@@ -18,7 +18,7 @@ void LinkableTexture__MakePixelPerfect(LinkableTexture_o *this, const MethodInfo
         (v4 = this->fields.mUiTexture) == 0)
     || (mUiTexture = this->fields.mCollider) == 0 )
   {
-    sub_1C942F0(mUiTexture, method);
+    sub_1C7BD40(mUiTexture, method);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -38,7 +38,7 @@ void LinkableTexture__SetSize(LinkableTexture_o *this, int32_t w, int32_t h, con
     || (UIWidget__set_width(mUiTexture, w, 0), (mUiTexture = (UIWidget_o *)this->fields.mUiTexture) == 0)
     || (UIWidget__set_height(mUiTexture, h, 0), (mUiTexture = (UIWidget_o *)this->fields.mCollider) == 0) )
   {
-    sub_1C942F0(mUiTexture, *(_QWORD *)&w);
+    sub_1C7BD40(mUiTexture, *(_QWORD *)&w);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -53,7 +53,7 @@ void LinkableTexture__SetTexture(LinkableTexture_o *this, UnityEngine_Texture_o 
 
   mUiTexture = this->fields.mUiTexture;
   if ( !mUiTexture )
-    sub_1C942F0(0, tex);
+    sub_1C7BD40(0, tex);
   ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Texture_o *, const MethodInfo *))mUiTexture->klass->vtable._27_set_mainTexture.methodPtr)(
     mUiTexture,
     tex,
@@ -76,7 +76,7 @@ void LinkableTexture__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)p_linkUrl,
     (int32_t)lnkUrl,
     (int32_t)lnkUrl,

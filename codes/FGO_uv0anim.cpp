@@ -17,23 +17,23 @@ void FGO_uv0anim__Start(FGO_uv0anim_o *this, const MethodInfo *method)
   __int64 v10; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4D2B5DF & 1) == 0 )
+  if ( (byte_4CED43F & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C94098(&StringLiteral_16321/*"_MainTex"*/);
-    byte_4D2B5DF = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C7BAE8(&StringLiteral_16323/*"_MainTex"*/);
+    byte_4CED43F = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1C942F0(renderer, v10);
+    sub_1C7BD40(renderer, v10);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16321/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16323/*"_MainTex"*/,
     this->fields.m_Offset,
     0);
 }
@@ -43,17 +43,17 @@ void FGO_uv0anim__Update(FGO_uv0anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4D2B5E0 & 1) == 0 )
+  if ( (byte_4CED440 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_16321/*"_MainTex"*/);
-    byte_4D2B5E0 = 1;
+    sub_1C7BAE8(&StringLiteral_16323/*"_MainTex"*/);
+    byte_4CED440 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1C942F0(renderer, method);
+    sub_1C7BD40(renderer, method);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16321/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16323/*"_MainTex"*/,
     this->fields.m_Offset,
     0);
 }

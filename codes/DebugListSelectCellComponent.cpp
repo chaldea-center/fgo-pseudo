@@ -27,7 +27,7 @@ void DebugListSelectCellComponent__Set(
 
   this->fields.id = id;
   p_id = &this->fields.id;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.id,
     (int32_t)id,
     index,
@@ -38,12 +38,12 @@ void DebugListSelectCellComponent__Set(
     v7);
   v13 = (UILabel_o *)*(p_id - 1);
   if ( !v13 )
-    sub_1C942F0(0, v12);
+    sub_1C7BD40(0, v12);
   UILabel__set_text(v13, this->fields.id, 0);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = index;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v15, v16, v17, v18, v19, v20);
 }
 
 

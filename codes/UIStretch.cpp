@@ -3,19 +3,19 @@ void UIStretch___ctor(UIStretch_o *this, const MethodInfo *method)
   UnityEngine_Vector2_c *v3; // x8
 
   this->fields.runOnlyOnce = 1;
-  if ( !byte_4D2CAFB )
+  if ( !byte_4CEE931 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D2CAFB = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CEE931 = 1;
   }
   v3 = UnityEngine_Vector2_TypeInfo;
   this->fields.relativeSize = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
   this->fields.initialSize = v3->static_fields->oneVector;
-  if ( !byte_4D25DF9 )
+  if ( !byte_4CE7D39 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
     v3 = UnityEngine_Vector2_TypeInfo;
-    byte_4D25DF9 = 1;
+    byte_4CE7D39 = 1;
   }
   this->fields.borderPadding = v3->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -75,42 +75,42 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
   GrandQuestFolderBoardItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_4D31172 & 1) == 0 )
+  if ( (byte_4CF2FA4 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C94098(&UICamera_OnScreenResize_TypeInfo);
-    sub_1C94098(&UICamera_TypeInfo);
-    sub_1C94098(&Method_UIStretch_ScreenSizeChanged__);
-    byte_4D31172 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C7BAE8(&UICamera_OnScreenResize_TypeInfo);
+    sub_1C7BAE8(&UICamera_TypeInfo);
+    sub_1C7BAE8(&Method_UIStretch_ScreenSizeChanged__);
+    byte_4CF2FA4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.mAnim = (struct UnityEngine_Animation_o *)Component_object;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mAnim, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mAnim, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   *(_QWORD *)&this->fields.mRect.fields.m_XMin = 0;
   *(_QWORD *)&this->fields.mRect.fields.m_Width = 0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
   v17 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+          (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)v17;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   v24 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+          (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   this->fields.mSprite = (struct UISprite_o *)v24;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)v24, v25, v26, v27, v28, v29, v30);
   v31 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+          (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v31;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v31, v32, v33, v34, v35, v36, v37);
   v38 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
   {
@@ -118,7 +118,7 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
     v38 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v38->static_fields->onScreenResize;
-  v40 = (UICamera_OnScreenResize_o *)sub_1C942E4(UICamera_OnScreenResize_TypeInfo);
+  v40 = (UICamera_OnScreenResize_o *)sub_1C7BD34(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v40, (Il2CppObject *)this, Method_UIStretch_ScreenSizeChanged__, 0);
   v41 = System_Delegate__Combine(onScreenResize, (System_Delegate_o *)v40, 0);
   v48 = v41;
@@ -131,13 +131,13 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
         p_onScreenResize = (GrandQuestFolderBoardItem_o *)&v50->onScreenResize,
         (UICamera_OnScreenResize_c *)v48->klass != v49) )
   {
-    sub_1C9468C(v48);
+    sub_1C7C0DC(v48);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = (struct UICamera_OnScreenResize_o *)v48;
     p_onScreenResize = (GrandQuestFolderBoardItem_o *)&static_fields->onScreenResize;
   }
-  sub_1C9403C(p_onScreenResize, (int32_t)v48, v42, v43, v44, v45, v46, v47);
+  sub_1C7BA8C(p_onScreenResize, (int32_t)v48, v42, v43, v44, v45, v46, v47);
 }
 
 
@@ -159,12 +159,12 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
   GrandQuestFolderBoardItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_4D31173 & 1) == 0 )
+  if ( (byte_4CF2FA5 & 1) == 0 )
   {
-    sub_1C94098(&UICamera_OnScreenResize_TypeInfo);
-    sub_1C94098(&UICamera_TypeInfo);
-    sub_1C94098(&Method_UIStretch_ScreenSizeChanged__);
-    byte_4D31173 = 1;
+    sub_1C7BAE8(&UICamera_OnScreenResize_TypeInfo);
+    sub_1C7BAE8(&UICamera_TypeInfo);
+    sub_1C7BAE8(&Method_UIStretch_ScreenSizeChanged__);
+    byte_4CF2FA5 = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -173,7 +173,7 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
     v3 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v3->static_fields->onScreenResize;
-  v5 = (UICamera_OnScreenResize_o *)sub_1C942E4(UICamera_OnScreenResize_TypeInfo);
+  v5 = (UICamera_OnScreenResize_o *)sub_1C7BD34(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v5, (Il2CppObject *)this, Method_UIStretch_ScreenSizeChanged__, 0);
   v6 = System_Delegate__Remove(onScreenResize, (System_Delegate_o *)v5, 0);
   v13 = v6;
@@ -186,13 +186,13 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
         p_onScreenResize = (GrandQuestFolderBoardItem_o *)&v15->onScreenResize,
         (UICamera_OnScreenResize_c *)v13->klass != v14) )
   {
-    sub_1C9468C(v13);
+    sub_1C7C0DC(v13);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = (struct UICamera_OnScreenResize_o *)v13;
     p_onScreenResize = (GrandQuestFolderBoardItem_o *)&static_fields->onScreenResize;
   }
-  sub_1C9403C(p_onScreenResize, (int32_t)v13, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C(p_onScreenResize, (int32_t)v13, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -242,12 +242,12 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
   System_String_o *v37; // x7
   const MethodInfo *v38; // x1
 
-  if ( (byte_4D31174 & 1) == 0 )
+  if ( (byte_4CF2FA6 & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIRoot___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D31174 = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIRoot___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2FA6 = 1;
   }
   container = (UnityEngine_Object_o *)this->fields.container;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -265,7 +265,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         goto LABEL_21;
       gameObject = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.container = gameObject;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&this->fields.container,
         (int32_t)gameObject,
         v9,
@@ -275,7 +275,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         v13,
         v14);
       *p_widgetContainer = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.widgetContainer, 0, v15, v16, v17, v18, v19, v20);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.widgetContainer, 0, v15, v16, v17, v18, v19, v20);
     }
   }
   uiCamera = (UnityEngine_Object_o *)this->fields.uiCamera;
@@ -291,7 +291,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       CameraForLayer = NGUITools__FindCameraForLayer(layer, 0);
       this->fields.uiCamera = CameraForLayer;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&this->fields.uiCamera,
         (int32_t)CameraForLayer,
         v24,
@@ -303,15 +303,15 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
       goto LABEL_18;
     }
 LABEL_21:
-    sub_1C942F0(v7, v6);
+    sub_1C7BD40(v7, v6);
   }
 LABEL_18:
   v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v31 = NGUITools__FindInParents_object_(v30, (const MethodInfo_32274D4 *)Method_NGUITools_FindInParents_UIRoot___);
+  v31 = NGUITools__FindInParents_object_(v30, (const MethodInfo_31F9E0C *)Method_NGUITools_FindInParents_UIRoot___);
   this->fields.mRoot = (struct UIRoot_o *)v31;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mRoot, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mRoot, (int32_t)v31, v32, v33, v34, v35, v36, v37);
   UIStretch__Update(this, v38);
   this->fields.mStarted = 1;
 }
@@ -407,13 +407,13 @@ void UIStretch__Update(UIStretch_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D31175 & 1) == 0 )
+  if ( (byte_4CF2FA7 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Application_TypeInfo);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D31175 = 1;
+    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2FA7 = 1;
   }
   mAnim = (UnityEngine_Object_o *)this->fields.mAnim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -440,7 +440,7 @@ void UIStretch__Update(UIStretch_o *this, const MethodInfo *method)
       goto LABEL_183;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   }
   v9 = (UnityEngine_Object_o *)this->fields.container;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -458,7 +458,7 @@ LABEL_20:
       goto LABEL_183;
     v10 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)transform,
-            (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+            (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -470,7 +470,7 @@ LABEL_20:
     transform = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0);
     if ( !Component_object )
       goto LABEL_183;
-    UIWidget__CalculateBounds_50118976(&iptr, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
+    UIWidget__CalculateBounds_49947208(&iptr, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
 LABEL_28:
     v11 = vadd_f32(*(float32x2_t *)&iptr.fields.m_Extents.fields.x, *(float32x2_t *)&iptr.fields.m_Extents.fields.x).n64_u64[0];
     *(float32x2_t *)&this->fields.mRect.fields.m_XMin = vsub_f32(
@@ -540,7 +540,7 @@ LABEL_59:
     v14 = (char)transform;
     v15 = UnityEngine_GameObject__get_transform(this->fields.container, 0);
     if ( (v14 & 1) != 0 )
-      NGUIMath__CalculateRelativeWidgetBounds_49915696(&iptr, (UnityEngine_Transform_o *)parent, v15, 0);
+      NGUIMath__CalculateRelativeWidgetBounds_49743928(&iptr, (UnityEngine_Transform_o *)parent, v15, 0);
     else
       NGUIMath__CalculateRelativeWidgetBounds(&iptr, v15, 0);
     goto LABEL_28;
@@ -672,10 +672,10 @@ LABEL_75:
         goto LABEL_140;
       v48 = (UIWidget_o *)this->fields.mSprite;
       v49 = pixelSize * this->fields.borderPadding.fields.x;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       v50 = m_Width - v49;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -717,20 +717,20 @@ LABEL_135:
       {
 LABEL_140:
         v73 = (UIWidget_o *)this->fields.mSprite;
-        if ( !byte_4D266E8 )
+        if ( !byte_4CE8569 )
         {
-          sub_1C94098(&System_Math_TypeInfo);
-          byte_4D266E8 = 1;
+          sub_1C7BAE8(&System_Math_TypeInfo);
+          byte_4CE8569 = 1;
         }
         v74 = mHeight - (float)(pixelSize * v47);
         v75 = System_Math_TypeInfo;
         goto LABEL_153;
       }
 LABEL_170:
-      if ( !byte_4D25F1E )
+      if ( !byte_4CE7E5E )
       {
-        sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-        byte_4D25F1E = 1;
+        sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+        byte_4CE7E5E = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       m_Width = static_fields->oneVector.fields.x;
@@ -747,10 +747,10 @@ LABEL_170:
         goto LABEL_150;
       v56 = this->fields.mWidget;
       v57 = this->fields.borderPadding.fields.x;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       v58 = m_Width - v57;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -793,10 +793,10 @@ LABEL_145:
 LABEL_150:
       v73 = this->fields.mWidget;
       v77 = this->fields.borderPadding.fields.y;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       v75 = System_Math_TypeInfo;
       v74 = mHeight - v77;
@@ -875,7 +875,7 @@ LABEL_177:
         }
       }
 LABEL_183:
-      sub_1C942F0(transform, v4);
+      sub_1C7BD40(transform, v4);
     }
     transform = this->fields.mPanel;
     if ( !transform )

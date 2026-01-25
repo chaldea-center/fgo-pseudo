@@ -8,24 +8,24 @@ void SwitchParameterDisplayManager___ctor(SwitchParameterDisplayManager_o *this,
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2BAB8 & 1) == 0 )
+  if ( (byte_4CED910 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_SwitchParameterDisplayComponent__TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager___ctor__);
-    byte_4D2BAB8 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_SwitchParameterDisplayComponent__TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager___ctor__);
+    byte_4CED910 = 1;
   }
   this->fields.state = 1;
   *(_QWORD *)&this->fields.FADE_TIME = 0x400000003F000000LL;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_SwitchParameterDisplayComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_SwitchParameterDisplayComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent___ctor__);
   this->fields.componentList = (struct System_Collections_Generic_List_SwitchParameterDisplayComponent__o *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.componentList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.componentList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3ABAA5C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager___ctor__);
+    (const MethodInfo_3A8CA90 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager___ctor__);
 }
 
 
@@ -46,11 +46,11 @@ void SwitchParameterDisplayManager__AddComponent(
   __int64 size; // x10
   Il2CppClass **v15; // x8
 
-  if ( (byte_4D2BAB5 & 1) == 0 )
+  if ( (byte_4CED90D & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__IndexOf__);
-    byte_4D2BAB5 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__IndexOf__);
+    byte_4CED90D = 1;
   }
   componentList = (System_Collections_Generic_List_object__o *)this->fields.componentList;
   if ( !componentList )
@@ -58,7 +58,7 @@ void SwitchParameterDisplayManager__AddComponent(
   if ( (System_Collections_Generic_List_object___IndexOf(
           componentList,
           (Il2CppObject *)component,
-          (const MethodInfo_386BAD4 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__IndexOf__)
+          (const MethodInfo_383FA9C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__IndexOf__)
       & 0x80000000) == 0 )
     return;
   componentList = (System_Collections_Generic_List_object__o *)this->fields.componentList;
@@ -69,7 +69,7 @@ void SwitchParameterDisplayManager__AddComponent(
         !items) )
   {
 LABEL_10:
-    sub_1C942F0(componentList, component);
+    sub_1C7BD40(componentList, component);
   }
   size = componentList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -77,14 +77,14 @@ LABEL_10:
     System_Collections_Generic_List_object___AddWithResize(
       componentList,
       (Il2CppObject *)component,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &items->obj.klass + size;
     componentList->fields._size = size + 1;
     v15[4] = (Il2CppClass *)component;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)component, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)component, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -103,14 +103,14 @@ void SwitchParameterDisplayManager__Reboot(SwitchParameterDisplayManager_o *this
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4D2BAB4 & 1) == 0 )
+  if ( (byte_4CED90C & 1) == 0 )
   {
-    this = (SwitchParameterDisplayManager_o *)sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Clear__);
-    byte_4D2BAB4 = 1;
+    this = (SwitchParameterDisplayManager_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Clear__);
+    byte_4CED90C = 1;
   }
   componentList = v2->fields.componentList;
   if ( !componentList )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   size = componentList->fields._size;
   v5 = componentList->fields._version + 1;
   componentList->fields._size = 0;
@@ -129,18 +129,18 @@ void SwitchParameterDisplayManager__RemoveComponent(
 {
   struct System_Collections_Generic_List_SwitchParameterDisplayComponent__o *componentList; // x0
 
-  if ( (byte_4D2BAB6 & 1) == 0 )
+  if ( (byte_4CED90E & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Remove__);
-    byte_4D2BAB6 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Remove__);
+    byte_4CED90E = 1;
   }
   componentList = this->fields.componentList;
   if ( !componentList )
-    sub_1C942F0(0, component);
+    sub_1C7BD40(0, component);
   System_Collections_Generic_List_object___Remove(
     (System_Collections_Generic_List_object__o *)componentList,
     (Il2CppObject *)component,
-    (const MethodInfo_386C35C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Remove__);
+    (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__Remove__);
 }
 
 
@@ -170,13 +170,13 @@ void SwitchParameterDisplayManager__Update(SwitchParameterDisplayManager_o *this
   int32_t v17; // w20
   Il2CppObject *v18; // x21
 
-  if ( (byte_4D2BAB7 & 1) == 0 )
+  if ( (byte_4CED90F & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2BAB7 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CED90F = 1;
   }
   dispTime = this->fields.dispTime;
   this->fields.alpha = 1.0;
@@ -216,7 +216,7 @@ LABEL_10:
       Item = System_Collections_Generic_List_object___get_Item(
                componentList,
                v12,
-               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -227,7 +227,7 @@ LABEL_10:
         componentList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                        componentList,
                                                                        v12,
-                                                                       (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+                                                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
         if ( !componentList )
           break;
         if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, _QWORD, const MethodInfo *))componentList->klass->vtable._4_unknown.methodPtr)(
@@ -242,7 +242,7 @@ LABEL_10:
           System_Collections_Generic_List_object___RemoveAt(
             componentList,
             v12,
-            (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
+            (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
         }
       }
       if ( --v12 < 0 )
@@ -251,7 +251,7 @@ LABEL_10:
     }
     while ( componentList );
 LABEL_54:
-    sub_1C942F0(componentList, v4);
+    sub_1C7BD40(componentList, v4);
   }
   v10 = this->fields.FADE_TIME;
   if ( v7 < v10 )
@@ -273,7 +273,7 @@ LABEL_54:
       v16 = System_Collections_Generic_List_object___get_Item(
               componentList,
               v15,
-              (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v16, 0, 0) )
@@ -284,7 +284,7 @@ LABEL_54:
         componentList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                        componentList,
                                                                        v15,
-                                                                       (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+                                                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
         if ( !componentList )
           goto LABEL_54;
         if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, _QWORD, const MethodInfo *))componentList->klass->vtable._4_unknown.methodPtr)(
@@ -299,7 +299,7 @@ LABEL_54:
           System_Collections_Generic_List_object___RemoveAt(
             componentList,
             v15,
-            (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
+            (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
         }
       }
       if ( --v15 < 0 )
@@ -321,7 +321,7 @@ LABEL_42:
       v18 = System_Collections_Generic_List_object___get_Item(
               componentList,
               v17,
-              (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v18, 0, 0) )
@@ -332,7 +332,7 @@ LABEL_42:
         componentList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                        componentList,
                                                                        v17,
-                                                                       (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
+                                                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__get_Item__);
         if ( !componentList )
           goto LABEL_54;
         if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, const MethodInfo *, float))componentList->klass->vtable._5_set_Item.methodPtr)(
@@ -347,7 +347,7 @@ LABEL_42:
           System_Collections_Generic_List_object___RemoveAt(
             componentList,
             v17,
-            (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
+            (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_SwitchParameterDisplayComponent__RemoveAt__);
         }
       }
       if ( --v17 < 0 )

@@ -22,9 +22,9 @@ void StaffCostumeSelectListViewItem___ctor(
   System_String_o *v23; // x7
   int32_t idx; // w8
 
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoCostumeEntity_k__BackingField = costumeEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._StaffPhotoCostumeEntity_k__BackingField,
     (int32_t)costumeEntity,
     v10,
@@ -34,11 +34,11 @@ void StaffCostumeSelectListViewItem___ctor(
     v14,
     v15);
   if ( !costumeEntity )
-    sub_1C942F0(v16, v17);
+    sub_1C7BD40(v16, v17);
   idx = costumeEntity->fields.idx;
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   this->fields._IsSelected_k__BackingField = idx == selectedCostumeIdx;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v18,
@@ -59,7 +59,7 @@ void StaffCostumeSelectListViewItem__ModifyItem(
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_1C942F0(this, selectedCostumeIdx);
+    sub_1C7BD40(this, selectedCostumeIdx);
   this->fields._IsSelected_k__BackingField = StaffPhotoCostumeEntity_k__BackingField->fields.idx == selectedCostumeIdx;
 }
 
@@ -74,7 +74,7 @@ bool StaffCostumeSelectListViewItem__SetSortValue(
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_1C942F0(this, sort);
+    sub_1C7BD40(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoCostumeEntity_k__BackingField->fields.dispOrder;
   return result;

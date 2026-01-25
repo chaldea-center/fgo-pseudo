@@ -38,7 +38,7 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNextFrameHeight(
 
   nextFrameSprite = this->fields.nextFrameSprite;
   if ( !nextFrameSprite )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return nextFrameSprite->fields.mHeight;
 }
 
@@ -51,7 +51,7 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNowFrameHeight(
 
   nowFrameSprite = this->fields.nowFrameSprite;
   if ( !nowFrameSprite )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return nowFrameSprite->fields.mHeight;
 }
 
@@ -71,25 +71,25 @@ void BattleCharaChangeConfirmListViewItemDraw__Init(
   __int64 v12; // x1
   UILabel_o *nowTitleLabel; // x0
 
-  if ( (byte_4D27788 & 1) == 0 )
+  if ( (byte_4CE9743 & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_11946/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D27788 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11949/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CE9743 = 1;
   }
   this->fields.drawKind = kind;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11949/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
   this->fields.modifyColor = v5;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.modifyColor, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.modifyColor, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   nowTitleLabel = this->fields.nowTitleLabel;
   if ( !nowTitleLabel
     || (UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (nowTitleLabel = this->fields.nextTitleLabel) == 0) )
   {
-    sub_1C942F0(nowTitleLabel, v12);
+    sub_1C7BD40(nowTitleLabel, v12);
   }
   UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
 }

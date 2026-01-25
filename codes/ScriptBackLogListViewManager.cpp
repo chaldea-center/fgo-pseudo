@@ -46,16 +46,16 @@ void ScriptBackLogListViewManager__CreateList(
   __int64 v41; // x10
   Il2CppClass **v42; // x8
 
-  if ( (byte_4D2E804 & 1) == 0 )
+  if ( (byte_4CF0574 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
-    sub_1C94098(&ScriptBackLogListViewItem_TypeInfo);
-    byte_4D2E804 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+    sub_1C7BAE8(&ScriptBackLogListViewItem_TypeInfo);
+    byte_4CF0574 = 1;
   }
   this->fields.clickFunc = callbackFunc;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.clickFunc,
     (int32_t)callbackFunc,
     (int32_t)callbackFunc,
@@ -92,11 +92,11 @@ void ScriptBackLogListViewManager__CreateList(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)logList,
                v21,
-               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
-      v23 = sub_1C942E4(ScriptBackLogListViewItem_TypeInfo);
-      ListViewItem___ctor_44594388((ListViewItem_o *)v23, v21, 0);
+               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+      v23 = sub_1C7BD34(ScriptBackLogListViewItem_TypeInfo);
+      ListViewItem___ctor_44325320((ListViewItem_o *)v23, v21, 0);
       *(_QWORD *)(v23 + 120) = Item;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v23 + 120), (int32_t)Item, v24, v25, v26, v27, v28, v29);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v23 + 120), (int32_t)Item, v24, v25, v26, v27, v28, v29);
       v36 = *(_QWORD *)(v23 + 120);
       if ( !v36 )
         break;
@@ -119,20 +119,20 @@ void ScriptBackLogListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)mPanel,
           (Il2CppObject *)v23,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
         v42 = &items->obj.klass + v41;
         mPanel->fields._size = v41 + 1;
         v42[4] = (Il2CppClass *)v23;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v42 + 4), v23, v30, v31, v32, v33, v34, v35);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v42 + 4), v23, v30, v31, v32, v33, v34, v35);
       }
       if ( size == ++v21 )
         goto LABEL_19;
     }
 LABEL_20:
-    sub_1C942F0(mPanel, v14);
+    sub_1C7BD40(mPanel, v14);
   }
 LABEL_19:
   ListViewManager__DispItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -149,7 +149,7 @@ void ScriptBackLogListViewManager__DestroyList(ScriptBackLogListViewManager_o *t
   System_String_o *v7; // x7
 
   this->fields.clickFunc = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7);
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
 }
 
@@ -162,11 +162,11 @@ ScriptBackLogListViewItem_o *ScriptBackLogListViewManager__GetItem(
   ScriptBackLogListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4D2E805 & 1) == 0 )
+  if ( (byte_4CF0575 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C94098(&ScriptBackLogListViewItem_TypeInfo);
-    byte_4D2E805 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C7BAE8(&ScriptBackLogListViewItem_TypeInfo);
+    byte_4CF0575 = 1;
   }
   result = (ScriptBackLogListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -174,7 +174,7 @@ ScriptBackLogListViewItem_o *ScriptBackLogListViewManager__GetItem(
     result = (ScriptBackLogListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)result,
                                               index,
-                                              (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = ScriptBackLogListViewItem_TypeInfo->_2.naturalAligment;
@@ -218,7 +218,7 @@ void ScriptBackLogListViewManager__OnClickListView(
   if ( clickFunc )
   {
     if ( !obj )
-      sub_1C942F0(this, 0);
+      sub_1C7BD40(this, 0);
     Index = ListViewObject__get_Index(obj, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))clickFunc->fields.invoke_impl)(
       clickFunc->fields.method_code,
@@ -254,10 +254,10 @@ void ScriptBackLogListViewManager__OnMoveEnd(ScriptBackLogListViewManager_o *thi
   struct UIScrollView_o *v14; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4D2E80A & 1) == 0 )
+  if ( (byte_4CF057A & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E80A = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF057A = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -274,7 +274,7 @@ void ScriptBackLogListViewManager__OnMoveEnd(ScriptBackLogListViewManager_o *thi
       {
         v14 = this->fields.scrollView;
         if ( !v14 )
-          sub_1C942F0(0, v7);
+          sub_1C7BD40(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v14->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v14,
           1,
@@ -284,7 +284,7 @@ void ScriptBackLogListViewManager__OnMoveEnd(ScriptBackLogListViewManager_o *thi
       if ( callbackFunc )
       {
         this->fields.callbackFunc = 0;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v8, v9, v10, v11, v12, v13);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v8, v9, v10, v11, v12, v13);
         ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
           callbackFunc->fields.method_code,
           callbackFunc->fields.method);
@@ -311,31 +311,31 @@ void ScriptBackLogListViewManager__RequestListObject(
   const MethodInfo *v14; // x3
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4D2E808 & 1) == 0 )
+  if ( (byte_4CF0578 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__get_Count__);
-    sub_1C94098(&Method_ScriptBackLogListViewManager_OnMoveEnd__);
-    sub_1C94098(&StringLiteral_9964/*"OnMoveEnd"*/);
-    byte_4D2E808 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__get_Count__);
+    sub_1C7BAE8(&Method_ScriptBackLogListViewManager_OnMoveEnd__);
+    sub_1C7BAE8(&StringLiteral_9968/*"OnMoveEnd"*/);
+    byte_4CF0578 = 1;
   }
   memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptBackLogListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C942F0(0, v8);
+    sub_1C7BD40(0, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9964/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9968/*"OnMoveEnd"*/,
       delay,
       0);
   }
@@ -345,27 +345,27 @@ void ScriptBackLogListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v15,
-              (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
+              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
     {
       current = v15.fields._current;
-      v11 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_ScriptBackLogListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C942F0(v12, v13);
-      ScriptBackLogListViewObject__Init_45579228((ScriptBackLogListViewObject_o *)current, mode, v11, delay, v14);
+        sub_1C7BD40(v12, v13);
+      ScriptBackLogListViewObject__Init_45313036((ScriptBackLogListViewObject_o *)current, mode, v11, delay, v14);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v15,
-      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ScriptBackLogListViewManager__RequestListObject_45578200(
+void ScriptBackLogListViewManager__RequestListObject_45312008(
         ScriptBackLogListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -380,31 +380,31 @@ void ScriptBackLogListViewManager__RequestListObject_45578200(
   const MethodInfo *v12; // x3
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4D2E809 & 1) == 0 )
+  if ( (byte_4CF0579 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__get_Count__);
-    sub_1C94098(&Method_ScriptBackLogListViewManager_OnMoveEnd__);
-    sub_1C94098(&StringLiteral_9964/*"OnMoveEnd"*/);
-    byte_4D2E809 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__get_Count__);
+    sub_1C7BAE8(&Method_ScriptBackLogListViewManager_OnMoveEnd__);
+    sub_1C7BAE8(&StringLiteral_9968/*"OnMoveEnd"*/);
+    byte_4CF0579 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptBackLogListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9964/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9968/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -414,21 +414,21 @@ void ScriptBackLogListViewManager__RequestListObject_45578200(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
+              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
     {
       current = v13.fields._current;
-      v9 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)this, Method_ScriptBackLogListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C942F0(v10, v11);
-      ScriptBackLogListViewObject__Init_45579312((ScriptBackLogListViewObject_o *)current, mode, v9, v12);
+        sub_1C7BD40(v10, v11);
+      ScriptBackLogListViewObject__Init_45313120((ScriptBackLogListViewObject_o *)current, mode, v9, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
   }
 }
 
@@ -440,11 +440,11 @@ void ScriptBackLogListViewManager__SetMode(
 {
   const MethodInfo *v3; // x3
 
-  ScriptBackLogListViewManager__SetMode_45577812(this, mode, 0, v3);
+  ScriptBackLogListViewManager__SetMode_45311620(this, mode, 0, v3);
 }
 
 
-void ScriptBackLogListViewManager__SetMode_45577812(
+void ScriptBackLogListViewManager__SetMode_45311620(
         ScriptBackLogListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -462,18 +462,18 @@ void ScriptBackLogListViewManager__SetMode_45577812(
   System_Collections_Generic_List_object__o *v16; // x20
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D2E807 & 1) == 0 )
+  if ( (byte_4CF0577 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
-    byte_4D2E807 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+    byte_4CF0577 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -488,20 +488,20 @@ void ScriptBackLogListViewManager__SetMode_45577812(
   v15 = mode == 1;
   v16 = (System_Collections_Generic_List_object__o *)ObjectList;
   if ( v15 )
-    ScriptBackLogListViewManager__RequestListObject_45578200(this, 3, v14);
+    ScriptBackLogListViewManager__RequestListObject_45312008(this, 3, v14);
   if ( !v16 )
-    sub_1C942F0(ObjectList, v13);
+    sub_1C7BD40(ObjectList, v13);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v17,
     v16,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
+            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__MoveNext__) )
     ;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_ScriptBackLogListViewObject__Dispose__);
 }
 
 
@@ -516,23 +516,23 @@ void ScriptBackLogListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4D2E806 & 1) == 0 )
+  if ( (byte_4CF0576 & 1) == 0 )
   {
-    this = (ScriptBackLogListViewManager_o *)sub_1C94098(&ScriptBackLogListViewObject_TypeInfo);
-    byte_4D2E806 = 1;
+    this = (ScriptBackLogListViewManager_o *)sub_1C7BAE8(&ScriptBackLogListViewObject_TypeInfo);
+    byte_4CF0576 = 1;
   }
   if ( !obj
     || (naturalAligment = ScriptBackLogListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (ScriptBackLogListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != ScriptBackLogListViewObject_TypeInfo )
   {
-    sub_1C942F0(this, obj);
+    sub_1C7BD40(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 3;
   else
     v7 = 2;
-  ScriptBackLogListViewObject__Init_45577740((ScriptBackLogListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  ScriptBackLogListViewObject__Init_45311548((ScriptBackLogListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -550,10 +550,10 @@ void ScriptBackLogListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4D2E801 & 1) == 0 )
+  if ( (byte_4CF0571 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    byte_4D2E801 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    byte_4CF0571 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -565,13 +565,13 @@ void ScriptBackLogListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1CEFE6C(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CD78BC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C9468C(v7);
+  sub_1C7C0DC(v7);
   ScriptBackLogListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -601,35 +601,35 @@ System_Collections_Generic_List_ScriptBackLogListViewObject__o *ScriptBackLogLis
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4D2E803 & 1) == 0 )
+  if ( (byte_4CF0573 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_ScriptBackLogListViewObject__TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E803 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ScriptBackLogListViewObject___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_ScriptBackLogListViewObject__TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0573 = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ScriptBackLogListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_ScriptBackLogListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_ScriptBackLogListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v23 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v23.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -638,38 +638,38 @@ System_Collections_Generic_List_ScriptBackLogListViewObject__o *ScriptBackLogLis
     if ( v7 )
     {
       if ( !current )
-        sub_1C942F0(v7, v8);
+        sub_1C7BD40(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
+                           (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
       v16 = Component_object;
       if ( !v3 )
-        sub_1C942F0(Component_object, Component_object);
+        sub_1C7BD40(Component_object, Component_object);
       items = v3->fields._items;
       v18 = Method_System_Collections_Generic_List_ScriptBackLogListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C942F0(Component_object, Component_object);
+        sub_1C7BD40(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v16;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ScriptBackLogListViewObject__o *)v3;
 }
 
@@ -687,10 +687,10 @@ void ScriptBackLogListViewManager__remove_callbackFunc(
   ScriptBackLogListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4D2E802 & 1) == 0 )
+  if ( (byte_4CF0572 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    byte_4D2E802 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    byte_4CF0572 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -702,13 +702,13 @@ void ScriptBackLogListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1CEFE6C(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CD78BC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C9468C(v7);
+  sub_1C7C0DC(v7);
   ScriptBackLogListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -732,7 +732,7 @@ void ScriptBackLogListViewManager_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -743,12 +743,12 @@ void ScriptBackLogListViewManager_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -760,9 +760,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1ACA080;
+  this->fields.invoke_impl = (intptr_t)sub_1AB2FA8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1ACA038;
+  this->fields.extra_arg = (intptr_t)sub_1AB2F60;
 }
 
 
@@ -777,14 +777,14 @@ System_IAsyncResult_o *ScriptBackLogListViewManager_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = select;
-  if ( (byte_4D2E80B & 1) == 0 )
+  if ( (byte_4CF057B & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    byte_4D2E80B = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    byte_4CF057B = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -793,7 +793,7 @@ void ScriptBackLogListViewManager_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

@@ -1,27 +1,27 @@
 void EventTradePickupEntity___ctor(EventTradePickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2CAFE & 1) == 0 )
+  if ( (byte_4CEE832 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2CAFE = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEE832 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventTradePickupEntity__CreatePK(int32_t tradeGoodsId, int64_t startedAt, const MethodInfo *method)
 {
-  if ( (byte_4D2CAFD & 1) == 0 )
+  if ( (byte_4CEE831 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__long___);
-    byte_4D2CAFD = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__long___);
+    byte_4CEE831 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            tradeGoodsId,
            startedAt,
-           (const MethodInfo_319A340 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_316E600 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

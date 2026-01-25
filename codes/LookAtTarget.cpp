@@ -46,10 +46,10 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2E061 & 1) == 0 )
+  if ( (byte_4CEFDCD & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E061 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFDCD = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,10 +70,10 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
     v9 = v34.fields.x;
     v10 = v34.fields.y;
     v11 = v34.fields.z;
-    if ( !byte_4D25F1B )
+    if ( !byte_4CE7E5B )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D25F1B = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE7E5B = 1;
     }
     v12 = x - v9;
     v13 = y - v10;
@@ -84,7 +84,7 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
       v35.fields.x = v12;
       v35.fields.y = v13;
       v35.fields.z = z - v11;
-      v36 = UnityEngine_Quaternion__LookRotation_72049252(v35, 0);
+      v36 = UnityEngine_Quaternion__LookRotation_71808428(v35, 0);
       v14 = this->fields.mTrans;
       b = v36.fields.x;
       if ( v14 )
@@ -118,7 +118,7 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
         return;
       }
 LABEL_18:
-      sub_1C942F0(mTrans, v4);
+      sub_1C7BD40(mTrans, v4);
     }
   }
 }
@@ -136,5 +136,5 @@ void LookAtTarget__Start(LookAtTarget_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }

@@ -1,13 +1,13 @@
 void BlankEarthGimmickAddEntity___ctor(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C4D1 & 1) == 0 )
+  if ( (byte_4CEE319 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2C4D1 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEE319 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *BlankEarthGimmickAddEntity__CreatePK(
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4D2C4CF & 1) == 0 )
+  if ( (byte_4CEE317 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4D2C4CF = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CEE317 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            blankEarthSpotId,
            priority,
            overwriteType,
-           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_316EA0C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -60,10 +60,10 @@ bool BlankEarthGimmickAddEntity__IsOpen(
   int32_t condTargetType; // w23
   int64_t condNum; // x21
 
-  if ( (byte_4D2C4D0 & 1) == 0 )
+  if ( (byte_4CEE318 & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    byte_4D2C4D0 = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    byte_4CEE318 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

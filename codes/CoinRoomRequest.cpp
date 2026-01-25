@@ -68,23 +68,23 @@ void CoinRoomRequest__BeginRequest(
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v60; // [xsp+20h] [xbp-80h] BYREF
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4D2E37D & 1) == 0 )
+  if ( (byte_4CF00EC & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__get_Values__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__get_Current__);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_int__SelectedUserSvtCoin__GetEnumerator__);
-    sub_1C94098(&StringLiteral_25511/*"}"*/);
-    sub_1C94098(&StringLiteral_846/*",\"num\":"*/);
-    sub_1C94098(&StringLiteral_25291/*"{\"id\":"*/);
-    sub_1C94098(&StringLiteral_21206/*"itemData"*/);
-    sub_1C94098(&StringLiteral_808/*","*/);
-    sub_1C94098(&StringLiteral_15861/*"["*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    this = (CoinRoomRequest_o *)sub_1C94098(&StringLiteral_16112/*"]"*/);
-    byte_4D2E37D = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__get_Values__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__get_Current__);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_int__SelectedUserSvtCoin__GetEnumerator__);
+    sub_1C7BAE8(&StringLiteral_25513/*"}"*/);
+    sub_1C7BAE8(&StringLiteral_847/*",\"num\":"*/);
+    sub_1C7BAE8(&StringLiteral_25294/*"{\"id\":"*/);
+    sub_1C7BAE8(&StringLiteral_21203/*"itemData"*/);
+    sub_1C7BAE8(&StringLiteral_809/*","*/);
+    sub_1C7BAE8(&StringLiteral_15862/*"["*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    this = (CoinRoomRequest_o *)sub_1C7BAE8(&StringLiteral_16114/*"]"*/);
+    byte_4CF00EC = 1;
   }
   memset(&v60, 0, sizeof(v60));
   monitor = 0;
@@ -92,72 +92,72 @@ void CoinRoomRequest__BeginRequest(
     || (v5 = (System_String_o *)StringLiteral_1/*""*/,
         (this = (CoinRoomRequest_o *)System_Collections_Generic_Dictionary_int__object___get_Values(
                                        (System_Collections_Generic_Dictionary_int__object__o *)requestValuse,
-                                       (const MethodInfo_34B46E4 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__get_Values__)) == 0) )
+                                       (const MethodInfo_3487520 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__get_Values__)) == 0) )
   {
-    sub_1C942F0(this, requestValuse);
+    sub_1C7BD40(this, requestValuse);
   }
   System_Collections_Generic_Dictionary_ValueCollection_int__object___GetEnumerator(
     &v58,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)this,
-    (const MethodInfo_3BA885C *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__SelectedUserSvtCoin__GetEnumerator__);
+    (const MethodInfo_3B79D54 *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__SelectedUserSvtCoin__GetEnumerator__);
   v6 = 0;
   v60 = v58;
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___MoveNext(
             &v60,
-            (const MethodInfo_3610C20 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__MoveNext__) )
+            (const MethodInfo_35E2804 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__MoveNext__) )
   {
     currentValue = v60.fields._currentValue;
     if ( v6 >= 1 )
-      v5 = System_String__Concat_64417744(v5, (System_String_o *)StringLiteral_808/*","*/, 0);
-    v8 = sub_1C94140(string___TypeInfo, 6);
+      v5 = System_String__Concat_64176912(v5, (System_String_o *)StringLiteral_809/*","*/, 0);
+    v8 = sub_1C7BB90(string___TypeInfo, 6);
     v16 = v8;
     if ( !v8 )
-      sub_1C942F0(0, v9);
+      sub_1C7BD40(0, v9);
     if ( !*(_DWORD *)(v8 + 24) )
-      sub_1C942F8(v8);
+      sub_1C7BD48(v8);
     *(_QWORD *)(v8 + 32) = v5;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)v5, v10, v11, v12, v13, v14, v15);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)v5, v10, v11, v12, v13, v14, v15);
     if ( *(_DWORD *)(v16 + 24) <= 1u )
-      sub_1C942F8(v17);
-    v24 = StringLiteral_25291/*"{\"id\":"*/;
-    *(_QWORD *)(v16 + 40) = StringLiteral_25291/*"{\"id\":"*/;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
+      sub_1C7BD48(v17);
+    v24 = StringLiteral_25294/*"{\"id\":"*/;
+    *(_QWORD *)(v16 + 40) = StringLiteral_25294/*"{\"id\":"*/;
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
     if ( !currentValue )
-      sub_1C942F0(v25, v26);
+      sub_1C7BD40(v25, v26);
     monitor = (int)currentValue[1].monitor;
     v27 = System_Int32__ToString((int32_t)&monitor, 0);
     if ( *(_DWORD *)(v16 + 24) <= 2u )
-      sub_1C942F8(v27);
+      sub_1C7BD48(v27);
     *(_QWORD *)(v16 + 48) = v27;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 48), (int32_t)v27, v28, v29, v30, v31, v32, v33);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 48), (int32_t)v27, v28, v29, v30, v31, v32, v33);
     if ( *(_DWORD *)(v16 + 24) <= 3u )
-      sub_1C942F8(v34);
-    v41 = StringLiteral_846/*",\"num\":"*/;
-    *(_QWORD *)(v16 + 56) = StringLiteral_846/*",\"num\":"*/;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 56), v41, v35, v36, v37, v38, v39, v40);
+      sub_1C7BD48(v34);
+    v41 = StringLiteral_847/*",\"num\":"*/;
+    *(_QWORD *)(v16 + 56) = StringLiteral_847/*",\"num\":"*/;
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 56), v41, v35, v36, v37, v38, v39, v40);
     monitor = HIDWORD(currentValue[1].monitor);
     v42 = System_Int32__ToString((int32_t)&monitor, 0);
     if ( *(_DWORD *)(v16 + 24) <= 4u )
-      sub_1C942F8(v42);
+      sub_1C7BD48(v42);
     *(_QWORD *)(v16 + 64) = v42;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 64), (int32_t)v42, v43, v44, v45, v46, v47, v48);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 64), (int32_t)v42, v43, v44, v45, v46, v47, v48);
     if ( *(_DWORD *)(v16 + 24) <= 5u )
-      sub_1C942F8(v49);
-    v56 = StringLiteral_25511/*"}"*/;
-    *(_QWORD *)(v16 + 72) = StringLiteral_25511/*"}"*/;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 72), v56, v50, v51, v52, v53, v54, v55);
+      sub_1C7BD48(v49);
+    v56 = StringLiteral_25513/*"}"*/;
+    *(_QWORD *)(v16 + 72) = StringLiteral_25513/*"}"*/;
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 72), v56, v50, v51, v52, v53, v54, v55);
     ++v6;
-    v5 = System_String__Concat_64458276((System_String_array *)v16, 0);
+    v5 = System_String__Concat_64217444((System_String_array *)v16, 0);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___Dispose(
     &v60,
-    (const MethodInfo_3610C1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__Dispose__);
-  v57 = System_String__Concat_64456008(
-          (System_String_o *)StringLiteral_15861/*"["*/,
+    (const MethodInfo_35E2800 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__Dispose__);
+  v57 = System_String__Concat_64215176(
+          (System_String_o *)StringLiteral_15862/*"["*/,
           v5,
-          (System_String_o *)StringLiteral_16112/*"]"*/,
+          (System_String_o *)StringLiteral_16114/*"]"*/,
           0);
-  RequestBase__addField_45016480(v4, (System_String_o *)StringLiteral_21206/*"itemData"*/, v57, 0);
+  RequestBase__addField_44748720(v4, (System_String_o *)StringLiteral_21203/*"itemData"*/, v57, 0);
   RequestBase__beginRequest(v4, 0);
 }
 
@@ -166,16 +166,16 @@ System_String_o *CoinRoomRequest__getURL(CoinRoomRequest_o *this, const MethodIn
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E37C & 1) == 0 )
+  if ( (byte_4CF00EB & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_18132/*"coinRoom/put"*/);
-    byte_4D2E37C = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_18132/*"coinRoom/put"*/);
+    byte_4CF00EB = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_18132/*"coinRoom/put"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_18132/*"coinRoom/put"*/, 0);
 }
 
 
@@ -189,17 +189,17 @@ void CoinRoomRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4D2E37E & 1) == 0 )
+  if ( (byte_4CF00ED & 1) == 0 )
   {
-    sub_1C94098(&JsonManager_TypeInfo);
-    sub_1C94098(&ResponseCommandKind_TypeInfo);
-    sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    byte_4D2E37E = 1;
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    byte_4CF00ED = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(111, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_45012660(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44743216(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -207,7 +207,7 @@ void CoinRoomRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22424/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22419/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

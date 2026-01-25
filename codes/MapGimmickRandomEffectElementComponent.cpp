@@ -16,18 +16,18 @@ bool MapGimmickRandomEffectElementComponent__get_IsValid(
   SpotEntity_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D292C4 & 1) == 0 )
+  if ( (byte_4CEB11F & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4D292C4 = 1;
+    sub_1C7BAE8(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4CEB11F = 1;
   }
   SpotEntity = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, method);
   if ( SpotEntity )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     v6 = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, v5);
     if ( !Instance )
-      sub_1C942F0(v6, v7);
+      sub_1C7BD40(v6, v7);
     LOBYTE(SpotEntity) = QuestTree__IsSpotSatisfyingDisplayCond((QuestTree_o *)Instance, v6, 1, 0);
   }
   return (char)SpotEntity;
@@ -42,24 +42,24 @@ SpotEntity_o *MapGimmickRandomEffectElementComponent__get_SpotEntity(
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D292C5 & 1) == 0 )
+  if ( (byte_4CEB120 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    byte_4D292C5 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    byte_4CEB120 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !Master_object )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          this->fields.spotId,
-         (const MethodInfo_345B50C *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+         (const MethodInfo_342E348 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
   {
     return (SpotEntity_o *)entity;
   }

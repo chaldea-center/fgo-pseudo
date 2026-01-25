@@ -1,13 +1,13 @@
 void NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2CDE1 & 1) == 0 )
+  if ( (byte_4CEEBF1 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2CDE1 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEEBF1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *NpcFollowerReleaseEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4D2CDDF & 1) == 0 )
+  if ( (byte_4CEEBEF & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4D2CDDF = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4CEEBEF = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_319A908 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_316EBC8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -38,22 +38,16 @@ System_String_o *NpcFollowerReleaseEntity__CreatePrimaryKey(NpcFollowerReleaseEn
 }
 
 
-int32_t NpcFollowerReleaseEntity__GetCondType(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
-{
-  return this->fields.condType;
-}
-
-
 bool NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4D2CDE0 & 1) == 0 )
+  if ( (byte_4CEEBF0 & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    byte_4D2CDE0 = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    byte_4CEEBF0 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

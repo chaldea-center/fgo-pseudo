@@ -35,11 +35,11 @@ void EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_49745900(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_49574132(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void EasingObject__Play_49745900(
+void EasingObject__Play_49574132(
         EasingObject_o *this,
         float from,
         float to,
@@ -76,11 +76,11 @@ void EasingObject__Play_49745900(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v15;
   this->fields.mEndAct = endAct;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17, v18, v19, v20, v21);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17, v18, v19, v20, v21);
   this->fields.mProcessAct = procAct;
   p_mProcessAct = &this->fields.mProcessAct;
   *((float *)p_mProcessAct - 6) = from;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_mProcessAct, (int32_t)procAct, v23, v24, v25, v26, v27, v28);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_mProcessAct, (int32_t)procAct, v23, v24, v25, v26, v27, v28);
   v29 = *p_mProcessAct;
   *((_DWORD *)p_mProcessAct + 4) = easingType;
   *((float *)p_mProcessAct - 3) = delay;
@@ -164,7 +164,7 @@ void EasingObject__Update(EasingObject_o *this, const MethodInfo *method)
         v10 = 1.0;
       else
         v10 = v7;
-      v11 = Easing__Func_49744724(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+      v11 = Easing__Func_49572956(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNow = v11;
       if ( mProcessAct )

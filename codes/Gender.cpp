@@ -31,72 +31,42 @@ void Gender___cctor(const MethodInfo *method)
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4D2B70E & 1) == 0 )
+  if ( (byte_4CED567 & 1) == 0 )
   {
-    sub_1C94098(&Gender_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_6406/*"FEMALE"*/);
-    sub_1C94098(&StringLiteral_9755/*"OTHER"*/);
-    sub_1C94098(&StringLiteral_8553/*"MALE"*/);
-    byte_4D2B70E = 1;
+    sub_1C7BAE8(&Gender_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_6407/*"FEMALE"*/);
+    sub_1C7BAE8(&StringLiteral_9759/*"OTHER"*/);
+    sub_1C7BAE8(&StringLiteral_8557/*"MALE"*/);
+    byte_4CED567 = 1;
   }
-  v1 = sub_1C94140(string___TypeInfo, 3);
+  v1 = sub_1C7BB90(string___TypeInfo, 3);
   if ( !v1 )
-    sub_1C942F0(0, v2);
+    sub_1C7BD40(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v10 = StringLiteral_8553/*"MALE"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_8553/*"MALE"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
+    || (v10 = StringLiteral_8557/*"MALE"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_8557/*"MALE"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
         *(_DWORD *)(v9 + 24) <= 1u)
-    || (v17 = StringLiteral_6406/*"FEMALE"*/,
-        *(_QWORD *)(v9 + 40) = StringLiteral_6406/*"FEMALE"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
+    || (v17 = StringLiteral_6407/*"FEMALE"*/,
+        *(_QWORD *)(v9 + 40) = StringLiteral_6407/*"FEMALE"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
         *(_DWORD *)(v9 + 24) <= 2u) )
   {
-    sub_1C942F8(v1);
+    sub_1C7BD48(v1);
   }
-  v24 = StringLiteral_9755/*"OTHER"*/;
-  *(_QWORD *)(v9 + 48) = StringLiteral_9755/*"OTHER"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_9759/*"OTHER"*/;
+  *(_QWORD *)(v9 + 48) = StringLiteral_9759/*"OTHER"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
   Gender_TypeInfo->static_fields->nameList = (struct System_String_array *)v9;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)Gender_TypeInfo->static_fields, v9, v25, v26, v27, v28, v29, v30);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)Gender_TypeInfo->static_fields, v9, v25, v26, v27, v28, v29, v30);
 }
 
 
 void Gender___ctor(Gender_o *this, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
-  this->fields.type = 3;
-}
-
-
-void Gender___ctor_41174616(Gender_o *this, int32_t type, const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-  this->fields.type = type;
-}
-
-
-void Gender___ctor_41174656(Gender_o *this, System_String_o *name, const MethodInfo *method)
-{
-  const MethodInfo *v5; // x1
-
-  if ( (byte_4D2B70B & 1) == 0 )
-  {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B70B = 1;
-  }
-  System_Object___ctor((Il2CppObject *)this, 0);
-  if ( !Gender_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(Gender_TypeInfo);
-  this->fields.type = Gender__Parse(name, v5);
-}
-
-
-int32_t Gender__Get(Gender_o *this, const MethodInfo *method)
-{
-  return this->fields.type;
 }
 
 
@@ -113,7 +83,7 @@ int32_t Gender__GetGenderTypeBySelectType(int32_t genderSelectType, const Method
     case 2:
       return genderSelectType;
     case 3:
-      return UnityEngine_Random__Range_72070684(1, 3, 0);
+      return UnityEngine_Random__Range_71829860(1, 3, 0);
     case 4:
       SelfUserGame = UserGameMaster__getSelfUserGame(0);
       if ( !SelfUserGame )
@@ -136,7 +106,7 @@ int32_t Gender__GetGenderTypeBySelectType(int32_t genderSelectType, const Method
       SelfUserGame = UserGameMaster__getSelfUserGame(0);
       if ( !SelfUserGame )
 LABEL_14:
-        sub_1C942F0(SelfUserGame, v3);
+        sub_1C7BD40(SelfUserGame, v3);
       genderSelectType = SelfUserGame->fields.genderType;
       break;
     default:
@@ -153,10 +123,10 @@ int32_t Gender__Parse(System_String_o *name, const MethodInfo *method)
   Gender_c *v4; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4D2B709 & 1) == 0 )
+  if ( (byte_4CED565 & 1) == 0 )
   {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B709 = 1;
+    sub_1C7BAE8(&Gender_TypeInfo);
+    byte_4CED565 = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -170,7 +140,7 @@ int32_t Gender__Parse(System_String_o *name, const MethodInfo *method)
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_1C942F0(v4, method);
+      sub_1C7BD40(v4, method);
     if ( v3 >= SLODWORD(nameList->max_length) )
       return 3;
     if ( !v4->_2.cctor_finished )
@@ -181,33 +151,14 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( (unsigned int)v3 >= LODWORD(nameList->max_length) )
-      sub_1C942F8(v4);
+      sub_1C7BD48(v4);
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_16;
     ++v3;
-    if ( System_String__Equals_64453064((System_String_o *)v4, name, 0) )
+    if ( System_String__Equals_64212232((System_String_o *)v4, name, 0) )
       return v3;
   }
-}
-
-
-void Gender__Set(Gender_o *this, int32_t type, const MethodInfo *method)
-{
-  this->fields.type = type;
-}
-
-
-void Gender__Set_41174900(Gender_o *this, System_String_o *name, const MethodInfo *method)
-{
-  if ( (byte_4D2B70D & 1) == 0 )
-  {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B70D = 1;
-  }
-  if ( !Gender_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(Gender_TypeInfo);
-  this->fields.type = Gender__Parse(name, (const MethodInfo *)name);
 }
 
 
@@ -217,10 +168,10 @@ int32_t Gender__ToData(System_String_o *name, const MethodInfo *method)
   Gender_c *v4; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4D2B70A & 1) == 0 )
+  if ( (byte_4CED566 & 1) == 0 )
   {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B70A = 1;
+    sub_1C7BAE8(&Gender_TypeInfo);
+    byte_4CED566 = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -234,7 +185,7 @@ int32_t Gender__ToData(System_String_o *name, const MethodInfo *method)
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_1C942F0(v4, method);
+      sub_1C7BD40(v4, method);
     if ( v3 >= SLODWORD(nameList->max_length) )
       return 3;
     if ( !v4->_2.cctor_finished )
@@ -245,20 +196,14 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( (unsigned int)v3 >= LODWORD(nameList->max_length) )
-      sub_1C942F8(v4);
+      sub_1C7BD48(v4);
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_16;
     ++v3;
-    if ( System_String__Equals_64453064((System_String_o *)v4, name, 0) )
+    if ( System_String__Equals_64212232((System_String_o *)v4, name, 0) )
       return v3;
   }
-}
-
-
-int32_t Gender__ToInteger(Gender_o *this, const MethodInfo *method)
-{
-  return this->fields.type;
 }
 
 
@@ -267,10 +212,10 @@ System_String_o *Gender__ToName(int32_t type, const MethodInfo *method)
   Gender_c *v3; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4D2B708 & 1) == 0 )
+  if ( (byte_4CED564 & 1) == 0 )
   {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B708 = 1;
+    sub_1C7BAE8(&Gender_TypeInfo);
+    byte_4CED564 = 1;
   }
   v3 = Gender_TypeInfo;
   if ( !Gender_TypeInfo->_2.cctor_finished )
@@ -280,36 +225,8 @@ System_String_o *Gender__ToName(int32_t type, const MethodInfo *method)
   }
   nameList = v3->static_fields->nameList;
   if ( !nameList )
-    sub_1C942F0(v3, method);
+    sub_1C7BD40(v3, method);
   if ( (unsigned int)(type - 1) >= LODWORD(nameList->max_length) )
-    sub_1C942F8(v3);
+    sub_1C7BD48(v3);
   return nameList->m_Items[type - 1];
-}
-
-
-System_String_o *Gender__ToString(Gender_o *this, const MethodInfo *method)
-{
-  int32_t type; // w19
-
-  if ( (byte_4D2B70C & 1) == 0 )
-  {
-    sub_1C94098(&Gender_TypeInfo);
-    byte_4D2B70C = 1;
-  }
-  type = this->fields.type;
-  if ( !Gender_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(Gender_TypeInfo);
-  return Gender__ToName(type, method);
-}
-
-
-int32_t Gender__get_Value(Gender_o *this, const MethodInfo *method)
-{
-  return this->fields.type;
-}
-
-
-void Gender__set_Value(Gender_o *this, int32_t value, const MethodInfo *method)
-{
-  this->fields.type = value;
 }

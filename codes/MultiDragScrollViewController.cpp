@@ -55,7 +55,7 @@ void MultiDragScrollViewController__OnDrag(
         return;
       }
 LABEL_15:
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     }
   }
 }
@@ -71,7 +71,7 @@ void MultiDragScrollViewController__OnDragStart(MultiDragScrollViewController_o 
     || (UnityEngine_Behaviour__set_enabled(horizontalDrag, !this->fields._StopDragHorizontally_k__BackingField, 0),
         (horizontalDrag = (UnityEngine_Behaviour_o *)this->fields.verticalDrag) == 0) )
   {
-    sub_1C942F0(horizontalDrag, method);
+    sub_1C7BD40(horizontalDrag, method);
   }
   UnityEngine_Behaviour__set_enabled(horizontalDrag, !this->fields._StopDragVertically_k__BackingField, 0);
 }
@@ -95,10 +95,10 @@ void MultiDragScrollViewController__OnPress(
   struct UIDragScrollView_o *v14; // x8
   struct UIScrollView_o *v15; // x8
 
-  if ( (byte_4D2E064 & 1) == 0 )
+  if ( (byte_4CEFDD0 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E064 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFDD0 = 1;
   }
   if ( !isPressed )
   {
@@ -171,7 +171,7 @@ void MultiDragScrollViewController__OnPress(
         }
       }
 LABEL_25:
-      sub_1C942F0(horizontalDrag, isPressed);
+      sub_1C7BD40(horizontalDrag, isPressed);
     }
   }
 }

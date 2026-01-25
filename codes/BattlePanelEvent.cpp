@@ -8,7 +8,7 @@ void BattlePanelEvent__OnDestroy(BattlePanelEvent_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_46970052(this, 0, v2);
+  BattlePanelEvent__SetPanelActive_46710660(this, 0, v2);
 }
 
 
@@ -16,20 +16,20 @@ void BattlePanelEvent__SetPanelActive(BattlePanelEvent_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_46970052(this, 1, v2);
+  BattlePanelEvent__SetPanelActive_46710660(this, 1, v2);
 }
 
 
-void BattlePanelEvent__SetPanelActive_46970052(BattlePanelEvent_o *this, bool flag, const MethodInfo *method)
+void BattlePanelEvent__SetPanelActive_46710660(BattlePanelEvent_o *this, bool flag, const MethodInfo *method)
 {
   UnityEngine_Object_o *Panel; // x21
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4D2F47A & 1) == 0 )
+  if ( (byte_4CF11FC & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F47A = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF11FC = 1;
   }
   Panel = (UnityEngine_Object_o *)this->fields.Panel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ void BattlePanelEvent__SetPanelActive_46970052(BattlePanelEvent_o *this, bool fl
   {
     v7 = this->fields.Panel;
     if ( !v7 )
-      sub_1C942F0(0, v6);
+      sub_1C7BD40(0, v6);
     UnityEngine_GameObject__SetActive(v7, flag, 0);
   }
 }
@@ -48,5 +48,5 @@ void BattlePanelEvent__SetPanelDisable(BattlePanelEvent_o *this, const MethodInf
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_46970052(this, 0, v2);
+  BattlePanelEvent__SetPanelActive_46710660(this, 0, v2);
 }

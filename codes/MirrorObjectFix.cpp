@@ -8,16 +8,16 @@ void MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo *method)
   System_String_o *v7; // x7
   int32_t v9; // w1
 
-  if ( (byte_4D2FD1B & 1) == 0 )
+  if ( (byte_4CF1AA0 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_21283/*"joint_all_Base/joint_all"*/);
-    byte_4D2FD1B = 1;
+    sub_1C7BAE8(&StringLiteral_21280/*"joint_all_Base/joint_all"*/);
+    byte_4CF1AA0 = 1;
   }
-  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_CFE1A0;
+  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_CF4EE0;
   *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.y = 0x3E99999A3F333333LL;
-  v9 = StringLiteral_21283/*"joint_all_Base/joint_all"*/;
-  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_21283/*"joint_all_Base/joint_all"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.rootTransformPath, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_21280/*"joint_all_Base/joint_all"*/;
+  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_21280/*"joint_all_Base/joint_all"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.rootTransformPath, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -42,7 +42,7 @@ UnityEngine_Bounds_o *MirrorObjectFix__GetBounds(
   m_Extents = this->fields.mirrorBounds.fields.m_Extents;
   RootTransform = MirrorObjectFix__get_RootTransform(this, method);
   if ( !RootTransform )
-    sub_1C942F0(0, v8);
+    sub_1C7BD40(0, v8);
   v11.fields.x = x;
   v11.fields.y = y;
   v11.fields.z = z;
@@ -97,7 +97,7 @@ void MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const MethodInfo *me
         w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C942F0(RootTransform, v7);
+    sub_1C7BD40(RootTransform, v7);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0);
   *(_QWORD *)&v19.fields.x = v3;
@@ -109,10 +109,10 @@ void MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const MethodInfo *me
   UnityEngine_Matrix4x4__TRS(&v15, v19, v23, lossyScale, 0);
   v14 = v15;
   UnityEngine_Gizmos__set_matrix(&v14, 0);
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   v20.fields.x = *((float *)&v3 + 3) + *((float *)&v3 + 3);
   v20.fields.y = v18 + v18;
@@ -146,10 +146,10 @@ UnityEngine_Transform_o *MirrorObjectFix__get_RootTransform(MirrorObjectFix_o *t
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4D2FD1A & 1) == 0 )
+  if ( (byte_4CF1A9F & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2FD1A = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF1A9F = 1;
   }
   p_cacheRootTransform = &this->fields.cacheRootTransform;
   cacheRootTransform = (UnityEngine_Object_o *)this->fields.cacheRootTransform;
@@ -176,7 +176,7 @@ LABEL_14:
         {
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
           this->fields.cacheRootTransform = transform;
-          sub_1C9403C(
+          sub_1C7BA8C(
             (GrandQuestFolderBoardItem_o *)&this->fields.cacheRootTransform,
             (int32_t)transform,
             v17,
@@ -190,11 +190,11 @@ LABEL_14:
       }
       v13 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !v13 )
-        sub_1C942F0(0, v14);
+        sub_1C7BD40(0, v14);
       v12 = UnityEngine_Transform__Find(v13, this->fields.rootTransformPath, 0);
     }
     *p_cacheRootTransform = v12;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cacheRootTransform, (int32_t)v12, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cacheRootTransform, (int32_t)v12, v6, v7, v8, v9, v10, v11);
     goto LABEL_14;
   }
   return *p_cacheRootTransform;

@@ -1,27 +1,27 @@
 void UserBoxGachaEntity___ctor(UserBoxGachaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D5E7 & 1) == 0 )
+  if ( (byte_4CEF3AE & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D5E7 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEF3AE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserBoxGachaEntity__CreatePK(int64_t userId, int32_t boxGachaId, const MethodInfo *method)
 {
-  if ( (byte_4D2D5E6 & 1) == 0 )
+  if ( (byte_4CEF3AD & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4D2D5E6 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CEF3AD = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            boxGachaId,
-           (const MethodInfo_319A3C4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_316E684 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -53,26 +53,26 @@ System_Collections_Generic_List_int__o *UserBoxGachaEntity__GetReplaceGiftIdList
   UserBoxGachaEntity_o *v17; // x0
   const MethodInfo *v18; // x1
 
-  if ( (byte_4D2D5E5 & 1) == 0 )
+  if ( (byte_4CEF3AC & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&long_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C94098(&StringLiteral_23278/*"replaceGiftIdList"*/);
-    byte_4D2D5E5 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&long_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C7BAE8(&StringLiteral_23273/*"replaceGiftIdList"*/);
+    byte_4CEF3AC = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
-          (Il2CppObject *)StringLiteral_23278/*"replaceGiftIdList"*/,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_23273/*"replaceGiftIdList"*/,
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0;
   }
@@ -80,22 +80,22 @@ System_Collections_Generic_List_int__o *UserBoxGachaEntity__GetReplaceGiftIdList
   if ( !v5
     || ((Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                   v5,
-                  (Il2CppObject *)StringLiteral_23278/*"replaceGiftIdList"*/,
-                  (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) != 0
+                  (Il2CppObject *)StringLiteral_23273/*"replaceGiftIdList"*/,
+                  (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) != 0
      && (naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment,
          Item->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
       ? ((System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[naturalAligment - 1] != System_Collections_Generic_List_object__TypeInfo
        ? (v8 = 0)
        : (v8 = (System_Collections_Generic_List_object__o *)Item))
       : (v8 = 0),
-        v9 = (System_Collections_Generic_List_int__o *)sub_1C942E4(System_Collections_Generic_List_int__TypeInfo),
+        v9 = (System_Collections_Generic_List_int__o *)sub_1C7BD34(System_Collections_Generic_List_int__TypeInfo),
         System_Collections_Generic_List_int____ctor(
           v9,
-          (const MethodInfo_384D5BC *)Method_System_Collections_Generic_List_int___ctor__),
+          (const MethodInfo_3821584 *)Method_System_Collections_Generic_List_int___ctor__),
         !v8) )
   {
 LABEL_25:
-    sub_1C942F0(v5, klass_low);
+    sub_1C7BD40(v5, klass_low);
   }
   if ( v8->fields._size < 1 )
     return v9;
@@ -105,7 +105,7 @@ LABEL_25:
     v5 = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       v8,
                                                                       v10,
-                                                                      (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+                                                                      (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
     if ( !v9 || !v5 )
       goto LABEL_25;
     if ( v5->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -123,7 +123,7 @@ LABEL_25:
       System_Collections_Generic_List_int___AddWithResize(
         v9,
         klass_low,
-        *(const MethodInfo_384DE10 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
@@ -133,6 +133,6 @@ LABEL_25:
     if ( ++v10 >= v8->fields._size )
       return v9;
   }
-  sub_1C9468C(v5);
+  sub_1C7C0DC(v5);
   return (System_Collections_Generic_List_int__o *)UserBoxGachaEntity__CreatePrimaryKey(v17, v18);
 }

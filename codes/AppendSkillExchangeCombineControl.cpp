@@ -1,9 +1,9 @@
 void AppendSkillExchangeCombineControl___ctor(AppendSkillExchangeCombineControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D306B0 & 1) == 0 )
+  if ( (byte_4CF2437 & 1) == 0 )
   {
-    sub_1C94098(&CombineMenuControl_TypeInfo);
-    byte_4D306B0 = 1;
+    sub_1C7BAE8(&CombineMenuControl_TypeInfo);
+    byte_4CF2437 = 1;
   }
   if ( !CombineMenuControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CombineMenuControl_TypeInfo);
@@ -53,17 +53,17 @@ void AppendSkillExchangeCombineControl__Init(AppendSkillExchangeCombineControl_o
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4D306A0 & 1) == 0 )
+  if ( (byte_4CF2427 & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_20796/*"img_txt_append"*/);
-    sub_1C94098(&StringLiteral_23188/*"rarity5_1"*/);
-    sub_1C94098(&StringLiteral_20797/*"img_txt_append_exchange"*/);
-    sub_1C94098(&StringLiteral_17751/*"buttontxt_exchange"*/);
-    sub_1C94098(&StringLiteral_1982/*"APPEND_SKILL_EXCHANGE_INFO"*/);
-    byte_4D306A0 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_20790/*"img_txt_append"*/);
+    sub_1C7BAE8(&StringLiteral_23183/*"rarity5_1"*/);
+    sub_1C7BAE8(&StringLiteral_20791/*"img_txt_append_exchange"*/);
+    sub_1C7BAE8(&StringLiteral_17753/*"buttontxt_exchange"*/);
+    sub_1C7BAE8(&StringLiteral_1983/*"APPEND_SKILL_EXCHANGE_INFO"*/);
+    byte_4CF2427 = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 95, 0, 0, 0, 0, 0, 0);
   CombineMenuControl__InitMenuControl((CombineMenuControl_o *)this, 0);
@@ -78,13 +78,13 @@ void AppendSkillExchangeCombineControl__Init(AppendSkillExchangeCombineControl_o
   charaSprite = this->fields.charaSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetCharaGraphaOption(charaSprite, (System_String_o *)StringLiteral_23188/*"rarity5_1"*/, 0);
+  AtlasManager__SetCharaGraphaOption(charaSprite, (System_String_o *)StringLiteral_23183/*"rarity5_1"*/, 0);
   helpBtn = (UnityEngine_GameObject_o *)this->fields.combineTxtImg;
   if ( !helpBtn )
     goto LABEL_20;
-  UISprite__set_spriteName((UISprite_o *)helpBtn, (System_String_o *)StringLiteral_17751/*"buttontxt_exchange"*/, 0);
-  AtlasManager__SetEventSprite(this->fields.titleImg, (System_String_o *)StringLiteral_20796/*"img_txt_append"*/, 0);
-  AtlasManager__SetEventSprite(this->fields.itemTitleImg, (System_String_o *)StringLiteral_20797/*"img_txt_append_exchange"*/, 0);
+  UISprite__set_spriteName((UISprite_o *)helpBtn, (System_String_o *)StringLiteral_17753/*"buttontxt_exchange"*/, 0);
+  AtlasManager__SetEventSprite(this->fields.titleImg, (System_String_o *)StringLiteral_20790/*"img_txt_append"*/, 0);
+  AtlasManager__SetEventSprite(this->fields.itemTitleImg, (System_String_o *)StringLiteral_20791/*"img_txt_append_exchange"*/, 0);
   helpBtn = (UnityEngine_GameObject_o *)this->fields.combineTxtImg;
   if ( !helpBtn )
     goto LABEL_20;
@@ -106,7 +106,7 @@ void AppendSkillExchangeCombineControl__Init(AppendSkillExchangeCombineControl_o
   detailInfoLb = this->fields.detailInfoLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1982/*"APPEND_SKILL_EXCHANGE_INFO"*/, 0);
+  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1983/*"APPEND_SKILL_EXCHANGE_INFO"*/, 0);
   if ( !detailInfoLb )
     goto LABEL_20;
   UILabel__set_text(detailInfoLb, (System_String_o *)helpBtn, 0);
@@ -122,13 +122,13 @@ void AppendSkillExchangeCombineControl__Init(AppendSkillExchangeCombineControl_o
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)helpBtn, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72110972(gameObject, 0);
+      UnityEngine_Object__Destroy_71870148(gameObject, 0);
       p_charaGraph->klass = 0;
-      sub_1C9403C(p_charaGraph, 0, v12, v13, v14, v15, v16, v17);
+      sub_1C7BA8C(p_charaGraph, 0, v12, v13, v14, v15, v16, v17);
       return;
     }
 LABEL_20:
-    sub_1C942F0(helpBtn, v4);
+    sub_1C7BD40(helpBtn, v4);
   }
 }
 
@@ -144,18 +144,18 @@ void AppendSkillExchangeCombineControl__InitDispCombineInfo(
   int v7; // w21
   int32_t v8; // w20
 
-  if ( (byte_4D306A1 & 1) == 0 )
+  if ( (byte_4CF2428 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/);
-    byte_4D306A1 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/);
+    byte_4CF2428 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/, 0);
   AppendSkillExchangeCombineControl__SetPreSelectLabel(this, v3, 1, v4);
   baseSelectInfoLb = this->fields.baseSelectInfoLb;
   if ( !baseSelectInfoLb )
@@ -177,7 +177,7 @@ void AppendSkillExchangeCombineControl__InitDispCombineInfo(
       baseSelectInfoLb = System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)baseSelectInfoLb,
                            v8,
-                           (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+                           (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
       if ( !baseSelectInfoLb )
         break;
       ServantSkillInfoIconComponent__ClearAppendSkillInfo((ServantSkillInfoIconComponent_o *)baseSelectInfoLb, 0);
@@ -187,7 +187,7 @@ void AppendSkillExchangeCombineControl__InitDispCombineInfo(
     }
     while ( baseSelectInfoLb );
 LABEL_13:
-    sub_1C942F0(baseSelectInfoLb, v5);
+    sub_1C7BD40(baseSelectInfoLb, v5);
   }
 }
 
@@ -207,24 +207,24 @@ void AppendSkillExchangeCombineControl__OnClickExeCombine(
   UserServantAppendPassiveSkillEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4D306A9 & 1) == 0 )
+  if ( (byte_4CF2430 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4D306A9 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CF2430 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2633A )
+  if ( !byte_4CE827C )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2633A = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CE827C = 1;
   }
   appendSkillExchangeDialog = (AppendSkillExchangeDialog_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -242,7 +242,7 @@ void AppendSkillExchangeCombineControl__OnClickExeCombine(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v12.fields.currentCryptoKey = v8;
   *(_QWORD *)&v12.fields.fakeValue = v7;
-  appendSkillExchangeDialog = (AppendSkillExchangeDialog_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(
+  appendSkillExchangeDialog = (AppendSkillExchangeDialog_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(
                                                                v12,
                                                                0);
   if ( !Master_object )
@@ -257,7 +257,7 @@ void AppendSkillExchangeCombineControl__OnClickExeCombine(
     return;
   if ( !entity || (appendSkillExchangeDialog = this->fields.appendSkillExchangeDialog) == 0 )
 LABEL_20:
-    sub_1C942F0(appendSkillExchangeDialog, v3);
+    sub_1C7BD40(appendSkillExchangeDialog, v3);
   AppendSkillExchangeDialog__Open(
     appendSkillExchangeDialog,
     this->fields.baseLvUpData,
@@ -314,43 +314,43 @@ void AppendSkillExchangeCombineControl__OnClickInfo(
   System_Collections_Generic_IEnumerable_TSource__o *v44; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v45; // x0
 
-  if ( (byte_4D306A4 & 1) == 0 )
+  if ( (byte_4CF242B & 1) == 0 )
   {
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl_OnClickInfo__);
-    sub_1C94098(&Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
-    sub_1C94098(&Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
-    sub_1C94098(&System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
-    sub_1C94098(&System_Math_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl___c__DisplayClass36_0__OnClickInfo_b__1__);
-    sub_1C94098(&AppendSkillExchangeCombineControl___c__DisplayClass36_0_TypeInfo);
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl___c__DisplayClass36_1__OnClickInfo_b__0__);
-    sub_1C94098(&AppendSkillExchangeCombineControl___c__DisplayClass36_1_TypeInfo);
-    byte_4D306A4 = 1;
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl_OnClickInfo__);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
+    sub_1C7BAE8(&System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl___c__DisplayClass36_0__OnClickInfo_b__1__);
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl___c__DisplayClass36_0_TypeInfo);
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl___c__DisplayClass36_1__OnClickInfo_b__0__);
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl___c__DisplayClass36_1_TypeInfo);
+    byte_4CF242B = 1;
   }
-  v7 = sub_1C942E4(AppendSkillExchangeCombineControl___c__DisplayClass36_0_TypeInfo);
+  v7 = sub_1C7BD34(AppendSkillExchangeCombineControl___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_36;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_DWORD *)(v7 + 24) = idx;
   if ( isDecide )
   {
     if ( ((this->fields.currentTargetIdx ^ this->fields.currentBaseIdx) & 0x80000000) == 0 )
       goto LABEL_11;
-    v16 = sub_1C942E4(AppendSkillExchangeCombineControl___c__DisplayClass36_1_TypeInfo);
+    v16 = sub_1C7BD34(AppendSkillExchangeCombineControl___c__DisplayClass36_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v16, 0);
     if ( !v16 )
       goto LABEL_36;
     *(_QWORD *)(v16 + 24) = v7;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 24), v7, v17, v18, v19, v20, v21, v22);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 24), v7, v17, v18, v19, v20, v21, v22);
     currentBaseIdx = this->fields.currentBaseIdx;
     currentTargetIdx = this->fields.currentTargetIdx;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    SelectMskImgTweenColor = (TweenColor_o *)System_Math__Max_65939564(currentBaseIdx, currentTargetIdx, 0);
+    SelectMskImgTweenColor = (TweenColor_o *)System_Math__Max_65698740(currentBaseIdx, currentTargetIdx, 0);
     v25 = *(_QWORD *)(v16 + 24);
     *(_DWORD *)(v16 + 16) = (_DWORD)SelectMskImgTweenColor;
     if ( !v25 )
@@ -358,7 +358,7 @@ void AppendSkillExchangeCombineControl__OnClickInfo(
     if ( (_DWORD)SelectMskImgTweenColor != *(_DWORD *)(v25 + 24) )
     {
       targetList = this->fields.targetList;
-      v37 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
+      v37 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v37,
         (Il2CppObject *)v16,
@@ -367,17 +367,17 @@ void AppendSkillExchangeCombineControl__OnClickInfo(
       v38 = System_Linq_Enumerable__Where_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)targetList,
               (System_Func_TSource__bool__o *)v37,
-              (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
+              (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
       v39 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                                    v38,
-                                                                   (const MethodInfo_31E1548 *)Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
+                                                                   (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
       v40 = System_Linq_Enumerable__FirstOrDefault_object_(
               v39,
-              (const MethodInfo_31C4BAC *)Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
+              (const MethodInfo_3197A00 *)Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
       v41 = this->fields.targetList;
       v42 = *(Il2CppObject **)(v16 + 24);
       v27 = (UnityEngine_Object_o *)v40;
-      v43 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
+      v43 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_ServantSkillInfoIconComponent__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v43,
         v42,
@@ -386,13 +386,13 @@ void AppendSkillExchangeCombineControl__OnClickInfo(
       v44 = System_Linq_Enumerable__Where_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v41,
               (System_Func_TSource__bool__o *)v43,
-              (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
+              (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_ServantSkillInfoIconComponent___);
       v45 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                                    v44,
-                                                                   (const MethodInfo_31E1548 *)Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
+                                                                   (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_ServantSkillInfoIconComponent___);
       v26 = System_Linq_Enumerable__FirstOrDefault_object_(
               v45,
-              (const MethodInfo_31C4BAC *)Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
+              (const MethodInfo_3197A00 *)Method_System_Linq_Enumerable_FirstOrDefault_ServantSkillInfoIconComponent___);
     }
     else
     {
@@ -402,8 +402,8 @@ LABEL_11:
     }
     v28 = Method_AppendSkillExchangeCombineControl_OnClickInfo__;
     if ( (*((_BYTE *)Method_AppendSkillExchangeCombineControl_OnClickInfo__ + 83) & 2) != 0 )
-      v28 = (_QWORD *)sub_1C940B0(Method_AppendSkillExchangeCombineControl_OnClickInfo__);
-    v29 = (System_Reflection_MethodBase_o *)sub_1C9407C(v28, v28[4]);
+      v28 = (_QWORD *)sub_1C7BB00(Method_AppendSkillExchangeCombineControl_OnClickInfo__);
+    v29 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v28, v28[4]);
     v30 = *(_DWORD *)(v7 + 24);
     v31 = this->fields.currentBaseIdx;
     if ( v31 == v30 )
@@ -461,7 +461,7 @@ LABEL_23:
               }
             }
 LABEL_36:
-            sub_1C942F0(SelectMskImgTweenColor, v9);
+            sub_1C7BD40(SelectMskImgTweenColor, v9);
           }
         }
         return;
@@ -485,7 +485,7 @@ void AppendSkillExchangeCombineControl__PlayEffect(
   int currentSkillLv; // w2
 
   if ( !targetSkillInfo )
-    sub_1C942F0(this, targetSkillIcon);
+    sub_1C7BD40(this, targetSkillIcon);
   currentSkillLv = targetSkillInfo->fields.currentSkillLv;
   if ( currentSkillLv <= 0 )
   {
@@ -532,25 +532,25 @@ void AppendSkillExchangeCombineControl__PlayLevelExchangeEffect(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D306AF & 1) == 0 )
+  if ( (byte_4CF2436 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D306AF = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2436 = 1;
   }
   effectSkillLvChange = (Il2CppObject *)this->fields.effectSkillLvChange;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                    effectSkillLvChange,
-                                                   (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                   (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_11;
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    Component_object,
-                                                   (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+                                                   (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
   if ( !Component_object
     || (v10 = (UnityEngine_Component_o *)Component_object,
         CommandCodeEffectComponent__SetEndEffectCallbak((CommandCodeEffectComponent_o *)Component_object, callback, 0),
@@ -560,11 +560,11 @@ void AppendSkillExchangeCombineControl__PlayLevelExchangeEffect(
         (Component_object = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                           skillInfoList,
                                                           idx,
-                                                          (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
+                                                          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
     || (Component_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0)) == 0 )
   {
 LABEL_11:
-    sub_1C942F0(Component_object, v9);
+    sub_1C7BD40(Component_object, v9);
   }
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(Component_object, 0);
   GameObjectExtensions__SetParent(v12, transform, 0);
@@ -601,25 +601,25 @@ void AppendSkillExchangeCombineControl__PlayLockEffect(
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D306AE & 1) == 0 )
+  if ( (byte_4CF2435 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D306AE = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2435 = 1;
   }
   effectSkillLock = (Il2CppObject *)this->fields.effectSkillLock;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                    effectSkillLock,
-                                                   (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                   (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_11;
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    Component_object,
-                                                   (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+                                                   (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
   if ( !Component_object )
     goto LABEL_11;
   v12 = (CommandCodeEffectComponent_o *)Component_object;
@@ -632,11 +632,11 @@ void AppendSkillExchangeCombineControl__PlayLockEffect(
         (Component_object = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                           skillInfoList,
                                                           idx,
-                                                          (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
+                                                          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
     || (Component_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0)) == 0 )
   {
 LABEL_11:
-    sub_1C942F0(Component_object, v11);
+    sub_1C7BD40(Component_object, v11);
   }
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(Component_object, 0);
   GameObjectExtensions__SetParent(v14, transform, 0);
@@ -672,25 +672,25 @@ void AppendSkillExchangeCombineControl__PlayUnlockEffect(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D306AD & 1) == 0 )
+  if ( (byte_4CF2434 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D306AD = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2434 = 1;
   }
   effectSkillUnlock = (Il2CppObject *)this->fields.effectSkillUnlock;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                    effectSkillUnlock,
-                                                   (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                   (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_11;
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    Component_object,
-                                                   (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+                                                   (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
   if ( !Component_object
     || (v10 = (UnityEngine_Component_o *)Component_object,
         CommandCodeEffectComponent__SetEndEffectCallbak((CommandCodeEffectComponent_o *)Component_object, callback, 0),
@@ -700,11 +700,11 @@ void AppendSkillExchangeCombineControl__PlayUnlockEffect(
         (Component_object = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                           skillInfoList,
                                                           idx,
-                                                          (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
+                                                          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__)) == 0)
     || (Component_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0)) == 0 )
   {
 LABEL_11:
-    sub_1C942F0(Component_object, v9);
+    sub_1C7BD40(Component_object, v9);
   }
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(Component_object, 0);
   GameObjectExtensions__SetParent(v12, transform, 0);
@@ -743,7 +743,7 @@ void AppendSkillExchangeCombineControl__SetBaseSvtCardImg(
                                          userSvtEnt,
                                          this->klass->vtable._7_SetCharaGraph.method);
   this->fields.charaGraph = v5;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_charaGraph, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_charaGraph, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -770,16 +770,16 @@ void AppendSkillExchangeCombineControl__SetBaseSvtSkillInfo(
   System_String_o *v20; // x7
   const MethodInfo *v21; // x2
 
-  if ( (byte_4D306A2 & 1) == 0 )
+  if ( (byte_4CF2429 & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/);
-    byte_4D306A2 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/);
+    byte_4CF2429 = 1;
   }
   if ( userSvtEnt )
   {
     this->fields.baseUserServantEntity = userSvtEnt;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.baseUserServantEntity,
       (int32_t)userSvtEnt,
       (int32_t)method,
@@ -790,15 +790,15 @@ void AppendSkillExchangeCombineControl__SetBaseSvtSkillInfo(
       v7);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_INFO"*/, 0);
     AppendSkillExchangeCombineControl__SetPreSelectLabel(this, v10, 1, v11);
     baseSelectInfoLb = this->fields.baseSelectInfoLb;
     if ( !baseSelectInfoLb )
-      sub_1C942F0(0, v12);
+      sub_1C7BD40(0, v12);
     UnityEngine_GameObject__SetActive(baseSelectInfoLb, 0, 0);
     AppendSkillInfo = UserServantEntity__getAppendSkillInfo(userSvtEnt, 0);
     this->fields.skillData = AppendSkillInfo;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.skillData,
       (int32_t)AppendSkillInfo,
       v15,
@@ -832,32 +832,32 @@ void AppendSkillExchangeCombineControl__SetExeBtnState(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D306A8 & 1) == 0 )
+  if ( (byte_4CF242F & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&StringLiteral_1979/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT_LOCK"*/);
-    sub_1C94098(&StringLiteral_1978/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT"*/);
-    byte_4D306A8 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1980/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT_LOCK"*/);
+    sub_1C7BAE8(&StringLiteral_1979/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT"*/);
+    byte_4CF242F = 1;
   }
   combineBtnBg = (UnityEngine_Component_o *)this->fields.combineBtnBg;
   if ( !combineBtnBg
     || (combineBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     combineBtnBg,
-                                                    (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIWidget___),
+                                                    (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIWidget___),
         !this->fields.confirmButtonEffect)
     || (v4 = (UIWidget_o *)combineBtnBg,
         combineBtnBg = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     this->fields.confirmButtonEffect,
-                                                    (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___),
+                                                    (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___),
         !this->fields.confirmButtonEffect)
     || (v5 = (UnityEngine_Behaviour_o *)combineBtnBg,
         combineBtnBg = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     this->fields.confirmButtonEffect,
-                                                    (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___),
+                                                    (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___),
         !this->fields.confirmButtonEffect)
     || (v6 = (UnityEngine_Behaviour_o *)combineBtnBg,
         (combineBtnBg = (UnityEngine_Component_o *)UnityEngine_GameObject__get_gameObject(
@@ -865,7 +865,7 @@ void AppendSkillExchangeCombineControl__SetExeBtnState(
                                                      0)) == 0) )
   {
 LABEL_36:
-    sub_1C942F0(combineBtnBg, method);
+    sub_1C7BD40(combineBtnBg, method);
   }
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)combineBtnBg,
@@ -919,7 +919,7 @@ LABEL_36:
     goto LABEL_36;
   max_length = svtSkillLvList->max_length;
   if ( (unsigned int)currentBaseIdx >= max_length || (unsigned int)currentTargetIdx >= max_length )
-    sub_1C942F8(combineBtnBg);
+    sub_1C7BD48(combineBtnBg);
   v13 = svtSkillLvList->m_Items[currentBaseIdx];
   v14 = v13 == svtSkillLvList->m_Items[currentTargetIdx];
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -928,13 +928,13 @@ LABEL_36:
     if ( v13 )
       goto LABEL_25;
 LABEL_28:
-    v15 = &StringLiteral_1979/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT_LOCK"*/;
+    v15 = &StringLiteral_1980/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT_LOCK"*/;
     goto LABEL_29;
   }
   if ( !v13 )
     goto LABEL_28;
 LABEL_25:
-  v15 = &StringLiteral_1978/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT"*/;
+  v15 = &StringLiteral_1979/*"APPEND_SKILL_EXCHANGE_COMBINE_TEXT"*/;
 LABEL_29:
   Empty = LocalizationManager__Get((System_String_o *)*v15, 0);
 LABEL_30:
@@ -1012,32 +1012,32 @@ void AppendSkillExchangeCombineControl__SetNeedItemInfo(
   System_String_o *v19; // x1
   const MethodInfo *v20; // x3
 
-  if ( (byte_4D306A5 & 1) == 0 )
+  if ( (byte_4CF242C & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&StringLiteral_1980/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/);
-    sub_1C94098(&StringLiteral_8828/*"MSG_SKILL_INFO"*/);
-    sub_1C94098(&StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/);
-    sub_1C94098(&StringLiteral_1990/*"APPEND_SKILL_EXCHANGE_PRESELECT_BASE_INFO"*/);
-    sub_1C94098(&StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/);
-    sub_1C94098(&StringLiteral_1994/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/);
-    byte_4D306A5 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/);
+    sub_1C7BAE8(&StringLiteral_8832/*"MSG_SKILL_INFO"*/);
+    sub_1C7BAE8(&StringLiteral_1993/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/);
+    sub_1C7BAE8(&StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_BASE_INFO"*/);
+    sub_1C7BAE8(&StringLiteral_1982/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/);
+    sub_1C7BAE8(&StringLiteral_1995/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/);
+    byte_4CF242C = 1;
   }
   if ( this->fields.baseUserServantEntity )
   {
     selectSkillHelpLb = this->fields.selectSkillHelpLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    targetList = LocalizationManager__Get((System_String_o *)StringLiteral_8828/*"MSG_SKILL_INFO"*/, 0);
+    targetList = LocalizationManager__Get((System_String_o *)StringLiteral_8832/*"MSG_SKILL_INFO"*/, 0);
     if ( !selectSkillHelpLb
       || (UILabel__set_text(selectSkillHelpLb, targetList, 0),
           (targetList = (System_String_o *)this->fields.targetList) == 0) )
     {
 LABEL_32:
-      sub_1C942F0(targetList, v5);
+      sub_1C7BD40(targetList, v5);
     }
     v6 = 0;
     while ( 1 )
@@ -1049,16 +1049,16 @@ LABEL_32:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v18 = (System_String_o **)&StringLiteral_1990/*"APPEND_SKILL_EXCHANGE_PRESELECT_BASE_INFO"*/;
+          v18 = (System_String_o **)&StringLiteral_1991/*"APPEND_SKILL_EXCHANGE_PRESELECT_BASE_INFO"*/;
         }
         else
         {
           currentTargetIdx = this->fields.currentTargetIdx;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v18 = (System_String_o **)&StringLiteral_1992/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/;
+          v18 = (System_String_o **)&StringLiteral_1993/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/;
           if ( currentTargetIdx >= 0 )
-            v18 = (System_String_o **)&StringLiteral_1994/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/;
+            v18 = (System_String_o **)&StringLiteral_1995/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/;
         }
         v19 = LocalizationManager__Get(*v18, 0);
         AppendSkillExchangeCombineControl__SetPreSelectLabel(this, v19, 0, v20);
@@ -1067,7 +1067,7 @@ LABEL_32:
       targetList = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)targetList,
                                         v6,
-                                        (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+                                        (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
       currentBaseIdx = (unsigned int)this->fields.currentBaseIdx;
       v8 = (ServantSkillInfoIconComponent_o *)targetList;
       if ( (currentBaseIdx & 0x80000000) != 0 )
@@ -1099,7 +1099,7 @@ LABEL_32:
           goto LABEL_32;
         if ( (unsigned int)v11 >= LODWORD(v12->max_length) )
 LABEL_44:
-          sub_1C942F8(targetList);
+          sub_1C7BD48(targetList);
         if ( !targetList )
           goto LABEL_32;
         v13 = v12->m_Items[v11] == LODWORD(targetList[7].monitor);
@@ -1107,11 +1107,11 @@ LABEL_44:
       ServantSkillInfoIconComponent__SetDispSelectMskImg((ServantSkillInfoIconComponent_o *)targetList, v10 || v13, 0);
       if ( v10 )
       {
-        v14 = &StringLiteral_1980/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/;
+        v14 = &StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v14 = &StringLiteral_1980/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/;
+          v14 = &StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_BASE"*/;
         }
       }
       else
@@ -1121,11 +1121,11 @@ LABEL_44:
           Empty = string_TypeInfo->static_fields->Empty;
           goto LABEL_31;
         }
-        v14 = &StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/;
+        v14 = &StringLiteral_1982/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v14 = &StringLiteral_1981/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/;
+          v14 = &StringLiteral_1982/*"APPEND_SKILL_EXCHANGE_ICON_MSG_TARGET"*/;
         }
       }
       Empty = LocalizationManager__Get((System_String_o *)*v14, 0);
@@ -1159,7 +1159,7 @@ void AppendSkillExchangeCombineControl__SetPreSelectLabel(
                                           (UnityEngine_Component_o *)preSelectBaseLb,
                                           0)) == 0) )
   {
-    sub_1C942F0(preSelectBaseLb, msg);
+    sub_1C7BD40(preSelectBaseLb, msg);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preSelectBaseLb, 1, 0);
 }
@@ -1177,7 +1177,7 @@ void AppendSkillExchangeCombineControl__SetRequest(
   System_String_o *v7; // x7
 
   this->fields.requestAppendSkillExchange = request;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.requestAppendSkillExchange,
     (int32_t)request,
     (int32_t)method,
@@ -1237,26 +1237,26 @@ void AppendSkillExchangeCombineControl__SetSkillIconInfo(
 
   v8 = skillData;
   v9 = this;
-  if ( (byte_4D306A3 & 1) == 0 )
+  if ( (byte_4CF242A & 1) == 0 )
   {
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl_OnClickInfo__);
-    sub_1C94098(&ServantSkillInfoIconComponent_ClickDelegate_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_ServantSkillInfoIconComponent__TypeInfo);
-    this = (AppendSkillExchangeCombineControl_o *)sub_1C94098(&StringLiteral_858/*"-"*/);
-    byte_4D306A3 = 1;
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl_OnClickInfo__);
+    sub_1C7BAE8(&ServantSkillInfoIconComponent_ClickDelegate_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_ServantSkillInfoIconComponent__TypeInfo);
+    this = (AppendSkillExchangeCombineControl_o *)sub_1C7BAE8(&StringLiteral_859/*"-"*/);
+    byte_4CF242A = 1;
   }
   if ( !v8 )
     goto LABEL_28;
   svtUseSkillIdList = v8->fields.svtUseSkillIdList;
   p_useSkillIdList = &v9->fields.useSkillIdList;
   v9->fields.useSkillIdList = svtUseSkillIdList;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&v9->fields.useSkillIdList,
     (int32_t)svtUseSkillIdList,
     (int32_t)method,
@@ -1269,13 +1269,13 @@ void AppendSkillExchangeCombineControl__SetSkillIconInfo(
   if ( !useSkillIdList )
     goto LABEL_28;
   max_length = useSkillIdList->max_length;
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ServantSkillInfoIconComponent__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_ServantSkillInfoIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent___ctor__);
   v9->fields.targetList = (struct System_Collections_Generic_List_ServantSkillInfoIconComponent__o *)v14;
   p_targetList = (AppendSkillExchangeCombineControl_o **)&v9->fields.targetList;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v9->fields.targetList, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v9->fields.targetList, (int32_t)v14, v15, v16, v17, v18, v19, v20);
   if ( (int)max_length >= 1 )
   {
     v21 = 0;
@@ -1291,13 +1291,13 @@ void AppendSkillExchangeCombineControl__SetSkillIconInfo(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillMaster___);
+        this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillMaster___);
         if ( !this )
           break;
         this = (AppendSkillExchangeCombineControl_o *)DataMasterBase_object__object__int___GetEntity(
                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                         v23,
-                                                        (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                        (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
         if ( this )
         {
           type = this->fields.type;
@@ -1305,7 +1305,7 @@ void AppendSkillExchangeCombineControl__SetSkillIconInfo(
         }
         else
         {
-          p_m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o **)&StringLiteral_858/*"-"*/;
+          p_m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o **)&StringLiteral_859/*"-"*/;
           type = 10;
         }
         svtSkillLvList = v8->fields.svtSkillLvList;
@@ -1313,7 +1313,7 @@ void AppendSkillExchangeCombineControl__SetSkillIconInfo(
           break;
         if ( v21 >= LODWORD(svtSkillLvList->max_length) )
 LABEL_29:
-          sub_1C942F8(this);
+          sub_1C7BD48(this);
         this = (AppendSkillExchangeCombineControl_o *)v9->fields.skillInfoList;
         if ( !this )
           break;
@@ -1323,8 +1323,8 @@ LABEL_29:
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)this,
                  v21,
-                 (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-        v31 = (ServantSkillInfoIconComponent_ClickDelegate_o *)sub_1C942E4(ServantSkillInfoIconComponent_ClickDelegate_TypeInfo);
+                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+        v31 = (ServantSkillInfoIconComponent_ClickDelegate_o *)sub_1C7BD34(ServantSkillInfoIconComponent_ClickDelegate_TypeInfo);
         ServantSkillInfoIconComponent_ClickDelegate___ctor(
           v31,
           (Il2CppObject *)v9,
@@ -1332,7 +1332,7 @@ LABEL_29:
           0);
         if ( !Item )
           break;
-        ServantSkillInfoIconComponent__SetSkillInfo_32072896(
+        ServantSkillInfoIconComponent__SetSkillInfo_31885360(
           (ServantSkillInfoIconComponent_o *)Item,
           v21,
           v27,
@@ -1356,14 +1356,14 @@ LABEL_29:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             Item,
-            *(const MethodInfo_386AE34 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
         }
         else
         {
           v41 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v41 + 32) = Item;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v41 + 32), (int32_t)Item, v32, v33, v34, v35, v36, v37);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v41 + 32), (int32_t)Item, v32, v33, v34, v35, v36, v37);
         }
         v8 = v29;
       }
@@ -1371,7 +1371,7 @@ LABEL_29:
         goto LABEL_27;
     }
 LABEL_28:
-    sub_1C942F0(this, skillData);
+    sub_1C7BD40(this, skillData);
   }
 LABEL_27:
   AppendSkillExchangeCombineControl__SetNeedItemInfo(v9, (const MethodInfo *)skillData);
@@ -1411,26 +1411,26 @@ void AppendSkillExchangeCombineControl__SetSkillLevelUpData(
   int64_t v35; // x6
   System_String_o *v36; // x7
 
-  if ( (byte_4D306A7 & 1) == 0 )
+  if ( (byte_4CF242E & 1) == 0 )
   {
-    sub_1C94098(&SetLevelUpData_TypeInfo);
-    byte_4D306A7 = 1;
+    sub_1C7BAE8(&SetLevelUpData_TypeInfo);
+    byte_4CF242E = 1;
   }
-  v16 = sub_1C942E4(SetLevelUpData_TypeInfo);
+  v16 = sub_1C7BD34(SetLevelUpData_TypeInfo);
   SetLevelUpData___ctor((SetLevelUpData_o *)v16, 0);
   if ( !v16 )
-    sub_1C942F0(v17, v18);
+    sub_1C7BD40(v17, v18);
   *(_DWORD *)(v16 + 28) = idx;
   *(_DWORD *)(v16 + 16) = currentSkillId;
   *(_DWORD *)(v16 + 20) = currentSkillId;
   *(_QWORD *)(v16 + 40) = skillName;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 40), (int32_t)skillName, v19, v20, v21, v22, v23, v24);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 40), (int32_t)skillName, v19, v20, v21, v22, v23, v24);
   *(_DWORD *)(v16 + 64) = currentSkillLv;
   *(_DWORD *)(v16 + 24) = currentSkillNum;
   *(_QWORD *)(v16 + 48) = skillDetail;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v16 + 48), (int32_t)skillDetail, v25, v26, v27, v28, v29, v30);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v16 + 48), (int32_t)skillDetail, v25, v26, v27, v28, v29, v30);
   *lvUpData = (SetLevelUpData_o *)v16;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)lvUpData, v16, v31, v32, v33, v34, v35, v36);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)lvUpData, v16, v31, v32, v33, v34, v35, v36);
 }
 
 
@@ -1490,13 +1490,13 @@ void AppendSkillExchangeCombineControl__SetSvtSkillCombineData(
   const MethodInfo *v51; // [xsp+0h] [xbp-70h]
 
   v4 = this;
-  if ( (byte_4D306A6 & 1) == 0 )
+  if ( (byte_4CF242D & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    this = (AppendSkillExchangeCombineControl_o *)sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    byte_4D306A6 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    this = (AppendSkillExchangeCombineControl_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    byte_4CF242D = 1;
   }
   skillData = v4->fields.skillData;
   if ( !skillData )
@@ -1515,13 +1515,13 @@ void AppendSkillExchangeCombineControl__SetSvtSkillCombineData(
   v9 = svtSkillLvList->m_Items[idx];
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillMaster___);
+  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !this )
     goto LABEL_61;
   if ( !DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           v8,
-          (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__) )
+          (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__) )
     return;
   this = (AppendSkillExchangeCombineControl_o *)v4->fields.targetList;
   if ( !this )
@@ -1529,7 +1529,7 @@ void AppendSkillExchangeCombineControl__SetSvtSkillCombineData(
   this = (AppendSkillExchangeCombineControl_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)this,
                                                   idx,
-                                                  (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+                                                  (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
   if ( !this )
     goto LABEL_61;
   ServantSkillInfoIconComponent__SetSkillIconStatusDisp((ServantSkillInfoIconComponent_o *)this, v9, 0, 1, 1, 0);
@@ -1550,7 +1550,7 @@ void AppendSkillExchangeCombineControl__SetSvtSkillCombineData(
     max_length = v13->max_length;
     if ( (unsigned int)currentBaseIdx >= max_length || (unsigned int)currentTargetIdx >= max_length )
 LABEL_62:
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     v15 = v13->m_Items[currentBaseIdx] != v13->m_Items[currentTargetIdx];
   }
   v4->fields._IsExeCombine_k__BackingField = v15;
@@ -1558,7 +1558,7 @@ LABEL_62:
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillMaster___);
+  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillMaster___);
   v16 = v4->fields.skillData;
   if ( !v16 )
     goto LABEL_61;
@@ -1573,7 +1573,7 @@ LABEL_62:
   this = (AppendSkillExchangeCombineControl_o *)DataMasterBase_object__object__int___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   v17->m_Items[v18],
-                                                  (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                  (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   v19 = v4->fields.skillData;
   if ( !v19 )
     goto LABEL_61;
@@ -1624,7 +1624,7 @@ LABEL_62:
     v50);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillMaster___);
+  this = (AppendSkillExchangeCombineControl_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillMaster___);
   v33 = v4->fields.skillData;
   if ( !v33 )
     goto LABEL_61;
@@ -1639,7 +1639,7 @@ LABEL_62:
   this = (AppendSkillExchangeCombineControl_o *)DataMasterBase_object__object__int___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   v34->m_Items[v35],
-                                                  (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                  (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   v36 = v4->fields.skillData;
   if ( !v36 )
     goto LABEL_61;
@@ -1662,7 +1662,7 @@ LABEL_62:
     goto LABEL_62;
   if ( !this )
 LABEL_61:
-    sub_1C942F0(this, *(_QWORD *)&idx);
+    sub_1C7BD40(this, *(_QWORD *)&idx);
   v42 = v4->fields.currentBaseIdx;
   if ( (unsigned int)v42 >= v40 )
     goto LABEL_62;
@@ -1760,24 +1760,24 @@ void AppendSkillExchangeCombineControl__StartPlayEffect(
   const MethodInfo *v71; // x4
   const MethodInfo *v72; // x4
 
-  if ( (byte_4D306AA & 1) == 0 )
+  if ( (byte_4CF2431 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl___c__DisplayClass44_0__StartPlayEffect_b__0__);
-    sub_1C94098(&AppendSkillExchangeCombineControl___c__DisplayClass44_0_TypeInfo);
-    byte_4D306AA = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl___c__DisplayClass44_0__StartPlayEffect_b__0__);
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl___c__DisplayClass44_0_TypeInfo);
+    byte_4CF2431 = 1;
   }
-  v11 = sub_1C942E4(AppendSkillExchangeCombineControl___c__DisplayClass44_0_TypeInfo);
+  v11 = sub_1C7BD34(AppendSkillExchangeCombineControl___c__DisplayClass44_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_25;
   *(_QWORD *)(v11 + 24) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 64) = callback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 64), (int32_t)callback, v20, v21, v22, v23, v24, v25);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 64), (int32_t)callback, v20, v21, v22, v23, v24, v25);
   if ( !userServantEntity )
     goto LABEL_25;
   AppendSkillInfo = (System_Collections_Generic_List_object__o *)UserServantEntity__getAppendSkillInfo(
@@ -1789,19 +1789,19 @@ void AppendSkillExchangeCombineControl__StartPlayEffect(
   Item = System_Collections_Generic_List_object___get_Item(
            (System_Collections_Generic_List_object__o *)this->fields.targetList,
            baseIndex,
-           (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+           (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
   *(_QWORD *)(v11 + 32) = Item;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)Item, v28, v29, v30, v31, v32, v33);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)Item, v28, v29, v30, v31, v32, v33);
   AppendSkillInfo = (System_Collections_Generic_List_object__o *)this->fields.targetList;
   if ( !AppendSkillInfo )
     goto LABEL_25;
   v34 = System_Collections_Generic_List_object___get_Item(
           AppendSkillInfo,
           targetIndex,
-          (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
+          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__);
   *(_QWORD *)(v11 + 40) = v34;
   v35 = (System_Collections_Generic_List_object__o **)(v11 + 40);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)v34, v36, v37, v38, v39, v40, v41);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)v34, v36, v37, v38, v39, v40, v41);
   if ( !v26 )
     goto LABEL_25;
   items = v26->fields._items;
@@ -1817,20 +1817,20 @@ void AppendSkillExchangeCombineControl__StartPlayEffect(
   skillData = this->fields.skillData;
   if ( !skillData || (svtSkillLvList = skillData->fields.svtSkillLvList) == 0 )
 LABEL_25:
-    sub_1C942F0(AppendSkillInfo, v13);
+    sub_1C7BD40(AppendSkillInfo, v13);
   if ( LODWORD(svtSkillLvList->max_length) <= baseIndex )
     goto LABEL_26;
   v46 = *((_DWORD *)items->m_Items + baseIndex);
   v47 = *(_DWORD *)(v43 + 4LL * baseIndex + 32);
   v48 = svtSkillLvList->m_Items[baseIndex];
-  v49 = sub_1C942E4(AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
+  v49 = sub_1C7BD34(AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v49, 0);
   *(_DWORD *)(v49 + 16) = baseIndex;
   *(_DWORD *)(v49 + 20) = v46;
   *(_DWORD *)(v49 + 24) = v47;
   *(_DWORD *)(v49 + 28) = v48;
   *(_QWORD *)(v11 + 48) = v49;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 48), v49, v50, v51, v52, v53, v54, v55);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 48), v49, v50, v51, v52, v53, v54, v55);
   v56 = v26->fields._items;
   if ( !v56 )
     goto LABEL_25;
@@ -1841,7 +1841,7 @@ LABEL_25:
     goto LABEL_25;
   if ( *(_DWORD *)(v57 + 24) <= (unsigned int)targetIndex )
 LABEL_26:
-    sub_1C942F8(AppendSkillInfo);
+    sub_1C7BD48(AppendSkillInfo);
   v58 = this->fields.skillData;
   if ( !v58 )
     goto LABEL_25;
@@ -1853,14 +1853,14 @@ LABEL_26:
   v60 = *((_DWORD *)v56->m_Items + targetIndex);
   v61 = *(_DWORD *)(v57 + 4LL * targetIndex + 32);
   v62 = v59->m_Items[targetIndex];
-  v63 = sub_1C942E4(AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
+  v63 = sub_1C7BD34(AppendSkillExchangeCombineControl_ExchangeSkillInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v63, 0);
   *(_DWORD *)(v63 + 16) = targetIndex;
   *(_DWORD *)(v63 + 20) = v60;
   *(_DWORD *)(v63 + 24) = v61;
   *(_DWORD *)(v63 + 28) = v62;
   *(_QWORD *)(v11 + 56) = v63;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 56), v63, v64, v65, v66, v67, v68, v69);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 56), v63, v64, v65, v66, v67, v68, v69);
   AppendSkillInfo = *(System_Collections_Generic_List_object__o **)(v11 + 32);
   if ( !AppendSkillInfo )
     goto LABEL_25;
@@ -1876,7 +1876,7 @@ LABEL_26:
     string_TypeInfo->static_fields->Empty,
     0);
   *(_BYTE *)(v11 + 16) = 0;
-  v70 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v70 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(
     v70,
     (Il2CppObject *)v11,
@@ -1944,26 +1944,26 @@ System_Collections_IEnumerator_o *AppendSkillExchangeCombineControl__StartPlayLe
   int64_t v48; // x6
   System_String_o *v49; // x7
 
-  if ( (byte_4D306AC & 1) == 0 )
+  if ( (byte_4CF2433 & 1) == 0 )
   {
-    sub_1C94098(&AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_TypeInfo);
-    byte_4D306AC = 1;
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_TypeInfo);
+    byte_4CF2433 = 1;
   }
-  v13 = sub_1C942E4(AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_TypeInfo);
+  v13 = sub_1C7BD34(AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   *(_DWORD *)(v13 + 16) = 0;
   *(_QWORD *)(v13 + 32) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 32), (int32_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 32), (int32_t)this, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v13 + 64) = baseSkillIcon;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 64), (int32_t)baseSkillIcon, v20, v21, v22, v23, v24, v25);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 64), (int32_t)baseSkillIcon, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v13 + 72) = targetSkillIcon;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 72), (int32_t)targetSkillIcon, v26, v27, v28, v29, v30, v31);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 72), (int32_t)targetSkillIcon, v26, v27, v28, v29, v30, v31);
   *(_QWORD *)(v13 + 40) = baseSkillInfo;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 40), (int32_t)baseSkillInfo, v32, v33, v34, v35, v36, v37);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 40), (int32_t)baseSkillInfo, v32, v33, v34, v35, v36, v37);
   *(_QWORD *)(v13 + 48) = targetSkillInfo;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 48), (int32_t)targetSkillInfo, v38, v39, v40, v41, v42, v43);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 48), (int32_t)targetSkillInfo, v38, v39, v40, v41, v42, v43);
   *(_QWORD *)(v13 + 56) = callback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 56), (int32_t)callback, v44, v45, v46, v47, v48, v49);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 56), (int32_t)callback, v44, v45, v46, v47, v48, v49);
   return (System_Collections_IEnumerator_o *)v13;
 }
 
@@ -1988,20 +1988,20 @@ void AppendSkillExchangeCombineControl__StartPlayLockEffect(
   System_Action_o *v20; // x22
   const MethodInfo *v21; // x4
 
-  if ( (byte_4D306AB & 1) == 0 )
+  if ( (byte_4CF2432 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_AppendSkillExchangeCombineControl___c__DisplayClass46_0__StartPlayLockEffect_b__0__);
-    sub_1C94098(&AppendSkillExchangeCombineControl___c__DisplayClass46_0_TypeInfo);
-    byte_4D306AB = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_AppendSkillExchangeCombineControl___c__DisplayClass46_0__StartPlayLockEffect_b__0__);
+    sub_1C7BAE8(&AppendSkillExchangeCombineControl___c__DisplayClass46_0_TypeInfo);
+    byte_4CF2432 = 1;
   }
-  v11 = sub_1C942E4(AppendSkillExchangeCombineControl___c__DisplayClass46_0_TypeInfo);
+  v11 = sub_1C7BD34(AppendSkillExchangeCombineControl___c__DisplayClass46_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11
     || (*(_QWORD *)(v11 + 16) = target,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)target, v14, v15, v16, v17, v18, v19),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)target, v14, v15, v16, v17, v18, v19),
         *(_DWORD *)(v11 + 24) = skillLv,
-        v20 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
+        v20 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo),
         System_Action___ctor(
           v20,
           (Il2CppObject *)v11,
@@ -2010,7 +2010,7 @@ void AppendSkillExchangeCombineControl__StartPlayLockEffect(
         AppendSkillExchangeCombineControl__PlayLockEffect(this, idx, v20, startPlayLevelExchangeEffect, v21),
         (v12 = *(ServantSkillInfoIconComponent_o **)(v11 + 16)) == 0) )
   {
-    sub_1C942F0(v12, v13);
+    sub_1C7BD40(v12, v13);
   }
   ServantSkillInfoIconComponent__PlaySkillIconTweenColor(v12, 1, 0);
 }
@@ -2033,7 +2033,7 @@ void AppendSkillExchangeCombineControl__StartPlayUnlockEffect(
     startPlayLevelExchangeEffect,
     (const MethodInfo *)target);
   if ( !target )
-    sub_1C942F0(v8, v9);
+    sub_1C7BD40(v8, v9);
   ServantSkillInfoIconComponent__SetSkillIconStatusDisp(target, skillLv, 0, 0, 0, 0);
   ServantSkillInfoIconComponent__PlaySkillIconTweenColor(target, 0, 0);
 }
@@ -2095,12 +2095,12 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
   struct AppendSkillExchangeCombineControl_ExchangeSkillInfo_o *v25; // x8
 
   v3 = this;
-  if ( (byte_4D306B1 & 1) == 0 )
+  if ( (byte_4CF2438 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)sub_1C94098(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    byte_4D306B1 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)sub_1C7BAE8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    byte_4CF2438 = 1;
   }
   _1__state = v3->fields.__1__state;
   if ( _1__state == 1 )
@@ -2108,7 +2108,7 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
     v3->fields.__1__state = -1;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillMaster___);
+    this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillMaster___);
     baseSkillInfo = v3->fields.baseSkillInfo;
     if ( !baseSkillInfo )
       goto LABEL_30;
@@ -2118,7 +2118,7 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
     this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)DataMasterBase_object__object__int___GetEntity(
                                                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                                                         baseSkillInfo->fields.skillId,
-                                                                                        (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                                                        (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
     v19 = this ? LODWORD(this->fields.baseSkillInfo) : 10;
     targetSkillInfo = v3->fields.targetSkillInfo;
     if ( !targetSkillInfo )
@@ -2126,7 +2126,7 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
     this = (AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_o *)DataMasterBase_object__object__int___GetEntity(
                                                                                         v18,
                                                                                         targetSkillInfo->fields.skillId,
-                                                                                        (const MethodInfo_345B4C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                                                        (const MethodInfo_342E2FC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
     v21 = this ? LODWORD(this->fields.baseSkillInfo) : 10;
     v22 = v3->fields.baseSkillInfo;
     if ( !v22 )
@@ -2197,7 +2197,7 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
             v7);
           v3->fields.__2__current = 0;
           p__2__current = (GrandQuestFolderBoardItem_o *)&v3->fields.__2__current;
-          sub_1C9403C(p__2__current, 0, v10, v11, v12, v13, v14, v15);
+          sub_1C7BA8C(p__2__current, 0, v10, v11, v12, v13, v14, v15);
           result = 1;
           LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
           return result;
@@ -2205,7 +2205,7 @@ bool AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48__Move
       }
     }
 LABEL_30:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   return 0;
 }
@@ -2227,11 +2227,11 @@ void __noreturn AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect_d__48_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 
@@ -2276,10 +2276,10 @@ bool AppendSkillExchangeCombineControl___c__DisplayClass36_0___OnClickInfo_b__1(
     goto LABEL_6;
   idx = this->fields.idx;
   if ( (unsigned int)idx >= LODWORD(useSkillIdList->max_length) )
-    sub_1C942F8(this);
+    sub_1C7BD48(this);
   if ( !x )
 LABEL_6:
-    sub_1C942F0(this, x);
+    sub_1C7BD40(this, x);
   return useSkillIdList->m_Items[idx] == x->fields.currentSkillId;
 }
 
@@ -2313,10 +2313,10 @@ bool AppendSkillExchangeCombineControl___c__DisplayClass36_1___OnClickInfo_b__0(
     goto LABEL_7;
   animBaseIndex = this->fields.animBaseIndex;
   if ( (unsigned int)animBaseIndex >= LODWORD(useSkillIdList->max_length) )
-    sub_1C942F8(this);
+    sub_1C7BD48(this);
   if ( !x )
 LABEL_7:
-    sub_1C942F0(this, x);
+    sub_1C7BD40(this, x);
   return useSkillIdList->m_Items[animBaseIndex] == x->fields.currentSkillId;
 }
 
@@ -2341,7 +2341,7 @@ void AppendSkillExchangeCombineControl___c__DisplayClass44_0___StartPlayEffect_b
   {
     _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
     if ( !_4__this )
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     appended = AppendSkillExchangeCombineControl__StartPlayLevelExchangeEffect(
                  this->fields.__4__this,
                  this->fields.baseSkillIcon,
@@ -2350,7 +2350,7 @@ void AppendSkillExchangeCombineControl___c__DisplayClass44_0___StartPlayEffect_b
                  this->fields.targetSkillInfo,
                  this->fields.callback,
                  v2);
-    UnityEngine_MonoBehaviour__StartCoroutine_72096164(_4__this, appended, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71855340(_4__this, appended, 0);
   }
   else
   {
@@ -2375,6 +2375,6 @@ void AppendSkillExchangeCombineControl___c__DisplayClass46_0___StartPlayLockEffe
 
   target = this->fields.target;
   if ( !target )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   ServantSkillInfoIconComponent__SetSkillIconStatusDisp(target, this->fields.skillLv, 0, 0, 1, 0);
 }

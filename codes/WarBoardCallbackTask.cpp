@@ -12,7 +12,7 @@ void WarBoardCallbackTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)waitYieldInstruction);
   this->fields.waitYieldInstruction = waitYieldInstruction;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.waitYieldInstruction,
     (int32_t)waitYieldInstruction,
     v5,
@@ -34,16 +34,16 @@ System_Collections_IEnumerator_o *WarBoardCallbackTask__Execute(WarBoardCallback
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2A3DE & 1) == 0 )
+  if ( (byte_4CEC240 & 1) == 0 )
   {
-    sub_1C94098(&WarBoardCallbackTask__Execute_d__2_TypeInfo);
-    byte_4D2A3DE = 1;
+    sub_1C7BAE8(&WarBoardCallbackTask__Execute_d__2_TypeInfo);
+    byte_4CEC240 = 1;
   }
-  v3 = sub_1C942E4(WarBoardCallbackTask__Execute_d__2_TypeInfo);
+  v3 = sub_1C7BD34(WarBoardCallbackTask__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -85,7 +85,7 @@ bool WarBoardCallbackTask__Execute_d__2__MoveNext(WarBoardCallbackTask__Execute_
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     waitYieldInstruction = (Il2CppObject *)_4__this->fields.waitYieldInstruction;
     if ( !waitYieldInstruction )
     {
@@ -95,7 +95,7 @@ bool WarBoardCallbackTask__Execute_d__2__MoveNext(WarBoardCallbackTask__Execute_
     {
       this->fields.__2__current = waitYieldInstruction;
       p__2__current = &this->fields.__2__current;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&this->fields.__2__current,
         (int32_t)waitYieldInstruction,
         v2,
@@ -128,11 +128,11 @@ void __noreturn WarBoardCallbackTask__Execute_d__2__System_Collections_IEnumerat
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 

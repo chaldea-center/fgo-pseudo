@@ -18,9 +18,9 @@ void SupportSelectListViewItem___ctor(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields.supportServantData = supportServantData;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
     v8,
@@ -30,7 +30,7 @@ void SupportSelectListViewItem___ctor(
     v12,
     v13);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     v14,
@@ -54,7 +54,7 @@ void SupportSelectListViewItem__ResetEventCampaign(
   System_String_o *v7; // x7
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     (int32_t)method,
@@ -72,7 +72,7 @@ System_String_o *SupportSelectListViewItem__get_DeckName(SupportSelectListViewIt
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -97,7 +97,7 @@ void SupportSelectListViewItem__set_listObj(
   System_String_o *v7; // x7
 
   this->fields._listObj_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -125,7 +125,7 @@ void SupportSelectListViewItem__setuplistObj(
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)obj,
     (int32_t)method,
@@ -135,7 +135,7 @@ void SupportSelectListViewItem__setuplistObj(
     v6,
     v7);
   if ( !*p_listObj_k__BackingField )
-    sub_1C942F0(0, v10);
+    sub_1C7BD40(0, v10);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

@@ -23,18 +23,18 @@ void TitleInfoEventTowerReward___cctor(const MethodInfo *method)
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4D2B1C5 & 1) == 0 )
+  if ( (byte_4CED023 & 1) == 0 )
   {
-    sub_1C94098(&TitleInfoEventTowerReward_TypeInfo);
-    sub_1C94098(&StringLiteral_24384/*"tower_{0}_{1}"*/);
-    sub_1C94098(&StringLiteral_17292/*"bit_floor_reward"*/);
-    sub_1C94098(&StringLiteral_3032/*"Back/back{0:D5}"*/);
-    byte_4D2B1C5 = 1;
+    sub_1C7BAE8(&TitleInfoEventTowerReward_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_24382/*"tower_{0}_{1}"*/);
+    sub_1C7BAE8(&StringLiteral_17294/*"bit_floor_reward"*/);
+    sub_1C7BAE8(&StringLiteral_3032/*"Back/back{0:D5}"*/);
+    byte_4CED023 = 1;
   }
-  TitleInfoEventTowerReward_TypeInfo->static_fields->SPRITE_NAME_TOWER = (struct System_String_o *)StringLiteral_24384/*"tower_{0}_{1}"*/;
-  sub_1C9403C(
+  TitleInfoEventTowerReward_TypeInfo->static_fields->SPRITE_NAME_TOWER = (struct System_String_o *)StringLiteral_24382/*"tower_{0}_{1}"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)TitleInfoEventTowerReward_TypeInfo->static_fields,
-    StringLiteral_24384/*"tower_{0}_{1}"*/,
+    StringLiteral_24382/*"tower_{0}_{1}"*/,
     v1,
     v2,
     v3,
@@ -44,11 +44,11 @@ void TitleInfoEventTowerReward___cctor(const MethodInfo *method)
   v7 = StringLiteral_3032/*"Back/back{0:D5}"*/;
   static_fields = TitleInfoEventTowerReward_TypeInfo->static_fields;
   static_fields->SPRITE_NAME_BG = (struct System_String_o *)StringLiteral_3032/*"Back/back{0:D5}"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->SPRITE_NAME_BG, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_17292/*"bit_floor_reward"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->SPRITE_NAME_BG, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_17294/*"bit_floor_reward"*/;
   v16 = TitleInfoEventTowerReward_TypeInfo->static_fields;
-  v16->CLIP_NAME_TOWER_REWARD = (struct System_String_o *)StringLiteral_17292/*"bit_floor_reward"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16->CLIP_NAME_TOWER_REWARD, v15, v17, v18, v19, v20, v21, v22);
+  v16->CLIP_NAME_TOWER_REWARD = (struct System_String_o *)StringLiteral_17294/*"bit_floor_reward"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16->CLIP_NAME_TOWER_REWARD, v15, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -80,25 +80,25 @@ void TitleInfoEventTowerReward__Close(TitleInfoEventTowerReward_o *this, const M
   System_Action_o *v20; // x20
   const MethodInfo *v21; // x2
 
-  if ( (byte_4D2B1C2 & 1) == 0 )
+  if ( (byte_4CED020 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&SoundManager_TypeInfo);
-    sub_1C94098(&Method_TitleInfoEventTowerReward__Close_b__37_0__);
-    byte_4D2B1C2 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    sub_1C7BAE8(&Method_TitleInfoEventTowerReward__Close_b__37_0__);
+    byte_4CED020 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   if ( this->fields.voicePlayer )
   {
     voiceName = this->fields.voiceName;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__stopVoice_42281524(voiceName, 0.0, 0);
+    SoundManager__stopVoice_42095856(voiceName, 0.0, 0);
     this->fields.voicePlayer = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayer, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayer, 0, v6, v7, v8, v9, v10, v11);
   }
   p_voiceAssetName = &this->fields.voiceAssetName;
   if ( !System_String__IsNullOrEmpty(this->fields.voiceAssetName, 0) )
@@ -108,11 +108,11 @@ void TitleInfoEventTowerReward__Close(TitleInfoEventTowerReward_o *this, const M
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__releaseAudioAssetStorage(v13, 0);
     *p_voiceAssetName = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.voiceAssetName, 0, v14, v15, v16, v17, v18, v19);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voiceAssetName, 0, v14, v15, v16, v17, v18, v19);
   }
   *(_QWORD *)&this->fields.selectVoiceIndex = 0;
   this->fields.playCnt = 0;
-  v20 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_TitleInfoEventTowerReward__Close_b__37_0__, 0);
   TitleInfoEventTowerReward__StartRewardAction(this, v20, v21);
 }
@@ -124,7 +124,7 @@ void TitleInfoEventTowerReward__EndItemGetEffectAction(
         const MethodInfo *method)
 {
   if ( !afterDetail )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   ((void (__fastcall *)(intptr_t, intptr_t))afterDetail->fields.invoke_impl)(
     afterDetail->fields.method_code,
     afterDetail->fields.method);
@@ -137,11 +137,11 @@ void TitleInfoEventTowerReward__EndPlayVoice(TitleInfoEventTowerReward_o *this, 
   __int64 playCnt; // x8
   __int64 v5; // x8
 
-  if ( (byte_4D2B1BF & 1) == 0 )
+  if ( (byte_4CED01D & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    sub_1C94098(&StringLiteral_10715/*"PlayVoice"*/);
-    byte_4D2B1BF = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    sub_1C7BAE8(&StringLiteral_10717/*"PlayVoice"*/);
+    byte_4CED01D = 1;
   }
   if ( this->fields.playCnt < this->fields.maxPlayCnt )
   {
@@ -151,19 +151,19 @@ void TitleInfoEventTowerReward__EndPlayVoice(TitleInfoEventTowerReward_o *this, 
     voiceList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                voiceList,
                                                                this->fields.selectVoiceIndex,
-                                                               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
     if ( !voiceList )
       goto LABEL_10;
     playCnt = this->fields.playCnt;
     if ( (unsigned int)playCnt >= voiceList->fields._size )
-      sub_1C942F8(voiceList);
+      sub_1C7BD48(voiceList);
     v5 = *((_QWORD *)&voiceList->fields._syncRoot + playCnt);
     if ( !v5 )
 LABEL_10:
-      sub_1C942F0(voiceList, method);
+      sub_1C7BD40(voiceList, method);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10715/*"PlayVoice"*/,
+      (System_String_o *)StringLiteral_10717/*"PlayVoice"*/,
       *(float *)(v5 + 24),
       0);
   }
@@ -180,22 +180,22 @@ void TitleInfoEventTowerReward__OnLoadEndBG(TitleInfoEventTowerReward_o *this, c
   System_Action_o *v7; // x23
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4D2B1BB & 1) == 0 )
+  if ( (byte_4CED019 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    this = (TitleInfoEventTowerReward_o *)sub_1C94098(&Method_TitleInfoEventTowerReward_OnLoadEndSvt__);
-    byte_4D2B1BB = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    this = (TitleInfoEventTowerReward_o *)sub_1C7BAE8(&Method_TitleInfoEventTowerReward_OnLoadEndSvt__);
+    byte_4CED019 = 1;
   }
   klass = v2[9].klass;
   if ( !klass
     || (monitor = (UIStandFigureR_o *)v2[4].monitor,
         v5 = *(&klass->_1.byval_arg.bits + 1),
         data = (int32_t)klass->_1.this_arg.data,
-        v7 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo),
         System_Action___ctor(v7, v2, Method_TitleInfoEventTowerReward_OnLoadEndSvt__, 0),
         !monitor) )
   {
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   UIStandFigureR__SetCharacter(monitor, v5, data, 1, 0, 0, v7, 0);
 }
@@ -238,7 +238,7 @@ void TitleInfoEventTowerReward__OnLoadEndSvt(TitleInfoEventTowerReward_o *this, 
   TitleInfoEventTowerReward_o *v34; // x1
   Il2CppClass **v35; // x0
   struct EventTowerReward_o *v36; // x8
-  System_String_o *VoiceAssetName_43575652; // x0
+  System_String_o *VoiceAssetName_43350640; // x0
   int32_t v38; // w2
   int32_t v39; // w3
   System_String_o *v40; // x4
@@ -249,37 +249,37 @@ void TitleInfoEventTowerReward__OnLoadEndSvt(TitleInfoEventTowerReward_o *this, 
   System_Action_o *v45; // x21
 
   v2 = this;
-  if ( (byte_4D2B1BC & 1) == 0 )
+  if ( (byte_4CED01A & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C94098(&SoundManager_TypeInfo);
-    this = (TitleInfoEventTowerReward_o *)sub_1C94098(&Method_TitleInfoEventTowerReward__OnLoadEndSvt_b__31_0__);
-    byte_4D2B1BC = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    this = (TitleInfoEventTowerReward_o *)sub_1C7BAE8(&Method_TitleInfoEventTowerReward__OnLoadEndSvt_b__31_0__);
+    byte_4CED01A = 1;
   }
   eventTowerReward = v2->fields.eventTowerReward;
   if ( !eventTowerReward )
     goto LABEL_39;
   if ( eventTowerReward->fields.voiceIds )
   {
-    v4 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    v4 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v4,
-      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    this = (TitleInfoEventTowerReward_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    this = (TitleInfoEventTowerReward_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_39;
     this = (TitleInfoEventTowerReward_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+                                            (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
     v5 = v2->fields.eventTowerReward;
     if ( !v5 )
       goto LABEL_39;
@@ -288,12 +288,12 @@ void TitleInfoEventTowerReward__OnLoadEndSvt(TitleInfoEventTowerReward_o *this, 
       goto LABEL_39;
     v7 = this;
     max_length = voiceIds->max_length;
-    v9 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    v9 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v9,
-      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
     v2->fields.voiceList = (struct System_Collections_Generic_List_ServantVoiceData____o *)v9;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields.voiceList, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.voiceList, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     if ( (int)max_length >= 1 )
     {
       v16 = 0;
@@ -307,10 +307,10 @@ void TitleInfoEventTowerReward__OnLoadEndSvt(TitleInfoEventTowerReward_o *this, 
           break;
         if ( v16 >= LODWORD(v18->max_length) )
 LABEL_40:
-          sub_1C942F8(this);
+          sub_1C7BD48(this);
         if ( !v7 )
           break;
-        this = (TitleInfoEventTowerReward_o *)ServantVoiceMaster__getEntity_43597388(
+        this = (TitleInfoEventTowerReward_o *)ServantVoiceMaster__getEntity_43371060(
                                                 (ServantVoiceMaster_o *)v7,
                                                 14,
                                                 v17->fields.svtId,
@@ -324,21 +324,21 @@ LABEL_40:
           System_Collections_Generic_List_object___AddRange(
             v4,
             (System_Collections_Generic_IEnumerable_T__o *)this,
-            (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
+            (const MethodInfo_383F008 *)Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
         }
         if ( (unsigned int)max_length == ++v16 )
           goto LABEL_18;
       }
 LABEL_39:
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     }
 LABEL_18:
-    this = (TitleInfoEventTowerReward_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (TitleInfoEventTowerReward_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_39;
     this = (TitleInfoEventTowerReward_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+                                            (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
     if ( !v4 )
       goto LABEL_39;
     size = v4->fields._size;
@@ -351,7 +351,7 @@ LABEL_18:
         this = (TitleInfoEventTowerReward_o *)System_Collections_Generic_List_object___get_Item(
                                                 v4,
                                                 v21,
-                                                (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
         if ( !this )
           goto LABEL_39;
         if ( !LODWORD(this->fields.m_CancellationTokenSource) )
@@ -377,7 +377,7 @@ LABEL_18:
           this = (TitleInfoEventTowerReward_o *)System_Collections_Generic_List_object___get_Item(
                                                   v4,
                                                   v21,
-                                                  (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                  (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
           if ( !voiceList )
             goto LABEL_39;
           items = voiceList->fields._items;
@@ -392,14 +392,14 @@ LABEL_18:
             System_Collections_Generic_List_object___AddWithResize(
               voiceList,
               (Il2CppObject *)this,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
           }
           else
           {
             v35 = &items->obj.klass + v33;
             voiceList->fields._size = v33 + 1;
             v35[4] = (Il2CppClass *)v34;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v35 + 4), (int32_t)v34, v25, v26, v27, v28, v29, v30);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v35 + 4), (int32_t)v34, v25, v26, v27, v28, v29, v30);
           }
         }
       }
@@ -408,11 +408,11 @@ LABEL_18:
     v36 = v2->fields.eventTowerReward;
     if ( !v36 )
       goto LABEL_39;
-    VoiceAssetName_43575652 = ServantVoiceEntity__getVoiceAssetName_43575652(v36->fields.svtId, 0);
-    v2->fields.voiceAssetName = VoiceAssetName_43575652;
-    sub_1C9403C(
+    VoiceAssetName_43350640 = ServantVoiceEntity__getVoiceAssetName_43350640(v36->fields.svtId, 0);
+    v2->fields.voiceAssetName = VoiceAssetName_43350640;
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&v2->fields.voiceAssetName,
-      (int32_t)VoiceAssetName_43575652,
+      (int32_t)VoiceAssetName_43350640,
       v38,
       v39,
       v40,
@@ -420,7 +420,7 @@ LABEL_18:
       v42,
       v43);
     voiceAssetName = v2->fields.voiceAssetName;
-    v45 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v45 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v45, (Il2CppObject *)v2, Method_TitleInfoEventTowerReward__OnLoadEndSvt_b__31_0__, 0);
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -438,13 +438,13 @@ void TitleInfoEventTowerReward__OnTouchDisp(TitleInfoEventTowerReward_o *this, c
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v8; // x21
 
-  if ( (byte_4D2B1C1 & 1) == 0 )
+  if ( (byte_4CED01F & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&AvalonSceneManager_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&Method_TitleInfoEventTowerReward__OnTouchDisp_b__36_0__);
-    byte_4D2B1C1 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&AvalonSceneManager_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&Method_TitleInfoEventTowerReward__OnTouchDisp_b__36_0__);
+    byte_4CED01F = 1;
   }
   screenTouchInfo = (UnityEngine_Component_o *)this->fields.screenTouchInfo;
   if ( !screenTouchInfo )
@@ -453,7 +453,7 @@ void TitleInfoEventTowerReward__OnTouchDisp(TitleInfoEventTowerReward_o *this, c
   if ( !screenTouchInfo )
     goto LABEL_9;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v5 = AvalonSceneManager_TypeInfo;
   v6 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -462,11 +462,11 @@ void TitleInfoEventTowerReward__OnTouchDisp(TitleInfoEventTowerReward_o *this, c
     v5 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v5->static_fields->DEFAULT_FADE_TIME;
-  v8 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_TitleInfoEventTowerReward__OnTouchDisp_b__36_0__, 0);
   if ( !v6 )
 LABEL_9:
-    sub_1C942F0(screenTouchInfo, method);
+    sub_1C7BD40(screenTouchInfo, method);
   CommonUI__maskFadeout(v6, 1, DEFAULT_FADE_TIME, v8, 0);
   this->fields.state = 0;
 }
@@ -567,42 +567,42 @@ void TitleInfoEventTowerReward__Open(
   System_String_o *nameText; // [xsp+10h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4D2B1BA & 1) == 0 )
+  if ( (byte_4CED018 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_EventTowerMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1C94098(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIFont__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIFont__get_Item__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C94098(&SimpleAnimation_State_TypeInfo);
-    sub_1C94098(&System_Text_StringBuilder_TypeInfo);
-    sub_1C94098(&TerminalPramsManager_TypeInfo);
-    sub_1C94098(&Method_TitleInfoEventTowerReward_OnLoadEndBG__);
-    sub_1C94098(&TitleInfoEventTowerReward_TypeInfo);
-    sub_1C94098(&StringLiteral_43/*"\n"*/);
-    sub_1C94098(&StringLiteral_5743/*"EVENT_TOWER_REWARD_GET"*/);
-    sub_1C94098(&StringLiteral_10887/*"QUEST_CLEAR_COSTUME_GET"*/);
-    sub_1C94098(&StringLiteral_16163/*"_"*/);
-    sub_1C94098(&StringLiteral_5744/*"EVENT_TOWER_REWARD_GET_2"*/);
-    byte_4D2B1BA = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventTowerMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_1C7BAE8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIFont__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIFont__get_Item__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
+    sub_1C7BAE8(&System_Text_StringBuilder_TypeInfo);
+    sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
+    sub_1C7BAE8(&Method_TitleInfoEventTowerReward_OnLoadEndBG__);
+    sub_1C7BAE8(&TitleInfoEventTowerReward_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_43/*"\n"*/);
+    sub_1C7BAE8(&StringLiteral_5747/*"EVENT_TOWER_REWARD_GET"*/);
+    sub_1C7BAE8(&StringLiteral_10889/*"QUEST_CLEAR_COSTUME_GET"*/);
+    sub_1C7BAE8(&StringLiteral_16165/*"_"*/);
+    sub_1C7BAE8(&StringLiteral_5748/*"EVENT_TOWER_REWARD_GET_2"*/);
+    byte_4CED018 = 1;
   }
   nameText = 0;
   entity = 0;
   countText = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4D29791 )
+  if ( !byte_4CEB5EE )
   {
-    sub_1C94098(&TerminalPramsManager_TypeInfo);
-    byte_4D29791 = 1;
+    sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
+    byte_4CEB5EE = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -613,7 +613,7 @@ void TitleInfoEventTowerReward__Open(
   eventTowerReward_k__BackingField = v10->static_fields->_eventTowerReward_k__BackingField;
   this->fields.eventTowerReward = eventTowerReward_k__BackingField;
   p_eventTowerReward = &this->fields.eventTowerReward;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventTowerReward,
     (int32_t)eventTowerReward_k__BackingField,
     (int32_t)method,
@@ -622,10 +622,10 @@ void TitleInfoEventTowerReward__Open(
     v5,
     v6,
     v7);
-  if ( !byte_4D29C13 )
+  if ( !byte_4CEBA77 )
   {
-    sub_1C94098(&TerminalPramsManager_TypeInfo);
-    byte_4D29C13 = 1;
+    sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
+    byte_4CEBA77 = 1;
   }
   v19 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -635,7 +635,7 @@ void TitleInfoEventTowerReward__Open(
   }
   resultEventTowerRewardInfo_k__BackingField = v19->static_fields->_resultEventTowerRewardInfo_k__BackingField;
   this->fields.resultEventTowerRewardInfo = resultEventTowerRewardInfo_k__BackingField;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.resultEventTowerRewardInfo,
     (int32_t)resultEventTowerRewardInfo_k__BackingField,
     v13,
@@ -656,7 +656,7 @@ void TitleInfoEventTowerReward__Open(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !Instance )
       goto LABEL_134;
@@ -669,9 +669,9 @@ void TitleInfoEventTowerReward__Open(
       goto LABEL_134;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
     *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.screenTouchInfo,
       (int32_t)Component_object,
       v28,
@@ -700,14 +700,14 @@ void TitleInfoEventTowerReward__Open(
     goto LABEL_134;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 0, 0);
   this->fields.endCallback = callback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.endCallback, (int32_t)callback, v34, v35, v36, v37, v38, v39);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.endCallback, (int32_t)callback, v34, v35, v36, v37, v38, v39);
   this->fields.state = 0;
-  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !transform )
     goto LABEL_134;
   transform = (__int64)DataManager__GetMasterData_object_(
                          (DataManager_o *)transform,
-                         (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_EventTowerMaster___);
+                         (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventTowerMaster___);
   if ( !*p_eventTowerReward || !transform )
     goto LABEL_134;
   transform = (__int64)EventTowerMaster__GetEntity(
@@ -726,19 +726,19 @@ void TitleInfoEventTowerReward__Open(
     goto LABEL_134;
   effectId = (*p_eventTowerReward)->fields.effectId;
   CLIP_NAME_TOWER_REWARD = v41->static_fields->CLIP_NAME_TOWER_REWARD;
-  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !transform )
     goto LABEL_134;
   transform = (__int64)DataManager__GetMasterData_object_(
                          (DataManager_o *)transform,
-                         (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                         (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !*p_eventTowerReward || !transform )
     goto LABEL_134;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)transform,
          &entity,
          (*p_eventTowerReward)->fields.eventId,
-         (const MethodInfo_345B50C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_342E348 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     transform = (__int64)entity;
     if ( !entity )
@@ -764,9 +764,9 @@ void TitleInfoEventTowerReward__Open(
   }
   eventId = effectId;
   v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
-  v48 = System_String__Concat_64455760(
+  v48 = System_String__Concat_64214928(
           (Il2CppObject *)CLIP_NAME_TOWER_REWARD,
-          (Il2CppObject *)StringLiteral_16163/*"_"*/,
+          (Il2CppObject *)StringLiteral_16165/*"_"*/,
           v47,
           0);
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
@@ -804,7 +804,7 @@ void TitleInfoEventTowerReward__Open(
         else
         {
 LABEL_58:
-          v57 = sub_1C6A420(transform, SimpleAnimation_State_TypeInfo, 14);
+          v57 = sub_1C51E70(transform, SimpleAnimation_State_TypeInfo, 14);
         }
         transform = (*(__int64 (__fastcall **)(__int64, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
         if ( this->fields.simpleAnimation )
@@ -822,7 +822,7 @@ LABEL_71:
       }
     }
 LABEL_134:
-    sub_1C942F0(transform, v24);
+    sub_1C7BD40(transform, v24);
   }
   animation = (UnityEngine_Object_o *)this->fields.animation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -861,7 +861,7 @@ LABEL_72:
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)transform,
                v24,
-               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIFont__get_Item__);
+               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIFont__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0);
@@ -877,7 +877,7 @@ LABEL_72:
         transform = (__int64)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)transform,
                                v62->fields.towerId - 1,
-                               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIFont__get_Item__);
+                               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIFont__get_Item__);
         if ( !floorLabel )
           goto LABEL_134;
         UILabel__set_bitmapFont(floorLabel, (UIFont_o *)transform, 0);
@@ -912,7 +912,7 @@ LABEL_72:
     v68 = (Il2CppObject *)transform;
     v89 = (*p_eventTowerReward)->fields.towerId;
     v69 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v89);
-    transform = (__int64)System_String__Format_64459052(v67, v68, v69, 0);
+    transform = (__int64)System_String__Format_64218220(v67, v68, v69, 0);
     if ( !nameSprite )
       goto LABEL_134;
     UISprite__set_spriteName(nameSprite, (System_String_o *)transform, 0);
@@ -923,12 +923,12 @@ LABEL_72:
       transform,
       *(_QWORD *)(*(_QWORD *)transform + 848LL));
   }
-  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !transform )
     goto LABEL_134;
   transform = (__int64)DataManager__GetMasterData_object_(
                          (DataManager_o *)transform,
-                         (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_GiftMaster___);
+                         (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !*p_eventTowerReward )
     goto LABEL_134;
   if ( !transform )
@@ -940,7 +940,7 @@ LABEL_72:
   v71 = transform;
   if ( v70 < 1 )
     goto LABEL_129;
-  v72 = (System_Text_StringBuilder_o *)sub_1C942E4(System_Text_StringBuilder_TypeInfo);
+  v72 = (System_Text_StringBuilder_o *)sub_1C7BD34(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v72, 0);
   for ( i = 0; i != v70; ++i )
   {
@@ -948,7 +948,7 @@ LABEL_72:
     {
       if ( !v72 )
         goto LABEL_134;
-      transform = (__int64)System_Text_StringBuilder__Append_64501704(v72, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+      transform = (__int64)System_Text_StringBuilder__Append_64260872(v72, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
     }
     if ( i >= *(_DWORD *)(v71 + 24) )
       goto LABEL_135;
@@ -967,7 +967,7 @@ LABEL_72:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v77 = (System_String_o *)StringLiteral_10887/*"QUEST_CLEAR_COSTUME_GET"*/;
+      v77 = (System_String_o *)StringLiteral_10889/*"QUEST_CLEAR_COSTUME_GET"*/;
       goto LABEL_117;
     }
     IsNullOrEmpty = System_String__IsNullOrEmpty(countText, 0);
@@ -982,7 +982,7 @@ LABEL_72:
       if ( IsNullOrEmpty )
       {
 LABEL_116:
-        v77 = (System_String_o *)StringLiteral_5744/*"EVENT_TOWER_REWARD_GET_2"*/;
+        v77 = (System_String_o *)StringLiteral_5748/*"EVENT_TOWER_REWARD_GET_2"*/;
 LABEL_117:
         transform = (__int64)LocalizationManager__Get(v77, 0);
         if ( !v72 )
@@ -995,10 +995,10 @@ LABEL_117:
         continue;
       }
     }
-    transform = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5743/*"EVENT_TOWER_REWARD_GET"*/, 0);
+    transform = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5747/*"EVENT_TOWER_REWARD_GET"*/, 0);
     if ( !v72 )
       goto LABEL_134;
-    transform = (__int64)System_Text_StringBuilder__AppendFormat_64508056(
+    transform = (__int64)System_Text_StringBuilder__AppendFormat_64267224(
                            v72,
                            (System_String_o *)transform,
                            (Il2CppObject *)nameText,
@@ -1014,7 +1014,7 @@ LABEL_117:
   UILabel__set_text(rewardLabel, (System_String_o *)transform, 0);
   if ( !*(_DWORD *)(v71 + 24) )
 LABEL_135:
-    sub_1C942F8(transform);
+    sub_1C7BD48(transform);
   v80 = *(_DWORD **)(v71 + 32);
   if ( !v80 )
     goto LABEL_134;
@@ -1022,7 +1022,7 @@ LABEL_135:
   if ( !transform )
     goto LABEL_134;
   v81 = v80[5];
-  ItemIconComponent__SetGift_41674460((ItemIconComponent_o *)transform, v81, v80[6], (int)v80[7], 0, 0);
+  ItemIconComponent__SetGift_41487788((ItemIconComponent_o *)transform, v81, v80[6], (int)v80[7], 0, 0);
   transform = (__int64)this->fields.imageFrame;
   if ( !transform )
     goto LABEL_134;
@@ -1043,7 +1043,7 @@ LABEL_129:
   v85 = System_String__Format(SPRITE_NAME_BG, v84, 0);
   bgSprite = this->fields.bgSprite;
   v87 = v85;
-  v88 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v88 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v88, (Il2CppObject *)this, Method_TitleInfoEventTowerReward_OnLoadEndBG__, 0);
   if ( !bgSprite )
     goto LABEL_134;
@@ -1064,7 +1064,7 @@ void TitleInfoEventTowerReward__PlayVoice(TitleInfoEventTowerReward_o *this, con
   ServantVoiceData_o *v11; // x20
   struct System_String_o *id; // x1
   struct EventTowerReward_o *eventTowerReward; // x8
-  System_String_o *VoiceAssetName_43575652; // x0
+  System_String_o *VoiceAssetName_43350640; // x0
   SeManager_c *v15; // x8
   System_String_o *voiceName; // x21
   System_String_o *v17; // x22
@@ -1081,14 +1081,14 @@ void TitleInfoEventTowerReward__PlayVoice(TitleInfoEventTowerReward_o *this, con
   int32_t face; // w22
   float FadeTime; // s0
 
-  if ( (byte_4D2B1BE & 1) == 0 )
+  if ( (byte_4CED01C & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    sub_1C94098(&SeManager_TypeInfo);
-    sub_1C94098(&SoundManager_TypeInfo);
-    sub_1C94098(&Method_TitleInfoEventTowerReward_EndPlayVoice__);
-    byte_4D2B1BE = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    sub_1C7BAE8(&SeManager_TypeInfo);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    sub_1C7BAE8(&Method_TitleInfoEventTowerReward_EndPlayVoice__);
+    byte_4CED01C = 1;
   }
   voiceList = (System_Collections_Generic_List_object__o *)this->fields.voiceList;
   if ( !voiceList )
@@ -1096,44 +1096,44 @@ void TitleInfoEventTowerReward__PlayVoice(TitleInfoEventTowerReward_o *this, con
   voiceList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              voiceList,
                                                              this->fields.selectVoiceIndex,
-                                                             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
   if ( !voiceList )
     goto LABEL_14;
   playCnt = this->fields.playCnt;
   if ( (unsigned int)playCnt >= voiceList->fields._size )
-    sub_1C942F8(voiceList);
+    sub_1C7BD48(voiceList);
   v11 = (ServantVoiceData_o *)*((_QWORD *)&voiceList->fields._syncRoot + playCnt);
   if ( !v11 )
     goto LABEL_14;
   id = v11->fields.id;
   this->fields.voiceName = id;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.voiceName, (int32_t)id, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voiceName, (int32_t)id, v4, v5, v6, v7, v8, v9);
   eventTowerReward = this->fields.eventTowerReward;
   if ( !eventTowerReward )
     goto LABEL_14;
-  VoiceAssetName_43575652 = ServantVoiceEntity__getVoiceAssetName_43575652(eventTowerReward->fields.svtId, 0);
+  VoiceAssetName_43350640 = ServantVoiceEntity__getVoiceAssetName_43350640(eventTowerReward->fields.svtId, 0);
   v15 = SeManager_TypeInfo;
   voiceName = this->fields.voiceName;
-  v17 = VoiceAssetName_43575652;
+  v17 = VoiceAssetName_43350640;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
     v15 = SeManager_TypeInfo;
   }
   DEFAULT_VOLUME = v15->static_fields->DEFAULT_VOLUME;
-  v19 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_TitleInfoEventTowerReward_EndPlayVoice__, 0);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  v20 = SoundManager__playVoice_42281128(v17, voiceName, DEFAULT_VOLUME, v19, 0, 0);
+  v20 = SoundManager__playVoice_42095460(v17, voiceName, DEFAULT_VOLUME, v19, 0, 0);
   this->fields.voicePlayer = v20;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayer, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayer, (int32_t)v20, v21, v22, v23, v24, v25, v26);
   standFigure = this->fields.standFigure;
   face = v11->fields.face;
   FadeTime = ServantVoiceData__GetFadeTime(v11, 0);
   if ( !standFigure )
 LABEL_14:
-    sub_1C942F0(voiceList, method);
+    sub_1C7BD40(voiceList, method);
   UIStandFigureR__SetFace(standFigure, face, FadeTime, 0);
   ++this->fields.playCnt;
 }
@@ -1164,26 +1164,26 @@ void TitleInfoEventTowerReward__StartRewardAction(
   System_Action_o *v22; // x22
   const MethodInfo *v23; // x4
 
-  if ( (byte_4D2B1C3 & 1) == 0 )
+  if ( (byte_4CED021 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_TitleInfoEventTowerReward___c__DisplayClass38_0__StartRewardAction_b__0__);
-    sub_1C94098(&TitleInfoEventTowerReward___c__DisplayClass38_0_TypeInfo);
-    byte_4D2B1C3 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_TitleInfoEventTowerReward___c__DisplayClass38_0__StartRewardAction_b__0__);
+    sub_1C7BAE8(&TitleInfoEventTowerReward___c__DisplayClass38_0_TypeInfo);
+    byte_4CED021 = 1;
   }
-  v5 = sub_1C942E4(TitleInfoEventTowerReward___c__DisplayClass38_0_TypeInfo);
+  v5 = sub_1C7BD34(TitleInfoEventTowerReward___c__DisplayClass38_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
   v14 = v5 + 24;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callback, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callback, v15, v16, v17, v18, v19, v20);
   resultEventTowerRewardInfo = this->fields.resultEventTowerRewardInfo;
   if ( resultEventTowerRewardInfo )
   {
-    v22 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(
       v22,
       (Il2CppObject *)v5,
@@ -1194,7 +1194,7 @@ void TitleInfoEventTowerReward__StartRewardAction(
   }
   if ( !*(_QWORD *)v14 )
 LABEL_8:
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v14 + 24LL))(
     *(_QWORD *)(*(_QWORD *)v14 + 64LL),
     *(_QWORD *)(*(_QWORD *)v14 + 40LL));
@@ -1209,7 +1209,7 @@ void TitleInfoEventTowerReward__StartRewardAction_sub(
         const MethodInfo *method)
 {
   __int64 v9; // x26
-  Il2CppObject *IsServant_41175504; // x0
+  Il2CppObject *IsServant_40988476; // x0
   __int64 v11; // x1
   int32_t v12; // w2
   int32_t v13; // w3
@@ -1248,29 +1248,29 @@ void TitleInfoEventTowerReward__StartRewardAction_sub(
 
   while ( 1 )
   {
-    if ( (byte_4D2B1C4 & 1) == 0 )
+    if ( (byte_4CED022 & 1) == 0 )
     {
-      sub_1C94098(&System_Action_TypeInfo);
-      sub_1C94098(&Method_DataManager_GetMasterData_ServantMaster___);
-      sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-      sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      sub_1C94098(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
-      sub_1C94098(&Method_TitleInfoEventTowerReward___c__DisplayClass39_0__StartRewardAction_sub_b__0__);
-      sub_1C94098(&TitleInfoEventTowerReward___c__DisplayClass39_0_TypeInfo);
-      byte_4D2B1C4 = 1;
+      sub_1C7BAE8(&System_Action_TypeInfo);
+      sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantMaster___);
+      sub_1C7BAE8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+      sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      sub_1C7BAE8(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+      sub_1C7BAE8(&Method_TitleInfoEventTowerReward___c__DisplayClass39_0__StartRewardAction_sub_b__0__);
+      sub_1C7BAE8(&TitleInfoEventTowerReward___c__DisplayClass39_0_TypeInfo);
+      byte_4CED022 = 1;
     }
-    v9 = sub_1C942E4(TitleInfoEventTowerReward___c__DisplayClass39_0_TypeInfo);
+    v9 = sub_1C7BD34(TitleInfoEventTowerReward___c__DisplayClass39_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v9, 0);
     if ( !v9 )
       goto LABEL_23;
     *(_QWORD *)(v9 + 24) = this;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)this, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)this, v12, v13, v14, v15, v16, v17);
     *(_QWORD *)(v9 + 32) = rewardInfoList;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)rewardInfoList, v18, v19, v20, v21, v22, v23);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)rewardInfoList, v18, v19, v20, v21, v22, v23);
     *(_QWORD *)(v9 + 48) = subEndAction;
     v24 = v9 + 48;
     *(_DWORD *)(v9 + 40) = idx;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)subEndAction, v25, v26, v27, v28, v29, v30);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)subEndAction, v25, v26, v27, v28, v29, v30);
     v37 = *(_QWORD *)(v9 + 32);
     if ( !v37 )
       goto LABEL_23;
@@ -1288,28 +1288,28 @@ void TitleInfoEventTowerReward__StartRewardAction_sub(
       goto LABEL_23;
     }
     if ( (unsigned int)v38 >= v39 )
-      sub_1C942F8(IsServant_41175504);
+      sub_1C7BD48(IsServant_40988476);
     v40 = *(_QWORD *)(v37 + 8 * v38 + 32);
     *(_QWORD *)(v9 + 16) = v40;
     v41 = v9 + 16;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 16), v40, v31, v32, v33, v34, v35, v36);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), v40, v31, v32, v33, v34, v35, v36);
     if ( !*(_QWORD *)(v9 + 16) )
       goto LABEL_23;
-    IsServant_41175504 = (Il2CppObject *)Gift__IsServant_41175504(*(_DWORD *)(*(_QWORD *)(v9 + 16) + 16LL), 0);
-    if ( ((unsigned __int8)IsServant_41175504 & 1) == 0 )
+    IsServant_40988476 = (Il2CppObject *)Gift__IsServant_40988476(*(_DWORD *)(*(_QWORD *)(v9 + 16) + 16LL), 0);
+    if ( ((unsigned __int8)IsServant_40988476 & 1) == 0 )
       break;
-    IsServant_41175504 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( !IsServant_41175504 )
+    IsServant_40988476 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !IsServant_40988476 )
       goto LABEL_23;
-    IsServant_41175504 = DataManager__GetMasterData_object_(
-                           (DataManager_o *)IsServant_41175504,
-                           (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantMaster___);
-    if ( !*(_QWORD *)v41 || !IsServant_41175504 )
+    IsServant_40988476 = DataManager__GetMasterData_object_(
+                           (DataManager_o *)IsServant_40988476,
+                           (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantMaster___);
+    if ( !*(_QWORD *)v41 || !IsServant_40988476 )
       goto LABEL_23;
     Entity = DataMasterBase_object__object__int___GetEntity(
-               (DataMasterBase_TMaster__TEntity__PKType__o *)IsServant_41175504,
+               (DataMasterBase_TMaster__TEntity__PKType__o *)IsServant_40988476,
                *(_DWORD *)(*(_QWORD *)v41 + 20LL),
-               (const MethodInfo_345B4C0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+               (const MethodInfo_342E2FC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( Entity )
     {
       v43 = Entity;
@@ -1323,11 +1323,11 @@ LABEL_18:
   }
   if ( !*(_QWORD *)v41 )
     goto LABEL_23;
-  if ( !Gift__IsCommandCode_41175896(*(_DWORD *)(*(_QWORD *)v41 + 16LL), 0) )
+  if ( !Gift__IsCommandCode_40988868(*(_DWORD *)(*(_QWORD *)v41 + 16LL), 0) )
     goto LABEL_18;
 LABEL_21:
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
-  v45 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+  v45 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(
     v45,
     (Il2CppObject *)v9,
@@ -1335,7 +1335,7 @@ LABEL_21:
     0);
   if ( !Instance )
 LABEL_23:
-    sub_1C942F0(IsServant_41175504, v11);
+    sub_1C7BD40(IsServant_40988476, v11);
   SummonAssetManager__LoadSummonAssets((SummonAssetManager_o *)Instance, v45, 0);
 }
 
@@ -1349,19 +1349,19 @@ void TitleInfoEventTowerReward__StartVoice(TitleInfoEventTowerReward_o *this, co
   System_Collections_Generic_List_object__o *v6; // x8
 
   v2 = this;
-  if ( (byte_4D2B1BD & 1) == 0 )
+  if ( (byte_4CED01B & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    this = (TitleInfoEventTowerReward_o *)sub_1C94098(&System_Random_TypeInfo);
-    byte_4D2B1BD = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    this = (TitleInfoEventTowerReward_o *)sub_1C7BAE8(&System_Random_TypeInfo);
+    byte_4CED01B = 1;
   }
   voiceList = v2->fields.voiceList;
   if ( !voiceList )
     goto LABEL_11;
   if ( voiceList->fields._size )
   {
-    v4 = (System_Random_o *)sub_1C942E4(System_Random_TypeInfo);
+    v4 = (System_Random_o *)sub_1C7BD34(System_Random_TypeInfo);
     System_Random___ctor(v4, 0);
     v5 = v2->fields.voiceList;
     if ( v5 )
@@ -1379,7 +1379,7 @@ void TitleInfoEventTowerReward__StartVoice(TitleInfoEventTowerReward_o *this, co
           this = (TitleInfoEventTowerReward_o *)System_Collections_Generic_List_object___get_Item(
                                                   v6,
                                                   (int32_t)this,
-                                                  (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                  (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
           if ( this )
           {
             *(_QWORD *)&v2->fields.maxPlayCnt = (unsigned int)this->fields.m_CancellationTokenSource;
@@ -1390,7 +1390,7 @@ void TitleInfoEventTowerReward__StartVoice(TitleInfoEventTowerReward_o *this, co
       }
     }
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
 }
 
@@ -1420,12 +1420,12 @@ void TitleInfoEventTowerReward__Update(TitleInfoEventTowerReward_o *this, const 
   SimpleAnimation_State_c **v23; // x10
   __int64 v24; // x0
 
-  if ( (byte_4D2B1C0 & 1) == 0 )
+  if ( (byte_4CED01E & 1) == 0 )
   {
-    sub_1C94098(&CTouch_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&SimpleAnimation_State_TypeInfo);
-    byte_4D2B1C0 = 1;
+    sub_1C7BAE8(&CTouch_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
+    byte_4CED01E = 1;
   }
   state = this->fields.state;
   if ( state != 2 )
@@ -1466,7 +1466,7 @@ void TitleInfoEventTowerReward__Update(TitleInfoEventTowerReward_o *this, const 
       else
       {
 LABEL_15:
-        v13 = sub_1C6A420(m_Clip, SimpleAnimation_State_TypeInfo, 3);
+        v13 = sub_1C51E70(m_Clip, SimpleAnimation_State_TypeInfo, 3);
       }
       v20 = ((long double (__fastcall *)(UnityEngine_Object_o *, _QWORD))*(_QWORD *)v13)(v10, *(_QWORD *)(v13 + 8));
       v21 = v10->klass;
@@ -1487,7 +1487,7 @@ LABEL_15:
       else
       {
 LABEL_33:
-        v24 = sub_1C6A420(v10, SimpleAnimation_State_TypeInfo, 14);
+        v24 = sub_1C51E70(v10, SimpleAnimation_State_TypeInfo, 14);
       }
       m_Clip = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v24)(
                                          v10,
@@ -1534,7 +1534,7 @@ LABEL_37:
       }
     }
 LABEL_41:
-    sub_1C942F0(m_Clip, v6);
+    sub_1C7BD40(m_Clip, v6);
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -1561,7 +1561,7 @@ void TitleInfoEventTowerReward___Close_b__37_0(TitleInfoEventTowerReward_o *this
   if ( endCallback )
   {
     p_endCallback->klass = 0;
-    sub_1C9403C(p_endCallback, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C7BA8C(p_endCallback, 0, v2, v3, v4, v5, v6, v7);
     ActionExtensions__Call(v9, 0);
   }
 }
@@ -1585,19 +1585,19 @@ void TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(TitleInfoEventTowerReward_
   UnityEngine_Animation_o *v16; // x20
   System_String_o *v17; // x0
 
-  if ( (byte_4D2B1C6 & 1) == 0 )
+  if ( (byte_4CED024 & 1) == 0 )
   {
-    sub_1C94098(&AvalonSceneManager_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMasterData_BgmMaster___);
-    sub_1C94098(&Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C94098(&SoundManager_TypeInfo);
-    sub_1C94098(&StringLiteral_13115/*"StartVoice"*/);
-    byte_4D2B1C6 = 1;
+    sub_1C7BAE8(&AvalonSceneManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_1C7BAE8(&Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13117/*"StartVoice"*/);
+    byte_4CED024 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v5 = Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
@@ -1606,7 +1606,7 @@ void TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(TitleInfoEventTowerReward_
   CommonUI__maskFadein(v5, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_13115/*"StartVoice"*/,
+    (System_String_o *)StringLiteral_13117/*"StartVoice"*/,
     this->fields.voiceStartTime,
     0);
   eventTowerReward = this->fields.eventTowerReward;
@@ -1614,12 +1614,12 @@ void TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(TitleInfoEventTowerReward_
     goto LABEL_40;
   if ( eventTowerReward->fields.bgmId >= 1 )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_40;
     Instance = (CommonUI_o *)DataManager__GetMasterData_object_(
                                (DataManager_o *)Instance,
-                               (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_BgmMaster___);
+                               (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_BgmMaster___);
     v7 = this->fields.eventTowerReward;
     if ( !v7 )
       goto LABEL_40;
@@ -1628,7 +1628,7 @@ void TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(TitleInfoEventTowerReward_
     Instance = (CommonUI_o *)DataMasterBase_object__object__int___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                v7->fields.bgmId,
-                               (const MethodInfo_345B4C0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
+                               (const MethodInfo_342E2FC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
     if ( !Instance )
       goto LABEL_40;
     m_CancellationTokenSource = (System_String_o *)Instance->fields.m_CancellationTokenSource;
@@ -1661,12 +1661,12 @@ void TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(TitleInfoEventTowerReward_
         if ( Instance )
         {
           name = UnityEngine_Object__get_name((UnityEngine_Object_o *)Instance, 0);
-          SimpleAnimation__Play_67362784(v12, name, 0);
+          SimpleAnimation__Play_67121960(v12, name, 0);
           goto LABEL_37;
         }
       }
 LABEL_40:
-      sub_1C942F0(Instance, v4);
+      sub_1C7BD40(Instance, v4);
     }
   }
   else
@@ -1696,7 +1696,7 @@ LABEL_40:
           if ( Instance )
           {
             v17 = UnityEngine_Object__get_name((UnityEngine_Object_o *)Instance, 0);
-            UnityEngine_Animation__Play_71854448(v16, v17, 0);
+            UnityEngine_Animation__Play_71613624(v16, v17, 0);
             goto LABEL_37;
           }
         }
@@ -1731,7 +1731,7 @@ void TitleInfoEventTowerReward___c__DisplayClass38_0___StartRewardAction_b__0(
   struct System_Action_o *callback; // x8
 
   if ( !this->fields.__4__this || (callback = this->fields.callback) == 0 )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
     callback->fields.method_code,
     callback->fields.method);
@@ -1786,22 +1786,22 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
   System_String_o *v35; // x7
 
   v2 = this;
-  if ( (byte_4D2B1C7 & 1) == 0 )
+  if ( (byte_4CED025 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
-    sub_1C94098(&SoundManager_TypeInfo);
-    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)sub_1C94098(&Method_TitleInfoEventTowerReward___c__DisplayClass39_0__StartRewardAction_sub_b__1__);
-    byte_4D2B1C7 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)sub_1C7BAE8(&Method_TitleInfoEventTowerReward___c__DisplayClass39_0__StartRewardAction_sub_b__1__);
+    byte_4CED025 = 1;
   }
   rewardInfo = v2->fields.rewardInfo;
   if ( !rewardInfo )
     goto LABEL_30;
-  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)Gift__IsServant_41175504(rewardInfo->fields.type, 0);
+  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)Gift__IsServant_40988476(rewardInfo->fields.type, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     _4__this = v2->fields.__4__this;
-    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
     if ( v2->fields.__4__this )
     {
       v5 = this;
@@ -1817,7 +1817,7 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
         if ( _4__this )
         {
           _4__this->fields.servantRewardAction = (struct ServantRewardAction_o *)this;
-          sub_1C9403C(
+          sub_1C7BA8C(
             (GrandQuestFolderBoardItem_o *)&_4__this->fields.servantRewardAction,
             (int32_t)this,
             v7,
@@ -1842,7 +1842,7 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
               this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)v15->fields.servantRewardAction;
               if ( this )
               {
-                ServantRewardAction__Setup_37847792((ServantRewardAction_o *)this, v2->fields.rewardInfo, v14, 0);
+                ServantRewardAction__Setup_37662140((ServantRewardAction_o *)this, v2->fields.rewardInfo, v14, 0);
                 goto LABEL_25;
               }
             }
@@ -1851,16 +1851,16 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
       }
     }
 LABEL_30:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   v16 = v2->fields.rewardInfo;
   if ( !v16 )
     goto LABEL_30;
-  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)Gift__IsCommandCode_41175896(v16->fields.type, 0);
+  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)Gift__IsCommandCode_40988868(v16->fields.type, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     v17 = v2->fields.__4__this;
-    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
     if ( !v2->fields.__4__this )
       goto LABEL_30;
     v18 = this;
@@ -1876,7 +1876,7 @@ LABEL_30:
     if ( !v17 )
       goto LABEL_30;
     v17->fields.servantRewardAction = (struct ServantRewardAction_o *)this;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&v17->fields.servantRewardAction,
       (int32_t)this,
       v20,
@@ -1901,14 +1901,14 @@ LABEL_25:
   _9__1 = v2->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v2,
       Method_TitleInfoEventTowerReward___c__DisplayClass39_0__StartRewardAction_sub_b__1__,
       0);
     v2->fields.__9__1 = _9__1;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields.__9__1, (int32_t)_9__1, v30, v31, v32, v33, v34, v35);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.__9__1, (int32_t)_9__1, v30, v31, v32, v33, v34, v35);
   }
   if ( !servantRewardAction )
     goto LABEL_30;
@@ -1926,11 +1926,11 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
   const MethodInfo *v5; // x4
 
   v2 = this;
-  if ( (byte_4D2B1C8 & 1) == 0 )
+  if ( (byte_4CED026 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)sub_1C94098(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
-    byte_4D2B1C8 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)sub_1C7BAE8(&Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+    byte_4CED026 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1941,14 +1941,14 @@ void TitleInfoEventTowerReward___c__DisplayClass39_0___StartRewardAction_sub_b__
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__DestroyImmediate_72111160(gameObject, 0);
-  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
+  UnityEngine_Object__DestroyImmediate_71870336(gameObject, 0);
+  this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SummonAssetManager__get_Instance__);
   if ( !this
     || (SummonAssetManager__UnloadSummonAssets((SummonAssetManager_o *)this, 0),
         (this = (TitleInfoEventTowerReward___c__DisplayClass39_0_o *)v2->fields.__4__this) == 0) )
   {
 LABEL_10:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   TitleInfoEventTowerReward__StartRewardAction_sub(
     (TitleInfoEventTowerReward_o *)this,

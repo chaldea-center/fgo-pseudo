@@ -1,13 +1,13 @@
 void ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D14D & 1) == 0 )
+  if ( (byte_4CEEF40 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D14D = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEEF40 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_4D2D14B & 1) == 0 )
+  if ( (byte_4CEEF3E & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
-    byte_4D2D14B = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+    byte_4CEEF3E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -30,7 +30,7 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_319B150 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_316F410 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -59,10 +59,10 @@ bool ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *thi
   int32_t v7; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_4D2D14C & 1) == 0 )
+  if ( (byte_4CEEF3F & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    byte_4D2D14C = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    byte_4CEEF3F = 1;
   }
   condType = this->fields.condType;
   if ( condType == 64 )
@@ -84,28 +84,4 @@ bool ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *thi
     v7 = condTargetId;
   }
   return CondType__IsOpen(v6, v7, costumeId, 0, 0, 0);
-}
-
-
-bool ServantCostumeReleaseEntity__IsCondAboutQuestClear(
-        ServantCostumeReleaseEntity_o *this,
-        int32_t questId,
-        int32_t phase,
-        const MethodInfo *method)
-{
-  int32_t condType; // w8
-
-  if ( !questId )
-    return 0;
-  condType = this->fields.condType;
-  switch ( condType )
-  {
-    case 57:
-      return this->fields.condTargetId == questId;
-    case 46:
-      return this->fields.condTargetId == questId && this->fields.condNum == phase;
-    case 1:
-      return this->fields.condTargetId == questId;
-  }
-  return 0;
 }

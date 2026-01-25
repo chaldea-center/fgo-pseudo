@@ -8,10 +8,10 @@ void ServantCostumeEventBalloon__Set(ServantCostumeEventBalloon_o *this, int32_t
 {
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_4D2665A & 1) == 0 )
+  if ( (byte_4CF28F5 & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    byte_4D2665A = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    byte_4CF28F5 = 1;
   }
   itemSprite = this->fields.itemSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )

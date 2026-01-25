@@ -111,87 +111,87 @@ void ServantScriptEntity___cctor(const MethodInfo *method)
   int64_t v109; // x6
   System_String_o *v110; // x7
 
-  if ( (byte_4D2D2BC & 1) == 0 )
+  if ( (byte_4CEF0A1 & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    sub_1C94098(&StringLiteral_22904/*"photoSvtScale"*/);
-    sub_1C94098(&StringLiteral_22902/*"photoSvtPositionLeft"*/);
-    sub_1C94098(&StringLiteral_22903/*"photoSvtPositionRight"*/);
-    sub_1C94098(&StringLiteral_3111/*"BattleBondOffset"*/);
-    sub_1C94098(&StringLiteral_24879/*"value"*/);
-    sub_1C94098(&StringLiteral_22901/*"photoSvtPosition"*/);
-    sub_1C94098(&StringLiteral_22356/*"myroomForm"*/);
-    sub_1C94098(&StringLiteral_22905/*"photoSvtScaleLeft"*/);
-    sub_1C94098(&StringLiteral_18310/*"conds"*/);
-    sub_1C94098(&StringLiteral_22906/*"photoSvtScaleRight"*/);
-    sub_1C94098(&StringLiteral_18221/*"combineResultMultipleForm"*/);
-    sub_1C94098(&StringLiteral_19533/*"faceSize"*/);
-    sub_1C94098(&StringLiteral_13762/*"TerminalOffset"*/);
-    sub_1C94098(&StringLiteral_18309/*"condType"*/);
-    byte_4D2D2BC = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22899/*"photoSvtScale"*/);
+    sub_1C7BAE8(&StringLiteral_22897/*"photoSvtPositionLeft"*/);
+    sub_1C7BAE8(&StringLiteral_22898/*"photoSvtPositionRight"*/);
+    sub_1C7BAE8(&StringLiteral_3111/*"BattleBondOffset"*/);
+    sub_1C7BAE8(&StringLiteral_24880/*"value"*/);
+    sub_1C7BAE8(&StringLiteral_22896/*"photoSvtPosition"*/);
+    sub_1C7BAE8(&StringLiteral_22351/*"myroomForm"*/);
+    sub_1C7BAE8(&StringLiteral_22900/*"photoSvtScaleLeft"*/);
+    sub_1C7BAE8(&StringLiteral_18310/*"conds"*/);
+    sub_1C7BAE8(&StringLiteral_22901/*"photoSvtScaleRight"*/);
+    sub_1C7BAE8(&StringLiteral_18221/*"combineResultMultipleForm"*/);
+    sub_1C7BAE8(&StringLiteral_19529/*"faceSize"*/);
+    sub_1C7BAE8(&StringLiteral_13764/*"TerminalOffset"*/);
+    sub_1C7BAE8(&StringLiteral_18309/*"condType"*/);
+    byte_4CEF0A1 = 1;
   }
-  ServantScriptEntity_TypeInfo->static_fields->FACE_SIZE_KEY = (struct System_String_o *)StringLiteral_19533/*"faceSize"*/;
-  sub_1C9403C(
+  ServantScriptEntity_TypeInfo->static_fields->FACE_SIZE_KEY = (struct System_String_o *)StringLiteral_19529/*"faceSize"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)ServantScriptEntity_TypeInfo->static_fields,
-    StringLiteral_19533/*"faceSize"*/,
+    StringLiteral_19529/*"faceSize"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_22356/*"myroomForm"*/;
+  v7 = StringLiteral_22351/*"myroomForm"*/;
   static_fields = ServantScriptEntity_TypeInfo->static_fields;
-  static_fields->MYROOM_FORM_KEY = (struct System_String_o *)StringLiteral_22356/*"myroomForm"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->MYROOM_FORM_KEY, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->MYROOM_FORM_KEY = (struct System_String_o *)StringLiteral_22351/*"myroomForm"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->MYROOM_FORM_KEY, v7, v9, v10, v11, v12, v13, v14);
   v15 = StringLiteral_18221/*"combineResultMultipleForm"*/;
   v16 = ServantScriptEntity_TypeInfo->static_fields;
   v16->COMBINE_RESULT_FORM_KEY = (struct System_String_o *)StringLiteral_18221/*"combineResultMultipleForm"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16->COMBINE_RESULT_FORM_KEY, v15, v17, v18, v19, v20, v21, v22);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16->COMBINE_RESULT_FORM_KEY, v15, v17, v18, v19, v20, v21, v22);
   v23 = StringLiteral_18310/*"conds"*/;
   v24 = ServantScriptEntity_TypeInfo->static_fields;
   v24->COND_KEY = (struct System_String_o *)StringLiteral_18310/*"conds"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v24->COND_KEY, v23, v25, v26, v27, v28, v29, v30);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v24->COND_KEY, v23, v25, v26, v27, v28, v29, v30);
   v31 = StringLiteral_18309/*"condType"*/;
   v32 = ServantScriptEntity_TypeInfo->static_fields;
   v32->COND_TYPE_KEY = (struct System_String_o *)StringLiteral_18309/*"condType"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v32->COND_TYPE_KEY, v31, v33, v34, v35, v36, v37, v38);
-  v39 = StringLiteral_24879/*"value"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v32->COND_TYPE_KEY, v31, v33, v34, v35, v36, v37, v38);
+  v39 = StringLiteral_24880/*"value"*/;
   v40 = ServantScriptEntity_TypeInfo->static_fields;
-  v40->COND_VALUE_KEY = (struct System_String_o *)StringLiteral_24879/*"value"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v40->COND_VALUE_KEY, v39, v41, v42, v43, v44, v45, v46);
-  v47 = StringLiteral_13762/*"TerminalOffset"*/;
+  v40->COND_VALUE_KEY = (struct System_String_o *)StringLiteral_24880/*"value"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v40->COND_VALUE_KEY, v39, v41, v42, v43, v44, v45, v46);
+  v47 = StringLiteral_13764/*"TerminalOffset"*/;
   v48 = ServantScriptEntity_TypeInfo->static_fields;
-  v48->TERMINAL_OFFSET_KEY = (struct System_String_o *)StringLiteral_13762/*"TerminalOffset"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v48->TERMINAL_OFFSET_KEY, v47, v49, v50, v51, v52, v53, v54);
+  v48->TERMINAL_OFFSET_KEY = (struct System_String_o *)StringLiteral_13764/*"TerminalOffset"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v48->TERMINAL_OFFSET_KEY, v47, v49, v50, v51, v52, v53, v54);
   v55 = StringLiteral_3111/*"BattleBondOffset"*/;
   v56 = ServantScriptEntity_TypeInfo->static_fields;
   v56->BATTLE_BOND_OFFSET_KEY = (struct System_String_o *)StringLiteral_3111/*"BattleBondOffset"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v56->BATTLE_BOND_OFFSET_KEY, v55, v57, v58, v59, v60, v61, v62);
-  v63 = StringLiteral_22901/*"photoSvtPosition"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v56->BATTLE_BOND_OFFSET_KEY, v55, v57, v58, v59, v60, v61, v62);
+  v63 = StringLiteral_22896/*"photoSvtPosition"*/;
   v64 = ServantScriptEntity_TypeInfo->static_fields;
-  v64->PHOT_SVT_POSITION_KEY = (struct System_String_o *)StringLiteral_22901/*"photoSvtPosition"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v64->PHOT_SVT_POSITION_KEY, v63, v65, v66, v67, v68, v69, v70);
+  v64->PHOT_SVT_POSITION_KEY = (struct System_String_o *)StringLiteral_22896/*"photoSvtPosition"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v64->PHOT_SVT_POSITION_KEY, v63, v65, v66, v67, v68, v69, v70);
   v71 = ServantScriptEntity_TypeInfo->static_fields;
-  v72 = StringLiteral_22903/*"photoSvtPositionRight"*/;
-  v71->PHOT_SVT_POSITION_RIGHT_KEY = (struct System_String_o *)StringLiteral_22903/*"photoSvtPositionRight"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v71->PHOT_SVT_POSITION_RIGHT_KEY, v72, v73, v74, v75, v76, v77, v78);
+  v72 = StringLiteral_22898/*"photoSvtPositionRight"*/;
+  v71->PHOT_SVT_POSITION_RIGHT_KEY = (struct System_String_o *)StringLiteral_22898/*"photoSvtPositionRight"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v71->PHOT_SVT_POSITION_RIGHT_KEY, v72, v73, v74, v75, v76, v77, v78);
   v79 = ServantScriptEntity_TypeInfo->static_fields;
-  v80 = StringLiteral_22902/*"photoSvtPositionLeft"*/;
-  v79->PHOT_SVT_POSITION_LEFT_KEY = (struct System_String_o *)StringLiteral_22902/*"photoSvtPositionLeft"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v79->PHOT_SVT_POSITION_LEFT_KEY, v80, v81, v82, v83, v84, v85, v86);
+  v80 = StringLiteral_22897/*"photoSvtPositionLeft"*/;
+  v79->PHOT_SVT_POSITION_LEFT_KEY = (struct System_String_o *)StringLiteral_22897/*"photoSvtPositionLeft"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v79->PHOT_SVT_POSITION_LEFT_KEY, v80, v81, v82, v83, v84, v85, v86);
   v87 = ServantScriptEntity_TypeInfo->static_fields;
-  v88 = StringLiteral_22904/*"photoSvtScale"*/;
-  v87->PHOT_SVT_SCALE_KEY = (struct System_String_o *)StringLiteral_22904/*"photoSvtScale"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v87->PHOT_SVT_SCALE_KEY, v88, v89, v90, v91, v92, v93, v94);
+  v88 = StringLiteral_22899/*"photoSvtScale"*/;
+  v87->PHOT_SVT_SCALE_KEY = (struct System_String_o *)StringLiteral_22899/*"photoSvtScale"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v87->PHOT_SVT_SCALE_KEY, v88, v89, v90, v91, v92, v93, v94);
   v95 = ServantScriptEntity_TypeInfo->static_fields;
-  v96 = StringLiteral_22906/*"photoSvtScaleRight"*/;
-  v95->PHOT_SVT_SCALE_RIGHT_KEY = (struct System_String_o *)StringLiteral_22906/*"photoSvtScaleRight"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v95->PHOT_SVT_SCALE_RIGHT_KEY, v96, v97, v98, v99, v100, v101, v102);
+  v96 = StringLiteral_22901/*"photoSvtScaleRight"*/;
+  v95->PHOT_SVT_SCALE_RIGHT_KEY = (struct System_String_o *)StringLiteral_22901/*"photoSvtScaleRight"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v95->PHOT_SVT_SCALE_RIGHT_KEY, v96, v97, v98, v99, v100, v101, v102);
   v103 = ServantScriptEntity_TypeInfo->static_fields;
-  v104 = StringLiteral_22905/*"photoSvtScaleLeft"*/;
-  v103->PHOT_SVT_SCALE_LEFT_KEY = (struct System_String_o *)StringLiteral_22905/*"photoSvtScaleLeft"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v103->PHOT_SVT_SCALE_LEFT_KEY, v104, v105, v106, v107, v108, v109, v110);
+  v104 = StringLiteral_22900/*"photoSvtScaleLeft"*/;
+  v103->PHOT_SVT_SCALE_LEFT_KEY = (struct System_String_o *)StringLiteral_22900/*"photoSvtScaleLeft"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v103->PHOT_SVT_SCALE_LEFT_KEY, v104, v105, v106, v107, v108, v109, v110);
 }
 
 
@@ -207,39 +207,39 @@ void ServantScriptEntity___ctor(ServantScriptEntity_o *this, const MethodInfo *m
   System_String_o *v10; // x7
   int v11; // w8
 
-  if ( (byte_4D2D2BB & 1) == 0 )
+  if ( (byte_4CEF0A0 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    sub_1C94098(&int___TypeInfo);
-    byte_4D2D2BB = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    sub_1C7BAE8(&int___TypeInfo);
+    byte_4CEF0A0 = 1;
   }
-  v3 = sub_1C94140(int___TypeInfo, 2);
+  v3 = sub_1C7BB90(int___TypeInfo, 2);
   if ( !v3 )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   v11 = *(_DWORD *)(v3 + 24);
   if ( !v11 || (*(_DWORD *)(v3 + 32) = 300, v11 == 1) )
-    sub_1C942F8(v3);
+    sub_1C7BD48(v3);
   *(_DWORD *)(v3 + 36) = 5;
   this->fields.grandSelectOffset = (struct System_Int32_array *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.grandSelectOffset, v3, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.grandSelectOffset, v3, v5, v6, v7, v8, v9, v10);
   this->fields.GrandBoardAddOffsetX = -25;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantScriptEntity__CreatePK(int32_t id, int32_t form, const MethodInfo *method)
 {
-  if ( (byte_4D2D2AC & 1) == 0 )
+  if ( (byte_4CEF091 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D2D2AC = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CEF091 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            form,
-           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -249,10 +249,10 @@ System_String_o *ServantScriptEntity__CreatePrimaryKey(ServantScriptEntity_o *th
   int32_t form; // w19
   int32_t id; // w20
 
-  if ( (byte_4D2D2AB & 1) == 0 )
+  if ( (byte_4CEF090 & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2AB = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF090 = 1;
   }
   id = this->fields.id;
   form = this->fields.form;
@@ -267,10 +267,10 @@ System_Int32_array *ServantScriptEntity__GetBattleBondOffset(ServantScriptEntity
   const MethodInfo *v2; // x3
   ServantScriptEntity_c *v4; // x0
 
-  if ( (byte_4D2D2B3 & 1) == 0 )
+  if ( (byte_4CEF098 & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B3 = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF098 = 1;
   }
   v4 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -300,25 +300,25 @@ System_Int32_array *ServantScriptEntity__GetExtendOffset(
   Il2CppObject *v16; // x22
   char *v17; // x9
 
-  if ( (byte_4D2D2B4 & 1) == 0 )
+  if ( (byte_4CEF099 & 1) == 0 )
   {
-    sub_1C94098(&System_Convert_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&int___TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_object__TypeInfo);
-    byte_4D2D2B4 = 1;
+    sub_1C7BAE8(&System_Convert_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&int___TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_object__TypeInfo);
+    byte_4CEF099 = 1;
   }
   if ( !defaultValue )
-    defaultValue = (System_Int32_array *)sub_1C94140(int___TypeInfo, 2);
+    defaultValue = (System_Int32_array *)sub_1C7BB90(int___TypeInfo, 2);
   extendData = this->fields.extendData;
   if ( extendData
     && System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)extendData,
          (Il2CppObject *)key,
-         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.extendData;
     if ( !Item )
@@ -326,7 +326,7 @@ System_Int32_array *ServantScriptEntity__GetExtendOffset(
     Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                         Item,
                                                                         (Il2CppObject *)key,
-                                                                        (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                                        (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( Item )
     {
       naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment;
@@ -354,7 +354,7 @@ System_Int32_array *ServantScriptEntity__GetExtendOffset(
                 v16 = System_Collections_Generic_List_object___get_Item(
                         v12,
                         v13,
-                        (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+                        (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
                 if ( !System_Convert_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
                 Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Convert__ToInt32(v16, 0);
@@ -362,7 +362,7 @@ System_Int32_array *ServantScriptEntity__GetExtendOffset(
               if ( !defaultValue )
                 break;
               if ( v13 >= LODWORD(defaultValue->max_length) )
-                sub_1C942F8(Item);
+                sub_1C7BD48(Item);
               v14 = 0;
               v17 = (char *)defaultValue + 4 * v13;
               v13 = 1;
@@ -372,7 +372,7 @@ System_Int32_array *ServantScriptEntity__GetExtendOffset(
             }
           }
 LABEL_25:
-          sub_1C942F0(Item, v8);
+          sub_1C7BD40(Item, v8);
         }
       }
     }
@@ -389,10 +389,10 @@ System_Int32_array *ServantScriptEntity__GetPhotoSvtPosition(
   const MethodInfo *v3; // x3
   ServantScriptEntity_c *v6; // x0
 
-  if ( (byte_4D2D2B5 & 1) == 0 )
+  if ( (byte_4CEF09A & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B5 = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09A = 1;
   }
   v6 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -412,10 +412,10 @@ System_Int32_array *ServantScriptEntity__GetPhotoSvtPositionLeft(
   const MethodInfo *v3; // x3
   ServantScriptEntity_c *v6; // x0
 
-  if ( (byte_4D2D2B7 & 1) == 0 )
+  if ( (byte_4CEF09C & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B7 = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09C = 1;
   }
   v6 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -435,10 +435,10 @@ System_Int32_array *ServantScriptEntity__GetPhotoSvtPositionRight(
   const MethodInfo *v3; // x3
   ServantScriptEntity_c *v6; // x0
 
-  if ( (byte_4D2D2B6 & 1) == 0 )
+  if ( (byte_4CEF09B & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B6 = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09B = 1;
   }
   v6 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -459,13 +459,13 @@ float ServantScriptEntity__GetPhotoSvtScale(ServantScriptEntity_o *this, float d
   struct System_Collections_Generic_Dictionary_string__object__o *v9; // x19
   Il2CppObject *Item; // x19
 
-  if ( (byte_4D2D2B8 & 1) == 0 )
+  if ( (byte_4CEF09D & 1) == 0 )
   {
-    sub_1C94098(&System_Convert_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B8 = 1;
+    sub_1C7BAE8(&System_Convert_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09D = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -479,18 +479,18 @@ float ServantScriptEntity__GetPhotoSvtScale(ServantScriptEntity_o *this, float d
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)extendData,
           (Il2CppObject *)v6->static_fields->PHOT_SVT_SCALE_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return defaultValue;
   v8 = ServantScriptEntity_TypeInfo;
   v9 = this->fields.extendData;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantScriptEntity_TypeInfo);
   if ( !v9 )
-    sub_1C942F0(v8, v7);
+    sub_1C7BD40(v8, v7);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v9,
            (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->PHOT_SVT_SCALE_KEY,
-           (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   return System_Convert__ToSingle(Item, 0);
@@ -509,13 +509,13 @@ float ServantScriptEntity__GetPhotoSvtScaleLeft(
   struct System_Collections_Generic_Dictionary_string__object__o *v9; // x19
   Il2CppObject *Item; // x19
 
-  if ( (byte_4D2D2BA & 1) == 0 )
+  if ( (byte_4CEF09F & 1) == 0 )
   {
-    sub_1C94098(&System_Convert_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2BA = 1;
+    sub_1C7BAE8(&System_Convert_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09F = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -529,18 +529,18 @@ float ServantScriptEntity__GetPhotoSvtScaleLeft(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)extendData,
           (Il2CppObject *)v6->static_fields->PHOT_SVT_SCALE_LEFT_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return defaultValue;
   v8 = ServantScriptEntity_TypeInfo;
   v9 = this->fields.extendData;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantScriptEntity_TypeInfo);
   if ( !v9 )
-    sub_1C942F0(v8, v7);
+    sub_1C7BD40(v8, v7);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v9,
            (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->PHOT_SVT_SCALE_LEFT_KEY,
-           (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   return System_Convert__ToSingle(Item, 0);
@@ -559,13 +559,13 @@ float ServantScriptEntity__GetPhotoSvtScaleRight(
   struct System_Collections_Generic_Dictionary_string__object__o *v9; // x19
   Il2CppObject *Item; // x19
 
-  if ( (byte_4D2D2B9 & 1) == 0 )
+  if ( (byte_4CEF09E & 1) == 0 )
   {
-    sub_1C94098(&System_Convert_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B9 = 1;
+    sub_1C7BAE8(&System_Convert_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF09E = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -579,18 +579,18 @@ float ServantScriptEntity__GetPhotoSvtScaleRight(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)extendData,
           (Il2CppObject *)v6->static_fields->PHOT_SVT_SCALE_RIGHT_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return defaultValue;
   v8 = ServantScriptEntity_TypeInfo;
   v9 = this->fields.extendData;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantScriptEntity_TypeInfo);
   if ( !v9 )
-    sub_1C942F0(v8, v7);
+    sub_1C7BD40(v8, v7);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v9,
            (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->PHOT_SVT_SCALE_RIGHT_KEY,
-           (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   return System_Convert__ToSingle(Item, 0);
@@ -602,10 +602,10 @@ System_Int32_array *ServantScriptEntity__GetTerminalOffset(ServantScriptEntity_o
   const MethodInfo *v2; // x3
   ServantScriptEntity_c *v4; // x0
 
-  if ( (byte_4D2D2B2 & 1) == 0 )
+  if ( (byte_4CEF097 & 1) == 0 )
   {
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B2 = 1;
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF097 = 1;
   }
   v4 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -642,18 +642,18 @@ bool ServantScriptEntity__IsCondEnable(ServantScriptEntity_o *this, int32_t frie
   System_Int32_array *v25; // x2
   const MethodInfo *v26; // x3
 
-  if ( (byte_4D2D2B1 & 1) == 0 )
+  if ( (byte_4CEF096 & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C94098(&long_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B1 = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C7BAE8(&long_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF096 = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -667,7 +667,7 @@ bool ServantScriptEntity__IsCondEnable(ServantScriptEntity_o *this, int32_t frie
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)extendData,
           (Il2CppObject *)v6->static_fields->COND_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_34;
   Item = (int *)ServantScriptEntity_TypeInfo;
   v9 = this->fields.extendData;
@@ -678,7 +678,7 @@ bool ServantScriptEntity__IsCondEnable(ServantScriptEntity_o *this, int32_t frie
   Item = (int *)System_Collections_Generic_Dictionary_object__object___get_Item(
                   (System_Collections_Generic_Dictionary_object__object__o *)v9,
                   (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->COND_KEY,
-                  (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                  (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     return (char)Item;
   naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment;
@@ -692,7 +692,7 @@ bool ServantScriptEntity__IsCondEnable(ServantScriptEntity_o *this, int32_t frie
   v11 = System_Collections_Generic_List_object___get_Item(
           (System_Collections_Generic_List_object__o *)Item,
           0,
-          (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
   v9 = (struct System_Collections_Generic_Dictionary_string__object__o *)v11;
   if ( v11 )
   {
@@ -702,7 +702,7 @@ bool ServantScriptEntity__IsCondEnable(ServantScriptEntity_o *this, int32_t frie
       || (System_Collections_Generic_Dictionary_string__object__c *)v11->klass->_2.typeHierarchy[v12 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
 LABEL_43:
-      sub_1C9468C(v9);
+      sub_1C7C0DC(v9);
       LOBYTE(Item) = (unsigned __int8)ServantScriptEntity__GetExtendOffset(v23, v24, v25, v26);
       return (char)Item;
     }
@@ -715,7 +715,7 @@ LABEL_43:
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)v9,
           (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->COND_TYPE_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_34;
   v13 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -726,7 +726,7 @@ LABEL_43:
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)v9,
           (Il2CppObject *)v13->static_fields->COND_VALUE_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_34;
   v14 = ServantScriptEntity_TypeInfo;
   if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
@@ -737,7 +737,7 @@ LABEL_43:
   Item = (int *)System_Collections_Generic_Dictionary_object__object___get_Item(
                   (System_Collections_Generic_Dictionary_object__object__o *)v9,
                   (Il2CppObject *)v14->static_fields->COND_TYPE_KEY,
-                  (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                  (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_41;
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) != long_TypeInfo->_1.element_class )
@@ -746,13 +746,13 @@ LABEL_43:
   Item = (int *)System_Collections_Generic_Dictionary_object__object___get_Item(
                   (System_Collections_Generic_Dictionary_object__object__o *)v9,
                   (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->COND_VALUE_KEY,
-                  (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                  (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_41;
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) != long_TypeInfo->_1.element_class )
   {
 LABEL_42:
-    sub_1C9468C(Item);
+    sub_1C7C0DC(Item);
     goto LABEL_43;
   }
   v20 = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v18, v19);
@@ -775,8 +775,8 @@ LABEL_34:
   Item = (int *)System_Int32__ToString((int)this + 16, 0);
   if ( !Item )
 LABEL_41:
-    sub_1C942F0(Item, v7);
-  v21 = System_String__Substring_64463684((System_String_o *)Item, 0, Item[4] - 1, 0);
+    sub_1C7BD40(Item, v7);
+  v21 = System_String__Substring_64222852((System_String_o *)Item, 0, Item[4] - 1, 0);
   v22 = System_Int32__Parse(v21, 0);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
@@ -802,21 +802,21 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
   Il2CppObject *v16; // x19
   Il2CppObject *v17; // x0
 
-  if ( (byte_4D2D2AE & 1) == 0 )
+  if ( (byte_4CEF093 & 1) == 0 )
   {
-    sub_1C94098(&System_Convert_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C94098(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2AE = 1;
+    sub_1C7BAE8(&System_Convert_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C7BAE8(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF093 = 1;
   }
-  if ( !byte_4D2D35B )
+  if ( !byte_4CEF1C0 )
   {
-    sub_1C94098(&UnityEngine_Vector2Int_TypeInfo);
-    byte_4D2D35B = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2Int_TypeInfo);
+    byte_4CEF1C0 = 1;
   }
   extendData = this->fields.extendData;
   s_Zero = (unsigned __int64)UnityEngine_Vector2Int_TypeInfo->static_fields->s_Zero;
@@ -831,18 +831,18 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)extendData,
            (Il2CppObject *)v5->static_fields->FACE_SIZE_KEY,
-           (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       v7 = ServantScriptEntity_TypeInfo;
       v8 = this->fields.extendData;
       if ( !ServantScriptEntity_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantScriptEntity_TypeInfo);
       if ( !v8 )
-        sub_1C942F0(v7, v6);
+        sub_1C7BD40(v7, v6);
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                             (System_Collections_Generic_Dictionary_object__object__o *)v8,
                                                             (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->FACE_SIZE_KEY,
-                                                            (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                            (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       v10 = Item;
       if ( Item
         && (naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment,
@@ -857,14 +857,14 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
             s_Zero = (unsigned __int64)System_Collections_Generic_List_object___get_Item(
                                          Item,
                                          0,
-                                         (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+                                         (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
             if ( !System_Convert_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
             LODWORD(s_Zero) = System_Convert__ToInt32((Il2CppObject *)s_Zero, 0);
             v17 = System_Collections_Generic_List_object___get_Item(
                     v10,
                     1,
-                    (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+                    (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
             LODWORD(v13) = System_Convert__ToInt32(v17, 0);
           }
           else
@@ -876,7 +876,7 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
         v16 = System_Collections_Generic_List_object___get_Item(
                 Item,
                 0,
-                (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_object__get_Item__);
+                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_object__get_Item__);
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
         v12 = v16;
@@ -908,13 +908,13 @@ int32_t ServantScriptEntity__getMyRoomForm(ServantScriptEntity_o *this, const Me
   ServantScriptEntity_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2D2AF & 1) == 0 )
+  if ( (byte_4CEF094 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&long_TypeInfo);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2AF = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&long_TypeInfo);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF094 = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -928,7 +928,7 @@ int32_t ServantScriptEntity__getMyRoomForm(ServantScriptEntity_o *this, const Me
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)extendData,
           (Il2CppObject *)v4->static_fields->MYROOM_FORM_KEY,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = ServantScriptEntity_TypeInfo;
   v7 = this->fields.extendData;
@@ -938,13 +938,13 @@ int32_t ServantScriptEntity__getMyRoomForm(ServantScriptEntity_o *this, const Me
     || (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  (System_Collections_Generic_Dictionary_object__object__o *)v7,
                  (Il2CppObject *)ServantScriptEntity_TypeInfo->static_fields->MYROOM_FORM_KEY,
-                 (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                 (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_1C942F0(Item, v5);
+    sub_1C7BD40(Item, v5);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v8, v9);
-  sub_1C9468C(Item);
+  sub_1C7C0DC(Item);
   return ServantScriptEntity__isMultipleForm(v11, v12);
 }
 
@@ -970,12 +970,12 @@ UnityEngine_Vector2_o ServantScriptEntity__getOffset(
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4D2D2AD & 1) == 0 )
+  if ( (byte_4CEF092 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_ServantScriptAddMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
-    byte_4D2D2AD = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantScriptAddMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
+    byte_4CEF092 = 1;
   }
   v16 = 0;
   entity = 0;
@@ -990,14 +990,14 @@ UnityEngine_Vector2_o ServantScriptEntity__getOffset(
     case 4:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
+      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
       if ( !Master_object )
         goto LABEL_37;
       Master_object = (System_Int32_array *)DataMasterBase_object__object__long___TryGetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                               &entity,
                                               this->fields.id,
-                                              (const MethodInfo_345DA68 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
+                                              (const MethodInfo_34308A4 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) == 0 )
       {
 LABEL_13:
@@ -1038,14 +1038,14 @@ LABEL_18:
     case 8:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
+      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
       if ( !Master_object )
         goto LABEL_37;
       Master_object = (System_Int32_array *)DataMasterBase_object__object__long___TryGetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                               &v15,
                                               this->fields.id,
-                                              (const MethodInfo_345DA68 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
+                                              (const MethodInfo_34308A4 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( v15 )
@@ -1055,14 +1055,14 @@ LABEL_18:
           goto LABEL_36;
         }
 LABEL_37:
-        sub_1C942F0(Master_object, v6);
+        sub_1C7BD40(Master_object, v6);
       }
       grandSelectOffset = this->fields.grandSelectOffset;
       if ( !grandSelectOffset )
         goto LABEL_37;
       if ( LODWORD(grandSelectOffset->max_length) < 2 )
 LABEL_38:
-        sub_1C942F8(Master_object);
+        sub_1C7BD48(Master_object);
       v12 = grandSelectOffset->m_Items[1];
       offsetXMyroom = grandSelectOffset->m_Items[0] + this->fields.offsetX;
       offsetYMyroom = v12 + this->fields.offsetY;
@@ -1075,14 +1075,14 @@ LABEL_36:
     case 9:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
+      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
       if ( !Master_object )
         goto LABEL_37;
       Master_object = (System_Int32_array *)DataMasterBase_object__object__long___TryGetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                               &v16,
                                               this->fields.id,
-                                              (const MethodInfo_345DA68 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
+                                              (const MethodInfo_34308A4 *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) == 0 )
       {
         offsetYMyroom = this->fields.offsetYMyroom;
@@ -1107,11 +1107,11 @@ bool ServantScriptEntity__isMultipleForm(ServantScriptEntity_o *this, const Meth
   struct System_Collections_Generic_Dictionary_string__object__o *extendData; // x19
   ServantScriptEntity_c *v4; // x0
 
-  if ( (byte_4D2D2B0 & 1) == 0 )
+  if ( (byte_4CEF095 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&ServantScriptEntity_TypeInfo);
-    byte_4D2D2B0 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&ServantScriptEntity_TypeInfo);
+    byte_4CEF095 = 1;
   }
   extendData = this->fields.extendData;
   if ( !extendData )
@@ -1125,5 +1125,5 @@ bool ServantScriptEntity__isMultipleForm(ServantScriptEntity_o *this, const Meth
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)extendData,
            (Il2CppObject *)v4->static_fields->COMBINE_RESULT_FORM_KEY,
-           (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+           (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
 }

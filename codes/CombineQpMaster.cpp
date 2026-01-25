@@ -1,14 +1,14 @@
 void CombineQpMaster___ctor(CombineQpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C613 & 1) == 0 )
+  if ( (byte_4CEE449 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string___ctor__);
-    byte_4D2C613 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string___ctor__);
+    byte_4CEE449 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     88,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ CombineQpEntity_o *CombineQpMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2C611 & 1) == 0 )
+  if ( (byte_4CEE447 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__GetEntity__);
-    byte_4D2C611 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__GetEntity__);
+    byte_4CEE447 = 1;
   }
   PK = (Il2CppObject *)CombineQpEntity__CreatePK(rarity, lv, *(const MethodInfo **)&lv);
   return (CombineQpEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_345FF78 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__GetEntity__);
+                                (const MethodInfo_3432DB4 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool CombineQpMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2C612 & 1) == 0 )
+  if ( (byte_4CEE448 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__TryGetEntity__);
-    byte_4D2C612 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__TryGetEntity__);
+    byte_4CEE448 = 1;
   }
   PK = (Il2CppObject *)CombineQpEntity__CreatePK(rarity, lv, *(const MethodInfo **)&rarity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_CombineQpMaster__CombineQpEntity__string__TryGetEntity__);
 }

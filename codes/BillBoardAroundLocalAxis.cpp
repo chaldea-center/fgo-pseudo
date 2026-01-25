@@ -16,7 +16,7 @@ void BillBoardAroundLocalAxis__SetTargetTransform(
   System_String_o *v7; // x7
 
   this->fields.targetTrans = trans;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetTrans,
     (int32_t)trans,
     (int32_t)method,
@@ -33,10 +33,10 @@ void BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *this, const Me
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4D2BBD1 & 1) == 0 )
+  if ( (byte_4CEDA29 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2BBD1 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEDA29 = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -171,7 +171,7 @@ void BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_o *this, co
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !targetTrans )
 LABEL_11:
-    sub_1C942F0(targetTrans, method);
+    sub_1C7BD40(targetTrans, method);
   v43.fields.x = v21;
   v43.fields.y = v22;
   v43.fields.z = v23;

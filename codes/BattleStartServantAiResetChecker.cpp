@@ -19,9 +19,9 @@ void BattleStartServantAiResetChecker___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.svtData = svtData;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)svtData, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)svtData, v7, v8, v9, v10, v11, v12);
   this->fields.warBoardSvtInfo = svtInfo;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.warBoardSvtInfo,
     (int32_t)svtInfo,
     v13,
@@ -39,6 +39,6 @@ bool BattleStartServantAiResetChecker__IsDead(BattleStartServantAiResetChecker_o
 
   warBoardSvtInfo = this->fields.warBoardSvtInfo;
   if ( !warBoardSvtInfo )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   return BattleWarBoardInfo_WarBoardServantInfo__IsBrokenPointInBoard(warBoardSvtInfo, 0);
 }

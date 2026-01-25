@@ -2,7 +2,7 @@ void FGOStandFigureMColor___ctor(FGOStandFigureMColor_o *this, const MethodInfo 
 {
   __asm { FMOV            V1.4S, #1.0 }
   this->fields.color = _Q1;
-  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_D00130;
+  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_CF6EA0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -39,10 +39,10 @@ void FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodIn
         do
         {
           if ( (unsigned int)v9 >= max_length )
-            sub_1C942F8(this);
+            sub_1C7BD48(this);
           material = (UnityEngine_Renderer_o *)renderers->m_Items[v9];
           if ( !material || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
-            sub_1C942F0(material, method);
+            sub_1C7BD40(material, method);
           UnityEngine_Material__set_color((UnityEngine_Material_o *)material, this->fields.color, 0);
           max_length = renderers->max_length;
           ++v9;

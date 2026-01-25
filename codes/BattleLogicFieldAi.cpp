@@ -24,152 +24,152 @@ void BattleLogicFieldAi___ctor(BattleLogicFieldAi_o *this, const MethodInfo *met
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D2FADC & 1) == 0 )
+  if ( (byte_4CF1861 & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask___TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE___ctor__);
-    sub_1C94098(&System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__TypeInfo);
-    byte_4D2FADC = 1;
+    sub_1C7BAE8(&BattleLogicTask___TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__TypeInfo);
+    byte_4CF1861 = 1;
   }
-  v3 = (struct BattleLogicTask_array *)sub_1C94140(BattleLogicTask___TypeInfo, 0);
+  v3 = (struct BattleLogicTask_array *)sub_1C7BB90(BattleLogicTask___TypeInfo, 0);
   this->fields.zeroTask = v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.zeroTask, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C942E4(System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.zeroTask, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum____ctor(
     v10,
-    (const MethodInfo_34E7500 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE___ctor__);
+    (const MethodInfo_34B8D98 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE___ctor__);
   if ( !v10 )
     goto LABEL_6;
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     48,
     28,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     49,
     29,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     46,
     30,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     47,
     31,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     43,
     32,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     45,
     33,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     44,
     43,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     75,
     64,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     76,
     70,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v10,
     79,
     74,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__Add__);
   this->fields.taskDictionary = (struct System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__o *)v10;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.taskDictionary, (int32_t)v10, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C942E4(System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.taskDictionary, (int32_t)v10, v13, v14, v15, v16, v17, v18);
+  v19 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum____ctor(
     v19,
-    (const MethodInfo_34E7500 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE___ctor__);
+    (const MethodInfo_34B8D98 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE___ctor__);
   if ( !v19 )
 LABEL_6:
-    sub_1C942F0(v11, v12);
+    sub_1C7BD40(v11, v12);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     28,
     10,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     29,
     11,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     30,
     12,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     31,
     13,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     32,
     6,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     33,
     4,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     34,
     2,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     43,
     15,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     64,
     21,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     66,
     19,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     67,
     22,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     70,
     23,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
     v19,
     74,
     25,
-    (const MethodInfo_34E7EC4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_34B975C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__Add__);
   this->fields.stateDicitionary = (struct System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__o *)v19;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.stateDicitionary, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.stateDicitionary, (int32_t)v19, v20, v21, v22, v23, v24, v25);
   BattleLogicBaseAi___ctor((BattleLogicBaseAi_o *)this, 0);
 }
 
@@ -222,12 +222,12 @@ void BattleLogicFieldAi__AddAiFieldScriptTask(
   System_String_o *v48; // x19
   System_String_o *v49; // x20
 
-  if ( (byte_4D2FAD7 & 1) == 0 )
+  if ( (byte_4CF185C & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C94098(&SoundManager_TypeInfo);
-    byte_4D2FAD7 = 1;
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C7BAE8(&SoundManager_TypeInfo);
+    byte_4CF185C = 1;
   }
   if ( ent )
   {
@@ -242,13 +242,13 @@ void BattleLogicFieldAi__AddAiFieldScriptTask(
       if ( EffectType )
       {
         v16 = EffectType;
-        v17 = sub_1C942E4(BattleLogicTask_TypeInfo);
+        v17 = sub_1C7BD34(BattleLogicTask_TypeInfo);
         BattleLogicTask___ctor((BattleLogicTask_o *)v17, 0);
         if ( !v17 )
           goto LABEL_31;
         BattleLogicTask__setEnemyMasterCutIn((BattleLogicTask_o *)v17, v16, 0);
         *(_QWORD *)(v17 + 120) = v14;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 120), (int32_t)v14, v18, v19, v20, v21, v22, v23);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 120), (int32_t)v14, v18, v19, v20, v21, v22, v23);
         *(_BYTE *)(v17 + 184) = isForcedSpeedOne;
         CutinAdditionalTime = AiFieldEntity__GetCutinAdditionalTime(ent, 0.0, 0);
         *(float *)(v17 + 212) = CutinAdditionalTime;
@@ -259,9 +259,9 @@ void BattleLogicFieldAi__AddAiFieldScriptTask(
           motionMessage = mainTask->fields.motionMessage;
           p_motionMessage = &mainTask->fields.motionMessage;
           *(_QWORD *)(v17 + 176) = motionMessage;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 176), (int32_t)motionMessage, v24, v25, v26, v27, v28, v29);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 176), (int32_t)motionMessage, v24, v25, v26, v27, v28, v29);
           *p_motionMessage = 0;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)p_motionMessage, 0, v33, v34, v35, v36, v37, v38);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_motionMessage, 0, v33, v34, v35, v36, v37, v38);
           *((_BYTE *)p_motionMessage + 40) = 1;
         }
         if ( retlist )
@@ -277,20 +277,20 @@ void BattleLogicFieldAi__AddAiFieldScriptTask(
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)retlist,
                 (Il2CppObject *)v17,
-                *(const MethodInfo_386AE34 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
             }
             else
             {
               v42 = &items->obj.klass + size;
               retlist->fields._size = size + 1;
               v42[4] = (Il2CppClass *)v17;
-              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v42 + 4), v17, v24, v25, v26, v27, v28, v29);
+              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v42 + 4), v17, v24, v25, v26, v27, v28, v29);
             }
             return;
           }
         }
 LABEL_31:
-        sub_1C942F0(Voice, v12);
+        sub_1C7BD40(Voice, v12);
       }
     }
     if ( !v14 )
@@ -311,7 +311,7 @@ LABEL_31:
         return;
       }
 LABEL_32:
-      sub_1C942F8(Voice);
+      sub_1C7BD48(Voice);
     }
     if ( (_DWORD)v43 == 2 )
     {
@@ -329,7 +329,7 @@ LABEL_32:
     v48 = (System_String_o *)v44[5];
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__playVoice_42281128(v49, v48, v47, 0, 0, 0);
+    SoundManager__playVoice_42095460(v49, v48, v47, 0, 0, 0);
   }
 }
 
@@ -352,11 +352,11 @@ void BattleLogicFieldAi__CheckAiActType(
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v10 = (BattleLogicBaseAi_o *)this;
-  if ( (byte_4D2FAD9 & 1) == 0 )
+  if ( (byte_4CF185E & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_SkillLvMaster___);
-    this = (BattleLogicFieldAi_o *)sub_1C94098(&DataManager_TypeInfo);
-    byte_4D2FAD9 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillLvMaster___);
+    this = (BattleLogicFieldAi_o *)sub_1C7BAE8(&DataManager_TypeInfo);
+    byte_4CF185E = 1;
   }
   entity = 0;
   v11 = (unsigned int)*actType;
@@ -373,7 +373,7 @@ void BattleLogicFieldAi__CheckAiActType(
       v13 = skillVals[9];
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (BattleLogicFieldAi_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillLvMaster___);
+      this = (BattleLogicFieldAi_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillLvMaster___);
       if ( !this )
         goto LABEL_18;
       this = (BattleLogicFieldAi_o *)SkillLvMaster__TryGetEntity((SkillLvMaster_o *)this, &entity, v14, v13, 0);
@@ -397,7 +397,7 @@ void BattleLogicFieldAi__CheckAiActType(
           }
         }
 LABEL_18:
-        sub_1C942F0(this, v11);
+        sub_1C7BD40(this, v11);
       }
     }
     goto LABEL_16;
@@ -437,37 +437,37 @@ bool BattleLogicFieldAi__CheckAiCanActionFromTargets(
   int32_t actType; // [xsp+1Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4D2FADB & 1) == 0 )
+  if ( (byte_4CF1860 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_Find_BattleFieldData___);
-    sub_1C94098(&BattleSkillInfoData_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMaster_AiActMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_AiActMaster__AiActEntity__int__TryGetEntity__);
-    sub_1C94098(&System_Func_BattleFieldData__bool__TypeInfo);
-    sub_1C94098(&Method_BattleLogicFieldAi___c__DisplayClass25_0__CheckAiCanActionFromTargets_b__0__);
-    sub_1C94098(&BattleLogicFieldAi___c__DisplayClass25_0_TypeInfo);
-    byte_4D2FADB = 1;
+    sub_1C7BAE8(&Method_BasicHelper_Find_BattleFieldData___);
+    sub_1C7BAE8(&BattleSkillInfoData_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_AiActMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_AiActMaster__AiActEntity__int__TryGetEntity__);
+    sub_1C7BAE8(&System_Func_BattleFieldData__bool__TypeInfo);
+    sub_1C7BAE8(&Method_BattleLogicFieldAi___c__DisplayClass25_0__CheckAiCanActionFromTargets_b__0__);
+    sub_1C7BAE8(&BattleLogicFieldAi___c__DisplayClass25_0_TypeInfo);
+    byte_4CF1860 = 1;
   }
   entity = 0;
   ptTarget = 0;
   target = 0;
-  v7 = sub_1C942E4(BattleLogicFieldAi___c__DisplayClass25_0_TypeInfo);
+  v7 = sub_1C7BD34(BattleLogicFieldAi___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_18;
   *(_QWORD *)(v7 + 16) = aiInfo;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)aiInfo, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)aiInfo, v10, v11, v12, v13, v14, v15);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_AiActMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_AiActMaster___);
   if ( !aiBaseEntity || !Master_object )
     goto LABEL_18;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           aiBaseEntity->fields.aiActId,
-          (const MethodInfo_345B50C *)Method_DataMasterBase_AiActMaster__AiActEntity__int__TryGetEntity__) )
+          (const MethodInfo_342E348 *)Method_DataMasterBase_AiActMaster__AiActEntity__int__TryGetEntity__) )
     return 1;
   Master_object = entity;
   if ( !entity )
@@ -477,9 +477,9 @@ bool BattleLogicFieldAi__CheckAiCanActionFromTargets(
     return 1;
   if ( !entity || (actType = HIDWORD(entity[1].klass), (data = this->fields.data) == 0) )
 LABEL_18:
-    sub_1C942F0(Master_object, v9);
+    sub_1C7BD40(Master_object, v9);
   field_datalist = (System_Object_array *)data->fields.field_datalist;
-  v18 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_BattleFieldData__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_BattleFieldData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v7,
@@ -488,8 +488,8 @@ LABEL_18:
   object = BasicHelper__Find_object_(
              field_datalist,
              (System_Func_T__bool__o *)v18,
-             (const MethodInfo_3186034 *)Method_BasicHelper_Find_BattleFieldData___);
-  v20 = (BattleSkillInfoData_o *)sub_1C942E4(BattleSkillInfoData_TypeInfo);
+             (const MethodInfo_315A2F4 *)Method_BasicHelper_Find_BattleFieldData___);
+  v20 = (BattleSkillInfoData_o *)sub_1C7BD34(BattleSkillInfoData_TypeInfo);
   BattleSkillInfoData___ctor(v20, 0);
   BattleLogicFieldAi__CheckAiActType(this, (AiActEntity_o *)entity, v20, (BattleFieldData_o *)object, &actType, v21);
   isSkillType = AiAct__isSkillType(actType, 0);
@@ -547,7 +547,7 @@ BattleLogicTask_array *BattleLogicFieldAi__CheckFieldAiBeforeMoveWave(
   data = this->fields.data;
   if ( !data || (field_datalist = data->fields.field_datalist) == 0 )
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   max_length = field_datalist->max_length;
   v5 = this;
   if ( (int)max_length < 1 )
@@ -556,11 +556,11 @@ LABEL_11:
   while ( 1 )
   {
     if ( v6 >= (unsigned int)max_length )
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     this = (BattleLogicFieldAi_o *)v5->fields.aiLogic;
     if ( !this )
       goto LABEL_11;
-    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47483096(
+    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47224712(
                                      (AiLogic_o *)this,
                                      field_datalist->m_Items[v6],
                                      21,
@@ -632,21 +632,21 @@ bool BattleLogicFieldAi__CheckFieldSkillTarget(
   char v59; // [xsp+28h] [xbp-78h]
   int v60; // [xsp+34h] [xbp-6Ch]
 
-  if ( (byte_4D2FADA & 1) == 0 )
+  if ( (byte_4CF185F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_FunctionMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C94098(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
-    sub_1C94098(&int___TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2FADA = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_FunctionMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C7BAE8(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+    sub_1C7BAE8(&int___TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CF185F = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_SkillLvMaster___);
   if ( !skillInfo )
     goto LABEL_41;
   v16 = (SkillLvMaster_o *)Instance;
@@ -660,12 +660,12 @@ bool BattleLogicFieldAi__CheckFieldSkillTarget(
     goto LABEL_41;
   v17 = (SkillLvEntity_o *)Instance;
   v18 = *(_QWORD *)(Instance + 32);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_FunctionMaster___);
+                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_FunctionMaster___);
   if ( !v18 )
     goto LABEL_41;
   v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -676,7 +676,7 @@ bool BattleLogicFieldAi__CheckFieldSkillTarget(
   Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                         *(_DWORD *)(v18 + 32),
-                        (const MethodInfo_345B4C0 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+                        (const MethodInfo_342E2FC *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
   if ( Instance )
   {
     Instance = FuncList__Check(43, *(_DWORD *)(Instance + 24), 0);
@@ -706,7 +706,7 @@ LABEL_13:
       Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
                             v19,
                             *(_DWORD *)(v18 + 32 + 4 * v23),
-                            (const MethodInfo_345B4C0 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+                            (const MethodInfo_342E2FC *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
       if ( Instance )
       {
         Instance = FuncList__Check(45, *(_DWORD *)(Instance + 24), 0);
@@ -746,7 +746,7 @@ LABEL_24:
       {
         v57 = (GrandQuestFolderBoardItem_o *)ptTarget;
         IsDeadToEnableUpHate = AiBaseEntity__IsDeadToEnableUpHate(aiEnt, 0, 0);
-        Instance = sub_1C94140(int___TypeInfo, 1);
+        Instance = sub_1C7BB90(int___TypeInfo, 1);
         data = this->fields.data;
         if ( data )
         {
@@ -780,8 +780,8 @@ LABEL_24:
                 goto LABEL_42;
               *(_DWORD *)(v32 + 32) = Instance;
               *target = (System_Int32_array *)v32;
-              sub_1C9403C((GrandQuestFolderBoardItem_o *)target, v32, v36, v37, v38, v39, v40, v41);
-              Instance = sub_1C94140(int___TypeInfo, 1);
+              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)target, v32, v36, v37, v38, v39, v40, v41);
+              Instance = sub_1C7BB90(int___TypeInfo, 1);
               v42 = v58->fields.data;
               if ( !v42 )
                 goto LABEL_41;
@@ -810,10 +810,10 @@ LABEL_24:
                 goto LABEL_41;
               if ( !*(_DWORD *)(v47 + 24) )
 LABEL_42:
-                sub_1C942F8(Instance);
+                sub_1C7BD48(Instance);
               *(_DWORD *)(v47 + 32) = Instance;
               v57->klass = (GrandQuestFolderBoardItem_c *)v47;
-              sub_1C9403C(v57, v47, v49, v50, v51, v52, v53, v54);
+              sub_1C7BA8C(v57, v47, v49, v50, v51, v52, v53, v54);
               aiLogic = v58->fields.aiLogic;
               Instance = AiActEntity__GetNoTargetNoActionType(aiActEnt, 0);
               if ( aiLogic )
@@ -824,7 +824,7 @@ LABEL_42:
       }
     }
 LABEL_41:
-    sub_1C942F0(Instance, v15);
+    sub_1C7BD40(Instance, v15);
   }
   return 0;
 }
@@ -840,15 +840,15 @@ BattleLogicTask_array *BattleLogicFieldAi__CreateActionTasks(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4D2FAD4 & 1) == 0 )
+  if ( (byte_4CF1859 & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    byte_4D2FAD4 = 1;
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    byte_4CF1859 = 1;
   }
-  v5 = (BattleLogicTask_o *)sub_1C942E4(BattleLogicTask_TypeInfo);
+  v5 = (BattleLogicTask_o *)sub_1C7BD34(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v5, 0);
   if ( !v5 )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   v5->fields.actiontype = actionType;
   BattleLogicTask__setActor(v5, 5, 0, 0);
   return BattleLogicFieldAi__createBaseActionTask(this, v5, v8);
@@ -886,7 +886,7 @@ void BattleLogicFieldAi__DefenceTargetInitialize(
         }
       }
 LABEL_8:
-      sub_1C942F0(this, aiFieldEntity);
+      sub_1C7BD40(this, aiFieldEntity);
     }
   }
 }
@@ -913,35 +913,35 @@ BattleLogicTask_array *BattleLogicFieldAi__GetCommonFieldAiTask(
   BattleData_o *v19; // x2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4D2FAD6 & 1) == 0 )
+  if ( (byte_4CF185B & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_Any_BattleFieldData___);
-    sub_1C94098(&System_Func_BattleFieldData__bool__TypeInfo);
-    sub_1C94098(&Method_BattleLogicFieldAi___c__DisplayClass19_0__GetCommonFieldAiTask_b__0__);
-    sub_1C94098(&BattleLogicFieldAi___c__DisplayClass19_0_TypeInfo);
-    byte_4D2FAD6 = 1;
+    sub_1C7BAE8(&Method_BasicHelper_Any_BattleFieldData___);
+    sub_1C7BAE8(&System_Func_BattleFieldData__bool__TypeInfo);
+    sub_1C7BAE8(&Method_BattleLogicFieldAi___c__DisplayClass19_0__GetCommonFieldAiTask_b__0__);
+    sub_1C7BAE8(&BattleLogicFieldAi___c__DisplayClass19_0_TypeInfo);
+    byte_4CF185B = 1;
   }
-  v7 = sub_1C942E4(BattleLogicFieldAi___c__DisplayClass19_0_TypeInfo);
+  v7 = sub_1C7BD34(BattleLogicFieldAi___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = this,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
         *(_DWORD *)(v7 + 24) = prcState,
         (data = this->fields.data) == 0) )
   {
-    sub_1C942F0(v8, v9);
+    sub_1C7BD40(v8, v9);
   }
   field_datalist = (System_Object_array *)data->fields.field_datalist;
-  v18 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_BattleFieldData__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_BattleFieldData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v7,
     Method_BattleLogicFieldAi___c__DisplayClass19_0__GetCommonFieldAiTask_b__0__,
     0);
-  if ( BasicHelper__Any_object__51926292(
+  if ( BasicHelper__Any_object__51746772(
          field_datalist,
          (System_Func_T__bool__o *)v18,
-         (const MethodInfo_3185514 *)Method_BasicHelper_Any_BattleFieldData___) )
+         (const MethodInfo_31597D4 *)Method_BasicHelper_Any_BattleFieldData___) )
   {
     return BattleLogicFieldAi__checkFieldAiTask(this, logicType, v19, v20);
   }
@@ -965,7 +965,7 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiEntry(BattleLogicFieldAi_
   data = this->fields.data;
   if ( !data || (field_datalist = data->fields.field_datalist) == 0 )
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   max_length = field_datalist->max_length;
   v5 = this;
   if ( (int)max_length < 1 )
@@ -974,11 +974,11 @@ LABEL_11:
   while ( 1 )
   {
     if ( v6 >= (unsigned int)max_length )
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     this = (BattleLogicFieldAi_o *)v5->fields.aiLogic;
     if ( !this )
       goto LABEL_11;
-    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47483096(
+    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47224712(
                                      (AiLogic_o *)this,
                                      field_datalist->m_Items[v6],
                                      15,
@@ -1006,7 +1006,7 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiStartTurn(BattleLogicFiel
   data = this->fields.data;
   if ( !data || (field_datalist = data->fields.field_datalist) == 0 )
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   max_length = field_datalist->max_length;
   v5 = this;
   if ( (int)max_length < 1 )
@@ -1015,11 +1015,11 @@ LABEL_11:
   while ( 1 )
   {
     if ( v6 >= (unsigned int)max_length )
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     this = (BattleLogicFieldAi_o *)v5->fields.aiLogic;
     if ( !this )
       goto LABEL_11;
-    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47483096(
+    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47224712(
                                      (AiLogic_o *)this,
                                      field_datalist->m_Items[v6],
                                      4,
@@ -1047,7 +1047,7 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiStartWave(BattleLogicFiel
   data = this->fields.data;
   if ( !data || (field_datalist = data->fields.field_datalist) == 0 )
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   max_length = field_datalist->max_length;
   v5 = this;
   if ( (int)max_length < 1 )
@@ -1056,11 +1056,11 @@ LABEL_11:
   while ( 1 )
   {
     if ( v6 >= (unsigned int)max_length )
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     this = (BattleLogicFieldAi_o *)v5->fields.aiLogic;
     if ( !this )
       goto LABEL_11;
-    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47483096(
+    this = (BattleLogicFieldAi_o *)AiLogic__checkThinking_47224712(
                                      (AiLogic_o *)this,
                                      field_datalist->m_Items[v6],
                                      6,
@@ -1086,11 +1086,11 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiTask(
   BattleLogicFieldAi_o *Item; // x0
   const MethodInfo *v8; // x3
 
-  if ( (byte_4D2FAD1 & 1) == 0 )
+  if ( (byte_4CF1856 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__get_Item__);
-    byte_4D2FAD1 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__get_Item__);
+    byte_4CF1856 = 1;
   }
   taskDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.taskDictionary;
   if ( !taskDictionary )
@@ -1098,7 +1098,7 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiTask(
   if ( System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___ContainsKey(
          taskDictionary,
          ltype,
-         (const MethodInfo_34E80B0 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__ContainsKey__) )
+         (const MethodInfo_34B9948 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__ContainsKey__) )
   {
     taskDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.taskDictionary;
     if ( taskDictionary )
@@ -1106,11 +1106,11 @@ BattleLogicTask_array *BattleLogicFieldAi__checkFieldAiTask(
       Item = (BattleLogicFieldAi_o *)System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___get_Item(
                                        taskDictionary,
                                        ltype,
-                                       (const MethodInfo_34E7E28 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__get_Item__);
+                                       (const MethodInfo_34B96C0 *)Method_System_Collections_Generic_Dictionary_BattleLogic_LOGICTYPE__BattleLogicTask_ACTIONTYPE__get_Item__);
       return BattleLogicFieldAi__createBase(Item, (int32_t)Item, 0, v8);
     }
 LABEL_8:
-    sub_1C942F0(taskDictionary, *(_QWORD *)&ltype);
+    sub_1C7BD40(taskDictionary, *(_QWORD *)&ltype);
   }
   return this->fields.zeroTask;
 }
@@ -1135,32 +1135,32 @@ BattleLogicTask_array *BattleLogicFieldAi__createBase(
   System_String_o *v16; // x7
   __int64 v18; // x0
 
-  if ( (byte_4D2FAD0 & 1) == 0 )
+  if ( (byte_4CF1855 & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask___TypeInfo);
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    byte_4D2FAD0 = 1;
+    sub_1C7BAE8(&BattleLogicTask___TypeInfo);
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    byte_4CF1855 = 1;
   }
-  v6 = (BattleLogicTask_o *)sub_1C942E4(BattleLogicTask_TypeInfo);
+  v6 = (BattleLogicTask_o *)sub_1C7BD34(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v6, 0);
   if ( !v6
     || (v6->fields.actiontype = actionType,
         BattleLogicTask__setActor(v6, 5, index, 0),
-        (v7 = sub_1C94140(BattleLogicTask___TypeInfo, 1)) == 0) )
+        (v7 = sub_1C7BB90(BattleLogicTask___TypeInfo, 1)) == 0) )
   {
-    sub_1C942F0(v7, v8);
+    sub_1C7BD40(v7, v8);
   }
   v9 = v7;
-  v10 = sub_1C941D4(v6, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+  v10 = sub_1C7BC24(v6, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
   if ( !v10 )
   {
-    v18 = sub_1C94314(0);
-    sub_1C941C0(v18, 0);
+    v18 = sub_1C7BD64(0);
+    sub_1C7BC10(v18, 0);
   }
   if ( !*(_DWORD *)(v9 + 24) )
-    sub_1C942F8(v10);
+    sub_1C7BD48(v10);
   *(_QWORD *)(v9 + 32) = v6;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v6, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v6, v11, v12, v13, v14, v15, v16);
   return (BattleLogicTask_array *)v9;
 }
 
@@ -1179,20 +1179,20 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
   BattleFieldData_o *v10; // x24
   System_Collections_Generic_List_object__o *v11; // x23
   struct BattleData_o *v12; // x8
-  AiFieldEntity_o *Action_47484152; // x0
+  AiFieldEntity_o *Action_47225768; // x0
   const MethodInfo *v14; // x3
   const MethodInfo *v15; // x5
 
   v4 = this;
-  if ( (byte_4D2FAD2 & 1) == 0 )
+  if ( (byte_4CF1857 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    this = (BattleLogicFieldAi_o *)sub_1C94098(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4D2FAD2 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    this = (BattleLogicFieldAi_o *)sub_1C7BAE8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4CF1857 = 1;
   }
   if ( !task )
     goto LABEL_22;
@@ -1202,7 +1202,7 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
   if ( System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___ContainsKey(
          (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
          task->fields.actiontype,
-         (const MethodInfo_34E80B0 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__ContainsKey__) )
+         (const MethodInfo_34B9948 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__ContainsKey__) )
   {
     this = (BattleLogicFieldAi_o *)v4->fields.stateDicitionary;
     if ( !this )
@@ -1210,7 +1210,7 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
     this = (BattleLogicFieldAi_o *)System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___get_Item(
                                      (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
                                      task->fields.actiontype,
-                                     (const MethodInfo_34E7E28 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__get_Item__);
+                                     (const MethodInfo_34B96C0 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__AiLogic_PROC_STATE__get_Item__);
     v5 = (int)this;
     if ( task->fields.actortype == 5 )
     {
@@ -1231,19 +1231,19 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
     if ( (int)v6 < (int)max_length )
     {
       if ( v6 >= max_length )
-        sub_1C942F8(this);
+        sub_1C7BD48(this);
       v10 = field_datalist->m_Items[v6];
-      v11 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+      v11 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v11,
-        (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+        (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
       v12 = v4->fields.data;
       if ( v12 )
       {
         this = (BattleLogicFieldAi_o *)v4->fields.aiLogic;
         if ( this )
         {
-          Action_47484152 = AiLogic__getAction_47484152(
+          Action_47225768 = AiLogic__getAction_47225768(
                               (AiLogic_o *)this,
                               v10,
                               v5,
@@ -1252,12 +1252,12 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
                               (BattleLogicBaseAi_o *)v4,
                               0,
                               0);
-          if ( Action_47484152 )
+          if ( Action_47225768 )
           {
             this = (BattleLogicFieldAi_o *)BattleLogicFieldAi__procAiAct(
                                              v4,
                                              v10,
-                                             Action_47484152,
+                                             Action_47225768,
                                              (int32_t)v14,
                                              v5,
                                              v15);
@@ -1266,10 +1266,10 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
             System_Collections_Generic_List_object___AddRange(
               v11,
               (System_Collections_Generic_IEnumerable_T__o *)this,
-              (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+              (const MethodInfo_383F008 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
           }
           this = (BattleLogicFieldAi_o *)BattleLogicFieldAi__createBase(
-                                           (BattleLogicFieldAi_o *)Action_47484152,
+                                           (BattleLogicFieldAi_o *)Action_47225768,
                                            task->fields.actiontype,
                                            v6 + 1,
                                            v14);
@@ -1278,15 +1278,15 @@ BattleLogicTask_array *BattleLogicFieldAi__createBaseActionTask(
             System_Collections_Generic_List_object___AddRange(
               v11,
               (System_Collections_Generic_IEnumerable_T__o *)this,
-              (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+              (const MethodInfo_383F008 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
             return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                               v11,
-                                              (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                              (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
           }
         }
       }
 LABEL_22:
-      sub_1C942F0(this, task);
+      sub_1C7BD40(this, task);
     }
   }
   return v4->fields.zeroTask;
@@ -1300,15 +1300,15 @@ BattleLogicTask_array *BattleLogicFieldAi__createDeadActionTask(BattleLogicField
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4D2FAD3 & 1) == 0 )
+  if ( (byte_4CF1858 & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    byte_4D2FAD3 = 1;
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    byte_4CF1858 = 1;
   }
-  v3 = (BattleLogicTask_o *)sub_1C942E4(BattleLogicTask_TypeInfo);
+  v3 = (BattleLogicTask_o *)sub_1C7BD34(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v3, 0);
   if ( !v3 )
-    sub_1C942F0(v4, v5);
+    sub_1C7BD40(v4, v5);
   v3->fields.actiontype = 34;
   BattleLogicTask__setActor(v3, 5, 0, 0);
   return BattleLogicFieldAi__createBaseActionTask(this, v3, v6);
@@ -1360,19 +1360,19 @@ BattleLogicTask_array *BattleLogicFieldAi__makeResurrectionTask(
   __int64 size; // x10
   Il2CppClass **v39; // x0
 
-  if ( (byte_4D2FAD8 & 1) == 0 )
+  if ( (byte_4CF185D & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4D2FAD8 = 1;
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4CF185D = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( !targetIds )
     goto LABEL_17;
   max_length = targetIds->max_length;
@@ -1383,20 +1383,20 @@ BattleLogicTask_array *BattleLogicFieldAi__makeResurrectionTask(
     do
     {
       if ( v14 >= (unsigned int)max_length )
-        sub_1C942F8(v11);
+        sub_1C7BD48(v11);
       v16 = targetIds->m_Items[v14];
       if ( (v16 & 0x80000000) == 0 )
       {
-        v17 = sub_1C942E4(BattleLogicTask_TypeInfo);
+        v17 = sub_1C7BD34(BattleLogicTask_TypeInfo);
         BattleLogicTask___ctor((BattleLogicTask_o *)v17, 0);
         if ( !v17 )
           goto LABEL_17;
         BattleLogicTask__setResurrection((BattleLogicTask_o *)v17, 0);
         *(_QWORD *)(v17 + 72) = skillInfo;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 72), (int32_t)skillInfo, v18, v19, v20, v21, v22, v23);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 72), (int32_t)skillInfo, v18, v19, v20, v21, v22, v23);
         BattleLogicTask__setActor((BattleLogicTask_o *)v17, 5, v16, 0);
         *(_QWORD *)(v17 + 176) = motionMessage;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 176), (int32_t)motionMessage, v24, v25, v26, v27, v28, v29);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 176), (int32_t)motionMessage, v24, v25, v26, v27, v28, v29);
         *(_BYTE *)(v17 + 184) = v15;
         if ( !v10 )
           goto LABEL_17;
@@ -1411,14 +1411,14 @@ BattleLogicTask_array *BattleLogicFieldAi__makeResurrectionTask(
           System_Collections_Generic_List_object___AddWithResize(
             v10,
             (Il2CppObject *)v17,
-            *(const MethodInfo_386AE34 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
         }
         else
         {
           v39 = &items->obj.klass + size;
           v10->fields._size = size + 1;
           v39[4] = (Il2CppClass *)v17;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v39 + 4), v17, v30, v31, v32, v33, v34, v35);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v39 + 4), v17, v30, v31, v32, v33, v34, v35);
         }
       }
       LODWORD(max_length) = targetIds->max_length;
@@ -1427,10 +1427,10 @@ BattleLogicTask_array *BattleLogicFieldAi__makeResurrectionTask(
   }
   if ( !v10 )
 LABEL_17:
-    sub_1C942F0(v11, v12);
+    sub_1C7BD40(v11, v12);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v10,
-                                    (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1442,7 +1442,7 @@ BattleLogicTask_array *BattleLogicFieldAi__procAiAct(
         int32_t procState,
         const MethodInfo *method)
 {
-  void *Instance; // x0
+  __int64 Instance; // x0
   __int64 v11; // x1
   AiActEntity_o *v12; // x25
   int32_t v13; // w26
@@ -1456,8 +1456,8 @@ BattleLogicTask_array *BattleLogicFieldAi__procAiAct(
   __int64 v22; // x9
   struct BattleData_o *data; // x8
   System_Collections_Generic_List_object__o *v24; // x23
-  bool isForcedSkillSpeedOne; // w0
-  bool v26; // w28
+  bool isForcedSkillSpeedOne; // w28
+  BattleData_o *v26; // x27
   __int64 v27; // x27
   int32_t v28; // w2
   int32_t v29; // w3
@@ -1507,80 +1507,81 @@ BattleLogicTask_array *BattleLogicFieldAi__procAiAct(
   System_Int32_array *target; // [xsp+8h] [xbp-68h] BYREF
   int v74; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_4D2FAD5 & 1) == 0 )
+  if ( (byte_4CF185A & 1) == 0 )
   {
-    sub_1C94098(&BattleLogicTask_TypeInfo);
-    sub_1C94098(&BattleSkillInfoData_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMasterData_AiActMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C94098(&Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
-    sub_1C94098(&FieldAiActArgument_TypeInfo);
-    sub_1C94098(&int___TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C94098(&Method_WeightRate_int___ctor__);
-    sub_1C94098(&WeightRate_int__TypeInfo);
-    sub_1C94098(&StringLiteral_8760/*"MOTION_"*/);
-    byte_4D2FAD5 = 1;
+    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
+    sub_1C7BAE8(&BattleSkillInfoData_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_AiActMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C7BAE8(&Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
+    sub_1C7BAE8(&FieldAiActArgument_TypeInfo);
+    sub_1C7BAE8(&int___TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C7BAE8(&Method_WeightRate_int___ctor__);
+    sub_1C7BAE8(&WeightRate_int__TypeInfo);
+    sub_1C7BAE8(&StringLiteral_8764/*"MOTION_"*/);
+    byte_4CF185A = 1;
   }
   v74 = 0;
   v72 = 0;
   target = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_52;
-  Instance = DataManager__GetMasterData_object_(
-               (DataManager_o *)Instance,
-               (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_AiActMaster___);
+    goto LABEL_57;
+  Instance = (__int64)DataManager__GetMasterData_object_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_AiActMaster___);
   if ( !aiEnt )
-    goto LABEL_52;
+    goto LABEL_57;
   if ( !Instance )
-    goto LABEL_52;
-  Instance = DataMasterBase_object__object__int___GetEntity(
-               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-               aiEnt->fields.aiActId,
-               (const MethodInfo_345B4C0 *)Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
+    goto LABEL_57;
+  Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
+                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
+                        aiEnt->fields.aiActId,
+                        (const MethodInfo_342E2FC *)Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
   if ( !Instance )
-    goto LABEL_52;
+    goto LABEL_57;
   v12 = (AiActEntity_o *)Instance;
-  v13 = *((_DWORD *)Instance + 5);
-  v14 = sub_1C942E4(BattleSkillInfoData_TypeInfo);
+  v13 = *(_DWORD *)(Instance + 20);
+  v14 = sub_1C7BD34(BattleSkillInfoData_TypeInfo);
   BattleSkillInfoData___ctor((BattleSkillInfoData_o *)v14, 0);
-  Instance = (void *)AiAct__Check(99, v12->fields.type, 0);
+  Instance = AiAct__Check(99, v12->fields.type, 0);
   if ( !fieldData )
-    goto LABEL_52;
+    goto LABEL_57;
   aiState = fieldData->fields.aiState;
-  v16 = (char)Instance;
-  Instance = (void *)AiBaseEntity__getChangeAiId((AiBaseEntity_o *)aiEnt, 0);
+  v16 = Instance;
+  Instance = AiBaseEntity__getChangeAiId((AiBaseEntity_o *)aiEnt, 0);
   v11 = (unsigned int)Instance;
   if ( (v16 & 1) != 0 )
   {
     if ( aiState )
     {
-      AiState__changeThinking(aiState, (int32_t)Instance, 0);
+      AiState__changeThinking(aiState, Instance, 0);
       return this->fields.emptyTask;
     }
-    goto LABEL_52;
+LABEL_57:
+    sub_1C7BD40(Instance, v11);
   }
   if ( (int)Instance >= 1 )
   {
-    Instance = (void *)AiBaseEntity__getChangeAiId((AiBaseEntity_o *)aiEnt, 0);
+    Instance = AiBaseEntity__getChangeAiId((AiBaseEntity_o *)aiEnt, 0);
     if ( !aiState )
-      goto LABEL_52;
-    AiState__changeThinking(aiState, (int32_t)Instance, 0);
+      goto LABEL_57;
+    AiState__changeThinking(aiState, Instance, 0);
   }
-  v18 = (WeightRate_int__o *)sub_1C942E4(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v18, (const MethodInfo_3C84680 *)Method_WeightRate_int___ctor__);
+  v18 = (WeightRate_int__o *)sub_1C7BD34(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v18, (const MethodInfo_3C54A68 *)Method_WeightRate_int___ctor__);
   if ( (unsigned int)(v13 - 40) >= 2 )
   {
     if ( v13 == 91 )
     {
       data = this->fields.data;
       if ( !data )
-        goto LABEL_52;
+        goto LABEL_57;
       *(_WORD *)&data->fields.endbattleFlg = 257;
       v13 = 91;
     }
@@ -1593,24 +1594,24 @@ BattleLogicTask_array *BattleLogicFieldAi__procAiAct(
   {
     skillVals = (int *)v12->fields.skillVals;
     if ( !skillVals )
-      goto LABEL_52;
+      goto LABEL_57;
     if ( skillVals[6] < 2 )
       goto LABEL_25;
     v21 = skillVals[8];
     v20 = skillVals[9];
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      goto LABEL_52;
-    Instance = DataManager__GetMasterData_object_(
-                 (DataManager_o *)Instance,
-                 (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+      goto LABEL_57;
+    Instance = (__int64)DataManager__GetMasterData_object_(
+                          (DataManager_o *)Instance,
+                          (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_SkillLvMaster___);
     if ( !Instance )
-      goto LABEL_52;
-    Instance = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, v21, v20, 0);
+      goto LABEL_57;
+    Instance = (__int64)SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, v21, v20, 0);
     if ( Instance )
     {
       if ( !v14 )
-        goto LABEL_52;
+        goto LABEL_57;
       v22 = *(_QWORD *)v14;
       *(_DWORD *)(v14 + 24) = fieldData->fields.uniqueId;
       *(_QWORD *)(v14 + 16) = 20;
@@ -1623,15 +1624,15 @@ LABEL_25:
       v13 = 0;
     }
   }
-  v24 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( !AiFieldEntity__isForcedSkillSpeedOne(aiEnt, 0) )
     goto LABEL_32;
-  Instance = this->fields.data;
+  Instance = (__int64)this->fields.data;
   if ( !Instance )
-    goto LABEL_52;
+    goto LABEL_57;
   if ( BattleData__checkEnablePlaySpeedOneFromFieldIdList(
          (BattleData_o *)Instance,
          aiEnt->fields.id,
@@ -1643,90 +1644,108 @@ LABEL_25:
   else
   {
 LABEL_32:
-    isForcedSkillSpeedOne = AiBaseEntity__IsForcedActionSpeedAnyTime((AiBaseEntity_o *)aiEnt, 0);
+    if ( !AiBaseEntity__IsForcedActionSpeedAnyTime((AiBaseEntity_o *)aiEnt, 0) )
+    {
+      if ( (((__int64 (__fastcall *)(BattleLogicFieldAi_o *, AiFieldEntity_o *, const MethodInfo *))this->klass->vtable._27_IsNotPlayedActionFirstTime.methodPtr)(
+              this,
+              aiEnt,
+              this->klass->vtable._27_IsNotPlayedActionFirstTime.method)
+          & 1) == 0 )
+      {
+        isForcedSkillSpeedOne = 0;
+        goto LABEL_38;
+      }
+      v26 = this->fields.data;
+      Instance = ((__int64 (__fastcall *)(AiFieldEntity_o *, const MethodInfo *))aiEnt->klass->vtable._7_get_FirstTimeSaveKey.methodPtr)(
+                   aiEnt,
+                   aiEnt->klass->vtable._7_get_FirstTimeSaveKey.method);
+      if ( !v26 )
+        goto LABEL_57;
+      BattleData__AddPlayedFirstTimeNormalSpeedAiList(v26, (System_String_o *)Instance, 0);
+    }
+    isForcedSkillSpeedOne = 1;
   }
-  v26 = isForcedSkillSpeedOne;
-  v27 = sub_1C942E4(BattleLogicTask_TypeInfo);
+LABEL_38:
+  v27 = sub_1C7BD34(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor((BattleLogicTask_o *)v27, 0);
-  if ( !v27
-    || (*(_BYTE *)(v27 + 184) = v26,
-        infoText = aiEnt->fields.infoText,
-        *(_QWORD *)(v27 + 176) = infoText,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v27 + 176), (int32_t)infoText, v28, v29, v30, v31, v32, v33),
-        BattleLogicTask__setActor((BattleLogicTask_o *)v27, 5, fieldData->fields.uniqueId, 0),
-        (Instance = fieldData->fields.aiState) == 0) )
-  {
-LABEL_52:
-    sub_1C942F0(Instance, v11);
-  }
+  if ( !v27 )
+    goto LABEL_57;
+  *(_BYTE *)(v27 + 184) = isForcedSkillSpeedOne;
+  infoText = aiEnt->fields.infoText;
+  *(_QWORD *)(v27 + 176) = infoText;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v27 + 176), (int32_t)infoText, v28, v29, v30, v31, v32, v33);
+  BattleLogicTask__setActor((BattleLogicTask_o *)v27, 5, fieldData->fields.uniqueId, 0);
+  Instance = (__int64)fieldData->fields.aiState;
+  if ( !Instance )
+    goto LABEL_57;
   AiState__setBeforeAction((AiState_o *)Instance, v13, aiEnt->fields.aiActId, 0);
   if ( v13 == 71 )
   {
-    Instance = (void *)AiBaseEntity__getActionValue((AiBaseEntity_o *)aiEnt, 0);
-    v74 = (int)Instance;
+    Instance = AiBaseEntity__getActionValue((AiBaseEntity_o *)aiEnt, 0);
+    v74 = Instance;
     if ( (int)Instance >= 1 )
     {
       BattleLogicFieldAi__AddAiFieldScriptTask(
         this,
         aiEnt,
         (System_Collections_Generic_List_BattleLogicTask__o *)v24,
-        v26,
+        isForcedSkillSpeedOne,
         (BattleLogicTask_o *)v27,
         v35);
       v36 = System_Int32__ToString((int32_t)&v74, 0);
-      v37 = System_String__Concat_64417744((System_String_o *)StringLiteral_8760/*"MOTION_"*/, v36, 0);
+      v37 = System_String__Concat_64176912((System_String_o *)StringLiteral_8764/*"MOTION_"*/, v36, 0);
       BattleLogicTask__SetPlayFieldMotion((BattleLogicTask_o *)v27, v37, 0);
       logic = this->fields.logic;
       if ( !logic )
-        goto LABEL_52;
-      Instance = logic->fields.perf;
+        goto LABEL_57;
+      Instance = (__int64)logic->fields.perf;
       if ( !Instance )
-        goto LABEL_52;
+        goto LABEL_57;
       ServantGameObject = BattlePerformance__getServantGameObject(
                             (BattlePerformance_o *)Instance,
                             fieldData->fields.uniqueId,
                             0);
       *(_QWORD *)(v27 + 128) = ServantGameObject;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v27 + 128), (int32_t)ServantGameObject, v40, v41, v42, v43, v44, v45);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v27 + 128), (int32_t)ServantGameObject, v40, v41, v42, v43, v44, v45);
       BattleLogicTask__setActor((BattleLogicTask_o *)v27, 5, fieldData->fields.uniqueId, 0);
       if ( !v24 )
-        goto LABEL_52;
+        goto LABEL_57;
       items = v24->fields._items;
       v53 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
       ++v24->fields._version;
       if ( !items )
-        goto LABEL_52;
+        goto LABEL_57;
       size = v24->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v24,
           (Il2CppObject *)v27,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
       }
       else
       {
         v55 = &items->obj.klass + size;
         v24->fields._size = size + 1;
         v55[4] = (Il2CppClass *)v27;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v55 + 4), v27, v46, v47, v48, v49, v50, v51);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v55 + 4), v27, v46, v47, v48, v49, v50, v51);
       }
       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                         v24,
-                                        (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                        (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
     }
-LABEL_51:
+LABEL_56:
     if ( !v24 )
-      goto LABEL_52;
+      goto LABEL_57;
     return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                       v24,
-                                      (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                      (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
   }
   isSkillType = AiAct__isSkillType(v13, 0);
   if ( !v14 || !isSkillType )
   {
-    v70 = (FieldAiActArgument_o *)sub_1C942E4(FieldAiActArgument_TypeInfo);
-    FieldAiActArgument___ctor(v70, v12, (AiBaseEntity_o *)aiEnt, fieldData, v26, procState, 0);
+    v70 = (FieldAiActArgument_o *)sub_1C7BD34(FieldAiActArgument_TypeInfo);
+    FieldAiActArgument___ctor(v70, v12, (AiBaseEntity_o *)aiEnt, fieldData, isForcedSkillSpeedOne, procState, 0);
     BattleLogicBaseAi__SetProcAiActTask(
       (BattleLogicBaseAi_o *)this,
       (System_Collections_Generic_List_BattleLogicTask__o *)v24,
@@ -1734,26 +1753,26 @@ LABEL_51:
       (BaseAiActArgument_o *)v70,
       0);
     BattleLogicFieldAi__DefenceTargetInitialize(this, aiEnt, v71);
-    goto LABEL_51;
+    goto LABEL_56;
   }
-  target = (System_Int32_array *)sub_1C94140(int___TypeInfo, 0);
-  v72 = (System_Int32_array *)sub_1C94140(int___TypeInfo, 0);
-  Instance = (void *)BattleLogicFieldAi__CheckFieldSkillTarget(
-                       this,
-                       (BattleSkillInfoData_o *)v14,
-                       (AiBaseEntity_o *)aiEnt,
-                       v12,
-                       fieldData,
-                       &target,
-                       &v72,
-                       v57);
-  if ( ((unsigned __int8)Instance & 1) == 0 )
-    goto LABEL_51;
+  target = (System_Int32_array *)sub_1C7BB90(int___TypeInfo, 0);
+  v72 = (System_Int32_array *)sub_1C7BB90(int___TypeInfo, 0);
+  Instance = BattleLogicFieldAi__CheckFieldSkillTarget(
+               this,
+               (BattleSkillInfoData_o *)v14,
+               (AiBaseEntity_o *)aiEnt,
+               v12,
+               fieldData,
+               &target,
+               &v72,
+               v57);
+  if ( (Instance & 1) == 0 )
+    goto LABEL_56;
   BattleLogicFieldAi__AddAiFieldScriptTask(
     this,
     aiEnt,
     (System_Collections_Generic_List_BattleLogicTask__o *)v24,
-    v26,
+    isForcedSkillSpeedOne,
     (BattleLogicTask_o *)v27,
     v58);
   BattleLogicBaseAi__SetSkillSelectAddIndex(
@@ -1764,31 +1783,31 @@ LABEL_51:
   BattleLogicTask__setActionSkill((BattleLogicTask_o *)v27, (BattleSkillInfoData_o *)v14, target, v72, 0, 0, 0);
   BattleLogicTask__setActor((BattleLogicTask_o *)v27, 5, fieldData->fields.uniqueId, 0);
   if ( !v24 )
-    goto LABEL_52;
+    goto LABEL_57;
   v65 = v24->fields._items;
   v66 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
   ++v24->fields._version;
   if ( !v65 )
-    goto LABEL_52;
+    goto LABEL_57;
   v67 = v24->fields._size;
   if ( (unsigned int)v67 >= LODWORD(v65->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v24,
       (Il2CppObject *)v27,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
   }
   else
   {
     v68 = &v65->obj.klass + v67;
     v24->fields._size = v67 + 1;
     v68[4] = (Il2CppClass *)v27;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 4), v27, v59, v60, v61, v62, v63, v64);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v68 + 4), v27, v59, v60, v61, v62, v63, v64);
   }
   BattleLogicFieldAi__DefenceTargetInitialize(this, aiEnt, v69);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v24,
-                                    (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1813,106 +1832,106 @@ void BattleLogicFieldAi__setReactionFunction(
   BattleLogic_reactionFunction_o *v18; // x21
   BattleLogic_reactionFunction_o *v19; // x21
 
-  if ( (byte_4D2FACF & 1) == 0 )
+  if ( (byte_4CF1854 & 1) == 0 )
   {
-    sub_1C94098(&Method_BattleLogicFieldAi_createBaseActionTask__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-    sub_1C94098(&BattleLogic_reactionFunction_TypeInfo);
-    byte_4D2FACF = 1;
+    sub_1C7BAE8(&Method_BattleLogicFieldAi_createBaseActionTask__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+    sub_1C7BAE8(&BattleLogic_reactionFunction_TypeInfo);
+    byte_4CF1854 = 1;
   }
-  v5 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+  v5 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v5, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   if ( !list )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     28,
     (Il2CppObject *)v5,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v8 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v8 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v8, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     29,
     (Il2CppObject *)v8,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v9 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v9 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v9, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     30,
     (Il2CppObject *)v9,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v10 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v10 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v10, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     31,
     (Il2CppObject *)v10,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v11 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v11 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v11, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     32,
     (Il2CppObject *)v11,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v12 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v12 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v12, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     33,
     (Il2CppObject *)v12,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v13 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v13 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v13, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     34,
     (Il2CppObject *)v13,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v14 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v14 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v14, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     43,
     (Il2CppObject *)v14,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v15 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v15 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v15, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     64,
     (Il2CppObject *)v15,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v16 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v16 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v16, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     66,
     (Il2CppObject *)v16,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v17 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v17 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v17, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     67,
     (Il2CppObject *)v17,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v18 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v18 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v18, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     70,
     (Il2CppObject *)v18,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v19 = (BattleLogic_reactionFunction_o *)sub_1C942E4(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v19 = (BattleLogic_reactionFunction_o *)sub_1C7BD34(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v19, (Il2CppObject *)this, Method_BattleLogicFieldAi_createBaseActionTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     74,
     (Il2CppObject *)v19,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
 }
 
 
@@ -1933,8 +1952,8 @@ bool BattleLogicFieldAi___c__DisplayClass19_0___GetCommonFieldAiTask_b__0(
 
   _4__this = (BattleLogicBaseAi_o *)this->fields.__4__this;
   if ( !_4__this || !_4__this->fields.aiLogic )
-    sub_1C942F0(this, fieldData);
-  return AiLogic__checkThinking_47483096(_4__this->fields.aiLogic, fieldData, this->fields.prcState, _4__this, 0);
+    sub_1C7BD40(this, fieldData);
+  return AiLogic__checkThinking_47224712(_4__this->fields.aiLogic, fieldData, this->fields.prcState, _4__this, 0);
 }
 
 
@@ -1954,6 +1973,6 @@ bool BattleLogicFieldAi___c__DisplayClass25_0___CheckAiCanActionFromTargets_b__0
   struct AiLogic_AiInfo_o *aiInfo; // x8
 
   if ( !f || (aiInfo = this->fields.aiInfo) == 0 )
-    sub_1C942F0(this, f);
+    sub_1C7BD40(this, f);
   return f->fields.index == aiInfo->fields.uniqueId;
 }

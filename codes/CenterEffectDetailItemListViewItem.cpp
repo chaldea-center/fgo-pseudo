@@ -5,7 +5,7 @@ void CenterEffectDetailItemListViewItem___ctor(
         int32_t skillLevel,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields.skillId = skillId;
   this->fields.skillLevel = skillLevel;
 }

@@ -28,22 +28,22 @@ void BattleDefenceTargetData__BuffTurnProgress(
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4D2F316 & 1) == 0 )
+  if ( (byte_4CF1098 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
-    sub_1C94098(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-    byte_4D2F316 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
+    sub_1C7BAE8(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    byte_4CF1098 = 1;
   }
   buffData = this->fields.buffData;
   if ( buffData )
   {
     ActiveList = BattleBuffData__getActiveList(buffData, 1, 0);
-    v7 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    v7 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v7,
-      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
     if ( !ActiveList )
       goto LABEL_24;
     max_length = ActiveList->max_length;
@@ -53,7 +53,7 @@ void BattleDefenceTargetData__BuffTurnProgress(
       do
       {
         if ( v17 >= max_length )
-          sub_1C942F8(ShowServantParam);
+          sub_1C7BD48(ShowServantParam);
         v9 = ActiveList->m_Items[v17];
         if ( !v9 )
           goto LABEL_24;
@@ -74,14 +74,14 @@ void BattleDefenceTargetData__BuffTurnProgress(
             System_Collections_Generic_List_object___AddWithResize(
               v7,
               (Il2CppObject *)v9,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &items->obj.klass + size;
             v7->fields._size = size + 1;
             v22[4] = (Il2CppClass *)v9;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v9, v10, v11, v12, v13, v14, v15);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v9, v10, v11, v12, v13, v14, v15);
           }
         }
         max_length = ActiveList->max_length;
@@ -102,7 +102,7 @@ void BattleDefenceTargetData__BuffTurnProgress(
       || (ShowServantParam = (BattleBuffData_o *)BattleBuffData__getShowServantParam(ShowServantParam, 0), !defenceTarget) )
     {
 LABEL_24:
-      sub_1C942F0(ShowServantParam, v9);
+      sub_1C7BD40(ShowServantParam, v9);
     }
     BattlePerformanceDefenceTarget__UpdateBuffIcon(
       defenceTarget,
@@ -133,20 +133,20 @@ BattleDefenceTargetData_SaveData_o *BattleDefenceTargetData__GetSaveData(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2F314 & 1) == 0 )
+  if ( (byte_4CF1096 & 1) == 0 )
   {
-    sub_1C94098(&BattleDefenceTargetData_SaveData_TypeInfo);
-    byte_4D2F314 = 1;
+    sub_1C7BAE8(&BattleDefenceTargetData_SaveData_TypeInfo);
+    byte_4CF1096 = 1;
   }
   if ( this->fields.maxHp < 1 || this->fields.uiId < 1 )
     return 0;
-  v3 = sub_1C942E4(BattleDefenceTargetData_SaveData_TypeInfo);
+  v3 = sub_1C7BD34(BattleDefenceTargetData_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 || (*(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.nowHp, (buffData = this->fields.buffData) == 0) )
-    sub_1C942F0(buffData, v5);
+    sub_1C7BD40(buffData, v5);
   SaveData = BattleBuffData__getSaveData(buffData, 0);
   *(_QWORD *)(v3 + 24) = SaveData;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)SaveData, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)SaveData, v7, v8, v9, v10, v11, v12);
   *(_DWORD *)(v3 + 32) = this->fields.uiId;
   return (BattleDefenceTargetData_SaveData_o *)v3;
 }
@@ -170,10 +170,10 @@ void BattleDefenceTargetData__Initialize(
   System_String_o *v17; // x7
   __int64 v18; // x1
 
-  if ( (byte_4D2F313 & 1) == 0 )
+  if ( (byte_4CF1095 & 1) == 0 )
   {
-    sub_1C94098(&BattleBuffData_TypeInfo);
-    byte_4D2F313 = 1;
+    sub_1C7BAE8(&BattleBuffData_TypeInfo);
+    byte_4CF1095 = 1;
   }
   p_buffData = &this->fields.buffData;
   buffData = this->fields.buffData;
@@ -181,13 +181,13 @@ void BattleDefenceTargetData__Initialize(
   this->fields.maxHp = maxHp;
   if ( !buffData )
   {
-    v11 = (BattleBuffData_o *)sub_1C942E4(BattleBuffData_TypeInfo);
+    v11 = (BattleBuffData_o *)sub_1C7BD34(BattleBuffData_TypeInfo);
     BattleBuffData___ctor(v11, 0);
     *p_buffData = v11;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)v11, v12, v13, v14, v15, v16, v17);
     buffData = *p_buffData;
     if ( !*p_buffData )
-      sub_1C942F0(0, v18);
+      sub_1C7BD40(0, v18);
   }
   BattleBuffData__Initialize(buffData, 0);
   this->fields.uiId = uiId;
@@ -224,10 +224,10 @@ void BattleDefenceTargetData__SetSaveData(
   System_String_o *v13; // x7
   __int64 v14; // x1
 
-  if ( (byte_4D2F315 & 1) == 0 )
+  if ( (byte_4CF1097 & 1) == 0 )
   {
-    sub_1C94098(&BattleBuffData_TypeInfo);
-    byte_4D2F315 = 1;
+    sub_1C7BAE8(&BattleBuffData_TypeInfo);
+    byte_4CF1097 = 1;
   }
   if ( saveData )
   {
@@ -236,13 +236,13 @@ void BattleDefenceTargetData__SetSaveData(
     *(_QWORD *)&this->fields.nowHp = *(_QWORD *)&saveData->fields.nowHp;
     if ( !buffData )
     {
-      v7 = (BattleBuffData_o *)sub_1C942E4(BattleBuffData_TypeInfo);
+      v7 = (BattleBuffData_o *)sub_1C7BD34(BattleBuffData_TypeInfo);
       BattleBuffData___ctor(v7, 0);
       *p_buffData = v7;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)v7, v8, v9, v10, v11, v12, v13);
       buffData = *p_buffData;
       if ( !*p_buffData )
-        sub_1C942F0(0, v14);
+        sub_1C7BD40(0, v14);
     }
     BattleBuffData__setSaveData(buffData, saveData->fields.buffDataSave, 0);
     this->fields.uiId = saveData->fields.uiId;

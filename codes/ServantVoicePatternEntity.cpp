@@ -1,13 +1,13 @@
 void ServantVoicePatternEntity___ctor(ServantVoicePatternEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D36C & 1) == 0 )
+  if ( (byte_4CEF14E & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D36C = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEF14E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -30,14 +30,14 @@ bool ServantVoicePatternEntity__CheckAddCond(
   Il2CppObject *v18; // x21
   const MethodInfo *v19; // x2
 
-  if ( (byte_4D2D36A & 1) == 0 )
+  if ( (byte_4CEF14C & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&VoiceCondType_TypeInfo);
-    byte_4D2D36A = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&VoiceCondType_TypeInfo);
+    byte_4CEF14C = 1;
   }
   if ( targetValue == -1 )
   {
@@ -64,13 +64,13 @@ bool ServantVoicePatternEntity__CheckAddCond(
 LABEL_15:
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4D2633A )
+        if ( !byte_4CE827C )
         {
-          sub_1C94098(&NetworkManager_TypeInfo);
-          byte_4D2633A = 1;
+          sub_1C7BAE8(&NetworkManager_TypeInfo);
+          byte_4CE827C = 1;
         }
         v13 = NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -101,7 +101,7 @@ LABEL_26:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        v18 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+        v18 = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
         FixSvtId = (UserServantCollectionEntity_o *)ServantVoicePatternEntity__GetFixSvtId(this, limitCount, v19);
         if ( v18 )
         {
@@ -113,7 +113,7 @@ LABEL_26:
           goto LABEL_26;
         }
 LABEL_33:
-        sub_1C942F0(FixSvtId, v16);
+        sub_1C7BD40(FixSvtId, v16);
       }
     }
     targetValue = -1;
@@ -133,16 +133,16 @@ System_String_o *ServantVoicePatternEntity__CreatePK(
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  if ( (byte_4D2D369 & 1) == 0 )
+  if ( (byte_4CEF14B & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
-    byte_4D2D369 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+    byte_4CEF14B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__object_(
            id,
            svtId,
            (Il2CppObject *)voiceId,
-           (const MethodInfo_319A874 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+           (const MethodInfo_316EB34 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
 }
 
 
@@ -181,14 +181,15 @@ int32_t ServantVoicePatternEntity__GetFixSvtId(
   int32_t *p_ServantIdJekyll; // x8
   Il2CppObject *Master_object; // x0
   __int64 v12; // x1
-  ServantTransformEntity_o *v13; // x0
+  const MethodInfo *v13; // x3
+  ServantTransformEntity_o *v14; // x0
 
-  if ( (byte_4D2D36B & 1) == 0 )
+  if ( (byte_4CEF14D & 1) == 0 )
   {
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMaster_ServantTransformMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    byte_4D2D36B = 1;
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantTransformMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    byte_4CEF14D = 1;
   }
   svtId = this->fields.svtId;
   p_svtId = &this->fields.svtId;
@@ -213,16 +214,16 @@ int32_t ServantVoicePatternEntity__GetFixSvtId(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantTransformMaster___);
     if ( !Master_object )
-      sub_1C942F0(0, v12);
-    v13 = ServantTransformMaster__GetBeforeTransformEntity(
+      sub_1C7BD40(0, v12);
+    v14 = ServantTransformMaster__GetBeforeTransformEntity(
             (ServantTransformMaster_o *)Master_object,
             *p_svtId,
             dispLimitCount + 1,
-            0);
-    p_ServantIdJekyll = &v13->fields.befSvtId;
-    if ( !v13 )
+            v13);
+    p_ServantIdJekyll = &v14->fields.befSvtId;
+    if ( !v14 )
       p_ServantIdJekyll = p_svtId;
   }
   return *p_ServantIdJekyll;

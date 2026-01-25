@@ -8,16 +8,16 @@ void TweenPosition__Awake(TweenPosition_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D3109F & 1) == 0 )
+  if ( (byte_4CF2ED1 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    byte_4D3109F = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    byte_4CF2ED1 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   this->fields.mRect = (struct UIRect_o *)Component_object;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -38,17 +38,17 @@ TweenPosition_o *TweenPosition__Begin(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4D310A0 & 1) == 0 )
+  if ( (byte_4CF2ED2 & 1) == 0 )
   {
-    sub_1C94098(&Method_UITweener_Begin_TweenPosition___);
-    byte_4D310A0 = 1;
+    sub_1C7BAE8(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CF2ED2 = 1;
   }
   v9 = (TweenPosition_o *)UITweener__Begin_object_(
                             go,
                             duration,
-                            (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenPosition___);
+                            (const MethodInfo_3245DA8 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v9 )
-    sub_1C942F0(0, v10);
+    sub_1C7BD40(0, v10);
   v11 = v9;
   v9->fields.from = TweenPosition__get_value(v9, v10);
   v11->fields.to.fields.x = x;
@@ -63,7 +63,7 @@ TweenPosition_o *TweenPosition__Begin(
 }
 
 
-TweenPosition_o *TweenPosition__Begin_50138108(
+TweenPosition_o *TweenPosition__Begin_49966340(
         UnityEngine_GameObject_o *go,
         float duration,
         UnityEngine_Vector3_o pos,
@@ -81,17 +81,17 @@ TweenPosition_o *TweenPosition__Begin_50138108(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4D310A1 & 1) == 0 )
+  if ( (byte_4CF2ED3 & 1) == 0 )
   {
-    sub_1C94098(&Method_UITweener_Begin_TweenPosition___);
-    byte_4D310A1 = 1;
+    sub_1C7BAE8(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CF2ED3 = 1;
   }
   v11 = (TweenPosition_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenPosition___);
+                             (const MethodInfo_3245DA8 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v11 )
-    sub_1C942F0(0, v12);
+    sub_1C7BD40(0, v12);
   v13 = v11;
   v11->fields.worldSpace = worldSpace;
   v11->fields.from = TweenPosition__get_value(v11, v12);
@@ -162,10 +162,10 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D3109D & 1) == 0 )
+  if ( (byte_4CF2ECF & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3109D = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2ECF = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -174,7 +174,7 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
   }
   return this->fields.mTrans;
 }
@@ -196,7 +196,7 @@ UnityEngine_Vector3_o TweenPosition__get_value(TweenPosition_o *this, const Meth
   worldSpace = this->fields.worldSpace;
   cachedTransform = TweenPosition__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   if ( worldSpace )
     return UnityEngine_Transform__get_position(cachedTransform, 0);
   else
@@ -229,10 +229,10 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4D3109E & 1) == 0 )
+  if ( (byte_4CF2ED0 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3109E = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2ED0 = 1;
   }
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -252,7 +252,7 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
         return;
       }
 LABEL_15:
-      sub_1C942F0(cachedTransform, v8);
+      sub_1C7BD40(cachedTransform, v8);
     }
   }
   worldSpace = this->fields.worldSpace;

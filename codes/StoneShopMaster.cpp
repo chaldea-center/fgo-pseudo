@@ -1,118 +1,18 @@
 void StoneShopMaster___ctor(StoneShopMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D524 & 1) == 0 )
+  if ( (byte_4CEF2EB & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int___ctor__);
-    byte_4D2D524 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int___ctor__);
+    byte_4CEF2EB = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     48,
-    (const MethodInfo_345919C *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int___ctor__);
+    (const MethodInfo_342BFD8 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int___ctor__);
 }
 
 
-StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList(StoneShopMaster_o *this, const MethodInfo *method)
-{
-  int64_t Time; // x21
-  System_Collections_Generic_List_object__o *v4; // x20
-  System_Collections_ObjectModel_Collection_T__o *v5; // x1
-  System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v7; // w22
-  int32_t v8; // w23
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
-  __int64 size; // x10
-  Il2CppClass **v18; // x0
-
-  if ( (byte_4D2D525 & 1) == 0 )
-  {
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_StoneShopEntity__TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2D525 = 1;
-  }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  Time = NetworkManager__getTime(0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_StoneShopEntity__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-  if ( !list )
-    goto LABEL_20;
-  list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
-                                                             list,
-                                                             (const MethodInfo_33F3B64 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
-  if ( (int)list >= 1 )
-  {
-    v7 = (int)list;
-    v8 = 0;
-    while ( 1 )
-    {
-      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-      if ( !list )
-        break;
-      list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
-                                                                 list,
-                                                                 v8,
-                                                                 (const MethodInfo_33F3BF4 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
-      if ( list )
-      {
-        v5 = list;
-        if ( Time >= SLODWORD(list[2].klass) && Time <= SHIDWORD(list[2].klass) )
-        {
-          if ( !v4 )
-            break;
-          items = v4->fields._items;
-          v16 = Method_System_Collections_Generic_List_StoneShopEntity__Add__;
-          ++v4->fields._version;
-          if ( !items )
-            break;
-          size = v4->fields._size;
-          if ( (unsigned int)size >= LODWORD(items->max_length) )
-          {
-            System_Collections_Generic_List_object___AddWithResize(
-              v4,
-              (Il2CppObject *)list,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
-          }
-          else
-          {
-            v18 = &items->obj.klass + size;
-            v4->fields._size = size + 1;
-            v18[4] = (Il2CppClass *)v5;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v5, v9, v10, v11, v12, v13, v14);
-          }
-        }
-      }
-      if ( v7 == ++v8 )
-        goto LABEL_18;
-    }
-LABEL_20:
-    sub_1C942F0(list, v5);
-  }
-LABEL_18:
-  if ( !v4 )
-    goto LABEL_20;
-  return (StoneShopEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                    v4,
-                                    (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
-}
-
-
-StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList_43731064(
+StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList(
         StoneShopMaster_o *this,
         int32_t effect,
         const MethodInfo *method)
@@ -134,30 +34,30 @@ StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList_43731064(
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_4D2D526 & 1) == 0 )
+  if ( (byte_4CEF2EC & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_StoneShopEntity__TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2D526 = 1;
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_StoneShopEntity__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_StoneShopEntity__TypeInfo);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CEF2EC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_StoneShopEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_StoneShopEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_StoneShopEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_21;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_33F3B64 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
+                                                             (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v9 = (int)list;
@@ -170,7 +70,7 @@ StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList_43731064(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v10,
-                                                                 (const MethodInfo_33F3BF4 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
+                                                                 (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_StoneShopEntity__get_Item__);
       if ( list )
       {
         v7 = list;
@@ -191,14 +91,14 @@ StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList_43731064(
             System_Collections_Generic_List_object___AddWithResize(
               v6,
               (Il2CppObject *)list,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v6->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v7;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v7, v11, v12, v13, v14, v15, v16);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v7, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -206,14 +106,14 @@ StoneShopEntity_array *StoneShopMaster__GetEnableEntitiyList_43731064(
         goto LABEL_19;
     }
 LABEL_21:
-    sub_1C942F0(list, v7);
+    sub_1C7BD40(list, v7);
   }
 LABEL_19:
   if ( !v6 )
     goto LABEL_21;
   return (StoneShopEntity_array *)System_Collections_Generic_List_object___ToArray(
                                     v6,
-                                    (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
+                                    (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_StoneShopEntity__ToArray__);
 }
 
 
@@ -223,17 +123,17 @@ int32_t StoneShopMaster__GetPayMultiTimePrice(const MethodInfo *method)
   __int64 v2; // x1
   const MethodInfo *v3; // x2
 
-  if ( (byte_4D2D528 & 1) == 0 )
+  if ( (byte_4CEF2EE & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_StoneShopMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    byte_4D2D528 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_StoneShopMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    byte_4CEF2EE = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_StoneShopMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_StoneShopMaster___);
   if ( !Master_object )
-    sub_1C942F0(0, v2);
+    sub_1C7BD40(0, v2);
   return StoneShopMaster__GetPrice((StoneShopMaster_o *)Master_object, 5, v3);
 }
 
@@ -244,20 +144,20 @@ int32_t StoneShopMaster__GetPrice(StoneShopMaster_o *this, int32_t id, const Met
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D2D527 & 1) == 0 )
+  if ( (byte_4CEF2ED & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__TryGetEntity__);
-    byte_4D2D527 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__TryGetEntity__);
+    byte_4CEF2ED = 1;
   }
   entity = 0;
   v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_345B50C *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__TryGetEntity__);
+         (const MethodInfo_342E348 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__TryGetEntity__);
   if ( !v5 )
     return 0;
   if ( !entity )
-    sub_1C942F0(v5, v6);
+    sub_1C7BD40(v5, v6);
   return *(_DWORD *)((char *)&qword_28 + (_QWORD)entity + 4);
 }

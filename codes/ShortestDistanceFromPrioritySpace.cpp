@@ -20,10 +20,10 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v9 = this;
-  if ( (byte_4D2A0D2 & 1) == 0 )
+  if ( (byte_4CEBF34 & 1) == 0 )
   {
-    this = (ShortestDistanceFromPrioritySpace_o *)sub_1C94098(&AStarSearch_TypeInfo);
-    byte_4D2A0D2 = 1;
+    this = (ShortestDistanceFromPrioritySpace_o *)sub_1C7BAE8(&AStarSearch_TypeInfo);
+    byte_4CEBF34 = 1;
   }
   if ( !targetSquare )
     goto LABEL_12;
@@ -45,7 +45,7 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
                * (float)targetSquare->fields._evalValue_k__BackingField,
                  0.0);
 LABEL_12:
-      sub_1C942F0(this, *(_QWORD *)&forceId);
+      sub_1C7BD40(this, *(_QWORD *)&forceId);
     }
   }
   return 0.0;

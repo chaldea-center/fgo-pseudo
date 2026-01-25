@@ -1,13 +1,13 @@
 void AiActEntity___ctor(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3EC & 1) == 0 )
+  if ( (byte_4CEE238 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_int___ctor__);
-    byte_4D2C3EC = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
+    byte_4CEE238 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t AiActEntity__CreatePrimaryKey(AiActEntity_o *this, const MethodInfo *met
 
 int32_t AiActEntity__GetBattleScriptId(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3E9 & 1) == 0 )
+  if ( (byte_4CEE235 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_17164/*"battleScriptId"*/);
-    byte_4D2C3E9 = 1;
+    sub_1C7BAE8(&StringLiteral_17166/*"battleScriptId"*/);
+    byte_4CEE235 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17164/*"battleScriptId"*/, -1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17166/*"battleScriptId"*/, -1, 0);
 }
 
 
@@ -46,32 +46,32 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
   int32_t value[2]; // [xsp+10h] [xbp-40h] BYREF
   int32_t v17[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4D2C3E8 & 1) == 0 )
+  if ( (byte_4CEE234 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C94098(&StringLiteral_19624/*"fixQuickCardId"*/);
-    sub_1C94098(&StringLiteral_19621/*"fixBusterCardId"*/);
-    sub_1C94098(&StringLiteral_19627/*"fixWeakCardId"*/);
-    sub_1C94098(&StringLiteral_19620/*"fixArtsCardId"*/);
-    sub_1C94098(&StringLiteral_19625/*"fixStrengthCardId"*/);
-    byte_4D2C3E8 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19619/*"fixQuickCardId"*/);
+    sub_1C7BAE8(&StringLiteral_19616/*"fixBusterCardId"*/);
+    sub_1C7BAE8(&StringLiteral_19622/*"fixWeakCardId"*/);
+    sub_1C7BAE8(&StringLiteral_19615/*"fixArtsCardId"*/);
+    sub_1C7BAE8(&StringLiteral_19620/*"fixStrengthCardId"*/);
+    byte_4CEE234 = 1;
   }
   *(_QWORD *)value = 0;
   *(_QWORD *)v17 = 0;
   item = 0;
-  v5 = (System_Collections_Generic_List_int__o *)sub_1C942E4(System_Collections_Generic_List_int__TypeInfo);
+  v5 = (System_Collections_Generic_List_int__o *)sub_1C7BD34(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v5,
-    (const MethodInfo_384D5BC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3821584 *)Method_System_Collections_Generic_List_int___ctor__);
   switch ( commandType )
   {
     case 1:
       IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                              this->fields.script,
-                             (System_String_o *)StringLiteral_19620/*"fixArtsCardId"*/,
+                             (System_String_o *)StringLiteral_19615/*"fixArtsCardId"*/,
                              &v17[1],
                              -1,
                              0);
@@ -86,7 +86,7 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
     case 2:
       IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                              this->fields.script,
-                             (System_String_o *)StringLiteral_19621/*"fixBusterCardId"*/,
+                             (System_String_o *)StringLiteral_19616/*"fixBusterCardId"*/,
                              v17,
                              -1,
                              0);
@@ -101,13 +101,13 @@ LABEL_28:
       if ( v5 )
         return System_Collections_Generic_List_int___ToArray(
                  v5,
-                 (const MethodInfo_384F8C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3823890 *)Method_System_Collections_Generic_List_int__ToArray__);
 LABEL_29:
-      sub_1C942F0(IntValueAndCompare, v7);
+      sub_1C7BD40(IntValueAndCompare, v7);
     case 3:
       IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                              this->fields.script,
-                             (System_String_o *)StringLiteral_19624/*"fixQuickCardId"*/,
+                             (System_String_o *)StringLiteral_19619/*"fixQuickCardId"*/,
                              &value[1],
                              -1,
                              0);
@@ -124,7 +124,7 @@ LABEL_29:
     goto LABEL_28;
   IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                          this->fields.script,
-                         (System_String_o *)StringLiteral_19627/*"fixWeakCardId"*/,
+                         (System_String_o *)StringLiteral_19622/*"fixWeakCardId"*/,
                          value,
                          -1,
                          0);
@@ -144,7 +144,7 @@ LABEL_29:
       System_Collections_Generic_List_int___AddWithResize(
         v5,
         v7,
-        *(const MethodInfo_384DE10 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+        *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
     }
     else
     {
@@ -154,7 +154,7 @@ LABEL_29:
   }
   IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                          this->fields.script,
-                         (System_String_o *)StringLiteral_19625/*"fixStrengthCardId"*/,
+                         (System_String_o *)StringLiteral_19620/*"fixStrengthCardId"*/,
                          &item,
                          -1,
                          0);
@@ -175,7 +175,7 @@ LABEL_25:
     System_Collections_Generic_List_int___AddWithResize(
       v5,
       v7,
-      *(const MethodInfo_384DE10 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
@@ -184,29 +184,29 @@ LABEL_25:
   }
   return System_Collections_Generic_List_int___ToArray(
            v5,
-           (const MethodInfo_384F8C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3823890 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
 int32_t AiActEntity__GetNoTargetNoActionType(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3E6 & 1) == 0 )
+  if ( (byte_4CEE232 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_22461/*"noTargetNoActionType"*/);
-    byte_4D2C3E6 = 1;
+    sub_1C7BAE8(&StringLiteral_22457/*"noTargetNoActionType"*/);
+    byte_4CEE232 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22461/*"noTargetNoActionType"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22457/*"noTargetNoActionType"*/, 0, 0);
 }
 
 
 bool AiActEntity__IsBattleScriptEachLoad(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3EA & 1) == 0 )
+  if ( (byte_4CEE236 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_18813/*"eachLoadOnPlayOrder"*/);
-    byte_4D2C3EA = 1;
+    sub_1C7BAE8(&StringLiteral_18814/*"eachLoadOnPlayOrder"*/);
+    byte_4CEE236 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18813/*"eachLoadOnPlayOrder"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18814/*"eachLoadOnPlayOrder"*/, 0, 0) == 1;
 }
 
 
@@ -214,12 +214,12 @@ bool AiActEntity__IsEnableTarget(AiActEntity_o *this, bool isCheckHate, const Me
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4D2C3EB & 1) == 0 )
+  if ( (byte_4CEE237 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_19140/*"enableTarget"*/);
-    byte_4D2C3EB = 1;
+    sub_1C7BAE8(&StringLiteral_19137/*"enableTarget"*/);
+    byte_4CEE237 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19140/*"enableTarget"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19137/*"enableTarget"*/, -1, 0);
   if ( IntValue )
     LOBYTE(IntValue) = IntValue > 0 || isCheckHate;
   return IntValue;
@@ -228,23 +228,23 @@ bool AiActEntity__IsEnableTarget(AiActEntity_o *this, bool isCheckHate, const Me
 
 bool AiActEntity__IsIncludeDeathSvt(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3E4 & 1) == 0 )
+  if ( (byte_4CEE230 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_20922/*"includeDeathSvt"*/);
-    byte_4D2C3E4 = 1;
+    sub_1C7BAE8(&StringLiteral_20917/*"includeDeathSvt"*/);
+    byte_4CEE230 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20922/*"includeDeathSvt"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20917/*"includeDeathSvt"*/, 0);
 }
 
 
 bool AiActEntity__IsNoCriticalOnAttack(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C3E7 & 1) == 0 )
+  if ( (byte_4CEE233 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_22452/*"noCriticalOnAttack"*/);
-    byte_4D2C3E7 = 1;
+    sub_1C7BAE8(&StringLiteral_22448/*"noCriticalOnAttack"*/);
+    byte_4CEE233 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22452/*"noCriticalOnAttack"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22448/*"noCriticalOnAttack"*/, 0, 0) == 1;
 }
 
 
@@ -253,14 +253,14 @@ bool AiActEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_4D2C3E5 & 1) == 0 )
+  if ( (byte_4CEE231 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_7642/*"Individuality"*/);
-    byte_4D2C3E5 = 1;
+    sub_1C7BAE8(&StringLiteral_7645/*"Individuality"*/);
+    byte_4CEE231 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7642/*"Individuality"*/,
+           (System_String_o *)StringLiteral_7645/*"Individuality"*/,
            resValues,
            0);
 }

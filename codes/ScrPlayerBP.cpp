@@ -48,20 +48,20 @@ void ScrPlayerBP___cctor(const MethodInfo *method)
   struct System_Int32_array *v46; // x1
   struct ScrPlayerBP_StaticFields *v47; // x0
 
-  if ( (byte_4D29590 & 1) == 0 )
+  if ( (byte_4CEB3F0 & 1) == 0 )
   {
-    sub_1C94098(&int___TypeInfo);
-    sub_1C94098(&ScrPlayerBP_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_23924/*"status_raid_frame_old"*/);
-    sub_1C94098(&StringLiteral_16037/*"[ffb505]"*/);
-    sub_1C94098(&StringLiteral_23923/*"status_raid_frame"*/);
-    byte_4D29590 = 1;
+    sub_1C7BAE8(&int___TypeInfo);
+    sub_1C7BAE8(&ScrPlayerBP_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_23920/*"status_raid_frame_old"*/);
+    sub_1C7BAE8(&StringLiteral_16039/*"[ffb505]"*/);
+    sub_1C7BAE8(&StringLiteral_23919/*"status_raid_frame"*/);
+    byte_4CEB3F0 = 1;
   }
-  ScrPlayerBP_TypeInfo->static_fields->RP_OVER_TXT_COLOR_STR = (struct System_String_o *)StringLiteral_16037/*"[ffb505]"*/;
-  sub_1C9403C(
+  ScrPlayerBP_TypeInfo->static_fields->RP_OVER_TXT_COLOR_STR = (struct System_String_o *)StringLiteral_16039/*"[ffb505]"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)ScrPlayerBP_TypeInfo->static_fields,
-    StringLiteral_16037/*"[ffb505]"*/,
+    StringLiteral_16039/*"[ffb505]"*/,
     v1,
     v2,
     v3,
@@ -69,46 +69,46 @@ void ScrPlayerBP___cctor(const MethodInfo *method)
     v5,
     v6);
   ScrPlayerBP_TypeInfo->static_fields->RP_COUNT_STOP = 99;
-  v7 = sub_1C94140(string___TypeInfo, 2);
+  v7 = sub_1C7BB90(string___TypeInfo, 2);
   if ( !v7 )
     goto LABEL_13;
   v15 = v7;
   if ( !*(_DWORD *)(v7 + 24) )
     goto LABEL_12;
-  v16 = StringLiteral_23924/*"status_raid_frame_old"*/;
-  *(_QWORD *)(v7 + 32) = StringLiteral_23924/*"status_raid_frame_old"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 32), v16, v9, v10, v11, v12, v13, v14);
+  v16 = StringLiteral_23920/*"status_raid_frame_old"*/;
+  *(_QWORD *)(v7 + 32) = StringLiteral_23920/*"status_raid_frame_old"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 32), v16, v9, v10, v11, v12, v13, v14);
   if ( *(_DWORD *)(v15 + 24) <= 1u )
     goto LABEL_12;
-  v23 = StringLiteral_23923/*"status_raid_frame"*/;
-  *(_QWORD *)(v15 + 40) = StringLiteral_23923/*"status_raid_frame"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v15 + 40), v23, v17, v18, v19, v20, v21, v22);
+  v23 = StringLiteral_23919/*"status_raid_frame"*/;
+  *(_QWORD *)(v15 + 40) = StringLiteral_23919/*"status_raid_frame"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v15 + 40), v23, v17, v18, v19, v20, v21, v22);
   static_fields = ScrPlayerBP_TypeInfo->static_fields;
   static_fields->RP_FRAME_SP = (struct System_String_array *)v15;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->RP_FRAME_SP, v15, v25, v26, v27, v28, v29, v30);
-  v7 = sub_1C94140(int___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->RP_FRAME_SP, v15, v25, v26, v27, v28, v29, v30);
+  v7 = sub_1C7BB90(int___TypeInfo, 2);
   if ( !v7 )
     goto LABEL_13;
   v37 = *(_DWORD *)(v7 + 24);
   v38 = (struct System_Int32_array *)v7;
   if ( !v37 || (*(_DWORD *)(v7 + 32) = 26, v37 == 1) )
 LABEL_12:
-    sub_1C942F8(v7);
+    sub_1C7BD48(v7);
   *(_DWORD *)(v7 + 36) = 10;
   v39 = ScrPlayerBP_TypeInfo->static_fields;
   v39->RP_GRID_WIDTH = v38;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v39->RP_GRID_WIDTH, (int32_t)v38, v31, v32, v33, v34, v35, v36);
-  v7 = sub_1C94140(int___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v39->RP_GRID_WIDTH, (int32_t)v38, v31, v32, v33, v34, v35, v36);
+  v7 = sub_1C7BB90(int___TypeInfo, 2);
   if ( !v7 )
 LABEL_13:
-    sub_1C942F0(v7, v8);
+    sub_1C7BD40(v7, v8);
   v46 = (struct System_Int32_array *)v7;
   if ( *(_DWORD *)(v7 + 24) <= 1u )
     goto LABEL_12;
   *(_DWORD *)(v7 + 36) = 7;
   v47 = ScrPlayerBP_TypeInfo->static_fields;
   v47->RP_FRAME_DEPTH = v46;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v47->RP_FRAME_DEPTH, (int32_t)v46, v40, v41, v42, v43, v44, v45);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v47->RP_FRAME_DEPTH, (int32_t)v46, v40, v41, v42, v43, v44, v45);
 }
 
 
@@ -122,18 +122,18 @@ void ScrPlayerBP___ctor(ScrPlayerBP_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2958F & 1) == 0 )
+  if ( (byte_4CEB3EF & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_PlayerStatusRaidPointComponent__TypeInfo);
-    byte_4D2958F = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_PlayerStatusRaidPointComponent__TypeInfo);
+    byte_4CEB3EF = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_PlayerStatusRaidPointComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_PlayerStatusRaidPointComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent___ctor__);
   this->fields.raidPointComponents = (struct System_Collections_Generic_List_PlayerStatusRaidPointComponent__o *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.raidPointComponents, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.raidPointComponents, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -153,7 +153,7 @@ void ScrPlayerBP__Awake(ScrPlayerBP_o *this, const MethodInfo *method)
         UIWidget__set_color(mRpRecoverBtnSp, v5, 0),
         (mRpRecoverBtnSp = (UIWidget_o *)this->fields.rpFrameR) == 0) )
   {
-    sub_1C942F0(mRpRecoverBtnSp, method);
+    sub_1C7BD40(mRpRecoverBtnSp, method);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mRpRecoverBtnSp, 0);
   this->fields.initPosRpFrameR = GameObjectExtensions__GetLocalPositionX(gameObject, 0);
@@ -170,18 +170,18 @@ System_String_o *ScrPlayerBP__GetTimeStr(ScrPlayerBP_o *this, int64_t time, cons
   int v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v3 = time;
-  if ( (byte_4D2958E & 1) == 0 )
+  if ( (byte_4CEB3EE & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&StringLiteral_25344/*"{0:D}:{1:D2}"*/);
-    byte_4D2958E = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_25347/*"{0:D}:{1:D2}"*/);
+    byte_4CEB3EE = 1;
   }
   v4 = v3 % 60;
   v9 = v3 / 60;
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
   v8 = v4;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  return System_String__Format_64459052((System_String_o *)StringLiteral_25344/*"{0:D}:{1:D2}"*/, v5, v6, 0);
+  return System_String__Format_64218220((System_String_o *)StringLiteral_25347/*"{0:D}:{1:D2}"*/, v5, v6, 0);
 }
 
 
@@ -199,7 +199,7 @@ void ScrPlayerBP__SetRpRecoverBtnEnable(ScrPlayerBP_o *this, bool is_enable, con
   if ( is_enable )
     v4 = 1.0;
   if ( !mRpRecoverBtnSp )
-    sub_1C942F0(0, is_enable);
+    sub_1C7BD40(0, is_enable);
   v5 = 1.0;
   v6 = v4;
   v7 = v4;
@@ -246,18 +246,18 @@ void ScrPlayerBP__SetupDispRaidPoint(ScrPlayerBP_o *this, UserGameEntity_o *user
   struct UIGrid_o *v39; // x8
   struct UIGrid_o *v40; // x8
 
-  if ( (byte_4D2958B & 1) == 0 )
+  if ( (byte_4CEB3EB & 1) == 0 )
   {
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Count__);
-    sub_1C94098(&Method_UnityEngine_Object_Instantiate_PlayerStatusRaidPointComponent___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&ScrPlayerBP_TypeInfo);
-    byte_4D2958B = 1;
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Count__);
+    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_PlayerStatusRaidPointComponent___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&ScrPlayerBP_TypeInfo);
+    byte_4CEB3EB = 1;
   }
   this->fields.userGameEntity = userGame;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.userGameEntity,
     (int32_t)userGame,
     (int32_t)method,
@@ -295,10 +295,10 @@ void ScrPlayerBP__SetupDispRaidPoint(ScrPlayerBP_o *this, UserGameEntity_o *user
     rpGrid->fields.cellWidth = (float)*(&m_CancellationTokenSource->fields._state + BpExpresssionType);
     if ( !this->fields.userGameEntity )
       goto LABEL_51;
-    if ( !byte_4D29390 )
+    if ( !byte_4CEB1EB )
     {
-      sub_1C94098(&BalanceConfig_TypeInfo);
-      byte_4D29390 = 1;
+      sub_1C7BAE8(&BalanceConfig_TypeInfo);
+      byte_4CEB1EB = 1;
     }
     v17 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -317,7 +317,7 @@ void ScrPlayerBP__SetupDispRaidPoint(ScrPlayerBP_o *this, UserGameEntity_o *user
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         rpFrameR = (PlayerStatusRaidPointComponent_o *)UnityEngine_Object__Instantiate_object_(
                                                          raidPointPrefab,
-                                                         (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_PlayerStatusRaidPointComponent___);
+                                                         (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_PlayerStatusRaidPointComponent___);
         if ( !rpFrameR )
           break;
         v21 = rpFrameR;
@@ -338,20 +338,20 @@ void ScrPlayerBP__SetupDispRaidPoint(ScrPlayerBP_o *this, UserGameEntity_o *user
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)rpFrameR,
             (Il2CppObject *)v21,
-            *(const MethodInfo_386AE34 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
           LODWORD(rpFrameR->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v32 + 32) = v21;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)v21, v23, v24, v25, v26, v27, v28);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)v21, v23, v24, v25, v26, v27, v28);
         }
         if ( UerGameRpMax == v19 )
           goto LABEL_28;
       }
 LABEL_51:
-      sub_1C942F0(rpFrameR, v11);
+      sub_1C7BD40(rpFrameR, v11);
     }
 LABEL_28:
     rpFrameR = (PlayerStatusRaidPointComponent_o *)this->fields.rpGrid;
@@ -410,7 +410,7 @@ LABEL_28:
       goto LABEL_51;
     if ( (unsigned int)BpExpresssionType >= LODWORD(v37->max_length) )
 LABEL_52:
-      sub_1C942F8(rpFrameR);
+      sub_1C7BD48(rpFrameR);
     rpFrameR = (PlayerStatusRaidPointComponent_o *)this->fields.rpFrameR;
     if ( !rpFrameR )
       goto LABEL_51;
@@ -476,15 +476,15 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
   int32_t UerGameRpMax; // [xsp+8h] [xbp-38h] BYREF
   int v25; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D2958C & 1) == 0 )
+  if ( (byte_4CEB3EC & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
-    sub_1C94098(&ScrPlayerBP_TypeInfo);
-    sub_1C94098(&TerminalSceneComponent_TypeInfo);
-    sub_1C94098(&StringLiteral_15881/*"[-]/"*/);
-    sub_1C94098(&StringLiteral_1041/*"/"*/);
-    byte_4D2958C = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
+    sub_1C7BAE8(&ScrPlayerBP_TypeInfo);
+    sub_1C7BAE8(&TerminalSceneComponent_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_15882/*"[-]/"*/);
+    sub_1C7BAE8(&StringLiteral_1042/*"/"*/);
+    byte_4CEB3EC = 1;
   }
   v25 = 0;
   userGameEntity = this->fields.userGameEntity;
@@ -494,10 +494,10 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
   if ( !this->fields.userGameEntity )
     goto LABEL_46;
   RP_COUNT_STOP = (int)userGameEntity;
-  if ( !byte_4D29390 )
+  if ( !byte_4CEB1EB )
   {
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    byte_4D29390 = 1;
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    byte_4CEB1EB = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -530,7 +530,7 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
   v12 = v10;
   if ( v25 <= UerGameRpMax )
   {
-    userGameEntity = System_String__Concat_64456008(v9, (System_String_o *)StringLiteral_1041/*"/"*/, v10, 0);
+    userGameEntity = System_String__Concat_64215176(v9, (System_String_o *)StringLiteral_1042/*"/"*/, v10, 0);
     if ( !mcRpStrP )
       goto LABEL_46;
   }
@@ -542,10 +542,10 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(ScrPlayerBP_TypeInfo);
       v13 = ScrPlayerBP_TypeInfo;
     }
-    userGameEntity = System_String__Concat_64458012(
+    userGameEntity = System_String__Concat_64217180(
                        v13->static_fields->RP_OVER_TXT_COLOR_STR,
                        v9,
-                       (System_String_o *)StringLiteral_15881/*"[-]/"*/,
+                       (System_String_o *)StringLiteral_15882/*"[-]/"*/,
                        v12,
                        0);
     if ( !mcRpStrP )
@@ -566,7 +566,7 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
       userGameEntity = System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)userGameEntity,
                          v17 - 1,
-                         (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
+                         (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
       if ( !userGameEntity )
         break;
       PlayerStatusRaidPointComponent__SetDispType((PlayerStatusRaidPointComponent_o *)userGameEntity, v16, 0);
@@ -578,7 +578,7 @@ void ScrPlayerBP__UpdateRpStatus(ScrPlayerBP_o *this, const MethodInfo *method)
     }
     while ( userGameEntity );
 LABEL_46:
-    sub_1C942F0(userGameEntity, method);
+    sub_1C7BD40(userGameEntity, method);
   }
 LABEL_28:
   v18 = v15 - v14;
@@ -597,7 +597,7 @@ LABEL_28:
       userGameEntity = System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)userGameEntity,
                          v20,
-                         (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
+                         (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_PlayerStatusRaidPointComponent__get_Item__);
       if ( !userGameEntity )
         goto LABEL_46;
       PlayerStatusRaidPointComponent__SetDispType((PlayerStatusRaidPointComponent_o *)userGameEntity, 2, 0);
@@ -606,10 +606,10 @@ LABEL_28:
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4D264E4 )
+  if ( !byte_4CE840E )
   {
-    sub_1C94098(&TerminalSceneComponent_TypeInfo);
-    byte_4D264E4 = 1;
+    sub_1C7BAE8(&TerminalSceneComponent_TypeInfo);
+    byte_4CE840E = 1;
   }
   userGameEntity = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -640,7 +640,7 @@ void ScrPlayerBP__UpdateRpTimeStr(ScrPlayerBP_o *this, const MethodInfo *method)
   mcRpTimeP = this->fields.mcRpTimeP;
   RpRecoverTimeStr = ScrPlayerBP__mfGetRpRecoverTimeStr(this, method);
   if ( !mcRpTimeP )
-    sub_1C942F0(RpRecoverTimeStr, v4);
+    sub_1C7BD40(RpRecoverTimeStr, v4);
   UILabel__set_text(mcRpTimeP, RpRecoverTimeStr, 0);
 }
 
@@ -652,10 +652,10 @@ System_String_o *ScrPlayerBP__mfGetRpRecoverTimeStr(ScrPlayerBP_o *this, const M
   ScrPlayerBP_o *RpNextRecoverTime; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4D2958D & 1) == 0 )
+  if ( (byte_4CEB3ED & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2958D = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEB3ED = 1;
   }
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
@@ -670,7 +670,7 @@ System_String_o *ScrPlayerBP__mfGetRpRecoverTimeStr(ScrPlayerBP_o *this, const M
       return ScrPlayerBP__GetTimeStr(RpNextRecoverTime, (int64_t)RpNextRecoverTime, v6);
     }
 LABEL_8:
-    sub_1C942F0(userGameEntity, method);
+    sub_1C7BD40(userGameEntity, method);
   }
   return v4;
 }

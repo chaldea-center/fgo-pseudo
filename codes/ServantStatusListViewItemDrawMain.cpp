@@ -14,7 +14,7 @@ void ServantStatusListViewItemDrawMain__AddAreaHeight(
 
   baseSprite = (UIWidget_o *)this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1C942F0(0, sizeY);
+    sub_1C7BD40(0, sizeY);
   UIWidget__set_height(baseSprite, baseSprite->fields.mHeight + sizeY, 0);
 }
 
@@ -32,13 +32,13 @@ void ServantStatusListViewItemDrawMain__AdjustBaseUiPosY(
 
   baseSprite = this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   mHeight = baseSprite->fields.mHeight;
   baseSpriteHeightBase = this->fields.baseSpriteHeightBase;
-  if ( !byte_4D265B8 )
+  if ( !byte_4CE84E7 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D265B8 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE84E7 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -68,13 +68,13 @@ void ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4D29C40 & 1) == 0 )
+  if ( (byte_4CEBBD3 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_Transform__TypeInfo);
-    sub_1C94098(&Method_BasicHelper_ForEach_Transform___);
-    sub_1C94098(&Method_ServantStatusListViewItemDrawMain___c__AdjustLayoutByInsertGrandEnforcementInfo_b__57_0__);
-    sub_1C94098(&ServantStatusListViewItemDrawMain___c_TypeInfo);
-    byte_4D29C40 = 1;
+    sub_1C7BAE8(&System_Action_Transform__TypeInfo);
+    sub_1C7BAE8(&Method_BasicHelper_ForEach_Transform___);
+    sub_1C7BAE8(&Method_ServantStatusListViewItemDrawMain___c__AdjustLayoutByInsertGrandEnforcementInfo_b__57_0__);
+    sub_1C7BAE8(&ServantStatusListViewItemDrawMain___c_TypeInfo);
+    byte_4CEBBD3 = 1;
   }
   ServantStatusListViewItemDrawMain__AddAreaHeight(this, 25, v2);
   v4 = ServantStatusListViewItemDrawMain___c_TypeInfo;
@@ -93,7 +93,7 @@ void ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo
       v4 = ServantStatusListViewItemDrawMain___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__57_0 = (System_Action_object__o *)sub_1C942E4(System_Action_Transform__TypeInfo);
+    _9__57_0 = (System_Action_object__o *)sub_1C7BD34(System_Action_Transform__TypeInfo);
     System_Action_object____ctor(
       _9__57_0,
       v7,
@@ -101,7 +101,7 @@ void ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo
       0);
     static_fields = ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields;
     static_fields->__9__57_0 = (struct System_Action_Transform__o *)_9__57_0;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__57_0,
       (int32_t)_9__57_0,
       v9,
@@ -114,7 +114,7 @@ void ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo
   BasicHelper__ForEach_object_(
     transformsShiftYByInsertGrandUi,
     (System_Action_T__o *)_9__57_0,
-    (const MethodInfo_3188088 *)Method_BasicHelper_ForEach_Transform___);
+    (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_Transform___);
 }
 
 
@@ -183,26 +183,26 @@ void ServantStatusListViewItemDrawMain__Awake(ServantStatusListViewItemDrawMain_
   __int64 v62; // x0
 
   v2 = this;
-  if ( (byte_4D29C3D & 1) == 0 )
+  if ( (byte_4CEBBD0 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Array_Empty_Transform___);
-    sub_1C94098(&Method_BasicHelper_ExcludeNull_Transform___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Concat_Transform___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Distinct_Transform___);
-    sub_1C94098(&Method_System_Linq_Enumerable_ToDictionary_Transform__Transform__float___);
-    sub_1C94098(&System_Func_Transform__float__TypeInfo);
-    sub_1C94098(&System_Func_Transform__Transform__TypeInfo);
-    sub_1C94098(&UnityEngine_Transform___TypeInfo);
-    sub_1C94098(&Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_0__);
-    sub_1C94098(&Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_1__);
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C94098(&ServantStatusListViewItemDrawMain___c_TypeInfo);
-    byte_4D29C3D = 1;
+    sub_1C7BAE8(&Method_System_Array_Empty_Transform___);
+    sub_1C7BAE8(&Method_BasicHelper_ExcludeNull_Transform___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Concat_Transform___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Distinct_Transform___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToDictionary_Transform__Transform__float___);
+    sub_1C7BAE8(&System_Func_Transform__float__TypeInfo);
+    sub_1C7BAE8(&System_Func_Transform__Transform__TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Transform___TypeInfo);
+    sub_1C7BAE8(&Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_0__);
+    sub_1C7BAE8(&Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_1__);
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BAE8(&ServantStatusListViewItemDrawMain___c_TypeInfo);
+    byte_4CEBBD0 = 1;
   }
   baseSprite = v2->fields.baseSprite;
   if ( !baseSprite )
     goto LABEL_40;
   v2->fields.baseSpriteHeightBase = baseSprite->fields.mHeight;
-  this = (ServantStatusListViewItemDrawMain_o *)sub_1C94140(UnityEngine_Transform___TypeInfo, 3);
+  this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BB90(UnityEngine_Transform___TypeInfo, 3);
   if ( !v2->fields.baseUi )
     goto LABEL_40;
   v4 = this;
@@ -212,14 +212,14 @@ void ServantStatusListViewItemDrawMain__Awake(ServantStatusListViewItemDrawMain_
   v11 = this;
   if ( this )
   {
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C941D4(this, v4->klass->_1.element_class);
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BC24(this, v4->klass->_1.element_class);
     if ( !this )
       goto LABEL_42;
   }
   if ( !LODWORD(v4->fields.m_CancellationTokenSource) )
     goto LABEL_41;
   *(_QWORD *)&v4->fields.dispMode = v11;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v4->fields.dispMode, (int32_t)v11, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.dispMode, (int32_t)v11, v5, v6, v7, v8, v9, v10);
   this = (ServantStatusListViewItemDrawMain_o *)v2->fields.mainContentsRoot;
   if ( !this )
     goto LABEL_40;
@@ -229,37 +229,37 @@ void ServantStatusListViewItemDrawMain__Awake(ServantStatusListViewItemDrawMain_
   v18 = this;
   if ( this )
   {
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C941D4(this, v4->klass->_1.element_class);
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BC24(this, v4->klass->_1.element_class);
     if ( !this )
     {
 LABEL_42:
-      v62 = sub_1C94314();
-      sub_1C941C0(v62, 0);
+      v62 = sub_1C7BD64();
+      sub_1C7BC10(v62, 0);
     }
   }
   if ( LODWORD(v4->fields.m_CancellationTokenSource) <= 1 )
     goto LABEL_41;
   v4->fields.baseButton = (struct UICommonButton_o *)v18;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v4->fields.baseButton, (int32_t)v18, v12, v13, v14, v15, v16, v17);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.baseButton, (int32_t)v18, v12, v13, v14, v15, v16, v17);
   this = (ServantStatusListViewItemDrawMain_o *)v2->fields.combineRoot;
   if ( !this )
 LABEL_40:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   this = (ServantStatusListViewItemDrawMain_o *)UnityEngine_GameObject__get_transform(
                                                   (UnityEngine_GameObject_o *)this,
                                                   0);
   v25 = this;
   if ( this )
   {
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C941D4(this, v4->klass->_1.element_class);
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BC24(this, v4->klass->_1.element_class);
     if ( !this )
       goto LABEL_42;
   }
   if ( LODWORD(v4->fields.m_CancellationTokenSource) <= 2 )
 LABEL_41:
-    sub_1C942F8(this);
+    sub_1C7BD48(this);
   v4->fields.servantTexture = (struct UITexture_o *)v25;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v4->fields.servantTexture, (int32_t)v25, v19, v20, v21, v22, v23, v24);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.servantTexture, (int32_t)v25, v19, v20, v21, v22, v23, v24);
   transformsShiftYByInsertGrandUi = (System_Collections_Generic_IEnumerable_TSource__o *)v2->fields.transformsShiftYByInsertGrandUi;
   if ( !transformsShiftYByInsertGrandUi )
   {
@@ -267,27 +267,27 @@ LABEL_41:
     v29 = *((_QWORD *)Method_System_Array_Empty_Transform___ + 7);
     if ( !v29 )
     {
-      sub_1C6A188(Method_System_Array_Empty_Transform___);
+      sub_1C51BD8(Method_System_Array_Empty_Transform___);
       v29 = v28[7];
     }
     v30 = *(_QWORD *)(v29 + 16);
     if ( (*(_BYTE *)(v30 + 309) & 1) == 0 )
-      v30 = sub_1C6A12C(inited);
+      v30 = sub_1C51B7C(inited);
     if ( !*(_DWORD *)(v30 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v30);
     v31 = *(_QWORD *)(v28[7] + 16LL);
     if ( (*(_BYTE *)(v31 + 309) & 1) == 0 )
-      v31 = sub_1C6A12C(inited);
+      v31 = sub_1C51B7C(inited);
     transformsShiftYByInsertGrandUi = **(System_Collections_Generic_IEnumerable_TSource__o ***)(v31 + 184);
   }
   v32 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Concat_object_(
                                                          (System_Collections_Generic_IEnumerable_TSource__o *)v4,
                                                          transformsShiftYByInsertGrandUi,
-                                                         (const MethodInfo_31B8EB0 *)Method_System_Linq_Enumerable_Concat_Transform___);
-  v33 = BasicHelper__ExcludeNull_object_(v32, (const MethodInfo_3185DBC *)Method_BasicHelper_ExcludeNull_Transform___);
+                                                         (const MethodInfo_318C14C *)Method_System_Linq_Enumerable_Concat_Transform___);
+  v33 = BasicHelper__ExcludeNull_object_(v32, (const MethodInfo_315A07C *)Method_BasicHelper_ExcludeNull_Transform___);
   v34 = System_Linq_Enumerable__Distinct_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v33,
-          (const MethodInfo_31BF74C *)Method_System_Linq_Enumerable_Distinct_Transform___);
+          (const MethodInfo_31929E8 *)Method_System_Linq_Enumerable_Distinct_Transform___);
   v35 = ServantStatusListViewItemDrawMain___c_TypeInfo;
   v36 = v34;
   if ( !ServantStatusListViewItemDrawMain___c_TypeInfo->_2.cctor_finished )
@@ -304,11 +304,11 @@ LABEL_41:
       v35 = ServantStatusListViewItemDrawMain___c_TypeInfo;
     }
     v38 = (Il2CppObject *)v35->static_fields->__9;
-    _9__53_0 = (System_Func_object__object__o *)sub_1C942E4(System_Func_Transform__Transform__TypeInfo);
+    _9__53_0 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_Transform__Transform__TypeInfo);
     System_Func_object__object____ctor(_9__53_0, v38, Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_0__, 0);
     static_fields = ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields;
     static_fields->__9__53_0 = (struct System_Func_Transform__Transform__o *)_9__53_0;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__53_0,
       (int32_t)_9__53_0,
       v40,
@@ -333,19 +333,19 @@ LABEL_41:
       v35 = ServantStatusListViewItemDrawMain___c_TypeInfo;
     }
     v47 = (Il2CppObject *)v35->static_fields->__9;
-    _9__53_1 = (System_Func_T__TResult__o *)sub_1C942E4(System_Func_Transform__float__TypeInfo);
+    _9__53_1 = (System_Func_T__TResult__o *)sub_1C7BD34(System_Func_Transform__float__TypeInfo);
     System_Func_object__float____ctor(_9__53_1, v47, Method_ServantStatusListViewItemDrawMain___c__Awake_b__53_1__, 0);
     v48 = ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields;
     v48->__9__53_1 = (struct System_Func_Transform__float__o *)_9__53_1;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v48->__9__53_1, (int32_t)_9__53_1, v49, v50, v51, v52, v53, v54);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v48->__9__53_1, (int32_t)_9__53_1, v49, v50, v51, v52, v53, v54);
   }
   v55 = System_Linq_Enumerable__ToDictionary_object__object__float_(
           v36,
           (System_Func_TSource__TKey__o *)_9__53_0,
           (System_Func_TSource__TElement__o *)_9__53_1,
-          (const MethodInfo_31DD314 *)Method_System_Linq_Enumerable_ToDictionary_Transform__Transform__float___);
+          (const MethodInfo_31AFC4C *)Method_System_Linq_Enumerable_ToDictionary_Transform__Transform__float___);
   v2->fields.dynamicTransformsToOriginalPosYMap = (struct System_Collections_Generic_Dictionary_Transform__float__o *)v55;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&v2->fields.dynamicTransformsToOriginalPosYMap,
     (int32_t)v55,
     v56,
@@ -376,12 +376,12 @@ void ServantStatusListViewItemDrawMain__GetServantIdAndLimitCount(
   int32_t ServantLimitCountSealAfter; // w0
   int32_t ConvertOverwritePortraitLimitCount; // w21
 
-  if ( (byte_4D29C41 & 1) == 0 )
+  if ( (byte_4CEBBD4 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C94098(&ImageLimitCount_TypeInfo);
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D29C41 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C7BAE8(&ImageLimitCount_TypeInfo);
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEBBD4 = 1;
   }
   if ( !item )
     goto LABEL_15;
@@ -392,12 +392,12 @@ void ServantStatusListViewItemDrawMain__GetServantIdAndLimitCount(
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
     *limitCount = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(ConvertOverwritePortraitLimitCount, 0);
-    this = (ServantStatusListViewItemDrawMain_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ServantStatusListViewItemDrawMain_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (ServantStatusListViewItemDrawMain_o *)DataManager__GetMasterData_object_(
                                                       (DataManager_o *)this,
-                                                      (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                                      (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
       if ( this )
       {
         ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -409,7 +409,7 @@ void ServantStatusListViewItemDrawMain__GetServantIdAndLimitCount(
       }
     }
 LABEL_15:
-    sub_1C942F0(this, svtId);
+    sub_1C7BD40(this, svtId);
   }
   *svtId = item->fields._TransformedSvtId_k__BackingField;
   TransformedServant_k__BackingField = item->fields._TransformedServant_k__BackingField;
@@ -441,10 +441,10 @@ void ServantStatusListViewItemDrawMain__ModifyPortrait(
   int32_t limitCount[2]; // [xsp+8h] [xbp-28h] BYREF
 
   v5 = this;
-  if ( (byte_4D29C43 & 1) == 0 )
+  if ( (byte_4CEBBD6 & 1) == 0 )
   {
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C94098(&ServantAssetLoadManager_TypeInfo);
-    byte_4D29C43 = 1;
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BAE8(&ServantAssetLoadManager_TypeInfo);
+    byte_4CEBBD6 = 1;
   }
   *(_QWORD *)limitCount = 0;
   if ( v5->fields.isStart )
@@ -472,21 +472,21 @@ void ServantStatusListViewItemDrawMain__ModifyRandomLimitCountSetting(
   int32_t v9; // w20
   int32_t limitCount[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D29C44 & 1) == 0 )
+  if ( (byte_4CEBBD7 & 1) == 0 )
   {
-    sub_1C94098(&RandomLimitCountManager_TypeInfo);
-    sub_1C94098(&ServantAssetLoadManager_TypeInfo);
-    byte_4D29C44 = 1;
+    sub_1C7BAE8(&RandomLimitCountManager_TypeInfo);
+    sub_1C7BAE8(&ServantAssetLoadManager_TypeInfo);
+    byte_4CEBBD7 = 1;
   }
   *(_QWORD *)limitCount = 0;
   if ( this->fields.isStart )
   {
     if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
-    if ( !byte_4D2818F )
+    if ( !byte_4CEA089 )
     {
-      sub_1C94098(&RandomLimitCountManager_TypeInfo);
-      byte_4D2818F = 1;
+      sub_1C7BAE8(&RandomLimitCountManager_TypeInfo);
+      byte_4CEA089 = 1;
     }
     v6 = (ServantStatusListViewItemDrawMain_o *)RandomLimitCountManager_TypeInfo;
     if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -523,14 +523,14 @@ void ServantStatusListViewItemDrawMain__ModifyStatus(
   int32_t svtId; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4D29C42 & 1) == 0 )
+  if ( (byte_4CEBBD5 & 1) == 0 )
   {
-    this = (ServantStatusListViewItemDrawMain_o *)sub_1C94098(&ServantAssetLoadManager_TypeInfo);
-    byte_4D29C42 = 1;
+    this = (ServantStatusListViewItemDrawMain_o *)sub_1C7BAE8(&ServantAssetLoadManager_TypeInfo);
+    byte_4CEBBD5 = 1;
   }
   limitCount = 0;
   if ( !item )
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   v5 = (ServantStatusListViewItemDrawMain_o *)ServantStatusListViewItem__get_SvtId(item, 0);
   svtId = (int)v5;
   if ( (int)v5 >= 1 )
@@ -557,11 +557,11 @@ void ServantStatusListViewItemDrawMain__OnClickUnSealedQuestTransitionButton(
   __int64 v6; // x1
   int32_t v7; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4D29C45 & 1) == 0 )
+  if ( (byte_4CEBBD8 & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&StringLiteral_9899/*"OnClickUnSealedQuestTransition"*/);
-    byte_4D29C45 = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_9903/*"OnClickUnSealedQuestTransition"*/);
+    byte_4CEBBD8 = 1;
   }
   questId = this->fields.questId;
   if ( questId )
@@ -570,8 +570,8 @@ void ServantStatusListViewItemDrawMain__OnClickUnSealedQuestTransitionButton(
     v7 = questId;
     v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v7);
     if ( !inputMessageObject )
-      sub_1C942F0(v5, v6);
-    UnityEngine_GameObject__SendMessage_72092252(inputMessageObject, (System_String_o *)StringLiteral_9899/*"OnClickUnSealedQuestTransition"*/, v5, 0);
+      sub_1C7BD40(v5, v6);
+    UnityEngine_GameObject__SendMessage_71851428(inputMessageObject, (System_String_o *)StringLiteral_9903/*"OnClickUnSealedQuestTransition"*/, v5, 0);
   }
 }
 
@@ -590,7 +590,7 @@ void ServantStatusListViewItemDrawMain__ResizeCollider(
     || (size = UnityEngine_BoxCollider__get_size(baseCollider, 0), (baseSprite = this->fields.baseSprite) == 0)
     || (baseCollider = this->fields.baseCollider) == 0 )
   {
-    sub_1C942F0(baseCollider, method);
+    sub_1C7BD40(baseCollider, method);
   }
   mHeight = (float)baseSprite->fields.mHeight;
   UnityEngine_BoxCollider__set_size(baseCollider, size, 0);
@@ -616,13 +616,13 @@ void ServantStatusListViewItemDrawMain__SetBaseView(
   UIWidget_o *baseSprite; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_4D29C3E & 1) == 0 )
+  if ( (byte_4CEBBD1 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_KeyValuePair_Transform__float___TypeInfo);
-    sub_1C94098(&Method_BasicHelper_ForEach_KeyValuePair_Transform__float____);
-    sub_1C94098(&Method_ServantStatusListViewItemDrawMain___c__SetBaseView_b__55_0__);
-    sub_1C94098(&ServantStatusListViewItemDrawMain___c_TypeInfo);
-    byte_4D29C3E = 1;
+    sub_1C7BAE8(&System_Action_KeyValuePair_Transform__float___TypeInfo);
+    sub_1C7BAE8(&Method_BasicHelper_ForEach_KeyValuePair_Transform__float____);
+    sub_1C7BAE8(&Method_ServantStatusListViewItemDrawMain___c__SetBaseView_b__55_0__);
+    sub_1C7BAE8(&ServantStatusListViewItemDrawMain___c_TypeInfo);
+    byte_4CEBBD1 = 1;
   }
   v3 = ServantStatusListViewItemDrawMain___c_TypeInfo;
   dynamicTransformsToOriginalPosYMap = (System_Collections_Generic_IEnumerable_T__o *)this->fields.dynamicTransformsToOriginalPosYMap;
@@ -640,7 +640,7 @@ void ServantStatusListViewItemDrawMain__SetBaseView(
       v3 = ServantStatusListViewItemDrawMain___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__55_0 = (System_Action_T__o *)sub_1C942E4(System_Action_KeyValuePair_Transform__float___TypeInfo);
+    _9__55_0 = (System_Action_T__o *)sub_1C7BD34(System_Action_KeyValuePair_Transform__float___TypeInfo);
     System_Action_KeyValuePair_object__float_____ctor(
       _9__55_0,
       v6,
@@ -648,15 +648,15 @@ void ServantStatusListViewItemDrawMain__SetBaseView(
       0);
     static_fields = ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields;
     static_fields->__9__55_0 = (struct System_Action_KeyValuePair_Transform__float___o *)_9__55_0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__55_0, (int32_t)_9__55_0, v8, v9, v10, v11, v12, v13);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__55_0, (int32_t)_9__55_0, v8, v9, v10, v11, v12, v13);
   }
   BasicHelper__ForEach_KeyValuePair_object__float__(
     dynamicTransformsToOriginalPosYMap,
     _9__55_0,
-    (const MethodInfo_318714C *)Method_BasicHelper_ForEach_KeyValuePair_Transform__float____);
+    (const MethodInfo_315B40C *)Method_BasicHelper_ForEach_KeyValuePair_Transform__float____);
   baseSprite = (UIWidget_o *)this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1C942F0(0, v14);
+    sub_1C7BD40(0, v14);
   UIWidget__set_height(baseSprite, this->fields.baseSpriteHeightBase, 0);
   ServantStatusListViewItemDrawMain__ResizeCollider(this, v16);
 }
@@ -753,11 +753,10 @@ void ServantStatusListViewItemDrawMain__SetItem(
   float v89; // s0
   UnityEngine_GameObject_o **p_levelExceedObject; // x8
   const MethodInfo *v91; // x2
-  _BOOL4 IsTransformServant_k__BackingField; // w21
   UILabel_o *transformNameLabel; // x21
-  const MethodInfo *v94; // x2
+  const MethodInfo *v93; // x2
+  const MethodInfo *v94; // x1
   const MethodInfo *v95; // x1
-  const MethodInfo *v96; // x1
   int32_t maxFriendshipRank[2]; // [xsp+20h] [xbp-B0h] BYREF
   __int64 fraction; // [xsp+28h] [xbp-A8h] BYREF
   int32_t max[2]; // [xsp+30h] [xbp-A0h] BYREF
@@ -767,21 +766,21 @@ void ServantStatusListViewItemDrawMain__SetItem(
   int32_t exp[2]; // [xsp+50h] [xbp-80h] BYREF
   int32_t secondMaxAdjustAtk[2]; // [xsp+58h] [xbp-78h] BYREF
   int32_t maxAjustAtk[2]; // [xsp+68h] [xbp-68h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v105; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v106; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v107; // 0:x0.16
 
-  if ( (byte_4D29C3F & 1) == 0 )
+  if ( (byte_4CEBBD2 & 1) == 0 )
   {
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C94098(&ServantSkillStrengthStatus_TypeInfo);
-    sub_1C94098(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D29C3F = 1;
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C7BAE8(&ServantSkillStrengthStatus_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEBBD2 = 1;
   }
   *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)exp = 0;
@@ -800,23 +799,23 @@ void ServantStatusListViewItemDrawMain__SetItem(
     exp[1] = ServantStatusListViewItem__get_Level(item, 0);
     svtEntity = System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !levelLabel )
-      goto LABEL_236;
+      goto LABEL_240;
     UIExtrusionLabel__set_text(levelLabel, svtEntity, 0);
     maxLevelLabel = this->fields.maxLevelLabel;
     exp[1] = ServantStatusListViewItem__get_MaxLevel(item, 0);
     svtEntity = System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !maxLevelLabel )
-      goto LABEL_236;
+      goto LABEL_240;
     UILabel__set_text(maxLevelLabel, svtEntity, 0);
     costLabel = this->fields.costLabel;
     exp[1] = ServantStatusListViewItem__get_Cost(item, 0);
     svtEntity = System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !costLabel )
-      goto LABEL_236;
+      goto LABEL_240;
     UILabel__set_text(costLabel, svtEntity, 0);
     svtEntity = (System_String_o *)item->fields.svtEntity;
     if ( !svtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     IsStatusUp = ServantEntity__get_IsStatusUp((ServantEntity_o *)svtEntity, 0);
     attackIconLabel = this->fields.attackIconLabel;
     v14 = IsStatusUp;
@@ -827,8 +826,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       if ( !attackIconLabel )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(
         attackIconLabel,
         39,
         BalanceConfig_TypeInfo->static_fields->StatusUpAdjustAtk * Atk,
@@ -843,8 +842,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
       hpIconLabel = this->fields.hpIconLabel;
       svtEntity = (System_String_o *)ServantStatusListViewItem__get_Hp(item, 0);
       if ( !hpIconLabel )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(
         hpIconLabel,
         38,
         BalanceConfig_TypeInfo->static_fields->StatusUpAdjustHp * (_DWORD)svtEntity,
@@ -861,22 +860,22 @@ void ServantStatusListViewItemDrawMain__SetItem(
     {
       svtEntity = (System_String_o *)ServantStatusListViewItem__get_AdjustAtk(item, 0);
       if ( !item->fields._GrandInfo_k__BackingField )
-        goto LABEL_236;
+        goto LABEL_240;
       v17 = (int)svtEntity;
       svtEntity = (System_String_o *)UserServantGrandInfo__get_AddedAtk(item->fields._GrandInfo_k__BackingField, 0);
       if ( !attackIconLabel )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(attackIconLabel, 5, Atk, (_DWORD)svtEntity + v17, 0, 0, 0, 0, 0, 0, 0);
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(attackIconLabel, 5, Atk, (_DWORD)svtEntity + v17, 0, 0, 0, 0, 0, 0, 0);
       v18 = this->fields.hpIconLabel;
       Hp = ServantStatusListViewItem__get_Hp(item, 0);
       svtEntity = (System_String_o *)ServantStatusListViewItem__get_AdjustHp(item, 0);
       if ( !item->fields._GrandInfo_k__BackingField )
-        goto LABEL_236;
+        goto LABEL_240;
       v20 = (int)svtEntity;
       svtEntity = (System_String_o *)UserServantGrandInfo__get_AddedHp(item->fields._GrandInfo_k__BackingField, 0);
       if ( !v18 )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(v18, 3, Hp, (_DWORD)svtEntity + v20, 0, 0, 0, 0, 0, 0, 0);
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(v18, 3, Hp, (_DWORD)svtEntity + v20, 0, 0, 0, 0, 0, 0, 0);
     }
     if ( ServantStatusListViewItem__GetAdjustMax(
            item,
@@ -901,8 +900,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
         v25 = BalanceConfig_TypeInfo;
       }
       if ( !reinforceAttackIconLabel )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(
         reinforceAttackIconLabel,
         45,
         v25->static_fields->StatusUpAdjustHp * v24,
@@ -916,7 +915,7 @@ void ServantStatusListViewItemDrawMain__SetItem(
         0);
       svtEntity = (System_String_o *)this->fields.reinforceAttackMaxLabel;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UILabel__set_text((UILabel_o *)svtEntity, (System_String_o *)StringLiteral_1/*""*/, 0);
       AdjustHp = ServantStatusListViewItem__get_AdjustHp(item, 0);
       reinforceHpIconLabel = this->fields.reinforceHpIconLabel;
@@ -933,8 +932,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
         v29 = BalanceConfig_TypeInfo;
       }
       if ( !reinforceHpIconLabel )
-        goto LABEL_236;
-      UIIconLabel__Set_41867060(
+        goto LABEL_240;
+      UIIconLabel__Set_41680724(
         reinforceHpIconLabel,
         44,
         v29->static_fields->StatusUpAdjustHp * v30,
@@ -951,20 +950,20 @@ void ServantStatusListViewItemDrawMain__SetItem(
     {
       svtEntity = (System_String_o *)this->fields.reinforceAttackIconLabel;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UIIconLabel__Clear((UIIconLabel_o *)svtEntity, 0);
       svtEntity = (System_String_o *)this->fields.reinforceAttackMaxLabel;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UILabel__set_text((UILabel_o *)svtEntity, (System_String_o *)StringLiteral_1/*""*/, 0);
       svtEntity = (System_String_o *)this->fields.reinforceHpIconLabel;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UIIconLabel__Clear((UIIconLabel_o *)svtEntity, 0);
     }
     svtEntity = (System_String_o *)this->fields.reinforceHpMaxLabel;
     if ( !svtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     UILabel__set_text((UILabel_o *)svtEntity, (System_String_o *)StringLiteral_1/*""*/, 0);
     addedHpByGrandIconLabel = (UnityEngine_Object_o *)this->fields.addedHpByGrandIconLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -978,35 +977,35 @@ void ServantStatusListViewItemDrawMain__SetItem(
       {
         svtEntity = (System_String_o *)item->fields._GrandInfo_k__BackingField;
         if ( !svtEntity )
-          goto LABEL_236;
+          goto LABEL_240;
         svtEntity = (System_String_o *)UserServantGrandInfo__IsValid((UserServantGrandInfo_o *)svtEntity, 0);
         v33 = this->fields.addedHpByGrandIconLabel;
         if ( ((unsigned __int8)svtEntity & 1) != 0 )
         {
           svtEntity = (System_String_o *)item->fields._GrandInfo_k__BackingField;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           svtEntity = (System_String_o *)UserServantGrandInfo__get_AddedHp((UserServantGrandInfo_o *)svtEntity, 0);
           if ( !v33 )
-            goto LABEL_236;
-          UIIconLabel__Set_41867060(v33, 58, (int32_t)svtEntity, 0, 0, 0, 0, 0, 0, 0, 0);
+            goto LABEL_240;
+          UIIconLabel__Set_41680724(v33, 58, (int32_t)svtEntity, 0, 0, 0, 0, 0, 0, 0, 0);
           svtEntity = (System_String_o *)item->fields._GrandInfo_k__BackingField;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           v34 = this->fields.addedAtkByGrandIconLabel;
           svtEntity = (System_String_o *)UserServantGrandInfo__get_AddedAtk((UserServantGrandInfo_o *)svtEntity, 0);
           if ( !v34 )
-            goto LABEL_236;
-          UIIconLabel__Set_41867060(v34, 59, (int32_t)svtEntity, 0, 0, 0, 0, 0, 0, 0, 0);
+            goto LABEL_240;
+          UIIconLabel__Set_41680724(v34, 59, (int32_t)svtEntity, 0, 0, 0, 0, 0, 0, 0, 0);
         }
         else
         {
           if ( !v33 )
-            goto LABEL_236;
+            goto LABEL_240;
           UIIconLabel__Clear(this->fields.addedHpByGrandIconLabel, 0);
           svtEntity = (System_String_o *)this->fields.addedAtkByGrandIconLabel;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           UIIconLabel__Clear((UIIconLabel_o *)svtEntity, 0);
         }
       }
@@ -1018,13 +1017,13 @@ void ServantStatusListViewItemDrawMain__SetItem(
                                      (float *)&barExp,
                                      0);
     if ( !this->fields.expBase )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( ((unsigned __int8)svtEntity & 1) != 0 )
     {
       UnityEngine_GameObject__SetActive(this->fields.expBase, 1, 0);
       svtEntity = (System_String_o *)this->fields.lateExpBase;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, SHIDWORD(barExp) > 0, 0);
       lateExpLabel = this->fields.lateExpLabel;
       v36 = HIDWORD(barExp);
@@ -1032,11 +1031,11 @@ void ServantStatusListViewItemDrawMain__SetItem(
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       svtEntity = LocalizationManager__GetNumberFormat(v36, 0);
       if ( !lateExpLabel )
-        goto LABEL_236;
+        goto LABEL_240;
       UILabel__set_text(lateExpLabel, svtEntity, 0);
       svtEntity = (System_String_o *)this->fields.expBar;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UIProgressBar__set_value((UIProgressBar_o *)svtEntity, *(float *)&barExp, 0);
     }
     else
@@ -1047,7 +1046,7 @@ void ServantStatusListViewItemDrawMain__SetItem(
     svtEntity = (System_String_o *)ServantStatusListViewItem__get_LimitCount(item, 0);
     v38 = item->fields.svtEntity;
     if ( !v38 || !limitCountGauge )
-      goto LABEL_236;
+      goto LABEL_240;
     ServantStatusLimitCountGauge__Set(limitCountGauge, (int32_t)svtEntity, v38->fields.limitMax, 0);
     tdStrengthStatusSprite = (UnityEngine_Object_o *)this->fields.tdStrengthStatusSprite;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1056,14 +1055,14 @@ void ServantStatusListViewItemDrawMain__SetItem(
     {
       svtEntity = (System_String_o *)ServantStatusListViewItem__GetNpInfo(item, &tdInfo, 0);
       if ( !tdInfo )
-        goto LABEL_236;
+        goto LABEL_240;
       v40 = this->fields.tdStrengthStatusSprite;
       svtEntity = StrengthStatus__GetTreasureDeviceIconName(
                     tdInfo->fields.strengthStatus,
                     tdInfo->fields.treasureDeviceNum,
                     0);
       if ( !v40 )
-        goto LABEL_236;
+        goto LABEL_240;
       UISprite__set_spriteName(v40, svtEntity, 0);
     }
     if ( this->fields.skillStrengthStatusLabelList )
@@ -1092,9 +1091,9 @@ void ServantStatusListViewItemDrawMain__SetItem(
               {
                 skillStrengthStatusLabelList = this->fields.skillStrengthStatusLabelList;
                 if ( !skillStrengthStatusLabelList )
-                  goto LABEL_236;
+                  goto LABEL_240;
                 if ( v42 + i >= LODWORD(skillStrengthStatusLabelList->max_length) )
-                  goto LABEL_237;
+                  goto LABEL_241;
                 svtEntity = (System_String_o *)ServantSkillStrengthStatus_TypeInfo;
                 v51 = skillStrengthStatusLabelList->m_Items[v42 + i];
                 if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
@@ -1105,13 +1104,13 @@ void ServantStatusListViewItemDrawMain__SetItem(
                 if ( i >= v48 )
                 {
                   if ( !v51 )
-                    goto LABEL_236;
+                    goto LABEL_240;
                   v52 = 32;
                 }
                 else
                 {
                   if ( !v51 )
-                    goto LABEL_236;
+                    goto LABEL_240;
                   v52 = 24;
                 }
                 UISprite__set_spriteName(v51, *(System_String_o **)(*(_QWORD *)&svtEntity[7].fields + v52), 0);
@@ -1123,16 +1122,16 @@ void ServantStatusListViewItemDrawMain__SetItem(
             goto LABEL_100;
           v41 = skillInfoList;
           if ( !skillInfoList )
-            goto LABEL_236;
+            goto LABEL_240;
         }
-LABEL_237:
-        sub_1C942F8(svtEntity);
+LABEL_241:
+        sub_1C7BD48(svtEntity);
       }
       v42 = 0;
 LABEL_100:
       v53 = this->fields.skillStrengthStatusLabelList;
       if ( !v53 )
-        goto LABEL_236;
+        goto LABEL_240;
       v54 = v53->max_length;
       if ( (int)v42 < v54 )
       {
@@ -1140,32 +1139,32 @@ LABEL_100:
         {
           svtEntity = (System_String_o *)v53->m_Items[v42];
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           UISprite__set_spriteName((UISprite_o *)svtEntity, 0, 0);
           if ( v54 == ++v42 )
             goto LABEL_107;
           v53 = this->fields.skillStrengthStatusLabelList;
           if ( !v53 )
-            goto LABEL_236;
+            goto LABEL_240;
         }
-        goto LABEL_237;
+        goto LABEL_241;
       }
     }
 LABEL_107:
     svtEntity = (System_String_o *)this->fields.friendshipGauge;
     if ( !svtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     userSvtCollectionEntity = item->fields.userSvtCollectionEntity;
     svtEntity = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)svtEntity, 0);
     if ( !svtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( userSvtCollectionEntity )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 1, 0);
       ServantStatusListViewItem__GetFriendshipInfo(item, &max[1], max, (int32_t *)&fraction + 1, (float *)&fraction, 0);
       svtEntity = (System_String_o *)this->fields.friendshipGauge;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       ServantStatusFriendshipGauge__Set(
         (ServantStatusFriendshipGauge_o *)svtEntity,
         max[1],
@@ -1184,8 +1183,8 @@ LABEL_107:
           svtEntity = (System_String_o *)ServantStatusListViewItem__get_IsEventJoin(item, 0),
           !gameObject) )
     {
-LABEL_236:
-      sub_1C942F0(svtEntity, v9);
+LABEL_240:
+      sub_1C7BD40(svtEntity, v9);
     }
     UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)svtEntity & 1, 0);
     baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
@@ -1197,47 +1196,58 @@ LABEL_236:
           (userSvtEntity = item->fields.userSvtEntity) == 0) )
     {
 LABEL_224:
-      svtEntity = (System_String_o *)this->fields.transformNameSprite;
+      if ( item->fields._IsTransformServant_k__BackingField )
+      {
+        svtEntity = (System_String_o *)this->fields.transformNameLabel;
+        if ( !svtEntity )
+          goto LABEL_240;
+        UIWidget__set_color((UIWidget_o *)svtEntity, item->fields._TransformNameLabelColor_k__BackingField, 0);
+        svtEntity = (System_String_o *)this->fields.transformNameSprite;
+        if ( !svtEntity )
+          goto LABEL_240;
+        UIWidget__set_color((UIWidget_o *)svtEntity, item->fields._TransformNameSpriteColor_k__BackingField, 0);
+        svtEntity = (System_String_o *)this->fields.transformNameSprite;
+        if ( !svtEntity )
+          goto LABEL_240;
+        svtEntity = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)svtEntity, 0);
+        if ( !svtEntity )
+          goto LABEL_240;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 1, 0);
+        transformNameLabel = this->fields.transformNameLabel;
+        svtEntity = ServantStatusListViewItem__GetTransformName(item, 0);
+        if ( !transformNameLabel )
+          goto LABEL_240;
+        UILabel__set_text(transformNameLabel, svtEntity, 0);
+        ServantStatusListViewItemDrawMain__AddAreaHeight(this, this->fields.transformNameAddHeight, v93);
+        GameObjectExtensions__AddLocalPositionY(
+          this->fields.mainContentsRoot,
+          (float)-this->fields.transformNameAddHeight,
+          0);
+        GameObjectExtensions__AddLocalPositionY(
+          this->fields.combineRoot,
+          (float)-this->fields.transformNameAddHeight,
+          0);
+      }
+      else
+      {
+        svtEntity = (System_String_o *)this->fields.transformNameSprite;
+        if ( !svtEntity )
+          goto LABEL_240;
+        svtEntity = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)svtEntity, 0);
+        if ( !svtEntity )
+          goto LABEL_240;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 0, 0);
+      }
+      svtEntity = (System_String_o *)item->fields._GrandInfo_k__BackingField;
       if ( svtEntity )
       {
-        IsTransformServant_k__BackingField = item->fields._IsTransformServant_k__BackingField;
-        svtEntity = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)svtEntity, 0);
-        if ( svtEntity )
-        {
-          if ( IsTransformServant_k__BackingField )
-          {
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 1, 0);
-            transformNameLabel = this->fields.transformNameLabel;
-            svtEntity = ServantStatusListViewItem__GetTransformName(item, 0);
-            if ( !transformNameLabel )
-              goto LABEL_236;
-            UILabel__set_text(transformNameLabel, svtEntity, 0);
-            ServantStatusListViewItemDrawMain__AddAreaHeight(this, this->fields.transformNameAddHeight, v94);
-            GameObjectExtensions__AddLocalPositionY(
-              this->fields.mainContentsRoot,
-              (float)-this->fields.transformNameAddHeight,
-              0);
-            GameObjectExtensions__AddLocalPositionY(
-              this->fields.combineRoot,
-              (float)-this->fields.transformNameAddHeight,
-              0);
-          }
-          else
-          {
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 0, 0);
-          }
-          svtEntity = (System_String_o *)item->fields._GrandInfo_k__BackingField;
-          if ( svtEntity )
-          {
-            if ( UserServantGrandInfo__IsValid((UserServantGrandInfo_o *)svtEntity, 0) )
-              ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo(this, v95);
-            ServantStatusListViewItemDrawMain__ResizeCollider(this, v95);
-            ServantStatusListViewItemDrawMain__AdjustBaseUiPosY(this, v96);
-            return;
-          }
-        }
+        if ( UserServantGrandInfo__IsValid((UserServantGrandInfo_o *)svtEntity, 0) )
+          ServantStatusListViewItemDrawMain__AdjustLayoutByInsertGrandEnforcementInfo(this, v94);
+        ServantStatusListViewItemDrawMain__ResizeCollider(this, v94);
+        ServantStatusListViewItemDrawMain__AdjustBaseUiPosY(this, v95);
+        return;
       }
-      goto LABEL_236;
+      goto LABEL_240;
     }
     IsHeroine = UserServantEntity__IsHeroine(userSvtEntity, 0);
     v61 = -1;
@@ -1263,19 +1273,19 @@ LABEL_224:
     {
       svtEntity = (System_String_o *)*p_userSvtEntity;
       if ( !*p_userSvtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       if ( !UserServantEntity__isExceedFriendshipMax((UserServantEntity_o *)svtEntity, 0) )
       {
         svtEntity = (System_String_o *)*p_userSvtEntity;
         if ( !*p_userSvtEntity )
-          goto LABEL_236;
+          goto LABEL_240;
         if ( !UserServantEntity__IsEventJoin((UserServantEntity_o *)svtEntity, 0) )
         {
           if ( v62 )
           {
             svtEntity = (System_String_o *)*p_userSvtEntity;
             if ( !*p_userSvtEntity )
-              goto LABEL_236;
+              goto LABEL_240;
             if ( !UserServantEntity__IsUseFriendshipExceedItemHeroine((UserServantEntity_o *)svtEntity, 0) )
             {
               v64 = 0;
@@ -1286,12 +1296,12 @@ LABEL_224:
           }
           svtEntity = (System_String_o *)this->fields.bondLimitUpObject;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           v64 = 1;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 1, 0);
           svtEntity = (System_String_o *)this->fields.bondLimitUpButton;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           BYTE1(svtEntity[4].klass) = 1;
           UICommonButton__SetEnable((UICommonButton_o *)svtEntity, item->fields._CanMoveCombine_k__BackingField, 0);
           if ( !v62 )
@@ -1306,17 +1316,17 @@ LABEL_224:
 LABEL_130:
       svtEntity = (System_String_o *)*p_userSvtEntity;
       if ( !*p_userSvtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       if ( UserServantEntity__isLevelMax((UserServantEntity_o *)svtEntity, 0) )
       {
         svtEntity = (System_String_o *)*p_userSvtEntity;
         if ( !*p_userSvtEntity )
-          goto LABEL_236;
+          goto LABEL_240;
         if ( !UserServantEntity__isLimitCountMax((UserServantEntity_o *)svtEntity, 0) )
         {
           svtEntity = (System_String_o *)this->fields.limitCountUpButton;
           if ( !svtEntity )
-            goto LABEL_236;
+            goto LABEL_240;
           v65 = 1;
           BYTE1(svtEntity[4].klass) = 1;
           v66 = v64 + 1;
@@ -1331,29 +1341,29 @@ LABEL_142:
 LABEL_143:
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__isLevelMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_156;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( UserServantEntity__isExceedLvMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_156;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( UserServantEntity__IsEventJoin((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_156;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__isLimitCountMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_156;
     if ( !v62 )
       goto LABEL_154;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__IsUseLevelExceedItemHeroine((UserServantEntity_o *)svtEntity, 0) )
     {
 LABEL_156:
@@ -1364,7 +1374,7 @@ LABEL_156:
 LABEL_154:
       svtEntity = (System_String_o *)this->fields.levelExceedButton;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       v67 = 1;
       BYTE1(svtEntity[4].klass) = 1;
       ++v66;
@@ -1372,22 +1382,22 @@ LABEL_154:
     }
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( UserServantEntity__IsLeave((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_159;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__isLevelMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_166;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__isSecondAdjustAtkMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_166;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( UserServantEntity__isSecondAdjustHpMax((UserServantEntity_o *)svtEntity, 0) )
     {
 LABEL_159:
@@ -1398,7 +1408,7 @@ LABEL_159:
 LABEL_166:
       svtEntity = (System_String_o *)this->fields.reinforceButton;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       v68 = 1;
       BYTE1(svtEntity[4].klass) = 1;
       ++v66;
@@ -1406,65 +1416,65 @@ LABEL_166:
     }
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( UserServantEntity__IsHeroine((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_191;
     svtEntity = (System_String_o *)*p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( !UserServantEntity__isLimitCountMax((UserServantEntity_o *)svtEntity, 0) )
       goto LABEL_191;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    svtEntity = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    svtEntity = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     v69 = *p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     v70 = (ServantLimitImageMaster_o *)svtEntity;
     v72 = *(_QWORD *)&v69[5].fields.currentCryptoKey;
     v71 = *(_QWORD *)&v69[5].fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v106.fields.currentCryptoKey = v72;
-    *(_QWORD *)&v106.fields.fakeValue = v71;
-    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v106, 0);
+    *(_QWORD *)&v105.fields.currentCryptoKey = v72;
+    *(_QWORD *)&v105.fields.fakeValue = v71;
+    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v105, 0);
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     v73 = (int)svtEntity;
-    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(
+    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(
                                      (*p_userSvtEntity)[6],
                                      0);
     if ( !v70 )
-      goto LABEL_236;
+      goto LABEL_240;
     svtEntity = (System_String_o *)ServantLimitImageMaster__IsServantLimitCountSeal(v70, v73, (int32_t)svtEntity, 0);
     if ( ((unsigned __int8)svtEntity & 1) == 0 )
       goto LABEL_191;
     v74 = *p_userSvtEntity;
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     v76 = *(_QWORD *)&v74[5].fields.currentCryptoKey;
     v75 = *(_QWORD *)&v74[5].fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v107.fields.currentCryptoKey = v76;
-    *(_QWORD *)&v107.fields.fakeValue = v75;
-    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v107, 0);
+    *(_QWORD *)&v106.fields.currentCryptoKey = v76;
+    *(_QWORD *)&v106.fields.fakeValue = v75;
+    svtEntity = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v106, 0);
     if ( !*p_userSvtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     v77 = (int)svtEntity;
-    v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544((*p_userSvtEntity)[6], 0);
+    v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776((*p_userSvtEntity)[6], 0);
     ServantLimitCountSealedQuestOpen = ServantLimitImageMaster__GetServantLimitCountSealedQuestOpen(v70, v77, v78, 0);
     this->fields.questId = ServantLimitCountSealedQuestOpen;
     if ( !ServantLimitCountSealedQuestOpen )
       goto LABEL_191;
-    svtEntity = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    svtEntity = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( !svtEntity )
-      goto LABEL_236;
+      goto LABEL_240;
     if ( clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)svtEntity, this->fields.questId, 0, 0) )
     {
       svtEntity = (System_String_o *)this->fields.unSealedQuestTransitionButton;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       BYTE1(svtEntity[4].klass) = 1;
       CanMoveCombine_k__BackingField = item->fields._CanMoveCombine_k__BackingField;
       ++v66;
@@ -1534,32 +1544,32 @@ LABEL_214:
 LABEL_215:
       svtEntity = (System_String_o *)this->fields.bondLimitUpObject;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, v64, 0);
       svtEntity = (System_String_o *)this->fields.limitCountUpObject;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, v65, 0);
       svtEntity = (System_String_o *)this->fields.levelExceedObject;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, v67, 0);
       svtEntity = (System_String_o *)this->fields.reinforceObject;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, v68, 0);
       svtEntity = (System_String_o *)this->fields.unSealedQuestTransitionObject;
       if ( !svtEntity )
-        goto LABEL_236;
+        goto LABEL_240;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, v81, 0);
       if ( v64 || v67 || v65 || v68 || v81 )
       {
         svtEntity = (System_String_o *)this->fields.reinforceMaskSprite;
         if ( !svtEntity )
-          goto LABEL_236;
+          goto LABEL_240;
         svtEntity = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)svtEntity, 0);
         if ( !svtEntity )
-          goto LABEL_236;
+          goto LABEL_240;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtEntity, 1, 0);
         ServantStatusListViewItemDrawMain__AddAreaHeight(this, 46, v91);
       }
@@ -1586,15 +1596,15 @@ void ServantStatusListViewItemDrawMain___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D29C46 & 1) == 0 )
+  if ( (byte_4CEBBD9 & 1) == 0 )
   {
-    sub_1C94098(&ServantStatusListViewItemDrawMain___c_TypeInfo);
-    byte_4D29C46 = 1;
+    sub_1C7BAE8(&ServantStatusListViewItemDrawMain___c_TypeInfo);
+    byte_4CEBBD9 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(ServantStatusListViewItemDrawMain___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(ServantStatusListViewItemDrawMain___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields->__9 = (struct ServantStatusListViewItemDrawMain___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)ServantStatusListViewItemDrawMain___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1626,7 +1636,7 @@ void ServantStatusListViewItemDrawMain___c___AdjustLayoutByInsertGrandEnforcemen
                                                             (UnityEngine_Component_o *)x,
                                                             0)) == 0 )
   {
-    sub_1C942F0(this, x);
+    sub_1C7BD40(this, x);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   TransformHelper__SetLocalPositionY(x, localPosition.fields.y + -25.0, 0);
@@ -1650,7 +1660,7 @@ float ServantStatusListViewItemDrawMain___c___Awake_b__53_1(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !x )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   localPosition = UnityEngine_Transform__get_localPosition(x, 0);
   return localPosition.fields.y;
 }
@@ -1666,11 +1676,11 @@ void ServantStatusListViewItemDrawMain___c___SetBaseView_b__55_0(
 
   value = x.fields.value;
   key = x.fields.key;
-  if ( (byte_4D29C47 & 1) == 0 )
+  if ( (byte_4CEBBDA & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_KeyValuePair_Transform__float__get_Key__);
-    sub_1C94098(&Method_System_Collections_Generic_KeyValuePair_Transform__float__get_Value__);
-    byte_4D29C47 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_KeyValuePair_Transform__float__get_Key__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_KeyValuePair_Transform__float__get_Value__);
+    byte_4CEBBDA = 1;
   }
   TransformHelper__SetLocalPositionY(key, value, 0);
 }

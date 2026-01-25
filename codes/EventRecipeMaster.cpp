@@ -1,14 +1,14 @@
 void EventRecipeMaster___ctor(EventRecipeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C969 & 1) == 0 )
+  if ( (byte_4CEE785 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int___ctor__);
-    byte_4D2C969 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int___ctor__);
+    byte_4CEE785 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     388,
-    (const MethodInfo_345919C *)Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int___ctor__);
+    (const MethodInfo_342BFD8 *)Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int___ctor__);
 }
 
 
@@ -35,26 +35,26 @@ EventRecipeEntity_array *EventRecipeMaster__GetRecipeEntityArray(
   Il2CppClass **v18; // x0
 
   v3 = eventId;
-  if ( (byte_4D2C96A & 1) == 0 )
+  if ( (byte_4CEE786 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Count__);
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_EventRecipeEntity__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_EventRecipeEntity__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_EventRecipeEntity___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_EventRecipeEntity__TypeInfo);
-    byte_4D2C96A = 1;
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventRecipeEntity__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventRecipeEntity__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventRecipeEntity___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_EventRecipeEntity__TypeInfo);
+    byte_4CEE786 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33F3B64 *)Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Count__);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_EventRecipeEntity__TypeInfo);
+            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Count__);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_EventRecipeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_EventRecipeEntity___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_EventRecipeEntity___ctor__);
   if ( Count >= 1 )
   {
     v8 = 0;
@@ -66,7 +66,7 @@ EventRecipeEntity_array *EventRecipeMaster__GetRecipeEntityArray(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v8,
-                                                                 (const MethodInfo_33F3BF4 *)Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Item__);
+                                                                 (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_EventRecipeEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&eventId = list;
@@ -85,14 +85,14 @@ EventRecipeEntity_array *EventRecipeMaster__GetRecipeEntityArray(
             System_Collections_Generic_List_object___AddWithResize(
               v7,
               (Il2CppObject *)list,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
             v18 = &items->obj.klass + size;
             v7->fields._size = size + 1;
             v18[4] = *(Il2CppClass **)&eventId;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v18 + 4), eventId, v9, v10, v11, v12, v13, v14);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v18 + 4), eventId, v9, v10, v11, v12, v13, v14);
           }
         }
       }
@@ -100,12 +100,12 @@ EventRecipeEntity_array *EventRecipeMaster__GetRecipeEntityArray(
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1C942F0(list, *(_QWORD *)&eventId);
+    sub_1C7BD40(list, *(_QWORD *)&eventId);
   }
 LABEL_15:
   if ( !v7 )
     goto LABEL_17;
   return (EventRecipeEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v7,
-                                      (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_EventRecipeEntity__ToArray__);
+                                      (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_EventRecipeEntity__ToArray__);
 }

@@ -87,7 +87,6 @@ AssetPathLoadCounter
 AssetStorageCache
 AssetStorageLoadWrapper
 Assets
-AssetsFile
 AssetsInfo
 AssistEffectConfirmDialog
 AssistEffectListViewItem
@@ -336,6 +335,7 @@ BattleModelObjectVisibleControlComponent
 BattleMotionSelectType
 BattleMotionSkipManager
 BattleMoveObject
+BattleMovieParam
 BattleMoviePlayer
 BattleMultiMessageDisplay
 BattleNextTDgaugeComponent
@@ -397,6 +397,7 @@ BattleResultKnockdownComponent
 BattleResultMasterUpStatusComponent
 BattleResultPopupWindowComponent
 BattleResultRequest
+BattleResumeBgmSetting
 BattleResumeRequest
 BattleRetireWindowComponent
 BattleRetryConfirmComponent
@@ -546,7 +547,6 @@ BlankEarthShortcutButtonOptionComponent
 BlankEarthShortcutUIButton
 BlankEarthSpotAddEntity
 BlankEarthSpotAddMaster
-BlankEarthSpotAnimStateManager
 BlankEarthSpotEntity
 BlankEarthSpotLabelComponent
 BlankEarthSpotMaster
@@ -1996,6 +1996,9 @@ GameOptionContentBase
 GameOptionRadioButtonGroup
 GameOptionToggleButton
 GamePurchase
+GardenItem
+GardenObject
+GardenPartitionsManager
 Gender
 GenderSelectControl
 GeneralBgmPlayer
@@ -2240,7 +2243,6 @@ MasterMissionListViewItemDraw
 MasterMissionListViewManager
 MasterMissionListViewObject
 MasterMissionReceiveConfirmDialog
-MasterMissionReceiveConfirmListViewItem
 MasterMissionReceiveConfirmListViewItemDraw
 MasterMissionReceiveConfirmListViewManager
 MasterMissionReceiveConfirmListViewObject
@@ -2369,6 +2371,7 @@ NGUIFader
 NGUIGlow
 NGUIGlowTextureGenerator
 NGUIMath
+NGUISpriteMaterialControl
 NGUIText
 NGuiEventsToPlaymakerFsmEvents
 NGuiPlayMakerProxy
@@ -3278,7 +3281,6 @@ SetMaterialFloatComponent
 SetMenuNameControl
 SetMessageDispOptionControl
 SetMoveBannerControll
-SetNoticeInfo
 SetNoticeNumControl
 SetNoticeOptionControl
 SetPlayOpeningMovieOptionControl
@@ -3477,7 +3479,6 @@ StoneShopDetailListViewItemDraw
 StoneShopDetailListViewManager
 StoneShopDetailListViewObject
 StoneShopEffect
-StoneShopEffectExtension
 StoneShopEntity
 StoneShopMaster
 StorageTakeinRequest
@@ -3901,6 +3902,7 @@ UISprite
 UISpriteAltMat
 UISpriteAnimation
 UISpriteData
+UISpriteHelper
 UIStandFigureM
 UIStandFigureR
 UIStandFigureRender
@@ -3945,6 +3947,8 @@ UserAccessaryEntity
 UserAccessaryMaster
 UserAccountLinkageEntity
 UserAccountLinkageMaster
+UserBgImagePartsGroupEntity
+UserBgImagePartsGroupMaster
 UserBlacklistEntity
 UserBlacklistMaster
 UserBoxGachaEntity
@@ -4074,8 +4078,6 @@ UserLoginMaster
 UserMaster
 UserMessageInputDlg
 UserMissionNewManager
-UserMissionProgressInfo
-UserMissionProgressManager
 UserNameChangeRequest
 UserNameChangeResponseCommand
 UserNameEntryComponent
@@ -4300,7 +4302,6 @@ WarBoardMaster
 WarBoardMasterAttackRequest
 WarBoardMasterPieceComponent
 WarBoardMessageEntity
-WarBoardMessageHistoryManager
 WarBoardMessageMaster
 WarBoardMessageScriptEntity
 WarBoardMessageScriptMaster

@@ -28,19 +28,19 @@ void UIDragScrollView__FindScrollView(UIDragScrollView_o *this, const MethodInfo
   UnityEngine_Object_o *v22; // x21
   struct UIScrollView_o *v23; // x1
 
-  if ( (byte_4D30E75 & 1) == 0 )
+  if ( (byte_4CF2CA7 & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIScrollView____79130432);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E75 = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIScrollView____78877104);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CA7 = 1;
   }
   mTrans = this->fields.mTrans;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v4 = NGUITools__FindInParents_object__52590124(
+  v4 = NGUITools__FindInParents_object__52404068(
          mTrans,
-         (const MethodInfo_322762C *)Method_NGUITools_FindInParents_UIScrollView____79130432);
+         (const MethodInfo_31F9F64 *)Method_NGUITools_FindInParents_UIScrollView____78877104);
   p_scrollView = &this->fields.scrollView;
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   v7 = (struct UIScrollView_o *)v4;
@@ -58,7 +58,7 @@ void UIDragScrollView__FindScrollView(UIDragScrollView_o *this, const MethodInfo
     {
 LABEL_12:
       this->fields.scrollView = v7;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v7, v8, v9, v10, v11, v12, v13);
       p_mAutoFind = &this->fields.mAutoFind;
 LABEL_16:
       *p_mAutoFind = 1;
@@ -73,7 +73,7 @@ LABEL_16:
 LABEL_17:
   v23 = this->fields.scrollView;
   this->fields.mScroll = v23;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v23, v16, v17, v18, v19, v20, v21);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v23, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -83,11 +83,11 @@ void UIDragScrollView__OnDrag(UIDragScrollView_o *this, UnityEngine_Vector2_o de
   __int64 v5; // x1
   UIScrollView_o *v6; // x0
 
-  if ( (byte_4D30E77 & 1) == 0 )
+  if ( (byte_4CF2CA9 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E77 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CA9 = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -100,7 +100,7 @@ void UIDragScrollView__OnDrag(UIDragScrollView_o *this, UnityEngine_Vector2_o de
     {
       v6 = this->fields.scrollView;
       if ( !v6 )
-        sub_1C942F0(0, v5);
+        sub_1C7BD40(0, v5);
       UIScrollView__Drag(v6, 0);
     }
   }
@@ -135,14 +135,14 @@ void UIDragScrollView__OnEnable(UIDragScrollView_o *this, const MethodInfo *meth
   System_String_o *v26; // x7
   UnityEngine_Object_o *mScroll; // x20
 
-  if ( (byte_4D30E74 & 1) == 0 )
+  if ( (byte_4CF2CA6 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E74 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CA6 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -156,9 +156,9 @@ void UIDragScrollView__OnEnable(UIDragScrollView_o *this, const MethodInfo *meth
     {
       v20 = *p_draggablePanel;
       this->fields.scrollView = *p_draggablePanel;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v20, v14, v15, v16, v17, v18, v19);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v20, v14, v15, v16, v17, v18, v19);
       *p_draggablePanel = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.draggablePanel, 0, v21, v22, v23, v24, v25, v26);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.draggablePanel, 0, v21, v22, v23, v24, v25, v26);
     }
   }
   if ( this->fields.mStarted )
@@ -206,12 +206,12 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
   int64_t v31; // x6
   System_String_o *v32; // x7
 
-  if ( (byte_4D30E76 & 1) == 0 )
+  if ( (byte_4CF2CA8 & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIScrollView____79130432);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E76 = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIScrollView____78877104);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CA8 = 1;
   }
   if ( this->fields.mAutoFind )
   {
@@ -223,7 +223,7 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
     {
       v13 = this->fields.scrollView;
       this->fields.mScroll = v13;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v13, v7, v8, v9, v10, v11, v12);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v13, v7, v8, v9, v10, v11, v12);
       this->fields.mAutoFind = 0;
     }
   }
@@ -236,24 +236,24 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_50038832(gameObject, 0) )
+    if ( NGUITools__GetActive_49867064(gameObject, 0) )
     {
       if ( !*p_scrollView )
-        sub_1C942F0(0, v17);
+        sub_1C7BD40(0, v17);
       UIScrollView__Press(*p_scrollView, pressed, 0);
       if ( !pressed && this->fields.mAutoFind )
       {
         mTrans = this->fields.mTrans;
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-        v19 = NGUITools__FindInParents_object__52590124(
+        v19 = NGUITools__FindInParents_object__52404068(
                 mTrans,
-                (const MethodInfo_322762C *)Method_NGUITools_FindInParents_UIScrollView____79130432);
+                (const MethodInfo_31F9F64 *)Method_NGUITools_FindInParents_UIScrollView____78877104);
         this->fields.scrollView = (struct UIScrollView_o *)v19;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.scrollView, (int32_t)v19, v20, v21, v22, v23, v24, v25);
         v26 = this->fields.scrollView;
         this->fields.mScroll = v26;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v26, v27, v28, v29, v30, v31, v32);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mScroll, (int32_t)v26, v27, v28, v29, v30, v31, v32);
       }
     }
   }
@@ -266,11 +266,11 @@ void UIDragScrollView__OnScroll(UIDragScrollView_o *this, float delta, const Met
   __int64 v6; // x1
   UIScrollView_o *v7; // x0
 
-  if ( (byte_4D30E78 & 1) == 0 )
+  if ( (byte_4CF2CAA & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E78 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CAA = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -283,7 +283,7 @@ void UIDragScrollView__OnScroll(UIDragScrollView_o *this, float delta, const Met
     {
       v7 = this->fields.scrollView;
       if ( !v7 )
-        sub_1C942F0(0, v6);
+        sub_1C7BD40(0, v6);
       UIScrollView__Scroll(v7, delta, 0);
     }
   }
@@ -297,10 +297,10 @@ void UIDragScrollView__OnScrollStop(UIDragScrollView_o *this, bool dummy, const 
   UIScrollView_o *v6; // x0
   UIScrollView_o *v7; // x19
 
-  if ( (byte_4D30E79 & 1) == 0 )
+  if ( (byte_4CF2CAB & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E79 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CAB = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -312,14 +312,14 @@ void UIDragScrollView__OnScrollStop(UIDragScrollView_o *this, bool dummy, const 
       goto LABEL_12;
     UIScrollView__DisableSpring(v6, 0);
     v7 = this->fields.scrollView;
-    if ( !byte_4D25F19 )
+    if ( !byte_4CE7E59 )
     {
-      v6 = (UIScrollView_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-      byte_4D25F19 = 1;
+      v6 = (UIScrollView_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+      byte_4CE7E59 = 1;
     }
     if ( !v7 )
 LABEL_12:
-      sub_1C942F0(v6, v5);
+      sub_1C7BD40(v6, v5);
     UIScrollView__set_currentMomentum(v7, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   }
 }

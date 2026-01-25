@@ -1,14 +1,14 @@
 void WarBoardStagePieceDetailMaster___ctor(WarBoardStagePieceDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2DADB & 1) == 0 )
+  if ( (byte_4CEF876 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
-    byte_4D2DADB = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
+    byte_4CEF876 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     368,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ WarBoardStagePieceDetailEntity_o *WarBoardStagePieceDetailMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2DAD9 & 1) == 0 )
+  if ( (byte_4CEF874 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
-    byte_4D2DAD9 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
+    byte_4CEF874 = 1;
   }
   PK = (Il2CppObject *)WarBoardStagePieceDetailEntity__CreatePK(
                          stageId,
@@ -37,7 +37,7 @@ WarBoardStagePieceDetailEntity_o *WarBoardStagePieceDetailMaster__GetEntity(
   return (WarBoardStagePieceDetailEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_345FF78 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
+                                               (const MethodInfo_3432DB4 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ bool WarBoardStagePieceDetailMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2DADA & 1) == 0 )
+  if ( (byte_4CEF875 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
-    byte_4D2DADA = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
+    byte_4CEF875 = 1;
   }
   PK = (Il2CppObject *)WarBoardStagePieceDetailEntity__CreatePK(
                          stageId,
@@ -68,5 +68,5 @@ bool WarBoardStagePieceDetailMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
 }

@@ -1,13 +1,13 @@
 void PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2CE38 & 1) == 0 )
+  if ( (byte_4CEEC40 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_long___ctor__);
-    byte_4D2CE38 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_long___ctor__);
+    byte_4CEEC40 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3459024 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_342BE60 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -39,10 +39,10 @@ FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     this = (PickupUserFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1C942F0(0, followerId);
+      sub_1C7BD40(0, followerId);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {

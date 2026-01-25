@@ -42,25 +42,25 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
   __int64 v17; // x1
   ConnectMark_o *connectMark; // x0
 
-  if ( (byte_4D2657A & 1) == 0 )
+  if ( (byte_4CE84A9 & 1) == 0 )
   {
-    sub_1C94098(&Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
-    byte_4D2657A = 1;
+    sub_1C7BAE8(&Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
+    byte_4CE84A9 = 1;
   }
-  if ( !byte_4D265BA )
+  if ( !byte_4CE84E9 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D265BA = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CE84E9 = 1;
   }
   x = this->fields.vec.fields.x;
   y = this->fields.vec.fields.y;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
   v7 = static_fields->upVector.fields.x;
   v6 = static_fields->upVector.fields.y;
-  if ( !byte_4D265BB )
+  if ( !byte_4CE84EA )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D265BB = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE84EA = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -82,12 +82,12 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
       v14 = this->fields.vec.fields.x;
       v15 = Method_ProfileArrowInfoTouchComponent_OnDragEnd__;
       if ( (*((_BYTE *)Method_ProfileArrowInfoTouchComponent_OnDragEnd__ + 83) & 2) != 0 )
-        v15 = (_QWORD *)sub_1C940B0(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
-      v16 = (System_Reflection_MethodBase_o *)sub_1C9407C(v15, v15[4]);
+        v15 = (_QWORD *)sub_1C7BB00(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
+      v16 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v15, v15[4]);
       OverwriteAssetSoundName__PlaySystemSe(v16, 7, 0, 0);
       connectMark = this->fields.connectMark;
       if ( !connectMark )
-        sub_1C942F0(0, v17);
+        sub_1C7BD40(0, v17);
       if ( v14 >= 0.0 )
         ConnectMark__NextServantProfile(connectMark, 0);
       else
@@ -99,10 +99,10 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
 
 void ProfileArrowInfoTouchComponent__OnDragStart(ProfileArrowInfoTouchComponent_o *this, const MethodInfo *method)
 {
-  if ( !byte_4D25DF9 )
+  if ( !byte_4CE7D39 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D25DF9 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CE7D39 = 1;
   }
   this->fields.vec = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
 }

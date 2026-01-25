@@ -1,27 +1,27 @@
 void ServantChangeEntity___ctor(ServantChangeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D0DE & 1) == 0 )
+  if ( (byte_4CEEED8 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D0DE = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEEED8 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantChangeEntity__CreatePK(int32_t svtId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4D2D0DC & 1) == 0 )
+  if ( (byte_4CEEED6 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D2D0DC = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CEEED6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            priority,
-           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -30,86 +30,6 @@ System_String_o *ServantChangeEntity__CreatePrimaryKey(ServantChangeEntity_o *th
   const MethodInfo *v2; // x2
 
   return ServantChangeEntity__CreatePK(this->fields.svtId, this->fields.priority, v2);
-}
-
-
-int32_t ServantChangeEntity__GetAfterTreasureDeviceId(
-        ServantChangeEntity_o *this,
-        int32_t treasureDeviceId,
-        const MethodInfo *method)
-{
-  struct System_Int32_array *beforeTreasureDeviceIds; // x8
-  struct System_Int32_array *afterTreasureDeviceIds; // x9
-  int max_length; // w10
-  unsigned int v6; // w11
-  unsigned int v7; // w9
-
-  beforeTreasureDeviceIds = this->fields.beforeTreasureDeviceIds;
-  if ( beforeTreasureDeviceIds )
-  {
-    afterTreasureDeviceIds = this->fields.afterTreasureDeviceIds;
-    if ( afterTreasureDeviceIds )
-    {
-      max_length = afterTreasureDeviceIds->max_length;
-      if ( max_length >= 1 )
-      {
-        v6 = 0;
-        while ( afterTreasureDeviceIds->m_Items[v6] != treasureDeviceId )
-        {
-          if ( max_length == ++v6 )
-            return treasureDeviceId;
-        }
-        v7 = beforeTreasureDeviceIds->max_length;
-        if ( (int)v6 < (int)v7 )
-        {
-          if ( v6 >= v7 )
-            sub_1C942F8(this);
-          return beforeTreasureDeviceIds->m_Items[v6];
-        }
-      }
-    }
-  }
-  return treasureDeviceId;
-}
-
-
-int32_t ServantChangeEntity__GetBeforeTreasureDeviceId(
-        ServantChangeEntity_o *this,
-        int32_t treasureDeviceId,
-        const MethodInfo *method)
-{
-  struct System_Int32_array *beforeTreasureDeviceIds; // x9
-  struct System_Int32_array *afterTreasureDeviceIds; // x8
-  int max_length; // w10
-  unsigned int v6; // w11
-  unsigned int v7; // w9
-
-  beforeTreasureDeviceIds = this->fields.beforeTreasureDeviceIds;
-  if ( beforeTreasureDeviceIds )
-  {
-    afterTreasureDeviceIds = this->fields.afterTreasureDeviceIds;
-    if ( afterTreasureDeviceIds )
-    {
-      max_length = beforeTreasureDeviceIds->max_length;
-      if ( max_length >= 1 )
-      {
-        v6 = 0;
-        while ( beforeTreasureDeviceIds->m_Items[v6] != treasureDeviceId )
-        {
-          if ( max_length == ++v6 )
-            return treasureDeviceId;
-        }
-        v7 = afterTreasureDeviceIds->max_length;
-        if ( (int)v6 < (int)v7 )
-        {
-          if ( v6 >= v7 )
-            sub_1C942F8(this);
-          return afterTreasureDeviceIds->m_Items[v6];
-        }
-      }
-    }
-  }
-  return treasureDeviceId;
 }
 
 
@@ -125,10 +45,10 @@ bool ServantChangeEntity__IsEnable(ServantChangeEntity_o *this, const MethodInfo
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4D2D0DD & 1) == 0 )
+  if ( (byte_4CEEED7 & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    byte_4D2D0DD = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    byte_4CEEED7 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

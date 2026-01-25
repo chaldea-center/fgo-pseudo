@@ -10,17 +10,17 @@ void UpdateViewIntervalBuffActionData___ctor(
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D2EECC & 1) == 0 )
+  if ( (byte_4CF0C3F & 1) == 0 )
   {
-    sub_1C94098(&BattleActionData_TypeInfo);
-    byte_4D2EECC = 1;
+    sub_1C7BAE8(&BattleActionData_TypeInfo);
+    byte_4CF0C3F = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
 }
 
 

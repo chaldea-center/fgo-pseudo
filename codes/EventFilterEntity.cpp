@@ -1,27 +1,27 @@
 void EventFilterEntity___ctor(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C80F & 1) == 0 )
+  if ( (byte_4CEE636 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2C80F = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEE636 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventFilterEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4D2C80D & 1) == 0 )
+  if ( (byte_4CEE634 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D2C80D = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CEE634 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,21 +39,15 @@ bool EventFilterEntity__HasStatus(EventFilterEntity_o *this, int32_t flagMask, c
 }
 
 
-bool EventFilterEntity__IsExistButtonText(EventFilterEntity_o *this, const MethodInfo *method)
-{
-  return !System_String__IsNullOrEmpty(this->fields.buttonText, 0);
-}
-
-
 bool EventFilterEntity__IsOpen(EventFilterEntity_o *this, const MethodInfo *method)
 {
   int32_t closeQuestId; // w19
   int32_t openQuestId; // w20
 
-  if ( (byte_4D2C80E & 1) == 0 )
+  if ( (byte_4CEE635 & 1) == 0 )
   {
-    sub_1C94098(&CondType_TypeInfo);
-    byte_4D2C80E = 1;
+    sub_1C7BAE8(&CondType_TypeInfo);
+    byte_4CEE635 = 1;
   }
   openQuestId = this->fields.openQuestId;
   closeQuestId = this->fields.closeQuestId;

@@ -14,18 +14,18 @@ void ScriptTextListViewItem___ctor(
   System_String_o *v14; // x7
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D29E43 & 1) == 0 )
+  if ( (byte_4CEBCA6 & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&StringLiteral_16068/*"[{0:D4}] {1}"*/);
-    byte_4D29E43 = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16070/*"[{0:D4}] {1}"*/);
+    byte_4CEBCA6 = 1;
   }
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   v15 = index + 1;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  v8 = System_String__Format_64459052((System_String_o *)StringLiteral_16068/*"[{0:D4}] {1}"*/, v7, (Il2CppObject *)lineText, 0);
+  v8 = System_String__Format_64218220((System_String_o *)StringLiteral_16070/*"[{0:D4}] {1}"*/, v7, (Il2CppObject *)lineText, 0);
   this->fields.lineText = v8;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.lineText, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.lineText, (int32_t)v8, v9, v10, v11, v12, v13, v14);
 }
 
 

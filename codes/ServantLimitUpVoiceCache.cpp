@@ -4,26 +4,26 @@ void ServantLimitUpVoiceCache___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_int__int__o *v2; // x19
   struct ServantLimitUpVoiceCache_StaticFields *static_fields; // x0
 
-  if ( (byte_4D26E0D & 1) == 0 )
+  if ( (byte_4CE8D9F & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_1C94098(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_1C94098(&ServantLimitUpVoiceCache_TypeInfo);
-    byte_4D26E0D = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_1C7BAE8(&ServantLimitUpVoiceCache_TypeInfo);
+    byte_4CE8D9F = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C942E4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v1,
-    (const MethodInfo_34AB458 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_347E294 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   ServantLimitUpVoiceCache_TypeInfo->static_fields->materialLimitUpVoiceFlagDic = v1;
-  sub_1C9403C(ServantLimitUpVoiceCache_TypeInfo->static_fields, v1);
-  v2 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C942E4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  sub_1C7BA8C(ServantLimitUpVoiceCache_TypeInfo->static_fields, v1);
+  v2 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v2,
-    (const MethodInfo_34AB458 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_347E294 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   static_fields = ServantLimitUpVoiceCache_TypeInfo->static_fields;
   static_fields->detailLimitUpVoiceFlagDic = v2;
-  sub_1C9403C(&static_fields->detailLimitUpVoiceFlagDic, v2);
+  sub_1C7BA8C(&static_fields->detailLimitUpVoiceFlagDic, v2);
 }
 
 
@@ -41,13 +41,13 @@ bool ServantLimitUpVoiceCache__IsLimitUpVoiceNormal(int32_t type, int32_t servan
   int32_t v13; // w0
   ServantLimitUpVoiceCache_c *v14; // x8
 
-  if ( (byte_4D26E0B & 1) == 0 )
+  if ( (byte_4CE8D9D & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
-    sub_1C94098(&ServantLimitUpVoiceCache_TypeInfo);
-    byte_4D26E0B = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+    sub_1C7BAE8(&ServantLimitUpVoiceCache_TypeInfo);
+    byte_4CE8D9D = 1;
   }
   if ( type != 2 )
   {
@@ -68,7 +68,7 @@ bool ServantLimitUpVoiceCache__IsLimitUpVoiceNormal(int32_t type, int32_t servan
     if ( System_Collections_Generic_Dictionary_int__int___ContainsKey(
            materialLimitUpVoiceFlagDic,
            servantId,
-           (const MethodInfo_34AC008 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+           (const MethodInfo_347EE44 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
     {
       v7 = ServantLimitUpVoiceCache_TypeInfo;
       if ( !ServantLimitUpVoiceCache_TypeInfo->_2.cctor_finished )
@@ -81,7 +81,7 @@ bool ServantLimitUpVoiceCache__IsLimitUpVoiceNormal(int32_t type, int32_t servan
         goto LABEL_25;
       goto LABEL_20;
     }
-    v11 = UnityEngine_Random__Range_72070684(0, 2, 0);
+    v11 = UnityEngine_Random__Range_71829860(0, 2, 0);
     v12 = ServantLimitUpVoiceCache_TypeInfo;
     Item = v11;
     if ( !ServantLimitUpVoiceCache_TypeInfo->_2.cctor_finished )
@@ -92,13 +92,13 @@ bool ServantLimitUpVoiceCache__IsLimitUpVoiceNormal(int32_t type, int32_t servan
     materialLimitUpVoiceFlagDic = v12->static_fields->materialLimitUpVoiceFlagDic;
     if ( !materialLimitUpVoiceFlagDic )
 LABEL_25:
-      sub_1C942F0(materialLimitUpVoiceFlagDic, *(_QWORD *)&servantId);
+      sub_1C7BD40(materialLimitUpVoiceFlagDic, *(_QWORD *)&servantId);
 LABEL_29:
     System_Collections_Generic_Dictionary_int__int___Add(
       materialLimitUpVoiceFlagDic,
       servantId,
       Item,
-      (const MethodInfo_34ABE1C *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+      (const MethodInfo_347EC58 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
     return Item == 0;
   }
   v8 = ServantLimitUpVoiceCache_TypeInfo;
@@ -113,9 +113,9 @@ LABEL_29:
   if ( !System_Collections_Generic_Dictionary_int__int___ContainsKey(
           materialLimitUpVoiceFlagDic,
           servantId,
-          (const MethodInfo_34AC008 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+          (const MethodInfo_347EE44 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
   {
-    v13 = UnityEngine_Random__Range_72070684(0, 2, 0);
+    v13 = UnityEngine_Random__Range_71829860(0, 2, 0);
     v14 = ServantLimitUpVoiceCache_TypeInfo;
     Item = v13;
     if ( !ServantLimitUpVoiceCache_TypeInfo->_2.cctor_finished )
@@ -141,7 +141,7 @@ LABEL_20:
   Item = System_Collections_Generic_Dictionary_int__int___get_Item(
            materialLimitUpVoiceFlagDic,
            servantId,
-           (const MethodInfo_34ABD80 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+           (const MethodInfo_347EBBC *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
   return Item == 0;
 }
 
@@ -159,14 +159,14 @@ void ServantLimitUpVoiceCache__UpdateLimitUpVoice(int32_t type, int32_t servantI
   ServantLimitUpVoiceCache_c *v12; // x8
   char v13; // w21
 
-  if ( (byte_4D26E0C & 1) == 0 )
+  if ( (byte_4CE8D9E & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
-    sub_1C94098(&ServantLimitUpVoiceCache_TypeInfo);
-    byte_4D26E0C = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
+    sub_1C7BAE8(&ServantLimitUpVoiceCache_TypeInfo);
+    byte_4CE8D9E = 1;
   }
   if ( type == 2 )
   {
@@ -182,7 +182,7 @@ void ServantLimitUpVoiceCache__UpdateLimitUpVoice(int32_t type, int32_t servantI
     detailLimitUpVoiceFlagDic = (System_Collections_Generic_Dictionary_int__int__o *)System_Collections_Generic_Dictionary_int__int___ContainsKey(
                                                                                        detailLimitUpVoiceFlagDic,
                                                                                        servantId,
-                                                                                       (const MethodInfo_34AC008 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+                                                                                       (const MethodInfo_347EE44 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
     v12 = ServantLimitUpVoiceCache_TypeInfo;
     v13 = (char)detailLimitUpVoiceFlagDic;
     if ( !ServantLimitUpVoiceCache_TypeInfo->_2.cctor_finished )
@@ -199,16 +199,16 @@ LABEL_11:
         v10 = System_Collections_Generic_Dictionary_int__int___get_Item(
                 materialLimitUpVoiceFlagDic,
                 servantId,
-                (const MethodInfo_34ABD80 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__) == 0;
+                (const MethodInfo_347EBBC *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__) == 0;
         System_Collections_Generic_Dictionary_int__int___set_Item(
           materialLimitUpVoiceFlagDic,
           servantId,
           v10,
-          (const MethodInfo_34ABE08 *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
+          (const MethodInfo_347EC44 *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
         return;
       }
 LABEL_22:
-      sub_1C942F0(detailLimitUpVoiceFlagDic, *(_QWORD *)&servantId);
+      sub_1C7BD40(detailLimitUpVoiceFlagDic, *(_QWORD *)&servantId);
     }
   }
   else
@@ -227,7 +227,7 @@ LABEL_22:
     detailLimitUpVoiceFlagDic = (System_Collections_Generic_Dictionary_int__int__o *)System_Collections_Generic_Dictionary_int__int___ContainsKey(
                                                                                        detailLimitUpVoiceFlagDic,
                                                                                        servantId,
-                                                                                       (const MethodInfo_34AC008 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+                                                                                       (const MethodInfo_347EE44 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
     v7 = ServantLimitUpVoiceCache_TypeInfo;
     v8 = (char)detailLimitUpVoiceFlagDic;
     if ( !ServantLimitUpVoiceCache_TypeInfo->_2.cctor_finished )
@@ -239,7 +239,7 @@ LABEL_22:
     if ( (v8 & 1) != 0 )
       goto LABEL_11;
   }
-  detailLimitUpVoiceFlagDic = (System_Collections_Generic_Dictionary_int__int__o *)UnityEngine_Random__Range_72070684(
+  detailLimitUpVoiceFlagDic = (System_Collections_Generic_Dictionary_int__int__o *)UnityEngine_Random__Range_71829860(
                                                                                      0,
                                                                                      2,
                                                                                      0);
@@ -249,5 +249,5 @@ LABEL_22:
     materialLimitUpVoiceFlagDic,
     servantId,
     (int32_t)detailLimitUpVoiceFlagDic,
-    (const MethodInfo_34ABE1C *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_347EC58 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
 }

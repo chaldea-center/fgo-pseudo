@@ -8,10 +8,10 @@ void DebugInputComponent__cancel(DebugInputComponent_o *this, const MethodInfo *
 {
   struct DebugInputComponent_EndInputCallBack_o *inputCallBack; // x8
 
-  if ( (byte_4D2DE86 & 1) == 0 )
+  if ( (byte_4CEFBF2 & 1) == 0 )
   {
-    sub_1C94098(&string_TypeInfo);
-    byte_4D2DE86 = 1;
+    sub_1C7BAE8(&string_TypeInfo);
+    byte_4CEFBF2 = 1;
   }
   inputCallBack = this->fields.inputCallBack;
   if ( inputCallBack )
@@ -36,17 +36,17 @@ void DebugInputComponent__setCallBack(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D2DE85 & 1) == 0 )
+  if ( (byte_4CEFBF1 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2DE85 = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEFBF1 = 1;
   }
   inputField = this->fields.inputField;
   if ( !inputField )
-    sub_1C942F0(0, cb);
+    sub_1C7BD40(0, cb);
   UIInput__set_value(inputField, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.inputCallBack = cb;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.inputCallBack, (int32_t)cb, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.inputCallBack, (int32_t)cb, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -61,7 +61,7 @@ void DebugInputComponent__submit(DebugInputComponent_o *this, const MethodInfo *
   {
     inputField = this->fields.inputField;
     if ( !inputField )
-      sub_1C942F0(0, method);
+      sub_1C7BD40(0, method);
     value = UIInput__get_value(inputField, 0);
     ((void (__fastcall *)(intptr_t, System_String_o *, __int64, intptr_t))inputCallBack->fields.invoke_impl)(
       inputCallBack->fields.method_code,
@@ -92,7 +92,7 @@ void DebugInputComponent_EndInputCallBack___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -103,17 +103,17 @@ void DebugInputComponent_EndInputCallBack___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1AC947C;
+      v13 = sub_1AB23A4;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v15 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v15, 0);
+      v15 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v15, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -123,11 +123,11 @@ LABEL_8:
   }
   if ( v12 != 2 )
     goto LABEL_8;
-  v13 = sub_1AC94A4;
+  v13 = sub_1AB23CC;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v13;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1AC9424;
+  this->fields.extra_arg = (intptr_t)sub_1AB234C;
 }
 
 
@@ -143,15 +143,15 @@ System_IAsyncResult_o *DebugInputComponent_EndInputCallBack__BeginInvoke(
   bool v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12[0] = submit;
-  if ( (byte_4D2DE87 & 1) == 0 )
+  if ( (byte_4CEFBF3 & 1) == 0 )
   {
-    sub_1C94098(&bool_TypeInfo);
-    byte_4D2DE87 = 1;
+    sub_1C7BAE8(&bool_TypeInfo);
+    byte_4CEFBF3 = 1;
   }
   v11[2] = 0;
   v11[0] = input;
   v11[1] = j_il2cpp_value_box_0(bool_TypeInfo, v12);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v11, callback, object);
 }
 
 
@@ -160,7 +160,7 @@ void DebugInputComponent_EndInputCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

@@ -1,13 +1,13 @@
 void BankShopEntity___ctor(BankShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C44B & 1) == 0 )
+  if ( (byte_4CEE297 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_int___ctor__);
-    byte_4D2C44B = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
+    byte_4CEE297 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,10 +22,10 @@ System_String_o *BankShopEntity__GetCountText(BankShopEntity_o *this, const Meth
   int32_t freeStoneNum; // w19
   int32_t chargeStoneNum; // w20
 
-  if ( (byte_4D2C449 & 1) == 0 )
+  if ( (byte_4CEE295 & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    byte_4D2C449 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    byte_4CEE295 = 1;
   }
   chargeStoneNum = this->fields.chargeStoneNum;
   freeStoneNum = this->fields.freeStoneNum;
@@ -38,18 +38,6 @@ System_String_o *BankShopEntity__GetCountText(BankShopEntity_o *this, const Meth
 int32_t BankShopEntity__GetPrice(BankShopEntity_o *this, const MethodInfo *method)
 {
   return this->fields.googlePrice;
-}
-
-
-int32_t BankShopEntity__GetPriceIcon(BankShopEntity_o *this, const MethodInfo *method)
-{
-  return 25;
-}
-
-
-int32_t BankShopEntity__GetPriceUnitIcon(BankShopEntity_o *this, const MethodInfo *method)
-{
-  return 15;
 }
 
 
@@ -72,12 +60,12 @@ bool BankShopEntity__IsOpen(BankShopEntity_o *this, const MethodInfo *method)
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2C44A & 1) == 0 )
+  if ( (byte_4CEE296 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_PaymentLimitMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2C44A = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_PaymentLimitMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CEE296 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -85,9 +73,9 @@ bool BankShopEntity__IsOpen(BankShopEntity_o *this, const MethodInfo *method)
   v4 = Time >= this->fields.startedAt && Time <= this->fields.endedAt;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_PaymentLimitMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_PaymentLimitMaster___);
   if ( !Master_object )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   return PaymentLimitMaster__IsBuyable((PaymentLimitMaster_o *)Master_object, this->fields.paymentLimitId, 0) && v4;
 }
 
@@ -261,149 +249,149 @@ System_String_o *BankShopEntity__ToString(BankShopEntity_o *this, const MethodIn
   System_String_o *v167; // x7
   int v169; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2C448 & 1) == 0 )
+  if ( (byte_4CEE294 & 1) == 0 )
   {
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_837/*", name:"*/);
-    sub_1C94098(&StringLiteral_834/*", googleShopId:"*/);
-    sub_1C94098(&StringLiteral_838/*", numDetail:"*/);
-    sub_1C94098(&StringLiteral_832/*", closeAt:"*/);
-    sub_1C94098(&StringLiteral_20429/*"id:"*/);
-    sub_1C94098(&StringLiteral_829/*", appleShopId:"*/);
-    sub_1C94098(&StringLiteral_842/*", stoneNum:"*/);
-    sub_1C94098(&StringLiteral_833/*", googlePrice:"*/);
-    sub_1C94098(&StringLiteral_839/*", openAt:"*/);
-    sub_1C94098(&StringLiteral_840/*", priceDetail:"*/);
-    sub_1C94098(&StringLiteral_828/*", applePrice:"*/);
-    sub_1C94098(&StringLiteral_830/*", auShopId:"*/);
-    byte_4D2C448 = 1;
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_838/*", name:"*/);
+    sub_1C7BAE8(&StringLiteral_835/*", googleShopId:"*/);
+    sub_1C7BAE8(&StringLiteral_839/*", numDetail:"*/);
+    sub_1C7BAE8(&StringLiteral_833/*", closeAt:"*/);
+    sub_1C7BAE8(&StringLiteral_20424/*"id:"*/);
+    sub_1C7BAE8(&StringLiteral_830/*", appleShopId:"*/);
+    sub_1C7BAE8(&StringLiteral_843/*", stoneNum:"*/);
+    sub_1C7BAE8(&StringLiteral_834/*", googlePrice:"*/);
+    sub_1C7BAE8(&StringLiteral_840/*", openAt:"*/);
+    sub_1C7BAE8(&StringLiteral_841/*", priceDetail:"*/);
+    sub_1C7BAE8(&StringLiteral_829/*", applePrice:"*/);
+    sub_1C7BAE8(&StringLiteral_831/*", auShopId:"*/);
+    byte_4CEE294 = 1;
   }
   v169 = 0;
-  v3 = (System_String_o *)sub_1C94140(string___TypeInfo, 24);
+  v3 = (System_String_o *)sub_1C7BB90(string___TypeInfo, 24);
   if ( !v3 )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   v11 = v3;
   if ( !LODWORD(v3[1].klass) )
     goto LABEL_29;
-  v12 = StringLiteral_20429/*"id:"*/;
-  v3[1].monitor = (void *)StringLiteral_20429/*"id:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3[1].monitor, v12, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_20424/*"id:"*/;
+  v3[1].monitor = (void *)StringLiteral_20424/*"id:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v3[1].monitor, v12, v5, v6, v7, v8, v9, v10);
   v3 = System_Int32__ToString((int)this + 16, 0);
   if ( LODWORD(v11[1].klass) <= 1 )
     goto LABEL_29;
   v11[1].fields = (System_String_Fields)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[1].fields, (int32_t)v3, v13, v14, v15, v16, v17, v18);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[1].fields, (int32_t)v3, v13, v14, v15, v16, v17, v18);
   if ( LODWORD(v11[1].klass) <= 2 )
     goto LABEL_29;
-  v25 = StringLiteral_837/*", name:"*/;
-  v11[2].klass = (System_String_c *)StringLiteral_837/*", name:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[2], v25, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_838/*", name:"*/;
+  v11[2].klass = (System_String_c *)StringLiteral_838/*", name:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[2], v25, v19, v20, v21, v22, v23, v24);
   if ( LODWORD(v11[1].klass) <= 3 )
     goto LABEL_29;
   name = this->fields.name;
   v11[2].monitor = name;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[2].monitor, (int32_t)name, v26, v27, v28, v29, v30, v31);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[2].monitor, (int32_t)name, v26, v27, v28, v29, v30, v31);
   if ( LODWORD(v11[1].klass) <= 4 )
     goto LABEL_29;
-  v39 = StringLiteral_829/*", appleShopId:"*/;
-  v11[2].fields = (System_String_Fields)StringLiteral_829/*", appleShopId:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[2].fields, v39, v33, v34, v35, v36, v37, v38);
+  v39 = StringLiteral_830/*", appleShopId:"*/;
+  v11[2].fields = (System_String_Fields)StringLiteral_830/*", appleShopId:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[2].fields, v39, v33, v34, v35, v36, v37, v38);
   if ( LODWORD(v11[1].klass) <= 5 )
     goto LABEL_29;
   appleShopId = this->fields.appleShopId;
   v11[3].klass = (System_String_c *)appleShopId;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[3], (int32_t)appleShopId, v40, v41, v42, v43, v44, v45);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[3], (int32_t)appleShopId, v40, v41, v42, v43, v44, v45);
   if ( LODWORD(v11[1].klass) <= 6 )
     goto LABEL_29;
-  v53 = StringLiteral_834/*", googleShopId:"*/;
-  v11[3].monitor = (void *)StringLiteral_834/*", googleShopId:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[3].monitor, v53, v47, v48, v49, v50, v51, v52);
+  v53 = StringLiteral_835/*", googleShopId:"*/;
+  v11[3].monitor = (void *)StringLiteral_835/*", googleShopId:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[3].monitor, v53, v47, v48, v49, v50, v51, v52);
   if ( LODWORD(v11[1].klass) <= 7 )
     goto LABEL_29;
   googleShopId = this->fields.googleShopId;
   v11[3].fields = (System_String_Fields)googleShopId;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[3].fields, (int32_t)googleShopId, v54, v55, v56, v57, v58, v59);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[3].fields, (int32_t)googleShopId, v54, v55, v56, v57, v58, v59);
   if ( LODWORD(v11[1].klass) <= 8 )
     goto LABEL_29;
-  v67 = StringLiteral_830/*", auShopId:"*/;
-  v11[4].klass = (System_String_c *)StringLiteral_830/*", auShopId:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[4], v67, v61, v62, v63, v64, v65, v66);
+  v67 = StringLiteral_831/*", auShopId:"*/;
+  v11[4].klass = (System_String_c *)StringLiteral_831/*", auShopId:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[4], v67, v61, v62, v63, v64, v65, v66);
   if ( LODWORD(v11[1].klass) <= 9 )
     goto LABEL_29;
   auShopId = this->fields.auShopId;
   v11[4].monitor = auShopId;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[4].monitor, (int32_t)auShopId, v68, v69, v70, v71, v72, v73);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[4].monitor, (int32_t)auShopId, v68, v69, v70, v71, v72, v73);
   if ( LODWORD(v11[1].klass) <= 0xA )
     goto LABEL_29;
-  v81 = StringLiteral_828/*", applePrice:"*/;
-  v11[4].fields = (System_String_Fields)StringLiteral_828/*", applePrice:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[4].fields, v81, v75, v76, v77, v78, v79, v80);
+  v81 = StringLiteral_829/*", applePrice:"*/;
+  v11[4].fields = (System_String_Fields)StringLiteral_829/*", applePrice:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[4].fields, v81, v75, v76, v77, v78, v79, v80);
   v3 = System_Int32__ToString((int)this + 52, 0);
   if ( LODWORD(v11[1].klass) <= 0xB )
     goto LABEL_29;
   v11[5].klass = (System_String_c *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[5], (int32_t)v3, v82, v83, v84, v85, v86, v87);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[5], (int32_t)v3, v82, v83, v84, v85, v86, v87);
   if ( LODWORD(v11[1].klass) <= 0xC )
     goto LABEL_29;
-  v94 = StringLiteral_833/*", googlePrice:"*/;
-  v11[5].monitor = (void *)StringLiteral_833/*", googlePrice:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[5].monitor, v94, v88, v89, v90, v91, v92, v93);
+  v94 = StringLiteral_834/*", googlePrice:"*/;
+  v11[5].monitor = (void *)StringLiteral_834/*", googlePrice:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[5].monitor, v94, v88, v89, v90, v91, v92, v93);
   v3 = System_Int32__ToString((int)this + 56, 0);
   if ( LODWORD(v11[1].klass) <= 0xD )
     goto LABEL_29;
   v11[5].fields = (System_String_Fields)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[5].fields, (int32_t)v3, v95, v96, v97, v98, v99, v100);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[5].fields, (int32_t)v3, v95, v96, v97, v98, v99, v100);
   if ( LODWORD(v11[1].klass) <= 0xE )
     goto LABEL_29;
-  v107 = StringLiteral_842/*", stoneNum:"*/;
-  v11[6].klass = (System_String_c *)StringLiteral_842/*", stoneNum:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[6], v107, v101, v102, v103, v104, v105, v106);
+  v107 = StringLiteral_843/*", stoneNum:"*/;
+  v11[6].klass = (System_String_c *)StringLiteral_843/*", stoneNum:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[6], v107, v101, v102, v103, v104, v105, v106);
   v169 = this->fields.freeStoneNum + this->fields.chargeStoneNum;
   v3 = System_Int32__ToString((int32_t)&v169, 0);
   if ( LODWORD(v11[1].klass) <= 0xF )
     goto LABEL_29;
   v11[6].monitor = v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[6].monitor, (int32_t)v3, v108, v109, v110, v111, v112, v113);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[6].monitor, (int32_t)v3, v108, v109, v110, v111, v112, v113);
   if ( LODWORD(v11[1].klass) <= 0x10 )
     goto LABEL_29;
-  v120 = StringLiteral_838/*", numDetail:"*/;
-  v11[6].fields = (System_String_Fields)StringLiteral_838/*", numDetail:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[6].fields, v120, v114, v115, v116, v117, v118, v119);
+  v120 = StringLiteral_839/*", numDetail:"*/;
+  v11[6].fields = (System_String_Fields)StringLiteral_839/*", numDetail:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[6].fields, v120, v114, v115, v116, v117, v118, v119);
   if ( LODWORD(v11[1].klass) <= 0x11 )
     goto LABEL_29;
   numDetail = this->fields.numDetail;
   v11[7].klass = (System_String_c *)numDetail;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[7], (int32_t)numDetail, v121, v122, v123, v124, v125, v126);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[7], (int32_t)numDetail, v121, v122, v123, v124, v125, v126);
   if ( LODWORD(v11[1].klass) <= 0x12 )
     goto LABEL_29;
-  v134 = StringLiteral_840/*", priceDetail:"*/;
-  v11[7].monitor = (void *)StringLiteral_840/*", priceDetail:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[7].monitor, v134, v128, v129, v130, v131, v132, v133);
+  v134 = StringLiteral_841/*", priceDetail:"*/;
+  v11[7].monitor = (void *)StringLiteral_841/*", priceDetail:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[7].monitor, v134, v128, v129, v130, v131, v132, v133);
   if ( LODWORD(v11[1].klass) <= 0x13 )
     goto LABEL_29;
   priceDetail = this->fields.priceDetail;
   v11[7].fields = (System_String_Fields)priceDetail;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[7].fields, (int32_t)priceDetail, v135, v136, v137, v138, v139, v140);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[7].fields, (int32_t)priceDetail, v135, v136, v137, v138, v139, v140);
   if ( LODWORD(v11[1].klass) <= 0x14 )
     goto LABEL_29;
-  v148 = StringLiteral_839/*", openAt:"*/;
-  v11[8].klass = (System_String_c *)StringLiteral_839/*", openAt:"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[8], v148, v142, v143, v144, v145, v146, v147);
+  v148 = StringLiteral_840/*", openAt:"*/;
+  v11[8].klass = (System_String_c *)StringLiteral_840/*", openAt:"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[8], v148, v142, v143, v144, v145, v146, v147);
   v3 = System_Int64__ToString((int64_t)&this->fields.openedAt, 0);
   if ( LODWORD(v11[1].klass) <= 0x15
     || (v11[8].monitor = v3,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[8].monitor, (int32_t)v3, v149, v150, v151, v152, v153, v154),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[8].monitor, (int32_t)v3, v149, v150, v151, v152, v153, v154),
         LODWORD(v11[1].klass) <= 0x16)
-    || (v161 = StringLiteral_832/*", closeAt:"*/,
-        v11[8].fields = (System_String_Fields)StringLiteral_832/*", closeAt:"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[8].fields, v161, v155, v156, v157, v158, v159, v160),
+    || (v161 = StringLiteral_833/*", closeAt:"*/,
+        v11[8].fields = (System_String_Fields)StringLiteral_833/*", closeAt:"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[8].fields, v161, v155, v156, v157, v158, v159, v160),
         v3 = System_Int64__ToString((int64_t)&this->fields.closedAt, 0),
         LODWORD(v11[1].klass) <= 0x17) )
   {
 LABEL_29:
-    sub_1C942F8(v3);
+    sub_1C7BD48(v3);
   }
   v11[9].klass = (System_String_c *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11[9], (int32_t)v3, v162, v163, v164, v165, v166, v167);
-  return System_String__Concat_64458276((System_String_array *)v11, 0);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11[9], (int32_t)v3, v162, v163, v164, v165, v166, v167);
+  return System_String__Concat_64217444((System_String_array *)v11, 0);
 }

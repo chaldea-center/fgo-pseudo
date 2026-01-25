@@ -12,7 +12,7 @@ void SimpleChainableAction___ctor(
 
   ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)action);
   this->fields.sysChainAction = action;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -46,17 +46,17 @@ SimpleChainableAction_array *SimpleChainableAction__ConvertToChainableActionArra
   __int64 v26; // x0
 
   v2 = sysActions;
-  if ( (byte_4D30D63 & 1) == 0 )
+  if ( (byte_4CF2B95 & 1) == 0 )
   {
-    sub_1C94098(&SimpleChainableAction___TypeInfo);
-    sysActions = (System_Action_Action__array *)sub_1C94098(&SimpleChainableAction_TypeInfo);
-    byte_4D30D63 = 1;
+    sub_1C7BAE8(&SimpleChainableAction___TypeInfo);
+    sysActions = (System_Action_Action__array *)sub_1C7BAE8(&SimpleChainableAction_TypeInfo);
+    byte_4CF2B95 = 1;
   }
   if ( !v2 )
 LABEL_13:
-    sub_1C942F0(sysActions, method);
+    sub_1C7BD40(sysActions, method);
   max_length = v2->max_length;
-  v4 = sub_1C94140(SimpleChainableAction___TypeInfo, (unsigned int)max_length);
+  v4 = sub_1C7BB90(SimpleChainableAction___TypeInfo, (unsigned int)max_length);
   v5 = (unsigned int *)v4;
   if ( (int)max_length >= 1 )
   {
@@ -69,23 +69,23 @@ LABEL_13:
       if ( v6 >= LODWORD(v2->max_length) )
         goto LABEL_12;
       v10 = *m_Items;
-      v11 = sub_1C942E4(SimpleChainableAction_TypeInfo);
+      v11 = sub_1C7BD34(SimpleChainableAction_TypeInfo);
       ChainableActionBase___ctor((ChainableActionBase_o *)v11, v12);
       *(_QWORD *)(v11 + 40) = v10;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)v10, v13, v14, v15, v16, v17, v18);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)v10, v13, v14, v15, v16, v17, v18);
       if ( !v5 )
         goto LABEL_13;
-      v4 = sub_1C941D4(v11, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+      v4 = sub_1C7BC24(v11, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
       if ( !v4 )
       {
-        v26 = sub_1C94314(0);
-        sub_1C941C0(v26, 0);
+        v26 = sub_1C7BD64(0);
+        sub_1C7BC10(v26, 0);
       }
       if ( v6 >= v5[6] )
 LABEL_12:
-        sub_1C942F8(v4);
+        sub_1C7BD48(v4);
       v9->klass = (GrandQuestFolderBoardItem_c *)v11;
-      sub_1C9403C(v9, v11, v19, v20, v21, v22, v23, v24);
+      sub_1C7BA8C(v9, v11, v19, v20, v21, v22, v23, v24);
       ++v6;
       ++m_Items;
       v9 = (GrandQuestFolderBoardItem_o *)((char *)v9 + 8);
@@ -101,17 +101,17 @@ void SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *this, const
   System_Action_T__o *sysChainAction; // x20
   System_Action_o *v4; // x21
 
-  if ( (byte_4D30D62 & 1) == 0 )
+  if ( (byte_4CF2B94 & 1) == 0 )
   {
-    sub_1C94098(&Method_ActionExtensions_Call_Action___);
-    sub_1C94098(&System_Action_TypeInfo);
-    byte_4D30D62 = 1;
+    sub_1C7BAE8(&Method_ActionExtensions_Call_Action___);
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    byte_4CF2B94 = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, (intptr_t)this->klass->vtable._5_End.method, 0);
   ActionExtensions__Call_object_(
     sysChainAction,
     (Il2CppObject *)v4,
-    (const MethodInfo_30E5920 *)Method_ActionExtensions_Call_Action___);
+    (const MethodInfo_30B9390 *)Method_ActionExtensions_Call_Action___);
 }

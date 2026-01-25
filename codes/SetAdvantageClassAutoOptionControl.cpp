@@ -12,25 +12,25 @@ void SetAdvantageClassAutoOptionControl__Init(SetAdvantageClassAutoOptionControl
   UILabel_o *infoLabel; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D277E1 & 1) == 0 )
+  if ( (byte_4CE958B & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&OptionManager_TypeInfo);
-    sub_1C94098(&StringLiteral_9678/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/);
-    sub_1C94098(&StringLiteral_9677/*"OPTION_ADVANTAGE_CLASS_AUTO"*/);
-    byte_4D277E1 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&OptionManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_9682/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/);
+    sub_1C7BAE8(&StringLiteral_9681/*"OPTION_ADVANTAGE_CLASS_AUTO"*/);
+    byte_4CE958B = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9677/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9681/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, 0);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v4, 0),
         infoLabel = this->fields.infoLabel,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9678/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9682/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, 0),
         !infoLabel) )
   {
-    sub_1C942F0(v4, v5);
+    sub_1C7BD40(v4, v5);
   }
   UILabel__set_text(infoLabel, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -50,10 +50,10 @@ void SetAdvantageClassAutoOptionControl__OnClickButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D277E3 & 1) == 0 )
+  if ( (byte_4CE958D & 1) == 0 )
   {
-    sub_1C94098(&Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
-    byte_4D277E3 = 1;
+    sub_1C7BAE8(&Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
+    byte_4CE958D = 1;
   }
   klass = this->klass;
   this->fields.flag ^= 1u;
@@ -63,8 +63,8 @@ void SetAdvantageClassAutoOptionControl__OnClickButton(
   v4 = Method_SetAdvantageClassAutoOptionControl_OnClickButton__;
   flag = this->fields.flag;
   if ( (*((_BYTE *)Method_SetAdvantageClassAutoOptionControl_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C940B0(Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C7BB00(Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, !flag, 0, 0);
   SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v7);
 }
@@ -76,10 +76,10 @@ void SetAdvantageClassAutoOptionControl__Reflection(
 {
   _BOOL4 flag; // w19
 
-  if ( (byte_4D277E4 & 1) == 0 )
+  if ( (byte_4CE958E & 1) == 0 )
   {
-    sub_1C94098(&OptionManager_TypeInfo);
-    byte_4D277E4 = 1;
+    sub_1C7BAE8(&OptionManager_TypeInfo);
+    byte_4CE958E = 1;
   }
   flag = this->fields.flag;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -95,18 +95,18 @@ void SetAdvantageClassAutoOptionControl__RefreshDisplay(
   UIButton_o *switchButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4D277E2 & 1) == 0 )
+  if ( (byte_4CE958C & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_17593/*"btn_on"*/);
-    sub_1C94098(&StringLiteral_17592/*"btn_off"*/);
-    byte_4D277E2 = 1;
+    sub_1C7BAE8(&StringLiteral_17595/*"btn_on"*/);
+    sub_1C7BAE8(&StringLiteral_17594/*"btn_off"*/);
+    byte_4CE958C = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   if ( this->fields.flag )
-    v4 = &StringLiteral_17593/*"btn_on"*/;
+    v4 = &StringLiteral_17595/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17592/*"btn_off"*/;
+    v4 = &StringLiteral_17594/*"btn_off"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v4, 0);
 }

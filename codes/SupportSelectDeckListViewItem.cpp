@@ -19,10 +19,10 @@ void SupportSelectDeckListViewItem___ctor(
   v7 = this;
   v8 = isSameKind;
   v9 = isPossibleCopy;
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   v7->fields.supportData = data;
   v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 120);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v7, (int32_t)data, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v7, (int32_t)data, v10, v11, v12, v13, v14, v15);
   LOBYTE(v7->monitor) = v8;
   BYTE1(v7->monitor) = v9;
 }

@@ -33,30 +33,30 @@ void UIPanel___cctor(const MethodInfo *method)
   System_String_o *v31; // x7
   struct UIPanel_StaticFields *v32; // x8
 
-  if ( (byte_4D30E09 & 1) == 0 )
+  if ( (byte_4CF2C3B & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_UIPanel___ctor__);
-    sub_1C94098(&System_Collections_Generic_HashSet_UIPanel__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_UIPanel__TypeInfo);
-    sub_1C94098(&float___TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    sub_1C94098(&UnityEngine_Vector3___TypeInfo);
-    byte_4D30E09 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_UIPanel___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_HashSet_UIPanel__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_UIPanel__TypeInfo);
+    sub_1C7BAE8(&float___TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Vector3___TypeInfo);
+    byte_4CF2C3B = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_UIPanel__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_UIPanel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_UIPanel___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_UIPanel___ctor__);
   UIPanel_TypeInfo->static_fields->list = (struct System_Collections_Generic_List_UIPanel__o *)v1;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)UIPanel_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
-  v8 = (System_Collections_Generic_HashSet_T__o *)sub_1C942E4(System_Collections_Generic_HashSet_UIPanel__TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)UIPanel_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  v8 = (System_Collections_Generic_HashSet_T__o *)sub_1C7BD34(System_Collections_Generic_HashSet_UIPanel__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
     v8,
-    (const MethodInfo_371E7A8 *)Method_System_Collections_Generic_HashSet_UIPanel___ctor__);
+    (const MethodInfo_36EFD64 *)Method_System_Collections_Generic_HashSet_UIPanel___ctor__);
   static_fields = UIPanel_TypeInfo->static_fields;
   static_fields->updateAgainPanels = (struct System_Collections_Generic_HashSet_UIPanel__o *)v8;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&static_fields->updateAgainPanels,
     (int32_t)v8,
     v10,
@@ -65,14 +65,14 @@ void UIPanel___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = sub_1C94140(float___TypeInfo, 4);
+  v16 = sub_1C7BB90(float___TypeInfo, 4);
   v17 = UIPanel_TypeInfo->static_fields;
   v17->mTemp = (struct System_Single_array *)v16;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v17->mTemp, v16, v18, v19, v20, v21, v22, v23);
-  v24 = sub_1C94140(UnityEngine_Vector3___TypeInfo, 4);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v17->mTemp, v16, v18, v19, v20, v21, v22, v23);
+  v24 = sub_1C7BB90(UnityEngine_Vector3___TypeInfo, 4);
   v25 = UIPanel_TypeInfo->static_fields;
   v25->mCorners = (struct UnityEngine_Vector3_array *)v24;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->mCorners, v24, v26, v27, v28, v29, v30, v31);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v25->mCorners, v24, v26, v27, v28, v29, v30, v31);
   v32 = UIPanel_TypeInfo->static_fields;
   v32->mUpdateFrame = -1;
   v32->mUpdating = 0;
@@ -103,35 +103,35 @@ void UIPanel___ctor(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Vector2_c *v27; // x8
   struct UnityEngine_Vector2_o zeroVector; // d0
 
-  if ( (byte_4D30E08 & 1) == 0 )
+  if ( (byte_4CF2C3A & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_UIDrawCall__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_List_UIWidget__TypeInfo);
-    sub_1C94098(&UIRect_TypeInfo);
-    byte_4D30E08 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_UIDrawCall__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_List_UIWidget__TypeInfo);
+    sub_1C7BAE8(&UIRect_TypeInfo);
+    byte_4CF2C3A = 1;
   }
   this->fields.showInPanelTool = 1;
   this->fields.cullWhileDragging = 1;
   this->fields.softBorderPadding = 1;
   this->fields.startingRenderQueue = 3000;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_UIWidget__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
   this->fields.widgets = (struct System_Collections_Generic_List_UIWidget__o *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.widgets, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_UIDrawCall__TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.widgets, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_UIDrawCall__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_UIDrawCall___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_UIDrawCall___ctor__);
   this->fields.drawCalls = (struct System_Collections_Generic_List_UIDrawCall__o *)v10;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.drawCalls, (int32_t)v10, v11, v12, v13, v14, v15, v16);
-  if ( !byte_4D2E24D )
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.drawCalls, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  if ( !byte_4CEFFB9 )
   {
-    sub_1C94098(&UnityEngine_Matrix4x4_TypeInfo);
-    byte_4D2E24D = 1;
+    sub_1C7BAE8(&UnityEngine_Matrix4x4_TypeInfo);
+    byte_4CEFFB9 = 1;
   }
   static_fields = UnityEngine_Matrix4x4_TypeInfo->static_fields;
   v18 = *(_OWORD *)&static_fields->identityMatrix.fields.m02;
@@ -140,17 +140,17 @@ void UIPanel___ctor(UIPanel_o *this, const MethodInfo *method)
   v21 = *(_OWORD *)&static_fields->identityMatrix.fields.m01;
   this->fields.mAlpha = 1.0;
   *(_OWORD *)&this->fields.worldToLocal.fields.m03 = v19;
-  this->fields.drawCallClipRange = (struct UnityEngine_Vector4_o)xmmword_CFE770;
+  this->fields.drawCallClipRange = (struct UnityEngine_Vector4_o)xmmword_CF54D0;
   *(_OWORD *)&this->fields.worldToLocal.fields.m01 = v21;
   *(_OWORD *)&this->fields.worldToLocal.fields.m02 = v18;
   __asm { FMOV            V0.2S, #4.0 }
   *(_OWORD *)&this->fields.worldToLocal.fields.m00 = v20;
-  this->fields.mClipRange = (struct UnityEngine_Vector4_o)xmmword_D001B0;
+  this->fields.mClipRange = (struct UnityEngine_Vector4_o)xmmword_CF6F30;
   this->fields.mClipSoftness = _D0;
-  if ( !byte_4D25DF9 )
+  if ( !byte_4CE7D39 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D25DF9 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CE7D39 = 1;
   }
   v27 = UnityEngine_Vector2_TypeInfo;
   zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -187,15 +187,15 @@ void UIPanel__AddWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method
   int v22; // w21
   Il2CppObject *v23; // x0
   int32_t v24; // w1
-  const MethodInfo_386BBE4 *v25; // x3
+  const MethodInfo_383FBAC *v25; // x3
 
-  if ( (byte_4D30DFF & 1) == 0 )
+  if ( (byte_4CF2C31 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__Insert__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
-    byte_4D30DFF = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__Insert__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
+    byte_4CF2C31 = 1;
   }
   widgets = (System_Collections_Generic_List_object__o *)this->fields.widgets;
   this->fields.mUpdateScroll = 1;
@@ -213,14 +213,14 @@ void UIPanel__AddWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method
       {
         widgets->fields._size = 1;
         items->m_Items[0] = (Il2CppObject *)w;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)items->m_Items, (int32_t)w, (int32_t)method, v3, v4, v5, v6, v7);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)items->m_Items, (int32_t)w, (int32_t)method, v3, v4, v5, v6, v7);
       }
       else
       {
         System_Collections_Generic_List_object___AddWithResize(
           widgets,
           (Il2CppObject *)w,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       goto LABEL_25;
     }
@@ -231,7 +231,7 @@ void UIPanel__AddWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method
     Item = System_Collections_Generic_List_object___get_Item(
              widgets,
              0,
-             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
     widgets = (System_Collections_Generic_List_object__o *)UIWidget__PanelCompareFunc(w, (UIWidget_o *)Item, 0);
     v21 = this->fields.widgets;
     if ( v21 )
@@ -240,7 +240,7 @@ void UIPanel__AddWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method
       {
         widgets = (System_Collections_Generic_List_object__o *)this->fields.widgets;
         v24 = 0;
-        v25 = (const MethodInfo_386BBE4 *)Method_System_Collections_Generic_List_UIWidget__Insert__;
+        v25 = (const MethodInfo_383FBAC *)Method_System_Collections_Generic_List_UIWidget__Insert__;
         goto LABEL_24;
       }
       v22 = v21->fields._size;
@@ -254,21 +254,21 @@ void UIPanel__AddWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method
         v23 = System_Collections_Generic_List_object___get_Item(
                 widgets,
                 --v22,
-                (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
       }
       while ( UIWidget__PanelCompareFunc(w, (UIWidget_o *)v23, 0) == -1 );
       widgets = (System_Collections_Generic_List_object__o *)this->fields.widgets;
       if ( widgets )
       {
         v24 = v22 + 1;
-        v25 = (const MethodInfo_386BBE4 *)Method_System_Collections_Generic_List_UIWidget__Insert__;
+        v25 = (const MethodInfo_383FBAC *)Method_System_Collections_Generic_List_UIWidget__Insert__;
 LABEL_24:
         System_Collections_Generic_List_object___Insert(widgets, v24, (Il2CppObject *)w, v25);
         goto LABEL_25;
       }
     }
 LABEL_26:
-    sub_1C942F0(widgets, w);
+    sub_1C7BD40(widgets, w);
   }
   v12 = widgets->fields._items;
   v13 = Method_System_Collections_Generic_List_UIWidget__Add__;
@@ -280,7 +280,7 @@ LABEL_26:
     System_Collections_Generic_List_object___AddWithResize(
       widgets,
       (Il2CppObject *)w,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
@@ -288,7 +288,7 @@ LABEL_26:
     v15 = &v12->obj.klass + size;
     widgets->fields._size = v14;
     v15[4] = (Il2CppClass *)w;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)w, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)w, (int32_t)method, v3, v4, v5, v6, v7);
   }
   UIPanel__SortWidgets(this, v16);
 LABEL_25:
@@ -303,10 +303,10 @@ bool UIPanel__Affects(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method)
   UnityEngine_Object_o *panel; // x20
   int32_t clipCount; // w0
 
-  if ( (byte_4D30DEF & 1) == 0 )
+  if ( (byte_4CF2C21 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DEF = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C21 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -315,7 +315,7 @@ bool UIPanel__Affects(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method)
   {
     if ( !w )
 LABEL_22:
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     panel = (UnityEngine_Object_o *)w->fields.panel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -371,18 +371,18 @@ void UIPanel__Awake(UIPanel_o *this, const MethodInfo *method)
   System_String_o *graphicsDeviceVersion; // x0
   __int64 v21; // x1
 
-  if ( (byte_4D30DF1 & 1) == 0 )
+  if ( (byte_4CF2C23 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Application_TypeInfo);
-    sub_1C94098(&StringLiteral_5282/*"Direct3D"*/);
-    byte_4D30DF1 = 1;
+    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_5284/*"Direct3D"*/);
+    byte_4CF2C23 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   this->fields.mGo = gameObject;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mGo, (int32_t)gameObject, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mGo, (int32_t)gameObject, v4, v5, v6, v7, v8, v9);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   if ( UnityEngine_Application__get_platform(0) == 2 )
@@ -394,8 +394,8 @@ LABEL_11:
     {
       graphicsDeviceVersion = UnityEngine_SystemInfo__get_graphicsDeviceVersion(0);
       if ( !graphicsDeviceVersion )
-        sub_1C942F0(0, v21);
-      v19 = System_String__Contains(graphicsDeviceVersion, (System_String_o *)StringLiteral_5282/*"Direct3D"*/, 0);
+        sub_1C7BD40(0, v21);
+      v19 = System_String__Contains(graphicsDeviceVersion, (System_String_o *)StringLiteral_5284/*"Direct3D"*/, 0);
     }
     else
     {
@@ -485,10 +485,10 @@ float UIPanel__CalculateFinalAlpha(UIPanel_o *this, int32_t frameID, const Metho
   _BOOL8 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4D30DEB & 1) == 0 )
+  if ( (byte_4CF2C1D & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DEB = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C1D = 1;
   }
   if ( this->fields.mAlphaFrameID == frameID )
     return this->fields.finalAlpha;
@@ -501,7 +501,7 @@ float UIPanel__CalculateFinalAlpha(UIPanel_o *this, int32_t frameID, const Metho
   if ( v8 )
   {
     if ( !parent )
-      sub_1C942F0(v8, v9);
+      sub_1C7BD40(v8, v9);
     result = ((float (__fastcall *)(UIRect_o *, _QWORD, const MethodInfo *))parent->klass->vtable._9_unknown.methodPtr)(
                parent,
                (unsigned int)frameID,
@@ -525,10 +525,10 @@ int32_t UIPanel__CompareFunc(UIPanel_o *a, UIPanel_o *b, const MethodInfo *metho
   int32_t v8; // w9
   int32_t InstanceID; // w20
 
-  if ( (byte_4D30DE1 & 1) == 0 )
+  if ( (byte_4CF2C13 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE1 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C13 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -544,7 +544,7 @@ int32_t UIPanel__CompareFunc(UIPanel_o *a, UIPanel_o *b, const MethodInfo *metho
   if ( !v5 )
     return 0;
   if ( !a || !b )
-    sub_1C942F0(v5, v6);
+    sub_1C7BD40(v5, v6);
   mDepth = a->fields.mDepth;
   v8 = b->fields.mDepth;
   if ( mDepth < v8 )
@@ -591,11 +591,11 @@ bool UIPanel__ConstrainTargetToBounds(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30E02 & 1) == 0 )
+  if ( (byte_4CF2C34 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E02 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C34 = 1;
   }
   y = targetBounds->fields.m_Center.fields.y;
   x = targetBounds->fields.m_Extents.fields.x;
@@ -644,7 +644,7 @@ bool UIPanel__ConstrainTargetToBounds(
     return 0;
   if ( !target )
 LABEL_22:
-    sub_1C942F0(v18, v19);
+    sub_1C7BD40(v18, v19);
   if ( !immediate )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)target, 0);
@@ -672,7 +672,7 @@ LABEL_22:
   targetBounds->fields.m_Center.fields.z = v27;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)target,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v18 = (SpringPosition_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -685,7 +685,7 @@ LABEL_22:
 }
 
 
-bool UIPanel__ConstrainTargetToBounds_49810588(
+bool UIPanel__ConstrainTargetToBounds_49638820(
         UIPanel_o *this,
         UnityEngine_Transform_o *target,
         bool immediate,
@@ -697,7 +697,7 @@ bool UIPanel__ConstrainTargetToBounds_49810588(
   UnityEngine_Bounds_o targetBounds; // [xsp+20h] [xbp-40h] BYREF
 
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
-  NGUIMath__CalculateRelativeWidgetBounds_49915696(&v10, cachedTransform, target, 0);
+  NGUIMath__CalculateRelativeWidgetBounds_49743928(&v10, cachedTransform, target, 0);
   targetBounds = v10;
   return UIPanel__ConstrainTargetToBounds(this, target, &targetBounds, immediate, v8);
 }
@@ -813,18 +813,18 @@ void UIPanel__FillAllDrawCalls(UIPanel_o *this, const MethodInfo *method)
   const MethodInfo *v102; // x2
   GrandQuestFolderBoardItem_o *p_mOnRender; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4D30DF9 & 1) == 0 )
+  if ( (byte_4CF2C2B & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__Clear__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIDrawCall_OnRenderCallback_TypeInfo);
-    sub_1C94098(&UIDrawCall_TypeInfo);
-    byte_4D30DF9 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__Clear__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIDrawCall_OnRenderCallback_TypeInfo);
+    sub_1C7BAE8(&UIDrawCall_TypeInfo);
+    byte_4CF2C2B = 1;
   }
   drawCalls = this->fields.drawCalls;
   if ( !drawCalls )
@@ -838,7 +838,7 @@ void UIPanel__FillAllDrawCalls(UIPanel_o *this, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)drawCalls,
              v4,
-             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
     if ( !UIDrawCall_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UIDrawCall_TypeInfo);
     UIDrawCall__Destroy((UIDrawCall_o *)Item, 0);
@@ -869,7 +869,7 @@ void UIPanel__FillAllDrawCalls(UIPanel_o *this, const MethodInfo *method)
     drawCalls = System_Collections_Generic_List_object___get_Item(
                   (System_Collections_Generic_List_object__o *)drawCalls,
                   v13,
-                  (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                  (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
     if ( !drawCalls )
       goto LABEL_9;
     v14 = (UIWidget_o *)drawCalls;
@@ -923,21 +923,21 @@ LABEL_95:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)drawCalls,
                 (Il2CppObject *)v11,
-                *(const MethodInfo_386AE34 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
             }
             else
             {
               v34 = v31 + 8 * v33;
               *((_DWORD *)drawCalls + 6) = v33 + 1;
               *(_QWORD *)(v34 + 32) = v11;
-              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v34 + 32), (int32_t)v11, v24, v25, v26, v27, v28, v29);
+              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v34 + 32), (int32_t)v11, v24, v25, v26, v27, v28, v29);
             }
             UIDrawCall__UpdateGeometry((UIDrawCall_o *)v11, v12, 0);
             klass = p_mOnRender->klass;
             *((_QWORD *)v11 + 28) = p_mOnRender->klass;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 224), (int32_t)klass, v36, v37, v38, v39, v40, v41);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 224), (int32_t)klass, v36, v37, v38, v39, v40, v41);
             p_mOnRender->klass = 0;
-            sub_1C9403C(p_mOnRender, 0, v42, v43, v44, v45, v46, v47);
+            sub_1C7BA8C(p_mOnRender, 0, v42, v43, v44, v45, v46, v47);
             v12 = 0;
             v11 = 0;
           }
@@ -983,7 +983,7 @@ LABEL_96:
           v11 = (char *)drawCalls;
           *((_DWORD *)drawCalls + 9) = mDepth;
           *((_DWORD *)drawCalls + 10) = mDepth;
-          sub_1C9403C(
+          sub_1C7BA8C(
             (GrandQuestFolderBoardItem_o *)((char *)drawCalls + 56),
             (int32_t)this,
             v54,
@@ -1005,7 +1005,7 @@ LABEL_96:
             *((_DWORD *)v11 + 10) = v62;
         }
         v14->fields.drawCall = (struct UIDrawCall_o *)v11;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->fields.drawCall, (int32_t)v11, v48, v49, v50, v51, v52, v53);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->fields.drawCall, (int32_t)v11, v48, v49, v50, v51, v52, v53);
         if ( this->fields.generateNormals )
         {
           v63 = (BetterList_Vector3__o *)*((_QWORD *)v11 + 11);
@@ -1042,7 +1042,7 @@ LABEL_96:
                     p_mOnRender->klass = (GrandQuestFolderBoardItem_c *)v73,
                     (UIDrawCall_OnRenderCallback_c *)v73->klass != v74) )
               {
-                sub_1C9468C(v73);
+                sub_1C7C0DC(v73);
                 UIPanel__FillDrawCall(v100, v101, v102);
                 return;
               }
@@ -1059,14 +1059,14 @@ LABEL_96:
             v75 = &this->fields.mOnRender;
             p_mOnRender->klass = (GrandQuestFolderBoardItem_c *)method;
           }
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)v75, (int32_t)method, v66, v67, v68, v69, v70, v71);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v75, (int32_t)method, v66, v67, v68, v69, v70, v71);
         }
       }
     }
     else
     {
       v14->fields.drawCall = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->fields.drawCall, 0, v15, v16, v17, v18, v19, v20);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->fields.drawCall, 0, v15, v16, v17, v18, v19, v20);
       v23 = v10;
       v22 = v9;
       v21 = v8;
@@ -1105,28 +1105,28 @@ LABEL_96:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)drawCalls,
                 (Il2CppObject *)v11,
-                *(const MethodInfo_386AE34 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
+                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
             }
             else
             {
               v86 = v83 + 8 * v85;
               *((_DWORD *)drawCalls + 6) = v85 + 1;
               *(_QWORD *)(v86 + 32) = v11;
-              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v86 + 32), (int32_t)v11, v76, v77, v78, v79, v80, v81);
+              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v86 + 32), (int32_t)v11, v76, v77, v78, v79, v80, v81);
             }
             UIDrawCall__UpdateGeometry((UIDrawCall_o *)v11, v12, 0);
             v87 = p_mOnRender->klass;
             *((_QWORD *)v11 + 28) = p_mOnRender->klass;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 224), (int32_t)v87, v88, v89, v90, v91, v92, v93);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 224), (int32_t)v87, v88, v89, v90, v91, v92, v93);
             p_mOnRender->klass = 0;
-            sub_1C9403C(p_mOnRender, 0, v94, v95, v96, v97, v98, v99);
+            sub_1C7BA8C(p_mOnRender, 0, v94, v95, v96, v97, v98, v99);
             return;
           }
         }
       }
     }
 LABEL_9:
-    sub_1C942F0(drawCalls, method);
+    sub_1C7BD40(drawCalls, method);
   }
 }
 
@@ -1171,14 +1171,14 @@ bool UIPanel__FillDrawCall(UIPanel_o *this, UIDrawCall_o *dc, const MethodInfo *
   UIPanel_o *v40; // x0
   const MethodInfo *v41; // x1
 
-  if ( (byte_4D30DFA & 1) == 0 )
+  if ( (byte_4CF2C2C & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__RemoveAt__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIDrawCall_OnRenderCallback_TypeInfo);
-    byte_4D30DFA = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__RemoveAt__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIDrawCall_OnRenderCallback_TypeInfo);
+    byte_4CF2C2C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1190,7 +1190,7 @@ bool UIPanel__FillDrawCall(UIPanel_o *this, UIDrawCall_o *dc, const MethodInfo *
     return 0;
   if ( !dc || (dc->fields.isDirty = 0, (widgets = this->fields.widgets) == 0) )
 LABEL_42:
-    sub_1C942F0(widgets, v6);
+    sub_1C7BD40(widgets, v6);
   v7 = 0;
   v8 = 0;
   p_mOnRender = &this->fields.mOnRender;
@@ -1208,9 +1208,9 @@ LABEL_42:
             UIDrawCall__UpdateGeometry(dc, v7, 0);
             v26 = *p_mOnRender;
             dc->fields.onRender = *p_mOnRender;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)&dc->fields.onRender, (int32_t)v26, v27, v28, v29, v30, v31, v32);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&dc->fields.onRender, (int32_t)v26, v27, v28, v29, v30, v31, v32);
             *p_mOnRender = 0;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mOnRender, 0, v33, v34, v35, v36, v37, v38);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mOnRender, 0, v33, v34, v35, v36, v37, v38);
             return 1;
           }
           return 0;
@@ -1220,7 +1220,7 @@ LABEL_42:
       Item = (UnityEngine_Object_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)widgets,
                                        v8,
-                                       (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       widgets = (struct System_Collections_Generic_List_UIWidget__o *)UnityEngine_Object__op_Equality(Item, 0, 0);
@@ -1232,7 +1232,7 @@ LABEL_42:
         System_Collections_Generic_List_object___RemoveAt(
           (System_Collections_Generic_List_object__o *)widgets,
           v8,
-          (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_UIWidget__RemoveAt__);
+          (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_UIWidget__RemoveAt__);
         widgets = this->fields.widgets;
         if ( widgets )
           continue;
@@ -1252,7 +1252,7 @@ LABEL_42:
     LODWORD(v6) = 0;
     Item[14].monitor = 0;
 LABEL_25:
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)p_monitor, (int32_t)v6, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_monitor, (int32_t)v6, v12, v13, v14, v15, v16, v17);
 LABEL_26:
     widgets = this->fields.widgets;
     ++v8;
@@ -1299,7 +1299,7 @@ LABEL_37:
     if ( (UIDrawCall_OnRenderCallback_c *)v22->klass == v24 )
       goto LABEL_37;
   }
-  sub_1C9468C(v22);
+  sub_1C7C0DC(v22);
   UIPanel__SortWidgets(v40, v41);
   return result;
 }
@@ -1309,14 +1309,14 @@ UIPanel_o *UIPanel__Find(UnityEngine_Transform_o *trans, const MethodInfo *metho
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4D30E03 & 1) == 0 )
+  if ( (byte_4CF2C35 & 1) == 0 )
   {
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30E03 = 1;
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C35 = 1;
   }
   if ( !UIPanel_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIPanel_TypeInfo);
-  return UIPanel__Find_49810784(trans, 0, -1, v2);
+  return UIPanel__Find_49639016(trans, 0, -1, v2);
 }
 
 
@@ -1344,12 +1344,12 @@ UIDrawCall_o *UIPanel__FindDrawCall(UIPanel_o *this, UIWidget_o *w, const Method
   bool hasVertices; // w8
 
   v4 = this;
-  if ( (byte_4D30DFE & 1) == 0 )
+  if ( (byte_4CF2C30 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    this = (UIPanel_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DFE = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    this = (UIPanel_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C30 = 1;
   }
   if ( !w )
     goto LABEL_31;
@@ -1373,7 +1373,7 @@ UIDrawCall_o *UIPanel__FindDrawCall(UIPanel_o *this, UIWidget_o *w, const Method
     Item = (struct UIDrawCall_o *)System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)this,
                                     v9,
-                                    (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                                    (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
     if ( v9 )
     {
       this = (UIPanel_o *)v4->fields.drawCalls;
@@ -1382,7 +1382,7 @@ UIDrawCall_o *UIPanel__FindDrawCall(UIPanel_o *this, UIWidget_o *w, const Method
       this = (UIPanel_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)this,
                             v9 - 1,
-                            (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                            (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
       if ( !this )
         goto LABEL_31;
       v11 = LODWORD(this->fields.rightAnchor) + 1;
@@ -1403,7 +1403,7 @@ UIDrawCall_o *UIPanel__FindDrawCall(UIPanel_o *this, UIWidget_o *w, const Method
       this = (UIPanel_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)this,
                             v9,
-                            (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                            (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
       if ( !this )
         goto LABEL_31;
       v12 = HIDWORD(this->fields.leftAnchor) - 1;
@@ -1412,7 +1412,7 @@ UIDrawCall_o *UIPanel__FindDrawCall(UIPanel_o *this, UIWidget_o *w, const Method
   while ( v11 > mDepth || v12 < mDepth );
   if ( !Item )
 LABEL_31:
-    sub_1C942F0(this, w);
+    sub_1C7BD40(this, w);
   mMaterial = (UnityEngine_Object_o *)Item->fields.mMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1428,7 +1428,7 @@ LABEL_31:
     if ( isVisible )
     {
       w->fields.drawCall = Item;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&w->fields.drawCall, (int32_t)Item, v15, v16, v17, v18, v19, v20);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&w->fields.drawCall, (int32_t)Item, v15, v16, v17, v18, v19, v20);
       hasVertices = UIWidget__get_hasVertices(w, 0);
       result = Item;
       if ( hasVertices )
@@ -1461,12 +1461,12 @@ void UIPanel__FindParent(UIPanel_o *this, const MethodInfo *method)
   System_String_o *v11; // x7
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_4D30DF2 & 1) == 0 )
+  if ( (byte_4CF2C24 & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIPanel___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DF2 = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIPanel___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C24 = 1;
   }
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
   if ( !cachedTransform )
@@ -1485,18 +1485,18 @@ void UIPanel__FindParent(UIPanel_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     cachedTransform = (UnityEngine_Transform_o *)NGUITools__FindInParents_object_(
                                                    gameObject,
-                                                   (const MethodInfo_32274D4 *)Method_NGUITools_FindInParents_UIPanel___);
+                                                   (const MethodInfo_31F9E0C *)Method_NGUITools_FindInParents_UIPanel___);
     v4 = (struct UIPanel_o *)cachedTransform;
   }
   if ( !this )
 LABEL_13:
-    sub_1C942F0(cachedTransform, v4);
+    sub_1C7BD40(cachedTransform, v4);
   this->fields.mParentPanel = v4;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParentPanel, (int32_t)v4, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mParentPanel, (int32_t)v4, v6, v7, v8, v9, v10, v11);
 }
 
 
-UIPanel_o *UIPanel__Find_49810784(
+UIPanel_o *UIPanel__Find_49639016(
         UnityEngine_Transform_o *trans,
         bool createIfMissing,
         int32_t layer,
@@ -1506,18 +1506,18 @@ UIPanel_o *UIPanel__Find_49810784(
   _BOOL4 v8; // w8
   UIPanel_o *result; // x0
 
-  if ( (byte_4D30E05 & 1) == 0 )
+  if ( (byte_4CF2C37 & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIPanel____79130384);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E05 = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIPanel____78877056);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C37 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v7 = NGUITools__FindInParents_object__52590124(
+  v7 = NGUITools__FindInParents_object__52404068(
          trans,
-         (const MethodInfo_322762C *)Method_NGUITools_FindInParents_UIPanel____79130384);
+         (const MethodInfo_31F9F64 *)Method_NGUITools_FindInParents_UIPanel____78877056);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0);
@@ -1529,24 +1529,24 @@ UIPanel_o *UIPanel__Find_49810784(
   {
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    return NGUITools__CreateUI_50046760(trans, 0, layer, 0);
+    return NGUITools__CreateUI_49874992(trans, 0, layer, 0);
   }
   return result;
 }
 
 
-UIPanel_o *UIPanel__Find_49811048(UnityEngine_Transform_o *trans, bool createIfMissing, const MethodInfo *method)
+UIPanel_o *UIPanel__Find_49639280(UnityEngine_Transform_o *trans, bool createIfMissing, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4D30E04 & 1) == 0 )
+  if ( (byte_4CF2C36 & 1) == 0 )
   {
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30E04 = 1;
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C36 = 1;
   }
   if ( !UIPanel_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIPanel_TypeInfo);
-  return UIPanel__Find_49810784(trans, createIfMissing, -1, v3);
+  return UIPanel__Find_49639016(trans, createIfMissing, -1, v3);
 }
 
 
@@ -1582,7 +1582,7 @@ UnityEngine_Vector3_array *UIPanel__GetSides(
   __int64 v28; // x22
   __int64 v29; // x24
   UIRect_c *v30; // x0
-  UnityEngine_Vector3_array *Sides_50057020; // x20
+  UnityEngine_Vector3_array *Sides_49885252; // x20
   UnityEngine_Object_o *anchorCamera; // x20
   UnityEngine_Camera_o *mCam; // x20
   float cameraRayDistance; // s8
@@ -1602,12 +1602,12 @@ UnityEngine_Vector3_array *UIPanel__GetSides(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30DEA & 1) == 0 )
+  if ( (byte_4CF2C1C & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIRect_TypeInfo);
-    byte_4D30DEA = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIRect_TypeInfo);
+    byte_4CF2C1C = 1;
   }
   if ( this->fields.mClipping )
   {
@@ -1633,7 +1633,7 @@ UnityEngine_Vector3_array *UIPanel__GetSides(
     v18 = v15 - (float)(z * 0.5);
     mSides = v13->static_fields->mSides;
     v20 = (float)(v16 + (float)(w + v16)) * 0.5;
-    v44 = UnityEngine_Transform__TransformPoint_72137752(v14, v18, v20, 0.0, 0);
+    v44 = UnityEngine_Transform__TransformPoint_71896928(v14, v18, v20, 0.0, 0);
     if ( !mSides )
       goto LABEL_52;
     if ( LODWORD(mSides->max_length) )
@@ -1642,21 +1642,21 @@ UnityEngine_Vector3_array *UIPanel__GetSides(
       v21 = z + v18;
       v22 = (float)(v18 + v21) * 0.5;
       v23 = UIRect_TypeInfo->static_fields->mSides;
-      v45 = UnityEngine_Transform__TransformPoint_72137752(v14, v22, v17, 0.0, 0);
+      v45 = UnityEngine_Transform__TransformPoint_71896928(v14, v22, v17, 0.0, 0);
       if ( !v23 )
         goto LABEL_52;
       if ( LODWORD(v23->max_length) > 1 )
       {
         v23->m_Items[1] = v45;
         v24 = UIRect_TypeInfo->static_fields->mSides;
-        v46 = UnityEngine_Transform__TransformPoint_72137752(v14, v21, v20, 0.0, 0);
+        v46 = UnityEngine_Transform__TransformPoint_71896928(v14, v21, v20, 0.0, 0);
         if ( !v24 )
           goto LABEL_52;
         if ( LODWORD(v24->max_length) > 2 )
         {
           v24->m_Items[2] = v46;
           v25 = UIRect_TypeInfo->static_fields->mSides;
-          v47 = UnityEngine_Transform__TransformPoint_72137752(v14, v22, v16, 0.0, 0);
+          v47 = UnityEngine_Transform__TransformPoint_71896928(v14, v22, v16, 0.0, 0);
           if ( !v25 )
             goto LABEL_52;
           if ( LODWORD(v25->max_length) > 3 )
@@ -1697,7 +1697,7 @@ UnityEngine_Vector3_array *UIPanel__GetSides(
                   goto LABEL_26;
               }
 LABEL_52:
-              sub_1C942F0(cachedTransform, v12);
+              sub_1C7BD40(cachedTransform, v12);
             }
 LABEL_26:
             v30 = UIRect_TypeInfo;
@@ -1722,17 +1722,17 @@ LABEL_26:
     cameraRayDistance = UIRect__get_cameraRayDistance((UIRect_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    Sides_50057020 = NGUITools__GetSides_50057020(mCam, cameraRayDistance, 0);
+    Sides_49885252 = NGUITools__GetSides_49885252(mCam, cameraRayDistance, 0);
     cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
     if ( !cachedTransform )
       goto LABEL_52;
     position = UnityEngine_Transform__get_position(cachedTransform, 0);
-    if ( !Sides_50057020 )
+    if ( !Sides_49885252 )
       goto LABEL_52;
-    max_length_low = LODWORD(Sides_50057020->max_length);
+    max_length_low = LODWORD(Sides_49885252->max_length);
     v37 = 0;
     v38 = position.fields.y;
-    p_z = &Sides_50057020->m_Items[0].fields.z;
+    p_z = &Sides_49885252->m_Items[0].fields.z;
     do
     {
       if ( v37 >= max_length_low )
@@ -1751,26 +1751,26 @@ LABEL_26:
                                                    0,
                                                    0);
     if ( ((unsigned __int8)cachedTransform & 1) == 0 )
-      return Sides_50057020;
-    LODWORD(v41) = Sides_50057020->max_length;
+      return Sides_49885252;
+    LODWORD(v41) = Sides_49885252->max_length;
     v42 = 0;
-    v43 = &Sides_50057020->m_Items[0].fields.z;
+    v43 = &Sides_49885252->m_Items[0].fields.z;
     while ( v42 < (unsigned int)v41 )
     {
       if ( !relativeTo )
         goto LABEL_52;
       v50 = UnityEngine_Transform__InverseTransformPoint(relativeTo, *(UnityEngine_Vector3_o *)(v43 - 2), 0);
-      v41 = LODWORD(Sides_50057020->max_length);
+      v41 = LODWORD(Sides_49885252->max_length);
       if ( v42 >= v41 )
         break;
       ++v42;
       *(UnityEngine_Vector3_o *)(v43 - 2) = v50;
       v43 += 3;
       if ( v42 == 4 )
-        return Sides_50057020;
+        return Sides_49885252;
     }
 LABEL_51:
-    sub_1C942F8(cachedTransform);
+    sub_1C7BD48(cachedTransform);
   }
   return UIRect__GetSides((UIRect_o *)this, relativeTo, 0);
 }
@@ -1783,10 +1783,10 @@ UnityEngine_Vector2_o UIPanel__GetViewSize(UIPanel_o *this, const MethodInfo *me
   UnityEngine_Vector2_o screenSize; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4D30E07 & 1) == 0 )
+  if ( (byte_4CF2C39 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30E07 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2C39 = 1;
   }
   if ( this->fields.mClipping )
   {
@@ -1821,17 +1821,17 @@ UnityEngine_Vector2_o UIPanel__GetWindowSize(UIPanel_o *this, const MethodInfo *
   double v12; // d1
   double v13; // d1
   int32_t v14; // w1
-  float PixelSizeAdjustment_50223176; // s0
+  float PixelSizeAdjustment_50051408; // s0
   float v16; // s0
   float v17; // s1
   double iptr; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4D30E06 & 1) == 0 )
+  if ( (byte_4CF2C38 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E06 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C38 = 1;
   }
   root = UIRect__get_root((UIRect_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -1843,10 +1843,10 @@ UnityEngine_Vector2_o UIPanel__GetWindowSize(UIPanel_o *this, const MethodInfo *
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)root, 0, 0) )
   {
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1878,14 +1878,14 @@ LABEL_17:
     }
 LABEL_22:
     if ( !root )
-      sub_1C942F0(v8, v9);
+      sub_1C7BD40(v8, v9);
     if ( v11 == INFINITY )
       v14 = 0x80000000;
     else
       v14 = (int)v11;
-    PixelSizeAdjustment_50223176 = UIRoot__GetPixelSizeAdjustment_50223176(root, v14, 0);
-    x = screenSize.fields.x * PixelSizeAdjustment_50223176;
-    y = screenSize.fields.y * PixelSizeAdjustment_50223176;
+    PixelSizeAdjustment_50051408 = UIRoot__GetPixelSizeAdjustment_50051408(root, v14, 0);
+    x = screenSize.fields.x * PixelSizeAdjustment_50051408;
+    y = screenSize.fields.y * PixelSizeAdjustment_50051408;
   }
   v16 = x;
   v17 = y;
@@ -1914,13 +1914,13 @@ void UIPanel__InvalidateClipping(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *Item; // x21
   UnityEngine_Object_o *klass; // x22
 
-  if ( (byte_4D30DE5 & 1) == 0 )
+  if ( (byte_4CF2C17 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DE5 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C17 = 1;
   }
   mCullTime = this->fields.mCullTime;
   this->fields.mResized = 1;
@@ -1956,7 +1956,7 @@ void UIPanel__InvalidateClipping(UIPanel_o *this, const MethodInfo *method)
       Item = (UnityEngine_Object_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)v5,
                                        i,
-                                       (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
+                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = (UIPanel_c *)UnityEngine_Object__op_Inequality(Item, (UnityEngine_Object_o *)this, 0);
@@ -1975,7 +1975,7 @@ void UIPanel__InvalidateClipping(UIPanel_o *this, const MethodInfo *method)
       v5 = UIPanel_TypeInfo;
     }
 LABEL_25:
-    sub_1C942F0(v5, method);
+    sub_1C7BD40(v5, method);
   }
 }
 
@@ -2040,10 +2040,10 @@ bool UIPanel__IsVisible(
   v8 = b.fields.x;
   v9 = a.fields.z;
   v10 = a.fields.y;
-  if ( (byte_4D30DED & 1) == 0 )
+  if ( (byte_4CF2C1F & 1) == 0 )
   {
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DED = 1;
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C1F = 1;
   }
   UIPanel__UpdateTransformMatrix(this, *(const MethodInfo **)&d.fields.x);
   v48.fields.x = x;
@@ -2074,14 +2074,14 @@ bool UIPanel__IsVisible(
   }
   mTemp = v19->static_fields->mTemp;
   if ( !mTemp )
-    sub_1C942F0(v19, v18);
+    sub_1C7BD40(v19, v18);
   max_length = mTemp->max_length;
   if ( !(_DWORD)max_length
     || (mTemp->m_Items[0] = v12, (_DWORD)max_length == 1)
     || (mTemp->m_Items[1] = v14, (unsigned int)max_length <= 2)
     || (mTemp->m_Items[2] = v16, (_DWORD)max_length == 3) )
   {
-    sub_1C942F8(v19);
+    sub_1C7BD48(v19);
   }
   mTemp->m_Items[3] = v20;
   if ( (int)max_length < 2 )
@@ -2172,7 +2172,7 @@ bool UIPanel__IsVisible(
 }
 
 
-bool UIPanel__IsVisible_49764364(UIPanel_o *this, UnityEngine_Vector3_o worldPos, const MethodInfo *method)
+bool UIPanel__IsVisible_49592596(UIPanel_o *this, UnityEngine_Vector3_o worldPos, const MethodInfo *method)
 {
   float z; // s8
   float y; // s9
@@ -2199,7 +2199,7 @@ bool UIPanel__IsVisible_49764364(UIPanel_o *this, UnityEngine_Vector3_o worldPos
 }
 
 
-bool UIPanel__IsVisible_49799116(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method)
+bool UIPanel__IsVisible_49627348(UIPanel_o *this, UIWidget_o *w, const MethodInfo *method)
 {
   __int64 v5; // x21
   __int64 v6; // x0
@@ -2207,10 +2207,10 @@ bool UIPanel__IsVisible_49799116(UIPanel_o *this, UIWidget_o *w, const MethodInf
   const MethodInfo *v8; // x3
   char v9; // w22
 
-  if ( (byte_4D30DEE & 1) == 0 )
+  if ( (byte_4CF2C20 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DEE = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C20 = 1;
   }
   v5 = 0;
   while ( 1 )
@@ -2236,7 +2236,7 @@ LABEL_16:
       v5 = v6;
       if ( !v6 )
 LABEL_20:
-        sub_1C942F0(v6, *(_QWORD *)&v7.fields.x);
+        sub_1C7BD40(v6, *(_QWORD *)&v7.fields.x);
       goto LABEL_17;
     }
     if ( !w )
@@ -2247,7 +2247,7 @@ LABEL_20:
       goto LABEL_16;
 LABEL_17:
     if ( *(_DWORD *)(v5 + 24) < 4u )
-      sub_1C942F8(v6);
+      sub_1C7BD48(v6);
     if ( !UIPanel__IsVisible(
             this,
             *(UnityEngine_Vector3_o *)(v5 + 32),
@@ -2293,17 +2293,17 @@ void UIPanel__LateUpdate(UIPanel_o *this, const MethodInfo *method)
   __int64 v28; // x8
   int v29; // w8
 
-  if ( (byte_4D30DF6 & 1) == 0 )
+  if ( (byte_4CF2C28 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_UIPanel__CopyTo__);
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
-    sub_1C94098(&UIPanel___TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DF6 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_UIPanel__CopyTo__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
+    sub_1C7BAE8(&UIPanel___TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C28 = 1;
   }
   v2 = UIPanel_TypeInfo;
   if ( !UIPanel_TypeInfo->_2.cctor_finished )
@@ -2329,7 +2329,7 @@ void UIPanel__LateUpdate(UIPanel_o *this, const MethodInfo *method)
       goto LABEL_55;
     System_Collections_Generic_HashSet_object___Clear(
       updateAgainPanels,
-      (const MethodInfo_371EE3C *)Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
+      (const MethodInfo_36F03F8 *)Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
     frameCount = (__int64)UIPanel_TypeInfo;
     list = UIPanel_TypeInfo->static_fields->list;
     if ( !list )
@@ -2352,7 +2352,7 @@ void UIPanel__LateUpdate(UIPanel_o *this, const MethodInfo *method)
       frameCount = (__int64)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)frameCount,
                               v10,
-                              (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
+                              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
       if ( !frameCount )
         goto LABEL_55;
       UIPanel__UpdateSelf((UIPanel_o *)frameCount, v6);
@@ -2362,7 +2362,7 @@ void UIPanel__LateUpdate(UIPanel_o *this, const MethodInfo *method)
     v13 = (struct System_Collections_Generic_HashSet_UIPanel__o *)v12[1];
     if ( !v13 )
 LABEL_55:
-      sub_1C942F0(frameCount, v6);
+      sub_1C7BD40(frameCount, v6);
     if ( v13->fields._count >= 1 )
     {
       if ( !*(_DWORD *)(frameCount + 224) )
@@ -2372,14 +2372,14 @@ LABEL_55:
         if ( !v13 )
           goto LABEL_55;
       }
-      frameCount = sub_1C94140(UIPanel___TypeInfo, (unsigned int)v13->fields._count);
+      frameCount = sub_1C7BB90(UIPanel___TypeInfo, (unsigned int)v13->fields._count);
       if ( !UIPanel_TypeInfo->static_fields->updateAgainPanels )
         goto LABEL_55;
       v14 = frameCount;
-      System_Collections_Generic_HashSet_object___CopyTo_57801924(
+      System_Collections_Generic_HashSet_object___CopyTo_57610880(
         (System_Collections_Generic_HashSet_T__o *)UIPanel_TypeInfo->static_fields->updateAgainPanels,
         (System_Object_array *)frameCount,
-        (const MethodInfo_371FCC4 *)Method_System_Collections_Generic_HashSet_UIPanel__CopyTo__);
+        (const MethodInfo_36F1280 *)Method_System_Collections_Generic_HashSet_UIPanel__CopyTo__);
       if ( !v14 )
         goto LABEL_55;
       v15 = *(_DWORD *)(v14 + 24);
@@ -2389,7 +2389,7 @@ LABEL_55:
         do
         {
           if ( v16 >= v15 )
-            sub_1C942F8(frameCount);
+            sub_1C7BD48(frameCount);
           frameCount = *(_QWORD *)(v14 + 8LL * (int)v16 + 32);
           if ( !frameCount )
             goto LABEL_55;
@@ -2409,7 +2409,7 @@ LABEL_55:
         goto LABEL_55;
       System_Collections_Generic_HashSet_object___Clear(
         (System_Collections_Generic_HashSet_T__o *)frameCount,
-        (const MethodInfo_371EE3C *)Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
+        (const MethodInfo_36F03F8 *)Method_System_Collections_Generic_HashSet_UIPanel__Clear__);
       frameCount = (__int64)UIPanel_TypeInfo;
     }
     if ( !*(_DWORD *)(frameCount + 224) )
@@ -2439,7 +2439,7 @@ LABEL_55:
       frameCount = (__int64)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)frameCount,
                               v19,
-                              (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
+                              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
       if ( !frameCount )
         goto LABEL_55;
       v23 = *(_DWORD *)(frameCount + 168);
@@ -2577,10 +2577,10 @@ void UIPanel__OnAnchor(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPos; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30DF5 & 1) == 0 )
+  if ( (byte_4CF2C27 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DF5 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C27 = 1;
   }
   if ( this->fields.mClipping )
   {
@@ -2873,10 +2873,10 @@ LABEL_74:
                 }
               }
 LABEL_103:
-              sub_1C942F0(cachedTransform, v4);
+              sub_1C7BD40(cachedTransform, v4);
             }
 LABEL_104:
-            sub_1C942F8(cachedTransform);
+            sub_1C7BD48(cachedTransform);
           }
           *(UnityEngine_Vector3_o *)(&v69 - 1) = UIRect__GetLocalPos(
                                                    (UIRect_o *)this,
@@ -2930,17 +2930,17 @@ void UIPanel__OnDisable(UIPanel_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_UIPanel__o *list; // x8
   UIPanel_c *v11; // x0
 
-  if ( (byte_4D30DF4 & 1) == 0 )
+  if ( (byte_4CF2C26 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__Clear__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__Remove__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIDrawCall_TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DF4 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__Clear__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__Remove__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIDrawCall_TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C26 = 1;
   }
   drawCalls = (System_Collections_Generic_List_object__o *)this->fields.drawCalls;
   if ( !drawCalls )
@@ -2952,7 +2952,7 @@ void UIPanel__OnDisable(UIPanel_o *this, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              drawCalls,
              v4,
-             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -2983,12 +2983,12 @@ void UIPanel__OnDisable(UIPanel_o *this, const MethodInfo *method)
     || (drawCalls = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Remove(
                                                                    drawCalls,
                                                                    (Il2CppObject *)this,
-                                                                   (const MethodInfo_386C35C *)Method_System_Collections_Generic_List_UIPanel__Remove__),
+                                                                   (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_UIPanel__Remove__),
         *(_QWORD *)&this->fields.mMatrixFrame = -1,
         (list = UIPanel_TypeInfo->static_fields->list) == 0) )
   {
 LABEL_13:
-    sub_1C942F0(drawCalls, method);
+    sub_1C7BD40(drawCalls, method);
   }
   if ( !list->fields._size )
   {
@@ -3047,19 +3047,19 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
   System_Collections_Generic_List_object__o *v23; // x19
   System_Comparison_T__o *v24; // x20
 
-  if ( (byte_4D30DF3 & 1) == 0 )
+  if ( (byte_4CF2C25 & 1) == 0 )
   {
-    sub_1C94098(&System_Comparison_UIPanel__TypeInfo);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UICamera___);
-    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__Sort__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_UIPanel_CompareFunc__);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DF3 = 1;
+    sub_1C7BAE8(&System_Comparison_UIPanel__TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UICamera___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__Sort__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_UIPanel_CompareFunc__);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C25 = 1;
   }
   v3 = UIPanel_TypeInfo;
   if ( !UIPanel_TypeInfo->_2.cctor_finished )
@@ -3073,7 +3073,7 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
   if ( System_Collections_Generic_List_object___Contains(
          list,
          (Il2CppObject *)this,
-         (const MethodInfo_386B1C4 *)Method_System_Collections_Generic_List_UIPanel__Contains__) )
+         (const MethodInfo_383F18C *)Method_System_Collections_Generic_List_UIPanel__Contains__) )
   {
     return;
   }
@@ -3081,7 +3081,7 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
   UIPanel__FindParent(this, v5);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -3103,7 +3103,7 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
           goto LABEL_35;
         v16 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)list,
-                (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UICamera___);
+                (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UICamera___);
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3124,7 +3124,7 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
             goto LABEL_35;
           list = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__AddComponent_object_(
                                                                 (UnityEngine_GameObject_o *)list,
-                                                                (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
+                                                                (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
           if ( !list )
             goto LABEL_35;
           v17 = (UnityEngine_Rigidbody_o *)list;
@@ -3156,25 +3156,25 @@ void UIPanel__OnInit(UIPanel_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       list,
       (Il2CppObject *)this,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = &items->obj.klass + size;
     list->fields._size = size + 1;
     v22[4] = (Il2CppClass *)this;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)this, v7, v8, v9, v10, v11, v12);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)this, v7, v8, v9, v10, v11, v12);
   }
   v23 = (System_Collections_Generic_List_object__o *)UIPanel_TypeInfo->static_fields->list;
-  v24 = (System_Comparison_T__o *)sub_1C942E4(System_Comparison_UIPanel__TypeInfo);
+  v24 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_UIPanel__TypeInfo);
   System_Comparison_object____ctor(v24, 0, Method_UIPanel_CompareFunc__, 0);
   if ( !v23 )
 LABEL_35:
-    sub_1C942F0(list, method);
-  System_Collections_Generic_List_object___Sort_59164920(
+    sub_1C7BD40(list, method);
+  System_Collections_Generic_List_object___Sort_58984640(
     v23,
     v24,
-    (const MethodInfo_386C8F8 *)Method_System_Collections_Generic_List_UIPanel__Sort__);
+    (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_UIPanel__Sort__);
 }
 
 
@@ -3184,7 +3184,7 @@ void UIPanel__OnStart(UIPanel_o *this, const MethodInfo *method)
 
   mGo = this->fields.mGo;
   if ( !mGo )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   this->fields.mLayer = UnityEngine_GameObject__get_layer(mGo, 0);
 }
 
@@ -3210,12 +3210,12 @@ void UIPanel__Refresh(UIPanel_o *this, const MethodInfo *method)
   __int64 *v4; // x9
   __int64 v5; // x8
 
-  if ( (byte_4D30E01 & 1) == 0 )
+  if ( (byte_4CF2C33 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30E01 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C33 = 1;
   }
   this->fields.mRebuild = 1;
   Item = (System_Collections_Generic_List_object__o *)UIPanel_TypeInfo;
@@ -3242,7 +3242,7 @@ void UIPanel__Refresh(UIPanel_o *this, const MethodInfo *method)
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             Item,
                                                             0,
-                                                            (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
+                                                            (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
       if ( Item )
       {
         UIPanel__LateUpdate((UIPanel_o *)Item, method);
@@ -3250,7 +3250,7 @@ void UIPanel__Refresh(UIPanel_o *this, const MethodInfo *method)
       }
     }
 LABEL_13:
-    sub_1C942F0(Item, method);
+    sub_1C7BD40(Item, method);
   }
 }
 
@@ -3269,11 +3269,11 @@ void UIPanel__RemoveWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *met
   int32_t mDepth; // w9
   GrandQuestFolderBoardItem_o *p_drawCall; // x0
 
-  if ( (byte_4D30E00 & 1) == 0 )
+  if ( (byte_4CF2C32 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__Remove__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30E00 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__Remove__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C32 = 1;
   }
   widgets = this->fields.widgets;
   if ( !widgets )
@@ -3281,7 +3281,7 @@ void UIPanel__RemoveWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *met
   widgets = (struct System_Collections_Generic_List_UIWidget__o *)System_Collections_Generic_List_object___Remove(
                                                                     (System_Collections_Generic_List_object__o *)widgets,
                                                                     (Il2CppObject *)w,
-                                                                    (const MethodInfo_386C35C *)Method_System_Collections_Generic_List_UIWidget__Remove__);
+                                                                    (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_UIWidget__Remove__);
   if ( ((unsigned __int8)widgets & 1) == 0 )
     return;
   if ( !w )
@@ -3301,11 +3301,11 @@ void UIPanel__RemoveWidget(UIPanel_o *this, UIWidget_o *w, const MethodInfo *met
         this->fields.mRebuild = 1;
       v13->fields.isDirty = 1;
       p_drawCall->klass = 0;
-      sub_1C9403C(p_drawCall, 0, v7, v8, v9, v10, v11, v12);
+      sub_1C7BA8C(p_drawCall, 0, v7, v8, v9, v10, v11, v12);
       return;
     }
 LABEL_15:
-    sub_1C942F0(widgets, w);
+    sub_1C7BD40(widgets, w);
   }
 }
 
@@ -3316,11 +3316,11 @@ void UIPanel__SetDirty(UIPanel_o *this, const MethodInfo *method)
   int size; // w21
   int32_t v5; // w20
 
-  if ( (byte_4D30DF0 & 1) == 0 )
+  if ( (byte_4CF2C22 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    byte_4D30DF0 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    byte_4CF2C22 = 1;
   }
   drawCalls = (System_Collections_Generic_List_object__o *)this->fields.drawCalls;
   if ( !drawCalls )
@@ -3334,7 +3334,7 @@ void UIPanel__SetDirty(UIPanel_o *this, const MethodInfo *method)
       drawCalls = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  drawCalls,
                                                                  v5,
-                                                                 (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                                                                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
       if ( !drawCalls )
         break;
       ++v5;
@@ -3345,7 +3345,7 @@ void UIPanel__SetDirty(UIPanel_o *this, const MethodInfo *method)
     }
     while ( drawCalls );
 LABEL_9:
-    sub_1C942F0(drawCalls, method);
+    sub_1C7BD40(drawCalls, method);
   }
 LABEL_10:
   ((void (__fastcall *)(UIPanel_o *, __int64, const MethodInfo *))this->klass->vtable._12_Invalidate.methodPtr)(
@@ -3380,24 +3380,24 @@ void UIPanel__SetRect(UIPanel_o *this, float x, float y, float width, float heig
   UnityEngine_Object_o *v31; // x21
   UnityEngine_Vector4_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D30DEC & 1) == 0 )
+  if ( (byte_4CF2C1E & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DEC = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C1E = 1;
   }
-  if ( !byte_4D25F18 )
+  if ( !byte_4CE7E58 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D25F18 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE7E58 = 1;
   }
   v11 = floorf(width + 0.5);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    if ( !byte_4D25F18 )
+    if ( !byte_4CE7E58 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D25F18 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE7E58 = 1;
     }
   }
   v12 = height + 0.5;
@@ -3480,7 +3480,7 @@ void UIPanel__SetRect(UIPanel_o *this, float x, float y, float width, float heig
     topAnchor = this->fields.topAnchor;
     if ( !topAnchor )
 LABEL_49:
-      sub_1C942F0(cachedTransform, v18);
+      sub_1C7BD40(cachedTransform, v18);
     v31 = (UnityEngine_Object_o *)topAnchor->fields.target;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3505,23 +3505,23 @@ void UIPanel__SortWidgets(UIPanel_o *this, const MethodInfo *method)
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D30DF8 & 1) == 0 )
+  if ( (byte_4CF2C2A & 1) == 0 )
   {
-    sub_1C94098(&System_Comparison_UIWidget__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__Sort__);
-    sub_1C94098(&Method_UIWidget_PanelCompareFunc__);
-    byte_4D30DF8 = 1;
+    sub_1C7BAE8(&System_Comparison_UIWidget__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__Sort__);
+    sub_1C7BAE8(&Method_UIWidget_PanelCompareFunc__);
+    byte_4CF2C2A = 1;
   }
   this->fields.mSortWidgets = 0;
   widgets = this->fields.widgets;
-  v4 = (System_Comparison_T__o *)sub_1C942E4(System_Comparison_UIWidget__TypeInfo);
+  v4 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_UIWidget__TypeInfo);
   System_Comparison_object____ctor(v4, 0, Method_UIWidget_PanelCompareFunc__, 0);
   if ( !widgets )
-    sub_1C942F0(v5, v6);
-  System_Collections_Generic_List_object___Sort_59164920(
+    sub_1C7BD40(v5, v6);
+  System_Collections_Generic_List_object___Sort_58984640(
     (System_Collections_Generic_List_object__o *)widgets,
     v4,
-    (const MethodInfo_386C8F8 *)Method_System_Collections_Generic_List_UIWidget__Sort__);
+    (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_UIWidget__Sort__);
 }
 
 
@@ -3585,12 +3585,12 @@ void UIPanel__UpdateDrawCalls(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D30DFB & 1) == 0 )
+  if ( (byte_4CF2C2D & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DFB = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C2D = 1;
   }
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
   usedForUI = UIPanel__get_usedForUI(this, v4);
@@ -3607,10 +3607,10 @@ void UIPanel__UpdateDrawCalls(UIPanel_o *this, const MethodInfo *method)
   }
   else
   {
-    if ( !byte_4D26206 )
+    if ( !byte_4CE8146 )
     {
-      usedForUI = sub_1C94098(&UnityEngine_Vector4_TypeInfo);
-      byte_4D26206 = 1;
+      usedForUI = sub_1C7BAE8(&UnityEngine_Vector4_TypeInfo);
+      byte_4CE8146 = 1;
     }
     static_fields = UnityEngine_Vector4_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -3674,12 +3674,12 @@ LABEL_54:
         goto LABEL_61;
       }
 LABEL_74:
-      sub_1C942F0(usedForUI, v6);
+      sub_1C7BD40(usedForUI, v6);
     }
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3713,10 +3713,10 @@ LABEL_34:
       x = -2147500000.0;
     else
       x = (float)(int)v17;
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3778,7 +3778,7 @@ LABEL_61:
     usedForUI = (__int64)System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)usedForUI,
                            v33,
-                           (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                           (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
     if ( usedForUI )
     {
       v34 = usedForUI;
@@ -3814,7 +3814,7 @@ LABEL_61:
         UIDrawCall__set_sortingOrder((UIDrawCall_o *)v34, this->fields.mSortingOrder, 0);
         mClipTexture = this->fields.mClipTexture;
         *(_QWORD *)(v34 + 64) = mClipTexture;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v34 + 64), (int32_t)mClipTexture, v40, v41, v42, v43, v44, v45);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v34 + 64), (int32_t)mClipTexture, v40, v41, v42, v43, v44, v45);
         usedForUI = (__int64)this->fields.drawCalls;
         ++v33;
         if ( usedForUI )
@@ -3838,14 +3838,14 @@ void UIPanel__UpdateLayers(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *parent; // x22
   int32_t v11; // w20
 
-  if ( (byte_4D30DFC & 1) == 0 )
+  if ( (byte_4CF2C2E & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DFC = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C2E = 1;
   }
   mLayer = this->fields.mLayer;
   cachedGameObject = UIRect__get_cachedGameObject((UIRect_o *)this, 0);
@@ -3870,7 +3870,7 @@ void UIPanel__UpdateLayers(UIPanel_o *this, const MethodInfo *method)
       Item = System_Collections_Generic_List_object___get_Item(
                widgets,
                v8,
-               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       cachedGameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Item, 0);
@@ -3904,14 +3904,14 @@ void UIPanel__UpdateLayers(UIPanel_o *this, const MethodInfo *method)
   cachedGameObject = (UnityEngine_GameObject_o *)this->fields.drawCalls;
   if ( !cachedGameObject )
 LABEL_28:
-    sub_1C942F0(cachedGameObject, v5);
+    sub_1C7BD40(cachedGameObject, v5);
   v11 = 0;
   while ( v11 < SLODWORD(cachedGameObject[1].klass) )
   {
     cachedGameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                      (System_Collections_Generic_List_object__o *)cachedGameObject,
                                                      v11,
-                                                     (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                                                     (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
     if ( cachedGameObject )
     {
       cachedGameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)cachedGameObject, 0);
@@ -3942,16 +3942,16 @@ void UIPanel__UpdateSelf(UIPanel_o *this, const MethodInfo *method)
   const MethodInfo *v11; // x2
   UIDrawCall_o *v12; // x21
 
-  if ( (byte_4D30DF7 & 1) == 0 )
+  if ( (byte_4CF2C29 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__RemoveAt__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIDrawCall_TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DF7 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__RemoveAt__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIDrawCall_TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C29 = 1;
   }
   this->fields.mUpdateTime = RealTime__get_time(0);
   v4 = UIPanel_TypeInfo;
@@ -3980,7 +3980,7 @@ void UIPanel__UpdateSelf(UIPanel_o *this, const MethodInfo *method)
       drawCalls = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  drawCalls,
                                                                  v10,
-                                                                 (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
+                                                                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIDrawCall__get_Item__);
       if ( !drawCalls )
         goto LABEL_26;
       v12 = (UIDrawCall_o *)drawCalls;
@@ -4002,7 +4002,7 @@ void UIPanel__UpdateSelf(UIPanel_o *this, const MethodInfo *method)
         System_Collections_Generic_List_object___RemoveAt(
           drawCalls,
           v10,
-          (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_UIDrawCall__RemoveAt__);
+          (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_UIDrawCall__RemoveAt__);
         drawCalls = (System_Collections_Generic_List_object__o *)this->fields.drawCalls;
         if ( !drawCalls )
           goto LABEL_26;
@@ -4014,7 +4014,7 @@ void UIPanel__UpdateSelf(UIPanel_o *this, const MethodInfo *method)
     this->fields.mUpdateScroll = 0;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     drawCalls = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
@@ -4029,7 +4029,7 @@ void UIPanel__UpdateSelf(UIPanel_o *this, const MethodInfo *method)
         return;
       }
 LABEL_26:
-      sub_1C942F0(drawCalls, v7);
+      sub_1C7BD40(drawCalls, v7);
     }
   }
 }
@@ -4055,7 +4055,7 @@ void UIPanel__UpdateTransformMatrix(UIPanel_o *this, const MethodInfo *method)
     this->fields.mMatrixFrame = frameCount;
     cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
     if ( !cachedTransform )
-      sub_1C942F0(0, v5);
+      sub_1C7BD40(0, v5);
     UnityEngine_Transform__get_worldToLocalMatrix(v13, cachedTransform, 0);
     v6 = *(_OWORD *)&v13[0].fields.m03;
     v8 = *(_OWORD *)&v13[0].fields.m00;
@@ -4097,12 +4097,12 @@ void UIPanel__UpdateWidgets(UIPanel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v19; // x8
   struct UIPanel_OnGeometryUpdated_o *onGeometryUpdated; // x8
 
-  if ( (byte_4D30DFD & 1) == 0 )
+  if ( (byte_4CF2C2F & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DFD = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIWidget__get_Item__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C2F = 1;
   }
   v3 = !this->fields.cullWhileDragging && this->fields.mCullTime > this->fields.mUpdateTime;
   if ( this->fields.mForced != v3 )
@@ -4114,7 +4114,7 @@ void UIPanel__UpdateWidgets(UIPanel_o *this, const MethodInfo *method)
   widgets = (System_Collections_Generic_List_object__o *)this->fields.widgets;
   if ( !widgets )
 LABEL_41:
-    sub_1C942F0(clipCount, v5);
+    sub_1C7BD40(clipCount, v5);
   size = widgets->fields._size;
   if ( size >= 1 )
   {
@@ -4126,7 +4126,7 @@ LABEL_41:
       clipCount = (UnityEngine_Object_o **)System_Collections_Generic_List_object___get_Item(
                                              widgets,
                                              v9,
-                                             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                                             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
       if ( !clipCount )
         goto LABEL_41;
       v11 = clipCount;
@@ -4150,7 +4150,7 @@ LABEL_41:
             else
             {
               v15 = UIWidget__CalculateCumulativeAlpha((UIWidget_o *)v11, frameCount, 0) > 0.001;
-              v14 = !v8 && !*((_BYTE *)v11 + 209) || UIPanel__IsVisible_49799116(this, (UIWidget_o *)v11, v16);
+              v14 = !v8 && !*((_BYTE *)v11 + 209) || UIPanel__IsVisible_49627348(this, (UIWidget_o *)v11, v16);
             }
             UIWidget__UpdateVisibility((UIWidget_o *)v11, v15, v14, 0);
           }
@@ -4205,10 +4205,10 @@ bool UIPanel__get_IsUpdated(UIPanel_o *this, const MethodInfo *method)
   UIPanel_c *v3; // x0
   int32_t mUpdatedFrame; // w19
 
-  if ( (byte_4D30DDE & 1) == 0 )
+  if ( (byte_4CF2C10 & 1) == 0 )
   {
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DDE = 1;
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C10 = 1;
   }
   v3 = UIPanel_TypeInfo;
   mUpdatedFrame = this->fields.mUpdatedFrame;
@@ -4259,10 +4259,10 @@ int32_t UIPanel__get_clipCount(UIPanel_o *this, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4D30DE4 & 1) == 0 )
+  if ( (byte_4CF2C16 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE4 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C16 = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -4273,7 +4273,7 @@ int32_t UIPanel__get_clipCount(UIPanel_o *this, const MethodInfo *method)
     if ( !v4 )
       break;
     if ( !this )
-      sub_1C942F0(v4, v5);
+      sub_1C7BD40(v4, v5);
     if ( (this->fields.mClipping | 2) == 3 )
       ++v3;
     this = this->fields.mParentPanel;
@@ -4395,10 +4395,10 @@ UnityEngine_Vector3_o UIPanel__get_drawCallOffset(UIPanel_o *this, const MethodI
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30DE3 & 1) == 0 )
+  if ( (byte_4CF2C15 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE3 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C15 = 1;
   }
   if ( this->fields.mHalfPixelOffset )
   {
@@ -4434,14 +4434,14 @@ UnityEngine_Vector3_o UIPanel__get_drawCallOffset(UIPanel_o *this, const MethodI
           goto LABEL_20;
         }
 LABEL_19:
-        sub_1C942F0(mCam, v4);
+        sub_1C7BD40(mCam, v4);
       }
     }
   }
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -4523,10 +4523,10 @@ UnityEngine_Vector3_array *UIPanel__get_localCorners(UIPanel_o *this, const Meth
   __int64 v17; // x22
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30DE8 & 1) == 0 )
+  if ( (byte_4CF2C1A & 1) == 0 )
   {
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DE8 = 1;
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C1A = 1;
   }
   if ( !this->fields.mClipping )
   {
@@ -4555,10 +4555,10 @@ UnityEngine_Vector3_array *UIPanel__get_localCorners(UIPanel_o *this, const Meth
           return (UnityEngine_Vector3_array *)v13;
       }
 LABEL_22:
-      sub_1C942F8(cachedTransform);
+      sub_1C7BD48(cachedTransform);
     }
 LABEL_23:
-    sub_1C942F0(cachedTransform, method);
+    sub_1C7BD40(cachedTransform, method);
   }
   mClipOffset = this->fields.mClipOffset;
   v5.n64_u64[0] = *(unsigned __int64 *)&this->fields.mClipRange.fields.x;
@@ -4614,12 +4614,12 @@ int32_t UIPanel__get_nextUnusedDepth(const MethodInfo *method)
   int32_t v6; // w19
   signed int v7; // w22
 
-  if ( (byte_4D30DDF & 1) == 0 )
+  if ( (byte_4CF2C11 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DDF = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__get_Item__);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C11 = 1;
   }
   Item = UIPanel_TypeInfo;
   if ( !UIPanel_TypeInfo->_2.cctor_finished )
@@ -4630,7 +4630,7 @@ int32_t UIPanel__get_nextUnusedDepth(const MethodInfo *method)
   v3 = **((_QWORD **)Item + 23);
   if ( !v3 )
 LABEL_19:
-    sub_1C942F0(Item, v1);
+    sub_1C7BD40(Item, v1);
   v4 = *(_DWORD *)(v3 + 24);
   v5 = v4 - 1;
   if ( v4 < 1 )
@@ -4650,7 +4650,7 @@ LABEL_19:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Item,
              v6,
-             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
+             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UIPanel__get_Item__);
     if ( !Item )
       goto LABEL_19;
     if ( v7 <= *((_DWORD *)Item + 80) )
@@ -4685,10 +4685,10 @@ bool UIPanel__get_usedForUI(UIPanel_o *this, const MethodInfo *method)
   __int64 v4; // x1
   UnityEngine_Camera_o *mCam; // x0
 
-  if ( (byte_4D30DE2 & 1) == 0 )
+  if ( (byte_4CF2C14 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE2 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C14 = 1;
   }
   anchorCamera = (UnityEngine_Object_o *)UIRect__get_anchorCamera((UIRect_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4697,7 +4697,7 @@ bool UIPanel__get_usedForUI(UIPanel_o *this, const MethodInfo *method)
     return 0;
   mCam = this->fields.mCam;
   if ( !mCam )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   return UnityEngine_Camera__get_orthographic(mCam, 0);
 }
 
@@ -4764,12 +4764,12 @@ UnityEngine_Vector3_array *UIPanel__get_worldCorners(UIPanel_o *this, const Meth
   UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30DE9 & 1) == 0 )
+  if ( (byte_4CF2C1B & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DE9 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C1B = 1;
   }
   if ( this->fields.mClipping )
   {
@@ -4792,7 +4792,7 @@ UnityEngine_Vector3_array *UIPanel__get_worldCorners(UIPanel_o *this, const Meth
       mCorners = v11->static_fields->mCorners;
       v14 = (float)(x + v4) - (float)(z * 0.5);
       v15 = (float)(y + v7) - (float)(w * 0.5);
-      v48 = UnityEngine_Transform__TransformPoint_72137752(v12, v14, v15, 0.0, 0);
+      v48 = UnityEngine_Transform__TransformPoint_71896928(v12, v14, v15, 0.0, 0);
       if ( mCorners )
       {
         if ( !LODWORD(mCorners->max_length) )
@@ -4800,7 +4800,7 @@ UnityEngine_Vector3_array *UIPanel__get_worldCorners(UIPanel_o *this, const Meth
         mCorners->m_Items[0] = v48;
         v16 = w + v15;
         v17 = UIPanel_TypeInfo->static_fields->mCorners;
-        v49 = UnityEngine_Transform__TransformPoint_72137752(v12, v14, v16, 0.0, 0);
+        v49 = UnityEngine_Transform__TransformPoint_71896928(v12, v14, v16, 0.0, 0);
         if ( v17 )
         {
           if ( LODWORD(v17->max_length) <= 1 )
@@ -4808,14 +4808,14 @@ UnityEngine_Vector3_array *UIPanel__get_worldCorners(UIPanel_o *this, const Meth
           v17->m_Items[1] = v49;
           v18 = z + v14;
           v19 = UIPanel_TypeInfo->static_fields->mCorners;
-          v50 = UnityEngine_Transform__TransformPoint_72137752(v12, v18, v16, 0.0, 0);
+          v50 = UnityEngine_Transform__TransformPoint_71896928(v12, v18, v16, 0.0, 0);
           if ( v19 )
           {
             if ( LODWORD(v19->max_length) <= 2 )
               goto LABEL_53;
             v19->m_Items[2] = v50;
             v20 = UIPanel_TypeInfo->static_fields->mCorners;
-            v51 = UnityEngine_Transform__TransformPoint_72137752(v12, v18, v15, 0.0, 0);
+            v51 = UnityEngine_Transform__TransformPoint_71896928(v12, v18, v15, 0.0, 0);
             if ( v20 )
             {
               if ( LODWORD(v20->max_length) > 3 )
@@ -4831,7 +4831,7 @@ LABEL_16:
                 return v21->static_fields->mCorners;
               }
 LABEL_53:
-              sub_1C942F8(cachedTransform);
+              sub_1C7BD48(cachedTransform);
             }
           }
         }
@@ -4948,13 +4948,13 @@ LABEL_53:
       }
     }
 LABEL_52:
-    sub_1C942F0(cachedTransform, v10);
+    sub_1C7BD40(cachedTransform, v10);
   }
   v25 = this->fields.mCam;
   cameraRayDistance = UIRect__get_cameraRayDistance((UIRect_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  return NGUITools__GetWorldCorners_50058620(v25, cameraRayDistance, 0);
+  return NGUITools__GetWorldCorners_49886852(v25, cameraRayDistance, 0);
 }
 
 
@@ -4996,11 +4996,11 @@ void UIPanel__set_baseClipRegion(UIPanel_o *this, UnityEngine_Vector4_o value, c
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4D30DE7 & 1) == 0 )
+  if ( (byte_4CF2C19 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE7 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C19 = 1;
   }
   v8 = 0.001;
   if ( vabds_f32(this->fields.mClipRange.fields.x, x) > 0.001
@@ -5020,14 +5020,14 @@ void UIPanel__set_baseClipRegion(UIPanel_o *this, UnityEngine_Vector4_o value, c
     this->fields.mMatrixFrame = -1;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
     if ( v11 )
     {
       if ( !Component_object )
-        sub_1C942F0(v11, v12);
+        sub_1C7BD40(v11, v12);
       UIScrollView__UpdatePosition((UIScrollView_o *)Component_object, 0);
     }
     onClipMove = this->fields.onClipMove;
@@ -5086,10 +5086,10 @@ void UIPanel__set_clipTexture(UIPanel_o *this, UnityEngine_Texture2D_o *value, c
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D30DE6 & 1) == 0 )
+  if ( (byte_4CF2C18 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30DE6 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2C18 = 1;
   }
   mClipTexture = (UnityEngine_Object_o *)this->fields.mClipTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5097,7 +5097,7 @@ void UIPanel__set_clipTexture(UIPanel_o *this, UnityEngine_Texture2D_o *value, c
   if ( UnityEngine_Object__op_Inequality(mClipTexture, (UnityEngine_Object_o *)value, 0) )
   {
     this->fields.mClipTexture = value;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mClipTexture, (int32_t)value, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mClipTexture, (int32_t)value, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -5128,13 +5128,13 @@ void UIPanel__set_depth(UIPanel_o *this, int32_t value, const MethodInfo *method
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4D30DE0 & 1) == 0 )
+  if ( (byte_4CF2C12 & 1) == 0 )
   {
-    sub_1C94098(&System_Comparison_UIPanel__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_UIPanel__Sort__);
-    sub_1C94098(&Method_UIPanel_CompareFunc__);
-    sub_1C94098(&UIPanel_TypeInfo);
-    byte_4D30DE0 = 1;
+    sub_1C7BAE8(&System_Comparison_UIPanel__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_UIPanel__Sort__);
+    sub_1C7BAE8(&Method_UIPanel_CompareFunc__);
+    sub_1C7BAE8(&UIPanel_TypeInfo);
+    byte_4CF2C12 = 1;
   }
   if ( this->fields.mDepth != value )
   {
@@ -5146,14 +5146,14 @@ void UIPanel__set_depth(UIPanel_o *this, int32_t value, const MethodInfo *method
       v5 = UIPanel_TypeInfo;
     }
     list = (System_Collections_Generic_List_object__o *)v5->static_fields->list;
-    v7 = (System_Comparison_T__o *)sub_1C942E4(System_Comparison_UIPanel__TypeInfo);
+    v7 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_UIPanel__TypeInfo);
     System_Comparison_object____ctor(v7, 0, Method_UIPanel_CompareFunc__, 0);
     if ( !list )
-      sub_1C942F0(v8, v9);
-    System_Collections_Generic_List_object___Sort_59164920(
+      sub_1C7BD40(v8, v9);
+    System_Collections_Generic_List_object___Sort_58984640(
       list,
       v7,
-      (const MethodInfo_386C8F8 *)Method_System_Collections_Generic_List_UIPanel__Sort__);
+      (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_UIPanel__Sort__);
   }
 }
 
@@ -5191,7 +5191,7 @@ void UIPanel_OnClippingMoved___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -5202,11 +5202,11 @@ void UIPanel_OnClippingMoved___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) != 0 )
+  if ( (sub_1C7BBA8(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1ACF664;
+      v13 = sub_1AB85F4;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -5218,41 +5218,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1C94150(method);
-        v16 = sub_1C946E4(method);
+        v15 = sub_1C7BBA0(method);
+        v16 = sub_1C7C134(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1ACF760;
+            v13 = sub_1AB86F0;
           else
-            v13 = sub_1ACF724;
+            v13 = sub_1AB86B4;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1ACF6A0;
+          v13 = sub_1AB8630;
         }
         else
         {
-          v13 = sub_1ACF674;
+          v13 = sub_1AB8604;
         }
       }
       else
       {
-        v13 = sub_1ACF644;
+        v13 = sub_1AB85D4;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v17, 0);
+      v17 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1ACF5FC;
+  this->fields.extra_arg = (intptr_t)sub_1AB858C;
 }
 
 
@@ -5266,7 +5266,7 @@ System_IAsyncResult_o *UIPanel_OnClippingMoved__BeginInvoke(
   UIPanel_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = panel;
-  return (System_IAsyncResult_o *)sub_1C9404C(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, &v6, callback, object);
 }
 
 
@@ -5275,7 +5275,7 @@ void UIPanel_OnClippingMoved__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 
@@ -5307,7 +5307,7 @@ void UIPanel_OnGeometryUpdated___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -5318,12 +5318,12 @@ void UIPanel_OnGeometryUpdated___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -5335,9 +5335,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1ACF5E8;
+  this->fields.invoke_impl = (intptr_t)sub_1AB8578;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1ACF5A8;
+  this->fields.extra_arg = (intptr_t)sub_1AB8538;
 }
 
 
@@ -5350,7 +5350,7 @@ System_IAsyncResult_o *UIPanel_OnGeometryUpdated__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, &v5, callback, object);
 }
 
 
@@ -5359,7 +5359,7 @@ void UIPanel_OnGeometryUpdated__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

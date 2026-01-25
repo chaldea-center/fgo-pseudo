@@ -18,9 +18,9 @@ void PaymentHistoryListViewItem___ctor(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields._UpsideMessage_k__BackingField = upsideMessage;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._UpsideMessage_k__BackingField,
     (int32_t)upsideMessage,
     v8,
@@ -30,7 +30,7 @@ void PaymentHistoryListViewItem___ctor(
     v12,
     v13);
   this->fields._BottomMessage_k__BackingField = bottomMessage;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BottomMessage_k__BackingField,
     (int32_t)bottomMessage,
     v14,
@@ -70,7 +70,7 @@ void PaymentHistoryListViewItem__set_BottomMessage(
   System_String_o *v7; // x7
 
   this->fields._BottomMessage_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BottomMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -94,7 +94,7 @@ void PaymentHistoryListViewItem__set_UpsideMessage(
   System_String_o *v7; // x7
 
   this->fields._UpsideMessage_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._UpsideMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,

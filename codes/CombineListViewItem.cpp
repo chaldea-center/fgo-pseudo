@@ -17,7 +17,7 @@ void CombineListViewItem___ctor(
   v6->fields.info = info;
   v6 = (CombineListViewItem_o *)((char *)v6 + 120);
   v6[-1].fields.loopIndex = index;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -33,14 +33,8 @@ System_String_o *CombineListViewItem__get_EventData(CombineListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return info->fields.eventData;
-}
-
-
-CombineListItemInfo_o *CombineListViewItem__get_Info(CombineListViewItem_o *this, const MethodInfo *method)
-{
-  return this->fields.info;
 }
 
 
@@ -50,17 +44,6 @@ System_String_o *CombineListViewItem__get_SpriteName(CombineListViewItem_o *this
 
   info = this->fields.info;
   if ( !info )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return info->fields.spriteName;
-}
-
-
-int32_t CombineListViewItem__get_Type(CombineListViewItem_o *this, const MethodInfo *method)
-{
-  struct CombineListItemInfo_o *info; // x8
-
-  info = this->fields.info;
-  if ( !info )
-    sub_1C942F0(this, method);
-  return info->fields.type;
 }

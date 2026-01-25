@@ -29,11 +29,11 @@ void ServantCoinConfirmListViewManager__CreateList(
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4D2F053 & 1) == 0 )
+  if ( (byte_4CF0F1A & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C94098(&ServantCoinConfirmListViewItem_TypeInfo);
-    byte_4D2F053 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C7BAE8(&ServantCoinConfirmListViewItem_TypeInfo);
+    byte_4CF0F1A = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !svtCoins )
@@ -50,8 +50,8 @@ void ServantCoinConfirmListViewManager__CreateList(
         break;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       v12 = *(ListViewItem_c **)&v10->fields.itemId;
-      v13 = (ListViewItem_o *)sub_1C942E4(ServantCoinConfirmListViewItem_TypeInfo);
-      ListViewItem___ctor_44594388(v13, v9, 0);
+      v13 = (ListViewItem_o *)sub_1C7BD34(ServantCoinConfirmListViewItem_TypeInfo);
+      ListViewItem___ctor_44325320(v13, v9, 0);
       v13[1].klass = v12;
       if ( !itemList )
         break;
@@ -66,22 +66,22 @@ void ServantCoinConfirmListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v13,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v23[4] = (Il2CppClass *)v13;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v23 + 4), (int32_t)v13, v14, v15, v16, v17, v18, v19);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v23 + 4), (int32_t)v13, v14, v15, v16, v17, v18, v19);
       }
       if ( v8 == v9 )
         goto LABEL_15;
       if ( (unsigned int)++v9 >= LODWORD(svtCoins->max_length) )
-        sub_1C942F8(scrollView);
+        sub_1C7BD48(scrollView);
     }
 LABEL_17:
-    sub_1C942F0(scrollView, v6);
+    sub_1C7BD40(scrollView, v6);
   }
 LABEL_15:
   scrollView = this->fields.scrollView;
@@ -100,17 +100,17 @@ void ServantCoinConfirmListViewManager__SetObjectItem(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4D2F054 & 1) == 0 )
+  if ( (byte_4CF0F1B & 1) == 0 )
   {
-    this = (ServantCoinConfirmListViewManager_o *)sub_1C94098(&ServantCoinConfirmListViewObject_TypeInfo);
-    byte_4D2F054 = 1;
+    this = (ServantCoinConfirmListViewManager_o *)sub_1C7BAE8(&ServantCoinConfirmListViewObject_TypeInfo);
+    byte_4CF0F1B = 1;
   }
   if ( !obj
     || (naturalAligment = ServantCoinConfirmListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (ServantCoinConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != ServantCoinConfirmListViewObject_TypeInfo )
   {
-    sub_1C942F0(this, obj);
+    sub_1C7BD40(this, obj);
   }
   ServantCoinConfirmListViewObject__SetupDisp((ServantCoinConfirmListViewObject_o *)obj, (const MethodInfo *)obj);
 }

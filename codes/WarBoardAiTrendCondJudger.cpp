@@ -14,15 +14,15 @@ bool WarBoardAiTrendCondJudger__IsReplaceTarget(
   WarBoardPieceData_o *basePiece; // x19
 
   v4 = route;
-  if ( (byte_4D2A168 & 1) == 0 )
+  if ( (byte_4CEBFCA & 1) == 0 )
   {
-    route = (WarBoardAIRoute_RouteData_o *)sub_1C94098(&WarBoardAIManager_TypeInfo);
-    byte_4D2A168 = 1;
+    route = (WarBoardAIRoute_RouteData_o *)sub_1C7BAE8(&WarBoardAIManager_TypeInfo);
+    byte_4CEBFCA = 1;
   }
   if ( !targetData )
     return 0;
   if ( !v4 )
-    sub_1C942F0(route, targetData);
+    sub_1C7BD40(route, targetData);
   actionPiece = v4->fields.actionPiece;
   if ( !actionPiece || targetData->fields.targetPiece != actionPiece )
     return 0;
@@ -44,7 +44,7 @@ bool WarBoardAiTrendCondJudger__TargetRangeUnder(
   {
     baseRoute = targetData->fields.baseRoute;
     if ( !baseRoute )
-      sub_1C942F0(targetData, value);
+      sub_1C7BD40(targetData, value);
     LOBYTE(targetData) = LODWORD(baseRoute->max_length) - 1 <= value;
   }
   return (char)targetData;

@@ -25,11 +25,11 @@ void ExtraBattleUserInterfaceButtonComponent__OnTap(
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4D2F8C9 & 1) == 0 )
+  if ( (byte_4CF164E & 1) == 0 )
   {
-    sub_1C94098(&Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData___);
-    sub_1C94098(&Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-    byte_4D2F8C9 = 1;
+    sub_1C7BAE8(&Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData___);
+    sub_1C7BAE8(&Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+    byte_4CF164E = 1;
   }
   IsEnable_k__BackingField = this->fields._IsEnable_k__BackingField;
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.disableTapSeName, 0);
@@ -39,22 +39,22 @@ void ExtraBattleUserInterfaceButtonComponent__OnTap(
     {
       v5 = Method_ExtraBattleUserInterfaceButtonComponent_OnTap__;
       if ( (*((_BYTE *)Method_ExtraBattleUserInterfaceButtonComponent_OnTap__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C940B0(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+        v5 = (_QWORD *)sub_1C7BB00(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
       OverwriteAssetSoundName__PlaySe(v6, this->fields.enableTapSeName, 0, 0);
     }
     ActionExtensions__Call_Int32Enum__object_(
       (System_Action_T1__T2__o *)this->fields.onTapCallback,
       this->fields.execType,
       (Il2CppObject *)this->fields.exUiData,
-      (const MethodInfo_30E5C64 *)Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData___);
+      (const MethodInfo_30B96D4 *)Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData___);
   }
   else if ( !IsNullOrEmpty )
   {
     v7 = Method_ExtraBattleUserInterfaceButtonComponent_OnTap__;
     if ( (*((_BYTE *)Method_ExtraBattleUserInterfaceButtonComponent_OnTap__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C940B0(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C9407C(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C7BB00(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v7, v7[4]);
     OverwriteAssetSoundName__PlaySe(v8, this->fields.disableTapSeName, 0, 0);
   }
 }
@@ -67,15 +67,15 @@ void ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(
   System_Collections_Generic_IEnumerable_T__o *stateObjects; // x20
   System_Action_object__o *v4; // x21
 
-  if ( (byte_4D2F8C5 & 1) == 0 )
+  if ( (byte_4CF164A & 1) == 0 )
   {
-    sub_1C94098(&System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
-    sub_1C94098(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
-    sub_1C94098(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_0__);
-    byte_4D2F8C5 = 1;
+    sub_1C7BAE8(&System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
+    sub_1C7BAE8(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
+    sub_1C7BAE8(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_0__);
+    byte_4CF164A = 1;
   }
   stateObjects = (System_Collections_Generic_IEnumerable_T__o *)this->fields.stateObjects;
-  v4 = (System_Action_object__o *)sub_1C942E4(System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
+  v4 = (System_Action_object__o *)sub_1C7BD34(System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
   System_Action_object____ctor(
     v4,
     (Il2CppObject *)this,
@@ -84,7 +84,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(
   BasicHelper__ForEach_object_(
     stateObjects,
     (System_Action_T__o *)v4,
-    (const MethodInfo_3188088 *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
+    (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
 }
 
 
@@ -98,10 +98,10 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(
   UILabel_o *v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4D2F8C6 & 1) == 0 )
+  if ( (byte_4CF164B & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F8C6 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF164B = 1;
   }
   buttonLabel = (UnityEngine_Object_o *)this->fields.buttonLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -110,7 +110,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(
   {
     v7 = this->fields.buttonLabel;
     if ( !v7 )
-      sub_1C942F0(0, v6);
+      sub_1C7BD40(0, v6);
     UILabel__set_text(v7, text, 0);
     ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(this, v8);
   }
@@ -135,10 +135,10 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabelColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4D2F8C7 & 1) == 0 )
+  if ( (byte_4CF164C & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F8C7 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF164C = 1;
   }
   buttonLabel = (UnityEngine_Object_o *)this->fields.buttonLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -147,7 +147,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabelColor(
   {
     v10 = (UIWidget_o *)this->fields.buttonLabel;
     if ( !v10 )
-      sub_1C942F0(0, v9);
+      sub_1C7BD40(0, v9);
     v11.fields.b = b;
     v11.fields.a = a;
     v11.fields.r = r;
@@ -169,7 +169,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetEnable(
   buttonSprite = this->fields.buttonSprite;
   this->fields._IsEnable_k__BackingField = value;
   if ( !buttonSprite )
-    sub_1C942F0(0, value);
+    sub_1C7BD40(0, value);
   v5 = 144;
   if ( value )
     v5 = 128;
@@ -190,7 +190,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetOnTapCallback(
   System_String_o *v7; // x7
 
   this->fields.onTapCallback = callback;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.onTapCallback,
     (int32_t)callback,
     (int32_t)method,
@@ -231,13 +231,13 @@ void ExtraBattleUserInterfaceButtonComponent__UpdateData(
   int32_t targetIndex; // [xsp+Ch] [xbp-34h] BYREF
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2F8C8 & 1) == 0 )
+  if ( (byte_4CF164D & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_5839/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    sub_1C94098(&StringLiteral_5838/*"EX_BATTLE_UI_EXECUTE_SKILL_BUTTON_COND_NO_ALIVE_SUB_MEMBER"*/);
-    byte_4D2F8C8 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_5843/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    sub_1C7BAE8(&StringLiteral_5842/*"EX_BATTLE_UI_EXECUTE_SKILL_BUTTON_COND_NO_ALIVE_SUB_MEMBER"*/);
+    byte_4CF164D = 1;
   }
   targetIndex = 0;
   ExtraBattleUserInterfaceComponent__UpdateData(
@@ -288,7 +288,7 @@ void ExtraBattleUserInterfaceButtonComponent__UpdateData(
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5838/*"EX_BATTLE_UI_EXECUTE_SKILL_BUTTON_COND_NO_ALIVE_SUB_MEMBER"*/, 0);
+        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5842/*"EX_BATTLE_UI_EXECUTE_SKILL_BUTTON_COND_NO_ALIVE_SUB_MEMBER"*/, 0);
         goto LABEL_26;
       }
 LABEL_22:
@@ -298,7 +298,7 @@ LABEL_26:
       return;
     }
 LABEL_28:
-    sub_1C942F0(Cond_k__BackingField, executeSkill);
+    sub_1C7BD40(Cond_k__BackingField, executeSkill);
   }
   if ( execType != 1 )
     return;
@@ -312,7 +312,7 @@ LABEL_28:
     goto LABEL_22;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5839/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/, 0);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5843/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/, 0);
   ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(this, v22, v23);
   v30.fields.g = 0.92157;
   v30.fields.b = 0.015686;
@@ -332,20 +332,20 @@ void ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_0(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4D2F8CA & 1) == 0 )
+  if ( (byte_4CF164F & 1) == 0 )
   {
-    sub_1C94098(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__);
-    sub_1C94098(&System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
-    byte_4D2F8CA = 1;
+    sub_1C7BAE8(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__);
+    sub_1C7BAE8(&System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
+    byte_4CF164F = 1;
   }
-  v5 = (System_Func_T__TResult__o *)sub_1C942E4(System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
+  v5 = (System_Func_T__TResult__o *)sub_1C7BD34(System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v5,
     (Il2CppObject *)this,
     Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__,
     0);
   if ( !obj )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   ExtraBattleUserInterfaceButtonComponent_StateObject__SetActiveCondition(
     obj,
     (System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__o *)v5,
@@ -365,10 +365,10 @@ bool ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_1(
   UnityEngine_Object_o *v10; // x20
   struct UILabel_o *v11; // x8
 
-  if ( (byte_4D2F8CB & 1) == 0 )
+  if ( (byte_4CF1650 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F8CB = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF1650 = 1;
   }
   switch ( condition )
   {
@@ -397,7 +397,7 @@ bool ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_1(
       v11 = this->fields.buttonLabel;
       if ( !v11 )
 LABEL_18:
-        sub_1C942F0(v7, v8);
+        sub_1C7BD40(v7, v8);
       return System_String__IsNullOrEmpty(v11->fields.mText, 0);
     default:
       return 0;
@@ -445,7 +445,7 @@ void ExtraBattleUserInterfaceButtonComponent_StateObject__SetActiveCondition(
     if ( obj )
       goto LABEL_3;
 LABEL_5:
-    sub_1C942F0(v4, func);
+    sub_1C7BD40(v4, func);
   }
   v4 = ((__int64 (__fastcall *)(intptr_t, _QWORD, intptr_t))func->fields.invoke_impl)(
          func->fields.method_code,

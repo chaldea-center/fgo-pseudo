@@ -1,9 +1,9 @@
 void CombineCommandCodeListViewObject___ctor(CombineCommandCodeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30864 & 1) == 0 )
+  if ( (byte_4CF25EC & 1) == 0 )
   {
-    sub_1C94098(&ListViewObject_TypeInfo);
-    byte_4D30864 = 1;
+    sub_1C7BAE8(&ListViewObject_TypeInfo);
+    byte_4CF25EC = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void CombineCommandCodeListViewObject__Awake(CombineCommandCodeListViewObject_o 
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D3085C & 1) == 0 )
+  if ( (byte_4CF25E4 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CombineCommandCodeListViewItemDraw___);
-    byte_4D3085C = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_CombineCommandCodeListViewItemDraw___);
+    byte_4CF25E4 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C942F0(0, v3);
+    sub_1C7BD40(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CombineCommandCodeListViewItemDraw___);
+                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_CombineCommandCodeListViewItemDraw___);
   this->fields.itemDraw = (struct CombineCommandCodeListViewItemDraw_o *)Component_object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -55,10 +55,10 @@ CombineCommandCodeListViewItem_o *CombineCommandCodeListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4D3085D & 1) == 0 )
+  if ( (byte_4CF25E5 & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItem_TypeInfo);
-    byte_4D3085D = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItem_TypeInfo);
+    byte_4CF25E5 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -104,10 +104,10 @@ void CombineCommandCodeListViewObject__Init(
   int32_t v30; // w8
   GrandQuestFolderBoardItem_c *klass; // x19
 
-  if ( (byte_4D3085F & 1) == 0 )
+  if ( (byte_4CF25E7 & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItem_TypeInfo);
-    byte_4D3085F = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItem_TypeInfo);
+    byte_4CF25E7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -135,12 +135,12 @@ void CombineCommandCodeListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C942F0(transform, v15);
+    sub_1C7BD40(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v17,
@@ -151,8 +151,8 @@ void CombineCommandCodeListViewObject__Init(
     v22);
   if ( (unsigned int)v11 <= 3 )
   {
-    v30 = *((_DWORD *)&xmmword_CFEF30 + v11);
-    this->fields.state = dword_CFE930[v11];
+    v30 = *((_DWORD *)&xmmword_CF5CA0 + v11);
+    this->fields.state = dword_CF56B0[v11];
     this->fields.dispMode = v30;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -161,7 +161,7 @@ void CombineCommandCodeListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C9403C(p_callbackFunc, 0, v24, v25, v26, v27, v28, v29);
+    sub_1C7BA8C(p_callbackFunc, 0, v24, v25, v26, v27, v28, v29);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -176,7 +176,7 @@ void CombineCommandCodeListViewObject__InitItem(CombineCommandCodeListViewObject
 
 
 // local variable allocation has failed, the output may be wrong!
-void CombineCommandCodeListViewObject__Init_49295756(
+void CombineCommandCodeListViewObject__Init_49040248(
         CombineCommandCodeListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -185,17 +185,17 @@ void CombineCommandCodeListViewObject__Init_49295756(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   CombineCommandCodeListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void CombineCommandCodeListViewObject__Init_49296504(
+void CombineCommandCodeListViewObject__Init_49040996(
         CombineCommandCodeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -204,17 +204,17 @@ void CombineCommandCodeListViewObject__Init_49296504(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   CombineCommandCodeListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void CombineCommandCodeListViewObject__Init_49304812(
+void CombineCommandCodeListViewObject__Init_49049304(
         CombineCommandCodeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -223,10 +223,10 @@ void CombineCommandCodeListViewObject__Init_49304812(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   CombineCommandCodeListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -252,13 +252,13 @@ void CombineCommandCodeListViewObject__OnClickSelect(
   System_Reflection_MethodBase_o *v15; // x0
 
   v3 = this;
-  if ( (byte_4D30861 & 1) == 0 )
+  if ( (byte_4CF25E9 & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItem_TypeInfo);
-    sub_1C94098(&CombineCommandCodeListViewManager_TypeInfo);
-    sub_1C94098(&Method_CombineCommandCodeListViewObject_OnClickSelect__);
-    this = (CombineCommandCodeListViewObject_o *)sub_1C94098(&StringLiteral_9870/*"OnClickListView"*/);
-    byte_4D30861 = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItem_TypeInfo);
+    sub_1C7BAE8(&CombineCommandCodeListViewManager_TypeInfo);
+    sub_1C7BAE8(&Method_CombineCommandCodeListViewObject_OnClickSelect__);
+    this = (CombineCommandCodeListViewObject_o *)sub_1C7BAE8(&StringLiteral_9874/*"OnClickListView"*/);
+    byte_4CF25E9 = 1;
   }
   linkItem = v3->fields.linkItem;
   if ( !linkItem )
@@ -268,7 +268,7 @@ void CombineCommandCodeListViewObject__OnClickSelect(
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (CombineCommandCodeListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CombineCommandCodeListViewItem_TypeInfo )
   {
-    sub_1C9468C(v3->fields.linkItem);
+    sub_1C7C0DC(v3->fields.linkItem);
     goto LABEL_26;
   }
   manager = (UnityEngine_Component_o *)v3->fields.manager;
@@ -279,9 +279,9 @@ void CombineCommandCodeListViewObject__OnClickSelect(
     || (CombineCommandCodeListViewManager_c *)manager->klass->_2.typeHierarchy[v7 - 1] != CombineCommandCodeListViewManager_TypeInfo )
   {
 LABEL_26:
-    sub_1C9468C(manager);
+    sub_1C7C0DC(manager);
 LABEL_27:
-    sub_1C942F0(this, v5);
+    sub_1C7BD40(this, v5);
   }
   ListViewManager__ClearScrollBarValue(v3->fields.manager, 1, 0);
   m_CachedPtr = manager[22].fields.m_CachedPtr;
@@ -289,8 +289,8 @@ LABEL_27:
   {
     v12 = Method_CombineCommandCodeListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_CombineCommandCodeListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v12 = (_QWORD *)sub_1C940B0(Method_CombineCommandCodeListViewObject_OnClickSelect__);
-    v13 = (System_Reflection_MethodBase_o *)sub_1C9407C(v12, v12[4]);
+      v12 = (_QWORD *)sub_1C7BB00(Method_CombineCommandCodeListViewObject_OnClickSelect__);
+    v13 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v12, v12[4]);
     OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0);
     BYTE6(linkItem[1].klass) ^= 1u;
     goto LABEL_18;
@@ -299,8 +299,8 @@ LABEL_27:
   {
     v9 = Method_CombineCommandCodeListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_CombineCommandCodeListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1C940B0(Method_CombineCommandCodeListViewObject_OnClickSelect__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C9407C(v9, v9[4]);
+      v9 = (_QWORD *)sub_1C7BB00(Method_CombineCommandCodeListViewObject_OnClickSelect__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v9, v9[4]);
     OverwriteAssetSoundName__PlaySystemSe(v10, 11, 0, 0);
     BYTE5(linkItem[1].klass) ^= 1u;
 LABEL_18:
@@ -311,15 +311,15 @@ LABEL_18:
   {
     v14 = Method_CombineCommandCodeListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_CombineCommandCodeListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1C940B0(Method_CombineCommandCodeListViewObject_OnClickSelect__);
-    v15 = (System_Reflection_MethodBase_o *)sub_1C9407C(v14, v14[4]);
+      v14 = (_QWORD *)sub_1C7BB00(Method_CombineCommandCodeListViewObject_OnClickSelect__);
+    v15 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v14, v14[4]);
     OverwriteAssetSoundName__PlaySystemSe(v15, 2, 0, 0);
   }
   else
   {
     UnityEngine_Component__SendMessage(
       manager,
-      (System_String_o *)StringLiteral_9870/*"OnClickListView"*/,
+      (System_String_o *)StringLiteral_9874/*"OnClickListView"*/,
       (Il2CppObject *)v3->fields.linkItem,
       0);
   }
@@ -332,11 +332,11 @@ void CombineCommandCodeListViewObject__OnLongPush(CombineCommandCodeListViewObje
   UnityEngine_Component_o *manager; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4D30862 & 1) == 0 )
+  if ( (byte_4CF25EA & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewManager_TypeInfo);
-    sub_1C94098(&StringLiteral_9950/*"OnLongPushListView"*/);
-    byte_4D30862 = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_9954/*"OnLongPushListView"*/);
+    byte_4CF25EA = 1;
   }
   linkItem = (Il2CppObject *)this->fields.linkItem;
   if ( linkItem )
@@ -348,12 +348,12 @@ void CombineCommandCodeListViewObject__OnLongPush(CombineCommandCodeListViewObje
       if ( manager->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (CombineCommandCodeListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] == CombineCommandCodeListViewManager_TypeInfo )
       {
-        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9950/*"OnLongPushListView"*/, linkItem, 0);
+        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9954/*"OnLongPushListView"*/, linkItem, 0);
         return;
       }
-      sub_1C9468C(manager);
+      sub_1C7C0DC(manager);
     }
-    sub_1C942F0(manager, method);
+    sub_1C7BD40(manager, method);
   }
 }
 
@@ -370,11 +370,11 @@ void CombineCommandCodeListViewObject__SetInput(
   struct ListViewItem_o *v9; // x1
   CombineCommandCodeListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4D3085E & 1) == 0 )
+  if ( (byte_4CF25E6 & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItem_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3085E = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItem_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF25E6 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -398,7 +398,7 @@ void CombineCommandCodeListViewObject__SetInput(
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C942F0(0, v9);
+      sub_1C7BD40(0, v9);
     CombineCommandCodeListViewItemDraw__SetInput(v10, (CombineCommandCodeListViewItem_o *)v9, v6);
   }
 }
@@ -410,12 +410,12 @@ void CombineCommandCodeListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_44621212((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44356304((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void CombineCommandCodeListViewObject__SetItem_49303900(
+void CombineCommandCodeListViewObject__SetItem_49048392(
         CombineCommandCodeListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -435,11 +435,11 @@ void CombineCommandCodeListViewObject__SetupDisp(CombineCommandCodeListViewObjec
   const MethodInfo *v8; // x3
   CombineCommandCodeListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4D30860 & 1) == 0 )
+  if ( (byte_4CF25E8 & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItem_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30860 = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItem_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF25E8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -463,7 +463,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C942F0(0, v7);
+      sub_1C7BD40(0, v7);
     CombineCommandCodeListViewItemDraw__SetItem(
       v9,
       (CombineCommandCodeListViewItem_o *)linkItem,
@@ -486,11 +486,11 @@ System_String_o *CombineCommandCodeListViewObject__ToString(
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4D30863 & 1) == 0 )
+  if ( (byte_4CF25EB & 1) == 0 )
   {
-    sub_1C94098(&CombineCommandCodeListViewItemDraw_DispMode_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    byte_4D30863 = 1;
+    sub_1C7BAE8(&CombineCommandCodeListViewItemDraw_DispMode_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    byte_4CF25EB = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -502,8 +502,8 @@ System_String_o *CombineCommandCodeListViewObject__ToString(
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1E54120(&v10, 0, 0, 0);
-  return System_String__Concat_64456008(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1E3ACE4(&v10, 0, 0, 0);
+  return System_String__Concat_64215176(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -522,10 +522,10 @@ void CombineCommandCodeListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D3085A & 1) == 0 )
+  if ( (byte_4CF25E2 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    byte_4D3085A = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    byte_4CF25E2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -538,13 +538,13 @@ void CombineCommandCodeListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   CombineCommandCodeListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -563,10 +563,10 @@ void CombineCommandCodeListViewObject__remove_callbackFunc(
   CombineCommandCodeListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D3085B & 1) == 0 )
+  if ( (byte_4CF25E3 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    byte_4D3085B = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    byte_4CF25E3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -579,12 +579,12 @@ void CombineCommandCodeListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   CombineCommandCodeListViewObject__Awake(v11, v12);
 }

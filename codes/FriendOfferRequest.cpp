@@ -3,12 +3,12 @@ void FriendOfferRequest__beginRequest(FriendOfferRequest_o *this, int64_t target
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4D2E429 & 1) == 0 )
+  if ( (byte_4CF0198 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_24239/*"targetUserId"*/);
-    byte_4D2E429 = 1;
+    sub_1C7BAE8(&StringLiteral_24237/*"targetUserId"*/);
+    byte_4CF0198 = 1;
   }
-  RequestBase__addField_45013228((RequestBase_o *)this, (System_String_o *)StringLiteral_24239/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_44745468((RequestBase_o *)this, (System_String_o *)StringLiteral_24237/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -17,16 +17,16 @@ System_String_o *FriendOfferRequest__getURL(FriendOfferRequest_o *this, const Me
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E428 & 1) == 0 )
+  if ( (byte_4CF0197 & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_19835/*"friend/offer"*/);
-    byte_4D2E428 = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19830/*"friend/offer"*/);
+    byte_4CF0197 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_19835/*"friend/offer"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19830/*"friend/offer"*/, 0);
 }
 
 
@@ -56,23 +56,23 @@ void FriendOfferRequest__requestCompleted(
   Il2CppObject *Instance; // x20
   NotificationDialog_ClickDelegate_o *v24; // x22
 
-  if ( (byte_4D2E42A & 1) == 0 )
+  if ( (byte_4CF0199 & 1) == 0 )
   {
-    sub_1C94098(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C94098(&Method_FriendOfferRequest_requestErrorDialog__);
-    sub_1C94098(&JsonManager_TypeInfo);
-    sub_1C94098(&ResponseCommandKind_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    sub_1C94098(&StringLiteral_24337/*"title"*/);
-    sub_1C94098(&StringLiteral_21745/*"message"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    sub_1C94098(&StringLiteral_1115/*"0"*/);
-    sub_1C94098(&StringLiteral_23914/*"status"*/);
-    byte_4D2E42A = 1;
+    sub_1C7BAE8(&NotificationDialog_ClickDelegate_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C7BAE8(&Method_FriendOfferRequest_requestErrorDialog__);
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    sub_1C7BAE8(&StringLiteral_24335/*"title"*/);
+    sub_1C7BAE8(&StringLiteral_21741/*"message"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    sub_1C7BAE8(&StringLiteral_1116/*"0"*/);
+    sub_1C7BAE8(&StringLiteral_23910/*"status"*/);
+    byte_4CF0199 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -88,7 +88,7 @@ LABEL_12:
     {
       invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t, long double))CallBack->fields.invoke_impl;
       method_code = CallBack->fields.method_code;
-      v17 = StringLiteral_22424/*"ng"*/;
+      v17 = StringLiteral_22419/*"ng"*/;
 LABEL_14:
       invoke_impl(method_code, v17, CallBack->fields.method, v7);
       return;
@@ -98,47 +98,47 @@ LABEL_14:
   success = (System_Collections_Generic_Dictionary_object__object__o *)v8->fields.success;
   if ( !success )
 LABEL_35:
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v8->fields.success,
-         (Il2CppObject *)StringLiteral_23914/*"status"*/,
-         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23910/*"status"*/,
+         (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_23914/*"status"*/,
-             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23910/*"status"*/,
+             (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v13 = (System_String_o *)Item;
     if ( Item && (System_String_c *)Item->klass != string_TypeInfo )
     {
-      v7 = sub_1C9468C(Item);
+      v7 = sub_1C7C0DC(Item);
       goto LABEL_12;
     }
   }
   else
   {
-    v13 = (System_String_o *)StringLiteral_1115/*"0"*/;
+    v13 = (System_String_o *)StringLiteral_1116/*"0"*/;
   }
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           success,
-          (Il2CppObject *)StringLiteral_24337/*"title"*/,
-          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_24335/*"title"*/,
+          (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_20;
   v18 = System_Collections_Generic_Dictionary_object__object___get_Item(
           success,
-          (Il2CppObject *)StringLiteral_24337/*"title"*/,
-          (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          (Il2CppObject *)StringLiteral_24335/*"title"*/,
+          (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   v19 = (System_String_o *)v18;
   if ( v18 && (System_String_c *)v18->klass != string_TypeInfo )
   {
-    sub_1C9468C(v18);
+    sub_1C7C0DC(v18);
 LABEL_20:
     v19 = (System_String_o *)StringLiteral_1/*""*/;
   }
   v9 = (Il2CppObject *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                          success,
-                         (Il2CppObject *)StringLiteral_21745/*"message"*/,
-                         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                         (Il2CppObject *)StringLiteral_21741/*"message"*/,
+                         (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   if ( ((unsigned __int8)v9 & 1) == 0 )
   {
 LABEL_25:
@@ -147,25 +147,25 @@ LABEL_25:
   }
   v9 = System_Collections_Generic_Dictionary_object__object___get_Item(
          success,
-         (Il2CppObject *)StringLiteral_21745/*"message"*/,
-         (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+         (Il2CppObject *)StringLiteral_21741/*"message"*/,
+         (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   v20 = (System_String_o *)v9;
   if ( v9 )
   {
     v10 = string_TypeInfo;
     if ( (System_String_c *)v9->klass != string_TypeInfo )
     {
-      sub_1C9468C(v9);
+      sub_1C7C0DC(v9);
       goto LABEL_25;
     }
   }
 LABEL_26:
   if ( !v13 )
     goto LABEL_35;
-  if ( !System_String__Equals_64453064(v13, (System_String_o *)StringLiteral_1115/*"0"*/, 0) )
+  if ( !System_String__Equals_64212232(v13, (System_String_o *)StringLiteral_1116/*"0"*/, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v24 = (NotificationDialog_ClickDelegate_o *)sub_1C942E4(NotificationDialog_ClickDelegate_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v24 = (NotificationDialog_ClickDelegate_o *)sub_1C7BD34(NotificationDialog_ClickDelegate_TypeInfo);
     NotificationDialog_ClickDelegate___ctor(
       v24,
       (Il2CppObject *)this,
@@ -173,7 +173,7 @@ LABEL_26:
       0);
     if ( Instance )
     {
-      CommonUI__OpenNotificationDialog_31585792(
+      CommonUI__OpenNotificationDialog_31485276(
         (CommonUI_o *)Instance,
         v19,
         v20,
@@ -219,20 +219,20 @@ void FriendOfferRequest__requestErrorDialog(FriendOfferRequest_o *this, bool flg
   __int64 v5; // x1
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_4D2E42B & 1) == 0 )
+  if ( (byte_4CF019A & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    byte_4D2E42B = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    byte_4CF019A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C942F0(0, v5);
+    sub_1C7BD40(0, v5);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
   CallBack = this->fields.CallBack;
   if ( CallBack )
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
       CallBack->fields.method_code,
-      StringLiteral_22424/*"ng"*/,
+      StringLiteral_22419/*"ng"*/,
       CallBack->fields.method);
 }

@@ -236,226 +236,226 @@ void UISkinnedEffectLoad___cctor(const MethodInfo *method)
   System_String_o *v234; // x7
   GrandQuestFolderBoardItem_o v235; // [xsp+8h] [xbp-A8h] BYREF
 
-  if ( (byte_4D2B5E7 & 1) == 0 )
+  if ( (byte_4CED447 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
-    sub_1C94098(&System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&UISkinnedEffectLoad_TypeInfo);
-    sub_1C94098(&StringLiteral_18994/*"ef_terminal_back_31"*/);
-    sub_1C94098(&StringLiteral_18919/*"ef_bg_cloud_21"*/);
-    sub_1C94098(&StringLiteral_18922/*"ef_bg_particles_21"*/);
-    sub_1C94098(&StringLiteral_18945/*"ef_common_back_31"*/);
-    sub_1C94098(&StringLiteral_18924/*"ef_bg_particles_23"*/);
-    sub_1C94098(&StringLiteral_18995/*"ef_terminal_particles_31"*/);
-    sub_1C94098(&StringLiteral_18923/*"ef_bg_particles_22"*/);
-    sub_1C94098(&StringLiteral_18920/*"ef_bg_particles_11"*/);
-    sub_1C94098(&StringLiteral_18946/*"ef_common_particles_31"*/);
-    sub_1C94098(&StringLiteral_18921/*"ef_bg_particles_12"*/);
-    sub_1C94098(&UISkinnedEffectLoad_skinEffect___TypeInfo);
-    byte_4D2B5E7 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&UISkinnedEffectLoad_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_18991/*"ef_terminal_back_31"*/);
+    sub_1C7BAE8(&StringLiteral_18920/*"ef_bg_cloud_21"*/);
+    sub_1C7BAE8(&StringLiteral_18923/*"ef_bg_particles_21"*/);
+    sub_1C7BAE8(&StringLiteral_18946/*"ef_common_back_31"*/);
+    sub_1C7BAE8(&StringLiteral_18925/*"ef_bg_particles_23"*/);
+    sub_1C7BAE8(&StringLiteral_18992/*"ef_terminal_particles_31"*/);
+    sub_1C7BAE8(&StringLiteral_18924/*"ef_bg_particles_22"*/);
+    sub_1C7BAE8(&StringLiteral_18921/*"ef_bg_particles_11"*/);
+    sub_1C7BAE8(&StringLiteral_18947/*"ef_common_particles_31"*/);
+    sub_1C7BAE8(&StringLiteral_18922/*"ef_bg_particles_12"*/);
+    sub_1C7BAE8(&UISkinnedEffectLoad_skinEffect___TypeInfo);
+    byte_4CED447 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C942E4(System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_34EA2E0 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
-  v2 = sub_1C94140(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_1C94140(string___TypeInfo, 1);
+    (const MethodInfo_34BBB78 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
+  v2 = sub_1C7BB90(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_1C7BB90(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v11 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v12 = StringLiteral_18920/*"ef_bg_particles_11"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18920/*"ef_bg_particles_11"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_18921/*"ef_bg_particles_11"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18921/*"ef_bg_particles_11"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
   v235.fields.sortValue1B = v11;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue1B, v11, v13, v14, v15, v16, v17, v18);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue1B, v11, v13, v14, v15, v16, v17, v18);
   if ( !v2 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v2 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v2 + 32) = v235.fields.sortValue1B;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v2 + 32), 0, v19, v20, v21, v22, v23, v24);
-  v3 = sub_1C94140(string___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v2 + 32), 0, v19, v20, v21, v22, v23, v24);
+  v3 = sub_1C7BB90(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v31 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v32 = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v32, v25, v26, v27, v28, v29, v30);
+  v32 = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v32, v25, v26, v27, v28, v29, v30);
   if ( *(_DWORD *)(v31 + 24) <= 1u )
     goto LABEL_41;
-  v39 = StringLiteral_18924/*"ef_bg_particles_23"*/;
-  *(_QWORD *)(v31 + 40) = StringLiteral_18924/*"ef_bg_particles_23"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v31 + 40), v39, v33, v34, v35, v36, v37, v38);
+  v39 = StringLiteral_18925/*"ef_bg_particles_23"*/;
+  *(_QWORD *)(v31 + 40) = StringLiteral_18925/*"ef_bg_particles_23"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v31 + 40), v39, v33, v34, v35, v36, v37, v38);
   v235.fields.sortStr1 = (struct System_String_o *)v31;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortStr1, v31, v40, v41, v42, v43, v44, v45);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortStr1, v31, v40, v41, v42, v43, v44, v45);
   if ( *(_DWORD *)(v2 + 24) <= 1u )
     goto LABEL_41;
   *(_QWORD *)(v2 + 40) = v235.fields.sortStr1;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v2 + 40), 0, v46, v47, v48, v49, v50, v51);
-  v3 = sub_1C94140(string___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v2 + 40), 0, v46, v47, v48, v49, v50, v51);
+  v3 = sub_1C7BB90(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v58 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v59 = StringLiteral_18946/*"ef_common_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18946/*"ef_common_particles_31"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v59, v52, v53, v54, v55, v56, v57);
+  v59 = StringLiteral_18947/*"ef_common_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18947/*"ef_common_particles_31"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v59, v52, v53, v54, v55, v56, v57);
   if ( *(_DWORD *)(v58 + 24) <= 1u )
     goto LABEL_41;
-  v66 = StringLiteral_18945/*"ef_common_back_31"*/;
-  *(_QWORD *)(v58 + 40) = StringLiteral_18945/*"ef_common_back_31"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v58 + 40), v66, v60, v61, v62, v63, v64, v65);
+  v66 = StringLiteral_18946/*"ef_common_back_31"*/;
+  *(_QWORD *)(v58 + 40) = StringLiteral_18946/*"ef_common_back_31"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v58 + 40), v66, v60, v61, v62, v63, v64, v65);
   v235.fields.sortValue1 = v58;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue1, v58, v67, v68, v69, v70, v71, v72);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue1, v58, v67, v68, v69, v70, v71, v72);
   if ( *(_DWORD *)(v2 + 24) <= 2u )
     goto LABEL_41;
   *(_QWORD *)(v2 + 48) = v235.fields.sortValue1;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v2 + 48), 0, v73, v74, v75, v76, v77, v78);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v2 + 48), 0, v73, v74, v75, v76, v77, v78);
   if ( !v1 )
     goto LABEL_42;
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
     (Il2CppObject *)v2,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-  v79 = sub_1C94140(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_1C94140(string___TypeInfo, 1);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+  v79 = sub_1C7BB90(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_1C7BB90(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v86 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v87 = StringLiteral_18920/*"ef_bg_particles_11"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18920/*"ef_bg_particles_11"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v87, v80, v81, v82, v83, v84, v85);
+  v87 = StringLiteral_18921/*"ef_bg_particles_11"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18921/*"ef_bg_particles_11"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v87, v80, v81, v82, v83, v84, v85);
   v235.fields.sortValue0B = v86;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue0B, v86, v88, v89, v90, v91, v92, v93);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue0B, v86, v88, v89, v90, v91, v92, v93);
   if ( !v79 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v79 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v79 + 32) = v235.fields.sortValue0B;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v79 + 32), 0, v94, v95, v96, v97, v98, v99);
-  v3 = sub_1C94140(string___TypeInfo, 1);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v79 + 32), 0, v94, v95, v96, v97, v98, v99);
+  v3 = sub_1C7BB90(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v106 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v107 = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v107, v100, v101, v102, v103, v104, v105);
+  v107 = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v107, v100, v101, v102, v103, v104, v105);
   v235.fields.sortValue0 = v106;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue0, v106, v108, v109, v110, v111, v112, v113);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortValue0, v106, v108, v109, v110, v111, v112, v113);
   if ( *(_DWORD *)(v79 + 24) <= 1u )
     goto LABEL_41;
   *(_QWORD *)(v79 + 40) = v235.fields.sortValue0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v79 + 40), 0, v114, v115, v116, v117, v118, v119);
-  v3 = sub_1C94140(string___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v79 + 40), 0, v114, v115, v116, v117, v118, v119);
+  v3 = sub_1C7BB90(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v126 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v127 = StringLiteral_18946/*"ef_common_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18946/*"ef_common_particles_31"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v127, v120, v121, v122, v123, v124, v125);
+  v127 = StringLiteral_18947/*"ef_common_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18947/*"ef_common_particles_31"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v127, v120, v121, v122, v123, v124, v125);
   if ( *(_DWORD *)(v126 + 24) <= 1u
-    || (v134 = StringLiteral_18945/*"ef_common_back_31"*/,
-        *(_QWORD *)(v126 + 40) = StringLiteral_18945/*"ef_common_back_31"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v126 + 40), v134, v128, v129, v130, v131, v132, v133),
+    || (v134 = StringLiteral_18946/*"ef_common_back_31"*/,
+        *(_QWORD *)(v126 + 40) = StringLiteral_18946/*"ef_common_back_31"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v126 + 40), v134, v128, v129, v130, v131, v132, v133),
         *(_QWORD *)&v235.fields.sortIndex = v126,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields.sortIndex, v126, v135, v136, v137, v138, v139, v140),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields.sortIndex, v126, v135, v136, v137, v138, v139, v140),
         *(_DWORD *)(v79 + 24) <= 2u) )
   {
 LABEL_41:
-    sub_1C942F8(v3);
+    sub_1C7BD48(v3);
   }
   *(_QWORD *)(v79 + 48) = *(_QWORD *)&v235.fields.sortIndex;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v79 + 48), 0, v141, v142, v143, v144, v145, v146);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v79 + 48), 0, v141, v142, v143, v144, v145, v146);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     4,
     (Il2CppObject *)v79,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-  v147 = sub_1C94140(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_1C94140(string___TypeInfo, 1);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+  v147 = sub_1C7BB90(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_1C7BB90(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v154 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v155 = StringLiteral_18921/*"ef_bg_particles_12"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18921/*"ef_bg_particles_12"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v155, v148, v149, v150, v151, v152, v153);
+  v155 = StringLiteral_18922/*"ef_bg_particles_12"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18922/*"ef_bg_particles_12"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v155, v148, v149, v150, v151, v152, v153);
   *(_QWORD *)&v235.fields.selectNum = v154;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.fields, v154, v156, v157, v158, v159, v160, v161);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.fields, v154, v156, v157, v158, v159, v160, v161);
   if ( !v147 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v147 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v147 + 32) = *(_QWORD *)&v235.fields.selectNum;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v147 + 32), 0, v162, v163, v164, v165, v166, v167);
-  v3 = sub_1C94140(string___TypeInfo, 3);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v147 + 32), 0, v162, v163, v164, v165, v166, v167);
+  v3 = sub_1C7BB90(string___TypeInfo, 3);
   if ( !v3 )
 LABEL_42:
-    sub_1C942F0(v3, v4);
+    sub_1C7BD40(v3, v4);
   v174 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v175 = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18922/*"ef_bg_particles_21"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v175, v168, v169, v170, v171, v172, v173);
+  v175 = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18923/*"ef_bg_particles_21"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v175, v168, v169, v170, v171, v172, v173);
   if ( *(_DWORD *)(v174 + 24) <= 1u )
     goto LABEL_41;
-  v182 = StringLiteral_18923/*"ef_bg_particles_22"*/;
-  *(_QWORD *)(v174 + 40) = StringLiteral_18923/*"ef_bg_particles_22"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v174 + 40), v182, v176, v177, v178, v179, v180, v181);
+  v182 = StringLiteral_18924/*"ef_bg_particles_22"*/;
+  *(_QWORD *)(v174 + 40) = StringLiteral_18924/*"ef_bg_particles_22"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v174 + 40), v182, v176, v177, v178, v179, v180, v181);
   if ( *(_DWORD *)(v174 + 24) <= 2u )
     goto LABEL_41;
-  v189 = StringLiteral_18919/*"ef_bg_cloud_21"*/;
-  *(_QWORD *)(v174 + 48) = StringLiteral_18919/*"ef_bg_cloud_21"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v174 + 48), v189, v183, v184, v185, v186, v187, v188);
+  v189 = StringLiteral_18920/*"ef_bg_cloud_21"*/;
+  *(_QWORD *)(v174 + 48) = StringLiteral_18920/*"ef_bg_cloud_21"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v174 + 48), v189, v183, v184, v185, v186, v187, v188);
   v235.monitor = (void *)v174;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v235.monitor, v174, v190, v191, v192, v193, v194, v195);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v235.monitor, v174, v190, v191, v192, v193, v194, v195);
   if ( *(_DWORD *)(v147 + 24) <= 1u )
     goto LABEL_41;
   *(_QWORD *)(v147 + 40) = v235.monitor;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v147 + 40), 0, v196, v197, v198, v199, v200, v201);
-  v3 = sub_1C94140(string___TypeInfo, 2);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v147 + 40), 0, v196, v197, v198, v199, v200, v201);
+  v3 = sub_1C7BB90(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v208 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v209 = StringLiteral_18995/*"ef_terminal_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18995/*"ef_terminal_particles_31"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v209, v202, v203, v204, v205, v206, v207);
+  v209 = StringLiteral_18992/*"ef_terminal_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18992/*"ef_terminal_particles_31"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v209, v202, v203, v204, v205, v206, v207);
   if ( *(_DWORD *)(v208 + 24) <= 1u )
     goto LABEL_41;
-  v216 = StringLiteral_18994/*"ef_terminal_back_31"*/;
-  *(_QWORD *)(v208 + 40) = StringLiteral_18994/*"ef_terminal_back_31"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v208 + 40), v216, v210, v211, v212, v213, v214, v215);
+  v216 = StringLiteral_18991/*"ef_terminal_back_31"*/;
+  *(_QWORD *)(v208 + 40) = StringLiteral_18991/*"ef_terminal_back_31"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v208 + 40), v216, v210, v211, v212, v213, v214, v215);
   v235.klass = (GrandQuestFolderBoardItem_c *)v208;
-  sub_1C9403C(&v235, v208, v217, v218, v219, v220, v221, v222);
+  sub_1C7BA8C(&v235, v208, v217, v218, v219, v220, v221, v222);
   if ( *(_DWORD *)(v147 + 24) <= 2u )
     goto LABEL_41;
   *(_QWORD *)(v147 + 48) = v235.klass;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v147 + 48), 0, v223, v224, v225, v226, v227, v228);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v147 + 48), 0, v223, v224, v225, v226, v227, v228);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     7,
     (Il2CppObject *)v147,
-    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
   UISkinnedEffectLoad_TypeInfo->static_fields->DefaultSkinEffects = (struct System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)UISkinnedEffectLoad_TypeInfo->static_fields,
     (int32_t)v1,
     v229,
@@ -497,26 +497,26 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D2B5E6 & 1) == 0 )
+  if ( (byte_4CED446 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C94098(&ServantCommentManager_TypeInfo);
-    sub_1C94098(&UISkinnedEffectLoad_TypeInfo);
-    sub_1C94098(&StringLiteral_2908/*"BG1_SKIN_EFFECT_NAMES{0}"*/);
-    sub_1C94098(&StringLiteral_13420/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/);
-    sub_1C94098(&StringLiteral_2909/*"BG2_SKIN_EFFECT_NAMES{0}"*/);
-    byte_4D2B5E6 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C7BAE8(&ServantCommentManager_TypeInfo);
+    sub_1C7BAE8(&UISkinnedEffectLoad_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_2909/*"BG1_SKIN_EFFECT_NAMES{0}"*/);
+    sub_1C7BAE8(&StringLiteral_13422/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/);
+    sub_1C7BAE8(&StringLiteral_2910/*"BG2_SKIN_EFFECT_NAMES{0}"*/);
+    byte_4CED446 = 1;
   }
   EffectNameList = 0;
   value = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
   if ( Master_object
     && TerminalOverwriteMaster__TryGetOverwriteEffectNames(
          (TerminalOverwriteMaster_o *)Master_object,
@@ -528,13 +528,13 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
     if ( EffectNameList )
       return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                       (System_Collections_Generic_List_object__o *)EffectNameList,
-                                      (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                      (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_37:
-    sub_1C942F0(IsNullOrEmpty, v6);
+    sub_1C7BD40(IsNullOrEmpty, v6);
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v9 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   skinType = this->fields.skinType;
   v11 = (ConstantStrMaster_o *)v9;
   switch ( skinType )
@@ -542,17 +542,17 @@ LABEL_37:
     case 2:
       v21 = effectIndex;
       v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v13 = &StringLiteral_2908/*"BG1_SKIN_EFFECT_NAMES{0}"*/;
+      v13 = &StringLiteral_2909/*"BG1_SKIN_EFFECT_NAMES{0}"*/;
       break;
     case 4:
       v21 = effectIndex;
       v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v13 = &StringLiteral_2909/*"BG2_SKIN_EFFECT_NAMES{0}"*/;
+      v13 = &StringLiteral_2910/*"BG2_SKIN_EFFECT_NAMES{0}"*/;
       break;
     case 7:
       v21 = effectIndex;
       v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v13 = &StringLiteral_13420/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/;
+      v13 = &StringLiteral_13422/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/;
       break;
     default:
       return 0;
@@ -592,7 +592,7 @@ LABEL_23:
         if ( max_length > (unsigned int)effectIndex )
           return skinEffects->m_Items[effectIndex].fields.EffectName;
 LABEL_34:
-        sub_1C942F8(IsNullOrEmpty);
+        sub_1C7BD48(IsNullOrEmpty);
       }
       v18 = UISkinnedEffectLoad_TypeInfo;
       if ( !UISkinnedEffectLoad_TypeInfo->_2.cctor_finished )
@@ -607,7 +607,7 @@ LABEL_34:
                                            (System_Collections_Generic_Dictionary_TKey__TValue__o *)IsNullOrEmpty,
                                            this->fields.skinType,
                                            &value,
-                                           (const MethodInfo_34EC428 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
+                                           (const MethodInfo_34BDCC0 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
         skinEffects = (struct UISkinnedEffectLoad_skinEffect_array *)value;
@@ -650,7 +650,7 @@ System_String_array *UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v7 = replaceDatas->m_Items[v6];
     if ( !v7 )
-      sub_1C942F0(this, uiChangeType);
+      sub_1C7BD40(this, uiChangeType);
     if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
     if ( max_length == ++v6 )
@@ -722,22 +722,22 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
   int64_t v50; // x6
   System_String_o *v51; // x7
 
-  if ( (byte_4D2B5E5 & 1) == 0 )
+  if ( (byte_4CED445 & 1) == 0 )
   {
-    sub_1C94098(&CommonEffectManager_TypeInfo);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_GameObject___);
-    sub_1C94098(&System_Func_GameObject__bool__TypeInfo);
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
-    sub_1C94098(&Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__);
-    sub_1C94098(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_4D2B5E5 = 1;
+    sub_1C7BAE8(&CommonEffectManager_TypeInfo);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_GameObject___);
+    sub_1C7BAE8(&System_Func_GameObject__bool__TypeInfo);
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+    sub_1C7BAE8(&Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__);
+    sub_1C7BAE8(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_4CED445 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   if ( !Instance )
     goto LABEL_47;
   v6 = Instance[20];
@@ -760,11 +760,11 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
       v9 = UISkinnedEffectLoad___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__10_0 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_GameObject__bool__TypeInfo);
+    _9__10_0 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__10_0, v11, Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__, 0);
     static_fields = UISkinnedEffectLoad___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Func_GameObject__bool__o *)_9__10_0;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__10_0,
       (int32_t)_9__10_0,
       v13,
@@ -777,10 +777,10 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
   Instance = System_Linq_Enumerable__Where_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)setEffectList,
                (System_Func_TSource__bool__o *)_9__10_0,
-               (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_GameObject___);
+               (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_GameObject___);
   if ( !Instance )
 LABEL_47:
-    sub_1C942F0(Instance, v4);
+    sub_1C7BD40(Instance, v4);
   v19 = *(_QWORD *)Instance;
   v20 = Instance;
   v21 = *(unsigned __int16 *)(*(_QWORD *)Instance + 302LL);
@@ -799,11 +799,11 @@ LABEL_47:
   else
   {
 LABEL_16:
-    v23 = sub_1C6A420(Instance, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
+    v23 = sub_1C51E70(Instance, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
   }
   v25 = (*(__int64 (__fastcall **)(_DWORD *, _QWORD))v23)(v20, *(_QWORD *)(v23 + 8));
   if ( !v25 )
-    sub_1C942F0(0, v24);
+    sub_1C7BD40(0, v24);
   while ( 1 )
   {
     v26 = *(_QWORD *)v25;
@@ -823,7 +823,7 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v29 = sub_1C6A420(v25, System_Collections_IEnumerator_TypeInfo, 0);
+      v29 = sub_1C51E70(v25, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
       break;
@@ -844,16 +844,16 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v33 = sub_1C6A420(v25, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
+      v33 = sub_1C51E70(v25, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
     }
     v34 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
     v36 = (UnityEngine_Object_o *)v34;
     if ( !v34 )
-      sub_1C942F0(0, v35);
+      sub_1C7BD40(0, v35);
     UnityEngine_GameObject__SetActive(v34, 0, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72110972(v36, 0);
+    UnityEngine_Object__Destroy_71870148(v36, 0);
   }
   v37 = *(_QWORD *)v25;
   v38 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
@@ -872,7 +872,7 @@ LABEL_30:
   else
   {
 LABEL_40:
-    v40 = sub_1C6A420(v25, System_IDisposable_TypeInfo, 0);
+    v40 = sub_1C51E70(v25, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v40)(v25, *(_QWORD *)(v40 + 8));
 LABEL_43:
@@ -884,7 +884,7 @@ LABEL_43:
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
   v45 = CommonEffectManager__SetSkinEffects(EffectNames, v44, SetDepthZero, 0);
   p_setEffectList->klass = (GrandQuestFolderBoardItem_c *)v45;
-  sub_1C9403C(p_setEffectList, (int32_t)v45, v46, v47, v48, v49, v50, v51);
+  sub_1C7BA8C(p_setEffectList, (int32_t)v45, v46, v47, v48, v49, v50, v51);
 }
 
 
@@ -904,15 +904,15 @@ void UISkinnedEffectLoad___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2B5EA & 1) == 0 )
+  if ( (byte_4CED44A & 1) == 0 )
   {
-    sub_1C94098(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_4D2B5EA = 1;
+    sub_1C7BAE8(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_4CED44A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(UISkinnedEffectLoad___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(UISkinnedEffectLoad___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UISkinnedEffectLoad___c_TypeInfo->static_fields->__9 = (struct UISkinnedEffectLoad___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)UISkinnedEffectLoad___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -935,10 +935,10 @@ bool UISkinnedEffectLoad___c___SetEffects_b__10_0(
         UnityEngine_GameObject_o *setEffect,
         const MethodInfo *method)
 {
-  if ( (byte_4D2B5EB & 1) == 0 )
+  if ( (byte_4CED44B & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2B5EB = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CED44B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -958,7 +958,7 @@ void UISkinnedEffectLoad_skinEffect___ctor(
   System_String_o *v7; // x7
 
   this.fields.EffectName->obj.klass = (Il2CppClass *)names;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)this.fields.EffectName,
     (int32_t)names,
     (int32_t)method,

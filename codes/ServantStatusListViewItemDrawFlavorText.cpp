@@ -48,11 +48,11 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4D29C3C & 1) == 0 )
+  if ( (byte_4CEBBCF & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D29C3C = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEBBCF = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode && v6->fields.isFirst )
@@ -69,7 +69,7 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
         while ( 1 )
         {
           if ( v10 >= max_length )
-            sub_1C942F8(this);
+            sub_1C7BD48(this);
           v11 = &svtCommentEntityList->obj.klass + (int)v10;
           v12 = (ServantCommentEntity_o *)v11[4];
           if ( !v12 )
@@ -215,6 +215,6 @@ LABEL_16:
       }
     }
 LABEL_51:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
 }

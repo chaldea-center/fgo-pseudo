@@ -8,20 +8,20 @@ void RoadmapBoardListViewItem___ctor(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1C9403C(&this->fields._Atlas_k__BackingField, atlas);
+  sub_1C7BA8C(&this->fields._Atlas_k__BackingField, atlas);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1C9403C(&this->fields._SpriteName_k__BackingField, spriteName);
+  sub_1C7BA8C(&this->fields._SpriteName_k__BackingField, spriteName);
   this->fields._BoardPrefab_k__BackingField = 0;
-  sub_1C9403C(&this->fields._BoardPrefab_k__BackingField, 0);
+  sub_1C7BA8C(&this->fields._BoardPrefab_k__BackingField, 0);
 }
 
 
-void RoadmapBoardListViewItem___ctor_32716600(
+void RoadmapBoardListViewItem___ctor_32691696(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -30,14 +30,14 @@ void RoadmapBoardListViewItem___ctor_32716600(
         UnityEngine_GameObject_o *boardPrefab,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_1C9403C(&this->fields._BoardPrefab_k__BackingField, boardPrefab);
+  sub_1C7BA8C(&this->fields._BoardPrefab_k__BackingField, boardPrefab);
   this->fields._Atlas_k__BackingField = 0;
-  sub_1C9403C(&this->fields._Atlas_k__BackingField, 0);
+  sub_1C7BA8C(&this->fields._Atlas_k__BackingField, 0);
 }
 
 
@@ -82,7 +82,7 @@ int32_t RoadmapBoardListViewItem__get_TabGroup(RoadmapBoardListViewItem_o *this,
 void RoadmapBoardListViewItem__set_Atlas(RoadmapBoardListViewItem_o *this, UIAtlas_o *value, const MethodInfo *method)
 {
   this->fields._Atlas_k__BackingField = value;
-  sub_1C9403C(&this->fields._Atlas_k__BackingField, value);
+  sub_1C7BA8C(&this->fields._Atlas_k__BackingField, value);
 }
 
 
@@ -98,7 +98,7 @@ void RoadmapBoardListViewItem__set_BoardPrefab(
         const MethodInfo *method)
 {
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_1C9403C(&this->fields._BoardPrefab_k__BackingField, value);
+  sub_1C7BA8C(&this->fields._BoardPrefab_k__BackingField, value);
 }
 
 
@@ -117,7 +117,7 @@ void RoadmapBoardListViewItem__set_SpriteName(
         const MethodInfo *method)
 {
   this->fields._SpriteName_k__BackingField = value;
-  sub_1C9403C(&this->fields._SpriteName_k__BackingField, value);
+  sub_1C7BA8C(&this->fields._SpriteName_k__BackingField, value);
 }
 
 

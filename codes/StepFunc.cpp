@@ -30,10 +30,10 @@ double StepFunc__Acc5(double v, const MethodInfo *method)
 
 double StepFunc__AccDec2(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29226 & 1) == 0 )
+  if ( (byte_4CEAFF6 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29226 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF6 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -46,10 +46,10 @@ double StepFunc__AccDec2(double v, const MethodInfo *method)
 
 double StepFunc__AccDec3(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29227 & 1) == 0 )
+  if ( (byte_4CEAFF7 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29227 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF7 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -62,10 +62,10 @@ double StepFunc__AccDec3(double v, const MethodInfo *method)
 
 double StepFunc__AccDec4(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29228 & 1) == 0 )
+  if ( (byte_4CEAFF8 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29228 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -78,10 +78,10 @@ double StepFunc__AccDec4(double v, const MethodInfo *method)
 
 double StepFunc__AccDec5(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29229 & 1) == 0 )
+  if ( (byte_4CEAFF9 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29229 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF9 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -94,10 +94,10 @@ double StepFunc__AccDec5(double v, const MethodInfo *method)
 
 double StepFunc__AccSig(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29220 & 1) == 0 )
+  if ( (byte_4CEAFF0 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29220 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF0 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -107,10 +107,10 @@ double StepFunc__AccSig(double v, const MethodInfo *method)
 
 double StepFunc__AccSin(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2921E & 1) == 0 )
+  if ( (byte_4CEAFEE & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2921E = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFEE = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -120,10 +120,10 @@ double StepFunc__AccSin(double v, const MethodInfo *method)
 
 double StepFunc__Dec2(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29222 & 1) == 0 )
+  if ( (byte_4CEAFF2 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29222 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF2 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -133,10 +133,10 @@ double StepFunc__Dec2(double v, const MethodInfo *method)
 
 double StepFunc__Dec3(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29223 & 1) == 0 )
+  if ( (byte_4CEAFF3 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29223 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF3 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -146,10 +146,10 @@ double StepFunc__Dec3(double v, const MethodInfo *method)
 
 double StepFunc__Dec4(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29224 & 1) == 0 )
+  if ( (byte_4CEAFF4 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29224 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF4 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -159,10 +159,10 @@ double StepFunc__Dec4(double v, const MethodInfo *method)
 
 double StepFunc__Dec5(double v, const MethodInfo *method)
 {
-  if ( (byte_4D29225 & 1) == 0 )
+  if ( (byte_4CEAFF5 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29225 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF5 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -172,10 +172,10 @@ double StepFunc__Dec5(double v, const MethodInfo *method)
 
 double StepFunc__DecAcc2(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2922A & 1) == 0 )
+  if ( (byte_4CEAFFA & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2922A = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFFA = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -188,10 +188,10 @@ double StepFunc__DecAcc2(double v, const MethodInfo *method)
 
 double StepFunc__DecAcc3(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2922B & 1) == 0 )
+  if ( (byte_4CEAFFB & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2922B = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFFB = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -204,10 +204,10 @@ double StepFunc__DecAcc3(double v, const MethodInfo *method)
 
 double StepFunc__DecAcc4(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2922C & 1) == 0 )
+  if ( (byte_4CEAFFC & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2922C = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFFC = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -220,10 +220,10 @@ double StepFunc__DecAcc4(double v, const MethodInfo *method)
 
 double StepFunc__DecAcc5(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2922D & 1) == 0 )
+  if ( (byte_4CEAFFD & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2922D = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFFD = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -238,10 +238,10 @@ double StepFunc__DecSig(double v, const MethodInfo *method)
 {
   double result; // d0
 
-  if ( (byte_4D29221 & 1) == 0 )
+  if ( (byte_4CEAFF1 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D29221 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFF1 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -254,10 +254,10 @@ double StepFunc__DecSig(double v, const MethodInfo *method)
 
 double StepFunc__DecSin(double v, const MethodInfo *method)
 {
-  if ( (byte_4D2921F & 1) == 0 )
+  if ( (byte_4CEAFEF & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D2921F = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEAFEF = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

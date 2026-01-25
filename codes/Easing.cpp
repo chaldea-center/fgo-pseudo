@@ -282,7 +282,7 @@ LABEL_50:
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o Easing__Func_49743612(
+UnityEngine_Color_o Easing__Func_49571844(
         UnityEngine_Color_o from,
         UnityEngine_Color_o to,
         float t,
@@ -586,7 +586,7 @@ LABEL_53:
 }
 
 
-float Easing__Func_49744724(float from, float to, float t, int32_t type, const MethodInfo *method)
+float Easing__Func_49572956(float from, float to, float t, int32_t type, const MethodInfo *method)
 {
   float v5; // s8
   float v6; // s9

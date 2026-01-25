@@ -1,14 +1,14 @@
 void SelectBonusMaster___ctor(SelectBonusMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D0A1 & 1) == 0 )
+  if ( (byte_4CEEE9D & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
-    byte_4D2D0A1 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
+    byte_4CEEE9D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     526,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ SelectBonusEntity_o *SelectBonusMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2D0A2 & 1) == 0 )
+  if ( (byte_4CEEE9E & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
-    byte_4D2D0A2 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
+    byte_4CEEE9E = 1;
   }
   PK = (Il2CppObject *)SelectBonusEntity__CreatePK(eventId, idx, 0);
   return (SelectBonusEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_345FF78 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
+                                  (const MethodInfo_3432DB4 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
 }
 
 
@@ -45,25 +45,25 @@ System_Collections_Generic_List_SelectBonusEntity__o *SelectBonusMaster__GetSele
   System_Func_object__bool__o *v9; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4D2D0A0 & 1) == 0 )
+  if ( (byte_4CEEE9C & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
-    sub_1C94098(&Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
-    sub_1C94098(&System_Func_SelectBonusEntity__bool__TypeInfo);
-    sub_1C94098(&Method_SelectBonusMaster___c__DisplayClass0_0__GetSelectBonusEntitiesByEventId_b__0__);
-    sub_1C94098(&SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4D2D0A0 = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
+    sub_1C7BAE8(&System_Func_SelectBonusEntity__bool__TypeInfo);
+    sub_1C7BAE8(&Method_SelectBonusMaster___c__DisplayClass0_0__GetSelectBonusEntitiesByEventId_b__0__);
+    sub_1C7BAE8(&SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4CEEE9C = 1;
   }
-  v5 = sub_1C942E4(SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C7BD34(SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   *(_DWORD *)(v5 + 16) = eventId;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.list,
-                                                              (const MethodInfo_31CBB8C *)Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
-  v9 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_SelectBonusEntity__bool__TypeInfo);
+                                                              (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
+  v9 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_SelectBonusEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -72,10 +72,10 @@ System_Collections_Generic_List_SelectBonusEntity__o *SelectBonusMaster__GetSele
   v10 = System_Linq_Enumerable__Where_object_(
           v8,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
+          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
   return (System_Collections_Generic_List_SelectBonusEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                    v10,
-                                                                   (const MethodInfo_31E1548 *)Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
+                                                                   (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
 }
 
 
@@ -88,17 +88,17 @@ bool SelectBonusMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2D0A3 & 1) == 0 )
+  if ( (byte_4CEEE9F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
-    byte_4D2D0A3 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
+    byte_4CEEE9F = 1;
   }
   PK = (Il2CppObject *)SelectBonusEntity__CreatePK(eventId, idx, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
 }
 
 
@@ -116,6 +116,6 @@ bool SelectBonusMaster___c__DisplayClass0_0___GetSelectBonusEntitiesByEventId_b_
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   return e->fields.eventId == this->fields.eventId;
 }

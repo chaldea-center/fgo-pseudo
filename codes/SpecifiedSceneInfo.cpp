@@ -13,7 +13,7 @@ void SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const MethodInfo *met
   v2->fields.nextSceneParam = 0;
   v2 = (SpecifiedSceneInfo_o *)((char *)v2 + 24);
   v2[-1].fields.nextSceneParam = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -30,5 +30,5 @@ void SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, const MethodI
   this->fields.nextSceneParam = 0;
   p_nextSceneParam = &this->fields.nextSceneParam;
   *(p_nextSceneParam - 1) = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_nextSceneParam, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_nextSceneParam, 0, v2, v3, v4, v5, v6, v7);
 }

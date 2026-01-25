@@ -18,16 +18,16 @@ System_Collections_IEnumerator_o *CoinRoomControlEffect__AddValue(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D30647 & 1) == 0 )
+  if ( (byte_4CF23CE & 1) == 0 )
   {
-    sub_1C94098(&CoinRoomControlEffect__AddValue_d__10_TypeInfo);
-    byte_4D30647 = 1;
+    sub_1C7BAE8(&CoinRoomControlEffect__AddValue_d__10_TypeInfo);
+    byte_4CF23CE = 1;
   }
-  v3 = sub_1C942E4(CoinRoomControlEffect__AddValue_d__10_TypeInfo);
+  v3 = sub_1C7BD34(CoinRoomControlEffect__AddValue_d__10_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -44,7 +44,7 @@ void CoinRoomControlEffect__KeyEventStartAddValue(CoinRoomControlEffect_o *this,
 
   this->fields.actionTime = time;
   v4 = CoinRoomControlEffect__AddValue(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v4, 0);
 }
 
 
@@ -66,7 +66,7 @@ void CoinRoomControlEffect__SetValue(
   this->fields.endValue = endValue;
   this->fields.devideValue = maxValue;
   if ( !targetParticle )
-    sub_1C942F0(0, startValue);
+    sub_1C7BD40(0, startValue);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(targetParticle, 0).fields.m_ParticleSystem;
   UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(
     &v9,
@@ -138,7 +138,7 @@ bool CoinRoomControlEffect__AddValue_d__10__MoveNext(
     if ( _4__this )
       goto LABEL_7;
 LABEL_11:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   if ( _1__state )
     return 0;
@@ -155,7 +155,7 @@ LABEL_11:
   if ( !this )
     goto LABEL_11;
   v5->fields._mainModule_5__5 = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)this, 0);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v5->fields._mainModule_5__5, 0, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v5->fields._mainModule_5__5, 0, v7, v8, v9, v10, v11, v12);
   v5->fields._time_5__6 = 0.0;
   v13 = 0.0;
 LABEL_7:
@@ -171,7 +171,7 @@ LABEL_7:
     UnityEngine_ParticleSystem_MainModule__set_startSize(v16, &v27, 0);
     v5->fields.__2__current = 0;
     p__2__current = (GrandQuestFolderBoardItem_o *)&v5->fields.__2__current;
-    sub_1C9403C(p__2__current, 0, v18, v19, v20, v21, v22, v23);
+    sub_1C7BA8C(p__2__current, 0, v18, v19, v20, v21, v22, v23);
     result = 1;
     LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
     return result;
@@ -200,11 +200,11 @@ void __noreturn CoinRoomControlEffect__AddValue_d__10__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 

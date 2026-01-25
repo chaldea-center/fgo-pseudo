@@ -17,21 +17,21 @@ void BattleLoadMovieActionData___ctor(
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4D2EED5 & 1) == 0 )
+  if ( (byte_4CF0C48 & 1) == 0 )
   {
-    sub_1C94098(&BattleActionData_TypeInfo);
-    sub_1C94098(&BattleActionWaitCond_WaitLoadMovieComplete_TypeInfo);
-    byte_4D2EED5 = 1;
+    sub_1C7BAE8(&BattleActionData_TypeInfo);
+    sub_1C7BAE8(&BattleActionWaitCond_WaitLoadMovieComplete_TypeInfo);
+    byte_4CF0C48 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)movieName);
-  v5 = sub_1C942E4(BattleActionWaitCond_WaitLoadMovieComplete_TypeInfo);
+  v5 = sub_1C7BD34(BattleActionWaitCond_WaitLoadMovieComplete_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 1092616192;
   *(_QWORD *)(v5 + 24) = movieName;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)movieName, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)movieName, v6, v7, v8, v9, v10, v11);
   this->fields.state = 6;
   this->fields._WaitCond_k__BackingField = (struct BattleActionWaitCond_Base_o *)v5;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._WaitCond_k__BackingField, v5, v12, v13, v14, v15, v16, v17);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._WaitCond_k__BackingField, v5, v12, v13, v14, v15, v16, v17);
 }

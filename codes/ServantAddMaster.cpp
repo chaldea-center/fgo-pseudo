@@ -7,16 +7,16 @@ void ServantAddMaster___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4D2D0AC & 1) == 0 )
+  if ( (byte_4CEEEA6 & 1) == 0 )
   {
-    sub_1C94098(&ServantAddMaster_TypeInfo);
-    sub_1C94098(&StringLiteral_22985/*"presentDialogMessageId"*/);
-    byte_4D2D0AC = 1;
+    sub_1C7BAE8(&ServantAddMaster_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22980/*"presentDialogMessageId"*/);
+    byte_4CEEEA6 = 1;
   }
-  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_22985/*"presentDialogMessageId"*/;
-  sub_1C9403C(
+  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_22980/*"presentDialogMessageId"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)ServantAddMaster_TypeInfo->static_fields,
-    StringLiteral_22985/*"presentDialogMessageId"*/,
+    StringLiteral_22980/*"presentDialogMessageId"*/,
     v1,
     v2,
     v3,
@@ -28,15 +28,15 @@ void ServantAddMaster___cctor(const MethodInfo *method)
 
 void ServantAddMaster___ctor(ServantAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D0AA & 1) == 0 )
+  if ( (byte_4CEEEA4 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
-    byte_4D2D0AA = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
+    byte_4CEEEA4 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     381,
-    (const MethodInfo_345919C *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
+    (const MethodInfo_342BFD8 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
 }
 
 
@@ -51,29 +51,29 @@ System_String_o *ServantAddMaster__AddIdentifyText(
   System_String_o *v9; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D2D0AB & 1) == 0 )
+  if ( (byte_4CEEEA5 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_11939/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/);
-    byte_4D2D0AB = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11942/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/);
+    byte_4CEEEA5 = 1;
   }
   entity = 0;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          svtId,
-         (const MethodInfo_345B50C *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
+         (const MethodInfo_342E348 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_1C942F0(0, v7);
+      sub_1C7BD40(0, v7);
     IdentifyText = (Il2CppObject *)ServantAddEntity__GetIdentifyText((ServantAddEntity_o *)entity, v7);
     if ( !System_String__IsNullOrEmpty((System_String_o *)IdentifyText, 0) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11939/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/, 0);
-      return System_String__Format_64459052(v9, (Il2CppObject *)baseName, IdentifyText, 0);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11942/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/, 0);
+      return System_String__Format_64218220(v9, (Il2CppObject *)baseName, IdentifyText, 0);
     }
   }
   return baseName;

@@ -5,10 +5,10 @@ void BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v3; // x9
   int32x2_t *v4; // x8
 
-  if ( (byte_4D26ADE & 1) == 0 )
+  if ( (byte_4CE895D & 1) == 0 )
   {
-    sub_1C94098(&BoxGachaUtility_TypeInfo);
-    byte_4D26ADE = 1;
+    sub_1C7BAE8(&BoxGachaUtility_TypeInfo);
+    byte_4CE895D = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -30,17 +30,17 @@ void BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, cons
   __int64 v7; // x1
   int32_t v8; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D26ADD & 1) == 0 )
+  if ( (byte_4CE895C & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&StringLiteral_20587/*"img_gachatxt_{0:D2}"*/);
-    byte_4D26ADD = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_20581/*"img_gachatxt_{0:D2}"*/);
+    byte_4CE895C = 1;
   }
   v8 = num;
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v6 = System_String__Format((System_String_o *)StringLiteral_20587/*"img_gachatxt_{0:D2}"*/, v5, 0);
+  v6 = System_String__Format((System_String_o *)StringLiteral_20581/*"img_gachatxt_{0:D2}"*/, v5, 0);
   if ( !sprite )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   UISprite__set_spriteName(sprite, v6, 0);
   ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     sprite,
@@ -70,10 +70,10 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4D26ADC & 1) == 0 )
+  if ( (byte_4CE895B & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1C94098(&BoxGachaUtility_TypeInfo);
-    byte_4D26ADC = 1;
+    *(_QWORD *)&gachaTime = sub_1C7BAE8(&BoxGachaUtility_TypeInfo);
+    byte_4CE895B = 1;
   }
   if ( v8 < 10 )
     goto LABEL_9;
@@ -140,7 +140,7 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1C942F0(*(_QWORD *)&gachaTime, oneDigit);
+    sub_1C7BD40(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;

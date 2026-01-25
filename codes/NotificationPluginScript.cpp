@@ -11,7 +11,7 @@ void NotificationPluginScript__ClearAll(const MethodInfo *method)
 
   v1 = NotificationPluginScript__Setup(method);
   if ( !v1 )
-    sub_1C942F0(0, v2);
+    sub_1C7BD40(0, v2);
   ((void (__fastcall *)(LocalNotificationService_o *, const MethodInfo *))v1->klass->vtable._6_CancelAll.methodPtr)(
     v1,
     v1->klass->vtable._6_CancelAll.method);
@@ -25,7 +25,7 @@ void NotificationPluginScript__ClearLocalNotification(System_String_o *key, cons
 
   v3 = NotificationPluginScript__Setup((const MethodInfo *)key);
   if ( !v3 )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, const MethodInfo *))v3->klass->vtable._5_Cancel.methodPtr)(
     v3,
     key,
@@ -45,7 +45,7 @@ void NotificationPluginScript__SetLocalNotification(
 
   v7 = NotificationPluginScript__Setup(*(const MethodInfo **)&interval);
   if ( !v7 )
-    sub_1C942F0(0, v8);
+    sub_1C7BD40(0, v8);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, System_String_o *, _QWORD, const MethodInfo *))v7->klass->vtable._4_Schedule.methodPtr)(
     v7,
     key,
@@ -67,19 +67,19 @@ LocalNotificationService_o *NotificationPluginScript__Setup(const MethodInfo *me
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2E2E4 & 1) == 0 )
+  if ( (byte_4CF0053 & 1) == 0 )
   {
-    sub_1C94098(&LocalNotificationServiceAndroid_TypeInfo);
-    sub_1C94098(&NotificationPluginScript_TypeInfo);
-    byte_4D2E2E4 = 1;
+    sub_1C7BAE8(&LocalNotificationServiceAndroid_TypeInfo);
+    sub_1C7BAE8(&NotificationPluginScript_TypeInfo);
+    byte_4CF0053 = 1;
   }
   result = NotificationPluginScript_TypeInfo->static_fields->_service;
   if ( !result )
   {
-    v2 = (LocalNotificationServiceAndroid_o *)sub_1C942E4(LocalNotificationServiceAndroid_TypeInfo);
+    v2 = (LocalNotificationServiceAndroid_o *)sub_1C7BD34(LocalNotificationServiceAndroid_TypeInfo);
     LocalNotificationServiceAndroid___ctor(v2, v3);
     NotificationPluginScript_TypeInfo->static_fields->_service = (struct LocalNotificationService_o *)v2;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)NotificationPluginScript_TypeInfo->static_fields,
       (int32_t)v2,
       v4,

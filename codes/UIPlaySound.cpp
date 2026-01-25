@@ -12,10 +12,10 @@ void UIPlaySound__OnClick(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EC3 & 1) == 0 )
+  if ( (byte_4CF2CF5 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EC3 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF5 = 1;
   }
   if ( UIPlaySound__get_canPlay(this, method) && !this->fields.trigger )
   {
@@ -24,7 +24,7 @@ void UIPlaySound__OnClick(UIPlaySound_o *this, const MethodInfo *method)
     pitch = this->fields.pitch;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
   }
 }
 
@@ -35,10 +35,10 @@ void UIPlaySound__OnDisable(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EC0 & 1) == 0 )
+  if ( (byte_4CF2CF2 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EC0 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF2 = 1;
   }
   if ( this->fields.trigger == 7 )
   {
@@ -47,7 +47,7 @@ void UIPlaySound__OnDisable(UIPlaySound_o *this, const MethodInfo *method)
     pitch = this->fields.pitch;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
   }
 }
 
@@ -58,10 +58,10 @@ void UIPlaySound__OnEnable(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EBF & 1) == 0 )
+  if ( (byte_4CF2CF1 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EBF = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF1 = 1;
   }
   if ( this->fields.trigger == 6 )
   {
@@ -70,7 +70,7 @@ void UIPlaySound__OnEnable(UIPlaySound_o *this, const MethodInfo *method)
     pitch = this->fields.pitch;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
   }
 }
 
@@ -83,10 +83,10 @@ void UIPlaySound__OnHover(UIPlaySound_o *this, bool isOver, const MethodInfo *me
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EC1 & 1) == 0 )
+  if ( (byte_4CF2CF3 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EC1 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF3 = 1;
   }
   if ( this->fields.trigger == 1 )
   {
@@ -111,7 +111,7 @@ void UIPlaySound__OnHover(UIPlaySound_o *this, bool isOver, const MethodInfo *me
     pitch = this->fields.pitch;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
   }
 }
 
@@ -124,10 +124,10 @@ void UIPlaySound__OnPress(UIPlaySound_o *this, bool isPressed, const MethodInfo 
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EC2 & 1) == 0 )
+  if ( (byte_4CF2CF4 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EC2 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF4 = 1;
   }
   if ( this->fields.trigger == 3 )
   {
@@ -152,7 +152,7 @@ void UIPlaySound__OnPress(UIPlaySound_o *this, bool isPressed, const MethodInfo 
     pitch = this->fields.pitch;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
   }
 }
 
@@ -163,10 +163,10 @@ void UIPlaySound__OnSelect(UIPlaySound_o *this, bool isSelected, const MethodInf
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4D30EC4 & 1) == 0 )
+  if ( (byte_4CF2CF6 & 1) == 0 )
   {
-    sub_1C94098(&UICamera_TypeInfo);
-    byte_4D30EC4 = 1;
+    sub_1C7BAE8(&UICamera_TypeInfo);
+    byte_4CF2CF6 = 1;
   }
   if ( UIPlaySound__get_canPlay(this, (const MethodInfo *)isSelected) )
   {
@@ -191,17 +191,17 @@ void UIPlaySound__Play(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s8
   float volume; // s9
 
-  if ( (byte_4D30EC5 & 1) == 0 )
+  if ( (byte_4CF2CF7 & 1) == 0 )
   {
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D30EC5 = 1;
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2CF7 = 1;
   }
   audioClip = this->fields.audioClip;
   volume = this->fields.volume;
   pitch = this->fields.pitch;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__PlaySound_50036980(audioClip, volume, pitch, 0);
+  NGUITools__PlaySound_49865212(audioClip, volume, pitch, 0);
 }
 
 
@@ -211,24 +211,24 @@ bool UIPlaySound__get_canPlay(UIPlaySound_o *this, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4D30EBE & 1) == 0 )
+  if ( (byte_4CF2CF0 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30EBE = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2CF0 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
     return 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v4 )
     return 1;
   if ( !Component_object )
-    sub_1C942F0(v4, v5);
+    sub_1C7BD40(v4, v5);
   return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[4].methodPtr)(
            Component_object,
            Component_object->klass->vtable[4].method);

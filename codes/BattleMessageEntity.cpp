@@ -1,28 +1,28 @@
 void BattleMessageEntity___ctor(BattleMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C488 & 1) == 0 )
+  if ( (byte_4CEE2D2 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2C488 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEE2D2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleMessageEntity__CreatePK(int32_t id, int32_t idx, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4D2C485 & 1) == 0 )
+  if ( (byte_4CEE2D0 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4D2C485 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CEE2D0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            idx,
            priority,
-           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_316EA0C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -34,47 +34,20 @@ System_String_o *BattleMessageEntity__CreatePrimaryKey(BattleMessageEntity_o *th
 }
 
 
-float BattleMessageEntity__GetScriptFloat(
-        BattleMessageEntity_o *this,
-        System_String_o *key,
-        int32_t def,
-        const MethodInfo *method)
-{
-  int32_t ScriptInt; // w0
-  BattleDataDefine_c *v8; // x8
-  int v9; // w19
-
-  if ( (byte_4D2C486 & 1) == 0 )
-  {
-    sub_1C94098(&BattleDataDefine_TypeInfo);
-    byte_4D2C486 = 1;
-  }
-  ScriptInt = BattleMessageEntity__GetScriptInt(this, key, def, method);
-  v8 = BattleDataDefine_TypeInfo;
-  v9 = ScriptInt;
-  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v8 = BattleDataDefine_TypeInfo;
-  }
-  return (float)v9 / v8->static_fields->PERMILLAGE_DENOMINATOR;
-}
-
-
 int32_t BattleMessageEntity__GetScriptInt(
         BattleMessageEntity_o *this,
         System_String_o *key,
         int64_t def,
         const MethodInfo *method)
 {
-  if ( (byte_4D2C487 & 1) == 0 )
+  if ( (byte_4CEE2D1 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_GetValue_long___);
-    byte_4D2C487 = 1;
+    sub_1C7BAE8(&Method_BasicHelper_GetValue_long___);
+    byte_4CEE2D1 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            key,
            def,
-           (const MethodInfo_3189950 *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_315DC10 *)Method_BasicHelper_GetValue_long___);
 }

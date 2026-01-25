@@ -19,7 +19,7 @@ void CampaignNoticeObject__Initialize(
   this->fields.onClick = onClick;
   p_onClick = &this->fields.onClick;
   *((_DWORD *)p_onClick - 2) = id;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)p_onClick,
     (int32_t)onClick,
     (int32_t)onClick,
@@ -62,20 +62,20 @@ void CampaignNoticeObject__StartUpdateLimitTime(
   System_String_o *v16; // x7
   __int64 v17; // x1
 
-  if ( (byte_4D291E4 & 1) == 0 )
+  if ( (byte_4CEAFB4 & 1) == 0 )
   {
-    sub_1C94098(&ShopNoticeRemainTimeLabel_TypeInfo);
-    byte_4D291E4 = 1;
+    sub_1C7BAE8(&ShopNoticeRemainTimeLabel_TypeInfo);
+    byte_4CEAFB4 = 1;
   }
   p_remainTimeLabelObject = &this->fields.remainTimeLabelObject;
   remainTimeLabelObject = this->fields.remainTimeLabelObject;
   if ( !remainTimeLabelObject )
   {
     campaignRemainingTimeLabel = this->fields.campaignRemainingTimeLabel;
-    v10 = (ShopNoticeRemainTimeLabel_o *)sub_1C942E4(ShopNoticeRemainTimeLabel_TypeInfo);
+    v10 = (ShopNoticeRemainTimeLabel_o *)sub_1C7BD34(ShopNoticeRemainTimeLabel_TypeInfo);
     ShopNoticeRemainTimeLabel___ctor(v10, campaignRemainingTimeLabel, monoBehaviour, 0);
     this->fields.remainTimeLabelObject = v10;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.remainTimeLabelObject,
       (int32_t)v10,
       v11,
@@ -92,7 +92,7 @@ void CampaignNoticeObject__StartUpdateLimitTime(
   remainTimeLabelObject = *p_remainTimeLabelObject;
   if ( !*p_remainTimeLabelObject )
 LABEL_7:
-    sub_1C942F0(remainTimeLabelObject, v17);
+    sub_1C7BD40(remainTimeLabelObject, v17);
   ShopNoticeRemainTimeLabel__Start(remainTimeLabelObject, 0);
 }
 

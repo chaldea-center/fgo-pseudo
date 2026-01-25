@@ -1,10 +1,10 @@
-void WeightRate_int____ctor(WeightRate_int__o *this, const MethodInfo_3C84680 *method)
+void WeightRate_int____ctor(WeightRate_int__o *this, const MethodInfo_3C54A68 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool WeightRate_int___HasWeight(WeightRate_int__o *this, int32_t t, const MethodInfo_3C83E80 *method)
+bool WeightRate_int___HasWeight(WeightRate_int__o *this, int32_t t, const MethodInfo_3C54268 *method)
 {
   __int64 _20_WeightRate___c__DisplayClass5_0_T___ctor; // x8
   __int64 v7; // x20
@@ -16,32 +16,32 @@ bool WeightRate_int___HasWeight(WeightRate_int__o *this, int32_t t, const Method
 
   _20_WeightRate___c__DisplayClass5_0_T___ctor = (__int64)method->klass->rgctx_data->_20_WeightRate___c__DisplayClass5_0_T___ctor;
   if ( (*(_BYTE *)(_20_WeightRate___c__DisplayClass5_0_T___ctor + 309) & 1) == 0 )
-    _20_WeightRate___c__DisplayClass5_0_T___ctor = sub_1C6A12C();
-  v7 = sub_1C942E4(_20_WeightRate___c__DisplayClass5_0_T___ctor);
+    _20_WeightRate___c__DisplayClass5_0_T___ctor = sub_1C51B7C();
+  v7 = sub_1C7BD34(_20_WeightRate___c__DisplayClass5_0_T___ctor);
   WeightRate___c__DisplayClass5_0_int____ctor(
     (WeightRate___c__DisplayClass5_0_T__o *)v7,
-    (const MethodInfo_3372094 *)method->klass->rgctx_data->_21_WeightRate___c__DisplayClass5_0_T___HasWeight_b__0);
+    (const MethodInfo_3344250 *)method->klass->rgctx_data->_21_WeightRate___c__DisplayClass5_0_T___HasWeight_b__0);
   if ( !v7 )
-    sub_1C942F0(v8, v9);
+    sub_1C7BD40(v8, v9);
   *(_DWORD *)(v7 + 16) = t;
   list = (System_Collections_Generic_List_T__o *)this->fields.list;
   _23_System_Func_WeightRate_WeightSeed_T___bool___ctor = (__int64)method->klass->rgctx_data->_23_System_Func_WeightRate_WeightSeed_T___bool___ctor;
   if ( (*(_BYTE *)(_23_System_Func_WeightRate_WeightSeed_T___bool___ctor + 309) & 1) == 0 )
-    _23_System_Func_WeightRate_WeightSeed_T___bool___ctor = sub_1C6A12C();
-  v12 = (System_Func_object__bool__o *)sub_1C942E4(_23_System_Func_WeightRate_WeightSeed_T___bool___ctor);
+    _23_System_Func_WeightRate_WeightSeed_T___bool___ctor = sub_1C51B7C();
+  v12 = (System_Func_object__bool__o *)sub_1C7BD34(_23_System_Func_WeightRate_WeightSeed_T___bool___ctor);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v7,
     (intptr_t)method->klass->rgctx_data->_22_System_Func_WeightRate_WeightSeed_T___bool_,
-    (const MethodInfo_36FB138 *)method->klass->rgctx_data->_24_BasicHelper_Any_WeightRate_WeightSeed_T__);
+    (const MethodInfo_36CCF78 *)method->klass->rgctx_data->_24_BasicHelper_Any_WeightRate_WeightSeed_T__);
   return BasicHelper__Any_object_(
            list,
            (System_Func_T__bool__o *)v12,
-           (const MethodInfo_3185468 *)method->klass->rgctx_data->_25_System_Collections_Generic_List_WeightRate_WeightSeed_T___get_Count);
+           (const MethodInfo_3159728 *)method->klass->rgctx_data->_25_System_Collections_Generic_List_WeightRate_WeightSeed_T___get_Count);
 }
 
 
-void WeightRate_int___ReverseWeight(WeightRate_int__o *this, const MethodInfo_3C843FC *method)
+void WeightRate_int___ReverseWeight(WeightRate_int__o *this, const MethodInfo_3C547E4 *method)
 {
   __int64 _1_System_Collections_Generic_List_WeightRate_WeightSeed_T; // x8
   System_Collections_Generic_List_object__o *v5; // x20
@@ -73,70 +73,70 @@ void WeightRate_int___ReverseWeight(WeightRate_int__o *this, const MethodInfo_3C
 
   _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_1_System_Collections_Generic_List_WeightRate_WeightSeed_T__;
   if ( (*(_BYTE *)(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C6A12C();
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C942E4(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
+    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C51B7C();
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_386A600 *)method->klass->rgctx_data->_2_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
+    (const MethodInfo_383E5C8 *)method->klass->rgctx_data->_2_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
   list = (System_Collections_Generic_List_object__o *)this->fields.list;
   if ( !list
     || (list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                               list,
-                                                              (const MethodInfo_386C98C *)method->klass->rgctx_data->_32_WeightRate_WeightSeed_T___),
+                                                              (const MethodInfo_3840954 *)method->klass->rgctx_data->_32_WeightRate_WeightSeed_T___),
         !v5) )
   {
 LABEL_34:
-    sub_1C942F0(list, v6);
+    sub_1C7BD40(list, v6);
   }
   System_Collections_Generic_List_object___AddRange(
     v5,
     (System_Collections_Generic_IEnumerable_T__o *)list,
-    (const MethodInfo_386B040 *)method->klass->rgctx_data->_34_WeightRate___c_T_);
+    (const MethodInfo_383F008 *)method->klass->rgctx_data->_34_WeightRate___c_T_);
   _37_WeightRate___c_T___ReverseWeight_b__12_0 = (__int64)method->klass->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
   if ( (*(_BYTE *)(_37_WeightRate___c_T___ReverseWeight_b__12_0 + 309) & 1) == 0 )
-    _37_WeightRate___c_T___ReverseWeight_b__12_0 = sub_1C6A12C();
+    _37_WeightRate___c_T___ReverseWeight_b__12_0 = sub_1C51B7C();
   if ( !*(_DWORD *)(_37_WeightRate___c_T___ReverseWeight_b__12_0 + 224) )
     j_il2cpp_runtime_class_init_0(_37_WeightRate___c_T___ReverseWeight_b__12_0);
   v9 = (__int64)method->klass->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C6A12C();
+    v9 = sub_1C51B7C();
   v10 = *(System_Comparison_T__o **)(*(_QWORD *)(v9 + 184) + 8LL);
   if ( !v10 )
   {
     v11 = (__int64)method->klass->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-      v11 = sub_1C6A12C();
+      v11 = sub_1C51B7C();
     if ( !*(_DWORD *)(v11 + 224) )
       j_il2cpp_runtime_class_init_0(v11);
     rgctx_data = method->klass->rgctx_data;
     v13 = (__int64)rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
     {
-      v13 = sub_1C6A12C();
+      v13 = sub_1C51B7C();
       rgctx_data = method->klass->rgctx_data;
     }
     _36_WeightRate___c_T = (__int64)rgctx_data->_36_WeightRate___c_T_;
     v15 = **(Il2CppObject ***)(v13 + 184);
     if ( (*(_BYTE *)(_36_WeightRate___c_T + 309) & 1) == 0 )
-      _36_WeightRate___c_T = sub_1C6A12C();
-    v10 = (System_Comparison_T__o *)sub_1C942E4(_36_WeightRate___c_T);
+      _36_WeightRate___c_T = sub_1C51B7C();
+    v10 = (System_Comparison_T__o *)sub_1C7BD34(_36_WeightRate___c_T);
     System_Comparison_object____ctor(
       v10,
       v15,
       (intptr_t)method->klass->rgctx_data->_38_System_Comparison_WeightRate_WeightSeed_T____ctor,
-      (const MethodInfo_3431F34 *)method->klass->rgctx_data->_39_System_Collections_Generic_List_WeightRate_WeightSeed_T___Sort);
+      (const MethodInfo_3404E24 *)method->klass->rgctx_data->_39_System_Collections_Generic_List_WeightRate_WeightSeed_T___Sort);
     v22 = method->klass->rgctx_data;
     v23 = (__int64)v22->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
     {
-      v23 = sub_1C6A12C();
+      v23 = sub_1C51B7C();
       v22 = method->klass->rgctx_data;
     }
     *(_QWORD *)(*(_QWORD *)(v23 + 184) + 8LL) = v10;
     v24 = (__int64)v22->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v24 + 309) & 1) == 0 )
-      v24 = sub_1C6A12C();
-    sub_1C9403C(
+      v24 = sub_1C51B7C();
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)(*(_QWORD *)(v24 + 184) + 8LL),
       (int32_t)v10,
       v16,
@@ -146,10 +146,10 @@ LABEL_34:
       v20,
       v21);
   }
-  System_Collections_Generic_List_object___Sort_59164920(
+  System_Collections_Generic_List_object___Sort_58984640(
     v5,
     v10,
-    (const MethodInfo_386C8F8 *)method->klass->rgctx_data[1]._0_WeightRate_T_);
+    (const MethodInfo_38408C0 *)method->klass->rgctx_data[1]._0_WeightRate_T_);
   size = v5->fields._size;
   if ( size >= 1 )
   {
@@ -163,18 +163,18 @@ LABEL_34:
       list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             v5,
                                                             v26,
-                                                            (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+                                                            (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
       if ( !list )
         goto LABEL_34;
       items = (int)list->fields._items;
       Item = System_Collections_Generic_List_object___get_Item(
                v5,
                v26,
-               (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+               (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
       list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             v5,
                                                             v28,
-                                                            (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+                                                            (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
       if ( !list )
         goto LABEL_34;
       if ( !Item )
@@ -183,7 +183,7 @@ LABEL_34:
       list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             v5,
                                                             v28,
-                                                            (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+                                                            (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
       if ( !list )
         goto LABEL_34;
       LODWORD(list->fields._items) = items;
@@ -196,7 +196,7 @@ LABEL_34:
 }
 
 
-void WeightRate_int___SetAdjust(WeightRate_int__o *this, const MethodInfo_3C83F70 *method)
+void WeightRate_int___SetAdjust(WeightRate_int__o *this, const MethodInfo_3C54358 *method)
 {
   System_Collections_Generic_List_object__o *list; // x0
   int32_t v5; // w22
@@ -206,7 +206,7 @@ void WeightRate_int___SetAdjust(WeightRate_int__o *this, const MethodInfo_3C83F7
   list = (System_Collections_Generic_List_object__o *)this->fields.list;
   if ( !list )
 LABEL_8:
-    sub_1C942F0(list, method);
+    sub_1C7BD40(list, method);
   v5 = 0;
   v6 = 0;
   while ( v6 < list->fields._size )
@@ -214,7 +214,7 @@ LABEL_8:
     list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                           list,
                                                           v6,
-                                                          (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+                                                          (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
     if ( list )
     {
       ++LODWORD(list->fields._items);
@@ -224,7 +224,7 @@ LABEL_8:
         list = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               list,
                                                               v6,
-                                                              (const MethodInfo_386AB64 *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
+                                                              (const MethodInfo_383EB2C *)method->klass->rgctx_data->_27_System_Activator_CreateInstance_T_);
         if ( list )
         {
           items = (int)list->fields._items;
@@ -242,13 +242,13 @@ LABEL_8:
 }
 
 
-bool WeightRate_int___checkWeight(WeightRate_int__o *this, const MethodInfo_3C83F48 *method)
+bool WeightRate_int___checkWeight(WeightRate_int__o *this, const MethodInfo_3C54330 *method)
 {
   return this->fields.totalweight > 0;
 }
 
 
-int32_t WeightRate_int___getCount(WeightRate_int__o *this, const MethodInfo_3C83F58 *method)
+int32_t WeightRate_int___getCount(WeightRate_int__o *this, const MethodInfo_3C54340 *method)
 {
   struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *list; // x8
 
@@ -260,7 +260,7 @@ int32_t WeightRate_int___getCount(WeightRate_int__o *this, const MethodInfo_3C83
 }
 
 
-int32_t WeightRate_int___getData(WeightRate_int__o *this, int32_t keywieght, const MethodInfo_3C84010 *method)
+int32_t WeightRate_int___getData(WeightRate_int__o *this, int32_t keywieght, const MethodInfo_3C543F8 *method)
 {
   int32_t totalweight; // w22
   __int64 Instance_int; // x0
@@ -274,40 +274,40 @@ int32_t WeightRate_int___getData(WeightRate_int__o *this, int32_t keywieght, con
   v14.fields._list = 0;
   *(_QWORD *)&v14.fields._index = 0;
   totalweight = this->fields.totalweight;
-  Instance_int = System_Activator__CreateInstance_int_((const MethodInfo_30E67F4 *)method->klass->rgctx_data->_28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
+  Instance_int = System_Activator__CreateInstance_int_((const MethodInfo_30BA264 *)method->klass->rgctx_data->_28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
   list = (System_Collections_Generic_List_object__o *)this->fields.list;
   if ( !list )
-    sub_1C942F0(Instance_int, v8);
+    sub_1C7BD40(Instance_int, v8);
   klass_high = Instance_int;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     list,
-    (const MethodInfo_386B92C *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
+    (const MethodInfo_383F8F4 *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
   do
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v14,
-            (const MethodInfo_35EC1C0 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
+            (const MethodInfo_35BDF98 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
     if ( !v11 )
       break;
     if ( !v14.fields._current )
-      sub_1C942F0(v11, v12);
+      sub_1C7BD40(v11, v12);
     klass_high = HIDWORD(v14.fields._current[1].klass);
     totalweight -= LODWORD(v14.fields._current[1].klass);
   }
   while ( totalweight > keywieght );
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_35EC1BC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+    (const MethodInfo_35BDF94 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
   return klass_high;
 }
 
 
-int32_t WeightRate_int___getData_63455544(
+int32_t WeightRate_int___getData_63259936(
         WeightRate_int__o *this,
         int32_t keyWeight,
         int32_t skipValue,
-        const MethodInfo_3C84138 *method)
+        const MethodInfo_3C54520 *method)
 {
   int32_t totalweight; // w26
   int32_t Instance_int; // w0
@@ -332,84 +332,84 @@ int32_t WeightRate_int___getData_63455544(
 
   memset(&v27, 0, sizeof(v27));
   totalweight = this->fields.totalweight;
-  Instance_int = System_Activator__CreateInstance_int_((const MethodInfo_30E67F4 *)method->klass->rgctx_data->_28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
+  Instance_int = System_Activator__CreateInstance_int_((const MethodInfo_30BA264 *)method->klass->rgctx_data->_28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
   list = (System_Collections_Generic_IEnumerable_T__o *)this->fields.list;
   klass_high = Instance_int;
   _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_1_System_Collections_Generic_List_WeightRate_WeightSeed_T__;
   if ( (*(_BYTE *)(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C6A12C();
-  v13 = (System_Collections_Generic_List_object__o *)sub_1C942E4(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
-  System_Collections_Generic_List_object____ctor_59156264(
+    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C51B7C();
+  v13 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
+  System_Collections_Generic_List_object____ctor_58975984(
     v13,
     list,
-    (const MethodInfo_386A728 *)method->klass->rgctx_data->_29_System_Collections_Generic_IEnumerable_WeightRate_WeightSeed_T__);
+    (const MethodInfo_383E6F0 *)method->klass->rgctx_data->_29_System_Collections_Generic_IEnumerable_WeightRate_WeightSeed_T__);
   if ( !v13 )
-    sub_1C942F0(v14, v15);
+    sub_1C7BD40(v14, v15);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     v13,
-    (const MethodInfo_386B92C *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
+    (const MethodInfo_383F8F4 *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
   v27 = v26;
   while ( 1 )
   {
     v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v27,
-            (const MethodInfo_35EC1C0 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
+            (const MethodInfo_35BDF98 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
     if ( !v16 )
       break;
     current = v27.fields._current;
     if ( !v27.fields._current )
-      sub_1C942F0(v16, v17);
+      sub_1C7BD40(v16, v17);
     rgctx_data = method->klass->rgctx_data;
     LODWORD(v26.fields._list) = HIDWORD(v27.fields._current[1].klass);
     v20 = j_il2cpp_value_box_0(rgctx_data->_3_T, &v26);
     v28 = skipValue;
     v21 = (Il2CppObject *)v20;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(method->klass->rgctx_data->_3_T, &v28);
-    if ( System_Object__Equals_66266984(v21, v22, 0) )
+    if ( System_Object__Equals_66026160(v21, v22, 0) )
     {
       System_Collections_Generic_List_object___Remove(
         v13,
         current,
-        (const MethodInfo_386C35C *)method->klass->rgctx_data->_31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray);
+        (const MethodInfo_3840324 *)method->klass->rgctx_data->_31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray);
       break;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_35EC1BC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+    (const MethodInfo_35BDF94 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     v13,
-    (const MethodInfo_386B92C *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
+    (const MethodInfo_383F8F4 *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
   v27 = v26;
   do
   {
     v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v27,
-            (const MethodInfo_35EC1C0 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
+            (const MethodInfo_35BDF98 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
     if ( !v23 )
       break;
     if ( !v27.fields._current )
-      sub_1C942F0(v23, v24);
+      sub_1C7BD40(v23, v24);
     klass_high = HIDWORD(v27.fields._current[1].klass);
     totalweight -= LODWORD(v27.fields._current[1].klass);
   }
   while ( totalweight > keyWeight );
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_35EC1BC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+    (const MethodInfo_35BDF94 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
   return klass_high;
 }
 
 
-int32_t WeightRate_int___getTotalWeight(WeightRate_int__o *this, const MethodInfo_3C83F40 *method)
+int32_t WeightRate_int___getTotalWeight(WeightRate_int__o *this, const MethodInfo_3C54328 *method)
 {
   return this->fields.totalweight;
 }
 
 
-void WeightRate_int___removeWeight(WeightRate_int__o *this, int32_t t, const MethodInfo_3C83CD4 *method)
+void WeightRate_int___removeWeight(WeightRate_int__o *this, int32_t t, const MethodInfo_3C540BC *method)
 {
   __int64 _7_WeightRate___c__DisplayClass4_0_T; // x8
   __int64 v7; // x22
@@ -426,56 +426,56 @@ void WeightRate_int___removeWeight(WeightRate_int__o *this, int32_t t, const Met
   memset(&v16, 0, sizeof(v16));
   _7_WeightRate___c__DisplayClass4_0_T = (__int64)method->klass->rgctx_data->_7_WeightRate___c__DisplayClass4_0_T_;
   if ( (*(_BYTE *)(_7_WeightRate___c__DisplayClass4_0_T + 309) & 1) == 0 )
-    _7_WeightRate___c__DisplayClass4_0_T = sub_1C6A12C();
-  v7 = sub_1C942E4(_7_WeightRate___c__DisplayClass4_0_T);
+    _7_WeightRate___c__DisplayClass4_0_T = sub_1C51B7C();
+  v7 = sub_1C7BD34(_7_WeightRate___c__DisplayClass4_0_T);
   WeightRate___c__DisplayClass4_0_int____ctor(
     (WeightRate___c__DisplayClass4_0_T__o *)v7,
-    (const MethodInfo_33705A8 *)method->klass->rgctx_data->_8_WeightRate___c__DisplayClass4_0_T___ctor);
+    (const MethodInfo_3342764 *)method->klass->rgctx_data->_8_WeightRate___c__DisplayClass4_0_T___ctor);
   if ( !v7 )
     goto LABEL_14;
   *(_DWORD *)(v7 + 16) = t;
   list = (System_Collections_Generic_List_object__o *)this->fields.list;
   _10_System_Predicate_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_10_System_Predicate_WeightRate_WeightSeed_T__;
   if ( (*(_BYTE *)(_10_System_Predicate_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _10_System_Predicate_WeightRate_WeightSeed_T = sub_1C6A12C();
-  v12 = (System_Predicate_object__o *)sub_1C942E4(_10_System_Predicate_WeightRate_WeightSeed_T);
+    _10_System_Predicate_WeightRate_WeightSeed_T = sub_1C51B7C();
+  v12 = (System_Predicate_object__o *)sub_1C7BD34(_10_System_Predicate_WeightRate_WeightSeed_T);
   System_Predicate_object____ctor(
     v12,
     (Il2CppObject *)v7,
     (intptr_t)method->klass->rgctx_data->_9_WeightRate___c__DisplayClass4_0_T___removeWeight_b__0,
-    (const MethodInfo_3A08F48 *)method->klass->rgctx_data->_11_System_Predicate_WeightRate_WeightSeed_T____ctor);
+    (const MethodInfo_39DA870 *)method->klass->rgctx_data->_11_System_Predicate_WeightRate_WeightSeed_T____ctor);
   if ( !list
     || (System_Collections_Generic_List_object___RemoveAll(
           list,
           (System_Predicate_T__o *)v12,
-          (const MethodInfo_386C490 *)method->klass->rgctx_data->_12_System_Collections_Generic_List_WeightRate_WeightSeed_T___RemoveAll),
+          (const MethodInfo_3840458 *)method->klass->rgctx_data->_12_System_Collections_Generic_List_WeightRate_WeightSeed_T___RemoveAll),
         (v8 = (System_Collections_Generic_List_object__o *)this->fields.list) == 0) )
   {
 LABEL_14:
-    sub_1C942F0(v8, v9);
+    sub_1C7BD40(v8, v9);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     v8,
-    (const MethodInfo_386B92C *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
+    (const MethodInfo_383F8F4 *)method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator);
   for ( i = 0; ; i += *(_DWORD *)((char *)&v16.fields._current->klass + (unsigned __int64)&word_10) )
   {
     v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_35EC1C0 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
+            (const MethodInfo_35BDF98 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext);
     if ( !v14 )
       break;
     if ( !v16.fields._current )
-      sub_1C942F0(v14, v15);
+      sub_1C7BD40(v14, v15);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_35EC1BC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+    (const MethodInfo_35BDF94 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
   this->fields.totalweight = i;
 }
 
 
-void WeightRate_int___setWeight(WeightRate_int__o *this, int32_t weight, int32_t t, const MethodInfo_3C83B9C *method)
+void WeightRate_int___setWeight(WeightRate_int__o *this, int32_t weight, int32_t t, const MethodInfo_3C53F84 *method)
 {
   System_Collections_Generic_List_object__o *list; // x22
   GrandQuestFolderBoardItem_o *p_fields; // x24
@@ -513,21 +513,21 @@ void WeightRate_int___setWeight(WeightRate_int__o *this, int32_t weight, int32_t
   {
     _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_1_System_Collections_Generic_List_WeightRate_WeightSeed_T__;
     if ( (*(_BYTE *)(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-      _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C6A12C();
-    v12 = (System_Collections_Generic_List_object__o *)sub_1C942E4(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
+      _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C51B7C();
+    v12 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
     System_Collections_Generic_List_object____ctor(
       v12,
-      (const MethodInfo_386A600 *)method->klass->rgctx_data->_2_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
+      (const MethodInfo_383E5C8 *)method->klass->rgctx_data->_2_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor);
     p_fields->klass = (GrandQuestFolderBoardItem_c *)v12;
-    sub_1C9403C(p_fields, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+    sub_1C7BA8C(p_fields, (int32_t)v12, v13, v14, v15, v16, v17, v18);
     list = (System_Collections_Generic_List_object__o *)p_fields->klass;
     totalweight = 0;
   }
   this->fields.totalweight = totalweight + weight;
   _4_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_;
   if ( (*(_BYTE *)(_4_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _4_WeightRate_WeightSeed_T = sub_1C6A12C();
-  v20 = sub_1C942E4(_4_WeightRate_WeightSeed_T);
+    _4_WeightRate_WeightSeed_T = sub_1C51B7C();
+  v20 = sub_1C7BD34(_4_WeightRate_WeightSeed_T);
   System_Object___ctor((Il2CppObject *)v20, 0);
   *(_DWORD *)(v20 + 16) = weight;
   *(_DWORD *)(v20 + 20) = t;
@@ -537,7 +537,7 @@ void WeightRate_int___setWeight(WeightRate_int__o *this, int32_t weight, int32_t
         ++list->fields._version,
         !items) )
   {
-    sub_1C942F0(v21, v22);
+    sub_1C7BD40(v21, v22);
   }
   size = list->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -545,13 +545,13 @@ void WeightRate_int___setWeight(WeightRate_int__o *this, int32_t weight, int32_t
     System_Collections_Generic_List_object___AddWithResize(
       list,
       (Il2CppObject *)v20,
-      (const MethodInfo_386AE34 *)_6_System_Collections_Generic_List_WeightRate_WeightSeed_T___Add->klass->rgctx_data[14].rgctxDataDummy);
+      (const MethodInfo_383EDFC *)_6_System_Collections_Generic_List_WeightRate_WeightSeed_T___Add->klass->rgctx_data[14].rgctxDataDummy);
   }
   else
   {
     v32 = &items->obj.klass + size;
     list->fields._size = size + 1;
     v32[4] = (Il2CppClass *)v20;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v32 + 4), v20, v23, v24, v25, v26, v27, v28);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v32 + 4), v20, v23, v24, v25, v26, v27, v28);
   }
 }

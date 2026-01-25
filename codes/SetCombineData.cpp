@@ -25,7 +25,7 @@ void SetCombineData__Clear(SetCombineData_o *this, const MethodInfo *method)
   *(_QWORD *)&this->fields.getExp = 0;
   *(_QWORD *)&this->fields.getHpAdjustVal = 0;
   this->fields.materialUsrSvtIdList = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3, v4, v5, v6, v7);
   this->fields.svtEqMaterialList = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.svtEqMaterialList, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.svtEqMaterialList, 0, v9, v10, v11, v12, v13, v14);
 }

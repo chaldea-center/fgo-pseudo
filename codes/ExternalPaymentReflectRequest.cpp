@@ -2,16 +2,16 @@ System_String_o *ExternalPaymentReflectRequest__getURL(ExternalPaymentReflectReq
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E3F1 & 1) == 0 )
+  if ( (byte_4CF0160 & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_19487/*"externalPayment/reflect"*/);
-    byte_4D2E3F1 = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19483/*"externalPayment/reflect"*/);
+    byte_4CF0160 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_19487/*"externalPayment/reflect"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19483/*"externalPayment/reflect"*/, 0);
 }
 
 
@@ -30,20 +30,20 @@ void ExternalPaymentReflectRequest__requestCompleted(
   intptr_t method_code; // x0
 
   v4 = this;
-  if ( (byte_4D2E3F2 & 1) == 0 )
+  if ( (byte_4CF0161 & 1) == 0 )
   {
-    sub_1C94098(&JsonManager_TypeInfo);
-    this = (ExternalPaymentReflectRequest_o *)sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    byte_4D2E3F2 = 1;
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    this = (ExternalPaymentReflectRequest_o *)sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    byte_4CF0161 = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !LODWORD(responseList->max_length) )
-    sub_1C942F8(this);
+    sub_1C7BD48(this);
   v5 = responseList->m_Items[0];
   if ( !v5 )
 LABEL_15:
-    sub_1C942F0(this, responseList);
+    sub_1C7BD40(this, responseList);
   if ( ResponseData__checkError((ResponseData_o *)this, v5->fields.resCode, method) )
   {
     success = (Il2CppObject *)v5->fields.success;
@@ -67,7 +67,7 @@ LABEL_13:
     {
       invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl;
       method_code = CallBack->fields.method_code;
-      v9 = StringLiteral_22424/*"ng"*/;
+      v9 = StringLiteral_22419/*"ng"*/;
       goto LABEL_13;
     }
   }

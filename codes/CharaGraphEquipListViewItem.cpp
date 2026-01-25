@@ -21,11 +21,11 @@ void CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4D2BB22 & 1) == 0 )
+  if ( (byte_4CED97A & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_Contains_long___);
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4D2BB22 = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Contains_long___);
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CED97A = 1;
   }
   CharaGraphServantListViewItemBase___ctor(
     (CharaGraphServantListViewItemBase_o *)this,
@@ -42,14 +42,14 @@ void CharaGraphEquipListViewItem___ctor(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v23 = v24;
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v23, 0);
+  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49453300(&v23, 0);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_10:
-    sub_1C942F0(v11, v12);
+    sub_1C7BD40(v11, v12);
   v15 = v11;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(this->fields._UserServantEntity_k__BackingField, 1, 0);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)EquipCategoryIdList,
     v17,
@@ -61,7 +61,7 @@ LABEL_10:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v15,
-         (const MethodInfo_31B9650 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_318C8EC *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -88,7 +88,7 @@ void CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   System_String_o *v7; // x7
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)value,
     (int32_t)method,

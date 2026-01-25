@@ -13,5 +13,5 @@ void EventDailyPoint___ctor(EventDailyPoint_o *this, const MethodInfo *method)
   v2->fields.eventPointBehavior = 0;
   v2 = (EventDailyPoint_o *)((char *)v2 + 24);
   LODWORD(v2[-1].fields.eventPointBehavior) = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
 }

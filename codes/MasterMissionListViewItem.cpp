@@ -38,14 +38,14 @@ void MasterMissionListViewItem___ctor(
   MasterMissionListViewItem_c *klass; // x8
   struct EventMissionEntity_o *v39; // x8
 
-  if ( (byte_4D2FA00 & 1) == 0 )
+  if ( (byte_4CF17E4 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2FA00 = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF17E4 = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0);
   this->fields.eventMissionEnt = missionData;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventMissionEnt,
     (int32_t)missionData,
     v7,
@@ -63,16 +63,16 @@ void MasterMissionListViewItem___ctor(
   this->fields.dispNo = missionData->fields.dispNo;
   v22 = StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.condMsg, v22, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.condMsg, v22, v15, v16, v17, v18, v19, v20);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0;
   this->fields.progNum = 0;
   v23 = StringLiteral_1/*""*/;
   this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.closedMessage, v23, v24, v25, v26, v27, v28, v29);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.closedMessage, v23, v24, v25, v26, v27, v28, v29);
   v30 = StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.progTxt, v30, v31, v32, v33, v34, v35, v36);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.progTxt, v30, v31, v32, v33, v34, v35, v36);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -88,7 +88,7 @@ void MasterMissionListViewItem___ctor(
         (v39 = this->fields.eventMissionEnt) == 0) )
   {
 LABEL_7:
-    sub_1C942F0(eventMissionEnt, v14);
+    sub_1C7BD40(eventMissionEnt, v14);
   }
   this->fields.sortValue2 = -v39->fields.id;
   MissionListViewItem__CheckEventMissionAdd((MissionListViewItem_o *)this, 0);
@@ -148,7 +148,7 @@ LABEL_18:
     {
       v8 = this->fields.progStatus;
       if ( (unsigned int)v8 <= 4 )
-        this->fields.sortValue0 = qword_D330F0[v8];
+        this->fields.sortValue0 = qword_D29E20[v8];
       if ( sort )
       {
         if ( sort->fields.sortKind != 1 )
@@ -162,7 +162,7 @@ LABEL_18:
         }
       }
     }
-    sub_1C942F0(v5, v6);
+    sub_1C7BD40(v5, v6);
   }
   return 0;
 }
@@ -175,7 +175,7 @@ bool MasterMissionListViewItem__get_IsHideReward(MasterMissionListViewItem_o *th
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0);
 }

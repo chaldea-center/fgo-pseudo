@@ -4,12 +4,12 @@ System_Collections_IEnumerator_o *WarBoardWaitNonBlockingTaskEnd__Execute(
 {
   __int64 v2; // x19
 
-  if ( (byte_4D2A41E & 1) == 0 )
+  if ( (byte_4CEC280 & 1) == 0 )
   {
-    sub_1C94098(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
-    byte_4D2A41E = 1;
+    sub_1C7BAE8(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+    byte_4CEC280 = 1;
   }
-  v2 = sub_1C942E4(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+  v2 = sub_1C7BD34(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
@@ -51,13 +51,13 @@ bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
   System_String_o *v21; // x7
   int32_t v22; // w8
 
-  if ( (byte_4D2A421 & 1) == 0 )
+  if ( (byte_4CEC283 & 1) == 0 )
   {
-    sub_1C94098(&System_Func_bool__TypeInfo);
-    sub_1C94098(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__);
-    sub_1C94098(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-    sub_1C94098(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4D2A421 = 1;
+    sub_1C7BAE8(&System_Func_bool__TypeInfo);
+    sub_1C7BAE8(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__);
+    sub_1C7BAE8(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CEC283 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -85,11 +85,11 @@ bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
         v5 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
       }
       v7 = (Il2CppObject *)v5->static_fields->__9;
-      _9__0_0 = (System_Func_bool__o *)sub_1C942E4(System_Func_bool__TypeInfo);
+      _9__0_0 = (System_Func_bool__o *)sub_1C7BD34(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(_9__0_0, v7, Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__, 0);
       static_fields = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields;
       static_fields->__9__0_0 = _9__0_0;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__0_0,
         (int32_t)_9__0_0,
         v9,
@@ -99,10 +99,10 @@ bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
         v13,
         v14);
     }
-    v15 = (UnityEngine_WaitUntil_o *)sub_1C942E4(UnityEngine_WaitUntil_TypeInfo);
+    v15 = (UnityEngine_WaitUntil_o *)sub_1C7BD34(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v15, _9__0_0, 0);
     this->fields.__2__current = (Il2CppObject *)v15;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17, v18, v19, v20, v21);
     v22 = 1;
     result = 1;
   }
@@ -127,11 +127,11 @@ void __noreturn WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 
@@ -161,15 +161,15 @@ void WarBoardWaitNonBlockingTaskEnd___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2A41F & 1) == 0 )
+  if ( (byte_4CEC281 & 1) == 0 )
   {
-    sub_1C94098(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-    byte_4D2A41F = 1;
+    sub_1C7BAE8(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    byte_4CEC281 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields->__9 = (struct WarBoardWaitNonBlockingTaskEnd___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -194,13 +194,13 @@ bool WarBoardWaitNonBlockingTaskEnd___c___Execute_b__0_0(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4D2A420 & 1) == 0 )
+  if ( (byte_4CEC282 & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4D2A420 = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4CEC282 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C942F0(0, v3);
+    sub_1C7BD40(0, v3);
   return WarBoardManager__IsNonBlockTaskEnmpty((WarBoardManager_o *)Instance, 0);
 }

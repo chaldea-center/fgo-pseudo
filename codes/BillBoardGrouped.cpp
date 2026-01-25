@@ -41,11 +41,11 @@ void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *me
   UnityEngine_Vector3_o LookVec; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2BBD3 & 1) == 0 )
+  if ( (byte_4CEDA2B & 1) == 0 )
   {
-    sub_1C94098(&BillBoardGroupManager_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
-    byte_4D2BBD3 = 1;
+    sub_1C7BAE8(&BillBoardGroupManager_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    byte_4CEDA2B = 1;
   }
   grouping = this->fields.grouping;
   if ( grouping < 0 )
@@ -66,26 +66,26 @@ void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *me
       v8 = p_targetFov[5];
       v9 = p_targetFov[6];
 LABEL_21:
-      v23 = UnityEngine_Quaternion__LookRotation_72049252(*(UnityEngine_Vector3_o *)&v7, 0);
+      v23 = UnityEngine_Quaternion__LookRotation_71808428(*(UnityEngine_Vector3_o *)&v7, 0);
       if ( mTrf )
       {
         v15 = mTrf;
         goto LABEL_23;
       }
 LABEL_24:
-      sub_1C942F0(Instance, method);
+      sub_1C7BD40(Instance, method);
     }
-    Instance = (BillBoardGroupManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    Instance = (BillBoardGroupManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
     LookVec = BillBoardGroupManager__GetLookVec(Instance, this->fields.grouping, !this->fields.enableRotationZ, v16);
     x = LookVec.fields.x;
     y = LookVec.fields.y;
     z = LookVec.fields.z;
-    if ( !byte_4D25F19 )
+    if ( !byte_4CE7E59 )
     {
-      sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-      byte_4D25F19 = 1;
+      sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+      byte_4CE7E59 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     if ( (float)((float)((float)(z - static_fields->zeroVector.fields.z)
@@ -118,7 +118,7 @@ LABEL_19:
   v14 = -forward.fields.z;
   if ( !this->fields.enableRotationZ )
     v12 = 0.0;
-  v23 = UnityEngine_Quaternion__LookRotation_72049252(*(UnityEngine_Vector3_o *)&v13, 0);
+  v23 = UnityEngine_Quaternion__LookRotation_71808428(*(UnityEngine_Vector3_o *)&v13, 0);
   if ( !v11 )
     goto LABEL_24;
   v15 = v11;
@@ -137,20 +137,20 @@ void BillBoardGrouped__Update(BillBoardGrouped_o *this, const MethodInfo *method
   __int64 v8; // x1
   const MethodInfo *v9; // x4
 
-  if ( (byte_4D2BBD2 & 1) == 0 )
+  if ( (byte_4CEDA2A & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
-    byte_4D2BBD2 = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    byte_4CEDA2A = 1;
   }
   if ( this->fields.grouping >= 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
     grouping = this->fields.grouping;
     targetCamera = this->fields.targetCamera;
     v6 = (BillBoardGroupManager_o *)Instance;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !v6 )
-      sub_1C942F0(gameObject, v8);
+      sub_1C7BD40(gameObject, v8);
     BillBoardGroupManager__AddData(v6, grouping, targetCamera, gameObject, v9);
   }
 }

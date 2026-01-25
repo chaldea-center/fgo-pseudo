@@ -6,12 +6,12 @@ void BoxGachaResetRequest___ctor(BoxGachaResetRequest_o *this, const MethodInfo 
 
 void BoxGachaResetRequest__beginRequest(BoxGachaResetRequest_o *this, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4D2E34C & 1) == 0 )
+  if ( (byte_4CF00BB & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_17449/*"boxGachaId"*/);
-    byte_4D2E34C = 1;
+    sub_1C7BAE8(&StringLiteral_17451/*"boxGachaId"*/);
+    byte_4CF00BB = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17449/*"boxGachaId"*/, gachaId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17451/*"boxGachaId"*/, gachaId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -20,16 +20,16 @@ System_String_o *BoxGachaResetRequest__getURL(BoxGachaResetRequest_o *this, cons
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E34B & 1) == 0 )
+  if ( (byte_4CF00BA & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_17447/*"boxGacha/reset"*/);
-    byte_4D2E34B = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_17449/*"boxGacha/reset"*/);
+    byte_4CF00BA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_17447/*"boxGacha/reset"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_17449/*"boxGacha/reset"*/, 0);
 }
 
 
@@ -43,17 +43,17 @@ void BoxGachaResetRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4D2E34D & 1) == 0 )
+  if ( (byte_4CF00BC & 1) == 0 )
   {
-    sub_1C94098(&JsonManager_TypeInfo);
-    sub_1C94098(&ResponseCommandKind_TypeInfo);
-    sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    byte_4D2E34D = 1;
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    byte_4CF00BC = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(48, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_45012660(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44743216(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -61,7 +61,7 @@ void BoxGachaResetRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22424/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22419/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

@@ -17,7 +17,7 @@ void BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *subject, const
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)subject, v5, v6, v7, v8, v9, v10);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)subject, v5, v6, v7, v8, v9, v10);
   }
 }
 

@@ -29,7 +29,7 @@ UnityEngine_Vector3_o Bezier__GetFirstDerivative(
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o Bezier__GetFirstDerivative_42302424(
+UnityEngine_Vector3_o Bezier__GetFirstDerivative_42116712(
         UnityEngine_Vector3_o p0,
         UnityEngine_Vector3_o p1,
         UnityEngine_Vector3_o p2,
@@ -122,7 +122,7 @@ UnityEngine_Vector3_o Bezier__GetPoint(
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o Bezier__GetPoint_42302160(
+UnityEngine_Vector3_o Bezier__GetPoint_42116448(
         UnityEngine_Vector3_o p0,
         UnityEngine_Vector3_o p1,
         UnityEngine_Vector3_o p2,

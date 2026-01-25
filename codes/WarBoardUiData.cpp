@@ -16,13 +16,13 @@ void WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4, v5, v6, v7, v8);
   this->fields._keys_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
-void WarBoardUiData___ctor_38818152(
+void WarBoardUiData___ctor_38633388(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -46,11 +46,11 @@ void WarBoardUiData___ctor_38818152(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1C942F0(v5, v6);
+    sub_1C7BD40(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
     (int32_t)pieceIndex,
     v7,
@@ -61,7 +61,7 @@ void WarBoardUiData___ctor_38818152(
     v12);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)keys,
     v15,
@@ -73,7 +73,7 @@ void WarBoardUiData___ctor_38818152(
 }
 
 
-void WarBoardUiData___ctor_38818232(
+void WarBoardUiData___ctor_38633468(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
@@ -95,9 +95,9 @@ void WarBoardUiData___ctor_38818232(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8, v9, v10, v11, v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)setKeys,
     v13,
@@ -109,7 +109,7 @@ void WarBoardUiData___ctor_38818232(
 }
 
 
-void WarBoardUiData___ctor_38818304(
+void WarBoardUiData___ctor_38633540(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
@@ -131,7 +131,7 @@ void WarBoardUiData___ctor_38818304(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
     (int32_t)indexes,
     v7,
@@ -141,7 +141,7 @@ void WarBoardUiData___ctor_38818304(
     v11,
     v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)setKeys,
     v13,
@@ -162,7 +162,7 @@ void WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_array *setKey
   System_String_o *v7; // x7
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)setKeys,
     (int32_t)method,
@@ -201,7 +201,7 @@ void WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_array *value
   System_String_o *v7; // x7
 
   this->fields._keys_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -222,7 +222,7 @@ void WarBoardUiData__set_pieceIndex(WarBoardUiData_o *this, System_Int32_array *
   System_String_o *v7; // x7
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -258,13 +258,13 @@ void WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, const Metho
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.pieceIndex, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.pieceIndex, 0, v3, v4, v5, v6, v7, v8);
   this->fields.keys = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.keys, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.keys, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
-void WarBoardUiData_SaveData___ctor_38775192(
+void WarBoardUiData_SaveData___ctor_38590428(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
@@ -288,11 +288,11 @@ void WarBoardUiData_SaveData___ctor_38775192(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !uiData )
-    sub_1C942F0(v5, v6);
+    sub_1C7BD40(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.pieceIndex,
     (int32_t)pieceIndex_k__BackingField,
     v7,
@@ -303,7 +303,7 @@ void WarBoardUiData_SaveData___ctor_38775192(
     v12);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.keys,
     (int32_t)keys_k__BackingField,
     v15,

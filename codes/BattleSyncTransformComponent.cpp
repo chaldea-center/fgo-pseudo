@@ -8,15 +8,15 @@ void BattleSyncTransformComponent___ctor(BattleSyncTransformComponent_o *this, c
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D300EF & 1) == 0 )
+  if ( (byte_4CF1E75 & 1) == 0 )
   {
-    sub_1C94098(&BattleSyncTransformComponent_SyncData_TypeInfo);
-    byte_4D300EF = 1;
+    sub_1C7BAE8(&BattleSyncTransformComponent_SyncData_TypeInfo);
+    byte_4CF1E75 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C942E4(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C7BD34(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -45,10 +45,10 @@ void BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.targetObj, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetObj, 0, v3, v4, v5, v6, v7, v8);
   v15 = (float *)*(p_targetObj - 1);
   if ( !v15 )
-    sub_1C942F0(v13, v14);
+    sub_1C7BD40(v13, v14);
   v15[5] = x;
   v15[6] = y;
   v15[7] = z;
@@ -85,7 +85,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget(
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSetting,
@@ -95,15 +95,15 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget(
     v6,
     v7);
   if ( !syncSetting )
-    sub_1C942F0(v10, v11);
+    sub_1C7BD40(v10, v11);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)syncData, v12, v13, v14, v15, v16, v17);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)syncData, v12, v13, v14, v15, v16, v17);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48474716(
+BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48217636(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -121,7 +121,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48474716
   System_String_o *v15; // x7
 
   this->fields.targetObj = target;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSettingData,
@@ -131,7 +131,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48474716
     v6,
     v7);
   this->fields.syncData = syncSettingData;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.syncData,
     (int32_t)syncSettingData,
     v10,
@@ -163,10 +163,10 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D300EE & 1) == 0 )
+  if ( (byte_4CF1E74 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D300EE = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF1E74 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -240,7 +240,7 @@ LABEL_19:
         }
       }
     }
-    sub_1C942F0(transform, v5);
+    sub_1C7BD40(transform, v5);
   }
 }
 
@@ -257,7 +257,7 @@ void BattleSyncTransformComponent__UpdateTarget(
   System_String_o *v7; // x7
 
   this->fields.targetObj = target;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)method,
@@ -275,7 +275,7 @@ bool BattleSyncTransformComponent__get_IsNotExecSync(BattleSyncTransformComponen
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return syncData->fields.syncType == 0;
 }
 

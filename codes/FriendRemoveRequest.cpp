@@ -3,12 +3,12 @@ void FriendRemoveRequest__beginRequest(FriendRemoveRequest_o *this, int64_t targ
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4D2E430 & 1) == 0 )
+  if ( (byte_4CF019F & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_24239/*"targetUserId"*/);
-    byte_4D2E430 = 1;
+    sub_1C7BAE8(&StringLiteral_24237/*"targetUserId"*/);
+    byte_4CF019F = 1;
   }
-  RequestBase__addField_45013228((RequestBase_o *)this, (System_String_o *)StringLiteral_24239/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_44745468((RequestBase_o *)this, (System_String_o *)StringLiteral_24237/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -17,16 +17,16 @@ System_String_o *FriendRemoveRequest__getURL(FriendRemoveRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E42F & 1) == 0 )
+  if ( (byte_4CF019E & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_19837/*"friend/remove"*/);
-    byte_4D2E42F = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19832/*"friend/remove"*/);
+    byte_4CF019E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_19837/*"friend/remove"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19832/*"friend/remove"*/, 0);
 }
 
 
@@ -43,12 +43,12 @@ void FriendRemoveRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4D2E431 & 1) == 0 )
+  if ( (byte_4CF01A0 & 1) == 0 )
   {
-    sub_1C94098(&JsonManager_TypeInfo);
-    sub_1C94098(&ResponseCommandKind_TypeInfo);
-    sub_1C94098(&StringLiteral_22424/*"ng"*/);
-    byte_4D2E431 = 1;
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
+    byte_4CF01A0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -72,7 +72,7 @@ void FriendRemoveRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22424/*"ng"*/,
+        StringLiteral_22419/*"ng"*/,
         v11->fields.method);
   }
 }

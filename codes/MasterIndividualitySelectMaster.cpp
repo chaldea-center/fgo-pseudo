@@ -1,14 +1,14 @@
 void MasterIndividualitySelectMaster___ctor(MasterIndividualitySelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2CD6D & 1) == 0 )
+  if ( (byte_4CEEB80 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
-    byte_4D2CD6D = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
+    byte_4CEEB80 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     553,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
 }
 
 
@@ -22,10 +22,10 @@ MasterIndividualitySelectEntity_o *MasterIndividualitySelectMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2CD6E & 1) == 0 )
+  if ( (byte_4CEEB81 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
-    byte_4D2CD6E = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
+    byte_4CEEB81 = 1;
   }
   PK = (Il2CppObject *)MasterIndividualitySelectEntity__CreatePK(
                          questId,
@@ -35,7 +35,7 @@ MasterIndividualitySelectEntity_o *MasterIndividualitySelectMaster__GetEntity(
   return (MasterIndividualitySelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_345FF78 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
+                                                (const MethodInfo_3432DB4 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
 }
 
 
@@ -50,17 +50,17 @@ bool MasterIndividualitySelectMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2CD6F & 1) == 0 )
+  if ( (byte_4CEEB82 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
-    byte_4D2CD6F = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
+    byte_4CEEB82 = 1;
   }
   PK = (Il2CppObject *)MasterIndividualitySelectEntity__CreatePK(questId, phase, priority, *(const MethodInfo **)&phase);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
 }
 
 
@@ -97,27 +97,27 @@ bool MasterIndividualitySelectMaster__TryGetEntityArray(
   int64_t v32; // x6
   System_String_o *v33; // x7
 
-  if ( (byte_4D2CD6C & 1) == 0 )
+  if ( (byte_4CEEB7F & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
-    sub_1C94098(&Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
-    sub_1C94098(&System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
-    sub_1C94098(&System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
-    sub_1C94098(&Method_MasterIndividualitySelectMaster___c__TryGetEntityArray_b__0_1__);
-    sub_1C94098(&Method_MasterIndividualitySelectMaster___c__DisplayClass0_0__TryGetEntityArray_b__0__);
-    sub_1C94098(&MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1C94098(&MasterIndividualitySelectMaster___c_TypeInfo);
-    byte_4D2CD6C = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
+    sub_1C7BAE8(&System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
+    sub_1C7BAE8(&System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
+    sub_1C7BAE8(&Method_MasterIndividualitySelectMaster___c__TryGetEntityArray_b__0_1__);
+    sub_1C7BAE8(&Method_MasterIndividualitySelectMaster___c__DisplayClass0_0__TryGetEntityArray_b__0__);
+    sub_1C7BAE8(&MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
+    sub_1C7BAE8(&MasterIndividualitySelectMaster___c_TypeInfo);
+    byte_4CEEB7F = 1;
   }
-  v9 = sub_1C942E4(MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
+  v9 = sub_1C7BD34(MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_12;
   *(_DWORD *)(v9 + 16) = questId;
   *(_DWORD *)(v9 + 20) = questPhase;
   list = this->fields.list;
-  v13 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -126,7 +126,7 @@ bool MasterIndividualitySelectMaster__TryGetEntityArray(
   v14 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
+          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
   v15 = MasterIndividualitySelectMaster___c_TypeInfo;
   v16 = v14;
   if ( !MasterIndividualitySelectMaster___c_TypeInfo->_2.cctor_finished )
@@ -143,7 +143,7 @@ bool MasterIndividualitySelectMaster__TryGetEntityArray(
       v15 = MasterIndividualitySelectMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v15->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C942E4(System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
       v18,
@@ -151,20 +151,20 @@ bool MasterIndividualitySelectMaster__TryGetEntityArray(
       0);
     static_fields = MasterIndividualitySelectMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_1 = (struct System_Func_MasterIndividualitySelectEntity__int__o *)_9__0_1;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v20, v21, v22, v23, v24, v25);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v20, v21, v22, v23, v24, v25);
   }
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                v16,
                                                                (System_Func_TSource__TKey__o *)_9__0_1,
-                                                               (const MethodInfo_31CC684 *)Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
+                                                               (const MethodInfo_319F4D8 *)Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
   v27 = System_Linq_Enumerable__ToArray_object_(
           v26,
-          (const MethodInfo_31DC8AC *)Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
+          (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
   *entityArray = (MasterIndividualitySelectEntity_array *)v27;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)entityArray, (int32_t)v27, v28, v29, v30, v31, v32, v33);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)entityArray, (int32_t)v27, v28, v29, v30, v31, v32, v33);
   if ( !*entityArray )
 LABEL_12:
-    sub_1C942F0(v10, v11);
+    sub_1C7BD40(v10, v11);
   return LODWORD((*entityArray)->max_length) != 0;
 }
 
@@ -179,15 +179,15 @@ void MasterIndividualitySelectMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2CD70 & 1) == 0 )
+  if ( (byte_4CEEB83 & 1) == 0 )
   {
-    sub_1C94098(&MasterIndividualitySelectMaster___c_TypeInfo);
-    byte_4D2CD70 = 1;
+    sub_1C7BAE8(&MasterIndividualitySelectMaster___c_TypeInfo);
+    byte_4CEEB83 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(MasterIndividualitySelectMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(MasterIndividualitySelectMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MasterIndividualitySelectMaster___c_TypeInfo->static_fields->__9 = (struct MasterIndividualitySelectMaster___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)MasterIndividualitySelectMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -211,7 +211,7 @@ int32_t MasterIndividualitySelectMaster___c___TryGetEntityArray_b__0_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   return x->fields.priority;
 }
 
@@ -230,6 +230,6 @@ bool MasterIndividualitySelectMaster___c__DisplayClass0_0___TryGetEntityArray_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   return x->fields.questId == this->fields.questId && x->fields.phase == this->fields.questPhase;
 }

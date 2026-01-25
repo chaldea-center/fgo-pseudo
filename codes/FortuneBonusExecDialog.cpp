@@ -1,9 +1,9 @@
 void FortuneBonusExecDialog___ctor(FortuneBonusExecDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2F07D & 1) == 0 )
+  if ( (byte_4CF0F44 & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D2F07D = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CF0F44 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -36,23 +36,23 @@ void FortuneBonusExecDialog__OnClickOkButton(FortuneBonusExecDialog_o *this, con
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2F07B & 1) == 0 )
+  if ( (byte_4CF0F42 & 1) == 0 )
   {
-    sub_1C94098(&Method_FortuneBonusExecDialog_OnClickOkButton__);
-    byte_4D2F07B = 1;
+    sub_1C7BAE8(&Method_FortuneBonusExecDialog_OnClickOkButton__);
+    byte_4CF0F42 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_FortuneBonusExecDialog_OnClickOkButton__;
     if ( (*((_BYTE *)Method_FortuneBonusExecDialog_OnClickOkButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_FortuneBonusExecDialog_OnClickOkButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_FortuneBonusExecDialog_OnClickOkButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = (GrandQuestFolderBoardItem_o *)&this->fields.clickFunc;
     ActionExtensions__Call(clickFunc, 0);
     p_clickFunc->klass = 0;
-    sub_1C9403C(p_clickFunc, 0, v7, v8, v9, v10, v11, v12);
+    sub_1C7BA8C(p_clickFunc, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -72,13 +72,13 @@ void FortuneBonusExecDialog__Open(
   System_String_o *v12; // x7
   System_Action_o *v13; // x20
 
-  if ( (byte_4D2F07A & 1) == 0 )
+  if ( (byte_4CF0F41 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_FortuneBonusExecDialog_EndOpened__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_6513/*"FORTUNE_BONUS_EXEC_BUTTON"*/);
-    byte_4D2F07A = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_FortuneBonusExecDialog_EndOpened__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_6514/*"FORTUNE_BONUS_EXEC_BUTTON"*/);
+    byte_4CF0F41 = 1;
   }
   descriptionTexture = (UnityEngine_Component_o *)this->fields.descriptionTexture;
   if ( !descriptionTexture )
@@ -96,16 +96,16 @@ void FortuneBonusExecDialog__Open(
   okBtnLabel = this->fields.okBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  descriptionTexture = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6513/*"FORTUNE_BONUS_EXEC_BUTTON"*/, 0);
+  descriptionTexture = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6514/*"FORTUNE_BONUS_EXEC_BUTTON"*/, 0);
   if ( !okBtnLabel )
 LABEL_10:
-    sub_1C942F0(descriptionTexture, nextAction);
+    sub_1C7BD40(descriptionTexture, nextAction);
   UILabel__set_text(okBtnLabel, (System_String_o *)descriptionTexture, 0);
   this->fields.clickFunc = nextAction;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)nextAction, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)nextAction, v7, v8, v9, v10, v11, v12);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0);
-  v13 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_FortuneBonusExecDialog_EndOpened__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
 }
@@ -117,17 +117,17 @@ void FortuneBonusExecDialog__Release(FortuneBonusExecDialog_o *this, const Metho
   __int64 v4; // x1
   UnityEngine_Object_o *v5; // x19
 
-  if ( (byte_4D2F07C & 1) == 0 )
+  if ( (byte_4CF0F43 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F07C = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0F43 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   v5 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72110972(v5, 0);
+  UnityEngine_Object__Destroy_71870148(v5, 0);
 }

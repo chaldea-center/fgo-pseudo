@@ -1,9 +1,9 @@
 void TakeoverConfirmMenu___ctor(TakeoverConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D29F95 & 1) == 0 )
+  if ( (byte_4CEBDF7 & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D29F95 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CEBDF7 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,7 +28,7 @@ void TakeoverConfirmMenu__Callback(TakeoverConfirmMenu_o *this, bool result, con
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C9403C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C7BA8C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -41,11 +41,11 @@ void TakeoverConfirmMenu__Close(TakeoverConfirmMenu_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x2
 
-  TakeoverConfirmMenu__Close_38333060(this, 0, v2);
+  TakeoverConfirmMenu__Close_38148296(this, 0, v2);
 }
 
 
-void TakeoverConfirmMenu__Close_38333060(
+void TakeoverConfirmMenu__Close_38148296(
         TakeoverConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -57,14 +57,14 @@ void TakeoverConfirmMenu__Close_38333060(
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4D29F92 & 1) == 0 )
+  if ( (byte_4CEBDF4 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_TakeoverConfirmMenu_EndClose__);
-    byte_4D29F92 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_TakeoverConfirmMenu_EndClose__);
+    byte_4CEBDF4 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -74,7 +74,7 @@ void TakeoverConfirmMenu__Close_38333060(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_TakeoverConfirmMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -99,7 +99,7 @@ void TakeoverConfirmMenu__EndClose(TakeoverConfirmMenu_o *this, const MethodInfo
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C9403C(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1C7BA8C(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -115,10 +115,10 @@ void TakeoverConfirmMenu__Init(TakeoverConfirmMenu_o *this, const MethodInfo *me
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4D29F90 & 1) == 0 )
+  if ( (byte_4CEBDF2 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D29F90 = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEBDF2 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -142,7 +142,7 @@ void TakeoverConfirmMenu__Init(TakeoverConfirmMenu_o *this, const MethodInfo *me
         (titleLabel = this->fields.cancelLabel) == 0) )
   {
 LABEL_11:
-    sub_1C942F0(titleLabel, method);
+    sub_1C7BD40(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -156,18 +156,18 @@ void TakeoverConfirmMenu__OnClickCancel(TakeoverConfirmMenu_o *this, const Metho
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D29F94 & 1) == 0 )
+  if ( (byte_4CEBDF6 & 1) == 0 )
   {
-    sub_1C94098(&Method_TakeoverConfirmMenu_OnClickCancel__);
-    byte_4D29F94 = 1;
+    sub_1C7BAE8(&Method_TakeoverConfirmMenu_OnClickCancel__);
+    byte_4CEBDF6 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TakeoverConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_TakeoverConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_TakeoverConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_TakeoverConfirmMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     TakeoverConfirmMenu__Callback(this, 0, v5);
   }
@@ -180,18 +180,18 @@ void TakeoverConfirmMenu__OnClickDecide(TakeoverConfirmMenu_o *this, const Metho
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D29F93 & 1) == 0 )
+  if ( (byte_4CEBDF5 & 1) == 0 )
   {
-    sub_1C94098(&Method_TakeoverConfirmMenu_OnClickDecide__);
-    byte_4D29F93 = 1;
+    sub_1C7BAE8(&Method_TakeoverConfirmMenu_OnClickDecide__);
+    byte_4CEBDF5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TakeoverConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_TakeoverConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_TakeoverConfirmMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_TakeoverConfirmMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     TakeoverConfirmMenu__Callback(this, 1, v5);
   }
@@ -216,21 +216,21 @@ void TakeoverConfirmMenu__Open(
   System_String_o *v16; // x0
   System_Action_o *v17; // x20
 
-  if ( (byte_4D29F91 & 1) == 0 )
+  if ( (byte_4CEBDF3 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&Method_TakeoverConfirmMenu_EndOpen__);
-    sub_1C94098(&StringLiteral_3691/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C94098(&StringLiteral_3689/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C94098(&StringLiteral_3823/*"CONTINUE_DEVICE_TAKEOVER_CONFIRM_MESSAGE"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D29F91 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&Method_TakeoverConfirmMenu_EndOpen__);
+    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C7BAE8(&StringLiteral_3824/*"CONTINUE_DEVICE_TAKEOVER_CONFIRM_MESSAGE"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEBDF3 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)callback,
@@ -272,27 +272,27 @@ void TakeoverConfirmMenu__Open(
     decideLabel = this->fields.decideLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3691/*"COMMON_CONFIRM_DECIDE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0);
     if ( !decideLabel )
       goto LABEL_19;
     UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0);
     cancelLabel = this->fields.cancelLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3689/*"COMMON_CONFIRM_CANCEL"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0);
     if ( !cancelLabel
       || (UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0),
           messageLabel = this->fields.messageLabel,
-          v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"CONTINUE_DEVICE_TAKEOVER_CONFIRM_MESSAGE"*/, 0),
+          v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"CONTINUE_DEVICE_TAKEOVER_CONFIRM_MESSAGE"*/, 0),
           gameObject = (UnityEngine_GameObject_o *)System_String__Format(v16, (Il2CppObject *)userName, 0),
           !messageLabel)
       || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.warningLabel) == 0) )
     {
 LABEL_19:
-      sub_1C942F0(gameObject, v12);
+      sub_1C7BD40(gameObject, v12);
     }
     UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
     this->fields.state = 1;
-    v17 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_TakeoverConfirmMenu_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v17, 0, 0, 0);
   }
@@ -314,10 +314,10 @@ void TakeoverConfirmMenu__add_callbackFunc(
   TakeoverConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D29F8E & 1) == 0 )
+  if ( (byte_4CEBDF0 & 1) == 0 )
   {
-    sub_1C94098(&TakeoverConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4D29F8E = 1;
+    sub_1C7BAE8(&TakeoverConfirmMenu_CallbackFunc_TypeInfo);
+    byte_4CEBDF0 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -330,13 +330,13 @@ void TakeoverConfirmMenu__add_callbackFunc(
       if ( (TakeoverConfirmMenu_CallbackFunc_c *)v8->klass != TakeoverConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   TakeoverConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -355,10 +355,10 @@ void TakeoverConfirmMenu__remove_callbackFunc(
   TakeoverConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D29F8F & 1) == 0 )
+  if ( (byte_4CEBDF1 & 1) == 0 )
   {
-    sub_1C94098(&TakeoverConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4D29F8F = 1;
+    sub_1C7BAE8(&TakeoverConfirmMenu_CallbackFunc_TypeInfo);
+    byte_4CEBDF1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -371,13 +371,13 @@ void TakeoverConfirmMenu__remove_callbackFunc(
       if ( (TakeoverConfirmMenu_CallbackFunc_c *)v8->klass != TakeoverConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   TakeoverConfirmMenu__Init(v11, v12);
 }
 
@@ -401,7 +401,7 @@ void TakeoverConfirmMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -412,12 +412,12 @@ void TakeoverConfirmMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -429,9 +429,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC61CC;
+  this->fields.invoke_impl = (intptr_t)sub_1AAF0E0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC6184;
+  this->fields.extra_arg = (intptr_t)sub_1AAF098;
 }
 
 
@@ -446,14 +446,14 @@ System_IAsyncResult_o *TakeoverConfirmMenu_CallbackFunc__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4D29F96 & 1) == 0 )
+  if ( (byte_4CEBDF8 & 1) == 0 )
   {
-    sub_1C94098(&bool_TypeInfo);
-    byte_4D29F96 = 1;
+    sub_1C7BAE8(&bool_TypeInfo);
+    byte_4CEBDF8 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -462,7 +462,7 @@ void TakeoverConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

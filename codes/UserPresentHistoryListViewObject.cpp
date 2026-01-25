@@ -1,9 +1,9 @@
 void UserPresentHistoryListViewObject___ctor(UserPresentHistoryListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2B563 & 1) == 0 )
+  if ( (byte_4CED3C3 & 1) == 0 )
   {
-    sub_1C94098(&ListViewObject_TypeInfo);
-    byte_4D2B563 = 1;
+    sub_1C7BAE8(&ListViewObject_TypeInfo);
+    byte_4CED3C3 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void UserPresentHistoryListViewObject__Awake(UserPresentHistoryListViewObject_o 
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D2B561 & 1) == 0 )
+  if ( (byte_4CED3C1 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
-    byte_4D2B561 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+    byte_4CED3C1 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C942F0(0, v3);
+    sub_1C7BD40(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
   this->fields.itemDraw = (struct UserPresentHistoryListViewItemDraw_o *)Component_object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -77,7 +77,7 @@ void UserPresentHistoryListViewObject__SetItem(
     goto LABEL_13;
   v8 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&item->fields.viewObject,
     (int32_t)this,
     (int32_t)seed,
@@ -87,7 +87,7 @@ void UserPresentHistoryListViewObject__SetItem(
     v6,
     v7);
   v8->fields.linkItem = item;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
   this = (UserPresentHistoryListViewObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v8, 0);
   if ( !seed )
     goto LABEL_13;
@@ -125,7 +125,7 @@ void UserPresentHistoryListViewObject__SetItem(
     || (v21 = this, this = (UserPresentHistoryListViewObject_o *)UnityEngine_GameObject__get_layer(parent, 0), !v21) )
   {
 LABEL_13:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v21, (int32_t)this, 0);
   ListViewObject__SetVisible((ListViewObject_o *)v8, 1, 0);
@@ -146,11 +146,11 @@ void UserPresentHistoryListViewObject__SetupDisp(UserPresentHistoryListViewObjec
   const MethodInfo *v8; // x2
   UserPresentHistoryListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4D2B562 & 1) == 0 )
+  if ( (byte_4CED3C2 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UserPresentHistoryListViewItem_TypeInfo);
-    byte_4D2B562 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UserPresentHistoryListViewItem_TypeInfo);
+    byte_4CED3C2 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -174,7 +174,7 @@ void UserPresentHistoryListViewObject__SetupDisp(UserPresentHistoryListViewObjec
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C942F0(0, v7);
+      sub_1C7BD40(0, v7);
     UserPresentHistoryListViewItemDraw__SetItem(v9, (UserPresentHistoryListViewItem_o *)v5, v8);
   }
 }

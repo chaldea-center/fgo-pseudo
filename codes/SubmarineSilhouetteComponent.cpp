@@ -17,11 +17,11 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D29043 & 1) == 0 )
+  if ( (byte_4CEAE9D & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29043 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEAE9D = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -30,9 +30,9 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.mAnimation,
       (int32_t)Component_object,
       v5,

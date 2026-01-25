@@ -15,27 +15,27 @@ void ServantFilterButtonControl___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4D2771E & 1) == 0 )
+  if ( (byte_4CE96DC & 1) == 0 )
   {
-    sub_1C94098(&ServantFilterButtonControl_TypeInfo);
-    sub_1C94098(&StringLiteral_17525/*"btn_bg_04"*/);
-    sub_1C94098(&StringLiteral_17524/*"btn_bg_03"*/);
-    byte_4D2771E = 1;
+    sub_1C7BAE8(&ServantFilterButtonControl_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_17527/*"btn_bg_04"*/);
+    sub_1C7BAE8(&StringLiteral_17526/*"btn_bg_03"*/);
+    byte_4CE96DC = 1;
   }
-  ServantFilterButtonControl_TypeInfo->static_fields->SPRITE_NAME_ENABLE = (struct System_String_o *)StringLiteral_17524/*"btn_bg_03"*/;
-  sub_1C9403C(
+  ServantFilterButtonControl_TypeInfo->static_fields->SPRITE_NAME_ENABLE = (struct System_String_o *)StringLiteral_17526/*"btn_bg_03"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)ServantFilterButtonControl_TypeInfo->static_fields,
-    StringLiteral_17524/*"btn_bg_03"*/,
+    StringLiteral_17526/*"btn_bg_03"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_17525/*"btn_bg_04"*/;
+  v7 = StringLiteral_17527/*"btn_bg_04"*/;
   static_fields = ServantFilterButtonControl_TypeInfo->static_fields;
-  static_fields->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_17525/*"btn_bg_04"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->SPRITE_NAME_DISABLE, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_17527/*"btn_bg_04"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->SPRITE_NAME_DISABLE, v7, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -94,7 +94,7 @@ void ServantFilterButtonControl__Init(
   if ( isDisplay )
   {
     *p_targetSort = targetSort;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.targetSort,
       (int32_t)targetSort,
       v15,
@@ -107,7 +107,7 @@ void ServantFilterButtonControl__Init(
     {
 LABEL_6:
       this->fields.onClickFilterEvent = onClickFilter;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&this->fields.onClickFilterEvent,
         (int32_t)onClickFilter,
         v22,
@@ -129,12 +129,12 @@ LABEL_6:
       goto LABEL_6;
     }
 LABEL_8:
-    sub_1C942F0(gameObject, v14);
+    sub_1C7BD40(gameObject, v14);
   }
   this->fields.targetSort = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.targetSort, 0, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetSort, 0, v15, v16, v17, v18, v19, v20);
   this->fields.onClickFilterEvent = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.onClickFilterEvent, 0, v32, v33, v34, v35, v36, v37);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onClickFilterEvent, 0, v32, v33, v34, v35, v36, v37);
 }
 
 
@@ -164,13 +164,13 @@ void ServantFilterButtonControl__OverwriteButtonText(
   UILabel_o *v11; // x21
   UILabel_o *v12; // x19
 
-  if ( (byte_4D2771B & 1) == 0 )
+  if ( (byte_4CE96D9 & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_11839/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/);
-    sub_1C94098(&StringLiteral_11828/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/);
-    sub_1C94098(&StringLiteral_11840/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/);
-    byte_4D2771B = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11842/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/);
+    sub_1C7BAE8(&StringLiteral_11831/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/);
+    sub_1C7BAE8(&StringLiteral_11843/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/);
+    byte_4CE96D9 = 1;
   }
   if ( isSummon )
   {
@@ -180,7 +180,7 @@ void ServantFilterButtonControl__OverwriteButtonText(
       buttonText = this->fields.buttonText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11839/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, 0);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, 0);
       if ( !buttonText )
         goto LABEL_21;
       UILabel__set_text(buttonText, v9, 0);
@@ -191,7 +191,7 @@ void ServantFilterButtonControl__OverwriteButtonText(
       v11 = this->fields.buttonText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11840/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, 0);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11843/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, 0);
       if ( !v11 )
         goto LABEL_21;
       UILabel__set_text(v11, v9, 0);
@@ -202,14 +202,14 @@ void ServantFilterButtonControl__OverwriteButtonText(
     v12 = this->fields.buttonText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11828/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, 0);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11831/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, 0);
     if ( v12 )
     {
       UILabel__set_text(v12, v9, 0);
       return;
     }
 LABEL_21:
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
   }
 }
 
@@ -224,10 +224,10 @@ void ServantFilterButtonControl__RefreshButtonSelectState(ServantFilterButtonCon
   UISprite_o *v8; // x8
   System_String_o **p_SPRITE_NAME_ENABLE; // x9
 
-  if ( (byte_4D2771C & 1) == 0 )
+  if ( (byte_4CE96DA & 1) == 0 )
   {
-    sub_1C94098(&ServantFilterButtonControl_TypeInfo);
-    byte_4D2771C = 1;
+    sub_1C7BAE8(&ServantFilterButtonControl_TypeInfo);
+    byte_4CE96DA = 1;
   }
   targetSort = this->fields.targetSort;
   buttonSprite = this->fields.buttonSprite;
@@ -253,7 +253,7 @@ void ServantFilterButtonControl__RefreshButtonSelectState(ServantFilterButtonCon
   else
     v8 = v5;
   if ( !v8 )
-    sub_1C942F0(v7, method);
+    sub_1C7BD40(v7, method);
   p_SPRITE_NAME_ENABLE = &v7->static_fields->SPRITE_NAME_ENABLE;
   if ( !v6 )
     ++p_SPRITE_NAME_ENABLE;
@@ -270,7 +270,7 @@ void ServantFilterButtonControl__SetButtonEnable(
 
   button = (UnityEngine_Behaviour_o *)this->fields.button;
   if ( !button )
-    sub_1C942F0(0, isEnable);
+    sub_1C7BD40(0, isEnable);
   UnityEngine_Behaviour__set_enabled(button, isEnable, 0);
 }
 
@@ -286,10 +286,10 @@ void ServantFilterButtonControl__SetButtonMask(
   __int128 v7; // kr00_16 OVERLAPPED
   unsigned __int128 v8; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4D2771D & 1) == 0 )
+  if ( (byte_4CE96DB & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_406/*"#303030"*/);
-    byte_4D2771D = 1;
+    sub_1C7BAE8(&StringLiteral_407/*"#303030"*/);
+    byte_4CE96DB = 1;
   }
   v8 = 0u;
   button = (UnityEngine_Behaviour_o *)this->fields.button;
@@ -307,13 +307,13 @@ void ServantFilterButtonControl__SetButtonMask(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C942F0(button, isActive);
+    sub_1C7BD40(button, isActive);
   }
   if ( !UnityEngine_ColorUtility__TryParseHtmlString(
-          (System_String_o *)StringLiteral_406/*"#303030"*/,
+          (System_String_o *)StringLiteral_407/*"#303030"*/,
           (UnityEngine_Color_o *)&v8,
           0) )
-    v8 = xmmword_CFE620;
+    v8 = xmmword_CF5380;
   button = (UnityEngine_Behaviour_o *)this->fields.buttonSprite;
   if ( !button )
     goto LABEL_12;
@@ -331,12 +331,12 @@ void ServantFilterButtonControl__SetCondensedScaleButtons(ServantFilterButtonCon
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
   int32_t filterKind; // w8
 
-  if ( (byte_4D2771A & 1) == 0 )
+  if ( (byte_4CE96D8 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___);
-    sub_1C94098(&FilterKindList_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    byte_4D2771A = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___);
+    sub_1C7BAE8(&FilterKindList_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    byte_4CE96D8 = 1;
   }
   if ( this->fields.filterKind == 56 )
   {
@@ -354,14 +354,14 @@ void ServantFilterButtonControl__SetCondensedScaleButtons(ServantFilterButtonCon
   buttonText = (UILabel_o *)v4->static_fields->ClassFilterKindList;
   if ( !buttonText )
 LABEL_17:
-    sub_1C942F0(buttonText, method);
+    sub_1C7BD40(buttonText, method);
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                               (System_Collections_Generic_List_T__o *)buttonText,
-                                                              (const MethodInfo_38520F4 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                              (const MethodInfo_38260BC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( System_Linq_Enumerable__Contains_Int32Enum_(
          v5,
          this->fields.filterKind,
-         (const MethodInfo_31B9554 *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___)
+         (const MethodInfo_318C7F0 *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___)
     || (filterKind = this->fields.filterKind, filterKind == 28) )
   {
     buttonText = this->fields.buttonText;
@@ -425,7 +425,7 @@ void ServantFilterButtonControl_OnClickFilterButton___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -436,12 +436,12 @@ void ServantFilterButtonControl_OnClickFilterButton___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -453,9 +453,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC0D70;
+  this->fields.invoke_impl = (intptr_t)sub_1AAA010;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC0D28;
+  this->fields.extra_arg = (intptr_t)sub_1AA9FC8;
 }
 
 
@@ -470,14 +470,14 @@ System_IAsyncResult_o *ServantFilterButtonControl_OnClickFilterButton__BeginInvo
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = filterKind;
-  if ( (byte_4D2771F & 1) == 0 )
+  if ( (byte_4CE96DD & 1) == 0 )
   {
-    sub_1C94098(&ListViewSort_FilterKind_TypeInfo);
-    byte_4D2771F = 1;
+    sub_1C7BAE8(&ListViewSort_FilterKind_TypeInfo);
+    byte_4CE96DD = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(ListViewSort_FilterKind_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -486,7 +486,7 @@ void ServantFilterButtonControl_OnClickFilterButton__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

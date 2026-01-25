@@ -1,14 +1,14 @@
 void ResponseData___ctor(ResponseData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2E48F & 1) == 0 )
+  if ( (byte_4CF01FE & 1) == 0 )
   {
-    sub_1C94098(&ResponseData___TypeInfo);
-    sub_1C94098(&ResponseData_TypeInfo);
-    byte_4D2E48F = 1;
+    sub_1C7BAE8(&ResponseData___TypeInfo);
+    sub_1C7BAE8(&ResponseData_TypeInfo);
+    byte_4CF01FE = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( ResponseData_TypeInfo->static_fields->_never )
-    sub_1C94140(ResponseData___TypeInfo, 1);
+    sub_1C7BB90(ResponseData___TypeInfo, 1);
 }
 
 
@@ -17,20 +17,20 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
   uint32_t v4; // w0
   __int64 *v5; // x8
 
-  if ( (byte_4D2E490 & 1) == 0 )
+  if ( (byte_4CF01FF & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1440/*"89"*/);
-    sub_1C94098(&StringLiteral_1129/*"01"*/);
-    sub_1C94098(&StringLiteral_1136/*"03"*/);
-    sub_1C94098(&StringLiteral_1446/*"99"*/);
-    sub_1C94098(&StringLiteral_1135/*"02"*/);
-    sub_1C94098(&StringLiteral_1439/*"88"*/);
-    sub_1C94098(&StringLiteral_1444/*"98"*/);
-    sub_1C94098(&StringLiteral_1301/*"11"*/);
-    sub_1C94098(&StringLiteral_1434/*"71"*/);
-    sub_1C94098(&StringLiteral_1137/*"04"*/);
-    sub_1C94098(&StringLiteral_1122/*"00"*/);
-    byte_4D2E490 = 1;
+    sub_1C7BAE8(&StringLiteral_1441/*"89"*/);
+    sub_1C7BAE8(&StringLiteral_1130/*"01"*/);
+    sub_1C7BAE8(&StringLiteral_1137/*"03"*/);
+    sub_1C7BAE8(&StringLiteral_1447/*"99"*/);
+    sub_1C7BAE8(&StringLiteral_1136/*"02"*/);
+    sub_1C7BAE8(&StringLiteral_1440/*"88"*/);
+    sub_1C7BAE8(&StringLiteral_1445/*"98"*/);
+    sub_1C7BAE8(&StringLiteral_1302/*"11"*/);
+    sub_1C7BAE8(&StringLiteral_1435/*"71"*/);
+    sub_1C7BAE8(&StringLiteral_1138/*"04"*/);
+    sub_1C7BAE8(&StringLiteral_1123/*"00"*/);
+    byte_4CF01FF = 1;
   }
   if ( !resCode )
     return 0;
@@ -42,13 +42,13 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
       switch ( v4 )
       {
         case 0x90E5D245:
-          v5 = &StringLiteral_1434/*"71"*/;
+          v5 = &StringLiteral_1435/*"71"*/;
           goto LABEL_30;
         case 0x9901B55A:
-          v5 = &StringLiteral_1440/*"89"*/;
+          v5 = &StringLiteral_1441/*"89"*/;
           goto LABEL_30;
         case 0x9A01B6ED:
-          v5 = &StringLiteral_1439/*"88"*/;
+          v5 = &StringLiteral_1440/*"88"*/;
           goto LABEL_30;
       }
     }
@@ -56,15 +56,15 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
     {
       if ( v4 == 535654183 )
       {
-        v5 = &StringLiteral_1135/*"02"*/;
+        v5 = &StringLiteral_1136/*"02"*/;
         goto LABEL_30;
       }
       if ( v4 == 552431802 )
       {
-        v5 = &StringLiteral_1129/*"01"*/;
+        v5 = &StringLiteral_1130/*"01"*/;
         goto LABEL_30;
       }
-      if ( v4 == 569209421 && System_String__op_Equality(resCode, (System_String_o *)StringLiteral_1122/*"00"*/, 0) )
+      if ( v4 == 569209421 && System_String__op_Equality(resCode, (System_String_o *)StringLiteral_1123/*"00"*/, 0) )
         return 1;
     }
   }
@@ -73,13 +73,13 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
     switch ( v4 )
     {
       case 0x1CEB2BD7u:
-        v5 = &StringLiteral_1301/*"11"*/;
+        v5 = &StringLiteral_1302/*"11"*/;
         goto LABEL_30;
       case 0x1DED6C01u:
-        v5 = &StringLiteral_1137/*"04"*/;
+        v5 = &StringLiteral_1138/*"04"*/;
         goto LABEL_30;
       case 0x1EED6D94u:
-        v5 = &StringLiteral_1136/*"03"*/;
+        v5 = &StringLiteral_1137/*"03"*/;
         goto LABEL_30;
     }
   }
@@ -87,12 +87,12 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
   {
     if ( v4 == 335455588 )
     {
-      v5 = &StringLiteral_1444/*"98"*/;
+      v5 = &StringLiteral_1445/*"98"*/;
       goto LABEL_30;
     }
     if ( v4 == 352233207 )
     {
-      v5 = &StringLiteral_1446/*"99"*/;
+      v5 = &StringLiteral_1447/*"99"*/;
 LABEL_30:
       System_String__op_Equality(resCode, (System_String_o *)*v5, 0);
     }
@@ -101,7 +101,7 @@ LABEL_30:
 }
 
 
-bool ResponseData__checkError_45012660(ResponseData_o *this, const MethodInfo *method)
+bool ResponseData__checkError_44743216(ResponseData_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -121,12 +121,12 @@ System_String_o *ResponseData__getErrorMessage(ResponseData_o *this, const Metho
   System_Collections_Generic_Dictionary_object__object__o *fail; // x19
 
   v2 = this;
-  if ( (byte_4D2E491 & 1) == 0 )
+  if ( (byte_4CF0200 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    this = (ResponseData_o *)sub_1C94098(&StringLiteral_18706/*"detail"*/);
-    byte_4D2E491 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    this = (ResponseData_o *)sub_1C7BAE8(&StringLiteral_18706/*"detail"*/);
+    byte_4CF0200 = 1;
   }
   fail = (System_Collections_Generic_Dictionary_object__object__o *)v2->fields.fail;
   if ( !fail )
@@ -134,18 +134,18 @@ System_String_o *ResponseData__getErrorMessage(ResponseData_o *this, const Metho
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          fail,
          (Il2CppObject *)StringLiteral_18706/*"detail"*/,
-         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     this = (ResponseData_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                fail,
                                (Il2CppObject *)StringLiteral_18706/*"detail"*/,
-                               (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                               (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
       return (System_String_o *)((__int64 (__fastcall *)(ResponseData_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
                                   this,
                                   this->klass->vtable._3_ToString.method);
 LABEL_8:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   return 0;
 }

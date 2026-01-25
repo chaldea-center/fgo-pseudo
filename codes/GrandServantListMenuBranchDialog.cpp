@@ -1,9 +1,9 @@
 void GrandServantListMenuBranchDialog___ctor(GrandServantListMenuBranchDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D274C0 & 1) == 0 )
+  if ( (byte_4CE9347 & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D274C0 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CE9347 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -37,7 +37,7 @@ void GrandServantListMenuBranchDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C9403C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C7BA8C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)result,
@@ -103,13 +103,13 @@ void GrandServantListMenuBranchDialog__OnEnable(GrandServantListMenuBranchDialog
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4D274BE & 1) == 0 )
+  if ( (byte_4CE9345 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_15695/*"Window/Buttons/CancelButton"*/);
-    byte_4D274BE = 1;
+    sub_1C7BAE8(&StringLiteral_15696/*"Window/Buttons/CancelButton"*/);
+    byte_4CE9345 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45761432(transform, (System_String_o *)StringLiteral_15695/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45495228(transform, (System_String_o *)StringLiteral_15696/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -164,37 +164,37 @@ void GrandServantListMenuBranchDialog__Open(
   int32_t num; // w20
   UnityEngine_Color_o v51; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4D274BF & 1) == 0 )
+  if ( (byte_4CE9346 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_Any_UserServantEntity____79047968);
-    sub_1C94098(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C94098(&System_Func_UserServantEntity__bool__TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&Method_GrandServantListMenuBranchDialog___c__DisplayClass12_0__Open_b__0__);
-    sub_1C94098(&GrandServantListMenuBranchDialog___c__DisplayClass12_0_TypeInfo);
-    sub_1C94098(&StringLiteral_7022/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_MESSAGE"*/);
-    sub_1C94098(&StringLiteral_409/*"#4D4D4D"*/);
-    sub_1C94098(&StringLiteral_7023/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/);
-    byte_4D274BF = 1;
+    sub_1C7BAE8(&Method_BasicHelper_Any_UserServantEntity____78794736);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C7BAE8(&System_Func_UserServantEntity__bool__TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&Method_GrandServantListMenuBranchDialog___c__DisplayClass12_0__Open_b__0__);
+    sub_1C7BAE8(&GrandServantListMenuBranchDialog___c__DisplayClass12_0_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_7025/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_MESSAGE"*/);
+    sub_1C7BAE8(&StringLiteral_410/*"#4D4D4D"*/);
+    sub_1C7BAE8(&StringLiteral_7026/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/);
+    byte_4CE9346 = 1;
   }
   *(_QWORD *)&v51.fields.r = 0;
   *(_QWORD *)&v51.fields.b = 0;
-  v9 = sub_1C942E4(GrandServantListMenuBranchDialog___c__DisplayClass12_0_TypeInfo);
+  v9 = sub_1C7BD34(GrandServantListMenuBranchDialog___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_36;
   *(_QWORD *)(v9 + 16) = userServantEntity;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)userServantEntity, v12, v13, v14, v15, v16, v17);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)userServantEntity, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = grandGraphEntity;
   v18 = (__int64 *)(v9 + 24);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)grandGraphEntity, v19, v20, v21, v22, v23, v24);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)grandGraphEntity, v19, v20, v21, v22, v23, v24);
   this->fields.callbackFunc = callback;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v25,
@@ -204,7 +204,7 @@ void GrandServantListMenuBranchDialog__Open(
     v29,
     v30);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_ColorUtility__TryParseHtmlString(
-                                                                  (System_String_o *)StringLiteral_409/*"#4D4D4D"*/,
+                                                                  (System_String_o *)StringLiteral_410/*"#4D4D4D"*/,
                                                                   &v51,
                                                                   0);
   changeServantButton = this->fields.changeServantButton;
@@ -232,24 +232,24 @@ void GrandServantListMenuBranchDialog__Open(
     goto LABEL_36;
   if ( !*(_DWORD *)(v37 + 24) )
 LABEL_37:
-    sub_1C942F8(Master_object);
+    sub_1C7BD48(Master_object);
   v38 = *(_DWORD *)(v36 + 32);
   v39 = *(_DWORD *)(v37 + 32);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              Master_object,
              v38,
-             (const MethodInfo_345B4C0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_342E2FC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   messageLabel = this->fields.messageLabel;
   v42 = Entity;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_7022/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_MESSAGE"*/,
+                                                                  (System_String_o *)StringLiteral_7025/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_MESSAGE"*/,
                                                                   0);
   if ( !v42 )
     goto LABEL_36;
@@ -261,7 +261,7 @@ LABEL_37:
     goto LABEL_36;
   UILabel__set_text(messageLabel, (System_String_o *)Master_object, 0);
   resetGrandButtonCoverLabel = this->fields.resetGrandButtonCoverLabel;
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_7023/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/, 0);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_7026/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
                                                                   v44,
                                                                   (Il2CppObject *)v42[1].monitor,
@@ -269,22 +269,22 @@ LABEL_37:
   if ( !resetGrandButtonCoverLabel )
     goto LABEL_36;
   UILabel__set_text(resetGrandButtonCoverLabel, (System_String_o *)Master_object, 0);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_36;
   OrganizationList = (System_Object_array *)UserServantMaster__getOrganizationList(
                                               (UserServantMaster_o *)Master_object,
                                               0);
-  v46 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_UserServantEntity__bool__TypeInfo);
+  v46 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_UserServantEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v46,
     (Il2CppObject *)v9,
     Method_GrandServantListMenuBranchDialog___c__DisplayClass12_0__Open_b__0__,
     0);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)BasicHelper__Any_object__51926292(
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)BasicHelper__Any_object__51746772(
                                                                   OrganizationList,
                                                                   (System_Func_T__bool__o *)v46,
-                                                                  (const MethodInfo_3185514 *)Method_BasicHelper_Any_UserServantEntity____79047968);
+                                                                  (const MethodInfo_31597D4 *)Method_BasicHelper_Any_UserServantEntity____78794736);
   if ( !this->fields.changeServantButton )
     goto LABEL_36;
   v47 = (char)Master_object;
@@ -293,13 +293,13 @@ LABEL_37:
   if ( !Master_object )
     goto LABEL_36;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, (v47 & 1) == 0, 0);
-  v48 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserItemMaster___);
+  v48 = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2633A )
+  if ( !byte_4CE827C )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2633A = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CE827C = 1;
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -323,7 +323,7 @@ LABEL_37:
                                                                          0)) == 0) )
   {
 LABEL_36:
-    sub_1C942F0(Master_object, v11);
+    sub_1C7BD40(Master_object, v11);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, num < v39, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -345,10 +345,10 @@ void GrandServantListMenuBranchDialog__add_callbackFunc(
   GrandServantListMenuBranchDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D274BC & 1) == 0 )
+  if ( (byte_4CE9343 & 1) == 0 )
   {
-    sub_1C94098(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo);
-    byte_4D274BC = 1;
+    sub_1C7BAE8(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo);
+    byte_4CE9343 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -361,13 +361,13 @@ void GrandServantListMenuBranchDialog__add_callbackFunc(
       if ( (GrandServantListMenuBranchDialog_CallbackFunc_c *)v8->klass != GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantListMenuBranchDialog_o *)sub_1C9468C(v8);
+  v11 = (GrandServantListMenuBranchDialog_o *)sub_1C7C0DC(v8);
   GrandServantListMenuBranchDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -386,10 +386,10 @@ void GrandServantListMenuBranchDialog__remove_callbackFunc(
   GrandServantListMenuBranchDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D274BD & 1) == 0 )
+  if ( (byte_4CE9344 & 1) == 0 )
   {
-    sub_1C94098(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo);
-    byte_4D274BD = 1;
+    sub_1C7BAE8(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo);
+    byte_4CE9344 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -402,13 +402,13 @@ void GrandServantListMenuBranchDialog__remove_callbackFunc(
       if ( (GrandServantListMenuBranchDialog_CallbackFunc_c *)v8->klass != GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantListMenuBranchDialog_o *)sub_1C9468C(v8);
+  v11 = (GrandServantListMenuBranchDialog_o *)sub_1C7C0DC(v8);
   GrandServantListMenuBranchDialog__Awake(v11, v12);
 }
 
@@ -432,7 +432,7 @@ void GrandServantListMenuBranchDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -443,12 +443,12 @@ void GrandServantListMenuBranchDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -460,9 +460,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC0838;
+  this->fields.invoke_impl = (intptr_t)sub_1AA974C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC07F0;
+  this->fields.extra_arg = (intptr_t)sub_1AA9704;
 }
 
 
@@ -477,14 +477,14 @@ System_IAsyncResult_o *GrandServantListMenuBranchDialog_CallbackFunc__BeginInvok
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4D274C1 & 1) == 0 )
+  if ( (byte_4CE9348 & 1) == 0 )
   {
-    sub_1C94098(&GrandServantListMenuBranchDialog_Result_TypeInfo);
-    byte_4D274C1 = 1;
+    sub_1C7BAE8(&GrandServantListMenuBranchDialog_Result_TypeInfo);
+    byte_4CE9348 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(GrandServantListMenuBranchDialog_Result_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -493,7 +493,7 @@ void GrandServantListMenuBranchDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 
@@ -535,11 +535,11 @@ bool GrandServantListMenuBranchDialog___c__DisplayClass12_0___Open_b__0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4D274C2 & 1) == 0 )
+  if ( (byte_4CE9349 & 1) == 0 )
   {
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4D274C2 = 1;
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CE9349 = 1;
   }
   if ( !e )
     goto LABEL_16;
@@ -549,13 +549,13 @@ bool GrandServantListMenuBranchDialog___c__DisplayClass12_0___Open_b__0(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v16.fields.currentCryptoKey = v6;
   *(_QWORD *)&v16.fields.fakeValue = v5;
-  this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(
+  this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(
                                                                        v16,
                                                                        0);
   userServantEntity = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v4->fields.userServantEntity;
   if ( !userServantEntity )
     goto LABEL_16;
-  if ( (_DWORD)this == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(userServantEntity[5], 0) )
+  if ( (_DWORD)this == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(userServantEntity[5], 0) )
   {
     v8 = *(_OWORD *)&e->fields.id.fields.fakeValue;
     *(_OWORD *)&v15.fields.currentCryptoKey = *(_OWORD *)&e->fields.id.fields.currentCryptoKey;
@@ -563,7 +563,7 @@ bool GrandServantListMenuBranchDialog___c__DisplayClass12_0___Open_b__0(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v14 = v15;
-    this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(
+    this = (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49453300(
                                                                          &v14,
                                                                          0);
     v9 = v4->fields.userServantEntity;
@@ -572,7 +572,7 @@ bool GrandServantListMenuBranchDialog___c__DisplayClass12_0___Open_b__0(
       v10 = *(_OWORD *)&v9->fields.id.fields.fakeValue;
       *(_OWORD *)&v13.fields.currentCryptoKey = *(_OWORD *)&v9->fields.id.fields.currentCryptoKey;
       *(_OWORD *)&v13.fields.fakeValue = v10;
-      if ( this == (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(
+      if ( this == (GrandServantListMenuBranchDialog___c__DisplayClass12_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49453300(
                                                                                  &v13,
                                                                                  0) )
         return 0;
@@ -581,7 +581,7 @@ bool GrandServantListMenuBranchDialog___c__DisplayClass12_0___Open_b__0(
         return GrandGraphEntity__CanSelectToGrand((GrandGraphEntity_o *)this, e, 0);
     }
 LABEL_16:
-    sub_1C942F0(this, e);
+    sub_1C7BD40(this, e);
   }
   return 0;
 }

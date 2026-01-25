@@ -1,13 +1,13 @@
 void EventMissionEntity___ctor(EventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C8AC & 1) == 0 )
+  if ( (byte_4CEE6CC & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_int___ctor__);
-    byte_4D2C8AC = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
+    byte_4CEE6CC = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -43,10 +43,10 @@ GiftEntity_o *EventMissionEntity__GetQpGiftEntity(EventMissionEntity_o *this, co
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1C942F8(GiftData);
+      sub_1C7BD48(GiftData);
     v7 = v5->m_Items[v6];
     if ( !v7 )
-      sub_1C942F0(GiftData, v3);
+      sub_1C7BD40(GiftData, v3);
     GiftData = (GiftEntity_array *)GiftEntity__isQp(v5->m_Items[v6], 0);
     if ( ((unsigned __int8)GiftData & 1) != 0 )
       break;
@@ -61,28 +61,6 @@ GiftEntity_o *EventMissionEntity__GetQpGiftEntity(EventMissionEntity_o *this, co
 bool EventMissionEntity__HasMissionFlag(EventMissionEntity_o *this, int32_t missionFlag, const MethodInfo *method)
 {
   return (this->fields.flag & missionFlag) != 0;
-}
-
-
-bool EventMissionEntity__IsActive(EventMissionEntity_o *this, int64_t checkTime, const MethodInfo *method)
-{
-  return this->fields.startedAt <= checkTime && this->fields.closedAt >= checkTime;
-}
-
-
-bool EventMissionEntity__IsActiveNow(EventMissionEntity_o *this, const MethodInfo *method)
-{
-  int64_t Time; // x0
-
-  if ( (byte_4D2C8AB & 1) == 0 )
-  {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2C8AB = 1;
-  }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  Time = NetworkManager__getTime(0);
-  return this->fields.startedAt <= Time && this->fields.closedAt >= Time;
 }
 
 
@@ -134,22 +112,6 @@ bool EventMissionEntity__IsOpen(EventMissionEntity_o *this, int64_t checkTime, c
 }
 
 
-bool EventMissionEntity__IsOpenNow(EventMissionEntity_o *this, const MethodInfo *method)
-{
-  int64_t Time; // x0
-
-  if ( (byte_4D2C8AA & 1) == 0 )
-  {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2C8AA = 1;
-  }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  Time = NetworkManager__getTime(0);
-  return this->fields.startedAt <= Time && this->fields.endedAt >= Time;
-}
-
-
 bool EventMissionEntity__IsReceivablePeriod(EventMissionEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
   return this->fields.startedAt <= nowTime && this->fields.closedAt >= nowTime;
@@ -161,19 +123,19 @@ GiftEntity_array *EventMissionEntity__getGiftData(EventMissionEntity_o *this, co
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4D2C8A7 & 1) == 0 )
+  if ( (byte_4CEE6C9 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2C8A7 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEE6C9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
+                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
   {
-    sub_1C942F0(Instance, v4);
+    sub_1C7BD40(Instance, v4);
   }
   return GiftMaster__GetGiftListById((GiftMaster_o *)Instance, this->fields.giftId, 0);
 }
@@ -185,19 +147,19 @@ EventRewardSetEntity_o *EventMissionEntity__getSetRewardData(EventMissionEntity_
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_4D2C8A8 & 1) == 0 )
+  if ( (byte_4CEE6CA & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2C8A8 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEE6CA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0 )
+                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0 )
   {
-    sub_1C942F0(Instance, v4);
+    sub_1C7BD40(Instance, v4);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
@@ -212,10 +174,10 @@ bool EventMissionEntity__isNowMission(EventMissionEntity_o *this, const MethodIn
 {
   int64_t Time; // x0
 
-  if ( (byte_4D2C8A9 & 1) == 0 )
+  if ( (byte_4CEE6CB & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2C8A9 = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CEE6CB = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

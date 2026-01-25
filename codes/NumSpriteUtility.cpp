@@ -2,10 +2,10 @@ int32_t NumSpriteUtility__GetDigit(int64_t num, const MethodInfo *method)
 {
   double v3; // d0
 
-  if ( (byte_4D28B76 & 1) == 0 )
+  if ( (byte_4CEA9D9 & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D28B76 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEA9D9 = 1;
   }
   if ( !num )
     return 0;
@@ -24,10 +24,10 @@ int64_t NumSpriteUtility__GetDigitNumber(int64_t number, int64_t digit, const Me
   double v5; // d0
   signed __int64 v6; // x8
 
-  if ( (byte_4D28B77 & 1) == 0 )
+  if ( (byte_4CEA9DA & 1) == 0 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D28B77 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CEA9DA = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -62,12 +62,12 @@ void NumSpriteUtility__SetNumSprite(
   int64_t DigitNumber; // [xsp+10h] [xbp-70h] BYREF
   int v24; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4D28B75 & 1) == 0 )
+  if ( (byte_4CEA9D8 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_Count_UISprite___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&string_TypeInfo);
-    byte_4D28B75 = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Count_UISprite___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&string_TypeInfo);
+    byte_4CEA9D8 = 1;
   }
   v24 = 0;
   DigitNumber = 0;
@@ -76,7 +76,7 @@ void NumSpriteUtility__SetNumSprite(
     Digit = NumSpriteUtility__GetDigit(number, (const MethodInfo *)sprites);
     v11 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                               (const MethodInfo_31BC830 *)Method_System_Linq_Enumerable_Count_UISprite___);
+                               (const MethodInfo_318FACC *)Method_System_Linq_Enumerable_Count_UISprite___);
     if ( (int)v11 >= 1 )
     {
       v12 = 0;
@@ -98,7 +98,7 @@ void NumSpriteUtility__SetNumSprite(
           {
             DigitNumber = NumSpriteUtility__GetDigitNumber(number, v13, v18);
             v21 = System_Int64__ToString((int64_t)&DigitNumber, 0);
-            v11 = System_String__Concat_64417744(baseName, v21, 0);
+            v11 = System_String__Concat_64176912(baseName, v21, 0);
             if ( !setSprite )
               goto LABEL_25;
             v11 = (System_String_o *)((__int64 (__fastcall *)(intptr_t, UISprite_o *, System_String_o *, intptr_t))setSprite->fields.invoke_impl)(
@@ -119,7 +119,7 @@ void NumSpriteUtility__SetNumSprite(
           {
             v24 = 0;
             v20 = System_Int32__ToString((int32_t)&v24, 0);
-            v11 = System_String__Concat_64417744(baseName, v20, 0);
+            v11 = System_String__Concat_64176912(baseName, v20, 0);
             if ( !setSprite )
               goto LABEL_25;
             ((void (__fastcall *)(intptr_t, UISprite_o *, System_String_o *, intptr_t))setSprite->fields.invoke_impl)(
@@ -132,7 +132,7 @@ void NumSpriteUtility__SetNumSprite(
           {
             if ( !setSprite )
 LABEL_25:
-              sub_1C942F0(v11, v17);
+              sub_1C7BD40(v11, v17);
             ((void (__fastcall *)(intptr_t, UISprite_o *, struct System_String_o *, intptr_t))setSprite->fields.invoke_impl)(
               setSprite->fields.method_code,
               m_Items[v12],
@@ -144,11 +144,11 @@ LABEL_25:
         ++v12;
         v11 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                    (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                   (const MethodInfo_31BC830 *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                   (const MethodInfo_318FACC *)Method_System_Linq_Enumerable_Count_UISprite___);
         if ( (__int64)v12 >= (int)v11 )
           return;
       }
-      sub_1C942F8(v11);
+      sub_1C7BD48(v11);
     }
   }
 }

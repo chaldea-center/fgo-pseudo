@@ -7,7 +7,7 @@ void ScriptActionAdvPrefabCameraLocator___ctor(ScriptActionAdvPrefabCameraLocato
 void ScriptActionAdvPrefabCameraLocator__Awake(ScriptActionAdvPrefabCameraLocator_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *targetRig; // x0
-  System_Object_array *ComponentsInChildren_object__52384692; // x0
+  System_Object_array *ComponentsInChildren_object__52198636; // x0
   int32_t v5; // w2
   int32_t v6; // w3
   System_String_o *v7; // x4
@@ -15,21 +15,21 @@ void ScriptActionAdvPrefabCameraLocator__Awake(ScriptActionAdvPrefabCameraLocato
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D2E7C6 & 1) == 0 )
+  if ( (byte_4CF0537 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-    byte_4D2E7C6 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+    byte_4CF0537 = 1;
   }
   targetRig = this->fields.targetRig;
   if ( !targetRig )
-    sub_1C942F0(0, method);
-  ComponentsInChildren_object__52384692 = UnityEngine_GameObject__GetComponentsInChildren_object__52384692(
+    sub_1C7BD40(0, method);
+  ComponentsInChildren_object__52198636 = UnityEngine_GameObject__GetComponentsInChildren_object__52198636(
                                             targetRig,
-                                            (const MethodInfo_31F53B4 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__52384692;
-  sub_1C9403C(
+                                            (const MethodInfo_31C7CEC *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__52198636;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetCameras,
-    (int32_t)ComponentsInChildren_object__52384692,
+    (int32_t)ComponentsInChildren_object__52198636,
     v5,
     v6,
     v7,
@@ -90,7 +90,7 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
       do
       {
         if ( v8 >= LODWORD(targetCameras->max_length) )
-          sub_1C942F8(targetRig);
+          sub_1C7BD48(targetRig);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
@@ -115,7 +115,7 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
       }
       while ( targetCameras );
 LABEL_18:
-      sub_1C942F0(targetRig, method);
+      sub_1C7BD40(targetRig, method);
     }
   }
 }

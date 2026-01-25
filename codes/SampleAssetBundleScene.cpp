@@ -35,61 +35,61 @@ void SampleAssetBundleScene__Init(SampleAssetBundleScene_o *this, const MethodIn
   AssetLoader_LoadEndDataHandler_o *v29; // x20
   AssetLoader_LoadEndDataHandler_o *v30; // x20
 
-  if ( (byte_4D29EE4 & 1) == 0 )
+  if ( (byte_4CEBD47 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&AssetManager_TypeInfo);
-    sub_1C94098(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C94098(&Method_SampleAssetBundleScene_LoadDependEnd__);
-    sub_1C94098(&Method_SampleAssetBundleScene_LoadMatEnd__);
-    sub_1C94098(&Method_SampleAssetBundleScene_LoadPackEnd4__);
-    sub_1C94098(&Method_SampleAssetBundleScene_LoadPackEnd__);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_13789/*"Test/card003"*/);
-    sub_1C94098(&StringLiteral_13781/*"Test/Card001d"*/);
-    sub_1C94098(&StringLiteral_8166/*"Items/ItemAtlas"*/);
-    sub_1C94098(&StringLiteral_13782/*"Test/DependCommon"*/);
-    sub_1C94098(&StringLiteral_13786/*"Test/TestCube"*/);
-    sub_1C94098(&StringLiteral_13787/*"Test/card002d.png"*/);
-    byte_4D29EE4 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C7BAE8(&Method_SampleAssetBundleScene_LoadDependEnd__);
+    sub_1C7BAE8(&Method_SampleAssetBundleScene_LoadMatEnd__);
+    sub_1C7BAE8(&Method_SampleAssetBundleScene_LoadPackEnd4__);
+    sub_1C7BAE8(&Method_SampleAssetBundleScene_LoadPackEnd__);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13791/*"Test/card003"*/);
+    sub_1C7BAE8(&StringLiteral_13783/*"Test/Card001d"*/);
+    sub_1C7BAE8(&StringLiteral_8170/*"Items/ItemAtlas"*/);
+    sub_1C7BAE8(&StringLiteral_13784/*"Test/DependCommon"*/);
+    sub_1C7BAE8(&StringLiteral_13788/*"Test/TestCube"*/);
+    sub_1C7BAE8(&StringLiteral_13789/*"Test/card002d.png"*/);
+    byte_4CEBD47 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.state = 1;
-    v3 = sub_1C94140(string___TypeInfo, 3);
+    v3 = sub_1C7BB90(string___TypeInfo, 3);
     if ( !v3 )
-      sub_1C942F0(0, v4);
+      sub_1C7BD40(0, v4);
     v11 = v3;
     if ( !*(_DWORD *)(v3 + 24)
-      || (v12 = StringLiteral_13781/*"Test/Card001d"*/,
-          *(_QWORD *)(v3 + 32) = StringLiteral_13781/*"Test/Card001d"*/,
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10),
+      || (v12 = StringLiteral_13783/*"Test/Card001d"*/,
+          *(_QWORD *)(v3 + 32) = StringLiteral_13783/*"Test/Card001d"*/,
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10),
           *(_DWORD *)(v11 + 24) <= 1u)
-      || (v19 = StringLiteral_13787/*"Test/card002d.png"*/,
-          *(_QWORD *)(v11 + 40) = StringLiteral_13787/*"Test/card002d.png"*/,
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 40), v19, v13, v14, v15, v16, v17, v18),
+      || (v19 = StringLiteral_13789/*"Test/card002d.png"*/,
+          *(_QWORD *)(v11 + 40) = StringLiteral_13789/*"Test/card002d.png"*/,
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 40), v19, v13, v14, v15, v16, v17, v18),
           *(_DWORD *)(v11 + 24) <= 2u) )
     {
-      sub_1C942F8(v3);
+      sub_1C7BD48(v3);
     }
-    v26 = StringLiteral_13786/*"Test/TestCube"*/;
-    *(_QWORD *)(v11 + 48) = StringLiteral_13786/*"Test/TestCube"*/;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 48), v26, v20, v21, v22, v23, v24, v25);
-    v27 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v26 = StringLiteral_13788/*"Test/TestCube"*/;
+    *(_QWORD *)(v11 + 48) = StringLiteral_13788/*"Test/TestCube"*/;
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 48), v26, v20, v21, v22, v23, v24, v25);
+    v27 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_SampleAssetBundleScene_LoadPackEnd__, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage_41292120((System_String_array *)v11, v27, 1, 0);
-    v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    AssetManager__loadAssetStorage_41103084((System_String_array *)v11, v27, 1, 0);
+    v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v28, (Il2CppObject *)this, Method_SampleAssetBundleScene_LoadMatEnd__, 0);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_8166/*"Items/ItemAtlas"*/, v28, 1, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_8170/*"Items/ItemAtlas"*/, v28, 1, 0);
     this->fields.downloadSize = AssetManager__getDownloadSize(0);
-    v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v29, (Il2CppObject *)this, Method_SampleAssetBundleScene_LoadPackEnd4__, 0);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13789/*"Test/card003"*/, v29, 1, 0);
-    v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13791/*"Test/card003"*/, v29, 1, 0);
+    v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v30, (Il2CppObject *)this, Method_SampleAssetBundleScene_LoadDependEnd__, 0);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13782/*"Test/DependCommon"*/, v30, 1, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13784/*"Test/DependCommon"*/, v30, 1, 0);
   }
 }
 
@@ -122,41 +122,41 @@ void SampleAssetBundleScene__LoadDependEnd(SampleAssetBundleScene_o *this, Asset
   int32_t v27; // w1
   System_Action_o *v28; // x21
 
-  if ( (byte_4D29EEB & 1) == 0 )
+  if ( (byte_4CEBD4E & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&AssetManager_TypeInfo);
-    sub_1C94098(&Method_SampleAssetBundleScene_LoadDependEnd2__);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_13783/*"Test/DependPrefab1"*/);
-    sub_1C94098(&StringLiteral_13785/*"Test/DependPrefab3"*/);
-    sub_1C94098(&StringLiteral_13784/*"Test/DependPrefab2"*/);
-    byte_4D29EEB = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    sub_1C7BAE8(&Method_SampleAssetBundleScene_LoadDependEnd2__);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13785/*"Test/DependPrefab1"*/);
+    sub_1C7BAE8(&StringLiteral_13787/*"Test/DependPrefab3"*/);
+    sub_1C7BAE8(&StringLiteral_13786/*"Test/DependPrefab2"*/);
+    byte_4CEBD4E = 1;
   }
-  v4 = sub_1C94140(string___TypeInfo, 3);
+  v4 = sub_1C7BB90(string___TypeInfo, 3);
   if ( !v4 )
-    sub_1C942F0(0, v5);
+    sub_1C7BD40(0, v5);
   v12 = v4;
   if ( !*(_DWORD *)(v4 + 24)
-    || (v13 = StringLiteral_13783/*"Test/DependPrefab1"*/,
-        *(_QWORD *)(v4 + 32) = StringLiteral_13783/*"Test/DependPrefab1"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11),
+    || (v13 = StringLiteral_13785/*"Test/DependPrefab1"*/,
+        *(_QWORD *)(v4 + 32) = StringLiteral_13785/*"Test/DependPrefab1"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11),
         *(_DWORD *)(v12 + 24) <= 1u)
-    || (v20 = StringLiteral_13784/*"Test/DependPrefab2"*/,
-        *(_QWORD *)(v12 + 40) = StringLiteral_13784/*"Test/DependPrefab2"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v12 + 40), v20, v14, v15, v16, v17, v18, v19),
+    || (v20 = StringLiteral_13786/*"Test/DependPrefab2"*/,
+        *(_QWORD *)(v12 + 40) = StringLiteral_13786/*"Test/DependPrefab2"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v12 + 40), v20, v14, v15, v16, v17, v18, v19),
         *(_DWORD *)(v12 + 24) <= 2u) )
   {
-    sub_1C942F8(v4);
+    sub_1C7BD48(v4);
   }
-  v27 = StringLiteral_13785/*"Test/DependPrefab3"*/;
-  *(_QWORD *)(v12 + 48) = StringLiteral_13785/*"Test/DependPrefab3"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v12 + 48), v27, v21, v22, v23, v24, v25, v26);
-  v28 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v27 = StringLiteral_13787/*"Test/DependPrefab3"*/;
+  *(_QWORD *)(v12 + 48) = StringLiteral_13787/*"Test/DependPrefab3"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v12 + 48), v27, v21, v22, v23, v24, v25, v26);
+  v28 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v28, (Il2CppObject *)this, Method_SampleAssetBundleScene_LoadDependEnd2__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_41292120((System_String_array *)v12, v28, 1, 0);
+  AssetManager__loadAssetStorage_41103084((System_String_array *)v12, v28, 1, 0);
 }
 
 
@@ -166,16 +166,16 @@ void SampleAssetBundleScene__LoadDependEnd2(SampleAssetBundleScene_o *this, cons
   const MethodInfo *v4; // x2
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D29EEC & 1) == 0 )
+  if ( (byte_4CEBD4F & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_13783/*"Test/DependPrefab1"*/);
-    sub_1C94098(&StringLiteral_13785/*"Test/DependPrefab3"*/);
-    sub_1C94098(&StringLiteral_13784/*"Test/DependPrefab2"*/);
-    byte_4D29EEC = 1;
+    sub_1C7BAE8(&StringLiteral_13785/*"Test/DependPrefab1"*/);
+    sub_1C7BAE8(&StringLiteral_13787/*"Test/DependPrefab3"*/);
+    sub_1C7BAE8(&StringLiteral_13786/*"Test/DependPrefab2"*/);
+    byte_4CEBD4F = 1;
   }
-  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13783/*"Test/DependPrefab1"*/, 100.0, 0.0, v2);
-  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13784/*"Test/DependPrefab2"*/, 200.0, 0.0, v4);
-  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13785/*"Test/DependPrefab3"*/, 300.0, 0.0, v5);
+  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13785/*"Test/DependPrefab1"*/, 100.0, 0.0, v2);
+  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13786/*"Test/DependPrefab2"*/, 200.0, 0.0, v4);
+  SampleAssetBundleScene__SetAssetPrefab(this, (System_String_o *)StringLiteral_13787/*"Test/DependPrefab3"*/, 300.0, 0.0, v5);
 }
 
 
@@ -184,27 +184,27 @@ void SampleAssetBundleScene__LoadMatEnd(SampleAssetBundleScene_o *this, AssetDat
   SampleAssetBundleScene_o *v4; // x19
 
   v4 = this;
-  if ( (byte_4D29EEA & 1) == 0 )
+  if ( (byte_4CEBD4D & 1) == 0 )
   {
-    sub_1C94098(&Method_AssetData_GetObject_GameObject___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    this = (SampleAssetBundleScene_o *)sub_1C94098(&StringLiteral_1288/*"100"*/);
-    byte_4D29EEA = 1;
+    sub_1C7BAE8(&Method_AssetData_GetObject_GameObject___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    this = (SampleAssetBundleScene_o *)sub_1C7BAE8(&StringLiteral_1289/*"100"*/);
+    byte_4CEBD4D = 1;
   }
   if ( !data
     || (this = (SampleAssetBundleScene_o *)AssetData__GetObject_object_(
                                              data,
-                                             (const MethodInfo_317D284 *)Method_AssetData_GetObject_GameObject___)) == 0
+                                             (const MethodInfo_3151490 *)Method_AssetData_GetObject_GameObject___)) == 0
     || (this = (SampleAssetBundleScene_o *)UnityEngine_GameObject__GetComponent_object_(
                                              (UnityEngine_GameObject_o *)this,
-                                             (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
+                                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
         !v4->fields.testAtlasSprite)
     || (UISprite__set_atlas(v4->fields.testAtlasSprite, (UIAtlas_o *)this, 0),
         (this = (SampleAssetBundleScene_o *)v4->fields.testAtlasSprite) == 0) )
   {
-    sub_1C942F0(this, data);
+    sub_1C7BD40(this, data);
   }
-  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_1288/*"100"*/, 0);
+  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_1289/*"100"*/, 0);
 }
 
 
@@ -217,21 +217,21 @@ void SampleAssetBundleScene__LoadPackEnd(SampleAssetBundleScene_o *this, const M
   AssetData_o *v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4D29EE5 & 1) == 0 )
+  if ( (byte_4CEBD48 & 1) == 0 )
   {
-    sub_1C94098(&AssetManager_TypeInfo);
-    sub_1C94098(&StringLiteral_13788/*"Test/card002p.png"*/);
-    sub_1C94098(&StringLiteral_13780/*"Test/Card001"*/);
-    sub_1C94098(&StringLiteral_13786/*"Test/TestCube"*/);
-    byte_4D29EE5 = 1;
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13790/*"Test/card002p.png"*/);
+    sub_1C7BAE8(&StringLiteral_13782/*"Test/Card001"*/);
+    sub_1C7BAE8(&StringLiteral_13788/*"Test/TestCube"*/);
+    byte_4CEBD48 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13780/*"Test/Card001"*/, 0);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13782/*"Test/Card001"*/, 0);
   SampleAssetBundleScene__LoadPackEnd1(this, AssetStorage, v4);
-  v5 = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13788/*"Test/card002p.png"*/, 0);
+  v5 = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13790/*"Test/card002p.png"*/, 0);
   SampleAssetBundleScene__LoadPackEnd2(this, v5, v6);
-  v7 = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13786/*"Test/TestCube"*/, 0);
+  v7 = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13788/*"Test/TestCube"*/, 0);
   SampleAssetBundleScene__LoadPackEnd3(this, v7, v8);
 }
 
@@ -245,14 +245,14 @@ void SampleAssetBundleScene__LoadPackEnd1(SampleAssetBundleScene_o *this, AssetD
   UIWidget_o *v9; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D29EE6 & 1) == 0 )
+  if ( (byte_4CEBD49 & 1) == 0 )
   {
-    sub_1C94098(&Method_AssetData_GetObject_Texture2D____79044848);
-    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&StringLiteral_13791/*"Test1"*/);
-    sub_1C94098(&StringLiteral_17851/*"card001"*/);
-    byte_4D29EE6 = 1;
+    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13793/*"Test1"*/);
+    sub_1C7BAE8(&StringLiteral_17853/*"card001"*/);
+    byte_4CEBD49 = 1;
   }
   testParentObject = this->fields.testParentObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -261,7 +261,7 @@ void SampleAssetBundleScene__LoadPackEnd1(SampleAssetBundleScene_o *this, AssetD
   if ( !transform )
     goto LABEL_10;
   v8 = (UnityEngine_GameObject_o *)transform;
-  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13791/*"Test1"*/, 0);
+  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13793/*"Test1"*/, 0);
   transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v8, 0);
   if ( !transform
     || (v10.fields.z = 0.0,
@@ -270,17 +270,17 @@ void SampleAssetBundleScene__LoadPackEnd1(SampleAssetBundleScene_o *this, AssetD
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v10, 0),
         transform = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                               v8,
-                                              (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_UITexture___),
+                                              (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_UITexture___),
         !data)
     || (v9 = (UIWidget_o *)transform,
-        transform = (UnityEngine_Object_o *)AssetData__GetObject_object__51893132(
+        transform = (UnityEngine_Object_o *)AssetData__GetObject_object__51713432(
                                               data,
-                                              (System_String_o *)StringLiteral_17851/*"card001"*/,
-                                              (const MethodInfo_317D38C *)Method_AssetData_GetObject_Texture2D____79044848),
+                                              (System_String_o *)StringLiteral_17853/*"card001"*/,
+                                              (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600),
         !v9) )
   {
 LABEL_10:
-    sub_1C942F0(transform, v7);
+    sub_1C7BD40(transform, v7);
   }
   ((void (__fastcall *)(UIWidget_o *, UnityEngine_Object_o *, const MethodInfo *))v9->klass->vtable._27_set_mainTexture.methodPtr)(
     v9,
@@ -302,13 +302,13 @@ void SampleAssetBundleScene__LoadPackEnd2(SampleAssetBundleScene_o *this, AssetD
   UIWidget_o *v9; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D29EE7 & 1) == 0 )
+  if ( (byte_4CEBD4A & 1) == 0 )
   {
-    sub_1C94098(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&StringLiteral_13792/*"Test2"*/);
-    byte_4D29EE7 = 1;
+    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13794/*"Test2"*/);
+    byte_4CEBD4A = 1;
   }
   testParentObject = this->fields.testParentObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -317,7 +317,7 @@ void SampleAssetBundleScene__LoadPackEnd2(SampleAssetBundleScene_o *this, AssetD
   if ( !transform )
     goto LABEL_10;
   v8 = (UnityEngine_GameObject_o *)transform;
-  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13792/*"Test2"*/, 0);
+  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13794/*"Test2"*/, 0);
   transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v8, 0);
   if ( !transform
     || (v10.fields.z = 0.0,
@@ -326,16 +326,16 @@ void SampleAssetBundleScene__LoadPackEnd2(SampleAssetBundleScene_o *this, AssetD
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v10, 0),
         transform = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                               v8,
-                                              (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_UITexture___),
+                                              (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_UITexture___),
         !data)
     || (v9 = (UIWidget_o *)transform,
         transform = (UnityEngine_Object_o *)AssetData__GetObject_object_(
                                               data,
-                                              (const MethodInfo_317D284 *)Method_AssetData_GetObject_Texture2D___),
+                                              (const MethodInfo_3151490 *)Method_AssetData_GetObject_Texture2D___),
         !v9) )
   {
 LABEL_10:
-    sub_1C942F0(transform, v7);
+    sub_1C7BD40(transform, v7);
   }
   ((void (__fastcall *)(UIWidget_o *, UnityEngine_Object_o *, const MethodInfo *))v9->klass->vtable._27_set_mainTexture.methodPtr)(
     v9,
@@ -358,18 +358,18 @@ void SampleAssetBundleScene__LoadPackEnd3(SampleAssetBundleScene_o *this, AssetD
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4D29EE8 & 1) == 0 )
+  if ( (byte_4CEBD4B & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
-    this = (SampleAssetBundleScene_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29EE8 = 1;
+    sub_1C7BAE8(&UnityEngine_GameObject_TypeInfo);
+    this = (SampleAssetBundleScene_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEBD4B = 1;
   }
   if ( !data )
     goto LABEL_13;
   Object = AssetData__GetObject(data, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (SampleAssetBundleScene_o *)UnityEngine_Object__Instantiate_72110184(Object, 0);
+  this = (SampleAssetBundleScene_o *)UnityEngine_Object__Instantiate_71869360(Object, 0);
   if ( !this )
     goto LABEL_13;
   v6 = this;
@@ -390,7 +390,7 @@ void SampleAssetBundleScene__LoadPackEnd3(SampleAssetBundleScene_o *this, AssetD
         (this = (SampleAssetBundleScene_o *)v4->fields.testParentObject) == 0) )
   {
 LABEL_13:
-    sub_1C942F0(this, data);
+    sub_1C7BD40(this, data);
   }
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0);
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v6, layer, 0);
@@ -406,13 +406,13 @@ void SampleAssetBundleScene__LoadPackEnd4(SampleAssetBundleScene_o *this, AssetD
   UIWidget_o *v9; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D29EE9 & 1) == 0 )
+  if ( (byte_4CEBD4C & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C94098(&StringLiteral_13793/*"Test4"*/);
-    byte_4D29EE9 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_UITexture___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13795/*"Test4"*/);
+    byte_4CEBD4C = 1;
   }
   testParentObject = this->fields.testParentObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -421,7 +421,7 @@ void SampleAssetBundleScene__LoadPackEnd4(SampleAssetBundleScene_o *this, AssetD
   if ( !transform )
     goto LABEL_15;
   v8 = (UnityEngine_GameObject_o *)transform;
-  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13793/*"Test4"*/, 0);
+  UnityEngine_Object__set_name(transform, (System_String_o *)StringLiteral_13795/*"Test4"*/, 0);
   transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v8, 0);
   if ( !transform )
     goto LABEL_15;
@@ -431,7 +431,7 @@ void SampleAssetBundleScene__LoadPackEnd4(SampleAssetBundleScene_o *this, AssetD
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v10, 0);
   transform = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                         v8,
-                                        (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_UITexture___);
+                                        (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_UITexture___);
   if ( !data )
     goto LABEL_15;
   v9 = (UIWidget_o *)transform;
@@ -442,7 +442,7 @@ void SampleAssetBundleScene__LoadPackEnd4(SampleAssetBundleScene_o *this, AssetD
     if ( v9 )
       goto LABEL_13;
 LABEL_15:
-    sub_1C942F0(transform, v7);
+    sub_1C7BD40(transform, v7);
   }
   if ( (UnityEngine_Texture2D_c *)transform->klass == UnityEngine_Texture2D_TypeInfo )
     v7 = transform;
@@ -498,12 +498,12 @@ void SampleAssetBundleScene__SetAssetPrefab(
   int32_t layer; // w1
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D29EED & 1) == 0 )
+  if ( (byte_4CEBD50 & 1) == 0 )
   {
-    sub_1C94098(&AssetManager_TypeInfo);
-    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29EED = 1;
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_GameObject_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEBD50 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -513,7 +513,7 @@ void SampleAssetBundleScene__SetAssetPrefab(
   Object = AssetData__GetObject(AssetStorage, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_72110184(Object, 0);
+  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_71869360(Object, 0);
   if ( !AssetStorage )
     goto LABEL_18;
   v12 = (UnityEngine_GameObject_o *)AssetStorage;
@@ -536,17 +536,17 @@ void SampleAssetBundleScene__SetAssetPrefab(
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)AssetStorage, v16, 0);
   AssetStorage = (AssetData_o *)UnityEngine_GameObject__get_transform(v12, 0);
   v14 = (UnityEngine_Transform_o *)AssetStorage;
-  if ( !byte_4D25F1E )
+  if ( !byte_4CE7E5E )
   {
-    AssetStorage = (AssetData_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F1E = 1;
+    AssetStorage = (AssetData_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E5E = 1;
   }
   if ( !v14
     || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
         (AssetStorage = (AssetData_o *)this->fields.testParentObject) == 0) )
   {
 LABEL_18:
-    sub_1C942F0(AssetStorage, v10);
+    sub_1C7BD40(AssetStorage, v10);
   }
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)AssetStorage, 0);
   UnityEngine_GameObject__set_layer(v12, layer, 0);
@@ -561,10 +561,10 @@ void SampleAssetBundleScene__Start(SampleAssetBundleScene_o *this, const MethodI
 
 void SampleAssetBundleScene__Update(SampleAssetBundleScene_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D29EEE & 1) == 0 )
+  if ( (byte_4CEBD51 & 1) == 0 )
   {
-    sub_1C94098(&AssetManager_TypeInfo);
-    byte_4D29EEE = 1;
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    byte_4CEBD51 = 1;
   }
   if ( this->fields.state == 1 )
   {

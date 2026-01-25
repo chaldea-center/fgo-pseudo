@@ -2,10 +2,10 @@ void ClassCompatibilityInfoDialog___cctor(const MethodInfo *method)
 {
   struct ClassCompatibilityInfoDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4D26319 & 1) == 0 )
+  if ( (byte_4CE825B & 1) == 0 )
   {
-    sub_1C94098(&ClassCompatibilityInfoDialog_TypeInfo);
-    byte_4D26319 = 1;
+    sub_1C7BAE8(&ClassCompatibilityInfoDialog_TypeInfo);
+    byte_4CE825B = 1;
   }
   static_fields = ClassCompatibilityInfoDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->CLOSE_BUTTON_DEFAULT_POSITION_X = 0xC302000000000000LL;
@@ -15,10 +15,10 @@ void ClassCompatibilityInfoDialog___cctor(const MethodInfo *method)
 
 void ClassCompatibilityInfoDialog___ctor(ClassCompatibilityInfoDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D26318 & 1) == 0 )
+  if ( (byte_4CE825A & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D26318 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CE825A = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -30,11 +30,11 @@ void ClassCompatibilityInfoDialog__Close(ClassCompatibilityInfoDialog_o *this, c
 {
   const MethodInfo *v2; // x2
 
-  ClassCompatibilityInfoDialog__Close_31548464(this, 0, v2);
+  ClassCompatibilityInfoDialog__Close_31449128(this, 0, v2);
 }
 
 
-void ClassCompatibilityInfoDialog__Close_31548464(
+void ClassCompatibilityInfoDialog__Close_31449128(
         ClassCompatibilityInfoDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -42,16 +42,16 @@ void ClassCompatibilityInfoDialog__Close_31548464(
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4D26313 & 1) == 0 )
+  if ( (byte_4CE8255 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_ClassCompatibilityInfoDialog_EndClose__);
-    byte_4D26313 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_ClassCompatibilityInfoDialog_EndClose__);
+    byte_4CE8255 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C9403C(&this->fields.closeCallbackFunc, callback);
+  sub_1C7BA8C(&this->fields.closeCallbackFunc, callback);
   this->fields.state = 5;
-  v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
@@ -70,7 +70,7 @@ void ClassCompatibilityInfoDialog__EndClose(ClassCompatibilityInfoDialog_o *this
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C9403C(p_closeCallbackFunc, 0);
+    sub_1C7BA8C(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -83,14 +83,14 @@ void ClassCompatibilityInfoDialog__EndCloseClassBoardEffectListDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4D26316 & 1) == 0 )
+  if ( (byte_4CE8258 & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D26316 = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CE8258 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   CommonUI__CloseClassBoardEffectListDialog((CommonUI_o *)Instance, 0, 0);
   this->fields.state = 2;
 }
@@ -107,10 +107,10 @@ void ClassCompatibilityInfoDialog__Init(ClassCompatibilityInfoDialog_o *this, co
   UILabel_o *closeLabel; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4D26311 & 1) == 0 )
+  if ( (byte_4CE8253 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D26311 = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CE8253 = 1;
   }
   closeLabel = this->fields.closeLabel;
   if ( !closeLabel
@@ -119,7 +119,7 @@ void ClassCompatibilityInfoDialog__Init(ClassCompatibilityInfoDialog_o *this, co
     || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (closeLabel = (UILabel_o *)this->fields.compatibilitySprite) == 0) )
   {
-    sub_1C942F0(closeLabel, method);
+    sub_1C7BD40(closeLabel, method);
   }
   UISprite__set_atlas((UISprite_o *)closeLabel, 0, 0);
   this->fields.state = 0;
@@ -136,26 +136,26 @@ void ClassCompatibilityInfoDialog__OnClickClassBoard(ClassCompatibilityInfoDialo
   ClassStatisticsInfo_array *classStatisticsInfos; // x0
   __int64 v8; // x1
 
-  if ( (byte_4D26315 & 1) == 0 )
+  if ( (byte_4CE8257 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_ClassCompatibilityInfoDialog_EndCloseClassBoardEffectListDialog__);
-    sub_1C94098(&Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
-    sub_1C94098(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D26315 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_ClassCompatibilityInfoDialog_EndCloseClassBoardEffectListDialog__);
+    sub_1C7BAE8(&Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CE8257 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_ClassCompatibilityInfoDialog_OnClickClassBoard__;
     if ( (*((_BYTE *)Method_ClassCompatibilityInfoDialog_OnClickClassBoard__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v6 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(
       v6,
       (Il2CppObject *)this,
@@ -163,13 +163,13 @@ void ClassCompatibilityInfoDialog__OnClickClassBoard(ClassCompatibilityInfoDialo
       0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    classStatisticsInfos = (ClassStatisticsInfo_array *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+    classStatisticsInfos = (ClassStatisticsInfo_array *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
     if ( classStatisticsInfos )
       classStatisticsInfos = UserClassStatisticsMaster__GetClassStatisticsInfos(
                                (UserClassStatisticsMaster_o *)classStatisticsInfos,
                                0);
     if ( !Instance )
-      sub_1C942F0(classStatisticsInfos, v8);
+      sub_1C7BD40(classStatisticsInfos, v8);
     CommonUI__OpenClassBoardEffectListDialog(
       (CommonUI_o *)Instance,
       1,
@@ -197,22 +197,22 @@ void ClassCompatibilityInfoDialog__OnClickClose(ClassCompatibilityInfoDialog_o *
   struct System_Action_o *v8; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4D26314 & 1) == 0 )
+  if ( (byte_4CE8256 & 1) == 0 )
   {
-    sub_1C94098(&Method_ClassCompatibilityInfoDialog_OnClickClose__);
-    byte_4D26314 = 1;
+    sub_1C7BAE8(&Method_ClassCompatibilityInfoDialog_OnClickClose__);
+    byte_4CE8256 = 1;
   }
   if ( this->fields.state == 2 )
   {
     classBoardButton = (UnityEngine_Behaviour_o *)this->fields.classBoardButton;
     this->fields.state = 3;
     if ( !classBoardButton )
-      sub_1C942F0(0, method);
+      sub_1C7BD40(0, method);
     isActiveAndEnabled = UnityEngine_Behaviour__get_isActiveAndEnabled(classBoardButton, 0);
     v5 = Method_ClassCompatibilityInfoDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassCompatibilityInfoDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C940B0(Method_ClassCompatibilityInfoDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C7BB00(Method_ClassCompatibilityInfoDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, isActiveAndEnabled, 0, 0);
     callbackFunc = this->fields.callbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
@@ -220,7 +220,7 @@ void ClassCompatibilityInfoDialog__OnClickClose(ClassCompatibilityInfoDialog_o *
     if ( callbackFunc )
     {
       *p_callbackFunc = 0;
-      sub_1C9403C(p_callbackFunc, 0);
+      sub_1C7BA8C(p_callbackFunc, 0);
       ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
     }
   }
@@ -246,23 +246,23 @@ void ClassCompatibilityInfoDialog__Open(
   System_Action_o *v16; // x20
   const MethodInfo *v17; // x4
 
-  if ( (byte_4D26312 & 1) == 0 )
+  if ( (byte_4CE8254 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    sub_1C94098(&Method_ClassCompatibilityInfoDialog_EndOpen__);
-    sub_1C94098(&ClassCompatibilityInfoDialog_TypeInfo);
-    sub_1C94098(&CondType_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_3391/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/);
-    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4D26312 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    sub_1C7BAE8(&Method_ClassCompatibilityInfoDialog_EndOpen__);
+    sub_1C7BAE8(&ClassCompatibilityInfoDialog_TypeInfo);
+    sub_1C7BAE8(&CondType_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_3391/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/);
+    sub_1C7BAE8(&StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4CE8254 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C9403C(&this->fields.callbackFunc, callback);
+    sub_1C7BA8C(&this->fields.callbackFunc, callback);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( gameObject )
     {
@@ -270,14 +270,14 @@ void ClassCompatibilityInfoDialog__Open(
       closeLabel = this->fields.closeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/, 0);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/, 0);
       if ( closeLabel )
       {
         UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
         compatibilitySprite = this->fields.compatibilitySprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetClassChart_41350692(compatibilitySprite, 0);
+        AtlasManager__SetClassChart_41161708(compatibilitySprite, 0);
         v9 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
@@ -287,7 +287,7 @@ void ClassCompatibilityInfoDialog__Open(
         ClassBoardReleaseQuestId = v9->static_fields->ClassBoardReleaseQuestId;
         if ( !CondType_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)CondType__IsQuestClear_41072884(ClassBoardReleaseQuestId, -1, 0, 0);
+        gameObject = (UnityEngine_GameObject_o *)CondType__IsQuestClear_40887944(ClassBoardReleaseQuestId, -1, 0, 0);
         if ( this->fields.closeButton )
         {
           v11 = (char)gameObject;
@@ -327,7 +327,7 @@ void ClassCompatibilityInfoDialog__Open(
                     UILabel__set_text(classBoardLabel, (System_String_o *)gameObject, 0);
 LABEL_29:
                     this->fields.state = 1;
-                    v16 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+                    v16 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
                     System_Action___ctor(v16, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndOpen__, 0);
                     BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0, v17);
                     return;
@@ -361,7 +361,7 @@ LABEL_29:
         }
       }
     }
-    sub_1C942F0(gameObject, v6);
+    sub_1C7BD40(gameObject, v6);
   }
 }
 
@@ -370,10 +370,10 @@ System_String_o *ClassCompatibilityInfoDialog__get_closeBtnPath(
         ClassCompatibilityInfoDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D26317 & 1) == 0 )
+  if ( (byte_4CE8259 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_7661/*"InfoDialog/CloseButton"*/);
-    byte_4D26317 = 1;
+    sub_1C7BAE8(&StringLiteral_7664/*"InfoDialog/CloseButton"*/);
+    byte_4CE8259 = 1;
   }
-  return (System_String_o *)StringLiteral_7661/*"InfoDialog/CloseButton"*/;
+  return (System_String_o *)StringLiteral_7664/*"InfoDialog/CloseButton"*/;
 }

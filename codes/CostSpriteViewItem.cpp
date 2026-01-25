@@ -1,6 +1,6 @@
 void CostSpriteViewItem___ctor(CostSpriteViewItem_o *this, int32_t index, int32_t bannerId, const MethodInfo *method)
 {
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields.id = bannerId;
 }
 

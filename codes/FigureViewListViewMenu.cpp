@@ -21,7 +21,7 @@ void FigureViewListViewMenu__Callback(FigureViewListViewMenu_o *this, bool resul
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C9403C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C7BA8C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -49,13 +49,13 @@ void FigureViewListViewMenu__Close(FigureViewListViewMenu_o *this, const MethodI
       goto LABEL_6;
     ListViewManager__DestroyList(listViewManager, 0);
     this->fields.figureAssetList = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.figureAssetList, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.figureAssetList, 0, v5, v6, v7, v8, v9, v10);
     this->fields.state = 0;
   }
   listViewManager = (ListViewManager_o *)this->fields.rootObject;
   if ( !listViewManager )
 LABEL_6:
-    sub_1C942F0(listViewManager, v3);
+    sub_1C7BD40(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0);
 }
 
@@ -71,7 +71,7 @@ void FigureViewListViewMenu__EndInput(FigureViewListViewMenu_o *this, const Meth
       || (ListViewManager__set_IsInput(listViewManager, 0, 0),
           (listViewManager = (ListViewManager_o *)this->fields.cancelButton) == 0) )
     {
-      sub_1C942F0(listViewManager, method);
+      sub_1C7BD40(listViewManager, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0);
   }
@@ -93,10 +93,10 @@ void FigureViewListViewMenu__OnClickCancel(FigureViewListViewMenu_o *this, const
 
 void FigureViewListViewMenu__OnClickClear(FigureViewListViewMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D29D4D & 1) == 0 )
+  if ( (byte_4CEBB69 & 1) == 0 )
   {
-    sub_1C94098(&ScriptManager_TypeInfo);
-    byte_4D29D4D = 1;
+    sub_1C7BAE8(&ScriptManager_TypeInfo);
+    byte_4CEBB69 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -116,12 +116,12 @@ void FigureViewListViewMenu__OnClickItem(FigureViewListViewMenu_o *this, const M
   System_String_array *figureAssetList; // x21
   ScriptManager_CallbackFunc_o *v8; // x22
 
-  if ( (byte_4D29D4B & 1) == 0 )
+  if ( (byte_4CEBB67 & 1) == 0 )
   {
-    sub_1C94098(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_1C94098(&Method_FigureViewListViewMenu_OnEndFigureView__);
-    sub_1C94098(&ScriptManager_TypeInfo);
-    byte_4D29D4B = 1;
+    sub_1C7BAE8(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu_OnEndFigureView__);
+    sub_1C7BAE8(&ScriptManager_TypeInfo);
+    byte_4CEBB67 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -138,10 +138,10 @@ void FigureViewListViewMenu__OnClickItem(FigureViewListViewMenu_o *this, const M
     this->fields.state = 3;
     if ( !listViewManager )
 LABEL_11:
-      sub_1C942F0(listViewManager, method);
+      sub_1C7BD40(listViewManager, method);
     dragParentObject = (System_String_o *)listViewManager->fields.dragParentObject;
     figureAssetList = this->fields.figureAssetList;
-    v8 = (ScriptManager_CallbackFunc_o *)sub_1C942E4(ScriptManager_CallbackFunc_TypeInfo);
+    v8 = (ScriptManager_CallbackFunc_o *)sub_1C7BD34(ScriptManager_CallbackFunc_TypeInfo);
     ScriptManager_CallbackFunc___ctor(v8, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnEndFigureView__, 0);
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -158,23 +158,23 @@ void FigureViewListViewMenu__OnEndFigureView(FigureViewListViewMenu_o *this, boo
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4D29D4C & 1) == 0 )
+  if ( (byte_4CEBB68 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_FigureViewListViewMenu_OnClickItem__);
-    byte_4D29D4C = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu_OnClickItem__);
+    byte_4CEBB68 = 1;
   }
   if ( this->fields.state == 3 )
   {
     this->fields.state = 2;
     listViewManager = this->fields.listViewManager;
-    v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnClickItem__, 0);
     if ( !listViewManager
-      || (FigureViewListViewManager__SetMode_38116792(listViewManager, 1, v5, v8),
+      || (FigureViewListViewManager__SetMode_37866420(listViewManager, 1, v5, v8),
           (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
     {
-      sub_1C942F0(cancelButton, v7);
+      sub_1C7BD40(cancelButton, v7);
     }
     UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
   }
@@ -195,10 +195,10 @@ void FigureViewListViewMenu__OnSearchLabelChange(FigureViewListViewMenu_o *this,
 
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   ListViewManager__DestroyList(listViewManager, 0);
   this->fields.figureAssetList = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.figureAssetList, 0, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.figureAssetList, 0, v4, v5, v6, v7, v8, v9);
   callbackFunc = this->fields.callbackFunc;
   this->fields.state = 0;
   FigureViewListViewMenu__Open(this, callbackFunc, v11);
@@ -254,40 +254,40 @@ void FigureViewListViewMenu__Open(
   const MethodInfo *v46; // x3
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D29D49 & 1) == 0 )
+  if ( (byte_4CEBB65 & 1) == 0 )
   {
-    sub_1C94098(&AssetManager_TypeInfo);
-    sub_1C94098(&System_Comparison_string__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_string__RemoveAll__);
-    sub_1C94098(&Method_System_Collections_Generic_List_string__Sort___79007112);
-    sub_1C94098(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_string___ctor___79006968);
-    sub_1C94098(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C94098(&System_Predicate_string__TypeInfo);
-    sub_1C94098(&Method_FigureViewListViewMenu___c__Open_b__12_1__);
-    sub_1C94098(&Method_FigureViewListViewMenu___c__DisplayClass12_0__Open_b__0__);
-    sub_1C94098(&FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
-    sub_1C94098(&FigureViewListViewMenu___c_TypeInfo);
-    sub_1C94098(&StringLiteral_4382/*"CharaFigure"*/);
-    byte_4D29D49 = 1;
+    sub_1C7BAE8(&AssetManager_TypeInfo);
+    sub_1C7BAE8(&System_Comparison_string__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__RemoveAll__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Sort___78754024);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_string___ctor___78753880);
+    sub_1C7BAE8(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C7BAE8(&System_Predicate_string__TypeInfo);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu___c__Open_b__12_1__);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu___c__DisplayClass12_0__Open_b__0__);
+    sub_1C7BAE8(&FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    sub_1C7BAE8(&FigureViewListViewMenu___c_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_4383/*"CharaFigure"*/);
+    byte_4CEBB65 = 1;
   }
   result = 0;
   if ( !this->fields.state )
   {
-    v5 = sub_1C942E4(FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    v5 = sub_1C7BD34(FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     this->fields.callbackFunc = callback;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7, v8, v9, v10, v11);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetStorageList = (System_Collections_Generic_IEnumerable_T__o *)AssetManager__getAssetStorageList(
-                                                                        (System_String_o *)StringLiteral_4382/*"CharaFigure"*/,
+                                                                        (System_String_o *)StringLiteral_4383/*"CharaFigure"*/,
                                                                         0);
-    v13 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_59156264(
+    v13 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_58975984(
       v13,
       AssetStorageList,
-      (const MethodInfo_386A728 *)Method_System_Collections_Generic_List_string___ctor___79006968);
+      (const MethodInfo_383E6F0 *)Method_System_Collections_Generic_List_string___ctor___78753880);
     rootObject = this->fields.rootObject;
     if ( rootObject )
     {
@@ -308,17 +308,17 @@ void FigureViewListViewMenu__Open(
             {
               *(_QWORD *)(v5 + 16) = rootObject;
               v22 = (System_String_o **)(v5 + 16);
-              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)rootObject, v16, v17, v18, v19, v20, v21);
+              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)rootObject, v16, v17, v18, v19, v20, v21);
               result = 0;
               if ( System_String__IsNullOrEmpty(*(System_String_o **)(v5 + 16), 0)
                 || !System_Int32__TryParse(*v22, &result, 0) )
               {
                 *v22 = 0;
-                sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), 0, v23, v24, v25, v26, v27, v28);
+                sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), 0, v23, v24, v25, v26, v27, v28);
               }
               if ( *v22 )
               {
-                v29 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_string__TypeInfo);
+                v29 = (System_Predicate_object__o *)sub_1C7BD34(System_Predicate_string__TypeInfo);
                 System_Predicate_object____ctor(
                   v29,
                   (Il2CppObject *)v5,
@@ -329,7 +329,7 @@ void FigureViewListViewMenu__Open(
                 System_Collections_Generic_List_object___RemoveAll(
                   v13,
                   (System_Predicate_T__o *)v29,
-                  (const MethodInfo_386C490 *)Method_System_Collections_Generic_List_string__RemoveAll__);
+                  (const MethodInfo_3840458 *)Method_System_Collections_Generic_List_string__RemoveAll__);
               }
               rootObject = FigureViewListViewMenu___c_TypeInfo;
               if ( !FigureViewListViewMenu___c_TypeInfo->_2.cctor_finished )
@@ -346,11 +346,11 @@ void FigureViewListViewMenu__Open(
                   rootObject = FigureViewListViewMenu___c_TypeInfo;
                 }
                 v31 = (Il2CppObject *)**((_QWORD **)rootObject + 23);
-                v30 = (System_Comparison_T__o *)sub_1C942E4(System_Comparison_string__TypeInfo);
+                v30 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_string__TypeInfo);
                 System_Comparison_object____ctor(v30, v31, Method_FigureViewListViewMenu___c__Open_b__12_1__, 0);
                 static_fields = FigureViewListViewMenu___c_TypeInfo->static_fields;
                 static_fields->__9__12_1 = (struct System_Comparison_string__o *)v30;
-                sub_1C9403C(
+                sub_1C7BA8C(
                   (GrandQuestFolderBoardItem_o *)&static_fields->__9__12_1,
                   (int32_t)v30,
                   v33,
@@ -362,15 +362,15 @@ void FigureViewListViewMenu__Open(
               }
               if ( v13 )
               {
-                System_Collections_Generic_List_object___Sort_59164920(
+                System_Collections_Generic_List_object___Sort_58984640(
                   v13,
                   v30,
-                  (const MethodInfo_386C8F8 *)Method_System_Collections_Generic_List_string__Sort___79007112);
+                  (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_string__Sort___78754024);
                 v39 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                                       v13,
-                                                      (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                                      (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_string__ToArray__);
                 this->fields.figureAssetList = v39;
-                sub_1C9403C(
+                sub_1C7BA8C(
                   (GrandQuestFolderBoardItem_o *)&this->fields.figureAssetList,
                   (int32_t)v39,
                   v40,
@@ -396,7 +396,7 @@ void FigureViewListViewMenu__Open(
       }
     }
 LABEL_27:
-    sub_1C942F0(rootObject, v14);
+    sub_1C7BD40(rootObject, v14);
   }
 LABEL_26:
   FigureViewListViewMenu__StartInput(this, (const MethodInfo *)callback);
@@ -411,21 +411,21 @@ void FigureViewListViewMenu__StartInput(FigureViewListViewMenu_o *this, const Me
   __int64 v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_4D29D4A & 1) == 0 )
+  if ( (byte_4CEBB66 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_FigureViewListViewMenu_OnClickItem__);
-    byte_4D29D4A = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu_OnClickItem__);
+    byte_4CEBB66 = 1;
   }
   this->fields.state = 2;
   listViewManager = this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnClickItem__, 0);
   if ( !listViewManager
-    || (FigureViewListViewManager__SetMode_38116792(listViewManager, 1, v4, v7),
+    || (FigureViewListViewManager__SetMode_37866420(listViewManager, 1, v4, v7),
         (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
   {
-    sub_1C942F0(cancelButton, v6);
+    sub_1C7BD40(cancelButton, v6);
   }
   UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
 }
@@ -437,16 +437,16 @@ void FigureViewListViewMenu__StartMenu(FigureViewListViewMenu_o *this, const Met
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D29D48 & 1) == 0 )
+  if ( (byte_4CEBB64 & 1) == 0 )
   {
-    sub_1C94098(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C94098(&Method_FigureViewListViewMenu__StartMenu_b__11_0__);
-    byte_4D29D48 = 1;
+    sub_1C7BAE8(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C7BAE8(&Method_FigureViewListViewMenu__StartMenu_b__11_0__);
+    byte_4CEBB64 = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (FigureViewListViewMenu_CallbackFunc_o *)sub_1C942E4(FigureViewListViewMenu_CallbackFunc_TypeInfo);
+  v3 = (FigureViewListViewMenu_CallbackFunc_o *)sub_1C7BD34(FigureViewListViewMenu_CallbackFunc_TypeInfo);
   FigureViewListViewMenu_CallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -471,10 +471,10 @@ void FigureViewListViewMenu__add_callbackFunc(
   FigureViewListViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D29D46 & 1) == 0 )
+  if ( (byte_4CEBB62 & 1) == 0 )
   {
-    sub_1C94098(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_4D29D46 = 1;
+    sub_1C7BAE8(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_4CEBB62 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -487,13 +487,13 @@ void FigureViewListViewMenu__add_callbackFunc(
       if ( (FigureViewListViewMenu_CallbackFunc_c *)v8->klass != FigureViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   FigureViewListViewMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -512,10 +512,10 @@ void FigureViewListViewMenu__remove_callbackFunc(
   FigureViewListViewMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D29D47 & 1) == 0 )
+  if ( (byte_4CEBB63 & 1) == 0 )
   {
-    sub_1C94098(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_4D29D47 = 1;
+    sub_1C7BAE8(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_4CEBB63 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -528,13 +528,13 @@ void FigureViewListViewMenu__remove_callbackFunc(
       if ( (FigureViewListViewMenu_CallbackFunc_c *)v8->klass != FigureViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
+    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C9468C(v8);
+  sub_1C7C0DC(v8);
   FigureViewListViewMenu__StartMenu(v11, v12);
 }
 
@@ -558,7 +558,7 @@ void FigureViewListViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -569,12 +569,12 @@ void FigureViewListViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -586,9 +586,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC5710;
+  this->fields.invoke_impl = (intptr_t)sub_1AAE624;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC56C8;
+  this->fields.extra_arg = (intptr_t)sub_1AAE5DC;
 }
 
 
@@ -603,14 +603,14 @@ System_IAsyncResult_o *FigureViewListViewMenu_CallbackFunc__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4D29D4E & 1) == 0 )
+  if ( (byte_4CEBB6A & 1) == 0 )
   {
-    sub_1C94098(&bool_TypeInfo);
-    byte_4D29D4E = 1;
+    sub_1C7BAE8(&bool_TypeInfo);
+    byte_4CEBB6A = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -619,7 +619,7 @@ void FigureViewListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 
@@ -645,15 +645,15 @@ void FigureViewListViewMenu___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D29D4F & 1) == 0 )
+  if ( (byte_4CEBB6B & 1) == 0 )
   {
-    sub_1C94098(&FigureViewListViewMenu___c_TypeInfo);
-    byte_4D29D4F = 1;
+    sub_1C7BAE8(&FigureViewListViewMenu___c_TypeInfo);
+    byte_4CEBB6B = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(FigureViewListViewMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(FigureViewListViewMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   FigureViewListViewMenu___c_TypeInfo->static_fields->__9 = (struct FigureViewListViewMenu___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)FigureViewListViewMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -682,7 +682,7 @@ int32_t FigureViewListViewMenu___c___Open_b__12_1(
   int32_t result; // w0
 
   if ( !a || !b )
-    sub_1C942F0(this, a);
+    sub_1C7BD40(this, a);
   stringLength = a->fields._stringLength;
   v5 = b->fields._stringLength;
   result = stringLength - v5;
@@ -706,6 +706,6 @@ bool FigureViewListViewMenu___c__DisplayClass12_0___Open_b__0(
         const MethodInfo *method)
 {
   if ( !X )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   return !System_String__Contains(X, this->fields.searchStr, 0);
 }

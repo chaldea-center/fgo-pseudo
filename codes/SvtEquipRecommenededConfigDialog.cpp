@@ -5,27 +5,27 @@ void SvtEquipRecommenededConfigDialog___ctor(SvtEquipRecommenededConfigDialog_o 
   __int64 v5; // x1
   __int64 v6; // x1
 
-  if ( (byte_4D2683B & 1) == 0 )
+  if ( (byte_4CE86BB & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    sub_1C94098(&StringLiteral_17593/*"btn_on"*/);
-    sub_1C94098(&StringLiteral_17525/*"btn_bg_04"*/);
-    sub_1C94098(&StringLiteral_17592/*"btn_off"*/);
-    sub_1C94098(&StringLiteral_17524/*"btn_bg_03"*/);
-    byte_4D2683B = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_17595/*"btn_on"*/);
+    sub_1C7BAE8(&StringLiteral_17527/*"btn_bg_04"*/);
+    sub_1C7BAE8(&StringLiteral_17594/*"btn_off"*/);
+    sub_1C7BAE8(&StringLiteral_17526/*"btn_bg_03"*/);
+    byte_4CE86BB = 1;
   }
-  v3 = StringLiteral_17524/*"btn_bg_03"*/;
-  this->fields.onBtnSpriteName = (struct System_String_o *)StringLiteral_17524/*"btn_bg_03"*/;
-  sub_1C9403C(&this->fields.onBtnSpriteName, v3);
-  v4 = StringLiteral_17525/*"btn_bg_04"*/;
-  this->fields.offBtnSpriteName = (struct System_String_o *)StringLiteral_17525/*"btn_bg_04"*/;
-  sub_1C9403C(&this->fields.offBtnSpriteName, v4);
-  v5 = StringLiteral_17593/*"btn_on"*/;
-  this->fields.autoSetOnBtnSpriteName = (struct System_String_o *)StringLiteral_17593/*"btn_on"*/;
-  sub_1C9403C(&this->fields.autoSetOnBtnSpriteName, v5);
-  v6 = StringLiteral_17592/*"btn_off"*/;
-  this->fields.autoSetOffSpriteName = (struct System_String_o *)StringLiteral_17592/*"btn_off"*/;
-  sub_1C9403C(&this->fields.autoSetOffSpriteName, v6);
+  v3 = StringLiteral_17526/*"btn_bg_03"*/;
+  this->fields.onBtnSpriteName = (struct System_String_o *)StringLiteral_17526/*"btn_bg_03"*/;
+  sub_1C7BA8C(&this->fields.onBtnSpriteName, v3);
+  v4 = StringLiteral_17527/*"btn_bg_04"*/;
+  this->fields.offBtnSpriteName = (struct System_String_o *)StringLiteral_17527/*"btn_bg_04"*/;
+  sub_1C7BA8C(&this->fields.offBtnSpriteName, v4);
+  v5 = StringLiteral_17595/*"btn_on"*/;
+  this->fields.autoSetOnBtnSpriteName = (struct System_String_o *)StringLiteral_17595/*"btn_on"*/;
+  sub_1C7BA8C(&this->fields.autoSetOnBtnSpriteName, v5);
+  v6 = StringLiteral_17594/*"btn_off"*/;
+  this->fields.autoSetOffSpriteName = (struct System_String_o *)StringLiteral_17594/*"btn_off"*/;
+  sub_1C7BA8C(&this->fields.autoSetOffSpriteName, v6);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -36,21 +36,21 @@ void SvtEquipRecommenededConfigDialog__Close(SvtEquipRecommenededConfigDialog_o 
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4D26830 & 1) == 0 )
+  if ( (byte_4CE86B0 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_BaseDialog_Init__);
-    byte_4D26830 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_BaseDialog_Init__);
+    byte_4CE86B0 = 1;
   }
   this->fields.closeAction = 0;
-  sub_1C9403C(&this->fields.closeAction, 0);
-  v3 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  sub_1C7BA8C(&this->fields.closeAction, 0);
+  v3 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_BaseDialog_Init__, 0);
   BaseDialog__SafeClose((BaseDialog_o *)this, v3, 0);
 }
 
 
-void SvtEquipRecommenededConfigDialog__Close_32172524(
+void SvtEquipRecommenededConfigDialog__Close_31984984(
         SvtEquipRecommenededConfigDialog_o *this,
         bool isExe,
         const MethodInfo *method)
@@ -75,32 +75,32 @@ void SvtEquipRecommenededConfigDialog__Close_32172524(
   CommonConfirmDialog_ClickDelegate_o *v22; // x25
   struct System_Action_bool__o *closeAction; // x8
 
-  if ( (byte_4D26839 & 1) == 0 )
+  if ( (byte_4CE86B9 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_Any_int___);
-    sub_1C94098(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C94098(&System_Func_int__bool__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Sort__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__Close_b__39_0__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass39_0__Close_b__1__);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c__DisplayClass39_0_TypeInfo);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c_TypeInfo);
-    sub_1C94098(&StringLiteral_11058/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_MESSAGE"*/);
-    sub_1C94098(&StringLiteral_3691/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C94098(&StringLiteral_3689/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C94098(&StringLiteral_11059/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_TITLE"*/);
-    byte_4D26839 = 1;
+    sub_1C7BAE8(&Method_BasicHelper_Any_int___);
+    sub_1C7BAE8(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C7BAE8(&System_Func_int__bool__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Sort__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__Close_b__39_0__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass39_0__Close_b__1__);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c__DisplayClass39_0_TypeInfo);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11060/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_MESSAGE"*/);
+    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C7BAE8(&StringLiteral_11061/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_TITLE"*/);
+    byte_4CE86B9 = 1;
   }
-  v5 = sub_1C942E4(SvtEquipRecommenededConfigDialog___c__DisplayClass39_0_TypeInfo);
+  v5 = sub_1C7BD34(SvtEquipRecommenededConfigDialog___c__DisplayClass39_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_32;
   *(_QWORD *)(v5 + 16) = this;
-  IsNullOrEmpty = (RecommendedSvtEquipConfigSaveData_o *)sub_1C9403C(v5 + 16, this);
+  IsNullOrEmpty = (RecommendedSvtEquipConfigSaveData_o *)sub_1C7BA8C(v5 + 16, this);
   *(_BYTE *)(v5 + 24) = isExe;
   saveData = this->fields.saveData;
   if ( !saveData )
@@ -112,13 +112,13 @@ void SvtEquipRecommenededConfigDialog__Close_32172524(
   if ( selectRarityList->fields._size >= 1 )
     System_Collections_Generic_List_int___Sort(
       saveData->fields.selectRarityList,
-      (const MethodInfo_384F754 *)Method_System_Collections_Generic_List_int__Sort__);
+      (const MethodInfo_382371C *)Method_System_Collections_Generic_List_int__Sort__);
   if ( !selectCombineStatusList )
     goto LABEL_32;
   if ( selectCombineStatusList->fields._size >= 1 )
     System_Collections_Generic_List_int___Sort(
       selectCombineStatusList,
-      (const MethodInfo_384F754 *)Method_System_Collections_Generic_List_int__Sort__);
+      (const MethodInfo_382371C *)Method_System_Collections_Generic_List_int__Sort__);
   if ( *(_BYTE *)(v5 + 24) )
     goto LABEL_24;
   IsNullOrEmpty = this->fields.saveData;
@@ -153,30 +153,30 @@ LABEL_24:
         v13 = SvtEquipRecommenededConfigDialog___c_TypeInfo;
       }
       v15 = (Il2CppObject *)v13->static_fields->__9;
-      _9__39_0 = (System_Func_int__bool__o *)sub_1C942E4(System_Func_int__bool__TypeInfo);
+      _9__39_0 = (System_Func_int__bool__o *)sub_1C7BD34(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(_9__39_0, v15, Method_SvtEquipRecommenededConfigDialog___c__Close_b__39_0__, 0);
       static_fields = SvtEquipRecommenededConfigDialog___c_TypeInfo->static_fields;
       static_fields->__9__39_0 = _9__39_0;
-      sub_1C9403C(&static_fields->__9__39_0, _9__39_0);
+      sub_1C7BA8C(&static_fields->__9__39_0, _9__39_0);
     }
     if ( BasicHelper__Any_int_(
            v12,
            (System_Func_T__bool__o *)_9__39_0,
-           (const MethodInfo_318513C *)Method_BasicHelper_Any_int___)
+           (const MethodInfo_31593FC *)Method_BasicHelper_Any_int___)
       || System_Collections_Generic_List_int___Contains(
            selectCombineStatusList,
            1,
-           (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__) )
+           (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__) )
     {
 LABEL_25:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11059/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_TITLE"*/, 0);
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11058/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_MESSAGE"*/, 0);
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3691/*"COMMON_CONFIRM_DECIDE"*/, 0);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3689/*"COMMON_CONFIRM_CANCEL"*/, 0);
-      v22 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C942E4(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11061/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_TITLE"*/, 0);
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11060/*"RECOMMENDED_SVT_EQUIP_MATERIAL_CONFIRM_MESSAGE"*/, 0);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0);
+      v22 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C7BD34(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
         v22,
         (Il2CppObject *)v5,
@@ -184,7 +184,7 @@ LABEL_25:
         0);
       if ( Instance )
       {
-        CommonUI__OpenConfirmDialog_31583064(
+        CommonUI__OpenConfirmDialog_31482500(
           (CommonUI_o *)Instance,
           v18,
           v19,
@@ -202,7 +202,7 @@ LABEL_25:
         return;
       }
 LABEL_32:
-      sub_1C942F0(IsNullOrEmpty, v7);
+      sub_1C7BD40(IsNullOrEmpty, v7);
     }
   }
   IsNullOrEmpty = this->fields.saveData;
@@ -229,21 +229,21 @@ void SvtEquipRecommenededConfigDialog__OnClickAutoSet(
   const MethodInfo *v6; // x1
   struct RecommendedSvtEquipConfigSaveData_o *saveData; // x8
 
-  if ( (byte_4D26834 & 1) == 0 )
+  if ( (byte_4CE86B4 & 1) == 0 )
   {
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__);
-    byte_4D26834 = 1;
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__);
+    byte_4CE86B4 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickAutoSet__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     saveData = this->fields.saveData;
     if ( !saveData )
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     saveData->fields.isAutoSet = saveData->fields.isAutoSet != 1;
     SvtEquipRecommenededConfigDialog__SetButtonState(this, v6);
   }
@@ -258,19 +258,19 @@ void SvtEquipRecommenededConfigDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D26838 & 1) == 0 )
+  if ( (byte_4CE86B8 & 1) == 0 )
   {
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickCancel__);
-    byte_4D26838 = 1;
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickCancel__);
+    byte_4CE86B8 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SvtEquipRecommenededConfigDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    SvtEquipRecommenededConfigDialog__Close_32172524(this, 0, v5);
+    SvtEquipRecommenededConfigDialog__Close_31984984(this, 0, v5);
   }
 }
 
@@ -289,18 +289,18 @@ void SvtEquipRecommenededConfigDialog__OnClickClear(SvtEquipRecommenededConfigDi
   struct System_Collections_Generic_List_int__o *selectRarityList; // x9
   int v13; // w10
 
-  if ( (byte_4D26836 & 1) == 0 )
+  if ( (byte_4CE86B6 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickClear__);
-    byte_4D26836 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickClear__);
+    byte_4CE86B6 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SvtEquipRecommenededConfigDialog_OnClickClear__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickClear__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickClear__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickClear__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     saveData = this->fields.saveData;
     if ( !saveData )
@@ -319,7 +319,7 @@ void SvtEquipRecommenededConfigDialog__OnClickClear(SvtEquipRecommenededConfigDi
           (selectRarityList = saveData->fields.selectRarityList) == 0) )
     {
 LABEL_12:
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     }
     v13 = selectRarityList->fields._version + 1;
     selectRarityList->fields._size = 0;
@@ -346,20 +346,20 @@ void SvtEquipRecommenededConfigDialog__OnClickCombineStatus(
   _QWORD *v13; // x9
   __int64 size; // x10
 
-  if ( (byte_4D26833 & 1) == 0 )
+  if ( (byte_4CE86B3 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__);
-    byte_4D26833 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__);
+    byte_4CE86B3 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v5 = Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickCombineStatus__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     saveData = this->fields.saveData;
     if ( saveData )
@@ -370,7 +370,7 @@ void SvtEquipRecommenededConfigDialog__OnClickCombineStatus(
         selectCombineStatusList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___Contains(
                                                                               selectCombineStatusList,
                                                                               status,
-                                                                              (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                              (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         v10 = this->fields.saveData;
         if ( v10 )
         {
@@ -383,7 +383,7 @@ void SvtEquipRecommenededConfigDialog__OnClickCombineStatus(
               System_Collections_Generic_List_int___Remove(
                 selectCombineStatusList,
                 status,
-                (const MethodInfo_384F30C *)Method_System_Collections_Generic_List_int__Remove__);
+                (const MethodInfo_38232D4 *)Method_System_Collections_Generic_List_int__Remove__);
 LABEL_17:
               SvtEquipRecommenededConfigDialog__SetButtonState(this, v8);
               return;
@@ -399,7 +399,7 @@ LABEL_17:
                 System_Collections_Generic_List_int___AddWithResize(
                   selectCombineStatusList,
                   status,
-                  *(const MethodInfo_384DE10 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+                  *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
               }
               else
               {
@@ -412,7 +412,7 @@ LABEL_17:
         }
       }
     }
-    sub_1C942F0(selectCombineStatusList, v8);
+    sub_1C7BD40(selectCombineStatusList, v8);
   }
 }
 
@@ -425,19 +425,19 @@ void SvtEquipRecommenededConfigDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D26837 & 1) == 0 )
+  if ( (byte_4CE86B7 & 1) == 0 )
   {
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickDecide__);
-    byte_4D26837 = 1;
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickDecide__);
+    byte_4CE86B7 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SvtEquipRecommenededConfigDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    SvtEquipRecommenededConfigDialog__Close_32172524(this, 1, v5);
+    SvtEquipRecommenededConfigDialog__Close_31984984(this, 1, v5);
   }
 }
 
@@ -458,20 +458,20 @@ void SvtEquipRecommenededConfigDialog__OnClickEquipType(
   _QWORD *v13; // x9
   __int64 size; // x10
 
-  if ( (byte_4D26831 & 1) == 0 )
+  if ( (byte_4CE86B1 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__);
-    byte_4D26831 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__);
+    byte_4CE86B1 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v5 = Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickEquipType__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     saveData = this->fields.saveData;
     if ( saveData )
@@ -482,7 +482,7 @@ void SvtEquipRecommenededConfigDialog__OnClickEquipType(
         selectTypeList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___Contains(
                                                                      selectTypeList,
                                                                      type,
-                                                                     (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                     (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         v10 = this->fields.saveData;
         if ( v10 )
         {
@@ -495,7 +495,7 @@ void SvtEquipRecommenededConfigDialog__OnClickEquipType(
               System_Collections_Generic_List_int___Remove(
                 selectTypeList,
                 type,
-                (const MethodInfo_384F30C *)Method_System_Collections_Generic_List_int__Remove__);
+                (const MethodInfo_38232D4 *)Method_System_Collections_Generic_List_int__Remove__);
 LABEL_17:
               SvtEquipRecommenededConfigDialog__SetButtonState(this, v8);
               return;
@@ -511,7 +511,7 @@ LABEL_17:
                 System_Collections_Generic_List_int___AddWithResize(
                   selectTypeList,
                   type,
-                  *(const MethodInfo_384DE10 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+                  *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
               }
               else
               {
@@ -524,7 +524,7 @@ LABEL_17:
         }
       }
     }
-    sub_1C942F0(selectTypeList, v8);
+    sub_1C7BD40(selectTypeList, v8);
   }
 }
 
@@ -545,20 +545,20 @@ void SvtEquipRecommenededConfigDialog__OnClickRarity(
   _QWORD *v13; // x9
   __int64 size; // x10
 
-  if ( (byte_4D26832 & 1) == 0 )
+  if ( (byte_4CE86B2 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickRarity__);
-    byte_4D26832 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickRarity__);
+    byte_4CE86B2 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v5 = Method_SvtEquipRecommenededConfigDialog_OnClickRarity__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickRarity__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickRarity__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickRarity__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     saveData = this->fields.saveData;
     if ( saveData )
@@ -569,7 +569,7 @@ void SvtEquipRecommenededConfigDialog__OnClickRarity(
         selectRarityList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___Contains(
                                                                        selectRarityList,
                                                                        rarity,
-                                                                       (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                       (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         v10 = this->fields.saveData;
         if ( v10 )
         {
@@ -582,7 +582,7 @@ void SvtEquipRecommenededConfigDialog__OnClickRarity(
               System_Collections_Generic_List_int___Remove(
                 selectRarityList,
                 rarity,
-                (const MethodInfo_384F30C *)Method_System_Collections_Generic_List_int__Remove__);
+                (const MethodInfo_38232D4 *)Method_System_Collections_Generic_List_int__Remove__);
 LABEL_17:
               SvtEquipRecommenededConfigDialog__SetButtonState(this, v8);
               return;
@@ -598,7 +598,7 @@ LABEL_17:
                 System_Collections_Generic_List_int___AddWithResize(
                   selectRarityList,
                   rarity,
-                  *(const MethodInfo_384DE10 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+                  *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
               }
               else
               {
@@ -611,7 +611,7 @@ LABEL_17:
         }
       }
     }
-    sub_1C942F0(selectRarityList, v8);
+    sub_1C7BD40(selectRarityList, v8);
   }
 }
 
@@ -623,17 +623,17 @@ void SvtEquipRecommenededConfigDialog__OnClickReset(SvtEquipRecommenededConfigDi
   const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
 
-  if ( (byte_4D26835 & 1) == 0 )
+  if ( (byte_4CE86B5 & 1) == 0 )
   {
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog_OnClickReset__);
-    byte_4D26835 = 1;
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog_OnClickReset__);
+    byte_4CE86B5 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SvtEquipRecommenededConfigDialog_OnClickReset__;
     if ( (*((_BYTE *)Method_SvtEquipRecommenededConfigDialog_OnClickReset__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C940B0(Method_SvtEquipRecommenededConfigDialog_OnClickReset__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C7BB00(Method_SvtEquipRecommenededConfigDialog_OnClickReset__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     SvtEquipRecommenededConfigDialog__SetInitConfig(this, v5);
     SvtEquipRecommenededConfigDialog__SetButtonState(this, v6);
@@ -729,53 +729,53 @@ void SvtEquipRecommenededConfigDialog__OpenRecommendedConfig(
   unsigned int v85; // [xsp+8h] [xbp-68h] BYREF
   unsigned int v86; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4D2682D & 1) == 0 )
+  if ( (byte_4CE86AD & 1) == 0 )
   {
-    sub_1C94098(&EventDelegate_Callback_TypeInfo);
-    sub_1C94098(&EventDelegate_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&RecommendedSvtEquipConfigSaveData_TypeInfo);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_0__OpenRecommendedConfig_b__0__);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_0_TypeInfo);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_1__OpenRecommendedConfig_b__1__);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_1_TypeInfo);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_2__OpenRecommendedConfig_b__2__);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_2_TypeInfo);
-    sub_1C94098(&StringLiteral_11063/*"RECOMMENDED_SVT_EQUIP_STATUS_TITLE"*/);
-    sub_1C94098(&StringLiteral_11048/*"RECOMMENDED_DIALOG_TITLE"*/);
-    sub_1C94098(&StringLiteral_11046/*"RECOMMENDED_DIALOG_DECIDE"*/);
-    sub_1C94098(&StringLiteral_11065/*"RECOMMENDED_SVT_EQUIP_TYPE_TITLE"*/);
-    sub_1C94098(&StringLiteral_11042/*"RECOMMENDED_AUTO_SET_TITLE"*/);
-    sub_1C94098(&StringLiteral_11054/*"RECOMMENDED_RARITY_TITLE"*/);
-    sub_1C94098(&StringLiteral_11062/*"RECOMMENDED_SVT_EQUIP_STATUS_"*/);
-    sub_1C94098(&StringLiteral_11053/*"RECOMMENDED_RARITY_"*/);
-    sub_1C94098(&StringLiteral_11045/*"RECOMMENDED_CLEAR"*/);
-    sub_1C94098(&StringLiteral_11057/*"RECOMMENDED_SVT_EQUIP_DIALOG_MESSAGE"*/);
-    sub_1C94098(&StringLiteral_11064/*"RECOMMENDED_SVT_EQUIP_TYPE_"*/);
-    sub_1C94098(&StringLiteral_11055/*"RECOMMENDED_RESET"*/);
-    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4D2682D = 1;
+    sub_1C7BAE8(&EventDelegate_Callback_TypeInfo);
+    sub_1C7BAE8(&EventDelegate_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&RecommendedSvtEquipConfigSaveData_TypeInfo);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_0__OpenRecommendedConfig_b__0__);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_0_TypeInfo);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_1__OpenRecommendedConfig_b__1__);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_1_TypeInfo);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_2__OpenRecommendedConfig_b__2__);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c__DisplayClass27_2_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11065/*"RECOMMENDED_SVT_EQUIP_STATUS_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_11050/*"RECOMMENDED_DIALOG_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_11048/*"RECOMMENDED_DIALOG_DECIDE"*/);
+    sub_1C7BAE8(&StringLiteral_11067/*"RECOMMENDED_SVT_EQUIP_TYPE_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_11044/*"RECOMMENDED_AUTO_SET_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_11056/*"RECOMMENDED_RARITY_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_11064/*"RECOMMENDED_SVT_EQUIP_STATUS_"*/);
+    sub_1C7BAE8(&StringLiteral_11055/*"RECOMMENDED_RARITY_"*/);
+    sub_1C7BAE8(&StringLiteral_11047/*"RECOMMENDED_CLEAR"*/);
+    sub_1C7BAE8(&StringLiteral_11059/*"RECOMMENDED_SVT_EQUIP_DIALOG_MESSAGE"*/);
+    sub_1C7BAE8(&StringLiteral_11066/*"RECOMMENDED_SVT_EQUIP_TYPE_"*/);
+    sub_1C7BAE8(&StringLiteral_11057/*"RECOMMENDED_RESET"*/);
+    sub_1C7BAE8(&StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4CE86AD = 1;
   }
   v84 = 0;
   v85 = 0;
   this->fields.closeAction = closeCallback;
-  sub_1C9403C(&this->fields.closeAction, closeCallback);
+  sub_1C7BA8C(&this->fields.closeAction, closeCallback);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11048/*"RECOMMENDED_DIALOG_TITLE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11050/*"RECOMMENDED_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_104;
   UILabel__set_text(titleLabel, saveData, 0);
   messageLabel = this->fields.messageLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11057/*"RECOMMENDED_SVT_EQUIP_DIALOG_MESSAGE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11059/*"RECOMMENDED_SVT_EQUIP_DIALOG_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_104;
   UILabel__set_text(messageLabel, saveData, 0);
   typeLabel = this->fields.typeLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11065/*"RECOMMENDED_SVT_EQUIP_TYPE_TITLE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11067/*"RECOMMENDED_SVT_EQUIP_TYPE_TITLE"*/, 0);
   if ( !typeLabel )
     goto LABEL_104;
   UILabel__set_text(typeLabel, saveData, 0);
@@ -786,12 +786,12 @@ void SvtEquipRecommenededConfigDialog__OpenRecommendedConfig(
   v11 = 0;
   while ( v11 < SLODWORD(typeButtonLabelList->max_length) )
   {
-    v12 = sub_1C942E4(SvtEquipRecommenededConfigDialog___c__DisplayClass27_0_TypeInfo);
+    v12 = sub_1C7BD34(SvtEquipRecommenededConfigDialog___c__DisplayClass27_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v12, 0);
     if ( v12 )
     {
       *(_QWORD *)(v12 + 24) = this;
-      saveData = (System_String_o *)sub_1C9403C(v12 + 24, this);
+      saveData = (System_String_o *)sub_1C7BA8C(v12 + 24, this);
       v13 = this->fields.typeButtonLabelList;
       if ( v13 )
       {
@@ -799,7 +799,7 @@ void SvtEquipRecommenededConfigDialog__OpenRecommendedConfig(
           goto LABEL_105;
         v14 = v13->m_Items[v86];
         v15 = System_Int32__ToString((int32_t)&v86, 0);
-        v16 = System_String__Concat_64417744((System_String_o *)StringLiteral_11064/*"RECOMMENDED_SVT_EQUIP_TYPE_"*/, v15, 0);
+        v16 = System_String__Concat_64176912((System_String_o *)StringLiteral_11066/*"RECOMMENDED_SVT_EQUIP_TYPE_"*/, v15, 0);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         saveData = LocalizationManager__Get(v16, 0);
@@ -837,19 +837,19 @@ void SvtEquipRecommenededConfigDialog__OpenRecommendedConfig(
                 }
                 if ( v18 >= LODWORD(typeButtonList->max_length) )
 LABEL_105:
-                  sub_1C942F8(saveData);
+                  sub_1C7BD48(saveData);
                 v23 = typeButtonList->m_Items[v18];
                 if ( v23 )
                 {
                   v24 = (System_Collections_Generic_List_object__o *)v23->fields.onClick;
-                  v25 = (EventDelegate_Callback_o *)sub_1C942E4(EventDelegate_Callback_TypeInfo);
+                  v25 = (EventDelegate_Callback_o *)sub_1C7BD34(EventDelegate_Callback_TypeInfo);
                   EventDelegate_Callback___ctor(
                     v25,
                     (Il2CppObject *)v12,
                     Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_0__OpenRecommendedConfig_b__0__,
                     0);
-                  v26 = (EventDelegate_o *)sub_1C942E4(EventDelegate_TypeInfo);
-                  EventDelegate___ctor_49964596(v26, v25, 0);
+                  v26 = (EventDelegate_o *)sub_1C7BD34(EventDelegate_TypeInfo);
+                  EventDelegate___ctor_49792828(v26, v25, 0);
                   if ( v24 )
                   {
                     items = v24->fields._items;
@@ -863,14 +863,14 @@ LABEL_105:
                         System_Collections_Generic_List_object___AddWithResize(
                           v24,
                           (Il2CppObject *)v26,
-                          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+                          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
                       }
                       else
                       {
                         v30 = &items->obj.klass + v29;
                         v24->fields._size = v29 + 1;
                         v30[4] = (Il2CppClass *)v26;
-                        saveData = (System_String_o *)sub_1C9403C(v30 + 4, v26);
+                        saveData = (System_String_o *)sub_1C7BA8C(v30 + 4, v26);
                       }
                       v11 = ++v86;
                       typeButtonLabelList = this->fields.typeButtonLabelList;
@@ -890,7 +890,7 @@ LABEL_105:
   rarityLabel = this->fields.rarityLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11054/*"RECOMMENDED_RARITY_TITLE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11056/*"RECOMMENDED_RARITY_TITLE"*/, 0);
   if ( !rarityLabel )
     goto LABEL_104;
   UILabel__set_text(rarityLabel, saveData, 0);
@@ -901,12 +901,12 @@ LABEL_105:
   v33 = 0;
   while ( v33 < SLODWORD(rarityButtonLabelList->max_length) )
   {
-    v34 = sub_1C942E4(SvtEquipRecommenededConfigDialog___c__DisplayClass27_1_TypeInfo);
+    v34 = sub_1C7BD34(SvtEquipRecommenededConfigDialog___c__DisplayClass27_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v34, 0);
     if ( !v34 )
       goto LABEL_104;
     *(_QWORD *)(v34 + 24) = this;
-    saveData = (System_String_o *)sub_1C9403C(v34 + 24, this);
+    saveData = (System_String_o *)sub_1C7BA8C(v34 + 24, this);
     v35 = this->fields.rarityButtonLabelList;
     if ( !v35 )
       goto LABEL_104;
@@ -914,7 +914,7 @@ LABEL_105:
       goto LABEL_105;
     v36 = v35->m_Items[v85];
     v37 = System_Int32__ToString((int32_t)&v85, 0);
-    v38 = System_String__Concat_64417744((System_String_o *)StringLiteral_11053/*"RECOMMENDED_RARITY_"*/, v37, 0);
+    v38 = System_String__Concat_64176912((System_String_o *)StringLiteral_11055/*"RECOMMENDED_RARITY_"*/, v37, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     saveData = LocalizationManager__Get(v38, 0);
@@ -952,14 +952,14 @@ LABEL_105:
     if ( v45 )
     {
       v46 = (System_Collections_Generic_List_object__o *)v45->fields.onClick;
-      v47 = (EventDelegate_Callback_o *)sub_1C942E4(EventDelegate_Callback_TypeInfo);
+      v47 = (EventDelegate_Callback_o *)sub_1C7BD34(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(
         v47,
         (Il2CppObject *)v34,
         Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_1__OpenRecommendedConfig_b__1__,
         0);
-      v48 = (EventDelegate_o *)sub_1C942E4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49964596(v48, v47, 0);
+      v48 = (EventDelegate_o *)sub_1C7BD34(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49792828(v48, v47, 0);
       if ( v46 )
       {
         v49 = v46->fields._items;
@@ -973,14 +973,14 @@ LABEL_105:
             System_Collections_Generic_List_object___AddWithResize(
               v46,
               (Il2CppObject *)v48,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
           }
           else
           {
             v52 = &v49->obj.klass + v51;
             v46->fields._size = v51 + 1;
             v52[4] = (Il2CppClass *)v48;
-            saveData = (System_String_o *)sub_1C9403C(v52 + 4, v48);
+            saveData = (System_String_o *)sub_1C7BA8C(v52 + 4, v48);
           }
           v33 = ++v85;
           rarityButtonLabelList = this->fields.rarityButtonLabelList;
@@ -994,7 +994,7 @@ LABEL_105:
   combineStatusLabel = this->fields.combineStatusLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11063/*"RECOMMENDED_SVT_EQUIP_STATUS_TITLE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11065/*"RECOMMENDED_SVT_EQUIP_STATUS_TITLE"*/, 0);
   if ( !combineStatusLabel )
     goto LABEL_104;
   UILabel__set_text(combineStatusLabel, saveData, 0);
@@ -1005,12 +1005,12 @@ LABEL_105:
   v55 = 0;
   while ( v55 < SLODWORD(combineStatusButtonLabelList->max_length) )
   {
-    v56 = sub_1C942E4(SvtEquipRecommenededConfigDialog___c__DisplayClass27_2_TypeInfo);
+    v56 = sub_1C7BD34(SvtEquipRecommenededConfigDialog___c__DisplayClass27_2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v56, 0);
     if ( !v56 )
       goto LABEL_104;
     *(_QWORD *)(v56 + 24) = this;
-    saveData = (System_String_o *)sub_1C9403C(v56 + 24, this);
+    saveData = (System_String_o *)sub_1C7BA8C(v56 + 24, this);
     v57 = this->fields.combineStatusButtonLabelList;
     if ( !v57 )
       goto LABEL_104;
@@ -1018,7 +1018,7 @@ LABEL_105:
       goto LABEL_105;
     v58 = v57->m_Items[v84];
     v59 = System_Int32__ToString((int32_t)&v84, 0);
-    v60 = System_String__Concat_64417744((System_String_o *)StringLiteral_11062/*"RECOMMENDED_SVT_EQUIP_STATUS_"*/, v59, 0);
+    v60 = System_String__Concat_64176912((System_String_o *)StringLiteral_11064/*"RECOMMENDED_SVT_EQUIP_STATUS_"*/, v59, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     saveData = LocalizationManager__Get(v60, 0);
@@ -1056,14 +1056,14 @@ LABEL_105:
     if ( v67 )
     {
       v68 = (System_Collections_Generic_List_object__o *)v67->fields.onClick;
-      v69 = (EventDelegate_Callback_o *)sub_1C942E4(EventDelegate_Callback_TypeInfo);
+      v69 = (EventDelegate_Callback_o *)sub_1C7BD34(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(
         v69,
         (Il2CppObject *)v56,
         Method_SvtEquipRecommenededConfigDialog___c__DisplayClass27_2__OpenRecommendedConfig_b__2__,
         0);
-      v70 = (EventDelegate_o *)sub_1C942E4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49964596(v70, v69, 0);
+      v70 = (EventDelegate_o *)sub_1C7BD34(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49792828(v70, v69, 0);
       if ( v68 )
       {
         v71 = v68->fields._items;
@@ -1077,14 +1077,14 @@ LABEL_105:
             System_Collections_Generic_List_object___AddWithResize(
               v68,
               (Il2CppObject *)v70,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
           }
           else
           {
             v74 = &v71->obj.klass + v73;
             v68->fields._size = v73 + 1;
             v74[4] = (Il2CppClass *)v70;
-            saveData = (System_String_o *)sub_1C9403C(v74 + 4, v70);
+            saveData = (System_String_o *)sub_1C7BA8C(v74 + 4, v70);
           }
           v55 = ++v84;
           combineStatusButtonLabelList = this->fields.combineStatusButtonLabelList;
@@ -1098,37 +1098,37 @@ LABEL_105:
   autoSetLabel = this->fields.autoSetLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11042/*"RECOMMENDED_AUTO_SET_TITLE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11044/*"RECOMMENDED_AUTO_SET_TITLE"*/, 0);
   if ( !autoSetLabel )
     goto LABEL_104;
   UILabel__set_text(autoSetLabel, saveData, 0);
   resetButtonLabel = this->fields.resetButtonLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11055/*"RECOMMENDED_RESET"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11057/*"RECOMMENDED_RESET"*/, 0);
   if ( !resetButtonLabel )
     goto LABEL_104;
   UILabel__set_text(resetButtonLabel, saveData, 0);
   clearButtonLabel = this->fields.clearButtonLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11045/*"RECOMMENDED_CLEAR"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11047/*"RECOMMENDED_CLEAR"*/, 0);
   if ( !clearButtonLabel )
     goto LABEL_104;
   UILabel__set_text(clearButtonLabel, saveData, 0);
   decideButtonLabel = this->fields.decideButtonLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11046/*"RECOMMENDED_DIALOG_DECIDE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_11048/*"RECOMMENDED_DIALOG_DECIDE"*/, 0);
   if ( !decideButtonLabel )
     goto LABEL_104;
   UILabel__set_text(decideButtonLabel, saveData, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  saveData = LocalizationManager__Get((System_String_o *)StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !cancelButtonLabel
     || (UILabel__set_text(cancelButtonLabel, saveData, 0),
-        v80 = (RecommendedSvtEquipConfigSaveData_o *)sub_1C942E4(RecommendedSvtEquipConfigSaveData_TypeInfo),
+        v80 = (RecommendedSvtEquipConfigSaveData_o *)sub_1C7BD34(RecommendedSvtEquipConfigSaveData_TypeInfo),
         RecommendedSvtEquipConfigSaveData___ctor(v80, 0),
         this->fields.saveData = v80,
-        sub_1C9403C(&this->fields.saveData, v80),
+        sub_1C7BA8C(&this->fields.saveData, v80),
         (saveData = (System_String_o *)this->fields.saveData) == 0) )
   {
 LABEL_104:
-    sub_1C942F0(saveData, v7);
+    sub_1C7BD40(saveData, v7);
   }
   if ( RecommendedSvtEquipConfigSaveData__IsExist((RecommendedSvtEquipConfigSaveData_o *)saveData, 0) )
   {
@@ -1136,7 +1136,7 @@ LABEL_104:
       j_il2cpp_runtime_class_init_0(RecommendedSvtEquipConfigSaveData_TypeInfo);
     ConfigSaveData = RecommendedSvtEquipConfigSaveData__LoadConfigSaveData(0);
     this->fields.saveData = ConfigSaveData;
-    sub_1C9403C(&this->fields.saveData, ConfigSaveData);
+    sub_1C7BA8C(&this->fields.saveData, ConfigSaveData);
   }
   else
   {
@@ -1174,10 +1174,10 @@ void SvtEquipRecommenededConfigDialog__SetButtonState(
   __int64 v22; // x8
 
   v2 = this;
-  if ( (byte_4D2682F & 1) == 0 )
+  if ( (byte_4CE86AF & 1) == 0 )
   {
-    this = (SvtEquipRecommenededConfigDialog_o *)sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    byte_4D2682F = 1;
+    this = (SvtEquipRecommenededConfigDialog_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    byte_4CE86AF = 1;
   }
   typeButtonSpriteList = v2->fields.typeButtonSpriteList;
   if ( !typeButtonSpriteList )
@@ -1190,7 +1190,7 @@ void SvtEquipRecommenededConfigDialog__SetButtonState(
       break;
     if ( (unsigned int)v4 >= max_length )
 LABEL_46:
-      sub_1C942F8(this);
+      sub_1C7BD48(this);
     saveData = v2->fields.saveData;
     if ( saveData )
     {
@@ -1201,7 +1201,7 @@ LABEL_46:
         this = (SvtEquipRecommenededConfigDialog_o *)System_Collections_Generic_List_int___Contains(
                                                        (System_Collections_Generic_List_int__o *)this,
                                                        v4,
-                                                       (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                       (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( v7 )
         {
           v8 = ((unsigned __int8)this & 1) != 0 ? 104LL : 112LL;
@@ -1236,7 +1236,7 @@ LABEL_46:
         this = (SvtEquipRecommenededConfigDialog_o *)System_Collections_Generic_List_int___Contains(
                                                        (System_Collections_Generic_List_int__o *)this,
                                                        v10 + 1,
-                                                       (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                       (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( v13 )
         {
           v14 = ((unsigned __int8)this & 1) != 0 ? 104LL : 112LL;
@@ -1271,7 +1271,7 @@ LABEL_46:
         this = (SvtEquipRecommenededConfigDialog_o *)System_Collections_Generic_List_int___Contains(
                                                        (System_Collections_Generic_List_int__o *)this,
                                                        v16,
-                                                       (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                       (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( v19 )
         {
           v20 = ((unsigned __int8)this & 1) != 0 ? 104LL : 112LL;
@@ -1294,7 +1294,7 @@ LABEL_46:
         !autoSetButtonSprite) )
   {
 LABEL_45:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   v22 = 128;
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -1322,11 +1322,11 @@ void SvtEquipRecommenededConfigDialog__SetInitConfig(
   int v14; // w11
 
   v2 = this;
-  if ( (byte_4D2682E & 1) == 0 )
+  if ( (byte_4CE86AE & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
-    this = (SvtEquipRecommenededConfigDialog_o *)sub_1C94098(&Method_System_Collections_Generic_List_int__Clear__);
-    byte_4D2682E = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
+    this = (SvtEquipRecommenededConfigDialog_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Clear__);
+    byte_4CE86AE = 1;
   }
   saveData = v2->fields.saveData;
   if ( !saveData )
@@ -1357,7 +1357,7 @@ void SvtEquipRecommenededConfigDialog__SetInitConfig(
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)this,
       1,
-      *(const MethodInfo_384DE10 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
     saveData = v2->fields.saveData;
     if ( !saveData )
       goto LABEL_21;
@@ -1376,7 +1376,7 @@ void SvtEquipRecommenededConfigDialog__SetInitConfig(
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)this,
       2,
-      *(const MethodInfo_384DE10 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     saveData = v2->fields.saveData;
     if ( !saveData )
       goto LABEL_21;
@@ -1396,14 +1396,14 @@ void SvtEquipRecommenededConfigDialog__SetInitConfig(
         !v12) )
   {
 LABEL_21:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   if ( !*(_DWORD *)(v12 + 24) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)this,
       0,
-      *(const MethodInfo_384DE10 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
     saveData = v2->fields.saveData;
     if ( saveData )
       goto LABEL_20;
@@ -1424,10 +1424,10 @@ UnityEngine_GameObject_o *SvtEquipRecommenededConfigDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4D2683A & 1) == 0 )
+  if ( (byte_4CE86BA & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2683A = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CE86BA = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1436,7 +1436,7 @@ UnityEngine_GameObject_o *SvtEquipRecommenededConfigDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }
 
@@ -1445,15 +1445,15 @@ void SvtEquipRecommenededConfigDialog___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4D2683C & 1) == 0 )
+  if ( (byte_4CE86BC & 1) == 0 )
   {
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c_TypeInfo);
-    byte_4D2683C = 1;
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c_TypeInfo);
+    byte_4CE86BC = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(SvtEquipRecommenededConfigDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(SvtEquipRecommenededConfigDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SvtEquipRecommenededConfigDialog___c_TypeInfo->static_fields->__9 = (struct SvtEquipRecommenededConfigDialog___c_o *)v1;
-  sub_1C9403C(SvtEquipRecommenededConfigDialog___c_TypeInfo->static_fields, v1);
+  sub_1C7BA8C(SvtEquipRecommenededConfigDialog___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -1489,7 +1489,7 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass27_0___OpenRecommendedCon
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   SvtEquipRecommenededConfigDialog__OnClickEquipType(this->fields.__4__this, this->fields.equipType, v2);
 }
 
@@ -1509,7 +1509,7 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass27_1___OpenRecommendedCon
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   SvtEquipRecommenededConfigDialog__OnClickRarity(this->fields.__4__this, this->fields.rarityKind, v2);
 }
 
@@ -1529,7 +1529,7 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass27_2___OpenRecommendedCon
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   SvtEquipRecommenededConfigDialog__OnClickCombineStatus(this->fields.__4__this, this->fields.combineStatus, v2);
 }
 
@@ -1553,22 +1553,22 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass39_0___Close_b__1(
   Il2CppObject *Instance; // x19
   System_Action_o *v9; // x20
 
-  if ( (byte_4D2683D & 1) == 0 )
+  if ( (byte_4CE86BD & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C94098(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass39_1__Close_b__2__);
-    sub_1C94098(&SvtEquipRecommenededConfigDialog___c__DisplayClass39_1_TypeInfo);
-    byte_4D2683D = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C7BAE8(&Method_SvtEquipRecommenededConfigDialog___c__DisplayClass39_1__Close_b__2__);
+    sub_1C7BAE8(&SvtEquipRecommenededConfigDialog___c__DisplayClass39_1_TypeInfo);
+    byte_4CE86BD = 1;
   }
-  v5 = sub_1C942E4(SvtEquipRecommenededConfigDialog___c__DisplayClass39_1_TypeInfo);
+  v5 = sub_1C7BD34(SvtEquipRecommenededConfigDialog___c__DisplayClass39_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C9403C(v5 + 24, this),
+        sub_1C7BA8C(v5 + 24, this),
         *(_BYTE *)(v5 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v9 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v9 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo),
         System_Action___ctor(
           v9,
           (Il2CppObject *)v5,
@@ -1576,9 +1576,9 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass39_0___Close_b__1(
           0),
         !Instance) )
   {
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   }
-  CommonUI__CloseConfirmDialog_31583752((CommonUI_o *)Instance, v9, 0);
+  CommonUI__CloseConfirmDialog_31483188((CommonUI_o *)Instance, v9, 0);
 }
 
 
@@ -1616,7 +1616,7 @@ void SvtEquipRecommenededConfigDialog___c__DisplayClass39_1___Close_b__2(
       || (v6 = v5->fields.__4__this) == 0
       || (closeAction = v6->fields.closeAction) == 0 )
     {
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     }
     ((void (__fastcall *)(intptr_t, bool, intptr_t))closeAction->fields.invoke_impl)(
       closeAction->fields.method_code,

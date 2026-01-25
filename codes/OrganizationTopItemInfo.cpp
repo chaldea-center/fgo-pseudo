@@ -28,9 +28,9 @@ void OrganizationTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.textCode, (int32_t)textCode, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.textCode, (int32_t)textCode, v11, v12, v13, v14, v15, v16);
   this->fields.imageName = imageName;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.imageName, (int32_t)imageName, v17, v18, v19, v20, v21, v22);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.imageName, (int32_t)imageName, v17, v18, v19, v20, v21, v22);
   this->fields.eventData = eventData;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v23, v24, v25, v26, v27, v28);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v23, v24, v25, v26, v27, v28);
 }

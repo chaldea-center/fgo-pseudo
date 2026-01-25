@@ -46,23 +46,23 @@ void DownloadHandlerFileWithCrcCheck___ctor(
   UnityEngine_Networking_DownloadHandlerScript___ctor((UnityEngine_Networking_DownloadHandlerScript_o *)this, 0);
   this->fields.crc = 0;
   this->fields.path = path;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v7, v8, v9, v10, v11, v12);
   this->fields.fileStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, 0, v13, v14, v15, v16, v17, v18);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, 0, v13, v14, v15, v16, v17, v18);
   this->fields._error_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._error_k__BackingField, 0, v19, v20, v21, v22, v23, v24);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._error_k__BackingField, 0, v19, v20, v21, v22, v23, v24);
   *(_QWORD *)&this->fields.nowDataLength = 0;
   this->fields.isDecrypt = v6;
   this->fields.cryptoStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v25, v26, v27, v28, v29, v30);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v25, v26, v27, v28, v29, v30);
   this->fields.outputStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v31, v32, v33, v34, v35, v36);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v31, v32, v33, v34, v35, v36);
   this->fields.key = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.key, 0, v37, v38, v39, v40, v41, v42);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.key, 0, v37, v38, v39, v40, v41, v42);
 }
 
 
-void DownloadHandlerFileWithCrcCheck___ctor_41515848(
+void DownloadHandlerFileWithCrcCheck___ctor_41329176(
         DownloadHandlerFileWithCrcCheck_o *this,
         System_String_o *path,
         bool isDecrypt,
@@ -109,25 +109,25 @@ void DownloadHandlerFileWithCrcCheck___ctor_41515848(
   System_String_o *v45; // x7
 
   v7 = isDecrypt;
-  UnityEngine_Networking_DownloadHandlerScript___ctor_74636828(
+  UnityEngine_Networking_DownloadHandlerScript___ctor_74396004(
     (UnityEngine_Networking_DownloadHandlerScript_o *)this,
     buffer,
     0);
   this->fields.crc = 0;
   this->fields.path = path;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v10, v11, v12, v13, v14, v15);
   this->fields.fileStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, 0, v16, v17, v18, v19, v20, v21);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, 0, v16, v17, v18, v19, v20, v21);
   this->fields._error_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._error_k__BackingField, 0, v22, v23, v24, v25, v26, v27);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._error_k__BackingField, 0, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)&this->fields.nowDataLength = 0;
   this->fields.isDecrypt = v7;
   this->fields.cryptoStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v28, v29, v30, v31, v32, v33);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v28, v29, v30, v31, v32, v33);
   this->fields.outputStream = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v34, v35, v36, v37, v38, v39);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v34, v35, v36, v37, v38, v39);
   this->fields.key = key;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.key, (int32_t)key, v40, v41, v42, v43, v44, v45);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.key, (int32_t)key, v40, v41, v42, v43, v44, v45);
 }
 
 
@@ -164,14 +164,14 @@ void DownloadHandlerFileWithCrcCheck__CloseStream(DownloadHandlerFileWithCrcChec
   {
     System_IO_Stream__Dispose(fileStream, 0);
     p_fileStream->klass = 0;
-    sub_1C9403C(p_fileStream, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C7BA8C(p_fileStream, 0, v5, v6, v7, v8, v9, v10);
   }
   cryptoStream = this->fields.cryptoStream;
   if ( cryptoStream )
   {
     System_Security_Cryptography_CryptoStream__Clear(cryptoStream, 0);
     this->fields.cryptoStream = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v12, v13, v14, v15, v16, v17);
   }
   outputStream = this->fields.outputStream;
   p_outputStream = (GrandQuestFolderBoardItem_o *)&this->fields.outputStream;
@@ -180,7 +180,7 @@ void DownloadHandlerFileWithCrcCheck__CloseStream(DownloadHandlerFileWithCrcChec
   {
     System_IO_Stream__Dispose(v18, 0);
     p_outputStream->klass = 0;
-    sub_1C9403C(p_outputStream, 0, v21, v22, v23, v24, v25, v26);
+    sub_1C7BA8C(p_outputStream, 0, v21, v22, v23, v24, v25, v26);
   }
 }
 
@@ -239,7 +239,7 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
   {
     System_IO_Stream__Dispose(fileStream, 0);
     p_fileStream->klass = 0;
-    sub_1C9403C(p_fileStream, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C7BA8C(p_fileStream, 0, v5, v6, v7, v8, v9, v10);
   }
   if ( this->fields.isDecrypt )
   {
@@ -256,12 +256,12 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
                 outputStream->klass->vtable._11_get_Length.method);
         v17 = this->fields.outputStream;
         if ( !v17 )
-          sub_1C942F0(0, v15);
+          sub_1C7BD40(0, v15);
         v18 = (struct System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))v17->klass->vtable._37_GetBuffer.methodPtr)(
                                             v17,
                                             v17->klass->vtable._37_GetBuffer.method);
         this->fields.decryptData = v18;
-        sub_1C9403C(
+        sub_1C7BA8C(
           (GrandQuestFolderBoardItem_o *)&this->fields.decryptData,
           (int32_t)v18,
           v19,
@@ -276,10 +276,10 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
         v16 = 0;
       }
       if ( !*p_cryptoStream )
-        sub_1C942F0(0, v13);
+        sub_1C7BD40(0, v13);
       System_Security_Cryptography_CryptoStream__Clear(*p_cryptoStream, 0);
       *p_cryptoStream = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v25, v26, v27, v28, v29, v30);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, 0, v25, v26, v27, v28, v29, v30);
     }
     else
     {
@@ -290,7 +290,7 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
     {
       System_IO_Stream__Dispose(v31, 0);
       this->fields.outputStream = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v32, v33, v34, v35, v36, v37);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, 0, v32, v33, v34, v35, v36, v37);
     }
     IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.key, 0);
     if ( v16 >= 1 && IsNullOrEmpty )
@@ -303,19 +303,19 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
           break;
         decryptData = this->fields.decryptData;
         if ( !decryptData )
-          sub_1C942F0(IsNullOrEmpty, v39);
+          sub_1C7BD40(IsNullOrEmpty, v39);
         max_length = decryptData->max_length;
         if ( (unsigned int)v40 >= max_length )
-          sub_1C942F8(IsNullOrEmpty);
+          sub_1C7BD48(IsNullOrEmpty);
         v44 = decryptData->m_Items[v40];
         if ( (int)v40 + 1 >= max_length )
-          sub_1C942F8(IsNullOrEmpty);
+          sub_1C7BD48(IsNullOrEmpty);
         decryptData->m_Items[v40] = decryptData->m_Items[v41] ^ 0xD2;
         v45 = this->fields.decryptData;
         if ( !v45 )
-          sub_1C942F0(IsNullOrEmpty, v39);
+          sub_1C7BD40(IsNullOrEmpty, v39);
         if ( (unsigned int)(v40 + 1) >= LODWORD(v45->max_length) )
-          sub_1C942F8(IsNullOrEmpty);
+          sub_1C7BD48(IsNullOrEmpty);
         v40 = (int)v40 + 2;
         v45->m_Items[v41] = v44 ^ 0xCE;
       }
@@ -427,26 +427,26 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   int32_t nowDataLength; // w8
   bool result; // w0
 
-  if ( (byte_4D2BAC8 & 1) == 0 )
+  if ( (byte_4CED920 & 1) == 0 )
   {
-    sub_1C94098(&CatAndMouseGame_TypeInfo);
-    sub_1C94098(&Crc32_TypeInfo);
-    sub_1C94098(&System_IO_FileStream_TypeInfo);
-    sub_1C94098(&System_IO_MemoryStream_TypeInfo);
-    byte_4D2BAC8 = 1;
+    sub_1C7BAE8(&CatAndMouseGame_TypeInfo);
+    sub_1C7BAE8(&Crc32_TypeInfo);
+    sub_1C7BAE8(&System_IO_FileStream_TypeInfo);
+    sub_1C7BAE8(&System_IO_MemoryStream_TypeInfo);
+    byte_4CED920 = 1;
   }
   p_fileStream = &this->fields.fileStream;
   fileStream = this->fields.fileStream;
   if ( !fileStream )
   {
     path = this->fields.path;
-    v10 = (System_IO_FileStream_o *)sub_1C942E4(System_IO_FileStream_TypeInfo);
-    System_IO_FileStream___ctor_65334224(v10, path, 2, 2, 0);
+    v10 = (System_IO_FileStream_o *)sub_1C7BD34(System_IO_FileStream_TypeInfo);
+    System_IO_FileStream___ctor_65093392(v10, path, 2, 2, 0);
     *p_fileStream = v10;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.fileStream, (int32_t)v10, v11, v12, v13, v14, v15, v16);
     fileStream = *p_fileStream;
     if ( !*p_fileStream )
-      sub_1C942F0(0, v17);
+      sub_1C7BD40(0, v17);
   }
   ((void (__fastcall *)(struct System_IO_FileStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))fileStream->klass->vtable._34_Write.methodPtr)(
     fileStream,
@@ -455,7 +455,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
     (unsigned int)dataLength,
     fileStream->klass->vtable._34_Write.method);
   if ( !*p_fileStream )
-    sub_1C942F0(0, v18);
+    sub_1C7BD40(0, v18);
   ((void (__fastcall *)(struct System_IO_FileStream_o *, const MethodInfo *))(*p_fileStream)->klass->vtable._20_Flush.methodPtr)(
     *p_fileStream,
     (*p_fileStream)->klass->vtable._20_Flush.method);
@@ -466,20 +466,20 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
     if ( !cryptoStream )
     {
       contentSize = this->fields.contentSize;
-      v22 = (System_IO_MemoryStream_o *)sub_1C942E4(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor_65238292(v22, contentSize, 0);
+      v22 = (System_IO_MemoryStream_o *)sub_1C7BD34(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor_64997460(v22, contentSize, 0);
       this->fields.outputStream = v22;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, (int32_t)v22, v23, v24, v25, v26, v27, v28);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.outputStream, (int32_t)v22, v23, v24, v25, v26, v27, v28);
       outputStream = (System_IO_Stream_o *)this->fields.outputStream;
       key = this->fields.key;
       if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v31 = CatAndMouseGame__MouseGame4Stream_41995124(outputStream, key, 0);
+      v31 = CatAndMouseGame__MouseGame4Stream_41808860(outputStream, key, 0);
       *p_cryptoStream = v31;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cryptoStream, (int32_t)v31, v32, v33, v34, v35, v36, v37);
       cryptoStream = *p_cryptoStream;
       if ( !*p_cryptoStream )
-        sub_1C942F0(0, v38);
+        sub_1C7BD40(0, v38);
     }
     ((void (__fastcall *)(struct System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))cryptoStream->klass->vtable._34_Write.methodPtr)(
       cryptoStream,
@@ -488,7 +488,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
       (unsigned int)dataLength,
       cryptoStream->klass->vtable._34_Write.method);
     if ( !*p_cryptoStream )
-      sub_1C942F0(0, v39);
+      sub_1C7BD40(0, v39);
     ((void (__fastcall *)(struct System_Security_Cryptography_CryptoStream_o *, const MethodInfo *))(*p_cryptoStream)->klass->vtable._20_Flush.methodPtr)(
       *p_cryptoStream,
       (*p_cryptoStream)->klass->vtable._20_Flush.method);
@@ -496,7 +496,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   crc = this->fields.crc;
   if ( !Crc32_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-  v41 = Crc32__Compute_42004428(data, dataLength, crc, 0);
+  v41 = Crc32__Compute_41818212(data, dataLength, crc, 0);
   nowDataLength = this->fields.nowDataLength;
   this->fields.crc = v41;
   result = 1;
@@ -531,7 +531,7 @@ void DownloadHandlerFileWithCrcCheck__set_error(
   System_String_o *v7; // x7
 
   this->fields._error_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._error_k__BackingField,
     (int32_t)value,
     (int32_t)method,

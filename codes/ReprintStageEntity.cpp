@@ -1,36 +1,13 @@
 void ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D063 & 1) == 0 )
+  if ( (byte_4CEEE60 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D063 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEEE60 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
-}
-
-
-void ReprintStageEntity___ctor_43358044(
-        ReprintStageEntity_o *this,
-        ReprintStageEntity_o *cSrc,
-        const MethodInfo *method)
-{
-  __int64 v5; // x0
-  __int64 v6; // x1
-
-  if ( (byte_4D2D064 & 1) == 0 )
-  {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D064 = 1;
-  }
-  DataEntityBase_object____ctor(
-    (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
-  if ( !cSrc )
-    sub_1C942F0(v5, v6);
-  *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
-  *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -40,16 +17,16 @@ System_String_o *ReprintStageEntity__CreatePK(
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_4D2D062 & 1) == 0 )
+  if ( (byte_4CEEE5F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4D2D062 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CEEE5F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_316EA0C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

@@ -15,7 +15,7 @@ void StoryGachaAdjustData___ctor(StoryGachaAdjustData_o *this, const MethodInfo 
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.targetEntity = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v3, v4, v5, v6, v7, v8);
   this->fields.adjustIds = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.adjustIds, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.adjustIds, 0, v9, v10, v11, v12, v13, v14);
 }

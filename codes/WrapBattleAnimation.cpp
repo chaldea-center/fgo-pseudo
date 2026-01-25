@@ -12,7 +12,7 @@ void WrapBattleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.animation = normalAnim;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)normalAnim, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)normalAnim, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -50,21 +50,21 @@ WrapBattleBaseAnimation_SimpleData_o *WrapBattleAnimation__GetPlayingSimpleAnimD
   int *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4D30150 & 1) == 0 )
+  if ( (byte_4CF1ED7 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C94098(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
-    byte_4D30150 = 1;
+    sub_1C7BAE8(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C7BAE8(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
+    byte_4CF1ED7 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
 LABEL_34:
-    sub_1C942F0(animation, method);
+    sub_1C7BD40(animation, method);
   Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0);
   if ( !Enumerator )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -84,7 +84,7 @@ LABEL_34:
     else
     {
 LABEL_9:
-      v9 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v9 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v9)(Enumerator, *(_QWORD *)(v9 + 8)) & 1) == 0 )
       break;
@@ -105,34 +105,34 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v13 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v13 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v14 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v13)(
                                             Enumerator,
                                             *(_QWORD *)(v13 + 8));
     v16 = v14;
     if ( !v14 )
-      sub_1C942F0(0, v15);
+      sub_1C7BD40(0, v15);
     if ( v14->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1C9468C(v14);
+      sub_1C7C0DC(v14);
       goto LABEL_34;
     }
     if ( UnityEngine_AnimationState__get_enabled(v14, 0) )
     {
       name = UnityEngine_AnimationState__get_name(v16, 0);
       time = UnityEngine_AnimationState__get_time(v16, 0);
-      v19 = sub_1C942E4(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+      v19 = sub_1C7BD34(WrapBattleBaseAnimation_SimpleData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v19, 0);
       *(_QWORD *)(v19 + 16) = name;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v19 + 16), (int32_t)name, v20, v21, v22, v23, v24, v25);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v19 + 16), (int32_t)name, v20, v21, v22, v23, v24, v25);
       *(float *)(v19 + 24) = time;
       goto LABEL_23;
     }
   }
   v19 = 0;
 LABEL_23:
-  v26 = sub_1C941D4(Enumerator, System_IDisposable_TypeInfo);
+  v26 = sub_1C7BC24(Enumerator, System_IDisposable_TypeInfo);
   if ( v26 )
   {
     v27 = *(_QWORD *)v26;
@@ -153,7 +153,7 @@ LABEL_23:
     else
     {
 LABEL_28:
-      v31 = sub_1C6A420(v26, System_IDisposable_TypeInfo, 0);
+      v31 = sub_1C51E70(v26, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v31)(v28, *(_QWORD *)(v31 + 8));
   }
@@ -176,7 +176,7 @@ void WrapBattleAnimation__PlayAnimation(
         (animation = this->fields.animation) == 0)
     || (UnityEngine_Animation__Sample(animation, 0), (animation = this->fields.animation) == 0) )
   {
-    sub_1C942F0(animation, animName);
+    sub_1C7BD40(animation, animName);
   }
-  UnityEngine_Animation__Play_71854448(animation, animName, 0);
+  UnityEngine_Animation__Play_71613624(animation, animName, 0);
 }

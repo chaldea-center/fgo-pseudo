@@ -30,13 +30,13 @@ void BattleDropPointComponent__Initialize(
   System_String_o *v26; // x7
   const MethodInfo *v27; // x1
 
-  if ( (byte_4D2F32A & 1) == 0 )
+  if ( (byte_4CF10AC & 1) == 0 )
   {
-    sub_1C94098(&ServantAssetLoadManager_TypeInfo);
-    byte_4D2F32A = 1;
+    sub_1C7BAE8(&ServantAssetLoadManager_TypeInfo);
+    byte_4CF10AC = 1;
   }
   this->fields.dropPointData = data;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.dropPointData,
     (int32_t)data,
     (int32_t)svtPosTr,
@@ -46,7 +46,7 @@ void BattleDropPointComponent__Initialize(
     (int64_t)method,
     v7);
   this->fields.defaultPosTransform = svtPosTr;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.defaultPosTransform,
     (int32_t)svtPosTr,
     v14,
@@ -63,7 +63,7 @@ void BattleDropPointComponent__Initialize(
                                                 isForceAppearance,
                                                 0);
   this->fields.adjustSetting = Manager__LoadBattleDropPointAdjustSetting;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.adjustSetting,
     (int32_t)Manager__LoadBattleDropPointAdjustSetting,
     v21,
@@ -79,7 +79,7 @@ void BattleDropPointComponent__Initialize(
 void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *adjustSetting; // x20
-  UnityEngine_Transform_o *transform; // x0
+  __int64 transform; // x0
   __int64 v5; // x1
   struct BattleDropPointAdjustSetting_o *v6; // x8
   struct BattleDropPointComponent_DropPointData_o *dropPointData; // x8
@@ -91,31 +91,31 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
   struct BattleDropPointAdjustSetting_o *v13; // x10
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2F32B & 1) == 0 )
+  if ( (byte_4CF10AD & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F32B = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF10AD = 1;
   }
   adjustSetting = (UnityEngine_Object_o *)this->fields.adjustSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(adjustSetting, 0, 0);
-  if ( ((unsigned __int8)transform & 1) != 0 )
+  transform = UnityEngine_Object__op_Inequality(adjustSetting, 0, 0);
+  if ( (transform & 1) != 0 )
   {
     v6 = this->fields.adjustSetting;
     if ( !v6 )
       goto LABEL_20;
     if ( !v6->fields.isForceActorPosition )
     {
-      transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+      transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( transform )
       {
-        UnityEngine_Transform__SetParent(transform, this->fields.defaultPosTransform, 0);
-        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+        UnityEngine_Transform__SetParent((UnityEngine_Transform_o *)transform, this->fields.defaultPosTransform, 0);
+        transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
         v13 = this->fields.adjustSetting;
         if ( v13 )
         {
-          v9 = transform;
+          v9 = (UnityEngine_Transform_o *)transform;
           if ( transform )
           {
             p_z = &v13->fields.adjustPosition.fields.z;
@@ -126,27 +126,27 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
         }
       }
 LABEL_20:
-      sub_1C942F0(transform, v5);
+      sub_1C7BD40(transform, v5);
     }
   }
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   dropPointData = this->fields.dropPointData;
   if ( !dropPointData )
     goto LABEL_20;
-  v8 = transform;
-  transform = (UnityEngine_Transform_o *)dropPointData->fields.ActorObject;
+  v8 = (UnityEngine_Transform_o *)transform;
+  transform = (__int64)dropPointData->fields.ActorObject;
   if ( !transform )
     goto LABEL_20;
-  transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
+  transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
   if ( !v8 )
     goto LABEL_20;
-  UnityEngine_Transform__SetParent(v8, transform, 0);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  v9 = transform;
-  if ( !byte_4D25F19 )
+  UnityEngine_Transform__SetParent(v8, (UnityEngine_Transform_o *)transform, 0);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  v9 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_4CE7E59 )
   {
-    transform = (UnityEngine_Transform_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    transform = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   if ( !v9 )
     goto LABEL_20;

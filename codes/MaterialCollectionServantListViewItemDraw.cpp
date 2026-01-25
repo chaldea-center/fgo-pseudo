@@ -33,14 +33,14 @@ void MaterialCollectionServantListViewItemDraw__Awake(
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
   v17 = this->fields.maskSprite;
   if ( v17 )
     mSpriteName = v17->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskName,
     (int32_t)mSpriteName,
     v11,
@@ -60,7 +60,7 @@ void MaterialCollectionServantListViewItemDraw__ClearNewIcon(
 
   servantFaceIcon = this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   ServantFaceIconComponent__ClearShiningIcon(servantFaceIcon, 0);
 }
 
@@ -75,10 +75,10 @@ void MaterialCollectionServantListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_4D27908 & 1) == 0 )
+  if ( (byte_4CE9784 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D27908 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CE9784 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ void MaterialCollectionServantListViewItemDraw__SetInput(
             v7->klass->vtable._5_set_isEnabled.method),
           (v7 = this->fields.baseButton) == 0) )
     {
-      sub_1C942F0(v7, v6);
+      sub_1C7BD40(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v7->klass->vtable._14_SetState.methodPtr)(
       v7,
@@ -148,21 +148,21 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
 
-  if ( (byte_4D27907 & 1) == 0 )
+  if ( (byte_4CE9783 & 1) == 0 )
   {
-    sub_1C94098(&BalanceConfig_TypeInfo);
-    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C94098(&ServantOverwriteStatus_TypeInfo);
-    sub_1C94098(&StringLiteral_8597/*"MATERIAL_FIND_COMMAND_CODE"*/);
-    sub_1C94098(&StringLiteral_8600/*"MATERIAL_FIND_SERVANT_EQUIP"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    sub_1C94098(&StringLiteral_8599/*"MATERIAL_FIND_SERVANT"*/);
-    byte_4D27907 = 1;
+    sub_1C7BAE8(&BalanceConfig_TypeInfo);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C7BAE8(&ServantOverwriteStatus_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_8601/*"MATERIAL_FIND_COMMAND_CODE"*/);
+    sub_1C7BAE8(&StringLiteral_8604/*"MATERIAL_FIND_SERVANT_EQUIP"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    sub_1C7BAE8(&StringLiteral_8603/*"MATERIAL_FIND_SERVANT"*/);
+    byte_4CE9783 = 1;
   }
   if ( !item || !mode )
     return;
@@ -192,7 +192,7 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v40.fields.currentCryptoKey = v11;
       *(_QWORD *)&v40.fields.fakeValue = v10;
-      v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v40, 0);
+      v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v40, 0);
       v13 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
@@ -203,14 +203,14 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        IsAnyLostStateServant = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantMaster___);
+        IsAnyLostStateServant = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantMaster___);
         v14 = (UserServantMaster_o *)IsAnyLostStateServant;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
         if ( !v14 )
           goto LABEL_77;
         HeroineData = UserServantMaster__getHeroineData(v14, BalanceConfig_TypeInfo->static_fields->ServantIdMashu1, 0);
-        IsAnyLostStateServant = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+        IsAnyLostStateServant = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantLimitMaster___);
         if ( !HeroineData )
           goto LABEL_77;
         v16 = (ServantLimitMaster_o *)IsAnyLostStateServant;
@@ -221,7 +221,7 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v41.fields.currentCryptoKey = v18;
         *(_QWORD *)&v41.fields.fakeValue = v17;
-        IsAnyLostStateServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v41, 0);
+        IsAnyLostStateServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v41, 0);
         if ( !v16 )
           goto LABEL_77;
         IsAnyLostStateServant = ServantLimitMaster__GetEntity(v16, ServantIdMashu1, (int32_t)IsAnyLostStateServant, 0);
@@ -247,10 +247,10 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v42.fields.currentCryptoKey = v23;
           *(_QWORD *)&v42.fields.fakeValue = v22;
-          v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v42, 0);
+          v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v42, 0);
           SpecialLimitCountPLD = BalanceConfig_TypeInfo->static_fields->SpecialLimitCountPLD;
-          v27 = (ServantOverwriteStatus_o *)sub_1C942E4(ServantOverwriteStatus_TypeInfo);
-          ServantOverwriteStatus___ctor_35769576(v27, v24, v25, SpecialLimitCountPLD, 0);
+          v27 = (ServantOverwriteStatus_o *)sub_1C7BD34(ServantOverwriteStatus_TypeInfo);
+          ServantOverwriteStatus___ctor_35656548(v27, v24, v25, SpecialLimitCountPLD, 0);
           if ( !v27 )
             goto LABEL_77;
           Rarity_k__BackingField = v27->fields._Rarity_k__BackingField;
@@ -270,7 +270,7 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v43.fields.currentCryptoKey = v32;
         *(_QWORD *)&v43.fields.fakeValue = v31;
-        IsAnyLostStateServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v43, 0);
+        IsAnyLostStateServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v43, 0);
         if ( !servantFaceIcon )
           goto LABEL_77;
         ServantFaceIconComponent__SetIcon(
@@ -299,7 +299,7 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
         IsAnyLostStateServant = this->fields.servantFaceIcon;
         if ( !IsAnyLostStateServant )
           goto LABEL_77;
-        ServantFaceIconComponent__Set_41846580(
+        ServantFaceIconComponent__Set_41660244(
           (ServantFaceIconComponent_o *)IsAnyLostStateServant,
           item->fields.userSvtCollectionEntity,
           item->fields.iconLabelInfo,
@@ -317,7 +317,7 @@ void MaterialCollectionServantListViewItemDraw__SetItem(
       IsAnyLostStateServant = this->fields.servantFaceIcon;
       if ( !IsAnyLostStateServant )
         goto LABEL_77;
-      ServantFaceIconComponent__Set_41854176(
+      ServantFaceIconComponent__Set_41667840(
         (ServantFaceIconComponent_o *)IsAnyLostStateServant,
         userCommandCodeCollectionEntity,
         item->fields.iconLabelInfo,
@@ -367,9 +367,9 @@ LABEL_53:
   {
     maskLabel = this->fields.maskLabel;
     if ( MaterialCollectionServantListViewItem__get_IsServantEquip(item, 0) )
-      v37 = (System_String_o **)&StringLiteral_8600/*"MATERIAL_FIND_SERVANT_EQUIP"*/;
+      v37 = (System_String_o **)&StringLiteral_8604/*"MATERIAL_FIND_SERVANT_EQUIP"*/;
     else
-      v37 = (System_String_o **)&StringLiteral_8599/*"MATERIAL_FIND_SERVANT"*/;
+      v37 = (System_String_o **)&StringLiteral_8603/*"MATERIAL_FIND_SERVANT"*/;
     v38 = *v37;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -385,7 +385,7 @@ LABEL_53:
     v39 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsAnyLostStateServant = LocalizationManager__Get((System_String_o *)StringLiteral_8597/*"MATERIAL_FIND_COMMAND_CODE"*/, 0);
+    IsAnyLostStateServant = LocalizationManager__Get((System_String_o *)StringLiteral_8601/*"MATERIAL_FIND_COMMAND_CODE"*/, 0);
     if ( !v39 )
       goto LABEL_77;
     v33 = (System_String_o *)IsAnyLostStateServant;
@@ -417,7 +417,7 @@ LABEL_54:
       }
     }
 LABEL_77:
-    sub_1C942F0(IsAnyLostStateServant, userCommandCodeCollectionEntity);
+    sub_1C7BD40(IsAnyLostStateServant, userCommandCodeCollectionEntity);
   }
 }
 
@@ -447,13 +447,13 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
   System_String_o *str; // x20
   System_String_o *v23; // x0
 
-  if ( (byte_4D27909 & 1) == 0 )
+  if ( (byte_4CE9785 & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&MyRoomParamsManager_TypeInfo);
-    sub_1C94098(&StringLiteral_6408/*"FES_WAR_ID"*/);
-    sub_1C94098(&StringLiteral_8605/*"MATERIAL_MAP_EPILOGUE_TITLE"*/);
-    byte_4D27909 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_6409/*"FES_WAR_ID"*/);
+    sub_1C7BAE8(&StringLiteral_8609/*"MATERIAL_MAP_EPILOGUE_TITLE"*/);
+    byte_4CE9785 = 1;
   }
   mLastTimeIcon = (UnityEngine_Component_o *)this->fields.mLastTimeIcon;
   if ( !mLastTimeIcon )
@@ -464,7 +464,7 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mLastTimeIcon, 0, 0);
   if ( item && item->fields.info )
   {
-    mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_6408/*"FES_WAR_ID"*/, 0);
+    mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_6409/*"FES_WAR_ID"*/, 0);
     info = item->fields.info;
     if ( !info )
       goto LABEL_70;
@@ -472,10 +472,10 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
     war_id = info->fields.war_id;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4D279F2 )
+    if ( !byte_4CE986E )
     {
-      sub_1C94098(&MyRoomParamsManager_TypeInfo);
-      byte_4D279F2 = 1;
+      sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+      byte_4CE986E = 1;
     }
     mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -494,10 +494,10 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
       {
         if ( !LODWORD(mLastTimeIcon[9].monitor) )
           j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-        if ( !byte_4D279F3 )
+        if ( !byte_4CE986F )
         {
-          sub_1C94098(&MyRoomParamsManager_TypeInfo);
-          byte_4D279F3 = 1;
+          sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+          byte_4CE986F = 1;
         }
         mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
         if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -513,10 +513,10 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
         {
           if ( !LODWORD(mLastTimeIcon[9].monitor) )
             j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-          if ( !byte_4D279F4 )
+          if ( !byte_4CE9870 )
           {
-            sub_1C94098(&MyRoomParamsManager_TypeInfo);
-            byte_4D279F4 = 1;
+            sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+            byte_4CE9870 = 1;
           }
           v14 = MyRoomParamsManager_TypeInfo;
           if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -527,16 +527,16 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
           LastPlayTitle_k__BackingField = v14->static_fields->_LastPlayTitle_k__BackingField;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8605/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0);
+          v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8609/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0);
           mLastTimeIcon = (UnityEngine_Component_o *)System_String__op_Equality(LastPlayTitle_k__BackingField, v16, 0);
           if ( ((unsigned __int8)mLastTimeIcon & 1) != 0 )
           {
             if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-            if ( !byte_4D279F4 )
+            if ( !byte_4CE9870 )
             {
-              sub_1C94098(&MyRoomParamsManager_TypeInfo);
-              byte_4D279F4 = 1;
+              sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+              byte_4CE9870 = 1;
             }
             mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
             if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -560,7 +560,7 @@ void MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
           str = v21->fields.str;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8605/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0);
+          v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8609/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0);
           if ( System_String__op_Inequality(str, v23, 0) )
           {
 LABEL_62:
@@ -575,7 +575,7 @@ LABEL_62:
               }
             }
 LABEL_70:
-            sub_1C942F0(mLastTimeIcon, item);
+            sub_1C7BD40(mLastTimeIcon, item);
           }
         }
       }
@@ -586,10 +586,10 @@ LABEL_70:
       {
         if ( !LODWORD(mLastTimeIcon[9].monitor) )
           j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-        if ( !byte_4D279F3 )
+        if ( !byte_4CE986F )
         {
-          sub_1C94098(&MyRoomParamsManager_TypeInfo);
-          byte_4D279F3 = 1;
+          sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+          byte_4CE986F = 1;
         }
         mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
         if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -606,10 +606,10 @@ LABEL_70:
       }
       if ( !LODWORD(mLastTimeIcon[9].monitor) )
         j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-      if ( !byte_4D279F5 )
+      if ( !byte_4CE9871 )
       {
-        sub_1C94098(&MyRoomParamsManager_TypeInfo);
-        byte_4D279F5 = 1;
+        sub_1C7BAE8(&MyRoomParamsManager_TypeInfo);
+        byte_4CE9871 = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )

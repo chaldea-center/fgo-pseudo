@@ -1,9 +1,9 @@
 void SkillListTreasureDeviceComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D2BDD2 & 1) == 0 )
+  if ( (byte_4CEDC2B & 1) == 0 )
   {
-    sub_1C94098(&SkillListTreasureDeviceComponent_TypeInfo);
-    byte_4D2BDD2 = 1;
+    sub_1C7BAE8(&SkillListTreasureDeviceComponent_TypeInfo);
+    byte_4CEDC2B = 1;
   }
   LODWORD(SkillListTreasureDeviceComponent_TypeInfo->static_fields->ADJUST_X_POS) = (struct SkillListTreasureDeviceComponent_StaticFields)1098907648;
 }
@@ -22,11 +22,11 @@ void SkillListTreasureDeviceComponent__Clear(SkillListTreasureDeviceComponent_o 
   UnityEngine_Object_o *treasureDeviceIconLabel; // x20
   UnityEngine_Object_o *skillIconSprite; // x20
 
-  if ( (byte_4D2BDCF & 1) == 0 )
+  if ( (byte_4CEDC28 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2BDCF = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEDC28 = 1;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
@@ -54,7 +54,7 @@ void SkillListTreasureDeviceComponent__Clear(SkillListTreasureDeviceComponent_o 
       return;
     }
 LABEL_15:
-    sub_1C942F0(skillLevelListLabel, method);
+    sub_1C7BD40(skillLevelListLabel, method);
   }
 }
 
@@ -88,11 +88,11 @@ void SkillListTreasureDeviceComponent__Set(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2BDD1 & 1) == 0 )
+  if ( (byte_4CEDC2A & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&SkillListTreasureDeviceComponent_TypeInfo);
-    byte_4D2BDD1 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&SkillListTreasureDeviceComponent_TypeInfo);
+    byte_4CEDC2A = 1;
   }
   if ( SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
          this,
@@ -168,7 +168,7 @@ void SkillListTreasureDeviceComponent__Set(
                                                              0)) == 0 )
     {
 LABEL_25:
-      sub_1C942F0(skillLevelListLabel, v15);
+      sub_1C7BD40(skillLevelListLabel, v15);
     }
     v32.fields.y = v19;
     v32.fields.z = v20;
@@ -192,7 +192,7 @@ void SkillListTreasureDeviceComponent__SetBitmapFont(
         (treasureDeviceIconLabel = this->fields.treasureDeviceIconLabel) == 0)
     || (skillLevelListLabel = treasureDeviceIconLabel->fields.textLabel) == 0 )
   {
-    sub_1C942F0(skillLevelListLabel, bitmapFont);
+    sub_1C7BD40(skillLevelListLabel, bitmapFont);
   }
   UILabel__set_bitmapFont(skillLevelListLabel, bitmapFont, 0);
 }
@@ -208,7 +208,7 @@ void SkillListTreasureDeviceComponent__SetLabelSkillLevelLabelScaleX(
 
   skillLevelListLabel = (UnityEngine_Component_o *)this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   gameObject = UnityEngine_Component__get_gameObject(skillLevelListLabel, 0);
   GameObjectExtensions__SetLocalScaleX(gameObject, scale, 0);
 }
@@ -237,7 +237,7 @@ void SkillListTreasureDeviceComponent__SetTreasureDeviceIconPosition(
                                                                (UnityEngine_Transform_o *)treasureDeviceIconLabel,
                                                                0)) == 0 )
   {
-    sub_1C942F0(treasureDeviceIconLabel, method);
+    sub_1C7BD40(treasureDeviceIconLabel, method);
   }
   v7.fields.y = y;
   v7.fields.z = z;
@@ -264,12 +264,12 @@ bool SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
   UnityEngine_Object_o *treasureDeviceObj; // x21
   const MethodInfo *v22; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_4D2BDD0 & 1) == 0 )
+  if ( (byte_4CEDC29 & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_20401/*"icon_skill_mini"*/);
-    byte_4D2BDD0 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_20396/*"icon_skill_mini"*/);
+    byte_4CEDC29 = 1;
   }
   if ( System_String__IsNullOrEmpty(skillLevelListText, 0) )
   {
@@ -291,7 +291,7 @@ bool SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
                                          0);
     if ( !this->fields.treasureDeviceIconLabel )
       goto LABEL_26;
-    UIIconLabel__Set_41867060(
+    UIIconLabel__Set_41680724(
       this->fields.treasureDeviceIconLabel,
       34,
       tdLv,
@@ -321,7 +321,7 @@ bool SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
     v20 = this->fields.skillIconSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v20, (System_String_o *)StringLiteral_20401/*"icon_skill_mini"*/, 0);
+    AtlasManager__SetEventSprite(v20, (System_String_o *)StringLiteral_20396/*"icon_skill_mini"*/, 0);
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( !skillLevelListLabel )
       goto LABEL_26;
@@ -337,7 +337,7 @@ bool SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
   skillLevelListLabel = (UILabel_o *)this->fields.treasureDeviceObj;
   if ( !skillLevelListLabel )
 LABEL_26:
-    sub_1C942F0(skillLevelListLabel, v15);
+    sub_1C7BD40(skillLevelListLabel, v15);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillLevelListLabel, !isHideTreasureDevice, 0);
   return 1;
 }

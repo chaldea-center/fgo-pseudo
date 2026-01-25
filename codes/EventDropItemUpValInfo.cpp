@@ -27,11 +27,11 @@ void EventDropItemUpValInfo___ctor(
   System_String_o *v28; // x7
   int32_t baseFuncId; // w2
 
-  if ( (byte_4D2C38A & 1) == 0 )
+  if ( (byte_4CEE1DF & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2C38A = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEE1DF = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !dropInfo )
@@ -40,7 +40,7 @@ void EventDropItemUpValInfo___ctor(
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.funcEntity,
     (int32_t)funcEntity,
     v11,
@@ -62,12 +62,12 @@ void EventDropItemUpValInfo___ctor(
     targetType = v18->fields.targetType;
   }
   this->fields.targetType = targetType;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   v21 = this->fields.funcEntity;
   if ( !v21 )
     goto LABEL_24;
@@ -108,7 +108,7 @@ LABEL_22:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1C9403C(
+        sub_1C7BA8C(
           (GrandQuestFolderBoardItem_o *)&this->fields.baseFuncGroupEntity,
           (int32_t)funcGroupEntity,
           baseFuncId,
@@ -123,7 +123,7 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_1C942F0(Instance, funcGroupEntity);
+    sub_1C7BD40(Instance, funcGroupEntity);
   }
 LABEL_23:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
@@ -133,7 +133,7 @@ LABEL_23:
 }
 
 
-void EventDropItemUpValInfo___ctor_42480364(
+void EventDropItemUpValInfo___ctor_42291684(
         EventDropItemUpValInfo_o *this,
         int32_t member,
         EventDropUpValInfo_o *dropInfo,
@@ -175,11 +175,11 @@ void EventDropItemUpValInfo___ctor_42480364(
   System_String_o *v41; // x7
   int32_t baseFuncId; // w2
 
-  if ( (byte_4D2C38B & 1) == 0 )
+  if ( (byte_4CEE1E0 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2C38B = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEE1E0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !dropInfo )
@@ -189,7 +189,7 @@ void EventDropItemUpValInfo___ctor_42480364(
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
   p_funcEntity = &this->fields.funcEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.funcEntity,
     (int32_t)funcEntity,
     v11,
@@ -205,7 +205,7 @@ void EventDropItemUpValInfo___ctor_42480364(
   funcType = v25->fields.funcType;
   this->fields.itemEntity = itemEntity;
   *(_QWORD *)&this->fields.baseFuncType = funcType;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemEntity,
     (int32_t)itemEntity,
     v19,
@@ -214,12 +214,12 @@ void EventDropItemUpValInfo___ctor_42480364(
     v22,
     v23,
     v24);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   if ( !*p_funcEntity )
     goto LABEL_18;
   v27 = (FunctionGroupMaster_o *)Instance;
@@ -232,7 +232,7 @@ void EventDropItemUpValInfo___ctor_42480364(
              0);
   this->fields.funcGroupEntity = Entity;
   p_funcGroupEntity = &this->fields.funcGroupEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.funcGroupEntity,
     (int32_t)Entity,
     v30,
@@ -277,7 +277,7 @@ LABEL_16:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1C9403C(
+        sub_1C7BA8C(
           (GrandQuestFolderBoardItem_o *)&this->fields.baseFuncGroupEntity,
           (int32_t)funcGroupEntity,
           baseFuncId,
@@ -292,7 +292,7 @@ LABEL_16:
       }
     }
 LABEL_18:
-    sub_1C942F0(Instance, funcGroupEntity);
+    sub_1C7BD40(Instance, funcGroupEntity);
   }
 LABEL_17:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;

@@ -8,9 +8,3 @@ bool EventRankingRoundItemInfo__get_IsGoal(EventRankingRoundItemInfo_o *this, co
 {
   return this->fields.goalPoint <= this->fields.nowPoint;
 }
-
-
-bool EventRankingRoundItemInfo__get_IsMostSupport(EventRankingRoundItemInfo_o *this, const MethodInfo *method)
-{
-  return this->fields.mostSupportGroupId == this->fields.groupId;
-}

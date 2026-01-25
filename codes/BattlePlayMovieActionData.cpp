@@ -12,7 +12,7 @@ void BattlePlayMovieActionData___ctor(
 
   ExecInActionData___ctor((ExecInActionData_o *)this, (const MethodInfo *)inMovieName);
   this->fields.movieName = inMovieName;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)inMovieName, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)inMovieName, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -22,6 +22,6 @@ void BattlePlayMovieActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   BattlePerformance__PlayMovie(perf, this->fields.movieName, 0, 0);
 }

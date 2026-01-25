@@ -30,116 +30,6 @@ bool FuncList__IsRelatedNpDecrease(int32_t funcType, const MethodInfo *method)
 }
 
 
-int32_t FuncList__getCount(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  if ( vals && SLODWORD(vals->max_length) >= 3 )
-    return vals->m_Items[2];
-  else
-    return 0;
-}
-
-
-int32_t FuncList__getRate(int32_t intype, System_Int32_array *vals, const MethodInfo *method)
-{
-  if ( vals && SLODWORD(vals->max_length) >= 1 )
-    return vals->m_Items[0];
-  else
-    return 0;
-}
-
-
-int32_t FuncList__getRate_41173372(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  if ( vals && SLODWORD(vals->max_length) >= 1 )
-    return vals->m_Items[0];
-  else
-    return 0;
-}
-
-
-int32_t FuncList__getTransformIndex(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  bool v3; // zf
-  int32_t result; // w0
-
-  v3 = type == 109;
-  result = 0;
-  if ( v3 && vals )
-  {
-    if ( SLODWORD(vals->max_length) >= 3 )
-      return vals->m_Items[2];
-    else
-      return 0;
-  }
-  return result;
-}
-
-
-int32_t FuncList__getTurn(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  if ( vals && SLODWORD(vals->max_length) >= 2 )
-    return vals->m_Items[1];
-  else
-    return 0;
-}
-
-
-int32_t FuncList__getUseRate(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  if ( vals && SLODWORD(vals->max_length) >= 5 )
-    return vals->m_Items[4];
-  else
-    return 0;
-}
-
-
-int32_t FuncList__getValue(int32_t type, System_Int32_array *vals, const MethodInfo *method)
-{
-  int max_length; // w8
-
-  if ( type != 16 && type != 1 )
-  {
-    if ( vals )
-    {
-      max_length = vals->max_length;
-      goto LABEL_8;
-    }
-    return 0;
-  }
-  if ( !vals )
-    return 0;
-  max_length = vals->max_length;
-  if ( max_length >= 4 )
-    return vals->m_Items[3];
-LABEL_8:
-  if ( max_length < 2 )
-    return 0;
-  return vals->m_Items[1];
-}
-
-
-int32_t FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, const MethodInfo *method)
-{
-  int32_t max_length; // w8
-
-  if ( vals )
-  {
-    max_length = vals->max_length;
-    if ( max_length >= index )
-    {
-      if ( max_length <= (unsigned int)index )
-        sub_1C942F8(vals);
-      LODWORD(vals) = vals->m_Items[index];
-    }
-    else
-    {
-      LODWORD(vals) = 0;
-    }
-  }
-  return (int)vals;
-}
-
-
 bool FuncList__isAddState(int32_t func, const MethodInfo *method)
 {
   return func == 1 || func == 16 || (func & 0xFFFFFFFE) == 160;
@@ -153,23 +43,17 @@ bool FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   System_Enum_o v6; // [xsp+8h] [xbp-38h] BYREF
   int32_t v7; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4D2B707 & 1) == 0 )
+  if ( (byte_4CED563 & 1) == 0 )
   {
-    sub_1C94098(&FuncList_TYPE_TypeInfo);
-    sub_1C94098(&StringLiteral_4962/*"DAMAGE"*/);
-    byte_4D2B707 = 1;
+    sub_1C7BAE8(&FuncList_TYPE_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_4963/*"DAMAGE"*/);
+    byte_4CED563 = 1;
   }
   v6.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
   v6.monitor = (void *)-1LL;
   v7 = funcType;
   v3 = System_Enum__ToString(&v6, 0);
   if ( !v3 )
-    sub_1C942F0(0, v4);
-  return System_String__Contains(v3, (System_String_o *)StringLiteral_4962/*"DAMAGE"*/, 0);
-}
-
-
-bool FuncList__isGainHp(int32_t func, const MethodInfo *method)
-{
-  return func == 6 || func == 17;
+    sub_1C7BD40(0, v4);
+  return System_String__Contains(v3, (System_String_o *)StringLiteral_4963/*"DAMAGE"*/, 0);
 }

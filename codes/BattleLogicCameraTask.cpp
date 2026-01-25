@@ -13,5 +13,5 @@ void BattleLogicCameraTask___ctor(BattleLogicCameraTask_o *this, System_String_o
   v4->fields._ClosedMessage_k__BackingField = cameraName;
   v4 = (GrandQuestFolderBoardItem_o *)((char *)v4 + 152);
   LODWORD(v4[-1].fields.sortStr1) = 27;
-  sub_1C9403C(v4, (int32_t)cameraName, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C(v4, (int32_t)cameraName, v5, v6, v7, v8, v9, v10);
 }

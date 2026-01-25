@@ -14,17 +14,17 @@ void GrandServantListItemEquipDraw__Initialize(
   System_String_o *v7; // x20
   int v8; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D274B3 & 1) == 0 )
+  if ( (byte_4CE933A & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&StringLiteral_19736/*"formation_blank_grand_{0:D2}"*/);
-    byte_4D274B3 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19731/*"formation_blank_grand_{0:D2}"*/);
+    byte_4CE933A = 1;
   }
   noneSprite = this->fields.noneSprite;
   v8 = index + 2;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v7 = System_String__Format((System_String_o *)StringLiteral_19736/*"formation_blank_grand_{0:D2}"*/, v6, 0);
+  v7 = System_String__Format((System_String_o *)StringLiteral_19731/*"formation_blank_grand_{0:D2}"*/, v6, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetGrandServantListImage(noneSprite, v7, 0);
@@ -48,10 +48,10 @@ void GrandServantListItemEquipDraw__Setup(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
-  if ( (byte_4D274B4 & 1) == 0 )
+  if ( (byte_4CE933B & 1) == 0 )
   {
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4D274B4 = 1;
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CE933B = 1;
   }
   if ( equipUserServantEntity )
   {
@@ -61,13 +61,13 @@ void GrandServantListItemEquipDraw__Setup(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v16.fields.currentCryptoKey = v10;
     *(_QWORD *)&v16.fields.fakeValue = v9;
-    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v16, 0);
+    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v16, 0);
     v12 = *(_QWORD *)&equipUserServantEntity->fields.limitCount.fields.currentCryptoKey;
     *(_QWORD *)&v17.fields.fakeValue = *(_QWORD *)&equipUserServantEntity->fields.limitCount.fields.fakeValue;
     v13 = v11;
     *(_QWORD *)&v17.fields.currentCryptoKey = v12;
-    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v17, 0);
-    GrandServantListItemEquipDraw__Setup_33551208(
+    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v17, 0);
+    GrandServantListItemEquipDraw__Setup_33371064(
       this,
       v13,
       v14,
@@ -88,11 +88,11 @@ void GrandServantListItemEquipDraw__SetupEmpty(GrandServantListItemEquipDraw_o *
   UnityEngine_Component_o *noneSprite; // x0
   UnityEngine_Object_o *friendShipSvtEquipIconSprite; // x20
 
-  if ( (byte_4D274B7 & 1) == 0 )
+  if ( (byte_4CE933E & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D274B7 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CE933E = 1;
   }
   noneSprite = (UnityEngine_Component_o *)this->fields.noneSprite;
   if ( !noneSprite )
@@ -131,7 +131,7 @@ void GrandServantListItemEquipDraw__SetupEmpty(GrandServantListItemEquipDraw_o *
       }
     }
 LABEL_18:
-    sub_1C942F0(noneSprite, method);
+    sub_1C7BD40(noneSprite, method);
   }
 LABEL_15:
   noneSprite = (UnityEngine_Component_o *)this->fields.equipSprite;
@@ -155,24 +155,24 @@ void GrandServantListItemEquipDraw__SetupLimitCount(
   _BOOL8 v8; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D274B8 & 1) == 0 )
+  if ( (byte_4CE933F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    byte_4D274B8 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    byte_4CE933F = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
                                                                   svtId,
-                                                                  (const MethodInfo_345B50C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_342E348 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 && !entity )
     goto LABEL_15;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.limitCountSprite;
@@ -193,12 +193,12 @@ void GrandServantListItemEquipDraw__SetupLimitCount(
   }
   if ( !Master_object )
 LABEL_15:
-    sub_1C942F0(Master_object, v8);
+    sub_1C7BD40(Master_object, v8);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v8, 0);
 }
 
 
-void GrandServantListItemEquipDraw__Setup_33546352(
+void GrandServantListItemEquipDraw__Setup_33366208(
         GrandServantListItemEquipDraw_o *this,
         EquipTargetInfo_o *equipTarget,
         bool isFriendShipSvtEquip,
@@ -214,10 +214,10 @@ void GrandServantListItemEquipDraw__Setup_33546352(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_4D274B5 & 1) == 0 )
+  if ( (byte_4CE933C & 1) == 0 )
   {
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4D274B5 = 1;
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CE933C = 1;
   }
   if ( !equipTarget )
     goto LABEL_10;
@@ -227,7 +227,7 @@ void GrandServantListItemEquipDraw__Setup_33546352(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v15.fields.currentCryptoKey = v10;
   *(_QWORD *)&v15.fields.fakeValue = v9;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v15, 0) > 0 )
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v15, 0) > 0 )
   {
     v12 = *(_QWORD *)&equipTarget->fields.svtId.fields.currentCryptoKey;
     v11 = *(_QWORD *)&equipTarget->fields.svtId.fields.fakeValue;
@@ -235,8 +235,8 @@ void GrandServantListItemEquipDraw__Setup_33546352(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v16.fields.currentCryptoKey = v12;
     *(_QWORD *)&v16.fields.fakeValue = v11;
-    v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v16, 0);
-    GrandServantListItemEquipDraw__Setup_33551208(
+    v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v16, 0);
+    GrandServantListItemEquipDraw__Setup_33371064(
       this,
       v13,
       equipTarget->fields.limitCount,
@@ -253,7 +253,7 @@ LABEL_10:
 }
 
 
-void GrandServantListItemEquipDraw__Setup_33551208(
+void GrandServantListItemEquipDraw__Setup_33371064(
         GrandServantListItemEquipDraw_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -269,13 +269,13 @@ void GrandServantListItemEquipDraw__Setup_33551208(
   UISprite_o *equipSprite; // x23
   const MethodInfo *v18; // x3
 
-  if ( (byte_4D274B6 & 1) == 0 )
+  if ( (byte_4CE933D & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_19878/*"func_group_icon_385"*/);
-    sub_1C94098(&StringLiteral_20513/*"img_bond_category"*/);
-    byte_4D274B6 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19873/*"func_group_icon_385"*/);
+    sub_1C7BAE8(&StringLiteral_20507/*"img_bond_category"*/);
+    byte_4CE933D = 1;
   }
   friendShipSvtEquipIconSprite = (UnityEngine_Object_o *)this->fields.friendShipSvtEquipIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -287,7 +287,7 @@ void GrandServantListItemEquipDraw__Setup_33551208(
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
 LABEL_22:
-      sub_1C942F0(gameObject, v14);
+      sub_1C7BD40(gameObject, v14);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isFriendShipSvtEquip, 0);
     if ( isFriendShipSvtEquip )
@@ -298,7 +298,7 @@ LABEL_22:
         if ( equipFriendShipSkillChange )
         {
 LABEL_11:
-          AtlasManager__SetEventUI(v16, (System_String_o *)StringLiteral_19878/*"func_group_icon_385"*/, 0);
+          AtlasManager__SetEventUI(v16, (System_String_o *)StringLiteral_19873/*"func_group_icon_385"*/, 0);
           goto LABEL_15;
         }
       }
@@ -312,7 +312,7 @@ LABEL_11:
       gameObject = (UnityEngine_Component_o *)this->fields.friendShipSvtEquipIconSprite;
       if ( !gameObject )
         goto LABEL_22;
-      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20513/*"img_bond_category"*/, 0);
+      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20507/*"img_bond_category"*/, 0);
     }
   }
 LABEL_15:

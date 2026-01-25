@@ -1,13 +1,13 @@
 void CommonReleaseEntity___ctor(CommonReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2C666 & 1) == 0 )
+  if ( (byte_4CEE49B & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2C666 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEE49B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0;
   *(_QWORD *)&this->fields.condGroup = 0;
   *(_QWORD *)&this->fields.condId = 0;
@@ -16,15 +16,15 @@ void CommonReleaseEntity___ctor(CommonReleaseEntity_o *this, const MethodInfo *m
 
 System_String_o *CommonReleaseEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4D2C667 & 1) == 0 )
+  if ( (byte_4CEE49C & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D2C667 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CEE49C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -63,7 +63,7 @@ bool CommonReleaseEntity__IsMatchQuestClearPhase(
 }
 
 
-bool CommonReleaseEntity__IsMatch_42660132(
+bool CommonReleaseEntity__IsMatch_42463512(
         CommonReleaseEntity_o *this,
         CommonReleaseEntity_o *other,
         const MethodInfo *method)

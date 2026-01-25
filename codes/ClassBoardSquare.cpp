@@ -43,25 +43,25 @@ void ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodInfo *method)
   int64_t v43; // x6
   System_String_o *v44; // x7
 
-  if ( (byte_4D30573 & 1) == 0 )
+  if ( (byte_4CF22FA & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_3231/*"BrightTurnTransition"*/);
-    sub_1C94098(&StringLiteral_3228/*"BrightTurn"*/);
-    sub_1C94098(&StringLiteral_7167/*"GrandReturnTransition"*/);
-    sub_1C94098(&StringLiteral_3233/*"BrightTurnUnLock"*/);
-    sub_1C94098(&StringLiteral_13073/*"SquareEnable"*/);
-    sub_1C94098(&StringLiteral_3181/*"BlackOutTransition"*/);
-    byte_4D30573 = 1;
+    sub_1C7BAE8(&StringLiteral_3230/*"BrightTurnTransition"*/);
+    sub_1C7BAE8(&StringLiteral_3227/*"BrightTurn"*/);
+    sub_1C7BAE8(&StringLiteral_7170/*"GrandReturnTransition"*/);
+    sub_1C7BAE8(&StringLiteral_3232/*"BrightTurnUnLock"*/);
+    sub_1C7BAE8(&StringLiteral_13075/*"SquareEnable"*/);
+    sub_1C7BAE8(&StringLiteral_3180/*"BlackOutTransition"*/);
+    byte_4CF22FA = 1;
   }
-  v9 = StringLiteral_3228/*"BrightTurn"*/;
-  this->fields.enableAnimationName = (struct System_String_o *)StringLiteral_3228/*"BrightTurn"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.enableAnimationName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_13073/*"SquareEnable"*/;
-  this->fields.releaseAnimationName = (struct System_String_o *)StringLiteral_13073/*"SquareEnable"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.releaseAnimationName, v10, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_3231/*"BrightTurnTransition"*/;
-  this->fields.brightTurnTransitionAnimationName = (struct System_String_o *)StringLiteral_3231/*"BrightTurnTransition"*/;
-  sub_1C9403C(
+  v9 = StringLiteral_3227/*"BrightTurn"*/;
+  this->fields.enableAnimationName = (struct System_String_o *)StringLiteral_3227/*"BrightTurn"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.enableAnimationName, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_13075/*"SquareEnable"*/;
+  this->fields.releaseAnimationName = (struct System_String_o *)StringLiteral_13075/*"SquareEnable"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.releaseAnimationName, v10, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_3230/*"BrightTurnTransition"*/;
+  this->fields.brightTurnTransitionAnimationName = (struct System_String_o *)StringLiteral_3230/*"BrightTurnTransition"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.brightTurnTransitionAnimationName,
     v17,
     v18,
@@ -70,9 +70,9 @@ void ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodInfo *method)
     v21,
     v22,
     v23);
-  v24 = StringLiteral_3181/*"BlackOutTransition"*/;
-  this->fields.blackOutTransitionAnimationName = (struct System_String_o *)StringLiteral_3181/*"BlackOutTransition"*/;
-  sub_1C9403C(
+  v24 = StringLiteral_3180/*"BlackOutTransition"*/;
+  this->fields.blackOutTransitionAnimationName = (struct System_String_o *)StringLiteral_3180/*"BlackOutTransition"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.blackOutTransitionAnimationName,
     v24,
     v25,
@@ -81,12 +81,12 @@ void ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodInfo *method)
     v28,
     v29,
     v30);
-  v31 = StringLiteral_3233/*"BrightTurnUnLock"*/;
-  this->fields.unlockEnableAnimationName = (struct System_String_o *)StringLiteral_3233/*"BrightTurnUnLock"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.unlockEnableAnimationName, v31, v32, v33, v34, v35, v36, v37);
-  v38 = StringLiteral_7167/*"GrandReturnTransition"*/;
-  this->fields.animNameGrandReturnTransition = (struct System_String_o *)StringLiteral_7167/*"GrandReturnTransition"*/;
-  sub_1C9403C(
+  v31 = StringLiteral_3232/*"BrightTurnUnLock"*/;
+  this->fields.unlockEnableAnimationName = (struct System_String_o *)StringLiteral_3232/*"BrightTurnUnLock"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.unlockEnableAnimationName, v31, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_7170/*"GrandReturnTransition"*/;
+  this->fields.animNameGrandReturnTransition = (struct System_String_o *)StringLiteral_7170/*"GrandReturnTransition"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameGrandReturnTransition,
     v38,
     v39,
@@ -249,11 +249,11 @@ void ClassBoardSquare__PlayClickedSe(ClassBoardSquare_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v14; // x0
 
   v2 = this;
-  if ( (byte_4D3056F & 1) == 0 )
+  if ( (byte_4CF22F6 & 1) == 0 )
   {
-    sub_1C94098(&Method_ClassBoardSquare_PlayClickedSe__);
-    this = (ClassBoardSquare_o *)sub_1C94098(&IClassBoardSquareModel_TypeInfo);
-    byte_4D3056F = 1;
+    sub_1C7BAE8(&Method_ClassBoardSquare_PlayClickedSe__);
+    this = (ClassBoardSquare_o *)sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
+    byte_4CF22F6 = 1;
   }
   SquareModel_k__BackingField = v2->fields._SquareModel_k__BackingField;
   if ( !SquareModel_k__BackingField )
@@ -275,7 +275,7 @@ void ClassBoardSquare__PlayClickedSe(ClassBoardSquare_o *this, const MethodInfo 
   else
   {
 LABEL_8:
-    v7 = sub_1C6A420(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 12);
+    v7 = sub_1C51E70(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 12);
   }
   this = (ClassBoardSquare_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v7)(
                                  SquareModel_k__BackingField,
@@ -285,7 +285,7 @@ LABEL_8:
   v8 = v2->fields._SquareModel_k__BackingField;
   if ( !v8 )
 LABEL_23:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   v9 = v8->klass;
   v10 = *(unsigned __int16 *)&v8->klass->_2.rank;
   if ( *(_WORD *)&v8->klass->_2.rank )
@@ -303,15 +303,15 @@ LABEL_23:
   else
   {
 LABEL_16:
-    v12 = sub_1C6A420(v8, IClassBoardSquareModel_TypeInfo, 13);
+    v12 = sub_1C51E70(v8, IClassBoardSquareModel_TypeInfo, 13);
   }
   if ( ((*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v12)(v8, *(_QWORD *)(v12 + 8)) & 1) != 0 )
   {
 LABEL_19:
     v13 = Method_ClassBoardSquare_PlayClickedSe__;
     if ( (*((_BYTE *)Method_ClassBoardSquare_PlayClickedSe__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1C940B0(Method_ClassBoardSquare_PlayClickedSe__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1C9407C(v13, v13[4]);
+      v13 = (_QWORD *)sub_1C7BB00(Method_ClassBoardSquare_PlayClickedSe__);
+    v14 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v13, v13[4]);
     OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0);
   }
 }
@@ -326,33 +326,33 @@ void ClassBoardSquare__PlayEnableEffect(ClassBoardSquare_o *this, const MethodIn
   System_Action_o *v7; // x21
   const MethodInfo *v8; // x4
 
-  if ( (byte_4D3056E & 1) == 0 )
+  if ( (byte_4CF22F5 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_ClassBoardEffectPlayer_GetData_bool___);
-    sub_1C94098(&Method_ClassBoardSquare__PlayEnableEffect_b__52_0__);
-    sub_1C94098(&Method_ClassBoardSquare__PlayEnableEffect_b__52_1__);
-    byte_4D3056E = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_ClassBoardEffectPlayer_GetData_bool___);
+    sub_1C7BAE8(&Method_ClassBoardSquare__PlayEnableEffect_b__52_0__);
+    sub_1C7BAE8(&Method_ClassBoardSquare__PlayEnableEffect_b__52_1__);
+    byte_4CF22F5 = 1;
   }
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation
     || (SimpleAnimation__Rewind(simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.enableEffectPlayer) == 0) )
   {
-    sub_1C942F0(simpleAnimation, method);
+    sub_1C7BD40(simpleAnimation, method);
   }
   if ( ClassBoardEffectPlayer__GetData_bool_(
          (ClassBoardEffectPlayer_o *)simpleAnimation,
-         (const MethodInfo_318F800 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
+         (const MethodInfo_3163AC0 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
   {
     unlockEnableAnimationName = this->fields.unlockEnableAnimationName;
-    v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     v6 = &Method_ClassBoardSquare__PlayEnableEffect_b__52_0__;
   }
   else
   {
     unlockEnableAnimationName = this->fields.enableAnimationName;
-    v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     v6 = &Method_ClassBoardSquare__PlayEnableEffect_b__52_1__;
   }
   v7 = v5;
@@ -378,20 +378,20 @@ void ClassBoardSquare__PlayForceEndSimpleAnimation(
   const MethodInfo *v15; // x3
   System_Collections_IEnumerator_o *v16; // x1
 
-  if ( (byte_4D30570 & 1) == 0 )
+  if ( (byte_4CF22F7 & 1) == 0 )
   {
-    sub_1C94098(&SimpleAnimation_State_TypeInfo);
-    byte_4D30570 = 1;
+    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
+    byte_4CF22F7 = 1;
   }
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation
-    || (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__Play_67362784(simpleAnimation, name, 0),
+    || (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__Play_67121960(simpleAnimation, name, 0),
         (v8 = this->fields.simpleAnimation) == 0)
     || (simpleAnimation = (SimpleAnimation_o *)v8->fields.m_Clip) == 0
     || (v9 = UnityEngine_Object__get_name((UnityEngine_Object_o *)simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__get_Item(v8, v9, 0)) == 0) )
   {
-    sub_1C942F0(simpleAnimation, name);
+    sub_1C7BD40(simpleAnimation, name);
   }
   klass = simpleAnimation->klass;
   v11 = simpleAnimation;
@@ -411,11 +411,11 @@ void ClassBoardSquare__PlayForceEndSimpleAnimation(
   else
   {
 LABEL_11:
-    v14 = sub_1C6A420(simpleAnimation, SimpleAnimation_State_TypeInfo, 6);
+    v14 = sub_1C51E70(simpleAnimation, SimpleAnimation_State_TypeInfo, 6);
   }
   (*(void (__fastcall **)(SimpleAnimation_o *, _QWORD, float))v14)(v11, *(_QWORD *)(v14 + 8), 1.0);
   v16 = ClassBoardSquare__WaitAnimationFinished(this, name, endCallback, v15);
-  UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v16, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v16, 0);
 }
 
 
@@ -425,14 +425,14 @@ void ClassBoardSquare__PlayGrandToClassTransition(ClassBoardSquare_o *this, bool
   System_Action_o *v6; // x22
   const MethodInfo *v7; // x4
 
-  if ( (byte_4D30569 & 1) == 0 )
+  if ( (byte_4CF22F0 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_ClassBoardSquare__PlayGrandToClassTransition_b__41_0__);
-    byte_4D30569 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_ClassBoardSquare__PlayGrandToClassTransition_b__41_0__);
+    byte_4CF22F0 = 1;
   }
   animNameGrandReturnTransition = this->fields.animNameGrandReturnTransition;
-  v6 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ClassBoardSquare__PlayGrandToClassTransition_b__41_0__, 0);
   ClassBoardSquare__PlaySimpleAnimation(this, animNameGrandReturnTransition, isQuick, v6, v7);
 }
@@ -444,14 +444,14 @@ void ClassBoardSquare__PlayReleaseEffect(ClassBoardSquare_o *this, const MethodI
   System_Action_o *v4; // x21
   const MethodInfo *v5; // x4
 
-  if ( (byte_4D3056D & 1) == 0 )
+  if ( (byte_4CF22F4 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_ClassBoardSquare__PlayReleaseEffect_b__51_0__);
-    byte_4D3056D = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_ClassBoardSquare__PlayReleaseEffect_b__51_0__);
+    byte_4CF22F4 = 1;
   }
   releaseAnimationName = this->fields.releaseAnimationName;
-  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_ClassBoardSquare__PlayReleaseEffect_b__51_0__, 0);
   ClassBoardSquare__PlaySimpleAnimation(this, releaseAnimationName, 0, v4, v5);
 }
@@ -476,10 +476,10 @@ void ClassBoardSquare__PlaySimpleAnimation(
   {
     simpleAnimation = this->fields.simpleAnimation;
     if ( !simpleAnimation )
-      sub_1C942F0(0, name);
-    SimpleAnimation__Play_67362784(simpleAnimation, name, 0);
+      sub_1C7BD40(0, name);
+    SimpleAnimation__Play_67121960(simpleAnimation, name, 0);
     v10 = ClassBoardSquare__WaitAnimationFinished(this, name, endCallback, v9);
-    UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v10, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v10, 0);
   }
 }
 
@@ -498,14 +498,14 @@ void ClassBoardSquare__PlayTransition(ClassBoardSquare_o *this, bool isQuick, co
   __int64 v12; // x8
 
   v4 = this;
-  if ( (byte_4D30568 & 1) == 0 )
+  if ( (byte_4CF22EF & 1) == 0 )
   {
-    this = (ClassBoardSquare_o *)sub_1C94098(&IClassBoardSquareModel_TypeInfo);
-    byte_4D30568 = 1;
+    this = (ClassBoardSquare_o *)sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
+    byte_4CF22EF = 1;
   }
   SquareModel_k__BackingField = v4->fields._SquareModel_k__BackingField;
   if ( !SquareModel_k__BackingField )
-    sub_1C942F0(this, isQuick);
+    sub_1C7BD40(this, isQuick);
   klass = SquareModel_k__BackingField->klass;
   v7 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -523,7 +523,7 @@ void ClassBoardSquare__PlayTransition(ClassBoardSquare_o *this, bool isQuick, co
   else
   {
 LABEL_8:
-    v9 = sub_1C6A420(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
+    v9 = sub_1C51E70(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
   }
   v10 = (*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v9)(
           SquareModel_k__BackingField,
@@ -553,20 +553,20 @@ void ClassBoardSquare__SetActiveArrayObject(
   __int64 v8; // x1
   System_Action_object__o *v9; // x20
 
-  if ( (byte_4D3056B & 1) == 0 )
+  if ( (byte_4CF22F2 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_GameObject__TypeInfo);
-    sub_1C94098(&Method_BasicHelper_ForEach_GameObject___);
-    sub_1C94098(&Method_ClassBoardSquare___c__DisplayClass49_0__SetActiveArrayObject_b__0__);
-    sub_1C94098(&ClassBoardSquare___c__DisplayClass49_0_TypeInfo);
-    byte_4D3056B = 1;
+    sub_1C7BAE8(&System_Action_GameObject__TypeInfo);
+    sub_1C7BAE8(&Method_BasicHelper_ForEach_GameObject___);
+    sub_1C7BAE8(&Method_ClassBoardSquare___c__DisplayClass49_0__SetActiveArrayObject_b__0__);
+    sub_1C7BAE8(&ClassBoardSquare___c__DisplayClass49_0_TypeInfo);
+    byte_4CF22F2 = 1;
   }
-  v6 = sub_1C942E4(ClassBoardSquare___c__DisplayClass49_0_TypeInfo);
+  v6 = sub_1C7BD34(ClassBoardSquare___c__DisplayClass49_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
-    sub_1C942F0(v7, v8);
+    sub_1C7BD40(v7, v8);
   *(_BYTE *)(v6 + 16) = isActive;
-  v9 = (System_Action_object__o *)sub_1C942E4(System_Action_GameObject__TypeInfo);
+  v9 = (System_Action_object__o *)sub_1C7BD34(System_Action_GameObject__TypeInfo);
   System_Action_object____ctor(
     v9,
     (Il2CppObject *)v6,
@@ -575,7 +575,7 @@ void ClassBoardSquare__SetActiveArrayObject(
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)objects,
     (System_Action_T__o *)v9,
-    (const MethodInfo_3188088 *)Method_BasicHelper_ForEach_GameObject___);
+    (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_GameObject___);
 }
 
 
@@ -588,10 +588,10 @@ void ClassBoardSquare__SetActiveObject(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D3056C & 1) == 0 )
+  if ( (byte_4CF22F3 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3056C = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF22F3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -599,7 +599,7 @@ void ClassBoardSquare__SetActiveObject(
   if ( v6 )
   {
     if ( !obj )
-      sub_1C942F0(v6, v7);
+      sub_1C7BD40(v6, v7);
     UnityEngine_GameObject__SetActive(obj, isActive, 0);
   }
 }
@@ -611,10 +611,10 @@ void ClassBoardSquare__SetSelectedEffectActive(ClassBoardSquare_o *this, bool is
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4D30572 & 1) == 0 )
+  if ( (byte_4CF22F9 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30572 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF22F9 = 1;
   }
   selectedEffect = (UnityEngine_Object_o *)this->fields.selectedEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -623,7 +623,7 @@ void ClassBoardSquare__SetSelectedEffectActive(ClassBoardSquare_o *this, bool is
   {
     v7 = this->fields.selectedEffect;
     if ( !v7 )
-      sub_1C942F0(0, v6);
+      sub_1C7BD40(0, v6);
     UnityEngine_GameObject__SetActive(v7, isActive, 0);
   }
 }
@@ -729,18 +729,18 @@ void ClassBoardSquare__Setup(ClassBoardSquare_o *this, IClassBoardSquareModel_o 
   System_String_o *v95; // x7
   int v96; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4D30566 & 1) == 0 )
+  if ( (byte_4CF22ED & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&ClassBoardEffectPlayer_TypeInfo);
-    sub_1C94098(&IClassBoardSquareModel_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_16163/*"_"*/);
-    byte_4D30566 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&ClassBoardEffectPlayer_TypeInfo);
+    sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16165/*"_"*/);
+    byte_4CF22ED = 1;
   }
   v96 = 0;
   this->fields._SquareModel_k__BackingField = squareModel;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareModel_k__BackingField,
     (int32_t)squareModel,
     (int32_t)method,
@@ -771,7 +771,7 @@ void ClassBoardSquare__Setup(ClassBoardSquare_o *this, IClassBoardSquareModel_o 
   else
   {
 LABEL_8:
-    v17 = sub_1C6A420(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 3);
+    v17 = sub_1C51E70(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 3);
   }
   transform = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v17)(
                                         SquareModel_k__BackingField,
@@ -784,7 +784,7 @@ LABEL_8:
     0,
     this->klass->vtable._9_UpdateDraw.method);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  transform = (UnityEngine_Object_o *)sub_1C94140(string___TypeInfo, 5);
+  transform = (UnityEngine_Object_o *)sub_1C7BB90(string___TypeInfo, 5);
   if ( !gameObject )
     goto LABEL_36;
   v22 = transform;
@@ -794,12 +794,12 @@ LABEL_8:
   if ( !LODWORD(v22[1].klass) )
     goto LABEL_37;
   v22[1].monitor = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22[1].monitor, (int32_t)transform, v23, v24, v25, v26, v27, v28);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v22[1].monitor, (int32_t)transform, v23, v24, v25, v26, v27, v28);
   if ( LODWORD(v22[1].klass) <= 1 )
     goto LABEL_37;
-  v35 = StringLiteral_16163/*"_"*/;
-  v22[1].fields.m_CachedPtr = StringLiteral_16163/*"_"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22[1].fields, v35, v29, v30, v31, v32, v33, v34);
+  v35 = StringLiteral_16165/*"_"*/;
+  v22[1].fields.m_CachedPtr = StringLiteral_16165/*"_"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v22[1].fields, v35, v29, v30, v31, v32, v33, v34);
   if ( !squareModel )
     goto LABEL_36;
   v36 = squareModel->klass;
@@ -819,19 +819,19 @@ LABEL_8:
   else
   {
 LABEL_20:
-    v39 = sub_1C6A420(squareModel, IClassBoardSquareModel_TypeInfo, 0);
+    v39 = sub_1C51E70(squareModel, IClassBoardSquareModel_TypeInfo, 0);
   }
   v96 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v39)(squareModel, *(_QWORD *)(v39 + 8));
   transform = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v96, 0);
   if ( LODWORD(v22[1].klass) <= 2 )
     goto LABEL_37;
   v22[2].klass = (UnityEngine_Object_c *)transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22[2], (int32_t)transform, v40, v41, v42, v43, v44, v45);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v22[2], (int32_t)transform, v40, v41, v42, v43, v44, v45);
   if ( LODWORD(v22[1].klass) <= 3 )
     goto LABEL_37;
-  v52 = StringLiteral_16163/*"_"*/;
-  v22[2].monitor = (void *)StringLiteral_16163/*"_"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22[2].monitor, v52, v46, v47, v48, v49, v50, v51);
+  v52 = StringLiteral_16165/*"_"*/;
+  v22[2].monitor = (void *)StringLiteral_16165/*"_"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v22[2].monitor, v52, v46, v47, v48, v49, v50, v51);
   v53 = squareModel->klass;
   v54 = *(unsigned __int16 *)&squareModel->klass->_2.rank;
   if ( *(_WORD *)&squareModel->klass->_2.rank )
@@ -849,25 +849,25 @@ LABEL_20:
   else
   {
 LABEL_28:
-    v56 = sub_1C6A420(squareModel, IClassBoardSquareModel_TypeInfo, 1);
+    v56 = sub_1C51E70(squareModel, IClassBoardSquareModel_TypeInfo, 1);
   }
   v96 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v56)(squareModel, *(_QWORD *)(v56 + 8));
   transform = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v96, 0);
   if ( LODWORD(v22[1].klass) <= 4 )
 LABEL_37:
-    sub_1C942F8(transform);
+    sub_1C7BD48(transform);
   v22[2].fields.m_CachedPtr = (intptr_t)transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22[2].fields, (int32_t)transform, v57, v58, v59, v60, v61, v62);
-  v63 = System_String__Concat_64458276((System_String_array *)v22, 0);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v22[2].fields, (int32_t)transform, v57, v58, v59, v60, v61, v62);
+  v63 = System_String__Concat_64217444((System_String_array *)v22, 0);
   UnityEngine_Object__set_name(gameObject, v63, 0);
   transform = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_36;
   name = UnityEngine_Object__get_name(transform, 0);
-  v65 = (ClassBoardEffectPlayer_o *)sub_1C942E4(ClassBoardEffectPlayer_TypeInfo);
-  ClassBoardEffectPlayer___ctor_48906144(v65, name, 0);
+  v65 = (ClassBoardEffectPlayer_o *)sub_1C7BD34(ClassBoardEffectPlayer_TypeInfo);
+  ClassBoardEffectPlayer___ctor_48650144(v65, name, 0);
   this->fields.releaseEffectPlayer = v65;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.releaseEffectPlayer,
     (int32_t)v65,
     v66,
@@ -877,12 +877,12 @@ LABEL_37:
     v70,
     v71);
   releaseEffectPlayer = this->fields.releaseEffectPlayer;
-  v73 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v73 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v73, (Il2CppObject *)this, (intptr_t)this->klass->vtable._10_PlayReleaseEffect.method, 0);
   if ( !releaseEffectPlayer )
     goto LABEL_36;
   releaseEffectPlayer->fields.playCallback = v73;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&releaseEffectPlayer->fields.playCallback,
     (int32_t)v73,
     v74,
@@ -895,10 +895,10 @@ LABEL_37:
   if ( !transform )
     goto LABEL_36;
   v80 = UnityEngine_Object__get_name(transform, 0);
-  v81 = (ClassBoardEffectPlayer_o *)sub_1C942E4(ClassBoardEffectPlayer_TypeInfo);
-  ClassBoardEffectPlayer___ctor_48906144(v81, v80, 0);
+  v81 = (ClassBoardEffectPlayer_o *)sub_1C7BD34(ClassBoardEffectPlayer_TypeInfo);
+  ClassBoardEffectPlayer___ctor_48650144(v81, v80, 0);
   this->fields.enableEffectPlayer = v81;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.enableEffectPlayer,
     (int32_t)v81,
     v82,
@@ -908,13 +908,13 @@ LABEL_37:
     v86,
     v87);
   enableEffectPlayer = this->fields.enableEffectPlayer;
-  v89 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v89 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v89, (Il2CppObject *)this, (intptr_t)this->klass->vtable._11_PlayEnableEffect.method, 0);
   if ( !enableEffectPlayer )
 LABEL_36:
-    sub_1C942F0(transform, v11);
+    sub_1C7BD40(transform, v11);
   enableEffectPlayer->fields.playCallback = v89;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&enableEffectPlayer->fields.playCallback,
     (int32_t)v89,
     v90,
@@ -952,11 +952,11 @@ void ClassBoardSquare__SetupIcon(ClassBoardSquare_o *this, const MethodInfo *met
   int32_t v20; // w23
 
   v2 = this;
-  if ( (byte_4D30567 & 1) == 0 )
+  if ( (byte_4CF22EE & 1) == 0 )
   {
-    sub_1C94098(&ClassBoardUtility_TypeInfo);
-    this = (ClassBoardSquare_o *)sub_1C94098(&IClassBoardSquareModel_TypeInfo);
-    byte_4D30567 = 1;
+    sub_1C7BAE8(&ClassBoardUtility_TypeInfo);
+    this = (ClassBoardSquare_o *)sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
+    byte_4CF22EE = 1;
   }
   iconSpritesNormal = v2->fields.iconSpritesNormal;
   if ( !iconSpritesNormal )
@@ -968,7 +968,7 @@ void ClassBoardSquare__SetupIcon(ClassBoardSquare_o *this, const MethodInfo *met
     while ( 1 )
     {
       if ( v5 >= (unsigned int)max_length )
-        sub_1C942F8(this);
+        sub_1C7BD48(this);
       v6 = iconSpritesNormal->m_Items[v5];
       this = (ClassBoardSquare_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit((const MethodInfo *)this);
       SquareModel_k__BackingField = v2->fields._SquareModel_k__BackingField;
@@ -992,7 +992,7 @@ void ClassBoardSquare__SetupIcon(ClassBoardSquare_o *this, const MethodInfo *met
       else
       {
 LABEL_12:
-        v12 = sub_1C6A420(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 2);
+        v12 = sub_1C51E70(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 2);
       }
       this = (ClassBoardSquare_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v12)(
                                      SquareModel_k__BackingField,
@@ -1018,7 +1018,7 @@ LABEL_12:
       else
       {
 LABEL_19:
-        v18 = sub_1C6A420(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 7);
+        v18 = sub_1C51E70(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 7);
       }
       v20 = (*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v18)(v13, *(_QWORD *)(v18 + 8));
       if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
@@ -1032,7 +1032,7 @@ LABEL_19:
         return;
     }
 LABEL_26:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
 }
 
@@ -1057,18 +1057,18 @@ void ClassBoardSquare__UpdateDraw(
   hasValue = handoverFlag.fields.hasValue;
   v4 = this;
   v13 = handoverFlag;
-  if ( (byte_4D3056A & 1) == 0 )
+  if ( (byte_4CF22F1 & 1) == 0 )
   {
-    sub_1C94098(&IClassBoardSquareModel_TypeInfo);
-    sub_1C94098(&Method_System_Nullable_AcquireFlag__get_HasValue__);
-    this = (ClassBoardSquare_o *)sub_1C94098(&Method_System_Nullable_AcquireFlag__get_Value__);
-    byte_4D3056A = 1;
+    sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
+    sub_1C7BAE8(&Method_System_Nullable_AcquireFlag__get_HasValue__);
+    this = (ClassBoardSquare_o *)sub_1C7BAE8(&Method_System_Nullable_AcquireFlag__get_Value__);
+    byte_4CF22F1 = 1;
   }
   if ( !hasValue )
   {
     SquareModel_k__BackingField = v4->fields._SquareModel_k__BackingField;
     if ( !SquareModel_k__BackingField )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C942F0)(this, handoverFlag);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C7BD40)(this, handoverFlag);
     klass = SquareModel_k__BackingField->klass;
     v10 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
     if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -1086,7 +1086,7 @@ void ClassBoardSquare__UpdateDraw(
     else
     {
 LABEL_14:
-      v12 = sub_1C6A420(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
+      v12 = sub_1C51E70(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
     }
     Value = (*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v12)(
               SquareModel_k__BackingField,
@@ -1101,7 +1101,7 @@ LABEL_19:
   v5 = (System_Nullable_Int32Enum__o)&v13;
   Value = System_Nullable_Int32Enum___get_Value(
             v5,
-            (const MethodInfo_39937C0 *)Method_System_Nullable_AcquireFlag__get_Value__);
+            (const MethodInfo_3965028 *)Method_System_Nullable_AcquireFlag__get_Value__);
   if ( !Value )
     goto LABEL_19;
 LABEL_5:
@@ -1152,20 +1152,20 @@ System_Collections_IEnumerator_o *ClassBoardSquare__WaitAnimationFinished(
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D30571 & 1) == 0 )
+  if ( (byte_4CF22F8 & 1) == 0 )
   {
-    sub_1C94098(&ClassBoardSquare__WaitAnimationFinished_d__56_TypeInfo);
-    byte_4D30571 = 1;
+    sub_1C7BAE8(&ClassBoardSquare__WaitAnimationFinished_d__56_TypeInfo);
+    byte_4CF22F8 = 1;
   }
-  v7 = sub_1C942E4(ClassBoardSquare__WaitAnimationFinished_d__56_TypeInfo);
+  v7 = sub_1C7BD34(ClassBoardSquare__WaitAnimationFinished_d__56_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = name;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)name, v14, v15, v16, v17, v18, v19);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)name, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = endCallback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)endCallback, v20, v21, v22, v23, v24, v25);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)endCallback, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -1181,7 +1181,7 @@ void ClassBoardSquare___PlayEnableEffect_b__52_0(ClassBoardSquare_o *this, const
         this->fields.isUpdateDraw = 1,
         !simpleAnimation) )
   {
-    sub_1C942F0(simpleAnimation, method);
+    sub_1C7BD40(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -1198,7 +1198,7 @@ void ClassBoardSquare___PlayEnableEffect_b__52_1(ClassBoardSquare_o *this, const
         this->fields.isUpdateDraw = 1,
         !simpleAnimation) )
   {
-    sub_1C942F0(simpleAnimation, method);
+    sub_1C7BD40(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -1210,7 +1210,7 @@ void ClassBoardSquare___PlayGrandToClassTransition_b__41_0(ClassBoardSquare_o *t
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   SimpleAnimation__Stop(simpleAnimation, 0);
 }
 
@@ -1222,7 +1222,7 @@ void ClassBoardSquare___PlayReleaseEffect_b__51_0(ClassBoardSquare_o *this, cons
   releaseEffectPlayer = this->fields.releaseEffectPlayer;
   this->fields.isUpdateDraw = 1;
   if ( !releaseEffectPlayer )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   ClassBoardEffectPlayer__End(releaseEffectPlayer, 0);
 }
 
@@ -1244,10 +1244,10 @@ void ClassBoardSquare__add_clickedEvent(
   System_Action_ClassBoardSquare__o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4D30564 & 1) == 0 )
+  if ( (byte_4CF22EB & 1) == 0 )
   {
-    sub_1C94098(&System_Action_ClassBoardSquare__TypeInfo);
-    byte_4D30564 = 1;
+    sub_1C7BAE8(&System_Action_ClassBoardSquare__TypeInfo);
+    byte_4CF22EB = 1;
   }
   clickedEvent = this->fields.clickedEvent;
   p_clickedEvent = &this->fields.clickedEvent;
@@ -1261,17 +1261,17 @@ void ClassBoardSquare__add_clickedEvent(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1C941D4(v8, System_Action_ClassBoardSquare__TypeInfo);
+    v10 = sub_1C7BC24(v8, System_Action_ClassBoardSquare__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1CEFE6C(p_clickedEvent, v10, v6);
+    v11 = sub_1CD78BC(p_clickedEvent, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1C9468C(v9);
+  sub_1C7C0DC(v9);
   ClassBoardSquare__remove_clickedEvent(v13, v14, v15);
 }
 
@@ -1316,10 +1316,10 @@ void ClassBoardSquare__remove_clickedEvent(
   ClassBoardSquare_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_4D30565 & 1) == 0 )
+  if ( (byte_4CF22EC & 1) == 0 )
   {
-    sub_1C94098(&System_Action_ClassBoardSquare__TypeInfo);
-    byte_4D30565 = 1;
+    sub_1C7BAE8(&System_Action_ClassBoardSquare__TypeInfo);
+    byte_4CF22EC = 1;
   }
   clickedEvent = this->fields.clickedEvent;
   p_clickedEvent = &this->fields.clickedEvent;
@@ -1333,17 +1333,17 @@ void ClassBoardSquare__remove_clickedEvent(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1C941D4(v8, System_Action_ClassBoardSquare__TypeInfo);
+    v10 = sub_1C7BC24(v8, System_Action_ClassBoardSquare__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1CEFE6C(p_clickedEvent, v10, v6);
+    v11 = sub_1CD78BC(p_clickedEvent, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1C9468C(v9);
+  sub_1C7C0DC(v9);
   ClassBoardSquare__get_ReleaseEffectPlayer(v13, v14);
 }
 
@@ -1366,7 +1366,7 @@ void ClassBoardSquare__set_SquareModel(
   System_String_o *v7; // x7
 
   this->fields._SquareModel_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareModel_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1422,10 +1422,10 @@ bool ClassBoardSquare__WaitAnimationFinished_d__56__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4D30574 & 1) == 0 )
+  if ( (byte_4CF22FB & 1) == 0 )
   {
-    this = (ClassBoardSquare__WaitAnimationFinished_d__56_o *)sub_1C94098(&SimpleAnimation_State_TypeInfo);
-    byte_4D30574 = 1;
+    this = (ClassBoardSquare__WaitAnimationFinished_d__56_o *)sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
+    byte_4CF22FB = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -1444,7 +1444,7 @@ bool ClassBoardSquare__WaitAnimationFinished_d__56__MoveNext(
       goto LABEL_28;
     State = SimpleAnimation__GetState((SimpleAnimation_o *)this, v2->fields.name, 0);
     v2->fields._state_5__2 = State;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields._state_5__2, (int32_t)State, v6, v7, v8, v9, v10, v11);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._state_5__2, (int32_t)State, v6, v7, v8, v9, v10, v11);
 LABEL_9:
     state_5__2 = v2->fields._state_5__2;
     if ( !state_5__2 )
@@ -1466,7 +1466,7 @@ LABEL_9:
     else
     {
 LABEL_14:
-      v16 = sub_1C6A420(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 13);
+      v16 = sub_1C51E70(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 13);
     }
     if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v16)(state_5__2, *(_QWORD *)(v16 + 8)) <= 0.0 )
     {
@@ -1494,13 +1494,13 @@ LABEL_26:
       else
       {
 LABEL_22:
-        v21 = sub_1C6A420(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 5);
+        v21 = sub_1C51E70(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 5);
       }
       if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v21)(v17, *(_QWORD *)(v21 + 8)) < 1.0 )
       {
         v2->fields.__2__current = 0;
         p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-        sub_1C9403C(p__2__current, 0, v22, v23, v24, v25, v26, v27);
+        sub_1C7BA8C(p__2__current, 0, v22, v23, v24, v25, v26, v27);
         result = 1;
         LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
@@ -1508,7 +1508,7 @@ LABEL_22:
       goto LABEL_26;
     }
 LABEL_28:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   return 0;
 }
@@ -1530,11 +1530,11 @@ void __noreturn ClassBoardSquare__WaitAnimationFinished_d__56__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_ClassBoardSquare__WaitAnimationFinished_d__56_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_ClassBoardSquare__WaitAnimationFinished_d__56_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 
@@ -1572,7 +1572,7 @@ void ClassBoardSquare___c__DisplayClass49_0___SetActiveArrayObject_b__0(
   if ( !x
     || (v3 = this, (this = (ClassBoardSquare___c__DisplayClass49_0_o *)UnityEngine_GameObject__get_gameObject(x, 0)) == 0) )
   {
-    sub_1C942F0(this, x);
+    sub_1C7BD40(this, x);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v3->fields.isActive, 0);
 }

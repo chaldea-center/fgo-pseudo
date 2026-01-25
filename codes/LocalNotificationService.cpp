@@ -38,18 +38,18 @@ LocalNotificationService_o *LocalNotificationService__getNullObject(const Method
   int64_t v7; // x6
   System_String_o *v8; // x7
 
-  if ( (byte_4D2E2DF & 1) == 0 )
+  if ( (byte_4CF004E & 1) == 0 )
   {
-    sub_1C94098(&LocalNotificationService_TypeInfo);
-    byte_4D2E2DF = 1;
+    sub_1C7BAE8(&LocalNotificationService_TypeInfo);
+    byte_4CF004E = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v2 = (Il2CppObject *)sub_1C942E4(LocalNotificationService_TypeInfo);
+    v2 = (Il2CppObject *)sub_1C7BD34(LocalNotificationService_TypeInfo);
     System_Object___ctor(v2, 0);
     LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v2;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)LocalNotificationService_TypeInfo->static_fields,
       (int32_t)v2,
       v3,

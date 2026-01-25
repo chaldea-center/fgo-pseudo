@@ -8,14 +8,14 @@ void EventInfoCondenseLabel___ctor(EventInfoCondenseLabel_o *this, const MethodI
   System_String_o *v7; // x7
   int32_t v9; // w1
 
-  if ( (byte_4D2CAF0 & 1) == 0 )
+  if ( (byte_4CEE926 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2CAF0 = 1;
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CEE926 = 1;
   }
   v9 = StringLiteral_1/*""*/;
   this->fields.beforeText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.beforeText, v9, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.beforeText, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -34,10 +34,10 @@ void EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, c
   struct UILabel_o *v12; // x8
   struct System_String_o *mText; // x1
 
-  if ( (byte_4D2CAEF & 1) == 0 )
+  if ( (byte_4CEE925 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2CAEF = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEE925 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,10 +49,10 @@ void EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, c
     if ( !v12
       || (mText = v12->fields.mText,
           this->fields.beforeText = mText,
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.beforeText, (int32_t)mText, v6, v7, v8, v9, v10, v11),
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.beforeText, (int32_t)mText, v6, v7, v8, v9, v10, v11),
           (v4 = this->fields.label) == 0) )
     {
-      sub_1C942F0(v4, v5);
+      sub_1C7BD40(v4, v5);
     }
     UILabel__SetCondensedScale(v4, this->fields.condensedWidth, 0, 0);
   }
@@ -72,19 +72,19 @@ void EventInfoCondenseLabel__Start(EventInfoCondenseLabel_o *this, const MethodI
   System_String_o *v11; // x7
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2CAED & 1) == 0 )
+  if ( (byte_4CEE923 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    byte_4D2CAED = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    byte_4CEE923 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   this->fields.label = (struct UILabel_o *)Component_object;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
   EventInfoCondenseLabel__SetCondensedScale(this, v12);
 }
 
@@ -97,10 +97,10 @@ void EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, const Method
   struct UILabel_o *v6; // x8
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D2CAEE & 1) == 0 )
+  if ( (byte_4CEE924 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2CAEE = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEE924 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -110,7 +110,7 @@ void EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, const Method
   {
     v6 = this->fields.label;
     if ( !v6 )
-      sub_1C942F0(v4, v5);
+      sub_1C7BD40(v4, v5);
     if ( System_String__op_Inequality(this->fields.beforeText, v6->fields.mText, 0) )
       EventInfoCondenseLabel__SetCondensedScale(this, v7);
   }

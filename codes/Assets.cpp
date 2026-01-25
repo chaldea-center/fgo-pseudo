@@ -17,25 +17,25 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager___ctor(
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4D2A672 & 1) == 0 )
+  if ( (byte_4CEC4CE & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
-    byte_4D2A672 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+    byte_4CEC4CE = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
   this->fields.beforeList = (struct System_Collections_Generic_List_SvtUseNpData__o *)v3;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
   this->fields.afterList = (struct System_Collections_Generic_List_SvtUseNpData__o *)v10;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.afterList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.afterList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -60,13 +60,13 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddAfterNp(
   __int64 size; // x10
   Il2CppClass **v21; // x8
 
-  if ( (byte_4D2A674 & 1) == 0 )
+  if ( (byte_4CEC4D0 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_1C94098(&SvtUseNpData_TypeInfo);
-    byte_4D2A674 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_1C7BAE8(&SvtUseNpData_TypeInfo);
+    byte_4CEC4D0 = 1;
   }
-  v9 = (SvtUseNpData_o *)sub_1C942E4(SvtUseNpData_TypeInfo);
+  v9 = (SvtUseNpData_o *)sub_1C7BD34(SvtUseNpData_TypeInfo);
   SvtUseNpData___ctor(v9, 0);
   if ( !v9
     || (v9->fields.svtUseNpId = id,
@@ -78,7 +78,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddAfterNp(
         ++afterList->fields._version,
         !items) )
   {
-    sub_1C942F0(afterList, v11);
+    sub_1C7BD40(afterList, v11);
   }
   size = afterList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -86,14 +86,14 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddAfterNp(
     System_Collections_Generic_List_object___AddWithResize(
       afterList,
       (Il2CppObject *)v9,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {
     v21 = &items->obj.klass + size;
     afterList->fields._size = size + 1;
     v21[4] = (Il2CppClass *)v9;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v9, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v9, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -119,13 +119,13 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddBeforeNp(
   __int64 size; // x10
   Il2CppClass **v21; // x8
 
-  if ( (byte_4D2A673 & 1) == 0 )
+  if ( (byte_4CEC4CF & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_1C94098(&SvtUseNpData_TypeInfo);
-    byte_4D2A673 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_1C7BAE8(&SvtUseNpData_TypeInfo);
+    byte_4CEC4CF = 1;
   }
-  v9 = (SvtUseNpData_o *)sub_1C942E4(SvtUseNpData_TypeInfo);
+  v9 = (SvtUseNpData_o *)sub_1C7BD34(SvtUseNpData_TypeInfo);
   SvtUseNpData___ctor(v9, 0);
   if ( !v9
     || (v9->fields.svtUseNpId = id,
@@ -137,7 +137,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddBeforeNp(
         ++beforeList->fields._version,
         !items) )
   {
-    sub_1C942F0(beforeList, v11);
+    sub_1C7BD40(beforeList, v11);
   }
   size = beforeList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -145,14 +145,14 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddBeforeNp(
     System_Collections_Generic_List_object___AddWithResize(
       beforeList,
       (Il2CppObject *)v9,
-      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {
     v21 = &items->obj.klass + size;
     beforeList->fields._size = size + 1;
     v21[4] = (Il2CppClass *)v9;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v9, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v9, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -165,18 +165,18 @@ SvtUseNpData_o *Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfter
 {
   System_Collections_Generic_List_object__o *afterList; // x0
 
-  if ( (byte_4D2A676 & 1) == 0 )
+  if ( (byte_4CEC4D2 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    byte_4D2A676 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    byte_4CEC4D2 = 1;
   }
   afterList = (System_Collections_Generic_List_object__o *)this->fields.afterList;
   if ( !afterList )
-    sub_1C942F0(0, *(_QWORD *)&index);
+    sub_1C7BD40(0, *(_QWORD *)&index);
   return (SvtUseNpData_o *)System_Collections_Generic_List_object___get_Item(
                              afterList,
                              index,
-                             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+                             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
 }
 
 
@@ -188,14 +188,14 @@ int32_t Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfterNpCount(
   struct System_Collections_Generic_List_SvtUseNpData__o *afterList; // x8
 
   v2 = this;
-  if ( (byte_4D2A677 & 1) == 0 )
+  if ( (byte_4CEC4D3 & 1) == 0 )
   {
-    this = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
-    byte_4D2A677 = 1;
+    this = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
+    byte_4CEC4D3 = 1;
   }
   afterList = v2->fields.afterList;
   if ( !afterList )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return afterList->fields._size;
 }
 
@@ -208,18 +208,18 @@ SvtUseNpData_o *Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetBefor
 {
   System_Collections_Generic_List_object__o *beforeList; // x0
 
-  if ( (byte_4D2A675 & 1) == 0 )
+  if ( (byte_4CEC4D1 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    byte_4D2A675 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    byte_4CEC4D1 = 1;
   }
   beforeList = (System_Collections_Generic_List_object__o *)this->fields.beforeList;
   if ( !beforeList )
-    sub_1C942F0(0, *(_QWORD *)&index);
+    sub_1C7BD40(0, *(_QWORD *)&index);
   return (SvtUseNpData_o *)System_Collections_Generic_List_object___get_Item(
                              beforeList,
                              index,
-                             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+                             (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
 }
 
 
@@ -235,7 +235,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__SetEntity(
   System_String_o *v7; // x7
 
   this->fields._tdAddEntity_k__BackingField = entity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._tdAddEntity_k__BackingField,
     (int32_t)entity,
     (int32_t)method,
@@ -267,7 +267,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__set_tdAddEntity(
   System_String_o *v7; // x7
 
   this->fields._tdAddEntity_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._tdAddEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

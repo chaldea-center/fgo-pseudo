@@ -1,9 +1,9 @@
 void BattleSkillSelectAddFuncConfComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D300D8 & 1) == 0 )
+  if ( (byte_4CF1E5E & 1) == 0 )
   {
-    sub_1C94098(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
-    byte_4D300D8 = 1;
+    sub_1C7BAE8(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
+    byte_4CF1E5E = 1;
   }
   *BattleSkillSelectAddFuncConfComponent_TypeInfo->static_fields = (struct BattleSkillSelectAddFuncConfComponent_StaticFields)0x6400000014LL;
 }
@@ -27,7 +27,7 @@ void BattleSkillSelectAddFuncConfComponent__CheckSerializeField(
 
   btnLayoutArray = this->fields.btnLayoutArray;
   if ( !btnLayoutArray )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   max_length = btnLayoutArray->max_length;
   v4 = -1;
   do
@@ -47,10 +47,10 @@ void BattleSkillSelectAddFuncConfComponent__ClickSelected(
   _QWORD *v8; // x0
   System_Reflection_MethodBase_o *v9; // x0
 
-  if ( (byte_4D300D3 & 1) == 0 )
+  if ( (byte_4CF1E59 & 1) == 0 )
   {
-    sub_1C94098(&Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
-    byte_4D300D3 = 1;
+    sub_1C7BAE8(&Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
+    byte_4CF1E59 = 1;
   }
   if ( BattleSkillSelectAddFuncConfComponent__IsEnableBtn(this, index, method) )
   {
@@ -58,8 +58,8 @@ void BattleSkillSelectAddFuncConfComponent__ClickSelected(
     {
       v6 = Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__;
       if ( (*((_BYTE *)Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1C940B0(Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
-      v7 = (System_Reflection_MethodBase_o *)sub_1C9407C(v6, v6[4]);
+        v6 = (_QWORD *)sub_1C7BB00(Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0);
       this->fields.isPlayedSe = 1;
     }
@@ -69,8 +69,8 @@ void BattleSkillSelectAddFuncConfComponent__ClickSelected(
   {
     v8 = Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__;
     if ( (*((_BYTE *)Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C940B0(Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1C9407C(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C7BB00(Method_BattleSkillSelectAddFuncConfComponent_ClickSelected__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0);
   }
 }
@@ -105,19 +105,19 @@ void BattleSkillSelectAddFuncConfComponent__CompOpen(
   __int64 v3; // x1
   UnityEngine_Component_o *labelDescription; // x0
 
-  if ( (byte_4D300D6 & 1) == 0 )
+  if ( (byte_4CF1E5C & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
-    byte_4D300D6 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    byte_4CF1E5C = 1;
   }
   BattleWindowComponent__CompOpen((BattleWindowComponent_o *)this, 0);
   labelDescription = (UnityEngine_Component_o *)this->fields.labelDescription;
   if ( !labelDescription
     || (labelDescription = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                         labelDescription,
-                                                        (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_BoxCollider___)) == 0 )
+                                                        (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___)) == 0 )
   {
-    sub_1C942F0(labelDescription, v3);
+    sub_1C7BD40(labelDescription, v3);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)labelDescription, 1, 0);
 }
@@ -136,16 +136,16 @@ System_Collections_IEnumerator_o *BattleSkillSelectAddFuncConfComponent__Corouti
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D300D5 & 1) == 0 )
+  if ( (byte_4CF1E5B & 1) == 0 )
   {
-    sub_1C94098(&BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_TypeInfo);
-    byte_4D300D5 = 1;
+    sub_1C7BAE8(&BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_TypeInfo);
+    byte_4CF1E5B = 1;
   }
-  v5 = sub_1C942E4(BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_TypeInfo);
+  v5 = sub_1C7BD34(BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_DWORD *)(v5 + 32) = index;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -166,15 +166,15 @@ System_String_o *BattleSkillSelectAddFuncConfComponent__GetEmbedLvDescription(
   int32_t v14; // [xsp+4h] [xbp-3Ch] BYREF
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D300D1 & 1) == 0 )
+  if ( (byte_4CF1E57 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_8280/*"LEVEL_DETAIL_INFO"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D300D1 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_8284/*"LEVEL_DETAIL_INFO"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF1E57 = 1;
   }
   entity = 0;
   if ( skillLv <= 0 )
@@ -185,7 +185,7 @@ System_String_o *BattleSkillSelectAddFuncConfComponent__GetEmbedLvDescription(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8280/*"LEVEL_DETAIL_INFO"*/, 0);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8284/*"LEVEL_DETAIL_INFO"*/, 0);
     v14 = skillLv;
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
     v10 = (Il2CppObject *)System_String__Format(v8, v9, 0);
@@ -194,7 +194,7 @@ System_String_o *BattleSkillSelectAddFuncConfComponent__GetEmbedLvDescription(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (SkillLvMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillLvMaster___);
+    Master_object = (SkillLvMaster_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillLvMaster___);
     if ( !Master_object )
       goto LABEL_19;
     if ( !SkillLvMaster__TryGetEntity(Master_object, &entity, skillId, skillLv, 0) )
@@ -202,7 +202,7 @@ System_String_o *BattleSkillSelectAddFuncConfComponent__GetEmbedLvDescription(
     Master_object = (SkillLvMaster_o *)entity;
     if ( !entity )
 LABEL_19:
-      sub_1C942F0(Master_object, v12);
+      sub_1C7BD40(Master_object, v12);
     str = SkillLvEntity__getDetail(entity, 1, 0, 0);
   }
 LABEL_15:
@@ -227,7 +227,7 @@ void BattleSkillSelectAddFuncConfComponent__Init(
   __int64 v10; // x1
 
   this->fields._Data_k__BackingField = data;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Data_k__BackingField,
     (int32_t)data,
     (int32_t)method,
@@ -238,7 +238,7 @@ void BattleSkillSelectAddFuncConfComponent__Init(
     v7);
   BattleWindowComponent__setInitData((BattleWindowComponent_o *)this, 2, 0.15, 0, 0);
   if ( !this->fields.btnLayoutArray )
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
 }
 
 
@@ -293,11 +293,11 @@ void BattleSkillSelectAddFuncConfComponent__InitBtnInfo(
 LABEL_20:
       if ( LODWORD(btnLayoutArray->max_length) <= btnLayoutType )
 LABEL_17:
-        sub_1C942F8(this);
+        sub_1C7BD48(this);
       v14 = btnLayoutArray->m_Items[btnLayoutType];
       v11->fields.currentBtnLayout = v14;
       p_currentBtnLayout = (BattleSkillSelectAddFuncConfComponent_o **)&v11->fields.currentBtnLayout;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)&v11->fields.currentBtnLayout,
         (int32_t)v14,
         btnLayoutType,
@@ -329,7 +329,7 @@ LABEL_17:
       }
     }
 LABEL_16:
-    sub_1C942F0(this, btnList);
+    sub_1C7BD40(this, btnList);
   }
 }
 
@@ -343,11 +343,11 @@ void BattleSkillSelectAddFuncConfComponent__InitDescription(
   UIWidget_o *labelDescription; // x21
   bool activeSelf; // w20
 
-  if ( (byte_4D300D0 & 1) == 0 )
+  if ( (byte_4CF1E56 & 1) == 0 )
   {
-    sub_1C94098(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
-    byte_4D300D0 = 1;
+    sub_1C7BAE8(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    byte_4CF1E56 = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)BattleSkillSelectAddFuncConfComponent_TypeInfo;
   labelDescription = (UIWidget_o *)this->fields.labelDescription;
@@ -383,10 +383,10 @@ void BattleSkillSelectAddFuncConfComponent__InitDescription(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.labelDescription) == 0)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_BoxCollider___)) == 0 )
+                                                   (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___)) == 0 )
   {
 LABEL_14:
-    sub_1C942F0(gameObject, description);
+    sub_1C7BD40(gameObject, description);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0);
 }
@@ -402,10 +402,10 @@ bool BattleSkillSelectAddFuncConfComponent__IsEnableBtn(
   const MethodInfo *v7; // x2
   BattleSkillSelectBtnBaseComponent_o *v9; // x0
 
-  if ( (byte_4D300D2 & 1) == 0 )
+  if ( (byte_4CF1E58 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D300D2 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF1E58 = 1;
   }
   currentBtnLayout = (UnityEngine_Object_o *)this->fields.currentBtnLayout;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -414,7 +414,7 @@ bool BattleSkillSelectAddFuncConfComponent__IsEnableBtn(
     return 0;
   v9 = this->fields.currentBtnLayout;
   if ( !v9 )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   return BattleSkillSelectBtnBaseComponent__IsEnableBtn(v9, index, v7);
 }
 
@@ -455,7 +455,7 @@ void BattleSkillSelectAddFuncConfComponent__OnSelected(
   {
     this->fields.isSelected = 1;
     v4 = BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected(this, index, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v4, 0);
   }
 }
 
@@ -472,7 +472,7 @@ void BattleSkillSelectAddFuncConfComponent__SetCallBack(
   System_String_o *v7; // x7
 
   this->fields.selectCallBack = callback;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.selectCallBack,
     (int32_t)callback,
     (int32_t)method,
@@ -520,25 +520,25 @@ bool BattleSkillSelectAddFuncConfComponent__SetPreOpenInfo(
   const MethodInfo *v24; // x3
   int32_t result; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4D300CF & 1) == 0 )
+  if ( (byte_4CF1E55 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_GetValue_List_object____);
-    sub_1C94098(&Method_BasicHelper_GetValue_string___);
-    sub_1C94098(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_System_Enum_TryParse_BattleSkillSelectAddFuncConfComponent_BtnLayoutType___);
-    sub_1C94098(&System_Enum_TypeInfo);
-    sub_1C94098(&StringLiteral_17514/*"btnLayoutType"*/);
-    sub_1C94098(&StringLiteral_17513/*"btn"*/);
-    sub_1C94098(&StringLiteral_18706/*"detail"*/);
-    sub_1C94098(&StringLiteral_24337/*"title"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D300CF = 1;
+    sub_1C7BAE8(&Method_BasicHelper_GetValue_List_object____);
+    sub_1C7BAE8(&Method_BasicHelper_GetValue_string___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_System_Enum_TryParse_BattleSkillSelectAddFuncConfComponent_BtnLayoutType___);
+    sub_1C7BAE8(&System_Enum_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_17516/*"btnLayoutType"*/);
+    sub_1C7BAE8(&StringLiteral_17515/*"btn"*/);
+    sub_1C7BAE8(&StringLiteral_18706/*"detail"*/);
+    sub_1C7BAE8(&StringLiteral_24335/*"title"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF1E55 = 1;
   }
   result = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !skillInfo )
     goto LABEL_14;
   v7 = (SkillLvMaster_o *)Master_object;
@@ -552,7 +552,7 @@ bool BattleSkillSelectAddFuncConfComponent__SetPreOpenInfo(
     return SelectAddFuncInfo != 0;
   this->fields._SkillInfo_k__BackingField = skillInfo;
   *(_WORD *)&this->fields.isPlayedSe = 0;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SkillInfo_k__BackingField,
     (int32_t)skillInfo,
     v8,
@@ -564,14 +564,14 @@ bool BattleSkillSelectAddFuncConfComponent__SetPreOpenInfo(
   labelTitle = this->fields.labelTitle;
   Master_object = (System_String_o *)BasicHelper__GetValue_object_(
                                        SelectAddFuncInfo,
-                                       (System_String_o *)StringLiteral_24337/*"title"*/,
+                                       (System_String_o *)StringLiteral_24335/*"title"*/,
                                        (Il2CppObject *)StringLiteral_1/*""*/,
-                                       (const MethodInfo_3189A3C *)Method_BasicHelper_GetValue_string___);
+                                       (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_string___);
   if ( !labelTitle
     || (UILabel__set_text(labelTitle, Master_object, 0), (Master_object = (System_String_o *)this->fields.skillIcon) == 0) )
   {
 LABEL_14:
-    sub_1C942F0(Master_object, v6);
+    sub_1C7BD40(Master_object, v6);
   }
   BattleServantSkillIConComponent__SetSkillInfo(
     (BattleServantSkillIConComponent_o *)Master_object,
@@ -585,7 +585,7 @@ LABEL_14:
                    SelectAddFuncInfo,
                    (System_String_o *)StringLiteral_18706/*"detail"*/,
                    (Il2CppObject *)StringLiteral_1/*""*/,
-                   (const MethodInfo_3189A3C *)Method_BasicHelper_GetValue_string___);
+                   (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_string___);
   v18 = (BattleSkillSelectAddFuncConfComponent_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._5_get_skillId.methodPtr)(
                                                      skillInfo,
                                                      skillInfo->klass->vtable._5_get_skillId.method);
@@ -598,20 +598,20 @@ LABEL_14:
   BattleSkillSelectAddFuncConfComponent__InitDescription(this, EmbedLvDescription, v21);
   v22 = BasicHelper__GetValue_object_(
           SelectAddFuncInfo,
-          (System_String_o *)StringLiteral_17514/*"btnLayoutType"*/,
+          (System_String_o *)StringLiteral_17516/*"btnLayoutType"*/,
           (Il2CppObject *)StringLiteral_1/*""*/,
-          (const MethodInfo_3189A3C *)Method_BasicHelper_GetValue_string___);
+          (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_string___);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   System_Enum__TryParse_Int32Enum_(
     (System_String_o *)v22,
     &result,
-    (const MethodInfo_31A2C78 *)Method_System_Enum_TryParse_BattleSkillSelectAddFuncConfComponent_BtnLayoutType___);
+    (const MethodInfo_3176F38 *)Method_System_Enum_TryParse_BattleSkillSelectAddFuncConfComponent_BtnLayoutType___);
   v23 = BasicHelper__GetValue_object_(
           SelectAddFuncInfo,
-          (System_String_o *)StringLiteral_17513/*"btn"*/,
+          (System_String_o *)StringLiteral_17515/*"btn"*/,
           0,
-          (const MethodInfo_3189A3C *)Method_BasicHelper_GetValue_List_object____);
+          (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_List_object____);
   BattleSkillSelectAddFuncConfComponent__InitBtnInfo(
     this,
     (System_Collections_Generic_List_object__o *)v23,
@@ -641,12 +641,12 @@ System_String_o *BattleSkillSelectAddFuncConfComponent__get_closeBtnPath(
         BattleSkillSelectAddFuncConfComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D300D7 & 1) == 0 )
+  if ( (byte_4CF1E5D & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_17558/*"btn_close"*/);
-    byte_4D300D7 = 1;
+    sub_1C7BAE8(&StringLiteral_17560/*"btn_close"*/);
+    byte_4CF1E5D = 1;
   }
-  return (System_String_o *)StringLiteral_17558/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17560/*"btn_close"*/;
 }
 
 
@@ -658,17 +658,17 @@ void BattleSkillSelectAddFuncConfComponent__onClickCancel(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4D300D4 & 1) == 0 )
+  if ( (byte_4CF1E5A & 1) == 0 )
   {
-    sub_1C94098(&Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__);
-    byte_4D300D4 = 1;
+    sub_1C7BAE8(&Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__);
+    byte_4CF1E5A = 1;
   }
   if ( !this->fields.isPlayedSe )
   {
     v4 = Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__;
     if ( (*((_BYTE *)Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C940B0(Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C9407C(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C7BB00(Method_BattleSkillSelectAddFuncConfComponent_onClickCancel__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v4, v4[4]);
     OverwriteAssetSoundName__PlayCommonSe(v5, 10, 0, 0);
     this->fields.isPlayedSe = 1;
   }
@@ -688,7 +688,7 @@ void BattleSkillSelectAddFuncConfComponent__set_Data(
   System_String_o *v7; // x7
 
   this->fields._Data_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Data_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -712,7 +712,7 @@ void BattleSkillSelectAddFuncConfComponent__set_SkillInfo(
   System_String_o *v7; // x7
 
   this->fields._SkillInfo_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SkillInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -746,7 +746,7 @@ void BattleSkillSelectAddFuncConfComponent_SelectCallBack___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -757,11 +757,11 @@ void BattleSkillSelectAddFuncConfComponent_SelectCallBack___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) != 0 )
+  if ( (sub_1C7BBA8(method) & 1) != 0 )
   {
     if ( v12 == 2 )
     {
-      v13 = sub_1ACC82C;
+      v13 = sub_1AB5758;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -773,41 +773,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v14 = sub_1C94150(method);
-        v15 = sub_1C946E4(method);
+        v14 = sub_1C7BBA0(method);
+        v15 = sub_1C7C134(method);
         if ( (v14 & 1) != 0 )
         {
           if ( (v15 & 1) != 0 )
-            v13 = sub_1ACC948;
+            v13 = sub_1AB5874;
           else
-            v13 = sub_1ACC8FC;
+            v13 = sub_1AB5828;
         }
         else if ( (v15 & 1) != 0 )
         {
-          v13 = sub_1ACC870;
+          v13 = sub_1AB579C;
         }
         else
         {
-          v13 = sub_1ACC840;
+          v13 = sub_1AB576C;
         }
       }
       else
       {
-        v13 = sub_1ACC808;
+        v13 = sub_1AB5734;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v17, 0);
+      v17 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1ACC7B0;
+  this->fields.extra_arg = (intptr_t)sub_1AB56DC;
 }
 
 
@@ -823,15 +823,15 @@ System_IAsyncResult_o *BattleSkillSelectAddFuncConfComponent_SelectCallBack__Beg
   int32_t v12; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12 = index;
-  if ( (byte_4D300D9 & 1) == 0 )
+  if ( (byte_4CF1E5F & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    byte_4D300D9 = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    byte_4CF1E5F = 1;
   }
   v11[2] = 0;
   v11[0] = skillInfo;
   v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v11, callback, object);
 }
 
 
@@ -840,7 +840,7 @@ void BattleSkillSelectAddFuncConfComponent_SelectCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 
@@ -890,7 +890,7 @@ bool BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     if ( this->fields.index < 0 )
       ((void (__fastcall *)(struct BattleSkillSelectAddFuncConfComponent_o *, _QWORD, const MethodInfo *))_4__this->klass->vtable._12_Close.methodPtr)(
         _4__this,
@@ -911,7 +911,7 @@ bool BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33__MoveNext(
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     this->fields.__1__state = -1;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -936,11 +936,11 @@ void __noreturn BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_BattleSkillSelectAddFuncConfComponent__CoroutineOnSelected_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 

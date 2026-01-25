@@ -67,24 +67,24 @@ void NGUIText___cctor(const MethodInfo *method)
   int64_t v71; // x6
   System_String_o *v72; // x7
 
-  if ( (byte_4D30FBE & 1) == 0 )
+  if ( (byte_4CF2DF0 & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_float___ctor__);
-    sub_1C94098(&Method_BetterList_Color___ctor__);
-    sub_1C94098(&BetterList_float__TypeInfo);
-    sub_1C94098(&BetterList_Color__TypeInfo);
-    sub_1C94098(&char___TypeInfo);
-    sub_1C94098(&NGUIText_GlyphInfo_TypeInfo);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&float___TypeInfo);
-    sub_1C94098(&Field__PrivateImplementationDetails__07F953EB3DB1131FBDB6AA2748FD8EC70F792C02BF125F3577B8988B69AF80B0);
-    byte_4D30FBE = 1;
+    sub_1C7BAE8(&Method_BetterList_float___ctor__);
+    sub_1C7BAE8(&Method_BetterList_Color___ctor__);
+    sub_1C7BAE8(&BetterList_float__TypeInfo);
+    sub_1C7BAE8(&BetterList_Color__TypeInfo);
+    sub_1C7BAE8(&char___TypeInfo);
+    sub_1C7BAE8(&NGUIText_GlyphInfo_TypeInfo);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&float___TypeInfo);
+    sub_1C7BAE8(&Field__PrivateImplementationDetails__07F953EB3DB1131FBDB6AA2748FD8EC70F792C02BF125F3577B8988B69AF80B0);
+    byte_4CF2DF0 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(NGUIText_GlyphInfo_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(NGUIText_GlyphInfo_TypeInfo);
   System_Object___ctor(v1, 0);
   static_fields = NGUIText_TypeInfo->static_fields;
   static_fields->glyph = (struct NGUIText_GlyphInfo_o *)v1;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->glyph, (int32_t)v1, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->glyph, (int32_t)v1, v3, v4, v5, v6, v7, v8);
   v9 = NGUIText_TypeInfo;
   __asm { FMOV            V1.2S, #1.0 }
   v15 = NGUIText_TypeInfo->static_fields;
@@ -101,14 +101,14 @@ void NGUIText___cctor(const MethodInfo *method)
   v9->static_fields->gradientTop = _Q1;
   v9->static_fields->specificGradientBottom = _Q1;
   v9->static_fields->specificGradientTop = _Q1;
-  if ( !byte_4D2CAFB )
+  if ( !byte_4CEE931 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D2CAFB = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CEE931 = 1;
   }
   v18 = NGUIText_TypeInfo;
   NGUIText_TypeInfo->static_fields->outlineDistance = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
-  v18->static_fields->outlineEffect = (struct UnityEngine_Color_o)xmmword_CFFE30;
+  v18->static_fields->outlineEffect = (struct UnityEngine_Color_o)xmmword_CF6BA0;
   v19 = v18->static_fields;
   v19->encoding = 0;
   *(_QWORD *)&v19->spacingX = 0;
@@ -116,7 +116,7 @@ void NGUIText___cctor(const MethodInfo *method)
   *(_QWORD *)&v19->finalSize = 0;
   *(_QWORD *)&v19->finalLineHeight = 0;
   v19->useSymbols = 0;
-  v20 = sub_1C94140(char___TypeInfo, 1);
+  v20 = sub_1C7BB90(char___TypeInfo, 1);
   if ( !v20 )
     goto LABEL_10;
   v28 = (struct System_Char_array *)v20;
@@ -125,45 +125,45 @@ void NGUIText___cctor(const MethodInfo *method)
   *(_WORD *)(v20 + 32) = 58;
   v29 = NGUIText_TypeInfo->static_fields;
   v29->PARAM_SPLIT_CHAR = v28;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v29->PARAM_SPLIT_CHAR, (int32_t)v28, v22, v23, v24, v25, v26, v27);
-  v20 = sub_1C94140(char___TypeInfo, 1);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v29->PARAM_SPLIT_CHAR, (int32_t)v28, v22, v23, v24, v25, v26, v27);
+  v20 = sub_1C7BB90(char___TypeInfo, 1);
   if ( !v20 )
 LABEL_10:
-    sub_1C942F0(v20, v21);
+    sub_1C7BD40(v20, v21);
   v36 = (struct System_Char_array *)v20;
   if ( !*(_DWORD *)(v20 + 24) )
 LABEL_11:
-    sub_1C942F8(v20);
+    sub_1C7BD48(v20);
   *(_WORD *)(v20 + 32) = 61;
   v37 = NGUIText_TypeInfo->static_fields;
   v37->KEY_VAL_SPLIT_CHAR = v36;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v37->KEY_VAL_SPLIT_CHAR, (int32_t)v36, v30, v31, v32, v33, v34, v35);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v37->KEY_VAL_SPLIT_CHAR, (int32_t)v36, v30, v31, v32, v33, v34, v35);
   v38 = NGUIText_TypeInfo->static_fields;
   *(_QWORD *)&v38->mInvisible.fields.r = 0;
   *(_QWORD *)&v38->mInvisible.fields.b = 0;
-  v39 = (BetterList_Color__o *)sub_1C942E4(BetterList_Color__TypeInfo);
-  BetterList_Color____ctor(v39, (const MethodInfo_33D210C *)Method_BetterList_Color___ctor__);
+  v39 = (BetterList_Color__o *)sub_1C7BD34(BetterList_Color__TypeInfo);
+  BetterList_Color____ctor(v39, (const MethodInfo_33A4F20 *)Method_BetterList_Color___ctor__);
   v40 = NGUIText_TypeInfo->static_fields;
   v40->mColors = v39;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v40->mColors, (int32_t)v39, v41, v42, v43, v44, v45, v46);
-  v47 = (BetterList_Color__o *)sub_1C942E4(BetterList_Color__TypeInfo);
-  BetterList_Color____ctor(v47, (const MethodInfo_33D210C *)Method_BetterList_Color___ctor__);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v40->mColors, (int32_t)v39, v41, v42, v43, v44, v45, v46);
+  v47 = (BetterList_Color__o *)sub_1C7BD34(BetterList_Color__TypeInfo);
+  BetterList_Color____ctor(v47, (const MethodInfo_33A4F20 *)Method_BetterList_Color___ctor__);
   p_mGradientColors = (GrandQuestFolderBoardItem_o *)&NGUIText_TypeInfo->static_fields->mGradientColors;
   p_mGradientColors->klass = (GrandQuestFolderBoardItem_c *)v47;
-  sub_1C9403C(p_mGradientColors, (int32_t)v47, v49, v50, v51, v52, v53, v54);
+  sub_1C7BA8C(p_mGradientColors, (int32_t)v47, v49, v50, v51, v52, v53, v54);
   NGUIText_TypeInfo->static_fields->mAlpha = 1.0;
-  v55 = (BetterList_float__o *)sub_1C942E4(BetterList_float__TypeInfo);
-  BetterList_float____ctor(v55, (const MethodInfo_33D4650 *)Method_BetterList_float___ctor__);
+  v55 = (BetterList_float__o *)sub_1C7BD34(BetterList_float__TypeInfo);
+  BetterList_float____ctor(v55, (const MethodInfo_33A7464 *)Method_BetterList_float___ctor__);
   p_mSizes = (GrandQuestFolderBoardItem_o *)&NGUIText_TypeInfo->static_fields->mSizes;
   p_mSizes->klass = (GrandQuestFolderBoardItem_c *)v55;
-  sub_1C9403C(p_mSizes, (int32_t)v55, v57, v58, v59, v60, v61, v62);
-  v63 = (System_Array_o *)sub_1C94140(float___TypeInfo, 8);
+  sub_1C7BA8C(p_mSizes, (int32_t)v55, v57, v58, v59, v60, v61, v62);
+  v63 = (System_Array_o *)sub_1C7BB90(float___TypeInfo, 8);
   v64.fields.value = Field__PrivateImplementationDetails__07F953EB3DB1131FBDB6AA2748FD8EC70F792C02BF125F3577B8988B69AF80B0;
   v65 = v63;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v63, v64, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v63, v64, 0);
   v66 = NGUIText_TypeInfo->static_fields;
   v66->s_c1 = (struct UnityEngine_Color32_o)v65;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v66->s_c1, (int32_t)v65, v67, v68, v69, v70, v71, v72);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v66->s_c1, (int32_t)v65, v67, v68, v69, v70, v71, v72);
 }
 
 
@@ -232,10 +232,10 @@ void NGUIText__Align(BetterList_Vector3__o *verts, int32_t indexOffset, float pr
   double iptr; // [xsp+8h] [xbp-88h] BYREF
 
   v5 = indexOffset;
-  if ( (byte_4D30FAF & 1) == 0 )
+  if ( (byte_4CF2DE1 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FAF = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE1 = 1;
   }
   v7 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -430,10 +430,10 @@ LABEL_68:
     j_il2cpp_runtime_class_init_0(v7);
     v14 = (float)NGUIText_TypeInfo->static_fields->rectWidth - printedWidth;
   }
-  if ( !byte_4D266E8 )
+  if ( !byte_4CE8569 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D266E8 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE8569 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -466,10 +466,10 @@ LABEL_68:
     v53 = v18;
 LABEL_82:
   v54 = NGUIText_TypeInfo->static_fields->rectWidth;
-  if ( !byte_4D266E8 )
+  if ( !byte_4CE8569 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D266E8 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE8569 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -526,14 +526,14 @@ LABEL_96:
     {
       if ( (unsigned int)v5 >= LODWORD(v63->max_length) )
 LABEL_114:
-        sub_1C942F8(v7);
+        sub_1C7BD48(v7);
       v64 = (float *)((char *)v63 + 12 * v5++);
       v64[8] = v15 + v64[8];
       if ( v62 == v5 )
         return;
     }
 LABEL_115:
-    sub_1C942F0(v7, *(_QWORD *)&indexOffset);
+    sub_1C7BD40(v7, *(_QWORD *)&indexOffset);
   }
 }
 
@@ -592,15 +592,15 @@ void NGUIText__ApplyEffect(
   float32x2_t v55; // [xsp+20h] [xbp-A0h]
 
   v14 = (unsigned int)start;
-  if ( (byte_4D30FBD & 1) == 0 )
+  if ( (byte_4CF2DEF & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Vector3__Add__);
-    sub_1C94098(&Method_BetterList_Color32__Add__);
-    sub_1C94098(&Method_BetterList_Vector2__Add__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&NGUITools_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FBD = 1;
+    sub_1C7BAE8(&Method_BetterList_Vector3__Add__);
+    sub_1C7BAE8(&Method_BetterList_Color32__Add__);
+    sub_1C7BAE8(&Method_BetterList_Vector2__Add__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DEF = 1;
   }
   v18 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -652,7 +652,7 @@ void NGUIText__ApplyEffect(
       }
     }
   }
-  v29 = (UIFont_o *)sub_25C4758(0, inited, v26, v25, v8);
+  v29 = (UIFont_o *)sub_2597300(0, inited, v26, v25, v8);
   v51 = (int)v29;
   if ( (int)v14 < end )
   {
@@ -675,7 +675,7 @@ void NGUIText__ApplyEffect(
         BetterList_Vector3___Add(
           verts,
           *(UnityEngine_Vector3_o *)((char *)&buffer->obj.klass + v35),
-          (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         if ( !uvs )
           break;
         v37 = uvs->fields.buffer;
@@ -683,7 +683,7 @@ void NGUIText__ApplyEffect(
           break;
         if ( (unsigned int)v14 >= LODWORD(v37->max_length) )
           goto LABEL_51;
-        BetterList_Vector2___Add(uvs, v37->m_Items[v33], (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v37->m_Items[v33], (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           break;
         v38 = cols->fields.buffer;
@@ -692,7 +692,7 @@ void NGUIText__ApplyEffect(
         if ( (unsigned int)v14 >= LODWORD(v38->max_length) )
           goto LABEL_51;
         v39 = (UnityEngine_Color32_o)*((unsigned int *)&v38->obj.klass + v34);
-        BetterList_Color32___Add(cols, v39, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v39, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
         v40 = verts->fields.buffer;
         if ( !v40 )
           break;
@@ -751,10 +751,10 @@ void NGUIText__ApplyEffect(
               }
             }
           }
-          v29 = (UIFont_o *)sub_25C4758(0, v48, v47, v46, v9);
+          v29 = (UIFont_o *)sub_2597300(0, v48, v47, v46, v9);
           if ( (unsigned int)v14 >= LODWORD(v41->max_length) )
 LABEL_51:
-            sub_1C942F8(v29);
+            sub_1C7BD48(v29);
           *(int32_t *)((char *)&v41->m_Items[0].fields.rgba + (v32 >> 30)) = (int)v29;
         }
         else
@@ -771,7 +771,7 @@ LABEL_51:
       }
     }
 LABEL_50:
-    sub_1C942F0(v29, v24);
+    sub_1C7BD40(v29, v24);
   }
 }
 
@@ -805,13 +805,13 @@ int32_t NGUIText__CalculateOffsetToFit(System_String_o *text, const MethodInfo *
   float j; // s8
   float Item; // s0
 
-  if ( (byte_4D30FB5 & 1) == 0 )
+  if ( (byte_4CF2DE7 & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_float__Add__);
-    sub_1C94098(&Method_BetterList_float__Clear__);
-    sub_1C94098(&Method_BetterList_float__get_Item__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB5 = 1;
+    sub_1C7BAE8(&Method_BetterList_float__Add__);
+    sub_1C7BAE8(&Method_BetterList_float__Clear__);
+    sub_1C7BAE8(&Method_BetterList_float__get_Item__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE7 = 1;
   }
   if ( System_String__IsNullOrEmpty(text, 0) )
     return 0;
@@ -862,7 +862,7 @@ int32_t NGUIText__CalculateOffsetToFit(System_String_o *text, const MethodInfo *
       BetterList_float___Add(
         (BetterList_float__o *)mSizes,
         v15->finalSpacingX + (float)(v15->fontScale * (float)v13->fields.mAdvance),
-        (const MethodInfo_33D3FE8 *)Method_BetterList_float__Add__);
+        (const MethodInfo_33A6DFC *)Method_BetterList_float__Add__);
       sequence = v13->fields.sequence;
       if ( !sequence )
         goto LABEL_49;
@@ -883,7 +883,7 @@ int32_t NGUIText__CalculateOffsetToFit(System_String_o *text, const MethodInfo *
           BetterList_float___Add(
             (BetterList_float__o *)mSizes,
             0.0,
-            (const MethodInfo_33D3FE8 *)Method_BetterList_float__Add__);
+            (const MethodInfo_33A6DFC *)Method_BetterList_float__Add__);
           --v17;
         }
         while ( v17 );
@@ -918,7 +918,7 @@ LABEL_29:
         BetterList_float___Add(
           (BetterList_float__o *)mSizes,
           v23 + v24->finalSpacingX,
-          (const MethodInfo_33D3FE8 *)Method_BetterList_float__Add__);
+          (const MethodInfo_33A6DFC *)Method_BetterList_float__Add__);
       }
     }
     ++v9;
@@ -942,13 +942,13 @@ LABEL_29:
     Item = BetterList_float___get_Item(
              (BetterList_float__o *)mSizes,
              --size,
-             (const MethodInfo_33D3DE8 *)Method_BetterList_float__get_Item__);
+             (const MethodInfo_33A6BFC *)Method_BetterList_float__get_Item__);
     mSizes = NGUIText_TypeInfo;
   }
   if ( !mSizes )
 LABEL_49:
-    sub_1C942F0(mSizes, v6);
-  BetterList_float___Clear((BetterList_float__o *)mSizes, (const MethodInfo_33D3FD0 *)Method_BetterList_float__Clear__);
+    sub_1C7BD40(mSizes, v6);
+  BetterList_float___Clear((BetterList_float__o *)mSizes, (const MethodInfo_33A6DE4 *)Method_BetterList_float__Clear__);
   if ( j < 0.0 )
     ++size;
   return size;
@@ -1009,15 +1009,15 @@ UnityEngine_Vector2_o NGUIText__CalculatePrintedSize(System_String_o *text, cons
   double iptr; // [xsp+8h] [xbp-A8h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4D30FB4 & 1) == 0 )
+  if ( (byte_4CF2DE6 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB4 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE6 = 1;
   }
-  if ( !byte_4D25DF9 )
+  if ( !byte_4CE7D39 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D25DF9 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CE7D39 = 1;
   }
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -1043,7 +1043,7 @@ UnityEngine_Vector2_o NGUIText__CalculatePrintedSize(System_String_o *text, cons
   NGUIText__Prepare(text, v6);
   if ( !text )
 LABEL_102:
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
   stringLength = text->fields._stringLength;
   if ( stringLength < 1 )
   {
@@ -1103,10 +1103,10 @@ LABEL_33:
       v25 = NGUIText_TypeInfo->static_fields;
       finalSpacingX = v25->finalSpacingX;
       fontScale = v25->fontScale;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1187,10 +1187,10 @@ LABEL_41:
       v34 = NGUIText_TypeInfo;
     }
     v36 = v34->static_fields->finalSpacingX;
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1297,10 +1297,10 @@ System_String_o *NGUIText__EncodeAlpha(float a, const MethodInfo *method)
   int v9; // w8
   double iptr; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( !byte_4D266E8 )
+  if ( !byte_4CE8569 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D266E8 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE8569 = 1;
   }
   v3 = a * 255.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1353,10 +1353,10 @@ System_String_o *NGUIText__EncodeColor(UnityEngine_Color_o c, const MethodInfo *
   b = c.fields.b;
   g = c.fields.g;
   r = c.fields.r;
-  if ( (byte_4D30FAA & 1) == 0 )
+  if ( (byte_4CF2DDC & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FAA = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DDC = 1;
   }
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
@@ -1387,7 +1387,7 @@ System_String_o *NGUIText__EncodeColor32(UnityEngine_Color_o c, const MethodInfo
 }
 
 
-System_String_o *NGUIText__EncodeColor_50005436(System_String_o *text, UnityEngine_Color_o c, const MethodInfo *method)
+System_String_o *NGUIText__EncodeColor_49833668(System_String_o *text, UnityEngine_Color_o c, const MethodInfo *method)
 {
   float a; // s8
   float b; // s9
@@ -1436,24 +1436,24 @@ System_String_o *NGUIText__EncodeColor_50005436(System_String_o *text, UnityEngi
   b = c.fields.b;
   g = c.fields.g;
   r = c.fields.r;
-  if ( (byte_4D30FAB & 1) == 0 )
+  if ( (byte_4CF2DDD & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_16019/*"[c]["*/);
-    sub_1C94098(&StringLiteral_16112/*"]"*/);
-    sub_1C94098(&StringLiteral_15882/*"[-][/c]"*/);
-    byte_4D30FAB = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16021/*"[c]["*/);
+    sub_1C7BAE8(&StringLiteral_16114/*"]"*/);
+    sub_1C7BAE8(&StringLiteral_15883/*"[-][/c]"*/);
+    byte_4CF2DDD = 1;
   }
-  v8 = (System_String_o *)sub_1C94140(string___TypeInfo, 5);
+  v8 = (System_String_o *)sub_1C7BB90(string___TypeInfo, 5);
   if ( !v8 )
-    sub_1C942F0(0, v9);
+    sub_1C7BD40(0, v9);
   v16 = v8;
   if ( !LODWORD(v8[1].klass) )
     goto LABEL_12;
-  v17 = StringLiteral_16019/*"[c]["*/;
-  v8[1].monitor = (void *)StringLiteral_16019/*"[c]["*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v8[1].monitor, v17, v10, v11, v12, v13, v14, v15);
+  v17 = StringLiteral_16021/*"[c]["*/;
+  v8[1].monitor = (void *)StringLiteral_16021/*"[c]["*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v8[1].monitor, v17, v10, v11, v12, v13, v14, v15);
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   v46.fields.r = r;
@@ -1464,23 +1464,23 @@ System_String_o *NGUIText__EncodeColor_50005436(System_String_o *text, UnityEngi
   v8 = NGUIMath__DecimalToHex24(v18 >> 8, 0);
   if ( LODWORD(v16[1].klass) <= 1
     || (v16[1].fields = (System_String_Fields)v8,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16[1].fields, (int32_t)v8, v19, v20, v21, v22, v23, v24),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16[1].fields, (int32_t)v8, v19, v20, v21, v22, v23, v24),
         LODWORD(v16[1].klass) <= 2)
-    || (v31 = StringLiteral_16112/*"]"*/,
-        v16[2].klass = (System_String_c *)StringLiteral_16112/*"]"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16[2], v31, v25, v26, v27, v28, v29, v30),
+    || (v31 = StringLiteral_16114/*"]"*/,
+        v16[2].klass = (System_String_c *)StringLiteral_16114/*"]"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16[2], v31, v25, v26, v27, v28, v29, v30),
         LODWORD(v16[1].klass) <= 3)
     || (v16[2].monitor = text,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16[2].monitor, (int32_t)text, v32, v33, v34, v35, v36, v37),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16[2].monitor, (int32_t)text, v32, v33, v34, v35, v36, v37),
         LODWORD(v16[1].klass) <= 4) )
   {
 LABEL_12:
-    sub_1C942F8(v8);
+    sub_1C7BD48(v8);
   }
-  v44 = StringLiteral_15882/*"[-][/c]"*/;
-  v16[2].fields = (System_String_Fields)StringLiteral_15882/*"[-][/c]"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v16[2].fields, v44, v38, v39, v40, v41, v42, v43);
-  return System_String__Concat_64458276((System_String_array *)v16, 0);
+  v44 = StringLiteral_15883/*"[-][/c]"*/;
+  v16[2].fields = (System_String_Fields)StringLiteral_15883/*"[-][/c]"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16[2].fields, v44, v38, v39, v40, v41, v42, v43);
+  return System_String__Concat_64217444((System_String_array *)v16, 0);
 }
 
 
@@ -1490,10 +1490,10 @@ void NGUIText__EndLine(System_Text_StringBuilder_o **s, const MethodInfo *method
   int32_t v4; // w20
   uint16_t Chars; // w21
 
-  if ( (byte_4D30FB2 & 1) == 0 )
+  if ( (byte_4CF2DE4 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB2 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE4 = 1;
   }
   v3 = *s;
   if ( !*s )
@@ -1516,13 +1516,13 @@ void NGUIText__EndLine(System_Text_StringBuilder_o **s, const MethodInfo *method
         return;
       }
 LABEL_14:
-      sub_1C942F0(v3, method);
+      sub_1C7BD40(v3, method);
     }
   }
   v3 = *s;
   if ( !*s )
     goto LABEL_14;
-  System_Text_StringBuilder__Append_64504032(v3, 0xAu, 0);
+  System_Text_StringBuilder__Append_64263200(v3, 0xAu, 0);
 }
 
 
@@ -1546,11 +1546,11 @@ int32_t NGUIText__GetApproximateCharacterIndex(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = verts;
-  if ( (byte_4D30FB1 & 1) == 0 )
+  if ( (byte_4CF2DE3 & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_int__get_Item__);
-    verts = (BetterList_Vector3__o *)sub_1C94098(&Method_BetterList_Vector3__get_Item__);
-    byte_4D30FB1 = 1;
+    sub_1C7BAE8(&Method_BetterList_int__get_Item__);
+    verts = (BetterList_Vector3__o *)sub_1C7BAE8(&Method_BetterList_Vector3__get_Item__);
+    byte_4CF2DE3 = 1;
   }
   if ( !v8 )
     goto LABEL_16;
@@ -1558,9 +1558,9 @@ int32_t NGUIText__GetApproximateCharacterIndex(
   {
     v10 = 0;
     if ( indices )
-      return BetterList_int___get_Item(indices, v10, (const MethodInfo_33D2B30 *)Method_BetterList_int__get_Item__);
+      return BetterList_int___get_Item(indices, v10, (const MethodInfo_33A5944 *)Method_BetterList_int__get_Item__);
 LABEL_16:
-    sub_1C942F0(verts, indices);
+    sub_1C7BD40(verts, indices);
   }
   LODWORD(v4) = 2139095039;
   v9 = 0;
@@ -1568,7 +1568,7 @@ LABEL_16:
   v11 = v4;
   do
   {
-    Item = BetterList_Vector3___get_Item(v8, v9, (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__);
+    Item = BetterList_Vector3___get_Item(v8, v9, (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__);
     v12 = vabds_f32(y, Item.fields.y);
     if ( v12 > *(float *)&v4 )
       goto LABEL_11;
@@ -1578,7 +1578,7 @@ LABEL_16:
                          BetterList_Vector3___get_Item(
                            v8,
                            v9,
-                           (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__)));
+                           (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__)));
     if ( v12 < *(float *)&v4 )
     {
       v10 = v9;
@@ -1597,7 +1597,7 @@ LABEL_12:
   while ( v9 < v8->fields.size );
   if ( !indices )
     goto LABEL_16;
-  return BetterList_int___get_Item(indices, v10, (const MethodInfo_33D2B30 *)Method_BetterList_int__get_Item__);
+  return BetterList_int___get_Item(indices, v10, (const MethodInfo_33A5944 *)Method_BetterList_int__get_Item__);
 }
 
 
@@ -1608,18 +1608,18 @@ System_String_o *NGUIText__GetEndOfLineThatFits(System_String_o *text, const Met
   int32_t v4; // w1
 
   v2 = text;
-  if ( (byte_4D30FB6 & 1) == 0 )
+  if ( (byte_4CF2DE8 & 1) == 0 )
   {
-    text = (System_String_o *)sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB6 = 1;
+    text = (System_String_o *)sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE8 = 1;
   }
   if ( !v2 )
-    sub_1C942F0(text, method);
+    sub_1C7BD40(text, method);
   stringLength = v2->fields._stringLength;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   v4 = NGUIText__CalculateOffsetToFit(v2, method);
-  return System_String__Substring_64463684(v2, v4, stringLength - v4, 0);
+  return System_String__Substring_64222852(v2, v4, stringLength - v4, 0);
 }
 
 
@@ -1640,15 +1640,15 @@ int32_t NGUIText__GetExactCharacterIndex(
   y = pos.fields.y;
   x = pos.fields.x;
   v7 = verts;
-  if ( (byte_4D30FB0 & 1) == 0 )
+  if ( (byte_4CF2DE2 & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_int__get_Item__);
-    verts = (BetterList_Vector3__o *)sub_1C94098(&Method_BetterList_Vector3__get_Item__);
-    byte_4D30FB0 = 1;
+    sub_1C7BAE8(&Method_BetterList_int__get_Item__);
+    verts = (BetterList_Vector3__o *)sub_1C7BAE8(&Method_BetterList_Vector3__get_Item__);
+    byte_4CF2DE2 = 1;
   }
   if ( !indices )
 LABEL_14:
-    sub_1C942F0(verts, indices);
+    sub_1C7BD40(verts, indices);
   if ( indices->fields.size < 1 )
     return 0;
   v8 = 0;
@@ -1660,13 +1660,13 @@ LABEL_14:
                 BetterList_Vector3___get_Item(
                   v7,
                   i - 1,
-                  (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__))
-      && x <= COERCE_FLOAT(BetterList_Vector3___get_Item(v7, i, (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__)) )
+                  (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__))
+      && x <= COERCE_FLOAT(BetterList_Vector3___get_Item(v7, i, (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__)) )
     {
-      Item = BetterList_Vector3___get_Item(v7, i - 1, (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__);
+      Item = BetterList_Vector3___get_Item(v7, i - 1, (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__);
       if ( y >= Item.fields.y )
       {
-        v12 = BetterList_Vector3___get_Item(v7, i, (const MethodInfo_33D513C *)Method_BetterList_Vector3__get_Item__);
+        v12 = BetterList_Vector3___get_Item(v7, i, (const MethodInfo_33A7F50 *)Method_BetterList_Vector3__get_Item__);
         if ( y <= v12.fields.y )
           break;
       }
@@ -1674,7 +1674,7 @@ LABEL_14:
     if ( ++v8 >= indices->fields.size )
       return 0;
   }
-  return BetterList_int___get_Item(indices, v8, (const MethodInfo_33D2B30 *)Method_BetterList_int__get_Item__);
+  return BetterList_int___get_Item(indices, v8, (const MethodInfo_33A5944 *)Method_BetterList_int__get_Item__);
 }
 
 
@@ -1773,11 +1773,11 @@ NGUIText_GlyphInfo_o *NGUIText__GetGlyph(int32_t ch, int32_t prev, const MethodI
   unsigned __int64 v95; // [xsp+0h] [xbp-50h]
   double iptr; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4D30FA8 & 1) == 0 )
+  if ( (byte_4CF2DDA & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FA8 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DDA = 1;
   }
   v5 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -1806,7 +1806,7 @@ NGUIText_GlyphInfo_o *NGUIText__GetGlyph(int32_t ch, int32_t prev, const MethodI
     bmFont = UIFont__get_bmFont((UIFont_o *)bmFont, 0);
     if ( !bmFont )
       goto LABEL_107;
-    result = (NGUIText_GlyphInfo_o *)BMFont__GetGlyph_49957588((BMFont_o *)bmFont, v9, 0);
+    result = (NGUIText_GlyphInfo_o *)BMFont__GetGlyph_49785820((BMFont_o *)bmFont, v9, 0);
     if ( !result )
       return result;
     v12 = result;
@@ -2146,7 +2146,7 @@ LABEL_95:
         }
       }
 LABEL_107:
-      sub_1C942F0(bmFont, v7);
+      sub_1C7BD40(bmFont, v7);
     }
 LABEL_103:
     if ( !*((_DWORD *)bmFont + 56) )
@@ -2168,7 +2168,7 @@ float NGUIText__GetGlyphWidth(int32_t ch, int32_t prev, const MethodInfo *method
   NGUIText_c *v8; // x0
   int32_t v9; // w21
   BMFont_o *bmFont; // x0
-  BMGlyph_o *Glyph_49957588; // x0
+  BMGlyph_o *Glyph_49785820; // x0
   BMGlyph_o *v12; // x21
   NGUIText_c *v13; // x0
   int advance; // w23
@@ -2182,11 +2182,11 @@ float NGUIText__GetGlyphWidth(int32_t ch, int32_t prev, const MethodInfo *method
   struct NGUIText_StaticFields *static_fields; // x8
   NGUIText_c *v23; // x0
 
-  if ( (byte_4D30FA7 & 1) == 0 )
+  if ( (byte_4CF2DD9 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FA7 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DD9 = 1;
   }
   v5 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -2215,10 +2215,10 @@ float NGUIText__GetGlyphWidth(int32_t ch, int32_t prev, const MethodInfo *method
       bmFont = UIFont__get_bmFont((UIFont_o *)bmFont, 0);
       if ( bmFont )
       {
-        Glyph_49957588 = BMFont__GetGlyph_49957588(bmFont, v9, 0);
-        if ( !Glyph_49957588 )
+        Glyph_49785820 = BMFont__GetGlyph_49785820(bmFont, v9, 0);
+        if ( !Glyph_49785820 )
           return 0.0;
-        v12 = Glyph_49957588;
+        v12 = Glyph_49785820;
         v13 = NGUIText_TypeInfo;
         advance = v12->fields.advance;
         v15 = ch == 8201;
@@ -2236,7 +2236,7 @@ float NGUIText__GetGlyphWidth(int32_t ch, int32_t prev, const MethodInfo *method
       }
     }
 LABEL_36:
-    sub_1C942F0(bmFont, v7);
+    sub_1C7BD40(bmFont, v7);
   }
   v18 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -2308,11 +2308,11 @@ BMSymbol_o *NGUIText__GetSymbol(System_String_o *text, int32_t index, int32_t te
   NGUIText_c *v10; // x0
   UIFont_o *v11; // x0
 
-  if ( (byte_4D30FA6 & 1) == 0 )
+  if ( (byte_4CF2DD8 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FA6 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DD8 = 1;
   }
   v7 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -2333,7 +2333,7 @@ BMSymbol_o *NGUIText__GetSymbol(System_String_o *text, int32_t index, int32_t te
   }
   v11 = v10->static_fields->bitmapFont;
   if ( !v11 )
-    sub_1C942F0(0, v9);
+    sub_1C7BD40(0, v9);
   return UIFont__MatchSymbol(v11, text, index, textLength, 0);
 }
 
@@ -2366,7 +2366,7 @@ float NGUIText__ParseAlpha(System_String_o *text, int32_t index, const MethodInf
   float result; // s0
 
   if ( !text )
-    sub_1C942F0(0, index);
+    sub_1C7BD40(0, index);
   Chars = System_String__get_Chars(text, index + 1, 0);
   v6 = NGUIMath__HexToDecimal(Chars, 0);
   v7 = System_String__get_Chars(text, index + 2, 0);
@@ -2380,10 +2380,10 @@ float NGUIText__ParseAlpha(System_String_o *text, int32_t index, const MethodInf
 
 UnityEngine_Color_o NGUIText__ParseColor(System_String_o *text, int32_t offset, const MethodInfo *method)
 {
-  if ( (byte_4D30FA9 & 1) == 0 )
+  if ( (byte_4CF2DDB & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FA9 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DDB = 1;
   }
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
@@ -2412,7 +2412,7 @@ UnityEngine_Color_o NGUIText__ParseColor24(System_String_o *text, int32_t offset
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !text )
-    sub_1C942F0(0, offset);
+    sub_1C7BD40(0, offset);
   Chars = System_String__get_Chars(text, offset, 0);
   v6 = NGUIMath__HexToDecimal(Chars, 0);
   v7 = System_String__get_Chars(text, offset + 1, 0);
@@ -2462,7 +2462,7 @@ UnityEngine_Color_o NGUIText__ParseColor32(System_String_o *text, int32_t offset
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !text )
-    sub_1C942F0(0, offset);
+    sub_1C7BD40(0, offset);
   Chars = System_String__get_Chars(text, offset, 0);
   v6 = NGUIMath__HexToDecimal(Chars, 0);
   v7 = System_String__get_Chars(text, offset + 1, 0);
@@ -2505,10 +2505,10 @@ bool NGUIText__ParseSymbol(System_String_o *text, int32_t *index, const MethodIn
   bool bold; // [xsp+88h] [xbp-28h] BYREF
   int32_t sub; // [xsp+8Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D30FAC & 1) == 0 )
+  if ( (byte_4CF2DDE & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FAC = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DDE = 1;
   }
   bold = 0;
   italic = 0;
@@ -2519,11 +2519,11 @@ bool NGUIText__ParseSymbol(System_String_o *text, int32_t *index, const MethodIn
   v9 = 0;
   isDiagonalLine = 0;
   sub = 1;
-  *(_OWORD *)&v7.fields._Slope_k__BackingField = xmmword_CFF110;
+  *(_OWORD *)&v7.fields._Slope_k__BackingField = xmmword_CF5E70;
   *(_QWORD *)&v7.fields._LineEdge_k__BackingField = 0;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-  return NGUIText__ParseSymbol_50006380(
+  return NGUIText__ParseSymbol_49834612(
            text,
            index,
            0,
@@ -2543,7 +2543,7 @@ bool NGUIText__ParseSymbol(System_String_o *text, int32_t *index, const MethodIn
 }
 
 
-bool NGUIText__ParseSymbol_50006380(
+bool NGUIText__ParseSymbol_49834612(
         System_String_o *text,
         int32_t *index,
         BetterList_Color__o *colors,
@@ -2687,42 +2687,42 @@ bool NGUIText__ParseSymbol_50006380(
   UnityEngine_Color_o v146; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v23 = text;
-  if ( (byte_4D30FAD & 1) == 0 )
+  if ( (byte_4CF2DDF & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Color__Add__);
-    sub_1C94098(&Method_BetterList_Color__RemoveAt__);
-    sub_1C94098(&Method_BetterList_Color__get_Item__);
-    sub_1C94098(&System_Globalization_CultureInfo_TypeInfo);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&StringLiteral_25116/*"x"*/);
-    sub_1C94098(&StringLiteral_15892/*"[/sub]"*/);
-    sub_1C94098(&StringLiteral_15895/*"[/url]"*/);
-    sub_1C94098(&StringLiteral_20092/*"h"*/);
-    sub_1C94098(&StringLiteral_15891/*"[/s]"*/);
-    sub_1C94098(&StringLiteral_15885/*"[/b]"*/);
-    sub_1C94098(&StringLiteral_16052/*"[o]"*/);
-    sub_1C94098(&StringLiteral_15893/*"[/sup]"*/);
-    sub_1C94098(&StringLiteral_19884/*"g"*/);
-    sub_1C94098(&StringLiteral_16058/*"[sub]"*/);
-    sub_1C94098(&StringLiteral_15886/*"[/c]"*/);
-    sub_1C94098(&StringLiteral_18809/*"e"*/);
-    sub_1C94098(&StringLiteral_15894/*"[/u]"*/);
-    sub_1C94098(&StringLiteral_16059/*"[sup]"*/);
-    sub_1C94098(&StringLiteral_15888/*"[/g]"*/);
-    sub_1C94098(&StringLiteral_15879/*"[--]"*/);
-    sub_1C94098(&StringLiteral_16040/*"[i]"*/);
-    sub_1C94098(&StringLiteral_15887/*"[/dl]"*/);
-    sub_1C94098(&StringLiteral_16039/*"[g]"*/);
-    sub_1C94098(&StringLiteral_15890/*"[/o]"*/);
-    sub_1C94098(&StringLiteral_16018/*"[c]"*/);
-    sub_1C94098(&StringLiteral_25218/*"y"*/);
-    sub_1C94098(&StringLiteral_16056/*"[s]"*/);
-    sub_1C94098(&StringLiteral_16017/*"[b]"*/);
-    sub_1C94098(&StringLiteral_15889/*"[/i]"*/);
-    sub_1C94098(&StringLiteral_16060/*"[u]"*/);
-    sub_1C94098(&StringLiteral_24969/*"w"*/);
-    text = (System_String_o *)sub_1C94098(&StringLiteral_16112/*"]"*/);
-    byte_4D30FAD = 1;
+    sub_1C7BAE8(&Method_BetterList_Color__Add__);
+    sub_1C7BAE8(&Method_BetterList_Color__RemoveAt__);
+    sub_1C7BAE8(&Method_BetterList_Color__get_Item__);
+    sub_1C7BAE8(&System_Globalization_CultureInfo_TypeInfo);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_25119/*"x"*/);
+    sub_1C7BAE8(&StringLiteral_15893/*"[/sub]"*/);
+    sub_1C7BAE8(&StringLiteral_15896/*"[/url]"*/);
+    sub_1C7BAE8(&StringLiteral_20087/*"h"*/);
+    sub_1C7BAE8(&StringLiteral_15892/*"[/s]"*/);
+    sub_1C7BAE8(&StringLiteral_15886/*"[/b]"*/);
+    sub_1C7BAE8(&StringLiteral_16054/*"[o]"*/);
+    sub_1C7BAE8(&StringLiteral_15894/*"[/sup]"*/);
+    sub_1C7BAE8(&StringLiteral_19879/*"g"*/);
+    sub_1C7BAE8(&StringLiteral_16060/*"[sub]"*/);
+    sub_1C7BAE8(&StringLiteral_15887/*"[/c]"*/);
+    sub_1C7BAE8(&StringLiteral_18810/*"e"*/);
+    sub_1C7BAE8(&StringLiteral_15895/*"[/u]"*/);
+    sub_1C7BAE8(&StringLiteral_16061/*"[sup]"*/);
+    sub_1C7BAE8(&StringLiteral_15889/*"[/g]"*/);
+    sub_1C7BAE8(&StringLiteral_15880/*"[--]"*/);
+    sub_1C7BAE8(&StringLiteral_16042/*"[i]"*/);
+    sub_1C7BAE8(&StringLiteral_15888/*"[/dl]"*/);
+    sub_1C7BAE8(&StringLiteral_16041/*"[g]"*/);
+    sub_1C7BAE8(&StringLiteral_15891/*"[/o]"*/);
+    sub_1C7BAE8(&StringLiteral_16020/*"[c]"*/);
+    sub_1C7BAE8(&StringLiteral_25221/*"y"*/);
+    sub_1C7BAE8(&StringLiteral_16058/*"[s]"*/);
+    sub_1C7BAE8(&StringLiteral_16019/*"[b]"*/);
+    sub_1C7BAE8(&StringLiteral_15890/*"[/i]"*/);
+    sub_1C7BAE8(&StringLiteral_16062/*"[u]"*/);
+    sub_1C7BAE8(&StringLiteral_24970/*"w"*/);
+    text = (System_String_o *)sub_1C7BAE8(&StringLiteral_16114/*"]"*/);
+    byte_4CF2DDF = 1;
   }
   result = 0.0;
   if ( !v23 )
@@ -2738,27 +2738,27 @@ bool NGUIText__ParseSymbol_50006380(
       {
         size = colors->fields.size;
         if ( size >= 2 )
-          BetterList_Color___RemoveAt(colors, size - 1, (const MethodInfo_33D1E78 *)Method_BetterList_Color__RemoveAt__);
+          BetterList_Color___RemoveAt(colors, size - 1, (const MethodInfo_33A4C8C *)Method_BetterList_Color__RemoveAt__);
       }
       v26 = *index + 3;
       goto LABEL_139;
     }
-    v27 = System_String__Substring_64463684(v23, *index, 3, 0);
-    v28 = PrivateImplementationDetails___ComputeStringHash_50248220(v27, 0);
+    v27 = System_String__Substring_64222852(v23, *index, 3, 0);
+    v28 = PrivateImplementationDetails___ComputeStringHash_50076452(v27, 0);
     if ( v28 > 0x7ACE3056 )
     {
       if ( v28 > 0xB6CA119C )
       {
         if ( v28 == -1162838014 )
         {
-          if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16056/*"[s]"*/, 0) )
+          if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16058/*"[s]"*/, 0) )
           {
             v30 = 1;
             *strike = 1;
             goto LABEL_37;
           }
         }
-        else if ( v28 == -1159586610 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16039/*"[g]"*/, 0) )
+        else if ( v28 == -1159586610 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16041/*"[g]"*/, 0) )
         {
           v30 = 1;
           *ignoreColor = 1;
@@ -2768,14 +2768,14 @@ bool NGUIText__ParseSymbol_50006380(
       }
       else if ( v28 == -1228271204 )
       {
-        if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16040/*"[i]"*/, 0) )
+        if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16042/*"[i]"*/, 0) )
         {
           v30 = 1;
           *italic = 1;
           goto LABEL_37;
         }
       }
-      else if ( v28 == 2061024690 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16018/*"[c]"*/, 0) )
+      else if ( v28 == 2061024690 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16020/*"[c]"*/, 0) )
       {
         v29 = ignoreColor;
         goto LABEL_23;
@@ -2783,7 +2783,7 @@ bool NGUIText__ParseSymbol_50006380(
     }
     else if ( v28 == 1992236928 )
     {
-      if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16060/*"[u]"*/, 0) )
+      if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16062/*"[u]"*/, 0) )
       {
         v30 = 1;
         *underline = 1;
@@ -2792,14 +2792,14 @@ bool NGUIText__ParseSymbol_50006380(
     }
     else if ( v28 == 1993767119 )
     {
-      if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16017/*"[b]"*/, 0) )
+      if ( System_String__op_Equality(v27, (System_String_o *)StringLiteral_16019/*"[b]"*/, 0) )
       {
         v30 = 1;
         *bold = 1;
         goto LABEL_37;
       }
     }
-    else if ( v28 == 2060333142 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16052/*"[o]"*/, 0) )
+    else if ( v28 == 2060333142 && System_String__op_Equality(v27, (System_String_o *)StringLiteral_16054/*"[o]"*/, 0) )
     {
       v29 = isOutline;
 LABEL_23:
@@ -2819,15 +2819,15 @@ LABEL_38:
   {
     if ( System_String__get_Chars(v23, *index + 3, 0) != 93 )
       goto LABEL_141;
-    v53 = System_String__Substring_64463684(v23, *index, 4, 0);
-    v54 = PrivateImplementationDetails___ComputeStringHash_50248220(v53, 0);
+    v53 = System_String__Substring_64222852(v23, *index, 4, 0);
+    v54 = PrivateImplementationDetails___ComputeStringHash_50076452(v53, 0);
     if ( v54 > 0x258A0629 )
     {
       if ( v54 > 0x615D44FF )
       {
         if ( v54 == -100292593 )
         {
-          if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15879/*"[--]"*/, 0) )
+          if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15880/*"[--]"*/, 0) )
           {
             *index += 4;
             if ( gradientColors )
@@ -2835,16 +2835,16 @@ LABEL_38:
               BetterList_Color___RemoveAt(
                 gradientColors,
                 gradientColors->fields.size - 1,
-                (const MethodInfo_33D1E78 *)Method_BetterList_Color__RemoveAt__);
+                (const MethodInfo_33A4C8C *)Method_BetterList_Color__RemoveAt__);
               BetterList_Color___RemoveAt(
                 gradientColors,
                 gradientColors->fields.size - 1,
-                (const MethodInfo_33D1E78 *)Method_BetterList_Color__RemoveAt__);
+                (const MethodInfo_33A4C8C *)Method_BetterList_Color__RemoveAt__);
             }
             return 1;
           }
         }
-        else if ( v54 == 1636753867 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15891/*"[/s]"*/, 0) )
+        else if ( v54 == 1636753867 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15892/*"[/s]"*/, 0) )
         {
           *strike = 0;
           goto LABEL_138;
@@ -2852,13 +2852,13 @@ LABEL_38:
       }
       else if ( v54 == 1632222535 )
       {
-        if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15890/*"[/o]"*/, 0) )
+        if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15891/*"[/o]"*/, 0) )
         {
           v55 = isOutline;
           goto LABEL_119;
         }
       }
-      else if ( v54 == 1633502463 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15888/*"[/g]"*/, 0) )
+      else if ( v54 == 1633502463 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15889/*"[/g]"*/, 0) )
       {
         *ignoreColor = 0;
         v55 = spGradient;
@@ -2873,13 +2873,13 @@ LABEL_119:
       {
         if ( v54 == 627683966 )
         {
-          if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15885/*"[/b]"*/, 0) )
+          if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15886/*"[/b]"*/, 0) )
           {
             *bold = 0;
             goto LABEL_138;
           }
         }
-        else if ( v54 == 629802537 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15894/*"[/u]"*/, 0) )
+        else if ( v54 == 629802537 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15895/*"[/u]"*/, 0) )
         {
           *underline = 0;
           goto LABEL_138;
@@ -2888,7 +2888,7 @@ LABEL_119:
       }
       if ( v54 != 560426395 )
       {
-        if ( v54 == 626551133 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15889/*"[/i]"*/, 0) )
+        if ( v54 == 626551133 && System_String__op_Equality(v53, (System_String_o *)StringLiteral_15890/*"[/i]"*/, 0) )
         {
           *italic = 0;
 LABEL_138:
@@ -2897,7 +2897,7 @@ LABEL_138:
         }
         goto LABEL_125;
       }
-      if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15886/*"[/c]"*/, 0) )
+      if ( System_String__op_Equality(v53, (System_String_o *)StringLiteral_15887/*"[/c]"*/, 0) )
       {
         v55 = ignoreColor;
         goto LABEL_119;
@@ -2934,26 +2934,26 @@ LABEL_141:
       return 0;
     if ( System_String__get_Chars(v23, *index + 4, 0) == 93 )
     {
-      v62 = System_String__Substring_64463684(v23, *index, 5, 0);
-      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_16058/*"[sub]"*/, 0) )
+      v62 = System_String__Substring_64222852(v23, *index, 5, 0);
+      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_16060/*"[sub]"*/, 0) )
       {
         v30 = 1;
         *sub = 1;
         v31 = *index + 5;
         goto LABEL_38;
       }
-      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_16059/*"[sup]"*/, 0) )
+      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_16061/*"[sup]"*/, 0) )
       {
         *sub = 2;
 LABEL_149:
         v26 = *index + 5;
         goto LABEL_139;
       }
-      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_15887/*"[/dl]"*/, 0) )
+      if ( System_String__op_Equality(v62, (System_String_o *)StringLiteral_15888/*"[/dl]"*/, 0) )
       {
         *isDiagonalLine = 0;
         *(_QWORD *)&diagonalLineInfo->fields._LineEdge_k__BackingField = 0;
-        *(_OWORD *)&diagonalLineInfo->fields._Slope_k__BackingField = xmmword_CFF110;
+        *(_OWORD *)&diagonalLineInfo->fields._Slope_k__BackingField = xmmword_CF5E70;
         goto LABEL_149;
       }
     }
@@ -2961,16 +2961,16 @@ LABEL_149:
       return 0;
     if ( System_String__get_Chars(v23, *index + 5, 0) == 93 )
     {
-      v63 = System_String__Substring_64463684(v23, *index, 6, 0);
-      if ( System_String__op_Equality(v63, (System_String_o *)StringLiteral_15892/*"[/sub]"*/, 0)
-        || System_String__op_Equality(v63, (System_String_o *)StringLiteral_15893/*"[/sup]"*/, 0) )
+      v63 = System_String__Substring_64222852(v23, *index, 6, 0);
+      if ( System_String__op_Equality(v63, (System_String_o *)StringLiteral_15893/*"[/sub]"*/, 0)
+        || System_String__op_Equality(v63, (System_String_o *)StringLiteral_15894/*"[/sup]"*/, 0) )
       {
         *sub = 0;
 LABEL_155:
         v26 = *index + 6;
         goto LABEL_139;
       }
-      if ( System_String__op_Equality(v63, (System_String_o *)StringLiteral_15895/*"[/url]"*/, 0) )
+      if ( System_String__op_Equality(v63, (System_String_o *)StringLiteral_15896/*"[/url]"*/, 0) )
         goto LABEL_155;
     }
     if ( System_String__get_Chars(v23, *index + 1, 0) != 117
@@ -2992,7 +2992,7 @@ LABEL_155:
         b = v134.fields.b;
         v71 = NGUIMath__ColorToInt(v134, 0);
         v72 = NGUIMath__DecimalToHex24(v71 >> 8, 0);
-        text = System_String__Substring_64463684(v23, *index + 1, 6, 0);
+        text = System_String__Substring_64222852(v23, *index + 1, 6, 0);
         if ( text )
         {
           v73 = System_String__ToUpper(text, 0);
@@ -3003,7 +3003,7 @@ LABEL_155:
               v135 = BetterList_Color___get_Item(
                        colors,
                        colors->fields.size - 1,
-                       (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                       (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               a = v135.fields.a;
               if ( v135.fields.a != 1.0 && premultiply )
               {
@@ -3026,7 +3026,7 @@ LABEL_155:
               v136.fields.g = g;
               v136.fields.b = b;
               v136.fields.a = a;
-              BetterList_Color___Add(colors, v136, (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+              BetterList_Color___Add(colors, v136, (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
             }
             v26 = *index + 8;
             goto LABEL_139;
@@ -3051,7 +3051,7 @@ LABEL_155:
           itema = v137.fields.a;
           v81 = NGUIMath__ColorToInt(v137, 0);
           v82 = NGUIMath__DecimalToHex32(v81, 0);
-          text = System_String__Substring_64463684(v23, *index + 1, 8, 0);
+          text = System_String__Substring_64222852(v23, *index + 1, 8, 0);
           if ( text )
           {
             v83 = System_String__ToUpper(text, 0);
@@ -3084,7 +3084,7 @@ LABEL_155:
                 v138.fields.r = v130;
                 v138.fields.g = v126;
                 v138.fields.a = itema;
-                BetterList_Color___Add(colors, v138, (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+                BetterList_Color___Add(colors, v138, (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
               }
               v26 = *index + 10;
               goto LABEL_139;
@@ -3109,7 +3109,7 @@ LABEL_155:
             v94 = v139.fields.a;
             v95 = NGUIMath__ColorToInt(v139, 0);
             v96 = NGUIMath__DecimalToHex24(v95 >> 8, 0);
-            text = System_String__Substring_64463684(v23, *index + 1, 6, 0);
+            text = System_String__Substring_64222852(v23, *index + 1, 6, 0);
             if ( text )
             {
               v97 = System_String__ToUpper(text, 0);
@@ -3125,7 +3125,7 @@ LABEL_155:
               v103 = v140.fields.a;
               v104 = NGUIMath__ColorToInt(v140, 0);
               v105 = NGUIMath__DecimalToHex24(v104 >> 8, 0);
-              text = System_String__Substring_64463684(v23, *index + 8, 6, 0);
+              text = System_String__Substring_64222852(v23, *index + 8, 6, 0);
               if ( text )
               {
                 v106 = System_String__ToUpper(text, 0);
@@ -3140,7 +3140,7 @@ LABEL_155:
                     BetterList_Color___Add(
                       gradientColors,
                       v141,
-                      (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+                      (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
                     v142.fields.r = v100;
                     v142.fields.g = v101;
                     v142.fields.b = v102;
@@ -3148,7 +3148,7 @@ LABEL_155:
                     BetterList_Color___Add(
                       gradientColors,
                       v142,
-                      (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+                      (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
                   }
                   v26 = *index + 15;
                   goto LABEL_139;
@@ -3171,7 +3171,7 @@ LABEL_155:
             v112 = v143.fields.a;
             v113 = NGUIMath__ColorToInt(v143, 0);
             v114 = NGUIMath__DecimalToHex32(v113, 0);
-            text = System_String__Substring_64463684(v23, *index + 1, 8, 0);
+            text = System_String__Substring_64222852(v23, *index + 1, 8, 0);
             if ( text )
             {
               v115 = System_String__ToUpper(text, 0);
@@ -3187,7 +3187,7 @@ LABEL_155:
               v121 = v144.fields.a;
               v122 = NGUIMath__ColorToInt(v144, 0);
               v123 = NGUIMath__DecimalToHex32(v122, 0);
-              text = System_String__Substring_64463684(v23, *index + 10, 8, 0);
+              text = System_String__Substring_64222852(v23, *index + 10, 8, 0);
               if ( text )
               {
                 v124 = System_String__ToUpper(text, 0);
@@ -3202,7 +3202,7 @@ LABEL_155:
                     BetterList_Color___Add(
                       gradientColors,
                       v145,
-                      (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+                      (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
                     v146.fields.r = v118;
                     v146.fields.g = v119;
                     v146.fields.b = v120;
@@ -3210,7 +3210,7 @@ LABEL_155:
                     BetterList_Color___Add(
                       gradientColors,
                       v146,
-                      (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+                      (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
                   }
                   v26 = *index + 19;
                   goto LABEL_139;
@@ -3223,7 +3223,7 @@ LABEL_155:
       }
       goto LABEL_222;
     }
-    v64 = System_String__IndexOf_64474784(v23, 0x5Du, *index + 4, 0);
+    v64 = System_String__IndexOf_64233952(v23, 0x5Du, *index + 4, 0);
     if ( v64 == -1 )
       v26 = v23->fields._stringLength;
     else
@@ -3232,7 +3232,7 @@ LABEL_139:
     *index = v26;
     return 1;
   }
-  v32 = System_String__IndexOf_64476152(v23, (System_String_o *)StringLiteral_16112/*"]"*/, *index + 3, 0);
+  v32 = System_String__IndexOf_64235320(v23, (System_String_o *)StringLiteral_16114/*"]"*/, *index + 3, 0);
   if ( v32 == -1 )
     return 0;
   v33 = v32;
@@ -3245,21 +3245,21 @@ LABEL_139:
   v38 = 0.0;
   if ( v32 <= v34 )
     goto LABEL_113;
-  v39 = System_String__Substring_64463684(v23, v34, v32 - *index - 3, 0);
+  v39 = System_String__Substring_64222852(v23, v34, v32 - *index - 3, 0);
   if ( System_String__IsNullOrEmpty(v39, 0) )
     goto LABEL_113;
   text = (System_String_o *)NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   if ( !v39
-    || (text = (System_String_o *)System_String__Split_64466952(
+    || (text = (System_String_o *)System_String__Split_64226120(
                                     v39,
                                     NGUIText_TypeInfo->static_fields->PARAM_SPLIT_CHAR,
                                     1,
                                     0)) == 0 )
   {
 LABEL_222:
-    sub_1C942F0(text, index);
+    sub_1C7BD40(text, index);
   }
   klass = (int)text[1].klass;
   v41 = text;
@@ -3282,14 +3282,14 @@ LABEL_222:
     {
       if ( v42 >= klass )
 LABEL_223:
-        sub_1C942F8(text);
+        sub_1C7BD48(text);
       text = (System_String_o *)NGUIText_TypeInfo;
       v47 = (System_String_o *)*((_QWORD *)&v41[1].monitor + (int)v42);
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
       if ( !v47 )
         goto LABEL_222;
-      text = (System_String_o *)System_String__Split_64466836(
+      text = (System_String_o *)System_String__Split_64226004(
                                   v47,
                                   NGUIText_TypeInfo->static_fields->KEY_VAL_SPLIT_CHAR,
                                   0);
@@ -3312,10 +3312,10 @@ LABEL_223:
         if ( !System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo);
         InvariantCulture = (System_IFormatProvider_o *)System_Globalization_CultureInfo__get_InvariantCulture(0);
-        text = (System_String_o *)System_Single__TryParse_66013276(v50, 167, InvariantCulture, &result, 0);
+        text = (System_String_o *)System_Single__TryParse_65772452(v50, 167, InvariantCulture, &result, 0);
         if ( ((unsigned __int8)text & 1) != 0 )
         {
-          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_25116/*"x"*/, 0);
+          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_25119/*"x"*/, 0);
           if ( ((unsigned __int8)text & 1) != 0 )
           {
             v52 = (v43 & 1) == 0;
@@ -3324,7 +3324,7 @@ LABEL_223:
               v36 = result;
             goto LABEL_91;
           }
-          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_25218/*"y"*/, 0);
+          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_25221/*"y"*/, 0);
           if ( ((unsigned __int8)text & 1) != 0 )
           {
             v52 = (v44 & 1) == 0;
@@ -3333,7 +3333,7 @@ LABEL_223:
               v35 = result;
             goto LABEL_91;
           }
-          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_24969/*"w"*/, 0);
+          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_24970/*"w"*/, 0);
           if ( ((unsigned __int8)text & 1) != 0 )
           {
             if ( (item & 1) == 0 )
@@ -3341,7 +3341,7 @@ LABEL_223:
             item = 1;
             goto LABEL_91;
           }
-          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_20092/*"h"*/, 0);
+          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_20087/*"h"*/, 0);
           if ( ((unsigned __int8)text & 1) != 0 )
           {
             if ( (v129 & 1) == 0 )
@@ -3349,10 +3349,10 @@ LABEL_223:
             v129 = 1;
             goto LABEL_91;
           }
-          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_18809/*"e"*/, 0);
+          text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_18810/*"e"*/, 0);
           if ( ((unsigned __int8)text & 1) == 0 )
           {
-            text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_19884/*"g"*/, 0);
+            text = (System_String_o *)System_String__op_Equality(v49, (System_String_o *)StringLiteral_19879/*"g"*/, 0);
             if ( ((unsigned __int8)text & 1) != 0 )
             {
               if ( (v125 & 1) == 0 )
@@ -3406,11 +3406,11 @@ void NGUIText__Prepare(System_String_o *text, const MethodInfo *method)
   struct NGUIText_StaticFields *static_fields; // x8
   UnityEngine_Font_o *v8; // x0
 
-  if ( (byte_4D30FA5 & 1) == 0 )
+  if ( (byte_4CF2DD7 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FA5 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DD7 = 1;
   }
   v3 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -3432,7 +3432,7 @@ void NGUIText__Prepare(System_String_o *text, const MethodInfo *method)
     static_fields = v6->static_fields;
     v8 = static_fields->dynamicFont;
     if ( !v8 )
-      sub_1C942F0(0, v5);
+      sub_1C7BD40(0, v5);
     UnityEngine_Font__RequestCharactersInTexture(v8, text, static_fields->finalSize, static_fields->fontStyle, 0);
   }
 }
@@ -3878,17 +3878,17 @@ void NGUIText__Print(
   UnityEngine_Color_o v443; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
   UnityEngine_Color_o v444; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
-  if ( (byte_4D30FB9 & 1) == 0 )
+  if ( (byte_4CF2DEB & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Vector3__Add__);
-    sub_1C94098(&Method_BetterList_Color32__Add__);
-    sub_1C94098(&Method_BetterList_Color__Add__);
-    sub_1C94098(&Method_BetterList_Vector2__Add__);
-    sub_1C94098(&Method_BetterList_Color__Clear__);
-    sub_1C94098(&Method_BetterList_Color__get_Item__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30FB9 = 1;
+    sub_1C7BAE8(&Method_BetterList_Vector3__Add__);
+    sub_1C7BAE8(&Method_BetterList_Color32__Add__);
+    sub_1C7BAE8(&Method_BetterList_Color__Add__);
+    sub_1C7BAE8(&Method_BetterList_Vector2__Add__);
+    sub_1C7BAE8(&Method_BetterList_Color__Clear__);
+    sub_1C7BAE8(&Method_BetterList_Color__get_Item__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2DEB = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0);
   if ( (IsNullOrEmpty & 1) == 0 )
@@ -3909,7 +3909,7 @@ void NGUIText__Print(
     BetterList_Color___Add(
       (BetterList_Color__o *)IsNullOrEmpty,
       v439,
-      (const MethodInfo_33D183C *)Method_BetterList_Color__Add__);
+      (const MethodInfo_33A4650 *)Method_BetterList_Color__Add__);
     static_fields = NGUIText_TypeInfo->static_fields;
     *(_QWORD *)&v18 = *(_QWORD *)&static_fields->tint.fields.r;
     *(_QWORD *)&v19 = *(_QWORD *)&static_fields->tint.fields.b;
@@ -3923,7 +3923,7 @@ void NGUIText__Print(
     static_fields->mAlpha = 1.0;
     item.n64_u64[0] = *(unsigned __int64 *)&v19;
     v383.n64_u64[0] = *(unsigned __int64 *)&v18;
-    IsNullOrEmpty = sub_25C4758(0, v18, v25, v19, v26);
+    IsNullOrEmpty = sub_2597300(0, v18, v25, v19, v26);
     if ( !text )
       goto LABEL_416;
     v27 = IsNullOrEmpty;
@@ -3939,7 +3939,7 @@ void NGUIText__Print(
     isOutline = 0;
     spGradient = 0;
     v391 = 0;
-    *(_OWORD *)&diagonalLineInfo.fields._Slope_k__BackingField = xmmword_CFF110;
+    *(_OWORD *)&diagonalLineInfo.fields._Slope_k__BackingField = xmmword_CF5E70;
     *(_QWORD *)&diagonalLineInfo.fields._LineEdge_k__BackingField = 0;
     bitmapFont = (UnityEngine_Object_o *)v28->bitmapFont;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4046,7 +4046,7 @@ void NGUIText__Print(
             j_il2cpp_runtime_class_init_0(v42);
             v43 = NGUIText_TypeInfo->static_fields;
           }
-          if ( NGUIText__ParseSymbol_50006380(
+          if ( NGUIText__ParseSymbol_49834612(
                  text,
                  &index,
                  v43->mColors,
@@ -4080,7 +4080,7 @@ void NGUIText__Print(
               *(UnityEngine_Color_o *)&v441 = BetterList_Color___get_Item(
                                                 (BetterList_Color__o *)IsNullOrEmpty,
                                                 *(_DWORD *)(IsNullOrEmpty + 24) - 1,
-                                                (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                                                (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               mAlpha = NGUIText_TypeInfo->static_fields->mAlpha * NGUIText_TypeInfo->static_fields->tint.fields.a;
             }
             else
@@ -4096,7 +4096,7 @@ void NGUIText__Print(
               *(UnityEngine_Color_o *)&v441 = BetterList_Color___get_Item(
                                                 (BetterList_Color__o *)IsNullOrEmpty,
                                                 *(_DWORD *)(IsNullOrEmpty + 24) - 1,
-                                                (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                                                (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               *((float *)&v441 + 3) = a * *((float *)&v441 + 3);
               *(float *)&v441 = r * *(float *)&v441;
               *((float *)&v441 + 1) = g * *((float *)&v441 + 1);
@@ -4110,7 +4110,7 @@ void NGUIText__Print(
             itema = *(float *)&v441;
             v371 = *((float *)&v441 + 1);
             v384 = *(_OWORD *)((char *)&v441 + 12);
-            IsNullOrEmpty = sub_25C4758(
+            IsNullOrEmpty = sub_2597300(
                               0,
                               v441,
                               *(long double *)((char *)&v441 + 4),
@@ -4148,7 +4148,7 @@ void NGUIText__Print(
               v442 = BetterList_Color___get_Item(
                        (BetterList_Color__o *)IsNullOrEmpty,
                        v88,
-                       (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                       (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               v86 = v385;
               v85 = NGUIText_TypeInfo;
               ++v88;
@@ -4193,7 +4193,7 @@ void NGUIText__Print(
               v443 = BetterList_Color___get_Item(
                        (BetterList_Color__o *)IsNullOrEmpty,
                        *(_DWORD *)(IsNullOrEmpty + 24) - 2,
-                       (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                       (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               IsNullOrEmpty = (__int64)NGUIText_TypeInfo->static_fields->mGradientColors;
               if ( !IsNullOrEmpty )
                 goto LABEL_416;
@@ -4208,7 +4208,7 @@ void NGUIText__Print(
               v444 = BetterList_Color___get_Item(
                        (BetterList_Color__o *)IsNullOrEmpty,
                        *(_DWORD *)(IsNullOrEmpty + 24) - 1,
-                       (const MethodInfo_33D1628 *)Method_BetterList_Color__get_Item__);
+                       (const MethodInfo_33A443C *)Method_BetterList_Color__get_Item__);
               v94 = v371;
               *(float32x2_t *)&v6 = vmul_f32(
                                       (float32x2_t)__PAIR64__(LODWORD(v444.fields.g), LODWORD(itema)),
@@ -4274,10 +4274,10 @@ void NGUIText__Print(
             fontScale = v51->static_fields->fontScale;
             mHeight = v50->fields.mHeight;
             mAdvance = v50->fields.mAdvance;
-            if ( !byte_4D266E8 )
+            if ( !byte_4CE8569 )
             {
-              sub_1C94098(&System_Math_TypeInfo);
-              byte_4D266E8 = 1;
+              sub_1C7BAE8(&System_Math_TypeInfo);
+              byte_4CE8569 = 1;
             }
             if ( !System_Math_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -4354,19 +4354,19 @@ LABEL_70:
             v413.fields.z = 0.0;
             v413.fields.x = v117;
             v413.fields.y = v121;
-            BetterList_Vector3___Add(verts, v413, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v413, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v414.fields.z = 0.0;
             v414.fields.x = v117;
             v414.fields.y = v119;
-            BetterList_Vector3___Add(verts, v414, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v414, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v415.fields.z = 0.0;
             v415.fields.x = v118;
             v415.fields.y = v119;
-            BetterList_Vector3___Add(verts, v415, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v415, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v416.fields.z = 0.0;
             v416.fields.x = v118;
             v416.fields.y = v121;
-            BetterList_Vector3___Add(verts, v416, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v416, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v123 = NGUIText_TypeInfo;
             v386 = v37;
             if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -4389,17 +4389,17 @@ LABEL_70:
               v136 = v133 + v50->fields.mUV.fields.m_Width;
               v401.fields.x = v133;
               v401.fields.y = m_YMin;
-              BetterList_Vector2___Add(uvs, v401, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+              BetterList_Vector2___Add(uvs, v401, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
               v402.fields.x = v133;
               v402.fields.y = v135;
-              BetterList_Vector2___Add(uvs, v402, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+              BetterList_Vector2___Add(uvs, v402, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
               v403.fields.x = v136;
               v403.fields.y = v135;
-              BetterList_Vector2___Add(uvs, v403, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+              BetterList_Vector2___Add(uvs, v403, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
               v404.fields.x = v136;
               v404.fields.y = m_YMin;
               v5 = v6;
-              BetterList_Vector2___Add(uvs, v404, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+              BetterList_Vector2___Add(uvs, v404, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             }
             *(float *)&v5 = *(float *)&v5 + (float)(finalSpacingX + (float)(v128 * (float)v125));
             if ( cols )
@@ -4419,7 +4419,7 @@ LABEL_70:
                 do
                 {
                   v139 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-                  BetterList_Color32___Add(cols, v139, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+                  BetterList_Color32___Add(cols, v139, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
                   --v138;
                 }
                 while ( v138 );
@@ -4430,13 +4430,13 @@ LABEL_70:
                 LODWORD(v130) = 1.0;
                 LODWORD(v131) = 1.0;
                 LODWORD(v132) = 1.0;
-                v140 = sub_25C4758(0, inited, v130, v131, v132) & 0xFFFFFF
+                v140 = sub_2597300(0, inited, v130, v131, v132) & 0xFFFFFF
                      | ((unsigned __int64)(unsigned __int8)v367 << 24);
                 v141 = 4;
                 do
                 {
                   v142 = (UnityEngine_Color32_o)v140;
-                  BetterList_Color32___Add(cols, v142, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+                  BetterList_Color32___Add(cols, v142, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
                   --v141;
                 }
                 while ( v141 );
@@ -4511,10 +4511,10 @@ LABEL_149:
           }
           advance = advance + v104;
         }
-        if ( !byte_4D266E8 )
+        if ( !byte_4CE8569 )
         {
-          sub_1C94098(&System_Math_TypeInfo);
-          byte_4D266E8 = 1;
+          sub_1C7BAE8(&System_Math_TypeInfo);
+          byte_4CE8569 = 1;
         }
         v373.n64_u64[0] = *(unsigned __int64 *)&v9;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -4683,10 +4683,10 @@ LABEL_193:
             v162 = 1;
           do
           {
-            BetterList_Vector2___Add(uvs, v66->fields.u0, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
-            BetterList_Vector2___Add(uvs, v66->fields.u1, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
-            BetterList_Vector2___Add(uvs, v66->fields.u2, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
-            BetterList_Vector2___Add(uvs, v66->fields.u3, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v66->fields.u0, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v66->fields.u1, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v66->fields.u2, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v66->fields.u3, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             ++v161;
           }
           while ( v161 < v162 );
@@ -4724,7 +4724,7 @@ LABEL_250:
                 *(float *)&v109 = *(float *)&v109 + 0.51;
               break;
           }
-          v186 = sub_25C4758(0, v146, v107, v108, v109);
+          v186 = sub_2597300(0, v146, v107, v108, v109);
           v166 = bold;
           v187 = (UnityEngine_Color32_o)v186;
           if ( bold )
@@ -4734,7 +4734,7 @@ LABEL_250:
           do
           {
             v189 = v187;
-            BetterList_Color32___Add(cols, v189, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v189, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
             --v188;
           }
           while ( v188 );
@@ -4768,7 +4768,7 @@ LABEL_250:
             do
             {
               v168 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-              BetterList_Color32___Add(cols, v168, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+              BetterList_Color32___Add(cols, v168, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
               --v167;
             }
             while ( v167 );
@@ -4797,7 +4797,7 @@ LABEL_250:
         *(float32x2_t *)&v108 = vadd_f32(v373, *(float32x2_t *)&v108);
         LODWORD(v107) = DWORD1(v146);
         LODWORD(v109) = DWORD1(v108);
-        v173 = sub_25C4758(0, v146, v107, v108, v109);
+        v173 = sub_2597300(0, v146, v107, v108, v109);
         *(float *)&v177 = fminf(v172, 1.0);
         if ( v172 < 0.0 )
           *(float *)&v177 = 0.0;
@@ -4808,7 +4808,7 @@ LABEL_250:
         LODWORD(v174) = DWORD1(v177);
         NGUIText_TypeInfo->static_fields->s_c0.fields.rgba = v173;
         LODWORD(v176) = DWORD1(v175);
-        v178 = sub_25C4758(0, v177, v174, v175, v176);
+        v178 = sub_2597300(0, v177, v174, v175, v176);
         v179 = NGUIText_TypeInfo;
         LODWORD(v8) = v357;
         *(_DWORD *)&NGUIText_TypeInfo->static_fields->s_c0.fields.r = v178;
@@ -4824,13 +4824,13 @@ LABEL_250:
           if ( !v179->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(v179);
           rgba = (UnityEngine_Color32_o)(unsigned int)NGUIText_TypeInfo->static_fields->s_c0.fields.rgba;
-          BetterList_Color32___Add(cols, rgba, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, rgba, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           v183 = (UnityEngine_Color32_o)*(unsigned int *)&NGUIText_TypeInfo->static_fields->s_c0.fields.r;
-          BetterList_Color32___Add(cols, v183, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, v183, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           v184 = (UnityEngine_Color32_o)*(unsigned int *)&NGUIText_TypeInfo->static_fields->s_c0.fields.r;
-          BetterList_Color32___Add(cols, v184, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, v184, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           v185 = (UnityEngine_Color32_o)(unsigned int)NGUIText_TypeInfo->static_fields->s_c0.fields.rgba;
-          BetterList_Color32___Add(cols, v185, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, v185, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           if ( !i )
             break;
           v179 = NGUIText_TypeInfo;
@@ -4859,7 +4859,7 @@ LABEL_251:
             v195 = *(unsigned int *)(*(_QWORD *)&s_c1 + 24LL);
             if ( v191 >= v195 || v191 + 1 >= v195 )
 LABEL_417:
-              sub_1C942F8(IsNullOrEmpty);
+              sub_1C7BD48(IsNullOrEmpty);
             v196 = *(_QWORD *)&s_c1 + 4 * v191;
             v197 = *(float *)(v196 + 32);
             v198 = *(float *)(v196 + 36);
@@ -4880,21 +4880,21 @@ LABEL_417:
             v417.fields.z = 0.0;
             v417.fields.x = (float)(itemb + v197) - v199;
             v417.fields.y = *(float *)&v6 + v198;
-            BetterList_Vector3___Add(verts, v417, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v417, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v201 = v147 + v198;
             v418.fields.x = (float)(itemb + v197) + v199;
             v418.fields.z = 0.0;
             v418.fields.y = v201;
-            BetterList_Vector3___Add(verts, v418, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v418, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v419.fields.z = 0.0;
             v202 = v377 + v197;
             v419.fields.x = v202 + v199;
             v419.fields.y = v201;
-            BetterList_Vector3___Add(verts, v419, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v419, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v420.fields.x = v202 - v199;
             v420.fields.z = 0.0;
             v420.fields.y = v200;
-            BetterList_Vector3___Add(verts, v420, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v420, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v37 = v387;
             v191 += 2LL;
             if ( v191 == 8 )
@@ -4914,15 +4914,15 @@ LABEL_417:
           v421.fields.x = itemb - v205;
           v421.fields.z = 0.0;
           v421.fields.y = *(float *)&v8;
-          BetterList_Vector3___Add(verts, v421, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v421, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v422.fields.x = itemb + v205;
           v422.fields.z = 0.0;
           v422.fields.y = v147;
-          BetterList_Vector3___Add(verts, v422, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v422, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v423.fields.z = 0.0;
           v423.fields.x = v377 + v205;
           v423.fields.y = v147;
-          BetterList_Vector3___Add(verts, v423, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v423, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v206 = v377 - v205;
         }
         else
@@ -4930,15 +4930,15 @@ LABEL_417:
           v424.fields.z = 0.0;
           v424.fields.x = itemb;
           v424.fields.y = *(float *)&v8;
-          BetterList_Vector3___Add(verts, v424, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v424, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v425.fields.z = 0.0;
           v425.fields.x = itemb;
           v425.fields.y = v147;
-          BetterList_Vector3___Add(verts, v425, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v425, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v426.fields.z = 0.0;
           v426.fields.x = v377;
           v426.fields.y = v147;
-          BetterList_Vector3___Add(verts, v426, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(verts, v426, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v206 = v377;
         }
         v207 = 0;
@@ -4947,7 +4947,7 @@ LABEL_417:
         BetterList_Vector3___Add(
           verts,
           *(UnityEngine_Vector3_o *)&v206,
-          (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
 LABEL_271:
         if ( isOutline )
         {
@@ -5028,10 +5028,10 @@ LABEL_271:
           v244 = 0.0;
         else
           v244 = v243;
-        if ( !byte_4D25F1A )
+        if ( !byte_4CE7E5A )
         {
-          sub_1C94098(&System_Math_TypeInfo);
-          byte_4D25F1A = 1;
+          sub_1C7BAE8(&System_Math_TypeInfo);
+          byte_4CE7E5A = 1;
         }
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -5047,10 +5047,10 @@ LABEL_271:
         v249 = sqrtf((float)(v247 * v247) + (float)(v248 * v248));
         if ( v249 <= 0.00001 )
         {
-          if ( !byte_4D25DF9 )
+          if ( !byte_4CE7D39 )
           {
-            sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-            byte_4D25DF9 = 1;
+            sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+            byte_4CE7D39 = 1;
           }
           v252 = UnityEngine_Vector2_TypeInfo->static_fields;
           v250 = v252->zeroVector.fields.x;
@@ -5086,16 +5086,16 @@ LABEL_271:
           v265 = diagonalLineInfo.fields._LineGradientAdjust_k__BackingField
                * (float)(vabds_f32(v264, *(float *)(IsNullOrEmpty + 52)) * 0.01);
           v405.fields.y = v264 - v265;
-          BetterList_Vector2___Add(uvs, v405, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+          BetterList_Vector2___Add(uvs, v405, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
           v406.fields.x = v263[10];
           v406.fields.y = v263[11] - v265;
-          BetterList_Vector2___Add(uvs, v406, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+          BetterList_Vector2___Add(uvs, v406, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
           v407.fields.x = v263[12];
           v407.fields.y = v265 + v263[13];
-          BetterList_Vector2___Add(uvs, v407, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+          BetterList_Vector2___Add(uvs, v407, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
           v408.fields.x = v263[14];
           v408.fields.y = v265 + v263[15];
-          BetterList_Vector2___Add(uvs, v408, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+          BetterList_Vector2___Add(uvs, v408, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
         }
         IsNullOrEmpty = (__int64)NGUIText_TypeInfo;
         if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -5140,7 +5140,7 @@ LABEL_326:
           *(float32x2_t *)&v258 = vadd_f32(*(float32x2_t *)&v6, *(float32x2_t *)&v258);
           LODWORD(v257) = DWORD1(v256);
           LODWORD(v259) = DWORD1(v258);
-          IsNullOrEmpty = sub_25C4758(0, v256, v257, v258, v259);
+          IsNullOrEmpty = sub_2597300(0, v256, v257, v258, v259);
           if ( !cols )
             goto LABEL_416;
           v280 = v270 + (float)(*(float *)&v7 / v277);
@@ -5149,7 +5149,7 @@ LABEL_326:
           v282 = (float)(v270 + (float)(*(float *)&v9 / v277)) / v270;
           v283 = (float)(v270 + (float)(v378 / v277)) / v270;
           v284 = v280 / v270;
-          BetterList_Color32___Add(cols, v281, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, v281, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           *(float *)&v288 = fminf(v282, 1.0);
           if ( v282 < 0.0 )
             *(float *)&v288 = 0.0;
@@ -5159,8 +5159,8 @@ LABEL_326:
           *(float32x2_t *)&v286 = vadd_f32(*(float32x2_t *)&v6, *(float32x2_t *)&v286);
           LODWORD(v285) = DWORD1(v288);
           LODWORD(v287) = DWORD1(v286);
-          v289 = (UnityEngine_Color32_o)(unsigned int)sub_25C4758(0, v288, v285, v286, v287);
-          BetterList_Color32___Add(cols, v289, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          v289 = (UnityEngine_Color32_o)(unsigned int)sub_2597300(0, v288, v285, v286, v287);
+          BetterList_Color32___Add(cols, v289, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           *(float *)&v293 = fminf(v283, 1.0);
           if ( v283 < 0.0 )
             *(float *)&v293 = 0.0;
@@ -5170,8 +5170,8 @@ LABEL_326:
           *(float32x2_t *)&v291 = vadd_f32(*(float32x2_t *)&v6, *(float32x2_t *)&v291);
           LODWORD(v290) = DWORD1(v293);
           LODWORD(v292) = DWORD1(v291);
-          v294 = (UnityEngine_Color32_o)(unsigned int)sub_25C4758(0, v293, v290, v291, v292);
-          BetterList_Color32___Add(cols, v294, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          v294 = (UnityEngine_Color32_o)(unsigned int)sub_2597300(0, v293, v290, v291, v292);
+          BetterList_Color32___Add(cols, v294, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           *(float *)&v298 = fminf(v284, 1.0);
           if ( v284 < 0.0 )
             *(float *)&v298 = 0.0;
@@ -5183,8 +5183,8 @@ LABEL_326:
           LODWORD(v6) = v353;
           LODWORD(v295) = DWORD1(v298);
           LODWORD(v297) = DWORD1(v296);
-          v299 = (UnityEngine_Color32_o)(unsigned int)sub_25C4758(0, v298, v295, v296, v297);
-          BetterList_Color32___Add(cols, v299, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          v299 = (UnityEngine_Color32_o)(unsigned int)sub_2597300(0, v298, v295, v296, v297);
+          BetterList_Color32___Add(cols, v299, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           v267 = v354;
           goto LABEL_338;
         }
@@ -5206,31 +5206,31 @@ LABEL_326:
         if ( !cols )
           goto LABEL_416;
         v272 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-        BetterList_Color32___Add(cols, v272, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v272, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
         v273 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-        BetterList_Color32___Add(cols, v273, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v273, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
         v274 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-        BetterList_Color32___Add(cols, v274, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v274, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
         v275 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-        BetterList_Color32___Add(cols, v275, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v275, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
         v6 = v7;
 LABEL_338:
         v427.fields.x = v356 + (float)(v355 * v267);
         v427.fields.y = itemc;
         v427.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v427, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v427, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v428.fields.z = 0.0;
         v428.fields.x = v356 - (float)(v355 * v267);
         v428.fields.y = *(float *)&v9;
-        BetterList_Vector3___Add(verts, v428, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v428, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v429.fields.z = 0.0;
         v429.fields.x = v358 - (float)(v355 * v267);
         v429.fields.y = v269;
-        BetterList_Vector3___Add(verts, v429, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v429, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v430.fields.z = 0.0;
         v430.fields.x = v358 + (float)(v355 * v267);
         v430.fields.y = *(float *)&v6;
-        BetterList_Vector3___Add(verts, v430, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v430, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v37 = v387;
         v227 = v365;
 LABEL_339:
@@ -5294,16 +5294,16 @@ LABEL_339:
           {
             v409.fields.y = v304[9];
             v409.fields.x = v313;
-            BetterList_Vector2___Add(uvs, v409, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v409, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             v410.fields.y = v304[13];
             v410.fields.x = v313;
-            BetterList_Vector2___Add(uvs, v410, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v410, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             v411.fields.y = v304[13];
             v411.fields.x = v313;
-            BetterList_Vector2___Add(uvs, v411, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v411, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             v412.fields.y = v304[9];
             v412.fields.x = v313;
-            BetterList_Vector2___Add(uvs, v412, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
+            BetterList_Vector2___Add(uvs, v412, (const MethodInfo_33A76F0 *)Method_BetterList_Vector2__Add__);
             ++v312;
           }
           while ( v312 < v314 );
@@ -5334,20 +5334,20 @@ LABEL_339:
             v323 = v315 + v321;
             v431.fields.x = v365 + v322;
             v431.fields.y = v315 + v321;
-            BetterList_Vector3___Add(verts, v431, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v431, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v324 = v316 + v321;
             v432.fields.z = 0.0;
             v432.fields.x = v365 + v322;
             v432.fields.y = v324;
-            BetterList_Vector3___Add(verts, v432, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v432, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v433.fields.z = 0.0;
             v433.fields.x = v372 + v322;
             v433.fields.y = v324;
-            BetterList_Vector3___Add(verts, v433, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v433, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v434.fields.z = 0.0;
             v434.fields.x = v372 + v322;
             v434.fields.y = v323;
-            BetterList_Vector3___Add(verts, v434, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v434, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
             v300 = v366;
             v317 += 2LL;
             v302 = 1.0;
@@ -5358,19 +5358,19 @@ LABEL_339:
         v435.fields.z = 0.0;
         v435.fields.x = v227;
         v435.fields.y = v304[5] - v37;
-        BetterList_Vector3___Add(verts, v435, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v435, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v436.fields.z = 0.0;
         v436.fields.x = v227;
         v436.fields.y = v316;
-        BetterList_Vector3___Add(verts, v436, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v436, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v437.fields.z = 0.0;
         v437.fields.x = v372;
         v437.fields.y = v316;
-        BetterList_Vector3___Add(verts, v437, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v437, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v438.fields.z = 0.0;
         v438.fields.x = v372;
         v438.fields.y = v315;
-        BetterList_Vector3___Add(verts, v438, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v438, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
 LABEL_370:
         IsNullOrEmpty = (__int64)NGUIText_TypeInfo;
         if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -5407,7 +5407,7 @@ LABEL_385:
           v9 = v328;
           LODWORD(v326) = DWORD1(v325);
           LODWORD(v328) = DWORD1(v327);
-          v338 = sub_25C4758(0, v325, v326, v327, v328);
+          v338 = sub_2597300(0, v325, v326, v327, v328);
           *(float *)&v342 = fminf(v336, v302);
           if ( v336 < 0.0 )
             *(float *)&v342 = 0.0;
@@ -5419,7 +5419,7 @@ LABEL_385:
           NGUIText_TypeInfo->static_fields->s_c0.fields.rgba = v338;
           LODWORD(v341) = DWORD1(v340);
           v6 = v8;
-          v343 = sub_25C4758(0, v342, v339, v340, v341);
+          v343 = sub_2597300(0, v342, v339, v340, v341);
           IsNullOrEmpty = (__int64)NGUIText_TypeInfo;
           if ( v359 )
             v344 = 4;
@@ -5437,13 +5437,13 @@ LABEL_385:
             if ( !cols )
               goto LABEL_416;
             v346 = (UnityEngine_Color32_o)(unsigned int)NGUIText_TypeInfo->static_fields->s_c0.fields.rgba;
-            BetterList_Color32___Add(cols, v346, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v346, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
             v347 = (UnityEngine_Color32_o)*(unsigned int *)&NGUIText_TypeInfo->static_fields->s_c0.fields.r;
-            BetterList_Color32___Add(cols, v347, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v347, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
             v348 = (UnityEngine_Color32_o)*(unsigned int *)&NGUIText_TypeInfo->static_fields->s_c0.fields.r;
-            BetterList_Color32___Add(cols, v348, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v348, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
             v349 = (UnityEngine_Color32_o)(unsigned int)NGUIText_TypeInfo->static_fields->s_c0.fields.rgba;
-            BetterList_Color32___Add(cols, v349, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v349, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
             if ( !v345 )
               goto LABEL_384;
             IsNullOrEmpty = (__int64)NGUIText_TypeInfo;
@@ -5468,7 +5468,7 @@ LABEL_385:
         do
         {
           v332 = (UnityEngine_Color32_o)(v370 & 0xFFFFFF | ((unsigned __int64)(unsigned __int8)v367 << 24));
-          BetterList_Color32___Add(cols, v332, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
+          BetterList_Color32___Add(cols, v332, (const MethodInfo_33A51A4 *)Method_BetterList_Color32__Add__);
           --v331;
         }
         while ( v331 );
@@ -5509,15 +5509,15 @@ LABEL_403:
     if ( !IsNullOrEmpty
       || (BetterList_Color___Clear(
             (BetterList_Color__o *)IsNullOrEmpty,
-            (const MethodInfo_33D1824 *)Method_BetterList_Color__Clear__),
+            (const MethodInfo_33A4638 *)Method_BetterList_Color__Clear__),
           (IsNullOrEmpty = (__int64)NGUIText_TypeInfo->static_fields->mGradientColors) == 0) )
     {
 LABEL_416:
-      sub_1C942F0(IsNullOrEmpty, v15);
+      sub_1C7BD40(IsNullOrEmpty, v15);
     }
     BetterList_Color___Clear(
       (BetterList_Color__o *)IsNullOrEmpty,
-      (const MethodInfo_33D1824 *)Method_BetterList_Color__Clear__);
+      (const MethodInfo_33A4638 *)Method_BetterList_Color__Clear__);
   }
 }
 
@@ -5591,13 +5591,13 @@ void NGUIText__PrintApproximateCharacterPositions(
   UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30FBA & 1) == 0 )
+  if ( (byte_4CF2DEC & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Vector3__Add__);
-    sub_1C94098(&Method_BetterList_int__Add__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    byte_4D30FBA = 1;
+    sub_1C7BAE8(&Method_BetterList_Vector3__Add__);
+    sub_1C7BAE8(&Method_BetterList_int__Add__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    byte_4CF2DEC = 1;
   }
   if ( System_String__IsNullOrEmpty(text, 0) )
     v8 = (System_String_o *)StringLiteral_113/*" "*/;
@@ -5608,7 +5608,7 @@ void NGUIText__PrintApproximateCharacterPositions(
   NGUIText__Prepare(v8, v7);
   if ( !v8 || !verts )
 LABEL_120:
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
   v12 = NGUIText_TypeInfo;
   stringLength = v8->fields._stringLength;
   size = verts->fields.size;
@@ -5633,11 +5633,11 @@ LABEL_120:
     v66.fields.z = 0.0;
     v66.fields.x = v20;
     v66.fields.y = v23;
-    BetterList_Vector3___Add(verts, v66, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+    BetterList_Vector3___Add(verts, v66, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     if ( !indices )
       goto LABEL_120;
     v24 = (unsigned __int16)v24;
-    BetterList_int___Add(indices, item, (const MethodInfo_33D2D34 *)Method_BetterList_int__Add__);
+    BetterList_int___Add(indices, item, (const MethodInfo_33A5B48 *)Method_BetterList_int__Add__);
     if ( (unsigned __int16)v24 == 10 )
     {
       v26 = NGUIText_TypeInfo;
@@ -5720,10 +5720,10 @@ LABEL_49:
         v44 = NGUIText_TypeInfo;
       }
       finalSpacingX = v44->static_fields->finalSpacingX;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -5797,8 +5797,8 @@ LABEL_93:
       v68.fields.z = 0.0;
       v68.fields.x = v47;
       v68.fields.y = v23;
-      BetterList_Vector3___Add(verts, v68, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
-      BetterList_int___Add(indices, item + 1, (const MethodInfo_33D2D34 *)Method_BetterList_int__Add__);
+      BetterList_Vector3___Add(verts, v68, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
+      BetterList_int___Add(indices, item + 1, (const MethodInfo_33A5B48 *)Method_BetterList_int__Add__);
       v20 = v47;
       goto LABEL_109;
     }
@@ -5813,10 +5813,10 @@ LABEL_93:
     v34 = v32->static_fields;
     v35 = v34->fontScale;
     v36 = v34->finalSpacingX;
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -5889,8 +5889,8 @@ LABEL_74:
     v67.fields.z = 0.0;
     v67.fields.x = v37;
     v67.fields.y = v23;
-    BetterList_Vector3___Add(verts, v67, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
-    BetterList_int___Add(indices, item + 1, (const MethodInfo_33D2D34 *)Method_BetterList_int__Add__);
+    BetterList_Vector3___Add(verts, v67, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
+    BetterList_int___Add(indices, item + 1, (const MethodInfo_33A5B48 *)Method_BetterList_int__Add__);
     sequence = v31->fields.sequence;
     if ( !sequence )
       goto LABEL_120;
@@ -5996,7 +5996,7 @@ void NGUIText__PrintCaretAndSelection(
   float finalLineHeight; // s0
   NGUIText_c *v74; // x0
   struct NGUIText_StaticFields *v75; // x8
-  const MethodInfo_33D5368 *v76; // x1
+  const MethodInfo_33A817C *v76; // x1
   float v77; // s1
   int v78; // s2
   BetterList_Vector3__o *v79; // x0
@@ -6038,12 +6038,12 @@ void NGUIText__PrintCaretAndSelection(
   UnityEngine_Vector3_o v115; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30FBC & 1) == 0 )
+  if ( (byte_4CF2DEE & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Vector3__Add__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    byte_4D30FBC = 1;
+    sub_1C7BAE8(&Method_BetterList_Vector3__Add__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    byte_4CF2DEE = 1;
   }
   if ( System_String__IsNullOrEmpty(text, 0) )
     v12 = (System_String_o *)StringLiteral_113/*" "*/;
@@ -6077,7 +6077,7 @@ LABEL_143:
     if ( v12 )
       goto LABEL_19;
 LABEL_144:
-    sub_1C942F0(v15, v13);
+    sub_1C7BD40(v15, v13);
   }
   size = 0;
   if ( !highlight )
@@ -6093,10 +6093,10 @@ LABEL_19:
   fontScale = static_fields->fontScale;
   index = 0;
   v24 = (float)fontSize;
-  if ( !byte_4D25DF9 )
+  if ( !byte_4CE7D39 )
   {
-    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
-    byte_4D25DF9 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector2_TypeInfo);
+    byte_4CE7D39 = 1;
   }
   v25 = fontScale * v24;
   v26 = UnityEngine_Vector2_TypeInfo->static_fields;
@@ -6120,19 +6120,19 @@ LABEL_147:
     v110.fields.z = 0.0;
     v110.fields.x = v29 + -1.0;
     v110.fields.y = (float)-v31 - v25;
-    BetterList_Vector3___Add(caret, v110, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+    BetterList_Vector3___Add(caret, v110, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     v111.fields.z = 0.0;
     v111.fields.x = v29 + -1.0;
     v111.fields.y = -v31;
-    BetterList_Vector3___Add(caret, v111, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+    BetterList_Vector3___Add(caret, v111, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     v112.fields.z = 0.0;
     v112.fields.x = v29 + 1.0;
     v112.fields.y = -v31;
-    BetterList_Vector3___Add(caret, v112, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+    BetterList_Vector3___Add(caret, v112, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     v113.fields.z = 0.0;
     v113.fields.x = v29 + 1.0;
     v113.fields.y = (float)-v31 - v25;
-    BetterList_Vector3___Add(caret, v113, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+    BetterList_Vector3___Add(caret, v113, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     goto LABEL_148;
   }
   v28 = 0;
@@ -6150,19 +6150,19 @@ LABEL_147:
       v93.fields.z = 0.0;
       v93.fields.x = v29 + -1.0;
       v93.fields.y = (float)-v31 - v25;
-      BetterList_Vector3___Add(caret, v93, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(caret, v93, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v94.fields.z = 0.0;
       v94.fields.x = v29 + -1.0;
       v94.fields.y = -v31;
-      BetterList_Vector3___Add(caret, v94, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(caret, v94, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v95.fields.z = 0.0;
       v95.fields.x = v29 + 1.0;
       v95.fields.y = -v31;
-      BetterList_Vector3___Add(caret, v95, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(caret, v95, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v96.fields.z = 0.0;
       v96.fields.x = v29 + 1.0;
       v96.fields.y = (float)-v31 - v25;
-      BetterList_Vector3___Add(caret, v96, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(caret, v96, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v28 = index;
       v90 = 1;
     }
@@ -6196,7 +6196,7 @@ LABEL_147:
         LODWORD(v97.fields.y) = item;
         v97.fields.z = 0.0;
         v97.fields.x = x;
-        BetterList_Vector3___Add(highlight, v97, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v97, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v36 = x;
         v37 = y;
       }
@@ -6208,21 +6208,21 @@ LABEL_147:
         v98.fields.z = 0.0;
         v98.fields.x = v29;
         v98.fields.y = v37;
-        BetterList_Vector3___Add(highlight, v98, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v98, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v99.fields.z = 0.0;
         v99.fields.x = v29;
         v99.fields.y = -v31;
-        BetterList_Vector3___Add(highlight, v99, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v99, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v36 = v29 + 2.0;
         v100.fields.z = 0.0;
         v100.fields.x = v29 + 2.0;
         v100.fields.y = -v31;
-        BetterList_Vector3___Add(highlight, v100, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v100, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       }
       v101.fields.z = 0.0;
       v101.fields.x = v36;
       v101.fields.y = v37;
-      BetterList_Vector3___Add(highlight, v101, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(highlight, v101, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
 LABEL_52:
       v39 = NGUIText_TypeInfo;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -6330,10 +6330,10 @@ LABEL_79:
       v53 = NGUIText_TypeInfo;
     }
     finalSpacingX = v53->static_fields->finalSpacingX;
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     prev_4a = y;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -6404,7 +6404,7 @@ LABEL_96:
         LODWORD(v102.fields.y) = item;
         v102.fields.z = 0.0;
         v102.fields.x = x;
-        BetterList_Vector3___Add(highlight, v102, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v102, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v67 = prev_4a;
       }
       else
@@ -6414,16 +6414,16 @@ LABEL_96:
         v103.fields.z = 0.0;
         v103.fields.x = v29;
         v103.fields.y = v65 - v25;
-        BetterList_Vector3___Add(highlight, v103, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v103, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v104.fields.z = 0.0;
         v104.fields.x = v29;
         v104.fields.y = -v31;
-        BetterList_Vector3___Add(highlight, v104, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v104, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         x = v29 + 2.0;
         v105.fields.z = 0.0;
         v105.fields.x = v29 + 2.0;
         v105.fields.y = -v31;
-        BetterList_Vector3___Add(highlight, v105, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(highlight, v105, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v67 = v65 - v25;
       }
       v69 = 0;
@@ -6431,7 +6431,7 @@ LABEL_96:
       BetterList_Vector3___Add(
         highlight,
         *(UnityEngine_Vector3_o *)(&v67 - 1),
-        (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
 LABEL_116:
       v71 = NGUIText_TypeInfo;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -6484,11 +6484,11 @@ LABEL_127:
           LODWORD(v108.fields.y) = item;
           v108.fields.z = 0.0;
           v108.fields.x = v84;
-          BetterList_Vector3___Add(highlight, v108, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(highlight, v108, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v109.fields.y = prev_4a;
           v109.fields.z = 0.0;
           v109.fields.x = v84;
-          BetterList_Vector3___Add(highlight, v109, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(highlight, v109, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         }
         BYTE4(item) = 0;
       }
@@ -6499,11 +6499,11 @@ LABEL_127:
           v106.fields.z = 0.0;
           v106.fields.x = v68;
           v106.fields.y = v66;
-          BetterList_Vector3___Add(highlight, v106, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(highlight, v106, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
           v107.fields.z = 0.0;
           v107.fields.x = v68;
           v107.fields.y = v65;
-          BetterList_Vector3___Add(highlight, v107, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+          BetterList_Vector3___Add(highlight, v107, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         }
         BYTE4(item) = 1;
       }
@@ -6544,7 +6544,7 @@ LABEL_154:
   {
     if ( (item & 0x100000000LL) != 0 )
     {
-      v76 = (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__;
+      v76 = (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__;
       v77 = *(float *)&item;
       v78 = 0;
       v79 = highlight;
@@ -6559,12 +6559,12 @@ LABEL_158:
       v114.fields.z = 0.0;
       v114.fields.x = v29;
       v114.fields.y = v81 - v25;
-      BetterList_Vector3___Add(highlight, v114, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(highlight, v114, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v115.fields.z = 0.0;
       v115.fields.x = v29;
       v115.fields.y = v81;
-      BetterList_Vector3___Add(highlight, v115, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
-      v76 = (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__;
+      BetterList_Vector3___Add(highlight, v115, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
+      v76 = (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__;
       x = v29 + 2.0;
       v78 = 0;
       v79 = highlight;
@@ -6575,7 +6575,7 @@ LABEL_161:
       v116.fields.z = 0.0;
       v116.fields.x = x;
       v116.fields.y = y;
-      BetterList_Vector3___Add(highlight, v116, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(highlight, v116, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
     }
     v82 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -6660,13 +6660,13 @@ void NGUIText__PrintExactCharacterPositions(
   UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D30FBB & 1) == 0 )
+  if ( (byte_4CF2DED & 1) == 0 )
   {
-    sub_1C94098(&Method_BetterList_Vector3__Add__);
-    sub_1C94098(&Method_BetterList_int__Add__);
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    byte_4D30FBB = 1;
+    sub_1C7BAE8(&Method_BetterList_Vector3__Add__);
+    sub_1C7BAE8(&Method_BetterList_int__Add__);
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    byte_4CF2DED = 1;
   }
   if ( System_String__IsNullOrEmpty(text, 0) )
     v8 = (System_String_o *)StringLiteral_113/*" "*/;
@@ -6677,7 +6677,7 @@ void NGUIText__PrintExactCharacterPositions(
   NGUIText__Prepare(v8, v7);
   if ( !v8 || !verts )
 LABEL_109:
-    sub_1C942F0(v9, v10);
+    sub_1C7BD40(v9, v10);
   v12 = NGUIText_TypeInfo;
   stringLength = v8->fields._stringLength;
   size = verts->fields.size;
@@ -6776,10 +6776,10 @@ LABEL_22:
         v34 = v32->static_fields;
         v35 = v34->fontScale;
         finalSpacingX = v34->finalSpacingX;
-        if ( !byte_4D266E8 )
+        if ( !byte_4CE8569 )
         {
-          sub_1C94098(&System_Math_TypeInfo);
-          byte_4D266E8 = 1;
+          sub_1C7BAE8(&System_Math_TypeInfo);
+          byte_4CE8569 = 1;
         }
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -6819,15 +6819,15 @@ LABEL_63:
           goto LABEL_84;
         if ( !indices )
           goto LABEL_109;
-        BetterList_int___Add(indices, index, (const MethodInfo_33D2D34 *)Method_BetterList_int__Add__);
+        BetterList_int___Add(indices, index, (const MethodInfo_33A5B48 *)Method_BetterList_int__Add__);
         v59.fields.y = (float)-v22 - v21;
         v59.fields.z = 0.0;
         v59.fields.x = v20;
-        BetterList_Vector3___Add(verts, v59, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v59, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         v60.fields.z = 0.0;
         v60.fields.x = v37;
         v60.fields.y = -v22;
-        BetterList_Vector3___Add(verts, v60, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v60, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
         sequence = v31->fields.sequence;
         if ( !sequence )
           goto LABEL_109;
@@ -6852,10 +6852,10 @@ LABEL_97:
         v44 = NGUIText_TypeInfo;
       }
       v46 = v44->static_fields->finalSpacingX;
-      if ( !byte_4D266E8 )
+      if ( !byte_4CE8569 )
       {
-        sub_1C94098(&System_Math_TypeInfo);
-        byte_4D266E8 = 1;
+        sub_1C7BAE8(&System_Math_TypeInfo);
+        byte_4CE8569 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -6927,15 +6927,15 @@ LABEL_84:
       }
       if ( !indices )
         goto LABEL_109;
-      BetterList_int___Add(indices, index, (const MethodInfo_33D2D34 *)Method_BetterList_int__Add__);
+      BetterList_int___Add(indices, index, (const MethodInfo_33A5B48 *)Method_BetterList_int__Add__);
       v61.fields.y = (float)-v22 - v21;
       v61.fields.z = 0.0;
       v61.fields.x = v20;
-      BetterList_Vector3___Add(verts, v61, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(verts, v61, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v62.fields.z = 0.0;
       v62.fields.x = v37;
       v62.fields.y = -v22;
-      BetterList_Vector3___Add(verts, v62, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(verts, v62, (const MethodInfo_33A817C *)Method_BetterList_Vector3__Add__);
       v18 = Chars;
       goto LABEL_97;
     }
@@ -6969,10 +6969,10 @@ void NGUIText__ReplaceSpaceWithNewline(System_Text_StringBuilder_o **s, const Me
   int32_t v4; // w20
   uint16_t Chars; // w21
 
-  if ( (byte_4D30FB3 & 1) == 0 )
+  if ( (byte_4CF2DE5 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB3 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE5 = 1;
   }
   v3 = *s;
   if ( !*s )
@@ -6995,7 +6995,7 @@ void NGUIText__ReplaceSpaceWithNewline(System_Text_StringBuilder_o **s, const Me
         return;
       }
 LABEL_13:
-      sub_1C942F0(v3, method);
+      sub_1C7BD40(v3, method);
     }
   }
 }
@@ -7020,10 +7020,10 @@ System_String_o *NGUIText__StripSymbols(System_String_o *text, const MethodInfo 
   bool bold; // [xsp+A8h] [xbp-58h] BYREF
   int32_t sub; // [xsp+ACh] [xbp-54h] BYREF
 
-  if ( (byte_4D30FAE & 1) == 0 )
+  if ( (byte_4CF2DE0 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FAE = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE0 = 1;
   }
   index = 0;
   if ( text )
@@ -7045,12 +7045,12 @@ System_String_o *NGUIText__StripSymbols(System_String_o *text, const MethodInfo 
         v13 = 0;
         isOutline = 0;
         isDiagonalLine = 0;
-        *(_OWORD *)&v10.fields._Slope_k__BackingField = xmmword_CFF110;
+        *(_OWORD *)&v10.fields._Slope_k__BackingField = xmmword_CF5E70;
         *(_QWORD *)&v10.fields._LineEdge_k__BackingField = 0;
         index = v4;
         if ( !NGUIText_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-        if ( NGUIText__ParseSymbol_50006380(
+        if ( NGUIText__ParseSymbol_49834612(
                text,
                &index,
                0,
@@ -7070,7 +7070,7 @@ System_String_o *NGUIText__StripSymbols(System_String_o *text, const MethodInfo 
         {
           v5 = System_String__Remove(text, v4, index - v4, 0);
           if ( !v5 )
-            sub_1C942F0(0, v6);
+            sub_1C7BD40(0, v6);
           stringLength = v5->fields._stringLength;
           text = v5;
         }
@@ -7091,18 +7091,18 @@ void NGUIText__Update(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_4D30FA3 & 1) == 0 )
+  if ( (byte_4CF2DD5 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FA3 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DD5 = 1;
   }
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-  NGUIText__Update_50000508(1, v1);
+  NGUIText__Update_49828740(1, v1);
 }
 
 
-void NGUIText__Update_50000508(bool request, const MethodInfo *method)
+void NGUIText__Update_49828740(bool request, const MethodInfo *method)
 {
   NGUIText_c *v3; // x0
   struct NGUIText_StaticFields *static_fields; // x8
@@ -7150,13 +7150,13 @@ void NGUIText__Update_50000508(bool request, const MethodInfo *method)
   float v46; // s1
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D30FA4 & 1) == 0 )
+  if ( (byte_4CF2DD6 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_783/*")_-"*/);
-    sub_1C94098(&StringLiteral_1777/*"A"*/);
-    byte_4D30FA4 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_784/*")_-"*/);
+    sub_1C7BAE8(&StringLiteral_1778/*"A"*/);
+    byte_4CF2DD6 = 1;
   }
   v3 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -7167,10 +7167,10 @@ void NGUIText__Update_50000508(bool request, const MethodInfo *method)
   static_fields = v3->static_fields;
   pixelDensity = static_fields->pixelDensity;
   fontSize = (float)static_fields->fontSize;
-  if ( !byte_4D266E8 )
+  if ( !byte_4CE8569 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D266E8 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE8569 = 1;
   }
   v7 = fontSize / pixelDensity;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -7275,7 +7275,7 @@ LABEL_34:
     {
       UnityEngine_Font__RequestCharactersInTexture(
         (UnityEngine_Font_o *)v22,
-        (System_String_o *)StringLiteral_783/*")_-"*/,
+        (System_String_o *)StringLiteral_784/*")_-"*/,
         v30->finalSize,
         v30->fontStyle,
         0);
@@ -7312,7 +7312,7 @@ LABEL_34:
         {
           UnityEngine_Font__RequestCharactersInTexture(
             (UnityEngine_Font_o *)v22,
-            (System_String_o *)StringLiteral_1777/*"A"*/,
+            (System_String_o *)StringLiteral_1778/*"A"*/,
             v34->finalSize,
             v34->fontStyle,
             0);
@@ -7390,7 +7390,7 @@ LABEL_68:
       }
     }
 LABEL_71:
-    sub_1C942F0(v22, v20);
+    sub_1C7BD40(v22, v20);
   }
 }
 
@@ -7399,18 +7399,18 @@ bool NGUIText__WrapText(System_String_o *text, System_String_o **finalText, cons
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4D30FB7 & 1) == 0 )
+  if ( (byte_4CF2DE9 & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    byte_4D30FB7 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    byte_4CF2DE9 = 1;
   }
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-  return NGUIText__WrapText_50016872(text, finalText, 0, v3);
+  return NGUIText__WrapText_49845104(text, finalText, 0, v3);
 }
 
 
-bool NGUIText__WrapText_50016872(
+bool NGUIText__WrapText_49845104(
         System_String_o *text,
         System_String_o **finalText,
         bool keepCharCount,
@@ -7494,13 +7494,13 @@ bool NGUIText__WrapText_50016872(
   System_Text_StringBuilder_o *s; // [xsp+28h] [xbp-A8h] BYREF
   double iptr; // [xsp+38h] [xbp-98h] BYREF
 
-  if ( (byte_4D30FB8 & 1) == 0 )
+  if ( (byte_4CF2DEA & 1) == 0 )
   {
-    sub_1C94098(&NGUIText_TypeInfo);
-    sub_1C94098(&System_Text_StringBuilder_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D30FB8 = 1;
+    sub_1C7BAE8(&NGUIText_TypeInfo);
+    sub_1C7BAE8(&System_Text_StringBuilder_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF2DEA = 1;
   }
   v11 = NGUIText_TypeInfo;
   s = 0;
@@ -7588,10 +7588,10 @@ LABEL_21:
     v19 = v15 / v11->static_fields->finalLineHeight;
   else
     v19 = v18;
-  if ( !byte_4D25F18 )
+  if ( !byte_4CE7E58 )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D25F18 = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE7E58 = 1;
   }
   v20 = v19 + 0.01;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -7606,7 +7606,7 @@ LABEL_21:
   {
 LABEL_151:
     *finalText = (System_String_o *)StringLiteral_1/*""*/;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)finalText,
       StringLiteral_1/*""*/,
       keepCharCount,
@@ -7625,7 +7625,7 @@ LABEL_151:
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   NGUIText__Prepare(v24, v23);
-  v25 = (System_Text_StringBuilder_o *)sub_1C942E4(System_Text_StringBuilder_TypeInfo);
+  v25 = (System_Text_StringBuilder_o *)sub_1C7BD34(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v25, 0);
   s = v25;
   if ( !v24 )
@@ -7669,14 +7669,14 @@ LABEL_151:
         {
           if ( !v25 )
             goto LABEL_170;
-          Chars = (System_String_o *)System_Text_StringBuilder__Append_64504032(v25, 0xAu, 0);
+          Chars = (System_String_o *)System_Text_StringBuilder__Append_64263200(v25, 0xAu, 0);
         }
         else
         {
-          Chars = System_String__Substring_64463684(v24, v30, index - v30 + 1, 0);
+          Chars = System_String__Substring_64222852(v24, v30, index - v30 + 1, 0);
           if ( !v25 )
             goto LABEL_170;
-          Chars = (System_String_o *)System_Text_StringBuilder__Append_64501704(v25, Chars, 0);
+          Chars = (System_String_o *)System_Text_StringBuilder__Append_64260872(v25, Chars, 0);
         }
         v31 = 0;
         v33 = (float)v39;
@@ -7689,10 +7689,10 @@ LABEL_151:
 LABEL_155:
       if ( (int)v27 > v30 )
       {
-        Chars = System_String__Substring_64463684(v24, v30, (int)v27 - v30, 0);
+        Chars = System_String__Substring_64222852(v24, v30, (int)v27 - v30, 0);
         if ( v25 )
         {
-          System_Text_StringBuilder__Append_64501704(v25, Chars, 0);
+          System_Text_StringBuilder__Append_64260872(v25, Chars, 0);
           v68 = (GrandQuestFolderBoardItem_o *)v79;
           goto LABEL_158;
         }
@@ -7704,7 +7704,7 @@ LABEL_160:
       if ( v25 )
         goto LABEL_161;
 LABEL_170:
-      sub_1C942F0(Chars, v27);
+      sub_1C7BD40(Chars, v27);
     }
     v40 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -7794,19 +7794,19 @@ LABEL_78:
 LABEL_92:
             v48 = v47;
         }
-        Chars = System_String__Substring_64463684(v24, v30, v48, 0);
+        Chars = System_String__Substring_64222852(v24, v30, v48, 0);
         if ( !v25 )
           goto LABEL_170;
-        System_Text_StringBuilder__Append_64501704(v25, Chars, 0);
+        System_Text_StringBuilder__Append_64260872(v25, Chars, 0);
         stringLength = v81;
         v35 = 0;
         v30 = index + 1;
       }
     }
-    if ( !byte_4D266E8 )
+    if ( !byte_4CE8569 )
     {
-      sub_1C94098(&System_Math_TypeInfo);
-      byte_4D266E8 = 1;
+      sub_1C7BAE8(&System_Math_TypeInfo);
+      byte_4CE8569 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -7878,10 +7878,10 @@ LABEL_149:
     if ( index >= stringLength )
       goto LABEL_155;
   }
-  Chars = System_String__Substring_64463684(v24, v30, (index - v30) & (unsigned int)~((index - v30) >> 31), 0);
+  Chars = System_String__Substring_64222852(v24, v30, (index - v30) & (unsigned int)~((index - v30) >> 31), 0);
   if ( !v25 )
     goto LABEL_170;
-  System_Text_StringBuilder__Append_64501704(v25, Chars, 0);
+  System_Text_StringBuilder__Append_64260872(v25, Chars, 0);
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   v61 = 1;
@@ -7942,7 +7942,7 @@ LABEL_161:
           v25,
           v25->klass->vtable._3_ToString.method);
   v68->klass = (GrandQuestFolderBoardItem_c *)v69;
-  sub_1C9403C(v68, v69, v70, v71, v72, v73, v74, v75);
+  sub_1C7BA8C(v68, v69, v70, v71, v72, v73, v74, v75);
   if ( (v67 & 1) == 0 )
     return 0;
   if ( index == stringLength )

@@ -24,7 +24,7 @@ void ShopHelpItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v10->fields._Kind_k__BackingField = kind;
   v10->fields._TextCode_k__BackingField = textCode;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&v10->fields._TextCode_k__BackingField,
     (int32_t)textCode,
     v11,
@@ -35,7 +35,7 @@ void ShopHelpItemInfo___ctor(
     v16);
   v10->fields._ImageName_k__BackingField = imageName;
   v10 = (ShopHelpItemInfo_o *)((char *)v10 + 32);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v10, (int32_t)imageName, v17, v18, v19, v20, v21, v22);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v10, (int32_t)imageName, v17, v18, v19, v20, v21, v22);
   LODWORD(v10->monitor) = line;
 }
 
@@ -79,7 +79,7 @@ void ShopHelpItemInfo__set_ImageName(ShopHelpItemInfo_o *this, System_String_o *
   System_String_o *v7; // x7
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ImageName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -112,7 +112,7 @@ void ShopHelpItemInfo__set_TextCode(ShopHelpItemInfo_o *this, System_String_o *v
   System_String_o *v7; // x7
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._TextCode_k__BackingField,
     (int32_t)value,
     (int32_t)method,

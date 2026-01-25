@@ -4,10 +4,10 @@ void SpringPosition___ctor(SpringPosition_o *this, const MethodInfo *method)
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_4D25F19 )
+  if ( !byte_4CE7E59 )
   {
-    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-    byte_4D25F19 = 1;
+    sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+    byte_4CE7E59 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -41,18 +41,18 @@ SpringPosition_o *SpringPosition__Begin(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = go;
-  if ( (byte_4D3108D & 1) == 0 )
+  if ( (byte_4CF2EBF & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
-    go = (UnityEngine_GameObject_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3108D = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+    go = (UnityEngine_GameObject_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2EBF = 1;
   }
   if ( !v8 )
     goto LABEL_12;
   Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                v8,
-                               (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+                               (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   go = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -60,18 +60,18 @@ SpringPosition_o *SpringPosition__Begin(
   {
     go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                        v8,
-                                       (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+                                       (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
     Component_object = (char *)go;
   }
   if ( !Component_object )
 LABEL_12:
-    sub_1C942F0(go, method);
+    sub_1C7BD40(go, method);
   *((float *)Component_object + 8) = x;
   *((float *)Component_object + 9) = y;
   *((float *)Component_object + 10) = z;
   *((float *)Component_object + 11) = strength;
   *((_QWORD *)Component_object + 7) = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(Component_object + 56), 0, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(Component_object + 56), 0, v10, v11, v12, v13, v14, v15);
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0) )
   {
     *((_DWORD *)Component_object + 22) = 0;
@@ -100,14 +100,14 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   __int64 v17; // x1
   UnityEngine_GameObject_o *v18; // x0
 
-  if ( (byte_4D3108C & 1) == 0 )
+  if ( (byte_4CF2EBE & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&SpringPosition_TypeInfo);
-    byte_4D3108C = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&SpringPosition_TypeInfo);
+    byte_4CF2EBE = 1;
   }
   SpringPosition_TypeInfo->static_fields->current = this;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)SpringPosition_TypeInfo->static_fields,
     (int32_t)this,
     v2,
@@ -129,11 +129,11 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   {
     v18 = this->fields.eventReceiver;
     if ( !v18 )
-      sub_1C942F0(0, v17);
-    UnityEngine_GameObject__SendMessage_72091256(v18, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
+      sub_1C7BD40(0, v17);
+    UnityEngine_GameObject__SendMessage_71850432(v18, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
   }
   SpringPosition_TypeInfo->static_fields->current = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)SpringPosition_TypeInfo->static_fields, 0, v11, v12, v13, v14, v15, v16);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)SpringPosition_TypeInfo->static_fields, 0, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -155,15 +155,15 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4D3108A & 1) == 0 )
+  if ( (byte_4CF2EBC & 1) == 0 )
   {
-    sub_1C94098(&Method_NGUITools_FindInParents_UIScrollView___);
-    sub_1C94098(&NGUITools_TypeInfo);
-    byte_4D3108A = 1;
+    sub_1C7BAE8(&Method_NGUITools_FindInParents_UIScrollView___);
+    sub_1C7BAE8(&NGUITools_TypeInfo);
+    byte_4CF2EBC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
   if ( this->fields.updateScrollView )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -171,9 +171,9 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     v11 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_32274D4 *)Method_NGUITools_FindInParents_UIScrollView___);
+            (const MethodInfo_31F9E0C *)Method_NGUITools_FindInParents_UIScrollView___);
     this->fields.mSv = (struct UIScrollView_o *)v11;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mSv, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mSv, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -212,10 +212,10 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D3108B & 1) == 0 )
+  if ( (byte_4CF2EBD & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D3108B = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2EBD = 1;
   }
   if ( this->fields.ignoreTimeScale )
     deltaTime = RealTime__get_deltaTime(0);
@@ -243,7 +243,7 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
     if ( v11 )
     {
       v27 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
-      v28 = NGUIMath__SpringLerp_49992652(v27, this->fields.target, this->fields.strength, v6, 0);
+      v28 = NGUIMath__SpringLerp_49820884(v27, this->fields.target, this->fields.strength, v6, 0);
       UnityEngine_Transform__set_position(v11, v28, 0);
       mTrans = this->fields.mTrans;
       if ( mTrans )
@@ -265,7 +265,7 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
       }
     }
 LABEL_30:
-    sub_1C942F0(mTrans, v4);
+    sub_1C7BD40(mTrans, v4);
   }
   if ( mThreshold == 0.0 )
   {
@@ -288,7 +288,7 @@ LABEL_30:
   if ( !v20 )
     goto LABEL_30;
   v31 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v32 = NGUIMath__SpringLerp_49992652(v31, this->fields.target, this->fields.strength, v6, 0);
+  v32 = NGUIMath__SpringLerp_49820884(v31, this->fields.target, this->fields.strength, v6, 0);
   UnityEngine_Transform__set_localPosition(v20, v32, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -348,7 +348,7 @@ void SpringPosition_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -359,12 +359,12 @@ void SpringPosition_OnFinished___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -376,9 +376,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AD083C;
+  this->fields.invoke_impl = (intptr_t)sub_1AB97CC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AD07FC;
+  this->fields.extra_arg = (intptr_t)sub_1AB978C;
 }
 
 
@@ -391,7 +391,7 @@ System_IAsyncResult_o *SpringPosition_OnFinished__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, &v5, callback, object);
 }
 
 
@@ -400,7 +400,7 @@ void SpringPosition_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

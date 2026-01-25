@@ -38,7 +38,7 @@ UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEnt
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0);
     p_userGameEntity->klass = (GrandQuestFolderBoardItem_c *)userGameEntity;
-    sub_1C9403C(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
+    sub_1C7BA8C(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

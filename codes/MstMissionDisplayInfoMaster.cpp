@@ -1,14 +1,14 @@
 void MstMissionDisplayInfoMaster___ctor(MstMissionDisplayInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2CD8C & 1) == 0 )
+  if ( (byte_4CEEB9F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
-    byte_4D2CD8C = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
+    byte_4CEEB9F = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     164,
-    (const MethodInfo_345919C *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
+    (const MethodInfo_342BFD8 *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
 }
 
 
@@ -22,19 +22,19 @@ bool MstMissionDisplayInfoMaster__IsBefOpenTime(MstMissionDisplayInfoMaster_o *t
   bool v8; // w24
   Il2CppObject *Item; // x0
 
-  if ( (byte_4D2CD8E & 1) == 0 )
+  if ( (byte_4CEEBA1 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2CD8E = 1;
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CEEBA1 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33F3B64 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
+            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
@@ -51,7 +51,7 @@ bool MstMissionDisplayInfoMaster__IsBefOpenTime(MstMissionDisplayInfoMaster_o *t
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v7,
-               (const MethodInfo_33F3BF4 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
+               (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
       if ( !Item || v6 >= (__int64)Item[2].monitor )
       {
         v8 = ++v7 < Count;
@@ -61,7 +61,7 @@ bool MstMissionDisplayInfoMaster__IsBefOpenTime(MstMissionDisplayInfoMaster_o *t
       return v8;
     }
 LABEL_15:
-    sub_1C942F0(list, method);
+    sub_1C7BD40(list, method);
   }
   return 0;
 }
@@ -76,18 +76,18 @@ bool MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMaster_o *this,
   bool v7; // w23
   Il2CppObject *Item; // x0
 
-  if ( (byte_4D2CD8D & 1) == 0 )
+  if ( (byte_4CEEBA0 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
-    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
-    byte_4D2CD8D = 1;
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
+    byte_4CEEBA0 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33F3B64 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
+            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Count__);
   if ( Count >= 1 )
   {
     v5 = Count;
@@ -101,7 +101,7 @@ bool MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMaster_o *this,
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v6,
-               (const MethodInfo_33F3BF4 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
+               (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MstMissionDisplayInfoEntity__get_Item__);
       if ( !Item || !MstMissionDisplayInfoEntity__isOpenNow((MstMissionDisplayInfoEntity_o *)Item, method) )
       {
         v7 = ++v6 < v5;
@@ -111,7 +111,7 @@ bool MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMaster_o *this,
       return v7;
     }
 LABEL_13:
-    sub_1C942F0(list, method);
+    sub_1C7BD40(list, method);
   }
   return 0;
 }

@@ -6,9 +6,9 @@ void TimeOverChecker___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1C9403C(&this->fields, monoBehaviour);
+  sub_1C7BA8C(&this->fields, monoBehaviour);
   this->fields.onFinish = onFinish;
-  sub_1C9403C(&this->fields.onFinish, onFinish);
+  sub_1C7BA8C(&this->fields.onFinish, onFinish);
 }
 
 
@@ -16,16 +16,16 @@ System_Collections_IEnumerator_o *TimeOverChecker__CheckTimeOver(TimeOverChecker
 {
   __int64 v3; // x20
 
-  if ( (byte_4D2683E & 1) == 0 )
+  if ( (byte_4CE86BE & 1) == 0 )
   {
-    sub_1C94098(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
-    byte_4D2683E = 1;
+    sub_1C7BAE8(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
+    byte_4CE86BE = 1;
   }
-  v3 = sub_1C942E4(TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
+  v3 = sub_1C7BD34(TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C9403C(v3 + 32, this);
+  sub_1C7BA8C(v3 + 32, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -51,13 +51,13 @@ void TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finishedAt, const M
       monoBehaviour = TimeOverChecker__CheckTimeOver(this, v6);
       if ( v7 )
       {
-        started = UnityEngine_MonoBehaviour__StartCoroutine_72096164(v7, monoBehaviour, 0);
+        started = UnityEngine_MonoBehaviour__StartCoroutine_71855340(v7, monoBehaviour, 0);
         this->fields.coroutine = started;
-        sub_1C9403C(&this->fields.coroutine, started);
+        sub_1C7BA8C(&this->fields.coroutine, started);
         return;
       }
 LABEL_7:
-      sub_1C942F0(monoBehaviour, v4);
+      sub_1C7BD40(monoBehaviour, v4);
     }
   }
 }
@@ -75,10 +75,10 @@ void TimeOverChecker__Stop(TimeOverChecker_o *this, const MethodInfo *method)
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1C942F0(0, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_72096784(monoBehaviour, coroutine, 0);
+      sub_1C7BD40(0, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_71855960(monoBehaviour, coroutine, 0);
     *p_coroutine = 0;
-    sub_1C9403C(p_coroutine, 0);
+    sub_1C7BA8C(p_coroutine, 0);
   }
 }
 
@@ -108,11 +108,11 @@ bool TimeOverChecker__CheckTimeOver_d__7__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4D2683F & 1) == 0 )
+  if ( (byte_4CE86BF & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1C94098(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4D2683F = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1C7BAE8(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4CE86BF = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -131,10 +131,10 @@ bool TimeOverChecker__CheckTimeOver_d__7__MoveNext(
       goto LABEL_16;
     if ( !_4__this->fields.onFinish )
       return 0;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_1C942E4(UnityEngine_WaitForSeconds_TypeInfo);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1C7BD34(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0);
     v2->fields._waitTime_5__2 = v5;
-    sub_1C9403C(&v2->fields._waitTime_5__2, v5);
+    sub_1C7BA8C(&v2->fields._waitTime_5__2, v5);
   }
   finishedAt = _4__this->fields.finishedAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -151,12 +151,12 @@ bool TimeOverChecker__CheckTimeOver_d__7__MoveNext(
       return 0;
     }
 LABEL_16:
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   }
   waitTime_5__2 = (Il2CppObject *)v2->fields._waitTime_5__2;
   v2->fields.__2__current = waitTime_5__2;
   p__2__current = &v2->fields.__2__current;
-  sub_1C9403C(p__2__current, waitTime_5__2);
+  sub_1C7BA8C(p__2__current, waitTime_5__2);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -179,11 +179,11 @@ void __noreturn TimeOverChecker__CheckTimeOver_d__7__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 

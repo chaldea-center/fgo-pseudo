@@ -24,11 +24,11 @@ void WarBoardWallData___ctor(
   int32_t defeatPoint; // w8
   WarBoardStageWallEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D2A337 & 1) == 0 )
+  if ( (byte_4CEC199 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2A337 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEC199 = 1;
   }
   entity = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -38,7 +38,7 @@ void WarBoardWallData___ctor(
   this->fields._wallId_k__BackingField = layout->fields.effectId;
   Individuality = WarBoardStageLayoutEntity__GetIndividuality(layout, 0);
   this->fields._individuality_k__BackingField = Individuality;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)Individuality,
     v10,
@@ -50,14 +50,14 @@ void WarBoardWallData___ctor(
   breakPoint = layout->fields.breakPoint;
   this->fields._breakPoint_k__BackingField = breakPoint;
   this->fields._breakPointMax_k__BackingField = breakPoint;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0 )
+                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0 )
   {
 LABEL_12:
-    sub_1C942F0(Instance, v8);
+    sub_1C7BD40(Instance, v8);
   }
   if ( WarBoardStageWallMaster__TryGetEntity(
          (WarBoardStageWallMaster_o *)Instance,
@@ -68,7 +68,7 @@ LABEL_12:
   {
     v23 = (int)entity;
     this->fields.wallEntity = entity;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.wallEntity, v23, v17, v18, v19, v20, v21, v22);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.wallEntity, v23, v17, v18, v19, v20, v21, v22);
   }
   if ( wallData )
   {
@@ -95,16 +95,16 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardWallData__Decrement
   WarBoardWallComponent_o *component; // x0
   int32_t breakPoint_k__BackingField; // w1
 
-  if ( (byte_4D2A33B & 1) == 0 )
+  if ( (byte_4CEC19D & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
-    byte_4D2A33B = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    byte_4CEC19D = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   component = this->fields.component;
   if ( !component )
     goto LABEL_9;
@@ -125,7 +125,7 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardWallData__Decrement
       return (System_Collections_Generic_List_WarBoardTaskBase__o *)v5;
     }
 LABEL_9:
-    sub_1C942F0(component, v6);
+    sub_1C7BD40(component, v6);
   }
   WarBoardWallComponent__OnBreak(
     component,
@@ -154,10 +154,10 @@ WarBoardStageWallEntity_o *WarBoardWallData__GetWallEntity(WarBoardWallData_o *t
 
 void WarBoardWallData__SetBreakPoint(WarBoardWallData_o *this, int32_t point, const MethodInfo *method)
 {
-  if ( (byte_4D2A33A & 1) == 0 )
+  if ( (byte_4CEC19C & 1) == 0 )
   {
-    sub_1C94098(&AStarSearch_TypeInfo);
-    byte_4D2A33A = 1;
+    sub_1C7BAE8(&AStarSearch_TypeInfo);
+    byte_4CEC19C = 1;
   }
   this->fields._breakPoint_k__BackingField = point;
   if ( point <= 0 )
@@ -182,7 +182,7 @@ void WarBoardWallData__SetComponent(
   System_String_o *v7; // x7
 
   this->fields.component = component;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.component,
     (int32_t)component,
     (int32_t)method,
@@ -200,7 +200,7 @@ void WarBoardWallData__SetTouchEnable(WarBoardWallData_o *this, bool enable, con
 
   component = this->fields.component;
   if ( !component )
-    sub_1C942F0(0, enable);
+    sub_1C7BD40(0, enable);
   WarBoardWallComponent__SetTouchEnable(component, enable, 0);
 }
 
@@ -211,7 +211,7 @@ void WarBoardWallData__SetWallEnable(WarBoardWallData_o *this, bool enable, cons
 
   component = this->fields.component;
   if ( !component )
-    sub_1C942F0(0, enable);
+    sub_1C7BD40(0, enable);
   WarBoardWallComponent__SetColliderEnable(component, enable, 0);
 }
 
@@ -341,10 +341,10 @@ System_String_o *WarBoardWallData__get_wallMessage(WarBoardWallData_o *this, con
   struct WarBoardStageWallEntity_o *wallEntity; // x8
   struct System_String_StaticFields *p_message; // x8
 
-  if ( (byte_4D2A339 & 1) == 0 )
+  if ( (byte_4CEC19B & 1) == 0 )
   {
-    sub_1C94098(&string_TypeInfo);
-    byte_4D2A339 = 1;
+    sub_1C7BAE8(&string_TypeInfo);
+    byte_4CEC19B = 1;
   }
   wallEntity = this->fields.wallEntity;
   if ( wallEntity )
@@ -360,10 +360,10 @@ System_String_o *WarBoardWallData__get_wallName(WarBoardWallData_o *this, const 
   struct WarBoardStageWallEntity_o *wallEntity; // x8
   struct System_String_StaticFields *p_name; // x8
 
-  if ( (byte_4D2A338 & 1) == 0 )
+  if ( (byte_4CEC19A & 1) == 0 )
   {
-    sub_1C94098(&string_TypeInfo);
-    byte_4D2A338 = 1;
+    sub_1C7BAE8(&string_TypeInfo);
+    byte_4CEC19A = 1;
   }
   wallEntity = this->fields.wallEntity;
   if ( wallEntity )
@@ -395,7 +395,7 @@ void WarBoardWallData__set_individuality(WarBoardWallData_o *this, System_Int32_
   System_String_o *v7; // x7
 
   this->fields._individuality_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -440,7 +440,7 @@ void WarBoardWallData_SaveData___ctor(WarBoardWallData_SaveData_o *this, const M
 }
 
 
-void WarBoardWallData_SaveData___ctor_38774820(
+void WarBoardWallData_SaveData___ctor_38590056(
         WarBoardWallData_SaveData_o *this,
         WarBoardWallData_o *owner,
         const MethodInfo *method)
@@ -462,16 +462,16 @@ void WarBoardWallData_SaveData___ctor_38774820(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.owner = owner;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
   v18 = this->fields.owner;
   if ( !v18 )
-    sub_1C942F0(0, v11);
+    sub_1C7BD40(0, v11);
   this->fields.wallId = v18->fields._wallId_k__BackingField;
   this->fields.squareIndex = v18->fields._squareIndex_k__BackingField;
   this->fields.isDestroy = v18->fields._isDestroy_k__BackingField;
   this->fields.breakPoint = v18->fields._breakPoint_k__BackingField;
   v18->fields.localSaveData = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v18->fields.localSaveData, (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v18->fields.localSaveData, (int32_t)this, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -526,15 +526,15 @@ void WarBoardWallData_SaveData__SetOwner(
   struct WarBoardWallData_o *owner; // x0
 
   if ( !data )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   Wall = WarBoardData__GetWall(data, this->fields.squareIndex, 1, 0);
   this->fields.owner = Wall;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)Wall, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)Wall, v5, v6, v7, v8, v9, v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&owner->fields.localSaveData,
       (int32_t)this,
       v11,

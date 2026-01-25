@@ -19,11 +19,11 @@ void DebugListViewItemDraw__SetItem(
   float v12; // s1
   float v13; // s2
 
-  if ( (byte_4D29CA5 & 1) == 0 )
+  if ( (byte_4CEBAC1 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29CA5 = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEBAC1 = 1;
   }
   if ( item && mode )
   {
@@ -43,7 +43,7 @@ void DebugListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)eventTextLabel,
-                             (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -68,6 +68,6 @@ void DebugListViewItemDraw__SetItem(
       }
     }
 LABEL_20:
-    sub_1C942F0(eventTextLabel, titleText);
+    sub_1C7BD40(eventTextLabel, titleText);
   }
 }

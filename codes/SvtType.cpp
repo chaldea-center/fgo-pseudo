@@ -34,7 +34,7 @@ bool SvtType__IsEnemyCollectionDetail(int32_t type, const MethodInfo *method)
 }
 
 
-bool SvtType__IsEnemy_41203756(int32_t type, const MethodInfo *method)
+bool SvtType__IsEnemy_41016004(int32_t type, const MethodInfo *method)
 {
   return type == 4;
 }
@@ -61,18 +61,6 @@ bool SvtType__IsKeepServant(int32_t type, const MethodInfo *method)
 bool SvtType__IsKeepServantEquip(int32_t type, const MethodInfo *method)
 {
   return type == 6 || type == 8;
-}
-
-
-bool SvtType__IsLock(int32_t type, const MethodInfo *method)
-{
-  _BOOL4 v2; // w0
-
-  if ( (unsigned int)(type - 1) > 7 )
-    LOBYTE(v2) = 0;
-  else
-    return (0xE7u >> (type - 1)) & 1;
-  return v2;
 }
 
 

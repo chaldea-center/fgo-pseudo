@@ -1,9 +1,9 @@
 void EventInfoRepairDialog___ctor(EventInfoRepairDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2DD28 & 1) == 0 )
+  if ( (byte_4CEFAE6 & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D2DD28 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CEFAE6 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,13 +18,13 @@ void EventInfoRepairDialog__OnClose(EventInfoRepairDialog_o *this, const MethodI
   System_Reflection_MethodBase_o *v5; // x0
   System_Action_o *v6; // x20
 
-  if ( (byte_4D2DD27 & 1) == 0 )
+  if ( (byte_4CEFAE5 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_EventInfoRepairDialog_OnClose__);
-    sub_1C94098(&Method_EventInfoRepairDialog__OnClose_b__7_0__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DD27 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_EventInfoRepairDialog_OnClose__);
+    sub_1C7BAE8(&Method_EventInfoRepairDialog__OnClose_b__7_0__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFAE5 = 1;
   }
   if ( this->fields.canTap )
   {
@@ -36,10 +36,10 @@ void EventInfoRepairDialog__OnClose(EventInfoRepairDialog_o *this, const MethodI
     this->fields.canTap = 0;
     v4 = Method_EventInfoRepairDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoRepairDialog_OnClose__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C940B0(Method_EventInfoRepairDialog_OnClose__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C9407C(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C7BB00(Method_EventInfoRepairDialog_OnClose__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
-    v6 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_EventInfoRepairDialog__OnClose_b__7_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v6, 0);
   }
@@ -70,15 +70,15 @@ void EventInfoRepairDialog__Open(
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v23; // x8
 
-  if ( (byte_4D2DD26 & 1) == 0 )
+  if ( (byte_4CEFAE4 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_EventInfoRepairDialog__Open_b__6_0__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DD26 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_EventInfoRepairDialog__Open_b__6_0__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFAE4 = 1;
   }
   this->fields.onClosed = inOnClosed;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClosed,
     (int32_t)inOnClosed,
     (int32_t)inOnClosed,
@@ -94,7 +94,7 @@ void EventInfoRepairDialog__Open(
     AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0);
   this->fields.canTap = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
-  v12 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_EventInfoRepairDialog__Open_b__6_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v12, 0, 0, 0);
   eventInfoEquipSkillPartsListComponent = (UnityEngine_Object_o *)this->fields.eventInfoEquipSkillPartsListComponent;
@@ -149,7 +149,7 @@ void EventInfoRepairDialog__Open(
         }
       }
 LABEL_29:
-      sub_1C942F0(v17, v14);
+      sub_1C7BD40(v17, v14);
     }
   }
 }
@@ -167,20 +167,20 @@ void EventInfoRepairDialog___OnClose_b__7_0(EventInfoRepairDialog_o *this, const
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D2DD29 & 1) == 0 )
+  if ( (byte_4CEFAE7 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DD29 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFAE7 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72110972(gameObject, 0);
+  UnityEngine_Object__Destroy_71870148(gameObject, 0);
   onClosed = this->fields.onClosed;
   p_onClosed = (GrandQuestFolderBoardItem_o *)&this->fields.onClosed;
   ActionExtensions__Call(onClosed, 0);
   p_onClosed->klass = 0;
-  sub_1C9403C(p_onClosed, 0, v6, v7, v8, v9, v10, v11);
+  sub_1C7BA8C(p_onClosed, 0, v6, v7, v8, v9, v10, v11);
 }
 
 

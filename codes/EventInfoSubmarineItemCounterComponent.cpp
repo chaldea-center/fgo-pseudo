@@ -1,9 +1,9 @@
 void EventInfoSubmarineItemCounterComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D2E5DA & 1) == 0 )
+  if ( (byte_4CF0480 & 1) == 0 )
   {
-    sub_1C94098(&EventInfoSubmarineItemCounterComponent_TypeInfo);
-    byte_4D2E5DA = 1;
+    sub_1C7BAE8(&EventInfoSubmarineItemCounterComponent_TypeInfo);
+    byte_4CF0480 = 1;
   }
   LODWORD(EventInfoSubmarineItemCounterComponent_TypeInfo->static_fields->ANIMATION_TIME) = (struct EventInfoSubmarineItemCounterComponent_StaticFields)1056964608;
 }
@@ -26,7 +26,7 @@ void EventInfoSubmarineItemCounterComponent__AddCount(
 
   countLabel = this->fields.countLabel;
   if ( !countLabel )
-    sub_1C942F0(this, count);
+    sub_1C7BD40(this, count);
   countLabel->fields._AddCount_k__BackingField = count;
 }
 
@@ -41,26 +41,26 @@ UserItemEntity_o *EventInfoSubmarineItemCounterComponent__GetUserItemEntity(
   Il2CppObject *MasterData_object; // x20
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D2E5D9 & 1) == 0 )
+  if ( (byte_4CF047F & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2E5D9 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CF047F = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2633A )
+  if ( !byte_4CE827C )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D2633A = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CE827C = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ UserItemEntity_o *EventInfoSubmarineItemCounterComponent__GetUserItemEntity(
   }
   if ( !MasterData_object )
 LABEL_12:
-    sub_1C942F0(Instance, v5);
+    sub_1C7BD40(Instance, v5);
   UserItemMaster__TryGetEntity(
     (UserItemMaster_o *)MasterData_object,
     &entity,
@@ -94,10 +94,10 @@ void EventInfoSubmarineItemCounterComponent__PlayAnimation(
   UserItemEntity_o *UserItemEntity; // x0
   int32_t num; // w8
 
-  if ( (byte_4D2E5D7 & 1) == 0 )
+  if ( (byte_4CF047D & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E5D7 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF047D = 1;
   }
   if ( this->fields.eventUiValueEntity )
   {
@@ -115,7 +115,7 @@ void EventInfoSubmarineItemCounterComponent__PlayAnimation(
           : (num = UserItemEntity->fields.num),
             (v4 = this->fields.countLabel) == 0) )
       {
-        sub_1C942F0(v4, v5);
+        sub_1C7BD40(v4, v5);
       }
       v4->fields._AddCount_k__BackingField = num - v4->fields._MainCount_k__BackingField;
       UICounterLabel__PlayAnimation(v4, 0);
@@ -150,17 +150,17 @@ void EventInfoSubmarineItemCounterComponent__Setup(
   UnityEngine_Object_o *nameLabel; // x22
   UnityEngine_GameObject_o *v25; // x0
 
-  if ( (byte_4D2E5D6 & 1) == 0 )
+  if ( (byte_4CF047C & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&EventInfoSubmarineItemCounterComponent_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_25304/*"{0:#,0}"*/);
-    byte_4D2E5D6 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&EventInfoSubmarineItemCounterComponent_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_25307/*"{0:#,0}"*/);
+    byte_4CF047C = 1;
   }
   this->fields.eventUiValueEntity = eventUiValueEntity;
   p_eventUiValueEntity = &this->fields.eventUiValueEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventUiValueEntity,
     (int32_t)eventUiValueEntity,
     (int32_t)itemData,
@@ -202,7 +202,7 @@ void EventInfoSubmarineItemCounterComponent__Setup(
         v22,
         num,
         EventInfoSubmarineItemCounterComponent_TypeInfo->static_fields->ANIMATION_TIME,
-        (System_String_o *)StringLiteral_25304/*"{0:#,0}"*/,
+        (System_String_o *)StringLiteral_25307/*"{0:#,0}"*/,
         1,
         0);
       ItemInfo = this->fields.countLabel;
@@ -213,7 +213,7 @@ void EventInfoSubmarineItemCounterComponent__Setup(
       if ( !ItemInfo )
         goto LABEL_30;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)ItemInfo, 0);
-      GameObjectExtensions__SetLocalPosition_36798708(gameObject, itemData->fields.CountPosition, 0);
+      GameObjectExtensions__SetLocalPosition_36523220(gameObject, itemData->fields.CountPosition, 0);
     }
     nameLabel = (UnityEngine_Object_o *)this->fields.nameLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -234,11 +234,11 @@ void EventInfoSubmarineItemCounterComponent__Setup(
       if ( ItemInfo )
       {
         v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)ItemInfo, 0);
-        GameObjectExtensions__SetLocalPosition_36798708(v25, itemData->fields.namePosition, 0);
+        GameObjectExtensions__SetLocalPosition_36523220(v25, itemData->fields.namePosition, 0);
         return;
       }
 LABEL_30:
-      sub_1C942F0(ItemInfo, v13);
+      sub_1C7BD40(ItemInfo, v13);
     }
   }
 }
@@ -256,10 +256,10 @@ void EventInfoSubmarineItemCounterComponent__UpdateCount(
   const MethodInfo *v8; // x2
   UserItemEntity_o *UserItemEntity; // x0
 
-  if ( (byte_4D2E5D8 & 1) == 0 )
+  if ( (byte_4CF047E & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E5D8 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF047E = 1;
   }
   if ( this->fields.eventUiValueEntity )
   {
@@ -277,7 +277,7 @@ void EventInfoSubmarineItemCounterComponent__UpdateCount(
           : (num = (unsigned int)UserItemEntity->fields.num),
             (v4 = this->fields.countLabel) == 0) )
       {
-        sub_1C942F0(v4, num);
+        sub_1C7BD40(v4, num);
       }
       UICounterLabel__SetCountLabel(v4, num, 0);
     }
@@ -293,6 +293,6 @@ bool EventInfoSubmarineItemCounterComponent__get_IsAnimFinished(
 
   countLabel = this->fields.countLabel;
   if ( !countLabel )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   return UICounterLabel__get_IsAnimFinished(countLabel, 0);
 }

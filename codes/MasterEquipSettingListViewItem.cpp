@@ -22,10 +22,10 @@ void MasterEquipSettingListViewItem___ctor(
   System_String_o *v23; // x7
 
   v11 = this;
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&v11->fields._EquipTexture_k__BackingField,
     (int32_t)equipTexture,
     v12,
@@ -36,7 +36,7 @@ void MasterEquipSettingListViewItem___ctor(
     v17);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 136);
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v11, (int32_t)shortName, v18, v19, v20, v21, v22, v23);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v11, (int32_t)shortName, v18, v19, v20, v21, v22, v23);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -62,7 +62,7 @@ void MasterEquipSettingListViewItem__ModifyItemTexture(
   System_String_o *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)texture,
     (int32_t)method,
@@ -129,7 +129,7 @@ void MasterEquipSettingListViewItem__set_EquipTexture(
   System_String_o *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)value,
     (int32_t)method,

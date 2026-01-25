@@ -14,40 +14,40 @@ System_Int32_array *BattleSelfSkillInfoData__GetRankUpSkillIds(
   __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D2F6A4 & 1) == 0 )
+  if ( (byte_4CF1426 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C94098(&int___TypeInfo);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2F6A4 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C7BAE8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C7BAE8(&int___TypeInfo);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CF1426 = 1;
   }
   entity = 0;
-  result = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_11;
   result = (System_Int32_array *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)result,
-                                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                   (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !result )
     goto LABEL_11;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)result,
          &entity,
          svtId,
-         (const MethodInfo_345B50C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_342E348 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
     result = (System_Int32_array *)entity;
     if ( entity )
       return ServantEntity__GetRankUpSkillIds((ServantEntity_o *)entity, baseSkillId, 0);
 LABEL_11:
-    sub_1C942F0(result, v7);
+    sub_1C7BD40(result, v7);
   }
-  result = (System_Int32_array *)sub_1C94140(int___TypeInfo, 1);
+  result = (System_Int32_array *)sub_1C7BB90(int___TypeInfo, 1);
   if ( !result )
     goto LABEL_11;
   if ( !LODWORD(result->max_length) )
-    sub_1C942F8(result);
+    sub_1C7BD48(result);
   result->m_Items[0] = baseSkillId;
   return result;
 }
@@ -101,13 +101,13 @@ void BattleSelfSkillInfoData__PreAddProcess(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4D2F6A3 & 1) == 0 )
+  if ( (byte_4CF1425 & 1) == 0 )
   {
-    sub_1C94098(&BattleSkillInfoData_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
-    this = (BattleSelfSkillInfoData_o *)sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4D2F6A3 = 1;
+    sub_1C7BAE8(&BattleSkillInfoData_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
+    this = (BattleSelfSkillInfoData_o *)sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CF1425 = 1;
   }
   if ( !svtData )
     goto LABEL_21;
@@ -116,7 +116,7 @@ void BattleSelfSkillInfoData__PreAddProcess(
     goto LABEL_21;
   v11 = *(struct BattleBuffData_SkillRankChangeData_o **)&this->fields.cutInId;
   v4->fields.rankChangeData = v11;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v4->fields.rankChangeData, (int32_t)v11, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.rankChangeData, (int32_t)v11, v5, v6, v7, v8, v9, v10);
   rankUpList = v4->fields.rankUpList;
   if ( !rankUpList )
     goto LABEL_21;
@@ -132,7 +132,7 @@ void BattleSelfSkillInfoData__PreAddProcess(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v36.fields.currentCryptoKey = v16;
   *(_QWORD *)&v36.fields.fakeValue = v15;
-  v17 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v36, 0);
+  v17 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v36, 0);
   this = (BattleSelfSkillInfoData_o *)BattleSelfSkillInfoData__GetRankUpSkillIds(
                                         v17,
                                         (int32_t)v17,
@@ -148,10 +148,10 @@ void BattleSelfSkillInfoData__PreAddProcess(
     while ( 1 )
     {
       if ( v21 >= (unsigned int)v19 )
-        sub_1C942F8(this);
+        sub_1C7BD48(this);
       v22 = *(&v20->fields._skillId + v21);
       v23 = (System_Collections_Generic_List_object__o *)v4->fields.rankUpList;
-      v24 = (BattleSkillInfoData_o *)sub_1C942E4(BattleSkillInfoData_TypeInfo);
+      v24 = (BattleSkillInfoData_o *)sub_1C7BD34(BattleSkillInfoData_TypeInfo);
       BattleSkillInfoData___ctor(v24, 0);
       this = (BattleSelfSkillInfoData_o *)BattleServantData__SetSkillInfo(
                                             svtData,
@@ -177,20 +177,20 @@ void BattleSelfSkillInfoData__PreAddProcess(
         System_Collections_Generic_List_object___AddWithResize(
           v23,
           (Il2CppObject *)this,
-          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
       }
       else
       {
         v35 = &items->obj.klass + v33;
         v23->fields._size = v33 + 1;
         v35[4] = (Il2CppClass *)v34;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v35 + 4), (int32_t)v34, v25, v26, v27, v28, v29, v30);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v35 + 4), (int32_t)v34, v25, v26, v27, v28, v29, v30);
       }
       LODWORD(v19) = v20->fields.svtUniqueId;
       if ( (__int64)++v21 >= (int)v19 )
         return;
     }
 LABEL_21:
-    sub_1C942F0(this, svtData);
+    sub_1C7BD40(this, svtData);
   }
 }

@@ -1,9 +1,9 @@
 void ItemNumDispControl___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D26BC2 & 1) == 0 )
+  if ( (byte_4CE8A41 & 1) == 0 )
   {
-    sub_1C94098(&ItemNumDispControl_TypeInfo);
-    byte_4D26BC2 = 1;
+    sub_1C7BAE8(&ItemNumDispControl_TypeInfo);
+    byte_4CE8A41 = 1;
   }
   *ItemNumDispControl_TypeInfo->static_fields = (struct ItemNumDispControl_StaticFields)0x400000003F000000LL;
 }
@@ -13,18 +13,18 @@ void ItemNumDispControl___ctor(ItemNumDispControl_o *this, const MethodInfo *met
 {
   System_Collections_Generic_List_object__o *v3; // x20
 
-  if ( (byte_4D26BC1 & 1) == 0 )
+  if ( (byte_4CE8A40 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4D26BC1 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4CE8A40 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.SetAlphaDispInfoGroup = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C9403C(&this->fields.SetAlphaDispInfoGroup, v3);
+  sub_1C7BA8C(&this->fields.SetAlphaDispInfoGroup, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -44,18 +44,18 @@ void ItemNumDispControl__InitEventAlphaAnim(
   __int64 v12; // x1
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D26BBD & 1) == 0 )
+  if ( (byte_4CE8A3C & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    byte_4D26BBD = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    byte_4CE8A3C = 1;
   }
   memset(&v13, 0, sizeof(v13));
   this->fields.SetAlphaDispInfoGroup = infoList;
   p_SetAlphaDispInfoGroup = &this->fields.SetAlphaDispInfoGroup;
-  sub_1C9403C(&this->fields.SetAlphaDispInfoGroup, infoList);
+  sub_1C7BA8C(&this->fields.SetAlphaDispInfoGroup, infoList);
   if ( ItemNumDispControl__IsEventInfoGroups(this, v6) )
   {
     ItemNumDispControl__SetDispEventInfoGroup(this, 0, v8);
@@ -71,7 +71,7 @@ void ItemNumDispControl__InitEventAlphaAnim(
       return;
     }
 LABEL_17:
-    sub_1C942F0(alphaAnimRoot, v7);
+    sub_1C7BD40(alphaAnimRoot, v7);
   }
   alphaAnimRoot = this->fields.alphaAnimRoot;
   if ( !alphaAnimRoot )
@@ -86,21 +86,21 @@ LABEL_17:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)alphaAnimRoot,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v13,
-            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     if ( !v13.fields._current )
-      sub_1C942F0(0, v10);
+      sub_1C7BD40(0, v10);
     gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v13.fields._current, 0);
     if ( !gameObject )
-      sub_1C942F0(0, v12);
+      sub_1C7BD40(0, v12);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }
 
 
@@ -110,14 +110,14 @@ bool ItemNumDispControl__IsEventInfoGroups(ItemNumDispControl_o *this, const Met
   struct System_Collections_Generic_List_GameObject__o *SetAlphaDispInfoGroup; // x8
 
   v2 = this;
-  if ( (byte_4D26BBE & 1) == 0 )
+  if ( (byte_4CE8A3D & 1) == 0 )
   {
-    this = (ItemNumDispControl_o *)sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    byte_4D26BBE = 1;
+    this = (ItemNumDispControl_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    byte_4CE8A3D = 1;
   }
   SetAlphaDispInfoGroup = v2->fields.SetAlphaDispInfoGroup;
   if ( !SetAlphaDispInfoGroup )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   return SetAlphaDispInfoGroup->fields._size > 1;
 }
 
@@ -141,15 +141,15 @@ void ItemNumDispControl__SetDispEventInfoGroup(ItemNumDispControl_o *this, int32
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4D26BBF & 1) == 0 )
+  if ( (byte_4CE8A3E & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4D26BBF = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4CE8A3E = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( group_id < 0 )
@@ -172,34 +172,34 @@ void ItemNumDispControl__SetDispEventInfoGroup(ItemNumDispControl_o *this, int32
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     SetAlphaDispInfoGroup,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v11 = v10;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v11,
-            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     if ( !v11.fields._current )
-      sub_1C942F0(0, v7);
+      sub_1C7BD40(0, v7);
     gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v11.fields._current, 0);
     if ( !gameObject )
-      sub_1C942F0(0, v9);
+      sub_1C7BD40(0, v9);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   SetAlphaDispInfoGroup = (System_Collections_Generic_List_object__o *)this->fields.SetAlphaDispInfoGroup;
   if ( !SetAlphaDispInfoGroup
     || (SetAlphaDispInfoGroup = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                SetAlphaDispInfoGroup,
                                                                                this->fields.infoGroupIdx,
-                                                                               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_GameObject__get_Item__)) == 0
+                                                                               (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_GameObject__get_Item__)) == 0
     || (SetAlphaDispInfoGroup = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__get_gameObject(
                                                                                (UnityEngine_GameObject_o *)SetAlphaDispInfoGroup,
                                                                                0)) == 0 )
   {
 LABEL_20:
-    sub_1C942F0(SetAlphaDispInfoGroup, *(_QWORD *)&group_id);
+    sub_1C7BD40(SetAlphaDispInfoGroup, *(_QWORD *)&group_id);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SetAlphaDispInfoGroup, 1, 0);
 }
@@ -234,15 +234,15 @@ void ItemNumDispControl__UpdateEventAlphaAnim(ItemNumDispControl_o *this, const 
   __int64 v18; // x1
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4D26BC0 & 1) == 0 )
+  if ( (byte_4CE8A3F & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C94098(&ItemNumDispControl_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D26BC0 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C7BAE8(&ItemNumDispControl_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CE8A3F = 1;
   }
   memset(&v19, 0, sizeof(v19));
   IsEventInfoGroups = (CommonUI_o *)ItemNumDispControl__IsEventInfoGroups(this, method);
@@ -266,7 +266,7 @@ void ItemNumDispControl__UpdateEventAlphaAnim(ItemNumDispControl_o *this, const 
     EVENT_ALPHA_ANIM_SPD_RATE = v10->static_fields->EVENT_ALPHA_ANIM_SPD_RATE;
     if ( !this->fields.isPauseEventAlphaAnim )
     {
-      IsEventInfoGroups = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      IsEventInfoGroups = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !IsEventInfoGroups )
         goto LABEL_28;
       if ( !CommonUI__IsActive_UserPresentBoxWindow(IsEventInfoGroups, 0) )
@@ -305,7 +305,7 @@ void ItemNumDispControl__UpdateEventAlphaAnim(ItemNumDispControl_o *this, const 
       return;
     }
 LABEL_28:
-    sub_1C942F0(IsEventInfoGroups, v4);
+    sub_1C7BD40(IsEventInfoGroups, v4);
   }
   ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))klass->vtable._8_set_alpha.methodPtr)(
     this->fields.alphaAnimRoot,
@@ -317,19 +317,19 @@ LABEL_28:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)IsEventInfoGroups,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v19,
-            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     if ( !v19.fields._current )
-      sub_1C942F0(0, v16);
+      sub_1C7BD40(0, v16);
     gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v19.fields._current, 0);
     if ( !gameObject )
-      sub_1C942F0(0, v18);
+      sub_1C7BD40(0, v18);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v19,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }

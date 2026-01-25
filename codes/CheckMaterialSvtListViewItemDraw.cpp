@@ -9,7 +9,7 @@ int32_t CheckMaterialSvtListViewItemDraw__GetDispMode(int32_t initMode, const Me
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_D31248[initMode - 1];
+    return dword_D28F18[initMode - 1];
 }
 
 
@@ -22,26 +22,26 @@ System_String_o *CheckMaterialSvtListViewItemDraw__GetStatusText(
 {
   __int64 *v8; // x8
 
-  if ( (byte_4D265C2 & 1) == 0 )
+  if ( (byte_4CF285D & 1) == 0 )
   {
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&StringLiteral_11586/*"SELECT_LOCK"*/);
-    sub_1C94098(&StringLiteral_11575/*"SELECT_FAVORITE"*/);
-    sub_1C94098(&StringLiteral_12567/*"SUPPORT_MEMBER"*/);
-    sub_1C94098(&StringLiteral_11568/*"SELECT_CANNOT"*/);
-    sub_1C94098(&StringLiteral_11569/*"SELECT_CHOICE"*/);
-    sub_1C94098(&StringLiteral_11600/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    sub_1C94098(&StringLiteral_11596/*"SELECT_PARTY"*/);
-    sub_1C94098(&StringLiteral_9338/*"NOT_SELECT_EQUIPED"*/);
-    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D265C2 = 1;
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_11589/*"SELECT_LOCK"*/);
+    sub_1C7BAE8(&StringLiteral_11578/*"SELECT_FAVORITE"*/);
+    sub_1C7BAE8(&StringLiteral_12570/*"SUPPORT_MEMBER"*/);
+    sub_1C7BAE8(&StringLiteral_11571/*"SELECT_CANNOT"*/);
+    sub_1C7BAE8(&StringLiteral_11572/*"SELECT_CHOICE"*/);
+    sub_1C7BAE8(&StringLiteral_11603/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_1C7BAE8(&StringLiteral_11599/*"SELECT_PARTY"*/);
+    sub_1C7BAE8(&StringLiteral_9343/*"NOT_SELECT_EQUIPED"*/);
+    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF285D = 1;
   }
   if ( !isServant )
   {
     if ( item )
       goto LABEL_12;
 LABEL_10:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
   if ( !item )
     goto LABEL_10;
@@ -49,14 +49,14 @@ LABEL_10:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = &StringLiteral_11600/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v8 = &StringLiteral_11603/*"SELECT_SERVANT_EVENT_JOIN"*/;
     return LocalizationManager__Get((System_String_o *)*v8, 0);
   }
   if ( !CheckMaterialSvtListViewItem__get_IsSellEnableServant(item, 0) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = &StringLiteral_11568/*"SELECT_CANNOT"*/;
+    v8 = &StringLiteral_11571/*"SELECT_CANNOT"*/;
     return LocalizationManager__Get((System_String_o *)*v8, 0);
   }
 LABEL_12:
@@ -64,14 +64,14 @@ LABEL_12:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = &StringLiteral_11569/*"SELECT_CHOICE"*/;
+    v8 = &StringLiteral_11572/*"SELECT_CHOICE"*/;
     return LocalizationManager__Get((System_String_o *)*v8, 0);
   }
   if ( item->fields._IsLock_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = &StringLiteral_11586/*"SELECT_LOCK"*/;
+    v8 = &StringLiteral_11589/*"SELECT_LOCK"*/;
     return LocalizationManager__Get((System_String_o *)*v8, 0);
   }
   if ( isServant )
@@ -80,21 +80,21 @@ LABEL_12:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v8 = &StringLiteral_11575/*"SELECT_FAVORITE"*/;
+      v8 = &StringLiteral_11578/*"SELECT_FAVORITE"*/;
       return LocalizationManager__Get((System_String_o *)*v8, 0);
     }
     if ( item->fields._IsParty_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v8 = &StringLiteral_11596/*"SELECT_PARTY"*/;
+      v8 = &StringLiteral_11599/*"SELECT_PARTY"*/;
       return LocalizationManager__Get((System_String_o *)*v8, 0);
     }
     if ( item->fields._IsUseSupportServant_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v8 = &StringLiteral_12567/*"SUPPORT_MEMBER"*/;
+      v8 = &StringLiteral_12570/*"SUPPORT_MEMBER"*/;
       return LocalizationManager__Get((System_String_o *)*v8, 0);
     }
   }
@@ -102,7 +102,7 @@ LABEL_12:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = &StringLiteral_9338/*"NOT_SELECT_EQUIPED"*/;
+    v8 = &StringLiteral_9343/*"NOT_SELECT_EQUIPED"*/;
     return LocalizationManager__Get((System_String_o *)*v8, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
@@ -169,7 +169,7 @@ void CheckMaterialSvtListViewItemDraw__SetDisp(
         (this = (CheckMaterialSvtListViewItemDraw_o *)v5->fields.dragSelect) == 0) )
   {
 LABEL_11:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
   DragSelectComponent__Set(
     (DragSelectComponent_o *)this,
@@ -190,10 +190,10 @@ void CheckMaterialSvtListViewItemDraw__SetInput(
   const MethodInfo *v9; // x3
   struct UICommonButton_o *v10; // x0
 
-  if ( (byte_4D265C3 & 1) == 0 )
+  if ( (byte_4CF285E & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D265C3 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF285E = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -208,7 +208,7 @@ void CheckMaterialSvtListViewItemDraw__SetInput(
             v10->klass->vtable._5_set_isEnabled.method),
           (v10 = this->fields.baseButton) == 0) )
     {
-      sub_1C942F0(v10, v8);
+      sub_1C7BD40(v10, v8);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v10->klass->vtable._14_SetState.methodPtr)(
       v10,
@@ -221,6 +221,107 @@ void CheckMaterialSvtListViewItemDraw__SetInput(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
+void CheckMaterialSvtListViewItemDraw__SetItem(
+        CheckMaterialSvtListViewItemDraw_o *this,
+        CheckMaterialSvtListViewItem_o *item,
+        int32_t dispMode,
+        bool isSelectEnable,
+        int32_t modeKind,
+        const MethodInfo *method)
+{
+  struct UserServantEntity_o *UserServantEntity_k__BackingField; // x24
+  struct UserCommandCodeEntity_o *UserCommandCodeEntity_k__BackingField; // x25
+  UnityEngine_Object_o *partyIcon; // x23
+  _BOOL8 v14; // x0
+  const MethodInfo *v15; // x3
+  FlashingIconComponent_o *v16; // x0
+  _BOOL8 IsParty_k__BackingField; // x1
+  UnityEngine_Object_o *baseButton; // x23
+  const MethodInfo *v19; // x3
+  const MethodInfo *v20; // x5
+
+  if ( (byte_4CF2859 & 1) == 0 )
+  {
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF2859 = 1;
+  }
+  if ( item )
+  {
+    if ( dispMode )
+    {
+      UserServantEntity_k__BackingField = item->fields._UserServantEntity_k__BackingField;
+      UserCommandCodeEntity_k__BackingField = item->fields._UserCommandCodeEntity_k__BackingField;
+      if ( UserServantEntity_k__BackingField || UserCommandCodeEntity_k__BackingField )
+      {
+        CheckMaterialSvtListViewItemDraw__SetServantFaceIcon(
+          this,
+          item,
+          UserServantEntity_k__BackingField != 0,
+          UserCommandCodeEntity_k__BackingField != 0,
+          *(const MethodInfo **)&modeKind);
+        partyIcon = (UnityEngine_Object_o *)this->fields.partyIcon;
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        v14 = UnityEngine_Object__op_Inequality(partyIcon, 0, 0);
+        if ( v14 )
+        {
+          v16 = this->fields.partyIcon;
+          if ( UserServantEntity_k__BackingField && !item->fields._IsUse_k__BackingField )
+          {
+            IsParty_k__BackingField = item->fields._IsParty_k__BackingField;
+            if ( !v16 )
+              goto LABEL_24;
+          }
+          else
+          {
+            IsParty_k__BackingField = 0;
+            if ( !v16 )
+              goto LABEL_24;
+          }
+          FlashingIconComponent__Set_41466896(v16, IsParty_k__BackingField, 0);
+        }
+        CheckMaterialSvtListViewItemDraw__SetSpriteActive(
+          (CheckMaterialSvtListViewItemDraw_o *)v14,
+          this->fields.useSprite,
+          item->fields._IsUse_k__BackingField,
+          v15);
+        baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
+        {
+          v16 = (FlashingIconComponent_o *)this->fields.baseButton;
+          if ( !v16
+            || (((void (__fastcall *)(FlashingIconComponent_o *, __int64, const char *))v16->klass[1]._1.name)(
+                  v16,
+                  1,
+                  v16->klass[1]._1.namespaze),
+                (v16 = (FlashingIconComponent_o *)this->fields.baseButton) == 0) )
+          {
+LABEL_24:
+            sub_1C7BD40(v16, IsParty_k__BackingField);
+          }
+          ((void (__fastcall *)(FlashingIconComponent_o *, _QWORD, __int64, Il2CppClass **))v16->klass[1]._1.nestedTypes)(
+            v16,
+            0,
+            1,
+            v16->klass[1]._1.implementedInterfaces);
+        }
+        CheckMaterialSvtListViewItemDraw__SetDisp(this, item, isSelectEnable, v19);
+        CheckMaterialSvtListViewItemDraw__SetWarningText(
+          this,
+          item,
+          modeKind,
+          UserServantEntity_k__BackingField != 0,
+          UserCommandCodeEntity_k__BackingField != 0,
+          v20);
+      }
+    }
+  }
+}
+
+
 void CheckMaterialSvtListViewItemDraw__SetLabelText(
         CheckMaterialSvtListViewItemDraw_o *this,
         UILabel_o *label,
@@ -230,10 +331,10 @@ void CheckMaterialSvtListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D265C0 & 1) == 0 )
+  if ( (byte_4CF285B & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D265C0 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF285B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -241,7 +342,7 @@ void CheckMaterialSvtListViewItemDraw__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C942F0(v6, v7);
+      sub_1C7BD40(v6, v7);
     UILabel__set_text(label, text, 0);
   }
 }
@@ -261,7 +362,7 @@ void CheckMaterialSvtListViewItemDraw__SetServantFaceIcon(
       this = (CheckMaterialSvtListViewItemDraw_o *)this->fields.servantFaceIcon;
       if ( this )
       {
-        ServantFaceIconComponent__Set_41844968(
+        ServantFaceIconComponent__Set_41658632(
           (ServantFaceIconComponent_o *)this,
           item->fields._UserServantEntity_k__BackingField,
           item->fields.iconLabelInfo1,
@@ -271,7 +372,7 @@ void CheckMaterialSvtListViewItemDraw__SetServantFaceIcon(
       }
     }
 LABEL_10:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
   if ( isCommandCode )
   {
@@ -280,7 +381,7 @@ LABEL_10:
     this = (CheckMaterialSvtListViewItemDraw_o *)this->fields.servantFaceIcon;
     if ( !this )
       goto LABEL_10;
-    ServantFaceIconComponent__Set_41852436(
+    ServantFaceIconComponent__Set_41666100(
       (ServantFaceIconComponent_o *)this,
       item->fields._UserCommandCodeEntity_k__BackingField,
       item->fields.iconLabelInfo1,
@@ -299,10 +400,10 @@ void CheckMaterialSvtListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D265BF & 1) == 0 )
+  if ( (byte_4CF285A & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D265BF = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF285A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -310,7 +411,7 @@ void CheckMaterialSvtListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
-      sub_1C942F0(gameObject, v7);
+      sub_1C7BD40(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
@@ -331,11 +432,11 @@ void CheckMaterialSvtListViewItemDraw__SetWarningText(
   UILabel_o *warningLabel; // x19
 
   v10 = this;
-  if ( (byte_4D265C1 & 1) == 0 )
+  if ( (byte_4CF285C & 1) == 0 )
   {
-    sub_1C94098(&TutorialFlag_TypeInfo);
-    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D265C1 = 1;
+    sub_1C7BAE8(&TutorialFlag_TypeInfo);
+    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF285C = 1;
   }
   if ( !item )
     goto LABEL_16;
@@ -347,7 +448,7 @@ void CheckMaterialSvtListViewItemDraw__SetWarningText(
     {
       if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      this = (CheckMaterialSvtListViewItemDraw_o *)TutorialFlag__Get_41176064(126, 0);
+      this = (CheckMaterialSvtListViewItemDraw_o *)TutorialFlag__Get_40989036(126, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
 LABEL_11:
@@ -376,7 +477,7 @@ LABEL_11:
       }
     }
 LABEL_16:
-    sub_1C942F0(this, item);
+    sub_1C7BD40(this, item);
   }
 LABEL_5:
   v11 = v10->fields.warningLabel;

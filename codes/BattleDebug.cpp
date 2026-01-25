@@ -8,19 +8,19 @@ void BattleDebug___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2F2A2 & 1) == 0 )
+  if ( (byte_4CF1024 & 1) == 0 )
   {
-    sub_1C94098(&BattleDebug_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Queue_string___ctor__);
-    sub_1C94098(&System_Collections_Generic_Queue_string__TypeInfo);
-    byte_4D2F2A2 = 1;
+    sub_1C7BAE8(&BattleDebug_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_string___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_Queue_string__TypeInfo);
+    byte_4CF1024 = 1;
   }
-  v1 = (System_Collections_Generic_Queue_T__o *)sub_1C942E4(System_Collections_Generic_Queue_string__TypeInfo);
+  v1 = (System_Collections_Generic_Queue_T__o *)sub_1C7BD34(System_Collections_Generic_Queue_string__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v1,
-    (const MethodInfo_3A15C30 *)Method_System_Collections_Generic_Queue_string___ctor__);
+    (const MethodInfo_39E74A4 *)Method_System_Collections_Generic_Queue_string___ctor__);
   BattleDebug_TypeInfo->static_fields->logQueue = (struct System_Collections_Generic_Queue_string__o *)v1;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)BattleDebug_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)BattleDebug_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -32,11 +32,11 @@ void BattleDebug__CheckNull(System_String_o *errorText, Il2CppObject *obj, const
 
   if ( !obj )
   {
-    v4 = sub_1C940AC(&System_Exception_TypeInfo);
-    v5 = (System_Exception_o *)sub_1C942E4(v4);
-    System_Exception___ctor_66163836(v5, errorText, 0);
-    v6 = sub_1C940AC(&Method_BattleDebug_CheckNull__);
-    sub_1C941C0(v5, v6);
+    v4 = sub_1C7BAFC(&System_Exception_TypeInfo);
+    v5 = (System_Exception_o *)sub_1C7BD34(v4);
+    System_Exception___ctor_65923012(v5, errorText, 0);
+    v6 = sub_1C7BAFC(&Method_BattleDebug_CheckNull__);
+    sub_1C7BC10(v5, v6);
   }
 }
 
@@ -59,7 +59,7 @@ void BattleDebug__Log(System_String_o *str, int32_t tag, const MethodInfo *metho
 }
 
 
-void BattleDebug__Log_46797996(
+void BattleDebug__Log_46538560(
         System_Collections_Generic_LinkedList_BattleLogicTask__o *taskList,
         int32_t tag,
         const MethodInfo *method)
@@ -93,21 +93,21 @@ void __noreturn BattleDebug__OutputError(
     v7 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, const MethodInfo *))exception->klass->vtable._9_get_StackTrace.methodPtr)(
                            exception,
                            exception->klass->vtable._9_get_StackTrace.method);
-    v8 = (System_String_o *)sub_1C940AC(&StringLiteral_9056/*"Message:\n{0}\nStackTrace:\n{1}\n"*/);
-    v4 = System_String__Format_64459052(v8, v6, v7, 0);
+    v8 = (System_String_o *)sub_1C7BAFC(&StringLiteral_9060/*"Message:\n{0}\nStackTrace:\n{1}\n"*/);
+    v4 = System_String__Format_64218220(v8, v6, v7, 0);
   }
   else
   {
-    v4 = (System_String_o *)sub_1C940AC(&StringLiteral_1/*""*/);
+    v4 = (System_String_o *)sub_1C7BAFC(&StringLiteral_1/*""*/);
   }
   v9 = v4;
-  v10 = (System_String_o *)sub_1C940AC(&StringLiteral_43/*"\n"*/);
-  v11 = System_String__Concat_64456008(errorText, v10, v9, 0);
-  v12 = sub_1C940AC(&System_Exception_TypeInfo);
-  v13 = (System_Exception_o *)sub_1C942E4(v12);
-  System_Exception___ctor_66163836(v13, v11, 0);
-  v14 = sub_1C940AC(&Method_BattleDebug_OutputError__);
-  sub_1C941C0(v13, v14);
+  v10 = (System_String_o *)sub_1C7BAFC(&StringLiteral_43/*"\n"*/);
+  v11 = System_String__Concat_64215176(errorText, v10, v9, 0);
+  v12 = sub_1C7BAFC(&System_Exception_TypeInfo);
+  v13 = (System_Exception_o *)sub_1C7BD34(v12);
+  System_Exception___ctor_65923012(v13, v11, 0);
+  v14 = sub_1C7BAFC(&Method_BattleDebug_OutputError__);
+  sub_1C7BC10(v13, v14);
 }
 
 
@@ -117,11 +117,11 @@ void BattleDebug__Reset(const MethodInfo *method)
   BattleDebug_c *v2; // x0
   System_Collections_Generic_Queue_T__o *logQueue; // x0
 
-  if ( (byte_4D2F2A0 & 1) == 0 )
+  if ( (byte_4CF1022 & 1) == 0 )
   {
-    sub_1C94098(&BattleDebug_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Queue_string__Clear__);
-    byte_4D2F2A0 = 1;
+    sub_1C7BAE8(&BattleDebug_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_string__Clear__);
+    byte_4CF1022 = 1;
   }
   v2 = BattleDebug_TypeInfo;
   if ( !BattleDebug_TypeInfo->_2.cctor_finished )
@@ -131,10 +131,10 @@ void BattleDebug__Reset(const MethodInfo *method)
   }
   logQueue = (System_Collections_Generic_Queue_T__o *)v2->static_fields->logQueue;
   if ( !logQueue )
-    sub_1C942F0(0, v1);
+    sub_1C7BD40(0, v1);
   System_Collections_Generic_Queue_object___Clear(
     logQueue,
-    (const MethodInfo_3A15EB8 *)Method_System_Collections_Generic_Queue_string__Clear__);
+    (const MethodInfo_39E772C *)Method_System_Collections_Generic_Queue_string__Clear__);
 }
 
 
@@ -166,26 +166,26 @@ System_String_array *BattleDebug__getLoglist(
   System_Object_array *All_object; // x0
   System_String_array *v21; // x20
 
-  if ( (byte_4D2F2A1 & 1) == 0 )
+  if ( (byte_4CF1023 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Array_FindAll_string___);
-    sub_1C94098(&Method_System_Array_Reverse_string___);
-    sub_1C94098(&BattleDebug_TypeInfo);
-    sub_1C94098(&System_Predicate_string__TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_Queue_string__ToArray__);
-    sub_1C94098(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__);
-    sub_1C94098(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__);
-    sub_1C94098(&BattleDebug___c__DisplayClass7_0_TypeInfo);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2F2A1 = 1;
+    sub_1C7BAE8(&Method_System_Array_FindAll_string___);
+    sub_1C7BAE8(&Method_System_Array_Reverse_string___);
+    sub_1C7BAE8(&BattleDebug_TypeInfo);
+    sub_1C7BAE8(&System_Predicate_string__TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_string__ToArray__);
+    sub_1C7BAE8(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__);
+    sub_1C7BAE8(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__);
+    sub_1C7BAE8(&BattleDebug___c__DisplayClass7_0_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF1023 = 1;
   }
-  v7 = sub_1C942E4(BattleDebug___c__DisplayClass7_0_TypeInfo);
+  v7 = sub_1C7BD34(BattleDebug___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_13;
   *(_QWORD *)(v7 + 24) = serchText;
   *(_DWORD *)(v7 + 16) = tag;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)serchText, v10, v11, v12, v13, v14, v15);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)serchText, v10, v11, v12, v13, v14, v15);
   v16 = BattleDebug_TypeInfo;
   if ( !BattleDebug_TypeInfo->_2.cctor_finished )
   {
@@ -197,11 +197,11 @@ System_String_array *BattleDebug__getLoglist(
     goto LABEL_13;
   logQueue = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Queue_object___ToArray(
                                                         logQueue,
-                                                        (const MethodInfo_3A16634 *)Method_System_Collections_Generic_Queue_string__ToArray__);
+                                                        (const MethodInfo_39E7EA8 *)Method_System_Collections_Generic_Queue_string__ToArray__);
   v17 = (System_Object_array *)logQueue;
   if ( *(_DWORD *)(v7 + 16) )
   {
-    v18 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_string__TypeInfo);
+    v18 = (System_Predicate_object__o *)sub_1C7BD34(System_Predicate_string__TypeInfo);
     System_Predicate_object____ctor(
       v18,
       (Il2CppObject *)v7,
@@ -210,13 +210,13 @@ System_String_array *BattleDebug__getLoglist(
     logQueue = (System_Collections_Generic_Queue_T__o *)System_Array__FindAll_object_(
                                                           v17,
                                                           (System_Predicate_T__o *)v18,
-                                                          (const MethodInfo_32A30DC *)Method_System_Array_FindAll_string___);
+                                                          (const MethodInfo_32737F4 *)Method_System_Array_FindAll_string___);
     v17 = (System_Object_array *)logQueue;
   }
   if ( !*(_QWORD *)(v7 + 24) )
 LABEL_13:
-    sub_1C942F0(logQueue, v9);
-  v19 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_string__TypeInfo);
+    sub_1C7BD40(logQueue, v9);
+  v19 = (System_Predicate_object__o *)sub_1C7BD34(System_Predicate_string__TypeInfo);
   System_Predicate_object____ctor(
     v19,
     (Il2CppObject *)v7,
@@ -225,10 +225,10 @@ LABEL_13:
   All_object = System_Array__FindAll_object_(
                  v17,
                  (System_Predicate_T__o *)v19,
-                 (const MethodInfo_32A30DC *)Method_System_Array_FindAll_string___);
+                 (const MethodInfo_32737F4 *)Method_System_Array_FindAll_string___);
   v21 = (System_String_array *)All_object;
   if ( reverseFlg )
-    System_Array__Reverse_object_(All_object, (const MethodInfo_315C40C *)Method_System_Array_Reverse_string___);
+    System_Array__Reverse_object_(All_object, (const MethodInfo_31305FC *)Method_System_Array_Reverse_string___);
   return v21;
 }
 
@@ -256,20 +256,20 @@ bool BattleDebug___c__DisplayClass7_0___getLoglist_b__0(
   System_Enum_o v9; // [xsp+8h] [xbp-48h] BYREF
   int32_t tag; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4D2F2A3 & 1) == 0 )
+  if ( (byte_4CF1025 & 1) == 0 )
   {
-    sub_1C94098(&BattleDebug_TAG_TypeInfo);
-    sub_1C94098(&StringLiteral_1736/*"<{0}>"*/);
-    byte_4D2F2A3 = 1;
+    sub_1C7BAE8(&BattleDebug_TAG_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1737/*"<{0}>"*/);
+    byte_4CF1025 = 1;
   }
   v9.klass = (System_Enum_c *)BattleDebug_TAG_TypeInfo;
   v9.monitor = (void *)-1LL;
   tag = this->fields.tag;
   v5 = (Il2CppObject *)System_Enum__ToString(&v9, 0);
-  v6 = System_String__Format((System_String_o *)StringLiteral_1736/*"<{0}>"*/, v5, 0);
+  v6 = System_String__Format((System_String_o *)StringLiteral_1737/*"<{0}>"*/, v5, 0);
   if ( !s )
-    sub_1C942F0(v6, v7);
-  return System_String__IndexOf_64476136(s, v6, 0) >= 0;
+    sub_1C7BD40(v6, v7);
+  return System_String__IndexOf_64235304(s, v6, 0) >= 0;
 }
 
 
@@ -281,13 +281,13 @@ bool BattleDebug___c__DisplayClass7_0___getLoglist_b__1(
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2F2A4 & 1) == 0 )
+  if ( (byte_4CF1026 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_25354/*"{0}"*/);
-    byte_4D2F2A4 = 1;
+    sub_1C7BAE8(&StringLiteral_25357/*"{0}"*/);
+    byte_4CF1026 = 1;
   }
-  v5 = System_String__Format((System_String_o *)StringLiteral_25354/*"{0}"*/, (Il2CppObject *)this->fields.serchText, 0);
+  v5 = System_String__Format((System_String_o *)StringLiteral_25357/*"{0}"*/, (Il2CppObject *)this->fields.serchText, 0);
   if ( !s )
-    sub_1C942F0(v5, v6);
-  return System_String__IndexOf_64476136(s, v5, 0) >= 0;
+    sub_1C7BD40(v5, v6);
+  return System_String__IndexOf_64235304(s, v5, 0) >= 0;
 }

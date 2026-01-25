@@ -1,27 +1,27 @@
 void UserFollowEntity___ctor(UserFollowEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D725 & 1) == 0 )
+  if ( (byte_4CEF4DC & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D725 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEF4DC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserFollowEntity__CreatePK(int64_t userId, int64_t followId, const MethodInfo *method)
 {
-  if ( (byte_4D2D724 & 1) == 0 )
+  if ( (byte_4CEF4DB & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__long___);
-    byte_4D2D724 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_4CEF4DB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            followId,
-           (const MethodInfo_319A448 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_316E708 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 

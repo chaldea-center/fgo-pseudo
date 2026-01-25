@@ -27,10 +27,10 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E28B & 1) == 0 )
+  if ( (byte_4CEFFF7 & 1) == 0 )
   {
-    sub_1C94098(&FSUtility_TypeInfo);
-    byte_4D2E28B = 1;
+    sub_1C7BAE8(&FSUtility_TypeInfo);
+    byte_4CEFFF7 = 1;
   }
   if ( this->fields.enableAddBottomY )
   {
@@ -48,7 +48,7 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
             z = localPosition.fields.z,
             (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
       {
-        sub_1C942F0(transform, v5);
+        sub_1C7BD40(transform, v5);
       }
       v11.fields.x = x;
       v11.fields.z = z;
@@ -67,10 +67,10 @@ void FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
   float v6; // s0
   int32_t v7; // w20
 
-  if ( (byte_4D2E289 & 1) == 0 )
+  if ( (byte_4CEFFF5 & 1) == 0 )
   {
-    sub_1C94098(&FSUtility_TypeInfo);
-    byte_4D2E289 = 1;
+    sub_1C7BAE8(&FSUtility_TypeInfo);
+    byte_4CEFFF5 = 1;
   }
   if ( this->fields.enableAddOffsetX )
   {
@@ -93,12 +93,12 @@ void FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
       v7 = UnityEngine_Screen__get_width(0);
       v6 = (float)v7 / (float)UnityEngine_Screen__get_height(0);
     }
-    FSOffset__AddOffsetX_44929248(this, v6, v5);
+    FSOffset__AddOffsetX_44659980(this, v6, v5);
   }
 }
 
 
-void FSOffset__AddOffsetX_44929248(FSOffset_o *this, float ratio, const MethodInfo *method)
+void FSOffset__AddOffsetX_44659980(FSOffset_o *this, float ratio, const MethodInfo *method)
 {
   float subMarginX; // s9
   FSUtility_c *v6; // x0
@@ -115,10 +115,10 @@ void FSOffset__AddOffsetX_44929248(FSOffset_o *this, float ratio, const MethodIn
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E28A & 1) == 0 )
+  if ( (byte_4CEFFF6 & 1) == 0 )
   {
-    sub_1C94098(&FSUtility_TypeInfo);
-    byte_4D2E28A = 1;
+    sub_1C7BAE8(&FSUtility_TypeInfo);
+    byte_4CEFFF6 = 1;
   }
   subMarginX = this->fields.subMarginX;
   if ( this->fields.calcNotchSize )
@@ -155,7 +155,7 @@ void FSOffset__AddOffsetX_44929248(FSOffset_o *this, float ratio, const MethodIn
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_17:
-    sub_1C942F0(transform, v11);
+    sub_1C7BD40(transform, v11);
   v18.fields.x = x;
   v18.fields.y = y;
   v18.fields.z = z;
@@ -178,10 +178,10 @@ void FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D2E287 & 1) == 0 )
+  if ( (byte_4CEFFF3 & 1) == 0 )
   {
-    sub_1C94098(&CommonUI_TypeInfo);
-    byte_4D2E287 = 1;
+    sub_1C7BAE8(&CommonUI_TypeInfo);
+    byte_4CEFFF3 = 1;
   }
   if ( this->fields.checkForceObi )
   {
@@ -190,7 +190,7 @@ void FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.defaultPosition, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1C942F0(transform, v4);
+      sub_1C7BD40(transform, v4);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.defaultScale, 0);
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
@@ -222,10 +222,10 @@ void FSOffset__SetOffset(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E288 & 1) == 0 )
+  if ( (byte_4CEFFF4 & 1) == 0 )
   {
-    sub_1C94098(&FSUtility_TypeInfo);
-    byte_4D2E288 = 1;
+    sub_1C7BAE8(&FSUtility_TypeInfo);
+    byte_4CEFFF4 = 1;
   }
   if ( this->fields.enablePosition )
   {
@@ -285,7 +285,7 @@ LABEL_21:
       goto LABEL_21;
     }
 LABEL_22:
-    sub_1C942F0(transform, v6);
+    sub_1C7BD40(transform, v6);
   }
 }
 
@@ -307,7 +307,7 @@ void FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *method)
       || (this->fields.defaultPosition = UnityEngine_Transform__get_localPosition(transform, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1C942F0(transform, v4);
+      sub_1C7BD40(transform, v4);
     }
     localScale = UnityEngine_Transform__get_localScale(transform, 0);
     checkForceObi = this->fields.checkForceObi;

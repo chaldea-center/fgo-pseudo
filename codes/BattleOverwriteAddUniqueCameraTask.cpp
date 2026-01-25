@@ -20,10 +20,10 @@ void BattleOverwriteAddUniqueCameraTask__Init(
   System_String_o *v11; // x7
 
   if ( !aiEnt )
-    sub_1C942F0(this, aiActEnt);
+    sub_1C7BD40(this, aiActEnt);
   CameraIds = AiBaseEntity__GetCameraIds(aiEnt, 0);
   this->fields.overwriteAddUniqueCameraIds = CameraIds;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.overwriteAddUniqueCameraIds,
     (int32_t)CameraIds,
     v6,
@@ -46,18 +46,18 @@ BattleActionData_o *BattleOverwriteAddUniqueCameraTask__MakeActionData(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4D2FC1E & 1) == 0 )
+  if ( (byte_4CF19A3 & 1) == 0 )
   {
-    sub_1C94098(&BattleActionData_TypeInfo);
-    sub_1C94098(&BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_TypeInfo);
-    byte_4D2FC1E = 1;
+    sub_1C7BAE8(&BattleActionData_TypeInfo);
+    sub_1C7BAE8(&BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_TypeInfo);
+    byte_4CF19A3 = 1;
   }
   overwriteAddUniqueCameraIds = this->fields.overwriteAddUniqueCameraIds;
-  v5 = (BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_o *)sub_1C942E4(BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_TypeInfo);
+  v5 = (BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_o *)sub_1C7BD34(BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_TypeInfo);
   BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___ctor(v5, overwriteAddUniqueCameraIds, 0);
-  v6 = (BattleActionData_o *)sub_1C942E4(BattleActionData_TypeInfo);
+  v6 = (BattleActionData_o *)sub_1C7BD34(BattleActionData_TypeInfo);
   BattleActionData___ctor(v6, 0);
   if ( !v6 )
-    sub_1C942F0(v7, v8);
+    sub_1C7BD40(v7, v8);
   return BattleActionData__SetWaitCond(v6, (BattleActionWaitCond_Base_o *)v5, 0);
 }

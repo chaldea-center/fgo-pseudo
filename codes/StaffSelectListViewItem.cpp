@@ -26,10 +26,10 @@ void StaffSelectListViewItem___ctor(
   bool v28; // w8
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
     (int32_t)entity,
     v13,
@@ -50,13 +50,13 @@ void StaffSelectListViewItem___ctor(
   v19 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_7:
-    sub_1C942F0(v19, v20);
+    sub_1C7BD40(v19, v20);
   v28 = !StaffPhotoEntity__IsEnableSameSet(v19, 0);
 LABEL_6:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
   *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v28;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)p_PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v21,
@@ -77,7 +77,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C942F0(this, selectStaffPhotoId);
+    sub_1C7BD40(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -92,7 +92,7 @@ bool StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C942F0(this, sort);
+    sub_1C7BD40(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

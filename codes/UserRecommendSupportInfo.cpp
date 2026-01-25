@@ -19,31 +19,7 @@ void UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const 
   if ( userSvtLeaderInfo )
   {
     userSvtLeaderInfo->fields.equipTarget1 = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3, v4, v5, v6, v7);
   }
   System_Object__Finalize((Il2CppObject *)this, 0);
-}
-
-
-EquipTargetInfo_o *UserRecommendSupportInfo__GetEquipTarget(UserRecommendSupportInfo_o *this, const MethodInfo *method)
-{
-  struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
-
-  userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
-  if ( userSvtLeaderInfo )
-    return userSvtLeaderInfo->fields.equipTarget1;
-  else
-    return 0;
-}
-
-
-int64_t UserRecommendSupportInfo__GetUserServantId(UserRecommendSupportInfo_o *this, const MethodInfo *method)
-{
-  struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
-
-  userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
-  if ( userSvtLeaderInfo )
-    return userSvtLeaderInfo->fields.userSvtId;
-  else
-    return 0;
 }

@@ -77,11 +77,11 @@ void MoveObject__Play(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
   v28 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
   this->fields.mProcessAct = procAct;
   this->fields.mNow = v28;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v21, v22, v23, v24, v25, v26);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v21, v22, v23, v24, v25, v26);
   this->fields.mEasingType = easingType;
   mProcessAct = this->fields.mProcessAct;
   this->fields.mDelay = delay;

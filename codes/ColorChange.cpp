@@ -73,7 +73,7 @@ UnityEngine_Color_o ColorChange__PingPong(
     to.fields.b = b;
     to.fields.a = a;
   }
-  return Easing__Func_49743612(from, to, v10, easingType, 0);
+  return Easing__Func_49571844(from, to, v10, easingType, 0);
 }
 
 
@@ -123,14 +123,14 @@ void ColorChange__Play(
   v11->fields.mCount = count;
   v11->fields.mNowCount = 0;
   v11->fields.mEndAct = endAct;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22, v23, v24, v25, v26);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22, v23, v24, v25, v26);
   v11->fields.mProcessAct = procAct;
   v11 = (ColorChange_o *)((char *)v11 + 112);
   *(float *)&v11[-1].fields.mNowCount = r;
   v11[-1].fields.mDelay = g;
   *(&v11[-1].fields.mDelay + 1) = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)v11, (int32_t)procAct, v27, v28, v29, v30, v31, v32);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v11, (int32_t)procAct, v27, v28, v29, v30, v31, v32);
   klass = (System_Action_o *)v11->klass;
   LODWORD(v11->fields.m_CancellationTokenSource) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
@@ -240,7 +240,7 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
       time = this->fields.mIsSkip ? 1.0 : v7;
       v26 = this->fields.mStyle == 1
           ? ColorChange__PingPong(this, *(UnityEngine_Color_o *)&r, *(UnityEngine_Color_o *)&v13, time, mEasingType, v5)
-          : Easing__Func_49743612(*(UnityEngine_Color_o *)&r, *(UnityEngine_Color_o *)&v13, time, mEasingType, 0);
+          : Easing__Func_49571844(*(UnityEngine_Color_o *)&r, *(UnityEngine_Color_o *)&v13, time, mEasingType, 0);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNowColor = v26;
       if ( mProcessAct )

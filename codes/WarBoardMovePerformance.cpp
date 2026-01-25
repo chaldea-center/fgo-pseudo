@@ -31,17 +31,17 @@ void WarBoardMovePerformance___ctor(
   v14 = from.fields.x;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   this->fields.target = target;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
   this->fields.from.fields.x = v14;
   this->fields.from.fields.y = v13;
   this->fields.from.fields.z = v12;
   this->fields.to.fields.x = x;
   this->fields.to.fields.y = y;
   this->fields.to.fields.z = z;
-  if ( !byte_4D25F1B )
+  if ( !byte_4CE7E5B )
   {
-    sub_1C94098(&System_Math_TypeInfo);
-    byte_4D25F1B = 1;
+    sub_1C7BAE8(&System_Math_TypeInfo);
+    byte_4CE7E5B = 1;
   }
   v23 = x - v14;
   v24 = y - v13;
@@ -65,16 +65,16 @@ System_Collections_IEnumerator_o *WarBoardMovePerformance__Execute(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2A3F6 & 1) == 0 )
+  if ( (byte_4CEC258 & 1) == 0 )
   {
-    sub_1C94098(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
-    byte_4D2A3F6 = 1;
+    sub_1C7BAE8(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
+    byte_4CEC258 = 1;
   }
-  v3 = sub_1C942E4(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_1C7BD34(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -86,7 +86,7 @@ void WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, const Metho
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_1C942F0(target, method);
+    sub_1C7BD40(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -110,7 +110,7 @@ void WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this, const Met
       StartCallback->fields.method);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_1C942F0(target, method);
+    sub_1C7BD40(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0);
 }
 
@@ -166,7 +166,7 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
           !transform) )
     {
 LABEL_15:
-      sub_1C942F0(this, method);
+      sub_1C7BD40(this, method);
     }
     UnityEngine_Transform__set_localPosition(transform, v20, 0);
     v11 = v10->fields._now_5__2;
@@ -185,7 +185,7 @@ LABEL_15:
   {
     v10->fields.__2__current = 0;
     p__2__current = (GrandQuestFolderBoardItem_o *)&v10->fields.__2__current;
-    sub_1C9403C(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C7BA8C(p__2__current, 0, v2, v3, v4, v5, v6, v7);
     result = 1;
     LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
     return result;
@@ -210,11 +210,11 @@ void __noreturn WarBoardMovePerformance__Execute_d__7__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
+  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C940AC(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C941C0(v3, v4);
+  v4 = sub_1C7BAFC(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C7BC10(v3, v4);
 }
 
 

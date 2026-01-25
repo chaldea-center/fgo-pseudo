@@ -56,7 +56,7 @@ void RewardMiniPopup_DisplayArgs__set_FinishCallback(
   System_String_o *v7; // x7
 
   this->fields._FinishCallback_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FinishCallback_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -109,7 +109,7 @@ void RewardMiniPopup_PopupInfoBase___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._FinishCallback_k__BackingField = finishCallback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -126,23 +126,23 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_PopupInfoBase__GenerateArgs(
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D2B124 & 1) == 0 )
+  if ( (byte_4CECEBB & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&RewardMiniPopup_DisplayArgs_TypeInfo);
-    sub_1C94098(&Method_RewardMiniPopup_PopupInfoBase_OnPlayAllFinished__);
-    byte_4D2B124 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&RewardMiniPopup_DisplayArgs_TypeInfo);
+    sub_1C7BAE8(&Method_RewardMiniPopup_PopupInfoBase_OnPlayAllFinished__);
+    byte_4CECEBB = 1;
   }
-  v3 = sub_1C942E4(RewardMiniPopup_DisplayArgs_TypeInfo);
+  v3 = sub_1C7BD34(RewardMiniPopup_DisplayArgs_TypeInfo);
   *(_BYTE *)(v3 + 40) = 1;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 28) = ((__int64 (__fastcall *)(RewardMiniPopup_PopupInfoBase_o *, const MethodInfo *))this->klass->vtable._4_unknown.methodPtr)(
                            this,
                            this->klass->vtable._4_unknown.method);
-  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_RewardMiniPopup_PopupInfoBase_OnPlayAllFinished__, 0);
   *(_QWORD *)(v3 + 32) = v4;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v5, v6, v7, v8, v9, v10);
   return (RewardMiniPopup_DisplayArgs_o *)v3;
 }
 
@@ -170,7 +170,7 @@ void RewardMiniPopup_PopupInfoBase__OnPlayAllFinished(RewardMiniPopup_PopupInfoB
   v9 = FinishCallback_k__BackingField;
   p_fields->isFinished = 1;
   p_fields->_FinishCallback_k__BackingField = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_fields, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_fields, 0, v2, v3, v4, v5, v6, v7);
   if ( FinishCallback_k__BackingField )
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
 }
@@ -196,7 +196,7 @@ void RewardMiniPopup_PopupInfoBase__set_FinishCallback(
   System_String_o *v7; // x7
 
   this->fields._FinishCallback_k__BackingField = value;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -234,45 +234,45 @@ void RewardMiniPopup_PopupInfoMultiQuestReward___ctor(
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D2B125 & 1) == 0 )
+  if ( (byte_4CECEBC & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Array_Empty_QuestRewardInfo___);
-    sub_1C94098(&Method_System_Collections_Generic_Queue_QuestRewardInfo___ctor__);
-    sub_1C94098(&System_Collections_Generic_Queue_QuestRewardInfo__TypeInfo);
-    byte_4D2B125 = 1;
+    sub_1C7BAE8(&Method_System_Array_Empty_QuestRewardInfo___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_QuestRewardInfo___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_Queue_QuestRewardInfo__TypeInfo);
+    byte_4CECEBC = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._FinishCallback_k__BackingField = finishCallback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v7, v8, v9, v10, v11, v12);
   if ( !rewardInfoArray )
   {
     v15 = Method_System_Array_Empty_QuestRewardInfo___;
     v16 = *((_QWORD *)Method_System_Array_Empty_QuestRewardInfo___ + 7);
     if ( !v16 )
     {
-      sub_1C6A188(Method_System_Array_Empty_QuestRewardInfo___);
+      sub_1C51BD8(Method_System_Array_Empty_QuestRewardInfo___);
       v16 = v15[7];
     }
     v17 = *(_QWORD *)(v16 + 16);
     if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-      v17 = sub_1C6A12C(inited);
+      v17 = sub_1C51B7C(inited);
     if ( !*(_DWORD *)(v17 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v17);
     v18 = *(_QWORD *)(v15[7] + 16LL);
     if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-      v18 = sub_1C6A12C(inited);
+      v18 = sub_1C51B7C(inited);
     rewardInfoArray = **(QuestRewardInfo_array ***)(v18 + 184);
     if ( !rewardInfoArray )
-      sub_1C942F0(v18, v13);
+      sub_1C7BD40(v18, v13);
   }
   this->fields.remainCount = rewardInfoArray->max_length;
-  v19 = (System_Collections_Generic_Queue_T__o *)sub_1C942E4(System_Collections_Generic_Queue_QuestRewardInfo__TypeInfo);
-  System_Collections_Generic_Queue_object____ctor_60906884(
+  v19 = (System_Collections_Generic_Queue_T__o *)sub_1C7BD34(System_Collections_Generic_Queue_QuestRewardInfo__TypeInfo);
+  System_Collections_Generic_Queue_object____ctor_60716536(
     v19,
     (System_Collections_Generic_IEnumerable_T__o *)rewardInfoArray,
-    (const MethodInfo_3A15D84 *)Method_System_Collections_Generic_Queue_QuestRewardInfo___ctor__);
+    (const MethodInfo_39E75F8 *)Method_System_Collections_Generic_Queue_QuestRewardInfo___ctor__);
   this->fields._RewardInfoQueue_k__BackingField = (struct System_Collections_Generic_Queue_QuestRewardInfo__o *)v19;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._RewardInfoQueue_k__BackingField,
     (int32_t)v19,
     v20,
@@ -297,27 +297,27 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_PopupInfoMultiQuestReward__Genera
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D2B126 & 1) == 0 )
+  if ( (byte_4CECEBD & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&RewardMiniPopup_DisplayArgs_TypeInfo);
-    sub_1C94098(&Method_RewardMiniPopup_PopupInfoMultiQuestReward_OnSinglePopupPlayFinished__);
-    byte_4D2B126 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&RewardMiniPopup_DisplayArgs_TypeInfo);
+    sub_1C7BAE8(&Method_RewardMiniPopup_PopupInfoMultiQuestReward_OnSinglePopupPlayFinished__);
+    byte_4CECEBD = 1;
   }
-  v3 = sub_1C942E4(RewardMiniPopup_DisplayArgs_TypeInfo);
+  v3 = sub_1C7BD34(RewardMiniPopup_DisplayArgs_TypeInfo);
   *(_BYTE *)(v3 + 40) = 1;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 28) = ((__int64 (__fastcall *)(RewardMiniPopup_PopupInfoMultiQuestReward_o *, const MethodInfo *))this->klass->vtable._4_unknown.methodPtr)(
                            this,
                            this->klass->vtable._4_unknown.method);
-  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(
     v4,
     (Il2CppObject *)this,
     Method_RewardMiniPopup_PopupInfoMultiQuestReward_OnSinglePopupPlayFinished__,
     0);
   *(_QWORD *)(v3 + 32) = v4;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v5, v6, v7, v8, v9, v10);
   return (RewardMiniPopup_DisplayArgs_o *)v3;
 }
 
@@ -326,14 +326,14 @@ bool RewardMiniPopup_PopupInfoMultiQuestReward__HasNext(
         RewardMiniPopup_PopupInfoMultiQuestReward_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D2B127 & 1) == 0 )
+  if ( (byte_4CECEBE & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_Any_QuestRewardInfo___);
-    byte_4D2B127 = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_QuestRewardInfo___);
+    byte_4CECEBE = 1;
   }
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._RewardInfoQueue_k__BackingField,
-           (const MethodInfo_31A7F44 *)Method_System_Linq_Enumerable_Any_QuestRewardInfo___);
+           (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_QuestRewardInfo___);
 }
 
 
@@ -359,17 +359,17 @@ bool RewardMiniPopup_PopupInfoMultiQuestReward__PlayNext(
   Il2CppObject *v6; // x0
   const MethodInfo *v7; // x3
 
-  if ( (byte_4D2B128 & 1) == 0 )
+  if ( (byte_4CECEBF & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_Queue_QuestRewardInfo__Dequeue__);
-    byte_4D2B128 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_QuestRewardInfo__Dequeue__);
+    byte_4CECEBF = 1;
   }
   RewardInfoQueue_k__BackingField = (System_Collections_Generic_Queue_T__o *)this->fields._RewardInfoQueue_k__BackingField;
   if ( !RewardInfoQueue_k__BackingField )
-    sub_1C942F0(0, args);
+    sub_1C7BD40(0, args);
   v6 = System_Collections_Generic_Queue_object___Dequeue(
          RewardInfoQueue_k__BackingField,
-         (const MethodInfo_3A16388 *)Method_System_Collections_Generic_Queue_QuestRewardInfo__Dequeue__);
+         (const MethodInfo_39E7BFC *)Method_System_Collections_Generic_Queue_QuestRewardInfo__Dequeue__);
   return RewardMiniPopup_PopupInfoMultiQuestReward__PlaySpecifiedReward(
            (RewardMiniPopup_PopupInfoMultiQuestReward_o *)v6,
            (QuestRewardInfo_o *)v6,
@@ -387,14 +387,14 @@ bool RewardMiniPopup_PopupInfoMultiQuestReward__PlaySpecifiedReward(
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D2B129 & 1) == 0 )
+  if ( (byte_4CECEC0 & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B129 = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CECEC0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C942F0(0, v7);
+    sub_1C7BD40(0, v7);
   return CommonUI__PlayRewardPopupLikeQuestPhaseReward((CommonUI_o *)Instance, questRewardInfo, args, 0);
 }
 
@@ -436,9 +436,9 @@ void RewardMiniPopup_PopupInfoQuestPhaseClear___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._FinishCallback_k__BackingField = finishCallback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v7, v8, v9, v10, v11, v12);
   *(_QWORD *)&this->fields.done = rewardInfoArray;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.done, (int32_t)rewardInfoArray, v13, v14, v15, v16, v17, v18);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.done, (int32_t)rewardInfoArray, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -450,14 +450,14 @@ bool RewardMiniPopup_PopupInfoQuestPhaseClear__PlayLocal(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2B12A & 1) == 0 )
+  if ( (byte_4CECEC1 & 1) == 0 )
   {
-    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B12A = 1;
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CECEC1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   return CommonUI__OpenQuestPhaseReward((CommonUI_o *)Instance, *(QuestRewardInfo_array **)&this->fields.done, args, 0);
 }
 
@@ -492,7 +492,7 @@ void RewardMiniPopup_PopupInfoSingle___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._FinishCallback_k__BackingField = finishCallback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v5, v6, v7, v8, v9, v10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)finishCallback, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -541,21 +541,21 @@ void RewardMiniPopup_RewardMiniPopupPlayerBase___ctor(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2B12B & 1) == 0 )
+  if ( (byte_4CECEC2 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
-    sub_1C94098(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
-    byte_4D2B12B = 1;
+    sub_1C7BAE8(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+    byte_4CECEC2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v5 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)inputPopupInfoArray,
-         (const MethodInfo_3185DBC *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+         (const MethodInfo_315A07C *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
   v6 = System_Linq_Enumerable__ToArray_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-         (const MethodInfo_31DC8AC *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+         (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
   this->fields._PopupInfoArray_k__BackingField = (struct RewardMiniPopup_PopupInfoBase_array *)v6;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v6, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -575,13 +575,13 @@ bool RewardMiniPopup_RewardMiniPopupPlayerBase__IsBusy(
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4D2B12C & 1) == 0 )
+  if ( (byte_4CECEC3 & 1) == 0 )
   {
-    sub_1C94098(&Method_BasicHelper_Any_PopupInfoBase___);
-    sub_1C94098(&System_Func_PopupInfoBase__bool__TypeInfo);
-    sub_1C94098(&Method_RewardMiniPopup_RewardMiniPopupPlayerBase___c__IsBusy_b__12_0__);
-    sub_1C94098(&RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
-    byte_4D2B12C = 1;
+    sub_1C7BAE8(&Method_BasicHelper_Any_PopupInfoBase___);
+    sub_1C7BAE8(&System_Func_PopupInfoBase__bool__TypeInfo);
+    sub_1C7BAE8(&Method_RewardMiniPopup_RewardMiniPopupPlayerBase___c__IsBusy_b__12_0__);
+    sub_1C7BAE8(&RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
+    byte_4CECEC3 = 1;
   }
   PopupInfoArray_k__BackingField = (System_Object_array *)this->fields._PopupInfoArray_k__BackingField;
   if ( !PopupInfoArray_k__BackingField )
@@ -601,7 +601,7 @@ bool RewardMiniPopup_RewardMiniPopupPlayerBase__IsBusy(
       v4 = RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__12_0 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_PopupInfoBase__bool__TypeInfo);
+    _9__12_0 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_PopupInfoBase__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__12_0,
       v6,
@@ -609,12 +609,12 @@ bool RewardMiniPopup_RewardMiniPopupPlayerBase__IsBusy(
       0);
     static_fields = RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = (struct System_Func_PopupInfoBase__bool__o *)_9__12_0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
   }
-  return BasicHelper__Any_object__51926292(
+  return BasicHelper__Any_object__51746772(
            PopupInfoArray_k__BackingField,
            (System_Func_T__bool__o *)_9__12_0,
-           (const MethodInfo_3185514 *)Method_BasicHelper_Any_PopupInfoBase___);
+           (const MethodInfo_31597D4 *)Method_BasicHelper_Any_PopupInfoBase___);
 }
 
 
@@ -636,7 +636,7 @@ void RewardMiniPopup_RewardMiniPopupPlayerBase__OnPlayAllFinished(
   p_FinishCallback_k__BackingField = (GrandQuestFolderBoardItem_o *)&this->fields._FinishCallback_k__BackingField;
   v9 = FinishCallback_k__BackingField;
   p_FinishCallback_k__BackingField->klass = 0;
-  sub_1C9403C(p_FinishCallback_k__BackingField, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C(p_FinishCallback_k__BackingField, 0, v2, v3, v4, v5, v6, v7);
   if ( FinishCallback_k__BackingField )
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
 }
@@ -686,7 +686,7 @@ void RewardMiniPopup_RewardMiniPopupPlayerBase__set_FinishCallback(
   System_String_o *v7; // x7
 
   this->fields._FinishCallback_k__BackingField = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FinishCallback_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -710,7 +710,7 @@ void RewardMiniPopup_RewardMiniPopupPlayerBase__set_PopupInfoArray(
   System_String_o *v7; // x7
 
   this->fields._PopupInfoArray_k__BackingField = value;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -724,15 +724,15 @@ void RewardMiniPopup_RewardMiniPopupPlayerBase___c___cctor(const MethodInfo *met
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2B12D & 1) == 0 )
+  if ( (byte_4CECEC4 & 1) == 0 )
   {
-    sub_1C94098(&RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
-    byte_4D2B12D = 1;
+    sub_1C7BAE8(&RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
+    byte_4CECEC4 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C942E4(RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C7BD34(RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo->static_fields->__9 = (struct RewardMiniPopup_RewardMiniPopupPlayerBase___c_o *)v1;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)RewardMiniPopup_RewardMiniPopupPlayerBase___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -758,7 +758,7 @@ bool RewardMiniPopup_RewardMiniPopupPlayerBase___c___IsBusy_b__12_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C942F0(this, 0);
+    sub_1C7BD40(this, 0);
   return !x->fields.isFinished;
 }
 
@@ -807,7 +807,7 @@ void RewardMiniPopup_RewardMiniPopupPlayerSimultaneous__Play(
   PopupInfoArray_k__BackingField = this->fields._PopupInfoArray_k__BackingField;
   if ( !PopupInfoArray_k__BackingField )
 LABEL_20:
-    sub_1C942F0(IsNullOrEmpty, v4);
+    sub_1C7BD40(IsNullOrEmpty, v4);
   max_length = PopupInfoArray_k__BackingField->max_length;
   if ( max_length >= 1 )
   {
@@ -815,7 +815,7 @@ LABEL_20:
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1C942F8(IsNullOrEmpty);
+        sub_1C7BD48(IsNullOrEmpty);
       v8 = PopupInfoArray_k__BackingField->m_Items[v7];
       if ( !v8 )
         break;
@@ -896,29 +896,29 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_RewardMiniPopupPlayerSimultaneous
   RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *v33; // x0
   const MethodInfo *v34; // x1
 
-  if ( (byte_4D2B12E & 1) == 0 )
+  if ( (byte_4CECEC5 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0__Play_b__1__);
-    sub_1C94098(&RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0_TypeInfo);
-    byte_4D2B12E = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0__Play_b__1__);
+    sub_1C7BAE8(&RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0_TypeInfo);
+    byte_4CECEC5 = 1;
   }
-  v5 = sub_1C942E4(RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_1C7BD34(RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_QWORD *)(v5 + 16) = popupInfo,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)popupInfo, v14, v15, v16, v17, v18, v19),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)popupInfo, v14, v15, v16, v17, v18, v19),
         (v6 = *(_QWORD **)(v5 + 16)) == 0)
     || (v6 = (_QWORD *)(*(__int64 (__fastcall **)(_QWORD *, _QWORD))(*v6 + 392LL))(v6, *(_QWORD *)(*v6 + 400LL))) == 0 )
   {
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   }
   v20 = v6;
   v21 = (GrandQuestFolderBoardItem_o *)(v6 + 4);
   v22 = (System_Delegate_o *)v6[4];
-  v23 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(
     v23,
     (Il2CppObject *)v5,
@@ -927,13 +927,13 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_RewardMiniPopupPlayerSimultaneous
   v24 = System_Delegate__Combine(v22, (System_Delegate_o *)v23, 0);
   if ( v24 && (System_Action_c *)v24->klass != System_Action_TypeInfo )
   {
-    sub_1C9468C(v24);
+    sub_1C7C0DC(v24);
     return (RewardMiniPopup_DisplayArgs_o *)RewardMiniPopup_RewardMiniPopupPlayerSimultaneous__IsBusy(v33, v34);
   }
   else
   {
     v20[4] = v24;
-    sub_1C9403C(v21, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+    sub_1C7BA8C(v21, (int32_t)v24, v25, v26, v27, v28, v29, v30);
     popupDisplayStartedCount = this->fields.popupDisplayStartedCount;
     *((_DWORD *)v20 + 4) = 0;
     *((_DWORD *)v20 + 6) = 0;
@@ -969,7 +969,7 @@ void RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___c__DisplayClass6_0___Pl
 
   _4__this = (RewardMiniPopup_RewardMiniPopupPlayerBase_o *)this->fields.__4__this;
   if ( !_4__this )
-    sub_1C942F0(this, method);
+    sub_1C7BD40(this, method);
   if ( (((__int64 (__fastcall *)(struct RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *, const MethodInfo *))_4__this->klass->vtable._5_IsBusy.methodPtr)(
           this->fields.__4__this,
           _4__this->klass->vtable._5_IsBusy.method)

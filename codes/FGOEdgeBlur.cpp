@@ -15,24 +15,24 @@ void FGOEdgeBlur___ctor(FGOEdgeBlur_o *this, const MethodInfo *method)
   int64_t v20; // x6
   System_String_o *v21; // x7
 
-  if ( (byte_4D2B5B7 & 1) == 0 )
+  if ( (byte_4CED417 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_RenderTexture___TypeInfo);
-    sub_1C94098(&float___TypeInfo);
-    byte_4D2B5B7 = 1;
+    sub_1C7BAE8(&UnityEngine_RenderTexture___TypeInfo);
+    sub_1C7BAE8(&float___TypeInfo);
+    byte_4CED417 = 1;
   }
   __asm { FMOV            V2.4S, #1.0 }
   this->fields._iteration = 4;
-  this->fields._Rect = (struct UnityEngine_Rect_o)xmmword_CFE8E0;
-  *(_OWORD *)&this->fields._thickness = xmmword_D00280;
+  this->fields._Rect = (struct UnityEngine_Rect_o)xmmword_CF5640;
+  *(_OWORD *)&this->fields._thickness = xmmword_CF7000;
   this->fields._color = _Q2;
   this->fields._particleColor = _Q2;
-  v8 = (struct UnityEngine_RenderTexture_array *)sub_1C94140(UnityEngine_RenderTexture___TypeInfo, 6);
+  v8 = (struct UnityEngine_RenderTexture_array *)sub_1C7BB90(UnityEngine_RenderTexture___TypeInfo, 6);
   this->fields._renderTextures = v8;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._renderTextures, (int32_t)v8, v9, v10, v11, v12, v13, v14);
-  v15 = (struct System_Single_array *)sub_1C94140(float___TypeInfo, 10);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._renderTextures, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  v15 = (struct System_Single_array *)sub_1C7BB90(float___TypeInfo, 10);
   this->fields._weights = v15;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._weights, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._weights, (int32_t)v15, v16, v17, v18, v19, v20, v21);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -88,7 +88,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
   UnityEngine_Material_o *v41; // x22
   UnityEngine_Shader_o *drawShader; // x21
   UnityEngine_Material_o *v43; // x20
-  bool HasProperty_71976444; // w0
+  bool HasProperty_71735620; // w0
   float r; // s0 OVERLAPPED
   float g; // s1
   float b; // s2
@@ -132,20 +132,20 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
   UnityEngine_Vector4_o v85; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v86; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2B5B6 & 1) == 0 )
+  if ( (byte_4CED416 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Graphics_TypeInfo);
-    sub_1C94098(&UnityEngine_Material_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C94098(&StringLiteral_16471/*"_Weights"*/);
-    sub_1C94098(&StringLiteral_16435/*"_Threshold"*/);
-    sub_1C94098(&StringLiteral_16305/*"_Intensity"*/);
-    sub_1C94098(&StringLiteral_16603/*"_customColor0"*/);
-    sub_1C94098(&StringLiteral_16378/*"_Rect"*/);
-    sub_1C94098(&StringLiteral_16432/*"_Thickness"*/);
-    sub_1C94098(&StringLiteral_16340/*"_Offset"*/);
-    byte_4D2B5B6 = 1;
+    sub_1C7BAE8(&UnityEngine_Graphics_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Material_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16473/*"_Weights"*/);
+    sub_1C7BAE8(&StringLiteral_16437/*"_Threshold"*/);
+    sub_1C7BAE8(&StringLiteral_16307/*"_Intensity"*/);
+    sub_1C7BAE8(&StringLiteral_16605/*"_customColor0"*/);
+    sub_1C7BAE8(&StringLiteral_16380/*"_Rect"*/);
+    sub_1C7BAE8(&StringLiteral_16434/*"_Thickness"*/);
+    sub_1C7BAE8(&StringLiteral_16342/*"_Offset"*/);
+    byte_4CED416 = 1;
   }
   m_ParticleSystem = 0;
   v83 = 0;
@@ -163,13 +163,13 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
     v85.fields.y = this->fields._Rect.fields.m_YMin;
     v85.fields.w = v85.fields.y + this->fields._Rect.fields.m_Height;
     v85.fields.z = v85.fields.x + this->fields._Rect.fields.m_Width;
-    UnityEngine_Material__SetVector((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16378/*"_Rect"*/, v85, 0);
+    UnityEngine_Material__SetVector((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16380/*"_Rect"*/, v85, 0);
     material = (__int64)this->fields._material;
     if ( !material )
       goto LABEL_88;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16432/*"_Thickness"*/,
+      (System_String_o *)StringLiteral_16434/*"_Thickness"*/,
       this->fields._thickness,
       0);
     material = (__int64)this->fields._material;
@@ -177,7 +177,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_88;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16435/*"_Threshold"*/,
+      (System_String_o *)StringLiteral_16437/*"_Threshold"*/,
       this->fields._threshold,
       0);
     material = (__int64)this->fields._material;
@@ -185,7 +185,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_88;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16305/*"_Intensity"*/,
+      (System_String_o *)StringLiteral_16307/*"_Intensity"*/,
       this->fields._intensity,
       0);
     material = (__int64)this->fields._material;
@@ -193,15 +193,15 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_88;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16340/*"_Offset"*/,
+      (System_String_o *)StringLiteral_16342/*"_Offset"*/,
       this->fields._offset,
       0);
     material = (__int64)this->fields._material;
     if ( !material )
       goto LABEL_88;
-    UnityEngine_Material__SetFloatArray_71980680(
+    UnityEngine_Material__SetFloatArray_71739856(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16471/*"_Weights"*/,
+      (System_String_o *)StringLiteral_16473/*"_Weights"*/,
       this->fields._weights,
       0);
     v6 = this->fields._texture;
@@ -209,7 +209,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
     v8 = this->fields._material;
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit_71955736(v6, rt0, v8, 0, 0);
+    UnityEngine_Graphics__Blit_71714912(v6, rt0, v8, 0, 0);
     material = (__int64)this->fields._rt0;
     if ( !material )
       goto LABEL_88;
@@ -243,27 +243,27 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
         v10 = v15 >> 1;
         v12 = v16 >> 1;
         format = UnityEngine_RenderTexture__get_format((UnityEngine_RenderTexture_o *)material, 0);
-        material = (__int64)UnityEngine_RenderTexture__GetTemporary_72018644(v10, v12, 0, format, 0);
+        material = (__int64)UnityEngine_RenderTexture__GetTemporary_71777820(v10, v12, 0, format, 0);
         if ( !renderTextures )
           goto LABEL_88;
         v25 = (UnityEngine_RenderTexture_o *)material;
         if ( material )
         {
-          material = sub_1C941D4(material, *(_QWORD *)(*(_QWORD *)renderTextures + 64LL));
+          material = sub_1C7BC24(material, *(_QWORD *)(*(_QWORD *)renderTextures + 64LL));
           if ( !material )
           {
-            v80 = sub_1C94314(0);
-            sub_1C941C0(v80, 0);
+            v80 = sub_1C7BD64(0);
+            sub_1C7BC10(v80, 0);
           }
         }
         if ( v13 >= renderTextures[6] )
           goto LABEL_89;
         *(_QWORD *)&renderTextures[v14] = v25;
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)&renderTextures[v14], (int32_t)v25, v19, v20, v21, v22, v23, v24);
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&renderTextures[v14], (int32_t)v25, v19, v20, v21, v22, v23, v24);
         v26 = this->fields._material;
         if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-        UnityEngine_Graphics__Blit_71955736(v11, v25, v26, 1, 0);
+        UnityEngine_Graphics__Blit_71714912(v11, v25, v26, 1, 0);
         ++v13;
         v14 += 2;
         v11 = (UnityEngine_Texture_o *)v25;
@@ -287,7 +287,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
           v30 = this->fields._material;
           if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-          UnityEngine_Graphics__Blit_71955736(v11, v29, v30, 2, 0);
+          UnityEngine_Graphics__Blit_71714912(v11, v29, v30, 2, 0);
           v37 = this->fields._renderTextures;
           if ( !v37 )
             goto LABEL_88;
@@ -295,7 +295,7 @@ void FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
             goto LABEL_89;
           v38 = &v37->obj.klass + v27;
           v38[4] = 0;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v38 + 4), 0, v31, v32, v33, v34, v35, v36);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v38 + 4), 0, v31, v32, v33, v34, v35, v36);
           UnityEngine_RenderTexture__ReleaseTemporary((UnityEngine_RenderTexture_o *)v11, 0);
           v39 = (__int64)v27-- <= 0;
           v11 = (UnityEngine_Texture_o *)v29;
@@ -310,21 +310,21 @@ LABEL_49:
     v41 = this->fields._material;
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit_71955736((UnityEngine_Texture_o *)v29, v40, v41, 3, 0);
+    UnityEngine_Graphics__Blit_71714912((UnityEngine_Texture_o *)v29, v40, v41, 3, 0);
     UnityEngine_RenderTexture__ReleaseTemporary(v29, 0);
     drawShader = this->fields._drawShader;
-    v43 = (UnityEngine_Material_o *)sub_1C942E4(UnityEngine_Material_TypeInfo);
+    v43 = (UnityEngine_Material_o *)sub_1C7BD34(UnityEngine_Material_TypeInfo);
     UnityEngine_Material___ctor(v43, drawShader, 0);
     if ( !v43 )
       goto LABEL_88;
     UnityEngine_Material__set_mainTexture(v43, (UnityEngine_Texture_o *)this->fields._rt0, 0);
-    HasProperty_71976444 = UnityEngine_Material__HasProperty_71976444(v43, (System_String_o *)StringLiteral_16603/*"_customColor0"*/, 0);
+    HasProperty_71735620 = UnityEngine_Material__HasProperty_71735620(v43, (System_String_o *)StringLiteral_16605/*"_customColor0"*/, 0);
     r = this->fields._color.fields.r;
     g = this->fields._color.fields.g;
     b = this->fields._color.fields.b;
     a = this->fields._color.fields.a;
-    if ( HasProperty_71976444 )
-      UnityEngine_Material__SetColor(v43, (System_String_o *)StringLiteral_16603/*"_customColor0"*/, *(UnityEngine_Color_o *)&r, 0);
+    if ( HasProperty_71735620 )
+      UnityEngine_Material__SetColor(v43, (System_String_o *)StringLiteral_16605/*"_customColor0"*/, *(UnityEngine_Color_o *)&r, 0);
     else
       UnityEngine_Material__set_color(v43, *(UnityEngine_Color_o *)&r, 0);
     material = (__int64)this->fields._renderer;
@@ -340,9 +340,9 @@ LABEL_49:
       v51 = (UnityEngine_Object_o *)*p_currentScreen;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72110972(v51, 0);
+      UnityEngine_Object__Destroy_71870148(v51, 0);
       *p_currentScreen = 0;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.currentScreen, 0, v52, v53, v54, v55, v56, v57);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.currentScreen, 0, v52, v53, v54, v55, v56, v57);
     }
     material = (__int64)this->fields._rt0;
     if ( !material )
@@ -358,8 +358,8 @@ LABEL_49:
                           v58,
                           this->fields._rt0,
                           v58->klass->vtable._6_get_height.method);
-    v61 = (UnityEngine_Texture2D_o *)sub_1C942E4(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_71998364(v61, v59, v60, 3, 0, 0, 0);
+    v61 = (UnityEngine_Texture2D_o *)sub_1C7BD34(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_71757540(v61, v59, v60, 3, 0, 0, 0);
     UnityEngine_RenderTexture__set_active(this->fields._rt0, 0);
     material = (__int64)this->fields._rt0;
     if ( !material
@@ -375,14 +375,14 @@ LABEL_49:
           !v61) )
     {
 LABEL_88:
-      sub_1C942F0(material, v4);
+      sub_1C7BD40(material, v4);
     }
     v86.fields.m_Height = (float)(int)material;
     v86.fields.m_Width = (float)v63;
     v86.fields.m_XMin = 0.0;
     v86.fields.m_YMin = 0.0;
-    UnityEngine_Texture2D__ReadPixels_72000828(v61, v86, 0, 0, 0);
-    UnityEngine_Texture2D__Apply_72000408(v61, 0);
+    UnityEngine_Texture2D__ReadPixels_71760004(v61, v86, 0, 0, 0);
+    UnityEngine_Texture2D__Apply_71759584(v61, 0);
     UnityEngine_RenderTexture__set_active(0, 0);
     shapeSettingParticles = this->fields._shapeSettingParticles;
     if ( shapeSettingParticles )
@@ -410,12 +410,12 @@ LABEL_88:
             goto LABEL_77;
         }
 LABEL_89:
-        sub_1C942F8(material);
+        sub_1C7BD48(material);
       }
     }
 LABEL_77:
     this->fields.currentScreen = v61;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.currentScreen, (int32_t)v61, v64, v65, v66, v67, v68, v69);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.currentScreen, (int32_t)v61, v64, v65, v66, v67, v68, v69);
     colorSettingParticles = this->fields._colorSettingParticles;
     if ( colorSettingParticles )
     {
@@ -496,15 +496,15 @@ void FGOEdgeBlur__Initialize(FGOEdgeBlur_o *this, const MethodInfo *method)
   int32_t v44; // w1
   struct UnityEngine_Renderer_o **p_renderer; // x8
 
-  if ( (byte_4D2B5B5 & 1) == 0 )
+  if ( (byte_4CED415 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Material_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UnityEngine_RenderTexture_TypeInfo);
-    sub_1C94098(&UnityEngine_Renderer_var);
-    sub_1C94098(&UnityEngine_Renderer_TypeInfo);
-    sub_1C94098(&System_Type_TypeInfo);
-    byte_4D2B5B5 = 1;
+    sub_1C7BAE8(&UnityEngine_Material_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_RenderTexture_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Renderer_var);
+    sub_1C7BAE8(&UnityEngine_Renderer_TypeInfo);
+    sub_1C7BAE8(&System_Type_TypeInfo);
+    byte_4CED415 = 1;
   }
   if ( !this->fields._isInitialized )
   {
@@ -527,7 +527,7 @@ void FGOEdgeBlur__Initialize(FGOEdgeBlur_o *this, const MethodInfo *method)
               goto LABEL_12;
           }
 LABEL_36:
-          sub_1C942F8(v4);
+          sub_1C7BD48(v4);
         }
       }
 LABEL_12:
@@ -548,10 +548,10 @@ LABEL_12:
       }
 LABEL_17:
       edgeShader = this->fields._edgeShader;
-      v12 = (UnityEngine_Material_o *)sub_1C942E4(UnityEngine_Material_TypeInfo);
+      v12 = (UnityEngine_Material_o *)sub_1C7BD34(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v12, edgeShader, 0);
       this->fields._material = v12;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._material, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._material, (int32_t)v12, v13, v14, v15, v16, v17, v18);
       material = (UnityEngine_Object_o *)this->fields._material;
       if ( !material
         || (UnityEngine_Object__set_hideFlags(material, 61, 0),
@@ -561,17 +561,17 @@ LABEL_17:
                                                  material->klass[1]._1.gc_desc),
             (v21 = this->fields._texture) == 0) )
       {
-        sub_1C942F0(material, v19);
+        sub_1C7BD40(material, v19);
       }
       v22 = (int)material;
       v23 = (unsigned int)((_QWORD *(__fastcall *)(struct UnityEngine_Texture_o *__return_ptr, struct UnityEngine_Texture_o *, const MethodInfo *))v21->klass->vtable._6_get_height.methodPtr)(
                             v21,
                             this->fields._texture,
                             v21->klass->vtable._6_get_height.method);
-      v24 = (UnityEngine_RenderTexture_o *)sub_1C942E4(UnityEngine_RenderTexture_TypeInfo);
-      UnityEngine_RenderTexture___ctor_72017028(v24, v22, v23, 0, 0, 0);
+      v24 = (UnityEngine_RenderTexture_o *)sub_1C7BD34(UnityEngine_RenderTexture_TypeInfo);
+      UnityEngine_RenderTexture___ctor_71776204(v24, v22, v23, 0, 0, 0);
       this->fields._rt0 = v24;
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._rt0, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._rt0, (int32_t)v24, v25, v26, v27, v28, v29, v30);
       v31 = UnityEngine_Renderer_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -613,7 +613,7 @@ LABEL_17:
         this->fields._renderer = 0;
         p_renderer = &this->fields._renderer;
       }
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)p_renderer, v44, v35, v36, v37, v38, v39, v40);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_renderer, v44, v35, v36, v37, v38, v39, v40);
       this->fields._isInitialized = 1;
     }
   }
@@ -648,13 +648,13 @@ void FGOEdgeBlur__OnDestroy(FGOEdgeBlur_o *this, const MethodInfo *method)
   int64_t v26; // x6
   System_String_o *v27; // x7
 
-  if ( (byte_4D2B5B4 & 1) == 0 )
+  if ( (byte_4CED414 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2B5B4 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CED414 = 1;
   }
   this->fields._material = 0;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._material, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._material, 0, v2, v3, v4, v5, v6, v7);
   p_rt0 = &this->fields._rt0;
   rt0 = (UnityEngine_Object_o *)this->fields._rt0;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -664,9 +664,9 @@ void FGOEdgeBlur__OnDestroy(FGOEdgeBlur_o *this, const MethodInfo *method)
     v11 = (UnityEngine_Object_o *)*p_rt0;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72110972(v11, 0);
+    UnityEngine_Object__Destroy_71870148(v11, 0);
     *p_rt0 = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields._rt0, 0, v12, v13, v14, v15, v16, v17);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._rt0, 0, v12, v13, v14, v15, v16, v17);
   }
   currentScreen = this->fields.currentScreen;
   p_currentScreen = (GrandQuestFolderBoardItem_o *)&this->fields.currentScreen;
@@ -679,9 +679,9 @@ void FGOEdgeBlur__OnDestroy(FGOEdgeBlur_o *this, const MethodInfo *method)
     klass = (UnityEngine_Object_o *)p_currentScreen->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72110972(klass, 0);
+    UnityEngine_Object__Destroy_71870148(klass, 0);
     p_currentScreen->klass = 0;
-    sub_1C9403C(p_currentScreen, 0, v22, v23, v24, v25, v26, v27);
+    sub_1C7BA8C(p_currentScreen, 0, v22, v23, v24, v25, v26, v27);
   }
 }
 
@@ -788,12 +788,12 @@ void FGOEdgeBlur__setMaskImagePosition(FGOEdgeBlur_o *this, UnityEngine_Vector3_
       do
       {
         if ( (unsigned int)v8 >= max_length )
-          sub_1C942F8(this);
+          sub_1C7BD48(this);
         transform = (UnityEngine_Component_o *)shapeSettingParticles->m_Items[v8];
         if ( !transform
           || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0)) == 0 )
         {
-          sub_1C942F0(transform, method);
+          sub_1C7BD40(transform, method);
         }
         v10.fields.x = x;
         v10.fields.y = y;
@@ -845,7 +845,7 @@ void FGOEdgeBlur__set_Texture(FGOEdgeBlur_o *this, UnityEngine_Texture_o *value,
   const MethodInfo *v9; // x1
 
   this->fields._texture = value;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._texture,
     (int32_t)value,
     (int32_t)method,

@@ -15,7 +15,7 @@ void UserOwnRarePrism___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void UserOwnRarePrism___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_1C942F0(v13, v14);
+    sub_1C7BD40(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.rarePri;
 }

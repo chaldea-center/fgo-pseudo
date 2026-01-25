@@ -9,12 +9,12 @@ void EventReceiveCooltimeRewardRequest__beginRequest(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4D2E3DF & 1) == 0 )
+  if ( (byte_4CF014E & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_19290/*"eventId"*/);
-    byte_4D2E3DF = 1;
+    sub_1C7BAE8(&StringLiteral_19287/*"eventId"*/);
+    byte_4CF014E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19290/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19287/*"eventId"*/, eventId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -25,16 +25,16 @@ System_String_o *EventReceiveCooltimeRewardRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D2E3DE & 1) == 0 )
+  if ( (byte_4CF014D & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    sub_1C94098(&StringLiteral_19277/*"event/receiveCooltimeReward"*/);
-    byte_4D2E3DE = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_19274/*"event/receiveCooltimeReward"*/);
+    byte_4CF014D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_19277/*"event/receiveCooltimeReward"*/, 0);
+  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19274/*"event/receiveCooltimeReward"*/, 0);
 }
 
 
@@ -49,11 +49,11 @@ void EventReceiveCooltimeRewardRequest__requestCompleted(
   System_String_o *v8; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4D2E3E0 & 1) == 0 )
+  if ( (byte_4CF014F & 1) == 0 )
   {
-    sub_1C94098(&JsonManager_TypeInfo);
-    sub_1C94098(&ResponseCommandKind_TypeInfo);
-    byte_4D2E3E0 = 1;
+    sub_1C7BAE8(&JsonManager_TypeInfo);
+    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
+    byte_4CF014F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -61,7 +61,7 @@ void EventReceiveCooltimeRewardRequest__requestCompleted(
   if ( v5 )
   {
     v6 = v5;
-    v7 = ResponseData__checkError_45012660(v5, 0);
+    v7 = ResponseData__checkError_44743216(v5, 0);
     v8 = 0;
     if ( v7 )
     {

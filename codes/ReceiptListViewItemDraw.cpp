@@ -11,7 +11,7 @@ void ReceiptListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  System_String_o *TitleText; // x0
+  __int64 TitleText; // x0
   const MethodInfo *v8; // x1
   UILabel_o *titleTextLabel; // x22
   System_String_o *v10; // x1
@@ -22,62 +22,59 @@ void ReceiptListViewItemDraw__SetItem(
   float v15; // s1
   float v16; // s2
 
-  if ( (byte_4D29D5A & 1) == 0 )
+  if ( (byte_4CEBB76 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_1750/*"?"*/);
-    byte_4D29D5A = 1;
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_1751/*"?"*/);
+    byte_4CEBB76 = 1;
   }
   if ( item && mode )
   {
-    TitleText = ReceiptListViewItem__get_TitleText(item, (const MethodInfo *)item);
+    TitleText = (__int64)ReceiptListViewItem__get_TitleText(item, (const MethodInfo *)item);
     titleTextLabel = this->fields.titleTextLabel;
     if ( TitleText )
     {
-      TitleText = ReceiptListViewItem__get_TitleText(item, v8);
+      TitleText = (__int64)ReceiptListViewItem__get_TitleText(item, v8);
       if ( !titleTextLabel )
         goto LABEL_25;
-      v10 = TitleText;
+      v10 = (System_String_o *)TitleText;
     }
     else
     {
       if ( !titleTextLabel )
         goto LABEL_25;
-      v10 = (System_String_o *)StringLiteral_1750/*"?"*/;
+      v10 = (System_String_o *)StringLiteral_1751/*"?"*/;
     }
     UILabel__set_text(titleTextLabel, v10, 0);
     timeTextLabel = this->fields.timeTextLabel;
-    if ( (byte_4D29D59 & 1) == 0 )
+    if ( (byte_4CEBB75 & 1) == 0 )
     {
-      TitleText = (System_String_o *)sub_1C94098(&StringLiteral_1/*""*/);
-      byte_4D29D59 = 1;
+      TitleText = sub_1C7BAE8(&StringLiteral_1/*""*/);
+      byte_4CEBB75 = 1;
     }
     if ( timeTextLabel )
     {
       UILabel__set_text(timeTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
-      TitleText = (System_String_o *)this->fields.baseImageTexture;
+      TitleText = (__int64)this->fields.baseImageTexture;
       if ( TitleText )
       {
-        TitleText = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)TitleText, 0);
+        TitleText = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)TitleText, 0);
         if ( TitleText )
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)TitleText,
-                               (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          TitleText = (System_String_o *)UnityEngine_Object__op_Inequality(
-                                           (UnityEngine_Object_o *)Component_object,
-                                           0,
-                                           0);
-          if ( ((unsigned __int8)TitleText & 1) != 0 )
+          TitleText = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+          if ( (TitleText & 1) != 0 )
           {
             if ( !Component_object )
               goto LABEL_25;
             UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
           }
-          TitleText = (System_String_o *)this->fields.baseImageTexture;
+          TitleText = (__int64)this->fields.baseImageTexture;
           v13 = 1.0;
           if ( mode == 1 )
             v13 = 0.5;
@@ -93,6 +90,6 @@ void ReceiptListViewItemDraw__SetItem(
       }
     }
 LABEL_25:
-    sub_1C942F0(TitleText, v8);
+    sub_1C7BD40(TitleText, v8);
   }
 }

@@ -311,277 +311,277 @@ void AccountExtensions___cctor(const MethodInfo *method)
   int64_t v309; // x6
   System_String_o *v310; // x7
 
-  if ( (byte_4D2A654 & 1) == 0 )
+  if ( (byte_4CEC4B0 & 1) == 0 )
   {
-    sub_1C94098(&AccountExtensions_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_8987/*"Maverick"*/);
-    sub_1C94098(&StringLiteral_13881/*"The Evacuator"*/);
-    sub_1C94098(&StringLiteral_22358/*"n3o"*/);
-    sub_1C94098(&StringLiteral_10672/*"Plank"*/);
-    sub_1C94098(&StringLiteral_11247/*"Read End Connection"*/);
-    sub_1C94098(&StringLiteral_8949/*"Mark"*/);
-    sub_1C94098(&StringLiteral_10634/*"Penis Man"*/);
-    sub_1C94098(&StringLiteral_2673/*"BARRY"*/);
-    sub_1C94098(&StringLiteral_15722/*"Wizard"*/);
-    sub_1C94098(&StringLiteral_13233/*"Sundown"*/);
-    sub_1C94098(&StringLiteral_10589/*"Parmesian"*/);
-    sub_1C94098(&StringLiteral_2090/*"AXIX"*/);
-    sub_1C94098(&StringLiteral_15003/*"Unconventional"*/);
-    sub_1C94098(&StringLiteral_8988/*"Max"*/);
-    sub_1C94098(&StringLiteral_9041/*"Merlin"*/);
-    sub_1C94098(&StringLiteral_15854/*"Z - Ray"*/);
-    sub_1C94098(&StringLiteral_3186/*"Blind"*/);
-    sub_1C94098(&StringLiteral_8238/*"Kenneth"*/);
-    sub_1C94098(&StringLiteral_7976/*"Ironside"*/);
-    sub_1C94098(&StringLiteral_15416/*"Vitamin C"*/);
-    sub_1C94098(&StringLiteral_10633/*"Penetrator"*/);
-    sub_1C94098(&StringLiteral_15682/*"White Mice"*/);
-    sub_1C94098(&StringLiteral_15857/*"Zoolander"*/);
-    sub_1C94098(&StringLiteral_13858/*"The Bin Man"*/);
-    sub_1C94098(&StringLiteral_12960/*"Slider"*/);
-    sub_1C94098(&StringLiteral_8200/*"Jester"*/);
-    sub_1C94098(&StringLiteral_2194/*"Alpro"*/);
-    sub_1C94098(&StringLiteral_5934/*"Egg-man"*/);
-    sub_1C94098(&StringLiteral_13049/*"Spitfire"*/);
-    sub_1C94098(&StringLiteral_11294/*"Redtail"*/);
-    sub_1C94098(&StringLiteral_10548/*"Palette"*/);
-    sub_1C94098(&StringLiteral_13374/*"T-Bag"*/);
-    sub_1C94098(&StringLiteral_7543/*"Ice Man"*/);
-    sub_1C94098(&StringLiteral_9433/*"Neo1988"*/);
-    sub_1C94098(&StringLiteral_7129/*"Giant Lump"*/);
-    sub_1C94098(&StringLiteral_13934/*"The Sperminator"*/);
-    sub_1C94098(&StringLiteral_5943/*"Ejaculatory"*/);
-    sub_1C94098(&StringLiteral_12762/*"Sergio Georgini"*/);
-    sub_1C94098(&StringLiteral_6195/*"Eva"*/);
-    sub_1C94098(&StringLiteral_5505/*"ETC"*/);
-    sub_1C94098(&StringLiteral_11262/*"RearEnd"*/);
-    sub_1C94098(&StringLiteral_7648/*"Infiltrator"*/);
-    sub_1C94098(&StringLiteral_4524/*"Coaster"*/);
-    byte_4D2A654 = 1;
+    sub_1C7BAE8(&AccountExtensions_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_8991/*"Maverick"*/);
+    sub_1C7BAE8(&StringLiteral_13883/*"The Evacuator"*/);
+    sub_1C7BAE8(&StringLiteral_22353/*"n3o"*/);
+    sub_1C7BAE8(&StringLiteral_10674/*"Plank"*/);
+    sub_1C7BAE8(&StringLiteral_11250/*"Read End Connection"*/);
+    sub_1C7BAE8(&StringLiteral_8953/*"Mark"*/);
+    sub_1C7BAE8(&StringLiteral_10636/*"Penis Man"*/);
+    sub_1C7BAE8(&StringLiteral_2674/*"BARRY"*/);
+    sub_1C7BAE8(&StringLiteral_15723/*"Wizard"*/);
+    sub_1C7BAE8(&StringLiteral_13235/*"Sundown"*/);
+    sub_1C7BAE8(&StringLiteral_10591/*"Parmesian"*/);
+    sub_1C7BAE8(&StringLiteral_2091/*"AXIX"*/);
+    sub_1C7BAE8(&StringLiteral_15005/*"Unconventional"*/);
+    sub_1C7BAE8(&StringLiteral_8992/*"Max"*/);
+    sub_1C7BAE8(&StringLiteral_9045/*"Merlin"*/);
+    sub_1C7BAE8(&StringLiteral_15855/*"Z - Ray"*/);
+    sub_1C7BAE8(&StringLiteral_3185/*"Blind"*/);
+    sub_1C7BAE8(&StringLiteral_8242/*"Kenneth"*/);
+    sub_1C7BAE8(&StringLiteral_7979/*"Ironside"*/);
+    sub_1C7BAE8(&StringLiteral_15417/*"Vitamin C"*/);
+    sub_1C7BAE8(&StringLiteral_10635/*"Penetrator"*/);
+    sub_1C7BAE8(&StringLiteral_15683/*"White Mice"*/);
+    sub_1C7BAE8(&StringLiteral_15858/*"Zoolander"*/);
+    sub_1C7BAE8(&StringLiteral_13860/*"The Bin Man"*/);
+    sub_1C7BAE8(&StringLiteral_12962/*"Slider"*/);
+    sub_1C7BAE8(&StringLiteral_8204/*"Jester"*/);
+    sub_1C7BAE8(&StringLiteral_2196/*"Alpro"*/);
+    sub_1C7BAE8(&StringLiteral_5938/*"Egg-man"*/);
+    sub_1C7BAE8(&StringLiteral_13051/*"Spitfire"*/);
+    sub_1C7BAE8(&StringLiteral_11297/*"Redtail"*/);
+    sub_1C7BAE8(&StringLiteral_10550/*"Palette"*/);
+    sub_1C7BAE8(&StringLiteral_13376/*"T-Bag"*/);
+    sub_1C7BAE8(&StringLiteral_7546/*"Ice Man"*/);
+    sub_1C7BAE8(&StringLiteral_9437/*"Neo1988"*/);
+    sub_1C7BAE8(&StringLiteral_7132/*"Giant Lump"*/);
+    sub_1C7BAE8(&StringLiteral_13936/*"The Sperminator"*/);
+    sub_1C7BAE8(&StringLiteral_5947/*"Ejaculatory"*/);
+    sub_1C7BAE8(&StringLiteral_12765/*"Sergio Georgini"*/);
+    sub_1C7BAE8(&StringLiteral_6199/*"Eva"*/);
+    sub_1C7BAE8(&StringLiteral_5508/*"ETC"*/);
+    sub_1C7BAE8(&StringLiteral_11265/*"RearEnd"*/);
+    sub_1C7BAE8(&StringLiteral_7651/*"Infiltrator"*/);
+    sub_1C7BAE8(&StringLiteral_4525/*"Coaster"*/);
+    byte_4CEC4B0 = 1;
   }
-  v1 = sub_1C94140(string___TypeInfo, 43);
+  v1 = sub_1C7BB90(string___TypeInfo, 43);
   if ( !v1 )
-    sub_1C942F0(0, v2);
+    sub_1C7BD40(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_48;
-  v10 = StringLiteral_10633/*"Penetrator"*/;
-  *(_QWORD *)(v1 + 32) = StringLiteral_10633/*"Penetrator"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8);
+  v10 = StringLiteral_10635/*"Penetrator"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_10635/*"Penetrator"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8);
   if ( *(_DWORD *)(v9 + 24) <= 1u )
     goto LABEL_48;
-  v17 = StringLiteral_8238/*"Kenneth"*/;
-  *(_QWORD *)(v9 + 40) = StringLiteral_8238/*"Kenneth"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_8242/*"Kenneth"*/;
+  *(_QWORD *)(v9 + 40) = StringLiteral_8242/*"Kenneth"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
   if ( *(_DWORD *)(v9 + 24) <= 2u )
     goto LABEL_48;
-  v24 = StringLiteral_10548/*"Palette"*/;
-  *(_QWORD *)(v9 + 48) = StringLiteral_10548/*"Palette"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_10550/*"Palette"*/;
+  *(_QWORD *)(v9 + 48) = StringLiteral_10550/*"Palette"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
   if ( *(_DWORD *)(v9 + 24) <= 3u )
     goto LABEL_48;
-  v31 = StringLiteral_8949/*"Mark"*/;
-  *(_QWORD *)(v9 + 56) = StringLiteral_8949/*"Mark"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 56), v31, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_8953/*"Mark"*/;
+  *(_QWORD *)(v9 + 56) = StringLiteral_8953/*"Mark"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 56), v31, v25, v26, v27, v28, v29, v30);
   if ( *(_DWORD *)(v9 + 24) <= 4u )
     goto LABEL_48;
-  v38 = StringLiteral_10589/*"Parmesian"*/;
-  *(_QWORD *)(v9 + 64) = StringLiteral_10589/*"Parmesian"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 64), v38, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_10591/*"Parmesian"*/;
+  *(_QWORD *)(v9 + 64) = StringLiteral_10591/*"Parmesian"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 64), v38, v32, v33, v34, v35, v36, v37);
   if ( *(_DWORD *)(v9 + 24) <= 5u )
     goto LABEL_48;
-  v45 = StringLiteral_13049/*"Spitfire"*/;
-  *(_QWORD *)(v9 + 72) = StringLiteral_13049/*"Spitfire"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 72), v45, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_13051/*"Spitfire"*/;
+  *(_QWORD *)(v9 + 72) = StringLiteral_13051/*"Spitfire"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 72), v45, v39, v40, v41, v42, v43, v44);
   if ( *(_DWORD *)(v9 + 24) <= 6u )
     goto LABEL_48;
-  v52 = StringLiteral_6195/*"Eva"*/;
-  *(_QWORD *)(v9 + 80) = StringLiteral_6195/*"Eva"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 80), v52, v46, v47, v48, v49, v50, v51);
+  v52 = StringLiteral_6199/*"Eva"*/;
+  *(_QWORD *)(v9 + 80) = StringLiteral_6199/*"Eva"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 80), v52, v46, v47, v48, v49, v50, v51);
   if ( *(_DWORD *)(v9 + 24) <= 7u )
     goto LABEL_48;
-  v59 = StringLiteral_2194/*"Alpro"*/;
-  *(_QWORD *)(v9 + 88) = StringLiteral_2194/*"Alpro"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 88), v59, v53, v54, v55, v56, v57, v58);
+  v59 = StringLiteral_2196/*"Alpro"*/;
+  *(_QWORD *)(v9 + 88) = StringLiteral_2196/*"Alpro"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 88), v59, v53, v54, v55, v56, v57, v58);
   if ( *(_DWORD *)(v9 + 24) <= 8u )
     goto LABEL_48;
-  v66 = StringLiteral_11294/*"Redtail"*/;
-  *(_QWORD *)(v9 + 96) = StringLiteral_11294/*"Redtail"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 96), v66, v60, v61, v62, v63, v64, v65);
+  v66 = StringLiteral_11297/*"Redtail"*/;
+  *(_QWORD *)(v9 + 96) = StringLiteral_11297/*"Redtail"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 96), v66, v60, v61, v62, v63, v64, v65);
   if ( *(_DWORD *)(v9 + 24) <= 9u )
     goto LABEL_48;
-  v73 = StringLiteral_7648/*"Infiltrator"*/;
-  *(_QWORD *)(v9 + 104) = StringLiteral_7648/*"Infiltrator"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 104), v73, v67, v68, v69, v70, v71, v72);
+  v73 = StringLiteral_7651/*"Infiltrator"*/;
+  *(_QWORD *)(v9 + 104) = StringLiteral_7651/*"Infiltrator"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 104), v73, v67, v68, v69, v70, v71, v72);
   if ( *(_DWORD *)(v9 + 24) <= 0xAu )
     goto LABEL_48;
-  v80 = StringLiteral_11262/*"RearEnd"*/;
-  *(_QWORD *)(v9 + 112) = StringLiteral_11262/*"RearEnd"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 112), v80, v74, v75, v76, v77, v78, v79);
+  v80 = StringLiteral_11265/*"RearEnd"*/;
+  *(_QWORD *)(v9 + 112) = StringLiteral_11265/*"RearEnd"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 112), v80, v74, v75, v76, v77, v78, v79);
   if ( *(_DWORD *)(v9 + 24) <= 0xBu )
     goto LABEL_48;
-  v87 = StringLiteral_15682/*"White Mice"*/;
-  *(_QWORD *)(v9 + 120) = StringLiteral_15682/*"White Mice"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 120), v87, v81, v82, v83, v84, v85, v86);
+  v87 = StringLiteral_15683/*"White Mice"*/;
+  *(_QWORD *)(v9 + 120) = StringLiteral_15683/*"White Mice"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 120), v87, v81, v82, v83, v84, v85, v86);
   if ( *(_DWORD *)(v9 + 24) <= 0xCu )
     goto LABEL_48;
-  v94 = StringLiteral_15003/*"Unconventional"*/;
-  *(_QWORD *)(v9 + 128) = StringLiteral_15003/*"Unconventional"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 128), v94, v88, v89, v90, v91, v92, v93);
+  v94 = StringLiteral_15005/*"Unconventional"*/;
+  *(_QWORD *)(v9 + 128) = StringLiteral_15005/*"Unconventional"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 128), v94, v88, v89, v90, v91, v92, v93);
   if ( *(_DWORD *)(v9 + 24) <= 0xDu )
     goto LABEL_48;
-  v101 = StringLiteral_10634/*"Penis Man"*/;
-  *(_QWORD *)(v9 + 136) = StringLiteral_10634/*"Penis Man"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 136), v101, v95, v96, v97, v98, v99, v100);
+  v101 = StringLiteral_10636/*"Penis Man"*/;
+  *(_QWORD *)(v9 + 136) = StringLiteral_10636/*"Penis Man"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 136), v101, v95, v96, v97, v98, v99, v100);
   if ( *(_DWORD *)(v9 + 24) <= 0xEu )
     goto LABEL_48;
-  v108 = StringLiteral_13858/*"The Bin Man"*/;
-  *(_QWORD *)(v9 + 144) = StringLiteral_13858/*"The Bin Man"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 144), v108, v102, v103, v104, v105, v106, v107);
+  v108 = StringLiteral_13860/*"The Bin Man"*/;
+  *(_QWORD *)(v9 + 144) = StringLiteral_13860/*"The Bin Man"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 144), v108, v102, v103, v104, v105, v106, v107);
   if ( *(_DWORD *)(v9 + 24) <= 0xFu )
     goto LABEL_48;
-  v115 = StringLiteral_13881/*"The Evacuator"*/;
-  *(_QWORD *)(v9 + 152) = StringLiteral_13881/*"The Evacuator"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 152), v115, v109, v110, v111, v112, v113, v114);
+  v115 = StringLiteral_13883/*"The Evacuator"*/;
+  *(_QWORD *)(v9 + 152) = StringLiteral_13883/*"The Evacuator"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 152), v115, v109, v110, v111, v112, v113, v114);
   if ( *(_DWORD *)(v9 + 24) <= 0x10u )
     goto LABEL_48;
-  v122 = StringLiteral_7129/*"Giant Lump"*/;
-  *(_QWORD *)(v9 + 160) = StringLiteral_7129/*"Giant Lump"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 160), v122, v116, v117, v118, v119, v120, v121);
+  v122 = StringLiteral_7132/*"Giant Lump"*/;
+  *(_QWORD *)(v9 + 160) = StringLiteral_7132/*"Giant Lump"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 160), v122, v116, v117, v118, v119, v120, v121);
   if ( *(_DWORD *)(v9 + 24) <= 0x11u )
     goto LABEL_48;
-  v129 = StringLiteral_5943/*"Ejaculatory"*/;
-  *(_QWORD *)(v9 + 168) = StringLiteral_5943/*"Ejaculatory"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 168), v129, v123, v124, v125, v126, v127, v128);
+  v129 = StringLiteral_5947/*"Ejaculatory"*/;
+  *(_QWORD *)(v9 + 168) = StringLiteral_5947/*"Ejaculatory"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 168), v129, v123, v124, v125, v126, v127, v128);
   if ( *(_DWORD *)(v9 + 24) <= 0x12u )
     goto LABEL_48;
-  v136 = StringLiteral_13934/*"The Sperminator"*/;
-  *(_QWORD *)(v9 + 176) = StringLiteral_13934/*"The Sperminator"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 176), v136, v130, v131, v132, v133, v134, v135);
+  v136 = StringLiteral_13936/*"The Sperminator"*/;
+  *(_QWORD *)(v9 + 176) = StringLiteral_13936/*"The Sperminator"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 176), v136, v130, v131, v132, v133, v134, v135);
   if ( *(_DWORD *)(v9 + 24) <= 0x13u )
     goto LABEL_48;
-  v143 = StringLiteral_8200/*"Jester"*/;
-  *(_QWORD *)(v9 + 184) = StringLiteral_8200/*"Jester"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 184), v143, v137, v138, v139, v140, v141, v142);
+  v143 = StringLiteral_8204/*"Jester"*/;
+  *(_QWORD *)(v9 + 184) = StringLiteral_8204/*"Jester"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 184), v143, v137, v138, v139, v140, v141, v142);
   if ( *(_DWORD *)(v9 + 24) <= 0x14u )
     goto LABEL_48;
-  v150 = StringLiteral_8987/*"Maverick"*/;
-  *(_QWORD *)(v9 + 192) = StringLiteral_8987/*"Maverick"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 192), v150, v144, v145, v146, v147, v148, v149);
+  v150 = StringLiteral_8991/*"Maverick"*/;
+  *(_QWORD *)(v9 + 192) = StringLiteral_8991/*"Maverick"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 192), v150, v144, v145, v146, v147, v148, v149);
   if ( *(_DWORD *)(v9 + 24) <= 0x15u )
     goto LABEL_48;
-  v157 = StringLiteral_7543/*"Ice Man"*/;
-  *(_QWORD *)(v9 + 200) = StringLiteral_7543/*"Ice Man"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 200), v157, v151, v152, v153, v154, v155, v156);
+  v157 = StringLiteral_7546/*"Ice Man"*/;
+  *(_QWORD *)(v9 + 200) = StringLiteral_7546/*"Ice Man"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 200), v157, v151, v152, v153, v154, v155, v156);
   if ( *(_DWORD *)(v9 + 24) <= 0x16u )
     goto LABEL_48;
-  v164 = (int)StringLiteral_12960/*"Slider"*/;
-  *(_QWORD *)(v9 + 208) = StringLiteral_12960/*"Slider"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 208), v164, v158, v159, v160, v161, v162, v163);
+  v164 = (int)StringLiteral_12962/*"Slider"*/;
+  *(_QWORD *)(v9 + 208) = StringLiteral_12962/*"Slider"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 208), v164, v158, v159, v160, v161, v162, v163);
   if ( *(_DWORD *)(v9 + 24) <= 0x17u )
     goto LABEL_48;
-  v171 = StringLiteral_7976/*"Ironside"*/;
-  *(_QWORD *)(v9 + 216) = StringLiteral_7976/*"Ironside"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 216), v171, v165, v166, v167, v168, v169, v170);
+  v171 = StringLiteral_7979/*"Ironside"*/;
+  *(_QWORD *)(v9 + 216) = StringLiteral_7979/*"Ironside"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 216), v171, v165, v166, v167, v168, v169, v170);
   if ( *(_DWORD *)(v9 + 24) <= 0x18u )
     goto LABEL_48;
-  v178 = StringLiteral_13374/*"T-Bag"*/;
-  *(_QWORD *)(v9 + 224) = StringLiteral_13374/*"T-Bag"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 224), v178, v172, v173, v174, v175, v176, v177);
+  v178 = StringLiteral_13376/*"T-Bag"*/;
+  *(_QWORD *)(v9 + 224) = StringLiteral_13376/*"T-Bag"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 224), v178, v172, v173, v174, v175, v176, v177);
   if ( *(_DWORD *)(v9 + 24) <= 0x19u )
     goto LABEL_48;
-  v185 = StringLiteral_13233/*"Sundown"*/;
-  *(_QWORD *)(v9 + 232) = StringLiteral_13233/*"Sundown"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 232), v185, v179, v180, v181, v182, v183, v184);
+  v185 = StringLiteral_13235/*"Sundown"*/;
+  *(_QWORD *)(v9 + 232) = StringLiteral_13235/*"Sundown"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 232), v185, v179, v180, v181, v182, v183, v184);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Au )
     goto LABEL_48;
-  v192 = StringLiteral_8988/*"Max"*/;
-  *(_QWORD *)(v9 + 240) = StringLiteral_8988/*"Max"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 240), v192, v186, v187, v188, v189, v190, v191);
+  v192 = StringLiteral_8992/*"Max"*/;
+  *(_QWORD *)(v9 + 240) = StringLiteral_8992/*"Max"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 240), v192, v186, v187, v188, v189, v190, v191);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Bu )
     goto LABEL_48;
-  v199 = StringLiteral_15722/*"Wizard"*/;
-  *(_QWORD *)(v9 + 248) = StringLiteral_15722/*"Wizard"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 248), v199, v193, v194, v195, v196, v197, v198);
+  v199 = StringLiteral_15723/*"Wizard"*/;
+  *(_QWORD *)(v9 + 248) = StringLiteral_15723/*"Wizard"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 248), v199, v193, v194, v195, v196, v197, v198);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Cu )
     goto LABEL_48;
-  v206 = StringLiteral_9041/*"Merlin"*/;
-  *(_QWORD *)(v9 + 256) = StringLiteral_9041/*"Merlin"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 256), v206, v200, v201, v202, v203, v204, v205);
+  v206 = StringLiteral_9045/*"Merlin"*/;
+  *(_QWORD *)(v9 + 256) = StringLiteral_9045/*"Merlin"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 256), v206, v200, v201, v202, v203, v204, v205);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Du )
     goto LABEL_48;
-  v213 = StringLiteral_2673/*"BARRY"*/;
-  *(_QWORD *)(v9 + 264) = StringLiteral_2673/*"BARRY"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 264), v213, v207, v208, v209, v210, v211, v212);
+  v213 = StringLiteral_2674/*"BARRY"*/;
+  *(_QWORD *)(v9 + 264) = StringLiteral_2674/*"BARRY"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 264), v213, v207, v208, v209, v210, v211, v212);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Eu )
     goto LABEL_48;
-  v220 = StringLiteral_15416/*"Vitamin C"*/;
-  *(_QWORD *)(v9 + 272) = StringLiteral_15416/*"Vitamin C"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 272), v220, v214, v215, v216, v217, v218, v219);
+  v220 = StringLiteral_15417/*"Vitamin C"*/;
+  *(_QWORD *)(v9 + 272) = StringLiteral_15417/*"Vitamin C"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 272), v220, v214, v215, v216, v217, v218, v219);
   if ( *(_DWORD *)(v9 + 24) <= 0x1Fu )
     goto LABEL_48;
-  v227 = StringLiteral_15857/*"Zoolander"*/;
-  *(_QWORD *)(v9 + 280) = StringLiteral_15857/*"Zoolander"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 280), v227, v221, v222, v223, v224, v225, v226);
+  v227 = StringLiteral_15858/*"Zoolander"*/;
+  *(_QWORD *)(v9 + 280) = StringLiteral_15858/*"Zoolander"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 280), v227, v221, v222, v223, v224, v225, v226);
   if ( *(_DWORD *)(v9 + 24) <= 0x20u )
     goto LABEL_48;
-  v234 = StringLiteral_4524/*"Coaster"*/;
-  *(_QWORD *)(v9 + 288) = StringLiteral_4524/*"Coaster"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 288), v234, v228, v229, v230, v231, v232, v233);
+  v234 = StringLiteral_4525/*"Coaster"*/;
+  *(_QWORD *)(v9 + 288) = StringLiteral_4525/*"Coaster"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 288), v234, v228, v229, v230, v231, v232, v233);
   if ( *(_DWORD *)(v9 + 24) <= 0x21u )
     goto LABEL_48;
-  v241 = StringLiteral_10672/*"Plank"*/;
-  *(_QWORD *)(v9 + 296) = StringLiteral_10672/*"Plank"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 296), v241, v235, v236, v237, v238, v239, v240);
+  v241 = StringLiteral_10674/*"Plank"*/;
+  *(_QWORD *)(v9 + 296) = StringLiteral_10674/*"Plank"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 296), v241, v235, v236, v237, v238, v239, v240);
   if ( *(_DWORD *)(v9 + 24) <= 0x22u )
     goto LABEL_48;
-  v248 = StringLiteral_9433/*"Neo1988"*/;
-  *(_QWORD *)(v9 + 304) = StringLiteral_9433/*"Neo1988"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 304), v248, v242, v243, v244, v245, v246, v247);
+  v248 = StringLiteral_9437/*"Neo1988"*/;
+  *(_QWORD *)(v9 + 304) = StringLiteral_9437/*"Neo1988"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 304), v248, v242, v243, v244, v245, v246, v247);
   if ( *(_DWORD *)(v9 + 24) <= 0x23u )
     goto LABEL_48;
-  v255 = StringLiteral_22358/*"n3o"*/;
-  *(_QWORD *)(v9 + 312) = StringLiteral_22358/*"n3o"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 312), v255, v249, v250, v251, v252, v253, v254);
+  v255 = StringLiteral_22353/*"n3o"*/;
+  *(_QWORD *)(v9 + 312) = StringLiteral_22353/*"n3o"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 312), v255, v249, v250, v251, v252, v253, v254);
   if ( *(_DWORD *)(v9 + 24) <= 0x24u )
     goto LABEL_48;
-  v262 = StringLiteral_5505/*"ETC"*/;
-  *(_QWORD *)(v9 + 320) = StringLiteral_5505/*"ETC"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 320), v262, v256, v257, v258, v259, v260, v261);
+  v262 = StringLiteral_5508/*"ETC"*/;
+  *(_QWORD *)(v9 + 320) = StringLiteral_5508/*"ETC"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 320), v262, v256, v257, v258, v259, v260, v261);
   if ( *(_DWORD *)(v9 + 24) <= 0x25u )
     goto LABEL_48;
-  v269 = StringLiteral_11247/*"Read End Connection"*/;
-  *(_QWORD *)(v9 + 328) = StringLiteral_11247/*"Read End Connection"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 328), v269, v263, v264, v265, v266, v267, v268);
+  v269 = StringLiteral_11250/*"Read End Connection"*/;
+  *(_QWORD *)(v9 + 328) = StringLiteral_11250/*"Read End Connection"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 328), v269, v263, v264, v265, v266, v267, v268);
   if ( *(_DWORD *)(v9 + 24) <= 0x26u )
     goto LABEL_48;
-  v276 = StringLiteral_3186/*"Blind"*/;
-  *(_QWORD *)(v9 + 336) = StringLiteral_3186/*"Blind"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 336), v276, v270, v271, v272, v273, v274, v275);
+  v276 = StringLiteral_3185/*"Blind"*/;
+  *(_QWORD *)(v9 + 336) = StringLiteral_3185/*"Blind"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 336), v276, v270, v271, v272, v273, v274, v275);
   if ( *(_DWORD *)(v9 + 24) <= 0x27u )
     goto LABEL_48;
-  v283 = StringLiteral_15854/*"Z - Ray"*/;
-  *(_QWORD *)(v9 + 344) = StringLiteral_15854/*"Z - Ray"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 344), v283, v277, v278, v279, v280, v281, v282);
+  v283 = StringLiteral_15855/*"Z - Ray"*/;
+  *(_QWORD *)(v9 + 344) = StringLiteral_15855/*"Z - Ray"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 344), v283, v277, v278, v279, v280, v281, v282);
   if ( *(_DWORD *)(v9 + 24) <= 0x28u
-    || (v290 = StringLiteral_5934/*"Egg-man"*/,
-        *(_QWORD *)(v9 + 352) = StringLiteral_5934/*"Egg-man"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 352), v290, v284, v285, v286, v287, v288, v289),
+    || (v290 = StringLiteral_5938/*"Egg-man"*/,
+        *(_QWORD *)(v9 + 352) = StringLiteral_5938/*"Egg-man"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 352), v290, v284, v285, v286, v287, v288, v289),
         *(_DWORD *)(v9 + 24) <= 0x29u)
-    || (v297 = StringLiteral_2090/*"AXIX"*/,
-        *(_QWORD *)(v9 + 360) = StringLiteral_2090/*"AXIX"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 360), v297, v291, v292, v293, v294, v295, v296),
+    || (v297 = StringLiteral_2091/*"AXIX"*/,
+        *(_QWORD *)(v9 + 360) = StringLiteral_2091/*"AXIX"*/,
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 360), v297, v291, v292, v293, v294, v295, v296),
         *(_DWORD *)(v9 + 24) <= 0x2Au) )
   {
 LABEL_48:
-    sub_1C942F8(v1);
+    sub_1C7BD48(v1);
   }
-  v304 = StringLiteral_12762/*"Sergio Georgini"*/;
-  *(_QWORD *)(v9 + 368) = StringLiteral_12762/*"Sergio Georgini"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 368), v304, v298, v299, v300, v301, v302, v303);
+  v304 = StringLiteral_12765/*"Sergio Georgini"*/;
+  *(_QWORD *)(v9 + 368) = StringLiteral_12765/*"Sergio Georgini"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 368), v304, v298, v299, v300, v301, v302, v303);
   AccountExtensions_TypeInfo->static_fields->names = (struct System_String_array *)v9;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)AccountExtensions_TypeInfo->static_fields,
     v9,
     v305,
@@ -600,10 +600,10 @@ System_String_o *AccountExtensions__GetRandomName(const MethodInfo *method)
   struct System_String_array *names; // x19
   __int64 v4; // x0
 
-  if ( (byte_4D2A653 & 1) == 0 )
+  if ( (byte_4CEC4AF & 1) == 0 )
   {
-    sub_1C94098(&AccountExtensions_TypeInfo);
-    byte_4D2A653 = 1;
+    sub_1C7BAE8(&AccountExtensions_TypeInfo);
+    byte_4CEC4AF = 1;
   }
   v2 = AccountExtensions_TypeInfo;
   if ( !AccountExtensions_TypeInfo->_2.cctor_finished )
@@ -613,10 +613,10 @@ System_String_o *AccountExtensions__GetRandomName(const MethodInfo *method)
   }
   names = v2->static_fields->names;
   if ( !names )
-    sub_1C942F0(v2, v1);
-  v4 = UnityEngine_Random__Range_72070684(0, LODWORD(names->max_length) - 1, 0);
+    sub_1C7BD40(v2, v1);
+  v4 = UnityEngine_Random__Range_71829860(0, LODWORD(names->max_length) - 1, 0);
   if ( (unsigned int)v4 >= LODWORD(names->max_length) )
-    sub_1C942F8(v4);
+    sub_1C7BD48(v4);
   return names->m_Items[(int)v4];
 }
 
@@ -627,17 +627,17 @@ bool AccountExtensions__IsValidEmailAddress(System_String_o *email, const Method
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2A652 & 1) == 0 )
+  if ( (byte_4CEC4AE & 1) == 0 )
   {
-    sub_1C94098(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_1C94098(&StringLiteral_16140/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/);
-    byte_4D2A652 = 1;
+    sub_1C7BAE8(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16142/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/);
+    byte_4CEC4AE = 1;
   }
   if ( System_String__IsNullOrEmpty(email, 0) )
     return 0;
-  v4 = (System_Text_RegularExpressions_Regex_o *)sub_1C942E4(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_70938516(v4, (System_String_o *)StringLiteral_16140/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, 1, 0);
+  v4 = (System_Text_RegularExpressions_Regex_o *)sub_1C7BD34(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_70697692(v4, (System_String_o *)StringLiteral_16142/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, 1, 0);
   if ( !v4 )
-    sub_1C942F0(v5, v6);
-  return System_Text_RegularExpressions_Regex__IsMatch_70933516(v4, email, 0);
+    sub_1C7BD40(v5, v6);
+  return System_Text_RegularExpressions_Regex__IsMatch_70692692(v4, email, 0);
 }

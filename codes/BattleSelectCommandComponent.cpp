@@ -31,36 +31,36 @@ void BattleSelectCommandComponent___cctor(const MethodInfo *method)
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4D2F85C & 1) == 0 )
+  if ( (byte_4CF15E0 & 1) == 0 )
   {
-    sub_1C94098(&BattleSelectCommandComponent_TypeInfo);
-    sub_1C94098(&string___TypeInfo);
-    sub_1C94098(&StringLiteral_18268/*"commandcard_select_3rd"*/);
-    sub_1C94098(&StringLiteral_18267/*"commandcard_select_2nd"*/);
-    sub_1C94098(&StringLiteral_18266/*"commandcard_select_1st"*/);
-    byte_4D2F85C = 1;
+    sub_1C7BAE8(&BattleSelectCommandComponent_TypeInfo);
+    sub_1C7BAE8(&string___TypeInfo);
+    sub_1C7BAE8(&StringLiteral_18268/*"commandcard_select_3rd"*/);
+    sub_1C7BAE8(&StringLiteral_18267/*"commandcard_select_2nd"*/);
+    sub_1C7BAE8(&StringLiteral_18266/*"commandcard_select_1st"*/);
+    byte_4CF15E0 = 1;
   }
-  v1 = sub_1C94140(string___TypeInfo, 3);
+  v1 = sub_1C7BB90(string___TypeInfo, 3);
   if ( !v1 )
-    sub_1C942F0(0, v2);
+    sub_1C7BD40(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24)
     || (v10 = StringLiteral_18266/*"commandcard_select_1st"*/,
         *(_QWORD *)(v1 + 32) = StringLiteral_18266/*"commandcard_select_1st"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
         *(_DWORD *)(v9 + 24) <= 1u)
     || (v17 = StringLiteral_18267/*"commandcard_select_2nd"*/,
         *(_QWORD *)(v9 + 40) = StringLiteral_18267/*"commandcard_select_2nd"*/,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
         *(_DWORD *)(v9 + 24) <= 2u) )
   {
-    sub_1C942F8(v1);
+    sub_1C7BD48(v1);
   }
   v24 = StringLiteral_18268/*"commandcard_select_3rd"*/;
   *(_QWORD *)(v9 + 48) = StringLiteral_18268/*"commandcard_select_3rd"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
   BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v9;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)BattleSelectCommandComponent_TypeInfo->static_fields,
     v9,
     v25,
@@ -89,12 +89,12 @@ void BattleSelectCommandComponent__setIndex(
   __int64 v7; // x8
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4D2F85B & 1) == 0 )
+  if ( (byte_4CF15DF & 1) == 0 )
   {
-    sub_1C94098(&BattleSelectCommandComponent_TypeInfo);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2F85B = 1;
+    sub_1C7BAE8(&BattleSelectCommandComponent_TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF15DF = 1;
   }
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
   markSprite = this->fields.markSprite;
@@ -107,7 +107,7 @@ void BattleSelectCommandComponent__setIndex(
   if ( !v7 )
     goto LABEL_16;
   if ( *(_DWORD *)(v7 + 24) <= (unsigned int)index )
-    sub_1C942F8(gameObject);
+    sub_1C7BD48(gameObject);
   if ( !markSprite )
     goto LABEL_16;
   UISprite__set_spriteName(markSprite, *(System_String_o **)(v7 + 8LL * index + 32), 0);
@@ -119,7 +119,7 @@ void BattleSelectCommandComponent__setIndex(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -135,6 +135,6 @@ void BattleSelectCommandComponent__setIndex(
       return;
     }
 LABEL_16:
-    sub_1C942F0(gameObject, *(_QWORD *)&index);
+    sub_1C7BD40(gameObject, *(_QWORD *)&index);
   }
 }

@@ -1,14 +1,14 @@
 void UserQuestRecordMaster___ctor(UserQuestRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D7E0 & 1) == 0 )
+  if ( (byte_4CEF593 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
-    byte_4D2D7E0 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
+    byte_4CEF593 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     64,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
 }
 
 
@@ -22,11 +22,11 @@ UserQuestRecordEntity_o *UserQuestRecordMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2D7DE & 1) == 0 )
+  if ( (byte_4CEF591 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
-    sub_1C94098(&UserQuestRecordEntity_TypeInfo);
-    byte_4D2D7DE = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
+    sub_1C7BAE8(&UserQuestRecordEntity_TypeInfo);
+    byte_4CEF591 = 1;
   }
   if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
@@ -34,7 +34,7 @@ UserQuestRecordEntity_o *UserQuestRecordMaster__GetEntity(
   return (UserQuestRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_345FF78 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
+                                      (const MethodInfo_3432DB4 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ void UserQuestRecordMaster__GetKnockdownRecordinfo(
   UserQuestRecordEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v8 = this;
-  if ( (byte_4D2D7E2 & 1) == 0 )
+  if ( (byte_4CEF595 & 1) == 0 )
   {
-    this = (UserQuestRecordMaster_o *)sub_1C94098(&UserQuestRecordEntity_TypeInfo);
-    byte_4D2D7E2 = 1;
+    this = (UserQuestRecordMaster_o *)sub_1C7BAE8(&UserQuestRecordEntity_TypeInfo);
+    byte_4CEF595 = 1;
   }
   entity = 0;
   if ( !knockdownInfo )
@@ -77,7 +77,7 @@ void UserQuestRecordMaster__GetKnockdownRecordinfo(
         (this = (UserQuestRecordMaster_o *)entity) == 0) )
   {
 LABEL_11:
-    sub_1C942F0(this, userId);
+    sub_1C7BD40(this, userId);
   }
   knockdownInfo->fields.totalDamage = UserQuestRecordEntity__getRecordLong(
                                         entity,
@@ -102,10 +102,10 @@ int64_t UserQuestRecordMaster__GetMaxTurnDamage(
   UserQuestRecordEntity_c *v13; // x0
   UserQuestRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D2D7E1 & 1) == 0 )
+  if ( (byte_4CEF594 & 1) == 0 )
   {
-    sub_1C94098(&UserQuestRecordEntity_TypeInfo);
-    byte_4D2D7E1 = 1;
+    sub_1C7BAE8(&UserQuestRecordEntity_TypeInfo);
+    byte_4CEF594 = 1;
   }
   entity = 0;
   v10 = UserQuestRecordMaster__TryGetEntity(this, &entity, userId, questId, 1, v4);
@@ -117,7 +117,7 @@ int64_t UserQuestRecordMaster__GetMaxTurnDamage(
     if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
     if ( !v12 )
-      sub_1C942F0(v13, v8);
+      sub_1C7BD40(v13, v8);
     return UserQuestRecordEntity__getRecordLong(
              v12,
              UserQuestRecordEntity_TypeInfo->static_fields->KEY_RECORD_TURN_MAX_DAMAGE,
@@ -139,11 +139,11 @@ bool UserQuestRecordMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2D7DF & 1) == 0 )
+  if ( (byte_4CEF592 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
-    sub_1C94098(&UserQuestRecordEntity_TypeInfo);
-    byte_4D2D7DF = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
+    sub_1C7BAE8(&UserQuestRecordEntity_TypeInfo);
+    byte_4CEF592 = 1;
   }
   if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
@@ -152,5 +152,5 @@ bool UserQuestRecordMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
 }

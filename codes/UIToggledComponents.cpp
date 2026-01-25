@@ -23,18 +23,18 @@ void UIToggledComponents__Awake(UIToggledComponents_o *this, const MethodInfo *m
   const MethodInfo *v17; // x2
   _QWORD *v18; // x9
   __int64 v19; // x8
-  const MethodInfo_386AE34 *v20; // x2
+  const MethodInfo_383EDFC *v20; // x2
 
-  if ( (byte_4D30F32 & 1) == 0 )
+  if ( (byte_4CF2D64 & 1) == 0 )
   {
-    sub_1C94098(&EventDelegate_Callback_TypeInfo);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C94098(&EventDelegate_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_UIToggledComponents_Toggle__);
-    byte_4D30F32 = 1;
+    sub_1C7BAE8(&EventDelegate_Callback_TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C7BAE8(&EventDelegate_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_UIToggledComponents_Toggle__);
+    byte_4CF2D64 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -56,7 +56,7 @@ LABEL_10:
       LODWORD(v4) = 0;
       this->fields.target = 0;
 LABEL_11:
-      sub_1C9403C((GrandQuestFolderBoardItem_o *)p_target, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_target, (int32_t)v4, v5, v6, v7, v8, v9, v10);
       goto LABEL_12;
     }
     v4 = (Il2CppObject *)this->fields.target;
@@ -75,7 +75,7 @@ LABEL_11:
           goto LABEL_11;
         }
         activate = (char *)deactivate;
-        v20 = *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
+        v20 = *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
         goto LABEL_25;
       }
     }
@@ -92,7 +92,7 @@ LABEL_11:
           p_target = (struct UnityEngine_MonoBehaviour_o **)(v19 + 32);
           goto LABEL_11;
         }
-        v20 = *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
+        v20 = *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
 LABEL_25:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)activate,
@@ -102,16 +102,16 @@ LABEL_25:
       }
     }
 LABEL_26:
-    sub_1C942F0(activate, v4);
+    sub_1C7BD40(activate, v4);
   }
 LABEL_12:
   activate = (char *)UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !activate )
     goto LABEL_26;
   v14 = (System_Collections_Generic_List_EventDelegate__o *)*((_QWORD *)activate + 8);
-  v15 = (EventDelegate_Callback_o *)sub_1C942E4(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_1C7BD34(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v15, (Il2CppObject *)this, Method_UIToggledComponents_Toggle__, v16);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -134,12 +134,12 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
   struct UIToggle_o *v13; // x8
   __int64 v14; // x9
 
-  if ( (byte_4D30F33 & 1) == 0 )
+  if ( (byte_4CF2D65 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
-    sub_1C94098(&UIToggle_TypeInfo);
-    byte_4D30F33 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+    sub_1C7BAE8(&UIToggle_TypeInfo);
+    byte_4CF2D65 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -152,7 +152,7 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
                                                                 v5,
-                                                                (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+                                                                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
       v6 = UIToggle_TypeInfo;
       v7 = (UnityEngine_Behaviour_o *)activate;
       if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -175,14 +175,14 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
     activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
     if ( !activate )
 LABEL_27:
-      sub_1C942F0(activate, v3);
+      sub_1C7BD40(activate, v3);
     v10 = 0;
     while ( v10 < activate->fields._size )
     {
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
                                                                 v10,
-                                                                (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+                                                                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
       v11 = UIToggle_TypeInfo;
       v12 = (UnityEngine_Behaviour_o *)activate;
       if ( !UIToggle_TypeInfo->_2.cctor_finished )

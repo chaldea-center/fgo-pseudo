@@ -1,14 +1,14 @@
 void ServantLimitMaster___ctor(ServantLimitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D232 & 1) == 0 )
+  if ( (byte_4CEF01C & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string___ctor__);
-    byte_4D2D232 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string___ctor__);
+    byte_4CEF01C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     7,
-    (const MethodInfo_345DC54 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string___ctor__);
+    (const MethodInfo_3430A90 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string___ctor__);
 }
 
 
@@ -24,21 +24,21 @@ int32_t ServantLimitMaster__GetAscensionAfterDialogId(int32_t svtId, int32_t lim
   ServantLimitAddEntity_o *v12; // [xsp+8h] [xbp-38h] BYREF
   ServantLimitEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D2D234 & 1) == 0 )
+  if ( (byte_4CEF01E & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2D234 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CEF01E = 1;
   }
   v12 = 0;
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !Instance )
     goto LABEL_15;
   if ( !ServantLimitMaster__TryGetEntity((ServantLimitMaster_o *)Instance, &entity, svtId, limitCount, v7) )
@@ -51,12 +51,12 @@ int32_t ServantLimitMaster__GetAscensionAfterDialogId(int32_t svtId, int32_t lim
   {
 LABEL_8:
     v12 = 0;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_15;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                                  (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
     if ( !Instance )
       goto LABEL_15;
     if ( ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Instance, &v12, svtId, limitCount, v10) )
@@ -65,7 +65,7 @@ LABEL_8:
       if ( v12 )
         return ServantLimitAddEntity__GetAscensionAfterDialogId(v12, -1, v11);
 LABEL_15:
-      sub_1C942F0(Instance, v6);
+      sub_1C7BD40(Instance, v6);
     }
     return -1;
   }
@@ -82,16 +82,16 @@ ServantLimitEntity_o *ServantLimitMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4D2D230 & 1) == 0 )
+  if ( (byte_4CEF01A & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__GetEntity__);
-    byte_4D2D230 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__GetEntity__);
+    byte_4CEF01A = 1;
   }
   PK = (Il2CppObject *)ServantLimitEntity__CreatePK(svtId, limitCount, *(const MethodInfo **)&limitCount);
   return (ServantLimitEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_345FF78 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__GetEntity__);
+                                   (const MethodInfo_3432DB4 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__GetEntity__);
 }
 
 
@@ -105,14 +105,14 @@ int32_t ServantLimitMaster__GetRewardRarityType(
   __int64 v8; // x1
   int32_t rarity; // w19
 
-  if ( (byte_4D2D233 & 1) == 0 )
+  if ( (byte_4CEF01D & 1) == 0 )
   {
-    sub_1C94098(&Rarity_TypeInfo);
-    byte_4D2D233 = 1;
+    sub_1C7BAE8(&Rarity_TypeInfo);
+    byte_4CEF01D = 1;
   }
   Entity = ServantLimitMaster__GetEntity(this, svtId, limitCount, method);
   if ( !Entity )
-    sub_1C942F0(0, v8);
+    sub_1C7BD40(0, v8);
   rarity = Entity->fields.rarity;
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
@@ -130,15 +130,15 @@ bool ServantLimitMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4D2D231 & 1) == 0 )
+  if ( (byte_4CEF01B & 1) == 0 )
   {
-    sub_1C94098(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__TryGetEntity__);
-    byte_4D2D231 = 1;
+    sub_1C7BAE8(&Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__TryGetEntity__);
+    byte_4CEF01B = 1;
   }
   PK = (Il2CppObject *)ServantLimitEntity__CreatePK(svtId, limitCount, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_345FFC4 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__TryGetEntity__);
+           (const MethodInfo_3432E00 *)Method_DataMasterBase_ServantLimitMaster__ServantLimitEntity__string__TryGetEntity__);
 }

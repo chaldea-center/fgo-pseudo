@@ -7,16 +7,16 @@ void MapButtonControl___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4D29246 & 1) == 0 )
+  if ( (byte_4CEB016 & 1) == 0 )
   {
-    sub_1C94098(&MapButtonControl_TypeInfo);
-    sub_1C94098(&StringLiteral_8914/*"MapBtnPrefab"*/);
-    byte_4D29246 = 1;
+    sub_1C7BAE8(&MapButtonControl_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_8918/*"MapBtnPrefab"*/);
+    byte_4CEB016 = 1;
   }
-  MapButtonControl_TypeInfo->static_fields->MAP_BUTTON_PREFAB_NAME = (struct System_String_o *)StringLiteral_8914/*"MapBtnPrefab"*/;
-  sub_1C9403C(
+  MapButtonControl_TypeInfo->static_fields->MAP_BUTTON_PREFAB_NAME = (struct System_String_o *)StringLiteral_8918/*"MapBtnPrefab"*/;
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)MapButtonControl_TypeInfo->static_fields,
-    StringLiteral_8914/*"MapBtnPrefab"*/,
+    StringLiteral_8918/*"MapBtnPrefab"*/,
     v1,
     v2,
     v3,
@@ -149,23 +149,23 @@ void MapButtonControl__CreateMapButtons(
   GrandQuestFolderBoardItem_o *p_buttons; // [xsp+60h] [xbp-70h]
   Il2CppObject *entity; // [xsp+68h] [xbp-68h] BYREF
 
-  if ( (byte_4D29240 & 1) == 0 )
+  if ( (byte_4CEB010 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_MapButtonMaster___);
-    sub_1C94098(&Method_DataManager_GetMaster_MapCondMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    sub_1C94098(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C94098(&Method_GameObjectExtensions_SafeGetComponent_MapButtonPrefab___);
-    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_MapButtonPrefab___);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C94098(&MapButtonPrefab___TypeInfo);
-    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C94098(&TerminalPramsManager_TypeInfo);
-    byte_4D29240 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_MapButtonMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMaster_MapCondMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    sub_1C7BAE8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C7BAE8(&Method_GameObjectExtensions_SafeGetComponent_MapButtonPrefab___);
+    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_MapButtonPrefab___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C7BAE8(&MapButtonPrefab___TypeInfo);
+    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
+    byte_4CEB010 = 1;
   }
   entity = 0;
   MapButtonPrefab = MapButtonControl__GetMapButtonPrefab(this, mapAssetData, (const MethodInfo *)mapInf);
@@ -180,9 +180,9 @@ void MapButtonControl__CreateMapButtons(
 LABEL_7:
     MapButtonControl__DestroyButtons(this, v12);
     this->fields.newButtonEntryAnimAction = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.newButtonEntryAnimAction, 0, v15, v16, v17, v18, v19, v20);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.newButtonEntryAnimAction, 0, v15, v16, v17, v18, v19, v20);
     this->fields.terminalMap = terminalMap;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.terminalMap,
       (int32_t)terminalMap,
       v21,
@@ -192,7 +192,7 @@ LABEL_7:
       v25,
       v26);
     this->fields.currentMapButtonPrefab = MapButtonPrefab;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.currentMapButtonPrefab,
       (int32_t)MapButtonPrefab,
       v27,
@@ -203,7 +203,7 @@ LABEL_7:
       v32);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_MapButtonMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_MapButtonMaster___);
     if ( !Master_object )
       goto LABEL_88;
     OpenedButtons = MapButtonMaster__GetOpenedButtons((MapButtonMaster_o *)Master_object, warInf, mapInf, 0);
@@ -211,7 +211,7 @@ LABEL_7:
     v37 = OpenedButtons;
     this->fields.gridComponent = GridComponentBottom;
     p_gridComponent = &this->fields.gridComponent;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.gridComponent,
       (int32_t)GridComponentBottom,
       v38,
@@ -220,7 +220,7 @@ LABEL_7:
       v41,
       v42,
       v43);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_EventDetailMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_EventDetailMaster___);
     if ( !warInf )
       goto LABEL_88;
     v44 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -231,7 +231,7 @@ LABEL_7:
                       v44,
                       &entity,
                       Master_object,
-                      (const MethodInfo_345B50C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+                      (const MethodInfo_342E348 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
     if ( (Master_object & 1) == 0 )
       goto LABEL_16;
     Master_object = (__int64)entity;
@@ -242,7 +242,7 @@ LABEL_7:
     {
       GridComponentTop = this->fields.GridComponentTop;
       this->fields.gridComponent = GridComponentTop;
-      sub_1C9403C(
+      sub_1C7BA8C(
         (GrandQuestFolderBoardItem_o *)p_gridComponent,
         (int32_t)GridComponentTop,
         v45,
@@ -262,7 +262,7 @@ LABEL_16:
       || (Master_object = ScrTerminalMap__IsMapModel(terminalMap, 0), (mMapInfo = terminalMap->fields.mMapInfo) == 0) )
     {
 LABEL_88:
-      sub_1C942F0(Master_object, v34);
+      sub_1C7BD40(Master_object, v34);
     }
     v53 = Master_object;
     mapId = mMapInfo->fields.mapId;
@@ -271,13 +271,13 @@ LABEL_88:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      v54 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_MapCondMaster___);
+      v54 = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_MapCondMaster___);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4D2926D )
+      if ( !byte_4CEB03D )
       {
-        sub_1C94098(&TerminalPramsManager_TypeInfo);
-        byte_4D2926D = 1;
+        sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
+        byte_4CEB03D = 1;
       }
       Master_object = (__int64)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -286,11 +286,11 @@ LABEL_88:
         Master_object = (__int64)TerminalPramsManager_TypeInfo;
       }
       v55 = *(_DWORD *)(*(_QWORD *)(Master_object + 184) + 140LL);
-      if ( !byte_4D2926E )
+      if ( !byte_4CEB03E )
       {
-        sub_1C94098(&TerminalPramsManager_TypeInfo);
+        sub_1C7BAE8(&TerminalPramsManager_TypeInfo);
         Master_object = (__int64)TerminalPramsManager_TypeInfo;
-        byte_4D2926E = 1;
+        byte_4CEB03E = 1;
       }
       if ( !*(_DWORD *)(Master_object + 224) )
       {
@@ -329,7 +329,7 @@ LABEL_38:
       v57 = *p_gridComponent;
       Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                  MapButtonPrefab,
-                                 (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_MapButtonPrefab___);
+                                 (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_MapButtonPrefab___);
       if ( Master_object )
       {
         GridCellHeight = MapButtonPrefab__GetGridCellHeight((MapButtonPrefab_o *)Master_object, v34);
@@ -339,9 +339,9 @@ LABEL_38:
           v57->fields.cellHeight = GridCellHeight;
           if ( v37 )
           {
-            v59 = sub_1C94140(MapButtonPrefab___TypeInfo, LODWORD(v37->max_length));
+            v59 = sub_1C7BB90(MapButtonPrefab___TypeInfo, LODWORD(v37->max_length));
             p_buttons->klass = (GrandQuestFolderBoardItem_c *)v59;
-            sub_1C9403C(p_buttons, v59, v60, v61, v62, v63, v64, v65);
+            sub_1C7BA8C(p_buttons, v59, v60, v61, v62, v63, v64, v65);
             max_length = v37->max_length;
             if ( max_length >= 1 )
             {
@@ -366,27 +366,27 @@ LABEL_38:
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 v75 = UnityEngine_Object__Instantiate_object_(
                         (Il2CppObject *)MapButtonPrefab,
-                        (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                        (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
                 klass = p_buttons->klass;
                 Master_object = (__int64)GameObjectExtensions__SafeGetComponent_object_(
                                            (UnityEngine_GameObject_o *)v75,
-                                           (const MethodInfo_31F6278 *)Method_GameObjectExtensions_SafeGetComponent_MapButtonPrefab___);
+                                           (const MethodInfo_31C8BB0 *)Method_GameObjectExtensions_SafeGetComponent_MapButtonPrefab___);
                 if ( !klass )
                   goto LABEL_88;
                 v83 = Master_object;
                 if ( Master_object )
                 {
-                  Master_object = sub_1C941D4(Master_object, *((_QWORD *)klass->_1.image + 8));
+                  Master_object = sub_1C7BC24(Master_object, *((_QWORD *)klass->_1.image + 8));
                   if ( !Master_object )
                   {
-                    v103 = sub_1C94314();
-                    sub_1C941C0(v103, 0);
+                    v103 = sub_1C7BD64();
+                    sub_1C7BC10(v103, 0);
                   }
                 }
                 if ( v67 >= LODWORD(klass->_1.namespaze) )
                   goto LABEL_89;
                 *(void **)((char *)&klass->_1.image + v70) = (void *)v83;
-                sub_1C9403C((GrandQuestFolderBoardItem_o *)((char *)klass + v70), v83, v77, v78, v79, v80, v81, v82);
+                sub_1C7BA8C((GrandQuestFolderBoardItem_o *)((char *)klass + v70), v83, v77, v78, v79, v80, v81, v82);
                 if ( (v109 & 1) != 0 )
                 {
                   v85 = 0;
@@ -403,7 +403,7 @@ LABEL_38:
                   Master_object = System_Collections_Generic_List_int___Contains(
                                     v106,
                                     v71->fields.id,
-                                    (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
+                                    (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
                   v85 = Master_object & 1;
                 }
                 v86 = p_buttons->klass;
@@ -411,7 +411,7 @@ LABEL_38:
                   goto LABEL_88;
                 if ( v67 >= LODWORD(v86->_1.namespaze) )
 LABEL_89:
-                  sub_1C942F8(Master_object);
+                  sub_1C7BD48(Master_object);
                 Master_object = *(__int64 *)((char *)&v86->_1.image + v70);
                 if ( !Master_object )
                   goto LABEL_88;
@@ -479,7 +479,7 @@ LABEL_69:
                 if ( v67 >= LODWORD(v95->_1.namespaze) )
                   goto LABEL_89;
                 v96 = *(MapButtonPrefab_o **)((char *)&v95->_1.image + v70);
-                Master_object = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+                Master_object = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_QuestTree__get_Instance__);
                 if ( !v71 )
                   goto LABEL_88;
                 if ( !Master_object )
@@ -498,7 +498,7 @@ LABEL_69:
                 if ( v67 >= LODWORD(v98->_1.namespaze) )
                   goto LABEL_89;
                 v99 = *(MapButtonPrefab_o **)((char *)&v98->_1.image + v70);
-                Master_object = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+                Master_object = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_QuestTree__get_Instance__);
                 if ( !Master_object )
                   goto LABEL_88;
                 Master_object = QuestTree__IsNextSpotForMap(
@@ -568,10 +568,10 @@ void MapButtonControl__DestroyButtons(MapButtonControl_o *this, const MethodInfo
   int64_t v23; // x6
   System_String_o *v24; // x7
 
-  if ( (byte_4D29244 & 1) == 0 )
+  if ( (byte_4CEB014 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29244 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEB014 = 1;
   }
   if ( this->fields.buttons )
   {
@@ -610,7 +610,7 @@ void MapButtonControl__DestroyButtons(MapButtonControl_o *this, const MethodInfo
                                                    0);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            UnityEngine_Object__Destroy_72110972(gameObject, 0);
+            UnityEngine_Object__Destroy_71870148(gameObject, 0);
           }
           transform = (UnityEngine_Component_o *)this->fields.GridComponentBottom;
           ++v6;
@@ -618,7 +618,7 @@ void MapButtonControl__DestroyButtons(MapButtonControl_o *this, const MethodInfo
         while ( transform );
       }
 LABEL_39:
-      sub_1C942F0(transform, v4);
+      sub_1C7BD40(transform, v4);
     }
 LABEL_22:
     GridComponentTop = (UnityEngine_Object_o *)this->fields.GridComponentTop;
@@ -654,7 +654,7 @@ LABEL_22:
             v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v17, 0);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            UnityEngine_Object__Destroy_72110972(v18, 0);
+            UnityEngine_Object__Destroy_71870148(v18, 0);
           }
           transform = (UnityEngine_Component_o *)this->fields.GridComponentTop;
           ++v16;
@@ -665,9 +665,9 @@ LABEL_22:
     }
 LABEL_40:
     this->fields.buttons = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.buttons, 0, v10, v11, v12, v13, v14, v15);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.buttons, 0, v10, v11, v12, v13, v14, v15);
     this->fields.currentMapButtonPrefab = 0;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.currentMapButtonPrefab, 0, v19, v20, v21, v22, v23, v24);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.currentMapButtonPrefab, 0, v19, v20, v21, v22, v23, v24);
   }
 }
 
@@ -716,41 +716,41 @@ void MapButtonControl__FrameIn(MapButtonControl_o *this, const MethodInfo *metho
   const MethodInfo *v42; // x2
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4D29245 & 1) == 0 )
+  if ( (byte_4CEB015 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_System_Linq_Enumerable_Any_MapButtonPrefab___);
-    sub_1C94098(&Method_System_Linq_Enumerable_Last_MapButtonPrefab___);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MapButtonPrefab__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
-    sub_1C94098(&Method_MapButtonControl___c__DisplayClass16_0__FrameIn_b__0__);
-    sub_1C94098(&MapButtonControl___c__DisplayClass16_0_TypeInfo);
-    byte_4D29245 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_MapButtonPrefab___);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Last_MapButtonPrefab___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MapButtonPrefab__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
+    sub_1C7BAE8(&Method_MapButtonControl___c__DisplayClass16_0__FrameIn_b__0__);
+    sub_1C7BAE8(&MapButtonControl___c__DisplayClass16_0_TypeInfo);
+    byte_4CEB015 = 1;
   }
   memset(&v43, 0, sizeof(v43));
-  v3 = sub_1C942E4(MapButtonControl___c__DisplayClass16_0_TypeInfo);
+  v3 = sub_1C7BD34(MapButtonControl___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   buttons = this->fields.buttons;
   if ( buttons && buttons->max_length )
   {
-    v5 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
+    v5 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v5,
-      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
-    v6 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
+      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
+    v6 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_MapButtonPrefab__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v6,
-      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
+      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_MapButtonPrefab___ctor__);
     if ( !v3 )
       goto LABEL_32;
     *(_QWORD *)(v3 + 16) = v6;
     v15 = (System_Collections_Generic_List_object__o **)(v3 + 16);
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v6, v9, v10, v11, v12, v13, v14);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v6, v9, v10, v11, v12, v13, v14);
     v22 = this->fields.buttons;
     if ( !v22 )
       goto LABEL_32;
@@ -761,7 +761,7 @@ void MapButtonControl__FrameIn(MapButtonControl_o *this, const MethodInfo *metho
       while ( 1 )
       {
         if ( v24 >= max_length )
-          sub_1C942F8(object);
+          sub_1C7BD48(object);
         v25 = v22->m_Items[v24];
         if ( !v25 )
           break;
@@ -781,14 +781,14 @@ void MapButtonControl__FrameIn(MapButtonControl_o *this, const MethodInfo *metho
             System_Collections_Generic_List_object___AddWithResize(
               object,
               (Il2CppObject *)v25,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
           }
           else
           {
             v29 = &items->obj.klass + size;
             object->fields._size = size + 1;
             v29[4] = (Il2CppClass *)v25;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v25, v16, v17, v18, v19, v20, v21);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v25, v16, v17, v18, v19, v20, v21);
           }
           v25->fields.isNew = 0;
         }
@@ -807,14 +807,14 @@ void MapButtonControl__FrameIn(MapButtonControl_o *this, const MethodInfo *metho
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               (Il2CppObject *)v25,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
           }
           else
           {
             v33 = &v30->obj.klass + v32;
             v5->fields._size = v32 + 1;
             v33[4] = (Il2CppClass *)v25;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v33 + 4), (int32_t)v25, v16, v17, v18, v19, v20, v21);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v33 + 4), (int32_t)v25, v16, v17, v18, v19, v20, v21);
           }
         }
         max_length = v22->max_length;
@@ -822,13 +822,13 @@ void MapButtonControl__FrameIn(MapButtonControl_o *this, const MethodInfo *metho
           goto LABEL_24;
       }
 LABEL_32:
-      sub_1C942F0(object, v8);
+      sub_1C7BD40(object, v8);
     }
 LABEL_24:
-    v34 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
     System_Action___ctor(v34, (Il2CppObject *)v3, Method_MapButtonControl___c__DisplayClass16_0__FrameIn_b__0__, 0);
     this->fields.newButtonEntryAnimAction = v34;
-    sub_1C9403C(
+    sub_1C7BA8C(
       (GrandQuestFolderBoardItem_o *)&this->fields.newButtonEntryAnimAction,
       (int32_t)v34,
       v35,
@@ -839,28 +839,28 @@ LABEL_24:
       v40);
     if ( System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-           (const MethodInfo_31A7F44 *)Method_System_Linq_Enumerable_Any_MapButtonPrefab___) )
+           (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_MapButtonPrefab___) )
     {
       object = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__Last_object_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-                                                              (const MethodInfo_31C737C *)Method_System_Linq_Enumerable_Last_MapButtonPrefab___);
+                                                              (const MethodInfo_319A1D0 *)Method_System_Linq_Enumerable_Last_MapButtonPrefab___);
       if ( !v5 )
         goto LABEL_32;
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v43,
         v5,
-        (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
+        (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v43,
-                (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__) )
+                (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__) )
       {
         if ( !v43.fields._current )
-          sub_1C942F0(0, v41);
+          sub_1C7BD40(0, v41);
         MapButtonPrefab__SetEntryAnim((MapButtonPrefab_o *)v43.fields._current, 0, v42);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v43,
-        (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
+        (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
     }
   }
 }
@@ -883,10 +883,10 @@ void MapButtonControl__FrameOut(MapButtonControl_o *this, const MethodInfo *meth
       do
       {
         if ( (unsigned int)v4 >= max_length )
-          sub_1C942F8(this);
+          sub_1C7BD48(this);
         v5 = buttons->m_Items[v4];
         if ( !v5 )
-          sub_1C942F0(0, method);
+          sub_1C7BD40(0, method);
         MapButtonPrefab__FrameOut(v5, method);
         max_length = buttons->max_length;
         ++v4;
@@ -903,14 +903,14 @@ UnityEngine_GameObject_o *MapButtonControl__GetMapButtonPrefab(
         const MethodInfo *method)
 {
   MapButtonControl_c *v5; // x0
-  Il2CppObject *Object_object__51893132; // x20
+  Il2CppObject *Object_object__51713432; // x20
 
-  if ( (byte_4D29241 & 1) == 0 )
+  if ( (byte_4CEB011 & 1) == 0 )
   {
-    sub_1C94098(&Method_AssetData_GetObject_GameObject____79044816);
-    sub_1C94098(&MapButtonControl_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D29241 = 1;
+    sub_1C7BAE8(&Method_AssetData_GetObject_GameObject____78791560);
+    sub_1C7BAE8(&MapButtonControl_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEB011 = 1;
   }
   if ( !mapAssetData )
     return this->fields.buttonPrefab;
@@ -920,15 +920,15 @@ UnityEngine_GameObject_o *MapButtonControl__GetMapButtonPrefab(
     j_il2cpp_runtime_class_init_0(MapButtonControl_TypeInfo);
     v5 = MapButtonControl_TypeInfo;
   }
-  Object_object__51893132 = AssetData__GetObject_object__51893132(
+  Object_object__51713432 = AssetData__GetObject_object__51713432(
                               mapAssetData,
                               v5->static_fields->MAP_BUTTON_PREFAB_NAME,
-                              (const MethodInfo_317D38C *)Method_AssetData_GetObject_GameObject____79044816);
+                              (const MethodInfo_3151598 *)Method_AssetData_GetObject_GameObject____78791560);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51893132, 0, 0) )
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51713432, 0, 0) )
     return this->fields.buttonPrefab;
-  return (UnityEngine_GameObject_o *)Object_object__51893132;
+  return (UnityEngine_GameObject_o *)Object_object__51713432;
 }
 
 
@@ -945,7 +945,7 @@ void MapButtonControl__PlayNewButtonEntryAnim(MapButtonControl_o *this, const Me
   p_newButtonEntryAnimAction = (GrandQuestFolderBoardItem_o *)&this->fields.newButtonEntryAnimAction;
   ActionExtensions__Call(this->fields.newButtonEntryAnimAction, 0);
   p_newButtonEntryAnimAction->klass = 0;
-  sub_1C9403C(p_newButtonEntryAnimAction, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C7BA8C(p_newButtonEntryAnimAction, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -971,17 +971,17 @@ void MapButtonControl__SetNext(
   const MethodInfo *v21; // x2
   struct MapButtonPrefab_array *v22; // x8
 
-  if ( (byte_4D29242 & 1) == 0 )
+  if ( (byte_4CEB012 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMaster_MapButtonMaster___);
-    sub_1C94098(&DataManager_TypeInfo);
-    byte_4D29242 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMaster_MapButtonMaster___);
+    sub_1C7BAE8(&DataManager_TypeInfo);
+    byte_4CEB012 = 1;
   }
   if ( this->fields.buttons )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (MapButtonEntity_array *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_MapButtonMaster___);
+    Master_object = (MapButtonEntity_array *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_MapButtonMaster___);
     if ( !Master_object )
       goto LABEL_25;
     Master_object = MapButtonMaster__GetOpenedButtons((MapButtonMaster_o *)Master_object, warInf, mapInf, 0);
@@ -1024,7 +1024,7 @@ void MapButtonControl__SetNext(
               break;
             if ( v13 >= LODWORD(v22->max_length) )
 LABEL_26:
-              sub_1C942F8(Master_object);
+              sub_1C7BD48(Master_object);
             Master_object = (MapButtonEntity_array *)v22->m_Items[v13];
             if ( !Master_object )
               break;
@@ -1036,7 +1036,7 @@ LABEL_26:
           return;
       }
 LABEL_25:
-      sub_1C942F0(Master_object, v10);
+      sub_1C7BD40(Master_object, v10);
     }
   }
 }
@@ -1057,21 +1057,21 @@ void MapButtonControl__UpdateBadge(
   const MethodInfo *v13; // x2
   struct MapButtonPrefab_array *v14; // x8
 
-  if ( (byte_4D29243 & 1) == 0 )
+  if ( (byte_4CEB013 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_MapButtonMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C94098(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4D29243 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_MapButtonMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C7BAE8(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4CEB013 = 1;
   }
   if ( this->fields.buttons )
   {
-    Instance = (MapButtonEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (MapButtonEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_19;
     Instance = (MapButtonEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_MapButtonMaster___);
+                                          (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_MapButtonMaster___);
     if ( !Instance )
       goto LABEL_19;
     Instance = MapButtonMaster__GetOpenedButtons((MapButtonMaster_o *)Instance, warInf, mapInf, 0);
@@ -1088,10 +1088,10 @@ void MapButtonControl__UpdateBadge(
           break;
         if ( (signed int)v10 >= SLODWORD(buttons->max_length) )
           return;
-        Instance = (MapButtonEntity_array *)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+        Instance = (MapButtonEntity_array *)SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_QuestTree__get_Instance__);
         if ( v10 >= LODWORD(v9->max_length) )
 LABEL_20:
-          sub_1C942F8(Instance);
+          sub_1C7BD48(Instance);
         v12 = v9->m_Items[v10];
         if ( !v12 )
           break;
@@ -1116,7 +1116,7 @@ LABEL_20:
           return;
       }
 LABEL_19:
-      sub_1C942F0(Instance, v8);
+      sub_1C7BD40(Instance, v8);
     }
   }
 }
@@ -1160,7 +1160,7 @@ void MapButtonControl__UpdateButtonSprite(MapButtonControl_o *this, const Method
       while ( 1 )
       {
         if ( v11 >= max_length )
-          sub_1C942F8(terminalMap);
+          sub_1C7BD48(terminalMap);
         terminalMap = (ScrTerminalMap_o *)buttons->m_Items[v11];
         if ( !terminalMap )
           break;
@@ -1170,7 +1170,7 @@ void MapButtonControl__UpdateButtonSprite(MapButtonControl_o *this, const Method
           return;
       }
 LABEL_12:
-      sub_1C942F0(terminalMap, method);
+      sub_1C7BD40(terminalMap, method);
     }
   }
 }
@@ -1194,37 +1194,37 @@ void MapButtonControl___c__DisplayClass16_0___FrameIn_b__0(
   const MethodInfo *v6; // x2
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D29247 & 1) == 0 )
+  if ( (byte_4CEB017 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Linq_Enumerable_Any_MapButtonPrefab___);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
-    byte_4D29247 = 1;
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_MapButtonPrefab___);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
+    byte_4CEB017 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.newButtonList,
-         (const MethodInfo_31A7F44 *)Method_System_Linq_Enumerable_Any_MapButtonPrefab___) )
+         (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_MapButtonPrefab___) )
   {
     newButtonList = (System_Collections_Generic_List_object__o *)this->fields.newButtonList;
     if ( !newButtonList )
-      sub_1C942F0(0, v3);
+      sub_1C7BD40(0, v3);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v7,
       newButtonList,
-      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
+      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_MapButtonPrefab__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v7,
-              (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__) )
+              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__MoveNext__) )
     {
       if ( !v7.fields._current )
-        sub_1C942F0(0, v5);
+        sub_1C7BD40(0, v5);
       MapButtonPrefab__SetEntryAnim((MapButtonPrefab_o *)v7.fields._current, 0, v6);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v7,
-      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
+      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_MapButtonPrefab__Dispose__);
   }
 }

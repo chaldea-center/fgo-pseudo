@@ -14,28 +14,28 @@ void EventExpeditionListViewItem___ctor(
   struct EventExpeditionEntity_o *eventExpeditionEnt; // x8
   bool IsOpen; // w0
 
-  if ( (byte_4D26983 & 1) == 0 )
+  if ( (byte_4CE8803 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_1C94098(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D26983 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CE8803 = 1;
   }
-  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
   this->fields.eventExpeditionEnt = evExpeditionEnt;
   p_eventExpeditionEnt = &this->fields.eventExpeditionEnt;
-  sub_1C9403C(&this->fields.eventExpeditionEnt, evExpeditionEnt);
+  sub_1C7BA8C(&this->fields.eventExpeditionEnt, evExpeditionEnt);
   this->fields.currentEventId = eventId;
   this->fields.asset = asset;
-  sub_1C9403C(&this->fields.asset, asset);
+  sub_1C7BA8C(&this->fields.asset, asset);
   this->fields.updateNoticeNum = updateNoticeNum;
-  sub_1C9403C(&this->fields.updateNoticeNum, updateNoticeNum);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C7BA8C(&this->fields.updateNoticeNum, updateNoticeNum);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+               (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_eventExpeditionEnt )
     goto LABEL_14;
   if ( !Instance )
@@ -45,7 +45,7 @@ void EventExpeditionListViewItem___ctor(
                    (*p_eventExpeditionEnt)->fields.commonConsumeId,
                    0);
   this->fields.commonConsumeEntity = IdEntityList;
-  Instance = (Il2CppObject *)sub_1C9403C(&this->fields.commonConsumeEntity, IdEntityList);
+  Instance = (Il2CppObject *)sub_1C7BA8C(&this->fields.commonConsumeEntity, IdEntityList);
   eventExpeditionEnt = this->fields.eventExpeditionEnt;
   if ( !eventExpeditionEnt )
     goto LABEL_14;
@@ -54,16 +54,16 @@ void EventExpeditionListViewItem___ctor(
     IsOpen = 1;
     goto LABEL_13;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         !*p_eventExpeditionEnt)
     || !Instance )
   {
 LABEL_14:
-    sub_1C942F0(Instance, v15);
+    sub_1C7BD40(Instance, v15);
   }
   IsOpen = CommonReleaseMaster__IsOpen(
              (CommonReleaseMaster_o *)Instance,
@@ -84,10 +84,10 @@ void EventExpeditionListViewItem__CheckExpeditionCondition(
   int64_t Time; // x0
   int32_t pieceIdx; // w8
 
-  if ( (byte_4D26985 & 1) == 0 )
+  if ( (byte_4CE8805 & 1) == 0 )
   {
-    sub_1C94098(&NetworkManager_TypeInfo);
-    byte_4D26985 = 1;
+    sub_1C7BAE8(&NetworkManager_TypeInfo);
+    byte_4CE8805 = 1;
   }
   ExpeditionInfo = EventExpeditionListViewItem__GetExpeditionInfo(this, method);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -131,21 +131,21 @@ ExpeditionInfo_o *EventExpeditionListViewItem__GetExpeditionInfo(
   __int64 v4; // x1
   struct EventExpeditionEntity_o *eventExpeditionEnt; // x8
 
-  if ( (byte_4D26984 & 1) == 0 )
+  if ( (byte_4CE8804 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D26984 = 1;
+    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CE8804 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___),
+                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___),
         (eventExpeditionEnt = this->fields.eventExpeditionEnt) == 0)
     || !Instance )
   {
-    sub_1C942F0(Instance, v4);
+    sub_1C7BD40(Instance, v4);
   }
   return UserEventExpeditionMaster__GetExpeditionInfo(
            (UserEventExpeditionMaster_o *)Instance,
@@ -164,7 +164,7 @@ UnityEngine_GameObject_o *EventExpeditionListViewItem__GetRunningAnim(
 
   asset = this->fields.asset;
   if ( !asset )
-    sub_1C942F0(0, idx);
+    sub_1C7BD40(0, idx);
   return ExpeditionAssetManager__GetRunEffect(asset, idx, method);
 }
 
@@ -196,12 +196,6 @@ EventExpeditionEntity_o *EventExpeditionListViewItem__get_EventExpeditionEnt(
 int32_t EventExpeditionListViewItem__get_GetEventId(EventExpeditionListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.currentEventId;
-}
-
-
-int32_t EventExpeditionListViewItem__get_GetIdx(EventExpeditionListViewItem_o *this, const MethodInfo *method)
-{
-  return this->fields.index;
 }
 
 

@@ -1,27 +1,27 @@
 void UserServantVoicePlayedEntity___ctor(UserServantVoicePlayedEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D945 & 1) == 0 )
+  if ( (byte_4CEF6E8 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D945 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEF6E8 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserServantVoicePlayedEntity__CreatePK(int64_t userId, int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4D2D942 & 1) == 0 )
+  if ( (byte_4CEF6E5 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4D2D942 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CEF6E5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_319A3C4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_316E684 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -35,10 +35,10 @@ System_String_o *UserServantVoicePlayedEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4D2D941 & 1) == 0 )
+  if ( (byte_4CEF6E4 & 1) == 0 )
   {
-    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4D2D941 = 1;
+    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CEF6E4 = 1;
   }
   v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
   *(_OWORD *)&v8.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
@@ -46,7 +46,7 @@ System_String_o *UserServantVoicePlayedEntity__CreatePrimaryKey(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v7 = v8;
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v7, 0);
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49453300(&v7, 0);
   return UserServantVoicePlayedEntity__CreatePK(v4, this->fields.svtId, v5);
 }
 
@@ -68,12 +68,12 @@ bool UserServantVoicePlayedEntity__IsPlayed(
   System_String_o *v15; // x7
   __int64 v16; // x1
 
-  if ( (byte_4D2D943 & 1) == 0 )
+  if ( (byte_4CEF6E6 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_int___ctor___78973968);
-    sub_1C94098(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4D2D943 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_int___ctor___78720936);
+    sub_1C7BAE8(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4CEF6E6 = 1;
   }
   p_voicePlayedHash = (GrandQuestFolderBoardItem_o *)&this->fields.voicePlayedHash;
   voicePlayedHash = this->fields.voicePlayedHash;
@@ -81,24 +81,24 @@ bool UserServantVoicePlayedEntity__IsPlayed(
     return System_Collections_Generic_HashSet_int___Contains(
              voicePlayedHash,
              flagNum,
-             (const MethodInfo_3718A78 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+             (const MethodInfo_36EA034 *)Method_System_Collections_Generic_HashSet_int__Contains__);
   voicePlayed = (System_Collections_Generic_IEnumerable_T__o *)this->fields.voicePlayed;
   if ( voicePlayed && voicePlayed[1].monitor )
   {
-    v9 = (System_Collections_Generic_HashSet_int__o *)sub_1C942E4(System_Collections_Generic_HashSet_int__TypeInfo);
-    System_Collections_Generic_HashSet_int____ctor_57771124(
+    v9 = (System_Collections_Generic_HashSet_int__o *)sub_1C7BD34(System_Collections_Generic_HashSet_int__TypeInfo);
+    System_Collections_Generic_HashSet_int____ctor_57580080(
       v9,
       voicePlayed,
-      (const MethodInfo_3718474 *)Method_System_Collections_Generic_HashSet_int___ctor___78973968);
+      (const MethodInfo_36E9A30 *)Method_System_Collections_Generic_HashSet_int___ctor___78720936);
     p_voicePlayedHash->klass = (GrandQuestFolderBoardItem_c *)v9;
-    sub_1C9403C(p_voicePlayedHash, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+    sub_1C7BA8C(p_voicePlayedHash, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     voicePlayedHash = (System_Collections_Generic_HashSet_int__o *)p_voicePlayedHash->klass;
     if ( !p_voicePlayedHash->klass )
-      sub_1C942F0(0, v16);
+      sub_1C7BD40(0, v16);
     return System_Collections_Generic_HashSet_int___Contains(
              voicePlayedHash,
              flagNum,
-             (const MethodInfo_3718A78 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+             (const MethodInfo_36EA034 *)Method_System_Collections_Generic_HashSet_int__Contains__);
   }
   return 0;
 }
@@ -120,32 +120,32 @@ bool UserServantVoicePlayedEntity__SetPlayed(
   System_String_o *v13; // x7
   __int64 v14; // x1
 
-  if ( (byte_4D2D944 & 1) == 0 )
+  if ( (byte_4CEF6E7 & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_HashSet_int___ctor___78973968);
-    sub_1C94098(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4D2D944 = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_int___ctor___78720936);
+    sub_1C7BAE8(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4CEF6E7 = 1;
   }
   voicePlayedHash = this->fields.voicePlayedHash;
   if ( !voicePlayedHash )
   {
     voicePlayed = (System_Collections_Generic_IEnumerable_T__o *)this->fields.voicePlayed;
-    v7 = (System_Collections_Generic_HashSet_int__o *)sub_1C942E4(System_Collections_Generic_HashSet_int__TypeInfo);
-    System_Collections_Generic_HashSet_int____ctor_57771124(
+    v7 = (System_Collections_Generic_HashSet_int__o *)sub_1C7BD34(System_Collections_Generic_HashSet_int__TypeInfo);
+    System_Collections_Generic_HashSet_int____ctor_57580080(
       v7,
       voicePlayed,
-      (const MethodInfo_3718474 *)Method_System_Collections_Generic_HashSet_int___ctor___78973968);
+      (const MethodInfo_36E9A30 *)Method_System_Collections_Generic_HashSet_int___ctor___78720936);
     this->fields.voicePlayedHash = v7;
-    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayedHash, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voicePlayedHash, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     voicePlayedHash = this->fields.voicePlayedHash;
     if ( !voicePlayedHash )
-      sub_1C942F0(0, v14);
+      sub_1C7BD40(0, v14);
   }
   return System_Collections_Generic_HashSet_int___Add(
            voicePlayedHash,
            flagNum,
-           (const MethodInfo_3719588 *)Method_System_Collections_Generic_HashSet_int__Add__);
+           (const MethodInfo_36EAB44 *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 

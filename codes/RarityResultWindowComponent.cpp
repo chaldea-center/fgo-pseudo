@@ -1,9 +1,9 @@
 void RarityResultWindowComponent___ctor(RarityResultWindowComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30A73 & 1) == 0 )
+  if ( (byte_4CF27FC & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D30A73 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CF27FC = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,20 +27,20 @@ void RarityResultWindowComponent__CloseToNext(
   System_String_o *v13; // x7
   System_Action_o *v14; // x20
 
-  if ( (byte_4D30A72 & 1) == 0 )
+  if ( (byte_4CF27FB & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_RarityResultWindowComponent___c__DisplayClass13_0__CloseToNext_b__0__);
-    sub_1C94098(&RarityResultWindowComponent___c__DisplayClass13_0_TypeInfo);
-    byte_4D30A72 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_RarityResultWindowComponent___c__DisplayClass13_0__CloseToNext_b__0__);
+    sub_1C7BAE8(&RarityResultWindowComponent___c__DisplayClass13_0_TypeInfo);
+    byte_4CF27FB = 1;
   }
-  v5 = sub_1C942E4(RarityResultWindowComponent___c__DisplayClass13_0_TypeInfo);
+  v5 = sub_1C7BD34(RarityResultWindowComponent___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
+  v14 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)v5,
@@ -84,27 +84,27 @@ void RarityResultWindowComponent__Open(
   int32_t v36; // [xsp+18h] [xbp-58h] BYREF
   int32_t v37; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_4D30A71 & 1) == 0 )
+  if ( (byte_4CF27FA & 1) == 0 )
   {
-    sub_1C94098(&AtlasManager_TypeInfo);
-    sub_1C94098(&int_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&Method_RarityResultWindowComponent_Open__);
-    sub_1C94098(&string_TypeInfo);
-    sub_1C94098(&StringLiteral_20535/*"img_combine_arrow_sp"*/);
-    sub_1C94098(&StringLiteral_2899/*"BEFORE_CHANGE_RARITY_SUB_TITLE"*/);
-    sub_1C94098(&StringLiteral_3847/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/);
-    sub_1C94098(&StringLiteral_20755/*"img_skillwindow_sp"*/);
-    sub_1C94098(&StringLiteral_3848/*"COSTUME_CHANGE_RARITY_TITLE"*/);
-    sub_1C94098(&StringLiteral_1921/*"AFTER_CHANGE_RARITY_SUB_TITLE"*/);
-    byte_4D30A71 = 1;
+    sub_1C7BAE8(&AtlasManager_TypeInfo);
+    sub_1C7BAE8(&int_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&Method_RarityResultWindowComponent_Open__);
+    sub_1C7BAE8(&string_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_20529/*"img_combine_arrow_sp"*/);
+    sub_1C7BAE8(&StringLiteral_2900/*"BEFORE_CHANGE_RARITY_SUB_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_3848/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/);
+    sub_1C7BAE8(&StringLiteral_20749/*"img_skillwindow_sp"*/);
+    sub_1C7BAE8(&StringLiteral_3849/*"COSTUME_CHANGE_RARITY_TITLE"*/);
+    sub_1C7BAE8(&StringLiteral_1922/*"AFTER_CHANGE_RARITY_SUB_TITLE"*/);
+    byte_4CF27FA = 1;
   }
   if ( !this->fields.baseState )
   {
     v15 = Method_RarityResultWindowComponent_Open__;
     if ( (*((_BYTE *)Method_RarityResultWindowComponent_Open__ + 83) & 2) != 0 )
-      v15 = (_QWORD *)sub_1C940B0(Method_RarityResultWindowComponent_Open__);
-    v16 = (System_Reflection_MethodBase_o *)sub_1C9407C(v15, v15[4]);
+      v15 = (_QWORD *)sub_1C7BB00(Method_RarityResultWindowComponent_Open__);
+    v16 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v15, v15[4]);
     OverwriteAssetSoundName__PlaySystemSe(v16, 6, 0, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( gameObject )
@@ -113,14 +113,14 @@ void RarityResultWindowComponent__Open(
       windowBgSprite = this->fields.windowBgSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20755/*"img_skillwindow_sp"*/, 0);
+      AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20749/*"img_skillwindow_sp"*/, 0);
       AtlasManager__SetDownloadCommonSprite(
         this->fields.rarityChangeInfArrowSprite1,
-        (System_String_o *)StringLiteral_20535/*"img_combine_arrow_sp"*/,
+        (System_String_o *)StringLiteral_20529/*"img_combine_arrow_sp"*/,
         0);
       AtlasManager__SetDownloadCommonSprite(
         this->fields.rarityChangeInfArrowSprite2,
-        (System_String_o *)StringLiteral_20535/*"img_combine_arrow_sp"*/,
+        (System_String_o *)StringLiteral_20529/*"img_combine_arrow_sp"*/,
         0);
       gameObject = this->fields.rarityChangeInfo;
       if ( gameObject )
@@ -133,7 +133,7 @@ void RarityResultWindowComponent__Open(
           v21 = this->fields.rarityChangeInfoTitle;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"COSTUME_CHANGE_RARITY_TITLE"*/, 0);
+          v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3849/*"COSTUME_CHANGE_RARITY_TITLE"*/, 0);
           gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                      v22,
                                                      (Il2CppObject *)svtCostumeEnt->fields.name,
@@ -155,32 +155,32 @@ void RarityResultWindowComponent__Open(
         rarityChangeInfoSubTitleOld = this->fields.rarityChangeInfoSubTitleOld;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2899/*"BEFORE_CHANGE_RARITY_SUB_TITLE"*/, 0);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2900/*"BEFORE_CHANGE_RARITY_SUB_TITLE"*/, 0);
         if ( rarityChangeInfoSubTitleOld )
         {
           UILabel__set_text(rarityChangeInfoSubTitleOld, (System_String_o *)gameObject, 0);
           rarityChangeInfoNameOld = this->fields.rarityChangeInfoNameOld;
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3847/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/, 0);
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/, 0);
           v37 = oldRarity;
           v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
           v36 = oldCost;
           v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
-          gameObject = (UnityEngine_GameObject_o *)System_String__Format_64459052(v26, v27, v28, 0);
+          gameObject = (UnityEngine_GameObject_o *)System_String__Format_64218220(v26, v27, v28, 0);
           if ( rarityChangeInfoNameOld )
           {
             UILabel__set_text(rarityChangeInfoNameOld, (System_String_o *)gameObject, 0);
             rarityChangeInfoSubTitleNow = this->fields.rarityChangeInfoSubTitleNow;
-            gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1921/*"AFTER_CHANGE_RARITY_SUB_TITLE"*/, 0);
+            gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1922/*"AFTER_CHANGE_RARITY_SUB_TITLE"*/, 0);
             if ( rarityChangeInfoSubTitleNow )
             {
               UILabel__set_text(rarityChangeInfoSubTitleNow, (System_String_o *)gameObject, 0);
               rarityChangeInfoNameNow = this->fields.rarityChangeInfoNameNow;
-              v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3847/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/, 0);
+              v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"COSTUME_CHANGE_RARITY_DETAIL_FORMAT"*/, 0);
               v35 = nowRarity;
               v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
               v34 = nowCost;
               v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-              gameObject = (UnityEngine_GameObject_o *)System_String__Format_64459052(v31, v32, v33, 0);
+              gameObject = (UnityEngine_GameObject_o *)System_String__Format_64218220(v31, v32, v33, 0);
               if ( rarityChangeInfoNameNow )
               {
                 UILabel__set_text(rarityChangeInfoNameNow, (System_String_o *)gameObject, 0);
@@ -193,7 +193,7 @@ void RarityResultWindowComponent__Open(
       }
     }
 LABEL_25:
-    sub_1C942F0(gameObject, v18);
+    sub_1C7BD40(gameObject, v18);
   }
 }
 

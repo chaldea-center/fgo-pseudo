@@ -1,13 +1,13 @@
 void ServantTreasureDeviceDamageEntity___ctor(ServantTreasureDeviceDamageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2D31A & 1) == 0 )
+  if ( (byte_4CEF102 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_string___ctor__);
-    byte_4D2D31A = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
+    byte_4CEF102 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *ServantTreasureDeviceDamageEntity__CreatePK(
         int32_t voicePrefix,
         const MethodInfo *method)
 {
-  if ( (byte_4D2D319 & 1) == 0 )
+  if ( (byte_4CEF101 & 1) == 0 )
   {
-    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D2D319 = 1;
+    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CEF101 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            voicePrefix,
-           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -61,7 +61,7 @@ int32_t ServantTreasureDeviceDamageEntity__getWeight(
       else
       {
         if ( max_length <= (unsigned int)idx )
-          sub_1C942F8(10);
+          sub_1C7BD48(10);
         return voiceWeights->m_Items[idx];
       }
     }

@@ -1,9 +1,9 @@
 void SelectBonusDialog___ctor(SelectBonusDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D26DD3 & 1) == 0 )
+  if ( (byte_4CE8D65 & 1) == 0 )
   {
-    sub_1C94098(&BaseDialog_TypeInfo);
-    byte_4D26DD3 = 1;
+    sub_1C7BAE8(&BaseDialog_TypeInfo);
+    byte_4CE8D65 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,34 +21,34 @@ void SelectBonusDialog__Close(SelectBonusDialog_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  SelectBonusDialog__Close_32740392(this, 0, v2);
+  SelectBonusDialog__Close_32715488(this, 0, v2);
 }
 
 
-void SelectBonusDialog__Close_32740392(SelectBonusDialog_o *this, System_Action_o *callback, const MethodInfo *method)
+void SelectBonusDialog__Close_32715488(SelectBonusDialog_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   Il2CppObject *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
   System_Action_o *v8; // x20
 
-  if ( (byte_4D26DD1 & 1) == 0 )
+  if ( (byte_4CE8D63 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__);
-    sub_1C94098(&SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
-    byte_4D26DD1 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__);
+    sub_1C7BAE8(&SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
+    byte_4CE8D63 = 1;
   }
-  v5 = (Il2CppObject *)sub_1C942E4(SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C7BD34(SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_1C942F0(v6, v7);
+    sub_1C7BD40(v6, v7);
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C9403C(&v5[1], this);
+  sub_1C7BA8C(&v5[1], this);
   v5[1].monitor = callback;
-  sub_1C9403C(&v5[1].monitor, callback);
+  sub_1C7BA8C(&v5[1].monitor, callback);
   this->fields.state = 3;
-  v8 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v8, v5, Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v8, 0);
 }
@@ -67,7 +67,7 @@ void SelectBonusDialog__ExecClickedFunc(SelectBonusDialog_o *this, int32_t index
       index,
       clickedFunc->fields.method);
   *p_clickedFunc = 0;
-  sub_1C9403C(p_clickedFunc, 0);
+  sub_1C7BA8C(p_clickedFunc, 0);
 }
 
 
@@ -84,17 +84,17 @@ void SelectBonusDialog__OnClickIndexButton(SelectBonusDialog_o *this, int32_t in
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4D26DD2 & 1) == 0 )
+  if ( (byte_4CE8D64 & 1) == 0 )
   {
-    sub_1C94098(&Method_SelectBonusDialog_OnClickIndexButton__);
-    byte_4D26DD2 = 1;
+    sub_1C7BAE8(&Method_SelectBonusDialog_OnClickIndexButton__);
+    byte_4CE8D64 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_SelectBonusDialog_OnClickIndexButton__;
     if ( (*((_BYTE *)Method_SelectBonusDialog_OnClickIndexButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C940B0(Method_SelectBonusDialog_OnClickIndexButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C7BB00(Method_SelectBonusDialog_OnClickIndexButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     SelectBonusDialog__ExecClickedFunc(this, index, v7);
   }
@@ -110,21 +110,21 @@ void SelectBonusDialog__Open(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4D26DD0 & 1) == 0 )
+  if ( (byte_4CE8D62 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&Method_SelectBonusDialog__Open_b__8_0__);
-    byte_4D26DD0 = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&Method_SelectBonusDialog__Open_b__8_0__);
+    byte_4CE8D62 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.clickedFunc = clickedAction;
-  sub_1C9403C(&this->fields.clickedFunc, clickedAction);
+  sub_1C7BA8C(&this->fields.clickedFunc, clickedAction);
   this->fields.state = 1;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0);
-  v7 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_SelectBonusDialog__Open_b__8_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v7, 0, 0, 0);
 }
@@ -151,10 +151,10 @@ void SelectBonusDialog__add_clickedFunc(
   SelectBonusDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D26DCE & 1) == 0 )
+  if ( (byte_4CE8D60 & 1) == 0 )
   {
-    sub_1C94098(&SelectBonusDialog_CallbackFunc_TypeInfo);
-    byte_4D26DCE = 1;
+    sub_1C7BAE8(&SelectBonusDialog_CallbackFunc_TypeInfo);
+    byte_4CE8D60 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -167,13 +167,13 @@ void SelectBonusDialog__add_clickedFunc(
       if ( (SelectBonusDialog_CallbackFunc_c *)v8->klass != SelectBonusDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_clickedFunc, v8, v6);
+    v9 = sub_1CD78BC(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusDialog_o *)sub_1C9468C(v8);
+  v11 = (SelectBonusDialog_o *)sub_1C7C0DC(v8);
   SelectBonusDialog__remove_clickedFunc(v11, v12, v13);
 }
 
@@ -192,10 +192,10 @@ void SelectBonusDialog__remove_clickedFunc(
   SelectBonusDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D26DCF & 1) == 0 )
+  if ( (byte_4CE8D61 & 1) == 0 )
   {
-    sub_1C94098(&SelectBonusDialog_CallbackFunc_TypeInfo);
-    byte_4D26DCF = 1;
+    sub_1C7BAE8(&SelectBonusDialog_CallbackFunc_TypeInfo);
+    byte_4CE8D61 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -208,13 +208,13 @@ void SelectBonusDialog__remove_clickedFunc(
       if ( (SelectBonusDialog_CallbackFunc_c *)v8->klass != SelectBonusDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEFE6C(p_clickedFunc, v8, v6);
+    v9 = sub_1CD78BC(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusDialog_o *)sub_1C9468C(v8);
+  v11 = (SelectBonusDialog_o *)sub_1C7C0DC(v8);
   SelectBonusDialog__Awake(v11, v12);
 }
 
@@ -234,15 +234,15 @@ void SelectBonusDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C9403C(&this->fields.m_target, object);
+  sub_1C7BA8C(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v10, 0);
+      v10 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v10, 0);
     }
     goto LABEL_5;
   }
@@ -254,9 +254,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1ABFDBC;
+  this->fields.invoke_impl = (intptr_t)sub_1AA8CD0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1ABFD74;
+  this->fields.extra_arg = (intptr_t)sub_1AA8C88;
 }
 
 
@@ -271,14 +271,14 @@ System_IAsyncResult_o *SelectBonusDialog_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = index;
-  if ( (byte_4D26DD4 & 1) == 0 )
+  if ( (byte_4CE8D66 & 1) == 0 )
   {
-    sub_1C94098(&int_TypeInfo);
-    byte_4D26DD4 = 1;
+    sub_1C7BAE8(&int_TypeInfo);
+    byte_4CE8D66 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
 }
 
 
@@ -287,7 +287,7 @@ void SelectBonusDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 
@@ -319,7 +319,7 @@ void SelectBonusDialog___c__DisplayClass10_0___Close_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   _4__this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)_4__this, 0);
   ActionExtensions__Call(this->fields.callback, 0);

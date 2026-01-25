@@ -3,19 +3,19 @@ int32_t TransformHelper__CalcPriority(System_String_o *objName, const MethodInfo
   System_String_o *v3; // x0
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2E2CD & 1) == 0 )
+  if ( (byte_4CF003A & 1) == 0 )
   {
-    sub_1C94098(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_1C94098(&StringLiteral_16013/*"[^0-9]"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2E2CD = 1;
+    sub_1C7BAE8(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_16015/*"[^0-9]"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF003A = 1;
   }
   result = 0;
   if ( !System_Text_RegularExpressions_Regex_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
   v3 = System_Text_RegularExpressions_Regex__Replace(
          objName,
-         (System_String_o *)StringLiteral_16013/*"[^0-9]"*/,
+         (System_String_o *)StringLiteral_16015/*"[^0-9]"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0);
   System_Int32__TryParse(v3, &result, 0);
@@ -48,20 +48,20 @@ int32_t TransformHelper__ChangeChildsLayer(UnityEngine_Transform_o *self, int32_
   __int64 v23; // x0
 
   v4 = (UnityEngine_Component_o *)self;
-  if ( (byte_4D2E2C5 & 1) == 0 )
+  if ( (byte_4CF0032 & 1) == 0 )
   {
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    self = (UnityEngine_Transform_o *)sub_1C94098(&UnityEngine_Transform_TypeInfo);
-    byte_4D2E2C5 = 1;
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    self = (UnityEngine_Transform_o *)sub_1C7BAE8(&UnityEngine_Transform_TypeInfo);
+    byte_4CF0032 = 1;
   }
   if ( !v4 || (self = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v4, 0)) == 0 )
 LABEL_33:
-    sub_1C942F0(self, *(_QWORD *)&layer);
+    sub_1C7BD40(self, *(_QWORD *)&layer);
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)self, layer, 0);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)v4, 0);
   if ( !Enumerator )
-    sub_1C942F0(0, v5);
+    sub_1C7BD40(0, v5);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -81,7 +81,7 @@ LABEL_33:
     else
     {
 LABEL_10:
-      v10 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v10 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v10)(Enumerator, *(_QWORD *)(v10 + 8))
         & 1) == 0 )
@@ -103,7 +103,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v14 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v14 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v15 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(
                                        Enumerator,
@@ -114,13 +114,13 @@ LABEL_17:
       if ( v15->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v15->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C9468C(v15);
+        sub_1C7C0DC(v15);
         goto LABEL_33;
       }
     }
     TransformHelper__ChangeChildsLayer(v15, layer, v16);
   }
-  v18 = sub_1C941D4(Enumerator, System_IDisposable_TypeInfo);
+  v18 = sub_1C7BC24(Enumerator, System_IDisposable_TypeInfo);
   if ( v18 )
   {
     v19 = *(_QWORD *)v18;
@@ -141,7 +141,7 @@ LABEL_17:
     else
     {
 LABEL_28:
-      v23 = sub_1C6A420(v18, System_IDisposable_TypeInfo, 0);
+      v23 = sub_1C51E70(v18, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v23)(v20, *(_QWORD *)(v23 + 8));
   }
@@ -179,13 +179,13 @@ void TransformHelper__DestroyChildren(UnityEngine_Transform_o *self, bool isImme
   int *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4D2E2C6 & 1) == 0 )
+  if ( (byte_4CF0033 & 1) == 0 )
   {
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&UnityEngine_Transform_TypeInfo);
-    byte_4D2E2C6 = 1;
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Transform_TypeInfo);
+    byte_4CF0033 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -209,19 +209,19 @@ void TransformHelper__DestroyChildren(UnityEngine_Transform_o *self, bool isImme
                                                  0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__DestroyImmediate_72111160(gameObject, 0);
+          UnityEngine_Object__DestroyImmediate_71870336(gameObject, 0);
           if ( --v7 < 0 )
             return;
         }
 LABEL_47:
-        sub_1C942F0(Child, v6);
+        sub_1C7BD40(Child, v6);
       }
     }
     else
     {
       Enumerator = UnityEngine_Transform__GetEnumerator(self, 0);
       if ( !Enumerator )
-        sub_1C942F0(0, v9);
+        sub_1C7BD40(0, v9);
       while ( 1 )
       {
         klass = Enumerator->klass;
@@ -241,7 +241,7 @@ LABEL_47:
         else
         {
 LABEL_19:
-          v14 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+          v14 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(
                 Enumerator,
@@ -265,7 +265,7 @@ LABEL_19:
         else
         {
 LABEL_26:
-          v18 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+          v18 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v19 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
                                            Enumerator,
@@ -277,20 +277,20 @@ LABEL_26:
         if ( v19->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C9468C(v19);
+          sub_1C7C0DC(v19);
 LABEL_45:
-          sub_1C942F0(v19, v20);
+          sub_1C7BD40(v19, v20);
         }
         v23 = UnityEngine_Component__get_gameObject(v19, 0);
         if ( !v23 )
-          sub_1C942F0(0, v24);
+          sub_1C7BD40(0, v24);
         UnityEngine_GameObject__SetActive(v23, 0, 0);
         v25 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v21, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_72110972(v25, 0);
+        UnityEngine_Object__Destroy_71870148(v25, 0);
       }
-      v26 = sub_1C941D4(Enumerator, System_IDisposable_TypeInfo);
+      v26 = sub_1C7BC24(Enumerator, System_IDisposable_TypeInfo);
       if ( v26 )
       {
         v27 = *(_QWORD *)v26;
@@ -311,7 +311,7 @@ LABEL_45:
         else
         {
 LABEL_40:
-          v31 = sub_1C6A420(v26, System_IDisposable_TypeInfo, 0);
+          v31 = sub_1C51E70(v26, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v31)(v28, *(_QWORD *)(v31 + 8));
       }
@@ -330,10 +330,10 @@ bool TransformHelper__ExistNodeFromLvName(
   const MethodInfo *v9; // x6
   UnityEngine_Object_o *NodeFromLvName; // x19
 
-  if ( (byte_4D2E2C8 & 1) == 0 )
+  if ( (byte_4CF0035 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2C8 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0035 = 1;
   }
   if ( System_String__IsNullOrEmpty(nodename, 0) )
     return 0;
@@ -384,16 +384,16 @@ UnityEngine_Transform_array *TransformHelper__GetIgnoreNodeList(
   Il2CppClass **v32; // x0
 
   v10 = (UnityEngine_Component_o *)parentTransform;
-  if ( (byte_4D2E2CB & 1) == 0 )
+  if ( (byte_4CF0038 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_BattleActorControl___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform__ToArray__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform___ctor__);
-    sub_1C94098(&System_Collections_Generic_List_Transform__TypeInfo);
-    parentTransform = (UnityEngine_Transform_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2CB = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_BattleActorControl___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__ToArray__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform___ctor__);
+    sub_1C7BAE8(&System_Collections_Generic_List_Transform__TypeInfo);
+    parentTransform = (UnityEngine_Transform_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0038 = 1;
   }
   if ( !isIgnore )
     return 0;
@@ -402,11 +402,11 @@ UnityEngine_Transform_array *TransformHelper__GetIgnoreNodeList(
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   v10,
                                   1,
-                                  (const MethodInfo_3193628 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_Transform__TypeInfo);
+                                  (const MethodInfo_31678E8 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_Transform___ctor__);
   if ( !ComponentsInChildren_object )
     goto LABEL_31;
   max_length = ComponentsInChildren_object->max_length;
@@ -420,7 +420,7 @@ UnityEngine_Transform_array *TransformHelper__GetIgnoreNodeList(
     {
       if ( v14 >= (unsigned int)max_length )
 LABEL_30:
-        sub_1C942F8(parentTransform);
+        sub_1C7BD48(parentTransform);
       v18 = (UnityEngine_Object_o *)m_Items[v14];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -434,7 +434,7 @@ LABEL_30:
           goto LABEL_31;
         Component_object = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)parentTransform,
-                             (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_BattleActorControl___);
+                             (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_BattleActorControl___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         parentTransform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
@@ -472,14 +472,14 @@ LABEL_30:
               System_Collections_Generic_List_object___AddWithResize(
                 v12,
                 (Il2CppObject *)NodeFromLvName,
-                *(const MethodInfo_386AE34 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
             }
             else
             {
               v32 = &items->obj.klass + size;
               v12->fields._size = size + 1;
               v32[4] = (Il2CppClass *)NodeFromLvName;
-              sub_1C9403C(
+              sub_1C7BA8C(
                 (GrandQuestFolderBoardItem_o *)(v32 + 4),
                 (int32_t)NodeFromLvName,
                 v23,
@@ -498,10 +498,10 @@ LABEL_30:
   }
   if ( !v12 )
 LABEL_31:
-    sub_1C942F0(parentTransform, nodename);
+    sub_1C7BD40(parentTransform, nodename);
   return (UnityEngine_Transform_array *)System_Collections_Generic_List_object___ToArray(
                                           v12,
-                                          (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_Transform__ToArray__);
+                                          (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_Transform__ToArray__);
 }
 
 
@@ -530,10 +530,10 @@ bool TransformHelper__SafeSetParentNonNull(
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2E2C7 & 1) == 0 )
+  if ( (byte_4CF0034 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2C7 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0034 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -579,7 +579,7 @@ bool TransformHelper__SafeSetParentNonNull(
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0), !v16) )
   {
 LABEL_15:
-    sub_1C942F0(gameObject, v6);
+    sub_1C7BD40(gameObject, v6);
   }
   UnityEngine_GameObject__set_layer(v16, (int32_t)gameObject, 0);
   return 1;
@@ -626,14 +626,14 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = tNode;
-  if ( (byte_4D2E2CE & 1) == 0 )
+  if ( (byte_4CF003B & 1) == 0 )
   {
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_Transform__Dispose__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_Transform__get_Current__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform__GetEnumerator__);
-    tNode = (System_Collections_Generic_List_Transform__o *)sub_1C94098(&StringLiteral_113/*" "*/);
-    byte_4D2E2CE = 1;
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_Transform__Dispose__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_Transform__get_Current__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__GetEnumerator__);
+    tNode = (System_Collections_Generic_List_Transform__o *)sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    byte_4CF003B = 1;
   }
   memset(&v30, 0, sizeof(v30));
   if ( !useNewRule )
@@ -645,18 +645,18 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v29,
         (System_Collections_Generic_List_object__o *)v4,
-        (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_Transform__GetEnumerator__);
+        (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_Transform__GetEnumerator__);
       v30 = v29;
       while ( 1 )
       {
         v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v30,
-                (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
+                (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
         if ( !v23 )
           break;
         current = v30.fields._current;
         if ( !v30.fields._current )
-          sub_1C942F0(v23, v24);
+          sub_1C7BD40(v23, v24);
         lossyScale = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v30.fields._current, 0);
         if ( lossyScale.fields.z > z )
         {
@@ -671,7 +671,7 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
           {
             name = UnityEngine_Object__get_name((UnityEngine_Object_o *)current, 0);
             if ( !name )
-              sub_1C942F0(0, v27);
+              sub_1C7BD40(0, v27);
             if ( !System_String__Contains(name, (System_String_o *)StringLiteral_113/*" "*/, 0) )
               v8 = (UnityEngine_Object_o *)current;
           }
@@ -680,14 +680,14 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
       goto LABEL_31;
     }
 LABEL_35:
-    sub_1C942F0(tNode, useNewRule);
+    sub_1C7BD40(tNode, useNewRule);
   }
   if ( !v4 )
     goto LABEL_35;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     (System_Collections_Generic_List_object__o *)v4,
-    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_Transform__GetEnumerator__);
+    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_Transform__GetEnumerator__);
   v5 = 0;
   v6 = 0;
   v7 = -100.0;
@@ -698,12 +698,12 @@ LABEL_6:
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v30,
-           (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
+           (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_Transform__MoveNext__);
     if ( !v9 )
       break;
     v6 = v30.fields._current;
     if ( !v30.fields._current )
-      sub_1C942F0(v9, v10);
+      sub_1C7BD40(v9, v10);
     v31 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v30.fields._current, 0);
     if ( v31.fields.z > v7 )
     {
@@ -719,15 +719,15 @@ LABEL_6:
     {
       v11 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0);
       if ( !v11 )
-        sub_1C942F0(0, v12);
+        sub_1C7BD40(0, v12);
       v13 = System_String__Contains(v11, (System_String_o *)StringLiteral_113/*" "*/, 0);
       if ( v13 )
       {
         if ( !v8 )
-          sub_1C942F0(v13, v14);
+          sub_1C7BD40(v13, v14);
         v15 = UnityEngine_Object__get_name(v8, 0);
         if ( !v15 )
-          sub_1C942F0(0, v16);
+          sub_1C7BD40(0, v16);
         if ( System_String__Contains(v15, (System_String_o *)StringLiteral_113/*" "*/, 0) )
         {
           v17 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0);
@@ -741,7 +741,7 @@ LABEL_6:
 LABEL_31:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v30,
-    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_Transform__Dispose__);
+    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_Transform__Dispose__);
   return (UnityEngine_Transform_o *)v8;
 }
 
@@ -761,10 +761,10 @@ void TransformHelper__SetLocalPosition(
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4D2E2D2 & 1) == 0 )
+  if ( (byte_4CF003F & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2D2 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF003F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -772,7 +772,7 @@ void TransformHelper__SetLocalPosition(
   if ( !v7 )
   {
     if ( !self )
-      sub_1C942F0(v7, v8);
+      sub_1C7BD40(v7, v8);
     v9.fields.y = y;
     v9.fields.z = z;
     v9.fields.x = x;
@@ -787,10 +787,10 @@ void TransformHelper__SetLocalPositionX(UnityEngine_Transform_o *self, float val
   __int64 v6; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E2CF & 1) == 0 )
+  if ( (byte_4CF003C & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2CF = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF003C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -798,7 +798,7 @@ void TransformHelper__SetLocalPositionX(UnityEngine_Transform_o *self, float val
   if ( !v5 )
   {
     if ( !self )
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     localPosition = UnityEngine_Transform__get_localPosition(self, 0);
     localPosition.fields.x = value;
     UnityEngine_Transform__set_localPosition(self, localPosition, 0);
@@ -812,10 +812,10 @@ void TransformHelper__SetLocalPositionY(UnityEngine_Transform_o *self, float val
   __int64 v6; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E2D0 & 1) == 0 )
+  if ( (byte_4CF003D & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2D0 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF003D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -823,7 +823,7 @@ void TransformHelper__SetLocalPositionY(UnityEngine_Transform_o *self, float val
   if ( !v5 )
   {
     if ( !self )
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     localPosition = UnityEngine_Transform__get_localPosition(self, 0);
     localPosition.fields.y = value;
     UnityEngine_Transform__set_localPosition(self, localPosition, 0);
@@ -837,10 +837,10 @@ void TransformHelper__SetLocalPositionZ(UnityEngine_Transform_o *self, float val
   __int64 v6; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2E2D1 & 1) == 0 )
+  if ( (byte_4CF003E & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2D1 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF003E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -848,7 +848,7 @@ void TransformHelper__SetLocalPositionZ(UnityEngine_Transform_o *self, float val
   if ( !v5 )
   {
     if ( !self )
-      sub_1C942F0(v5, v6);
+      sub_1C7BD40(v5, v6);
     localPosition = UnityEngine_Transform__get_localPosition(self, 0);
     localPosition.fields.z = value;
     UnityEngine_Transform__set_localPosition(self, localPosition, 0);
@@ -871,10 +871,10 @@ void TransformHelper__SetLocalScale(
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4D2E2D3 & 1) == 0 )
+  if ( (byte_4CF0040 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2D3 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0040 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -882,7 +882,7 @@ void TransformHelper__SetLocalScale(
   if ( !v7 )
   {
     if ( !self )
-      sub_1C942F0(v7, v8);
+      sub_1C7BD40(v7, v8);
     v9.fields.y = y;
     v9.fields.z = z;
     v9.fields.x = x;
@@ -911,10 +911,10 @@ void TransformHelper__SetLossyScale(
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4D2E2D4 & 1) == 0 )
+  if ( (byte_4CF0041 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2D4 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0041 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -928,10 +928,10 @@ void TransformHelper__SetLossyScale(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality(parent, 0, 0) )
       {
-        if ( !byte_4D25F1E )
+        if ( !byte_4CE7E5E )
         {
-          sub_1C94098(&UnityEngine_Vector3_TypeInfo);
-          byte_4D25F1E = 1;
+          sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
+          byte_4CE7E5E = 1;
         }
         oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
         goto LABEL_15;
@@ -957,7 +957,7 @@ LABEL_15:
         return;
       }
     }
-    sub_1C942F0(v7, v8);
+    sub_1C7BD40(v7, v8);
   }
 }
 
@@ -1067,47 +1067,47 @@ UnityEngine_Transform_o *TransformHelper__executeGetNodeFromLvName(
   System_Collections_Generic_List_object__o *v105; // [xsp+10h] [xbp-80h]
   int32_t result; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4D2E2CA & 1) == 0 )
+  if ( (byte_4CF0037 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponent_BattleActorControl___);
-    sub_1C94098(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_Transform___);
-    sub_1C94098(&System_Func_Transform__bool__TypeInfo);
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform__Add__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform___ctor__);
-    sub_1C94098(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C94098(&System_Collections_Generic_List_Transform__TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&Method_TransformHelper___c__DisplayClass5_0__executeGetNodeFromLvName_b__0__);
-    sub_1C94098(&TransformHelper___c__DisplayClass5_0_TypeInfo);
-    sub_1C94098(&StringLiteral_113/*" "*/);
-    sub_1C94098(&StringLiteral_16622/*"_level"*/);
-    sub_1C94098(&StringLiteral_1/*""*/);
-    byte_4D2E2CA = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_BattleActorControl___);
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_Transform___);
+    sub_1C7BAE8(&System_Func_Transform__bool__TypeInfo);
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__Add__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform___ctor__);
+    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C7BAE8(&System_Collections_Generic_List_Transform__TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&Method_TransformHelper___c__DisplayClass9_0__executeGetNodeFromLvName_b__0__);
+    sub_1C7BAE8(&TransformHelper___c__DisplayClass9_0_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_113/*" "*/);
+    sub_1C7BAE8(&StringLiteral_16624/*"_level"*/);
+    sub_1C7BAE8(&StringLiteral_1/*""*/);
+    byte_4CF0037 = 1;
   }
   result = 0;
-  v11 = sub_1C942E4(TransformHelper___c__DisplayClass5_0_TypeInfo);
+  v11 = sub_1C7BD34(TransformHelper___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_100;
   *(_QWORD *)(v11 + 16) = nodename;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)nodename, v14, v15, v16, v17, v18, v19);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)nodename, v14, v15, v16, v17, v18, v19);
   v20 = *(System_String_o **)(v11 + 16);
   v21 = self;
   if ( !v20 )
     return v21;
-  v12 = System_String__Equals_64453064(v20, (System_String_o *)StringLiteral_1/*""*/, 0);
+  v12 = System_String__Equals_64212232(v20, (System_String_o *)StringLiteral_1/*""*/, 0);
   if ( (v12 & 1) != 0 )
     return v21;
   if ( !self )
     goto LABEL_100;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)self,
-                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_BattleActorControl___);
+                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_BattleActorControl___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -1120,17 +1120,17 @@ UnityEngine_Transform_o *TransformHelper__executeGetNodeFromLvName(
   ComponentsInChildren_object = (System_Collections_Generic_IEnumerable_TSource__o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                                                        (UnityEngine_Component_o *)self,
                                                                                        includeInactive,
-                                                                                       (const MethodInfo_3193628 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720);
-  v24 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_Transform__bool__TypeInfo);
+                                                                                       (const MethodInfo_31678E8 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456);
+  v24 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_Transform__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v24,
     (Il2CppObject *)v11,
-    Method_TransformHelper___c__DisplayClass5_0__executeGetNodeFromLvName_b__0__,
+    Method_TransformHelper___c__DisplayClass9_0__executeGetNodeFromLvName_b__0__,
     0);
   v25 = System_Linq_Enumerable__Where_object_(
           ComponentsInChildren_object,
           (System_Func_TSource__bool__o *)v24,
-          (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_Transform___);
+          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_Transform___);
   IgnoreNodeList = TransformHelper__GetIgnoreNodeList(
                      self,
                      *(System_String_o **)(v11 + 16),
@@ -1138,14 +1138,14 @@ UnityEngine_Transform_o *TransformHelper__executeGetNodeFromLvName(
                      useNewRule,
                      isIgnore,
                      v26);
-  v105 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_Transform__TypeInfo);
+  v105 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v105,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_Transform___ctor__);
-  v28 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_Transform__TypeInfo);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_Transform___ctor__);
+  v28 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v28,
-    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_Transform___ctor__);
   if ( !v25 )
     goto LABEL_100;
   klass = v25->klass;
@@ -1165,14 +1165,14 @@ UnityEngine_Transform_o *TransformHelper__executeGetNodeFromLvName(
   else
   {
 LABEL_18:
-    v32 = sub_1C6A420(v25, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
+    v32 = sub_1C51E70(v25, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
   }
   v104 = includeInactive;
   v34 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v32)(
           v25,
           *(_QWORD *)(v32 + 8));
   if ( !v34 )
-    sub_1C942F0(0, v33);
+    sub_1C7BD40(0, v33);
   while ( 1 )
   {
 LABEL_21:
@@ -1193,7 +1193,7 @@ LABEL_21:
     else
     {
 LABEL_25:
-      v38 = sub_1C6A420(v34, System_Collections_IEnumerator_TypeInfo, 0);
+      v38 = sub_1C51E70(v34, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v34, *(_QWORD *)(v38 + 8)) & 1) == 0 )
       break;
@@ -1214,30 +1214,30 @@ LABEL_25:
     else
     {
 LABEL_32:
-      v42 = sub_1C6A420(v34, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
+      v42 = sub_1C51E70(v34, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
     }
     v43 = (*(__int64 (__fastcall **)(__int64, _QWORD))v42)(v34, *(_QWORD *)(v42 + 8));
     v45 = (UnityEngine_Component_o *)v43;
     if ( IgnoreNodeList && SLODWORD(IgnoreNodeList->max_length) >= 1 )
     {
       if ( !v43 )
-        sub_1C942F0(0, v44);
+        sub_1C7BD40(0, v44);
       v46 = 0;
       while ( 1 )
       {
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v45, 0);
         if ( !gameObject )
-          sub_1C942F0(0, v48);
+          sub_1C7BD40(0, v48);
         InstanceID = UnityEngine_Object__GetInstanceID(gameObject, 0);
         if ( (unsigned int)v46 >= LODWORD(IgnoreNodeList->max_length) )
-          sub_1C942F8(InstanceID);
+          sub_1C7BD48(InstanceID);
         v51 = InstanceID;
         v52 = (UnityEngine_Component_o *)IgnoreNodeList->m_Items[v46];
         if ( !v52 )
-          sub_1C942F0(0, v50);
+          sub_1C7BD40(0, v50);
         v53 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v52, 0);
         if ( !v53 )
-          sub_1C942F0(0, v54);
+          sub_1C7BD40(0, v54);
         v43 = UnityEngine_Object__GetInstanceID(v53, 0);
         if ( v51 == (_DWORD)v43 )
           break;
@@ -1249,35 +1249,35 @@ LABEL_32:
     {
 LABEL_44:
       if ( !v45 )
-        sub_1C942F0(v43, v44);
+        sub_1C7BD40(v43, v44);
       name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v45, 0);
       if ( !name )
-        sub_1C942F0(0, v56);
-      v57 = System_String__Contains(name, (System_String_o *)StringLiteral_16622/*"_level"*/, 0);
+        sub_1C7BD40(0, v56);
+      v57 = System_String__Contains(name, (System_String_o *)StringLiteral_16624/*"_level"*/, 0);
       if ( v57 )
       {
         v65 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v45, 0);
         if ( !v65 )
-          sub_1C942F0(0, v66);
-        v67 = System_String__IndexOf_64476136(v65, (System_String_o *)StringLiteral_16622/*"_level"*/, 0);
+          sub_1C7BD40(0, v66);
+        v67 = System_String__IndexOf_64235304(v65, (System_String_o *)StringLiteral_16624/*"_level"*/, 0);
         v68 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v45, 0);
         if ( !v68 )
-          sub_1C942F0(0, v69);
+          sub_1C7BD40(0, v69);
         v70 = System_String__Substring(v68, v67 + 7, 0);
         v72 = v70;
         if ( !v70 )
-          sub_1C942F0(0, v71);
-        if ( (System_String__IndexOf_64476136(v70, (System_String_o *)StringLiteral_113/*" "*/, 0) & 0x80000000) == 0 )
+          sub_1C7BD40(0, v71);
+        if ( (System_String__IndexOf_64235304(v70, (System_String_o *)StringLiteral_113/*" "*/, 0) & 0x80000000) == 0 )
         {
-          v73 = System_String__IndexOf_64476136(v72, (System_String_o *)StringLiteral_113/*" "*/, 0);
-          v72 = System_String__Substring_64463684(v72, 0, v73, 0);
+          v73 = System_String__IndexOf_64235304(v72, (System_String_o *)StringLiteral_113/*" "*/, 0);
+          v72 = System_String__Substring_64222852(v72, 0, v73, 0);
           if ( !v72 )
-            sub_1C942F0(0, v74);
+            sub_1C7BD40(0, v74);
         }
         v75 = System_String__Split(v72, 0x5Fu, 0, 0);
         v77 = v75;
         if ( !v75 )
-          sub_1C942F0(0, v76);
+          sub_1C7BD40(0, v76);
         max_length = v75->max_length;
         if ( (int)max_length >= 1 )
         {
@@ -1285,7 +1285,7 @@ LABEL_44:
           while ( 1 )
           {
             if ( v79 >= (unsigned int)max_length )
-              sub_1C942F8(v75);
+              sub_1C7BD48(v75);
             v80 = v77->m_Items[v79];
             result = 99;
             v75 = (System_String_array *)System_Int32__TryParse(v80, &result, 0);
@@ -1300,52 +1300,52 @@ LABEL_44:
               goto LABEL_21;
           }
           if ( !v105 )
-            sub_1C942F0(v75, v81);
+            sub_1C7BD40(v75, v81);
           items = v105->fields._items;
           v93 = Method_System_Collections_Generic_List_Transform__Add__;
           ++v105->fields._version;
           if ( !items )
-            sub_1C942F0(v75, v81);
+            sub_1C7BD40(v75, v81);
           size = v105->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v105,
               (Il2CppObject *)v45,
-              *(const MethodInfo_386AE34 **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
+              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
           }
           else
           {
             v95 = &items->obj.klass + size;
             v105->fields._size = size + 1;
             v95[4] = (Il2CppClass *)v45;
-            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v95 + 4), (int32_t)v45, v82, v83, v84, v85, v86, v87);
+            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v95 + 4), (int32_t)v45, v82, v83, v84, v85, v86, v87);
           }
         }
       }
       else
       {
         if ( !v28 )
-          sub_1C942F0(v57, v58);
+          sub_1C7BD40(v57, v58);
         v88 = v28->fields._items;
         v89 = Method_System_Collections_Generic_List_Transform__Add__;
         ++v28->fields._version;
         if ( !v88 )
-          sub_1C942F0(v57, v58);
+          sub_1C7BD40(v57, v58);
         v90 = v28->fields._size;
         if ( (unsigned int)v90 >= LODWORD(v88->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v28,
             (Il2CppObject *)v45,
-            *(const MethodInfo_386AE34 **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
+            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
         }
         else
         {
           v91 = &v88->obj.klass + v90;
           v28->fields._size = v90 + 1;
           v91[4] = (Il2CppClass *)v45;
-          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v91 + 4), (int32_t)v45, v59, v60, v61, v62, v63, v64);
+          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v91 + 4), (int32_t)v45, v59, v60, v61, v62, v63, v64);
         }
       }
     }
@@ -1368,12 +1368,12 @@ LABEL_44:
   else
   {
 LABEL_74:
-    v99 = sub_1C6A420(v34, System_IDisposable_TypeInfo, 0);
+    v99 = sub_1C51E70(v34, System_IDisposable_TypeInfo, 0);
   }
   v12 = (*(__int64 (__fastcall **)(__int64, _QWORD))v99)(v34, *(_QWORD *)(v99 + 8));
   if ( !v105 )
 LABEL_100:
-    sub_1C942F0(v12, v13);
+    sub_1C7BD40(v12, v13);
   if ( v105->fields._size >= 1 )
     v101 = (System_Collections_Generic_List_Transform__o *)v105;
   else
@@ -1398,10 +1398,10 @@ UnityEngine_Transform_o *TransformHelper__getNodeFromLvName(
   UnityEngine_Transform_o *NodeFromLvName; // x23
   const MethodInfo *v11; // x6
 
-  if ( (byte_4D2E2C9 & 1) == 0 )
+  if ( (byte_4CF0036 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2E2C9 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF0036 = 1;
   }
   NodeFromLvName = TransformHelper__executeGetNodeFromLvName(self, nodename, level, 0, useNewRule, 1, v5);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1452,41 +1452,41 @@ UnityEngine_Transform_o *TransformHelper__getNodeFromName(
   int *v37; // x10
   __int64 v38; // x0
 
-  if ( (byte_4D2E2CC & 1) == 0 )
+  if ( (byte_4CF0039 & 1) == 0 )
   {
-    sub_1C94098(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720);
-    sub_1C94098(&Method_System_Linq_Enumerable_Where_Transform___);
-    sub_1C94098(&System_Func_Transform__bool__TypeInfo);
-    sub_1C94098(&System_IDisposable_TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
-    sub_1C94098(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
-    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C94098(&Method_TransformHelper___c__DisplayClass7_0__getNodeFromName_b__0__);
-    sub_1C94098(&TransformHelper___c__DisplayClass7_0_TypeInfo);
-    byte_4D2E2CC = 1;
+    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456);
+    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_Transform___);
+    sub_1C7BAE8(&System_Func_Transform__bool__TypeInfo);
+    sub_1C7BAE8(&System_IDisposable_TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
+    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
+    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C7BAE8(&Method_TransformHelper___c__DisplayClass11_0__getNodeFromName_b__0__);
+    sub_1C7BAE8(&TransformHelper___c__DisplayClass11_0_TypeInfo);
+    byte_4CF0039 = 1;
   }
-  v7 = sub_1C942E4(TransformHelper___c__DisplayClass7_0_TypeInfo);
+  v7 = sub_1C7BD34(TransformHelper___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = nodename,
-        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)nodename, v10, v11, v12, v13, v14, v15),
+        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)nodename, v10, v11, v12, v13, v14, v15),
         !self)
     || (ComponentsInChildren_object = (System_Collections_Generic_IEnumerable_TSource__o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                                                              (UnityEngine_Component_o *)self,
                                                                                              includeInactive,
-                                                                                             (const MethodInfo_3193628 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____79067720),
-        v17 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_Transform__bool__TypeInfo),
+                                                                                             (const MethodInfo_31678E8 *)Method_UnityEngine_Component_GetComponentsInChildren_Transform____78814456),
+        v17 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_Transform__bool__TypeInfo),
         System_Func_object__bool____ctor(
           v17,
           (Il2CppObject *)v7,
-          Method_TransformHelper___c__DisplayClass7_0__getNodeFromName_b__0__,
+          Method_TransformHelper___c__DisplayClass11_0__getNodeFromName_b__0__,
           0),
         (v8 = System_Linq_Enumerable__Where_object_(
                 ComponentsInChildren_object,
                 (System_Func_TSource__bool__o *)v17,
-                (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_Transform___)) == 0) )
+                (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_Transform___)) == 0) )
   {
-    sub_1C942F0(v8, v9);
+    sub_1C7BD40(v8, v9);
   }
   klass = v8->klass;
   v19 = v8;
@@ -1506,14 +1506,14 @@ UnityEngine_Transform_o *TransformHelper__getNodeFromName(
   else
   {
 LABEL_10:
-    v22 = sub_1C6A420(v8, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
+    v22 = sub_1C51E70(v8, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
   }
   v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v22)(
           v19,
           *(_QWORD *)(v22 + 8));
   v25 = v23;
   if ( !v23 )
-    sub_1C942F0(0, v24);
+    sub_1C7BD40(0, v24);
   v26 = *(_QWORD *)v23;
   v27 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
   if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
@@ -1531,7 +1531,7 @@ LABEL_10:
   else
   {
 LABEL_17:
-    v29 = sub_1C6A420(v23, System_Collections_IEnumerator_TypeInfo, 0);
+    v29 = sub_1C51E70(v23, System_Collections_IEnumerator_TypeInfo, 0);
   }
   if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
   {
@@ -1557,7 +1557,7 @@ LABEL_17:
   else
   {
 LABEL_24:
-    v33 = sub_1C6A420(v25, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
+    v33 = sub_1C51E70(v25, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
   }
   v34 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
   if ( v25 )
@@ -1580,7 +1580,7 @@ LABEL_29:
     else
     {
 LABEL_33:
-      v38 = sub_1C6A420(v25, System_IDisposable_TypeInfo, 0);
+      v38 = sub_1C51E70(v25, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v38)(v25, *(_QWORD *)(v38 + 8));
   }
@@ -1588,57 +1588,97 @@ LABEL_33:
 }
 
 
-void TransformHelper___c__DisplayClass5_0___ctor(
-        TransformHelper___c__DisplayClass5_0_o *this,
+UnityEngine_Color_o TransformHelper__get_DefaultCondTitleLabelColor(const MethodInfo *method)
+{
+  float v1; // s0
+  float v2; // s1
+  float v3; // s2
+  float v4; // s3
+  UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+
+  v1 = 1.0;
+  v2 = 1.0;
+  v3 = 1.0;
+  v4 = 1.0;
+  result.fields.a = v4;
+  result.fields.b = v3;
+  result.fields.g = v2;
+  result.fields.r = v1;
+  return result;
+}
+
+
+UnityEngine_Color_o TransformHelper__get_DefaultCondTitleSpriteColor(const MethodInfo *method)
+{
+  float v1; // s1
+  float v2; // s2
+  float v3; // s0
+  float v4; // s3
+  UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+
+  v1 = 0.33333;
+  v2 = 0.8;
+  v3 = 0.0;
+  v4 = 1.0;
+  result.fields.a = v4;
+  result.fields.b = v2;
+  result.fields.g = v1;
+  result.fields.r = v3;
+  return result;
+}
+
+
+void TransformHelper___c__DisplayClass11_0___ctor(
+        TransformHelper___c__DisplayClass11_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool TransformHelper___c__DisplayClass5_0___executeGetNodeFromLvName_b__0(
-        TransformHelper___c__DisplayClass5_0_o *this,
+bool TransformHelper___c__DisplayClass11_0___getNodeFromName_b__0(
+        TransformHelper___c__DisplayClass11_0_o *this,
         UnityEngine_Transform_o *p,
         const MethodInfo *method)
 {
-  TransformHelper___c__DisplayClass5_0_o *v3; // x19
+  TransformHelper___c__DisplayClass11_0_o *v3; // x19
 
   if ( !p
     || (v3 = this,
-        (this = (TransformHelper___c__DisplayClass5_0_o *)UnityEngine_Component__get_gameObject(
+        (this = (TransformHelper___c__DisplayClass11_0_o *)UnityEngine_Component__get_gameObject(
+                                                             (UnityEngine_Component_o *)p,
+                                                             0)) == 0)
+    || (this = (TransformHelper___c__DisplayClass11_0_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0)) == 0 )
+  {
+    sub_1C7BD40(this, p);
+  }
+  return System_String__Equals_64212232((System_String_o *)this, v3->fields.nodename, 0);
+}
+
+
+void TransformHelper___c__DisplayClass9_0___ctor(
+        TransformHelper___c__DisplayClass9_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+bool TransformHelper___c__DisplayClass9_0___executeGetNodeFromLvName_b__0(
+        TransformHelper___c__DisplayClass9_0_o *this,
+        UnityEngine_Transform_o *p,
+        const MethodInfo *method)
+{
+  TransformHelper___c__DisplayClass9_0_o *v3; // x19
+
+  if ( !p
+    || (v3 = this,
+        (this = (TransformHelper___c__DisplayClass9_0_o *)UnityEngine_Component__get_gameObject(
                                                             (UnityEngine_Component_o *)p,
                                                             0)) == 0)
-    || (this = (TransformHelper___c__DisplayClass5_0_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0)) == 0 )
+    || (this = (TransformHelper___c__DisplayClass9_0_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0)) == 0 )
   {
-    sub_1C942F0(this, p);
+    sub_1C7BD40(this, p);
   }
   return System_String__Contains((System_String_o *)this, v3->fields.nodename, 0);
-}
-
-
-void TransformHelper___c__DisplayClass7_0___ctor(
-        TransformHelper___c__DisplayClass7_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-bool TransformHelper___c__DisplayClass7_0___getNodeFromName_b__0(
-        TransformHelper___c__DisplayClass7_0_o *this,
-        UnityEngine_Transform_o *p,
-        const MethodInfo *method)
-{
-  TransformHelper___c__DisplayClass7_0_o *v3; // x19
-
-  if ( !p
-    || (v3 = this,
-        (this = (TransformHelper___c__DisplayClass7_0_o *)UnityEngine_Component__get_gameObject(
-                                                            (UnityEngine_Component_o *)p,
-                                                            0)) == 0)
-    || (this = (TransformHelper___c__DisplayClass7_0_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0)) == 0 )
-  {
-    sub_1C942F0(this, p);
-  }
-  return System_String__Equals_64453064((System_String_o *)this, v3->fields.nodename, 0);
 }

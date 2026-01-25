@@ -33,22 +33,24 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
   UnityEngine_GameObject_o *v22; // x20
   System_String_o *v23; // x21
   CommonEffectLoadComponent_LoadEndHandler_o *v24; // x22
+  const MethodInfo *v25; // x3
+  const MethodInfo *v26; // x6
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2DEDD & 1) == 0 )
+  if ( (byte_4CEFC49 & 1) == 0 )
   {
-    sub_1C94098(&Method_CharaAppearanceReverseEffectComponent_EndCreateEffect__);
-    sub_1C94098(&CommonEffectManager_TypeInfo);
-    sub_1C94098(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    sub_1C94098(&StringLiteral_13685/*"Talk/"*/);
-    sub_1C94098(&StringLiteral_4927/*"Custom/Sprite-ScriptActionFigureErasureReverse"*/);
-    byte_4D2DEDD = 1;
+    sub_1C7BAE8(&Method_CharaAppearanceReverseEffectComponent_EndCreateEffect__);
+    sub_1C7BAE8(&CommonEffectManager_TypeInfo);
+    sub_1C7BAE8(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_13687/*"Talk/"*/);
+    sub_1C7BAE8(&StringLiteral_4928/*"Custom/Sprite-ScriptActionFigureErasureReverse"*/);
+    byte_4CEFC49 = 1;
   }
   p_figure = &this->fields.figure;
   this->fields.figure = figure;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.figure, (int32_t)figure, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.figure, (int32_t)figure, (int32_t)method, v3, v4, v5, v6, v7);
   if ( this->fields.duration <= 0.0 )
     this->fields.duration = 2.0;
   transform = (UIStandFigureRender_o *)*p_figure;
@@ -60,7 +62,7 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
   this->fields.addVolume = 1.2039;
   if ( !transform )
     goto LABEL_32;
-  UIStandFigureRender__SetSharder(transform, (System_String_o *)StringLiteral_4927/*"Custom/Sprite-ScriptActionFigureErasureReverse"*/, 0);
+  UIStandFigureRender__SetSharder(transform, (System_String_o *)StringLiteral_4928/*"Custom/Sprite-ScriptActionFigureErasureReverse"*/, 0);
   transform = (UIStandFigureRender_o *)*p_figure;
   if ( !*p_figure )
     goto LABEL_32;
@@ -79,7 +81,7 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72110972(gameObject, 0);
+    UnityEngine_Object__Destroy_71870148(gameObject, 0);
     return;
   }
   v16 = (UnityEngine_Object_o *)*p_figure;
@@ -120,23 +122,23 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
                                                 0)) == 0) )
   {
 LABEL_32:
-    sub_1C942F0(transform, v12);
+    sub_1C7BD40(transform, v12);
   }
-  v26.fields.y = -y;
-  v26.fields.x = -x;
-  v26.fields.z = v19;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v26, 0);
+  v28.fields.y = -y;
+  v28.fields.x = -x;
+  v28.fields.z = v19;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v28, 0);
   v22 = this->fields.subEffectBase;
-  v23 = System_String__Concat_64417744((System_String_o *)StringLiteral_13685/*"Talk/"*/, this->fields.subEffectName, 0);
-  v24 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C942E4(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+  v23 = System_String__Concat_64176912((System_String_o *)StringLiteral_13687/*"Talk/"*/, this->fields.subEffectName, 0);
+  v24 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C7BD34(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
   CommonEffectLoadComponent_LoadEndHandler___ctor(
     v24,
     (Il2CppObject *)this,
     Method_CharaAppearanceReverseEffectComponent_EndCreateEffect__,
-    0);
+    v25);
   if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-  CommonEffectManager__Create_44542236(v22, v23, v24, 0, 0, 0, 0);
+  CommonEffectManager__Create_44231468(v22, v23, v24, 0, 0, 0, v26);
 }
 
 
@@ -164,10 +166,10 @@ void CharaAppearanceReverseEffectComponent__EffectResume(
   int64_t v20; // x6
   System_String_o *v21; // x7
 
-  if ( (byte_4D2DEDE & 1) == 0 )
+  if ( (byte_4CEFC4A & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_9923/*"OnEndEffect"*/);
-    byte_4D2DEDE = 1;
+    sub_1C7BAE8(&StringLiteral_9927/*"OnEndEffect"*/);
+    byte_4CEFC4A = 1;
   }
   klass = this->klass;
   this->fields.isPause = 0;
@@ -178,15 +180,15 @@ void CharaAppearanceReverseEffectComponent__EffectResume(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v5 = TweenRenderVolume__Begin(gameObject, this->fields.duration, 1.0, 0);
   if ( !v5 )
-    sub_1C942F0(0, v6);
+    sub_1C7BD40(0, v6);
   v7 = v5;
   v5->fields.method = 1;
   v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v7->fields.eventReceiver = v8;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v7->fields.eventReceiver, (int32_t)v8, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_9923/*"OnEndEffect"*/;
-  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9923/*"OnEndEffect"*/;
-  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v7->fields.callWhenFinished, v15, v16, v17, v18, v19, v20, v21);
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v7->fields.eventReceiver, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_9927/*"OnEndEffect"*/;
+  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9927/*"OnEndEffect"*/;
+  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v7->fields.callWhenFinished, v15, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -204,7 +206,7 @@ void CharaAppearanceReverseEffectComponent__EndCreateEffect(
 
   this->fields.isStart = 1;
   this->fields.childEffect = effect;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.childEffect,
     (int32_t)effect,
     (int32_t)method,
@@ -233,10 +235,10 @@ void CharaAppearanceReverseEffectComponent__OnDestroy(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2DEE0 & 1) == 0 )
+  if ( (byte_4CEFC4C & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DEE0 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFC4C = 1;
   }
   figure = (UnityEngine_Object_o *)this->fields.figure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -248,11 +250,11 @@ void CharaAppearanceReverseEffectComponent__OnDestroy(
     if ( !p_figure->klass
       || (UIStandFigureRender__RecoverSharder(klass, 0), (klass = (UIStandFigureRender_o *)p_figure->klass) == 0) )
     {
-      sub_1C942F0(klass, v4);
+      sub_1C7BD40(klass, v4);
     }
     UIStandFigureRender__SetAlpha(klass, 1.0, 0);
     p_figure->klass = 0;
-    sub_1C9403C(p_figure, 0, v7, v8, v9, v10, v11, v12);
+    sub_1C7BA8C(p_figure, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -261,17 +263,18 @@ void CharaAppearanceReverseEffectComponent__OnEndEffect(
         CharaAppearanceReverseEffectComponent_o *this,
         const MethodInfo *method)
 {
+  const MethodInfo *v2; // x4
   UnityEngine_GameObject_o *subEffectBase; // x20
 
-  if ( (byte_4D2DEDF & 1) == 0 )
+  if ( (byte_4CEFC4B & 1) == 0 )
   {
-    sub_1C94098(&CommonEffectManager_TypeInfo);
-    byte_4D2DEDF = 1;
+    sub_1C7BAE8(&CommonEffectManager_TypeInfo);
+    byte_4CEFC4B = 1;
   }
   subEffectBase = this->fields.subEffectBase;
   if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-  CommonEffectManager__Stop(subEffectBase, 0, 0, 0, 0);
+  CommonEffectManager__Stop(subEffectBase, 0, 0, 0, v2);
   this->fields.isWaitEndEffect = 1;
 }
 
@@ -280,14 +283,15 @@ void CharaAppearanceReverseEffectComponent__OnUpdate(
         CharaAppearanceReverseEffectComponent_o *this,
         const MethodInfo *method)
 {
+  const MethodInfo *v3; // x1
   UnityEngine_GameObject_o *subEffectBase; // x20
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4D2DEE1 & 1) == 0 )
+  if ( (byte_4CEFC4D & 1) == 0 )
   {
-    sub_1C94098(&CommonEffectManager_TypeInfo);
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DEE1 = 1;
+    sub_1C7BAE8(&CommonEffectManager_TypeInfo);
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFC4D = 1;
   }
   ProgramEffectComponent__OnUpdate((ProgramEffectComponent_o *)this, 0);
   if ( this->fields.isWaitEndEffect )
@@ -295,13 +299,13 @@ void CharaAppearanceReverseEffectComponent__OnUpdate(
     subEffectBase = this->fields.subEffectBase;
     if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-    if ( !CommonEffectManager__IsBusy(subEffectBase, 0) )
+    if ( !CommonEffectManager__IsBusy(subEffectBase, v3) )
     {
       this->fields.isWaitEndEffect = 0;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72110972(gameObject, 0);
+      UnityEngine_Object__Destroy_71870148(gameObject, 0);
     }
   }
 }
@@ -347,7 +351,7 @@ void CharaAppearanceReverseEffectComponent__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   figure = this->fields.figure;
   if ( !figure )
-    sub_1C942F0(0, v8);
+    sub_1C7BD40(0, v8);
   ((void (__fastcall *)(struct UIStandFigureM_o *, const MethodInfo *, long double, long double, long double, long double))figure->klass->vtable._39_SetTweenColor.methodPtr)(
     figure,
     figure->klass->vtable._39_SetTweenColor.method,
@@ -376,10 +380,10 @@ void CharaAppearanceReverseEffectComponent__SetTweenVolume(
   System_String_o *v15; // x7
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2DEDC & 1) == 0 )
+  if ( (byte_4CEFC48 & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D2DEDC = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CEFC48 = 1;
   }
   figure = (UIStandFigureRender_o *)this->fields.figure;
   this->fields.volume = v;
@@ -409,7 +413,7 @@ void CharaAppearanceReverseEffectComponent__SetTweenVolume(
         }
       }
 LABEL_17:
-      sub_1C942F0(figure, method);
+      sub_1C7BD40(figure, method);
     }
     klass = (UnityEngine_Object_o *)p_childEffect->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -425,7 +429,7 @@ LABEL_17:
         0,
         figure->klass->vtable._8_set_alpha.method);
       p_childEffect->klass = 0;
-      sub_1C9403C(p_childEffect, 0, v10, v11, v12, v13, v14, v15);
+      sub_1C7BA8C(p_childEffect, 0, v10, v11, v12, v13, v14, v15);
     }
   }
 }

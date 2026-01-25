@@ -11,10 +11,10 @@ void BattleWindowOuterClickComponent__OnClick(BattleWindowOuterClickComponent_o 
   BattleWindowComponent_o *v5; // x0
   struct BattleWindowOuterClickComponent_OuterClickCall_o *clickCallBack; // x8
 
-  if ( (byte_4D30115 & 1) == 0 )
+  if ( (byte_4CF1E9B & 1) == 0 )
   {
-    sub_1C94098(&UnityEngine_Object_TypeInfo);
-    byte_4D30115 = 1;
+    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
+    byte_4CF1E9B = 1;
   }
   targetWindow = (UnityEngine_Object_o *)this->fields.targetWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23,7 +23,7 @@ void BattleWindowOuterClickComponent__OnClick(BattleWindowOuterClickComponent_o 
     goto LABEL_8;
   v5 = this->fields.targetWindow;
   if ( !v5 )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   if ( !BattleWindowComponent__isOpening(v5, 0) )
   {
 LABEL_8:
@@ -48,7 +48,7 @@ void BattleWindowOuterClickComponent__SetTargetWindow(
   System_String_o *v7; // x7
 
   this->fields.targetWindow = window;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetWindow,
     (int32_t)window,
     (int32_t)method,
@@ -72,7 +72,7 @@ void BattleWindowOuterClickComponent__setClickCallBack(
   System_String_o *v7; // x7
 
   this->fields.clickCallBack = call;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.clickCallBack,
     (int32_t)call,
     (int32_t)method,
@@ -103,7 +103,7 @@ void BattleWindowOuterClickComponent_OuterClickCall___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C9403C(
+  sub_1C7BA8C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -114,12 +114,12 @@ void BattleWindowOuterClickComponent_OuterClickCall___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C94158(method) & 1) == 0 )
+  if ( (sub_1C7BBA8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C941C0(v14, 0);
+      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C7BC10(v14, 0);
     }
     goto LABEL_5;
   }
@@ -131,9 +131,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1ACCD84;
+  this->fields.invoke_impl = (intptr_t)sub_1AB5CB0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1ACCD44;
+  this->fields.extra_arg = (intptr_t)&loc_1AB5C70;
 }
 
 
@@ -146,7 +146,7 @@ System_IAsyncResult_o *BattleWindowOuterClickComponent_OuterClickCall__BeginInvo
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C7BA9C(this, &v5, callback, object);
 }
 
 
@@ -155,7 +155,7 @@ void BattleWindowOuterClickComponent_OuterClickCall__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C94050(result, 0, method);
+  sub_1C7BAA0(result, 0, method);
 }
 
 

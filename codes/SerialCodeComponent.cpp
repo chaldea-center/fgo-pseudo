@@ -8,14 +8,14 @@ bool SerialCodeComponent__closeMenu(SerialCodeComponent_o *this, const MethodInf
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4D27DAD & 1) == 0 )
+  if ( (byte_4CE9C28 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_3519/*"CLOSE_MENU"*/);
-    byte_4D27DAD = 1;
+    sub_1C7BAE8(&StringLiteral_3519/*"CLOSE_MENU"*/);
+    byte_4CE9C28 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3519/*"CLOSE_MENU"*/, 0);
   return 1;
 }
@@ -28,7 +28,7 @@ void SerialCodeComponent__hideMenu(SerialCodeComponent_o *this, const MethodInfo
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v3);
+    sub_1C7BD40(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -37,14 +37,14 @@ void SerialCodeComponent__onCloseWebView(SerialCodeComponent_o *this, const Meth
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4D27DAC & 1) == 0 )
+  if ( (byte_4CE9C27 & 1) == 0 )
   {
-    sub_1C94098(&StringLiteral_3523/*"CLOSE_SERIAL_CODE"*/);
-    byte_4D27DAC = 1;
+    sub_1C7BAE8(&StringLiteral_3523/*"CLOSE_SERIAL_CODE"*/);
+    byte_4CE9C27 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C942F0(0, method);
+    sub_1C7BD40(0, method);
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3523/*"CLOSE_SERIAL_CODE"*/, 0);
 }
 
@@ -56,28 +56,28 @@ bool SerialCodeComponent__openMenu(SerialCodeComponent_o *this, const MethodInfo
   System_String_o *v5; // x20
   System_Action_o *v6; // x21
 
-  if ( (byte_4D27DAB & 1) == 0 )
+  if ( (byte_4CE9C26 & 1) == 0 )
   {
-    sub_1C94098(&System_Action_TypeInfo);
-    sub_1C94098(&LocalizationManager_TypeInfo);
-    sub_1C94098(&Method_SerialCodeComponent_onCloseWebView__);
-    sub_1C94098(&WebViewManager_TypeInfo);
-    sub_1C94098(&StringLiteral_15609/*"WEB_VIEW_TITLE_SERIAL_CODE"*/);
-    sub_1C94098(&StringLiteral_12763/*"SerialCodeTop"*/);
-    byte_4D27DAB = 1;
+    sub_1C7BAE8(&System_Action_TypeInfo);
+    sub_1C7BAE8(&LocalizationManager_TypeInfo);
+    sub_1C7BAE8(&Method_SerialCodeComponent_onCloseWebView__);
+    sub_1C7BAE8(&WebViewManager_TypeInfo);
+    sub_1C7BAE8(&StringLiteral_15610/*"WEB_VIEW_TITLE_SERIAL_CODE"*/);
+    sub_1C7BAE8(&StringLiteral_12766/*"SerialCodeTop"*/);
+    byte_4CE9C26 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v4);
+    sub_1C7BD40(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15609/*"WEB_VIEW_TITLE_SERIAL_CODE"*/, 0);
-  v6 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15610/*"WEB_VIEW_TITLE_SERIAL_CODE"*/, 0);
+  v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_SerialCodeComponent_onCloseWebView__, 0);
   if ( !WebViewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-  WebViewManager__OpenViewDynamic(v5, (System_String_o *)StringLiteral_12763/*"SerialCodeTop"*/, v6, 0);
+  WebViewManager__OpenViewDynamic(v5, (System_String_o *)StringLiteral_12766/*"SerialCodeTop"*/, v6, 0);
   return 1;
 }
 
@@ -89,6 +89,6 @@ void SerialCodeComponent__showMenu(SerialCodeComponent_o *this, const MethodInfo
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C942F0(0, v3);
+    sub_1C7BD40(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
