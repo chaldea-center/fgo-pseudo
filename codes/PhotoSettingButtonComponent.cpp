@@ -1,6 +1,5 @@
 void PhotoSettingButtonComponent___ctor(PhotoSettingButtonComponent_o *this, const MethodInfo *method)
 {
-  this->fields.moveButtonPositionY = 61.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -12,158 +11,119 @@ void PhotoSettingButtonComponent__DispSettingButton(
         PhotoStandFigureComponent_array *photoStandFigures,
         bool isChangePos,
         bool isOneShot,
+        bool isSwitchCameraTexture,
         const MethodInfo *method)
 {
-  int64_t v6; // x6
   System_String_o *v7; // x7
-  bool v13; // w25
-  __int64 v14; // x1
-  void *hideUiButton; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v17; // x0
-  bool v18; // w26
-  UnityEngine_GameObject_o *v19; // x0
-  struct System_Collections_Generic_List_PhotoUtility_TargetType__o *photoTargetList; // x23
-  PhotoSettingButtonComponent___c_c *v21; // x0
-  System_Func_T__TResult__o *_9__27_0; // x24
-  Il2CppObject *v23; // x25
+  bool v14; // w26
+  struct System_Collections_Generic_List_PhotoUtility_TargetType__o **p_photoTargetList; // x23
+  const MethodInfo *v16; // x2
+  __int64 v17; // x1
+  void *exchangePositionButton; // x0
+  bool v19; // w27
+  PhotoSettingButtonComponent___c_c *v20; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v21; // x24
+  System_Func_T__TResult__o *_9__30_0; // x25
+  Il2CppObject *v23; // x26
   struct PhotoSettingButtonComponent___c_StaticFields *static_fields; // x0
   int32_t v25; // w2
   char v26; // w3
   System_String_o *v27; // x4
-  int32_t v28; // w5
+  char v28; // w5
   int64_t v29; // x6
   System_String_o *v30; // x7
   int32_t v31; // w0
-  UnityEngine_GameObject_o *v32; // x0
-  UnityEngine_GameObject_o *v33; // x0
-  PhotoStandFigureComponent_o *v34; // x8
+  PhotoStandFigureComponent_o *v32; // x8
   struct ServantPhotoEntity_FaceData_array *FaceList_k__BackingField; // x8
   int max_length; // w8
-  bool v37; // cc
-  bool v38; // w8
-  float v39; // s8
-  PhotoStandFigureComponent_o *v40; // x8
-  struct ServantPhotoEntity_FaceData_array *v41; // x8
-  int v42; // w8
-  bool v43; // w8
-  float v44; // s8
-  UnityEngine_GameObject_o *v45; // x0
-  System_Collections_Generic_List_T__o *v46; // x22
-  System_Predicate_T__o *v47; // x23
-  Il2CppObject *v48; // x24
-  struct PhotoSettingButtonComponent___c_StaticFields *v49; // x0
-  int32_t v50; // w2
-  char v51; // w3
-  System_String_o *v52; // x4
-  int32_t v53; // w5
-  int64_t v54; // x6
-  System_String_o *v55; // x7
-  PhotoStandFigureComponent_o *v56; // x8
-  struct ServantPhotoEntity_FaceData_array *v57; // x8
-  int v58; // w8
-  bool v59; // w8
-  UnityEngine_GameObject_o *v60; // x0
-  UnityEngine_GameObject_o *v61; // x0
-  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  bool v35; // cc
+  bool v36; // w8
+  float v37; // s8
+  PhotoStandFigureComponent_o *v38; // x8
+  struct ServantPhotoEntity_FaceData_array *v39; // x8
+  int v40; // w8
+  bool v41; // w8
+  float v42; // s8
+  System_Collections_Generic_List_T__o *v43; // x22
+  System_Predicate_T__o *v44; // x23
+  Il2CppObject *v45; // x24
+  struct PhotoSettingButtonComponent___c_StaticFields *v46; // x0
+  int32_t v47; // w2
+  char v48; // w3
+  System_String_o *v49; // x4
+  char v50; // w5
+  int64_t v51; // x6
+  System_String_o *v52; // x7
+  PhotoStandFigureComponent_o *v53; // x8
+  struct ServantPhotoEntity_FaceData_array *v54; // x8
+  int v55; // w8
+  bool v56; // w8
+  UnityEngine_Color_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v13 = isChangePos;
-  if ( (byte_4CE9BE8 & 1) == 0 )
+  v14 = isChangePos;
+  if ( (byte_4D2BED1 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
-    sub_1C7BAE8(&System_Func_PhotoUtility_TargetType__bool__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
-    sub_1C7BAE8(&System_Predicate_PhotoUtility_TargetType__TypeInfo);
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_0__);
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_1__);
-    sub_1C7BAE8(&PhotoSettingButtonComponent___c_TypeInfo);
-    byte_4CE9BE8 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
+    sub_1C93AD4(&System_Func_PhotoUtility_TargetType__bool__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
+    sub_1C93AD4(&System_Predicate_PhotoUtility_TargetType__TypeInfo);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__30_0__);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__30_1__);
+    sub_1C93AD4(&PhotoSettingButtonComponent___c_TypeInfo);
+    byte_4D2BED1 = 1;
   }
   this->fields.photoTargetList = targetList;
-  sub_1C7BA8C(
+  p_photoTargetList = &this->fields.photoTargetList;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.photoTargetList,
     (int32_t)targetList,
     (int32_t)photoStandFigures,
     isChangePos,
     (System_String_o *)isOneShot,
-    (int32_t)method,
-    v6,
+    isSwitchCameraTexture,
+    (int64_t)method,
     v7);
-  hideUiButton = this->fields.hideUiButton;
-  this->fields.isChangePosition = v13;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0);
-  hideUiButton = this->fields.changePhotoFrameButton;
-  this->fields.topButtonPosition = LocalPosition;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  v63.fields.x = this->fields.topButtonPosition.fields.x;
-  v63.fields.z = this->fields.topButtonPosition.fields.z;
-  v63.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-  this->fields.topButtonPosition.fields.y = v63.fields.y;
-  GameObjectExtensions__SetLocalPosition(v17, v63, 0);
-  hideUiButton = this->fields.exchangePositionButton;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  if ( !hideUiButton )
-    goto LABEL_88;
-  v18 = !isOneShot;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, !isOneShot, 0);
-  if ( !isOneShot )
-  {
-    hideUiButton = this->fields.exchangePositionButton;
-    if ( !hideUiButton )
-      goto LABEL_88;
-    v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-    v64.fields.x = this->fields.topButtonPosition.fields.x;
-    v64.fields.z = this->fields.topButtonPosition.fields.z;
-    v64.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-    this->fields.topButtonPosition.fields.y = v64.fields.y;
-    GameObjectExtensions__SetLocalPosition(v19, v64, 0);
-  }
-  photoTargetList = this->fields.photoTargetList;
-  v21 = PhotoSettingButtonComponent___c_TypeInfo;
+  this->fields.isChangePosition = v14;
+  PhotoSettingButtonComponent__SetSwitchBackgroundButtonLabel(this, isSwitchCameraTexture, v16);
+  exchangePositionButton = this->fields.exchangePositionButton;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  exchangePositionButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)exchangePositionButton, 0);
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  v19 = !isOneShot;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, !isOneShot, 0);
+  v20 = PhotoSettingButtonComponent___c_TypeInfo;
+  v21 = (System_Collections_Generic_IEnumerable_TSource__o *)*p_photoTargetList;
   if ( !PhotoSettingButtonComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PhotoSettingButtonComponent___c_TypeInfo);
-    v21 = PhotoSettingButtonComponent___c_TypeInfo;
+    v20 = PhotoSettingButtonComponent___c_TypeInfo;
   }
-  _9__27_0 = (System_Func_T__TResult__o *)v21->static_fields->__9__27_0;
-  if ( !_9__27_0 )
+  _9__30_0 = (System_Func_T__TResult__o *)v20->static_fields->__9__30_0;
+  if ( !_9__30_0 )
   {
-    if ( !v21->_2.cctor_finished )
+    if ( !v20->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v21);
-      v21 = PhotoSettingButtonComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v20);
+      v20 = PhotoSettingButtonComponent___c_TypeInfo;
     }
-    v23 = (Il2CppObject *)v21->static_fields->__9;
-    _9__27_0 = (System_Func_T__TResult__o *)sub_1C7BD34(System_Func_PhotoUtility_TargetType__bool__TypeInfo);
+    v23 = (Il2CppObject *)v20->static_fields->__9;
+    _9__30_0 = (System_Func_T__TResult__o *)sub_1C93D20(System_Func_PhotoUtility_TargetType__bool__TypeInfo);
     System_Func_Int32Enum__bool____ctor(
-      _9__27_0,
+      _9__30_0,
       v23,
-      Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_0__,
+      Method_PhotoSettingButtonComponent___c__DispSettingButton_b__30_0__,
       0);
     static_fields = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
-    static_fields->__9__27_0 = (struct System_Func_PhotoUtility_TargetType__bool__o *)_9__27_0;
-    sub_1C7BA8C(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__27_0,
-      (int32_t)_9__27_0,
+    static_fields->__9__30_0 = (struct System_Func_PhotoUtility_TargetType__bool__o *)_9__30_0;
+    sub_1C93A78(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__30_0,
+      (int32_t)_9__30_0,
       v25,
       v26,
       v27,
@@ -172,282 +132,266 @@ void PhotoSettingButtonComponent__DispSettingButton(
       v30);
   }
   v31 = System_Linq_Enumerable__Count_Int32Enum_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)photoTargetList,
-          (System_Func_TSource__bool__o *)_9__27_0,
-          (const MethodInfo_3190CE8 *)Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
+          v21,
+          (System_Func_TSource__bool__o *)_9__30_0,
+          (const MethodInfo_31C5660 *)Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
   switch ( v31 )
   {
     case 2:
-      hideUiButton = this->fields.changeServantFaceButton;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      hideUiButton = this->fields.changeServantFaceButtonLeft;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 1, 0);
-      hideUiButton = this->fields.changeServantFaceButtonRight;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 1, 0);
-      hideUiButton = this->fields.changeServantFaceButtonRight;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      v65.fields.x = this->fields.topButtonPosition.fields.x;
-      v65.fields.z = this->fields.topButtonPosition.fields.z;
-      v65.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-      this->fields.topButtonPosition.fields.y = v65.fields.y;
-      GameObjectExtensions__SetLocalPosition(v32, v65, 0);
-      hideUiButton = this->fields.changeServantFaceButtonLeft;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      v66.fields.x = this->fields.topButtonPosition.fields.x;
-      v66.fields.z = this->fields.topButtonPosition.fields.z;
-      v66.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-      this->fields.topButtonPosition.fields.y = v66.fields.y;
-      GameObjectExtensions__SetLocalPosition(v33, v66, 0);
+      exchangePositionButton = this->fields.changeServantFaceButton;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+      exchangePositionButton = this->fields.changeServantFaceButtonLeft;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 1, 0);
+      exchangePositionButton = this->fields.changeServantFaceButtonRight;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 1, 0);
       if ( !photoStandFigures )
-        goto LABEL_88;
+        goto LABEL_78;
       if ( (unsigned int)isChangePos < LODWORD(photoStandFigures->max_length) )
       {
-        v34 = photoStandFigures->m_Items[isChangePos];
-        if ( !v34 )
-          goto LABEL_88;
-        FaceList_k__BackingField = v34->fields._FaceList_k__BackingField;
+        v32 = photoStandFigures->m_Items[isChangePos];
+        if ( !v32 )
+          goto LABEL_78;
+        FaceList_k__BackingField = v32->fields._FaceList_k__BackingField;
         if ( !FaceList_k__BackingField )
-          goto LABEL_88;
+          goto LABEL_78;
         max_length = FaceList_k__BackingField->max_length;
-        hideUiButton = this->fields.changeServantFaceButtonLeft;
-        v37 = max_length <= 1;
-        v38 = max_length > 1;
-        v39 = v37 ? 0.5 : 1.0;
-        this->fields.isEnableChangeServantFaceButtonLeft = v38;
-        if ( !hideUiButton )
-          goto LABEL_88;
-        v70.fields.a = 1.0;
-        v70.fields.r = v39;
-        v70.fields.g = v39;
-        v70.fields.b = v39;
-        UIWidget__set_color((UIWidget_o *)hideUiButton, v70, 0);
-        hideUiButton = this->fields.changeServantFaceButtonLabelLeft;
-        if ( !hideUiButton )
-          goto LABEL_88;
-        v71.fields.a = 1.0;
-        v71.fields.r = v39;
-        v71.fields.g = v39;
-        v71.fields.b = v39;
-        UIWidget__set_color((UIWidget_o *)hideUiButton, v71, 0);
+        exchangePositionButton = this->fields.changeServantFaceButtonLeft;
+        v35 = max_length <= 1;
+        v36 = max_length > 1;
+        v37 = v35 ? 0.5 : 1.0;
+        this->fields.isEnableChangeServantFaceButtonLeft = v36;
+        if ( !exchangePositionButton )
+          goto LABEL_78;
+        v57.fields.a = 1.0;
+        v57.fields.r = v37;
+        v57.fields.g = v37;
+        v57.fields.b = v37;
+        UIWidget__set_color((UIWidget_o *)exchangePositionButton, v57, 0);
+        exchangePositionButton = this->fields.changeServantFaceButtonLabelLeft;
+        if ( !exchangePositionButton )
+          goto LABEL_78;
+        v58.fields.a = 1.0;
+        v58.fields.r = v37;
+        v58.fields.g = v37;
+        v58.fields.b = v37;
+        UIWidget__set_color((UIWidget_o *)exchangePositionButton, v58, 0);
         if ( !isChangePos < LODWORD(photoStandFigures->max_length) )
         {
-          v40 = photoStandFigures->m_Items[!isChangePos];
-          if ( !v40 )
-            goto LABEL_88;
-          v41 = v40->fields._FaceList_k__BackingField;
-          if ( !v41 )
-            goto LABEL_88;
-          v42 = v41->max_length;
-          hideUiButton = this->fields.changeServantFaceButtonRight;
-          v37 = v42 <= 1;
-          v43 = v42 > 1;
-          v44 = v37 ? 0.5 : 1.0;
-          this->fields.isEnableChangeServantFaceButtonRight = v43;
-          if ( !hideUiButton )
-            goto LABEL_88;
-          v72.fields.a = 1.0;
-          v72.fields.r = v44;
-          v72.fields.g = v44;
-          v72.fields.b = v44;
-          UIWidget__set_color((UIWidget_o *)hideUiButton, v72, 0);
-          hideUiButton = this->fields.changeServantFaceButtonLabelRight;
-          if ( !hideUiButton )
-            goto LABEL_88;
-          goto LABEL_75;
+          v38 = photoStandFigures->m_Items[!isChangePos];
+          if ( !v38 )
+            goto LABEL_78;
+          v39 = v38->fields._FaceList_k__BackingField;
+          if ( !v39 )
+            goto LABEL_78;
+          v40 = v39->max_length;
+          exchangePositionButton = this->fields.changeServantFaceButtonRight;
+          v35 = v40 <= 1;
+          v41 = v40 > 1;
+          v42 = v35 ? 0.5 : 1.0;
+          this->fields.isEnableChangeServantFaceButtonRight = v41;
+          if ( !exchangePositionButton )
+            goto LABEL_78;
+          v59.fields.a = 1.0;
+          v59.fields.r = v42;
+          v59.fields.g = v42;
+          v59.fields.b = v42;
+          UIWidget__set_color((UIWidget_o *)exchangePositionButton, v59, 0);
+          exchangePositionButton = this->fields.changeServantFaceButtonLabelRight;
+          if ( !exchangePositionButton )
+            goto LABEL_78;
+LABEL_67:
+          v61.fields.a = 1.0;
+          v61.fields.r = v42;
+          v61.fields.g = v42;
+          v61.fields.b = v42;
+          UIWidget__set_color((UIWidget_o *)exchangePositionButton, v61, 0);
+          break;
         }
       }
-LABEL_89:
-      sub_1C7BD48(hideUiButton);
+LABEL_79:
+      sub_1C93D34(exchangePositionButton);
     case 1:
-      hideUiButton = this->fields.changeServantFaceButton;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 1, 0);
-      hideUiButton = this->fields.changeServantFaceButtonLeft;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      hideUiButton = this->fields.changeServantFaceButtonRight;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      hideUiButton = this->fields.changeServantFaceButton;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      v67.fields.x = this->fields.topButtonPosition.fields.x;
-      v67.fields.z = this->fields.topButtonPosition.fields.z;
-      v67.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-      this->fields.topButtonPosition.fields.y = v67.fields.y;
-      GameObjectExtensions__SetLocalPosition(v45, v67, 0);
-      hideUiButton = PhotoSettingButtonComponent___c_TypeInfo;
-      v46 = (System_Collections_Generic_List_T__o *)this->fields.photoTargetList;
+      exchangePositionButton = this->fields.changeServantFaceButton;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 1, 0);
+      exchangePositionButton = this->fields.changeServantFaceButtonLeft;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+      exchangePositionButton = this->fields.changeServantFaceButtonRight;
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                 (UnityEngine_Component_o *)exchangePositionButton,
+                                 0);
+      if ( !exchangePositionButton )
+        goto LABEL_78;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+      exchangePositionButton = PhotoSettingButtonComponent___c_TypeInfo;
+      v43 = (System_Collections_Generic_List_T__o *)*p_photoTargetList;
       if ( !PhotoSettingButtonComponent___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(PhotoSettingButtonComponent___c_TypeInfo);
-        hideUiButton = PhotoSettingButtonComponent___c_TypeInfo;
+        exchangePositionButton = PhotoSettingButtonComponent___c_TypeInfo;
       }
-      v47 = *(System_Predicate_T__o **)(*((_QWORD *)hideUiButton + 23) + 16LL);
-      if ( !v47 )
+      v44 = *(System_Predicate_T__o **)(*((_QWORD *)exchangePositionButton + 23) + 16LL);
+      if ( !v44 )
       {
-        if ( !*((_DWORD *)hideUiButton + 56) )
+        if ( !*((_DWORD *)exchangePositionButton + 56) )
         {
-          j_il2cpp_runtime_class_init_0(hideUiButton);
-          hideUiButton = PhotoSettingButtonComponent___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(exchangePositionButton);
+          exchangePositionButton = PhotoSettingButtonComponent___c_TypeInfo;
         }
-        v48 = (Il2CppObject *)**((_QWORD **)hideUiButton + 23);
-        v47 = (System_Predicate_T__o *)sub_1C7BD34(System_Predicate_PhotoUtility_TargetType__TypeInfo);
+        v45 = (Il2CppObject *)**((_QWORD **)exchangePositionButton + 23);
+        v44 = (System_Predicate_T__o *)sub_1C93D20(System_Predicate_PhotoUtility_TargetType__TypeInfo);
         System_Predicate_Int32Enum____ctor(
-          v47,
-          v48,
-          Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_1__,
+          v44,
+          v45,
+          Method_PhotoSettingButtonComponent___c__DispSettingButton_b__30_1__,
           0);
-        v49 = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
-        v49->__9__27_1 = (struct System_Predicate_PhotoUtility_TargetType__o *)v47;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v49->__9__27_1, (int32_t)v47, v50, v51, v52, v53, v54, v55);
+        v46 = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
+        v46->__9__30_1 = (struct System_Predicate_PhotoUtility_TargetType__o *)v44;
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v46->__9__30_1, (int32_t)v44, v47, v48, v49, v50, v51, v52);
       }
-      if ( !v46 )
-        goto LABEL_88;
-      hideUiButton = (void *)System_Collections_Generic_List_Int32Enum___FindIndex(
-                               v46,
-                               v47,
-                               (const MethodInfo_3824E38 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
+      if ( !v43 )
+        goto LABEL_78;
+      exchangePositionButton = (void *)System_Collections_Generic_List_Int32Enum___FindIndex(
+                                         v43,
+                                         v44,
+                                         (const MethodInfo_385F9D8 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
       if ( !photoStandFigures )
-        goto LABEL_88;
-      if ( (unsigned int)hideUiButton < LODWORD(photoStandFigures->max_length) )
+        goto LABEL_78;
+      if ( (unsigned int)exchangePositionButton < LODWORD(photoStandFigures->max_length) )
       {
-        v56 = photoStandFigures->m_Items[(int)hideUiButton];
-        if ( !v56 )
-          goto LABEL_88;
-        v57 = v56->fields._FaceList_k__BackingField;
-        if ( !v57 )
-          goto LABEL_88;
-        v58 = v57->max_length;
-        hideUiButton = this->fields.changeServantFaceButton;
-        v37 = v58 <= 1;
-        v59 = v58 > 1;
-        v44 = v37 ? 0.5 : 1.0;
-        this->fields.isEnableChangeServantFaceButton = v59;
-        if ( !hideUiButton )
-          goto LABEL_88;
-        v73.fields.a = 1.0;
-        v73.fields.r = v44;
-        v73.fields.g = v44;
-        v73.fields.b = v44;
-        UIWidget__set_color((UIWidget_o *)hideUiButton, v73, 0);
-        hideUiButton = this->fields.changeServantFaceButtonLabel;
-        if ( !hideUiButton )
-          goto LABEL_88;
-LABEL_75:
-        v74.fields.a = 1.0;
-        v74.fields.r = v44;
-        v74.fields.g = v44;
-        v74.fields.b = v44;
-        UIWidget__set_color((UIWidget_o *)hideUiButton, v74, 0);
-        break;
+        v53 = photoStandFigures->m_Items[(int)exchangePositionButton];
+        if ( !v53 )
+          goto LABEL_78;
+        v54 = v53->fields._FaceList_k__BackingField;
+        if ( !v54 )
+          goto LABEL_78;
+        v55 = v54->max_length;
+        exchangePositionButton = this->fields.changeServantFaceButton;
+        v35 = v55 <= 1;
+        v56 = v55 > 1;
+        v42 = v35 ? 0.5 : 1.0;
+        this->fields.isEnableChangeServantFaceButton = v56;
+        if ( !exchangePositionButton )
+          goto LABEL_78;
+        v60.fields.a = 1.0;
+        v60.fields.r = v42;
+        v60.fields.g = v42;
+        v60.fields.b = v42;
+        UIWidget__set_color((UIWidget_o *)exchangePositionButton, v60, 0);
+        exchangePositionButton = this->fields.changeServantFaceButtonLabel;
+        if ( !exchangePositionButton )
+          goto LABEL_78;
+        goto LABEL_67;
       }
-      goto LABEL_89;
+      goto LABEL_79;
     case 0:
-      hideUiButton = this->fields.changeServantFaceButton;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      hideUiButton = this->fields.changeServantFaceButtonLeft;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      hideUiButton = this->fields.changeServantFaceButtonRight;
-      if ( !hideUiButton )
-        goto LABEL_88;
-      hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      if ( !hideUiButton )
-        goto LABEL_88;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, 0, 0);
-      break;
+      exchangePositionButton = this->fields.changeServantFaceButton;
+      if ( exchangePositionButton )
+      {
+        exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                   (UnityEngine_Component_o *)exchangePositionButton,
+                                   0);
+        if ( exchangePositionButton )
+        {
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+          exchangePositionButton = this->fields.changeServantFaceButtonLeft;
+          if ( exchangePositionButton )
+          {
+            exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                       (UnityEngine_Component_o *)exchangePositionButton,
+                                       0);
+            if ( exchangePositionButton )
+            {
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+              exchangePositionButton = this->fields.changeServantFaceButtonRight;
+              if ( exchangePositionButton )
+              {
+                exchangePositionButton = UnityEngine_Component__get_gameObject(
+                                           (UnityEngine_Component_o *)exchangePositionButton,
+                                           0);
+                if ( exchangePositionButton )
+                {
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, 0, 0);
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+LABEL_78:
+      sub_1C93D2C(exchangePositionButton, v17);
   }
-  hideUiButton = this->fields.changeTargetButton;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  if ( !hideUiButton )
-    goto LABEL_88;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, isOneShot, 0);
-  hideUiButton = this->fields.changeTargetButtonLeft;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  if ( !hideUiButton )
-    goto LABEL_88;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, v18, 0);
-  hideUiButton = this->fields.changeTargetButtonRight;
-  if ( !hideUiButton )
-    goto LABEL_88;
-  hideUiButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  if ( !hideUiButton )
-    goto LABEL_88;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hideUiButton, v18, 0);
-  if ( !isOneShot )
-  {
-    hideUiButton = this->fields.changeTargetButtonRight;
-    if ( hideUiButton )
-    {
-      v60 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-      v68.fields.x = this->fields.topButtonPosition.fields.x;
-      v68.fields.z = this->fields.topButtonPosition.fields.z;
-      v68.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-      this->fields.topButtonPosition.fields.y = v68.fields.y;
-      GameObjectExtensions__SetLocalPosition(v60, v68, 0);
-      hideUiButton = this->fields.changeTargetButtonLeft;
-      if ( hideUiButton )
-        goto LABEL_87;
-    }
-LABEL_88:
-    sub_1C7BD40(hideUiButton, v14);
-  }
-  hideUiButton = this->fields.changeTargetButton;
-  if ( !hideUiButton )
-    goto LABEL_88;
-LABEL_87:
-  v61 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)hideUiButton, 0);
-  v69.fields.x = this->fields.topButtonPosition.fields.x;
-  v69.fields.z = this->fields.topButtonPosition.fields.z;
-  v69.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-  this->fields.topButtonPosition.fields.y = v69.fields.y;
-  GameObjectExtensions__SetLocalPosition(v61, v69, 0);
+  exchangePositionButton = this->fields.changeTargetButton;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  exchangePositionButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)exchangePositionButton, 0);
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, isOneShot, 0);
+  exchangePositionButton = this->fields.changeTargetButtonLeft;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  exchangePositionButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)exchangePositionButton, 0);
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, v19, 0);
+  exchangePositionButton = this->fields.changeTargetButtonRight;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  exchangePositionButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)exchangePositionButton, 0);
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, v19, 0);
+  exchangePositionButton = this->fields.changePhotoFrameSizeButton;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  exchangePositionButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)exchangePositionButton, 0);
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangePositionButton, isOneShot, 0);
+  exchangePositionButton = this->fields.grid;
+  if ( !exchangePositionButton )
+    goto LABEL_78;
+  (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)exchangePositionButton + 440LL))(
+    exchangePositionButton,
+    *(_QWORD *)(*(_QWORD *)exchangePositionButton + 448LL));
 }
 
 
@@ -462,9 +406,10 @@ void PhotoSettingButtonComponent__Init(
   int64_t v6; // x6
   System_String_o *v7; // x7
   struct MyRoomControl_o **p_myRoomControl; // x20
-  UILabel_o *changeTargetButtonLabel; // x21
+  UILabel_o *switchBackgroundButtonLabel; // x21
   System_String_o *myRoomControl; // x0
   __int64 v13; // x1
+  UILabel_o *changeTargetButtonLabel; // x21
   UILabel_o *changeTargetButtonLabelLeft; // x21
   UILabel_o *changeTargetButtonLabelRight; // x21
   UILabel_o *changeServantFaceButtonLabel; // x21
@@ -473,25 +418,28 @@ void PhotoSettingButtonComponent__Init(
   UILabel_o *exchangePositionButtonLabel; // x21
   UILabel_o *changePhotoFrameButtonLabel; // x21
   UILabel_o *hideUiButtonLabel; // x21
+  UILabel_o *changePhotoFrameSizeButtonLabel; // x21
 
-  if ( (byte_4CE9BE7 & 1) == 0 )
+  if ( (byte_4D2BED0 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10399/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/);
-    sub_1C7BAE8(&StringLiteral_17517/*"btn_Polaroid_bg"*/);
-    sub_1C7BAE8(&StringLiteral_10402/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/);
-    sub_1C7BAE8(&StringLiteral_10401/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/);
-    sub_1C7BAE8(&StringLiteral_10396/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/);
-    sub_1C7BAE8(&StringLiteral_10394/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/);
-    sub_1C7BAE8(&StringLiteral_10398/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/);
-    sub_1C7BAE8(&StringLiteral_10397/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/);
-    sub_1C7BAE8(&StringLiteral_10395/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/);
-    sub_1C7BAE8(&StringLiteral_10400/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/);
-    byte_4CE9BE7 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10431/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/);
+    sub_1C93AD4(&StringLiteral_17560/*"btn_Polaroid_bg"*/);
+    sub_1C93AD4(&StringLiteral_10434/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10426/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_SIZE_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10433/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10428/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/);
+    sub_1C93AD4(&StringLiteral_10425/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10430/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10429/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/);
+    sub_1C93AD4(&StringLiteral_10427/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10432/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/);
+    sub_1C93AD4(&StringLiteral_10435/*"PHOTO_SETTING_SWITCH_CAMERA_BG_BUTTON"*/);
+    byte_4D2BED0 = 1;
   }
   this->fields.myRoomControl = myRoom;
   p_myRoomControl = &this->fields.myRoomControl;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.myRoomControl,
     (int32_t)myRoom,
     (int32_t)method,
@@ -500,141 +448,152 @@ void PhotoSettingButtonComponent__Init(
     v5,
     v6,
     v7);
-  changeTargetButtonLabel = this->fields.changeTargetButtonLabel;
+  switchBackgroundButtonLabel = this->fields.switchBackgroundButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10398/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10435/*"PHOTO_SETTING_SWITCH_CAMERA_BG_BUTTON"*/, 0);
+  if ( !switchBackgroundButtonLabel )
+    goto LABEL_29;
+  UILabel__set_text(switchBackgroundButtonLabel, myRoomControl, 0);
+  changeTargetButtonLabel = this->fields.changeTargetButtonLabel;
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10430/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, 0);
   if ( !changeTargetButtonLabel )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeTargetButtonLabel, myRoomControl, 0);
   changeTargetButtonLabelLeft = this->fields.changeTargetButtonLabelLeft;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10399/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10431/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, 0);
   if ( !changeTargetButtonLabelLeft )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeTargetButtonLabelLeft, myRoomControl, 0);
   changeTargetButtonLabelRight = this->fields.changeTargetButtonLabelRight;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10400/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10432/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, 0);
   if ( !changeTargetButtonLabelRight )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeTargetButtonLabelRight, myRoomControl, 0);
   changeServantFaceButtonLabel = this->fields.changeServantFaceButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10395/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10427/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, 0);
   if ( !changeServantFaceButtonLabel )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeServantFaceButtonLabel, myRoomControl, 0);
   changeServantFaceButtonLabelLeft = this->fields.changeServantFaceButtonLabelLeft;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10396/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10428/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, 0);
   if ( !changeServantFaceButtonLabelLeft )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeServantFaceButtonLabelLeft, myRoomControl, 0);
   changeServantFaceButtonLabelRight = this->fields.changeServantFaceButtonLabelRight;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10397/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10429/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, 0);
   if ( !changeServantFaceButtonLabelRight )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changeServantFaceButtonLabelRight, myRoomControl, 0);
   exchangePositionButtonLabel = this->fields.exchangePositionButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10401/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10433/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, 0);
   if ( !exchangePositionButtonLabel )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(exchangePositionButtonLabel, myRoomControl, 0);
   changePhotoFrameButtonLabel = this->fields.changePhotoFrameButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10394/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10425/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, 0);
   if ( !changePhotoFrameButtonLabel )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(changePhotoFrameButtonLabel, myRoomControl, 0);
   hideUiButtonLabel = this->fields.hideUiButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10402/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, 0);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10434/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, 0);
   if ( !hideUiButtonLabel )
-    goto LABEL_25;
+    goto LABEL_29;
   UILabel__set_text(hideUiButtonLabel, myRoomControl, 0);
+  changePhotoFrameSizeButtonLabel = this->fields.changePhotoFrameSizeButtonLabel;
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10426/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_SIZE_BUTTON"*/, 0);
+  if ( !changePhotoFrameSizeButtonLabel )
+    goto LABEL_29;
+  UILabel__set_text(changePhotoFrameSizeButtonLabel, myRoomControl, 0);
   myRoomControl = (System_String_o *)*p_myRoomControl;
   if ( !*p_myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
+  MyRoomControl__SetPhotoCampaignSprite(
+    (MyRoomControl_o *)myRoomControl,
+    this->fields.switchBackgroundButton,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
+    0);
+  myRoomControl = (System_String_o *)this->fields.myRoomControl;
+  if ( !myRoomControl )
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButton,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButtonLeft,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButtonRight,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButton,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButtonLeft,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
-    goto LABEL_25;
+    goto LABEL_29;
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButtonRight,
-    (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
+    0);
+  myRoomControl = (System_String_o *)this->fields.myRoomControl;
+  if ( !myRoomControl )
+    goto LABEL_29;
+  MyRoomControl__SetPhotoCampaignSprite(
+    (MyRoomControl_o *)myRoomControl,
+    this->fields.changePhotoFrameButton,
+    (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
     0);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetPhotoCampaignSprite(
           (MyRoomControl_o *)myRoomControl,
-          this->fields.changePhotoFrameButton,
-          (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
-          0),
-        (myRoomControl = (System_String_o *)this->fields.myRoomControl) == 0)
-    || (MyRoomControl__SetPhotoCampaignSprite(
-          (MyRoomControl_o *)myRoomControl,
           this->fields.exchangePositionButton,
-          (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+          (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
           0),
         (myRoomControl = (System_String_o *)this->fields.myRoomControl) == 0)
     || (MyRoomControl__SetPhotoCampaignSprite(
           (MyRoomControl_o *)myRoomControl,
           this->fields.hideUiButton,
-          (System_String_o *)StringLiteral_17517/*"btn_Polaroid_bg"*/,
+          (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
+          0),
+        (myRoomControl = (System_String_o *)this->fields.myRoomControl) == 0)
+    || (MyRoomControl__SetPhotoCampaignSprite(
+          (MyRoomControl_o *)myRoomControl,
+          this->fields.changePhotoFrameSizeButton,
+          (System_String_o *)StringLiteral_17560/*"btn_Polaroid_bg"*/,
           0),
         (myRoomControl = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-LABEL_25:
-    sub_1C7BD40(myRoomControl, v13);
+LABEL_29:
+    sub_1C93D2C(myRoomControl, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)myRoomControl, 0, 0);
-}
-
-
-void PhotoSettingButtonComponent__MoveSettingButtonDisplay(
-        PhotoSettingButtonComponent_o *this,
-        UnityEngine_GameObject_o *button,
-        const MethodInfo *method)
-{
-  UnityEngine_Vector3_o v3; // 0:s0.4,4:s1.4,8:s2.4
-
-  v3.fields.x = this->fields.topButtonPosition.fields.x;
-  v3.fields.z = this->fields.topButtonPosition.fields.z;
-  v3.fields.y = this->fields.topButtonPosition.fields.y + this->fields.moveButtonPositionY;
-  this->fields.topButtonPosition.fields.y = v3.fields.y;
-  GameObjectExtensions__SetLocalPosition(button, v3, 0);
 }
 
 
@@ -647,20 +606,46 @@ void PhotoSettingButtonComponent__OnClickChangePhotoFrameButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BF0 & 1) == 0 )
+  if ( (byte_4D2BEDB & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
-    byte_4CE9BF0 = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
+    byte_4D2BEDB = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   MyRoomControl__OpenPhotoFrameSelectDialog(myRoomControl, 0, 0, 0);
+}
+
+
+void PhotoSettingButtonComponent__OnClickChangePhotoFrameSizeButton(
+        PhotoSettingButtonComponent_o *this,
+        const MethodInfo *method)
+{
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
+  MyRoomControl_o *myRoomControl; // x0
+
+  if ( (byte_4D2BEDD & 1) == 0 )
+  {
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameSizeButton__);
+    byte_4D2BEDD = 1;
+  }
+  v3 = Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameSizeButton__;
+  if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameSizeButton__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameSizeButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+  myRoomControl = this->fields.myRoomControl;
+  if ( !myRoomControl )
+    sub_1C93D2C(0, v5);
+  MyRoomControl__ChangeFrameSizeType(myRoomControl, 0);
 }
 
 
@@ -675,7 +660,7 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
   PhotoSettingButtonComponent___c_c *Index; // x0
   MyRoomControl_o *myRoomControl; // x19
   System_Collections_Generic_List_T__o *photoTargetList; // x20
-  System_Predicate_T__o *_9__32_0; // x21
+  System_Predicate_T__o *_9__36_0; // x21
   Il2CppObject *v11; // x22
   struct PhotoSettingButtonComponent___c_StaticFields *static_fields; // x0
   int32_t v13; // w2
@@ -685,20 +670,20 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
   int64_t v17; // x6
   System_String_o *v18; // x7
 
-  if ( (byte_4CE9BEC & 1) == 0 )
+  if ( (byte_4D2BED7 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
-    sub_1C7BAE8(&System_Predicate_PhotoUtility_TargetType__TypeInfo);
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__32_0__);
-    sub_1C7BAE8(&PhotoSettingButtonComponent___c_TypeInfo);
-    byte_4CE9BEC = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
+    sub_1C93AD4(&System_Predicate_PhotoUtility_TargetType__TypeInfo);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__36_0__);
+    sub_1C93AD4(&PhotoSettingButtonComponent___c_TypeInfo);
+    byte_4D2BED7 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__;
   isEnableChangeServantFaceButton = this->fields.isEnableChangeServantFaceButton;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   if ( isEnableChangeServantFaceButton )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
@@ -710,8 +695,8 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
       j_il2cpp_runtime_class_init_0(PhotoSettingButtonComponent___c_TypeInfo);
       Index = PhotoSettingButtonComponent___c_TypeInfo;
     }
-    _9__32_0 = (System_Predicate_T__o *)Index->static_fields->__9__32_0;
-    if ( !_9__32_0 )
+    _9__36_0 = (System_Predicate_T__o *)Index->static_fields->__9__36_0;
+    if ( !_9__36_0 )
     {
       if ( !Index->_2.cctor_finished )
       {
@@ -719,17 +704,17 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
         Index = PhotoSettingButtonComponent___c_TypeInfo;
       }
       v11 = (Il2CppObject *)Index->static_fields->__9;
-      _9__32_0 = (System_Predicate_T__o *)sub_1C7BD34(System_Predicate_PhotoUtility_TargetType__TypeInfo);
+      _9__36_0 = (System_Predicate_T__o *)sub_1C93D20(System_Predicate_PhotoUtility_TargetType__TypeInfo);
       System_Predicate_Int32Enum____ctor(
-        _9__32_0,
+        _9__36_0,
         v11,
-        Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__32_0__,
+        Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__36_0__,
         0);
       static_fields = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
-      static_fields->__9__32_0 = (struct System_Predicate_PhotoUtility_TargetType__o *)_9__32_0;
-      sub_1C7BA8C(
-        (GrandQuestFolderBoardItem_o *)&static_fields->__9__32_0,
-        (int32_t)_9__32_0,
+      static_fields->__9__36_0 = (struct System_Predicate_PhotoUtility_TargetType__o *)_9__36_0;
+      sub_1C93A78(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__36_0,
+        (int32_t)_9__36_0,
         v13,
         v14,
         v15,
@@ -740,11 +725,11 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
     if ( !photoTargetList
       || (Index = (PhotoSettingButtonComponent___c_c *)System_Collections_Generic_List_Int32Enum___FindIndex(
                                                          photoTargetList,
-                                                         _9__32_0,
-                                                         (const MethodInfo_3824E38 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__),
+                                                         _9__36_0,
+                                                         (const MethodInfo_385F9D8 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__),
           !myRoomControl) )
     {
-      sub_1C7BD40(Index, v6);
+      sub_1C93D2C(Index, v6);
     }
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, (int32_t)Index, 0);
   }
@@ -765,22 +750,22 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButtonLeft(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BED & 1) == 0 )
+  if ( (byte_4D2BED8 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
-    byte_4CE9BED = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
+    byte_4D2BED8 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__;
   isEnableChangeServantFaceButtonLeft = this->fields.isEnableChangeServantFaceButtonLeft;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   if ( isEnableChangeServantFaceButtonLeft )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     myRoomControl = this->fields.myRoomControl;
     if ( !myRoomControl )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, this->fields.isChangePosition, 0);
   }
   else
@@ -800,22 +785,22 @@ void PhotoSettingButtonComponent__OnClickChangeServantFaceButtonRight(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BEE & 1) == 0 )
+  if ( (byte_4D2BED9 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
-    byte_4CE9BEE = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
+    byte_4D2BED9 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__;
   isEnableChangeServantFaceButtonRight = this->fields.isEnableChangeServantFaceButtonRight;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   if ( isEnableChangeServantFaceButtonRight )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     myRoomControl = this->fields.myRoomControl;
     if ( !myRoomControl )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, !this->fields.isChangePosition, 0);
   }
   else
@@ -834,24 +819,24 @@ void PhotoSettingButtonComponent__OnClickChangeTargetButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BE9 & 1) == 0 )
+  if ( (byte_4D2BED4 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
-    sub_1C7BAE8(&StringLiteral_10034/*"OpenTargetSelectDialogOnPhotoMode"*/);
-    byte_4CE9BE9 = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
+    sub_1C93AD4(&StringLiteral_10064/*"OpenTargetSelectDialogOnPhotoMode"*/);
+    byte_4D2BED4 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0), (myRoomControl = this->fields.myRoomControl) == 0) )
   {
-    sub_1C7BD40(myRoomControl, v5);
+    sub_1C93D2C(myRoomControl, v5);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10034/*"OpenTargetSelectDialogOnPhotoMode"*/, 1, 0);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10064/*"OpenTargetSelectDialogOnPhotoMode"*/, 1, 0);
 }
 
 
@@ -864,24 +849,24 @@ void PhotoSettingButtonComponent__OnClickChangeTargetButtonLeft(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BEA & 1) == 0 )
+  if ( (byte_4D2BED5 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
-    sub_1C7BAE8(&StringLiteral_10033/*"OpenTargetSelectDialogLeftOnPhotoMode"*/);
-    byte_4CE9BEA = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
+    sub_1C93AD4(&StringLiteral_10063/*"OpenTargetSelectDialogLeftOnPhotoMode"*/);
+    byte_4D2BED5 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0), (myRoomControl = this->fields.myRoomControl) == 0) )
   {
-    sub_1C7BD40(myRoomControl, v5);
+    sub_1C93D2C(myRoomControl, v5);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10033/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, 1, 0);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10063/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, 1, 0);
 }
 
 
@@ -894,24 +879,24 @@ void PhotoSettingButtonComponent__OnClickChangeTargetButtonRight(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BEB & 1) == 0 )
+  if ( (byte_4D2BED6 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
-    sub_1C7BAE8(&StringLiteral_10035/*"OpenTargetSelectDialogRightOnPhotoMode"*/);
-    byte_4CE9BEB = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
+    sub_1C93AD4(&StringLiteral_10065/*"OpenTargetSelectDialogRightOnPhotoMode"*/);
+    byte_4D2BED6 = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0), (myRoomControl = this->fields.myRoomControl) == 0) )
   {
-    sub_1C7BD40(myRoomControl, v5);
+    sub_1C93D2C(myRoomControl, v5);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10035/*"OpenTargetSelectDialogRightOnPhotoMode"*/, 1, 0);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_10065/*"OpenTargetSelectDialogRightOnPhotoMode"*/, 1, 0);
 }
 
 
@@ -924,19 +909,19 @@ void PhotoSettingButtonComponent__OnClickExchangePositionButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BEF & 1) == 0 )
+  if ( (byte_4D2BEDA & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
-    byte_4CE9BEF = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
+    byte_4D2BEDA = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   MyRoomControl__ExchangePosition(myRoomControl, 0);
 }
 
@@ -948,20 +933,108 @@ void PhotoSettingButtonComponent__OnClickHideUIButton(PhotoSettingButtonComponen
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_4CE9BF1 & 1) == 0 )
+  if ( (byte_4D2BEDC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
-    byte_4CE9BF1 = 1;
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
+    byte_4D2BEDC = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickHideUIButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickHideUIButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   MyRoomControl__HidePhotoUi(myRoomControl, 0);
+}
+
+
+void PhotoSettingButtonComponent__OnClickSwitchBackgroundButton(
+        PhotoSettingButtonComponent_o *this,
+        const MethodInfo *method)
+{
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
+  MyRoomControl_o *myRoomControl; // x0
+  MyRoomControl_o *v7; // x20
+  System_Action_bool__o *v8; // x21
+
+  if ( (byte_4D2BED3 & 1) == 0 )
+  {
+    sub_1C93AD4(&System_Action_bool__TypeInfo);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent_OnClickSwitchBackgroundButton__);
+    sub_1C93AD4(&Method_PhotoSettingButtonComponent__OnClickSwitchBackgroundButton_b__32_0__);
+    byte_4D2BED3 = 1;
+  }
+  v3 = Method_PhotoSettingButtonComponent_OnClickSwitchBackgroundButton__;
+  if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickSwitchBackgroundButton__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C93AEC(Method_PhotoSettingButtonComponent_OnClickSwitchBackgroundButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+  myRoomControl = this->fields.myRoomControl;
+  if ( !myRoomControl
+    || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0),
+        v7 = this->fields.myRoomControl,
+        v8 = (System_Action_bool__o *)sub_1C93D20(System_Action_bool__TypeInfo),
+        System_Action_bool____ctor(
+          v8,
+          (Il2CppObject *)this,
+          Method_PhotoSettingButtonComponent__OnClickSwitchBackgroundButton_b__32_0__,
+          0),
+        !v7) )
+  {
+    sub_1C93D2C(myRoomControl, v5);
+  }
+  MyRoomControl__SwitchPhotoBackground(v7, v8, 0);
+}
+
+
+void PhotoSettingButtonComponent__SetSwitchBackgroundButtonLabel(
+        PhotoSettingButtonComponent_o *this,
+        bool isSwitchCameraTexture,
+        const MethodInfo *method)
+{
+  UILabel_o *switchBackgroundButtonLabel; // x20
+  System_String_o **v6; // x8
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+
+  if ( (byte_4D2BED2 & 1) == 0 )
+  {
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10436/*"PHOTO_SETTING_SWITCH_MYROOM_BG_BUTTON"*/);
+    sub_1C93AD4(&StringLiteral_10435/*"PHOTO_SETTING_SWITCH_CAMERA_BG_BUTTON"*/);
+    byte_4D2BED2 = 1;
+  }
+  switchBackgroundButtonLabel = this->fields.switchBackgroundButtonLabel;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( isSwitchCameraTexture )
+    v6 = (System_String_o **)&StringLiteral_10436/*"PHOTO_SETTING_SWITCH_MYROOM_BG_BUTTON"*/;
+  else
+    v6 = (System_String_o **)&StringLiteral_10435/*"PHOTO_SETTING_SWITCH_CAMERA_BG_BUTTON"*/;
+  v7 = LocalizationManager__Get(*v6, 0);
+  if ( !switchBackgroundButtonLabel )
+    sub_1C93D2C(v7, v8);
+  UILabel__set_text(switchBackgroundButtonLabel, v7, 0);
+}
+
+
+void PhotoSettingButtonComponent___OnClickSwitchBackgroundButton_b__32_0(
+        PhotoSettingButtonComponent_o *this,
+        bool isSwitchCameraTexture,
+        const MethodInfo *method)
+{
+  MyRoomControl_o *myRoomControl; // x0
+  const MethodInfo *v6; // x2
+
+  myRoomControl = this->fields.myRoomControl;
+  if ( !myRoomControl )
+    sub_1C93D2C(0, isSwitchCameraTexture);
+  MyRoomControl__SetMaskCollider(myRoomControl, 0, 0);
+  PhotoSettingButtonComponent__SetSwitchBackgroundButtonLabel(this, isSwitchCameraTexture, v6);
 }
 
 
@@ -975,15 +1048,15 @@ void PhotoSettingButtonComponent___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CE9BF2 & 1) == 0 )
+  if ( (byte_4D2BEDE & 1) == 0 )
   {
-    sub_1C7BAE8(&PhotoSettingButtonComponent___c_TypeInfo);
-    byte_4CE9BF2 = 1;
+    sub_1C93AD4(&PhotoSettingButtonComponent___c_TypeInfo);
+    byte_4D2BEDE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(PhotoSettingButtonComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(PhotoSettingButtonComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PhotoSettingButtonComponent___c_TypeInfo->static_fields->__9 = (struct PhotoSettingButtonComponent___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)PhotoSettingButtonComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1001,7 +1074,7 @@ void PhotoSettingButtonComponent___c___ctor(PhotoSettingButtonComponent___c_o *t
 }
 
 
-bool PhotoSettingButtonComponent___c___DispSettingButton_b__27_0(
+bool PhotoSettingButtonComponent___c___DispSettingButton_b__30_0(
         PhotoSettingButtonComponent___c_o *this,
         int32_t x,
         const MethodInfo *method)
@@ -1010,7 +1083,7 @@ bool PhotoSettingButtonComponent___c___DispSettingButton_b__27_0(
 }
 
 
-bool PhotoSettingButtonComponent___c___DispSettingButton_b__27_1(
+bool PhotoSettingButtonComponent___c___DispSettingButton_b__30_1(
         PhotoSettingButtonComponent___c_o *this,
         int32_t x,
         const MethodInfo *method)
@@ -1019,7 +1092,7 @@ bool PhotoSettingButtonComponent___c___DispSettingButton_b__27_1(
 }
 
 
-bool PhotoSettingButtonComponent___c___OnClickChangeServantFaceButton_b__32_0(
+bool PhotoSettingButtonComponent___c___OnClickChangeServantFaceButton_b__36_0(
         PhotoSettingButtonComponent___c_o *this,
         int32_t x,
         const MethodInfo *method)

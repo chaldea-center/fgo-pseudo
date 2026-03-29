@@ -71,7 +71,7 @@ void BlankEarthShortcutUIButton__SetPressAction(
   System_String_o *v7; // x7
 
   this->fields.onPressedAction = pressAction;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.onPressedAction,
     (int32_t)pressAction,
     (int32_t)method,

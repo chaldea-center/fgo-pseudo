@@ -23,7 +23,7 @@ void BattleCharaChangeConfirmListViewItem___ctor(
   this->fields._SvtId_k__BackingField = svtId;
   this->fields._LimitCount_k__BackingField = limitCount;
   this->fields._NowData_k__BackingField = nowData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._NowData_k__BackingField,
     (int32_t)nowData,
     v11,
@@ -33,7 +33,7 @@ void BattleCharaChangeConfirmListViewItem___ctor(
     v15,
     v16);
   this->fields._NextData_k__BackingField = nextData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._NextData_k__BackingField,
     (int32_t)nextData,
     v17,
@@ -114,7 +114,7 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._DispLimitCount_k__BackingField = dispLimitCount;
   this->fields._TreasureDeviceInfo_k__BackingField = tdInfo;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField,
     (int32_t)tdInfo,
     v13,
@@ -124,7 +124,7 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v17,
     v18);
   this->fields._SkillInfoArray_k__BackingField = skillInfoArray;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._SkillInfoArray_k__BackingField,
     (int32_t)skillInfoArray,
     v19,
@@ -134,7 +134,7 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v23,
     v24);
   this->fields._Status_k__BackingField = status;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Status_k__BackingField,
     (int32_t)status,
     v25,
@@ -144,7 +144,7 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v29,
     v30);
   this->fields._ClassPassiveSkillArray_k__BackingField = classSkillArray;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClassPassiveSkillArray_k__BackingField,
     (int32_t)classSkillArray,
     v31,

@@ -5,51 +5,29 @@ void LookAtTarget___ctor(LookAtTarget_o *this, const MethodInfo *method)
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *target; // x20
   __int64 v4; // x1
   UnityEngine_Transform_o *mTrans; // x0
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  float v9; // s11
-  float v10; // s12
-  float v11; // s13
-  float v12; // s11
-  float v13; // s9
-  UnityEngine_Transform_o *v14; // x20
-  float v15; // s9
-  float v16; // s10
-  float w; // s11
+  UnityEngine_Transform_o *v6; // x20
   float speed; // s8
-  float v19; // s12
-  float v20; // s13
-  float v21; // s14
-  float v22; // s15
-  float v23; // s0
-  float v24; // s4 OVERLAPPED
-  float v25; // s1
-  bool v26; // nf
-  float v27; // s0
-  float v28; // s5
-  float v29; // s6
-  float v30; // s7
-  float v31; // [xsp+0h] [xbp-70h]
-  float b; // [xsp+Ch] [xbp-64h]
-  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s0
+  float v9; // s1
+  bool v10; // nf
+  float v11; // s0
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o v13; // 0:kr14_12.12
+  UnityEngine_Quaternion_o v14; // 0:kr20_16.16
+  UnityEngine_Quaternion_o rotation; // 0:kr30_16.16
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v18; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CEFDCD & 1) == 0 )
+  if ( (byte_4D32152 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFDCD = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D32152 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -63,62 +41,44 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
     mTrans = this->fields.mTrans;
     if ( !mTrans )
       goto LABEL_18;
-    x = position.fields.x;
-    y = position.fields.y;
-    z = position.fields.z;
-    v34 = UnityEngine_Transform__get_position(mTrans, 0);
-    v9 = v34.fields.x;
-    v10 = v34.fields.y;
-    v11 = v34.fields.z;
-    if ( !byte_4CE7E5B )
+    v13 = UnityEngine_Transform__get_position(mTrans, 0);
+    if ( !byte_4D2A13B )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE7E5B = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A13B = 1;
     }
-    v12 = x - v9;
-    v13 = y - v10;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    if ( sqrtf((float)((float)(z - v11) * (float)(z - v11)) + (float)((float)(v12 * v12) + (float)(v13 * v13))) > 0.001 )
+    if ( sqrtf(
+           (float)((float)(position.fields.z - v13.fields.z) * (float)(position.fields.z - v13.fields.z))
+         + (float)((float)((float)(position.fields.x - v13.fields.x) * (float)(position.fields.x - v13.fields.x))
+                 + (float)((float)(position.fields.y - v13.fields.y) * (float)(position.fields.y - v13.fields.y)))) > 0.001 )
     {
-      v35.fields.x = v12;
-      v35.fields.y = v13;
-      v35.fields.z = z - v11;
-      v36 = UnityEngine_Quaternion__LookRotation_71808428(v35, 0);
-      v14 = this->fields.mTrans;
-      b = v36.fields.x;
-      if ( v14 )
+      v16.fields.x = position.fields.x - v13.fields.x;
+      v16.fields.y = position.fields.y - v13.fields.y;
+      v16.fields.z = position.fields.z - v13.fields.z;
+      v14 = UnityEngine_Quaternion__LookRotation_72058188(v16, 0);
+      v6 = this->fields.mTrans;
+      if ( v6 )
       {
-        v15 = v36.fields.y;
-        v16 = v36.fields.z;
-        w = v36.fields.w;
-        rotation = UnityEngine_Transform__get_rotation(v14, 0);
+        rotation = UnityEngine_Transform__get_rotation(v6, 0);
         speed = this->fields.speed;
-        v19 = rotation.fields.x;
-        v20 = rotation.fields.y;
-        v21 = rotation.fields.z;
-        v22 = rotation.fields.w;
-        v23 = speed * UnityEngine_Time__get_deltaTime(0);
-        v24 = b;
-        v25 = fminf(v23, 1.0);
-        v26 = v23 < 0.0;
-        v27 = 0.0;
-        if ( !v26 )
-          v27 = v25;
-        v31 = v27;
-        v38.fields.x = v19;
-        v38.fields.y = v20;
-        v38.fields.z = v21;
-        v38.fields.w = v22;
-        v28 = v15;
-        v29 = v16;
-        v30 = w;
-        v39 = UnityEngine_Quaternion__Slerp(v38, *(UnityEngine_Quaternion_o *)&v24, v31, 0);
-        UnityEngine_Transform__set_rotation(v14, v39, 0);
+        v8 = speed * UnityEngine_Time__get_deltaTime(0);
+        v18.fields.x = v14.fields.x;
+        v9 = fminf(v8, 1.0);
+        v10 = v8 < 0.0;
+        v11 = 0.0;
+        if ( !v10 )
+          v11 = v9;
+        v18.fields.y = v14.fields.y;
+        v18.fields.z = v14.fields.z;
+        v18.fields.w = v14.fields.w;
+        v17 = UnityEngine_Quaternion__Slerp(rotation, v18, v11, 0);
+        UnityEngine_Transform__set_rotation(v6, v17, 0);
         return;
       }
 LABEL_18:
-      sub_1C7BD40(mTrans, v4);
+      sub_1C93D2C(mTrans, v4);
     }
   }
 }
@@ -136,5 +96,5 @@ void LookAtTarget__Start(LookAtTarget_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }

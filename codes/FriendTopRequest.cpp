@@ -2,16 +2,16 @@ System_String_o *FriendTopRequest__getURL(FriendTopRequest_o *this, const Method
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF01A1 & 1) == 0 )
+  if ( (byte_4D32531 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19833/*"friend/top"*/);
-    byte_4CF01A1 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19887/*"friend/top"*/);
+    byte_4D32531 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19833/*"friend/top"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19887/*"friend/top"*/, 0);
 }
 
 
@@ -25,12 +25,12 @@ void FriendTopRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4CF01A2 & 1) == 0 )
+  if ( (byte_4D32532 & 1) == 0 )
   {
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22590/*"ok"*/);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF01A2 = 1;
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D32532 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -40,14 +40,14 @@ void FriendTopRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22590/*"ok"*/;
+    v8 = &StringLiteral_22655/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22419/*"ng"*/;
+    v8 = &StringLiteral_22483/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

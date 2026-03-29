@@ -2,10 +2,10 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog___ctor(
         EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CE87F1 & 1) == 0 )
+  if ( (byte_4D2AAC5 & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CE87F1 = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2AAC5 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,21 +21,21 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Init(
   __int64 v4; // x1
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4CE87EC & 1) == 0 )
+  if ( (byte_4D2AAC0 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4CE87EC = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4D2AAC0 = 1;
   }
   this->fields.closeCallback = 0;
-  sub_1C7BA8C(&this->fields.closeCallback, 0);
+  sub_1C93A78(&this->fields.closeCallback, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_1C7BD40(transform, v4);
+    sub_1C93D2C(transform, v4);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_1C7BA8C(&this->fields.basePanel, Component_object);
+  sub_1C93A78(&this->fields.basePanel, Component_object);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -48,21 +48,21 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__OnClickCloseButton
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CE87EF & 1) == 0 )
+  if ( (byte_4D2AAC3 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__);
-    sub_1C7BAE8(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__OnClickCloseButton_b__20_0__);
-    byte_4CE87EF = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__);
+    sub_1C93AD4(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__OnClickCloseButton_b__20_0__);
+    byte_4D2AAC3 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -92,21 +92,21 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Open(
   struct UIScrollView_o *v19; // x8
   float oneDisplayScrollBarValue; // s0
 
-  if ( (byte_4CE87ED & 1) == 0 )
+  if ( (byte_4D2AAC1 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE87ED = 1;
+    sub_1C93AD4(&Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2AAC1 = 1;
   }
   EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Init(this, (const MethodInfo *)msg);
   if ( !System_String__IsNullOrEmpty(this->fields.playSeName, 0) )
   {
     v11 = Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1C7BB00(Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v11, v11[4]);
+      v11 = (_QWORD *)sub_1C93AEC(Method_EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_Open__);
+    v12 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v11, v11[4]);
     OverwriteAssetSoundName__PlaySe(v12, this->fields.playSeName, 0, 0);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -114,7 +114,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Open(
     goto LABEL_24;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.closeCallback = closeCallback;
-  sub_1C7BA8C(&this->fields.closeCallback, closeCallback);
+  sub_1C93A78(&this->fields.closeCallback, closeCallback);
   gameObject = (UnityEngine_GameObject_o *)this->fields.msgLabel;
   if ( !gameObject )
     goto LABEL_24;
@@ -151,7 +151,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Open(
         }
       }
 LABEL_24:
-      sub_1C7BD40(gameObject, v14);
+      sub_1C93D2C(gameObject, v14);
     }
   }
 LABEL_23:
@@ -196,26 +196,26 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Setup(
   System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+40h] [xbp-80h] BYREF
 
   v6 = this;
-  if ( (byte_4CE87EE & 1) == 0 )
+  if ( (byte_4D2AAC2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
-    sub_1C7BAE8(&EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
-    sub_1C7BAE8(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    this = (EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
-    byte_4CE87EE = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
+    sub_1C93AD4(&EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
+    sub_1C93AD4(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    this = (EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
+    byte_4D2AAC2 = 1;
   }
   memset(&v34, 0, sizeof(v34));
   memset(&v33, 0, sizeof(v33));
   if ( !eventEquipSkillPartsEntityList || !assistList || !v6 )
-    sub_1C7BD40(this, eventEquipSkillPartsEntityList);
+    sub_1C93D2C(this, eventEquipSkillPartsEntityList);
   v7 = 196;
   if ( eventEquipSkillPartsEntityList->fields._size + assistList->fields._size != 1 )
     v7 = 192;
@@ -231,28 +231,28 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Setup(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v32,
       (System_Collections_Generic_List_object__o *)eventEquipSkillPartsEntityList,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
     v34 = v32;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v34,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
     {
       current = (EventEquipSkillPartsEntity_o *)v34.fields._current;
       v9 = GameObjectHelper__Instantiate_object_(
              v6->fields.prefab,
              v6->fields.equipSkillParent,
              0,
-             (const MethodInfo_31C8CEC *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
+             (const MethodInfo_31FDCA8 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
       BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v9, 1, 0);
       if ( !current )
-        sub_1C7BD40(v10, v11);
+        sub_1C93D2C(v10, v11);
       skillId = current->fields.skillId;
       SkillName = EventEquipSkillPartsEntity__GetSkillName(current, 0);
       SkillDetail = EventEquipSkillPartsEntity__GetSkillDetail(current, 0, 0);
-      v15 = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_o *)sub_1C7BD34(EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
+      v15 = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_o *)sub_1C93D20(EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
       EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem___ctor(v15, skillId, SkillName, SkillDetail, v16);
       if ( !v9 )
-        sub_1C7BD40(v17, v18);
+        sub_1C93D2C(v17, v18);
       EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw__UpdateUi(
         (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw_o *)v9,
         v15,
@@ -262,7 +262,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Setup(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v34,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)assistList, 0) )
   {
@@ -277,28 +277,28 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Setup(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v32,
       (System_Collections_Generic_List_object__o *)assistList,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
     v33 = v32;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v33,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
     {
       v20 = (AssistEntity_o *)v33.fields._current;
       v21 = GameObjectHelper__Instantiate_object_(
               v6->fields.prefab,
               v6->fields.assistSkillParent,
               0,
-              (const MethodInfo_31C8CEC *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
+              (const MethodInfo_31FDCA8 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw___);
       BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v21, 1, 0);
       if ( !v20 )
-        sub_1C7BD40(v22, v23);
+        sub_1C93D2C(v22, v23);
       v24 = v20->fields.skillId;
       name = v20->fields.name;
       Detail = AssistEntity__GetDetail(v20, 0, 0);
-      v27 = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_o *)sub_1C7BD34(EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
+      v27 = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_o *)sub_1C93D20(EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem_TypeInfo);
       EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem___ctor(v27, v24, name, Detail, v28);
       if ( !v21 )
-        sub_1C7BD40(v29, v30);
+        sub_1C93D2C(v29, v30);
       EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw__UpdateUi(
         (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw_o *)v21,
         v27,
@@ -308,7 +308,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog__Setup(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v33,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
   }
 }
 
@@ -319,18 +319,18 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionDialog___OnClickCloseButto
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4CE87F2 & 1) == 0 )
+  if ( (byte_4D2AAC6 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE87F2 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2AAC6 = 1;
   }
   ActionExtensions__Call(this->fields.closeCallback, 0);
   this->fields.closeCallback = 0;
-  sub_1C7BA8C(&this->fields.closeCallback, 0);
+  sub_1C93A78(&this->fields.closeCallback, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71870148(gameObject, 0);
+  UnityEngine_Object__Destroy_72119908(gameObject, 0);
 }
 
 
@@ -342,10 +342,10 @@ UnityEngine_GameObject_o *EventEquipSkillPartsRenoQuestReleaseAndCompletionDialo
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4CE87F0 & 1) == 0 )
+  if ( (byte_4D2AAC4 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE87F0 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2AAC4 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -354,6 +354,6 @@ UnityEngine_GameObject_o *EventEquipSkillPartsRenoQuestReleaseAndCompletionDialo
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

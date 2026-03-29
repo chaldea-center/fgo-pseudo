@@ -35,10 +35,10 @@ void EventSaveData__SetValueByArray(
   uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v14 = separator;
-  if ( (byte_4CEB8AF & 1) == 0 )
+  if ( (byte_4D2DC37 & 1) == 0 )
   {
-    sub_1C7BAE8(&char_TypeInfo);
-    byte_4CEB8AF = 1;
+    sub_1C93AD4(&char_TypeInfo);
+    byte_4D2DC37 = 1;
   }
   if ( valueArray )
   {
@@ -47,6 +47,6 @@ void EventSaveData__SetValueByArray(
     v6 = System_Char__ToString((uint16_t)&v14, 0);
     v7 = System_String__Join(v6, valueArray, 0);
     this->fields.value = v7;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

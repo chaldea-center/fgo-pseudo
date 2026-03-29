@@ -12,7 +12,7 @@ void ShopNoticeRemainTime___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)monoBehaviour, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)monoBehaviour, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -23,17 +23,17 @@ bool ShopNoticeRemainTime__CheckTimeUp(ShopNoticeRemainTime_o *this, const Metho
   int32_t size; // w24
   int64_t Item; // x21
 
-  if ( (byte_4CEA885 & 1) == 0 )
+  if ( (byte_4D2CB74 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEA885 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D2CB74 = 1;
   }
   mostRecentTimeLimits = this->fields.mostRecentTimeLimits;
   if ( !mostRecentTimeLimits )
 LABEL_10:
-    sub_1C7BD40(mostRecentTimeLimits, method);
+    sub_1C93D2C(mostRecentTimeLimits, method);
   v4 = 0;
   while ( 1 )
   {
@@ -43,7 +43,7 @@ LABEL_10:
     Item = System_Collections_Generic_List_long___get_Item(
              mostRecentTimeLimits,
              v4,
-             (const MethodInfo_3826B40 *)Method_System_Collections_Generic_List_long__get_Item__);
+             (const MethodInfo_38616E0 *)Method_System_Collections_Generic_List_long__get_Item__);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     if ( Item < NetworkManager__getTime(0) )
@@ -69,16 +69,16 @@ System_Collections_IEnumerator_o *ShopNoticeRemainTime__ExecuteEverySecondLoop(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEA884 & 1) == 0 )
+  if ( (byte_4D2CB73 & 1) == 0 )
   {
-    sub_1C7BAE8(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
-    byte_4CEA884 = 1;
+    sub_1C93AD4(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+    byte_4D2CB73 = 1;
   }
-  v3 = sub_1C7BD34(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+  v3 = sub_1C93D20(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -95,7 +95,7 @@ void ShopNoticeRemainTime__SetMostRecentTimeLimits(
   System_String_o *v7; // x7
 
   this->fields.mostRecentTimeLimits = mostRecentTimeLimits;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.mostRecentTimeLimits,
     (int32_t)mostRecentTimeLimits,
     (int32_t)method,
@@ -119,7 +119,7 @@ void ShopNoticeRemainTime__SetOnTimeUpAction(
   System_String_o *v7; // x7
 
   this->fields.onTimeUpAction = onTimeUpAction;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.onTimeUpAction,
     (int32_t)onTimeUpAction,
     (int32_t)method,
@@ -152,25 +152,25 @@ void ShopNoticeRemainTime__SetShopNotice(
   _QWORD *v17; // x10
 
   v3 = shopNotice;
-  if ( (byte_4CEA883 & 1) == 0 )
+  if ( (byte_4D2CB72 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_long__TypeInfo);
-    byte_4CEA883 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_long__TypeInfo);
+    byte_4D2CB72 = 1;
   }
   mostRecentTimeLimits = this->fields.mostRecentTimeLimits;
   p_mostRecentTimeLimits = (GrandQuestFolderBoardItem_o *)&this->fields.mostRecentTimeLimits;
   klass = mostRecentTimeLimits;
   if ( !mostRecentTimeLimits )
   {
-    v8 = (System_Collections_Generic_List_long__o *)sub_1C7BD34(System_Collections_Generic_List_long__TypeInfo);
+    v8 = (System_Collections_Generic_List_long__o *)sub_1C93D20(System_Collections_Generic_List_long__TypeInfo);
     System_Collections_Generic_List_long____ctor(
       v8,
-      (const MethodInfo_38265DC *)Method_System_Collections_Generic_List_long___ctor__);
+      (const MethodInfo_386117C *)Method_System_Collections_Generic_List_long___ctor__);
     p_mostRecentTimeLimits->klass = (GrandQuestFolderBoardItem_c *)v8;
-    sub_1C7BA8C(p_mostRecentTimeLimits, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+    sub_1C93A78(p_mostRecentTimeLimits, (int32_t)v8, v9, v10, v11, v12, v13, v14);
     klass = (System_Collections_Generic_List_long__o *)p_mostRecentTimeLimits->klass;
     if ( !p_mostRecentTimeLimits->klass )
       goto LABEL_10;
@@ -186,7 +186,7 @@ void ShopNoticeRemainTime__SetShopNotice(
         !items) )
   {
 LABEL_10:
-    sub_1C7BD40(klass, shopNotice);
+    sub_1C93D2C(klass, shopNotice);
   }
   if ( LODWORD(items->max_length) )
   {
@@ -198,7 +198,7 @@ LABEL_10:
     System_Collections_Generic_List_long___AddWithResize(
       klass,
       (int64_t)shopNotice,
-      *(const MethodInfo_3826E30 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_38619D0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
 }
 
@@ -222,10 +222,10 @@ void ShopNoticeRemainTime__Start(ShopNoticeRemainTime_o *this, const MethodInfo 
   this->fields.isLoop = 1;
   v5 = ShopNoticeRemainTime__ExecuteEverySecondLoop(this, v4);
   if ( !monoBehaviour )
-    sub_1C7BD40(v5, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_71855340(monoBehaviour, v5, 0);
+    sub_1C93D2C(v5, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_72105100(monoBehaviour, v5, 0);
   this->fields.coroutine = started;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -248,10 +248,10 @@ void ShopNoticeRemainTime__Stop(ShopNoticeRemainTime_o *this, const MethodInfo *
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1C7BD40(0, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_71855960(monoBehaviour, coroutine, 0);
+      sub_1C93D2C(0, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_72105720(monoBehaviour, coroutine, 0);
     p_coroutine->klass = 0;
-    sub_1C7BA8C(p_coroutine, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78(p_coroutine, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -291,28 +291,27 @@ bool ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__MoveNext(
   System_String_o *v20; // x7
   Il2CppObject *loopWait_5__2; // x1
   GrandQuestFolderBoardItem_o *p__2__current; // x19
-  bool result; // w0
 
   v2 = this;
-  if ( (byte_4CEA886 & 1) == 0 )
+  if ( (byte_4D2CB75 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_long__Clear__);
-    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_1C7BAE8(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4CEA886 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Clear__);
+    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_1C93AD4(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4D2CB75 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v14 = (UnityEngine_WaitForSeconds_o *)sub_1C7BD34(UnityEngine_WaitForSeconds_TypeInfo);
+    v14 = (UnityEngine_WaitForSeconds_o *)sub_1C93D20(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v14, 1.0, 0);
     v2->fields._loopWait_5__2 = v14;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._loopWait_5__2, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._loopWait_5__2, (int32_t)v14, v15, v16, v17, v18, v19, v20);
     if ( _4__this )
       goto LABEL_11;
 LABEL_14:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   if ( _1__state != 1 )
     return 0;
@@ -339,10 +338,9 @@ LABEL_11:
     loopWait_5__2 = (Il2CppObject *)v2->fields._loopWait_5__2;
     v2->fields.__2__current = loopWait_5__2;
     p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-    sub_1C7BA8C(p__2__current, (int32_t)loopWait_5__2, v5, v6, v7, v8, v9, v10);
-    result = 1;
+    sub_1C93A78(p__2__current, (int32_t)loopWait_5__2, v5, v6, v7, v8, v9, v10);
     LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -364,11 +362,11 @@ void __noreturn ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 

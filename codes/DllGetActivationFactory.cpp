@@ -36,53 +36,53 @@ __int64 __fastcall DllGetActivationFactory(__int64 a1, _QWORD *a2)
   *(_QWORD *)v34 = a1;
   if ( a1 && a2 )
   {
-    sub_1C50A00(v33, &dword_4D00550);
-    if ( (byte_4D005A0 & 1) == 0 )
+    sub_1C689EC(v33, &dword_4D429A8);
+    if ( (byte_4D429F8 & 1) == 0 )
     {
-      if ( (sub_1C78274("IL2CPP Root Domain") & 1) == 0 )
+      if ( (sub_1C90260("IL2CPP Root Domain") & 1) == 0 )
       {
         v2 = -2146233082;
 LABEL_23:
-        sub_1C4A6D4(v33);
+        sub_1C626C0(v33);
         return v2;
       }
-      byte_4D005A0 = 1;
+      byte_4D429F8 = 1;
     }
-    v4 = sub_1CBB598(&qword_4D00538, v34);
-    if ( (_UNKNOWN **)v4 == &off_4D00540 )
+    v4 = sub_1CD3584(&qword_4D42990, v34);
+    if ( (_UNKNOWN **)v4 == &off_4D42998 )
     {
-      sub_1CD6598(&v27, v34[0], (int)&v32, v5, v6, v7, v8, v9, v10, v18, v19, v20, v21, v22);
+      sub_1CEE584(&v27, v34[0], (int)&v32, v5, v6, v7, v8, v9, v10, v18, v19, v20, v21, v22);
       LODWORD(v22) = v28;
       std::string::basic_string(v23, v29);
       v26 = v31;
-      if ( (unsigned int)sub_1C4BF70(&v22) )
+      if ( (unsigned int)sub_1C63F5C(&v22) )
       {
-        v17 = sub_1CB815C(&v22);
+        v17 = sub_1CD0148(&v22);
         if ( ((unsigned __int8)v22 & 1) != 0 )
           operator delete(v24);
         if ( (v29[0] & 1) != 0 )
           operator delete(v30);
-        sub_1C4A6D4(v33);
-        sub_1D5FCC4(v17);
+        sub_1C626C0(v33);
+        sub_1D77CB0(v17);
       }
       if ( (v23[0] & 1) != 0 )
         operator delete(v25);
-      sub_1CA9030(&v22, v27, v32);
+      sub_1CC101C(&v22, v27, v32);
       if ( ((unsigned __int8)v22 & 1) != 0 )
         v12 = (char *)v24;
       else
         v12 = (char *)&v22 + 1;
-      v13 = (__int64 (*)(void))sub_1C88700(v12);
+      v13 = (__int64 (*)(void))sub_1CA06EC(v12);
       if ( v13 )
       {
-        v2 = sub_1CD658C(*(_QWORD *)v34, &v21);
+        v2 = sub_1CEE578(*(_QWORD *)v34, &v21);
         if ( (v2 & 0x80000000) == 0 )
         {
           v14 = v13();
           v18 = v21;
           v19 = v14;
           v20 = v21;
-          v15 = *(_QWORD *)(sub_1CBB7A4(&qword_4D00538, &v18, &v18) + 40);
+          v15 = *(_QWORD *)(sub_1CD3790(&qword_4D42990, &v18, &v18) + 40);
           (*(void (__fastcall **)(__int64))(*(_QWORD *)v15 + 8LL))(v15);
           v2 = 0;
           *a2 = v15;

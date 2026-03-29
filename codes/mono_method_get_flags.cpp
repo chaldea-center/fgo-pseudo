@@ -1,6 +1,6 @@
 __int64 __fastcall mono_method_get_flags(__int64 a1, _DWORD *a2)
 {
   if ( a2 )
-    *a2 = sub_1CC573C(a1);
-  return sub_1CC5744(a1);
+    *a2 = sub_1CDD728(a1);
+  return sub_1CDD730(a1);
 }

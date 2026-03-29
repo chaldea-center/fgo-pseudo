@@ -8,14 +8,12 @@ UnityEngine_Vector2_o FSWindowUtil__GetSize(const MethodInfo *method)
   float v6; // s9
   struct ManagerConfig_StaticFields *static_fields; // x8
   float v8; // s8
-  float v9; // s1
-  float v10; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4CF0010 & 1) == 0 )
+  if ( (byte_4D3239D & 1) == 0 )
   {
-    sub_1C7BAE8(&ManagerConfig_TypeInfo);
-    byte_4CF0010 = 1;
+    sub_1C93AD4(&ManagerConfig_TypeInfo);
+    byte_4D3239D = 1;
   }
   width = UnityEngine_Screen__get_width(0);
   height = (float)UnityEngine_Screen__get_height(0);
@@ -42,11 +40,9 @@ UnityEngine_Vector2_o FSWindowUtil__GetSize(const MethodInfo *method)
     static_fields = ManagerConfig_TypeInfo->static_fields;
   }
   if ( v6 >= 1.7778 )
-    v9 = (float)static_fields->HEIGHT;
+    result.fields.y = (float)static_fields->HEIGHT;
   else
-    v9 = (float)static_fields->WIDTH / v6;
-  v10 = v8;
-  result.fields.y = v9;
-  result.fields.x = v10;
+    result.fields.y = (float)static_fields->WIDTH / v6;
+  result.fields.x = v8;
   return result;
 }

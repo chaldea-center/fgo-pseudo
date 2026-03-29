@@ -52,18 +52,18 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEDA90 & 1) == 0 )
+  if ( (byte_4D2FDE9 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
-    sub_1C7BAE8(&FadeLogger_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_GUI_TypeInfo);
-    sub_1C7BAE8(&string___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1718/*"<size="*/);
-    sub_1C7BAE8(&StringLiteral_15977/*"[FADE]\n"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_1521/*"</size>"*/);
-    sub_1C7BAE8(&StringLiteral_1744/*">"*/);
-    byte_4CEDA90 = 1;
+    sub_1C93AD4(&UnityEngine_Application_TypeInfo);
+    sub_1C93AD4(&FadeLogger_TypeInfo);
+    sub_1C93AD4(&UnityEngine_GUI_TypeInfo);
+    sub_1C93AD4(&string___TypeInfo);
+    sub_1C93AD4(&StringLiteral_1718/*"<size="*/);
+    sub_1C93AD4(&StringLiteral_16019/*"[FADE]\n"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_1521/*"</size>"*/);
+    sub_1C93AD4(&StringLiteral_1744/*">"*/);
+    byte_4D2FDE9 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -73,7 +73,7 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     if ( !FadeLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
     FadeLog = FadeLogger__GetFadeLog((const MethodInfo *)v3);
-    v5 = System_String__Concat_64176912((System_String_o *)StringLiteral_15977/*"[FADE]\n"*/, FadeLog, 0);
+    v5 = System_String__Concat_64425724((System_String_o *)StringLiteral_16019/*"[FADE]\n"*/, FadeLog, 0);
     v6 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -82,36 +82,36 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     v45.fields.m_Width = v6 * 660.0;
     v45.fields.m_Height = v6 * 825.0;
     UnityEngine_GUI__Box(v45, (System_String_o *)StringLiteral_1/*""*/, 0);
-    v7 = (System_String_o *)sub_1C7BB90(string___TypeInfo, 5);
+    v7 = (System_String_o *)sub_1C93B7C(string___TypeInfo, 5);
     if ( !v7 )
-      sub_1C7BD40(0, v8);
+      sub_1C93D2C(0, v8);
     v15 = v7;
     if ( !LODWORD(v7[1].klass) )
       goto LABEL_18;
     v16 = StringLiteral_1718/*"<size="*/;
     v7[1].monitor = (void *)StringLiteral_1718/*"<size="*/;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v7[1].monitor, v16, v9, v10, v11, v12, v13, v14);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v7[1].monitor, v16, v9, v10, v11, v12, v13, v14);
     v44 = v6 * 18.0;
     v7 = System_Single__ToString(v6 * 18.0, (const MethodInfo *)&v44);
     if ( LODWORD(v15[1].klass) <= 1
       || (v15[1].fields = (System_String_Fields)v7,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v15[1].fields, (int32_t)v7, v17, v18, v19, v20, v21, v22),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v15[1].fields, (int32_t)v7, v17, v18, v19, v20, v21, v22),
           LODWORD(v15[1].klass) <= 2)
       || (v29 = StringLiteral_1744/*">"*/,
           v15[2].klass = (System_String_c *)StringLiteral_1744/*">"*/,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v15[2], v29, v23, v24, v25, v26, v27, v28),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v15[2], v29, v23, v24, v25, v26, v27, v28),
           LODWORD(v15[1].klass) <= 3)
       || (v15[2].monitor = v5,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v15[2].monitor, (int32_t)v5, v30, v31, v32, v33, v34, v35),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v15[2].monitor, (int32_t)v5, v30, v31, v32, v33, v34, v35),
           LODWORD(v15[1].klass) <= 4) )
     {
 LABEL_18:
-      sub_1C7BD48(v7);
+      sub_1C93D34(v7);
     }
     v42 = StringLiteral_1521/*"</size>"*/;
     v15[2].fields = (System_String_Fields)StringLiteral_1521/*"</size>"*/;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v15[2].fields, v42, v36, v37, v38, v39, v40, v41);
-    v43 = System_String__Concat_64217444((System_String_array *)v15, 0);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v15[2].fields, v42, v36, v37, v38, v39, v40, v41);
+    v43 = System_String__Concat_64466256((System_String_array *)v15, 0);
     v46.fields.m_XMin = 10.0;
     v46.fields.m_YMin = 5.0;
     v46.fields.m_Width = v6 * 800.0;

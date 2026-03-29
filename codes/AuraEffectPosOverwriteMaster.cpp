@@ -14,28 +14,28 @@ void AuraEffectPosOverwriteMaster___cctor(const MethodInfo *method)
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CEE293 & 1) == 0 )
+  if ( (byte_4D305F2 & 1) == 0 )
   {
-    sub_1C7BAE8(&AuraEffectPosOverwriteMaster_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int____Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int_____ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_Dictionary_int__int____TypeInfo);
-    sub_1C7BAE8(&int___TypeInfo);
-    byte_4CEE293 = 1;
+    sub_1C93AD4(&AuraEffectPosOverwriteMaster_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int____Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int_____ctor__);
+    sub_1C93AD4(&System_Collections_Generic_Dictionary_int__int____TypeInfo);
+    sub_1C93AD4(&int___TypeInfo);
+    byte_4D305F2 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_int__int____TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C93D20(System_Collections_Generic_Dictionary_int__int____TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v1,
-    (const MethodInfo_3486D3C *)Method_System_Collections_Generic_Dictionary_int__int_____ctor__);
-  v2 = sub_1C7BB90(int___TypeInfo, 1);
+    (const MethodInfo_34BC3B0 *)Method_System_Collections_Generic_Dictionary_int__int_____ctor__);
+  v2 = sub_1C93B7C(int___TypeInfo, 1);
   if ( !v1 )
     goto LABEL_18;
   System_Collections_Generic_Dictionary_int__object___Add(
     v1,
     0,
     (Il2CppObject *)v2,
-    (const MethodInfo_3487710 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
-  v2 = sub_1C7BB90(int___TypeInfo, 2);
+    (const MethodInfo_34BCD84 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
+  v2 = sub_1C93B7C(int___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_18;
   v4 = *(_DWORD *)(v2 + 24);
@@ -49,8 +49,8 @@ void AuraEffectPosOverwriteMaster___cctor(const MethodInfo *method)
     v1,
     1,
     (Il2CppObject *)v2,
-    (const MethodInfo_3487710 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
-  v2 = sub_1C7BB90(int___TypeInfo, 2);
+    (const MethodInfo_34BCD84 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
+  v2 = sub_1C93B7C(int___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_18;
   v5 = *(_DWORD *)(v2 + 24);
@@ -64,24 +64,24 @@ void AuraEffectPosOverwriteMaster___cctor(const MethodInfo *method)
     v1,
     2,
     (Il2CppObject *)v2,
-    (const MethodInfo_3487710 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
-  v2 = sub_1C7BB90(int___TypeInfo, 2);
+    (const MethodInfo_34BCD84 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
+  v2 = sub_1C93B7C(int___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_18;
   v6 = *(_DWORD *)(v2 + 24);
   if ( !v6 || (*(_DWORD *)(v2 + 32) = 3, v6 == 1) )
 LABEL_17:
-    sub_1C7BD48(v2);
+    sub_1C93D34(v2);
   *(_DWORD *)(v2 + 36) = 4;
   System_Collections_Generic_Dictionary_int__object___Add(
     v1,
     3,
     (Il2CppObject *)v2,
-    (const MethodInfo_3487710 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
-  v2 = sub_1C7BB90(int___TypeInfo, 2);
+    (const MethodInfo_34BCD84 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
+  v2 = sub_1C93B7C(int___TypeInfo, 2);
   if ( !v2 )
 LABEL_18:
-    sub_1C7BD40(v2, v3);
+    sub_1C93D2C(v2, v3);
   v7 = *(_DWORD *)(v2 + 24);
   if ( !v7 )
     goto LABEL_17;
@@ -93,9 +93,9 @@ LABEL_18:
     v1,
     4,
     (Il2CppObject *)v2,
-    (const MethodInfo_3487710 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
+    (const MethodInfo_34BCD84 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
   AuraEffectPosOverwriteMaster_TypeInfo->static_fields->SvtLimitCountTable = (struct System_Collections_Generic_IDictionary_int__int____o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)AuraEffectPosOverwriteMaster_TypeInfo->static_fields,
     (int32_t)v1,
     v8,
@@ -109,15 +109,15 @@ LABEL_18:
 
 void AuraEffectPosOverwriteMaster___ctor(AuraEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE290 & 1) == 0 )
+  if ( (byte_4D305EF & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
-    byte_4CEE290 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    byte_4D305EF = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     247,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -131,10 +131,10 @@ AuraEffectPosOverwriteEntity_o *AuraEffectPosOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEE291 & 1) == 0 )
+  if ( (byte_4D305F0 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
-    byte_4CEE291 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+    byte_4D305F0 = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -144,7 +144,7 @@ AuraEffectPosOverwriteEntity_o *AuraEffectPosOverwriteMaster__GetEntity(
   return (AuraEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_3432DB4 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_34681D4 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -162,12 +162,12 @@ System_Int32_array *AuraEffectPosOverwriteMaster__GetMasterLimitCounts(
   __int64 v9; // x0
   System_Int32_array *v10; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CEE28F & 1) == 0 )
+  if ( (byte_4D305EE & 1) == 0 )
   {
-    sub_1C7BAE8(&AuraEffectPosOverwriteMaster_TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IDictionary_int__int____TypeInfo);
-    sub_1C7BAE8(&int___TypeInfo);
-    byte_4CEE28F = 1;
+    sub_1C93AD4(&AuraEffectPosOverwriteMaster_TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IDictionary_int__int____TypeInfo);
+    sub_1C93AD4(&int___TypeInfo);
+    byte_4D305EE = 1;
   }
   result = (System_Int32_array *)AuraEffectPosOverwriteMaster_TypeInfo;
   v10 = 0;
@@ -196,7 +196,7 @@ System_Int32_array *AuraEffectPosOverwriteMaster__GetMasterLimitCounts(
   else
   {
 LABEL_10:
-    v9 = sub_1C51E70(v5, System_Collections_Generic_IDictionary_int__int____TypeInfo, 7);
+    v9 = sub_1C69E5C(v5, System_Collections_Generic_IDictionary_int__int____TypeInfo, 7);
   }
   if ( ((*(__int64 (__fastcall **)(__int64 *, _QWORD, System_Int32_array **, _QWORD))v9)(
           v5,
@@ -205,12 +205,12 @@ LABEL_10:
           *(_QWORD *)(v9 + 8))
       & 1) != 0 )
     return v10;
-  result = (System_Int32_array *)sub_1C7BB90(int___TypeInfo, 1);
+  result = (System_Int32_array *)sub_1C93B7C(int___TypeInfo, 1);
   if ( !result )
 LABEL_17:
-    sub_1C7BD40(result, *(_QWORD *)&svtLimitCount);
+    sub_1C93D2C(result, *(_QWORD *)&svtLimitCount);
   if ( !LODWORD(result->max_length) )
-    sub_1C7BD48(result);
+    sub_1C93D34(result);
   result->m_Items[0] = svtLimitCount;
   return result;
 }
@@ -227,10 +227,10 @@ bool AuraEffectPosOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEE292 & 1) == 0 )
+  if ( (byte_4D305F1 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
-    byte_4CEE292 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+    byte_4D305F1 = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -241,7 +241,7 @@ bool AuraEffectPosOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -272,7 +272,7 @@ bool AuraEffectPosOverwriteMaster__TryGetEntityFromLimitCount(
                         svtLimitCount,
                         *(const MethodInfo **)&auraEffectId);
   if ( !MasterLimitCounts )
-    sub_1C7BD40(0, v11);
+    sub_1C93D2C(0, v11);
   max_length = MasterLimitCounts->max_length;
   v19 = MasterLimitCounts;
   v20 = (int)max_length > 0;
@@ -280,7 +280,7 @@ bool AuraEffectPosOverwriteMaster__TryGetEntityFromLimitCount(
   {
 LABEL_7:
     *entity = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)entity, 0, v12, v13, v14, (int32_t)v15, v16, v17);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)entity, 0, v12, v13, v14, (int32_t)v15, v16, v17);
   }
   else
   {
@@ -288,7 +288,7 @@ LABEL_7:
     while ( 1 )
     {
       if ( v21 >= (unsigned int)max_length )
-        sub_1C7BD48(MasterLimitCounts);
+        sub_1C93D34(MasterLimitCounts);
       MasterLimitCounts = (System_Int32_array *)AuraEffectPosOverwriteMaster__TryGetEntity(
                                                   this,
                                                   entity,

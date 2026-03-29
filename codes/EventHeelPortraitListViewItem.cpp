@@ -9,10 +9,10 @@ void EventHeelPortraitListViewItem___ctor(
   EventHeelPortraitListViewItem_o *v9; // x22
 
   v9 = this;
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 120);
-  sub_1C7BA8C(v9, heelPortraitEntity);
+  sub_1C93A78(v9, heelPortraitEntity);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
@@ -55,7 +55,7 @@ void EventHeelPortraitListViewItem__set_Entity(
         const MethodInfo *method)
 {
   this->fields._Entity_k__BackingField = value;
-  sub_1C7BA8C(&this->fields._Entity_k__BackingField, value);
+  sub_1C93A78(&this->fields._Entity_k__BackingField, value);
 }
 
 

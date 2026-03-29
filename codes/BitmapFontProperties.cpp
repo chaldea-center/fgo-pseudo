@@ -23,7 +23,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
     while ( 1 )
     {
       if ( v5 >= max_length )
-        sub_1C7BD48(this);
+        sub_1C93D34(this);
       this = (BitmapFontProperties_o *)bitmapFontInfos->m_Items[v5];
       if ( !this )
         break;
@@ -33,7 +33,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
         return 0;
     }
 LABEL_11:
-    sub_1C7BD40(this, type);
+    sub_1C93D2C(this, type);
   }
   return 0;
 }

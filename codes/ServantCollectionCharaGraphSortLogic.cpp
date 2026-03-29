@@ -29,7 +29,7 @@ void ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1C7BD40(ListViewItem, v4);
+    sub_1C93D2C(ListViewItem, v4);
   }
   if ( sortKind == 8 )
   {
@@ -72,10 +72,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   ServantCollectionCharaGraphSortLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4CED9E4 & 1) == 0 )
+  if ( (byte_4D2FD3D & 1) == 0 )
   {
-    sub_1C7BAE8(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    byte_4CED9E4 = 1;
+    sub_1C93AD4(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_4D2FD3D = 1;
   }
   p_listViewItem = (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -89,10 +89,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   {
     item = this->fields.item;
     p_listViewItem->klass = (GrandQuestFolderBoardItem_c *)listViewItem;
-    sub_1C7BA8C(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
+    sub_1C93A78(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1C7C0DC(this->fields.item);
+  sub_1C940C8(this->fields.item);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v14, v15);
   return result;
 }

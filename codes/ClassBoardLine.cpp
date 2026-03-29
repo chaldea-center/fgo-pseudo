@@ -57,30 +57,30 @@ void ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *method)
   int64_t v57; // x6
   System_String_o *v58; // x7
 
-  if ( (byte_4CF226B & 1) == 0 )
+  if ( (byte_4D34656 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_3230/*"BrightTurnTransition"*/);
-    sub_1C7BAE8(&StringLiteral_3227/*"BrightTurn"*/);
-    sub_1C7BAE8(&StringLiteral_3231/*"BrightTurnTransitionRoadOn"*/);
-    sub_1C7BAE8(&StringLiteral_7170/*"GrandReturnTransition"*/);
-    sub_1C7BAE8(&StringLiteral_3232/*"BrightTurnUnLock"*/);
-    sub_1C7BAE8(&StringLiteral_3228/*"BrightTurnRoadOn"*/);
-    sub_1C7BAE8(&StringLiteral_3229/*"BrightTurnRoadOnUnLock"*/);
-    sub_1C7BAE8(&StringLiteral_3180/*"BlackOutTransition"*/);
-    byte_4CF226B = 1;
+    sub_1C93AD4(&StringLiteral_3243/*"BrightTurnTransition"*/);
+    sub_1C93AD4(&StringLiteral_3240/*"BrightTurn"*/);
+    sub_1C93AD4(&StringLiteral_3244/*"BrightTurnTransitionRoadOn"*/);
+    sub_1C93AD4(&StringLiteral_7192/*"GrandReturnTransition"*/);
+    sub_1C93AD4(&StringLiteral_3245/*"BrightTurnUnLock"*/);
+    sub_1C93AD4(&StringLiteral_3241/*"BrightTurnRoadOn"*/);
+    sub_1C93AD4(&StringLiteral_3242/*"BrightTurnRoadOnUnLock"*/);
+    sub_1C93AD4(&StringLiteral_3193/*"BlackOutTransition"*/);
+    byte_4D34656 = 1;
   }
-  v9 = StringLiteral_3227/*"BrightTurn"*/;
-  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_3227/*"BrightTurn"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurn, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_3228/*"BrightTurnRoadOn"*/;
-  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_3228/*"BrightTurnRoadOn"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnRoadOn, v10, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_3232/*"BrightTurnUnLock"*/;
-  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_3232/*"BrightTurnUnLock"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnUnlock, v17, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_3229/*"BrightTurnRoadOnUnLock"*/;
-  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_3229/*"BrightTurnRoadOnUnLock"*/;
-  sub_1C7BA8C(
+  v9 = StringLiteral_3240/*"BrightTurn"*/;
+  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_3240/*"BrightTurn"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurn, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_3241/*"BrightTurnRoadOn"*/;
+  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_3241/*"BrightTurnRoadOn"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnRoadOn, v10, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_3245/*"BrightTurnUnLock"*/;
+  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_3245/*"BrightTurnUnLock"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnUnlock, v17, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_3242/*"BrightTurnRoadOnUnLock"*/;
+  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_3242/*"BrightTurnRoadOnUnLock"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnRoadOnUnlock,
     v24,
     v25,
@@ -89,9 +89,9 @@ void ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *method)
     v28,
     v29,
     v30);
-  v31 = StringLiteral_3230/*"BrightTurnTransition"*/;
-  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_3230/*"BrightTurnTransition"*/;
-  sub_1C7BA8C(
+  v31 = StringLiteral_3243/*"BrightTurnTransition"*/;
+  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_3243/*"BrightTurnTransition"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnTransition,
     v31,
     v32,
@@ -100,9 +100,9 @@ void ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *method)
     v35,
     v36,
     v37);
-  v38 = StringLiteral_3231/*"BrightTurnTransitionRoadOn"*/;
-  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_3231/*"BrightTurnTransitionRoadOn"*/;
-  sub_1C7BA8C(
+  v38 = StringLiteral_3244/*"BrightTurnTransitionRoadOn"*/;
+  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_3244/*"BrightTurnTransitionRoadOn"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameBrightTurnTransitionRoadOn,
     v38,
     v39,
@@ -111,9 +111,9 @@ void ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *method)
     v42,
     v43,
     v44);
-  v45 = StringLiteral_3180/*"BlackOutTransition"*/;
-  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_3180/*"BlackOutTransition"*/;
-  sub_1C7BA8C(
+  v45 = StringLiteral_3193/*"BlackOutTransition"*/;
+  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_3193/*"BlackOutTransition"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameBlackOutTransition,
     v45,
     v46,
@@ -122,9 +122,9 @@ void ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *method)
     v49,
     v50,
     v51);
-  v52 = StringLiteral_7170/*"GrandReturnTransition"*/;
-  this->fields.animNameGrandReturnTransition = (struct System_String_o *)StringLiteral_7170/*"GrandReturnTransition"*/;
-  sub_1C7BA8C(
+  v52 = StringLiteral_7192/*"GrandReturnTransition"*/;
+  this->fields.animNameGrandReturnTransition = (struct System_String_o *)StringLiteral_7192/*"GrandReturnTransition"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animNameGrandReturnTransition,
     v52,
     v53,
@@ -275,18 +275,18 @@ int32_t ClassBoardLine__GetConnectType(ClassBoardLine_o *this, const MethodInfo 
   ClassBoardLine_o *v120; // [xsp+48h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4CF2267 & 1) == 0 )
+  if ( (byte_4D34652 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
-    sub_1C7BAE8(&IClassBoardLineModel_TypeInfo);
-    sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
-    this = (ClassBoardLine_o *)sub_1C7BAE8(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    byte_4CF2267 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
+    sub_1C93AD4(&IClassBoardLineModel_TypeInfo);
+    sub_1C93AD4(&IClassBoardSquareModel_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
+    this = (ClassBoardLine_o *)sub_1C93AD4(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    byte_4D34652 = 1;
   }
   v120 = 0;
   memset(&v119, 0, sizeof(v119));
@@ -310,7 +310,7 @@ int32_t ClassBoardLine__GetConnectType(ClassBoardLine_o *this, const MethodInfo 
   else
   {
 LABEL_8:
-    v7 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+    v7 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v7)(
                                LineModel_k__BackingField,
@@ -335,7 +335,7 @@ LABEL_8:
   else
   {
 LABEL_15:
-    v12 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 5);
+    v12 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 5);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -360,7 +360,7 @@ LABEL_15:
   else
   {
 LABEL_23:
-    v17 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
+    v17 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v17)(
                                v13,
@@ -385,16 +385,16 @@ LABEL_23:
   else
   {
 LABEL_30:
-    v22 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 5);
+    v22 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 5);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v22)(v19, *(_QWORD *)(v22 + 8));
   if ( ((unsigned __int8)this & 1) != 0 )
   {
 LABEL_33:
-    v23 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    v23 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v23,
-      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+      (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
     v120 = (ClassBoardLine_o *)v23;
     v24 = v2->fields._LineModel_k__BackingField;
     if ( v24 )
@@ -416,7 +416,7 @@ LABEL_33:
       else
       {
 LABEL_38:
-        v28 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+        v28 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
       }
       this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v28)(
                                    v24,
@@ -441,7 +441,7 @@ LABEL_38:
         else
         {
 LABEL_51:
-          v38 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 5);
+          v38 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 5);
         }
         this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v38)(
                                      v35,
@@ -468,7 +468,7 @@ LABEL_51:
           else
           {
 LABEL_59:
-            v43 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+            v43 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
           }
           this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v43)(
                                        v39,
@@ -493,7 +493,7 @@ LABEL_59:
           else
           {
 LABEL_66:
-            v48 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 17);
+            v48 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 17);
           }
           this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, ClassBoardLine_o **, _QWORD))v48)(
                                        v45,
@@ -520,7 +520,7 @@ LABEL_66:
           else
           {
 LABEL_74:
-            v53 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
+            v53 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
           }
           this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v53)(
                                        v49,
@@ -545,7 +545,7 @@ LABEL_74:
             else
             {
 LABEL_81:
-              v58 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 5);
+              v58 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 5);
             }
             this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v58)(
                                          v55,
@@ -572,7 +572,7 @@ LABEL_81:
               else
               {
 LABEL_89:
-                v63 = sub_1C51E70(v59, IClassBoardLineModel_TypeInfo, 1);
+                v63 = sub_1C69E5C(v59, IClassBoardLineModel_TypeInfo, 1);
               }
               this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v63)(
                                            v59,
@@ -597,7 +597,7 @@ LABEL_89:
               else
               {
 LABEL_96:
-                v68 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 17);
+                v68 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 17);
               }
               (*(void (__fastcall **)(ClassBoardLine_o *, ClassBoardLine_o **, _QWORD))v68)(
                 v65,
@@ -611,19 +611,19 @@ LABEL_96:
               System_Collections_Generic_List_object___GetEnumerator(
                 (System_Collections_Generic_List_Enumerator_T__o *)&v118,
                 (System_Collections_Generic_List_object__o *)v120,
-                (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+                (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
               v70 = 0;
               v119 = v118;
               while ( 1 )
               {
                 v71 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                         &v119,
-                        (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+                        (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
                 if ( !v71 )
                   break;
                 current = v119.fields._current;
                 if ( !v119.fields._current )
-                  sub_1C7BD40(v71, v72);
+                  sub_1C93D2C(v71, v72);
                 v74 = v119.fields._current->klass;
                 v75 = *(unsigned __int16 *)&v119.fields._current->klass->_2.rank;
                 if ( *(_WORD *)&v119.fields._current->klass->_2.rank )
@@ -641,7 +641,7 @@ LABEL_96:
                 else
                 {
 LABEL_107:
-                  v77 = sub_1C51E70(v119.fields._current, IClassBoardSquareModel_TypeInfo, 5);
+                  v77 = sub_1C69E5C(v119.fields._current, IClassBoardSquareModel_TypeInfo, 5);
                 }
                 if ( ((*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v77)(current, *(_QWORD *)(v77 + 8)) & 1) != 0 )
                 {
@@ -666,7 +666,7 @@ LABEL_107:
                   else
                   {
 LABEL_114:
-                    v81 = sub_1C51E70(current, IClassBoardSquareModel_TypeInfo, 15);
+                    v81 = sub_1C69E5C(current, IClassBoardSquareModel_TypeInfo, 15);
                   }
                   v70 += (*(__int64 (__fastcall **)(Il2CppObject *, _QWORD, _QWORD))v81)(
                            current,
@@ -677,7 +677,7 @@ LABEL_114:
               }
               System_Collections_Generic_List_Enumerator_object___Dispose(
                 &v119,
-                (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+                (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
               if ( !v70 )
                 return 0;
               if ( v70 < m_CancellationTokenSource )
@@ -710,7 +710,7 @@ LABEL_114:
   else
   {
 LABEL_44:
-    v33 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+    v33 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v33)(
                                v29,
@@ -735,7 +735,7 @@ LABEL_44:
   else
   {
 LABEL_129:
-    v87 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 15);
+    v87 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 15);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v87)(
                                v84,
@@ -763,7 +763,7 @@ LABEL_129:
     else
     {
 LABEL_137:
-      v92 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
+      v92 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v92)(
                                  v88,
@@ -788,7 +788,7 @@ LABEL_137:
     else
     {
 LABEL_144:
-      v97 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 15);
+      v97 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 15);
     }
     this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v97)(
                                  v94,
@@ -817,7 +817,7 @@ LABEL_144:
   else
   {
 LABEL_152:
-    v102 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+    v102 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v102)(
                                v98,
@@ -842,7 +842,7 @@ LABEL_152:
   else
   {
 LABEL_160:
-    v107 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 15);
+    v107 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 15);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v107)(
                                v104,
@@ -870,14 +870,14 @@ LABEL_160:
   else
   {
 LABEL_168:
-    v112 = sub_1C51E70(v108, IClassBoardLineModel_TypeInfo, 1);
+    v112 = sub_1C69E5C(v108, IClassBoardLineModel_TypeInfo, 1);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v112)(
                                v108,
                                *(_QWORD *)(v112 + 8));
   if ( !this )
 LABEL_180:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   v113 = this->klass;
   v114 = this;
   v115 = *(unsigned __int16 *)&this->klass->_2.rank;
@@ -896,7 +896,7 @@ LABEL_180:
   else
   {
 LABEL_176:
-    v117 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 15);
+    v117 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 15);
   }
   return (*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD, _QWORD))v117)(v114, 0, *(_QWORD *)(v117 + 8)) & 1;
 }
@@ -915,14 +915,14 @@ float ClassBoardLine__GetSquareTypeOffset(
   float *p_blankOffsetLength; // x8
 
   v4 = this;
-  if ( (byte_4CF2268 & 1) == 0 )
+  if ( (byte_4D34653 & 1) == 0 )
   {
-    sub_1C7BAE8(&IClassBoardLockModel_TypeInfo);
-    this = (ClassBoardLine_o *)sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
-    byte_4CF2268 = 1;
+    sub_1C93AD4(&IClassBoardLockModel_TypeInfo);
+    this = (ClassBoardLine_o *)sub_1C93AD4(&IClassBoardSquareModel_TypeInfo);
+    byte_4D34653 = 1;
   }
   if ( !squareModel )
-    sub_1C7BD40(this, squareModel);
+    sub_1C93D2C(this, squareModel);
   klass = squareModel->klass;
   v6 = *(unsigned __int16 *)&squareModel->klass->_2.rank;
   if ( *(_WORD *)&squareModel->klass->_2.rank )
@@ -940,13 +940,13 @@ float ClassBoardLine__GetSquareTypeOffset(
   else
   {
 LABEL_8:
-    v8 = sub_1C51E70(squareModel, IClassBoardSquareModel_TypeInfo, 5);
+    v8 = sub_1C69E5C(squareModel, IClassBoardSquareModel_TypeInfo, 5);
   }
   if ( ((*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v8)(squareModel, *(_QWORD *)(v8 + 8)) & 1) != 0 )
   {
     p_blankOffsetLength = &v4->fields.blankOffsetLength;
   }
-  else if ( sub_1C7BC24(squareModel, IClassBoardLockModel_TypeInfo) )
+  else if ( sub_1C93C10(squareModel, IClassBoardLockModel_TypeInfo) )
   {
     p_blankOffsetLength = &v4->fields.lockOffsetLength;
   }
@@ -975,20 +975,20 @@ void ClassBoardLine__PlayForceEndSimpleAnimation(
   const MethodInfo *v15; // x3
   System_Collections_IEnumerator_o *v16; // x1
 
-  if ( (byte_4CF2269 & 1) == 0 )
+  if ( (byte_4D34654 & 1) == 0 )
   {
-    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF2269 = 1;
+    sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D34654 = 1;
   }
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation
-    || (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__Play_67121960(simpleAnimation, name, 0),
+    || (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__Play_67370764(simpleAnimation, name, 0),
         (v8 = this->fields.simpleAnimation) == 0)
     || (simpleAnimation = (SimpleAnimation_o *)v8->fields.m_Clip) == 0
     || (v9 = UnityEngine_Object__get_name((UnityEngine_Object_o *)simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)SimpleAnimation__get_Item(v8, v9, 0)) == 0) )
   {
-    sub_1C7BD40(simpleAnimation, name);
+    sub_1C93D2C(simpleAnimation, name);
   }
   klass = simpleAnimation->klass;
   v11 = simpleAnimation;
@@ -1008,11 +1008,11 @@ void ClassBoardLine__PlayForceEndSimpleAnimation(
   else
   {
 LABEL_11:
-    v14 = sub_1C51E70(simpleAnimation, SimpleAnimation_State_TypeInfo, 6);
+    v14 = sub_1C69E5C(simpleAnimation, SimpleAnimation_State_TypeInfo, 6);
   }
   (*(void (__fastcall **)(SimpleAnimation_o *, _QWORD, float))v14)(v11, *(_QWORD *)(v14 + 8), 1.0);
   v16 = ClassBoardLine__WaitAnimationFinished(this, name, endCallback, v15);
-  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v16, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v16, 0);
 }
 
 
@@ -1022,14 +1022,14 @@ void ClassBoardLine__PlayGrandToClassTransition(ClassBoardLine_o *this, bool isQ
   System_Action_o *v6; // x22
   const MethodInfo *v7; // x4
 
-  if ( (byte_4CF2264 & 1) == 0 )
+  if ( (byte_4D3464F & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayGrandToClassTransition_b__30_0__);
-    byte_4CF2264 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayGrandToClassTransition_b__30_0__);
+    byte_4D3464F = 1;
   }
   animNameGrandReturnTransition = this->fields.animNameGrandReturnTransition;
-  v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ClassBoardLine__PlayGrandToClassTransition_b__30_0__, 0);
   ClassBoardLine__PlaySimpleAnimation(this, animNameGrandReturnTransition, isQuick, v6, v7);
 }
@@ -1046,15 +1046,15 @@ void ClassBoardLine__PlayReleaseEffect(ClassBoardLine_o *this, const MethodInfo 
   System_Action_o *v9; // x21
   const MethodInfo *v10; // x4
 
-  if ( (byte_4CF2266 & 1) == 0 )
+  if ( (byte_4D34651 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_ClassBoardEffectPlayer_GetData_bool___);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayReleaseEffect_b__35_0__);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayReleaseEffect_b__35_1__);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayReleaseEffect_b__35_2__);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayReleaseEffect_b__35_3__);
-    byte_4CF2266 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_ClassBoardEffectPlayer_GetData_bool___);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayReleaseEffect_b__35_0__);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayReleaseEffect_b__35_1__);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayReleaseEffect_b__35_2__);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayReleaseEffect_b__35_3__);
+    byte_4D34651 = 1;
   }
   ConnectType = ClassBoardLine__GetConnectType(this, method);
   if ( ConnectType == 2 )
@@ -1064,22 +1064,22 @@ void ClassBoardLine__PlayReleaseEffect(ClassBoardLine_o *this, const MethodInfo 
     {
       if ( ClassBoardEffectPlayer__GetData_bool_(
              releaseEffectPlayer,
-             (const MethodInfo_3163AC0 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
+             (const MethodInfo_3198108 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
       {
         animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnRoadOnUnlock;
-        v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+        v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
         v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__35_2__;
       }
       else
       {
         animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnRoadOn;
-        v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+        v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
         v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__35_3__;
       }
       goto LABEL_15;
     }
 LABEL_16:
-    sub_1C7BD40(releaseEffectPlayer, v4);
+    sub_1C93D2C(releaseEffectPlayer, v4);
   }
   if ( ConnectType != 1 )
   {
@@ -1096,16 +1096,16 @@ LABEL_16:
     goto LABEL_16;
   if ( ClassBoardEffectPlayer__GetData_bool_(
          releaseEffectPlayer,
-         (const MethodInfo_3163AC0 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
+         (const MethodInfo_3198108 *)Method_ClassBoardEffectPlayer_GetData_bool___) )
   {
     animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurnUnlock;
-    v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__35_0__;
   }
   else
   {
     animNameBrightTurnRoadOnUnlock = this->fields.animNameBrightTurn;
-    v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayReleaseEffect_b__35_1__;
   }
 LABEL_15:
@@ -1136,11 +1136,11 @@ void ClassBoardLine__PlaySimpleAnimation(
     if ( !simpleAnimation
       || (SimpleAnimation__Rewind(simpleAnimation, 0), (simpleAnimation = this->fields.simpleAnimation) == 0) )
     {
-      sub_1C7BD40(simpleAnimation, name);
+      sub_1C93D2C(simpleAnimation, name);
     }
-    SimpleAnimation__Play_67121960(simpleAnimation, name, 0);
+    SimpleAnimation__Play_67370764(simpleAnimation, name, 0);
     v10 = ClassBoardLine__WaitAnimationFinished(this, name, endCallback, v9);
-    UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v10, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v10, 0);
   }
 }
 
@@ -1155,31 +1155,31 @@ void ClassBoardLine__PlayTransition(ClassBoardLine_o *this, bool isQuick, const 
   System_Action_o *v9; // x22
   const MethodInfo *v10; // x4
 
-  if ( (byte_4CF2263 & 1) == 0 )
+  if ( (byte_4D3464E & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayTransition_b__29_0__);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayTransition_b__29_1__);
-    sub_1C7BAE8(&Method_ClassBoardLine__PlayTransition_b__29_2__);
-    byte_4CF2263 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayTransition_b__29_0__);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayTransition_b__29_1__);
+    sub_1C93AD4(&Method_ClassBoardLine__PlayTransition_b__29_2__);
+    byte_4D3464E = 1;
   }
   ConnectType = ClassBoardLine__GetConnectType(this, (const MethodInfo *)isQuick);
   if ( ConnectType == 2 )
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBrightTurnTransitionRoadOn;
-    v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayTransition_b__29_1__;
   }
   else if ( ConnectType == 1 )
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBrightTurnTransition;
-    v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayTransition_b__29_0__;
   }
   else
   {
     animNameBrightTurnTransitionRoadOn = this->fields.animNameBlackOutTransition;
-    v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     v8 = &Method_ClassBoardLine__PlayTransition_b__29_2__;
   }
   v9 = v7;
@@ -1310,26 +1310,23 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
   float lineLength; // s8
   UnityEngine_Transform_o *v111; // x20
   float y; // s9
-  float v113; // s0
-  float v114; // s1
-  int v115; // [xsp+1Ch] [xbp-44h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v117; // 0:s0.4,4:s1.4,8:s2.4
+  int v113; // [xsp+1Ch] [xbp-44h] BYREF
+  UnityEngine_Vector3_o v114; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF2262 & 1) == 0 )
+  if ( (byte_4D3464D & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&ClassBoardEffectPlayer_TypeInfo);
-    sub_1C7BAE8(&Method_ClassBoardLine_PlayReleaseEffect__);
-    sub_1C7BAE8(&IClassBoardLineModel_TypeInfo);
-    sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
-    sub_1C7BAE8(&string___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16165/*"_"*/);
-    byte_4CF2262 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&ClassBoardEffectPlayer_TypeInfo);
+    sub_1C93AD4(&Method_ClassBoardLine_PlayReleaseEffect__);
+    sub_1C93AD4(&IClassBoardLineModel_TypeInfo);
+    sub_1C93AD4(&IClassBoardSquareModel_TypeInfo);
+    sub_1C93AD4(&string___TypeInfo);
+    sub_1C93AD4(&StringLiteral_16207/*"_"*/);
+    byte_4D3464D = 1;
   }
-  v115 = 0;
+  v113 = 0;
   this->fields._LineModel_k__BackingField = setLineModel;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._LineModel_k__BackingField,
     (int32_t)setLineModel,
     (int32_t)method,
@@ -1339,7 +1336,7 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
     v6,
     v7);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  name = (UnityEngine_Object_o *)sub_1C7BB90(string___TypeInfo, 7);
+  name = (UnityEngine_Object_o *)sub_1C93B7C(string___TypeInfo, 7);
   if ( !gameObject )
     goto LABEL_64;
   v13 = name;
@@ -1349,12 +1346,12 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
   if ( !LODWORD(v13[1].klass) )
     goto LABEL_65;
   v13[1].monitor = name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[1].monitor, (int32_t)name, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[1].monitor, (int32_t)name, v14, v15, v16, v17, v18, v19);
   if ( LODWORD(v13[1].klass) <= 1 )
     goto LABEL_65;
-  v26 = StringLiteral_16165/*"_"*/;
-  v13[1].fields.m_CachedPtr = StringLiteral_16165/*"_"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[1].fields, v26, v20, v21, v22, v23, v24, v25);
+  v26 = StringLiteral_16207/*"_"*/;
+  v13[1].fields.m_CachedPtr = StringLiteral_16207/*"_"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[1].fields, v26, v20, v21, v22, v23, v24, v25);
   if ( !setLineModel )
     goto LABEL_64;
   klass = setLineModel->klass;
@@ -1374,7 +1371,7 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
   else
   {
 LABEL_12:
-    v30 = sub_1C51E70(setLineModel, IClassBoardLineModel_TypeInfo, 0);
+    v30 = sub_1C69E5C(setLineModel, IClassBoardLineModel_TypeInfo, 0);
   }
   name = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, _QWORD))v30)(
                                    setLineModel,
@@ -1399,21 +1396,21 @@ LABEL_12:
   else
   {
 LABEL_19:
-    v35 = sub_1C51E70(name, IClassBoardSquareModel_TypeInfo, 0);
+    v35 = sub_1C69E5C(name, IClassBoardSquareModel_TypeInfo, 0);
   }
-  v115 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v115, 0);
+  v113 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v113, 0);
   if ( LODWORD(v13[1].klass) <= 2
     || (v13[2].klass = (UnityEngine_Object_c *)name,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[2], (int32_t)name, v36, v37, v38, v39, v40, v41),
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[2], (int32_t)name, v36, v37, v38, v39, v40, v41),
         LODWORD(v13[1].klass) <= 3) )
   {
 LABEL_65:
-    sub_1C7BD48(name);
+    sub_1C93D34(name);
   }
-  v48 = StringLiteral_16165/*"_"*/;
-  v13[2].monitor = (void *)StringLiteral_16165/*"_"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[2].monitor, v48, v42, v43, v44, v45, v46, v47);
+  v48 = StringLiteral_16207/*"_"*/;
+  v13[2].monitor = (void *)StringLiteral_16207/*"_"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[2].monitor, v48, v42, v43, v44, v45, v46, v47);
   v49 = setLineModel->klass;
   v50 = *(unsigned __int16 *)&setLineModel->klass->_2.rank;
   if ( *(_WORD *)&setLineModel->klass->_2.rank )
@@ -1431,14 +1428,14 @@ LABEL_65:
   else
   {
 LABEL_27:
-    v52 = sub_1C51E70(setLineModel, IClassBoardLineModel_TypeInfo, 1);
+    v52 = sub_1C69E5C(setLineModel, IClassBoardLineModel_TypeInfo, 1);
   }
   name = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, _QWORD))v52)(
                                    setLineModel,
                                    *(_QWORD *)(v52 + 8));
   if ( !name )
 LABEL_64:
-    sub_1C7BD40(name, v12);
+    sub_1C93D2C(name, v12);
   v53 = name->klass;
   v54 = name;
   v55 = *(unsigned __int16 *)&name->klass->_2.rank;
@@ -1457,19 +1454,19 @@ LABEL_64:
   else
   {
 LABEL_34:
-    v57 = sub_1C51E70(name, IClassBoardSquareModel_TypeInfo, 0);
+    v57 = sub_1C69E5C(name, IClassBoardSquareModel_TypeInfo, 0);
   }
-  v115 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v115, 0);
+  v113 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v113, 0);
   if ( LODWORD(v13[1].klass) <= 4 )
     goto LABEL_65;
   v13[2].fields.m_CachedPtr = (intptr_t)name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[2].fields, (int32_t)name, v58, v59, v60, v61, v62, v63);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[2].fields, (int32_t)name, v58, v59, v60, v61, v62, v63);
   if ( LODWORD(v13[1].klass) <= 5 )
     goto LABEL_65;
-  v70 = StringLiteral_16165/*"_"*/;
-  v13[3].klass = (UnityEngine_Object_c *)StringLiteral_16165/*"_"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[3], v70, v64, v65, v66, v67, v68, v69);
+  v70 = StringLiteral_16207/*"_"*/;
+  v13[3].klass = (UnityEngine_Object_c *)StringLiteral_16207/*"_"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[3], v70, v64, v65, v66, v67, v68, v69);
   v71 = setLineModel->klass;
   v72 = *(unsigned __int16 *)&setLineModel->klass->_2.rank;
   if ( *(_WORD *)&setLineModel->klass->_2.rank )
@@ -1487,7 +1484,7 @@ LABEL_34:
   else
   {
 LABEL_42:
-    v74 = sub_1C51E70(setLineModel, IClassBoardLineModel_TypeInfo, 0);
+    v74 = sub_1C69E5C(setLineModel, IClassBoardLineModel_TypeInfo, 0);
   }
   name = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, _QWORD))v74)(
                                    setLineModel,
@@ -1512,25 +1509,25 @@ LABEL_42:
   else
   {
 LABEL_49:
-    v79 = sub_1C51E70(name, IClassBoardSquareModel_TypeInfo, 1);
+    v79 = sub_1C69E5C(name, IClassBoardSquareModel_TypeInfo, 1);
   }
-  v115 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v79)(v76, *(_QWORD *)(v79 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v115, 0);
+  v113 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v79)(v76, *(_QWORD *)(v79 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v113, 0);
   if ( LODWORD(v13[1].klass) <= 6 )
     goto LABEL_65;
   v13[3].monitor = name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13[3].monitor, (int32_t)name, v80, v81, v82, v83, v84, v85);
-  v86 = System_String__Concat_64217444((System_String_array *)v13, 0);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13[3].monitor, (int32_t)name, v80, v81, v82, v83, v84, v85);
+  v86 = System_String__Concat_64466256((System_String_array *)v13, 0);
   UnityEngine_Object__set_name(gameObject, v86, 0);
   ClassBoardLine__UpdateLine(this, v87);
   name = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !name )
     goto LABEL_64;
   v88 = UnityEngine_Object__get_name(name, 0);
-  v89 = (ClassBoardEffectPlayer_o *)sub_1C7BD34(ClassBoardEffectPlayer_TypeInfo);
-  ClassBoardEffectPlayer___ctor_48650144(v89, v88, 0);
+  v89 = (ClassBoardEffectPlayer_o *)sub_1C93D20(ClassBoardEffectPlayer_TypeInfo);
+  ClassBoardEffectPlayer___ctor_48851620(v89, v88, 0);
   this->fields.releaseEffectPlayer = v89;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.releaseEffectPlayer,
     (int32_t)v89,
     v90,
@@ -1540,12 +1537,12 @@ LABEL_49:
     v94,
     v95);
   releaseEffectPlayer = this->fields.releaseEffectPlayer;
-  v97 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v97 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v97, (Il2CppObject *)this, Method_ClassBoardLine_PlayReleaseEffect__, 0);
   if ( !releaseEffectPlayer )
     goto LABEL_64;
   releaseEffectPlayer->fields.playCallback = v97;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&releaseEffectPlayer->fields.playCallback,
     (int32_t)v97,
     v98,
@@ -1555,7 +1552,7 @@ LABEL_49:
     v102,
     v103);
   effectObjects = this->fields.effectObjects;
-  v115 = 0;
+  v113 = 0;
   if ( !effectObjects )
     goto LABEL_64;
   max_length = effectObjects->max_length;
@@ -1574,19 +1571,18 @@ LABEL_49:
       name = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v108, 0);
       if ( !name )
         goto LABEL_64;
-      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0);
-      y = localScale.fields.y;
+      y = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0).fields.y;
       name = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v108, 0);
       if ( !name )
         goto LABEL_64;
-      v117 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0);
+      v114.fields.z = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0).fields.z;
       if ( !v111 )
         goto LABEL_64;
-      v113 = lineLength;
-      v114 = y;
-      UnityEngine_Transform__set_localScale(v111, v117, 0);
-      v106 = v115 + 1;
-      v115 = v106;
+      v114.fields.x = lineLength;
+      v114.fields.y = y;
+      UnityEngine_Transform__set_localScale(v111, v114, 0);
+      v106 = v113 + 1;
+      v113 = v106;
       max_length = effectObjects->max_length;
       if ( v106 >= max_length )
         return;
@@ -1608,7 +1604,6 @@ void ClassBoardLine__UpdateDrawFromAnimationEvent(ClassBoardLine_o *this, const 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodInfo *method)
 {
   ClassBoardLine_o *v2; // x19
@@ -1686,27 +1681,25 @@ void ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodInfo *method
   float32x2_t v74; // d0
   float v75; // s1
   struct UnityEngine_Vector3_StaticFields *v76; // x8
-  float v77; // s2 OVERLAPPED
-  unsigned __int64 v78; // d0 OVERLAPPED
-  int v79; // s1
-  unsigned __int32 v80; // [xsp+0h] [xbp-C0h]
-  unsigned __int32 v81; // [xsp+0h] [xbp-C0h]
-  unsigned int v82; // [xsp+10h] [xbp-B0h]
+  unsigned __int32 v77; // [xsp+0h] [xbp-C0h]
+  unsigned __int32 v78; // [xsp+0h] [xbp-C0h]
+  unsigned int v79; // [xsp+10h] [xbp-B0h]
   unsigned __int32 xb; // [xsp+20h] [xbp-A0h]
   unsigned __int32 xc; // [xsp+20h] [xbp-A0h]
   float32x2_t x; // [xsp+20h] [xbp-A0h]
   float32x2_t xa; // [xsp+20h] [xbp-A0h]
-  unsigned int v87; // [xsp+30h] [xbp-90h]
-  float32x2_t v88; // [xsp+30h] [xbp-90h]
-  int32x2_t v89; // [xsp+30h] [xbp-90h]
-  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
+  unsigned int v84; // [xsp+30h] [xbp-90h]
+  float32x2_t v85; // [xsp+30h] [xbp-90h]
+  int32x2_t v86; // [xsp+30h] [xbp-90h]
+  UnityEngine_Vector3_o v87; // 0:kr00_12.12
+  UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CF2265 & 1) == 0 )
+  if ( (byte_4D34650 & 1) == 0 )
   {
-    sub_1C7BAE8(&IClassBoardLineModel_TypeInfo);
-    this = (ClassBoardLine_o *)sub_1C7BAE8(&IClassBoardSquareModel_TypeInfo);
-    byte_4CF2265 = 1;
+    sub_1C93AD4(&IClassBoardLineModel_TypeInfo);
+    this = (ClassBoardLine_o *)sub_1C93AD4(&IClassBoardSquareModel_TypeInfo);
+    byte_4D34650 = 1;
   }
   LineModel_k__BackingField = v2->fields._LineModel_k__BackingField;
   if ( !LineModel_k__BackingField )
@@ -1728,7 +1721,7 @@ void ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodInfo *method
   else
   {
 LABEL_8:
-    v7 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+    v7 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v7)(
                                LineModel_k__BackingField,
@@ -1753,7 +1746,7 @@ LABEL_8:
   else
   {
 LABEL_15:
-    v12 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 3);
+    v12 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 3);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(ClassBoardLine_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
   v16 = v2->fields._LineModel_k__BackingField;
@@ -1761,9 +1754,9 @@ LABEL_15:
     goto LABEL_94;
   v17 = v16->klass;
   v18 = v15;
-  v87 = v13;
+  v84 = v13;
   v19 = *(unsigned __int16 *)&v16->klass->_2.rank;
-  v82 = v14;
+  v79 = v14;
   if ( *(_WORD *)&v16->klass->_2.rank )
   {
     v20 = (IClassBoardLineModel_c **)&v17->_1.interfaceOffsets->offset;
@@ -1779,7 +1772,7 @@ LABEL_15:
   else
   {
 LABEL_22:
-    v21 = sub_1C51E70(v16, IClassBoardLineModel_TypeInfo, 1);
+    v21 = sub_1C69E5C(v16, IClassBoardLineModel_TypeInfo, 1);
   }
   this = (ClassBoardLine_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v21)(
                                v16,
@@ -1804,37 +1797,37 @@ LABEL_22:
   else
   {
 LABEL_29:
-    v26 = sub_1C51E70(this, IClassBoardSquareModel_TypeInfo, 3);
+    v26 = sub_1C69E5C(this, IClassBoardSquareModel_TypeInfo, 3);
   }
   (*(void (__fastcall **)(ClassBoardLine_o *, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
   v30 = v29;
-  if ( !byte_4CE7E57 )
+  if ( !byte_4D2A137 )
   {
     xb = v27.n64_u32[0];
-    v80 = v28;
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    v28 = v80;
+    v77 = v28;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    v28 = v77;
     v27.n64_u32[0] = xb;
-    byte_4CE7E57 = 1;
+    byte_4D2A137 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
     xc = v27.n64_u32[0];
-    v81 = v28;
+    v78 = v28;
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v28 = v81;
+    v28 = v78;
     v27.n64_u32[0] = xc;
   }
   v27.n64_u32[1] = v28;
-  v31.n64_u64[0] = __PAIR64__(v82, v87);
+  v31.n64_u64[0] = __PAIR64__(v79, v84);
   x.n64_u64[0] = v27.n64_u64[0];
-  v88.n64_u64[0] = __PAIR64__(v82, v87);
-  if ( !byte_4CE7E5C )
+  v85.n64_u64[0] = __PAIR64__(v79, v84);
+  if ( !byte_4D2A13C )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
+    sub_1C93AD4(&System_Math_TypeInfo);
     v27.n64_u64[0] = x.n64_u64[0];
-    v31.n64_u64[0] = v88.n64_u64[0];
-    byte_4CE7E5C = 1;
+    v31.n64_u64[0] = v85.n64_u64[0];
+    byte_4D2A13C = 1;
   }
   this = (ClassBoardLine_o *)System_Math_TypeInfo;
   v32.n64_u64[0] = vsub_f32(v27, v31).n64_u64[0];
@@ -1845,10 +1838,10 @@ LABEL_29:
   v34.n64_f32[0] = sqrtf((float)(v33 * v33) + vaddv_f32(v34));
   if ( v34.n64_f32[0] <= 0.00001 )
   {
-    if ( !byte_4CE7E59 )
+    if ( !byte_4D2A139 )
     {
-      this = (ClassBoardLine_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-      byte_4CE7E59 = 1;
+      this = (ClassBoardLine_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+      byte_4D2A139 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v35.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.x;
@@ -1879,7 +1872,7 @@ LABEL_29:
   else
   {
 LABEL_49:
-    v42 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
+    v42 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 0);
   }
   v43 = (IClassBoardSquareModel_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v42)(
                                       v38,
@@ -1908,20 +1901,20 @@ LABEL_49:
   else
   {
 LABEL_56:
-    v53 = sub_1C51E70(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
+    v53 = sub_1C69E5C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
   }
   v54 = v18 - v51;
-  v55.n64_u64[0] = vsub_f32(v88, v50).n64_u64[0];
+  v55.n64_u64[0] = vsub_f32(v85, v50).n64_u64[0];
   v56 = (IClassBoardSquareModel_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v53)(
                                       v46,
                                       *(_QWORD *)(v53 + 8));
   v59 = ClassBoardLine__GetSquareTypeOffset(v2, v56, v57) * 0.5;
   v60.n64_u64[0] = vadd_f32(x, vmul_n_f32(v35, v59)).n64_u64[0];
   v61 = v30 + (float)(z * v59);
-  if ( !byte_4CE7E5B )
+  if ( !byte_4D2A13B )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    byte_4CE7E5B = 1;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    byte_4D2A13B = 1;
   }
   v62.n64_u64[0] = vsub_f32(v60, v55).n64_u64[0];
   v63 = v61 - v54;
@@ -1934,7 +1927,7 @@ LABEL_56:
   v64 = v62.n64_f32[1];
   v65 = vmul_f32(v62, v62).n64_u64[0];
   *(float *)&v65 = sqrtf((float)(v63 * v63) + (float)(*(float *)&v65 + vmuls_lane_f32(v62.n64_f32[1], v62, 1)));
-  v89.n64_u64[0] = v65;
+  v86.n64_u64[0] = v65;
   LODWORD(v2->fields.lineLength) = v65;
   this = (ClassBoardLine_o *)ClassBoardLine__GetConnectType(v2, v58);
   if ( !v2->fields.notConnectedSprite )
@@ -1953,7 +1946,7 @@ LABEL_56:
     || (this = (ClassBoardLine_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
   {
 LABEL_94:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   if ( !v66 )
@@ -1977,41 +1970,41 @@ LABEL_73:
   if ( !this )
     goto LABEL_94;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  if ( !byte_4CE84E7 )
+  if ( !byte_4D2A7BA )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    byte_4CE84E7 = 1;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    byte_4D2A7BA = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v69 = vcvtps_s32_f32(v89.n64_f32[0]);
-  v70 = ceilf(v89.n64_f32[0]) == INFINITY ? 0x80000000 : v69;
+  v69 = vcvtps_s32_f32(v86.n64_f32[0]);
+  v70 = ceilf(v86.n64_f32[0]) == INFINITY ? 0x80000000 : v69;
   UIWidget__set_width((UIWidget_o *)v68, v70, 0);
   this = (ClassBoardLine_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
   if ( !this )
     goto LABEL_94;
   v71 = this;
-  v90.fields.z = atan2f(v64, xa.n64_f32[0]) * 57.296;
-  v90.fields.x = 0.0;
-  v90.fields.y = 0.0;
-  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v71, v90, 0);
+  v88.fields.z = atan2f(v64, xa.n64_f32[0]) * 57.296;
+  v88.fields.x = 0.0;
+  v88.fields.y = 0.0;
+  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v71, v88, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
-  if ( !byte_4CE7E5C )
+  if ( !byte_4D2A13C )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    byte_4CE7E5C = 1;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    byte_4D2A13C = 1;
   }
   this = (ClassBoardLine_o *)System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v73 = v89.n64_f32[0];
-  if ( v89.n64_f32[0] <= 0.00001 )
+  v73 = v86.n64_f32[0];
+  if ( v86.n64_f32[0] <= 0.00001 )
   {
-    if ( !byte_4CE7E59 )
+    if ( !byte_4D2A139 )
     {
-      this = (ClassBoardLine_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-      v73 = v89.n64_f32[0];
-      byte_4CE7E59 = 1;
+      this = (ClassBoardLine_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+      v73 = v86.n64_f32[0];
+      byte_4D2A139 = 1;
     }
     v76 = UnityEngine_Vector3_TypeInfo->static_fields;
     v74.n64_u64[0] = *(unsigned __int64 *)&v76->zeroVector.fields.x;
@@ -2019,15 +2012,14 @@ LABEL_73:
   }
   else
   {
-    v74.n64_u64[0] = vdiv_f32(xa, vdup_lane_s32(v89, 0)).n64_u64[0];
-    v75 = v63 / v89.n64_f32[0];
+    v74.n64_u64[0] = vdiv_f32(xa, vdup_lane_s32(v86, 0)).n64_u64[0];
+    v75 = v63 / v86.n64_f32[0];
   }
   if ( !transform )
     goto LABEL_94;
-  v77 = v54 + (float)((float)(v73 * 0.5) * v75);
-  v78 = vadd_f32(v55, vmul_n_f32(v74, v73 * 0.5)).n64_u64[0];
-  v79 = HIDWORD(v78);
-  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)(&v77 - 2), 0);
+  *(float32x2_t *)&v87.fields.x = vadd_f32(v55, vmul_n_f32(v74, v73 * 0.5));
+  v87.fields.z = v54 + (float)((float)(v73 * 0.5) * v75);
+  UnityEngine_Transform__set_localPosition(transform, v87, 0);
 }
 
 
@@ -2057,20 +2049,20 @@ System_Collections_IEnumerator_o *ClassBoardLine__WaitAnimationFinished(
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4CF226A & 1) == 0 )
+  if ( (byte_4D34655 & 1) == 0 )
   {
-    sub_1C7BAE8(&ClassBoardLine__WaitAnimationFinished_d__40_TypeInfo);
-    byte_4CF226A = 1;
+    sub_1C93AD4(&ClassBoardLine__WaitAnimationFinished_d__40_TypeInfo);
+    byte_4D34655 = 1;
   }
-  v7 = sub_1C7BD34(ClassBoardLine__WaitAnimationFinished_d__40_TypeInfo);
+  v7 = sub_1C93D20(ClassBoardLine__WaitAnimationFinished_d__40_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)name, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)name, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = endCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)endCallback, v20, v21, v22, v23, v24, v25);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)endCallback, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -2081,7 +2073,7 @@ void ClassBoardLine___PlayGrandToClassTransition_b__30_0(ClassBoardLine_o *this,
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   SimpleAnimation__Stop(simpleAnimation, 0);
 }
 
@@ -2095,7 +2087,7 @@ void ClassBoardLine___PlayReleaseEffect_b__35_0(ClassBoardLine_o *this, const Me
     || (SimpleAnimation__Stop(simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0) )
   {
-    sub_1C7BD40(simpleAnimation, method);
+    sub_1C93D2C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -2110,7 +2102,7 @@ void ClassBoardLine___PlayReleaseEffect_b__35_1(ClassBoardLine_o *this, const Me
     || (SimpleAnimation__Stop(simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0) )
   {
-    sub_1C7BD40(simpleAnimation, method);
+    sub_1C93D2C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -2125,7 +2117,7 @@ void ClassBoardLine___PlayReleaseEffect_b__35_2(ClassBoardLine_o *this, const Me
     || (SimpleAnimation__Stop(simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0) )
   {
-    sub_1C7BD40(simpleAnimation, method);
+    sub_1C93D2C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -2140,7 +2132,7 @@ void ClassBoardLine___PlayReleaseEffect_b__35_3(ClassBoardLine_o *this, const Me
     || (SimpleAnimation__Stop(simpleAnimation, 0),
         (simpleAnimation = (SimpleAnimation_o *)this->fields.releaseEffectPlayer) == 0) )
   {
-    sub_1C7BD40(simpleAnimation, method);
+    sub_1C93D2C(simpleAnimation, method);
   }
   ClassBoardEffectPlayer__End((ClassBoardEffectPlayer_o *)simpleAnimation, 0);
 }
@@ -2152,7 +2144,7 @@ void ClassBoardLine___PlayTransition_b__29_0(ClassBoardLine_o *this, const Metho
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   SimpleAnimation__Stop(simpleAnimation, 0);
 }
 
@@ -2163,7 +2155,7 @@ void ClassBoardLine___PlayTransition_b__29_1(ClassBoardLine_o *this, const Metho
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   SimpleAnimation__Stop(simpleAnimation, 0);
 }
 
@@ -2174,7 +2166,7 @@ void ClassBoardLine___PlayTransition_b__29_2(ClassBoardLine_o *this, const Metho
 
   simpleAnimation = this->fields.simpleAnimation;
   if ( !simpleAnimation )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   SimpleAnimation__Stop(simpleAnimation, 0);
 }
 
@@ -2200,7 +2192,7 @@ void ClassBoardLine__set_LineModel(ClassBoardLine_o *this, IClassBoardLineModel_
   System_String_o *v7; // x7
 
   this->fields._LineModel_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._LineModel_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -2253,13 +2245,12 @@ bool ClassBoardLine__WaitAnimationFinished_d__40__MoveNext(
   int64_t v26; // x6
   System_String_o *v27; // x7
   GrandQuestFolderBoardItem_o *p__2__current; // x19
-  bool result; // w0
 
   v2 = this;
-  if ( (byte_4CF226C & 1) == 0 )
+  if ( (byte_4D34657 & 1) == 0 )
   {
-    this = (ClassBoardLine__WaitAnimationFinished_d__40_o *)sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF226C = 1;
+    this = (ClassBoardLine__WaitAnimationFinished_d__40_o *)sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D34657 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -2278,7 +2269,7 @@ bool ClassBoardLine__WaitAnimationFinished_d__40__MoveNext(
       goto LABEL_28;
     State = SimpleAnimation__GetState((SimpleAnimation_o *)this, v2->fields.name, 0);
     v2->fields._state_5__2 = State;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._state_5__2, (int32_t)State, v6, v7, v8, v9, v10, v11);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._state_5__2, (int32_t)State, v6, v7, v8, v9, v10, v11);
 LABEL_9:
     state_5__2 = v2->fields._state_5__2;
     if ( !state_5__2 )
@@ -2300,7 +2291,7 @@ LABEL_9:
     else
     {
 LABEL_14:
-      v16 = sub_1C51E70(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 13);
+      v16 = sub_1C69E5C(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 13);
     }
     if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v16)(state_5__2, *(_QWORD *)(v16 + 8)) <= 0.0 )
     {
@@ -2328,21 +2319,20 @@ LABEL_26:
       else
       {
 LABEL_22:
-        v21 = sub_1C51E70(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 5);
+        v21 = sub_1C69E5C(v2->fields._state_5__2, SimpleAnimation_State_TypeInfo, 5);
       }
       if ( (*(float (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v21)(v17, *(_QWORD *)(v21 + 8)) < 1.0 )
       {
         v2->fields.__2__current = 0;
         p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-        sub_1C7BA8C(p__2__current, 0, v22, v23, v24, v25, v26, v27);
-        result = 1;
+        sub_1C93A78(p__2__current, 0, v22, v23, v24, v25, v26, v27);
         LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-        return result;
+        return 1;
       }
       goto LABEL_26;
     }
 LABEL_28:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   return 0;
 }
@@ -2364,11 +2354,11 @@ void __noreturn ClassBoardLine__WaitAnimationFinished_d__40__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_ClassBoardLine__WaitAnimationFinished_d__40_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_ClassBoardLine__WaitAnimationFinished_d__40_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 

@@ -17,7 +17,7 @@ void ExUIGrid__ResetPosition(
   float v10; // s8
   unsigned int v11; // w8
   int v12; // w25
-  UnityEngine_Vector2_o PivotOffset; // kr00_8
+  UnityEngine_Vector2_o PivotOffset; // kr10_8
   float v14; // s2
   int v15; // w26
   float v16; // s0
@@ -36,38 +36,36 @@ void ExUIGrid__ResetPosition(
   int32_t arrangement; // w8
   float x; // s9
   float v31; // s10
-  float v32; // s8
   float cellWidth; // s0
-  float v34; // s9
+  float v33; // s9
+  double v34; // d0
   double v35; // d0
-  double v36; // d0
-  float v37; // s1
-  __int64 v38; // x8
-  float v39; // s0
-  float v40; // s1
+  float v36; // s1
+  __int64 v37; // x8
+  float v38; // s0
+  float v39; // s1
   float cellHeight; // s0
-  float v42; // s10
+  float v41; // s10
+  double v42; // d0
   double v43; // d0
-  double v44; // d0
-  float v45; // s1
-  __int64 v46; // x8
-  float v47; // s0
-  float v48; // s1
-  float v49; // s8
+  float v44; // s1
+  __int64 v45; // x8
+  float v46; // s0
+  float v47; // s1
   UnityEngine_GameObject_o *gameObject; // x0
-  float v51; // [xsp+Ch] [xbp-B4h]
+  float v49; // [xsp+Ch] [xbp-B4h]
   double iptr; // [xsp+18h] [xbp-A8h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEFD2C & 1) == 0 )
+  if ( (byte_4D320B1 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__GetRange__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4CEFD2C = 1;
+    sub_1C93AD4(&UnityEngine_Application_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Transform__GetRange__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4D320B1 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)list, 0);
   if ( (IsNullOrEmpty & 1) == 0 )
@@ -82,13 +80,13 @@ void ExUIGrid__ResetPosition(
       this->fields.mReposition = 0;
       if ( !list )
 LABEL_72:
-        sub_1C7BD40(IsNullOrEmpty, v6);
+        sub_1C93D2C(IsNullOrEmpty, v6);
       v8 = (float)maxPerLine;
       size = (float)list->fields._size;
-      if ( !byte_4CE84E7 )
+      if ( !byte_4D2A7BA )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE84E7 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A7BA = 1;
       }
       v10 = size / v8;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -107,7 +105,7 @@ LABEL_72:
           v16 = 0.0;
         else
           v16 = v14;
-        v51 = v16;
+        v49 = v16;
         while ( 1 )
         {
           v17 = this->fields.maxPerLine;
@@ -119,12 +117,12 @@ LABEL_72:
                                      (System_Collections_Generic_List_object__o *)list,
                                      v17 * v15,
                                      v18,
-                                     (const MethodInfo_383F9CC *)Method_System_Collections_Generic_List_Transform__GetRange__);
+                                     (const MethodInfo_387A56C *)Method_System_Collections_Generic_List_Transform__GetRange__);
           v19 = (System_Collections_Generic_List_object__o *)IsNullOrEmpty;
-          if ( !byte_4CE7E59 )
+          if ( !byte_4D2A139 )
           {
-            IsNullOrEmpty = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-            byte_4CE7E59 = 1;
+            IsNullOrEmpty = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+            byte_4D2A139 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           z = static_fields->zeroVector.fields.z;
@@ -144,7 +142,7 @@ LABEL_72:
             v22 = v19->fields._size;
             y = (float)(this->fields.cellHeight * (float)(1 - v12))
               + (float)(PivotOffset.fields.y * (float)(0.0 - (float)(this->fields.cellHeight * (float)(1 - v12))));
-            v25 = (float)(v51 * (float)(this->fields.cellWidth * (float)(v22 - 1))) + 0.0;
+            v25 = (float)(v49 * (float)(this->fields.cellWidth * (float)(v22 - 1))) + 0.0;
           }
           if ( v22 >= 1 )
             break;
@@ -159,7 +157,7 @@ LABEL_69:
           IsNullOrEmpty = (__int64)System_Collections_Generic_List_object___get_Item(
                                      v19,
                                      v26,
-                                     (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                     (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_Transform__get_Item__);
           if ( !IsNullOrEmpty )
             goto LABEL_72;
           v28 = (UnityEngine_Component_o *)IsNullOrEmpty;
@@ -167,7 +165,6 @@ LABEL_69:
           arrangement = this->fields.arrangement;
           x = localPosition.fields.x;
           v31 = localPosition.fields.y;
-          v32 = localPosition.fields.z;
           if ( arrangement != 2 )
           {
             if ( arrangement == 1 )
@@ -189,38 +186,37 @@ LABEL_48:
           cellHeight = this->fields.cellHeight;
           if ( cellHeight <= 0.0 )
             goto LABEL_60;
-          v42 = v31 / cellHeight;
-          v43 = modf(v42, &iptr);
-          if ( v42 >= 0.0 )
+          v41 = localPosition.fields.y / cellHeight;
+          v42 = modf((float)(localPosition.fields.y / cellHeight), &iptr);
+          if ( v41 >= 0.0 )
           {
-            if ( v43 == 0.5 )
+            if ( v42 == 0.5 )
             {
-              v44 = iptr;
-              v45 = 1.0;
+              v43 = iptr;
+              v44 = 1.0;
 LABEL_54:
-              v46 = (__int64)v44;
-              v47 = v44;
-              v48 = v47 + v45;
-              if ( (v46 & 1) != 0 )
-                v47 = v48;
+              v45 = (__int64)v43;
+              v46 = v43;
+              v47 = v46 + v44;
+              if ( (v45 & 1) != 0 )
+                v46 = v47;
               goto LABEL_59;
             }
-            v47 = floorf(v42 + 0.5);
+            v46 = floorf(v41 + 0.5);
           }
           else
           {
-            if ( v43 == -0.5 )
+            if ( v42 == -0.5 )
             {
-              v44 = iptr;
-              v45 = -1.0;
+              v43 = iptr;
+              v44 = -1.0;
               goto LABEL_54;
             }
-            v47 = ceilf(v42 + -0.5);
+            v46 = ceilf(v41 + -0.5);
           }
 LABEL_59:
-          v31 = v47 * this->fields.cellHeight;
+          v31 = v46 * this->fields.cellHeight;
 LABEL_60:
-          v49 = v32 - z;
           if ( !this->fields.animateSmoothly )
             goto LABEL_66;
           if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -228,10 +224,10 @@ LABEL_60:
           if ( UnityEngine_Application__get_isPlaying(0) )
           {
             gameObject = UnityEngine_Component__get_gameObject(v28, 0);
-            v54.fields.x = x - v25;
-            v54.fields.y = v31 - y;
-            v54.fields.z = v49;
-            IsNullOrEmpty = (__int64)SpringPosition__Begin(gameObject, v54, 15.0, 0);
+            v52.fields.x = x - v25;
+            v52.fields.y = v31 - y;
+            v52.fields.z = localPosition.fields.z - z;
+            IsNullOrEmpty = (__int64)SpringPosition__Begin(gameObject, v52, 15.0, 0);
             if ( !IsNullOrEmpty )
               goto LABEL_72;
             *(_WORD *)(IsNullOrEmpty + 49) = 257;
@@ -242,44 +238,44 @@ LABEL_66:
             IsNullOrEmpty = (__int64)UnityEngine_Component__get_transform(v28, 0);
             if ( !IsNullOrEmpty )
               goto LABEL_72;
-            v55.fields.x = x - v25;
-            v55.fields.y = v31 - y;
-            v55.fields.z = v49;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v55, 0);
+            v53.fields.x = x - v25;
+            v53.fields.y = v31 - y;
+            v53.fields.z = localPosition.fields.z - z;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v53, 0);
           }
           if ( ++v26 >= v19->fields._size )
             goto LABEL_69;
         }
-        v34 = x / cellWidth;
-        v35 = modf(v34, &iptr);
-        if ( v34 >= 0.0 )
+        v33 = localPosition.fields.x / cellWidth;
+        v34 = modf((float)(localPosition.fields.x / cellWidth), &iptr);
+        if ( v33 >= 0.0 )
         {
-          if ( v35 == 0.5 )
+          if ( v34 == 0.5 )
           {
-            v36 = iptr;
-            v37 = 1.0;
+            v35 = iptr;
+            v36 = 1.0;
 LABEL_42:
-            v38 = (__int64)v36;
-            v39 = v36;
-            v40 = v39 + v37;
-            if ( (v38 & 1) != 0 )
-              v39 = v40;
+            v37 = (__int64)v35;
+            v38 = v35;
+            v39 = v38 + v36;
+            if ( (v37 & 1) != 0 )
+              v38 = v39;
             goto LABEL_47;
           }
-          v39 = floorf(v34 + 0.5);
+          v38 = floorf(v33 + 0.5);
         }
         else
         {
-          if ( v35 == -0.5 )
+          if ( v34 == -0.5 )
           {
-            v36 = iptr;
-            v37 = -1.0;
+            v35 = iptr;
+            v36 = -1.0;
             goto LABEL_42;
           }
-          v39 = ceilf(v34 + -0.5);
+          v38 = ceilf(v33 + -0.5);
         }
 LABEL_47:
-        x = v39 * this->fields.cellWidth;
+        x = v38 * this->fields.cellWidth;
         goto LABEL_48;
       }
     }

@@ -1,9 +1,9 @@
 void BlankEarthShortcutButtonListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CEADB1 & 1) == 0 )
+  if ( (byte_4D2D0A1 & 1) == 0 )
   {
-    sub_1C7BAE8(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
-    byte_4CEADB1 = 1;
+    sub_1C93AD4(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
+    byte_4D2D0A1 = 1;
   }
   BlankEarthShortcutButtonListViewItemDraw_TypeInfo->static_fields->NAME_LABEL_MAX_WIDTH = 115;
 }
@@ -27,10 +27,10 @@ float BlankEarthShortcutButtonListViewItemDraw__GetButtonWidth(
   float result; // s0
   struct UISprite_o *v7; // x8
 
-  if ( (byte_4CEADAF & 1) == 0 )
+  if ( (byte_4D2D09F & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEADAF = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D09F = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -41,7 +41,7 @@ float BlankEarthShortcutButtonListViewItemDraw__GetButtonWidth(
   {
     v7 = this->fields.bgSprite;
     if ( !v7 )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     return (float)v7->fields.mWidth;
   }
   return result;
@@ -92,7 +92,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   Il2CppObject *Master_object; // x0
   __int64 v34; // x1
   WarReleaseEntity_o *OpenEntity; // x0
-  Il2CppObject *ComponentInParent_object__51802752; // x0
+  Il2CppObject *ComponentInParent_object__52017352; // x0
   struct BlankEarthShortcutUIButton_o **p_shortcutButton; // x22
   int32_t v38; // w2
   int32_t v39; // w3
@@ -188,36 +188,36 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   int32_t IconId_k__BackingField; // [xsp+1Ch] [xbp-84h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v130; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4CEADAD & 1) == 0 )
+  if ( (byte_4D2D09D & 1) == 0 )
   {
-    sub_1C7BAE8(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_WarReleaseMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__get_Current__);
-    sub_1C7BAE8(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__ToArray__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C7BAE8(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&UICommonButtonColor_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_43/*"\n"*/);
-    sub_1C7BAE8(&StringLiteral_87/*"\r\n"*/);
-    sub_1C7BAE8(&StringLiteral_17605/*"btn_shortcut"*/);
-    sub_1C7BAE8(&StringLiteral_19359/*"event_logo_shortcut_"*/);
-    byte_4CEADAD = 1;
+    sub_1C93AD4(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_WarReleaseMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_WarEntity__get_Current__);
+    sub_1C93AD4(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__ToArray__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C93AD4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&UICommonButtonColor_TypeInfo);
+    sub_1C93AD4(&StringLiteral_43/*"\n"*/);
+    sub_1C93AD4(&StringLiteral_87/*"\r\n"*/);
+    sub_1C93AD4(&StringLiteral_17648/*"btn_shortcut"*/);
+    sub_1C93AD4(&StringLiteral_19412/*"event_logo_shortcut_"*/);
+    byte_4D2D09D = 1;
   }
   memset(&v130, 0, sizeof(v130));
   IconId_k__BackingField = 0;
   this->fields.listViewItem = item;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem,
     (int32_t)item,
     (int32_t)method,
@@ -230,7 +230,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
     goto LABEL_101;
   OnClickAction_k__BackingField = item->fields._OnClickAction_k__BackingField;
   this->fields.onClickAction = OnClickAction_k__BackingField;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickAction,
     (int32_t)OnClickAction_k__BackingField,
     v12,
@@ -242,10 +242,10 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C8BB0 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+                       (const MethodInfo_31FDB6C *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
   this->fields.bgSprite = (struct UISprite_o *)Component_object;
   p_bgSprite = &this->fields.bgSprite;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.bgSprite,
     (int32_t)Component_object,
     v22,
@@ -261,7 +261,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   bgSprite = (__int64)*p_bgSprite;
   if ( !*p_bgSprite )
     goto LABEL_101;
-  UISprite__set_spriteName((UISprite_o *)bgSprite, (System_String_o *)StringLiteral_17605/*"btn_shortcut"*/, 0);
+  UISprite__set_spriteName((UISprite_o *)bgSprite, (System_String_o *)StringLiteral_17648/*"btn_shortcut"*/, 0);
   bgSprite = (__int64)*p_bgSprite;
   if ( !*p_bgSprite )
     goto LABEL_101;
@@ -270,7 +270,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
     *(_QWORD *)(*(_QWORD *)bgSprite + 848LL));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  bgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_WarMaster___);
+  bgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !bgSprite )
     goto LABEL_101;
   bgSprite = (__int64)WarMaster__GetEntityList((WarMaster_o *)bgSprite, 0);
@@ -279,29 +279,29 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v128,
     (System_Collections_Generic_List_object__o *)bgSprite,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
   v28 = 0;
   v130 = v128;
   while ( 1 )
   {
     v29 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v130,
-            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
+            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
     if ( !v29 )
       break;
     current = v130.fields._current;
     if ( !v130.fields._current )
-      sub_1C7BD40(v29, v30);
+      sub_1C93D2C(v29, v30);
     blankEarthSpotNavimenuEntity_k__BackingField = item->fields._blankEarthSpotNavimenuEntity_k__BackingField;
     if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-      sub_1C7BD40(v29, v30);
+      sub_1C93D2C(v29, v30);
     if ( HIDWORD(v130.fields._current[7].monitor) == blankEarthSpotNavimenuEntity_k__BackingField->fields.blankEarthSpotId )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_WarReleaseMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_WarReleaseMaster___);
       if ( !Master_object )
-        sub_1C7BD40(0, v34);
+        sub_1C93D2C(0, v34);
       OpenEntity = WarReleaseMaster__GetOpenEntity((WarReleaseMaster_o *)Master_object, (int32_t)current[1].klass, 0);
       if ( OpenEntity )
       {
@@ -312,15 +312,15 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v130,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
-  ComponentInParent_object__51802752 = UnityEngine_Component__GetComponentInParent_object__51802752(
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
+  ComponentInParent_object__52017352 = UnityEngine_Component__GetComponentInParent_object__52017352(
                                          (UnityEngine_Component_o *)this,
-                                         (const MethodInfo_3167280 *)Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
-  this->fields.shortcutButton = (struct BlankEarthShortcutUIButton_o *)ComponentInParent_object__51802752;
+                                         (const MethodInfo_319B8C8 *)Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
+  this->fields.shortcutButton = (struct BlankEarthShortcutUIButton_o *)ComponentInParent_object__52017352;
   p_shortcutButton = &this->fields.shortcutButton;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.shortcutButton,
-    (int32_t)ComponentInParent_object__51802752,
+    (int32_t)ComponentInParent_object__52017352,
     v38,
     v39,
     v40,
@@ -332,7 +332,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
     goto LABEL_101;
   onClickAction = this->fields.onClickAction;
   *(_QWORD *)(bgSprite + 112) = onClickAction;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(bgSprite + 112), (int32_t)onClickAction, v44, v45, v46, v47, v48, v49);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(bgSprite + 112), (int32_t)onClickAction, v44, v45, v46, v47, v48, v49);
   v51 = (UnityEngine_Object_o *)*p_shortcutButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -340,10 +340,10 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
   {
     if ( (v28 & 1) == 0 )
     {
-      v52 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_GameObject__TypeInfo);
+      v52 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_GameObject__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v52,
-        (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+        (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_GameObject___ctor__);
       bgSprite = (__int64)*p_bgSprite;
       if ( !*p_bgSprite )
         goto LABEL_101;
@@ -362,14 +362,14 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
       }
       else
       {
         v63 = &items->obj.klass + size;
         v52->fields._size = size + 1;
         v63[4] = (Il2CppClass *)v62;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v63 + 4), v62, v53, v54, v55, v56, v57, v58);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v63 + 4), v62, v53, v54, v55, v56, v57, v58);
       }
       bgSprite = (__int64)this->fields.iconSprite;
       if ( !bgSprite )
@@ -387,14 +387,14 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
       }
       else
       {
         v74 = &v70->obj.klass + v72;
         v52->fields._size = v72 + 1;
         v74[4] = (Il2CppClass *)v73;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v74 + 4), v73, v64, v65, v66, v67, v68, v69);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v74 + 4), v73, v64, v65, v66, v67, v68, v69);
       }
       bgSprite = (__int64)this->fields.nameLabelUp;
       if ( !bgSprite )
@@ -412,14 +412,14 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
       }
       else
       {
         v85 = &v81->obj.klass + v83;
         v52->fields._size = v83 + 1;
         v85[4] = (Il2CppClass *)v84;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v85 + 4), v84, v75, v76, v77, v78, v79, v80);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v85 + 4), v84, v75, v76, v77, v78, v79, v80);
       }
       bgSprite = (__int64)this->fields.nameLabelBottom;
       if ( !bgSprite )
@@ -437,14 +437,14 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
       }
       else
       {
         v96 = &v92->obj.klass + v94;
         v52->fields._size = v94 + 1;
         v96[4] = (Il2CppClass *)v95;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v96 + 4), v95, v86, v87, v88, v89, v90, v91);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v96 + 4), v95, v86, v87, v88, v89, v90, v91);
       }
       bgSprite = (__int64)this->fields.nameLabelMiddle;
       if ( !bgSprite )
@@ -462,23 +462,23 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v104[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v104[4] + 192LL) + 112LL));
       }
       else
       {
         v107 = &v103->obj.klass + v105;
         v52->fields._size = v105 + 1;
         v107[4] = (Il2CppClass *)v106;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v107 + 4), v106, v97, v98, v99, v100, v101, v102);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v107 + 4), v106, v97, v98, v99, v100, v101, v102);
       }
       v108 = *p_shortcutButton;
       bgSprite = (__int64)System_Collections_Generic_List_object___ToArray(
                             v52,
-                            (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+                            (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
       if ( !v108 )
         goto LABEL_101;
       v108->fields.tweenTargets = (struct UnityEngine_GameObject_array *)bgSprite;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&v108->fields.tweenTargets,
         bgSprite,
         v109,
@@ -523,12 +523,12 @@ void BlankEarthShortcutButtonListViewItemDraw__SetItem(
       }
     }
 LABEL_101:
-    sub_1C7BD40(bgSprite, v11);
+    sub_1C93D2C(bgSprite, v11);
   }
   bgSprite = (__int64)item->fields._Name_k__BackingField;
   if ( !bgSprite )
     goto LABEL_101;
-  bgSprite = (__int64)System_String__Replace_64223476(
+  bgSprite = (__int64)System_String__Replace_64472288(
                         (System_String_o *)bgSprite,
                         (System_String_o *)StringLiteral_87/*"\r\n"*/,
                         (System_String_o *)StringLiteral_43/*"\n"*/,
@@ -542,7 +542,7 @@ LABEL_101:
                                                                 0);
   bgSprite = (__int64)System_Linq_Enumerable__ToList_object_(
                         v116,
-                        (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_string___);
+                        (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_string___);
   if ( !bgSprite )
     goto LABEL_101;
   nameLabelUp = this->fields.nameLabelUp;
@@ -550,7 +550,7 @@ LABEL_101:
   bgSprite = (__int64)System_Collections_Generic_List_object___get_Item(
                         (System_Collections_Generic_List_object__o *)bgSprite,
                         0,
-                        (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                        (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelUp )
     goto LABEL_101;
   UILabel__set_text(nameLabelUp, (System_String_o *)bgSprite, 0);
@@ -575,7 +575,7 @@ LABEL_101:
   bgSprite = (__int64)System_Collections_Generic_List_object___get_Item(
                         v118,
                         1,
-                        (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                        (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelBottom )
     goto LABEL_101;
   UILabel__set_text(nameLabelBottom, (System_String_o *)bgSprite, 0);
@@ -596,7 +596,7 @@ LABEL_78:
     0);
   IconId_k__BackingField = item->fields._IconId_k__BackingField;
   v122 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0);
-  v123 = System_String__Concat_64176912((System_String_o *)StringLiteral_19359/*"event_logo_shortcut_"*/, v122, 0);
+  v123 = System_String__Concat_64425724((System_String_o *)StringLiteral_19412/*"event_logo_shortcut_"*/, v122, 0);
   IconAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._IconAtlas_k__BackingField;
   v125 = v123;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -681,10 +681,10 @@ void BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
   struct BlankEarthShortcutUIButton_o *v7; // x0
   _BOOL4 isLongPress; // w8
 
-  if ( (byte_4CEADB0 & 1) == 0 )
+  if ( (byte_4D2D0A0 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEADB0 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D0A0 = 1;
   }
   shortcutButton = (UnityEngine_Object_o *)this->fields.shortcutButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -693,7 +693,7 @@ void BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
   {
     v7 = this->fields.shortcutButton;
     if ( !v7 )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     if ( isEnable )
     {
       isLongPress = v7->fields.isLongPress;
@@ -720,10 +720,10 @@ void BlankEarthShortcutButtonListViewItemDraw__Update(
   const MethodInfo *v7; // x3
   struct BlankEarthShortcutButtonListViewItem_o *listViewItem; // x8
 
-  if ( (byte_4CEADAE & 1) == 0 )
+  if ( (byte_4D2D09E & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEADAE = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D09E = 1;
   }
   optionComponent = (UnityEngine_Object_o *)this->fields.optionComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -754,7 +754,7 @@ void BlankEarthShortcutButtonListViewItemDraw__Update(
         }
       }
 LABEL_13:
-      sub_1C7BD40(v6, v4);
+      sub_1C93D2C(v6, v4);
     }
   }
 }

@@ -4,7 +4,7 @@ void WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, const MethodI
 }
 
 
-void WarBoardBossBattleData___ctor_38386872(
+void WarBoardBossBattleData___ctor_38529816(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
@@ -21,11 +21,11 @@ void WarBoardBossBattleData___ctor_38386872(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.script, (int32_t)script, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.script, (int32_t)script, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -44,11 +44,11 @@ void WarBoardBossBattleData_SaveData___ctor(WarBoardBossBattleData_SaveData_o *t
   v2->fields.script = 0;
   v2 = (WarBoardBossBattleData_SaveData_o *)((char *)v2 + 24);
   v2[-1].fields.script = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
-void WarBoardBossBattleData_SaveData___ctor_38386976(
+void WarBoardBossBattleData_SaveData___ctor_38529920(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
@@ -65,9 +65,9 @@ void WarBoardBossBattleData_SaveData___ctor_38386976(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.script, (int32_t)script, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.script, (int32_t)script, v7, v8, v9, v10, v11, v12);
 }

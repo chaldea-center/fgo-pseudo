@@ -17,11 +17,11 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   float v10; // s13
   float v11; // s11
   float startParentPosZ; // s12
-  float z; // s8
+  float v13; // s8
   float v14; // s13
   float v15; // s9
   float v16; // s8
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  float z; // s2
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -37,10 +37,10 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
     goto LABEL_11;
   v9 = (float)width / (float)v6;
   v10 = (float)(fminf(v9, 2.3333) * 9.0) * 0.0625;
-  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  z = UnityEngine_Transform__get_localPosition(transform, 0).fields.z;
   startParentPosZ = this->fields.startParentPosZ;
   v11 = this->fields.endParentPosZ;
-  z = localPosition.fields.z;
+  v13 = z;
   v14 = v9 < 1.7778 ? 0.0 : v10 + -1.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -51,7 +51,7 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   LODWORD(v15) = (unsigned int)UnityEngine_Transform__get_localPosition(transform, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (v16 = (float)((float)(v14 * (float)(endParentPosZ - z)) / (float)(v11 - startParentPosZ)) + 1.0,
+    || (v16 = (float)((float)(v14 * (float)(endParentPosZ - v13)) / (float)(v11 - startParentPosZ)) + 1.0,
         v18.fields.x = (float)(1.0 - v16) * v15,
         v18.fields.y = 0.0,
         v18.fields.z = 0.0,
@@ -59,7 +59,7 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_11:
-    sub_1C7BD40(transform, v8);
+    sub_1C93D2C(transform, v8);
   }
   v19.fields.x = v16;
   v19.fields.z = v16;

@@ -20,7 +20,7 @@ void FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v9 = IsInversion;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.TargetObj,
     (int32_t)obj,
     IsInversion,
@@ -41,14 +41,14 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
   __int64 v6; // x1
   UnityEngine_Transform_o *v7; // x19
   float x; // s8
-  float v9; // s0
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEDA99 & 1) == 0 )
+  if ( (byte_4D2FDF2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEDA99 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2FDF2 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -64,6 +64,8 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
       if ( transform )
       {
         localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+        v12.fields.y = localPosition.fields.y;
+        v12.fields.z = localPosition.fields.z;
         x = localPosition.fields.x;
         if ( IsInversion )
         {
@@ -73,15 +75,15 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
             transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
             if ( transform )
             {
-              v11 = UnityEngine_Transform__get_localPosition(transform, 0);
+              y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
               if ( v7 )
               {
-                localPosition.fields.y = -v11.fields.y;
-                x = -x;
-                localPosition.fields.z = 0.0;
+                v12.fields.y = -y;
+                x = -localPosition.fields.x;
+                v12.fields.z = 0.0;
 LABEL_14:
-                v9 = x;
-                UnityEngine_Transform__set_localPosition(v7, localPosition, 0);
+                v12.fields.x = x;
+                UnityEngine_Transform__set_localPosition(v7, v12, 0);
                 return;
               }
             }
@@ -93,6 +95,6 @@ LABEL_14:
         }
       }
     }
-    sub_1C7BD40(transform, v6);
+    sub_1C93D2C(transform, v6);
   }
 }

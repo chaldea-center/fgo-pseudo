@@ -7,10 +7,10 @@ void CriMonoBehaviour___ctor(CriMonoBehaviour_o *this, const MethodInfo *method)
 
 void CriMonoBehaviour__OnDisable(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE7CF3 & 1) == 0 )
+  if ( (byte_4D29FD3 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriMonoBehaviourManager_TypeInfo);
-    byte_4CE7CF3 = 1;
+    sub_1C93AD4(&CriMonoBehaviourManager_TypeInfo);
+    byte_4D29FD3 = 1;
   }
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
@@ -25,32 +25,27 @@ void CriMonoBehaviour__OnEnable(CriMonoBehaviour_o *this, const MethodInfo *meth
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CE7CF2 & 1) == 0 )
+  if ( (byte_4D29FD2 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriMonoBehaviourManager_TypeInfo);
-    byte_4CE7CF2 = 1;
+    sub_1C93AD4(&CriMonoBehaviourManager_TypeInfo);
+    byte_4D29FD2 = 1;
   }
   inited = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     inited = (CriMonoBehaviourManager_c *)j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
   instance = CriMonoBehaviourManager__get_instance((const MethodInfo *)inited);
   if ( !instance )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   CriMonoBehaviourManager__Register(instance, this, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Guid_o CriMonoBehaviour__get_guid(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v3; // x0
   System_Guid_o result; // 0:x0.16
 
-  v2 = *(_QWORD *)&this->fields._guid_k__BackingField.fields._d;
-  v3 = *(_QWORD *)&this->fields._guid_k__BackingField.fields._a;
-  *(_QWORD *)&result.fields._d = v2;
-  *(_QWORD *)&result.fields._a = v3;
+  *(_QWORD *)&result.fields._d = *(_QWORD *)&this->fields._guid_k__BackingField.fields._d;
+  *(_QWORD *)&result.fields._a = *(_QWORD *)&this->fields._guid_k__BackingField.fields._a;
   return result;
 }
 

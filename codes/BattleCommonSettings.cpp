@@ -39,7 +39,7 @@ System_String_o *BattleCommonSettings_ShiftIconAdjustment__get_SpriteName(
   {
     spriteName = BattleServantHpShiftComponent__GetShiftIconName(this->fields.ImageType, this->fields.ImageNo, 0);
     this->fields.spriteName = spriteName;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_spriteName, (int32_t)spriteName, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)p_spriteName, (int32_t)spriteName, v5, v6, v7, v8, v9, v10);
   }
   return spriteName;
 }

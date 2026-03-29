@@ -41,28 +41,28 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   int64_t v43; // x6
   System_String_o *v44; // x7
 
-  if ( (byte_4CF0ED5 & 1) == 0 )
+  if ( (byte_4D3328B & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF0ED5 = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D3328B = 1;
   }
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   v5 = StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField, v12, v13, v14, v15, v16, v17, v18);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField, v12, v13, v14, v15, v16, v17, v18);
   this->fields._ItemEnt_k__BackingField = 0;
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v19, v20, v21, v22, v23, v24);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v19, v20, v21, v22, v23, v24);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
   v25 = StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     v25,
     v26,
@@ -73,11 +73,11 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
     v31);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._LinkAction_k__BackingField, 0, v32, v33, v34, v35, v36, v37);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields._LinkAction_k__BackingField, 0, v32, v33, v34, v35, v36, v37);
   this->fields._IsFirst_k__BackingField = 0;
   v38 = StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
     v38,
     v39,
@@ -215,7 +215,7 @@ void ItemLinkInfoListViewItem__set_ClosedMessage(
   System_String_o *v7; // x7
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -239,7 +239,7 @@ void ItemLinkInfoListViewItem__set_IconName(
   System_String_o *v7; // x7
 
   this->fields._IconName_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -308,7 +308,7 @@ void ItemLinkInfoListViewItem__set_ItemEnt(
   System_String_o *v7; // x7
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEnt_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -341,7 +341,7 @@ void ItemLinkInfoListViewItem__set_LinkAction(
   System_String_o *v7; // x7
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._LinkAction_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -365,7 +365,7 @@ void ItemLinkInfoListViewItem__set_Name(
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -404,7 +404,7 @@ void ItemLinkInfoListViewItem__set_TransitionParam(
   System_String_o *v7; // x7
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
     (int32_t)value,
     (int32_t)method,

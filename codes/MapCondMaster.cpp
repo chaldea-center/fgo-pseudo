@@ -1,14 +1,14 @@
 void MapCondMaster___ctor(MapCondMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEEB33 & 1) == 0 )
+  if ( (byte_4D30E9F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
-    byte_4CEEB33 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
+    byte_4D30E9F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     202,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string___ctor__);
 }
 
 
@@ -27,31 +27,31 @@ System_Collections_Generic_List_int__o *MapCondMaster__GetAvailableButtons(
   System_Collections_Generic_List_int__o *v12; // x20
   int32_t value; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CEEB35 & 1) == 0 )
+  if ( (byte_4D30EA1 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
-    sub_1C7BAE8(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_int___ctor___78742272);
-    sub_1C7BAE8(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEEB35 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
+    sub_1C93AD4(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor___79008552);
+    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D30EA1 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C93D20(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v5,
-    (const MethodInfo_347E294 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_34B3908 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
     goto LABEL_21;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   list = NetworkManager__getTime(0);
@@ -67,7 +67,7 @@ System_Collections_Generic_List_int__o *MapCondMaster__GetAvailableButtons(
       list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)list,
                         v9,
-                        (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+                        (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
       if ( list )
       {
         v10 = (MapCondEntity_o *)list;
@@ -79,7 +79,7 @@ System_Collections_Generic_List_int__o *MapCondMaster__GetAvailableButtons(
                    v5,
                    *(_DWORD *)(list + 32),
                    &value,
-                   (const MethodInfo_34802F0 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+                   (const MethodInfo_34B5964 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
           if ( (list & 1) == 0 )
             goto LABEL_16;
           if ( v10->fields.priority >= value )
@@ -93,7 +93,7 @@ LABEL_18:
     System_Collections_Generic_Dictionary_int__int___Remove(
       v5,
       v10->fields.targetId,
-      (const MethodInfo_3480010 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+      (const MethodInfo_34B5684 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
 LABEL_16:
     list = MapCondEntity__IsOpen(v10, v6);
     if ( (list & 1) != 0 )
@@ -101,21 +101,21 @@ LABEL_16:
         v5,
         v10->fields.targetId,
         v10->fields.priority,
-        (const MethodInfo_347EC58 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+        (const MethodInfo_34B42CC *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
     goto LABEL_18;
   }
 LABEL_19:
   if ( !v5 )
 LABEL_21:
-    sub_1C7BD40(list, v6);
+    sub_1C93D2C(list, v6);
   Keys = System_Collections_Generic_Dictionary_int__int___get_Keys(
            v5,
-           (const MethodInfo_347E91C *)Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
-  v12 = (System_Collections_Generic_List_int__o *)sub_1C7BD34(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_58857132(
+           (const MethodInfo_34B3F90 *)Method_System_Collections_Generic_Dictionary_int__int__get_Keys__);
+  v12 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_59097676(
     v12,
     (System_Collections_Generic_IEnumerable_T__o *)Keys,
-    (const MethodInfo_38216AC *)Method_System_Collections_Generic_List_int___ctor___78742272);
+    (const MethodInfo_385C24C *)Method_System_Collections_Generic_List_int___ctor___79008552);
   return v12;
 }
 
@@ -125,16 +125,16 @@ MapCondEntity_o *MapCondMaster__GetEntity(MapCondMaster_o *this, int32_t id, int
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEEB31 & 1) == 0 )
+  if ( (byte_4D30E9D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
-    byte_4CEEB31 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
+    byte_4D30E9D = 1;
   }
   PK = (Il2CppObject *)MapCondEntity__CreatePK(id, mapId, *(const MethodInfo **)&mapId);
   return (MapCondEntity_o *)DataMasterBase_object__object__object___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                               PK,
-                              (const MethodInfo_3432DB4 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
+                              (const MethodInfo_34681D4 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__GetEntity__);
 }
 
 
@@ -158,20 +158,20 @@ int32_t MapCondMaster__GetPrioredID(
   int32_t condType; // w8
   int32_t v22; // [xsp+Ch] [xbp-64h]
 
-  if ( (byte_4CEEB34 & 1) == 0 )
+  if ( (byte_4D30EA0 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEEB34 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D30EA0 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_28:
-    sub_1C7BD40(list, *(_QWORD *)&type);
+    sub_1C93D2C(list, *(_QWORD *)&type);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__getTime(0);
@@ -189,7 +189,7 @@ LABEL_28:
       Item = (MapCondEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                   list,
                                   v16,
-                                  (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+                                  (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
       if ( !Item )
         goto LABEL_24;
       v19 = Item;
@@ -207,7 +207,7 @@ LABEL_21:
           v15 = System_Collections_ObjectModel_Collection_object___get_Item(
                   list,
                   v16,
-                  (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+                  (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
         }
         goto LABEL_24;
       }
@@ -256,27 +256,27 @@ System_Collections_Generic_List_int__o *MapCondMaster__GetReleasedMapButtonIdLis
   _QWORD *v18; // x9
   __int64 size; // x10
 
-  if ( (byte_4CEEB37 & 1) == 0 )
+  if ( (byte_4D30EA3 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4CEEB37 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4D30EA3 = 1;
   }
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C7BD34(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_3821584 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
   list = this->fields.list;
   if ( !list )
 LABEL_26:
-    sub_1C7BD40(list, v10);
+    sub_1C93D2C(list, v10);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
   if ( Count >= 1 )
   {
     v13 = Count;
@@ -289,7 +289,7 @@ LABEL_26:
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v14,
-               (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+               (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
       if ( !list )
         goto LABEL_24;
       v15 = (unsigned int *)list;
@@ -308,7 +308,7 @@ LABEL_15:
         list = (void *)System_Collections_Generic_List_int___Contains(
                          v9,
                          *((_DWORD *)list + 8),
-                         (const MethodInfo_3822150 *)Method_System_Collections_Generic_List_int__Contains__);
+                         (const MethodInfo_385CCF0 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( ((unsigned __int8)list & 1) == 0 )
         {
           v10 = v15[8];
@@ -323,7 +323,7 @@ LABEL_15:
             System_Collections_Generic_List_int___AddWithResize(
               v9,
               v10,
-              *(const MethodInfo_3821DD8 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_385C978 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
@@ -357,17 +357,17 @@ bool MapCondMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEEB32 & 1) == 0 )
+  if ( (byte_4D30E9E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
-    byte_4CEEB32 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
+    byte_4D30E9E = 1;
   }
   PK = (Il2CppObject *)MapCondEntity__CreatePK(id, mapId, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_MapCondMaster__MapCondEntity__string__TryGetEntity__);
 }
 
 
@@ -397,20 +397,20 @@ bool MapCondMaster__TryGetOnMapCameraOffset(
   int32_t v26; // [xsp+4h] [xbp-6Ch]
   UnityEngine_Vector3_o *v27; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4CEEB36 & 1) == 0 )
+  if ( (byte_4D30EA2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEEB36 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D30EA2 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_41:
-    sub_1C7BD40(list, *(_QWORD *)&mapId);
+    sub_1C93D2C(list, *(_QWORD *)&mapId);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__getTime(0);
@@ -435,7 +435,7 @@ LABEL_41:
     Item = (MapCondEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                 list,
                                 v15,
-                                (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
+                                (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_MapCondEntity__get_Item__);
     if ( Item )
     {
       v19 = Item;

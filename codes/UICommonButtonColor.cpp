@@ -2,17 +2,17 @@ void UICommonButtonColor___cctor(const MethodInfo *method)
 {
   UICommonButtonColor_c *v6; // x8
 
-  if ( (byte_4CEFE42 & 1) == 0 )
+  if ( (byte_4D321C7 & 1) == 0 )
   {
-    sub_1C7BAE8(&UICommonButtonColor_TypeInfo);
-    byte_4CEFE42 = 1;
+    sub_1C93AD4(&UICommonButtonColor_TypeInfo);
+    byte_4D321C7 = 1;
   }
   __asm { FMOV            V0.4S, #1.0 }
   UICommonButtonColor_TypeInfo->static_fields->normal = _Q0;
   v6 = UICommonButtonColor_TypeInfo;
-  UICommonButtonColor_TypeInfo->static_fields->hover = (struct UnityEngine_Color_o)xmmword_CF67A0;
-  v6->static_fields->pressed = (struct UnityEngine_Color_o)xmmword_CF7030;
-  v6->static_fields->disabledColor = (struct UnityEngine_Color_o)xmmword_CF5380;
+  UICommonButtonColor_TypeInfo->static_fields->hover = (struct UnityEngine_Color_o)xmmword_D01910;
+  v6->static_fields->pressed = (struct UnityEngine_Color_o)xmmword_D021C0;
+  v6->static_fields->disabledColor = (struct UnityEngine_Color_o)xmmword_D004E0;
   v6->static_fields->duration = 0.2;
 }
 
@@ -28,15 +28,15 @@ void UICommonButtonColor___ctor(UICommonButtonColor_o *this, const MethodInfo *m
   System_String_o *v9; // x7
   UICommonButtonColor_c *v10; // x0
 
-  if ( (byte_4CEFE41 & 1) == 0 )
+  if ( (byte_4D321C6 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_GameObject___TypeInfo);
-    sub_1C7BAE8(&UICommonButtonColor_TypeInfo);
-    byte_4CEFE41 = 1;
+    sub_1C93AD4(&UnityEngine_GameObject___TypeInfo);
+    sub_1C93AD4(&UICommonButtonColor_TypeInfo);
+    byte_4D321C6 = 1;
   }
-  v3 = (struct UnityEngine_GameObject_array *)sub_1C7BB90(UnityEngine_GameObject___TypeInfo, 1);
+  v3 = (struct UnityEngine_GameObject_array *)sub_1C93B7C(UnityEngine_GameObject___TypeInfo, 1);
   this->fields.tweenTargets = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.tweenTargets, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.tweenTargets, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   v10 = UICommonButtonColor_TypeInfo;
   if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
   {
@@ -62,12 +62,12 @@ void UICommonButtonColor__OnDisable(UICommonButtonColor_o *this, const MethodInf
   struct UnityEngine_GameObject_array *v10; // x8
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4CEFE3D & 1) == 0 )
+  if ( (byte_4D321C2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&UICommonButtonColor_TypeInfo);
-    byte_4CEFE3D = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&UICommonButtonColor_TypeInfo);
+    byte_4D321C2 = 1;
   }
   if ( this->fields.mInitDone && this->fields.tweenTargets )
   {
@@ -79,7 +79,7 @@ void UICommonButtonColor__OnDisable(UICommonButtonColor_o *this, const MethodInf
     tweenTargets = this->fields.tweenTargets;
     if ( !tweenTargets )
 LABEL_23:
-      sub_1C7BD40(v3, v4);
+      sub_1C93D2C(v3, v4);
     v6 = 4;
     while ( 1 )
     {
@@ -100,13 +100,13 @@ LABEL_23:
           goto LABEL_23;
         if ( v8 >= LODWORD(v10->max_length) )
 LABEL_25:
-          sub_1C7BD48(v3);
+          sub_1C93D34(v3);
         v3 = (UICommonButtonColor_c *)*((_QWORD *)&v10->obj.klass + v6);
         if ( !v3 )
           goto LABEL_23;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v3,
-                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v3 = (UICommonButtonColor_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -191,11 +191,11 @@ void UICommonButtonColor__OnEnable(UICommonButtonColor_o *this, const MethodInfo
   UnityEngine_Object_o *current; // x20
   UnityEngine_Object_o *v15; // x21
 
-  if ( (byte_4CEFE3C & 1) == 0 )
+  if ( (byte_4D321C1 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CEFE3C = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D321C1 = 1;
   }
   if ( this->fields.mInitDone )
   {
@@ -245,7 +245,7 @@ LABEL_23:
     v13 = v7->static_fields->currentTouch;
     if ( !v13 )
 LABEL_25:
-      sub_1C7BD40(v7, v8);
+      sub_1C93D2C(v7, v8);
     current = (UnityEngine_Object_o *)v13->fields.current;
     v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -302,26 +302,26 @@ void UICommonButtonColor__OnInit(UICommonButtonColor_o *this, const MethodInfo *
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4CEFE3B & 1) == 0 )
+  if ( (byte_4D321C0 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_GameObject___TypeInfo);
-    byte_4CEFE3B = 1;
+    sub_1C93AD4(&UnityEngine_GameObject___TypeInfo);
+    byte_4D321C0 = 1;
   }
   tweenTargets = this->fields.tweenTargets;
   this->fields.mInitDone = 1;
   if ( !tweenTargets )
   {
-    v4 = (struct UnityEngine_GameObject_array *)sub_1C7BB90(UnityEngine_GameObject___TypeInfo, 1);
+    v4 = (struct UnityEngine_GameObject_array *)sub_1C93B7C(UnityEngine_GameObject___TypeInfo, 1);
     this->fields.tweenTargets = v4;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.tweenTargets, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.tweenTargets, (int32_t)v4, v5, v6, v7, v8, v9, v10);
     v11 = this->fields.tweenTargets;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !v11 )
-      sub_1C7BD40(gameObject, v13);
+      sub_1C93D2C(gameObject, v13);
     if ( !LODWORD(v11->max_length) )
-      sub_1C7BD48(gameObject);
+      sub_1C93D34(gameObject);
     v11->m_Items[0] = gameObject;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v11->m_Items, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)v11->m_Items, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
   }
 }
 
@@ -345,11 +345,11 @@ void UICommonButtonColor__OnPress(UICommonButtonColor_o *this, bool isPressed, c
   UnityEngine_Object_o *hoveredObject; // x20
   UnityEngine_Object_o *v20; // x21
 
-  if ( (byte_4CEFE3E & 1) == 0 )
+  if ( (byte_4D321C3 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CEFE3E = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D321C3 = 1;
   }
   if ( (((__int64 (__fastcall *)(UICommonButtonColor_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -386,7 +386,7 @@ void UICommonButtonColor__OnPress(UICommonButtonColor_o *this, bool isPressed, c
           }
           currentTouch = v9->static_fields->currentTouch;
           if ( !currentTouch )
-            sub_1C7BD40(v9, v5);
+            sub_1C93D2C(v9, v5);
           current = (UnityEngine_Object_o *)currentTouch->fields.current;
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -452,10 +452,10 @@ void UICommonButtonColor__OnSelect(UICommonButtonColor_o *this, bool isSelected,
   _BOOL8 v7; // x1
   UICommonButtonColor_o *v8; // x0
 
-  if ( (byte_4CEFE3F & 1) == 0 )
+  if ( (byte_4D321C4 & 1) == 0 )
   {
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CEFE3F = 1;
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D321C4 = 1;
   }
   if ( (((__int64 (__fastcall *)(UICommonButtonColor_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -632,11 +632,11 @@ void UICommonButtonColor__UpdateColor(UICommonButtonColor_o *this, bool instant,
   UnityEngine_Color_o v59; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
   UnityEngine_Color_o v60; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4CEFE40 & 1) == 0 )
+  if ( (byte_4D321C5 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&UICommonButtonColor_TypeInfo);
-    byte_4CEFE40 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&UICommonButtonColor_TypeInfo);
+    byte_4D321C5 = 1;
   }
   if ( !this->fields.tweenTargets )
     return;
@@ -655,22 +655,22 @@ void UICommonButtonColor__UpdateColor(UICommonButtonColor_o *this, bool instant,
       g = static_fields->disabledColor.fields.g;
       b = static_fields->disabledColor.fields.b;
       a = static_fields->disabledColor.fields.a;
-      v13 = (void *)System_Single__Equals_65770204(
+      v13 = (void *)System_Single__Equals_66019008(
                       static_fields->disabledColor.fields.r,
                       v3,
                       (const MethodInfo *)&this->fields.specifyDisabledColor);
       if ( ((unsigned __int8)v13 & 1) != 0
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             g,
                             v26,
                             (const MethodInfo *)&this->fields.specifyDisabledColor.fields.g),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             b,
                             v27,
                             (const MethodInfo *)&this->fields.specifyDisabledColor.fields.b),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             a,
                             v28,
                             (const MethodInfo *)&this->fields.specifyDisabledColor.fields.a),
@@ -707,22 +707,22 @@ void UICommonButtonColor__UpdateColor(UICommonButtonColor_o *this, bool instant,
       v32 = v31->pressed.fields.g;
       v34 = v31->pressed.fields.b;
       v33 = v31->pressed.fields.a;
-      v13 = (void *)System_Single__Equals_65770204(
+      v13 = (void *)System_Single__Equals_66019008(
                       v31->pressed.fields.r,
                       v3,
                       (const MethodInfo *)&this->fields.specifyPressedColor);
       if ( ((unsigned __int8)v13 & 1) != 0
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v32,
                             v35,
                             (const MethodInfo *)&this->fields.specifyPressedColor.fields.g),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v34,
                             v36,
                             (const MethodInfo *)&this->fields.specifyPressedColor.fields.b),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v33,
                             v37,
                             (const MethodInfo *)&this->fields.specifyPressedColor.fields.a),
@@ -759,22 +759,22 @@ void UICommonButtonColor__UpdateColor(UICommonButtonColor_o *this, bool instant,
       v10 = v8->hover.fields.g;
       v12 = v8->hover.fields.b;
       v11 = v8->hover.fields.a;
-      v13 = (void *)System_Single__Equals_65770204(
+      v13 = (void *)System_Single__Equals_66019008(
                       v8->hover.fields.r,
                       v3,
                       (const MethodInfo *)&this->fields.specifyHoverColor);
       if ( ((unsigned __int8)v13 & 1) != 0
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v10,
                             v14,
                             (const MethodInfo *)&this->fields.specifyHoverColor.fields.g),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v12,
                             v15,
                             (const MethodInfo *)&this->fields.specifyHoverColor.fields.b),
             ((unsigned __int8)v13 & 1) != 0)
-        && (v13 = (void *)System_Single__Equals_65770204(
+        && (v13 = (void *)System_Single__Equals_66019008(
                             v11,
                             v16,
                             (const MethodInfo *)&this->fields.specifyHoverColor.fields.a),
@@ -870,7 +870,7 @@ void UICommonButtonColor__UpdateColor(UICommonButtonColor_o *this, bool instant,
       while ( tweenTargets );
     }
 LABEL_72:
-    sub_1C7BD40(v13, instant);
+    sub_1C93D2C(v13, instant);
   }
   if ( !tweenTargets )
     goto LABEL_72;
@@ -894,7 +894,7 @@ LABEL_72:
         goto LABEL_72;
       if ( v54 >= LODWORD(v56->max_length) )
 LABEL_74:
-        sub_1C7BD48(v13);
+        sub_1C93D34(v13);
       v57 = UICommonButtonColor_TypeInfo;
       v58 = (UnityEngine_GameObject_o *)*((_QWORD *)&v56->obj.klass + v52);
       if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
@@ -927,14 +927,13 @@ float UICommonButtonColor__get_alpha(UICommonButtonColor_o *this, const MethodIn
   __int64 v8; // x1
   struct UnityEngine_GameObject_array *v9; // x8
   Il2CppObject *Component_object; // x20
-  float result; // s0
 
   v2 = this;
-  if ( (byte_4CEFE3A & 1) == 0 )
+  if ( (byte_4D321BF & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    this = (UICommonButtonColor_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFE3A = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    this = (UICommonButtonColor_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D321BF = 1;
   }
   tweenTargets = v2->fields.tweenTargets;
   if ( tweenTargets )
@@ -959,13 +958,13 @@ float UICommonButtonColor__get_alpha(UICommonButtonColor_o *this, const MethodIn
           goto LABEL_17;
         if ( v6 >= LODWORD(v9->max_length) )
 LABEL_21:
-          sub_1C7BD48(this);
+          sub_1C93D34(this);
         this = (UICommonButtonColor_o *)*((_QWORD *)&v9->obj.klass + v4);
         if ( !this )
           goto LABEL_17;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)this,
-                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (UICommonButtonColor_o *)UnityEngine_Object__op_Inequality(
@@ -976,11 +975,10 @@ LABEL_21:
         {
           if ( !Component_object )
 LABEL_17:
-            sub_1C7BD40(this, v8);
-          ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[7].methodPtr)(
-            Component_object,
-            Component_object->klass->vtable[7].method);
-          return result;
+            sub_1C93D2C(this, v8);
+          return ((float (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[7].methodPtr)(
+                   Component_object,
+                   Component_object->klass->vtable[7].method);
         }
       }
       tweenTargets = v2->fields.tweenTargets;

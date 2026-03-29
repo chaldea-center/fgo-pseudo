@@ -13,16 +13,16 @@ void EventInfoPossessionItemCounter__Initialization(
   System_Action_o *v5; // x21
 
   v4 = this;
-  if ( (byte_4CEFAAC & 1) == 0 )
+  if ( (byte_4D31E4F & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    this = (EventInfoPossessionItemCounter_o *)sub_1C7BAE8(&Method_EventInfoPossessionItemCounter__Initialization_b__8_0__);
-    byte_4CEFAAC = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    this = (EventInfoPossessionItemCounter_o *)sub_1C93AD4(&Method_EventInfoPossessionItemCounter__Initialization_b__8_0__);
+    byte_4D31E4F = 1;
   }
   if ( !entity )
-    sub_1C7BD40(this, entity);
+    sub_1C93D2C(this, entity);
   v4->fields.eventId = entity->fields.eventId;
-  v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)v4, Method_EventInfoPossessionItemCounter__Initialization_b__8_0__, 0);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)v4, entity, v5, 0);
 }
@@ -48,12 +48,12 @@ void EventInfoPossessionItemCounter__Setup(
   UILabel_o *v9; // x20
 
   v4 = this;
-  if ( (byte_4CEFAAD & 1) == 0 )
+  if ( (byte_4D31E50 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    this = (EventInfoPossessionItemCounter_o *)sub_1C7BAE8(&StringLiteral_5665/*"EVENT_POSSESSION_ITEM_TITLE"*/);
-    byte_4CEFAAD = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    this = (EventInfoPossessionItemCounter_o *)sub_1C93AD4(&StringLiteral_5683/*"EVENT_POSSESSION_ITEM_TITLE"*/);
+    byte_4D31E50 = 1;
   }
   if ( entity )
   {
@@ -61,7 +61,7 @@ void EventInfoPossessionItemCounter__Setup(
     if ( max_length )
     {
       if ( !(_DWORD)max_length )
-        sub_1C7BD48(this);
+        sub_1C93D34(this);
       v6 = entity->m_Items[0];
       if ( !v6 )
         goto LABEL_17;
@@ -76,7 +76,7 @@ void EventInfoPossessionItemCounter__Setup(
         v9 = v4->fields.possessionTitleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5665/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0);
+        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0);
         if ( v9 )
         {
           UILabel__set_text(v9, (System_String_o *)this, 0);
@@ -85,7 +85,7 @@ LABEL_15:
           return;
         }
 LABEL_17:
-        sub_1C7BD40(this, entity);
+        sub_1C93D2C(this, entity);
       }
     }
   }
@@ -104,28 +104,28 @@ void EventInfoPossessionItemCounter__UpdateDisp(EventInfoPossessionItemCounter_o
   Il2CppObject *v10; // x0
   int64_t itemNum; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CEFAAE & 1) == 0 )
+  if ( (byte_4D31E51 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C7BAE8(&long_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_5666/*"EVENT_POSSESSION_ITEM_VALUE"*/);
-    byte_4CEFAAE = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C93AD4(&long_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_5684/*"EVENT_POSSESSION_ITEM_VALUE"*/);
+    byte_4D31E51 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CE827C )
+  if ( !byte_4D2A55B )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CE827C = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D2A55B = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -150,13 +150,13 @@ void EventInfoPossessionItemCounter__UpdateDisp(EventInfoPossessionItemCounter_o
   possessionValueLabel = this->fields.possessionValueLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5666/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5684/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0);
   itemNum = this->fields.itemNum;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &itemNum);
   Instance = (DataManager_o *)System_String__Format(v9, v10, 0);
   if ( !possessionValueLabel )
 LABEL_19:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   UILabel__set_text(possessionValueLabel, (System_String_o *)Instance, 0);
 }
 

@@ -9,13 +9,13 @@ void SummonHistoryListViewItemDraw__SetBonusMessagePosition(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *titleLabel; // x0
-  unsigned int localPosition; // s0
-  struct UILabel_o *v5; // x8
+  struct UILabel_o *v4; // x8
   struct UISprite_o *bonusItemSpr; // x9
-  float v7; // s8
+  float v6; // s8
   float mWidth; // s9
-  float v9; // s10
+  float v8; // s10
   UnityEngine_GameObject_o *gameObject; // x0
+  unsigned int localPosition; // s0
 
   titleLabel = (UnityEngine_Component_o *)this->fields.titleLabel;
   if ( !titleLabel
@@ -24,17 +24,17 @@ void SummonHistoryListViewItemDraw__SetBonusMessagePosition(
                                                   (UnityEngine_GameObject_o *)titleLabel,
                                                   0)) == 0
     || (localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)titleLabel, 0),
-        (v5 = this->fields.titleLabel) == 0)
+        (v4 = this->fields.titleLabel) == 0)
     || (bonusItemSpr = this->fields.bonusItemSpr) == 0
     || (titleLabel = (UnityEngine_Component_o *)this->fields.messageLabel2) == 0 )
   {
-    sub_1C7BD40(titleLabel, method);
+    sub_1C93D2C(titleLabel, method);
   }
-  v7 = *(float *)&localPosition;
+  v6 = *(float *)&localPosition;
   mWidth = (float)bonusItemSpr->fields.mWidth;
-  v9 = (float)v5->fields.mWidth;
+  v8 = (float)v4->fields.mWidth;
   gameObject = UnityEngine_Component__get_gameObject(titleLabel, 0);
-  GameObjectExtensions__SetLocalPositionX(gameObject, (float)((float)(v7 + v9) + mWidth) + 3.0, 0);
+  GameObjectExtensions__SetLocalPositionX(gameObject, (float)((float)(v6 + v8) + mWidth) + 3.0, 0);
 }
 
 
@@ -52,11 +52,11 @@ void SummonHistoryListViewItemDraw__SetItem(
   const MethodInfo *v10; // x1
 
   v4 = this;
-  if ( (byte_4CEA9CC & 1) == 0 )
+  if ( (byte_4D2CCBC & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    this = (SummonHistoryListViewItemDraw_o *)sub_1C7BAE8(&StringLiteral_6919/*"GACHA_HISTORY_LIST_DOT"*/);
-    byte_4CEA9CC = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    this = (SummonHistoryListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_6941/*"GACHA_HISTORY_LIST_DOT"*/);
+    byte_4D2CCBC = 1;
   }
   if ( !item )
     goto LABEL_53;
@@ -139,7 +139,7 @@ void SummonHistoryListViewItemDraw__SetItem(
                                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                     this = (SummonHistoryListViewItemDraw_o *)LocalizationManager__Get(
-                                                                                (System_String_o *)StringLiteral_6919/*"GACHA_HISTORY_LIST_DOT"*/,
+                                                                                (System_String_o *)StringLiteral_6941/*"GACHA_HISTORY_LIST_DOT"*/,
                                                                                 0);
                                     if ( dotLabel )
                                     {
@@ -233,7 +233,7 @@ LABEL_45:
         }
       }
 LABEL_53:
-      sub_1C7BD40(this, item);
+      sub_1C93D2C(this, item);
     case 0:
       this = (SummonHistoryListViewItemDraw_o *)v4->fields.messageLabel;
       if ( !this )
@@ -269,7 +269,7 @@ LABEL_53:
       v6 = (SummonHistoryListViewItemDraw_o *)v4->fields.dotLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      this = (SummonHistoryListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6919/*"GACHA_HISTORY_LIST_DOT"*/, 0);
+      this = (SummonHistoryListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6941/*"GACHA_HISTORY_LIST_DOT"*/, 0);
       if ( !v6 )
         goto LABEL_53;
       Message_k__BackingField = (System_String_o *)this;
@@ -297,11 +297,11 @@ void SummonHistoryListViewItemDraw__SetItemIconPosition(
   float v13; // s0
 
   v2 = this;
-  if ( (byte_4CEA9CD & 1) == 0 )
+  if ( (byte_4D2CCBD & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1434/*"7"*/);
-    this = (SummonHistoryListViewItemDraw_o *)sub_1C7BAE8(&StringLiteral_1436/*"7999"*/);
-    byte_4CEA9CD = 1;
+    sub_1C93AD4(&StringLiteral_1434/*"7"*/);
+    this = (SummonHistoryListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_1436/*"7999"*/);
+    byte_4D2CCBD = 1;
   }
   titleLabel = v2->fields.titleLabel;
   if ( !titleLabel )
@@ -310,7 +310,7 @@ void SummonHistoryListViewItemDraw__SetItemIconPosition(
   if ( !this )
     goto LABEL_17;
   mWidth = (float)titleLabel->fields.mWidth;
-  v5 = (float)(SLODWORD(this[1].fields.bonusItemSpr) / 2);
+  v5 = (float)(*((_DWORD *)this + 42) / 2);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPositionX(gameObject, mWidth + v5, 0);
   this = (SummonHistoryListViewItemDraw_o *)v2->fields.bonusItemSpr;
@@ -336,7 +336,7 @@ void SummonHistoryListViewItemDraw__SetItemIconPosition(
   v10 = v2->fields.bonusItemSpr;
   if ( !v10 )
 LABEL_17:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   if ( System_String__op_Equality(v10->fields.mSpriteName, (System_String_o *)StringLiteral_1436/*"7999"*/, 0) )
   {
     this = (SummonHistoryListViewItemDraw_o *)v2->fields.bonusItemSpr;

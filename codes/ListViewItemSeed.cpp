@@ -13,48 +13,40 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
 {
   ListViewItemSeed_o *v4; // x19
   float y; // s8
-  float v6; // s1
-  float v7; // s2
-  float v8; // s0
   float x; // s8
-  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4CEFD45 & 1) == 0 )
+  if ( (byte_4D320CA & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_4CEFD45 = 1;
+    this = (ListViewItemSeed_o *)sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_4D320CA = 1;
   }
   if ( !obj )
     goto LABEL_9;
   this = (ListViewItemSeed_o *)UnityEngine_GameObject__GetComponent_object_(
                                  obj,
-                                 (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-  if ( !v4->fields.arrangement )
+                                 (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+  if ( v4->fields.arrangement )
   {
     if ( this )
     {
-      x = v4->fields.arrangementPich.fields.x;
-      v8 = x - COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
-      v6 = 0.0;
-      v7 = 0.0;
-      goto LABEL_10;
+      y = v4->fields.arrangementPich.fields.y;
+      result.fields.y = y
+                      - COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0).fields.y));
+      result.fields.z = 10.0;
+      result.fields.x = 0.0;
+      return result;
     }
 LABEL_9:
-    sub_1C7BD40(this, obj);
+    sub_1C93D2C(this, obj);
   }
   if ( !this )
     goto LABEL_9;
-  y = v4->fields.arrangementPich.fields.y;
-  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-  v6 = y - size.fields.y;
-  v7 = 10.0;
-  v8 = 0.0;
-LABEL_10:
-  result.fields.z = v7;
-  result.fields.y = v6;
-  result.fields.x = v8;
+  x = v4->fields.arrangementPich.fields.x;
+  result.fields.x = x - COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
+  result.fields.y = 0.0;
+  result.fields.z = 0.0;
   return result;
 }
 
@@ -76,7 +68,7 @@ UnityEngine_Vector3_o ListViewItemSeed__GetLocalPosition(
         Position = ListViewItemSeed__GetPosition(this, index, v7),
         !transform) )
   {
-    sub_1C7BD40(parent, *(_QWORD *)&index);
+    sub_1C93D2C(parent, *(_QWORD *)&index);
   }
   return UnityEngine_Transform__InverseTransformPoint(transform, Position, 0);
 }
@@ -117,8 +109,8 @@ UnityEngine_Vector3_o ListViewItemSeed__GetPosition(ListViewItemSeed_o *this, in
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C7BD40(0, v11);
-  return UnityEngine_Transform__TransformPoint_71896928(
+    sub_1C93D2C(0, v11);
+  return UnityEngine_Transform__TransformPoint_72146688(
            transform,
            v6 * this->fields.arrangementPich.fields.x,
            v7 * this->fields.arrangementPich.fields.y,
@@ -143,10 +135,10 @@ void ListViewItemSeed__SetTransform(
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4CEFD46 & 1) == 0 )
+  if ( (byte_4D320CB & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1C7BAE8(&StringLiteral_12843/*"SetBaseTransform"*/);
-    byte_4CEFD46 = 1;
+    this = (ListViewItemSeed_o *)sub_1C93AD4(&StringLiteral_12884/*"SetBaseTransform"*/);
+    byte_4D320CB = 1;
   }
   if ( !obj )
     goto LABEL_10;
@@ -165,8 +157,8 @@ void ListViewItemSeed__SetTransform(
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0), !v10) )
   {
 LABEL_10:
-    sub_1C7BD40(this, obj);
+    sub_1C93D2C(this, obj);
   }
   UnityEngine_Transform__set_localScale(v10, localScale, 0);
-  UnityEngine_GameObject__SendMessage_71851516(obj, (System_String_o *)StringLiteral_12843/*"SetBaseTransform"*/, 0);
+  UnityEngine_GameObject__SendMessage_72101276(obj, (System_String_o *)StringLiteral_12884/*"SetBaseTransform"*/, 0);
 }

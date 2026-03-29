@@ -14,23 +14,23 @@ void BattleItemIconComponent___ctor(BattleItemIconComponent_o *this, const Metho
   long double v14; // q0
   long double v15; // q3
 
-  if ( (byte_4CF11CF & 1) == 0 )
+  if ( (byte_4D3359A & 1) == 0 )
   {
-    sub_1C7BAE8(&ItemIconComponent_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_801/*"+"*/);
-    byte_4CF11CF = 1;
+    sub_1C93AD4(&ItemIconComponent_TypeInfo);
+    sub_1C93AD4(&StringLiteral_801/*"+"*/);
+    byte_4D3359A = 1;
   }
   LODWORD(v4) = 1064037356;
   LODWORD(v5) = 1015054465;
   LODWORD(v2) = 1.0;
   LODWORD(v3) = 1.0;
-  this->fields.addCountColor.fields.rgba = sub_2597300(0, v2, v4, v5, v3);
+  this->fields.addCountColor.fields.rgba = sub_25BA1B8(0, v2, v4, v5, v3);
   v7 = StringLiteral_801/*"+"*/;
   this->fields.addCountStr = (struct System_String_o *)StringLiteral_801/*"+"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.addCountStr, v7, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.addCountStr, v7, v8, v9, v10, v11, v12, v13);
   LODWORD(v14) = 1.0;
   LODWORD(v15) = 1.0;
-  this->fields.nowAddCountColor.fields.rgba = sub_2597300(0, v14, v4, v5, v15);
+  this->fields.nowAddCountColor.fields.rgba = sub_25BA1B8(0, v14, v4, v5, v15);
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
   ItemIconComponent___ctor((ItemIconComponent_o *)this, 0);
@@ -74,7 +74,7 @@ void BattleItemIconComponent__SetActiveDarkMode(
   *(float *)&v10 = g * (float)((float)BYTE1(rgba) / 255.0);
   *(float *)&v11 = b * (float)((float)BYTE2(rgba) / 255.0);
   *(float *)&v12 = a * (float)((float)HIBYTE(rgba) / 255.0);
-  this->fields.nowAddCountColor.fields.rgba = sub_2597300(0, v9, v10, v11, v12);
+  this->fields.nowAddCountColor.fields.rgba = sub_25BA1B8(0, v9, v10, v11, v12);
 }
 
 
@@ -147,16 +147,16 @@ void BattleItemIconComponent__setCounterLabel(
   UnityEngine_Color_o v68; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v69; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF11CE & 1) == 0 )
+  if ( (byte_4D33599 & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&object___TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_25462/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/);
-    sub_1C7BAE8(&StringLiteral_16073/*"[{0}]({1}{2:#,0})[-]"*/);
-    sub_1C7BAE8(&StringLiteral_25461/*"{0}{1:#,0}"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF11CE = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&object___TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_25532/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/);
+    sub_1C93AD4(&StringLiteral_16115/*"[{0}]({1}{2:#,0})[-]"*/);
+    sub_1C93AD4(&StringLiteral_25531/*"{0}{1:#,0}"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D33599 = 1;
   }
   counterLabel = (UnityEngine_Object_o *)this->fields.counterLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -179,31 +179,31 @@ void BattleItemIconComponent__setCounterLabel(
     v18 = UnityEngine_ColorUtility__ToHtmlStringRGB(v68, 0);
     v19 = this->fields.counterLabel;
     v20 = v18;
-    v11 = (UILabel_o *)sub_1C7BB90(object___TypeInfo, 5);
+    v11 = (UILabel_o *)sub_1C93B7C(object___TypeInfo, 5);
     if ( !v11 )
       goto LABEL_36;
     v27 = v11;
-    if ( !v17 || (v11 = (UILabel_o *)sub_1C7BC24(v17, v11->klass->_1.element_class)) != 0 )
+    if ( !v17 || (v11 = (UILabel_o *)sub_1C93C10(v17, v11->klass->_1.element_class)) != 0 )
     {
       if ( !LODWORD(v27->fields.m_CancellationTokenSource) )
         goto LABEL_37;
       v27->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)v17;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v27->fields.leftAnchor, (int32_t)v17, v21, v22, v23, v24, v25, v26);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->fields.leftAnchor, (int32_t)v17, v21, v22, v23, v24, v25, v26);
       v67 = count;
       v11 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v67);
       v34 = v11;
-      if ( !v11 || (v11 = (UILabel_o *)sub_1C7BC24(v11, v27->klass->_1.element_class)) != 0 )
+      if ( !v11 || (v11 = (UILabel_o *)sub_1C93C10(v11, v27->klass->_1.element_class)) != 0 )
       {
         if ( LODWORD(v27->fields.m_CancellationTokenSource) <= 1 )
           goto LABEL_37;
         v27->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v34;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v27->fields.rightAnchor, (int32_t)v34, v28, v29, v30, v31, v32, v33);
-        if ( !v20 || (v11 = (UILabel_o *)sub_1C7BC24(v20, v27->klass->_1.element_class)) != 0 )
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->fields.rightAnchor, (int32_t)v34, v28, v29, v30, v31, v32, v33);
+        if ( !v20 || (v11 = (UILabel_o *)sub_1C93C10(v20, v27->klass->_1.element_class)) != 0 )
         {
           if ( LODWORD(v27->fields.m_CancellationTokenSource) <= 2 )
             goto LABEL_37;
           v27->fields.bottomAnchor = (struct UIRect_AnchorPoint_o *)v20;
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&v27->fields.bottomAnchor,
             (int32_t)v20,
             v35,
@@ -213,12 +213,12 @@ void BattleItemIconComponent__setCounterLabel(
             v39,
             v40);
           addCountStr = this->fields.addCountStr;
-          if ( !addCountStr || (v11 = (UILabel_o *)sub_1C7BC24(addCountStr, v27->klass->_1.element_class)) != 0 )
+          if ( !addCountStr || (v11 = (UILabel_o *)sub_1C93C10(addCountStr, v27->klass->_1.element_class)) != 0 )
           {
             if ( LODWORD(v27->fields.m_CancellationTokenSource) <= 3 )
               goto LABEL_37;
             v27->fields.topAnchor = (struct UIRect_AnchorPoint_o *)addCountStr;
-            sub_1C7BA8C(
+            sub_1C93A78(
               (GrandQuestFolderBoardItem_o *)&v27->fields.topAnchor,
               (int32_t)addCountStr,
               v41,
@@ -230,12 +230,12 @@ void BattleItemIconComponent__setCounterLabel(
             v66 = addCount;
             v11 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v66);
             v54 = v11;
-            if ( !v11 || (v11 = (UILabel_o *)sub_1C7BC24(v11, v27->klass->_1.element_class)) != 0 )
+            if ( !v11 || (v11 = (UILabel_o *)sub_1C93C10(v11, v27->klass->_1.element_class)) != 0 )
             {
               if ( LODWORD(v27->fields.m_CancellationTokenSource) > 4 )
               {
                 *(_QWORD *)&v27->fields.updateAnchors = v54;
-                sub_1C7BA8C(
+                sub_1C93A78(
                   (GrandQuestFolderBoardItem_o *)&v27->fields.updateAnchors,
                   (int32_t)v54,
                   v48,
@@ -244,8 +244,8 @@ void BattleItemIconComponent__setCounterLabel(
                   v51,
                   v52,
                   v53);
-                v11 = (UILabel_o *)System_String__Format_64218356(
-                                     (System_String_o *)StringLiteral_25462/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/,
+                v11 = (UILabel_o *)System_String__Format_64467168(
+                                     (System_String_o *)StringLiteral_25532/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/,
                                      (System_Object_array *)v27,
                                      0);
                 if ( !v19 )
@@ -257,14 +257,14 @@ LABEL_34:
                 return;
               }
 LABEL_37:
-              sub_1C7BD48(v11);
+              sub_1C93D34(v11);
             }
           }
         }
       }
     }
-    v65 = sub_1C7BD64(v11);
-    sub_1C7BC10(v65, 0);
+    v65 = sub_1C93D50(v11);
+    sub_1C93BFC(v65, 0);
   }
   UILabel__set_spacingY(v11, 0, 0);
   v11 = (UILabel_o *)ItemType__GetCountableString(type, 0);
@@ -280,11 +280,11 @@ LABEL_37:
     v13 = (Il2CppObject *)v11;
     v67 = count;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67);
-    v11 = (UILabel_o *)System_String__Format_64218220((System_String_o *)StringLiteral_25461/*"{0}{1:#,0}"*/, v13, v14, 0);
+    v11 = (UILabel_o *)System_String__Format_64467032((System_String_o *)StringLiteral_25531/*"{0}{1:#,0}"*/, v13, v14, 0);
     v10 = (System_String_o *)v11;
     if ( !v12 )
 LABEL_36:
-      sub_1C7BD40(v11, v10);
+      sub_1C93D2C(v11, v10);
   }
   UILabel__set_text(v12, v10, 0);
   if ( addCount >= 1 )
@@ -303,8 +303,8 @@ LABEL_36:
     v62 = (Il2CppObject *)v60;
     v67 = addCount;
     v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67);
-    v64 = System_String__Format_64218288((System_String_o *)StringLiteral_16073/*"[{0}]({1}{2:#,0})[-]"*/, v62, v61, v63, 0);
-    v55 = System_String__Concat_64176912(mText, v64, 0);
+    v64 = System_String__Format_64467100((System_String_o *)StringLiteral_16115/*"[{0}]({1}{2:#,0})[-]"*/, v62, v61, v63, 0);
+    v55 = System_String__Concat_64425724(mText, v64, 0);
     v56 = v57;
     goto LABEL_34;
   }

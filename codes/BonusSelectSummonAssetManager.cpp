@@ -26,24 +26,24 @@ void BonusSelectSummonAssetManager__GetAssets(
   System_String_o *v19; // x7
   AssetLoader_LoadEndDataHandler_o *v20; // x19
 
-  if ( (byte_4CEA962 & 1) == 0 )
+  if ( (byte_4D2CC52 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C7BAE8(&Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__);
-    sub_1C7BAE8(&BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_13232/*"SummonScene/BonusSelectSummon"*/);
-    byte_4CEA962 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C93AD4(&Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__);
+    sub_1C93AD4(&BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
+    sub_1C93AD4(&StringLiteral_13273/*"SummonScene/BonusSelectSummon"*/);
+    byte_4D2CC52 = 1;
   }
-  v5 = sub_1C7BD34(BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
+  v5 = sub_1C93D20(BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
+  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v20,
     (Il2CppObject *)v5,
@@ -51,7 +51,7 @@ void BonusSelectSummonAssetManager__GetAssets(
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13232/*"SummonScene/BonusSelectSummon"*/, v20, 1, 0);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13273/*"SummonScene/BonusSelectSummon"*/, v20, 1, 0);
 }
 
 
@@ -89,9 +89,9 @@ void BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetManager_o *thi
   System_String_o *v32; // x7
 
   this->fields._ConfirmDialogPrefab_k__BackingField = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
   this->fields._OrganizationListViewItemPrefab_k__BackingField = 0;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._OrganizationListViewItemPrefab_k__BackingField,
     0,
     v9,
@@ -101,7 +101,7 @@ void BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetManager_o *thi
     v13,
     v14);
   this->fields._ServantSelectMenuPrefab_k__BackingField = 0;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantSelectMenuPrefab_k__BackingField,
     0,
     v15,
@@ -111,7 +111,7 @@ void BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetManager_o *thi
     v19,
     v20);
   this->fields._MsgInfoPrefab_k__BackingField = 0;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._MsgInfoPrefab_k__BackingField,
     0,
     v21,
@@ -121,7 +121,7 @@ void BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetManager_o *thi
     v25,
     v26);
   this->fields._MsgInfoMenberPrefab_k__BackingField = 0;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._MsgInfoMenberPrefab_k__BackingField,
     0,
     v27,
@@ -140,7 +140,7 @@ void BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  Il2CppObject *Object_object__51713432; // x0
+  Il2CppObject *Object_object__51927708; // x0
   int32_t v9; // w2
   int32_t v10; // w3
   System_String_o *v11; // x4
@@ -148,19 +148,19 @@ void BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CEA963 & 1) == 0 )
+  if ( (byte_4D2CC53 & 1) == 0 )
   {
-    this = (BonusSelectSummonAssetManager_o *)sub_1C7BAE8(&Method_AssetData_GetObject_GameObject____78791560);
-    byte_4CEA963 = 1;
+    this = (BonusSelectSummonAssetManager_o *)sub_1C93AD4(&Method_AssetData_GetObject_GameObject____79057888);
+    byte_4D2CC53 = 1;
   }
   if ( !assetData )
-    sub_1C7BD40(this, prefab);
-  Object_object__51713432 = AssetData__GetObject_object__51713432(
+    sub_1C93D2C(this, prefab);
+  Object_object__51927708 = AssetData__GetObject_object__51927708(
                               assetData,
                               prefabName,
-                              (const MethodInfo_3151598 *)Method_AssetData_GetObject_GameObject____78791560);
-  *prefab = (UnityEngine_GameObject_o *)Object_object__51713432;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)prefab, (int32_t)Object_object__51713432, v9, v10, v11, v12, v13, v14);
+                              (const MethodInfo_3185A9C *)Method_AssetData_GetObject_GameObject____79057888);
+  *prefab = (UnityEngine_GameObject_o *)Object_object__51927708;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)prefab, (int32_t)Object_object__51927708, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -216,7 +216,7 @@ void BonusSelectSummonAssetManager__set_ConfirmDialogPrefab(
   System_String_o *v7; // x7
 
   this->fields._ConfirmDialogPrefab_k__BackingField = value;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -232,7 +232,7 @@ void BonusSelectSummonAssetManager__set_MsgInfoMenberPrefab(
   System_String_o *v7; // x7
 
   this->fields._MsgInfoMenberPrefab_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._MsgInfoMenberPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -256,7 +256,7 @@ void BonusSelectSummonAssetManager__set_MsgInfoPrefab(
   System_String_o *v7; // x7
 
   this->fields._MsgInfoPrefab_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._MsgInfoPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -280,7 +280,7 @@ void BonusSelectSummonAssetManager__set_OrganizationListViewItemPrefab(
   System_String_o *v7; // x7
 
   this->fields._OrganizationListViewItemPrefab_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._OrganizationListViewItemPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -304,7 +304,7 @@ void BonusSelectSummonAssetManager__set_ServantSelectMenuPrefab(
   System_String_o *v7; // x7
 
   this->fields._ServantSelectMenuPrefab_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantSelectMenuPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -377,14 +377,14 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
   UnityEngine_GameObject_o *prefab; // [xsp+28h] [xbp-28h] BYREF
 
   v5 = this;
-  if ( (byte_4CEA964 & 1) == 0 )
+  if ( (byte_4D2CC54 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_3203/*"BonusSelectSummonConfirmDialog"*/);
-    sub_1C7BAE8(&StringLiteral_3204/*"BonusSelectSummonMsgInfo"*/);
-    sub_1C7BAE8(&StringLiteral_3205/*"BonusSelectSummonMsgInfoMenber"*/);
-    sub_1C7BAE8(&StringLiteral_3206/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/);
-    this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)sub_1C7BAE8(&StringLiteral_3207/*"BonusSelectSummonPartyServantSelectMenu"*/);
-    byte_4CEA964 = 1;
+    sub_1C93AD4(&StringLiteral_3216/*"BonusSelectSummonConfirmDialog"*/);
+    sub_1C93AD4(&StringLiteral_3217/*"BonusSelectSummonMsgInfo"*/);
+    sub_1C93AD4(&StringLiteral_3218/*"BonusSelectSummonMsgInfoMenber"*/);
+    sub_1C93AD4(&StringLiteral_3219/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/);
+    this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)sub_1C93AD4(&StringLiteral_3220/*"BonusSelectSummonPartyServantSelectMenu"*/);
+    byte_4D2CC54 = 1;
   }
   v48 = 0;
   prefab = 0;
@@ -396,7 +396,7 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
     &prefab,
-    (System_String_o *)StringLiteral_3203/*"BonusSelectSummonConfirmDialog"*/,
+    (System_String_o *)StringLiteral_3216/*"BonusSelectSummonConfirmDialog"*/,
     assetData,
     v3);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
@@ -404,13 +404,13 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
     goto LABEL_14;
   v12 = (int)prefab;
   this->fields.__4__this = (struct BonusSelectSummonAssetManager_o *)prefab;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, v12, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, v12, v6, v7, v8, v9, v10, v11);
   if ( !v5->fields.__4__this )
     goto LABEL_14;
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
     &v48,
-    (System_String_o *)StringLiteral_3206/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/,
+    (System_String_o *)StringLiteral_3219/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/,
     assetData,
     v13);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
@@ -418,46 +418,46 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
     goto LABEL_14;
   v20 = (int)v48;
   this->fields.finishCallback = (struct System_Action_o *)v48;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.finishCallback, v20, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.finishCallback, v20, v14, v15, v16, v17, v18, v19);
   if ( !v5->fields.__4__this )
     goto LABEL_14;
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
     &v47,
-    (System_String_o *)StringLiteral_3207/*"BonusSelectSummonPartyServantSelectMenu"*/,
+    (System_String_o *)StringLiteral_3220/*"BonusSelectSummonPartyServantSelectMenu"*/,
     assetData,
     v21);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
   if ( !this )
     goto LABEL_14;
   v28 = (int)v47;
-  this[1].klass = (BonusSelectSummonAssetManager___c__DisplayClass21_0_c *)v47;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this[1], v28, v22, v23, v24, v25, v26, v27);
+  *((_QWORD *)this + 4) = v47;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(this + 1), v28, v22, v23, v24, v25, v26, v27);
   if ( !v5->fields.__4__this
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
           &v46,
-          (System_String_o *)StringLiteral_3204/*"BonusSelectSummonMsgInfo"*/,
+          (System_String_o *)StringLiteral_3217/*"BonusSelectSummonMsgInfo"*/,
           assetData,
           v29),
         (this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this) == 0)
     || (v36 = (int)v46,
-        this[1].monitor = v46,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this[1].monitor, v36, v30, v31, v32, v33, v34, v35),
+        *((_QWORD *)this + 5) = v46,
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)((char *)this + 40), v36, v30, v31, v32, v33, v34, v35),
         !v5->fields.__4__this)
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
           &v45,
-          (System_String_o *)StringLiteral_3205/*"BonusSelectSummonMsgInfoMenber"*/,
+          (System_String_o *)StringLiteral_3218/*"BonusSelectSummonMsgInfoMenber"*/,
           assetData,
           v37),
         (this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this) == 0) )
   {
 LABEL_14:
-    sub_1C7BD40(this, assetData);
+    sub_1C93D2C(this, assetData);
   }
   v44 = (int)v45;
-  this[1].fields.__4__this = (struct BonusSelectSummonAssetManager_o *)v45;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this[1].fields, v44, v38, v39, v40, v41, v42, v43);
+  *((_QWORD *)this + 6) = v45;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)((char *)this + 48), v44, v38, v39, v40, v41, v42, v43);
   ActionExtensions__Call(v5->fields.finishCallback, 0);
 }

@@ -14,23 +14,23 @@ void SaturationImageEffect__OnRenderImage(
   __int64 v8; // x1
   UnityEngine_Material_o *v9; // x21
 
-  if ( (byte_4CF20E6 & 1) == 0 )
+  if ( (byte_4D344D1 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Graphics_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16323/*"_MainTex"*/);
-    sub_1C7BAE8(&StringLiteral_16387/*"_Saturation"*/);
-    byte_4CF20E6 = 1;
+    sub_1C93AD4(&UnityEngine_Graphics_TypeInfo);
+    sub_1C93AD4(&StringLiteral_16365/*"_MainTex"*/);
+    sub_1C93AD4(&StringLiteral_16429/*"_Saturation"*/);
+    byte_4D344D1 = 1;
   }
   material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0);
   if ( !material
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16387/*"_Saturation"*/, this->fields.saturation, 0),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16429/*"_Saturation"*/, this->fields.saturation, 0),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0)) == 0) )
   {
-    sub_1C7BD40(material, v8);
+    sub_1C93D2C(material, v8);
   }
-  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16323/*"_MainTex"*/, this->fields.texture, 0);
+  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16365/*"_MainTex"*/, this->fields.texture, 0);
   v9 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_71715072((UnityEngine_Texture_o *)source, destination, v9, 0);
+  UnityEngine_Graphics__Blit_71964832((UnityEngine_Texture_o *)source, destination, v9, 0);
 }

@@ -1,9 +1,9 @@
 void BattleScriptActionData___ctor(BattleScriptActionData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF0C4A & 1) == 0 )
+  if ( (byte_4D32FF3 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleActionData_TypeInfo);
-    byte_4CF0C4A = 1;
+    sub_1C93AD4(&BattleActionData_TypeInfo);
+    byte_4D32FF3 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
@@ -44,20 +44,20 @@ void BattleScriptActionData__SetBattleScript(
   __int64 size; // x10
   Il2CppClass **v33; // x8
 
-  if ( (byte_4CF0C4B & 1) == 0 )
+  if ( (byte_4D32FF4 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
-    byte_4CF0C4B = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
+    byte_4D32FF4 = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
   p_ListBattleScriptData_k__BackingField = &this->fields._ListBattleScriptData_k__BackingField;
   this->fields._ListBattleScriptData_k__BackingField = (struct System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__o *)v11;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ListBattleScriptData_k__BackingField,
     (int32_t)v11,
     v13,
@@ -76,7 +76,7 @@ void BattleScriptActionData__SetBattleScript(
     while ( 1 )
     {
       if ( v22 >= (unsigned int)max_length )
-        sub_1C7BD48(BattleScriptData);
+        sub_1C93D34(BattleScriptData);
       if ( !logic )
         break;
       BattleScriptData = (System_Collections_Generic_List_object__o *)BattleLogicBattleScript__CreateBattleScriptData(
@@ -103,14 +103,14 @@ void BattleScriptActionData__SetBattleScript(
           System_Collections_Generic_List_object___AddWithResize(
             BattleScriptData,
             v20,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
         else
         {
           v33 = &items->obj.klass + size;
           BattleScriptData->fields._size = size + 1;
           v33[4] = (Il2CppClass *)v20;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v33 + 4), (int32_t)v20, v24, v25, v26, v27, v28, v29);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v33 + 4), (int32_t)v20, v24, v25, v26, v27, v28, v29);
         }
       }
       LODWORD(max_length) = entities->max_length;
@@ -118,7 +118,7 @@ void BattleScriptActionData__SetBattleScript(
         return;
     }
 LABEL_16:
-    sub_1C7BD40(BattleScriptData, v20);
+    sub_1C93D2C(BattleScriptData, v20);
   }
 }
 
@@ -143,7 +143,7 @@ void BattleScriptActionData__set_ListBattleScriptData(
   System_String_o *v7; // x7
 
   this->fields._ListBattleScriptData_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ListBattleScriptData_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -1,9 +1,9 @@
 void DummyErrorSelectDialog___ctor(DummyErrorSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEDB15 & 1) == 0 )
+  if ( (byte_4D2FE6E & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CEDB15 = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2FE6E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,10 +15,10 @@ void DummyErrorSelectDialog__Init(DummyErrorSelectDialog_o *this, const MethodIn
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4CEDB14 & 1) == 0 )
+  if ( (byte_4D2FE6D & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEDB14 = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2FE6D = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -27,7 +27,7 @@ void DummyErrorSelectDialog__Init(DummyErrorSelectDialog_o *this, const MethodIn
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = this->fields.decideLabel) == 0) )
   {
-    sub_1C7BD40(titleLabel, method);
+    sub_1C93D2C(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -53,7 +53,7 @@ void DummyErrorSelectDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -64,12 +64,12 @@ void DummyErrorSelectDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -81,9 +81,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AB1AA0;
+  this->fields.invoke_impl = (intptr_t)sub_1AC8E68;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AB1A58;
+  this->fields.extra_arg = (intptr_t)sub_1AC8E20;
 }
 
 
@@ -98,14 +98,14 @@ System_IAsyncResult_o *DummyErrorSelectDialog_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = selectError;
-  if ( (byte_4CEDB16 & 1) == 0 )
+  if ( (byte_4D2FE6F & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    byte_4CEDB16 = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    byte_4D2FE6F = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -114,7 +114,7 @@ void DummyErrorSelectDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

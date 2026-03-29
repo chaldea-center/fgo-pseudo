@@ -4,27 +4,20 @@ void UIButtonObjectComponent___ctor(UIButtonObjectComponent_o *this, const Metho
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool flg, const MethodInfo *method)
 {
   UnityEngine_Object_o *col; // x21
   __int64 v6; // x1
   UnityEngine_Collider_o *v7; // x0
   UnityEngine_Object_o *buttonsprite; // x21
-  float v9; // s0 OVERLAPPED
-  float v10; // s3
-  float v11; // s1
-  float v12; // s2
   UnityEngine_Object_o *textlabel; // x21
-  float v14; // s0 OVERLAPPED
-  float v15; // s3
-  float v16; // s1
-  float v17; // s2
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEDC59 & 1) == 0 )
+  if ( (byte_4D2FFB2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEDC59 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2FFB2 = 1;
   }
   col = (UnityEngine_Object_o *)this->fields.col;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,15 +35,15 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
   if ( UnityEngine_Object__op_Inequality(buttonsprite, 0, 0) )
   {
     v7 = (UnityEngine_Collider_o *)this->fields.buttonsprite;
-    v9 = 0.5;
+    v10.fields.r = 0.5;
     if ( flg )
-      v9 = 1.0;
+      v10.fields.r = 1.0;
     if ( !v7 )
       goto LABEL_23;
-    v10 = 1.0;
-    v11 = v9;
-    v12 = v9;
-    UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v9, 0);
+    v10.fields.a = 1.0;
+    v10.fields.g = v10.fields.r;
+    v10.fields.b = v10.fields.r;
+    UIWidget__set_color((UIWidget_o *)v7, v10, 0);
   }
   textlabel = (UnityEngine_Object_o *)this->fields.textlabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,18 +51,18 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
   if ( UnityEngine_Object__op_Inequality(textlabel, 0, 0) )
   {
     v7 = (UnityEngine_Collider_o *)this->fields.textlabel;
-    v14 = 0.5;
+    v11.fields.r = 0.5;
     if ( flg )
-      v14 = 1.0;
+      v11.fields.r = 1.0;
     if ( v7 )
     {
-      v15 = 1.0;
-      v16 = v14;
-      v17 = v14;
-      UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v14, 0);
+      v11.fields.a = 1.0;
+      v11.fields.g = v11.fields.r;
+      v11.fields.b = v11.fields.r;
+      UIWidget__set_color((UIWidget_o *)v7, v11, 0);
       return;
     }
 LABEL_23:
-    sub_1C7BD40(v7, v6);
+    sub_1C93D2C(v7, v6);
   }
 }

@@ -15,27 +15,27 @@ void FileName___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CED562 & 1) == 0 )
+  if ( (byte_4D2F8B4 & 1) == 0 )
   {
-    sub_1C7BAE8(&FileName_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_20411/*"icon_support_02"*/);
-    sub_1C7BAE8(&StringLiteral_20364/*"icon_eventjoin_02"*/);
-    byte_4CED562 = 1;
+    sub_1C93AD4(&FileName_TypeInfo);
+    sub_1C93AD4(&StringLiteral_20470/*"icon_support_02"*/);
+    sub_1C93AD4(&StringLiteral_20423/*"icon_eventjoin_02"*/);
+    byte_4D2F8B4 = 1;
   }
-  FileName_TypeInfo->static_fields->friendIconName = (struct System_String_o *)StringLiteral_20411/*"icon_support_02"*/;
-  sub_1C7BA8C(
+  FileName_TypeInfo->static_fields->friendIconName = (struct System_String_o *)StringLiteral_20470/*"icon_support_02"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)FileName_TypeInfo->static_fields,
-    StringLiteral_20411/*"icon_support_02"*/,
+    StringLiteral_20470/*"icon_support_02"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_20364/*"icon_eventjoin_02"*/;
+  v7 = StringLiteral_20423/*"icon_eventjoin_02"*/;
   static_fields = FileName_TypeInfo->static_fields;
-  static_fields->eventJoinIconName = (struct System_String_o *)StringLiteral_20364/*"icon_eventjoin_02"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->eventJoinIconName, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->eventJoinIconName = (struct System_String_o *)StringLiteral_20423/*"icon_eventjoin_02"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->eventJoinIconName, v7, v9, v10, v11, v12, v13, v14);
 }
 
 

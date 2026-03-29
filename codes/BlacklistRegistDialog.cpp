@@ -29,19 +29,19 @@ void BlacklistRegistDialog__Open(
   UILabel_o *v26; // x20
   System_Action_o *v27; // x20
 
-  if ( (byte_4CE9427 & 1) == 0 )
+  if ( (byte_4D2B6F8 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_CommonConfirmDialog_EndOpen__);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_3694/*"COMMON_CONFIRM_NO"*/);
-    sub_1C7BAE8(&StringLiteral_3699/*"COMMON_CONFIRM_YES"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE9427 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_CommonConfirmDialog_EndOpen__);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_3710/*"COMMON_CONFIRM_NO"*/);
+    sub_1C93AD4(&StringLiteral_3715/*"COMMON_CONFIRM_YES"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2B6F8 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     (int32_t)message_main,
@@ -108,7 +108,7 @@ void BlacklistRegistDialog__Open(
       goto LABEL_33;
     }
 LABEL_48:
-    sub_1C7BD40(v17, v16);
+    sub_1C93D2C(v17, v16);
   }
 LABEL_33:
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
@@ -119,7 +119,7 @@ LABEL_33:
     v24 = this->fields.buttonDecideLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3699/*"COMMON_CONFIRM_YES"*/, 0);
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COMMON_CONFIRM_YES"*/, 0);
     if ( !v24 )
       goto LABEL_48;
     UILabel__set_text(v24, (System_String_o *)v17, 0);
@@ -132,7 +132,7 @@ LABEL_33:
     v26 = this->fields.buttonCancelLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3694/*"COMMON_CONFIRM_NO"*/, 0);
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3710/*"COMMON_CONFIRM_NO"*/, 0);
     if ( v26 )
     {
       UILabel__set_text(v26, (System_String_o *)v17, 0);
@@ -142,7 +142,7 @@ LABEL_33:
   }
 LABEL_47:
   *(_WORD *)&this->fields.isButtonEnable = 256;
-  v27 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0, 0);
 }

@@ -7,7 +7,7 @@ void WrapBattleUIFrontPopupControl___ctor(
   const MethodInfo *v5; // x1
 
   if ( !inPerf )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   WrapBaseBattlePopupControl___ctor((WrapBaseBattlePopupControl_o *)this, inPerf->fields.popupUiFrontTr, inPerf, v3);
   WrapBattleUIFrontPopupControl__InitPopupPrefab(this, v5);
 }
@@ -75,21 +75,21 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__GetBuffTextClassIconObj
   Il2CppObject *v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CF144E & 1) == 0 )
+  if ( (byte_4D3381D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_First_GameObject___);
-    byte_4CF144E = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_First_GameObject___);
+    byte_4D3381D = 1;
   }
   buffTextClassIconList = this->fields.buffTextClassIconList;
   object = System_Linq_Enumerable__First_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)buffTextClassIconList,
-             (const MethodInfo_319601C *)Method_System_Linq_Enumerable_First_GameObject___);
-  v7 = BasicHelper__IndexValue_object__51767468(
+             (const MethodInfo_31CA994 *)Method_System_Linq_Enumerable_First_GameObject___);
+  v7 = BasicHelper__IndexValue_object__51981564(
          (System_Collections_Generic_List_T__o *)buffTextClassIconList,
          color - 1,
          object,
-         (const MethodInfo_315E8AC *)Method_BasicHelper_IndexValue_GameObject___);
+         (const MethodInfo_3192CFC *)Method_BasicHelper_IndexValue_GameObject___);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            (UnityEngine_GameObject_o *)v7,
@@ -108,21 +108,21 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__GetBuffTextObject(
   Il2CppObject *v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CF144D & 1) == 0 )
+  if ( (byte_4D3381C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_First_GameObject___);
-    byte_4CF144D = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_First_GameObject___);
+    byte_4D3381C = 1;
   }
   buffTextList = this->fields.buffTextList;
   object = System_Linq_Enumerable__First_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)buffTextList,
-             (const MethodInfo_319601C *)Method_System_Linq_Enumerable_First_GameObject___);
-  v7 = BasicHelper__IndexValue_object__51767468(
+             (const MethodInfo_31CA994 *)Method_System_Linq_Enumerable_First_GameObject___);
+  v7 = BasicHelper__IndexValue_object__51981564(
          (System_Collections_Generic_List_T__o *)buffTextList,
          color - 1,
          object,
-         (const MethodInfo_315E8AC *)Method_BasicHelper_IndexValue_GameObject___);
+         (const MethodInfo_3192CFC *)Method_BasicHelper_IndexValue_GameObject___);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            (UnityEngine_GameObject_o *)v7,
@@ -143,10 +143,10 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__GetDamageObject(
   Il2CppObject *v11; // x1
   const MethodInfo *v12; // x3
 
-  if ( (byte_4CF144C & 1) == 0 )
+  if ( (byte_4D3381B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_GameObject___);
-    byte_4CF144C = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_GameObject___);
+    byte_4D3381B = 1;
   }
   if ( resist )
     v9 = 3;
@@ -158,11 +158,11 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__GetDamageObject(
     v10 = 1;
   else
     v10 = v9;
-  v11 = BasicHelper__IndexValue_object__51767468(
+  v11 = BasicHelper__IndexValue_object__51981564(
           (System_Collections_Generic_List_T__o *)this->fields.damageList,
           v10,
           0,
-          (const MethodInfo_315E8AC *)Method_BasicHelper_IndexValue_GameObject___);
+          (const MethodInfo_3192CFC *)Method_BasicHelper_IndexValue_GameObject___);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            (UnityEngine_GameObject_o *)v11,
@@ -179,16 +179,16 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__GetEffectInstantiateLoc
   Il2CppObject *v5; // x1
   const MethodInfo *v6; // x3
 
-  if ( (byte_4CF144F & 1) == 0 )
+  if ( (byte_4D3381E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_GameObject___);
-    byte_4CF144F = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_GameObject___);
+    byte_4D3381E = 1;
   }
-  v5 = BasicHelper__IndexValue_object__51767468(
+  v5 = BasicHelper__IndexValue_object__51981564(
          (System_Collections_Generic_List_T__o *)this->fields.effectList,
          id,
          0,
-         (const MethodInfo_315E8AC *)Method_BasicHelper_IndexValue_GameObject___);
+         (const MethodInfo_3192CFC *)Method_BasicHelper_IndexValue_GameObject___);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            (UnityEngine_GameObject_o *)v5,
@@ -355,13 +355,13 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
   System_String_o *v127; // x7
 
   v2 = this;
-  if ( (byte_4CF144B & 1) == 0 )
+  if ( (byte_4D3381A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToList_GameObject___);
-    sub_1C7BAE8(&System_Func_GameObject__GameObject__TypeInfo);
-    this = (WrapBattleUIFrontPopupControl_o *)sub_1C7BAE8(&Method_WrapBattleUIFrontPopupControl_MakePrefab__);
-    byte_4CF144B = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToList_GameObject___);
+    sub_1C93AD4(&System_Func_GameObject__GameObject__TypeInfo);
+    this = (WrapBattleUIFrontPopupControl_o *)sub_1C93AD4(&Method_WrapBattleUIFrontPopupControl_MakePrefab__);
+    byte_4D3381A = 1;
   }
   perf = v2->fields.perf;
   if ( !perf )
@@ -370,17 +370,17 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
   if ( !effectcontrol )
     goto LABEL_26;
   EffectList = (System_Collections_Generic_IEnumerable_TSource__o *)effectcontrol->fields.EffectList;
-  v6 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_GameObject__GameObject__TypeInfo);
+  v6 = (System_Func_object__object__o *)sub_1C93D20(System_Func_GameObject__GameObject__TypeInfo);
   System_Func_object__object____ctor(v6, (Il2CppObject *)v2, Method_WrapBattleUIFrontPopupControl_MakePrefab__, 0);
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                               EffectList,
                                                               (System_Func_TSource__TResult__o *)v6,
-                                                              (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
+                                                              (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
   v8 = System_Linq_Enumerable__ToList_object_(
          v7,
-         (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+         (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_GameObject___);
   v2->fields.effectList = (struct System_Collections_Generic_List_GameObject__o *)v8;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.effectList, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.effectList, (int32_t)v8, v9, v10, v11, v12, v13, v14);
   v15 = v2->fields.perf;
   if ( !v15 )
     goto LABEL_26;
@@ -388,17 +388,17 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
   if ( !v16 )
     goto LABEL_26;
   damageObjectlist = (System_Collections_Generic_IEnumerable_TSource__o *)v16->fields.damageObjectlist;
-  v18 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_GameObject__GameObject__TypeInfo);
+  v18 = (System_Func_object__object__o *)sub_1C93D20(System_Func_GameObject__GameObject__TypeInfo);
   System_Func_object__object____ctor(v18, (Il2CppObject *)v2, Method_WrapBattleUIFrontPopupControl_MakePrefab__, 0);
   v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                damageObjectlist,
                                                                (System_Func_TSource__TResult__o *)v18,
-                                                               (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
+                                                               (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
   v20 = System_Linq_Enumerable__ToList_object_(
           v19,
-          (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+          (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_GameObject___);
   v2->fields.damageList = (struct System_Collections_Generic_List_GameObject__o *)v20;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.damageList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.damageList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
   v27 = v2->fields.perf;
   if ( !v27 )
     goto LABEL_26;
@@ -406,17 +406,17 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
   if ( !v28 )
     goto LABEL_26;
   buffTextObjectlist = (System_Collections_Generic_IEnumerable_TSource__o *)v28->fields.buffTextObjectlist;
-  v30 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_GameObject__GameObject__TypeInfo);
+  v30 = (System_Func_object__object__o *)sub_1C93D20(System_Func_GameObject__GameObject__TypeInfo);
   System_Func_object__object____ctor(v30, (Il2CppObject *)v2, Method_WrapBattleUIFrontPopupControl_MakePrefab__, 0);
   v31 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                buffTextObjectlist,
                                                                (System_Func_TSource__TResult__o *)v30,
-                                                               (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
+                                                               (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
   v32 = System_Linq_Enumerable__ToList_object_(
           v31,
-          (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+          (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_GameObject___);
   v2->fields.buffTextList = (struct System_Collections_Generic_List_GameObject__o *)v32;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.buffTextList, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.buffTextList, (int32_t)v32, v33, v34, v35, v36, v37, v38);
   v39 = v2->fields.perf;
   if ( !v39 )
     goto LABEL_26;
@@ -424,17 +424,17 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
   if ( !v40 )
     goto LABEL_26;
   buffTextClassIconObjectList = (System_Collections_Generic_IEnumerable_TSource__o *)v40->fields.buffTextClassIconObjectList;
-  v42 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_GameObject__GameObject__TypeInfo);
+  v42 = (System_Func_object__object__o *)sub_1C93D20(System_Func_GameObject__GameObject__TypeInfo);
   System_Func_object__object____ctor(v42, (Il2CppObject *)v2, Method_WrapBattleUIFrontPopupControl_MakePrefab__, 0);
   v43 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                buffTextClassIconObjectList,
                                                                (System_Func_TSource__TResult__o *)v42,
-                                                               (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
+                                                               (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_GameObject__GameObject___);
   v44 = System_Linq_Enumerable__ToList_object_(
           v43,
-          (const MethodInfo_31B3E80 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+          (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_GameObject___);
   v2->fields.buffTextClassIconList = (struct System_Collections_Generic_List_GameObject__o *)v44;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.buffTextClassIconList,
     (int32_t)v44,
     v45,
@@ -456,7 +456,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
                   v51);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, PopupObject, v55);
   v2->fields.avoidanceObj = PopupObject;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.avoidanceObj,
     (int32_t)PopupObject,
     v56,
@@ -478,7 +478,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
           v62);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v65, v66);
   v2->fields.avoidanceTextObj = v65;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.avoidanceTextObj, (int32_t)v65, v67, v68, v69, v70, v71, v72);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.avoidanceTextObj, (int32_t)v65, v67, v68, v69, v70, v71, v72);
   v74 = v2->fields.perf;
   if ( !v74 )
     goto LABEL_26;
@@ -492,7 +492,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
           v73);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v76, v77);
   v2->fields.avoidResetDamageObj = v76;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.avoidResetDamageObj,
     (int32_t)v76,
     v78,
@@ -514,7 +514,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
           v84);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v87, v88);
   v2->fields.avoidResetDamageTextObj = v87;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.avoidResetDamageTextObj,
     (int32_t)v87,
     v89,
@@ -536,7 +536,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
           v95);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v98, v99);
   v2->fields.invincibleObj = v98;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.invincibleObj,
     (int32_t)v98,
     v100,
@@ -555,7 +555,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
                  v106),
         WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v109, v110),
         v2->fields.spInvincibleObj = v109,
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)&v2->fields.spInvincibleObj,
           (int32_t)v109,
           v111,
@@ -568,7 +568,7 @@ void WrapBattleUIFrontPopupControl__InitPopupPrefab(WrapBattleUIFrontPopupContro
     || (v119 = v118->fields.effectcontrol) == 0 )
   {
 LABEL_26:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   v120 = WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)v2,
@@ -577,7 +577,7 @@ LABEL_26:
            v117);
   WrapBaseBattlePopupControl__ApplyLayerRecursively((WrapBaseBattlePopupControl_o *)v2, v120, v121);
   v2->fields.buffIconObj = v120;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.buffIconObj, (int32_t)v120, v122, v123, v124, v125, v126, v127);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.buffIconObj, (int32_t)v120, v122, v123, v124, v125, v126, v127);
 }
 
 
@@ -606,6 +606,6 @@ UnityEngine_GameObject_o *WrapBattleUIFrontPopupControl__SetBuffIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C7BD40(this, buffList);
-  return BattleEffectControl__SetBuffIconObject_46575180(effectcontrol, buffList, this->fields.buffIconObj, 0);
+    sub_1C93D2C(this, buffList);
+  return BattleEffectControl__SetBuffIconObject_46759600(effectcontrol, buffList, this->fields.buffIconObj, 0);
 }

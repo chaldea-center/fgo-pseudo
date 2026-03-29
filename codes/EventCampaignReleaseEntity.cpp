@@ -1,13 +1,13 @@
 void EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE58F & 1) == 0 )
+  if ( (byte_4D308F2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEE58F = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D308F2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventCampaignReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4CEE58E & 1) == 0 )
+  if ( (byte_4D308F1 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CEE58E = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4D308F1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_316EA0C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_31A3054 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -88,40 +88,40 @@ System_String_o *EventCampaignReleaseEntity__getCreatePrimarykey(
   v41 = target;
   v42 = eventId;
   v40 = idx;
-  if ( (byte_4CEE58D & 1) == 0 )
+  if ( (byte_4D308F0 & 1) == 0 )
   {
-    sub_1C7BAE8(&string___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1451/*":"*/);
-    byte_4CEE58D = 1;
+    sub_1C93AD4(&string___TypeInfo);
+    sub_1C93AD4(&StringLiteral_1451/*":"*/);
+    byte_4D308F0 = 1;
   }
-  v4 = sub_1C7BB90(string___TypeInfo, 5);
+  v4 = sub_1C93B7C(string___TypeInfo, 5);
   v5 = System_Int32__ToString((int32_t)&v42, 0);
   if ( !v4 )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_10;
   *(_QWORD *)(v4 + 32) = v5;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 32), (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 32), (int32_t)v5, v7, v8, v9, v10, v11, v12);
   if ( *(_DWORD *)(v4 + 24) <= 1u )
     goto LABEL_10;
   v19 = StringLiteral_1451/*":"*/;
   *(_QWORD *)(v4 + 40) = StringLiteral_1451/*":"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 40), v19, v13, v14, v15, v16, v17, v18);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 40), v19, v13, v14, v15, v16, v17, v18);
   v5 = System_Int32__ToString((int32_t)&v41, 0);
   if ( *(_DWORD *)(v4 + 24) <= 2u
     || (*(_QWORD *)(v4 + 48) = v5,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 48), (int32_t)v5, v20, v21, v22, v23, v24, v25),
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 48), (int32_t)v5, v20, v21, v22, v23, v24, v25),
         *(_DWORD *)(v4 + 24) <= 3u)
     || (v32 = StringLiteral_1451/*":"*/,
         *(_QWORD *)(v4 + 56) = StringLiteral_1451/*":"*/,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 56), v32, v26, v27, v28, v29, v30, v31),
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 56), v32, v26, v27, v28, v29, v30, v31),
         v5 = System_Int32__ToString((int32_t)&v40, 0),
         *(_DWORD *)(v4 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1C7BD48(v5);
+    sub_1C93D34(v5);
   }
   *(_QWORD *)(v4 + 64) = v5;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 64), (int32_t)v5, v33, v34, v35, v36, v37, v38);
-  return System_String__Concat_64217444((System_String_array *)v4, 0);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 64), (int32_t)v5, v33, v34, v35, v36, v37, v38);
+  return System_String__Concat_64466256((System_String_array *)v4, 0);
 }

@@ -5,33 +5,38 @@ void PurchaseRequest__beginRequest(
         int32_t num,
         int32_t anotherPayFlag,
         int32_t anotherPayUsedItem,
+        int32_t selectSkill,
         const MethodInfo *method)
 {
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
   const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x3
+  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x3
 
-  if ( (byte_4CF01D4 & 1) == 0 )
+  if ( (byte_4D32564 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_22543/*"num"*/);
-    sub_1C7BAE8(&StringLiteral_16874/*"anotherPayUsedItem"*/);
-    sub_1C7BAE8(&StringLiteral_20420/*"id"*/);
-    sub_1C7BAE8(&StringLiteral_16872/*"anotherPayFlag"*/);
-    byte_4CF01D4 = 1;
+    sub_1C93AD4(&StringLiteral_22608/*"num"*/);
+    sub_1C93AD4(&StringLiteral_23552/*"selectSkill"*/);
+    sub_1C93AD4(&StringLiteral_16916/*"anotherPayUsedItem"*/);
+    sub_1C93AD4(&StringLiteral_20479/*"id"*/);
+    sub_1C93AD4(&StringLiteral_16914/*"anotherPayFlag"*/);
+    byte_4D32564 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_20420/*"id"*/,
+    (System_String_o *)StringLiteral_20479/*"id"*/,
     id,
     *(const MethodInfo **)&anotherPayFlag);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22543/*"num"*/, num, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22608/*"num"*/, num, v13);
   if ( anotherPayFlag >= 1 )
   {
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16872/*"anotherPayFlag"*/, anotherPayFlag, v13);
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16874/*"anotherPayUsedItem"*/, anotherPayUsedItem, v14);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16914/*"anotherPayFlag"*/, anotherPayFlag, v15);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16916/*"anotherPayUsedItem"*/, anotherPayUsedItem, v16);
+    if ( selectSkill >= 1 )
+      RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23552/*"selectSkill"*/, selectSkill, v17);
   }
-  RequestBase__beginRequest((RequestBase_o *)this, v12);
+  RequestBase__beginRequest((RequestBase_o *)this, v14);
 }
 
 
@@ -39,16 +44,16 @@ System_String_o *PurchaseRequest__getURL(PurchaseRequest_o *this, const MethodIn
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF01D3 & 1) == 0 )
+  if ( (byte_4D32563 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_23659/*"shop/purchase"*/);
-    byte_4CF01D3 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_23725/*"shop/purchase"*/);
+    byte_4D32563 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_23659/*"shop/purchase"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_23725/*"shop/purchase"*/, 0);
 }
 
 
@@ -65,12 +70,12 @@ void PurchaseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CF01D5 & 1) == 0 )
+  if ( (byte_4D32565 & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF01D5 = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D32565 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -95,7 +100,7 @@ void PurchaseRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22419/*"ng"*/,
+        StringLiteral_22483/*"ng"*/,
         v11->fields.method);
   }
 }

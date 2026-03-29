@@ -1,9 +1,9 @@
 void PresentBoxNotificationMenu___ctor(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE84A7 & 1) == 0 )
+  if ( (byte_4D2A793 & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CE84A7 = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2A793 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,17 +13,17 @@ void PresentBoxNotificationMenu___ctor(PresentBoxNotificationMenu_o *this, const
 
 void PresentBoxNotificationMenu__BackBuyBankItem(PresentBoxNotificationMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE84A3 & 1) == 0 )
+  if ( (byte_4D2A78F & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_9968/*"OnMoveEnd"*/);
-    byte_4CE84A3 = 1;
+    sub_1C93AD4(&StringLiteral_9998/*"OnMoveEnd"*/);
+    byte_4D2A78F = 1;
   }
   if ( this->fields.state == 4 )
   {
     this->fields.state = 5;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9968/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9998/*"OnMoveEnd"*/,
       0.1,
       0);
   }
@@ -40,7 +40,7 @@ void PresentBoxNotificationMenu__Callback(PresentBoxNotificationMenu_o *this, in
   p_callbackFunc = &this->fields.callbackFunc;
   v4 = callbackFunc;
   *p_callbackFunc = 0;
-  sub_1C7BA8C(p_callbackFunc, 0);
+  sub_1C93A78(p_callbackFunc, 0);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
       v4->fields.method_code,
@@ -56,18 +56,18 @@ void PresentBoxNotificationMenu__Close(
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4CE84A2 & 1) == 0 )
+  if ( (byte_4D2A78E & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
-    byte_4CE84A2 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
+    byte_4D2A78E = 1;
   }
   if ( this->fields.state )
   {
     this->fields.closeCallbackFunc = callback;
-    sub_1C7BA8C(&this->fields.closeCallbackFunc, callback);
+    sub_1C93A78(&this->fields.closeCallbackFunc, callback);
     this->fields.state = 5;
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -84,10 +84,10 @@ void PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *this, const 
 {
   UILabel_o *message1Label; // x0
 
-  if ( (byte_4CE84A0 & 1) == 0 )
+  if ( (byte_4D2A78C & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE84A0 = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2A78C = 1;
   }
   message1Label = this->fields.message1Label;
   if ( !message1Label
@@ -98,7 +98,7 @@ void PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *this, const 
     || (UILabel__set_text(message1Label, (System_String_o *)StringLiteral_1/*""*/, 0),
         (message1Label = (UILabel_o *)this->fields.ItemListViewManager) == 0) )
   {
-    sub_1C7BD40(message1Label, method);
+    sub_1C93D2C(message1Label, method);
   }
   ListViewManager__DestroyList((ListViewManager_o *)message1Label, 0);
   this->fields.state = 0;
@@ -112,15 +112,15 @@ void PresentBoxNotificationMenu__OnClickClose(PresentBoxNotificationMenu_o *this
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CE84A5 & 1) == 0 )
+  if ( (byte_4D2A791 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PresentBoxNotificationMenu_OnClickClose__);
-    byte_4CE84A5 = 1;
+    sub_1C93AD4(&Method_PresentBoxNotificationMenu_OnClickClose__);
+    byte_4D2A791 = 1;
   }
   v3 = Method_PresentBoxNotificationMenu_OnClickClose__;
   if ( (*((_BYTE *)Method_PresentBoxNotificationMenu_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_PresentBoxNotificationMenu_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_PresentBoxNotificationMenu_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   PresentBoxNotificationMenu__Callback(this, 0, v5);
 }
@@ -139,11 +139,11 @@ void PresentBoxNotificationMenu__OnMoveEnd(PresentBoxNotificationMenu_o *this, c
   struct System_Action_o *v11; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
-  if ( (byte_4CE84A4 & 1) == 0 )
+  if ( (byte_4D2A790 & 1) == 0 )
   {
-    sub_1C7BAE8(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
-    sub_1C7BAE8(&Method_PresentBoxNotificationMenu_OnSelectBuyItem__);
-    byte_4CE84A4 = 1;
+    sub_1C93AD4(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
+    sub_1C93AD4(&Method_PresentBoxNotificationMenu_OnSelectBuyItem__);
+    byte_4D2A790 = 1;
   }
   switch ( this->fields.state )
   {
@@ -153,17 +153,17 @@ void PresentBoxNotificationMenu__OnMoveEnd(PresentBoxNotificationMenu_o *this, c
     case 3:
       this->fields.state = 4;
       ItemListViewManager = this->fields.ItemListViewManager;
-      v5 = (PresentBoxNotificationListViewManager_CallbackFunc_o *)sub_1C7BD34(PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
+      v5 = (PresentBoxNotificationListViewManager_CallbackFunc_o *)sub_1C93D20(PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
       PresentBoxNotificationListViewManager_CallbackFunc___ctor(
         v5,
         (Il2CppObject *)this,
         Method_PresentBoxNotificationMenu_OnSelectBuyItem__,
         v6);
       if ( !ItemListViewManager )
-        sub_1C7BD40(v7, v8);
+        sub_1C93D2C(v7, v8);
       ItemListViewManager->fields.callbackFunc = v5;
-      sub_1C7BA8C(&ItemListViewManager->fields.callbackFunc, v5);
-      PresentBoxNotificationListViewManager__SetMode_31660284(ItemListViewManager, 1, v9);
+      sub_1C93A78(&ItemListViewManager->fields.callbackFunc, v5);
+      PresentBoxNotificationListViewManager__SetMode_31765496(ItemListViewManager, 1, v9);
       break;
     case 5:
       v3 = 6;
@@ -178,7 +178,7 @@ LABEL_6:
       if ( closeCallbackFunc )
       {
         *p_closeCallbackFunc = 0;
-        sub_1C7BA8C(p_closeCallbackFunc, 0);
+        sub_1C93A78(p_closeCallbackFunc, 0);
         ((void (__fastcall *)(intptr_t, intptr_t))v11->fields.invoke_impl)(v11->fields.method_code, v11->fields.method);
       }
       break;
@@ -211,15 +211,15 @@ void PresentBoxNotificationMenu__Open(
   const MethodInfo *v12; // x3
   System_Action_o *v13; // x20
 
-  if ( (byte_4CE84A1 & 1) == 0 )
+  if ( (byte_4D2A78D & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
-    sub_1C7BAE8(&StringLiteral_10472/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/);
-    sub_1C7BAE8(&StringLiteral_10471/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/);
-    sub_1C7BAE8(&StringLiteral_10470/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/);
-    byte_4CE84A1 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_PresentBoxNotificationMenu_OnMoveEnd__);
+    sub_1C93AD4(&StringLiteral_10506/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/);
+    sub_1C93AD4(&StringLiteral_10505/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/);
+    sub_1C93AD4(&StringLiteral_10504/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/);
+    byte_4D2A78D = 1;
   }
   if ( !this->fields.state )
   {
@@ -228,7 +228,7 @@ void PresentBoxNotificationMenu__Open(
       goto LABEL_13;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     this->fields.callbackFunc = callback;
-    sub_1C7BA8C(&this->fields.callbackFunc, callback);
+    sub_1C93A78(&this->fields.callbackFunc, callback);
     gameObject = (UnityEngine_GameObject_o *)this->fields.ItemListViewManager;
     if ( !gameObject )
       goto LABEL_13;
@@ -236,22 +236,22 @@ void PresentBoxNotificationMenu__Open(
     message1Label = this->fields.message1Label;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10471/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10505/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, 0);
     if ( !message1Label )
       goto LABEL_13;
     UILabel__set_text(message1Label, (System_String_o *)gameObject, 0);
     message2Label = this->fields.message2Label;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10472/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10506/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, 0);
     if ( !message2Label
       || (UILabel__set_text(message2Label, (System_String_o *)gameObject, 0),
           closeLabel = this->fields.closeLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10470/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10504/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, 0),
           !closeLabel)
       || (UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.ItemListViewManager) == 0) )
     {
 LABEL_13:
-      sub_1C7BD40(gameObject, v8);
+      sub_1C93D2C(gameObject, v8);
     }
     PresentBoxNotificationListViewManager__CreateList(
       (PresentBoxNotificationListViewManager_o *)gameObject,
@@ -259,7 +259,7 @@ LABEL_13:
       presentList,
       v12);
     this->fields.state = 2;
-    v13 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v13, (Il2CppObject *)this, Method_PresentBoxNotificationMenu_OnMoveEnd__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
   }
@@ -281,10 +281,10 @@ void PresentBoxNotificationMenu__add_callbackFunc(
   PresentBoxNotificationMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CE849E & 1) == 0 )
+  if ( (byte_4D2A78A & 1) == 0 )
   {
-    sub_1C7BAE8(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
-    byte_4CE849E = 1;
+    sub_1C93AD4(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
+    byte_4D2A78A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -297,13 +297,13 @@ void PresentBoxNotificationMenu__add_callbackFunc(
       if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v8->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PresentBoxNotificationMenu_o *)sub_1C7C0DC(v8);
+  v11 = (PresentBoxNotificationMenu_o *)sub_1C940C8(v8);
   PresentBoxNotificationMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -312,12 +312,12 @@ System_String_o *PresentBoxNotificationMenu__get_closeBtnPath(
         PresentBoxNotificationMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CE84A6 & 1) == 0 )
+  if ( (byte_4D2A792 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_8896/*"MainPanel/BaseView/CloseButton"*/);
-    byte_4CE84A6 = 1;
+    sub_1C93AD4(&StringLiteral_8923/*"MainPanel/BaseView/CloseButton"*/);
+    byte_4D2A792 = 1;
   }
-  return (System_String_o *)StringLiteral_8896/*"MainPanel/BaseView/CloseButton"*/;
+  return (System_String_o *)StringLiteral_8923/*"MainPanel/BaseView/CloseButton"*/;
 }
 
 
@@ -335,10 +335,10 @@ void PresentBoxNotificationMenu__remove_callbackFunc(
   PresentBoxNotificationMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CE849F & 1) == 0 )
+  if ( (byte_4D2A78B & 1) == 0 )
   {
-    sub_1C7BAE8(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
-    byte_4CE849F = 1;
+    sub_1C93AD4(&PresentBoxNotificationMenu_CallbackFunc_TypeInfo);
+    byte_4D2A78B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -351,13 +351,13 @@ void PresentBoxNotificationMenu__remove_callbackFunc(
       if ( (PresentBoxNotificationMenu_CallbackFunc_c *)v8->klass != PresentBoxNotificationMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PresentBoxNotificationMenu_o *)sub_1C7C0DC(v8);
+  v11 = (PresentBoxNotificationMenu_o *)sub_1C940C8(v8);
   PresentBoxNotificationMenu__Init(v11, v12);
 }
 
@@ -377,15 +377,15 @@ void PresentBoxNotificationMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C7BA8C(&this->fields.m_target, object);
+  sub_1C93A78(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v10, 0);
+      v10 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -397,9 +397,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA7FD8;
+  this->fields.invoke_impl = (intptr_t)sub_1ABF3A0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA7F90;
+  this->fields.extra_arg = (intptr_t)sub_1ABF358;
 }
 
 
@@ -414,14 +414,14 @@ System_IAsyncResult_o *PresentBoxNotificationMenu_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4CE84A8 & 1) == 0 )
+  if ( (byte_4D2A794 & 1) == 0 )
   {
-    sub_1C7BAE8(&PresentBoxNotificationMenu_Result_TypeInfo);
-    byte_4CE84A8 = 1;
+    sub_1C93AD4(&PresentBoxNotificationMenu_Result_TypeInfo);
+    byte_4D2A794 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(PresentBoxNotificationMenu_Result_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -430,7 +430,7 @@ void PresentBoxNotificationMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

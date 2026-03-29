@@ -24,19 +24,19 @@ void BattleSyncFromTargetTransformComponent__SyncTarget(
   UnityEngine_Transform_o *v13; // x8
   struct BattleSyncTransformComponent_SyncData_o *v14; // x19
   UnityEngine_Transform_o *v15; // x20
-  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:kr30_12.12
+  UnityEngine_Vector3_o lossyScale; // 0:kr44_12.12
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF1E73 & 1) == 0 )
+  if ( (byte_4D3425B & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1E73 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3425B = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -59,10 +59,10 @@ void BattleSyncFromTargetTransformComponent__SyncTarget(
         {
           if ( v8 )
           {
-            v17.fields.z = position.fields.z + v7->fields.positionDiff.fields.z;
-            v17.fields.y = position.fields.y + v7->fields.positionDiff.fields.y;
-            v17.fields.x = position.fields.x + v7->fields.positionDiff.fields.x;
-            UnityEngine_Transform__set_position(v8, v17, 0);
+            v19.fields.z = position.fields.z + v7->fields.positionDiff.fields.z;
+            v19.fields.y = position.fields.y + v7->fields.positionDiff.fields.y;
+            v19.fields.x = position.fields.x + v7->fields.positionDiff.fields.x;
+            UnityEngine_Transform__set_position(v8, v19, 0);
             syncData = this->fields.syncData;
             if ( syncData )
             {
@@ -89,10 +89,10 @@ LABEL_30:
                   {
                     if ( v12 )
                     {
-                      v19.fields.z = localScale.fields.z + v11->fields.scaleDiff.fields.z;
-                      v19.fields.y = localScale.fields.y + v11->fields.scaleDiff.fields.y;
-                      v19.fields.x = localScale.fields.x + v11->fields.scaleDiff.fields.x;
-                      UnityEngine_Transform__set_localScale(v12, v19, 0);
+                      v20.fields.z = localScale.fields.z + v11->fields.scaleDiff.fields.z;
+                      v20.fields.y = localScale.fields.y + v11->fields.scaleDiff.fields.y;
+                      v20.fields.x = localScale.fields.x + v11->fields.scaleDiff.fields.x;
+                      UnityEngine_Transform__set_localScale(v12, v20, 0);
                       syncData = this->fields.syncData;
                       if ( syncData )
                       {
@@ -125,6 +125,6 @@ LABEL_22:
         }
       }
     }
-    sub_1C7BD40(transform, v5);
+    sub_1C93D2C(transform, v5);
   }
 }

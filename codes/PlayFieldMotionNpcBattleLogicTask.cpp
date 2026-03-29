@@ -18,7 +18,7 @@ void PlayFieldMotionNpcBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
   this->fields.actiontype = 44;
   this->fields.motionName = motionName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.motionName, (int32_t)motionName, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.motionName, (int32_t)motionName, v9, v10, v11, v12, v13, v14);
   this->fields.isForcedSpeedOne = v8;
   this->fields.actiontype = 61;
   BattleLogicTask__setTarget((BattleLogicTask_o *)this, targetId, v15);
@@ -45,22 +45,22 @@ BattleActionData_o *PlayFieldMotionNpcBattleLogicTask__MakeActionData(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4CF1992 & 1) == 0 )
+  if ( (byte_4D33D76 & 1) == 0 )
   {
-    sub_1C7BAE8(&PlayFieldMotionNpcActionData_TypeInfo);
-    byte_4CF1992 = 1;
+    sub_1C93AD4(&PlayFieldMotionNpcActionData_TypeInfo);
+    byte_4D33D76 = 1;
   }
-  if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._11_IsMakeAble.methodPtr)(
+  if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._12_IsMakeAble.methodPtr)(
           this,
           logic,
-          this->klass->vtable._11_IsMakeAble.method)
+          this->klass->vtable._12_IsMakeAble.method)
       & 1) == 0 )
     return 0;
   TargetId = PlayFieldMotionNpcBattleLogicTask__get_TargetId(this, v5);
-  v7 = (PlayFieldMotionNpcActionData_o *)sub_1C7BD34(PlayFieldMotionNpcActionData_TypeInfo);
+  v7 = (PlayFieldMotionNpcActionData_o *)sub_1C93D20(PlayFieldMotionNpcActionData_TypeInfo);
   PlayFieldMotionNpcActionData___ctor(v7, TargetId, 0);
   if ( !logic )
-    sub_1C7BD40(v8, v9);
+    sub_1C93D2C(v8, v9);
   return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v7, 0);
 }
 
@@ -69,14 +69,14 @@ int32_t PlayFieldMotionNpcBattleLogicTask__get_TargetId(
         PlayFieldMotionNpcBattleLogicTask_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CF1991 & 1) == 0 )
+  if ( (byte_4D33D75 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_int____78796912);
-    byte_4CF1991 = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_int____79063232);
+    byte_4D33D75 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.targetIdlist,
            0,
            -1,
-           (const MethodInfo_315E844 *)Method_BasicHelper_IndexValue_int____78796912);
+           (const MethodInfo_3192C94 *)Method_BasicHelper_IndexValue_int____79063232);
 }

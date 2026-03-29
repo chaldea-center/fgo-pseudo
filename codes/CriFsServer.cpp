@@ -13,10 +13,10 @@ void CriFsServer__AddRequest(CriFsServer_o *this, CriFsRequest_o *request, const
   __int64 size; // x10
   Il2CppClass **v9; // x8
 
-  if ( (byte_4CE7AB7 & 1) == 0 )
+  if ( (byte_4D29D97 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
-    byte_4CE7AB7 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
+    byte_4D29D97 = 1;
   }
   requestList = (System_Collections_Generic_List_object__o *)this->fields.requestList;
   if ( !requestList
@@ -25,7 +25,7 @@ void CriFsServer__AddRequest(CriFsServer_o *this, CriFsRequest_o *request, const
         ++requestList->fields._version,
         !items) )
   {
-    sub_1C7BD40(requestList, request);
+    sub_1C93D2C(requestList, request);
   }
   size = requestList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -33,14 +33,14 @@ void CriFsServer__AddRequest(CriFsServer_o *this, CriFsRequest_o *request, const
     System_Collections_Generic_List_object___AddWithResize(
       requestList,
       (Il2CppObject *)request,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
     v9 = &items->obj.klass + size;
     requestList->fields._size = size + 1;
     v9[4] = (Il2CppClass *)request;
-    sub_1C7BA8C(v9 + 4, request);
+    sub_1C93A78(v9 + 4, request);
   }
 }
 
@@ -59,16 +59,16 @@ void CriFsServer__Awake(CriFsServer_o *this, const MethodInfo *method)
   __int64 size; // x10
   Il2CppClass **v13; // x8
 
-  if ( (byte_4CE7AB4 & 1) == 0 )
+  if ( (byte_4D29D94 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsRequest_TypeInfo);
-    sub_1C7BAE8(&CriFsServer_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__RemoveAt__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_CriFsRequest__TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE7AB4 = 1;
+    sub_1C93AD4(&CriFsRequest_TypeInfo);
+    sub_1C93AD4(&CriFsServer_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__RemoveAt__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_CriFsRequest__TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D29D94 = 1;
   }
   instance = (UnityEngine_Object_o *)CriFsServer_TypeInfo->static_fields->_instance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -76,15 +76,15 @@ void CriFsServer__Awake(CriFsServer_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Equality(instance, 0, 0) )
   {
     CriFsServer_TypeInfo->static_fields->_instance = this;
-    sub_1C7BA8C(CriFsServer_TypeInfo->static_fields, this);
-    v4 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_CriFsRequest__TypeInfo);
+    sub_1C93A78(CriFsServer_TypeInfo->static_fields, this);
+    v4 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_CriFsRequest__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v4,
-      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_CriFsRequest___ctor__);
+      (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_CriFsRequest___ctor__);
     this->fields.requestList = (struct System_Collections_Generic_List_CriFsRequest__o *)v4;
     p_requestList = &this->fields.requestList;
-    sub_1C7BA8C(p_requestList, v4);
-    v6 = sub_1C7BD34(CriFsRequest_TypeInfo);
+    sub_1C93A78(p_requestList, v4);
+    v6 = sub_1C93D20(CriFsRequest_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     v8 = System_Guid__NewGuid(0);
     v7 = *(_QWORD *)&v8.fields._d;
@@ -103,29 +103,29 @@ void CriFsServer__Awake(CriFsServer_o *this, const MethodInfo *method)
       System_Collections_Generic_List_object___AddWithResize(
         v9,
         (Il2CppObject *)v6,
-        *(const MethodInfo_383EDFC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+        *(const MethodInfo_387999C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     }
     else
     {
       v13 = &items->obj.klass + size;
       v9->fields._size = size + 1;
       v13[4] = (Il2CppClass *)v6;
-      sub_1C7BA8C(v13 + 4, v6);
+      sub_1C93A78(v13 + 4, v6);
     }
     v9 = (System_Collections_Generic_List_object__o *)*p_requestList;
     if ( !*p_requestList )
 LABEL_16:
-      sub_1C7BD40(v9, v7);
+      sub_1C93D2C(v9, v7);
     System_Collections_Generic_List_object___RemoveAt(
       v9,
       0,
-      (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_CriFsRequest__RemoveAt__);
+      (const MethodInfo_387B170 *)Method_System_Collections_Generic_List_CriFsRequest__RemoveAt__);
   }
   else
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71870148((UnityEngine_Object_o *)this, 0);
+    UnityEngine_Object__Destroy_72119908((UnityEngine_Object_o *)this, 0);
   }
 }
 
@@ -141,12 +141,12 @@ CriFsBindRequest_o *CriFsServer__BindCpk(
   const MethodInfo *v10; // x5
   const MethodInfo *v11; // x2
 
-  if ( (byte_4CE7ABC & 1) == 0 )
+  if ( (byte_4D29D9C & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsBindRequest_TypeInfo);
-    byte_4CE7ABC = 1;
+    sub_1C93AD4(&CriFsBindRequest_TypeInfo);
+    byte_4D29D9C = 1;
   }
-  v9 = (CriFsBindRequest_o *)sub_1C7BD34(CriFsBindRequest_TypeInfo);
+  v9 = (CriFsBindRequest_o *)sub_1C93D20(CriFsBindRequest_TypeInfo);
   CriFsBindRequest___ctor(v9, 0, targetBinder, srcBinder, path, v10);
   CriFsServer__AddRequest(this, (CriFsRequest_o *)v9, v11);
   return v9;
@@ -164,12 +164,12 @@ CriFsBindRequest_o *CriFsServer__BindDirectory(
   const MethodInfo *v10; // x5
   const MethodInfo *v11; // x2
 
-  if ( (byte_4CE7ABD & 1) == 0 )
+  if ( (byte_4D29D9D & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsBindRequest_TypeInfo);
-    byte_4CE7ABD = 1;
+    sub_1C93AD4(&CriFsBindRequest_TypeInfo);
+    byte_4D29D9D = 1;
   }
-  v9 = (CriFsBindRequest_o *)sub_1C7BD34(CriFsBindRequest_TypeInfo);
+  v9 = (CriFsBindRequest_o *)sub_1C93D20(CriFsBindRequest_TypeInfo);
   CriFsBindRequest___ctor(v9, 1, targetBinder, srcBinder, path, v10);
   CriFsServer__AddRequest(this, (CriFsRequest_o *)v9, v11);
   return v9;
@@ -187,12 +187,12 @@ CriFsBindRequest_o *CriFsServer__BindFile(
   const MethodInfo *v10; // x5
   const MethodInfo *v11; // x2
 
-  if ( (byte_4CE7ABE & 1) == 0 )
+  if ( (byte_4D29D9E & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsBindRequest_TypeInfo);
-    byte_4CE7ABE = 1;
+    sub_1C93AD4(&CriFsBindRequest_TypeInfo);
+    byte_4D29D9E = 1;
   }
-  v9 = (CriFsBindRequest_o *)sub_1C7BD34(CriFsBindRequest_TypeInfo);
+  v9 = (CriFsBindRequest_o *)sub_1C93D20(CriFsBindRequest_TypeInfo);
   CriFsBindRequest___ctor(v9, 2, targetBinder, srcBinder, path, v10);
   CriFsServer__AddRequest(this, (CriFsRequest_o *)v9, v11);
   return v9;
@@ -206,13 +206,13 @@ void CriFsServer__CreateInstance(const MethodInfo *method)
   __int64 v3; // x1
   struct CriFsServer_o *v4; // x19
 
-  if ( (byte_4CE7AB2 & 1) == 0 )
+  if ( (byte_4D29D92 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsPlugin_TypeInfo);
-    sub_1C7BAE8(&CriFsServer_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_CriFsServer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE7AB2 = 1;
+    sub_1C93AD4(&CriFsPlugin_TypeInfo);
+    sub_1C93AD4(&CriFsServer_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_AddComponent_CriFsServer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D29D92 = 1;
   }
   instance = (UnityEngine_Object_o *)CriFsServer_TypeInfo->static_fields->_instance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -224,14 +224,14 @@ void CriFsServer__CreateInstance(const MethodInfo *method)
       goto LABEL_12;
     UnityEngine_GameObject__AddComponent_object_(
       managerObject,
-      (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_CriFsServer___);
+      (const MethodInfo_31FBF9C *)Method_UnityEngine_GameObject_AddComponent_CriFsServer___);
     managerObject = (UnityEngine_GameObject_o *)CriFsPlugin_TypeInfo;
     v4 = CriFsServer_TypeInfo->static_fields->_instance;
     if ( !CriFsPlugin_TypeInfo->_2.cctor_finished )
       managerObject = (UnityEngine_GameObject_o *)j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
     if ( !v4 )
 LABEL_12:
-      sub_1C7BD40(managerObject, v3);
+      sub_1C93D2C(managerObject, v3);
     v4->fields._installBufferSize_k__BackingField = CriFsPlugin_TypeInfo->static_fields->installBufferSize;
   }
 }
@@ -256,18 +256,18 @@ void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *metho
   Il2CppObject *Item; // x0
 
   v2 = this;
-  if ( (byte_4CE7AB6 & 1) == 0 )
+  if ( (byte_4D29D96 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__Remove__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__get_Count__);
-    this = (CriFsServer_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
-    byte_4CE7AB6 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__Remove__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__get_Count__);
+    this = (CriFsServer_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
+    byte_4D29D96 = 1;
   }
   v3 = CriFsInstaller__criFsInstaller_ExecuteMain((const MethodInfo *)this);
-  if ( !byte_4CE7D33 )
+  if ( !byte_4D2A013 )
   {
-    v3 = sub_1C7BAE8(&CriFsWebInstaller_TypeInfo);
-    byte_4CE7D33 = 1;
+    v3 = sub_1C93AD4(&CriFsWebInstaller_TypeInfo);
+    byte_4D2A013 = 1;
   }
   if ( CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField )
     CriFsWebInstaller__criFsWebInstaller_ExecuteMain((const MethodInfo *)v3);
@@ -283,7 +283,7 @@ void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *metho
     requestList = System_Collections_Generic_List_object___get_Item(
                     (System_Collections_Generic_List_object__o *)requestList,
                     v6,
-                    (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
+                    (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
     if ( requestList )
     {
       ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))requestList->klass->vtable[8].methodPtr)(
@@ -304,7 +304,7 @@ void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *metho
       requestList = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)requestList,
                       v8,
-                      (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
+                      (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
       if ( !requestList )
         break;
       if ( LOBYTE(requestList[2].monitor) )
@@ -315,7 +315,7 @@ void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *metho
       requestList = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)requestList,
                       v8,
-                      (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
+                      (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
       if ( !requestList )
         break;
       if ( LOBYTE(requestList[3].monitor) )
@@ -327,11 +327,11 @@ LABEL_20:
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)v2->fields.requestList,
                  v8,
-                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
+                 (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
         System_Collections_Generic_List_object___Remove(
           v9,
           Item,
-          (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_CriFsRequest__Remove__);
+          (const MethodInfo_387AEC4 *)Method_System_Collections_Generic_List_CriFsRequest__Remove__);
       }
       requestList = (Il2CppObject *)v2->fields.requestList;
       if ( !requestList )
@@ -340,7 +340,7 @@ LABEL_20:
         return;
     }
 LABEL_12:
-    sub_1C7BD40(requestList, v4);
+    sub_1C93D2C(requestList, v4);
   }
 }
 
@@ -350,11 +350,11 @@ void CriFsServer__DestroyInstance(const MethodInfo *method)
   UnityEngine_Object_o *instance; // x19
   UnityEngine_Object_o *v2; // x19
 
-  if ( (byte_4CE7AB3 & 1) == 0 )
+  if ( (byte_4D29D93 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsServer_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE7AB3 = 1;
+    sub_1C93AD4(&CriFsServer_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D29D93 = 1;
   }
   instance = (UnityEngine_Object_o *)CriFsServer_TypeInfo->static_fields->_instance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -364,7 +364,7 @@ void CriFsServer__DestroyInstance(const MethodInfo *method)
     v2 = (UnityEngine_Object_o *)CriFsServer_TypeInfo->static_fields->_instance;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71870148(v2, 0);
+    UnityEngine_Object__Destroy_72119908(v2, 0);
   }
 }
 
@@ -387,14 +387,14 @@ CriFsInstallRequest_o *CriFsServer__Install(
   __int64 size; // x10
   Il2CppClass **v19; // x8
 
-  if ( (byte_4CE7ABA & 1) == 0 )
+  if ( (byte_4D29D9A & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsInstallRequestLegacy_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
-    byte_4CE7ABA = 1;
+    sub_1C93AD4(&CriFsInstallRequestLegacy_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
+    byte_4D29D9A = 1;
   }
   installBufferSize_k__BackingField = this->fields._installBufferSize_k__BackingField;
-  v12 = (CriFsInstallRequestLegacy_o *)sub_1C7BD34(CriFsInstallRequestLegacy_TypeInfo);
+  v12 = (CriFsInstallRequestLegacy_o *)sub_1C93D20(CriFsInstallRequestLegacy_TypeInfo);
   CriFsInstallRequestLegacy___ctor(
     v12,
     srcBinder,
@@ -410,7 +410,7 @@ CriFsInstallRequest_o *CriFsServer__Install(
         ++requestList->fields._version,
         !items) )
   {
-    sub_1C7BD40(requestList, v14);
+    sub_1C93D2C(requestList, v14);
   }
   size = requestList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -418,14 +418,14 @@ CriFsInstallRequest_o *CriFsServer__Install(
     System_Collections_Generic_List_object___AddWithResize(
       requestList,
       (Il2CppObject *)v12,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     requestList->fields._size = size + 1;
     v19[4] = (Il2CppClass *)v12;
-    sub_1C7BA8C(v19 + 4, v12);
+    sub_1C93A78(v19 + 4, v12);
   }
   return (CriFsInstallRequest_o *)v12;
 }
@@ -442,12 +442,12 @@ CriFsLoadAssetBundleRequest_o *CriFsServer__LoadAssetBundle(
   const MethodInfo *v10; // x4
   const MethodInfo *v11; // x2
 
-  if ( (byte_4CE7AB9 & 1) == 0 )
+  if ( (byte_4D29D99 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsLoadAssetBundleRequest_TypeInfo);
-    byte_4CE7AB9 = 1;
+    sub_1C93AD4(&CriFsLoadAssetBundleRequest_TypeInfo);
+    byte_4D29D99 = 1;
   }
-  v9 = (CriFsLoadAssetBundleRequest_o *)sub_1C7BD34(CriFsLoadAssetBundleRequest_TypeInfo);
+  v9 = (CriFsLoadAssetBundleRequest_o *)sub_1C93D20(CriFsLoadAssetBundleRequest_TypeInfo);
   CriFsLoadAssetBundleRequest___ctor(v9, binder, path, readUnitSize, v10);
   CriFsServer__AddRequest(this, (CriFsRequest_o *)v9, v11);
   return v9;
@@ -466,12 +466,12 @@ CriFsLoadFileRequest_o *CriFsServer__LoadFile(
   const MethodInfo *v12; // x5
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CE7AB8 & 1) == 0 )
+  if ( (byte_4D29D98 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsLoadFileRequest_TypeInfo);
-    byte_4CE7AB8 = 1;
+    sub_1C93AD4(&CriFsLoadFileRequest_TypeInfo);
+    byte_4D29D98 = 1;
   }
-  v11 = (CriFsLoadFileRequest_o *)sub_1C7BD34(CriFsLoadFileRequest_TypeInfo);
+  v11 = (CriFsLoadFileRequest_o *)sub_1C93D20(CriFsLoadFileRequest_TypeInfo);
   CriFsLoadFileRequest___ctor(v11, binder, path, doneDelegate, readUnitSize, v12);
   CriFsServer__AddRequest(this, (CriFsRequest_o *)v11, v13);
   return v11;
@@ -486,15 +486,15 @@ void CriFsServer__OnDestroy(CriFsServer_o *this, const MethodInfo *method)
   __int64 v6; // x1
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CE7AB5 & 1) == 0 )
+  if ( (byte_4D29D95 & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsServer_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__GetEnumerator__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE7AB5 = 1;
+    sub_1C93AD4(&CriFsServer_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_CriFsRequest__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__GetEnumerator__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D29D95 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   instance = (UnityEngine_Object_o *)CriFsServer_TypeInfo->static_fields->_instance;
@@ -504,24 +504,24 @@ void CriFsServer__OnDestroy(CriFsServer_o *this, const MethodInfo *method)
   {
     requestList = (System_Collections_Generic_List_object__o *)this->fields.requestList;
     if ( !requestList )
-      sub_1C7BD40(0, v4);
+      sub_1C93D2C(0, v4);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v7,
       requestList,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_CriFsRequest__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_CriFsRequest__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v7,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_CriFsRequest__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_CriFsRequest__MoveNext__) )
     {
       if ( !v7.fields._current )
-        sub_1C7BD40(0, v6);
+        sub_1C93D2C(0, v6);
       v7.fields._current->klass->vtable[5].methodPtr();
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v7,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_CriFsRequest__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_CriFsRequest__Dispose__);
     CriFsServer_TypeInfo->static_fields->_instance = 0;
-    sub_1C7BA8C(CriFsServer_TypeInfo->static_fields, 0);
+    sub_1C93A78(CriFsServer_TypeInfo->static_fields, 0);
   }
 }
 
@@ -542,13 +542,13 @@ CriFsInstallRequest_o *CriFsServer__WebInstall(
   __int64 size; // x10
   Il2CppClass **v16; // x8
 
-  if ( (byte_4CE7ABB & 1) == 0 )
+  if ( (byte_4D29D9B & 1) == 0 )
   {
-    sub_1C7BAE8(&CriFsWebInstallRequest_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
-    byte_4CE7ABB = 1;
+    sub_1C93AD4(&CriFsWebInstallRequest_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_CriFsRequest__Add__);
+    byte_4D29D9B = 1;
   }
-  v9 = (CriFsWebInstallRequest_o *)sub_1C7BD34(CriFsWebInstallRequest_TypeInfo);
+  v9 = (CriFsWebInstallRequest_o *)sub_1C93D20(CriFsWebInstallRequest_TypeInfo);
   CriFsWebInstallRequest___ctor(v9, srcPath, dstPath, doneDelegate, v10);
   requestList = (System_Collections_Generic_List_object__o *)this->fields.requestList;
   if ( !requestList
@@ -557,7 +557,7 @@ CriFsInstallRequest_o *CriFsServer__WebInstall(
         ++requestList->fields._version,
         !items) )
   {
-    sub_1C7BD40(requestList, v11);
+    sub_1C93D2C(requestList, v11);
   }
   size = requestList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -565,14 +565,14 @@ CriFsInstallRequest_o *CriFsServer__WebInstall(
     System_Collections_Generic_List_object___AddWithResize(
       requestList,
       (Il2CppObject *)v9,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     requestList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v9;
-    sub_1C7BA8C(v16 + 4, v9);
+    sub_1C93A78(v16 + 4, v9);
   }
   return (CriFsInstallRequest_o *)v9;
 }
@@ -586,10 +586,10 @@ int32_t CriFsServer__get_installBufferSize(CriFsServer_o *this, const MethodInfo
 
 CriFsServer_o *CriFsServer__get_instance(const MethodInfo *method)
 {
-  if ( (byte_4CE7AB1 & 1) == 0 )
+  if ( (byte_4D29D91 & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1C7BAE8(&CriFsServer_TypeInfo);
-    byte_4CE7AB1 = 1;
+    method = (const MethodInfo *)sub_1C93AD4(&CriFsServer_TypeInfo);
+    byte_4D29D91 = 1;
   }
   CriFsServer__CreateInstance(method);
   return CriFsServer_TypeInfo->static_fields->_instance;

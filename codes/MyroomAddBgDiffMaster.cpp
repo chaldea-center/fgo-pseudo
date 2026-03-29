@@ -1,14 +1,14 @@
 void MyroomAddBgDiffMaster___ctor(MyroomAddBgDiffMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEEBB1 & 1) == 0 )
+  if ( (byte_4D30F1D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
-    byte_4CEEBB1 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
+    byte_4D30F1D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     554,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
 }
 
 
@@ -49,28 +49,28 @@ int32_t MyroomAddBgDiffMaster__GetDisplayObjectId(
   System_String_o *v35; // x7
   Il2CppObject *v36; // x0
 
-  if ( (byte_4CEEBB0 & 1) == 0 )
+  if ( (byte_4D30F1C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
-    sub_1C7BAE8(&System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
-    sub_1C7BAE8(&System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
-    sub_1C7BAE8(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__);
-    sub_1C7BAE8(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__);
-    sub_1C7BAE8(&Method_MyroomAddBgDiffMaster___c__DisplayClass0_0__GetDisplayObjectId_b__0__);
-    sub_1C7BAE8(&MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1C7BAE8(&MyroomAddBgDiffMaster___c_TypeInfo);
-    byte_4CEEBB0 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
+    sub_1C93AD4(&System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+    sub_1C93AD4(&System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
+    sub_1C93AD4(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__);
+    sub_1C93AD4(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__);
+    sub_1C93AD4(&Method_MyroomAddBgDiffMaster___c__DisplayClass0_0__GetDisplayObjectId_b__0__);
+    sub_1C93AD4(&MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
+    sub_1C93AD4(&MyroomAddBgDiffMaster___c_TypeInfo);
+    byte_4D30F1C = 1;
   }
-  v7 = sub_1C7BD34(MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
+  v7 = sub_1C93D20(MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C7BD40(v8, v9);
+    sub_1C93D2C(v8, v9);
   *(_DWORD *)(v7 + 16) = backGroundOverwriteId;
   *(_DWORD *)(v7 + 20) = type;
   list = this->fields.list;
-  v11 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v11,
     (Il2CppObject *)v7,
@@ -79,7 +79,7 @@ int32_t MyroomAddBgDiffMaster__GetDisplayObjectId(
   v12 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
+          (const MethodInfo_31EB2BC *)Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
   v13 = MyroomAddBgDiffMaster___c_TypeInfo;
   v14 = v12;
   if ( !MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished )
@@ -96,16 +96,16 @@ int32_t MyroomAddBgDiffMaster__GetDisplayObjectId(
       v13 = MyroomAddBgDiffMaster___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C93D20(System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_1, v16, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__, 0);
     static_fields = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_1 = (struct System_Func_MyroomAddBgDiffEntity__int__o *)_9__0_1;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v18, v19, v20, v21, v22, v23);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v18, v19, v20, v21, v22, v23);
   }
   v24 = System_Linq_Enumerable__OrderByDescending_object__int_(
           v14,
           (System_Func_TSource__TKey__o *)_9__0_1,
-          (const MethodInfo_319F4D8 *)Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
+          (const MethodInfo_31D3DE4 *)Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
   v25 = MyroomAddBgDiffMaster___c_TypeInfo;
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)v24;
   if ( !MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished )
@@ -122,16 +122,16 @@ int32_t MyroomAddBgDiffMaster__GetDisplayObjectId(
       v25 = MyroomAddBgDiffMaster___c_TypeInfo;
     }
     v28 = (Il2CppObject *)v25->static_fields->__9;
-    _9__0_2 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+    _9__0_2 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__0_2, v28, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__, 0);
     v29 = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
     v29->__9__0_2 = (struct System_Func_MyroomAddBgDiffEntity__bool__o *)_9__0_2;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v29->__9__0_2, (int32_t)_9__0_2, v30, v31, v32, v33, v34, v35);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v29->__9__0_2, (int32_t)_9__0_2, v30, v31, v32, v33, v34, v35);
   }
-  v36 = System_Linq_Enumerable__FirstOrDefault_object__52006308(
+  v36 = System_Linq_Enumerable__FirstOrDefault_object__52221724(
           v26,
           (System_Func_TSource__bool__o *)_9__0_2,
-          (const MethodInfo_3198DA4 *)Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
+          (const MethodInfo_31CD71C *)Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
   if ( v36 )
     LODWORD(v36) = HIDWORD(v36[1].monitor);
   return (int)v36;
@@ -148,16 +148,16 @@ MyroomAddBgDiffEntity_o *MyroomAddBgDiffMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEEBB2 & 1) == 0 )
+  if ( (byte_4D30F1E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
-    byte_4CEEBB2 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
+    byte_4D30F1E = 1;
   }
   PK = (Il2CppObject *)MyroomAddBgDiffEntity__CreatePK(overwriteId, type, priority, *(const MethodInfo **)&priority);
   return (MyroomAddBgDiffEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_3432DB4 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
+                                      (const MethodInfo_34681D4 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
 }
 
 
@@ -172,17 +172,17 @@ bool MyroomAddBgDiffMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEEBB3 & 1) == 0 )
+  if ( (byte_4D30F1F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
-    byte_4CEEBB3 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
+    byte_4D30F1F = 1;
   }
   PK = (Il2CppObject *)MyroomAddBgDiffEntity__CreatePK(overwriteId, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
 }
 
 
@@ -196,15 +196,15 @@ void MyroomAddBgDiffMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEEBB4 & 1) == 0 )
+  if ( (byte_4D30F20 & 1) == 0 )
   {
-    sub_1C7BAE8(&MyroomAddBgDiffMaster___c_TypeInfo);
-    byte_4CEEBB4 = 1;
+    sub_1C93AD4(&MyroomAddBgDiffMaster___c_TypeInfo);
+    byte_4D30F20 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(MyroomAddBgDiffMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(MyroomAddBgDiffMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MyroomAddBgDiffMaster___c_TypeInfo->static_fields->__9 = (struct MyroomAddBgDiffMaster___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)MyroomAddBgDiffMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -228,7 +228,7 @@ int32_t MyroomAddBgDiffMaster___c___GetDisplayObjectId_b__0_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return entity->fields.priority;
 }
 
@@ -239,7 +239,7 @@ bool MyroomAddBgDiffMaster___c___GetDisplayObjectId_b__0_2(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return MyroomAddBgDiffEntity__IsOpen(entity, (const MethodInfo *)entity);
 }
 
@@ -258,6 +258,6 @@ bool MyroomAddBgDiffMaster___c__DisplayClass0_0___GetDisplayObjectId_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return entity->fields.overwriteId == this->fields.backGroundOverwriteId && entity->fields.type == this->fields.type;
 }

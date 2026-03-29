@@ -11,17 +11,17 @@ void BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)arg);
   this->fields.actiontype = 72;
   if ( !arg )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   v7 = arg->fields._FromProcState_k__BackingField == 2
     && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
          arg,
          arg->klass->vtable._4_get_UniqueId.method) != -1;
-  this->fields.isAddAfterDeadTask = v7;
+  *(&this->fields._IsBuffTriggeredTask_k__BackingField + 1) = v7;
   v8 = arg->fields._FromProcState_k__BackingField == 2
     && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
          arg,
          arg->klass->vtable._4_get_UniqueId.method) == -1;
-  this->fields.isAddLastDeadTask = v8;
+  *(&this->fields._IsBuffTriggeredTask_k__BackingField + 2) = v8;
 }
 
 
@@ -29,7 +29,7 @@ bool BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddAfterDeadTask(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         const MethodInfo *method)
 {
-  return this->fields.isAddAfterDeadTask;
+  return *(&this->fields._IsBuffTriggeredTask_k__BackingField + 1);
 }
 
 
@@ -37,7 +37,7 @@ bool BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddLastDeadTask(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         const MethodInfo *method)
 {
-  return this->fields.isAddLastDeadTask;
+  return *(&this->fields._IsBuffTriggeredTask_k__BackingField + 2);
 }
 
 
@@ -48,12 +48,12 @@ BattleActionData_o *BattleEndNotRelatedSurvivalStatusInstantlyTask__MakeActionDa
 {
   BattleEndNotRelatedSurvivalStatusInstantlyData_o *v3; // x19
 
-  if ( (byte_4CF199E & 1) == 0 )
+  if ( (byte_4D33D82 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
-    byte_4CF199E = 1;
+    sub_1C93AD4(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+    byte_4D33D82 = 1;
   }
-  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1C7BD34(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1C93D20(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
   BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

@@ -1,9 +1,9 @@
 void UIButtonKeys___ctor(UIButtonKeys_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF2C68 & 1) == 0 )
+  if ( (byte_4D35058 & 1) == 0 )
   {
-    sub_1C7BAE8(&UIKeyNavigation_TypeInfo);
-    byte_4CF2C68 = 1;
+    sub_1C93AD4(&UIKeyNavigation_TypeInfo);
+    byte_4D35058 = 1;
   }
   if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIKeyNavigation_TypeInfo);
@@ -105,11 +105,11 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
   int64_t v83; // x6
   System_String_o *v84; // x7
 
-  if ( (byte_4CF2C67 & 1) == 0 )
+  if ( (byte_4D35057 & 1) == 0 )
   {
-    sub_1C7BAE8(&NGUITools_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2C67 = 1;
+    sub_1C93AD4(&NGUITools_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D35057 = 1;
   }
   onClick = (UnityEngine_Object_o *)this->fields.onClick;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -127,7 +127,7 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       gameObject = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onClick = gameObject;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&this->fields.onClick,
         (int32_t)gameObject,
         v9,
@@ -137,7 +137,7 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         v13,
         v14);
       *p_selectOnClick = 0;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selectOnClick, 0, v15, v16, v17, v18, v19, v20);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selectOnClick, 0, v15, v16, v17, v18, v19, v20);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -159,9 +159,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v24 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onLeft = v24;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onLeft, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.onLeft, (int32_t)v24, v25, v26, v27, v28, v29, v30);
       *p_selectOnLeft = 0;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selectOnLeft, 0, v31, v32, v33, v34, v35, v36);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selectOnLeft, 0, v31, v32, v33, v34, v35, v36);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -183,9 +183,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v40 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onRight = v40;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onRight, (int32_t)v40, v41, v42, v43, v44, v45, v46);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.onRight, (int32_t)v40, v41, v42, v43, v44, v45, v46);
       *p_selectOnRight = 0;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selectOnRight, 0, v47, v48, v49, v50, v51, v52);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selectOnRight, 0, v47, v48, v49, v50, v51, v52);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -207,9 +207,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v56 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onUp = v56;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onUp, (int32_t)v56, v57, v58, v59, v60, v61, v62);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.onUp, (int32_t)v56, v57, v58, v59, v60, v61, v62);
       *p_selectOnUp = 0;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selectOnUp, 0, v63, v64, v65, v66, v67, v68);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selectOnUp, 0, v63, v64, v65, v66, v67, v68);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -231,16 +231,16 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
       {
         v72 = UnityEngine_Component__get_gameObject(v7, 0);
         this->fields.onDown = v72;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onDown, (int32_t)v72, v73, v74, v75, v76, v77, v78);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.onDown, (int32_t)v72, v73, v74, v75, v76, v77, v78);
         *p_selectOnDown = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selectOnDown, 0, v79, v80, v81, v82, v83, v84);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selectOnDown, 0, v79, v80, v81, v82, v83, v84);
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
         NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
         return;
       }
 LABEL_54:
-      sub_1C7BD40(v7, v6);
+      sub_1C93D2C(v7, v6);
     }
   }
 }

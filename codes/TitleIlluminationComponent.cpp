@@ -4,7 +4,6 @@ void TitleIlluminationComponent___ctor(TitleIlluminationComponent_o *this, const
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TitleIlluminationComponent__Setup(
         TitleIlluminationComponent_o *this,
         int32_t x,
@@ -19,23 +18,21 @@ void TitleIlluminationComponent__Setup(
   int32_t v15; // w23
   void *transform; // x0
   __int64 v17; // x1
-  float v18; // s0 OVERLAPPED
-  float v19; // s1
-  int v20; // s2
-  UIWidget_o *v21; // x19
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UIWidget_o *v18; // x19
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEBE13 & 1) == 0 )
+  if ( (byte_4D2E157 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    byte_4CEBE13 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    byte_4D2E157 = 1;
   }
   this->fields.IlluminationX = x;
   this->fields.IlluminationY = y;
   this->fields.lifetime = lifetime;
   this->fields.lifetimeMax = lifetime;
   this->fields.manager = manager;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.manager,
     (int32_t)manager,
     y,
@@ -51,28 +48,28 @@ void TitleIlluminationComponent__Setup(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_11;
-  v18 = (float)(sz * x);
+  v19.fields.x = (float)(sz * x);
   if ( (y & 1) == 0 )
-    v18 = v18 - (float)(v15 >> 1);
-  v19 = (float)((v15 >> 1) * y);
-  v20 = 0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v18, 0);
+    v19.fields.x = v19.fields.x - (float)(v15 >> 1);
+  v19.fields.y = (float)((v15 >> 1) * y);
+  v19.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v19, 0);
   transform = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !transform )
 LABEL_11:
-    sub_1C7BD40(transform, v17);
-  v22.fields.r = *((float *)transform + 37);
-  v22.fields.g = *((float *)transform + 38);
-  v22.fields.b = *((float *)transform + 39);
-  v22.fields.a = 1.0;
-  v21 = (UIWidget_o *)transform;
-  UIWidget__set_color((UIWidget_o *)transform, v22, 0);
-  UIWidget__set_depth(v21, 1, 0);
-  ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v21->klass->vtable._30_MarkAsChanged.methodPtr)(
-    v21,
-    v21->klass->vtable._30_MarkAsChanged.method);
+    sub_1C93D2C(transform, v17);
+  v20.fields.r = *((float *)transform + 37);
+  v20.fields.g = *((float *)transform + 38);
+  v20.fields.b = *((float *)transform + 39);
+  v20.fields.a = 1.0;
+  v18 = (UIWidget_o *)transform;
+  UIWidget__set_color((UIWidget_o *)transform, v20, 0);
+  UIWidget__set_depth(v18, 1, 0);
+  ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v18->klass->vtable._30_MarkAsChanged.methodPtr)(
+    v18,
+    v18->klass->vtable._30_MarkAsChanged.method);
 }
 
 
@@ -92,17 +89,17 @@ void TitleIlluminationComponent__Update(TitleIlluminationComponent_o *this, cons
   long double v8; // q0
   long double v9; // q0
 
-  if ( (byte_4CEBE14 & 1) == 0 )
+  if ( (byte_4D2E158 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBE14 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E158 = 1;
   }
   lifetime = this->fields.lifetime;
   this->fields.lifetime = lifetime - UnityEngine_Time__get_deltaTime(0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   manager = (TitleIlluminationManager_o *)UnityEngine_Object__op_Equality(
@@ -142,6 +139,6 @@ LABEL_12:
         Component_object->klass->vtable[30].method);
       return;
     }
-    sub_1C7BD40(manager, v6);
+    sub_1C93D2C(manager, v6);
   }
 }

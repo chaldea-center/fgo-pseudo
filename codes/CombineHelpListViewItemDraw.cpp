@@ -17,14 +17,13 @@ void CombineHelpListViewItemDraw__Awake(CombineHelpListViewItemDraw_o *this, con
 
   baseImageSprite = this->fields.baseImageSprite;
   if ( !baseImageSprite )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   mAtlas = baseImageSprite->fields.mAtlas;
   this->fields.baseImageBasicAtlas = mAtlas;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.baseImageBasicAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.baseImageBasicAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CombineHelpListViewItemDraw__SetItem(
         CombineHelpListViewItemDraw_o *this,
         CombineHelpListViewItem_o *item,
@@ -44,25 +43,21 @@ void CombineHelpListViewItemDraw__SetItem(
   int32_t line; // w8
   float x; // s8
   float z; // s9
-  float v20; // s1 OVERLAPPED
-  float v21; // s0
-  float v22; // s2
-  float y; // s8
-  float v24; // s9
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v21; // 0:kr14_12.12
+  UnityEngine_Vector3_o v22; // 0:kr20_12.12
+  UnityEngine_Vector3_o v23; // 0:kr34_12.12
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF26E1 & 1) == 0 )
+  if ( (byte_4D34ACE & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_20724/*"img_shop_0"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_20779/*"img_tutorial_txtbg"*/);
-    byte_4CF26E1 = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_20786/*"img_shop_0"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_20841/*"img_tutorial_txtbg"*/);
+    byte_4D34ACE = 1;
   }
   if ( item )
   {
@@ -92,7 +87,7 @@ void CombineHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_52;
-        imageName = (System_String_o *)StringLiteral_20724/*"img_shop_0"*/;
+        imageName = (System_String_o *)StringLiteral_20786/*"img_shop_0"*/;
         v13 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
@@ -148,7 +143,7 @@ void CombineHelpListViewItemDraw__SetItem(
           gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
           if ( !gameObject )
             goto LABEL_52;
-          v20 = -12.0;
+          v24.fields.y = -12.0;
         }
         else
         {
@@ -163,16 +158,16 @@ void CombineHelpListViewItemDraw__SetItem(
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
             if ( !gameObject )
               goto LABEL_52;
-            v26 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+            v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
             gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
             if ( !gameObject )
               goto LABEL_52;
-            x = v26.fields.x;
-            z = v26.fields.z;
+            x = v21.fields.x;
+            z = v21.fields.z;
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
             if ( !gameObject )
               goto LABEL_52;
-            v20 = -18.0;
+            v24.fields.y = -18.0;
           }
           else
           {
@@ -183,47 +178,42 @@ void CombineHelpListViewItemDraw__SetItem(
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
             if ( !gameObject )
               goto LABEL_52;
-            v27 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+            v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
             gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
             if ( !gameObject )
               goto LABEL_52;
-            x = v27.fields.x;
-            z = v27.fields.z;
+            x = v22.fields.x;
+            z = v22.fields.z;
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
             if ( !gameObject )
               goto LABEL_52;
-            v20 = -22.0;
+            v24.fields.y = -22.0;
           }
         }
-        v21 = x;
-        v22 = z;
-        UnityEngine_Transform__set_localPosition(
-          (UnityEngine_Transform_o *)gameObject,
-          *(UnityEngine_Vector3_o *)(&v20 - 1),
-          0);
+        v24.fields.x = x;
+        v24.fields.z = z;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v24, 0);
         gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
         if ( gameObject )
         {
-          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20779/*"img_tutorial_txtbg"*/, 0);
+          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20841/*"img_tutorial_txtbg"*/, 0);
           gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
           if ( gameObject )
           {
             gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
             if ( gameObject )
             {
-              v28 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+              v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
               gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
               if ( gameObject )
               {
-                y = v28.fields.y;
-                v24 = v28.fields.z;
                 gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                 if ( gameObject )
                 {
-                  v29.fields.x = -251.0;
-                  v29.fields.y = y;
-                  v29.fields.z = v24;
-                  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v29, 0);
+                  v25.fields.x = -251.0;
+                  v25.fields.y = v23.fields.y;
+                  v25.fields.z = v23.fields.z;
+                  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v25, 0);
                   return;
                 }
               }
@@ -232,7 +222,7 @@ void CombineHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_52:
-      sub_1C7BD40(gameObject, v9);
+      sub_1C93D2C(gameObject, v9);
     }
   }
 }

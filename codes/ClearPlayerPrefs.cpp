@@ -50,38 +50,38 @@ void ClearPlayerPrefs___ctor(ClearPlayerPrefs_o *this, const MethodInfo *method)
   int64_t v50; // x6
   System_String_o *v51; // x7
 
-  if ( (byte_4CEBAAF & 1) == 0 )
+  if ( (byte_4D2DE3A & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_4497/*"Clear All Player Prefs"*/);
-    sub_1C7BAE8(&StringLiteral_25647/*"はい"*/);
-    sub_1C7BAE8(&StringLiteral_10724/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/);
-    sub_1C7BAE8(&StringLiteral_25640/*"いいえ"*/);
-    sub_1C7BAE8(&StringLiteral_10723/*"PlayerPrefsの削除"*/);
-    sub_1C7BAE8(&StringLiteral_25682/*"データ更新のため再起動します。"*/);
-    sub_1C7BAE8(&StringLiteral_25681/*"データ更新のためゲームを終了します。"*/);
-    byte_4CEBAAF = 1;
+    sub_1C93AD4(&StringLiteral_4513/*"Clear All Player Prefs"*/);
+    sub_1C93AD4(&StringLiteral_25718/*"はい"*/);
+    sub_1C93AD4(&StringLiteral_10760/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/);
+    sub_1C93AD4(&StringLiteral_25711/*"いいえ"*/);
+    sub_1C93AD4(&StringLiteral_10759/*"PlayerPrefsの削除"*/);
+    sub_1C93AD4(&StringLiteral_25753/*"データ更新のため再起動します。"*/);
+    sub_1C93AD4(&StringLiteral_25752/*"データ更新のためゲームを終了します。"*/);
+    byte_4D2DE3A = 1;
   }
-  v9 = StringLiteral_10723/*"PlayerPrefsの削除"*/;
-  this->fields.windowTitle = (struct System_String_o *)StringLiteral_10723/*"PlayerPrefsの削除"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.windowTitle, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_4497/*"Clear All Player Prefs"*/;
-  this->fields.allClearTitle = (struct System_String_o *)StringLiteral_4497/*"Clear All Player Prefs"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.allClearTitle, v10, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_10724/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/;
-  this->fields.message = (struct System_String_o *)StringLiteral_10724/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.message, v17, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_25681/*"データ更新のためゲームを終了します。"*/;
-  this->fields.quitMessage = (struct System_String_o *)StringLiteral_25681/*"データ更新のためゲームを終了します。"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.quitMessage, v24, v25, v26, v27, v28, v29, v30);
-  v31 = StringLiteral_25682/*"データ更新のため再起動します。"*/;
-  this->fields.rebootMessage = (struct System_String_o *)StringLiteral_25682/*"データ更新のため再起動します。"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.rebootMessage, v31, v32, v33, v34, v35, v36, v37);
-  v38 = StringLiteral_25640/*"いいえ"*/;
-  this->fields.cancelBtnMsg = (struct System_String_o *)StringLiteral_25640/*"いいえ"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cancelBtnMsg, v38, v39, v40, v41, v42, v43, v44);
-  v45 = StringLiteral_25647/*"はい"*/;
-  this->fields.decideBtnMsg = (struct System_String_o *)StringLiteral_25647/*"はい"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.decideBtnMsg, v45, v46, v47, v48, v49, v50, v51);
+  v9 = StringLiteral_10759/*"PlayerPrefsの削除"*/;
+  this->fields.windowTitle = (struct System_String_o *)StringLiteral_10759/*"PlayerPrefsの削除"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.windowTitle, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_4513/*"Clear All Player Prefs"*/;
+  this->fields.allClearTitle = (struct System_String_o *)StringLiteral_4513/*"Clear All Player Prefs"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.allClearTitle, v10, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_10760/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/;
+  this->fields.message = (struct System_String_o *)StringLiteral_10760/*"PlayerPrefsを全て削除します\n※元に戻せません\n※再起動後反映されます"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.message, v17, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_25752/*"データ更新のためゲームを終了します。"*/;
+  this->fields.quitMessage = (struct System_String_o *)StringLiteral_25752/*"データ更新のためゲームを終了します。"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.quitMessage, v24, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_25753/*"データ更新のため再起動します。"*/;
+  this->fields.rebootMessage = (struct System_String_o *)StringLiteral_25753/*"データ更新のため再起動します。"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.rebootMessage, v31, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_25711/*"いいえ"*/;
+  this->fields.cancelBtnMsg = (struct System_String_o *)StringLiteral_25711/*"いいえ"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.cancelBtnMsg, v38, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_25718/*"はい"*/;
+  this->fields.decideBtnMsg = (struct System_String_o *)StringLiteral_25718/*"はい"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.decideBtnMsg, v45, v46, v47, v48, v49, v50, v51);
   this->fields.isQuit = 1;
   TestScript_DebugTest_DebugItem_DebugItemMenuBase___ctor((TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this, 0);
 }
@@ -106,31 +106,31 @@ void ClearPlayerPrefs__Dialog(ClearPlayerPrefs_o *this, bool result, const Metho
   CommonUI_o *v13; // x24
   CommonConfirmDialog_ClickDelegate_o *v14; // x25
 
-  if ( (byte_4CEBAAE & 1) == 0 )
+  if ( (byte_4D2DE39 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_ClearPlayerPrefs__Dialog_b__9_0__);
-    sub_1C7BAE8(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CEBAAE = 1;
+    sub_1C93AD4(&Method_ClearPlayerPrefs__Dialog_b__9_0__);
+    sub_1C93AD4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2DE39 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
-  CommonUI__CloseConfirmDialog_31483188((CommonUI_o *)Instance, 0, 0);
+  CommonUI__CloseConfirmDialog_31581328((CommonUI_o *)Instance, 0, 0);
   if ( !result )
     return;
-  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   allClearTitle = this->fields.allClearTitle;
   cancelBtnMsg = this->fields.cancelBtnMsg;
   decideBtnMsg = this->fields.decideBtnMsg;
   v11 = this->fields.isQuit ? 88LL : 96LL;
   v12 = *(System_String_o **)((char *)&this->klass + v11);
   v13 = (CommonUI_o *)v7;
-  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C7BD34(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(v14, (Il2CppObject *)this, Method_ClearPlayerPrefs__Dialog_b__9_0__, 0);
   if ( !v13 )
 LABEL_11:
-    sub_1C7BD40(Instance, v6);
+    sub_1C93D2C(Instance, v6);
   CommonUI__OpenConfirmDecideDlg(
     v13,
     allClearTitle,
@@ -165,26 +165,26 @@ void ClearPlayerPrefs__StartMenu(ClearPlayerPrefs_o *this, const MethodInfo *met
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4CEBAAD & 1) == 0 )
+  if ( (byte_4D2DE38 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_ClearPlayerPrefs_Dialog__);
-    sub_1C7BAE8(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CEBAAD = 1;
+    sub_1C93AD4(&Method_ClearPlayerPrefs_Dialog__);
+    sub_1C93AD4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2DE38 = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   windowTitle = this->fields.windowTitle;
   message = this->fields.message;
   cancelBtnMsg = this->fields.cancelBtnMsg;
   decideBtnMsg = this->fields.decideBtnMsg;
   v8 = (CommonUI_o *)Instance;
-  v9 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C7BD34(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v9 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(v9, (Il2CppObject *)this, Method_ClearPlayerPrefs_Dialog__, 0);
   if ( !v8 )
-    sub_1C7BD40(v10, v11);
+    sub_1C93D2C(v10, v11);
   CommonUI__OpenConfirmDecideDlg(
     v8,
     windowTitle,
@@ -219,28 +219,28 @@ void ClearPlayerPrefs___Dialog_b__9_0(ClearPlayerPrefs_o *this, bool isDecide, c
   CommonUI_o *v12; // x24
   CommonConfirmDialog_ClickDelegate_o *v13; // x25
 
-  if ( (byte_4CEBAB0 & 1) == 0 )
+  if ( (byte_4D2DE3B & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
-    sub_1C7BAE8(&Method_ClearPlayerPrefs_Dialog__);
-    sub_1C7BAE8(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4CEBAB0 = 1;
+    sub_1C93AD4(&UnityEngine_Application_TypeInfo);
+    sub_1C93AD4(&Method_ClearPlayerPrefs_Dialog__);
+    sub_1C93AD4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4D2DE3B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
-  CommonUI__CloseConfirmDialog_31483188((CommonUI_o *)Instance, 0, 0);
+  CommonUI__CloseConfirmDialog_31581328((CommonUI_o *)Instance, 0, 0);
   if ( !isDecide )
   {
-    v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     windowTitle = this->fields.windowTitle;
     message = this->fields.message;
     cancelBtnMsg = this->fields.cancelBtnMsg;
     decideBtnMsg = this->fields.decideBtnMsg;
     v12 = (CommonUI_o *)v7;
-    v13 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C7BD34(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v13 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(v13, (Il2CppObject *)this, Method_ClearPlayerPrefs_Dialog__, 0);
     if ( v12 )
     {
@@ -270,19 +270,19 @@ void ClearPlayerPrefs___Dialog_b__9_0(ClearPlayerPrefs_o *this, bool isDecide, c
   if ( !this->fields.isQuit )
   {
     UserSaveData__DeleteAndInitContinueData(0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( Instance )
     {
       ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0);
       return;
     }
 LABEL_13:
-    sub_1C7BD40(Instance, v6);
+    sub_1C93D2C(Instance, v6);
   }
   UnityEngine_PlayerPrefs__DeleteAll(0);
   UserSaveData__DeleteData(0, 0);
   UserSaveData__Save(0);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  UnityEngine_Application__Quit_71663312(0);
+  UnityEngine_Application__Quit_71912916(0);
 }

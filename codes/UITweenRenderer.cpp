@@ -24,20 +24,12 @@ int32_t UITweenRenderer__GetRenderingCompareFunction(
 
 UnityEngine_Color_o UITweenRenderer__GetTweenColor(UITweenRenderer_o *this, const MethodInfo *method)
 {
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  r = this->fields.mColor.fields.r;
-  g = this->fields.mColor.fields.g;
-  b = this->fields.mColor.fields.b;
-  a = this->fields.mColor.fields.a;
-  result.fields.a = a;
-  result.fields.b = b;
-  result.fields.g = g;
-  result.fields.r = r;
+  result.fields.r = this->fields.mColor.fields.r;
+  result.fields.g = this->fields.mColor.fields.g;
+  result.fields.b = this->fields.mColor.fields.b;
+  result.fields.a = this->fields.mColor.fields.a;
   return result;
 }
 

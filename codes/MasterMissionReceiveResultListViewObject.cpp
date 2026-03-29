@@ -2,10 +2,10 @@ void MasterMissionReceiveResultListViewObject___ctor(
         MasterMissionReceiveResultListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CF182D & 1) == 0 )
+  if ( (byte_4D33C1B & 1) == 0 )
   {
-    sub_1C7BAE8(&ListViewObject_TypeInfo);
-    byte_4CF182D = 1;
+    sub_1C93AD4(&ListViewObject_TypeInfo);
+    byte_4D33C1B = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -27,20 +27,20 @@ void MasterMissionReceiveResultListViewObject__Awake(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CF182B & 1) == 0 )
+  if ( (byte_4D33C19 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
-    byte_4CF182B = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
+    byte_4D33C19 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
   this->fields.itemDraw = (struct MasterMissionReceiveResultListViewItemDraw_o *)Component_object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -81,7 +81,7 @@ void MasterMissionReceiveResultListViewObject__SetItem(
     goto LABEL_13;
   v8 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&item->fields.viewObject,
     (int32_t)this,
     (int32_t)seed,
@@ -91,7 +91,7 @@ void MasterMissionReceiveResultListViewObject__SetItem(
     v6,
     v7);
   v8->fields.linkItem = item;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
   this = (MasterMissionReceiveResultListViewObject_o *)UnityEngine_Component__get_transform(
                                                          (UnityEngine_Component_o *)v8,
                                                          0);
@@ -139,7 +139,7 @@ void MasterMissionReceiveResultListViewObject__SetItem(
         !v21) )
   {
 LABEL_13:
-    sub_1C7BD40(this, item);
+    sub_1C93D2C(this, item);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v21, (int32_t)this, 0);
   ListViewObject__SetVisible((ListViewObject_o *)v8, 1, 0);
@@ -162,11 +162,11 @@ void MasterMissionReceiveResultListViewObject__SetupDisp(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CF182C & 1) == 0 )
+  if ( (byte_4D33C1A & 1) == 0 )
   {
-    sub_1C7BAE8(&MasterMissionReceiveResultListViewItem_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF182C = 1;
+    sub_1C93AD4(&MasterMissionReceiveResultListViewItem_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D33C1A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -190,7 +190,7 @@ void MasterMissionReceiveResultListViewObject__SetupDisp(
   if ( ((unsigned __int8)v7 & 1) != 0 )
   {
     if ( !v5 || (v7 = this->fields.itemDraw) == 0 )
-      sub_1C7BD40(v7, v8);
+      sub_1C93D2C(v7, v8);
     MasterMissionReceiveResultListViewItemDraw__SetItem(v7, (System_String_o *)v5[1].klass, v9);
   }
 }

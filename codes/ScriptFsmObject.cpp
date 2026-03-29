@@ -25,7 +25,7 @@ void ScriptFsmObject__SendEvent(ScriptFsmObject_o *this, System_String_o *eventN
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   PlayMakerFSM__SendEvent(fsm, eventName, 0);
 }
 
@@ -37,7 +37,7 @@ void ScriptFsmObject__SetBool(ScriptFsmObject_o *this, System_String_o *name, bo
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C7BD40(fsm, name);
+    sub_1C93D2C(fsm, name);
   FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmBool )
     FsmBool->fields.value = value;
@@ -51,7 +51,7 @@ void ScriptFsmObject__SetFloat(ScriptFsmObject_o *this, System_String_o *name, f
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C7BD40(fsm, name);
+    sub_1C93D2C(fsm, name);
   FsmFloat = HutongGames_PlayMaker_FsmVariables__GetFsmFloat((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmFloat )
     FsmFloat->fields.value = value;
@@ -67,7 +67,7 @@ void ScriptFsmObject__SetState(ScriptFsmObject_o *this, System_String_o *stateNa
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   PlayMakerFSM__SetState(fsm, stateName, 0);
 }
 
@@ -89,12 +89,12 @@ void ScriptFsmObject__SetString(
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C7BD40(fsm, name);
+    sub_1C93D2C(fsm, name);
   FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmString )
   {
     FsmString->fields.value = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&FsmString->fields.value, (int32_t)value, v8, v9, v10, v11, v12, v13);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&FsmString->fields.value, (int32_t)value, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -103,13 +103,13 @@ void ScriptFsmObject__Skip(ScriptFsmObject_o *this, const MethodInfo *method)
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4CF059F & 1) == 0 )
+  if ( (byte_4D32935 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_12288/*"SKIP"*/);
-    byte_4CF059F = 1;
+    sub_1C93AD4(&StringLiteral_12325/*"SKIP"*/);
+    byte_4D32935 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
-    sub_1C7BD40(0, method);
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12288/*"SKIP"*/, 0);
+    sub_1C93D2C(0, method);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12325/*"SKIP"*/, 0);
 }

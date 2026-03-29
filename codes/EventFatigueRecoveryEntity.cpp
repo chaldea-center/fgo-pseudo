@@ -1,27 +1,27 @@
 void EventFatigueRecoveryEntity___ctor(EventFatigueRecoveryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE62D & 1) == 0 )
+  if ( (byte_4D30990 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEE62D = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D30990 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventFatigueRecoveryEntity__CreatePK(int32_t eventId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4CEE62B & 1) == 0 )
+  if ( (byte_4D3098E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CEE62B = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D3098E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            priority,
-           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,21 +41,21 @@ bool EventFatigueRecoveryEntity__IsOpen(EventFatigueRecoveryEntity_o *this, cons
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_4CEE62C & 1) == 0 )
+  if ( (byte_4D3098F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CEE62C = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D3098F = 1;
   }
   if ( this->fields.commonReleaseId < 1 )
     return 1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
+                     (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
   {
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0, 0, v5);
 }

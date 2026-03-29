@@ -1,9 +1,9 @@
 void SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE9CD1 & 1) == 0 )
+  if ( (byte_4D2BFBF & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonEffectComponent_TypeInfo);
-    byte_4CE9CD1 = 1;
+    sub_1C93AD4(&CommonEffectComponent_TypeInfo);
+    byte_4D2BFBF = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -53,7 +53,7 @@ void SoundPlayerOpenEffectComponent__setAnimEndCallback(
   System_String_o *v7; // x7
 
   this->fields.animEndCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.animEndCallback,
     (int32_t)callback,
     (int32_t)method,
@@ -77,7 +77,7 @@ void SoundPlayerOpenEffectComponent__setChangeUiCallback(
   System_String_o *v7; // x7
 
   this->fields.changeUiCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.changeUiCallback,
     (int32_t)callback,
     (int32_t)method,
@@ -101,7 +101,7 @@ void SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
   System_String_o *v7; // x7
 
   this->fields.playIconAnimCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.playIconAnimCallback,
     (int32_t)callback,
     (int32_t)method,

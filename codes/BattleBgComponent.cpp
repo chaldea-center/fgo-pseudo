@@ -60,31 +60,31 @@ void BattleBgComponent__ResetAnimation(BattleBgComponent_o *this, const MethodIn
   int *v54; // x10
   __int64 v55; // x0
 
-  if ( (byte_4CF0C6D & 1) == 0 )
+  if ( (byte_4D33308 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C7BAE8(&System_IDisposable_TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF0C6D = 1;
+    sub_1C93AD4(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C93AD4(&System_IDisposable_TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D33308 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_84;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_84;
   v6 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -117,11 +117,11 @@ void BattleBgComponent__ResetAnimation(BattleBgComponent_o *this, const MethodIn
         else
         {
 LABEL_14:
-          v11 = sub_1C51E70(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+          v11 = sub_1C69E5C(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
         }
         v13 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v11)(v8, *(_QWORD *)(v11 + 8));
         if ( !v13 )
-          sub_1C7BD40(0, v12);
+          sub_1C93D2C(0, v12);
         while ( 1 )
         {
           v14 = *(_QWORD *)v13;
@@ -141,7 +141,7 @@ LABEL_14:
           else
           {
 LABEL_21:
-            v17 = sub_1C51E70(v13, System_Collections_IEnumerator_TypeInfo, 0);
+            v17 = sub_1C69E5C(v13, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
             break;
@@ -162,12 +162,12 @@ LABEL_21:
           else
           {
 LABEL_28:
-            v21 = sub_1C51E70(v13, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+            v21 = sub_1C69E5C(v13, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
           }
           v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v13, *(_QWORD *)(v21 + 8));
           v24 = v22;
           if ( !v22 )
-            sub_1C7BD40(0, v23);
+            sub_1C93D2C(0, v23);
           v25 = *(_QWORD *)v22;
           v26 = *(unsigned __int16 *)(*(_QWORD *)v22 + 302LL);
           if ( *(_WORD *)(*(_QWORD *)v22 + 302LL) )
@@ -185,7 +185,7 @@ LABEL_28:
           else
           {
 LABEL_35:
-            v28 = sub_1C51E70(v22, SimpleAnimation_State_TypeInfo, 4);
+            v28 = sub_1C69E5C(v22, SimpleAnimation_State_TypeInfo, 4);
           }
           (*(void (__fastcall **)(__int64, _QWORD, float))v28)(v24, *(_QWORD *)(v28 + 8), 0.0);
           v29 = *(_QWORD *)v24;
@@ -205,7 +205,7 @@ LABEL_35:
           else
           {
 LABEL_41:
-            v32 = sub_1C51E70(v24, SimpleAnimation_State_TypeInfo, 1);
+            v32 = sub_1C69E5C(v24, SimpleAnimation_State_TypeInfo, 1);
           }
           (*(void (__fastcall **)(__int64, _QWORD, _QWORD))v32)(v24, 0, *(_QWORD *)(v32 + 8));
         }
@@ -226,14 +226,14 @@ LABEL_41:
         else
         {
 LABEL_48:
-          v36 = sub_1C51E70(v13, System_IDisposable_TypeInfo, 0);
+          v36 = sub_1C69E5C(v13, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v36)(v13, *(_QWORD *)(v36 + 8));
         return;
       }
     }
 LABEL_84:
-    sub_1C7BD40(gameObject, v4);
+    sub_1C93D2C(gameObject, v4);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -245,7 +245,7 @@ LABEL_84:
     UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v6, 0);
     Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)v6, 0);
     if ( !Enumerator )
-      sub_1C7BD40(0, v37);
+      sub_1C93D2C(0, v37);
     while ( 1 )
     {
       v39 = Enumerator->klass;
@@ -265,7 +265,7 @@ LABEL_84:
       else
       {
 LABEL_60:
-        v42 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v42 = sub_1C69E5C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v42)(
               Enumerator,
@@ -289,23 +289,23 @@ LABEL_60:
       else
       {
 LABEL_67:
-        v46 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v46 = sub_1C69E5C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v47 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v46)(
                                               Enumerator,
                                               *(_QWORD *)(v46 + 8));
       v49 = v47;
       if ( !v47 )
-        sub_1C7BD40(0, v48);
+        sub_1C93D2C(0, v48);
       if ( v47->klass != UnityEngine_AnimationState_TypeInfo )
       {
-        sub_1C7C0DC(v47);
+        sub_1C940C8(v47);
         goto LABEL_84;
       }
       UnityEngine_AnimationState__set_time(v47, 0.0, 0);
       UnityEngine_AnimationState__set_enabled(v49, 0, 0);
     }
-    v50 = sub_1C7BC24(Enumerator, System_IDisposable_TypeInfo);
+    v50 = sub_1C93C10(Enumerator, System_IDisposable_TypeInfo);
     if ( v50 )
     {
       v51 = *(_QWORD *)v50;
@@ -326,7 +326,7 @@ LABEL_67:
       else
       {
 LABEL_77:
-        v55 = sub_1C51E70(v50, System_IDisposable_TypeInfo, 0);
+        v55 = sub_1C69E5C(v50, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v55)(v52, *(_QWORD *)(v55 + 8));
     }
@@ -340,7 +340,7 @@ bool BattleBgComponent__checkKey(BattleBgComponent_o *this, System_String_o *key
 
   motionKey = this->fields.motionKey;
   if ( motionKey )
-    LOBYTE(motionKey) = System_String__Equals_64212232(motionKey, key, 0);
+    LOBYTE(motionKey) = System_String__Equals_64461044(motionKey, key, 0);
   return (char)motionKey;
 }
 
@@ -352,102 +352,103 @@ BattleBgComponent_SaveData_o *BattleBgComponent__getSaveData(BattleBgComponent_o
   Il2CppObject *Component_object; // x21
   Il2CppObject *v6; // x20
   __int64 v7; // x19
+  const MethodInfo *v8; // x1
   UnityEngine_GameObject_c *klass; // x8
-  UnityEngine_GameObject_o *v9; // x21
-  __int64 v10; // x9
+  UnityEngine_GameObject_o *v10; // x21
+  __int64 v11; // x9
   int32_t *p_offset; // x10
-  __int64 v12; // x0
-  __int64 v13; // x1
-  __int64 v14; // x21
-  __int64 v15; // x8
-  __int64 v16; // x9
-  int *v17; // x10
-  __int64 v18; // x0
-  __int64 v19; // x8
-  __int64 v20; // x9
-  int *v21; // x10
-  __int64 v22; // x0
+  __int64 v13; // x0
+  __int64 v14; // x1
+  __int64 v15; // x21
+  __int64 v16; // x8
+  __int64 v17; // x9
+  int *v18; // x10
+  __int64 v19; // x0
+  __int64 v20; // x8
+  __int64 v21; // x9
+  int *v22; // x10
   __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x22
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
-  __int64 v30; // x8
-  __int64 v31; // x9
-  SimpleAnimation_State_c **v32; // x10
-  __int64 v33; // x0
+  __int64 v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x22
+  __int64 v27; // x8
+  __int64 v28; // x9
+  int *v29; // x10
+  __int64 v30; // x0
+  __int64 v31; // x8
+  __int64 v32; // x9
+  SimpleAnimation_State_c **v33; // x10
   __int64 v34; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  __int64 v41; // x8
-  __int64 v42; // x9
-  SimpleAnimation_State_c **v43; // x10
-  __int64 v44; // x0
-  __int64 v45; // x8
-  __int64 v46; // x9
-  int *v47; // x10
-  __int64 v48; // x0
-  __int64 v49; // x1
+  __int64 v35; // x0
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  __int64 v42; // x8
+  __int64 v43; // x9
+  SimpleAnimation_State_c **v44; // x10
+  __int64 v45; // x0
+  __int64 v46; // x8
+  __int64 v47; // x9
+  int *v48; // x10
+  __int64 v49; // x0
+  __int64 v50; // x1
   System_Collections_IEnumerator_o *Enumerator; // x20
-  System_Collections_IEnumerator_c *v51; // x8
-  __int64 v52; // x9
-  int32_t *v53; // x10
-  __int64 v54; // x0
-  System_Collections_IEnumerator_c *v55; // x8
-  __int64 v56; // x9
-  System_Collections_IEnumerator_c **v57; // x10
-  __int64 v58; // x0
-  UnityEngine_AnimationState_o *v59; // x0
-  __int64 v60; // x1
-  UnityEngine_AnimationState_o *v61; // x21
+  System_Collections_IEnumerator_c *v52; // x8
+  __int64 v53; // x9
+  int32_t *v54; // x10
+  __int64 v55; // x0
+  System_Collections_IEnumerator_c *v56; // x8
+  __int64 v57; // x9
+  System_Collections_IEnumerator_c **v58; // x10
+  __int64 v59; // x0
+  UnityEngine_AnimationState_o *v60; // x0
+  __int64 v61; // x1
+  UnityEngine_AnimationState_o *v62; // x21
   System_String_o *name; // x0
-  int32_t v63; // w2
-  int32_t v64; // w3
-  System_String_o *v65; // x4
-  int32_t v66; // w5
-  int64_t v67; // x6
-  System_String_o *v68; // x7
-  __int64 v69; // x0
-  __int64 v70; // x8
-  __int64 v71; // x20
-  __int64 v72; // x9
-  int *v73; // x10
-  __int64 v74; // x0
+  int32_t v64; // w2
+  int32_t v65; // w3
+  System_String_o *v66; // x4
+  int32_t v67; // w5
+  int64_t v68; // x6
+  System_String_o *v69; // x7
+  __int64 v70; // x0
+  __int64 v71; // x8
+  __int64 v72; // x20
+  __int64 v73; // x9
+  int *v74; // x10
+  __int64 v75; // x0
 
-  if ( (byte_4CF0C6B & 1) == 0 )
+  if ( (byte_4D33306 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C7BAE8(&System_IDisposable_TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&BattleBgComponent_SaveData_TypeInfo);
-    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF0C6B = 1;
+    sub_1C93AD4(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C93AD4(&System_IDisposable_TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&BattleBgComponent_SaveData_TypeInfo);
+    sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D33306 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_95;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_95;
   v6 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
-  v7 = sub_1C7BD34(BattleBgComponent_SaveData_TypeInfo);
-  BattleBgComponent_SaveData___ctor((BattleBgComponent_SaveData_o *)v7, 0);
+         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  v7 = sub_1C93D20(BattleBgComponent_SaveData_TypeInfo);
+  BattleBgComponent_SaveData___ctor((BattleBgComponent_SaveData_o *)v7, v8);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -462,167 +463,167 @@ BattleBgComponent_SaveData_o *BattleBgComponent__getSaveData(BattleBgComponent_o
       if ( gameObject )
       {
         klass = gameObject->klass;
-        v9 = gameObject;
-        v10 = *(unsigned __int16 *)&gameObject->klass->_2.rank;
+        v10 = gameObject;
+        v11 = *(unsigned __int16 *)&gameObject->klass->_2.rank;
         if ( *(_WORD *)&gameObject->klass->_2.rank )
         {
           p_offset = &klass->_1.interfaceOffsets->offset;
           while ( *((System_Collections_Generic_IEnumerable_SimpleAnimation_State__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo )
           {
-            --v10;
+            --v11;
             p_offset += 4;
-            if ( !v10 )
+            if ( !v11 )
               goto LABEL_14;
           }
-          v12 = (__int64)&klass->vtable + 16 * *p_offset;
+          v13 = (__int64)&klass->vtable + 16 * *p_offset;
         }
         else
         {
 LABEL_14:
-          v12 = sub_1C51E70(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+          v13 = sub_1C69E5C(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
         }
-        v14 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
-        if ( !v14 )
-          sub_1C7BD40(0, v13);
+        v15 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
+        if ( !v15 )
+          sub_1C93D2C(0, v14);
         while ( 1 )
         {
-          v15 = *(_QWORD *)v14;
-          v16 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+          v16 = *(_QWORD *)v15;
+          v17 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
           {
-            v17 = (int *)(*(_QWORD *)(v15 + 176) + 8LL);
-            while ( *((System_Collections_IEnumerator_c **)v17 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v18 = (int *)(*(_QWORD *)(v16 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v18 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v16;
-              v17 += 4;
-              if ( !v16 )
+              --v17;
+              v18 += 4;
+              if ( !v17 )
                 goto LABEL_21;
             }
-            v18 = v15 + 16LL * *v17 + 312;
+            v19 = v16 + 16LL * *v18 + 312;
           }
           else
           {
 LABEL_21:
-            v18 = sub_1C51E70(v14, System_Collections_IEnumerator_TypeInfo, 0);
+            v19 = sub_1C69E5C(v15, System_Collections_IEnumerator_TypeInfo, 0);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8)) & 1) == 0 )
             break;
-          v19 = *(_QWORD *)v14;
-          v20 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+          v20 = *(_QWORD *)v15;
+          v21 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
           {
-            v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
-            while ( *((System_Collections_Generic_IEnumerator_SimpleAnimation_State__c **)v21 - 1) != System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo )
+            v22 = (int *)(*(_QWORD *)(v20 + 176) + 8LL);
+            while ( *((System_Collections_Generic_IEnumerator_SimpleAnimation_State__c **)v22 - 1) != System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo )
             {
-              --v20;
-              v21 += 4;
-              if ( !v20 )
+              --v21;
+              v22 += 4;
+              if ( !v21 )
                 goto LABEL_28;
             }
-            v22 = v19 + 16LL * *v21 + 312;
+            v23 = v20 + 16LL * *v22 + 312;
           }
           else
           {
 LABEL_28:
-            v22 = sub_1C51E70(v14, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+            v23 = sub_1C69E5C(v15, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
           }
-          v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
-          v25 = v23;
-          if ( !v23 )
-            sub_1C7BD40(0, v24);
-          v26 = *(_QWORD *)v23;
-          v27 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
+          v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v15, *(_QWORD *)(v23 + 8));
+          v26 = v24;
+          if ( !v24 )
+            sub_1C93D2C(0, v25);
+          v27 = *(_QWORD *)v24;
+          v28 = *(unsigned __int16 *)(*(_QWORD *)v24 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v24 + 302LL) )
           {
-            v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-            while ( *((SimpleAnimation_State_c **)v28 - 1) != SimpleAnimation_State_TypeInfo )
+            v29 = (int *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((SimpleAnimation_State_c **)v29 - 1) != SimpleAnimation_State_TypeInfo )
             {
-              --v27;
-              v28 += 4;
-              if ( !v27 )
+              --v28;
+              v29 += 4;
+              if ( !v28 )
                 goto LABEL_35;
             }
-            v29 = v26 + 16LL * *v28 + 312;
+            v30 = v27 + 16LL * *v29 + 312;
           }
           else
           {
 LABEL_35:
-            v29 = sub_1C51E70(v23, SimpleAnimation_State_TypeInfo, 0);
+            v30 = sub_1C69E5C(v24, SimpleAnimation_State_TypeInfo, 0);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) != 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) != 0 )
           {
-            v30 = *(_QWORD *)v25;
-            v31 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-            if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+            v31 = *(_QWORD *)v26;
+            v32 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+            if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
             {
-              v32 = (SimpleAnimation_State_c **)(*(_QWORD *)(v30 + 176) + 8LL);
-              while ( *(v32 - 1) != SimpleAnimation_State_TypeInfo )
+              v33 = (SimpleAnimation_State_c **)(*(_QWORD *)(v31 + 176) + 8LL);
+              while ( *(v33 - 1) != SimpleAnimation_State_TypeInfo )
               {
-                --v31;
-                v32 += 2;
-                if ( !v31 )
+                --v32;
+                v33 += 2;
+                if ( !v32 )
                   goto LABEL_42;
               }
-              v33 = v30 + 16LL * (*(_DWORD *)v32 + 9) + 312;
+              v34 = v31 + 16LL * (*(_DWORD *)v33 + 9) + 312;
             }
             else
             {
 LABEL_42:
-              v33 = sub_1C51E70(v25, SimpleAnimation_State_TypeInfo, 9);
+              v34 = sub_1C69E5C(v26, SimpleAnimation_State_TypeInfo, 9);
             }
-            v34 = (*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
+            v35 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
             if ( !v7 )
-              sub_1C7BD40(v34, v34);
-            *(_QWORD *)(v7 + 16) = v34;
-            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), v34, v35, v36, v37, v38, v39, v40);
-            v41 = *(_QWORD *)v25;
-            v42 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-            if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+              sub_1C93D2C(v35, v35);
+            *(_QWORD *)(v7 + 16) = v35;
+            sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), v35, v36, v37, v38, v39, v40, v41);
+            v42 = *(_QWORD *)v26;
+            v43 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+            if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
             {
-              v43 = (SimpleAnimation_State_c **)(*(_QWORD *)(v41 + 176) + 8LL);
-              while ( *(v43 - 1) != SimpleAnimation_State_TypeInfo )
+              v44 = (SimpleAnimation_State_c **)(*(_QWORD *)(v42 + 176) + 8LL);
+              while ( *(v44 - 1) != SimpleAnimation_State_TypeInfo )
               {
-                --v42;
-                v43 += 2;
-                if ( !v42 )
+                --v43;
+                v44 += 2;
+                if ( !v43 )
                   goto LABEL_50;
               }
-              v44 = v41 + 16LL * (*(_DWORD *)v43 + 3) + 312;
+              v45 = v42 + 16LL * (*(_DWORD *)v44 + 3) + 312;
             }
             else
             {
 LABEL_50:
-              v44 = sub_1C51E70(v25, SimpleAnimation_State_TypeInfo, 3);
+              v45 = sub_1C69E5C(v26, SimpleAnimation_State_TypeInfo, 3);
             }
-            *(float *)(v7 + 24) = (*(float (__fastcall **)(__int64, _QWORD))v44)(v25, *(_QWORD *)(v44 + 8));
+            *(float *)(v7 + 24) = (*(float (__fastcall **)(__int64, _QWORD))v45)(v26, *(_QWORD *)(v45 + 8));
             break;
           }
         }
-        v45 = *(_QWORD *)v14;
-        v46 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+        v46 = *(_QWORD *)v15;
+        v47 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
         {
-          v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
+          v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
           {
-            --v46;
-            v47 += 4;
-            if ( !v46 )
+            --v47;
+            v48 += 4;
+            if ( !v47 )
               goto LABEL_57;
           }
-          v48 = v45 + 16LL * *v47 + 312;
+          v49 = v46 + 16LL * *v48 + 312;
         }
         else
         {
 LABEL_57:
-          v48 = sub_1C51E70(v14, System_IDisposable_TypeInfo, 0);
+          v49 = sub_1C69E5C(v15, System_IDisposable_TypeInfo, 0);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v48)(v14, *(_QWORD *)(v48 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v49)(v15, *(_QWORD *)(v49 + 8));
         return (BattleBgComponent_SaveData_o *)v7;
       }
     }
 LABEL_95:
-    sub_1C7BD40(gameObject, v4);
+    sub_1C93D2C(gameObject, v4);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -633,94 +634,94 @@ LABEL_95:
     goto LABEL_95;
   Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)v6, 0);
   if ( !Enumerator )
-    sub_1C7BD40(0, v49);
+    sub_1C93D2C(0, v50);
   do
   {
-    v51 = Enumerator->klass;
-    v52 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    v52 = Enumerator->klass;
+    v53 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
     if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
-      v53 = &v51->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_IEnumerator_c **)v53 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v54 = &v52->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerator_c **)v54 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v52;
-        v53 += 4;
-        if ( !v52 )
+        --v53;
+        v54 += 4;
+        if ( !v53 )
           goto LABEL_69;
       }
-      v54 = (__int64)&v51->vtable[*v53];
+      v55 = (__int64)&v52->vtable[*v54];
     }
     else
     {
 LABEL_69:
-      v54 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v55 = sub_1C69E5C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v54)(Enumerator, *(_QWORD *)(v54 + 8))
+    if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v55)(Enumerator, *(_QWORD *)(v55 + 8))
         & 1) == 0 )
       goto LABEL_83;
-    v55 = Enumerator->klass;
-    v56 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    v56 = Enumerator->klass;
+    v57 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
     if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
-      v57 = (System_Collections_IEnumerator_c **)&v55->_1.interfaceOffsets->offset;
-      while ( *(v57 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v58 = (System_Collections_IEnumerator_c **)&v56->_1.interfaceOffsets->offset;
+      while ( *(v58 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v56;
-        v57 += 2;
-        if ( !v56 )
+        --v57;
+        v58 += 2;
+        if ( !v57 )
           goto LABEL_76;
       }
-      v58 = (__int64)&v55->vtable[*(_DWORD *)v57 + 1];
+      v59 = (__int64)&v56->vtable[*(_DWORD *)v58 + 1];
     }
     else
     {
 LABEL_76:
-      v58 = sub_1C51E70(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v59 = sub_1C69E5C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
-    v59 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v58)(
+    v60 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v59)(
                                             Enumerator,
-                                            *(_QWORD *)(v58 + 8));
-    v61 = v59;
-    if ( !v59 )
-      sub_1C7BD40(0, v60);
-    if ( v59->klass != UnityEngine_AnimationState_TypeInfo )
+                                            *(_QWORD *)(v59 + 8));
+    v62 = v60;
+    if ( !v60 )
+      sub_1C93D2C(0, v61);
+    if ( v60->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1C7C0DC(v59);
+      sub_1C940C8(v60);
       goto LABEL_95;
     }
   }
-  while ( !UnityEngine_AnimationState__get_enabled(v59, 0) );
-  name = UnityEngine_AnimationState__get_name(v61, 0);
+  while ( !UnityEngine_AnimationState__get_enabled(v60, 0) );
+  name = UnityEngine_AnimationState__get_name(v62, 0);
   if ( !v7 )
-    sub_1C7BD40(name, name);
+    sub_1C93D2C(name, name);
   *(_QWORD *)(v7 + 16) = name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)name, v63, v64, v65, v66, v67, v68);
-  *(float *)(v7 + 24) = UnityEngine_AnimationState__get_time(v61, 0);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)name, v64, v65, v66, v67, v68, v69);
+  *(float *)(v7 + 24) = UnityEngine_AnimationState__get_time(v62, 0);
 LABEL_83:
-  v69 = sub_1C7BC24(Enumerator, System_IDisposable_TypeInfo);
-  if ( v69 )
+  v70 = sub_1C93C10(Enumerator, System_IDisposable_TypeInfo);
+  if ( v70 )
   {
-    v70 = *(_QWORD *)v69;
-    v71 = v69;
-    v72 = *(unsigned __int16 *)(*(_QWORD *)v69 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v69 + 302LL) )
+    v71 = *(_QWORD *)v70;
+    v72 = v70;
+    v73 = *(unsigned __int16 *)(*(_QWORD *)v70 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v70 + 302LL) )
     {
-      v73 = (int *)(*(_QWORD *)(v70 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v73 - 1) != System_IDisposable_TypeInfo )
+      v74 = (int *)(*(_QWORD *)(v71 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v74 - 1) != System_IDisposable_TypeInfo )
       {
-        --v72;
-        v73 += 4;
-        if ( !v72 )
+        --v73;
+        v74 += 4;
+        if ( !v73 )
           goto LABEL_88;
       }
-      v74 = v70 + 16LL * *v73 + 312;
+      v75 = v71 + 16LL * *v74 + 312;
     }
     else
     {
 LABEL_88:
-      v74 = sub_1C51E70(v69, System_IDisposable_TypeInfo, 0);
+      v75 = sub_1C69E5C(v70, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v74)(v71, *(_QWORD *)(v74 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v75)(v72, *(_QWORD *)(v75 + 8));
   }
   return (BattleBgComponent_SaveData_o *)v7;
 }
@@ -749,26 +750,26 @@ void BattleBgComponent__loadSaveData(
   SimpleAnimation_State_c **p_offset; // x10
   __int64 v15; // x0
 
-  if ( (byte_4CF0C6C & 1) == 0 )
+  if ( (byte_4D33307 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF0C6C = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D33307 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_27;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !save )
     goto LABEL_27;
   animName = save->fields.animName;
@@ -800,12 +801,12 @@ void BattleBgComponent__loadSaveData(
       {
         UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)gameObject, save->fields.timeline, 0);
         UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v10, 0);
-        UnityEngine_Animation__Play_71613624((UnityEngine_Animation_o *)v10, save->fields.animName, 0);
+        UnityEngine_Animation__Play_71862428((UnityEngine_Animation_o *)v10, save->fields.animName, 0);
         return;
       }
     }
 LABEL_27:
-    sub_1C7BD40(gameObject, v7);
+    sub_1C93D2C(gameObject, v7);
   }
   if ( !Component_object )
     goto LABEL_27;
@@ -834,11 +835,11 @@ LABEL_27:
   else
   {
 LABEL_17:
-    v15 = sub_1C51E70(gameObject, SimpleAnimation_State_TypeInfo, 4);
+    v15 = sub_1C69E5C(gameObject, SimpleAnimation_State_TypeInfo, 4);
   }
   (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, long double))v15)(v12, *(_QWORD *)(v15 + 8), v3);
   SimpleAnimation__Sample((SimpleAnimation_o *)Component_object, 0);
-  SimpleAnimation__Play_67121960((SimpleAnimation_o *)Component_object, save->fields.animName, 0);
+  SimpleAnimation__Play_67370764((SimpleAnimation_o *)Component_object, save->fields.animName, 0);
 }
 
 
@@ -861,26 +862,26 @@ void BattleBgComponent__playAnimation(
   __int64 v15; // x0
 
   v4 = *(long double *)&timeline;
-  if ( (byte_4CF0C67 & 1) == 0 )
+  if ( (byte_4D33302 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&SimpleAnimation_State_TypeInfo);
-    byte_4CF0C67 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&SimpleAnimation_State_TypeInfo);
+    byte_4D33302 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_24;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_24;
   v10 = UnityEngine_GameObject__GetComponent_object_(
           gameObject,
-          (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+          (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -904,12 +905,12 @@ void BattleBgComponent__playAnimation(
       {
         UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)gameObject, *(float *)&v4, 0);
         UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v10, 0);
-        UnityEngine_Animation__Play_71613624((UnityEngine_Animation_o *)v10, animName, 0);
+        UnityEngine_Animation__Play_71862428((UnityEngine_Animation_o *)v10, animName, 0);
         return;
       }
     }
 LABEL_24:
-    sub_1C7BD40(gameObject, v8);
+    sub_1C93D2C(gameObject, v8);
   }
   if ( !Component_object )
     goto LABEL_24;
@@ -934,11 +935,11 @@ LABEL_24:
   else
   {
 LABEL_14:
-    v15 = sub_1C51E70(gameObject, SimpleAnimation_State_TypeInfo, 4);
+    v15 = sub_1C69E5C(gameObject, SimpleAnimation_State_TypeInfo, 4);
   }
   (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, long double))v15)(v12, *(_QWORD *)(v15 + 8), v4);
   SimpleAnimation__Sample((SimpleAnimation_o *)Component_object, 0);
-  SimpleAnimation__Play_67121960((SimpleAnimation_o *)Component_object, animName, 0);
+  SimpleAnimation__Play_67370764((SimpleAnimation_o *)Component_object, animName, 0);
 }
 
 
@@ -946,23 +947,22 @@ void BattleBgComponent__playCameraAnimation(BattleBgComponent_o *this, System_St
 {
   UnityEngine_Object_o *actionCamera; // x21
   __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  BattleActionCamera_o *v8; // x0
+  BattleActionCamera_o *v7; // x0
 
-  if ( (byte_4CF0C6A & 1) == 0 )
+  if ( (byte_4D33305 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0C6A = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D33305 = 1;
   }
   actionCamera = (UnityEngine_Object_o *)this->fields.actionCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(actionCamera, 0, 0) )
   {
-    v8 = this->fields.actionCamera;
-    if ( !v8 )
-      sub_1C7BD40(0, v6);
-    BattleActionCamera__playCameraAnimation(v8, name, v7);
+    v7 = this->fields.actionCamera;
+    if ( !v7 )
+      sub_1C93D2C(0, v6);
+    BattleActionCamera__playCameraAnimation(v7, name, 0);
   }
 }
 
@@ -974,25 +974,25 @@ void BattleBgComponent__playLoadEndAnimation(BattleBgComponent_o *this, const Me
   Il2CppObject *Component_object; // x19
   Il2CppObject *v6; // x20
 
-  if ( (byte_4CF0C68 & 1) == 0 )
+  if ( (byte_4D33303 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0C68 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D33303 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_18;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_18;
   v6 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1008,7 +1008,7 @@ void BattleBgComponent__playLoadEndAnimation(BattleBgComponent_o *this, const Me
       return;
     }
 LABEL_18:
-    sub_1C7BD40(gameObject, v4);
+    sub_1C93D2C(gameObject, v4);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1035,7 +1035,7 @@ void BattleBgComponent__setActionCamera(
   System_String_o *v7; // x7
 
   this->fields.actionCamera = inActionCamera;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.actionCamera,
     (int32_t)inActionCamera,
     (int32_t)method,
@@ -1054,7 +1054,7 @@ void BattleBgComponent__setCutNodeNoble(BattleBgComponent_o *this, bool flg, con
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, !flg, 0);
 }
 
@@ -1062,29 +1062,27 @@ void BattleBgComponent__setCutNodeNoble(BattleBgComponent_o *this, bool flg, con
 void BattleBgComponent__shakeCamera(BattleBgComponent_o *this, float power, const MethodInfo *method)
 {
   UnityEngine_Object_o *actionCamera; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  struct BattleActionCamera_o *v8; // x8
+  __int64 v6; // x1
+  BattleActionCamera_o *v7; // x0
+  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF0C69 & 1) == 0 )
+  if ( (byte_4D33304 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0C69 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D33304 = 1;
   }
   actionCamera = (UnityEngine_Object_o *)this->fields.actionCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality(actionCamera, 0, 0);
-  if ( !v6 )
+  if ( !UnityEngine_Object__op_Equality(actionCamera, 0, 0) )
   {
-    v8 = this->fields.actionCamera;
-    if ( !v8 )
-      sub_1C7BD40(v6, v7);
-    v8->fields.Shaking = 1;
-    v8->fields.ShakeRange.fields.x = power * 0.1;
-    v8->fields.ShakeRange.fields.y = power * 0.1;
-    v8->fields.ShakeRange.fields.z = power * 0.0;
-    *(_QWORD *)&v8->fields.ShakeTime = 0x3F80000000000000LL;
+    v7 = this->fields.actionCamera;
+    if ( !v7 )
+      sub_1C93D2C(0, v6);
+    v8.fields.x = power * 0.1;
+    v8.fields.z = power * 0.0;
+    v8.fields.y = power * 0.1;
+    BattleActionCamera__ShakePosition(v7, v8, 1.0, 0);
   }
 }
 
@@ -1099,13 +1097,13 @@ void BattleBgComponent_SaveData___ctor(BattleBgComponent_SaveData_o *this, const
   System_String_o *v7; // x7
   int32_t v9; // w1
 
-  if ( (byte_4CF0F5D & 1) == 0 )
+  if ( (byte_4D33309 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF0F5D = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D33309 = 1;
   }
   v9 = StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }

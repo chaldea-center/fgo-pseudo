@@ -11,18 +11,17 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
   System_Reflection_FieldInfo_o *Field; // x0
   Il2CppType *v5; // x20
   System_Reflection_FieldInfo_o *v6; // x19
-  System_RuntimeTypeHandle_o v7; // x0
-  __int64 v8; // x0
+  __int64 v7; // x0
   void *monitor; // x8
   System_Enum_c *klass; // x8
 
   v2 = (Il2CppObject *)value;
-  if ( (byte_4CEC4AB & 1) == 0 )
+  if ( (byte_4D2E7E2 & 1) == 0 )
   {
-    sub_1C7BAE8(&PlayMakerUtils_FsmEvent___TypeInfo);
-    sub_1C7BAE8(&PlayMakerUtils_FsmEvent_var);
-    value = (System_Enum_o *)sub_1C7BAE8(&System_Type_TypeInfo);
-    byte_4CEC4AB = 1;
+    sub_1C93AD4(&PlayMakerUtils_FsmEvent___TypeInfo);
+    sub_1C93AD4(&PlayMakerUtils_FsmEvent_var);
+    value = (System_Enum_o *)sub_1C93AD4(&System_Type_TypeInfo);
+    byte_4D2E7E2 = 1;
   }
   if ( !v2 )
     goto LABEL_14;
@@ -37,28 +36,27 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
   v6 = Field;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v7.fields.value = (intptr_t)v5;
-  value = (System_Enum_o *)System_Type__GetTypeFromHandle(v7, 0);
+  value = (System_Enum_o *)System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v5, 0);
   if ( !v6 )
     goto LABEL_14;
-  v8 = ((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, System_Enum_o *, _QWORD, const MethodInfo *))v6->klass->vtable._14_GetCustomAttributes.methodPtr)(
+  v7 = ((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, System_Enum_o *, _QWORD, const MethodInfo *))v6->klass->vtable._14_GetCustomAttributes.methodPtr)(
          v6,
          value,
          0,
          v6->klass->vtable._14_GetCustomAttributes.method);
-  value = (System_Enum_o *)sub_1C7BC24(v8, PlayMakerUtils_FsmEvent___TypeInfo);
+  value = (System_Enum_o *)sub_1C93C10(v7, PlayMakerUtils_FsmEvent___TypeInfo);
   if ( !value )
     goto LABEL_14;
   monitor = value[1].monitor;
   if ( monitor )
   {
     if ( !(_DWORD)monitor )
-      sub_1C7BD48(value);
+      sub_1C93D34(value);
     klass = value[2].klass;
     if ( klass )
       return (System_String_o *)klass->_1.name;
 LABEL_14:
-    sub_1C7BD40(value, method);
+    sub_1C93D2C(value, method);
   }
   return 0;
 }

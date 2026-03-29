@@ -11,9 +11,9 @@ void ScriptBackLogListViewItem___ctor(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   this->fields.label = label;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)label, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)label, v6, v7, v8, v9, v10, v11);
 }
 
 

@@ -23,7 +23,7 @@ bool WarBoardTouchBlockObject__Activate(
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.onClickCallback,
       (int32_t)callback,
       v5,
@@ -34,7 +34,7 @@ bool WarBoardTouchBlockObject__Activate(
       v10);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C7BD40(0, v13);
+      sub_1C93D2C(0, v13);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
   return !isActiveAndEnabled;
@@ -54,10 +54,10 @@ void WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o *this, cons
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.onClickCallback = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.onClickCallback, 0, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.onClickCallback, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -80,7 +80,7 @@ void WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject_o *this, c
       onClickCallback->fields.method_code,
       onClickCallback->fields.method);
     p_onClickCallback->klass = 0;
-    sub_1C7BA8C(p_onClickCallback, 0, v4, v5, v6, v7, v8, v9);
+    sub_1C93A78(p_onClickCallback, 0, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -103,7 +103,7 @@ void WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObject_o *this, 
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0;
-      sub_1C7BA8C(p_onClickCallback, 0, v3, v4, v5, v6, v7, v8);
+      sub_1C93A78(p_onClickCallback, 0, v3, v4, v5, v6, v7, v8);
     }
   }
 }
@@ -130,7 +130,7 @@ void WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (GrandQuestFolderBoardItem_c *)callback;
-      sub_1C7BA8C(p_onClickCallback, (int32_t)callback, v5, v6, v7, v8, v9, v10);
+      sub_1C93A78(p_onClickCallback, (int32_t)callback, v5, v6, v7, v8, v9, v10);
     }
   }
 }

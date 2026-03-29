@@ -7,14 +7,14 @@ void EventResetDiggingRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4CF0155 & 1) == 0 )
+  if ( (byte_4D324E5 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_19287/*"eventId"*/);
-    sub_1C7BAE8(&StringLiteral_16948/*"areaNum"*/);
-    byte_4CF0155 = 1;
+    sub_1C93AD4(&StringLiteral_19339/*"eventId"*/);
+    sub_1C93AD4(&StringLiteral_16990/*"areaNum"*/);
+    byte_4D324E5 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19287/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16948/*"areaNum"*/, areaNum, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19339/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16990/*"areaNum"*/, areaNum, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,16 +23,16 @@ System_String_o *EventResetDiggingRequest__getURL(EventResetDiggingRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF0154 & 1) == 0 )
+  if ( (byte_4D324E4 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19277/*"event/resetDigging"*/);
-    byte_4CF0154 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19329/*"event/resetDigging"*/);
+    byte_4D324E4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19277/*"event/resetDigging"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19329/*"event/resetDigging"*/, 0);
 }
 
 
@@ -49,11 +49,11 @@ void EventResetDiggingRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CF0156 & 1) == 0 )
+  if ( (byte_4D324E6 & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    byte_4CF0156 = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    byte_4D324E6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

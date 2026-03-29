@@ -4,7 +4,7 @@ void PlayBackStepLogicTask___ctor(PlayBackStepLogicTask_o *this, int32_t actorId
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actorId);
   this->fields.actiontype = 71;
   this->fields.isSkipStep = 1;
-  this->fields.backStepActorId = actorId;
+  *(_DWORD *)(&this->fields._IsBuffTriggeredTask_k__BackingField + 3) = actorId;
 }
 
 
@@ -20,25 +20,31 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
   const MethodInfo *v8; // x1
 
   v4 = this;
-  if ( (byte_4CF199A & 1) == 0 )
+  if ( (byte_4D33D7E & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleLogicTask_TypeInfo);
-    this = (PlayBackStepLogicTask_o *)sub_1C7BAE8(&BattlePerformance_TypeInfo);
-    byte_4CF199A = 1;
+    sub_1C93AD4(&BattleLogicTask_TypeInfo);
+    this = (PlayBackStepLogicTask_o *)sub_1C93AD4(&BattlePerformance_TypeInfo);
+    byte_4D33D7E = 1;
   }
   if ( !logic )
     goto LABEL_15;
   this = (PlayBackStepLogicTask_o *)logic->fields.data;
   if ( !this )
     goto LABEL_15;
-  ServantData = BattleData__getServantData((BattleData_o *)this, v4->fields.backStepActorId, 0);
+  ServantData = BattleData__getServantData(
+                  (BattleData_o *)this,
+                  *(_DWORD *)(&v4->fields._IsBuffTriggeredTask_k__BackingField + 3),
+                  0);
   if ( ServantData && !ServantData->fields.isDeadAnime )
   {
     this = (PlayBackStepLogicTask_o *)logic->fields.logicnomal;
     if ( this )
     {
-      BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0);
-      v7 = (BattleLogicTask_o *)sub_1C7BD34(BattleLogicTask_TypeInfo);
+      BackStep = BattleLogicNomal__createBackStep(
+                   (BattleLogicNomal_o *)this,
+                   *(_DWORD *)(&v4->fields._IsBuffTriggeredTask_k__BackingField + 3),
+                   0);
+      v7 = (BattleLogicTask_o *)sub_1C93D20(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v7, v8);
       this = (PlayBackStepLogicTask_o *)BattlePerformance_TypeInfo;
       if ( !BattlePerformance_TypeInfo->_2.cctor_finished )
@@ -55,7 +61,7 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
       }
     }
 LABEL_15:
-    sub_1C7BD40(this, logic);
+    sub_1C93D2C(this, logic);
   }
   return 0;
 }

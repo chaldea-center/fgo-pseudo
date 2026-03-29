@@ -22,30 +22,30 @@ void EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const MethodInfo 
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CEE6F7 & 1) == 0 )
+  if ( (byte_4D30A5A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
-    sub_1C7BAE8(&int___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEE6F7 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_int___ctor__);
+    sub_1C93AD4(&int___TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D30A5A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3460B3C *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0;
   *(_QWORD *)&this->fields.groupId = 0;
   v3 = StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
   v10 = StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&this->fields.imageId = 0;
   *(_QWORD *)&this->fields.skillIconId = 0;
   this->fields.value = 0;
-  v17 = (struct System_Int32_array *)sub_1C7BB90(int___TypeInfo, 0);
+  v17 = (struct System_Int32_array *)sub_1C93B7C(int___TypeInfo, 0);
   this->fields.funcIds = v17;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.funcIds, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.funcIds, (int32_t)v17, v18, v19, v20, v21, v22, v23);
 }
 
 

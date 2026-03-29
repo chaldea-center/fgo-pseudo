@@ -17,7 +17,6 @@ void UVScrollAnimation__Update(UVScrollAnimation_o *this, const MethodInfo *meth
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x20
@@ -32,20 +31,19 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
   float v12; // s0
   float v13; // s1
   bool v14; // nf
-  float v15; // s1 OVERLAPPED
-  float v16; // s2
-  float v17; // s0
+  float v15; // s2
+  UnityEngine_Vector2_o v17; // 0:s0.4,4:s1.4
 
-  if ( (byte_4CEBA8B & 1) == 0 )
+  if ( (byte_4D2DE16 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16323/*"_MainTex"*/);
-    byte_4CEBA8B = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_16365/*"_MainTex"*/);
+    byte_4D2DE16 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -55,9 +53,9 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
     || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0)) == 0 )
   {
 LABEL_18:
-    sub_1C7BD40(material, v5);
+    sub_1C93D2C(material, v5);
   }
-  if ( !UnityEngine_Material__HasProperty_71735620(material, (System_String_o *)StringLiteral_16323/*"_MainTex"*/, 0) )
+  if ( !UnityEngine_Material__HasProperty_71985380(material, (System_String_o *)StringLiteral_16365/*"_MainTex"*/, 0) )
   {
 LABEL_17:
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
@@ -75,17 +73,13 @@ LABEL_17:
   v12 = (float)(v8 * offsetXPerSec) - floorf(v8 * offsetXPerSec);
   v13 = (float)(v11 * offsetYPerSec) - floorf(v11 * offsetYPerSec);
   v14 = v13 < 0.0;
-  v15 = fminf(v13, 1.0);
-  v16 = fminf(v12, 1.0);
+  v17.fields.y = fminf(v13, 1.0);
+  v15 = fminf(v12, 1.0);
   if ( v14 )
-    v15 = 0.0;
+    v17.fields.y = 0.0;
   if ( v12 < 0.0 )
-    v17 = 0.0;
+    v17.fields.x = 0.0;
   else
-    v17 = v16;
-  UnityEngine_Material__SetTextureOffset(
-    material,
-    (System_String_o *)StringLiteral_16323/*"_MainTex"*/,
-    *(UnityEngine_Vector2_o *)(&v15 - 1),
-    0);
+    v17.fields.x = v15;
+  UnityEngine_Material__SetTextureOffset(material, (System_String_o *)StringLiteral_16365/*"_MainTex"*/, v17, 0);
 }

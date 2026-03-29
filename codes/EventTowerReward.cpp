@@ -11,5 +11,5 @@ void EventTowerReward___ctor(EventTowerReward_o *this, const MethodInfo *method)
   *(_OWORD *)&this->fields.iconId = 0u;
   *(_OWORD *)&this->fields.limitCount = 0u;
   *(_OWORD *)&this->fields.eventId = 0u;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.voiceIds, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.voiceIds, 0, v3, v4, v5, v6, v7, v8);
 }

@@ -46,9 +46,6 @@ UnityEngine_Vector3_o Easing__Func(
   float32x2_t v42; // d1
   float v43; // s2
   float v44; // s0
-  float v45; // s2
-  float v46; // s1
-  float v47; // s0
   unsigned __int64 v48; // [xsp+0h] [xbp-30h]
   unsigned __int64 v49; // [xsp+0h] [xbp-30h]
   unsigned __int64 v50; // [xsp+0h] [xbp-30h]
@@ -187,12 +184,9 @@ LABEL_51:
       v5.n64_u64[0] = vadd_f32(v5, v29).n64_u64[0];
       z = z + v30;
 LABEL_52:
-      v45 = z;
-      v46 = v5.n64_f32[1];
-      v47 = v5.n64_f32[0];
-      result.fields.z = v45;
-      result.fields.y = v46;
-      result.fields.x = v47;
+      result.fields.z = z;
+      LODWORD(result.fields.y) = v5.n64_u32[1];
+      LODWORD(result.fields.x) = v5.n64_u32[0];
       return result;
     case 13:
       v48 = *(_QWORD *)&from.fields.x;
@@ -282,7 +276,7 @@ LABEL_50:
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o Easing__Func_49571844(
+UnityEngine_Color_o Easing__Func_49776096(
         UnityEngine_Color_o from,
         UnityEngine_Color_o to,
         float t,
@@ -332,10 +326,6 @@ UnityEngine_Color_o Easing__Func_49571844(
   float v45; // s3
   float v46; // s4
   float v47; // s0
-  float v48; // s1
-  float v49; // s3
-  float v50; // s0
-  float v51; // s2
   unsigned __int64 v52; // [xsp+0h] [xbp-40h]
   unsigned __int64 v53; // [xsp+0h] [xbp-40h]
   unsigned __int64 v54; // [xsp+0h] [xbp-40h]
@@ -571,14 +561,10 @@ LABEL_41:
         v5.n64_u64[0] = vsub_f32(v5, v43).n64_u64[0];
       }
 LABEL_53:
-      v48 = v6.n64_f32[1];
-      v49 = v5.n64_f32[1];
-      v50 = v6.n64_f32[0];
-      v51 = v5.n64_f32[0];
-      result.fields.a = v49;
-      result.fields.b = v51;
-      result.fields.g = v48;
-      result.fields.r = v50;
+      LODWORD(result.fields.g) = v6.n64_u32[1];
+      LODWORD(result.fields.a) = v5.n64_u32[1];
+      LODWORD(result.fields.r) = v6.n64_u32[0];
+      LODWORD(result.fields.b) = v5.n64_u32[0];
       return result;
     default:
       goto LABEL_53;
@@ -586,7 +572,7 @@ LABEL_53:
 }
 
 
-float Easing__Func_49572956(float from, float to, float t, int32_t type, const MethodInfo *method)
+float Easing__Func_49777208(float from, float to, float t, int32_t type, const MethodInfo *method)
 {
   float v5; // s8
   float v6; // s9

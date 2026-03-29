@@ -5,11 +5,11 @@ CriFsBindRequest_o *CriFsUtility__BindCpk(
 {
   const MethodInfo *v3; // x3
 
-  return CriFsUtility__BindCpk_31112148(targetBinder, 0, srcPath, v3);
+  return CriFsUtility__BindCpk_31210432(targetBinder, 0, srcPath, v3);
 }
 
 
-CriFsBindRequest_o *CriFsUtility__BindCpk_31112148(
+CriFsBindRequest_o *CriFsUtility__BindCpk_31210432(
         CriFsBinder_o *targetBinder,
         CriFsBinder_o *srcBinder,
         System_String_o *srcPath,
@@ -21,7 +21,7 @@ CriFsBindRequest_o *CriFsUtility__BindCpk_31112148(
 
   instance = CriFsServer__get_instance((const MethodInfo *)targetBinder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__BindCpk(instance, targetBinder, srcBinder, srcPath, v9);
 }
 
@@ -37,12 +37,12 @@ CriFsBindRequest_o *CriFsUtility__BindDirectory(
 
   instance = CriFsServer__get_instance((const MethodInfo *)targetBinder);
   if ( !instance )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   return CriFsServer__BindDirectory(instance, targetBinder, 0, srcPath, v7);
 }
 
 
-CriFsBindRequest_o *CriFsUtility__BindDirectory_31112536(
+CriFsBindRequest_o *CriFsUtility__BindDirectory_31210820(
         CriFsBinder_o *targetBinder,
         CriFsBinder_o *srcBinder,
         System_String_o *srcPath,
@@ -54,7 +54,7 @@ CriFsBindRequest_o *CriFsUtility__BindDirectory_31112536(
 
   instance = CriFsServer__get_instance((const MethodInfo *)targetBinder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__BindDirectory(instance, targetBinder, srcBinder, srcPath, v9);
 }
 
@@ -70,12 +70,12 @@ CriFsBindRequest_o *CriFsUtility__BindFile(
 
   instance = CriFsServer__get_instance((const MethodInfo *)targetBinder);
   if ( !instance )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   return CriFsServer__BindFile(instance, targetBinder, 0, srcPath, v7);
 }
 
 
-CriFsBindRequest_o *CriFsUtility__BindFile_31112784(
+CriFsBindRequest_o *CriFsUtility__BindFile_31211068(
         CriFsBinder_o *targetBinder,
         CriFsBinder_o *srcBinder,
         System_String_o *srcPath,
@@ -87,7 +87,7 @@ CriFsBindRequest_o *CriFsUtility__BindFile_31112784(
 
   instance = CriFsServer__get_instance((const MethodInfo *)targetBinder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__BindFile(instance, targetBinder, srcBinder, srcPath, v9);
 }
 
@@ -112,7 +112,7 @@ bool CriFsUtility__CRIWARE14C89F34(System_String_o *userAgentString, const Metho
   char v18; // [xsp+2Ch] [xbp-24h]
 
   v8 = (int)userAgentString;
-  if ( !off_4CE7A20 )
+  if ( !off_4D29D00 )
   {
     *(_QWORD *)v12 = "cri_ware_unity";
     v13 = 14;
@@ -121,11 +121,11 @@ bool CriFsUtility__CRIWARE14C89F34(System_String_o *userAgentString, const Metho
     v17 = 8;
     v16 = 0x200000000LL;
     v18 = 0;
-    off_4CE7A20 = (__int64 (*)(void))sub_1C7C198(v12);
+    off_4D29D00 = (__int64 (*)(void))sub_1C94184(v12);
   }
-  v9 = sub_1C7C178(v8, (int)method, v2, v3, v4, v5, v6, v7, v12[0], v13, v14[0], v15);
-  v10 = off_4CE7A20();
-  sub_1C7C190(v9);
+  v9 = sub_1C94164(v8, (int)method, v2, v3, v4, v5, v6, v7, v12[0], v13, v14[0], v15);
+  v10 = off_4D29D00();
+  sub_1C9417C(v9);
   return v10 != 0;
 }
 
@@ -151,7 +151,7 @@ bool CriFsUtility__CRIWARE5123B195(System_String_o *proxyPath, uint16_t proxyPor
 
   v8 = proxyPort;
   v9 = (int)proxyPath;
-  if ( !off_4CE7A28 )
+  if ( !off_4D29D08 )
   {
     *(_QWORD *)v13 = "cri_ware_unity";
     v14 = 14;
@@ -160,11 +160,11 @@ bool CriFsUtility__CRIWARE5123B195(System_String_o *proxyPath, uint16_t proxyPor
     v18 = 12;
     v17 = 0x200000000LL;
     v19 = 0;
-    off_4CE7A28 = (__int64 (__fastcall *)(_QWORD, _QWORD))sub_1C7C198(v13);
+    off_4D29D08 = (__int64 (__fastcall *)(_QWORD, _QWORD))sub_1C94184(v13);
   }
-  v10 = sub_1C7C178(v9, proxyPort, (int)method, v3, v4, v5, v6, v7, v13[0], v14, v15[0], v16);
-  v11 = off_4CE7A28(v10, v8);
-  sub_1C7C190(v10);
+  v10 = sub_1C94164(v9, proxyPort, (int)method, v3, v4, v5, v6, v7, v13[0], v14, v15[0], v16);
+  v11 = off_4D29D08(v10, v8);
+  sub_1C9417C(v10);
   return v11 != 0;
 }
 
@@ -189,7 +189,7 @@ bool CriFsUtility__CRIWARE6ACCF4D2(System_String_o *filter, const MethodInfo *me
   char v18; // [xsp+2Ch] [xbp-24h]
 
   v8 = (int)filter;
-  if ( !off_4CE7A30 )
+  if ( !off_4D29D10 )
   {
     *(_QWORD *)v12 = "cri_ware_unity";
     v13 = 14;
@@ -198,11 +198,11 @@ bool CriFsUtility__CRIWARE6ACCF4D2(System_String_o *filter, const MethodInfo *me
     v17 = 8;
     v16 = 0x200000000LL;
     v18 = 0;
-    off_4CE7A30 = (__int64 (*)(void))sub_1C7C198(v12);
+    off_4D29D10 = (__int64 (*)(void))sub_1C94184(v12);
   }
-  v9 = sub_1C7C178(v8, (int)method, v2, v3, v4, v5, v6, v7, v12[0], v13, v14[0], v15);
-  v10 = off_4CE7A30();
-  sub_1C7C190(v9);
+  v9 = sub_1C94164(v8, (int)method, v2, v3, v4, v5, v6, v7, v12[0], v13, v14[0], v15);
+  v10 = off_4D29D10();
+  sub_1C9417C(v9);
   return v10 != 0;
 }
 
@@ -214,11 +214,11 @@ CriFsInstallRequest_o *CriFsUtility__Install(
 {
   const MethodInfo *v3; // x4
 
-  return CriFsUtility__Install_31111416(0, srcPath, dstPath, 0, v3);
+  return CriFsUtility__Install_31209700(0, srcPath, dstPath, 0, v3);
 }
 
 
-CriFsInstallRequest_o *CriFsUtility__Install_31111416(
+CriFsInstallRequest_o *CriFsUtility__Install_31209700(
         CriFsBinder_o *srcBinder,
         System_String_o *srcPath,
         System_String_o *dstPath,
@@ -231,12 +231,12 @@ CriFsInstallRequest_o *CriFsUtility__Install_31111416(
 
   instance = CriFsServer__get_instance((const MethodInfo *)srcBinder);
   if ( !instance )
-    sub_1C7BD40(0, v10);
+    sub_1C93D2C(0, v10);
   return CriFsServer__Install(instance, srcBinder, srcPath, dstPath, doneDeleagate, v11);
 }
 
 
-CriFsInstallRequest_o *CriFsUtility__Install_31111488(
+CriFsInstallRequest_o *CriFsUtility__Install_31209772(
         System_String_o *srcPath,
         System_String_o *dstPath,
         CriFsRequest_DoneDelegate_o *doneDeleagate,
@@ -244,11 +244,11 @@ CriFsInstallRequest_o *CriFsUtility__Install_31111488(
 {
   const MethodInfo *v4; // x4
 
-  return CriFsUtility__Install_31111416(0, srcPath, dstPath, doneDeleagate, v4);
+  return CriFsUtility__Install_31209700(0, srcPath, dstPath, doneDeleagate, v4);
 }
 
 
-CriFsInstallRequest_o *CriFsUtility__Install_31111508(
+CriFsInstallRequest_o *CriFsUtility__Install_31209792(
         CriFsBinder_o *srcBinder,
         System_String_o *srcPath,
         System_String_o *dstPath,
@@ -260,7 +260,7 @@ CriFsInstallRequest_o *CriFsUtility__Install_31111508(
 
   instance = CriFsServer__get_instance((const MethodInfo *)srcBinder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__Install(instance, srcBinder, srcPath, dstPath, 0, v9);
 }
 
@@ -272,11 +272,11 @@ CriFsLoadAssetBundleRequest_o *CriFsUtility__LoadAssetBundle(
 {
   const MethodInfo *v3; // x3
 
-  return CriFsUtility__LoadAssetBundle_31111204(0, path, readUnitSize, v3);
+  return CriFsUtility__LoadAssetBundle_31209488(0, path, readUnitSize, v3);
 }
 
 
-CriFsLoadAssetBundleRequest_o *CriFsUtility__LoadAssetBundle_31111204(
+CriFsLoadAssetBundleRequest_o *CriFsUtility__LoadAssetBundle_31209488(
         CriFsBinder_o *binder,
         System_String_o *path,
         int32_t readUnitSize,
@@ -288,7 +288,7 @@ CriFsLoadAssetBundleRequest_o *CriFsUtility__LoadAssetBundle_31111204(
 
   instance = CriFsServer__get_instance((const MethodInfo *)binder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__LoadAssetBundle(instance, binder, path, readUnitSize, v9);
 }
 
@@ -301,12 +301,12 @@ CriFsLoadFileRequest_o *CriFsUtility__LoadFile(System_String_o *path, int32_t re
 
   instance = CriFsServer__get_instance((const MethodInfo *)path);
   if ( !instance )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   return CriFsServer__LoadFile(instance, 0, path, 0, readUnitSize, v7);
 }
 
 
-CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31107668(
+CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31205952(
         CriFsBinder_o *binder,
         System_String_o *path,
         int32_t readUnitSize,
@@ -318,12 +318,12 @@ CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31107668(
 
   instance = CriFsServer__get_instance((const MethodInfo *)binder);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__LoadFile(instance, binder, path, 0, readUnitSize, v9);
 }
 
 
-CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31111128(
+CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31209412(
         System_String_o *path,
         CriFsRequest_DoneDelegate_o *doneDelegate,
         int32_t readUnitSize,
@@ -335,7 +335,7 @@ CriFsLoadFileRequest_o *CriFsUtility__LoadFile_31111128(
 
   instance = CriFsServer__get_instance((const MethodInfo *)path);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__LoadFile(instance, 0, path, doneDelegate, readUnitSize, v9);
 }
 
@@ -373,6 +373,6 @@ CriFsInstallRequest_o *CriFsUtility__WebInstall(
 
   instance = CriFsServer__get_instance((const MethodInfo *)srcPath);
   if ( !instance )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   return CriFsServer__WebInstall(instance, srcPath, dstPath, doneDeleagate, v9);
 }

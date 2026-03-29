@@ -1,13 +1,13 @@
 void BattleRandom___ctor(BattleRandom_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF1213 & 1) == 0 )
+  if ( (byte_4D335DE & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom___ctor__);
-    byte_4CF1213 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom___ctor__);
+    byte_4D335DE = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A8CA90 *)Method_SingletonMonoBehaviour_BattleRandom___ctor__);
+    (const MethodInfo_3AC57E4 *)Method_SingletonMonoBehaviour_BattleRandom___ctor__);
 }
 
 
@@ -20,18 +20,18 @@ int32_t BattleRandom__GetGutsCount(const MethodInfo *method)
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CF1212 & 1) == 0 )
+  if ( (byte_4D335DD & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF1212 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335DD = 1;
   }
   v2 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v2 + 309) & 1) == 0 )
-    v2 = sub_1C51B7C(v1);
+    v2 = sub_1C69B68(v1);
   v3 = *(_QWORD *)(*(_QWORD *)(v2 + 192) + 16LL);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C(v1);
+    v3 = sub_1C69B68(v1);
   v4 = **(_QWORD **)(v3 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -39,7 +39,7 @@ int32_t BattleRandom__GetGutsCount(const MethodInfo *method)
   if ( !v5 )
     return 0;
   if ( !v4 )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   return *(_DWORD *)(v4 + 52);
 }
 
@@ -53,18 +53,18 @@ int32_t BattleRandom__GetLogicCount(const MethodInfo *method)
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CF1211 & 1) == 0 )
+  if ( (byte_4D335DC & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF1211 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335DC = 1;
   }
   v2 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v2 + 309) & 1) == 0 )
-    v2 = sub_1C51B7C(v1);
+    v2 = sub_1C69B68(v1);
   v3 = *(_QWORD *)(*(_QWORD *)(v2 + 192) + 16LL);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C(v1);
+    v3 = sub_1C69B68(v1);
   v4 = **(_QWORD **)(v3 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -72,7 +72,7 @@ int32_t BattleRandom__GetLogicCount(const MethodInfo *method)
   if ( !v5 )
     return 0;
   if ( !v4 )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   return *(_DWORD *)(v4 + 48);
 }
 
@@ -86,18 +86,18 @@ void BattleRandom__SetCount(int32_t logic, int32_t guts, const MethodInfo *metho
   _BOOL8 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4CF1210 & 1) == 0 )
+  if ( (byte_4D335DB & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF1210 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335DB = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C51B7C(v3);
+    v6 = sub_1C69B68(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C51B7C(v3);
+    v7 = sub_1C69B68(v3);
   v8 = **(_QWORD **)(v7 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -105,7 +105,7 @@ void BattleRandom__SetCount(int32_t logic, int32_t guts, const MethodInfo *metho
   if ( v9 )
   {
     if ( !v8 )
-      sub_1C7BD40(v9, v10);
+      sub_1C93D2C(v9, v10);
     *(_DWORD *)(v8 + 48) = logic;
     *(_DWORD *)(v8 + 52) = guts;
   }
@@ -123,18 +123,18 @@ void BattleRandom__adjustment(const MethodInfo *method)
   int v7; // w20
   int v8; // w20
 
-  if ( (byte_4CF120C & 1) == 0 )
+  if ( (byte_4D335D7 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF120C = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335D7 = 1;
   }
   v2 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v2 + 309) & 1) == 0 )
-    v2 = sub_1C51B7C(v1);
+    v2 = sub_1C69B68(v1);
   v3 = *(_QWORD *)(*(_QWORD *)(v2 + 192) + 16LL);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C(v1);
+    v3 = sub_1C69B68(v1);
   v4 = **(_QWORD **)(v3 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -156,7 +156,7 @@ void BattleRandom__adjustment(const MethodInfo *method)
           goto LABEL_15;
       }
 LABEL_20:
-      sub_1C7BD40(v5, v6);
+      sub_1C93D2C(v5, v6);
     }
 LABEL_15:
     if ( *(int *)(v4 + 52) >= 1 )
@@ -186,18 +186,18 @@ int32_t BattleRandom__getGutsNext(int32_t max, const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CF120E & 1) == 0 )
+  if ( (byte_4D335D9 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF120E = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335D9 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C51B7C(v2);
+    v4 = sub_1C69B68(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C51B7C(v2);
+    v5 = sub_1C69B68(v2);
   v6 = **(_QWORD **)(v5 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -205,8 +205,8 @@ int32_t BattleRandom__getGutsNext(int32_t max, const MethodInfo *method)
   if ( (v7 & 1) == 0 )
     return max - 1;
   if ( !v6 || (v7 = *(_QWORD *)(v6 + 40), ++*(_DWORD *)(v6 + 52), !v7) )
-    sub_1C7BD40(v7, v8);
-  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
+    sub_1C93D2C(v7, v8);
+  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
            v7,
            (unsigned int)max,
            *(_QWORD *)(*(_QWORD *)v7 + 432LL));
@@ -222,18 +222,18 @@ int32_t BattleRandom__getNext(int32_t max, const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CF120D & 1) == 0 )
+  if ( (byte_4D335D8 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF120D = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335D8 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C51B7C(v2);
+    v4 = sub_1C69B68(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C51B7C(v2);
+    v5 = sub_1C69B68(v2);
   v6 = **(_QWORD **)(v5 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -241,8 +241,8 @@ int32_t BattleRandom__getNext(int32_t max, const MethodInfo *method)
   if ( (v7 & 1) == 0 )
     return max - 1;
   if ( !v6 || (v7 = *(_QWORD *)(v6 + 32), ++*(_DWORD *)(v6 + 48), !v7) )
-    sub_1C7BD40(v7, v8);
-  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
+    sub_1C93D2C(v7, v8);
+  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
            v7,
            (unsigned int)max,
            *(_QWORD *)(*(_QWORD *)v7 + 432LL));
@@ -258,18 +258,18 @@ int32_t BattleRandom__getRandom(int32_t min, int32_t max, const MethodInfo *meth
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4CF120F & 1) == 0 )
+  if ( (byte_4D335DA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF120F = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335DA = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C51B7C(v3);
+    v6 = sub_1C69B68(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C51B7C(v3);
+    v7 = sub_1C69B68(v3);
   v8 = **(_QWORD **)(v7 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -277,8 +277,8 @@ int32_t BattleRandom__getRandom(int32_t min, int32_t max, const MethodInfo *meth
   if ( (v9 & 1) == 0 )
     return min;
   if ( !v8 || (v9 = *(_QWORD *)(v8 + 32), ++*(_DWORD *)(v8 + 48), !v9) )
-    sub_1C7BD40(v9, v10);
-  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v9 + 408LL))(
+    sub_1C93D2C(v9, v10);
+  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v9 + 408LL))(
            v9,
            (unsigned int)min,
            (unsigned int)max,
@@ -288,10 +288,10 @@ int32_t BattleRandom__getRandom(int32_t min, int32_t max, const MethodInfo *meth
 
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleRandom__getShuffle___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *list,
-        const MethodInfo_3161430 *method)
+        const MethodInfo_3195880 *method)
 {
   unsigned __int64 StatusReg; // x19
-  const MethodInfo_3161430_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3195880_RGCTXs *rgctx_data; // x8
   size_t actualSize; // x20
   char *v7; // x22
   Il2CppClass *v8; // x0
@@ -325,7 +325,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleRandom__getShu
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8(method);
+    sub_1C69BC4(method);
     rgctx_data = method->rgctx_data;
   }
   actualSize = rgctx_data->_1_T->_2.actualSize;
@@ -340,16 +340,16 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleRandom__getShu
   _0_T = method->rgctx_data->_0_T__;
   if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
   {
-    v8 = (Il2CppClass *)sub_1C51B7C(v10);
+    v8 = (Il2CppClass *)sub_1C69B68(v10);
     _0_T = v8;
   }
   v28 = StatusReg;
   if ( !v11 )
 LABEL_23:
-    sub_1C7BD40(v8, v9);
-  v13 = sub_1C7BC24(v11, _0_T);
+    sub_1C93D2C(v8, v9);
+  v13 = sub_1C93C10(v11, _0_T);
   if ( !v13 )
-    sub_1C7C0DC(v11);
+    sub_1C940C8(v11);
   v14 = *(_QWORD *)(v13 + 24);
   v15 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)v13;
   if ( (int)v14 >= 2 )
@@ -379,11 +379,11 @@ LABEL_23:
       memcpy((char *)v15->m_Items + (unsigned int)v15->obj.klass->_2.native_size * v21, v17, actualSize);
       Next = (__int64)method->rgctx_data->_1_T;
       if ( (*(_BYTE *)(Next + 309) & 1) == 0 )
-        Next = sub_1C51B7C(v23);
+        Next = sub_1C69B68(v23);
       v24 = v29;
       if ( (unsigned int)v21 >= LODWORD(v15->max_length) )
         goto LABEL_22;
-      sub_1C7BA90(Next, (char *)v15->m_Items + (unsigned int)v15->obj.klass->_2.native_size * v21, v7);
+      sub_1C93A7C(Next, (char *)v15->m_Items + (unsigned int)v15->obj.klass->_2.native_size * v21, v7);
       Next = (__int64)memcpy(v24, v32, actualSize);
       v25 = v15->max_length;
       if ( (unsigned int)v14 >= v25 )
@@ -395,13 +395,13 @@ LABEL_23:
       Next = (__int64)method->rgctx_data->_1_T;
       if ( (*(_BYTE *)(Next + 309) & 1) == 0 )
       {
-        Next = sub_1C51B7C(v26);
+        Next = sub_1C69B68(v26);
         v25 = v15->max_length;
       }
       if ( (unsigned int)v14 >= v25 )
 LABEL_22:
-        sub_1C7BD48(Next);
-      sub_1C7BA90(
+        sub_1C93D34(Next);
+      sub_1C93A7C(
         Next,
         (char *)v15->m_Items + (unsigned int)v15->obj.klass->_2.native_size * (unsigned __int64)(unsigned int)v14,
         v24);
@@ -413,7 +413,7 @@ LABEL_22:
 }
 
 
-System_Int32_array *BattleRandom__getShuffle_int_(System_Int32_array *list, const MethodInfo_316123C *method)
+System_Int32_array *BattleRandom__getShuffle_int_(System_Int32_array *list, const MethodInfo_319568C *method)
 {
   System_Array_o *v3; // x20
   long double v4; // q0
@@ -429,11 +429,11 @@ System_Int32_array *BattleRandom__getShuffle_int_(System_Int32_array *list, cons
   __int64 v14; // x9
   int v15; // t1
   System_Object_array *v17; // x0
-  const MethodInfo_3161324 *v18; // x1
+  const MethodInfo_3195774 *v18; // x1
 
   v3 = (System_Array_o *)list;
   if ( !method->rgctx_data )
-    list = (System_Int32_array *)sub_1C51BD8(method);
+    list = (System_Int32_array *)sub_1C69BC4(method);
   if ( !v3 )
     goto LABEL_15;
   list = (System_Int32_array *)System_Array__Clone(v3, 0);
@@ -441,13 +441,13 @@ System_Int32_array *BattleRandom__getShuffle_int_(System_Int32_array *list, cons
   _0_T = method->rgctx_data->_0_T__;
   if ( (_0_T[309] & 1) == 0 )
   {
-    list = (System_Int32_array *)sub_1C51B7C(v4);
+    list = (System_Int32_array *)sub_1C69B68(v4);
     _0_T = list;
   }
   if ( !v5 )
 LABEL_15:
-    sub_1C7BD40(list, method);
-  v7 = sub_1C7BC24(v5, _0_T);
+    sub_1C93D2C(list, method);
+  v7 = sub_1C93C10(v5, _0_T);
   if ( v7 )
   {
     v8 = *(_QWORD *)(v7 + 24);
@@ -460,7 +460,7 @@ LABEL_15:
         Next = BattleRandom__getNext(v8, 0);
         v12 = *(_DWORD *)(v9 + 24);
         if ( (unsigned int)Next >= v12 || (LODWORD(v8) = v8 - 1, (unsigned int)v8 >= v12) )
-          sub_1C7BD48(Next);
+          sub_1C93D34(Next);
         v13 = v9 + 4LL * (int)Next;
         v14 = v9 + 4LL * (unsigned int)v8;
         v15 = *(_DWORD *)(v13 + 32);
@@ -474,13 +474,13 @@ LABEL_15:
   }
   else
   {
-    sub_1C7C0DC(v5);
+    sub_1C940C8(v5);
     return (System_Int32_array *)BattleRandom__getShuffle_object_(v17, v18);
   }
 }
 
 
-System_Object_array *BattleRandom__getShuffle_object_(System_Object_array *list, const MethodInfo_3161324 *method)
+System_Object_array *BattleRandom__getShuffle_object_(System_Object_array *list, const MethodInfo_3195774 *method)
 {
   System_Array_o *v3; // x20
   long double v4; // q0
@@ -511,11 +511,11 @@ System_Object_array *BattleRandom__getShuffle_object_(System_Object_array *list,
   int64_t v29; // x6
   System_String_o *v30; // x7
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v32; // x0
-  const MethodInfo_3161430 *v33; // x1
+  const MethodInfo_3195880 *v33; // x1
 
   v3 = (System_Array_o *)list;
   if ( !method->rgctx_data )
-    list = (System_Object_array *)sub_1C51BD8(method);
+    list = (System_Object_array *)sub_1C69BC4(method);
   if ( !v3 )
     goto LABEL_16;
   list = (System_Object_array *)System_Array__Clone(v3, 0);
@@ -523,13 +523,13 @@ System_Object_array *BattleRandom__getShuffle_object_(System_Object_array *list,
   _0_T = method->rgctx_data->_0_T__;
   if ( (_0_T[309] & 1) == 0 )
   {
-    list = (System_Object_array *)sub_1C51B7C(v4);
+    list = (System_Object_array *)sub_1C69B68(v4);
     _0_T = list;
   }
   if ( !v5 )
 LABEL_16:
-    sub_1C7BD40(list, method);
-  v7 = sub_1C7BC24(v5, _0_T);
+    sub_1C93D2C(list, method);
+  v7 = sub_1C93C10(v5, _0_T);
   if ( v7 )
   {
     v8 = *(_QWORD *)(v7 + 24);
@@ -553,14 +553,14 @@ LABEL_16:
               v24 = *(GrandQuestFolderBoardItem_c **)(v22 + 32),
               v23 = (GrandQuestFolderBoardItem_o *)(v22 + 32),
               Next->klass = v24,
-              sub_1C7BA8C(Next, (int32_t)v24, v12, v13, v14, v15, v16, v17),
+              sub_1C93A78(Next, (int32_t)v24, v12, v13, v14, v15, v16, v17),
               (unsigned int)v8 >= *(_DWORD *)(v9 + 24)) )
         {
 LABEL_15:
-          sub_1C7BD48(Next);
+          sub_1C93D34(Next);
         }
         v23->klass = v20;
-        sub_1C7BA8C(v23, (int32_t)v20, v25, v26, v27, v28, v29, v30);
+        sub_1C93A78(v23, (int32_t)v20, v25, v26, v27, v28, v29, v30);
         --v10;
       }
       while ( v10 > 2 );
@@ -569,7 +569,7 @@ LABEL_15:
   }
   else
   {
-    sub_1C7C0DC(v5);
+    sub_1C940C8(v5);
     return (System_Object_array *)BattleRandom__getShuffle___Il2CppFullySharedGenericType_(v32, v33);
   }
 }
@@ -599,35 +599,35 @@ void BattleRandom__setSeed(int32_t seed, const MethodInfo *method)
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CF120B & 1) == 0 )
+  if ( (byte_4D335D6 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&System_Random_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
-    byte_4CF120B = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&System_Random_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BattleRandom__getInstance__);
+    byte_4D335D6 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_BattleRandom__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C51B7C(v2);
+    v4 = sub_1C69B68(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C51B7C(v2);
+    v5 = sub_1C69B68(v2);
   v6 = **(_QWORD **)(v5 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v6, 0, 0) )
   {
-    v7 = (System_Random_o *)sub_1C7BD34(System_Random_TypeInfo);
-    System_Random___ctor_65763668(v7, seed, 0);
+    v7 = (System_Random_o *)sub_1C93D20(System_Random_TypeInfo);
+    System_Random___ctor_66012472(v7, seed, 0);
     if ( !v6 )
-      sub_1C7BD40(v8, v9);
+      sub_1C93D2C(v8, v9);
     *(_QWORD *)(v6 + 32) = v7;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v6 + 32), (int32_t)v7, v10, v11, v12, v13, v14, v15);
-    v16 = (System_Random_o *)sub_1C7BD34(System_Random_TypeInfo);
-    System_Random___ctor_65763668(v16, seed, 0);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v6 + 32), (int32_t)v7, v10, v11, v12, v13, v14, v15);
+    v16 = (System_Random_o *)sub_1C93D20(System_Random_TypeInfo);
+    System_Random___ctor_66012472(v16, seed, 0);
     *(_QWORD *)(v6 + 40) = v16;
     v17 = (GrandQuestFolderBoardItem_o *)(v6 + 40);
-    sub_1C7BA8C(v17, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+    sub_1C93A78(v17, (int32_t)v16, v18, v19, v20, v21, v22, v23);
     v17->monitor = 0;
   }
 }

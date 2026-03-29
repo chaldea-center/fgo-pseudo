@@ -34,25 +34,25 @@ void BattleResultEventItemGroupComponent__CommonPointViewFunc(
   int64_t v32; // [xsp+0h] [xbp-70h] BYREF
   DataManager_o *v33; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CF1F8A & 1) == 0 )
+  if ( (byte_4D34372 & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserEventPointMaster___);
-    sub_1C7BAE8(&long_TypeInfo);
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_25307/*"{0:#,0}"*/);
-    sub_1C7BAE8(&StringLiteral_802/*"+ {0:#,0}"*/);
-    byte_4CF1F8A = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEventPointMaster___);
+    sub_1C93AD4(&long_TypeInfo);
+    sub_1C93AD4(&System_Math_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_25376/*"{0:#,0}"*/);
+    sub_1C93AD4(&StringLiteral_802/*"+ {0:#,0}"*/);
+    byte_4D34372 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
   if ( !Instance )
     goto LABEL_22;
   Entity = UserEventPointMaster__GetEntity((UserEventPointMaster_o *)Instance, userId, eventId, groupId, 0);
@@ -75,8 +75,8 @@ void BattleResultEventItemGroupComponent__CommonPointViewFunc(
   UserPointEventMax = v22->static_fields->UserPointEventMax;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v24 = System_Math__Min_65699080(value, UserPointEventMax, 0);
-  Instance = (DataManager_o *)System_Math__Min_65699080(
+  v24 = System_Math__Min_65947884(value, UserPointEventMax, 0);
+  Instance = (DataManager_o *)System_Math__Min_65947884(
                                 v21,
                                 BalanceConfig_TypeInfo->static_fields->UserPointEventMax,
                                 0);
@@ -92,15 +92,15 @@ void BattleResultEventItemGroupComponent__CommonPointViewFunc(
     || (UILabel__SetDefaultFont(totalLabel, 0),
         v32 = v24,
         v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v32),
-        v29 = System_String__Format((System_String_o *)StringLiteral_25307/*"{0:#,0}"*/, v28, 0),
+        v29 = System_String__Format((System_String_o *)StringLiteral_25376/*"{0:#,0}"*/, v28, 0),
         UILabel__set_text(totalLabel, v29, 0),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0 )
+                                      (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0 )
   {
 LABEL_22:
-    sub_1C7BD40(Instance, v18);
+    sub_1C93D2C(Instance, v18);
   }
   v30 = EventPointGroupMaster__GetEntity((EventPointGroupMaster_o *)Instance, eventId, groupId, 0);
   if ( v30 )
@@ -129,7 +129,7 @@ void BattleResultEventItemGroupComponent__SetGroupDamageInfo(
   if ( !eventDamageRoot
     || (UnityEngine_GameObject__SetActive(eventDamageRoot, 1, 0), (eventDamageRoot = this->fields.eventPointRoot) == 0) )
   {
-    sub_1C7BD40(eventDamageRoot, *(_QWORD *)&eventId);
+    sub_1C93D2C(eventDamageRoot, *(_QWORD *)&eventId);
   }
   UnityEngine_GameObject__SetActive(eventDamageRoot, 0, 0);
 }
@@ -149,14 +149,14 @@ void BattleResultEventItemGroupComponent__SetGroupPointInfo(
   EventDetailEntity_o *v13; // x23
   const MethodInfo *v14; // x5
 
-  if ( (byte_4CF1F88 & 1) == 0 )
+  if ( (byte_4D34370 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C7BAE8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C7BAE8(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CF1F88 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C93AD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C93AD4(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D34370 = 1;
   }
   eventDamageRoot = this->fields.eventDamageRoot;
   if ( !eventDamageRoot )
@@ -166,32 +166,32 @@ void BattleResultEventItemGroupComponent__SetGroupPointInfo(
   if ( !eventDamageRoot )
     goto LABEL_14;
   UnityEngine_GameObject__SetActive(eventDamageRoot, 1, 0);
-  eventDamageRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  eventDamageRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !eventDamageRoot )
     goto LABEL_14;
   eventDamageRoot = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                   (DataManager_o *)eventDamageRoot,
-                                                  (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventMaster___);
+                                                  (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !eventDamageRoot )
     goto LABEL_14;
   if ( !DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)eventDamageRoot,
           eventId,
-          (const MethodInfo_342E2FC *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__) )
+          (const MethodInfo_3463274 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__) )
     return;
-  eventDamageRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  eventDamageRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !eventDamageRoot
     || (eventDamageRoot = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                         (DataManager_o *)eventDamageRoot,
-                                                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
+                                                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
   {
 LABEL_14:
-    sub_1C7BD40(eventDamageRoot, *(_QWORD *)&eventId);
+    sub_1C93D2C(eventDamageRoot, *(_QWORD *)&eventId);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)eventDamageRoot,
              eventId,
-             (const MethodInfo_342E2FC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             (const MethodInfo_3463274 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   if ( Entity )
   {
     v13 = (EventDetailEntity_o *)Entity;
@@ -216,13 +216,13 @@ void BattleResultEventItemGroupComponent__SetQpInfo(
   int64_t v13; // [xsp+8h] [xbp-48h] BYREF
   int32_t v14; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CF1F87 & 1) == 0 )
+  if ( (byte_4D3436F & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&long_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_25307/*"{0:#,0}"*/);
-    sub_1C7BAE8(&StringLiteral_802/*"+ {0:#,0}"*/);
-    byte_4CF1F87 = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&long_TypeInfo);
+    sub_1C93AD4(&StringLiteral_25376/*"{0:#,0}"*/);
+    sub_1C93AD4(&StringLiteral_802/*"+ {0:#,0}"*/);
+    byte_4D3436F = 1;
   }
   getQpLabel = this->fields.getQpLabel;
   v14 = getQp;
@@ -233,10 +233,10 @@ void BattleResultEventItemGroupComponent__SetQpInfo(
         totalQpLabel = this->fields.totalQpLabel,
         v13 = totalQp,
         v12 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13),
-        v9 = System_String__Format((System_String_o *)StringLiteral_25307/*"{0:#,0}"*/, v12, 0),
+        v9 = System_String__Format((System_String_o *)StringLiteral_25376/*"{0:#,0}"*/, v12, 0),
         !totalQpLabel) )
   {
-    sub_1C7BD40(v9, v10);
+    sub_1C93D2C(v9, v10);
   }
   UILabel__set_text(totalQpLabel, v9, 0);
 }
@@ -323,17 +323,17 @@ void BattleResultEventItemGroupComponent__SwitchViewMode(
   const MethodInfo *v80; // [xsp+8h] [xbp-68h]
   UnityEngine_Vector3_o v81; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v82; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v83; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v85; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v86; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
 
   v10 = this;
-  if ( (byte_4CF1F89 & 1) == 0 )
+  if ( (byte_4D34371 & 1) == 0 )
   {
-    this = (BattleResultEventItemGroupComponent_o *)sub_1C7BAE8(&long___TypeInfo);
-    byte_4CF1F89 = 1;
+    this = (BattleResultEventItemGroupComponent_o *)sub_1C93AD4(&long___TypeInfo);
+    byte_4D34371 = 1;
   }
   if ( !viewGroupIds )
     goto LABEL_150;
@@ -395,18 +395,18 @@ void BattleResultEventItemGroupComponent__SwitchViewMode(
         getLabelRoot = v10->fields.getLabelRoot;
         if ( !getLabelRoot )
           goto LABEL_150;
-        localPosition = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
-        localPosition.fields.z = 0.0;
-        localPosition.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(getLabelRoot, localPosition, 0);
+        v84.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
+        v84.fields.z = 0.0;
+        v84.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(getLabelRoot, v84, 0);
         totalLabelRoot = v10->fields.totalLabelRoot;
         if ( !totalLabelRoot )
           goto LABEL_150;
-        v84 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
-        v84.fields.z = 0.0;
-        v84.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(totalLabelRoot, v84, 0);
-        this = (BattleResultEventItemGroupComponent_o *)sub_1C7BB90(long___TypeInfo, 2);
+        v85.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
+        v85.fields.z = 0.0;
+        v85.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(totalLabelRoot, v85, 0);
+        this = (BattleResultEventItemGroupComponent_o *)sub_1C93B7C(long___TypeInfo, 2);
         v29 = viewGroupIds->max_length;
         v30 = this;
         if ( (int)v29 >= 1 )
@@ -520,7 +520,7 @@ LABEL_55:
                         return;
                     }
 LABEL_150:
-                    sub_1C7BD40(this, userId);
+                    sub_1C93D2C(this, userId);
                   }
                 }
               }
@@ -530,7 +530,7 @@ LABEL_150:
       }
     }
 LABEL_151:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   }
   if ( v16 != 1 )
   {
@@ -557,18 +557,18 @@ LABEL_151:
         v46 = v10->fields.getLabelRoot;
         if ( !v46 )
           goto LABEL_150;
-        v85 = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
-        v85.fields.z = 0.0;
-        v85.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(v46, v85, 0);
+        v86.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
+        v86.fields.z = 0.0;
+        v86.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(v46, v86, 0);
         v47 = v10->fields.totalLabelRoot;
         if ( !v47 )
           goto LABEL_150;
-        v86 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
-        v86.fields.z = 0.0;
-        v86.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(v47, v86, 0);
-        this = (BattleResultEventItemGroupComponent_o *)sub_1C7BB90(long___TypeInfo, 3);
+        v87.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
+        v87.fields.z = 0.0;
+        v87.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(v47, v87, 0);
+        this = (BattleResultEventItemGroupComponent_o *)sub_1C93B7C(long___TypeInfo, 3);
         v48 = viewGroupIds->max_length;
         v49 = this;
         if ( (int)v48 < 1 )
@@ -681,10 +681,10 @@ LABEL_99:
                                                                                 0);
                               if ( this )
                               {
-                                v87.fields.x = x + (float)(int)(groupIconSpace * (v66 >> 1));
-                                v87.fields.y = y;
-                                v87.fields.z = z;
-                                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v87, 0);
+                                v81.fields.x = x + (float)(int)(groupIconSpace * (v66 >> 1));
+                                v81.fields.y = y;
+                                v81.fields.z = z;
+                                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v81, 0);
                                 v71 = v10->fields.groupLabels;
                                 if ( v71 )
                                 {
@@ -801,17 +801,17 @@ LABEL_98:
   v19 = v10->fields.getLabelRoot;
   if ( !v19 )
     goto LABEL_150;
-  v81 = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
-  v81.fields.z = 0.0;
-  v81.fields.x = -355.0;
-  UnityEngine_Transform__set_localPosition(v19, v81, 0);
+  v82.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
+  v82.fields.z = 0.0;
+  v82.fields.x = -355.0;
+  UnityEngine_Transform__set_localPosition(v19, v82, 0);
   v20 = v10->fields.totalLabelRoot;
   if ( !v20 )
     goto LABEL_150;
-  v82 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
-  v82.fields.z = 0.0;
-  v82.fields.x = -355.0;
-  UnityEngine_Transform__set_localPosition(v20, v82, 0);
+  v83.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
+  v83.fields.z = 0.0;
+  v83.fields.x = -355.0;
+  UnityEngine_Transform__set_localPosition(v20, v83, 0);
   if ( !oldUsrPoint )
     goto LABEL_150;
   v21 = oldUsrPoint->max_length;

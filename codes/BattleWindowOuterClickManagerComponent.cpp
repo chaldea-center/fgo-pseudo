@@ -27,10 +27,10 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4CF1E9C & 1) == 0 )
+  if ( (byte_4D34284 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1E9C = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D34284 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -40,7 +40,7 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
     v13 = this->fields.outerPanel;
     if ( !v13
       || (v13->fields.clickCallBack = callBack,
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&v13->fields.clickCallBack,
             (int32_t)callBack,
             v7,
@@ -51,9 +51,9 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
             v12),
           (v13 = this->fields.outerPanel) == 0) )
     {
-      sub_1C7BD40(v13, v6);
+      sub_1C93D2C(v13, v6);
     }
     v13->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13->fields.targetWindow, (int32_t)this, v14, v15, v16, v17, v18, v19);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13->fields.targetWindow, (int32_t)this, v14, v15, v16, v17, v18, v19);
   }
 }

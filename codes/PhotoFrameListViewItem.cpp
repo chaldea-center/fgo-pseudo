@@ -3,7 +3,7 @@ void PhotoFrameListViewItem___ctor(
         int32_t itemIndex,
         int32_t id,
         int32_t priority,
-        System_String_o *spriteName,
+        System_String_o *thumbnailSpriteName,
         System_String_o *name,
         UIAtlas_o *atlas,
         int32_t selectedId,
@@ -31,10 +31,10 @@ void PhotoFrameListViewItem___ctor(
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.index = itemIndex;
   this->fields._Id_k__BackingField = id;
-  this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1C7BA8C(
-    (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
-    (int32_t)spriteName,
+  this->fields._ThumbnailSpriteName_k__BackingField = thumbnailSpriteName;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpriteName_k__BackingField,
+    (int32_t)thumbnailSpriteName,
     v16,
     v17,
     v18,
@@ -42,7 +42,7 @@ void PhotoFrameListViewItem___ctor(
     v20,
     v21);
   this->fields._Name_k__BackingField = name;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v22,
@@ -52,7 +52,7 @@ void PhotoFrameListViewItem___ctor(
     v26,
     v27);
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)atlas,
     v28,
@@ -104,6 +104,14 @@ System_String_o *PhotoFrameListViewItem__get_SpriteName(PhotoFrameListViewItem_o
 }
 
 
+System_String_o *PhotoFrameListViewItem__get_ThumbnailSpriteName(
+        PhotoFrameListViewItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ThumbnailSpriteName_k__BackingField;
+}
+
+
 void PhotoFrameListViewItem__set_Atlas(PhotoFrameListViewItem_o *this, UIAtlas_o *value, const MethodInfo *method)
 {
   int32_t v3; // w3
@@ -113,7 +121,7 @@ void PhotoFrameListViewItem__set_Atlas(PhotoFrameListViewItem_o *this, UIAtlas_o
   System_String_o *v7; // x7
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -146,7 +154,7 @@ void PhotoFrameListViewItem__set_Name(PhotoFrameListViewItem_o *this, System_Str
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -170,8 +178,32 @@ void PhotoFrameListViewItem__set_SpriteName(
   System_String_o *v7; // x7
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+}
+
+
+void PhotoFrameListViewItem__set_ThumbnailSpriteName(
+        PhotoFrameListViewItem_o *this,
+        System_String_o *value,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
+  this->fields._ThumbnailSpriteName_k__BackingField = value;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
     v3,

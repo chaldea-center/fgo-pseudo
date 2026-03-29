@@ -1,27 +1,27 @@
 void RecommendSupportSelectControl___ctor(RecommendSupportSelectControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEA44B & 1) == 0 )
+  if ( (byte_4D2C769 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl___ctor__);
-    byte_4CEA44B = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl___ctor__);
+    byte_4D2C769 = 1;
   }
   this->fields._SelectIndex_k__BackingField = -1;
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A8CA90 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl___ctor__);
+    (const MethodInfo_3AC57E4 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl___ctor__);
 }
 
 
 void RecommendSupportSelectControl__Awake(RecommendSupportSelectControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEA445 & 1) == 0 )
+  if ( (byte_4D2C763 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__Awake__);
-    byte_4CEA445 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__Awake__);
+    byte_4D2C763 = 1;
   }
   SingletonMonoBehaviour_object___Awake(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A8C8CC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__Awake__);
+    (const MethodInfo_3AC5620 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__Awake__);
 }
 
 
@@ -47,30 +47,30 @@ void RecommendSupportSelectControl__GetAssets(
   System_String_o *v19; // x7
   AssetLoader_LoadEndDataHandler_o *v20; // x19
 
-  if ( (byte_4CEA443 & 1) == 0 )
+  if ( (byte_4D2C761 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl___c__DisplayClass41_0__GetAssets_b__1__);
-    sub_1C7BAE8(&RecommendSupportSelectControl___c__DisplayClass41_0_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10603/*"PartyOrganization/RecommendSupport"*/);
-    byte_4CEA443 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl___c__DisplayClass41_0__GetAssets_b__1__);
+    sub_1C93AD4(&RecommendSupportSelectControl___c__DisplayClass41_0_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10637/*"PartyOrganization/RecommendSupport"*/);
+    byte_4D2C761 = 1;
   }
-  v5 = sub_1C7BD34(RecommendSupportSelectControl___c__DisplayClass41_0_TypeInfo);
+  v5 = sub_1C93D20(RecommendSupportSelectControl___c__DisplayClass41_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
   if ( GameObjectExtensions__HasChild(this->fields.rootObject, 0) )
   {
     ActionExtensions__Call(*(System_Action_o **)(v5 + 24), 0);
   }
   else
   {
-    v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v20,
       (Il2CppObject *)v5,
@@ -78,32 +78,135 @@ void RecommendSupportSelectControl__GetAssets(
       0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_10603/*"PartyOrganization/RecommendSupport"*/, v20, 1, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_10637/*"PartyOrganization/RecommendSupport"*/, v20, 1, 0);
   }
 }
 
 
 Il2CppObject *RecommendSupportSelectControl__GetDialog_object_(
         RecommendSupportSelectControl_o *this,
-        const MethodInfo_32096A0 *method)
+        const MethodInfo_323E65C *method)
 {
-  const MethodInfo_32096A0_RGCTXs *rgctx_data; // x8
-  intptr_t _0_T; // x21
-  System_RuntimeTypeHandle_o v6; // x0
+  const MethodInfo_323E65C_RGCTXs *rgctx_data; // x8
+  System_RuntimeTypeHandle_o v5; // x21
   System_Type_o *TypeFromHandle; // x22
   UnityEngine_Object_o *messageSelectDialog; // x21
-  Il2CppType *v9; // x21
-  System_RuntimeTypeHandle_o v10; // x0
+  Il2CppType *v8; // x21
+  System_Type_o *v9; // x0
+  Il2CppType *v10; // x21
   System_Type_o *v11; // x0
-  Il2CppType *v12; // x21
-  System_RuntimeTypeHandle_o v13; // x0
-  System_Type_o *v14; // x0
-  __int64 v15; // x1
-  bool v16; // w8
+  __int64 v12; // x1
+  bool v13; // w8
   Il2CppObject *result; // x0
   System_Type_o *Type; // x20
-  Il2CppType *v19; // x22
-  System_RuntimeTypeHandle_o v20; // x0
+  Il2CppType *_0_T; // x22
+  System_Type_o *v17; // x0
+  bool v18; // w8
+  long double v19; // q0
+  Il2CppClass *_1_T; // x1
+  __int64 v21; // x20
+  long double v22; // q0
+  Il2CppClass *v23; // x19
+
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&RecommendSupportCancelConfirmDialog_var);
+    sub_1C93AD4(&RecommendSupportMessageSelectDialog_var);
+    sub_1C93AD4(&System_Type_TypeInfo);
+    rgctx_data = method->rgctx_data;
+    if ( !rgctx_data )
+    {
+      sub_1C69BC4();
+      rgctx_data = method->rgctx_data;
+    }
+  }
+  v5.fields.value = (intptr_t)rgctx_data->_0_T;
+  if ( !System_Type_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
+  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
+  messageSelectDialog = 0;
+  if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
+  {
+    v8 = RecommendSupportMessageSelectDialog_var;
+    if ( !System_Type_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
+    v9 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v8, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v9, 0) )
+    {
+      messageSelectDialog = (UnityEngine_Object_o *)this->fields.messageSelectDialog;
+    }
+    else
+    {
+      v10 = RecommendSupportCancelConfirmDialog_var;
+      if ( !System_Type_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
+      v11 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v10, 0);
+      messageSelectDialog = 0;
+      if ( System_Type__op_Equality(TypeFromHandle, v11, 0) )
+        messageSelectDialog = (UnityEngine_Object_o *)this->fields.cancelConfirmDialog;
+    }
+  }
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v13 = UnityEngine_Object__op_Inequality(messageSelectDialog, 0, 0);
+  result = 0;
+  if ( v13 )
+  {
+    if ( !messageSelectDialog )
+      sub_1C93D2C(0, v12);
+    Type = System_Object__GetType((Il2CppObject *)messageSelectDialog, 0);
+    _0_T = method->rgctx_data->_0_T;
+    if ( !System_Type_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
+    v17 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)_0_T, 0);
+    v18 = System_Type__op_Equality(Type, v17, 0);
+    result = 0;
+    if ( v18 )
+    {
+      _1_T = method->rgctx_data->_1_T;
+      if ( (*(&_1_T->_2.bitflags2 + 2) & 1) == 0 )
+        _1_T = (Il2CppClass *)sub_1C69B68(v19);
+      v21 = sub_1C93C10(messageSelectDialog, _1_T);
+      v23 = method->rgctx_data->_1_T;
+      if ( (*(&v23->_2.bitflags2 + 2) & 1) == 0 )
+        v23 = (Il2CppClass *)sub_1C69B68(v22);
+      if ( v21 )
+      {
+        result = (Il2CppObject *)sub_1C93C10(v21, v23);
+        if ( result )
+          return result;
+        sub_1C940C8(v21);
+      }
+      return 0;
+    }
+  }
+  return result;
+}
+
+
+Il2CppObject *RecommendSupportSelectControl__GetMenu_object_(
+        RecommendSupportSelectControl_o *this,
+        const MethodInfo_323E88C *method)
+{
+  const MethodInfo_323E88C_RGCTXs *rgctx_data; // x8
+  System_RuntimeTypeHandle_o v5; // x21
+  System_Type_o *TypeFromHandle; // x21
+  UnityEngine_Object_o *mainMenu; // x22
+  Il2CppType *v8; // x22
+  System_Type_o *v9; // x0
+  Il2CppType *v10; // x22
+  System_Type_o *v11; // x0
+  Il2CppType *v12; // x22
+  System_Type_o *v13; // x0
+  Il2CppType *v14; // x22
+  System_Type_o *v15; // x0
+  __int64 v16; // x1
+  bool v17; // w8
+  Il2CppObject *result; // x0
+  System_Type_o *Type; // x20
+  Il2CppType *_0_T; // x21
   System_Type_o *v21; // x0
   bool v22; // w8
   long double v23; // q0
@@ -115,184 +218,62 @@ Il2CppObject *RecommendSupportSelectControl__GetDialog_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportCancelConfirmDialog_var);
-    sub_1C7BAE8(&RecommendSupportMessageSelectDialog_var);
-    sub_1C7BAE8(&System_Type_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&RecommendSupportEquipSelectListMenu_var);
+    sub_1C93AD4(&RecommendSupportQuestSelectListMenu_var);
+    sub_1C93AD4(&RecommendSupportSelectListViewMenu_var);
+    sub_1C93AD4(&RecommendSupportServantSelectListMenu_var);
+    sub_1C93AD4(&System_Type_TypeInfo);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C51BD8();
+      sub_1C69BC4();
       rgctx_data = method->rgctx_data;
     }
   }
-  _0_T = (intptr_t)rgctx_data->_0_T;
+  v5.fields.value = (intptr_t)rgctx_data->_0_T;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v6.fields.value = _0_T;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
-  messageSelectDialog = 0;
-  if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
-  {
-    v9 = RecommendSupportMessageSelectDialog_var;
-    if ( !System_Type_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v10.fields.value = (intptr_t)v9;
-    v11 = System_Type__GetTypeFromHandle(v10, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v11, 0) )
-    {
-      messageSelectDialog = (UnityEngine_Object_o *)this->fields.messageSelectDialog;
-    }
-    else
-    {
-      v12 = RecommendSupportCancelConfirmDialog_var;
-      if ( !System_Type_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-      v13.fields.value = (intptr_t)v12;
-      v14 = System_Type__GetTypeFromHandle(v13, 0);
-      messageSelectDialog = 0;
-      if ( System_Type__op_Equality(TypeFromHandle, v14, 0) )
-        messageSelectDialog = (UnityEngine_Object_o *)this->fields.cancelConfirmDialog;
-    }
-  }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v16 = UnityEngine_Object__op_Inequality(messageSelectDialog, 0, 0);
-  result = 0;
-  if ( v16 )
-  {
-    if ( !messageSelectDialog )
-      sub_1C7BD40(0, v15);
-    Type = System_Object__GetType((Il2CppObject *)messageSelectDialog, 0);
-    v19 = method->rgctx_data->_0_T;
-    if ( !System_Type_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v20.fields.value = (intptr_t)v19;
-    v21 = System_Type__GetTypeFromHandle(v20, 0);
-    v22 = System_Type__op_Equality(Type, v21, 0);
-    result = 0;
-    if ( v22 )
-    {
-      _1_T = method->rgctx_data->_1_T;
-      if ( (*(&_1_T->_2.bitflags2 + 2) & 1) == 0 )
-        _1_T = (Il2CppClass *)sub_1C51B7C(v23);
-      v25 = sub_1C7BC24(messageSelectDialog, _1_T);
-      v27 = method->rgctx_data->_1_T;
-      if ( (*(&v27->_2.bitflags2 + 2) & 1) == 0 )
-        v27 = (Il2CppClass *)sub_1C51B7C(v26);
-      if ( v25 )
-      {
-        result = (Il2CppObject *)sub_1C7BC24(v25, v27);
-        if ( result )
-          return result;
-        sub_1C7C0DC(v25);
-      }
-      return 0;
-    }
-  }
-  return result;
-}
-
-
-Il2CppObject *RecommendSupportSelectControl__GetMenu_object_(
-        RecommendSupportSelectControl_o *this,
-        const MethodInfo_32098D0 *method)
-{
-  const MethodInfo_32098D0_RGCTXs *rgctx_data; // x8
-  intptr_t _0_T; // x21
-  System_RuntimeTypeHandle_o v6; // x0
-  System_Type_o *TypeFromHandle; // x21
-  UnityEngine_Object_o *mainMenu; // x22
-  Il2CppType *v9; // x22
-  System_RuntimeTypeHandle_o v10; // x0
-  System_Type_o *v11; // x0
-  Il2CppType *v12; // x22
-  System_RuntimeTypeHandle_o v13; // x0
-  System_Type_o *v14; // x0
-  Il2CppType *v15; // x22
-  System_RuntimeTypeHandle_o v16; // x0
-  System_Type_o *v17; // x0
-  Il2CppType *v18; // x22
-  System_RuntimeTypeHandle_o v19; // x0
-  System_Type_o *v20; // x0
-  __int64 v21; // x1
-  bool v22; // w8
-  Il2CppObject *result; // x0
-  System_Type_o *Type; // x20
-  Il2CppType *v25; // x21
-  System_RuntimeTypeHandle_o v26; // x0
-  System_Type_o *v27; // x0
-  bool v28; // w8
-  long double v29; // q0
-  Il2CppClass *_1_T; // x1
-  __int64 v31; // x20
-  long double v32; // q0
-  Il2CppClass *v33; // x19
-
-  rgctx_data = method->rgctx_data;
-  if ( !rgctx_data )
-  {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportEquipSelectListMenu_var);
-    sub_1C7BAE8(&RecommendSupportQuestSelectListMenu_var);
-    sub_1C7BAE8(&RecommendSupportSelectListViewMenu_var);
-    sub_1C7BAE8(&RecommendSupportServantSelectListMenu_var);
-    sub_1C7BAE8(&System_Type_TypeInfo);
-    rgctx_data = method->rgctx_data;
-    if ( !rgctx_data )
-    {
-      sub_1C51BD8();
-      rgctx_data = method->rgctx_data;
-    }
-  }
-  _0_T = (intptr_t)rgctx_data->_0_T;
-  if ( !System_Type_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v6.fields.value = _0_T;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
+  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
   mainMenu = 0;
   if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
   {
-    v9 = RecommendSupportSelectListViewMenu_var;
+    v8 = RecommendSupportSelectListViewMenu_var;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v10.fields.value = (intptr_t)v9;
-    v11 = System_Type__GetTypeFromHandle(v10, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v11, 0) )
+    v9 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v8, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v9, 0) )
     {
       mainMenu = (UnityEngine_Object_o *)this->fields.mainMenu;
     }
     else
     {
-      v12 = RecommendSupportServantSelectListMenu_var;
+      v10 = RecommendSupportServantSelectListMenu_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-      v13.fields.value = (intptr_t)v12;
-      v14 = System_Type__GetTypeFromHandle(v13, 0);
-      if ( System_Type__op_Equality(TypeFromHandle, v14, 0) )
+      v11 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v10, 0);
+      if ( System_Type__op_Equality(TypeFromHandle, v11, 0) )
       {
         mainMenu = (UnityEngine_Object_o *)this->fields.servantSelectMenu;
       }
       else
       {
-        v15 = RecommendSupportEquipSelectListMenu_var;
+        v12 = RecommendSupportEquipSelectListMenu_var;
         if ( !System_Type_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-        v16.fields.value = (intptr_t)v15;
-        v17 = System_Type__GetTypeFromHandle(v16, 0);
-        if ( System_Type__op_Equality(TypeFromHandle, v17, 0) )
+        v13 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v12, 0);
+        if ( System_Type__op_Equality(TypeFromHandle, v13, 0) )
         {
           mainMenu = (UnityEngine_Object_o *)this->fields.equipSelectMenu;
         }
         else
         {
-          v18 = RecommendSupportQuestSelectListMenu_var;
+          v14 = RecommendSupportQuestSelectListMenu_var;
           if ( !System_Type_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-          v19.fields.value = (intptr_t)v18;
-          v20 = System_Type__GetTypeFromHandle(v19, 0);
+          v15 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v14, 0);
           mainMenu = 0;
-          if ( System_Type__op_Equality(TypeFromHandle, v20, 0) )
+          if ( System_Type__op_Equality(TypeFromHandle, v15, 0) )
             mainMenu = (UnityEngine_Object_o *)this->fields.questSelectMenu;
         }
       }
@@ -300,35 +281,34 @@ Il2CppObject *RecommendSupportSelectControl__GetMenu_object_(
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v22 = UnityEngine_Object__op_Inequality(mainMenu, 0, 0);
+  v17 = UnityEngine_Object__op_Inequality(mainMenu, 0, 0);
   result = 0;
-  if ( v22 )
+  if ( v17 )
   {
     if ( !mainMenu )
-      sub_1C7BD40(0, v21);
+      sub_1C93D2C(0, v16);
     Type = System_Object__GetType((Il2CppObject *)mainMenu, 0);
-    v25 = method->rgctx_data->_0_T;
+    _0_T = method->rgctx_data->_0_T;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v26.fields.value = (intptr_t)v25;
-    v27 = System_Type__GetTypeFromHandle(v26, 0);
-    v28 = System_Type__op_Equality(Type, v27, 0);
+    v21 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)_0_T, 0);
+    v22 = System_Type__op_Equality(Type, v21, 0);
     result = 0;
-    if ( v28 )
+    if ( v22 )
     {
       _1_T = method->rgctx_data->_1_T;
       if ( (*(&_1_T->_2.bitflags2 + 2) & 1) == 0 )
-        _1_T = (Il2CppClass *)sub_1C51B7C(v29);
-      v31 = sub_1C7BC24(mainMenu, _1_T);
-      v33 = method->rgctx_data->_1_T;
-      if ( (*(&v33->_2.bitflags2 + 2) & 1) == 0 )
-        v33 = (Il2CppClass *)sub_1C51B7C(v32);
-      if ( v31 )
+        _1_T = (Il2CppClass *)sub_1C69B68(v23);
+      v25 = sub_1C93C10(mainMenu, _1_T);
+      v27 = method->rgctx_data->_1_T;
+      if ( (*(&v27->_2.bitflags2 + 2) & 1) == 0 )
+        v27 = (Il2CppClass *)sub_1C69B68(v26);
+      if ( v25 )
       {
-        result = (Il2CppObject *)sub_1C7BC24(v31, v33);
+        result = (Il2CppObject *)sub_1C93C10(v25, v27);
         if ( result )
           return result;
-        sub_1C7C0DC(v31);
+        sub_1C940C8(v25);
       }
       return 0;
     }
@@ -343,14 +323,14 @@ int32_t RecommendSupportSelectControl__GetState(RecommendSupportSelectControl_o 
   struct CStateManager_RecommendSupportSelectControl__o *fsm; // x8
 
   v2 = this;
-  if ( (byte_4CEA447 & 1) == 0 )
+  if ( (byte_4D2C765 & 1) == 0 )
   {
-    this = (RecommendSupportSelectControl_o *)sub_1C7BAE8(&Method_CStateManager_RecommendSupportSelectControl__getState__);
-    byte_4CEA447 = 1;
+    this = (RecommendSupportSelectControl_o *)sub_1C93AD4(&Method_CStateManager_RecommendSupportSelectControl__getState__);
+    byte_4D2C765 = 1;
   }
   fsm = v2->fields.fsm;
   if ( !fsm )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   return fsm->fields.m_state;
 }
 
@@ -418,36 +398,36 @@ void RecommendSupportSelectControl__Init(
   System_Action_o *v61; // x21
   const MethodInfo *v62; // x2
 
-  if ( (byte_4CEA446 & 1) == 0 )
+  if ( (byte_4D2C764 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_CStateManager_RecommendSupportSelectControl___ctor__);
-    sub_1C7BAE8(&Method_CStateManager_RecommendSupportSelectControl__add__);
-    sub_1C7BAE8(&CStateManager_RecommendSupportSelectControl__TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C7BAE8(&RecommendSupportSelectControl_EquipSelectMenuState_TypeInfo);
-    sub_1C7BAE8(&EventUpValSetupInfo_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportSelectControl_QuestSelectMenuState_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportData_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportSelectControl_RecommendSupportSelectMenuState_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportSelectControl_ServantSelectMenuState_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl___c__DisplayClass44_0__Init_b__0__);
-    sub_1C7BAE8(&RecommendSupportSelectControl___c__DisplayClass44_0_TypeInfo);
-    byte_4CEA446 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_CStateManager_RecommendSupportSelectControl___ctor__);
+    sub_1C93AD4(&Method_CStateManager_RecommendSupportSelectControl__add__);
+    sub_1C93AD4(&CStateManager_RecommendSupportSelectControl__TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C93AD4(&RecommendSupportSelectControl_EquipSelectMenuState_TypeInfo);
+    sub_1C93AD4(&EventUpValSetupInfo_TypeInfo);
+    sub_1C93AD4(&RecommendSupportSelectControl_QuestSelectMenuState_TypeInfo);
+    sub_1C93AD4(&RecommendSupportData_TypeInfo);
+    sub_1C93AD4(&RecommendSupportSelectControl_RecommendSupportSelectMenuState_TypeInfo);
+    sub_1C93AD4(&RecommendSupportSelectControl_ServantSelectMenuState_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl___c__DisplayClass44_0__Init_b__0__);
+    sub_1C93AD4(&RecommendSupportSelectControl___c__DisplayClass44_0_TypeInfo);
+    byte_4D2C764 = 1;
   }
-  v7 = sub_1C7BD34(RecommendSupportSelectControl___c__DisplayClass44_0_TypeInfo);
+  v7 = sub_1C93D20(RecommendSupportSelectControl___c__DisplayClass44_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_14;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
   this->fields._SceneJumpInfo_k__BackingField = sceneJumpInfo;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._SceneJumpInfo_k__BackingField,
     (int32_t)sceneJumpInfo,
     v22,
@@ -456,22 +436,22 @@ void RecommendSupportSelectControl__Init(
     v25,
     v26,
     v27);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_14;
   EventValUpEventIdHash = EventMaster__GetEventValUpEventIdHash((EventMaster_o *)Instance, 0, 0, 0);
   v29 = System_Linq_Enumerable__ToArray_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
-          (const MethodInfo_31AF04C *)Method_System_Linq_Enumerable_ToArray_int___);
-  v30 = (EventUpValSetupInfo_o *)sub_1C7BD34(EventUpValSetupInfo_TypeInfo);
-  EventUpValSetupInfo___ctor_42311644(v30, v29, 0, 0, 0, 0);
+          (const MethodInfo_31E3B80 *)Method_System_Linq_Enumerable_ToArray_int___);
+  v30 = (EventUpValSetupInfo_o *)sub_1C93D20(EventUpValSetupInfo_TypeInfo);
+  EventUpValSetupInfo___ctor_42466312(v30, v29, 0, 0, 0, 0);
   this->fields._EventSetupInfo_k__BackingField = v30;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._EventSetupInfo_k__BackingField,
     (int32_t)v30,
     v31,
@@ -483,17 +463,17 @@ void RecommendSupportSelectControl__Init(
   p_fsm = &this->fields.fsm;
   if ( this->fields.fsm )
     goto LABEL_12;
-  v38 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-  v39 = (CStateManager_T__o *)sub_1C7BD34(CStateManager_RecommendSupportSelectControl__TypeInfo);
+  v38 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  v39 = (CStateManager_T__o *)sub_1C93D20(CStateManager_RecommendSupportSelectControl__TypeInfo);
   CStateManager_object____ctor(
     v39,
     v38,
     4,
-    (const MethodInfo_33B93F0 *)Method_CStateManager_RecommendSupportSelectControl___ctor__);
+    (const MethodInfo_33EE80C *)Method_CStateManager_RecommendSupportSelectControl___ctor__);
   *p_fsm = (struct CStateManager_RecommendSupportSelectControl__o *)v39;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.fsm, (int32_t)v39, v40, v41, v42, v43, v44, v45);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.fsm, (int32_t)v39, v40, v41, v42, v43, v44, v45);
   v46 = (CStateManager_T__o *)*p_fsm;
-  v47 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_RecommendSupportSelectMenuState_TypeInfo);
+  v47 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_RecommendSupportSelectMenuState_TypeInfo);
   System_Object___ctor(v47, 0);
   if ( !v46 )
     goto LABEL_14;
@@ -501,9 +481,9 @@ void RecommendSupportSelectControl__Init(
     v46,
     0,
     (IState_T__o *)v47,
-    (const MethodInfo_33B9498 *)Method_CStateManager_RecommendSupportSelectControl__add__);
+    (const MethodInfo_33EE8B4 *)Method_CStateManager_RecommendSupportSelectControl__add__);
   v48 = (CStateManager_T__o *)*p_fsm;
-  v49 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_ServantSelectMenuState_TypeInfo);
+  v49 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_ServantSelectMenuState_TypeInfo);
   System_Object___ctor(v49, 0);
   if ( !v48 )
     goto LABEL_14;
@@ -511,34 +491,34 @@ void RecommendSupportSelectControl__Init(
     v48,
     1,
     (IState_T__o *)v49,
-    (const MethodInfo_33B9498 *)Method_CStateManager_RecommendSupportSelectControl__add__);
+    (const MethodInfo_33EE8B4 *)Method_CStateManager_RecommendSupportSelectControl__add__);
   v50 = (CStateManager_T__o *)*p_fsm;
-  v51 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_EquipSelectMenuState_TypeInfo);
+  v51 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_EquipSelectMenuState_TypeInfo);
   System_Object___ctor(v51, 0);
   if ( !v50
     || (CStateManager_object___add(
           v50,
           2,
           (IState_T__o *)v51,
-          (const MethodInfo_33B9498 *)Method_CStateManager_RecommendSupportSelectControl__add__),
+          (const MethodInfo_33EE8B4 *)Method_CStateManager_RecommendSupportSelectControl__add__),
         v52 = (CStateManager_T__o *)*p_fsm,
-        v53 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_QuestSelectMenuState_TypeInfo),
+        v53 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_QuestSelectMenuState_TypeInfo),
         System_Object___ctor(v53, 0),
         !v52) )
   {
 LABEL_14:
-    sub_1C7BD40(Instance, v9);
+    sub_1C93D2C(Instance, v9);
   }
   CStateManager_object___add(
     v52,
     3,
     (IState_T__o *)v53,
-    (const MethodInfo_33B9498 *)Method_CStateManager_RecommendSupportSelectControl__add__);
+    (const MethodInfo_33EE8B4 *)Method_CStateManager_RecommendSupportSelectControl__add__);
 LABEL_12:
-  v54 = (RecommendSupportData_o *)sub_1C7BD34(RecommendSupportData_TypeInfo);
+  v54 = (RecommendSupportData_o *)sub_1C93D20(RecommendSupportData_TypeInfo);
   RecommendSupportData___ctor(v54, 0);
   this->fields._RecommendSupportData_k__BackingField = v54;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._RecommendSupportData_k__BackingField,
     (int32_t)v54,
     v55,
@@ -553,7 +533,7 @@ LABEL_12:
   RecommendSupportData__Init((RecommendSupportData_o *)Instance, this->fields._EventSetupInfo_k__BackingField, 0);
   EventTutorialMaster__CheckTutorial(0, 92, 0, 0, 0, 0, 0, 0);
   this->fields._IsEdit_k__BackingField = 0;
-  v61 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v61 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(
     v61,
     (Il2CppObject *)v7,
@@ -567,84 +547,78 @@ void RecommendSupportSelectControl__OpenDialog_object_(
         RecommendSupportSelectControl_o *this,
         RecommendSupportSelectControl_DialogResultCallBack_o *callback,
         int32_t index,
-        const MethodInfo_3209BA0 *method)
+        const MethodInfo_323EB5C *method)
 {
-  const MethodInfo_3209BA0_RGCTXs *rgctx_data; // x8
-  intptr_t _0_T; // x21
-  System_RuntimeTypeHandle_o v10; // x0
+  const MethodInfo_323EB5C_RGCTXs *rgctx_data; // x8
+  System_RuntimeTypeHandle_o v9; // x21
   System_Type_o *TypeFromHandle; // x21
-  Il2CppType *v12; // x22
-  System_RuntimeTypeHandle_o v13; // x0
-  System_Type_o *v14; // x0
+  Il2CppType *v11; // x22
+  System_Type_o *v12; // x0
   UnityEngine_Object_o *messageSelectDialog; // x22
-  __int64 v16; // x1
-  RecommendSupportMessageSelectDialog_o *v17; // x0
-  Il2CppType *v18; // x22
-  System_RuntimeTypeHandle_o v19; // x0
-  System_Type_o *v20; // x0
+  __int64 v14; // x1
+  RecommendSupportMessageSelectDialog_o *v15; // x0
+  Il2CppType *v16; // x22
+  System_Type_o *v17; // x0
   UnityEngine_Object_o *cancelConfirmDialog; // x21
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&RecommendSupportCancelConfirmDialog_var);
-    sub_1C7BAE8(&RecommendSupportMessageSelectDialog_var);
-    sub_1C7BAE8(&System_Type_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&RecommendSupportCancelConfirmDialog_var);
+    sub_1C93AD4(&RecommendSupportMessageSelectDialog_var);
+    sub_1C93AD4(&System_Type_TypeInfo);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C51BD8();
+      sub_1C69BC4();
       rgctx_data = method->rgctx_data;
     }
   }
-  _0_T = (intptr_t)rgctx_data->_0_T;
+  v9.fields.value = (intptr_t)rgctx_data->_0_T;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v10.fields.value = _0_T;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
+  TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
   this->fields._SelectIndex_k__BackingField = index;
   if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
   {
-    v12 = RecommendSupportMessageSelectDialog_var;
+    v11 = RecommendSupportMessageSelectDialog_var;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v13.fields.value = (intptr_t)v12;
-    v14 = System_Type__GetTypeFromHandle(v13, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v14, 0) )
+    v12 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v11, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v12, 0) )
     {
       messageSelectDialog = (UnityEngine_Object_o *)this->fields.messageSelectDialog;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(messageSelectDialog, 0, 0) )
       {
-        v17 = this->fields.messageSelectDialog;
+        v15 = this->fields.messageSelectDialog;
         this->fields._IsEdit_k__BackingField = 1;
-        if ( v17 )
+        if ( v15 )
         {
-          RecommendSupportMessageSelectDialog__Open(v17, callback, 0);
+          RecommendSupportMessageSelectDialog__Open(v15, callback, 0);
           return;
         }
 LABEL_24:
-        sub_1C7BD40(v17, v16);
+        sub_1C93D2C(v15, v14);
       }
     }
-    v18 = RecommendSupportCancelConfirmDialog_var;
+    v16 = RecommendSupportCancelConfirmDialog_var;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v19.fields.value = (intptr_t)v18;
-    v20 = System_Type__GetTypeFromHandle(v19, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v20, 0) )
+    v17 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v16, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v17, 0) )
     {
       cancelConfirmDialog = (UnityEngine_Object_o *)this->fields.cancelConfirmDialog;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(cancelConfirmDialog, 0, 0) )
       {
-        v17 = (RecommendSupportMessageSelectDialog_o *)this->fields.cancelConfirmDialog;
-        if ( !v17 )
+        v15 = (RecommendSupportMessageSelectDialog_o *)this->fields.cancelConfirmDialog;
+        if ( !v15 )
           goto LABEL_24;
-        RecommendSupportCancelConfirmDialog__Open((RecommendSupportCancelConfirmDialog_o *)v17, callback, 0);
+        RecommendSupportCancelConfirmDialog__Open((RecommendSupportCancelConfirmDialog_o *)v15, callback, 0);
       }
     }
   }
@@ -663,19 +637,19 @@ void RecommendSupportSelectControl__ReleaseAsset(RecommendSupportSelectControl_o
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CEA444 & 1) == 0 )
+  if ( (byte_4D2C762 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    byte_4CEA444 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    byte_4D2C762 = 1;
   }
   cashedAssetData = this->fields.cashedAssetData;
   p_cashedAssetData = (GrandQuestFolderBoardItem_o *)&this->fields.cashedAssetData;
   v4 = cashedAssetData;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAsset_41096272(v4, 0);
+  AssetManager__releaseAsset_41247948(v4, 0);
   p_cashedAssetData->klass = 0;
-  sub_1C7BA8C(p_cashedAssetData, 0, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78(p_cashedAssetData, 0, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -691,26 +665,26 @@ void RecommendSupportSelectControl__ReturnScene(
   __int64 v9; // x1
   SceneJumpInfo_o *SceneJumpInfo_k__BackingField; // x0
 
-  if ( (byte_4CEA44A & 1) == 0 )
+  if ( (byte_4D2C768 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_ReturnScene__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CEA44A = 1;
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_ReturnScene__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D2C768 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22419/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22483/*"ng"*/, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( Instance )
     {
       AtlasManager__ReleaseUISkin((AtlasManager_o *)Instance, 2, 0, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( Instance )
       {
         if ( AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)Instance, 0) )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
           if ( Instance )
           {
             AvalonSceneManager__popScene((AvalonSceneManager_o *)Instance, 1, 0, 0);
@@ -722,7 +696,7 @@ void RecommendSupportSelectControl__ReturnScene(
           SceneJumpInfo_k__BackingField = this->fields._SceneJumpInfo_k__BackingField;
           if ( SceneJumpInfo_k__BackingField && SceneJumpInfo__ReturnScene(SceneJumpInfo_k__BackingField, 0) )
             return;
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
           if ( Instance )
           {
             AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 39, 1, 0, 0);
@@ -731,12 +705,12 @@ void RecommendSupportSelectControl__ReturnScene(
         }
       }
     }
-    sub_1C7BD40(Instance, v9);
+    sub_1C93D2C(Instance, v9);
   }
   v5 = Method_RecommendSupportSelectControl_ReturnScene__;
   if ( (*((_BYTE *)Method_RecommendSupportSelectControl_ReturnScene__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C7BB00(Method_RecommendSupportSelectControl_ReturnScene__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C93AEC(Method_RecommendSupportSelectControl_ReturnScene__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
   RecommendSupportSelectControl__SetState(this, 0, v7);
 }
@@ -750,23 +724,23 @@ void RecommendSupportSelectControl__SetState(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4CEA448 & 1) == 0 )
+  if ( (byte_4D2C766 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_CStateManager_RecommendSupportSelectControl__setState__);
-    byte_4CEA448 = 1;
+    sub_1C93AD4(&Method_CStateManager_RecommendSupportSelectControl__setState__);
+    byte_4D2C766 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_1C7BD40(0, *(_QWORD *)&state);
+    sub_1C93D2C(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_33B9524 *)Method_CStateManager_RecommendSupportSelectControl__setState__);
+    (const MethodInfo_33EE940 *)Method_CStateManager_RecommendSupportSelectControl__setState__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void RecommendSupportSelectControl__SetState_35269992(
+void RecommendSupportSelectControl__SetState_35394324(
         RecommendSupportSelectControl_o *this,
         int32_t state,
         int32_t index,
@@ -774,20 +748,20 @@ void RecommendSupportSelectControl__SetState_35269992(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4CEA449 & 1) == 0 )
+  if ( (byte_4D2C767 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_CStateManager_RecommendSupportSelectControl__setState__);
-    byte_4CEA449 = 1;
+    sub_1C93AD4(&Method_CStateManager_RecommendSupportSelectControl__setState__);
+    byte_4D2C767 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   this->fields._SelectIndex_k__BackingField = index;
   this->fields._IsEdit_k__BackingField = 1;
   if ( !fsm )
-    sub_1C7BD40(0, *(_QWORD *)&state);
+    sub_1C93D2C(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_33B9524 *)Method_CStateManager_RecommendSupportSelectControl__setState__);
+    (const MethodInfo_33EE940 *)Method_CStateManager_RecommendSupportSelectControl__setState__);
 }
 
 
@@ -810,7 +784,7 @@ System_String_o *RecommendSupportSelectControl__get_GetMessageSentence(
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   SelectMessageIds = RecommendSupportSelectControl__get_SelectMessageIds(this, method);
   if ( !RecommendSupportData_k__BackingField )
-    sub_1C7BD40(SelectMessageIds, v4);
+    sub_1C93D2C(SelectMessageIds, v4);
   return RecommendSupportData__GetMessageSentence(RecommendSupportData_k__BackingField, SelectMessageIds, 0);
 }
 
@@ -845,7 +819,7 @@ int64_t RecommendSupportSelectControl__get_SelectEquipId(
 
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   if ( !RecommendSupportData_k__BackingField )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   return RecommendSupportData__GetEquip(
            RecommendSupportData_k__BackingField,
            this->fields._SelectIndex_k__BackingField,
@@ -867,7 +841,7 @@ System_Int32_array *RecommendSupportSelectControl__get_SelectMessageIds(
 
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   if ( !RecommendSupportData_k__BackingField )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   return RecommendSupportData__GetMessage(
            RecommendSupportData_k__BackingField,
            this->fields._SelectIndex_k__BackingField,
@@ -883,7 +857,7 @@ int64_t RecommendSupportSelectControl__get_SelectServantId(
 
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   if ( !RecommendSupportData_k__BackingField )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   return RecommendSupportData__GetServant(
            RecommendSupportData_k__BackingField,
            this->fields._SelectIndex_k__BackingField,
@@ -903,7 +877,7 @@ void RecommendSupportSelectControl__set_EventSetupInfo(
   System_String_o *v7; // x7
 
   this->fields._EventSetupInfo_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._EventSetupInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -936,7 +910,7 @@ void RecommendSupportSelectControl__set_RecommendSupportData(
   System_String_o *v7; // x7
 
   this->fields._RecommendSupportData_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._RecommendSupportData_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -960,7 +934,7 @@ void RecommendSupportSelectControl__set_SceneJumpInfo(
   System_String_o *v7; // x7
 
   this->fields._SceneJumpInfo_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._SceneJumpInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1000,7 +974,7 @@ void RecommendSupportSelectControl_DialogResultCallBack___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1011,12 +985,12 @@ void RecommendSupportSelectControl_DialogResultCallBack___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1028,9 +1002,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AAC580;
+  this->fields.invoke_impl = (intptr_t)sub_1AC3A10;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AAC538;
+  this->fields.extra_arg = (intptr_t)sub_1AC39C8;
 }
 
 
@@ -1045,14 +1019,14 @@ System_IAsyncResult_o *RecommendSupportSelectControl_DialogResultCallBack__Begin
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4CEA44C & 1) == 0 )
+  if ( (byte_4D2C76A & 1) == 0 )
   {
-    sub_1C7BAE8(&RecommendSupportSelectControl_DialogState_TypeInfo);
-    byte_4CEA44C = 1;
+    sub_1C93AD4(&RecommendSupportSelectControl_DialogState_TypeInfo);
+    byte_4D2C76A = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(RecommendSupportSelectControl_DialogState_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -1061,7 +1035,7 @@ void RecommendSupportSelectControl_DialogResultCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 
@@ -1095,19 +1069,19 @@ void RecommendSupportSelectControl_EquipSelectMenuState__begin(
   Il2CppObject *Menu_object; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CEA453 & 1) == 0 )
+  if ( (byte_4D2C771 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportEquipSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4CEA453 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportEquipSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4D2C771 = 1;
   }
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                   Instance,
-                  (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportEquipSelectListMenu___);
+                  (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportEquipSelectListMenu___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (RecommendSupportSelectControl_o *)UnityEngine_Object__op_Equality(
@@ -1116,14 +1090,14 @@ void RecommendSupportSelectControl_EquipSelectMenuState__begin(
                                                   0);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( Instance )
     {
       RecommendSupportSelectControl__SetState(Instance, 0, v6);
       return;
     }
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   if ( !Menu_object )
     goto LABEL_12;
@@ -1156,21 +1130,21 @@ void RecommendSupportSelectControl_EquipSelectMenuState__end(
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CEA454 & 1) == 0 )
+  if ( (byte_4D2C772 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_EquipSelectMenuState___c__end_b__2_0__);
-    sub_1C7BAE8(&RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
-    byte_4CEA454 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_EquipSelectMenuState___c__end_b__2_0__);
+    sub_1C93AD4(&RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
+    byte_4D2C772 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = RecommendSupportSelectControl__GetMenu_object_(
                (RecommendSupportSelectControl_o *)Instance,
-               (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+               (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
   v5 = RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo;
   v6 = (BaseMenu_o *)Instance;
   if ( !RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo->_2.cctor_finished )
@@ -1187,15 +1161,15 @@ void RecommendSupportSelectControl_EquipSelectMenuState__end(
       v5 = RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__2_0 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(_9__2_0, v8, Method_RecommendSupportSelectControl_EquipSelectMenuState___c__end_b__2_0__, 0);
     static_fields = RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
   }
   if ( !v6 )
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   BaseMenu__Close(v6, _9__2_0, 0);
 }
 
@@ -1219,15 +1193,15 @@ void RecommendSupportSelectControl_EquipSelectMenuState___c___cctor(const Method
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEA455 & 1) == 0 )
+  if ( (byte_4D2C773 & 1) == 0 )
   {
-    sub_1C7BAE8(&RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
-    byte_4CEA455 = 1;
+    sub_1C93AD4(&RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
+    byte_4D2C773 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo->static_fields->__9 = (struct RecommendSupportSelectControl_EquipSelectMenuState___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)RecommendSupportSelectControl_EquipSelectMenuState___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1274,19 +1248,19 @@ void RecommendSupportSelectControl_QuestSelectMenuState__begin(
   const MethodInfo *v6; // x2
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CEA456 & 1) == 0 )
+  if ( (byte_4D2C774 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4CEA456 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4D2C774 = 1;
   }
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                   Instance,
-                  (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
+                  (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (RecommendSupportSelectControl_o *)UnityEngine_Object__op_Equality(
@@ -1295,14 +1269,14 @@ void RecommendSupportSelectControl_QuestSelectMenuState__begin(
                                                   0);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( Instance )
     {
       RecommendSupportSelectControl__SetState(Instance, 0, v6);
       return;
     }
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   if ( !Menu_object )
     goto LABEL_12;
@@ -1335,21 +1309,21 @@ void RecommendSupportSelectControl_QuestSelectMenuState__end(
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CEA457 & 1) == 0 )
+  if ( (byte_4D2C775 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_QuestSelectMenuState___c__end_b__2_0__);
-    sub_1C7BAE8(&RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
-    byte_4CEA457 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_QuestSelectMenuState___c__end_b__2_0__);
+    sub_1C93AD4(&RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
+    byte_4D2C775 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = RecommendSupportSelectControl__GetMenu_object_(
                (RecommendSupportSelectControl_o *)Instance,
-               (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
+               (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportQuestSelectListMenu___);
   v5 = RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo;
   v6 = (BaseMenu_o *)Instance;
   if ( !RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo->_2.cctor_finished )
@@ -1366,15 +1340,15 @@ void RecommendSupportSelectControl_QuestSelectMenuState__end(
       v5 = RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__2_0 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(_9__2_0, v8, Method_RecommendSupportSelectControl_QuestSelectMenuState___c__end_b__2_0__, 0);
     static_fields = RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
   }
   if ( !v6 )
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   BaseMenu__Close(v6, _9__2_0, 0);
 }
 
@@ -1398,15 +1372,15 @@ void RecommendSupportSelectControl_QuestSelectMenuState___c___cctor(const Method
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEA458 & 1) == 0 )
+  if ( (byte_4D2C776 & 1) == 0 )
   {
-    sub_1C7BAE8(&RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
-    byte_4CEA458 = 1;
+    sub_1C93AD4(&RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
+    byte_4D2C776 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo->static_fields->__9 = (struct RecommendSupportSelectControl_QuestSelectMenuState___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)RecommendSupportSelectControl_QuestSelectMenuState___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1453,20 +1427,20 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState__begin(
   const MethodInfo *v6; // x2
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CEA44D & 1) == 0 )
+  if ( (byte_4D2C76B & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_22590/*"ok"*/);
-    byte_4CEA44D = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
+    byte_4D2C76B = 1;
   }
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                   Instance,
-                  (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
+                  (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (RecommendSupportSelectControl_o *)UnityEngine_Object__op_Equality(
@@ -1475,14 +1449,14 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState__begin(
                                                   0);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( Instance )
     {
-      RecommendSupportSelectControl__ReturnScene(Instance, (System_String_o *)StringLiteral_22590/*"ok"*/, v6);
+      RecommendSupportSelectControl__ReturnScene(Instance, (System_String_o *)StringLiteral_22655/*"ok"*/, v6);
       return;
     }
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   if ( !Menu_object )
     goto LABEL_12;
@@ -1515,21 +1489,21 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState__end(
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CEA44E & 1) == 0 )
+  if ( (byte_4D2C76C & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_RecommendSupportSelectMenuState___c__end_b__2_0__);
-    sub_1C7BAE8(&RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
-    byte_4CEA44E = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_RecommendSupportSelectMenuState___c__end_b__2_0__);
+    sub_1C93AD4(&RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
+    byte_4D2C76C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = RecommendSupportSelectControl__GetMenu_object_(
                (RecommendSupportSelectControl_o *)Instance,
-               (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
+               (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___);
   v5 = RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo;
   v6 = (BaseMenu_o *)Instance;
   if ( !RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo->_2.cctor_finished )
@@ -1546,7 +1520,7 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState__end(
       v5 = RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__2_0 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2_0,
       v8,
@@ -1554,11 +1528,11 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState__end(
       0);
     static_fields = RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
   }
   if ( !v6 )
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   BaseMenu__Close(v6, _9__2_0, 0);
 }
 
@@ -1582,15 +1556,15 @@ void RecommendSupportSelectControl_RecommendSupportSelectMenuState___c___cctor(c
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEA44F & 1) == 0 )
+  if ( (byte_4D2C76D & 1) == 0 )
   {
-    sub_1C7BAE8(&RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
-    byte_4CEA44F = 1;
+    sub_1C93AD4(&RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
+    byte_4D2C76D = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo->static_fields->__9 = (struct RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)RecommendSupportSelectControl_RecommendSupportSelectMenuState___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1637,19 +1611,19 @@ void RecommendSupportSelectControl_ServantSelectMenuState__begin(
   const MethodInfo *v6; // x2
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CEA450 & 1) == 0 )
+  if ( (byte_4D2C76E & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4CEA450 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4D2C76E = 1;
   }
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                   Instance,
-                  (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+                  (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (RecommendSupportSelectControl_o *)UnityEngine_Object__op_Equality(
@@ -1658,14 +1632,14 @@ void RecommendSupportSelectControl_ServantSelectMenuState__begin(
                                                   0);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( Instance )
     {
       RecommendSupportSelectControl__SetState(Instance, 0, v6);
       return;
     }
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   if ( !Menu_object )
     goto LABEL_12;
@@ -1698,21 +1672,21 @@ void RecommendSupportSelectControl_ServantSelectMenuState__end(
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CEA451 & 1) == 0 )
+  if ( (byte_4D2C76F & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_1C7BAE8(&Method_RecommendSupportSelectControl_ServantSelectMenuState___c__end_b__2_0__);
-    sub_1C7BAE8(&RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
-    byte_4CEA451 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1C93AD4(&Method_RecommendSupportSelectControl_ServantSelectMenuState___c__end_b__2_0__);
+    sub_1C93AD4(&RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
+    byte_4D2C76F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = RecommendSupportSelectControl__GetMenu_object_(
                (RecommendSupportSelectControl_o *)Instance,
-               (const MethodInfo_32098D0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
+               (const MethodInfo_323E88C *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportServantSelectListMenu___);
   v5 = RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo;
   v6 = (BaseMenu_o *)Instance;
   if ( !RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo->_2.cctor_finished )
@@ -1729,15 +1703,15 @@ void RecommendSupportSelectControl_ServantSelectMenuState__end(
       v5 = RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__2_0 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(_9__2_0, v8, Method_RecommendSupportSelectControl_ServantSelectMenuState___c__end_b__2_0__, 0);
     static_fields = RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11, v12, v13, v14, v15);
   }
   if ( !v6 )
 LABEL_12:
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   BaseMenu__Close(v6, _9__2_0, 0);
 }
 
@@ -1761,15 +1735,15 @@ void RecommendSupportSelectControl_ServantSelectMenuState___c___cctor(const Meth
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEA452 & 1) == 0 )
+  if ( (byte_4D2C770 & 1) == 0 )
   {
-    sub_1C7BAE8(&RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
-    byte_4CEA452 = 1;
+    sub_1C93AD4(&RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
+    byte_4D2C770 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo->static_fields->__9 = (struct RecommendSupportSelectControl_ServantSelectMenuState___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)RecommendSupportSelectControl_ServantSelectMenuState___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1877,21 +1851,21 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   UnityEngine_GameObject_o *v69; // [xsp+20h] [xbp-30h] BYREF
   UnityEngine_GameObject_o *prefabObject; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4CEA45A & 1) == 0 )
+  if ( (byte_4D2C778 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportCancelConfirmDialog___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportEquipSelectListMenu___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectDialog___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestSelectListMenu___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportSelectListViewMenu___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportServantSelectListMenu___);
-    sub_1C7BAE8(&StringLiteral_11274/*"RecommendSupportEquipSelectListMenuPrefab"*/);
-    sub_1C7BAE8(&StringLiteral_11278/*"RecommendSupportSelectMenuPrefab"*/);
-    sub_1C7BAE8(&StringLiteral_11276/*"RecommendSupportMessageSelectDialogPrefab"*/);
-    sub_1C7BAE8(&StringLiteral_11273/*"RecommendSupportCancelConfirmDialogPrefab"*/);
-    sub_1C7BAE8(&StringLiteral_11277/*"RecommendSupportQuestSelectMenuPrefab"*/);
-    sub_1C7BAE8(&StringLiteral_11282/*"RecommendSupportServantSelectMenuPrefab"*/);
-    byte_4CEA45A = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportCancelConfirmDialog___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportEquipSelectListMenu___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectDialog___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestSelectListMenu___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportSelectListViewMenu___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportServantSelectListMenu___);
+    sub_1C93AD4(&StringLiteral_11311/*"RecommendSupportEquipSelectListMenuPrefab"*/);
+    sub_1C93AD4(&StringLiteral_11315/*"RecommendSupportSelectMenuPrefab"*/);
+    sub_1C93AD4(&StringLiteral_11313/*"RecommendSupportMessageSelectDialogPrefab"*/);
+    sub_1C93AD4(&StringLiteral_11310/*"RecommendSupportCancelConfirmDialogPrefab"*/);
+    sub_1C93AD4(&StringLiteral_11314/*"RecommendSupportQuestSelectMenuPrefab"*/);
+    sub_1C93AD4(&StringLiteral_11319/*"RecommendSupportServantSelectMenuPrefab"*/);
+    byte_4D2C778 = 1;
   }
   v69 = 0;
   prefabObject = 0;
@@ -1903,14 +1877,14 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   if ( !_4__this )
     goto LABEL_23;
   *((_QWORD *)_4__this + 4) = assetData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(_4__this + 32), (int32_t)assetData, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(_4__this + 32), (int32_t)assetData, (int32_t)method, v3, v4, v5, v6, v7);
   v12 = this->fields.__4__this;
   if ( !v12 )
     goto LABEL_23;
   RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
     this,
     &prefabObject,
-    (System_String_o *)StringLiteral_11278/*"RecommendSupportSelectMenuPrefab"*/,
+    (System_String_o *)StringLiteral_11315/*"RecommendSupportSelectMenuPrefab"*/,
     v12->fields.cashedAssetData,
     v11);
   _4__this = (char *)prefabObject;
@@ -1919,18 +1893,18 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   v13 = this->fields.__4__this;
   _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                        prefabObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportSelectListViewMenu___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportSelectListViewMenu___);
   if ( !v13 )
     goto LABEL_23;
   v13->fields.mainMenu = (struct RecommendSupportSelectListViewMenu_o *)_4__this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v13->fields.mainMenu, (int32_t)_4__this, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v13->fields.mainMenu, (int32_t)_4__this, v14, v15, v16, v17, v18, v19);
   v21 = this->fields.__4__this;
   if ( !v21 )
     goto LABEL_23;
   RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
     this,
     &v69,
-    (System_String_o *)StringLiteral_11282/*"RecommendSupportServantSelectMenuPrefab"*/,
+    (System_String_o *)StringLiteral_11319/*"RecommendSupportServantSelectMenuPrefab"*/,
     v21->fields.cashedAssetData,
     v20);
   _4__this = (char *)v69;
@@ -1939,11 +1913,11 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   v22 = this->fields.__4__this;
   _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                        v69,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportServantSelectListMenu___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportServantSelectListMenu___);
   if ( !v22 )
     goto LABEL_23;
   v22->fields.servantSelectMenu = (struct RecommendSupportServantSelectListMenu_o *)_4__this;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v22->fields.servantSelectMenu,
     (int32_t)_4__this,
     v23,
@@ -1958,7 +1932,7 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
     this,
     &v68,
-    (System_String_o *)StringLiteral_11274/*"RecommendSupportEquipSelectListMenuPrefab"*/,
+    (System_String_o *)StringLiteral_11311/*"RecommendSupportEquipSelectListMenuPrefab"*/,
     v30->fields.cashedAssetData,
     v29);
   _4__this = (char *)v68;
@@ -1967,11 +1941,11 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   v31 = this->fields.__4__this;
   _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                        v68,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportEquipSelectListMenu___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportEquipSelectListMenu___);
   if ( !v31 )
     goto LABEL_23;
   v31->fields.equipSelectMenu = (struct RecommendSupportEquipSelectListMenu_o *)_4__this;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v31->fields.equipSelectMenu,
     (int32_t)_4__this,
     v32,
@@ -1986,7 +1960,7 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
     this,
     &v67,
-    (System_String_o *)StringLiteral_11277/*"RecommendSupportQuestSelectMenuPrefab"*/,
+    (System_String_o *)StringLiteral_11314/*"RecommendSupportQuestSelectMenuPrefab"*/,
     v39->fields.cashedAssetData,
     v38);
   _4__this = (char *)v67;
@@ -1995,11 +1969,11 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   v40 = this->fields.__4__this;
   _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                        v67,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestSelectListMenu___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestSelectListMenu___);
   if ( !v40 )
     goto LABEL_23;
   v40->fields.questSelectMenu = (struct RecommendSupportQuestSelectListMenu_o *)_4__this;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v40->fields.questSelectMenu,
     (int32_t)_4__this,
     v41,
@@ -2014,7 +1988,7 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
     this,
     &v66,
-    (System_String_o *)StringLiteral_11276/*"RecommendSupportMessageSelectDialogPrefab"*/,
+    (System_String_o *)StringLiteral_11313/*"RecommendSupportMessageSelectDialogPrefab"*/,
     v48->fields.cashedAssetData,
     v47);
   _4__this = (char *)v66;
@@ -2023,10 +1997,10 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
   v49 = this->fields.__4__this;
   _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                        v66,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectDialog___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectDialog___);
   if ( !v49
     || (v49->fields.messageSelectDialog = (struct RecommendSupportMessageSelectDialog_o *)_4__this,
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)&v49->fields.messageSelectDialog,
           (int32_t)_4__this,
           v50,
@@ -2039,21 +2013,21 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_b__1(
     || (RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefabAndNullCheck_0(
           this,
           &v65,
-          (System_String_o *)StringLiteral_11273/*"RecommendSupportCancelConfirmDialogPrefab"*/,
+          (System_String_o *)StringLiteral_11310/*"RecommendSupportCancelConfirmDialogPrefab"*/,
           v57->fields.cashedAssetData,
           v56),
         (_4__this = (char *)v65) == 0)
     || (v58 = this->fields.__4__this,
         _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                              v65,
-                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportCancelConfirmDialog___),
+                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportCancelConfirmDialog___),
         !v58) )
   {
 LABEL_23:
-    sub_1C7BD40(_4__this, assetData);
+    sub_1C93D2C(_4__this, assetData);
   }
   v58->fields.cancelConfirmDialog = (struct RecommendSupportCancelConfirmDialog_o *)_4__this;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v58->fields.cancelConfirmDialog,
     (int32_t)_4__this,
     v59,
@@ -2086,33 +2060,33 @@ void RecommendSupportSelectControl___c__DisplayClass41_0___GetAssets_g__SetPrefa
   System_String_o *v18; // x7
 
   v8 = this;
-  if ( (byte_4CEA459 & 1) == 0 )
+  if ( (byte_4D2C777 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_AssetData_GetObject_GameObject____78791560);
-    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject____78879968);
-    this = (RecommendSupportSelectControl___c__DisplayClass41_0_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEA459 = 1;
+    sub_1C93AD4(&Method_AssetData_GetObject_GameObject____79057888);
+    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject____79146536);
+    this = (RecommendSupportSelectControl___c__DisplayClass41_0_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2C777 = 1;
   }
   if ( !assetData
-    || (this = (RecommendSupportSelectControl___c__DisplayClass41_0_o *)AssetData__GetObject_object__51713432(
+    || (this = (RecommendSupportSelectControl___c__DisplayClass41_0_o *)AssetData__GetObject_object__51927708(
                                                                           assetData,
                                                                           prefabName,
-                                                                          (const MethodInfo_3151598 *)Method_AssetData_GetObject_GameObject____78791560),
+                                                                          (const MethodInfo_3185A9C *)Method_AssetData_GetObject_GameObject____79057888),
         (_4__this = v8->fields.__4__this) == 0)
     || (v10 = (Il2CppObject *)this,
         (this = (RecommendSupportSelectControl___c__DisplayClass41_0_o *)_4__this->fields.rootObject) == 0) )
   {
-    sub_1C7BD40(this, prefabObject);
+    sub_1C93D2C(this, prefabObject);
   }
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v12 = UnityEngine_Object__Instantiate_object__52412380(
+  v12 = UnityEngine_Object__Instantiate_object__52629400(
           v10,
           transform,
-          (const MethodInfo_31FBFDC *)Method_UnityEngine_Object_Instantiate_GameObject____78879968);
+          (const MethodInfo_3230F98 *)Method_UnityEngine_Object_Instantiate_GameObject____79146536);
   *prefabObject = (UnityEngine_GameObject_o *)v12;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)prefabObject, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)prefabObject, (int32_t)v12, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -2181,7 +2155,7 @@ void RecommendSupportSelectControl___c__DisplayClass44_0___Init_b__0(
         (callback = v3->fields.callback) == 0) )
   {
 LABEL_16:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
     callback->fields.method_code,

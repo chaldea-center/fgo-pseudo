@@ -8,30 +8,30 @@ void ShopActionManager___ctor(ShopActionManager_o *this, const MethodInfo *metho
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEA6C5 & 1) == 0 )
+  if ( (byte_4D2CA73 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_ShopActionEntity__TypeInfo);
-    byte_4CEA6C5 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_ShopActionEntity__TypeInfo);
+    byte_4D2CA73 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_ShopActionEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_ShopActionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_ShopActionEntity___ctor__);
   this->fields.shopActionList = (struct System_Collections_Generic_List_ShopActionEntity__o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.shopActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.shopActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 void ShopActionManager__ExecutionShopAction(ShopActionManager_o *this, const MethodInfo *method)
 {
-  const MethodInfo_3A8C5A8 **v2; // x20
+  const MethodInfo_3AC52FC **v2; // x20
   System_Collections_Generic_List_object__o *shopActionList; // x0
   ShopActionEntity_o *v5; // x28
   int32_t actionType; // w8
   Il2CppObject *Item; // x0
-  const MethodInfo_3A8C5A8 **v8; // x24
+  const MethodInfo_3AC52FC **v8; // x24
   EventRewardRootComponent_o *syncRoot; // x29
   System_Action_o *v10; // x20
   __int64 naturalAligment; // x9
@@ -39,38 +39,38 @@ void ShopActionManager__ExecutionShopAction(ShopActionManager_o *this, const Met
   ShopActionManager_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  v2 = (const MethodInfo_3A8C5A8 **)&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__;
+  v2 = (const MethodInfo_3AC52FC **)&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__;
   while ( 1 )
   {
-    if ( (byte_4CEA6C3 & 1) == 0 )
+    if ( (byte_4D2CA71 & 1) == 0 )
     {
-      sub_1C7BAE8(&System_Action_TypeInfo);
-      sub_1C7BAE8(&EventRewardRootComponent_TypeInfo);
-      sub_1C7BAE8(&Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
-      sub_1C7BAE8(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
-      sub_1C7BAE8(&Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
-      sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-      sub_1C7BAE8(&Method_ShopActionManager_VoiceEnd__);
-      sub_1C7BAE8(v2);
-      byte_4CEA6C3 = 1;
+      sub_1C93AD4(&System_Action_TypeInfo);
+      sub_1C93AD4(&EventRewardRootComponent_TypeInfo);
+      sub_1C93AD4(&Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
+      sub_1C93AD4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
+      sub_1C93AD4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
+      sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+      sub_1C93AD4(&Method_ShopActionManager_VoiceEnd__);
+      sub_1C93AD4(v2);
+      byte_4D2CA71 = 1;
     }
     shopActionList = (System_Collections_Generic_List_object__o *)this->fields.shopActionList;
     if ( !shopActionList )
 LABEL_25:
-      sub_1C7BD40(shopActionList, method);
+      sub_1C93D2C(shopActionList, method);
     if ( shopActionList->fields._size <= 0 )
       break;
     shopActionList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     shopActionList,
                                                                     0,
-                                                                    (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
+                                                                    (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
     if ( !this->fields.shopActionList )
       goto LABEL_25;
     v5 = (ShopActionEntity_o *)shopActionList;
     System_Collections_Generic_List_object___RemoveAt(
       (System_Collections_Generic_List_object__o *)this->fields.shopActionList,
       0,
-      (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
+      (const MethodInfo_387B170 *)Method_System_Collections_Generic_List_ShopActionEntity__RemoveAt__);
     if ( !v5 )
       goto LABEL_25;
     actionType = v5->fields.actionType;
@@ -87,7 +87,7 @@ LABEL_25:
         Item = System_Collections_Generic_List_object___get_Item(
                  shopActionList,
                  0,
-                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
+                 (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_ShopActionEntity__get_Item__);
         if ( Item )
         {
           if ( LODWORD(Item[1].monitor) == 8 )
@@ -99,7 +99,7 @@ LABEL_25:
       if ( !shopActionList )
         goto LABEL_25;
       syncRoot = (EventRewardRootComponent_o *)shopActionList->fields._syncRoot;
-      v10 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_ShopActionManager_VoiceEnd__, 0);
       if ( !syncRoot )
         goto LABEL_25;
@@ -107,7 +107,7 @@ LABEL_25:
       if ( syncRoot->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (EventRewardRootComponent_c *)syncRoot->klass->_2.typeHierarchy[naturalAligment - 1] != EventRewardRootComponent_TypeInfo )
       {
-        sub_1C7C0DC(syncRoot);
+        sub_1C940C8(syncRoot);
         ShopActionManager__VoiceEnd(v13, v14);
         return;
       }
@@ -120,7 +120,7 @@ LABEL_25:
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71870148(gameObject, 0);
+    UnityEngine_Object__Destroy_72119908(gameObject, 0);
   }
 }
 
@@ -150,7 +150,7 @@ void ShopActionManager__SetShopAction(
   const MethodInfo *v16; // x1
 
   this->fields.shopActionList = shopActionEntityList;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.shopActionList,
     (int32_t)shopActionEntityList,
     (int32_t)callback,
@@ -160,7 +160,7 @@ void ShopActionManager__SetShopAction(
     v6,
     v7);
   this->fields.afterCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.afterCallback,
     (int32_t)callback,
     v10,
@@ -181,15 +181,15 @@ void ShopActionManager__VoiceEnd(ShopActionManager_o *this, const MethodInfo *me
   UnityEngine_Object_o *gameObject; // x20
 
   v2 = this;
-  if ( (byte_4CEA6C4 & 1) == 0 )
+  if ( (byte_4D2CA72 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
-    this = (ShopActionManager_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEA6C4 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ShopActionEntity__get_Count__);
+    this = (ShopActionManager_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2CA72 = 1;
   }
   shopActionList = v2->fields.shopActionList;
   if ( !shopActionList )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   if ( shopActionList->fields._size <= 0 )
   {
     afterCallback = v2->fields.afterCallback;
@@ -198,7 +198,7 @@ void ShopActionManager__VoiceEnd(ShopActionManager_o *this, const MethodInfo *me
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71870148(gameObject, 0);
+    UnityEngine_Object__Destroy_72119908(gameObject, 0);
   }
   *(_WORD *)&v2->fields.isVoicePlaying = 0;
 }

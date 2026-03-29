@@ -11,19 +11,19 @@ System_String_o *TitleInfoEventTimeImgListViewDraw__GetIconImageName(
 {
   System_String_o **v4; // x8
 
-  if ( (byte_4CECFF4 & 1) == 0 )
+  if ( (byte_4D2F341 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_24318/*"time_status_icon_noon"*/);
-    sub_1C7BAE8(&StringLiteral_24317/*"time_status_icon_night"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CECFF4 = 1;
+    sub_1C93AD4(&StringLiteral_24386/*"time_status_icon_noon"*/);
+    sub_1C93AD4(&StringLiteral_24385/*"time_status_icon_night"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2F341 = 1;
   }
   if ( (state & 0xFFFFFFFE) == 2 )
-    v4 = (System_String_o **)&StringLiteral_24317/*"time_status_icon_night"*/;
+    v4 = (System_String_o **)&StringLiteral_24385/*"time_status_icon_night"*/;
   else
     v4 = (System_String_o **)&StringLiteral_1/*""*/;
   if ( (unsigned int)state <= 1 )
-    v4 = (System_String_o **)&StringLiteral_24318/*"time_status_icon_noon"*/;
+    v4 = (System_String_o **)&StringLiteral_24386/*"time_status_icon_noon"*/;
   return *v4;
 }
 
@@ -35,17 +35,17 @@ System_String_o *TitleInfoEventTimeImgListViewDraw__GetLabelImageName(
 {
   System_String_o **v4; // x8
 
-  if ( (byte_4CECFF5 & 1) == 0 )
+  if ( (byte_4D2F342 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_24319/*"time_status_icon_story"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_24315/*"time_status_icon_free"*/);
-    byte_4CECFF5 = 1;
+    sub_1C93AD4(&StringLiteral_24387/*"time_status_icon_story"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_24383/*"time_status_icon_free"*/);
+    byte_4D2F342 = 1;
   }
   if ( (unsigned int)state > 3 )
     v4 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v4 = (System_String_o **)*(&off_4704A80 + state);
+    v4 = (System_String_o **)*(&off_4741990 + state);
   return *v4;
 }
 
@@ -66,10 +66,10 @@ void TitleInfoEventTimeImgListViewDraw__SetItem(
   System_String_o *LabelImageName; // x0
 
   v4 = this;
-  if ( (byte_4CECFF3 & 1) == 0 )
+  if ( (byte_4D2F340 & 1) == 0 )
   {
-    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C7BAE8(&AtlasManager_TypeInfo);
-    byte_4CECFF3 = 1;
+    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C93AD4(&AtlasManager_TypeInfo);
+    byte_4D2F340 = 1;
   }
   timeIcon = v4->fields.timeIcon;
   IconImageName = TitleInfoEventTimeImgListViewDraw__GetIconImageName(this, state, method);
@@ -86,7 +86,7 @@ void TitleInfoEventTimeImgListViewDraw__SetItem(
         AtlasManager__SetEventUI(stateSprite, LabelImageName, 0),
         (v8 = v4->fields.stateSprite) == 0) )
   {
-    sub_1C7BD40(v8, v7);
+    sub_1C93D2C(v8, v7);
   }
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v8->klass->vtable._33_MakePixelPerfect.methodPtr)(
     v8,

@@ -24,32 +24,32 @@ void BattlePerformanceEnemyMst___cctor(const MethodInfo *method)
   System_String_o *v22; // x7
   BattlePerformanceEnemyMst_c *v23; // x8
 
-  if ( (byte_4CF1C4F & 1) == 0 )
+  if ( (byte_4D34033 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattlePerformanceEnemyMst_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_4429/*"ChrVoice_{0}"*/);
-    sub_1C7BAE8(&StringLiteral_19176/*"enemyMstFace{0:d5}"*/);
-    sub_1C7BAE8(&StringLiteral_6053/*"EnemyMasterFace/enemyMstFace{0:d5}"*/);
-    byte_4CF1C4F = 1;
+    sub_1C93AD4(&BattlePerformanceEnemyMst_TypeInfo);
+    sub_1C93AD4(&StringLiteral_4445/*"ChrVoice_{0}"*/);
+    sub_1C93AD4(&StringLiteral_19227/*"enemyMstFace{0:d5}"*/);
+    sub_1C93AD4(&StringLiteral_6074/*"EnemyMasterFace/enemyMstFace{0:d5}"*/);
+    byte_4D34033 = 1;
   }
-  BattlePerformanceEnemyMst_TypeInfo->static_fields->MASTER_FACE_ASSET_NAME = (struct System_String_o *)StringLiteral_6053/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
-  sub_1C7BA8C(
+  BattlePerformanceEnemyMst_TypeInfo->static_fields->MASTER_FACE_ASSET_NAME = (struct System_String_o *)StringLiteral_6074/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)BattlePerformanceEnemyMst_TypeInfo->static_fields,
-    StringLiteral_6053/*"EnemyMasterFace/enemyMstFace{0:d5}"*/,
+    StringLiteral_6074/*"EnemyMasterFace/enemyMstFace{0:d5}"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_19176/*"enemyMstFace{0:d5}"*/;
+  v7 = StringLiteral_19227/*"enemyMstFace{0:d5}"*/;
   static_fields = BattlePerformanceEnemyMst_TypeInfo->static_fields;
-  static_fields->MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_19176/*"enemyMstFace{0:d5}"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->MASTER_FACE_TEXTURE_NAME, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_4429/*"ChrVoice_{0}"*/;
+  static_fields->MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_19227/*"enemyMstFace{0:d5}"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->MASTER_FACE_TEXTURE_NAME, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_4445/*"ChrVoice_{0}"*/;
   v16 = BattlePerformanceEnemyMst_TypeInfo->static_fields;
-  v16->MASTER_VOICE_ASSET_NAME = (struct System_String_o *)StringLiteral_4429/*"ChrVoice_{0}"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16->MASTER_VOICE_ASSET_NAME, v15, v17, v18, v19, v20, v21, v22);
+  v16->MASTER_VOICE_ASSET_NAME = (struct System_String_o *)StringLiteral_4445/*"ChrVoice_{0}"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v16->MASTER_VOICE_ASSET_NAME, v15, v17, v18, v19, v20, v21, v22);
   v23 = BattlePerformanceEnemyMst_TypeInfo;
   BattlePerformanceEnemyMst_TypeInfo->static_fields->DEFAULT_COMMAND_SPELL_ICON_SIZE = (struct UnityEngine_Vector2_o)vdup_n_s32(0x42B40000u).n64_u64[0];
   v23->static_fields->DEFAULT_COMMAND_SPELL_ICON_POSITION = (struct UnityEngine_Vector2_o)0x4184DA5142500000LL;
@@ -68,7 +68,7 @@ void BattlePerformanceEnemyMst__HideMaster(BattlePerformanceEnemyMst_o *this, co
 
   masterRoot = this->fields.masterRoot;
   if ( !masterRoot )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   UnityEngine_GameObject__SetActive(masterRoot, 0, 0);
 }
 
@@ -85,7 +85,7 @@ void BattlePerformanceEnemyMst__Initialize(
   System_String_o *v7; // x7
 
   this->fields.data = indata;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)indata, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)indata, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -108,16 +108,16 @@ System_Collections_IEnumerator_o *BattlePerformanceEnemyMst__LoadAssetCoroutine(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CF1C49 & 1) == 0 )
+  if ( (byte_4D3402D & 1) == 0 )
   {
-    sub_1C7BAE8(&BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_TypeInfo);
-    byte_4CF1C49 = 1;
+    sub_1C93AD4(&BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_TypeInfo);
+    byte_4D3402D = 1;
   }
-  v5 = sub_1C7BD34(BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_TypeInfo);
+  v5 = sub_1C93D20(BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_DWORD *)(v5 + 40) = mstFaceId;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -149,19 +149,19 @@ void BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(BattlePerformanceEnemy
   int32_t v15; // [xsp+4h] [xbp-2Ch] BYREF
   UIAtlas_o *atlas; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CF1C45 & 1) == 0 )
+  if ( (byte_4D34029 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    sub_1C7BAE8(&BattleDataDefine_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_EnemyMstBattleMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataMasterBase_EnemyMstBattleMaster__EnemyMstBattleEntity__int__GetEntity__);
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19811/*"frame_enemymaster_bg"*/);
-    sub_1C7BAE8(&StringLiteral_3109/*"BattleAssetUIAtlas"*/);
-    sub_1C7BAE8(&StringLiteral_19812/*"frame_enemymaster_bg_{0}"*/);
-    byte_4CF1C45 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    sub_1C93AD4(&BattleDataDefine_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMaster_EnemyMstBattleMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_DataMasterBase_EnemyMstBattleMaster__EnemyMstBattleEntity__int__GetEntity__);
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19865/*"frame_enemymaster_bg"*/);
+    sub_1C93AD4(&StringLiteral_3122/*"BattleAssetUIAtlas"*/);
+    sub_1C93AD4(&StringLiteral_19866/*"frame_enemymaster_bg_{0}"*/);
+    byte_4D34029 = 1;
   }
   battleUiAtlas = (UnityEngine_Object_o *)this->fields.battleUiAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -176,7 +176,7 @@ void BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(BattlePerformanceEnemy
     enemyMasterFrame = this->fields.enemyMasterFrame;
     if ( !enemyMasterFrame )
       goto LABEL_27;
-    UISprite__set_spriteName(enemyMasterFrame, (System_String_o *)StringLiteral_19811/*"frame_enemymaster_bg"*/, 0);
+    UISprite__set_spriteName(enemyMasterFrame, (System_String_o *)StringLiteral_19865/*"frame_enemymaster_bg"*/, 0);
   }
   data = this->fields.data;
   if ( !data )
@@ -185,7 +185,7 @@ void BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(BattlePerformanceEnemy
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  enemyMasterFrame = (UISprite_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_EnemyMstBattleMaster___);
+  enemyMasterFrame = (UISprite_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EnemyMstBattleMaster___);
   v7 = this->fields.data;
   if ( !v7
     || (enemyMasterInfo = v7->fields.enemyMasterInfo) == 0
@@ -193,10 +193,10 @@ void BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(BattlePerformanceEnemy
     || (enemyMasterFrame = (UISprite_o *)DataMasterBase_object__object__int___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)enemyMasterFrame,
                                            enemyMasterInfo->fields.id,
-                                           (const MethodInfo_342E2FC *)Method_DataMasterBase_EnemyMstBattleMaster__EnemyMstBattleEntity__int__GetEntity__)) == 0 )
+                                           (const MethodInfo_3463274 *)Method_DataMasterBase_EnemyMstBattleMaster__EnemyMstBattleEntity__int__GetEntity__)) == 0 )
   {
 LABEL_27:
-    sub_1C7BD40(enemyMasterFrame, v5);
+    sub_1C93D2C(enemyMasterFrame, v5);
   }
   OverwriteFrame = EnemyMstBattleEntity__GetOverwriteFrame((EnemyMstBattleEntity_o *)enemyMasterFrame, 0, 0);
   if ( OverwriteFrame )
@@ -212,7 +212,7 @@ LABEL_27:
     ASSET_BATTLE_COMMON = v11->static_fields->ASSET_BATTLE_COMMON;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3109/*"BattleAssetUIAtlas"*/, 0) )
+    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3122/*"BattleAssetUIAtlas"*/, 0) )
     {
       enemyMasterFrame = this->fields.enemyMasterFrame;
       if ( enemyMasterFrame )
@@ -221,7 +221,7 @@ LABEL_27:
         v13 = this->fields.enemyMasterFrame;
         v15 = v10;
         v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-        enemyMasterFrame = (UISprite_o *)System_String__Format((System_String_o *)StringLiteral_19812/*"frame_enemymaster_bg_{0}"*/, v14, 0);
+        enemyMasterFrame = (UISprite_o *)System_String__Format((System_String_o *)StringLiteral_19866/*"frame_enemymaster_bg_{0}"*/, v14, 0);
         if ( v13 )
         {
           UISprite__set_spriteName(v13, (System_String_o *)enemyMasterFrame, 0);
@@ -263,7 +263,7 @@ void BattlePerformanceEnemyMst__SetRootActive(BattlePerformanceEnemyMst_o *this,
       return;
     }
 LABEL_11:
-    sub_1C7BD40(data, status);
+    sub_1C93D2C(data, status);
   }
 }
 
@@ -277,7 +277,7 @@ void BattlePerformanceEnemyMst___loadData_b__20_0(BattlePerformanceEnemyMst_o *t
   data = this->fields.data;
   this->fields.loadStat = 2;
   if ( !data )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   CurrentEnemyMasterFaceId = BattleData__GetCurrentEnemyMasterFaceId(data, 0);
   BattlePerformanceEnemyMst__loadMasterFace(this, CurrentEnemyMasterFaceId, v5);
 }
@@ -302,26 +302,26 @@ void BattlePerformanceEnemyMst__changeMasterFace(
   System_String_o *AssetName; // x20
   AssetLoader_LoadEndDataHandler_o *v17; // x22
 
-  if ( (byte_4CF1C48 & 1) == 0 )
+  if ( (byte_4D3402C & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_1C7BAE8(&Method_BattlePerformanceEnemyMst___c__DisplayClass25_0__changeMasterFace_b__0__);
-    sub_1C7BAE8(&BattlePerformanceEnemyMst___c__DisplayClass25_0_TypeInfo);
-    byte_4CF1C48 = 1;
+    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_1C93AD4(&Method_BattlePerformanceEnemyMst___c__DisplayClass25_0__changeMasterFace_b__0__);
+    sub_1C93AD4(&BattlePerformanceEnemyMst___c__DisplayClass25_0_TypeInfo);
+    byte_4D3402C = 1;
   }
-  v5 = sub_1C7BD34(BattlePerformanceEnemyMst___c__DisplayClass25_0_TypeInfo);
+  v5 = sub_1C93D20(BattlePerformanceEnemyMst___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = this,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_DWORD *)(v5 + 24) = nextMstFaceId,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__),
         AssetName = BattlePerformanceEnemyMst__getAssetName(
                       (BattlePerformanceEnemyMst_o *)Instance,
                       *(_DWORD *)(v5 + 24),
                       v15),
-        v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo),
+        v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo),
         AssetLoader_LoadEndDataHandler___ctor(
           v17,
           (Il2CppObject *)v5,
@@ -329,7 +329,7 @@ void BattlePerformanceEnemyMst__changeMasterFace(
           0),
         !Instance) )
   {
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   }
   AssetManager__LoadAssetStorage((AssetManager_o *)Instance, AssetName, v17, 1, 0);
 }
@@ -345,11 +345,11 @@ System_String_o *BattlePerformanceEnemyMst__getAssetName(
   Il2CppObject *v6; // x0
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CF1C4C & 1) == 0 )
+  if ( (byte_4D34030 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattlePerformanceEnemyMst_TypeInfo);
-    sub_1C7BAE8(&int_TypeInfo);
-    byte_4CF1C4C = 1;
+    sub_1C93AD4(&BattlePerformanceEnemyMst_TypeInfo);
+    sub_1C93AD4(&int_TypeInfo);
+    byte_4D34030 = 1;
   }
   v4 = BattlePerformanceEnemyMst_TypeInfo;
   if ( !BattlePerformanceEnemyMst_TypeInfo->_2.cctor_finished )
@@ -374,11 +374,11 @@ System_String_o *BattlePerformanceEnemyMst__getTextureName(
   Il2CppObject *v6; // x0
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CF1C4D & 1) == 0 )
+  if ( (byte_4D34031 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattlePerformanceEnemyMst_TypeInfo);
-    sub_1C7BAE8(&int_TypeInfo);
-    byte_4CF1C4D = 1;
+    sub_1C93AD4(&BattlePerformanceEnemyMst_TypeInfo);
+    sub_1C93AD4(&int_TypeInfo);
+    byte_4D34031 = 1;
   }
   v4 = BattlePerformanceEnemyMst_TypeInfo;
   if ( !BattlePerformanceEnemyMst_TypeInfo->_2.cctor_finished )
@@ -403,11 +403,11 @@ System_String_o *BattlePerformanceEnemyMst__getVoiceAssetName(
   Il2CppObject *v6; // x0
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CF1C4E & 1) == 0 )
+  if ( (byte_4D34032 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattlePerformanceEnemyMst_TypeInfo);
-    sub_1C7BAE8(&int_TypeInfo);
-    byte_4CF1C4E = 1;
+    sub_1C93AD4(&BattlePerformanceEnemyMst_TypeInfo);
+    sub_1C93AD4(&int_TypeInfo);
+    byte_4D34032 = 1;
   }
   v4 = BattlePerformanceEnemyMst_TypeInfo;
   if ( !BattlePerformanceEnemyMst_TypeInfo->_2.cctor_finished )
@@ -444,12 +444,12 @@ void BattlePerformanceEnemyMst__loadData(BattlePerformanceEnemyMst_o *this, cons
   const MethodInfo *v19; // x1
 
   v2 = this;
-  if ( (byte_4CF1C44 & 1) == 0 )
+  if ( (byte_4D34028 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_BattlePerformanceEnemyMst__loadData_b__20_0__);
-    this = (BattlePerformanceEnemyMst_o *)sub_1C7BAE8(&SoundManager_TypeInfo);
-    byte_4CF1C44 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_BattlePerformanceEnemyMst__loadData_b__20_0__);
+    this = (BattlePerformanceEnemyMst_o *)sub_1C93AD4(&SoundManager_TypeInfo);
+    byte_4D34028 = 1;
   }
   data = v2->fields.data;
   if ( !data )
@@ -465,7 +465,7 @@ void BattlePerformanceEnemyMst__loadData(BattlePerformanceEnemyMst_o *this, cons
       return;
     }
 LABEL_15:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   v2->fields.loadStat = 1;
   BattlePerformanceEnemyMst__releaseMasterVoice(v2, method);
@@ -477,7 +477,7 @@ LABEL_15:
     goto LABEL_15;
   VoiceAssetName = BattlePerformanceEnemyMst__getVoiceAssetName(this, enemyMasterInfo->fields.enemyMasterId, v4);
   v2->fields.loadVoiceAsset = VoiceAssetName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v2->fields.loadVoiceAsset,
     (int32_t)VoiceAssetName,
     v8,
@@ -487,7 +487,7 @@ LABEL_15:
     v12,
     v13);
   loadVoiceAsset = v2->fields.loadVoiceAsset;
-  v15 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)v2, Method_BattlePerformanceEnemyMst__loadData_b__20_0__, 0);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -511,10 +511,10 @@ void BattlePerformanceEnemyMst__loadMasterFace(
   const MethodInfo *v7; // x2
   System_Collections_IEnumerator_o *AssetCoroutine; // x1
 
-  if ( (byte_4CF1C47 & 1) == 0 )
+  if ( (byte_4D3402B & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1C47 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3402B = 1;
   }
   faceText = (UnityEngine_Object_o *)this->fields.faceText;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -524,7 +524,7 @@ void BattlePerformanceEnemyMst__loadMasterFace(
     if ( this->fields.mstFaceAssets )
       BattlePerformanceEnemyMst__releaseMasterFace(this, v6);
     AssetCoroutine = BattlePerformanceEnemyMst__LoadAssetCoroutine(this, mstFaceId, v7);
-    UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, AssetCoroutine, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, AssetCoroutine, 0);
   }
 }
 
@@ -548,11 +548,11 @@ void BattlePerformanceEnemyMst__releaseMasterFace(BattlePerformanceEnemyMst_o *t
   int64_t v17; // x6
   System_String_o *v18; // x7
 
-  if ( (byte_4CF1C4A & 1) == 0 )
+  if ( (byte_4D3402E & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1C4A = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3402E = 1;
   }
   faceText = (UnityEngine_Object_o *)this->fields.faceText;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -577,7 +577,7 @@ void BattlePerformanceEnemyMst__releaseMasterFace(BattlePerformanceEnemyMst_o *t
                                      v5->klass->vtable._24_get_material.method);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71870148(v7, 0);
+      UnityEngine_Object__Destroy_72119908(v7, 0);
       v5 = this->fields.faceText;
       if ( !v5 )
         goto LABEL_26;
@@ -614,13 +614,13 @@ LABEL_21:
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
           AssetManager__releaseAssetStorage(name, 0);
           p_mstFaceAssets->klass = 0;
-          sub_1C7BA8C(p_mstFaceAssets, 0, v13, v14, v15, v16, v17, v18);
+          sub_1C93A78(p_mstFaceAssets, 0, v13, v14, v15, v16, v17, v18);
         }
         return;
       }
     }
 LABEL_26:
-    sub_1C7BD40(v5, v4);
+    sub_1C93D2C(v5, v4);
   }
 }
 
@@ -637,10 +637,10 @@ void BattlePerformanceEnemyMst__releaseMasterVoice(BattlePerformanceEnemyMst_o *
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CF1C4B & 1) == 0 )
+  if ( (byte_4D3402F & 1) == 0 )
   {
-    sub_1C7BAE8(&SoundManager_TypeInfo);
-    byte_4CF1C4B = 1;
+    sub_1C93AD4(&SoundManager_TypeInfo);
+    byte_4D3402F = 1;
   }
   loadVoiceAsset = this->fields.loadVoiceAsset;
   p_loadVoiceAsset = (GrandQuestFolderBoardItem_o *)&this->fields.loadVoiceAsset;
@@ -651,12 +651,11 @@ void BattlePerformanceEnemyMst__releaseMasterVoice(BattlePerformanceEnemyMst_o *
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__releaseAudioAssetStorage(v4, 0);
     p_loadVoiceAsset->klass = 0;
-    sub_1C7BA8C(p_loadVoiceAsset, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C93A78(p_loadVoiceAsset, 0, v6, v7, v8, v9, v10, v11);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BattlePerformanceEnemyMst__updateCommandSpellIcon(BattlePerformanceEnemyMst_o *this, const MethodInfo *method)
 {
   BattlePerformanceEnemyMst_o *v2; // x19
@@ -666,24 +665,22 @@ void BattlePerformanceEnemyMst__updateCommandSpellIcon(BattlePerformanceEnemyMst
   StageEntity_o *v6; // x20
   System_Int32_array *EnemyMasterCommandSpellIconSize; // x21
   BattlePerformanceEnemyMst_c *v8; // x0
-  struct BattlePerformanceEnemyMst_StaticFields *static_fields; // x8
-  float x; // s0 OVERLAPPED
-  float y; // s1
   System_Single_array *EnemyMasterCommandSpellIconPosition; // x20
-  BattlePerformanceEnemyMst_c *v13; // x0
-  struct BattlePerformanceEnemyMst_StaticFields *v14; // x9
+  BattlePerformanceEnemyMst_c *v11; // x0
+  struct BattlePerformanceEnemyMst_StaticFields *static_fields; // x9
   float *m_Items; // x8
   float *p_y; // x9
-  float v17; // s8
-  float v18; // s9
+  float v15; // s8
+  float v16; // s9
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Vector2_o v20; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o DEFAULT_COMMAND_SPELL_ICON_SIZE; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v19; // 0:s0.4,4:s1.4
 
   v2 = this;
-  if ( (byte_4CF1C46 & 1) == 0 )
+  if ( (byte_4D3402A & 1) == 0 )
   {
-    this = (BattlePerformanceEnemyMst_o *)sub_1C7BAE8(&BattlePerformanceEnemyMst_TypeInfo);
-    byte_4CF1C46 = 1;
+    this = (BattlePerformanceEnemyMst_o *)sub_1C93AD4(&BattlePerformanceEnemyMst_TypeInfo);
+    byte_4D3402A = 1;
   }
   data = v2->fields.data;
   if ( !data )
@@ -706,7 +703,7 @@ void BattlePerformanceEnemyMst__updateCommandSpellIcon(BattlePerformanceEnemyMst
     || (this = (BattlePerformanceEnemyMst_o *)BattleData__getStageEntity((BattleData_o *)this, 0)) == 0 )
   {
 LABEL_27:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   v6 = (StageEntity_o *)this;
   EnemyMasterCommandSpellIconSize = StageEntity__GetEnemyMasterCommandSpellIconSize((StageEntity_o *)this, 0);
@@ -721,9 +718,7 @@ LABEL_27:
       j_il2cpp_runtime_class_init_0(BattlePerformanceEnemyMst_TypeInfo);
       v8 = BattlePerformanceEnemyMst_TypeInfo;
     }
-    static_fields = v8->static_fields;
-    x = static_fields->DEFAULT_COMMAND_SPELL_ICON_SIZE.fields.x;
-    y = static_fields->DEFAULT_COMMAND_SPELL_ICON_SIZE.fields.y;
+    DEFAULT_COMMAND_SPELL_ICON_SIZE = v8->static_fields->DEFAULT_COMMAND_SPELL_ICON_SIZE;
   }
   else
   {
@@ -731,13 +726,13 @@ LABEL_27:
       goto LABEL_27;
     if ( LODWORD(EnemyMasterCommandSpellIconSize->max_length) < 2 )
       goto LABEL_28;
-    x = (float)EnemyMasterCommandSpellIconSize->m_Items[0];
-    y = (float)EnemyMasterCommandSpellIconSize->m_Items[1];
+    DEFAULT_COMMAND_SPELL_ICON_SIZE.fields.x = (float)EnemyMasterCommandSpellIconSize->m_Items[0];
+    DEFAULT_COMMAND_SPELL_ICON_SIZE.fields.y = (float)EnemyMasterCommandSpellIconSize->m_Items[1];
   }
   this = (BattlePerformanceEnemyMst_o *)v2->fields.commandSpellIcon;
   if ( !this )
     goto LABEL_27;
-  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)this, *(UnityEngine_Vector2_o *)&x, 0);
+  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)this, DEFAULT_COMMAND_SPELL_ICON_SIZE, 0);
   EnemyMasterCommandSpellIconPosition = StageEntity__GetEnemyMasterCommandSpellIconPosition(v6, 0);
   this = (BattlePerformanceEnemyMst_o *)BasicHelper__IsNullOrEmpty(
                                           (System_Collections_ICollection_o *)EnemyMasterCommandSpellIconPosition,
@@ -753,27 +748,27 @@ LABEL_27:
       goto LABEL_25;
     }
 LABEL_28:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   }
-  v13 = BattlePerformanceEnemyMst_TypeInfo;
+  v11 = BattlePerformanceEnemyMst_TypeInfo;
   if ( !BattlePerformanceEnemyMst_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattlePerformanceEnemyMst_TypeInfo);
-    v13 = BattlePerformanceEnemyMst_TypeInfo;
+    v11 = BattlePerformanceEnemyMst_TypeInfo;
   }
-  v14 = v13->static_fields;
-  m_Items = (float *)&v14->DEFAULT_COMMAND_SPELL_ICON_POSITION;
-  p_y = &v14->DEFAULT_COMMAND_SPELL_ICON_POSITION.fields.y;
+  static_fields = v11->static_fields;
+  m_Items = (float *)&static_fields->DEFAULT_COMMAND_SPELL_ICON_POSITION;
+  p_y = &static_fields->DEFAULT_COMMAND_SPELL_ICON_POSITION.fields.y;
 LABEL_25:
   this = (BattlePerformanceEnemyMst_o *)v2->fields.commandSpellIcon;
   if ( !this )
     goto LABEL_27;
-  v17 = *m_Items;
-  v18 = *p_y;
+  v15 = *m_Items;
+  v16 = *p_y;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v20.fields.x = v17;
-  v20.fields.y = v18;
-  GameObjectExtensions__SetLocalPosition_36523220(gameObject, v20, 0);
+  v19.fields.x = v15;
+  v19.fields.y = v16;
+  GameObjectExtensions__SetLocalPosition_36745064(gameObject, v19, 0);
 }
 
 
@@ -816,7 +811,6 @@ bool BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26__MoveNext(
   int64_t v25; // x6
   System_String_o *v26; // x7
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
   struct BattlePerformanceEnemyMst_o *v29; // x23
   const MethodInfo *v30; // x2
   struct BattlePerformanceEnemyMst___c__DisplayClass26_0_o *v31; // x8
@@ -826,13 +820,13 @@ bool BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26__MoveNext(
   System_String_o *v35; // x19
   AssetLoader_LoadEndDataHandler_o *v36; // x21
 
-  if ( (byte_4CF1C52 & 1) == 0 )
+  if ( (byte_4D34036 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_1C7BAE8(&Method_BattlePerformanceEnemyMst___c__DisplayClass26_0__LoadAssetCoroutine_b__0__);
-    sub_1C7BAE8(&BattlePerformanceEnemyMst___c__DisplayClass26_0_TypeInfo);
-    byte_4CF1C52 = 1;
+    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_1C93AD4(&Method_BattlePerformanceEnemyMst___c__DisplayClass26_0__LoadAssetCoroutine_b__0__);
+    sub_1C93AD4(&BattlePerformanceEnemyMst___c__DisplayClass26_0_TypeInfo);
+    byte_4D34036 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state != 1 )
@@ -840,36 +834,35 @@ bool BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26__MoveNext(
     if ( !_1__state )
     {
       this->fields.__1__state = -1;
-      v4 = (Il2CppObject *)sub_1C7BD34(BattlePerformanceEnemyMst___c__DisplayClass26_0_TypeInfo);
+      v4 = (Il2CppObject *)sub_1C93D20(BattlePerformanceEnemyMst___c__DisplayClass26_0_TypeInfo);
       System_Object___ctor(v4, 0);
       this->fields.__8__1 = (struct BattlePerformanceEnemyMst___c__DisplayClass26_0_o *)v4;
       p__8__1 = &this->fields.__8__1;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.__8__1, (int32_t)v4, v6, v7, v8, v9, v10, v11);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.__8__1, (int32_t)v4, v6, v7, v8, v9, v10, v11);
       _8__1 = (char *)this->fields.__8__1;
       if ( _8__1 )
       {
         _4__this = this->fields.__4__this;
         *((_QWORD *)_8__1 + 2) = _4__this;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(_8__1 + 16), (int32_t)_4__this, v13, v14, v15, v16, v17, v18);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(_8__1 + 16), (int32_t)_4__this, v13, v14, v15, v16, v17, v18);
         if ( *p__8__1 )
         {
           (*p__8__1)->fields.mstFaceId = this->fields.mstFaceId;
           this->fields.__2__current = 0;
           p__2__current = &this->fields.__2__current;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p__2__current, 0, v21, v22, v23, v24, v25, v26);
-          result = 1;
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)p__2__current, 0, v21, v22, v23, v24, v25, v26);
           *((_DWORD *)p__2__current - 2) = 1;
-          return result;
+          return 1;
         }
       }
 LABEL_14:
-      sub_1C7BD40(_8__1, v12);
+      sub_1C93D2C(_8__1, v12);
     }
     return 0;
   }
   this->fields.__1__state = -1;
   v29 = this->fields.__4__this;
-  _8__1 = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  _8__1 = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   v31 = this->fields.__8__1;
   if ( !v31 )
     goto LABEL_14;
@@ -879,7 +872,7 @@ LABEL_14:
   AssetName = BattlePerformanceEnemyMst__getAssetName((BattlePerformanceEnemyMst_o *)_8__1, v31->fields.mstFaceId, v30);
   v34 = (Il2CppObject *)this->fields.__8__1;
   v35 = AssetName;
-  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v36,
     v34,
@@ -889,9 +882,8 @@ LABEL_14:
     goto LABEL_14;
   if ( AssetManager__LoadAssetStorage(v32, v35, v36, 1, 0) )
     return 0;
-  result = 0;
   v29->fields.loadStat = 0;
-  return result;
+  return 0;
 }
 
 
@@ -911,11 +903,11 @@ void __noreturn BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_BattlePerformanceEnemyMst__LoadAssetCoroutine_d__26_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -957,16 +949,16 @@ void BattlePerformanceEnemyMst___c__DisplayClass25_0___changeMasterFace_b__0(
   int32_t v9; // w5
   int64_t v10; // x6
   System_String_o *v11; // x7
-  struct BattlePerformanceEnemyMst_o *v12; // x8
-  System_String_o *m_CancellationTokenSource; // x21
+  __int64 v12; // x8
+  System_String_o *v13; // x21
 
   v3 = data;
   v4 = this;
-  if ( (byte_4CF1C50 & 1) == 0 )
+  if ( (byte_4D34034 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
-    this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)sub_1C7BAE8(&AssetManager_TypeInfo);
-    byte_4CF1C50 = 1;
+    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
+    this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)sub_1C93AD4(&AssetManager_TypeInfo);
+    byte_4D34034 = 1;
   }
   if ( !v4->fields.__4__this )
     goto LABEL_13;
@@ -976,10 +968,10 @@ void BattlePerformanceEnemyMst___c__DisplayClass25_0___changeMasterFace_b__0(
                                                                 method);
   if ( !v3 )
     goto LABEL_13;
-  this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)AssetData__GetObject_object__51713432(
+  this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)AssetData__GetObject_object__51927708(
                                                                 v3,
                                                                 (System_String_o *)this,
-                                                                (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600);
+                                                                (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
     goto LABEL_13;
@@ -994,20 +986,20 @@ void BattlePerformanceEnemyMst___c__DisplayClass25_0___changeMasterFace_b__0(
   this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)v4->fields.__4__this;
   if ( !this )
     goto LABEL_13;
-  v12 = this[2].fields.__4__this;
+  v12 = *((_QWORD *)this + 10);
   if ( v12 )
   {
-    m_CancellationTokenSource = (System_String_o *)v12->fields.m_CancellationTokenSource;
+    v13 = *(System_String_o **)(v12 + 24);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage(m_CancellationTokenSource, 0);
+    AssetManager__releaseAssetStorage(v13, 0);
     this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)v4->fields.__4__this;
     if ( !this )
 LABEL_13:
-      sub_1C7BD40(this, data);
+      sub_1C93D2C(this, data);
   }
-  this[2].fields.__4__this = (struct BattlePerformanceEnemyMst_o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this[2].fields, (int32_t)v3, v6, v7, v8, v9, v10, v11);
+  *((_QWORD *)this + 10) = v3;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)((char *)this + 80), (int32_t)v3, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -1039,25 +1031,25 @@ void BattlePerformanceEnemyMst___c__DisplayClass26_0___LoadAssetCoroutine_b__0(
   struct UITexture_o *v17; // x20
   AssetData_o *mstFaceAssets; // x21
 
-  if ( (byte_4CF1C51 & 1) == 0 )
+  if ( (byte_4D34035 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
-    sub_1C7BAE8(&UnityEngine_Material_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_4944/*"Custom/SpriteWithMask"*/);
-    byte_4CF1C51 = 1;
+    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
+    sub_1C93AD4(&UnityEngine_Material_TypeInfo);
+    sub_1C93AD4(&StringLiteral_4960/*"Custom/SpriteWithMask"*/);
+    byte_4D34035 = 1;
   }
   _4__this = (char *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_10;
   *((_QWORD *)_4__this + 10) = data;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(_4__this + 80), (int32_t)data, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(_4__this + 80), (int32_t)data, (int32_t)method, v3, v4, v5, v6, v7);
   v11 = this->fields.__4__this;
   if ( !v11 )
     goto LABEL_10;
   v11->fields.loadStat = 0;
   faceText = v11->fields.faceText;
-  v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4944/*"Custom/SpriteWithMask"*/, 0);
-  v14 = (UnityEngine_Material_o *)sub_1C7BD34(UnityEngine_Material_TypeInfo);
+  v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4960/*"Custom/SpriteWithMask"*/, 0);
+  v14 = (UnityEngine_Material_o *)sub_1C93D20(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v14, v13, 0);
   if ( !faceText
     || (_4__this = (char *)((__int64 (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))faceText->klass->vtable._25_set_material.methodPtr)(
@@ -1072,14 +1064,14 @@ void BattlePerformanceEnemyMst___c__DisplayClass26_0___LoadAssetCoroutine_b__0(
                              this->fields.mstFaceId,
                              v15),
         !mstFaceAssets)
-    || (_4__this = (char *)AssetData__GetObject_object__51713432(
+    || (_4__this = (char *)AssetData__GetObject_object__51927708(
                              mstFaceAssets,
                              (System_String_o *)_4__this,
-                             (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600),
+                             (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928),
         !v17) )
   {
 LABEL_10:
-    sub_1C7BD40(_4__this, data);
+    sub_1C93D2C(_4__this, data);
   }
   ((void (__fastcall *)(struct UITexture_o *, char *, const MethodInfo *))v17->klass->vtable._27_set_mainTexture.methodPtr)(
     v17,

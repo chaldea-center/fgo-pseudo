@@ -1,9 +1,9 @@
 void PresentBoxOverDialog___ctor(PresentBoxOverDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE8EBC & 1) == 0 )
+  if ( (byte_4D2B18D & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CE8EBC = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2B18D = 1;
   }
   this->fields.MESSAGE_FONT_SIZE = 30;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,27 +16,27 @@ void PresentBoxOverDialog__Close(PresentBoxOverDialog_o *this, const MethodInfo 
 {
   const MethodInfo *v2; // x2
 
-  PresentBoxOverDialog__Close_32875040(this, 0, v2);
+  PresentBoxOverDialog__Close_32974724(this, 0, v2);
 }
 
 
-void PresentBoxOverDialog__Close_32875040(
+void PresentBoxOverDialog__Close_32974724(
         PresentBoxOverDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4CE8EB8 & 1) == 0 )
+  if ( (byte_4D2B189 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_PresentBoxOverDialog_EndClose__);
-    byte_4CE8EB8 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_PresentBoxOverDialog_EndClose__);
+    byte_4D2B189 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C7BA8C(&this->fields.closeEndFunc, callback);
+  sub_1C93A78(&this->fields.closeEndFunc, callback);
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -55,7 +55,7 @@ void PresentBoxOverDialog__EndClose(PresentBoxOverDialog_o *this, const MethodIn
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0;
-    sub_1C7BA8C(p_closeEndFunc, 0);
+    sub_1C93A78(p_closeEndFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -75,11 +75,11 @@ void PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const MethodInfo *
   UnityEngine_Object_o *closeBtnLabel; // x20
   UnityEngine_Object_o *presentBoxBtnLabel; // x20
 
-  if ( (byte_4CE8EB6 & 1) == 0 )
+  if ( (byte_4D2B187 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE8EB6 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2B187 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -132,7 +132,7 @@ void PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const MethodInfo *
   titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !titleLabel )
 LABEL_27:
-    sub_1C7BD40(titleLabel, method);
+    sub_1C93D2C(titleLabel, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -147,17 +147,17 @@ void PresentBoxOverDialog__OnClickClose(PresentBoxOverDialog_o *this, const Meth
   struct PresentBoxOverDialog_ClickDelegate_o *v6; // x20
   struct PresentBoxOverDialog_ClickDelegate_o *clickFunc; // t1
 
-  if ( (byte_4CE8EB9 & 1) == 0 )
+  if ( (byte_4D2B18A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PresentBoxOverDialog_OnClickClose__);
-    byte_4CE8EB9 = 1;
+    sub_1C93AD4(&Method_PresentBoxOverDialog_OnClickClose__);
+    byte_4D2B18A = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PresentBoxOverDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_PresentBoxOverDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_PresentBoxOverDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_PresentBoxOverDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = &this->fields.clickFunc;
@@ -165,7 +165,7 @@ void PresentBoxOverDialog__OnClickClose(PresentBoxOverDialog_o *this, const Meth
     if ( clickFunc )
     {
       *p_clickFunc = 0;
-      sub_1C7BA8C(p_clickFunc, 0);
+      sub_1C93A78(p_clickFunc, 0);
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v6->fields.invoke_impl)(
         v6->fields.method_code,
         0,
@@ -183,17 +183,17 @@ void PresentBoxOverDialog__OnClickPresentBox(PresentBoxOverDialog_o *this, const
   struct PresentBoxOverDialog_ClickDelegate_o *v6; // x20
   struct PresentBoxOverDialog_ClickDelegate_o *clickFunc; // t1
 
-  if ( (byte_4CE8EBA & 1) == 0 )
+  if ( (byte_4D2B18B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_PresentBoxOverDialog_OnClickPresentBox__);
-    byte_4CE8EBA = 1;
+    sub_1C93AD4(&Method_PresentBoxOverDialog_OnClickPresentBox__);
+    byte_4D2B18B = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PresentBoxOverDialog_OnClickPresentBox__;
     if ( (*((_BYTE *)Method_PresentBoxOverDialog_OnClickPresentBox__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_PresentBoxOverDialog_OnClickPresentBox__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_PresentBoxOverDialog_OnClickPresentBox__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = &this->fields.clickFunc;
@@ -201,7 +201,7 @@ void PresentBoxOverDialog__OnClickPresentBox(PresentBoxOverDialog_o *this, const
     if ( clickFunc )
     {
       *p_clickFunc = 0;
-      sub_1C7BA8C(p_clickFunc, 0);
+      sub_1C93A78(p_clickFunc, 0);
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v6->fields.invoke_impl)(
         v6->fields.method_code,
         1,
@@ -229,20 +229,20 @@ void PresentBoxOverDialog__Open(
   UILabel_o *v18; // x20
   System_Action_o *v19; // x20
 
-  if ( (byte_4CE8EB7 & 1) == 0 )
+  if ( (byte_4D2B188 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_PresentBoxOverDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_9675/*"OPEN_PRESENT_BOX"*/);
-    sub_1C7BAE8(&StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4CE8EB7 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_PresentBoxOverDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_9705/*"OPEN_PRESENT_BOX"*/);
+    sub_1C93AD4(&StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4D2B188 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.clickFunc = func;
-    sub_1C7BA8C(&this->fields.clickFunc, func);
+    sub_1C93A78(&this->fields.clickFunc, func);
     titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -281,7 +281,7 @@ void PresentBoxOverDialog__Open(
       v16 = this->fields.closeBtnLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v13 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3691/*"COMMON_CONFIRM_CLOSE"*/, 0);
+      v13 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/, 0);
       if ( !v16 )
         goto LABEL_33;
       UILabel__set_text(v16, (System_String_o *)v13, 0);
@@ -294,31 +294,31 @@ void PresentBoxOverDialog__Open(
     v18 = this->fields.presentBoxBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9675/*"OPEN_PRESENT_BOX"*/, 0);
+    v13 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9705/*"OPEN_PRESENT_BOX"*/, 0);
     if ( v18 )
     {
       UILabel__set_text(v18, (System_String_o *)v13, 0);
 LABEL_32:
       this->fields.state = 1;
-      v19 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v19 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v19, (Il2CppObject *)this, Method_PresentBoxOverDialog_EndOpen__, 0);
       BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
       return;
     }
 LABEL_33:
-    sub_1C7BD40(v13, v12);
+    sub_1C93D2C(v13, v12);
   }
 }
 
 
 System_String_o *PresentBoxOverDialog__get_closeBtnPath(PresentBoxOverDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE8EBB & 1) == 0 )
+  if ( (byte_4D2B18C & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_15701/*"Window/CloseButton"*/);
-    byte_4CE8EBB = 1;
+    sub_1C93AD4(&StringLiteral_15743/*"Window/CloseButton"*/);
+    byte_4D2B18C = 1;
   }
-  return (System_String_o *)StringLiteral_15701/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15743/*"Window/CloseButton"*/;
 }
 
 
@@ -337,15 +337,15 @@ void PresentBoxOverDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C7BA8C(&this->fields.m_target, object);
+  sub_1C93A78(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v10, 0);
+      v10 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -357,9 +357,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA9054;
+  this->fields.invoke_impl = (intptr_t)sub_1AC03B8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA900C;
+  this->fields.extra_arg = (intptr_t)sub_1AC0370;
 }
 
 
@@ -374,14 +374,14 @@ System_IAsyncResult_o *PresentBoxOverDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isPresentBoxOpen;
-  if ( (byte_4CE8EBD & 1) == 0 )
+  if ( (byte_4D2B18E & 1) == 0 )
   {
-    sub_1C7BAE8(&bool_TypeInfo);
-    byte_4CE8EBD = 1;
+    sub_1C93AD4(&bool_TypeInfo);
+    byte_4D2B18E = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -390,7 +390,7 @@ void PresentBoxOverDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

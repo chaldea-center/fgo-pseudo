@@ -1,28 +1,28 @@
 void UserEventRaidEntity___ctor(UserEventRaidEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF492 & 1) == 0 )
+  if ( (byte_4D31813 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEF492 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D31813 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventRaidEntity__CreatePK(int64_t userId, int32_t eventId, int32_t day, const MethodInfo *method)
 {
-  if ( (byte_4CEF491 & 1) == 0 )
+  if ( (byte_4D31812 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4CEF491 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4D31812 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            day,
-           (const MethodInfo_316EBC8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_31A3210 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

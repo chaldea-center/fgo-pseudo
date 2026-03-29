@@ -18,7 +18,7 @@ void BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamageGauge(
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C7BD40(damageGauge, method);
+    sub_1C93D2C(damageGauge, method);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -40,7 +40,7 @@ void BattleDefenceTargetHpGaugeComponent__SetHpGauge(
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C7BD40(damageGauge, v4);
+    sub_1C93D2C(damageGauge, v4);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -69,7 +69,7 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGauge(
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0);
 }
 
@@ -175,36 +175,36 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   __int64 v98; // [xsp+10h] [xbp-40h] BYREF
   __int64 v99; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4CF1B26 & 1) == 0 )
+  if ( (byte_4D33F0A & 1) == 0 )
   {
-    sub_1C7BAE8(&double_TypeInfo);
-    sub_1C7BAE8(&object___TypeInfo);
-    sub_1C7BAE8(&float_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19848/*"from"*/);
-    sub_1C7BAE8(&StringLiteral_24308/*"time"*/);
-    sub_1C7BAE8(&StringLiteral_22645/*"onupdate"*/);
-    sub_1C7BAE8(&StringLiteral_15244/*"UpdateDefenceTargetDamageGauge"*/);
-    sub_1C7BAE8(&StringLiteral_18660/*"delay"*/);
-    sub_1C7BAE8(&StringLiteral_24347/*"to"*/);
-    sub_1C7BAE8(&StringLiteral_4631/*"CompleteDefenceTargetDamageGauge"*/);
-    sub_1C7BAE8(&StringLiteral_22637/*"oncomplete"*/);
-    sub_1C7BAE8(&iTween_TypeInfo);
-    byte_4CF1B26 = 1;
+    sub_1C93AD4(&double_TypeInfo);
+    sub_1C93AD4(&object___TypeInfo);
+    sub_1C93AD4(&float_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19902/*"from"*/);
+    sub_1C93AD4(&StringLiteral_24376/*"time"*/);
+    sub_1C93AD4(&StringLiteral_22710/*"onupdate"*/);
+    sub_1C93AD4(&StringLiteral_15286/*"UpdateDefenceTargetDamageGauge"*/);
+    sub_1C93AD4(&StringLiteral_18710/*"delay"*/);
+    sub_1C93AD4(&StringLiteral_24415/*"to"*/);
+    sub_1C93AD4(&StringLiteral_4647/*"CompleteDefenceTargetDamageGauge"*/);
+    sub_1C93AD4(&StringLiteral_22702/*"oncomplete"*/);
+    sub_1C93AD4(&iTween_TypeInfo);
+    byte_4D33F0A = 1;
   }
   this->fields.nowval = nowHp;
   BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v6 = sub_1C7BB90(object___TypeInfo, 12);
+  v6 = sub_1C93B7C(object___TypeInfo, 12);
   if ( !v6 )
-    sub_1C7BD40(0, v7);
+    sub_1C93D2C(0, v7);
   v14 = (System_Object_array *)v6;
-  v15 = StringLiteral_19848/*"from"*/;
-  if ( StringLiteral_19848/*"from"*/ )
+  v15 = StringLiteral_19902/*"from"*/;
+  if ( StringLiteral_19902/*"from"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_19848/*"from"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_19902/*"from"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v16 = StringLiteral_19848/*"from"*/;
+    v16 = StringLiteral_19902/*"from"*/;
   }
   else
   {
@@ -213,27 +213,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( !LODWORD(v14->max_length) )
     goto LABEL_59;
   v14->m_Items[0] = (Il2CppObject *)v16;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v14->m_Items, v16, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v14->m_Items, v16, v8, v9, v10, v11, v12, v13);
   v99 = 0;
   v15 = j_il2cpp_value_box_0(double_TypeInfo, &v99);
   v23 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C7BC24(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 1 )
     goto LABEL_59;
   v14->m_Items[1] = v23;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
-  v15 = StringLiteral_24347/*"to"*/;
-  if ( StringLiteral_24347/*"to"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
+  v15 = StringLiteral_24415/*"to"*/;
+  if ( StringLiteral_24415/*"to"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_24347/*"to"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_24415/*"to"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v30 = StringLiteral_24347/*"to"*/;
+    v30 = StringLiteral_24415/*"to"*/;
   }
   else
   {
@@ -242,27 +242,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 2 )
     goto LABEL_59;
   v14->m_Items[2] = (Il2CppObject *)v30;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[2], v30, v24, v25, v26, v27, v28, v29);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[2], v30, v24, v25, v26, v27, v28, v29);
   v98 = 0x3FF0000000000000LL;
   v15 = j_il2cpp_value_box_0(double_TypeInfo, &v98);
   v37 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C7BC24(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 3 )
     goto LABEL_59;
   v14->m_Items[3] = v37;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[3], (int32_t)v37, v31, v32, v33, v34, v35, v36);
-  v15 = StringLiteral_22645/*"onupdate"*/;
-  if ( StringLiteral_22645/*"onupdate"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[3], (int32_t)v37, v31, v32, v33, v34, v35, v36);
+  v15 = StringLiteral_22710/*"onupdate"*/;
+  if ( StringLiteral_22710/*"onupdate"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_22645/*"onupdate"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_22710/*"onupdate"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v44 = StringLiteral_22645/*"onupdate"*/;
+    v44 = StringLiteral_22710/*"onupdate"*/;
   }
   else
   {
@@ -271,14 +271,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 4 )
     goto LABEL_59;
   v14->m_Items[4] = (Il2CppObject *)v44;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
-  v15 = StringLiteral_15244/*"UpdateDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_15244/*"UpdateDefenceTargetDamageGauge"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
+  v15 = StringLiteral_15286/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15286/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_15244/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_15286/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v51 = StringLiteral_15244/*"UpdateDefenceTargetDamageGauge"*/;
+    v51 = StringLiteral_15286/*"UpdateDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -287,14 +287,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 5 )
     goto LABEL_59;
   v14->m_Items[5] = (Il2CppObject *)v51;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
-  v15 = StringLiteral_22637/*"oncomplete"*/;
-  if ( StringLiteral_22637/*"oncomplete"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
+  v15 = StringLiteral_22702/*"oncomplete"*/;
+  if ( StringLiteral_22702/*"oncomplete"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_22637/*"oncomplete"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_22702/*"oncomplete"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v58 = StringLiteral_22637/*"oncomplete"*/;
+    v58 = StringLiteral_22702/*"oncomplete"*/;
   }
   else
   {
@@ -303,14 +303,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 6 )
     goto LABEL_59;
   v14->m_Items[6] = (Il2CppObject *)v58;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
-  v15 = StringLiteral_4631/*"CompleteDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_4631/*"CompleteDefenceTargetDamageGauge"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
+  v15 = StringLiteral_4647/*"CompleteDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_4647/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_4631/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_4647/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v65 = StringLiteral_4631/*"CompleteDefenceTargetDamageGauge"*/;
+    v65 = StringLiteral_4647/*"CompleteDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -319,14 +319,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 7 )
     goto LABEL_59;
   v14->m_Items[7] = (Il2CppObject *)v65;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
-  v15 = StringLiteral_18660/*"delay"*/;
-  if ( StringLiteral_18660/*"delay"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
+  v15 = StringLiteral_18710/*"delay"*/;
+  if ( StringLiteral_18710/*"delay"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_18660/*"delay"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_18710/*"delay"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v72 = StringLiteral_18660/*"delay"*/;
+    v72 = StringLiteral_18710/*"delay"*/;
   }
   else
   {
@@ -335,27 +335,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 8 )
     goto LABEL_59;
   v14->m_Items[8] = (Il2CppObject *)v72;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
   v97 = 1056964608;
   v15 = j_il2cpp_value_box_0(float_TypeInfo, &v97);
   v79 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C7BC24(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 9 )
     goto LABEL_59;
   v14->m_Items[9] = v79;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[9], (int32_t)v79, v73, v74, v75, v76, v77, v78);
-  v15 = StringLiteral_24308/*"time"*/;
-  if ( StringLiteral_24308/*"time"*/ )
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[9], (int32_t)v79, v73, v74, v75, v76, v77, v78);
+  v15 = StringLiteral_24376/*"time"*/;
+  if ( StringLiteral_24376/*"time"*/ )
   {
-    v15 = sub_1C7BC24(StringLiteral_24308/*"time"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(StringLiteral_24376/*"time"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v86 = StringLiteral_24308/*"time"*/;
+    v86 = StringLiteral_24376/*"time"*/;
   }
   else
   {
@@ -364,25 +364,25 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 0xA )
     goto LABEL_59;
   v14->m_Items[10] = (Il2CppObject *)v86;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[10], v86, v80, v81, v82, v83, v84, v85);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[10], v86, v80, v81, v82, v83, v84, v85);
   v96 = 1065353216;
   v15 = j_il2cpp_value_box_0(float_TypeInfo, &v96);
   v93 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C7BC24(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C93C10(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_60:
-      v95 = sub_1C7BD64(v15);
-      sub_1C7BC10(v95, 0);
+      v95 = sub_1C93D50(v15);
+      sub_1C93BFC(v95, 0);
     }
   }
   if ( LODWORD(v14->max_length) <= 0xB )
 LABEL_59:
-    sub_1C7BD48(v15);
+    sub_1C93D34(v15);
   v14->m_Items[11] = v93;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v14->m_Items[11], (int32_t)v93, v87, v88, v89, v90, v91, v92);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->m_Items[11], (int32_t)v93, v87, v88, v89, v90, v91, v92);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v94 = iTween__Hash(v14, 0);

@@ -8,14 +8,14 @@ void BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *this, const M
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CF0B25 & 1) == 0 )
+  if ( (byte_4D32EC9 & 1) == 0 )
   {
-    sub_1C7BAE8(&byte___TypeInfo);
-    byte_4CF0B25 = 1;
+    sub_1C93AD4(&byte___TypeInfo);
+    byte_4D32EC9 = 1;
   }
-  v3 = (struct System_Byte_array *)sub_1C7BB90(byte___TypeInfo, 1);
+  v3 = (struct System_Byte_array *)sub_1C93B7C(byte___TypeInfo, 1);
   this->fields.dummy = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 

@@ -6,7 +6,7 @@ void BattleExUiSkillInfoData___ctor(BattleExUiSkillInfoData_o *this, const Metho
 
 BaseMotionSkip_o *BattleExUiSkillInfoData__MakeSkillSkip(BattleExUiSkillInfoData_o *this, const MethodInfo *method)
 {
-  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleExUiSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
-                               this,
-                               this->klass->vtable._17_CommonMakeSkillSkip.method);
+  return ((BaseMotionSkip_o *(__fastcall *)(BattleExUiSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
+           this,
+           this->klass->vtable._17_CommonMakeSkillSkip.method);
 }

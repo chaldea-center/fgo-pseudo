@@ -1,9 +1,9 @@
 void PanelUniqueIDUtil___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CEAEA0 & 1) == 0 )
+  if ( (byte_4D2D25B & 1) == 0 )
   {
-    sub_1C7BAE8(&PanelUniqueIDUtil_TypeInfo);
-    byte_4CEAEA0 = 1;
+    sub_1C93AD4(&PanelUniqueIDUtil_TypeInfo);
+    byte_4D2D25B = 1;
   }
   PanelUniqueIDUtil_TypeInfo->static_fields->V_INDEX_SHIFT = 10000;
 }
@@ -13,10 +13,10 @@ int32_t PanelUniqueIDUtil__GetID(int32_t hIndex, int32_t vIndex, const MethodInf
 {
   PanelUniqueIDUtil_c *v5; // x0
 
-  if ( (byte_4CEAE9E & 1) == 0 )
+  if ( (byte_4D2D259 & 1) == 0 )
   {
-    sub_1C7BAE8(&PanelUniqueIDUtil_TypeInfo);
-    byte_4CEAE9E = 1;
+    sub_1C93AD4(&PanelUniqueIDUtil_TypeInfo);
+    byte_4D2D259 = 1;
   }
   v5 = PanelUniqueIDUtil_TypeInfo;
   if ( !PanelUniqueIDUtil_TypeInfo->_2.cctor_finished )
@@ -32,14 +32,14 @@ bool PanelUniqueIDUtil__HasID(int32_t hIndex, int32_t vIndex, System_Int32_array
 {
   int32_t ID; // w0
 
-  if ( (byte_4CEAE9F & 1) == 0 )
+  if ( (byte_4D2D25A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Array_IndexOf_int___);
-    sub_1C7BAE8(&PanelUniqueIDUtil_TypeInfo);
-    byte_4CEAE9F = 1;
+    sub_1C93AD4(&Method_System_Array_IndexOf_int___);
+    sub_1C93AD4(&PanelUniqueIDUtil_TypeInfo);
+    byte_4D2D25A = 1;
   }
   if ( !PanelUniqueIDUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PanelUniqueIDUtil_TypeInfo);
   ID = PanelUniqueIDUtil__GetID(hIndex, vIndex, (const MethodInfo *)uniqueIds);
-  return System_Array__IndexOf_int_(uniqueIds, ID, (const MethodInfo_3275200 *)Method_System_Array_IndexOf_int___) >= 0;
+  return System_Array__IndexOf_int_(uniqueIds, ID, (const MethodInfo_32AB154 *)Method_System_Array_IndexOf_int___) >= 0;
 }

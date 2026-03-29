@@ -1,13 +1,13 @@
 void BattlePointEntity___ctor(BattlePointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE2E0 & 1) == 0 )
+  if ( (byte_4D3063F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
-    byte_4CEE2E0 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_int___ctor__);
+    byte_4D3063F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3460B3C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -31,7 +31,7 @@ bool BattlePointEntity__IsEnableToAddBattlePoint(
   if ( (this->fields.flag & 1) == 0 )
     return 1;
   if ( !svtData )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return !BattleServantData__IsFollwerSupport(svtData, 0);
 }
 
@@ -48,7 +48,7 @@ bool BattlePointEntity__IsHideBattlePointGauge(
   if ( (this->fields.flag & 2) != 0 )
     return 1;
   if ( !svtData )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   BattlePointData = BattleServantData__GetBattlePointData(svtData, this->fields.id, 0);
   if ( BattlePointData )
     IsEnableToAddValue_k__BackingField = BattlePointData->fields._IsEnableToAddValue_k__BackingField;

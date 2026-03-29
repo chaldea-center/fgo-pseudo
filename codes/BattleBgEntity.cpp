@@ -1,27 +1,27 @@
 void BattleBgEntity___ctor(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE2B5 & 1) == 0 )
+  if ( (byte_4D30614 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEE2B5 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D30614 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleBgEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4CEE2AC & 1) == 0 )
+  if ( (byte_4D3060B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CEE2AC = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D3060B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_316E57C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -46,17 +46,17 @@ System_Collections_Generic_IEnumerable_int__o *BattleBgEntity__GetAllSpecialShad
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CEE2B3 & 1) == 0 )
+  if ( (byte_4D30612 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
-    byte_4CEE2B3 = 1;
+    sub_1C93AD4(&BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
+    byte_4D30612 = 1;
   }
-  v5 = sub_1C7BD34(BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
+  v5 = sub_1C93D20(BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 24) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_DWORD *)(v5 + 44) = defId;
   return (System_Collections_Generic_IEnumerable_int__o *)v5;
 }
@@ -70,21 +70,21 @@ System_Single_array *BattleBgEntity__GetCameraClippingRange(BattleBgEntity_o *th
   __int64 v6; // x1
   int max_length; // w8
 
-  if ( (byte_4CEE2AF & 1) == 0 )
+  if ( (byte_4D3060E & 1) == 0 )
   {
-    sub_1C7BAE8(&float___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_3972/*"CameraClippingFar"*/);
-    sub_1C7BAE8(&StringLiteral_3973/*"CameraClippingNear"*/);
-    byte_4CEE2AF = 1;
+    sub_1C93AD4(&float___TypeInfo);
+    sub_1C93AD4(&StringLiteral_3988/*"CameraClippingFar"*/);
+    sub_1C93AD4(&StringLiteral_3989/*"CameraClippingNear"*/);
+    byte_4D3060E = 1;
   }
-  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3973/*"CameraClippingNear"*/, -1.0, 0);
-  v4 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3972/*"CameraClippingFar"*/, -1.0, 0);
-  result = (System_Single_array *)sub_1C7BB90(float___TypeInfo, 2);
+  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3989/*"CameraClippingNear"*/, -1.0, 0);
+  v4 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3988/*"CameraClippingFar"*/, -1.0, 0);
+  result = (System_Single_array *)sub_1C93B7C(float___TypeInfo, 2);
   if ( !result )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   max_length = result->max_length;
   if ( !max_length || (result->m_Items[0] = Millesimal, max_length == 1) )
-    sub_1C7BD48(result);
+    sub_1C93D34(result);
   result->m_Items[1] = v4;
   return result;
 }
@@ -92,12 +92,12 @@ System_Single_array *BattleBgEntity__GetCameraClippingRange(BattleBgEntity_o *th
 
 int32_t BattleBgEntity__GetInvalidOverwrite(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE2B0 & 1) == 0 )
+  if ( (byte_4D3060F & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_7969/*"InvalidOverwrite"*/);
-    byte_4CEE2B0 = 1;
+    sub_1C93AD4(&StringLiteral_7993/*"InvalidOverwrite"*/);
+    byte_4D3060F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7969/*"InvalidOverwrite"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7993/*"InvalidOverwrite"*/, 0, 0);
 }
 
 
@@ -105,16 +105,16 @@ int32_t BattleBgEntity__GetShadowImage(BattleBgEntity_o *this, bool isEnemy, con
 {
   System_String_o **v5; // x8
 
-  if ( (byte_4CEE2B4 & 1) == 0 )
+  if ( (byte_4D30613 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_10725/*"PlayerShadowImageId"*/);
-    sub_1C7BAE8(&StringLiteral_6055/*"EnemyShadowImageId"*/);
-    byte_4CEE2B4 = 1;
+    sub_1C93AD4(&StringLiteral_10761/*"PlayerShadowImageId"*/);
+    sub_1C93AD4(&StringLiteral_6076/*"EnemyShadowImageId"*/);
+    byte_4D30613 = 1;
   }
   if ( isEnemy )
-    v5 = (System_String_o **)&StringLiteral_6055/*"EnemyShadowImageId"*/;
+    v5 = (System_String_o **)&StringLiteral_6076/*"EnemyShadowImageId"*/;
   else
-    v5 = (System_String_o **)&StringLiteral_10725/*"PlayerShadowImageId"*/;
+    v5 = (System_String_o **)&StringLiteral_10761/*"PlayerShadowImageId"*/;
   return EntityScriptUtil__GetIntValue(this->fields.script, *v5, this->fields.imageId, 0);
 }
 
@@ -130,20 +130,20 @@ int32_t BattleBgEntity__GetSpecialShadowEffectId(
   System_String_o *v9; // x21
   int32_t IntValue; // w2
 
-  if ( (byte_4CEE2B2 & 1) == 0 )
+  if ( (byte_4D30611 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_13022/*"SpecialShadowEffectId"*/);
-    sub_1C7BAE8(&StringLiteral_10726/*"PlayerSpecialShadowEffectId"*/);
-    sub_1C7BAE8(&StringLiteral_6056/*"EnemySpecialShadowEffectId"*/);
-    byte_4CEE2B2 = 1;
+    sub_1C93AD4(&StringLiteral_13063/*"SpecialShadowEffectId"*/);
+    sub_1C93AD4(&StringLiteral_10762/*"PlayerSpecialShadowEffectId"*/);
+    sub_1C93AD4(&StringLiteral_6077/*"EnemySpecialShadowEffectId"*/);
+    byte_4D30611 = 1;
   }
   script = this->fields.script;
   if ( isEnemy )
-    v8 = &StringLiteral_6056/*"EnemySpecialShadowEffectId"*/;
+    v8 = &StringLiteral_6077/*"EnemySpecialShadowEffectId"*/;
   else
-    v8 = &StringLiteral_10726/*"PlayerSpecialShadowEffectId"*/;
+    v8 = &StringLiteral_10762/*"PlayerSpecialShadowEffectId"*/;
   v9 = (System_String_o *)*v8;
-  IntValue = EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_13022/*"SpecialShadowEffectId"*/, defId, 0);
+  IntValue = EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_13063/*"SpecialShadowEffectId"*/, defId, 0);
   return EntityScriptUtil__GetIntValue(script, v9, IntValue, 0);
 }
 
@@ -161,14 +161,14 @@ SubBgmPlayArgs_array *BattleBgEntity__GetSubBgmPlayArgsArray(BattleBgEntity_o *t
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4CEE2AD & 1) == 0 )
+  if ( (byte_4D3060C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
-    sub_1C7BAE8(&System_Func_List_object___SubBgmPlayArgs____TypeInfo);
-    sub_1C7BAE8(&Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__10_0__);
-    sub_1C7BAE8(&BattleBgEntity___c_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_23989/*"subBgms"*/);
-    byte_4CEE2AD = 1;
+    sub_1C93AD4(&Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
+    sub_1C93AD4(&System_Func_List_object___SubBgmPlayArgs____TypeInfo);
+    sub_1C93AD4(&Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__10_0__);
+    sub_1C93AD4(&BattleBgEntity___c_TypeInfo);
+    sub_1C93AD4(&StringLiteral_24056/*"subBgms"*/);
+    byte_4D3060C = 1;
   }
   v3 = BattleBgEntity___c_TypeInfo;
   if ( !BattleBgEntity___c_TypeInfo->_2.cctor_finished )
@@ -185,40 +185,40 @@ SubBgmPlayArgs_array *BattleBgEntity__GetSubBgmPlayArgsArray(BattleBgEntity_o *t
       v3 = BattleBgEntity___c_TypeInfo;
     }
     v5 = (Il2CppObject *)v3->static_fields->__9;
-    _9__10_0 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_List_object___SubBgmPlayArgs____TypeInfo);
+    _9__10_0 = (System_Func_object__object__o *)sub_1C93D20(System_Func_List_object___SubBgmPlayArgs____TypeInfo);
     System_Func_object__object____ctor(_9__10_0, v5, Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__10_0__, 0);
     static_fields = BattleBgEntity___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Func_List_object___SubBgmPlayArgs____o *)_9__10_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v7, v8, v9, v10, v11, v12);
   }
   return (SubBgmPlayArgs_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                    this->fields.script,
-                                   (System_String_o *)StringLiteral_23989/*"subBgms"*/,
+                                   (System_String_o *)StringLiteral_24056/*"subBgms"*/,
                                    (System_Func_TSource__TDestination__o *)_9__10_0,
                                    0,
-                                   (const MethodInfo_3176B8C *)Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
+                                   (const MethodInfo_31AB334 *)Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
 }
 
 
 int32_t BattleBgEntity__GetSubBgmsPriority(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE2AE & 1) == 0 )
+  if ( (byte_4D3060D & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_23990/*"subBgmsPriority"*/);
-    byte_4CEE2AE = 1;
+    sub_1C93AD4(&StringLiteral_24057/*"subBgmsPriority"*/);
+    byte_4D3060D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23990/*"subBgmsPriority"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24057/*"subBgmsPriority"*/, 0, 0);
 }
 
 
 bool BattleBgEntity__IsAcceptedOverwrittenShadow(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE2B1 & 1) == 0 )
+  if ( (byte_4D30610 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_2102/*"AcceptOverwrittenShadow"*/);
-    byte_4CEE2B1 = 1;
+    sub_1C93AD4(&StringLiteral_2114/*"AcceptOverwrittenShadow"*/);
+    byte_4D30610 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_2102/*"AcceptOverwrittenShadow"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_2114/*"AcceptOverwrittenShadow"*/, 0, 0) == 1;
 }
 
 
@@ -242,12 +242,12 @@ bool BattleBgEntity__GetAllSpecialShadowEffectIds_d__16__MoveNext(
   int32_t v5; // w20
   __int64 *v6; // x9
 
-  if ( (byte_4CEE2B7 & 1) == 0 )
+  if ( (byte_4D30616 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_13022/*"SpecialShadowEffectId"*/);
-    sub_1C7BAE8(&StringLiteral_10726/*"PlayerSpecialShadowEffectId"*/);
-    sub_1C7BAE8(&StringLiteral_6056/*"EnemySpecialShadowEffectId"*/);
-    byte_4CEE2B7 = 1;
+    sub_1C93AD4(&StringLiteral_13063/*"SpecialShadowEffectId"*/);
+    sub_1C93AD4(&StringLiteral_10762/*"PlayerSpecialShadowEffectId"*/);
+    sub_1C93AD4(&StringLiteral_6077/*"EnemySpecialShadowEffectId"*/);
+    byte_4D30616 = 1;
   }
   result = 0;
   _4__this = this->fields.__4__this;
@@ -258,22 +258,22 @@ bool BattleBgEntity__GetAllSpecialShadowEffectIds_d__16__MoveNext(
       this->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_12;
-      v6 = &StringLiteral_13022/*"SpecialShadowEffectId"*/;
+      v6 = &StringLiteral_13063/*"SpecialShadowEffectId"*/;
       v5 = 1;
       goto LABEL_10;
     case 1:
       this->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_12;
-      v6 = &StringLiteral_10726/*"PlayerSpecialShadowEffectId"*/;
+      v6 = &StringLiteral_10762/*"PlayerSpecialShadowEffectId"*/;
       v5 = 2;
       goto LABEL_10;
     case 2:
       this->fields.__1__state = -1;
       if ( !_4__this )
 LABEL_12:
-        sub_1C7BD40(0, method);
-      v6 = &StringLiteral_6056/*"EnemySpecialShadowEffectId"*/;
+        sub_1C93D2C(0, method);
+      v6 = &StringLiteral_6077/*"EnemySpecialShadowEffectId"*/;
       v5 = 3;
 LABEL_10:
       this->fields.__2__current = EntityScriptUtil__GetIntValue(
@@ -307,12 +307,11 @@ System_Collections_Generic_IEnumerator_int__o *BattleBgEntity__GetAllSpecialShad
   int32_t v9; // w5
   int64_t v10; // x6
   System_String_o *v11; // x7
-  System_Collections_Generic_IEnumerator_int__o *result; // x0
 
-  if ( (byte_4CEE2B9 & 1) == 0 )
+  if ( (byte_4D30618 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
-    byte_4CEE2B9 = 1;
+    sub_1C93AD4(&BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
+    byte_4D30618 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -323,17 +322,16 @@ System_Collections_Generic_IEnumerator_int__o *BattleBgEntity__GetAllSpecialShad
   }
   else
   {
-    v4 = (BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_o *)sub_1C7BD34(BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
+    v4 = (BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_o *)sub_1C93D20(BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7, v8, v9, v10, v11);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7, v8, v9, v10, v11);
   }
-  result = (System_Collections_Generic_IEnumerator_int__o *)v4;
   v4->fields.defId = this->fields.__3__defId;
-  return result;
+  return (System_Collections_Generic_IEnumerator_int__o *)v4;
 }
 
 
@@ -353,11 +351,11 @@ void __noreturn BattleBgEntity__GetAllSpecialShadowEffectIds_d__16__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_BattleBgEntity__GetAllSpecialShadowEffectIds_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -367,10 +365,10 @@ Il2CppObject *BattleBgEntity__GetAllSpecialShadowEffectIds_d__16__System_Collect
 {
   int32_t _2__current; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CEE2B8 & 1) == 0 )
+  if ( (byte_4D30617 & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    byte_4CEE2B8 = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    byte_4D30617 = 1;
   }
   _2__current = this->fields.__2__current;
   return (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &_2__current);
@@ -395,15 +393,15 @@ void BattleBgEntity___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEE2B6 & 1) == 0 )
+  if ( (byte_4D30615 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleBgEntity___c_TypeInfo);
-    byte_4CEE2B6 = 1;
+    sub_1C93AD4(&BattleBgEntity___c_TypeInfo);
+    byte_4D30615 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(BattleBgEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(BattleBgEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleBgEntity___c_TypeInfo->static_fields->__9 = (struct BattleBgEntity___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)BattleBgEntity___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

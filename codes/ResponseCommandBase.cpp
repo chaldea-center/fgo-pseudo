@@ -11,10 +11,10 @@ System_String_o *ResponseCommandBase__GetCommandName(ResponseCommandBase_o *this
 {
   int32_t v3; // w19
 
-  if ( (byte_4CF01FD & 1) == 0 )
+  if ( (byte_4D3258D & 1) == 0 )
   {
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    byte_4CF01FD = 1;
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    byte_4D3258D = 1;
   }
   v3 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, const MethodInfo *))this->klass->vtable._4_GetKind.methodPtr)(
          this,

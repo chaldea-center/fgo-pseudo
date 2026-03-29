@@ -325,325 +325,319 @@ void BuffList___cctor(const MethodInfo *method)
   BuffList_TYPE_array *v323; // x20
   BuffList_TYPE_array *v324; // x21
   BuffList_ActInfo_o *v325; // x22
-  System_Array_o *v326; // x0
-  System_RuntimeFieldHandle_o v327; // x1
-  BuffList_TYPE_array *v328; // x21
-  BuffList_TYPE_array *v329; // x22
-  BuffList_ActInfo_o *v330; // x20
-  Il2CppObject *v331; // x0
-  BuffList_TYPE_array *v332; // x20
-  BuffList_TYPE_array *v333; // x21
-  BuffList_ActInfo_o *v334; // x22
-  BuffList_TYPE_array *v335; // x20
-  BuffList_TYPE_array *v336; // x21
-  BuffList_ActInfo_o *v337; // x22
-  BuffList_TYPE_array *v338; // x20
-  BuffList_TYPE_array *v339; // x21
-  BuffList_ActInfo_o *v340; // x22
-  Il2CppObject *v341; // x0
-  BuffList_TYPE_array *v342; // x20
-  BuffList_TYPE_array *v343; // x21
-  BuffList_ActInfo_o *v344; // x22
-  Il2CppObject *v345; // x0
-  BuffList_TYPE_array *v346; // x20
-  BuffList_TYPE_array *v347; // x22
-  BuffList_ActInfo_o *v348; // x21
-  Il2CppObject *v349; // x0
-  BuffList_TYPE_array *v350; // x20
-  BuffList_TYPE_array *v351; // x21
-  BuffList_ActInfo_o *v352; // x22
-  BuffList_TYPE_array *v353; // x20
-  BuffList_TYPE_array *v354; // x21
-  BuffList_ActInfo_o *v355; // x22
-  BuffList_TYPE_array *v356; // x20
-  BuffList_TYPE_array *v357; // x21
-  BuffList_ActInfo_o *v358; // x22
-  BuffList_TYPE_array *v359; // x20
-  BuffList_TYPE_array *v360; // x21
-  BuffList_ActInfo_o *v361; // x22
-  BuffList_TYPE_array *v362; // x20
-  BuffList_TYPE_array *v363; // x21
-  BuffList_ActInfo_o *v364; // x22
-  BuffList_TYPE_array *v365; // x20
-  BuffList_TYPE_array *v366; // x21
-  BuffList_ActInfo_o *v367; // x22
-  BuffList_TYPE_array *v368; // x20
-  BuffList_TYPE_array *v369; // x22
-  BuffList_ActInfo_o *v370; // x21
-  Il2CppObject *v371; // x0
-  BuffList_TYPE_array *v372; // x20
-  BuffList_TYPE_array *v373; // x21
-  BuffList_ActInfo_o *v374; // x22
-  BuffList_TYPE_array *v375; // x20
-  BuffList_TYPE_array *v376; // x21
-  BuffList_ActInfo_o *v377; // x22
-  BuffList_TYPE_array *v378; // x20
-  BuffList_TYPE_array *v379; // x21
-  BuffList_ActInfo_o *v380; // x22
-  BuffList_TYPE_array *v381; // x20
-  BuffList_TYPE_array *v382; // x21
-  BuffList_ActInfo_o *v383; // x22
-  BuffList_TYPE_array *v384; // x20
-  BuffList_TYPE_array *v385; // x21
-  BuffList_ToFieldActInfo_o *v386; // x22
-  BuffList_TYPE_array *v387; // x20
-  BuffList_TYPE_array *v388; // x21
-  BuffList_ToFieldActInfo_o *v389; // x22
-  BuffList_TYPE_array *v390; // x20
-  BuffList_TYPE_array *v391; // x22
-  BuffList_ActInfo_o *v392; // x21
-  Il2CppObject *v393; // x0
-  BuffList_TYPE_array *v394; // x20
-  BuffList_TYPE_array *v395; // x21
-  BuffList_ActInfo_o *v396; // x22
-  BuffList_TYPE_array *v397; // x20
-  BuffList_TYPE_array *v398; // x21
-  BuffList_ActInfo_o *v399; // x22
-  BuffList_TYPE_array *v400; // x20
-  BuffList_TYPE_array *v401; // x22
-  BuffList_ActInfo_o *v402; // x21
-  Il2CppObject *v403; // x0
-  BuffList_TYPE_array *v404; // x20
-  BuffList_TYPE_array *v405; // x21
-  BuffList_ActInfo_o *v406; // x22
-  Il2CppObject *v407; // x0
-  int v408; // w8
-  BuffList_TYPE_array *v409; // x20
-  BuffList_TYPE_array *v410; // x21
-  BuffList_ActInfo_o *v411; // x22
-  BuffList_TYPE_array *v412; // x20
-  BuffList_TYPE_array *v413; // x22
-  BuffList_ActInfo_o *v414; // x21
-  Il2CppObject *v415; // x0
-  BuffList_TYPE_array *v416; // x20
-  BuffList_TYPE_array *v417; // x21
-  BuffList_ActInfo_o *v418; // x22
-  BuffList_TYPE_array *v419; // x20
-  BuffList_TYPE_array *v420; // x21
-  BuffList_ActInfo_o *v421; // x22
-  BuffList_TYPE_array *v422; // x20
-  BuffList_TYPE_array *v423; // x21
-  BuffList_ActInfo_o *v424; // x22
-  BuffList_TYPE_array *v425; // x20
-  BuffList_TYPE_array *v426; // x21
-  BuffList_ActInfo_o *v427; // x22
-  BuffList_TYPE_array *v428; // x20
-  BuffList_TYPE_array *v429; // x21
-  BuffList_ActInfo_o *v430; // x22
-  BuffList_TYPE_array *v431; // x20
-  BuffList_TYPE_array *v432; // x21
-  BuffList_ActInfo_o *v433; // x22
-  BuffList_TYPE_array *v434; // x20
-  BuffList_TYPE_array *v435; // x21
-  BuffList_ActInfo_o *v436; // x22
-  BuffList_TYPE_array *v437; // x20
-  BuffList_TYPE_array *v438; // x21
-  BuffList_ActInfo_o *v439; // x22
-  BuffList_TYPE_array *v440; // x20
-  BuffList_TYPE_array *v441; // x21
-  BuffList_ActInfo_o *v442; // x22
-  BuffList_TYPE_array *v443; // x20
-  BuffList_TYPE_array *v444; // x21
-  BuffList_ActInfo_o *v445; // x22
-  BuffList_TYPE_array *v446; // x20
-  BuffList_TYPE_array *v447; // x21
-  BuffList_ActInfo_o *v448; // x22
-  BuffList_TYPE_array *v449; // x20
-  BuffList_TYPE_array *v450; // x21
-  BuffList_ActInfo_o *v451; // x22
-  BuffList_TYPE_array *v452; // x20
-  BuffList_TYPE_array *v453; // x21
-  BuffList_ActInfo_o *v454; // x22
-  BuffList_TYPE_array *v455; // x20
-  BuffList_TYPE_array *v456; // x21
-  BuffList_ActInfo_o *v457; // x22
-  BuffList_TYPE_array *v458; // x20
-  BuffList_TYPE_array *v459; // x21
-  BuffList_ActInfo_o *v460; // x22
-  BuffList_TYPE_array *v461; // x20
-  BuffList_TYPE_array *v462; // x21
-  BuffList_ActInfo_o *v463; // x22
-  int v464; // w8
-  BuffList_TYPE_array *v465; // x20
-  BuffList_TYPE_array *v466; // x21
-  BuffList_ActInfo_o *v467; // x22
-  BuffList_TYPE_array *v468; // x20
-  BuffList_TYPE_array *v469; // x21
-  BuffList_ActInfo_o *v470; // x22
-  BuffList_TYPE_array *v471; // x20
-  BuffList_TYPE_array *v472; // x21
-  BuffList_ActInfo_o *v473; // x22
-  BuffList_TYPE_array *v474; // x20
-  BuffList_TYPE_array *v475; // x21
-  BuffList_ActInfo_o *v476; // x22
-  BuffList_TYPE_array *v477; // x20
-  BuffList_TYPE_array *v478; // x21
-  BuffList_ActInfo_o *v479; // x22
-  BuffList_TYPE_array *v480; // x20
-  BuffList_TYPE_array *v481; // x21
-  BuffList_ActInfo_o *v482; // x22
-  BuffList_TYPE_array *v483; // x20
-  BuffList_TYPE_array *v484; // x21
-  BuffList_ActInfo_o *v485; // x22
-  BuffList_TYPE_array *v486; // x20
-  BuffList_TYPE_array *v487; // x21
-  BuffList_ActInfo_o *v488; // x22
-  BuffList_TYPE_array *v489; // x20
-  BuffList_TYPE_array *v490; // x21
-  BuffList_ActInfo_o *v491; // x22
-  BuffList_TYPE_array *v492; // x20
-  BuffList_TYPE_array *v493; // x21
-  BuffList_ActInfo_o *v494; // x22
-  BuffList_TYPE_array *v495; // x20
-  BuffList_TYPE_array *v496; // x21
-  BuffList_ActInfo_o *v497; // x22
-  BuffList_TYPE_array *v498; // x20
-  BuffList_TYPE_array *v499; // x21
-  BuffList_ActInfo_o *v500; // x22
-  BuffList_TYPE_array *v501; // x20
-  BuffList_TYPE_array *v502; // x21
-  BuffList_ActInfo_o *v503; // x22
-  BuffList_TYPE_array *v504; // x20
-  BuffList_TYPE_array *v505; // x22
-  BuffList_ActInfo_o *v506; // x21
-  Il2CppObject *v507; // x0
-  BuffList_TYPE_array *v508; // x20
-  BuffList_TYPE_array *v509; // x21
-  BuffList_ActInfo_o *v510; // x22
-  BuffList_TYPE_array *v511; // x20
-  BuffList_TYPE_array *v512; // x21
-  BuffList_ActInfo_o *v513; // x22
-  BuffList_TYPE_array *v514; // x20
-  BuffList_TYPE_array *v515; // x21
-  BuffList_ActInfo_o *v516; // x22
-  BuffList_TYPE_array *v517; // x20
-  BuffList_TYPE_array *v518; // x21
-  BuffList_ActInfo_o *v519; // x22
-  Il2CppObject *v520; // x0
-  BuffList_TYPE_array *v521; // x20
-  BuffList_TYPE_array *v522; // x21
-  BuffList_ActInfo_o *v523; // x22
-  Il2CppObject *v524; // x0
-  BuffList_TYPE_array *v525; // x20
-  BuffList_TYPE_array *v526; // x21
-  BuffList_ActInfo_o *v527; // x22
-  BuffList_TYPE_array *v528; // x20
-  BuffList_TYPE_array *v529; // x22
-  BuffList_ActInfo_o *v530; // x21
-  Il2CppObject *v531; // x0
-  BuffList_TYPE_array *v532; // x20
-  BuffList_TYPE_array *v533; // x21
-  BuffList_ActInfo_o *v534; // x22
-  BuffList_TYPE_array *v535; // x20
-  BuffList_TYPE_array *v536; // x22
-  BuffList_ActInfo_o *v537; // x21
-  Il2CppObject *v538; // x0
-  BuffList_TYPE_array *v539; // x20
-  BuffList_TYPE_array *v540; // x21
-  BuffList_ActInfo_o *v541; // x22
-  Il2CppObject *v542; // x0
-  BuffList_TYPE_array *v543; // x20
-  BuffList_TYPE_array *v544; // x21
-  BuffList_ActInfo_o *v545; // x22
-  BuffList_TYPE_array *v546; // x20
-  BuffList_TYPE_array *v547; // x21
-  BuffList_ActInfo_o *v548; // x22
-  BuffList_TYPE_array *v549; // x20
-  BuffList_TYPE_array *v550; // x22
-  BuffList_ActInfo_o *v551; // x21
-  Il2CppObject *v552; // x0
-  BuffList_TYPE_array *v553; // x20
-  BuffList_TYPE_array *v554; // x22
-  BuffList_ActInfo_o *v555; // x21
-  Il2CppObject *v556; // x0
-  BuffList_TYPE_array *v557; // x20
-  BuffList_TYPE_array *v558; // x21
-  BuffList_ActInfo_o *v559; // x22
-  BuffList_TYPE_array *v560; // x20
-  BuffList_TYPE_array *v561; // x21
-  BuffList_ActInfo_o *v562; // x22
-  BuffList_TYPE_array *v563; // x20
-  BuffList_TYPE_array *v564; // x21
-  BuffList_ActInfo_o *v565; // x22
-  BuffList_TYPE_array *v566; // x20
-  BuffList_TYPE_array *v567; // x21
-  BuffList_ActInfo_o *v568; // x22
-  BuffList_TYPE_array *v569; // x20
-  BuffList_TYPE_array *v570; // x21
-  BuffList_ActInfo_o *v571; // x22
-  BuffList_TYPE_array *v572; // x20
-  BuffList_TYPE_array *v573; // x21
-  BuffList_ActInfo_o *v574; // x22
-  BuffList_TYPE_array *v575; // x20
-  BuffList_TYPE_array *v576; // x21
-  BuffList_ActInfo_o *v577; // x22
-  BuffList_TYPE_array *v578; // x20
-  BuffList_TYPE_array *v579; // x21
-  BuffList_ActInfo_o *v580; // x22
-  BuffList_TYPE_array *v581; // x20
-  BuffList_TYPE_array *v582; // x21
-  BuffList_ActInfo_o *v583; // x22
-  BuffList_TYPE_array *v584; // x20
-  BuffList_TYPE_array *v585; // x21
-  BuffList_ActInfo_o *v586; // x22
-  int32_t v587; // w2
-  int32_t v588; // w3
-  System_String_o *v589; // x4
-  int32_t v590; // w5
-  int64_t v591; // x6
-  System_String_o *v592; // x7
-  System_Array_o *v593; // x0
-  System_RuntimeFieldHandle_o v594; // x1
-  System_Array_o *v595; // x19
+  System_Array_o *v326; // x21
+  BuffList_TYPE_array *v327; // x22
+  BuffList_ActInfo_o *v328; // x20
+  Il2CppObject *v329; // x0
+  BuffList_TYPE_array *v330; // x20
+  BuffList_TYPE_array *v331; // x21
+  BuffList_ActInfo_o *v332; // x22
+  BuffList_TYPE_array *v333; // x20
+  BuffList_TYPE_array *v334; // x21
+  BuffList_ActInfo_o *v335; // x22
+  BuffList_TYPE_array *v336; // x20
+  BuffList_TYPE_array *v337; // x21
+  BuffList_ActInfo_o *v338; // x22
+  Il2CppObject *v339; // x0
+  BuffList_TYPE_array *v340; // x20
+  BuffList_TYPE_array *v341; // x21
+  BuffList_ActInfo_o *v342; // x22
+  Il2CppObject *v343; // x0
+  BuffList_TYPE_array *v344; // x20
+  BuffList_TYPE_array *v345; // x22
+  BuffList_ActInfo_o *v346; // x21
+  Il2CppObject *v347; // x0
+  BuffList_TYPE_array *v348; // x20
+  BuffList_TYPE_array *v349; // x21
+  BuffList_ActInfo_o *v350; // x22
+  BuffList_TYPE_array *v351; // x20
+  BuffList_TYPE_array *v352; // x21
+  BuffList_ActInfo_o *v353; // x22
+  BuffList_TYPE_array *v354; // x20
+  BuffList_TYPE_array *v355; // x21
+  BuffList_ActInfo_o *v356; // x22
+  BuffList_TYPE_array *v357; // x20
+  BuffList_TYPE_array *v358; // x21
+  BuffList_ActInfo_o *v359; // x22
+  BuffList_TYPE_array *v360; // x20
+  BuffList_TYPE_array *v361; // x21
+  BuffList_ActInfo_o *v362; // x22
+  BuffList_TYPE_array *v363; // x20
+  BuffList_TYPE_array *v364; // x21
+  BuffList_ActInfo_o *v365; // x22
+  BuffList_TYPE_array *v366; // x20
+  BuffList_TYPE_array *v367; // x22
+  BuffList_ActInfo_o *v368; // x21
+  Il2CppObject *v369; // x0
+  BuffList_TYPE_array *v370; // x20
+  BuffList_TYPE_array *v371; // x21
+  BuffList_ActInfo_o *v372; // x22
+  BuffList_TYPE_array *v373; // x20
+  BuffList_TYPE_array *v374; // x21
+  BuffList_ActInfo_o *v375; // x22
+  BuffList_TYPE_array *v376; // x20
+  BuffList_TYPE_array *v377; // x21
+  BuffList_ActInfo_o *v378; // x22
+  BuffList_TYPE_array *v379; // x20
+  BuffList_TYPE_array *v380; // x21
+  BuffList_ActInfo_o *v381; // x22
+  BuffList_TYPE_array *v382; // x20
+  BuffList_TYPE_array *v383; // x21
+  BuffList_ToFieldActInfo_o *v384; // x22
+  BuffList_TYPE_array *v385; // x20
+  BuffList_TYPE_array *v386; // x21
+  BuffList_ToFieldActInfo_o *v387; // x22
+  BuffList_TYPE_array *v388; // x20
+  BuffList_TYPE_array *v389; // x22
+  BuffList_ActInfo_o *v390; // x21
+  Il2CppObject *v391; // x0
+  BuffList_TYPE_array *v392; // x20
+  BuffList_TYPE_array *v393; // x21
+  BuffList_ActInfo_o *v394; // x22
+  BuffList_TYPE_array *v395; // x20
+  BuffList_TYPE_array *v396; // x21
+  BuffList_ActInfo_o *v397; // x22
+  BuffList_TYPE_array *v398; // x20
+  BuffList_TYPE_array *v399; // x22
+  BuffList_ActInfo_o *v400; // x21
+  Il2CppObject *v401; // x0
+  BuffList_TYPE_array *v402; // x20
+  BuffList_TYPE_array *v403; // x21
+  BuffList_ActInfo_o *v404; // x22
+  Il2CppObject *v405; // x0
+  int v406; // w8
+  BuffList_TYPE_array *v407; // x20
+  BuffList_TYPE_array *v408; // x21
+  BuffList_ActInfo_o *v409; // x22
+  BuffList_TYPE_array *v410; // x20
+  BuffList_TYPE_array *v411; // x22
+  BuffList_ActInfo_o *v412; // x21
+  Il2CppObject *v413; // x0
+  BuffList_TYPE_array *v414; // x20
+  BuffList_TYPE_array *v415; // x21
+  BuffList_ActInfo_o *v416; // x22
+  BuffList_TYPE_array *v417; // x20
+  BuffList_TYPE_array *v418; // x21
+  BuffList_ActInfo_o *v419; // x22
+  BuffList_TYPE_array *v420; // x20
+  BuffList_TYPE_array *v421; // x21
+  BuffList_ActInfo_o *v422; // x22
+  BuffList_TYPE_array *v423; // x20
+  BuffList_TYPE_array *v424; // x21
+  BuffList_ActInfo_o *v425; // x22
+  BuffList_TYPE_array *v426; // x20
+  BuffList_TYPE_array *v427; // x21
+  BuffList_ActInfo_o *v428; // x22
+  BuffList_TYPE_array *v429; // x20
+  BuffList_TYPE_array *v430; // x21
+  BuffList_ActInfo_o *v431; // x22
+  BuffList_TYPE_array *v432; // x20
+  BuffList_TYPE_array *v433; // x21
+  BuffList_ActInfo_o *v434; // x22
+  BuffList_TYPE_array *v435; // x20
+  BuffList_TYPE_array *v436; // x21
+  BuffList_ActInfo_o *v437; // x22
+  BuffList_TYPE_array *v438; // x20
+  BuffList_TYPE_array *v439; // x21
+  BuffList_ActInfo_o *v440; // x22
+  BuffList_TYPE_array *v441; // x20
+  BuffList_TYPE_array *v442; // x21
+  BuffList_ActInfo_o *v443; // x22
+  BuffList_TYPE_array *v444; // x20
+  BuffList_TYPE_array *v445; // x21
+  BuffList_ActInfo_o *v446; // x22
+  BuffList_TYPE_array *v447; // x20
+  BuffList_TYPE_array *v448; // x21
+  BuffList_ActInfo_o *v449; // x22
+  BuffList_TYPE_array *v450; // x20
+  BuffList_TYPE_array *v451; // x21
+  BuffList_ActInfo_o *v452; // x22
+  BuffList_TYPE_array *v453; // x20
+  BuffList_TYPE_array *v454; // x21
+  BuffList_ActInfo_o *v455; // x22
+  BuffList_TYPE_array *v456; // x20
+  BuffList_TYPE_array *v457; // x21
+  BuffList_ActInfo_o *v458; // x22
+  BuffList_TYPE_array *v459; // x20
+  BuffList_TYPE_array *v460; // x21
+  BuffList_ActInfo_o *v461; // x22
+  int v462; // w8
+  BuffList_TYPE_array *v463; // x20
+  BuffList_TYPE_array *v464; // x21
+  BuffList_ActInfo_o *v465; // x22
+  BuffList_TYPE_array *v466; // x20
+  BuffList_TYPE_array *v467; // x21
+  BuffList_ActInfo_o *v468; // x22
+  BuffList_TYPE_array *v469; // x20
+  BuffList_TYPE_array *v470; // x21
+  BuffList_ActInfo_o *v471; // x22
+  BuffList_TYPE_array *v472; // x20
+  BuffList_TYPE_array *v473; // x21
+  BuffList_ActInfo_o *v474; // x22
+  BuffList_TYPE_array *v475; // x20
+  BuffList_TYPE_array *v476; // x21
+  BuffList_ActInfo_o *v477; // x22
+  BuffList_TYPE_array *v478; // x20
+  BuffList_TYPE_array *v479; // x21
+  BuffList_ActInfo_o *v480; // x22
+  BuffList_TYPE_array *v481; // x20
+  BuffList_TYPE_array *v482; // x21
+  BuffList_ActInfo_o *v483; // x22
+  BuffList_TYPE_array *v484; // x20
+  BuffList_TYPE_array *v485; // x21
+  BuffList_ActInfo_o *v486; // x22
+  BuffList_TYPE_array *v487; // x20
+  BuffList_TYPE_array *v488; // x21
+  BuffList_ActInfo_o *v489; // x22
+  BuffList_TYPE_array *v490; // x20
+  BuffList_TYPE_array *v491; // x21
+  BuffList_ActInfo_o *v492; // x22
+  BuffList_TYPE_array *v493; // x20
+  BuffList_TYPE_array *v494; // x21
+  BuffList_ActInfo_o *v495; // x22
+  BuffList_TYPE_array *v496; // x20
+  BuffList_TYPE_array *v497; // x21
+  BuffList_ActInfo_o *v498; // x22
+  BuffList_TYPE_array *v499; // x20
+  BuffList_TYPE_array *v500; // x21
+  BuffList_ActInfo_o *v501; // x22
+  BuffList_TYPE_array *v502; // x20
+  BuffList_TYPE_array *v503; // x22
+  BuffList_ActInfo_o *v504; // x21
+  Il2CppObject *v505; // x0
+  BuffList_TYPE_array *v506; // x20
+  BuffList_TYPE_array *v507; // x21
+  BuffList_ActInfo_o *v508; // x22
+  BuffList_TYPE_array *v509; // x20
+  BuffList_TYPE_array *v510; // x21
+  BuffList_ActInfo_o *v511; // x22
+  BuffList_TYPE_array *v512; // x20
+  BuffList_TYPE_array *v513; // x21
+  BuffList_ActInfo_o *v514; // x22
+  BuffList_TYPE_array *v515; // x20
+  BuffList_TYPE_array *v516; // x21
+  BuffList_ActInfo_o *v517; // x22
+  Il2CppObject *v518; // x0
+  BuffList_TYPE_array *v519; // x20
+  BuffList_TYPE_array *v520; // x21
+  BuffList_ActInfo_o *v521; // x22
+  Il2CppObject *v522; // x0
+  BuffList_TYPE_array *v523; // x20
+  BuffList_TYPE_array *v524; // x21
+  BuffList_ActInfo_o *v525; // x22
+  BuffList_TYPE_array *v526; // x20
+  BuffList_TYPE_array *v527; // x22
+  BuffList_ActInfo_o *v528; // x21
+  Il2CppObject *v529; // x0
+  BuffList_TYPE_array *v530; // x20
+  BuffList_TYPE_array *v531; // x21
+  BuffList_ActInfo_o *v532; // x22
+  BuffList_TYPE_array *v533; // x20
+  BuffList_TYPE_array *v534; // x22
+  BuffList_ActInfo_o *v535; // x21
+  Il2CppObject *v536; // x0
+  BuffList_TYPE_array *v537; // x20
+  BuffList_TYPE_array *v538; // x21
+  BuffList_ActInfo_o *v539; // x22
+  Il2CppObject *v540; // x0
+  BuffList_TYPE_array *v541; // x20
+  BuffList_TYPE_array *v542; // x21
+  BuffList_ActInfo_o *v543; // x22
+  BuffList_TYPE_array *v544; // x20
+  BuffList_TYPE_array *v545; // x21
+  BuffList_ActInfo_o *v546; // x22
+  BuffList_TYPE_array *v547; // x20
+  BuffList_TYPE_array *v548; // x22
+  BuffList_ActInfo_o *v549; // x21
+  Il2CppObject *v550; // x0
+  BuffList_TYPE_array *v551; // x20
+  BuffList_TYPE_array *v552; // x22
+  BuffList_ActInfo_o *v553; // x21
+  Il2CppObject *v554; // x0
+  BuffList_TYPE_array *v555; // x20
+  BuffList_TYPE_array *v556; // x21
+  BuffList_ActInfo_o *v557; // x22
+  BuffList_TYPE_array *v558; // x20
+  BuffList_TYPE_array *v559; // x21
+  BuffList_ActInfo_o *v560; // x22
+  BuffList_TYPE_array *v561; // x20
+  BuffList_TYPE_array *v562; // x21
+  BuffList_ActInfo_o *v563; // x22
+  BuffList_TYPE_array *v564; // x20
+  BuffList_TYPE_array *v565; // x21
+  BuffList_ActInfo_o *v566; // x22
+  BuffList_TYPE_array *v567; // x20
+  BuffList_TYPE_array *v568; // x21
+  BuffList_ActInfo_o *v569; // x22
+  BuffList_TYPE_array *v570; // x20
+  BuffList_TYPE_array *v571; // x21
+  BuffList_ActInfo_o *v572; // x22
+  BuffList_TYPE_array *v573; // x20
+  BuffList_TYPE_array *v574; // x21
+  BuffList_ActInfo_o *v575; // x22
+  BuffList_TYPE_array *v576; // x20
+  BuffList_TYPE_array *v577; // x21
+  BuffList_ActInfo_o *v578; // x22
+  BuffList_TYPE_array *v579; // x20
+  BuffList_TYPE_array *v580; // x21
+  BuffList_ActInfo_o *v581; // x22
+  BuffList_TYPE_array *v582; // x20
+  BuffList_TYPE_array *v583; // x21
+  BuffList_ActInfo_o *v584; // x22
+  int32_t v585; // w2
+  int32_t v586; // w3
+  System_String_o *v587; // x4
+  int32_t v588; // w5
+  int64_t v589; // x6
+  System_String_o *v590; // x7
+  System_Array_o *v591; // x19
   struct BuffList_StaticFields *static_fields; // x0
-  int32_t v597; // w2
-  int32_t v598; // w3
-  System_String_o *v599; // x4
-  int32_t v600; // w5
-  int64_t v601; // x6
-  System_String_o *v602; // x7
-  System_Array_o *v603; // x0
-  System_RuntimeFieldHandle_o v604; // x1
-  System_Array_o *v605; // x19
-  struct BuffList_StaticFields *v606; // x0
-  int32_t v607; // w2
-  int32_t v608; // w3
-  System_String_o *v609; // x4
-  int32_t v610; // w5
-  int64_t v611; // x6
-  System_String_o *v612; // x7
-  System_Collections_Generic_HashSet_T__o *v613; // x19
-  struct BuffList_StaticFields *v614; // x0
-  int32_t v615; // w2
-  int32_t v616; // w3
-  System_String_o *v617; // x4
-  int32_t v618; // w5
-  int64_t v619; // x6
-  System_String_o *v620; // x7
+  int32_t v593; // w2
+  int32_t v594; // w3
+  System_String_o *v595; // x4
+  int32_t v596; // w5
+  int64_t v597; // x6
+  System_String_o *v598; // x7
+  System_Array_o *v599; // x19
+  struct BuffList_StaticFields *v600; // x0
+  int32_t v601; // w2
+  int32_t v602; // w3
+  System_String_o *v603; // x4
+  int32_t v604; // w5
+  int64_t v605; // x6
+  System_String_o *v606; // x7
+  System_Collections_Generic_HashSet_T__o *v607; // x19
+  struct BuffList_StaticFields *v608; // x0
+  int32_t v609; // w2
+  int32_t v610; // w3
+  System_String_o *v611; // x4
+  int32_t v612; // w5
+  int64_t v613; // x6
+  System_String_o *v614; // x7
 
-  if ( (byte_4CED466 & 1) == 0 )
+  if ( (byte_4D2F7B7 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_ACTION___TypeInfo);
-    sub_1C7BAE8(&BuffList_ActInfo_TypeInfo);
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
-    sub_1C7BAE8(&BuffList_TYPE___TypeInfo);
-    sub_1C7BAE8(&BuffList_ToFieldActInfo_TypeInfo);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__4DCEA73076A551DAEDFBF7D13EF3DC1D62E99512969075595348B65A4AC9216C);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E);
-    byte_4CED466 = 1;
+    sub_1C93AD4(&BuffList_ACTION___TypeInfo);
+    sub_1C93AD4(&BuffList_ActInfo_TypeInfo);
+    sub_1C93AD4(&BuffList_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
+    sub_1C93AD4(&BuffList_TYPE___TypeInfo);
+    sub_1C93AD4(&BuffList_ToFieldActInfo_TypeInfo);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__4DCEA73076A551DAEDFBF7D13EF3DC1D62E99512969075595348B65A4AC9216C);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E);
+    byte_4D2F7B7 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C93D20(System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_34BBB78 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F52C0 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo___ctor__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   plusTypes = (int)v2->fields.plusTypes;
@@ -654,7 +648,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( plusTypes == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 52;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v6 = (int)v2->fields.plusTypes;
@@ -665,7 +659,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v6 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 60;
-  v8 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v8 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v8, 3, v5, v7, 0);
   if ( !v1 )
     goto LABEL_515;
@@ -673,8 +667,8 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     1,
     (Il2CppObject *)v8,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v9 = (int)v2->fields.plusTypes;
@@ -685,7 +679,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v9 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 128;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v11 = (int)v2->fields.plusTypes;
@@ -696,85 +690,85 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v11 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 129;
-  v13 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v13 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v13, 1, v10, v12, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
     (Il2CppObject *)v13,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v14 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 9;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v15 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 10;
-  v16 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v16 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v16, 3, v14, v15, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     3,
     (Il2CppObject *)v16,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v17 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 42;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v18 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 43;
-  v19 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v19 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v19, 2, v17, v18, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     4,
     (Il2CppObject *)v19,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v20 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v20 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v21 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 43;
-  v22 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v22 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v22, 2, v20, v21, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     5,
     (Il2CppObject *)v22,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v23 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 91;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v24 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 92;
-  v25 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v25 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v25, 3, v23, v24, 0);
   if ( !v25 )
     goto LABEL_515;
@@ -783,22 +777,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     6,
     v26,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v27 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 11;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v28 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 12;
-  v29 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v29 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v29, 1, v27, v28, 0);
   if ( !v29 )
     goto LABEL_515;
@@ -807,22 +801,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     7,
     v30,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v31 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 110;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v32 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 111;
-  v33 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v33 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v33, 1, v31, v32, 0);
   if ( !v33 )
     goto LABEL_515;
@@ -831,22 +825,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     8,
     v34,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v35 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 112;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v36 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 113;
-  v37 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v37 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v37, 1, v35, v36, 0);
   if ( !v37 )
     goto LABEL_515;
@@ -855,22 +849,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     9,
     v38,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v39 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 214;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v40 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 215;
-  v41 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v41 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v41, 2, v39, v40, 0);
   if ( !v41 )
     goto LABEL_515;
@@ -879,22 +873,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     10,
     v42,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v43 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 18;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v44 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 19;
-  v45 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v45 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v45, 1, v43, v44, 0);
   if ( !v45 )
     goto LABEL_515;
@@ -903,22 +897,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     11,
     v46,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v47 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 15;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v48 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 16;
-  v49 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v49 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v49, 1, v47, v48, 0);
   if ( !v49 )
     goto LABEL_515;
@@ -927,22 +921,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     12,
     v50,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v51 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 13;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v52 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 14;
-  v53 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v53 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v53, 0, v51, v52, 0);
   if ( !v53 )
     goto LABEL_515;
@@ -951,22 +945,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     13,
     v54,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v55 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 22;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v56 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 23;
-  v57 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v57 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v57, 0, v55, v56, 0);
   if ( !v57 )
     goto LABEL_515;
@@ -975,16 +969,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     14,
     v58,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v59 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 22;
-  v60 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v61 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v60 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v61 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v61, 0, v59, v60, 0);
   if ( !v61 )
     goto LABEL_515;
@@ -993,22 +987,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     133,
     v62,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v63 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 195;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v64 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 196;
-  v65 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v65 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v65, 0, v63, v64, 0);
   if ( !v65 )
     goto LABEL_515;
@@ -1017,16 +1011,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     134,
     v66,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v67 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v67 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v68 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 227;
-  v69 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v69 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v69, 0, v67, v68, 0);
   if ( !v69 )
     goto LABEL_515;
@@ -1035,113 +1029,113 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     154,
     v70,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v71 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 72;
-  v72 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v73 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v72 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v73 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v73, 0, v71, v72, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     15,
     (Il2CppObject *)v73,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v74 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 26;
-  v75 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v76 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v75 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v76 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v76, 0, v74, v75, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     16,
     (Il2CppObject *)v76,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v77 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 25;
-  v78 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v79 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v78 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v79 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v79, 0, v77, v78, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     17,
     (Il2CppObject *)v79,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v80 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 24;
-  v81 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v82 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v81 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v82 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v82, 0, v80, v81, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     18,
     (Il2CppObject *)v82,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v83 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 107;
-  v84 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v85 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v84 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v85 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v85, 0, v83, v84, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     19,
     (Il2CppObject *)v85,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v86 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 108;
-  v87 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v88 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v87 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v88 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v88, 0, v86, v87, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     20,
     (Il2CppObject *)v88,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v89 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 109;
-  v90 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v91 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v90 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v91 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v91, 0, v89, v90, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     21,
     (Il2CppObject *)v91,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v92 = (int)v2->fields.plusTypes;
@@ -1152,7 +1146,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v92 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 52;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v94 = (int)v2->fields.plusTypes;
@@ -1163,14 +1157,14 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v94 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 60;
-  v96 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v96 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v96, 3, v93, v95, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     22,
     (Il2CppObject *)v96,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v97 = (int)v2->fields.plusTypes;
@@ -1181,7 +1175,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v97 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 220;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v99 = (int)v2->fields.plusTypes;
@@ -1192,56 +1186,56 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v99 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 222;
-  v101 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v101 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v101, 1, v98, v100, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     23,
     (Il2CppObject *)v101,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v102 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 17;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v103 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 63;
-  v104 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v104 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v104, 3, v102, v103, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     24,
     (Il2CppObject *)v104,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v105 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 93;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v106 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 94;
-  v107 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v107 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v107, 3, v105, v106, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     25,
     (Il2CppObject *)v107,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v108 = (int)v2->fields.plusTypes;
@@ -1252,7 +1246,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v108 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 52;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v110 = (int)v2->fields.plusTypes;
@@ -1263,14 +1257,14 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v110 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 60;
-  v112 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v112 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v112, 3, v109, v111, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     26,
     (Il2CppObject *)v112,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v113 = (int)v2->fields.plusTypes;
@@ -1281,7 +1275,7 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v113 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 223;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
   v115 = (int)v2->fields.plusTypes;
@@ -1292,28 +1286,28 @@ void BuffList___cctor(const MethodInfo *method)
   if ( v115 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 225;
-  v117 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v117 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v117, 1, v114, v116, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     27,
     (Il2CppObject *)v117,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v118 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 3;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v119 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 4;
-  v120 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v120 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v120, 3, v118, v119, 0);
   if ( !v120 )
     goto LABEL_515;
@@ -1322,43 +1316,43 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     28,
     v121,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v122 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 2;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v123 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 61;
-  v124 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v124 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v124, 3, v122, v123, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     29,
     (Il2CppObject *)v124,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v125 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 5;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v126 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 62;
-  v127 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v127 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v127, 0, v125, v126, 0);
   if ( !v127 )
     goto LABEL_515;
@@ -1373,16 +1367,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     30,
     v128,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v129 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 6;
-  v130 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v131 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v130 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v131 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v131, 0, v129, v130, 0);
   if ( !v131 )
     goto LABEL_515;
@@ -1394,16 +1388,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     31,
     v132,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v133 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 7;
-  v134 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v135 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v134 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v135 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v135, 0, v133, v134, 0);
   if ( !v135 )
     goto LABEL_515;
@@ -1415,16 +1409,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     32,
     v136,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v137 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 8;
-  v138 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v139 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v138 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v139 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v139, 0, v137, v138, 0);
   if ( !v139 )
     goto LABEL_515;
@@ -1439,22 +1433,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     33,
     v140,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v141 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 197;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v142 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 198;
-  v143 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v143 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v143, 0, v141, v142, 0);
   if ( !v143 )
     goto LABEL_515;
@@ -1463,43 +1457,43 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     135,
     v144,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v145 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 64;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v146 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 65;
-  v147 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v147 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v147, 3, v145, v146, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     34,
     (Il2CppObject *)v147,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v148 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 114;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v149 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 115;
-  v150 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v150 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v150, 0, v148, v149, 0);
   if ( !v150 )
     goto LABEL_515;
@@ -1508,22 +1502,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     35,
     v151,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v152 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 27;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v153 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 28;
-  v154 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v154 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v154, 3, v152, v153, 0);
   if ( !v154 )
     goto LABEL_515;
@@ -1532,22 +1526,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     36,
     v155,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v156 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 29;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v157 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 30;
-  v158 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v158 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v158, 3, v156, v157, 0);
   if ( !v158 )
     goto LABEL_515;
@@ -1556,142 +1550,142 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     37,
     v159,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v160 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 31;
-  v161 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v162 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v161 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v162 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v162, 0, v160, v161, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     38,
     (Il2CppObject *)v162,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v163 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 32;
-  v164 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v165 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v164 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v165 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v165, 0, v163, v164, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     39,
     (Il2CppObject *)v165,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v166 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 33;
-  v167 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v168 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v167 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v168 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v168, 0, v166, v167, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     40,
     (Il2CppObject *)v168,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v169 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 34;
-  v170 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v171 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v170 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v171 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v171, 0, v169, v170, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     41,
     (Il2CppObject *)v171,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v172 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 35;
-  v173 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v174 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v173 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v174 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v174, 0, v172, v173, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     42,
     (Il2CppObject *)v174,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v175 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 40;
-  v176 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v177 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v176 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v177 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v177, 0, v175, v176, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     43,
     (Il2CppObject *)v177,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v178 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 41;
-  v179 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v180 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v179 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v180 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v180, 0, v178, v179, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     44,
     (Il2CppObject *)v180,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v181 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 38;
-  v182 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v183 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v182 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v183 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v183, 0, v181, v182, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     45,
     (Il2CppObject *)v183,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v184 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 70;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v185 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 71;
-  v186 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v186 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v186, 3, v184, v185, 0);
   if ( !v186 )
     goto LABEL_515;
@@ -1700,31 +1694,31 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     46,
     v187,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v188 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 73;
-  v189 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v190 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v189 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v190 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v190, 3, v188, v189, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     47,
     (Il2CppObject *)v190,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v191 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 74;
-  v192 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v193 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v192 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v193 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v193, 3, v191, v192, 0);
   if ( !v193 )
     goto LABEL_515;
@@ -1733,16 +1727,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     48,
     v194,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v195 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 75;
-  v196 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v197 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v196 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v197 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v197, 3, v195, v196, 0);
   if ( !v197 )
     goto LABEL_515;
@@ -1751,16 +1745,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     49,
     v198,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v199 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 77;
-  v200 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v201 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v200 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v201 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v201, 0, v199, v200, 0);
   if ( !v201 )
     goto LABEL_515;
@@ -1769,52 +1763,52 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     50,
     v202,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v203 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 78;
-  v204 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v205 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v204 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v205 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v205, 0, v203, v204, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     51,
     (Il2CppObject *)v205,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v206 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 149;
-  v207 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v208 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v207 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v208 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v208, 0, v206, v207, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     89,
     (Il2CppObject *)v208,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v209 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 79;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v210 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 80;
-  v211 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v211 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v211, 3, v209, v210, 0);
   if ( !v211 )
     goto LABEL_515;
@@ -1826,22 +1820,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     52,
     v212,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v213 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 81;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v214 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 82;
-  v215 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v215 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v215, 0, v213, v214, 0);
   if ( !v215 )
     goto LABEL_515;
@@ -1853,127 +1847,127 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     53,
     v216,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v217 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 84;
-  v218 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v219 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v218 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v219 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v219, 0, v217, v218, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     54,
     (Il2CppObject *)v219,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v220 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 226;
-  v221 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v222 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v221 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v222 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v222, 0, v220, v221, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     153,
     (Il2CppObject *)v222,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v223 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 85;
-  v224 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v225 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v224 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v225 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v225, 0, v223, v224, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     55,
     (Il2CppObject *)v225,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v226 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 87;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v227 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 88;
-  v228 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v228 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v228, 3, v226, v227, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     56,
     (Il2CppObject *)v228,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v229 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 89;
-  v230 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v231 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v230 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v231 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v231, 0, v229, v230, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     57,
     (Il2CppObject *)v231,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v232 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 90;
-  v233 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v234 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v233 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v234 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v234, 0, v232, v233, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     58,
     (Il2CppObject *)v234,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v235 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 95;
-  v236 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v237 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v236 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v237 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v237, 0, v235, v236, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     59,
     (Il2CppObject *)v237,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v238 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 96;
-  v239 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v240 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v239 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v240 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v240, 0, v238, v239, 0);
   if ( !v240 )
     goto LABEL_515;
@@ -1982,22 +1976,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     60,
     v241,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v242 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 98;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v243 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 99;
-  v244 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v244 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v244, 3, v242, v243, 0);
   if ( !v244 )
     goto LABEL_515;
@@ -2006,22 +2000,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     61,
     v245,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v246 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 100;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v247 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 101;
-  v248 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v248 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v248, 3, v246, v247, 0);
   if ( !v248 )
     goto LABEL_515;
@@ -2030,22 +2024,22 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     62,
     v249,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v250 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 102;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v251 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 103;
-  v252 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v252 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v252, 3, v250, v251, 0);
   if ( !v252 )
     goto LABEL_515;
@@ -2054,88 +2048,88 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     63,
     v253,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v254 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 86;
-  v255 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v256 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v255 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v256 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v256, 0, v254, v255, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     64,
     (Il2CppObject *)v256,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v257 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 97;
-  v258 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v259 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v258 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v259 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v259, 0, v257, v258, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     65,
     (Il2CppObject *)v259,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v260 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 116;
-  v261 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v262 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v261 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v262 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v262, 0, v260, v261, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     66,
     (Il2CppObject *)v262,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v263 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 117;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v264 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 118;
-  v265 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v265 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v265, 1, v263, v264, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     67,
     (Il2CppObject *)v265,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v266 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 119;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v267 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 120;
-  v268 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v268 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v268, 0, v266, v267, 0);
   if ( !v268 )
     goto LABEL_515;
@@ -2144,184 +2138,184 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     68,
     v269,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v270 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 121;
-  v271 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v272 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v271 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v272 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v272, 0, v270, v271, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     69,
     (Il2CppObject *)v272,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v273 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 122;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v274 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 123;
-  v275 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v275 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v275, 3, v273, v274, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     70,
     (Il2CppObject *)v275,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v276 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 124;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v277 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 125;
-  v278 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v278 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v278, 0, v276, v277, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     71,
     (Il2CppObject *)v278,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v279 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 126;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v280 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 127;
-  v281 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v281 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v281, 0, v279, v280, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     72,
     (Il2CppObject *)v281,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v282 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 130;
-  v283 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v284 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v283 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v284 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v284, 0, v282, v283, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     73,
     (Il2CppObject *)v284,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v285 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 131;
-  v286 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v287 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v286 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v287 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v287, 0, v285, v286, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     74,
     (Il2CppObject *)v287,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v288 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 132;
-  v289 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v290 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v289 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v290 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v290, 0, v288, v289, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     75,
     (Il2CppObject *)v290,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v291 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 133;
-  v292 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v293 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v292 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v293 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v293, 0, v291, v292, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     76,
     (Il2CppObject *)v293,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v294 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 134;
-  v295 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v296 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v295 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v296 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v296, 0, v294, v295, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     77,
     (Il2CppObject *)v296,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v297 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 209;
-  v298 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v299 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v298 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v299 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v299, 0, v297, v298, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     146,
     (Il2CppObject *)v299,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v300 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 135;
-  v301 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v302 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v301 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v302 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v302, 1, v300, v301, 0);
   if ( !v302 )
     goto LABEL_515;
@@ -2330,16 +2324,16 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     78,
     v303,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v304 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 136;
-  v305 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v306 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v305 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v306 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v306, 1, v304, v305, 0);
   if ( !v306 )
     goto LABEL_515;
@@ -2348,1477 +2342,1480 @@ void BuffList___cctor(const MethodInfo *method)
     v1,
     79,
     v307,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v308 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 137;
-  v309 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v310 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v309 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v310 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v310, 0, v308, v309, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     80,
     (Il2CppObject *)v310,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v311 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 138;
-  v312 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v313 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v312 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v313 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v313, 0, v311, v312, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     81,
     (Il2CppObject *)v313,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v314 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 139;
-  v315 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v316 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v315 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v316 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v316, 0, v314, v315, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     82,
     (Il2CppObject *)v316,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v317 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 140;
-  v318 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v319 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v318 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v319 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v319, 0, v317, v318, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     83,
     (Il2CppObject *)v319,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v320 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 141;
-  v321 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v322 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v321 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v322 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v322, 0, v320, v321, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     84,
     (Il2CppObject *)v322,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
   v323 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 142;
-  v324 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v325 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
+  v324 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v325 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
   BuffList_ActInfo___ctor(v325, 0, v323, v324, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     85,
     (Il2CppObject *)v325,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v326 = (System_Array_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 4);
-  v327.fields.value = Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E;
-  v328 = (BuffList_TYPE_array *)v326;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v326, v327, 0);
-  v329 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v330 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v330, 0, v328, v329, 0);
-  if ( !v330 )
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v326 = (System_Array_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
+    v326,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__F74CB50F9D18C1E2A044410ED05D3C7285B0A0EF1A7321D9BD37EE90BF1D943E,
+    0);
+  v327 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v328 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v328, 0, (BuffList_TYPE_array *)v326, v327, 0);
+  if ( !v328 )
     goto LABEL_515;
-  v331 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v330, -1, 0);
+  v329 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v328, -1, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     86,
-    v331,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v329,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v332 = (BuffList_TYPE_array *)v2;
+  v330 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 144;
-  v333 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v334 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v334, 0, v332, v333, 0);
+  v331 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v332 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v332, 0, v330, v331, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     87,
-    (Il2CppObject *)v334,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v332,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v335 = (BuffList_TYPE_array *)v2;
+  v333 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 148;
-  v336 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v337 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v337, 0, v335, v336, 0);
+  v334 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v335 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v335, 0, v333, v334, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     88,
-    (Il2CppObject *)v337,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v335,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v338 = (BuffList_TYPE_array *)v2;
+  v336 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 150;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v339 = (BuffList_TYPE_array *)v2;
+  v337 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 151;
-  v340 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v340, 3, v338, v339, 0);
-  if ( !v340 )
+  v338 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v338, 3, v336, v337, 0);
+  if ( !v338 )
     goto LABEL_515;
-  v341 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v340, 1000, 0);
+  v339 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v338, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     90,
-    v341,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v339,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v342 = (BuffList_TYPE_array *)v2;
+  v340 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 152;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v343 = (BuffList_TYPE_array *)v2;
+  v341 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 153;
-  v344 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v344, 3, v342, v343, 0);
-  if ( !v344 )
+  v342 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v342, 3, v340, v341, 0);
+  if ( !v342 )
     goto LABEL_515;
-  v345 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v344, 1000, 0);
+  v343 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v342, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     91,
-    v345,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v343,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v346 = (BuffList_TYPE_array *)v2;
+  v344 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 154;
-  v347 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v348 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v348, 3, v346, v347, 0);
-  if ( !v348 )
+  v345 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v346 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v346, 3, v344, v345, 0);
+  if ( !v346 )
     goto LABEL_515;
-  v349 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v348, 0, 0);
+  v347 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v346, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     92,
-    v349,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v347,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v350 = (BuffList_TYPE_array *)v2;
+  v348 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 155;
-  v351 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v352 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v352, 3, v350, v351, 0);
+  v349 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v350 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v350, 3, v348, v349, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     93,
-    (Il2CppObject *)v352,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v350,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v353 = (BuffList_TYPE_array *)v2;
+  v351 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 156;
-  v354 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v355 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v355, 0, v353, v354, 0);
+  v352 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v353 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v353, 0, v351, v352, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     94,
-    (Il2CppObject *)v355,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v353,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v356 = (BuffList_TYPE_array *)v2;
+  v354 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 157;
-  v357 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v358 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v358, 0, v356, v357, 0);
+  v355 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v356 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v356, 0, v354, v355, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     95,
-    (Il2CppObject *)v358,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v356,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v359 = (BuffList_TYPE_array *)v2;
+  v357 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 158;
-  v360 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v361 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v361, 0, v359, v360, 0);
+  v358 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v359 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v359, 0, v357, v358, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     96,
-    (Il2CppObject *)v361,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v359,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v362 = (BuffList_TYPE_array *)v2;
+  v360 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 159;
-  v363 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v364 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v364, 0, v362, v363, 0);
+  v361 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v362 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v362, 0, v360, v361, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     97,
-    (Il2CppObject *)v364,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v362,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v365 = (BuffList_TYPE_array *)v2;
+  v363 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 160;
-  v366 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v367 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v367, 0, v365, v366, 0);
+  v364 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v365 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v365, 0, v363, v364, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     98,
-    (Il2CppObject *)v367,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v365,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v368 = (BuffList_TYPE_array *)v2;
+  v366 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 161;
-  v369 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v370 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v370, 0, v368, v369, 0);
-  if ( !v370 )
+  v367 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v368 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v368, 0, v366, v367, 0);
+  if ( !v368 )
     goto LABEL_515;
-  v371 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v370, 0, 0);
+  v369 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v368, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     99,
-    v371,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v369,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v372 = (BuffList_TYPE_array *)v2;
+  v370 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 163;
-  v373 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v374 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v374, 0, v372, v373, 0);
+  v371 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v372 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v372, 0, v370, v371, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     100,
-    (Il2CppObject *)v374,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v372,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v375 = (BuffList_TYPE_array *)v2;
+  v373 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 162;
-  v376 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v377 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v377, 3, v375, v376, 0);
+  v374 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v375 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v375, 3, v373, v374, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     101,
-    (Il2CppObject *)v377,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v375,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v378 = (BuffList_TYPE_array *)v2;
+  v376 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 165;
-  v379 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v380 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v380, 0, v378, v379, 0);
+  v377 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v378 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v378, 0, v376, v377, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     102,
-    (Il2CppObject *)v380,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v378,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v381 = (BuffList_TYPE_array *)v2;
+  v379 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 166;
-  v382 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v383 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v383, 0, v381, v382, 0);
+  v380 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v381 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v381, 0, v379, v380, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     103,
-    (Il2CppObject *)v383,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v381,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v384 = (BuffList_TYPE_array *)v2;
+  v382 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 10002;
-  v385 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v386 = (BuffList_ToFieldActInfo_o *)sub_1C7BD34(BuffList_ToFieldActInfo_TypeInfo);
-  BuffList_ToFieldActInfo___ctor(v386, 0, v384, v385, 0);
+  v383 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v384 = (BuffList_ToFieldActInfo_o *)sub_1C93D20(BuffList_ToFieldActInfo_TypeInfo);
+  BuffList_ToFieldActInfo___ctor(v384, 0, v382, v383, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     105,
-    (Il2CppObject *)v386,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v384,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v387 = (BuffList_TYPE_array *)v2;
+  v385 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 10003;
-  v388 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v389 = (BuffList_ToFieldActInfo_o *)sub_1C7BD34(BuffList_ToFieldActInfo_TypeInfo);
-  BuffList_ToFieldActInfo___ctor(v389, 0, v387, v388, 0);
+  v386 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v387 = (BuffList_ToFieldActInfo_o *)sub_1C93D20(BuffList_ToFieldActInfo_TypeInfo);
+  BuffList_ToFieldActInfo___ctor(v387, 0, v385, v386, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     112,
-    (Il2CppObject *)v389,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v387,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v390 = (BuffList_TYPE_array *)v2;
+  v388 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 27;
-  v391 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v392 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v392, 3, v390, v391, 0);
-  if ( !v392 )
+  v389 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v390 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v390, 3, v388, v389, 0);
+  if ( !v390 )
     goto LABEL_515;
-  v393 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v392, 1000, 0);
+  v391 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v390, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     106,
-    v393,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v391,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v394 = (BuffList_TYPE_array *)v2;
+  v392 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 167;
-  v395 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v396 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v396, 3, v394, v395, 0);
+  v393 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v394 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v394, 3, v392, v393, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     107,
-    (Il2CppObject *)v396,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v394,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v397 = (BuffList_TYPE_array *)v2;
+  v395 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 168;
-  v398 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v399 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v399, 0, v397, v398, 0);
+  v396 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v397 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v397, 0, v395, v396, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     108,
-    (Il2CppObject *)v399,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v397,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v400 = (BuffList_TYPE_array *)v2;
+  v398 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 169;
-  v401 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v402 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v402, 0, v400, v401, 0);
-  if ( !v402 )
+  v399 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v400 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v400, 0, v398, v399, 0);
+  if ( !v400 )
     goto LABEL_515;
-  v403 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v402, 0, 0);
+  v401 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v400, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     109,
-    v403,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v401,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v404 = (BuffList_TYPE_array *)v2;
+  v402 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 170;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v405 = (BuffList_TYPE_array *)v2;
+  v403 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 171;
-  v406 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v406, 0, v404, v405, 0);
-  if ( !v406 )
+  v404 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v404, 0, v402, v403, 0);
+  if ( !v404 )
     goto LABEL_515;
-  v407 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v406, 0, 0);
+  v405 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v404, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     110,
-    v407,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    v405,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
-  v408 = (int)v2->fields.plusTypes;
-  v409 = (BuffList_TYPE_array *)v2;
-  if ( !v408 )
+  v406 = (int)v2->fields.plusTypes;
+  v407 = (BuffList_TYPE_array *)v2;
+  if ( !v406 )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 172;
-  if ( v408 == 1 )
+  if ( v406 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 173;
-  v410 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v411 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v411, 0, v409, v410, 0);
+  v408 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v409 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v409, 0, v407, v408, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     111,
-    (Il2CppObject *)v411,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v409,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v412 = (BuffList_TYPE_array *)v2;
+  v410 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 174;
-  v413 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v414 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v414, 3, v412, v413, 0);
-  if ( !v414 )
+  v411 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v412 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v412, 3, v410, v411, 0);
+  if ( !v412 )
     goto LABEL_515;
-  v415 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v414, 0, 0);
+  v413 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v412, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     113,
-    v415,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v413,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v416 = (BuffList_TYPE_array *)v2;
+  v414 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 175;
-  v417 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v418 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v418, 0, v416, v417, 0);
+  v415 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v416 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v416, 0, v414, v415, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     114,
-    (Il2CppObject *)v418,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v416,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v419 = (BuffList_TYPE_array *)v2;
+  v417 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 176;
-  v420 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v421 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v421, 0, v419, v420, 0);
+  v418 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v419 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v419, 0, v417, v418, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     115,
-    (Il2CppObject *)v421,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v419,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v422 = (BuffList_TYPE_array *)v2;
+  v420 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 177;
-  v423 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v424 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v424, 0, v422, v423, 0);
+  v421 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v422 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v422, 0, v420, v421, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     116,
-    (Il2CppObject *)v424,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v422,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v425 = (BuffList_TYPE_array *)v2;
+  v423 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 178;
-  v426 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v427 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v427, 0, v425, v426, 0);
+  v424 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v425 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v425, 0, v423, v424, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     117,
-    (Il2CppObject *)v427,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v425,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v428 = (BuffList_TYPE_array *)v2;
+  v426 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 179;
-  v429 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v430 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v430, 0, v428, v429, 0);
+  v427 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v428 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v428, 0, v426, v427, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     118,
-    (Il2CppObject *)v430,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v428,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v431 = (BuffList_TYPE_array *)v2;
+  v429 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 180;
-  v432 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v433 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v433, 0, v431, v432, 0);
+  v430 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v431 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v431, 0, v429, v430, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     119,
-    (Il2CppObject *)v433,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v431,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v434 = (BuffList_TYPE_array *)v2;
+  v432 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 181;
-  v435 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v436 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v436, 0, v434, v435, 0);
+  v433 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v434 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v434, 0, v432, v433, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     120,
-    (Il2CppObject *)v436,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v434,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v437 = (BuffList_TYPE_array *)v2;
+  v435 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 182;
-  v438 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v439 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v439, 0, v437, v438, 0);
+  v436 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v437 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v437, 0, v435, v436, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     121,
-    (Il2CppObject *)v439,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v437,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v440 = (BuffList_TYPE_array *)v2;
+  v438 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 185;
-  v441 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v442 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v442, 0, v440, v441, 0);
+  v439 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v440 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v440, 0, v438, v439, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     122,
-    (Il2CppObject *)v442,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v440,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v443 = (BuffList_TYPE_array *)v2;
+  v441 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 187;
-  v444 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v445 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v445, 0, v443, v444, 0);
+  v442 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v443 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v443, 0, v441, v442, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     123,
-    (Il2CppObject *)v445,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v443,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v446 = (BuffList_TYPE_array *)v2;
+  v444 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 186;
-  v447 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v448 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v448, 0, v446, v447, 0);
+  v445 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v446 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v446, 0, v444, v445, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     124,
-    (Il2CppObject *)v448,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v446,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v449 = (BuffList_TYPE_array *)v2;
+  v447 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 188;
-  v450 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v451 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v451, 0, v449, v450, 0);
+  v448 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v449 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v449, 0, v447, v448, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     125,
-    (Il2CppObject *)v451,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v449,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v452 = (BuffList_TYPE_array *)v2;
+  v450 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 189;
-  v453 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v454 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v454, 0, v452, v453, 0);
+  v451 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v452 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v452, 0, v450, v451, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     127,
-    (Il2CppObject *)v454,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v452,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v455 = (BuffList_TYPE_array *)v2;
+  v453 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 190;
-  v456 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v457 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v457, 0, v455, v456, 0);
+  v454 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v455 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v455, 0, v453, v454, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     128,
-    (Il2CppObject *)v457,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v455,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v458 = (BuffList_TYPE_array *)v2;
+  v456 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 191;
-  v459 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v460 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v460, 0, v458, v459, 0);
+  v457 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v458 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v458, 0, v456, v457, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     129,
-    (Il2CppObject *)v460,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v458,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v461 = (BuffList_TYPE_array *)v2;
+  v459 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 192;
-  v462 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v463 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v463, 0, v461, v462, 0);
+  v460 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v461 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v461, 0, v459, v460, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     130,
-    (Il2CppObject *)v463,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 2);
+    (Il2CppObject *)v461,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 2);
   if ( !v2 )
     goto LABEL_515;
-  v464 = (int)v2->fields.plusTypes;
-  v465 = (BuffList_TYPE_array *)v2;
-  if ( !v464 )
+  v462 = (int)v2->fields.plusTypes;
+  v463 = (BuffList_TYPE_array *)v2;
+  if ( !v462 )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 37;
-  if ( v464 == 1 )
+  if ( v462 == 1 )
     goto LABEL_516;
   HIDWORD(v2->fields.minusTypes) = 104;
-  v466 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v467 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v467, 0, v465, v466, 0);
+  v464 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v465 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v465, 0, v463, v464, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     126,
-    (Il2CppObject *)v467,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v465,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v468 = (BuffList_TYPE_array *)v2;
+  v466 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 194;
-  v469 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v470 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v470, 0, v468, v469, 0);
+  v467 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v468 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v468, 0, v466, v467, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     131,
-    (Il2CppObject *)v470,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v468,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v471 = (BuffList_TYPE_array *)v2;
+  v469 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 199;
-  v472 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v473 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v473, 0, v471, v472, 0);
+  v470 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v471 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v471, 0, v469, v470, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     136,
-    (Il2CppObject *)v473,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v471,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v474 = (BuffList_TYPE_array *)v2;
+  v472 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 193;
-  v475 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v476 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v476, 0, v474, v475, 0);
+  v473 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v474 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v474, 0, v472, v473, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     132,
-    (Il2CppObject *)v476,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v474,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v477 = (BuffList_TYPE_array *)v2;
+  v475 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 200;
-  v478 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v479 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v479, 0, v477, v478, 0);
+  v476 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v477 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v477, 0, v475, v476, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     137,
-    (Il2CppObject *)v479,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v477,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v480 = (BuffList_TYPE_array *)v2;
+  v478 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 201;
-  v481 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v482 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v482, 0, v480, v481, 0);
+  v479 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v480 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v480, 0, v478, v479, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     138,
-    (Il2CppObject *)v482,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v480,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v483 = (BuffList_TYPE_array *)v2;
+  v481 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 202;
-  v484 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v485 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v485, 0, v483, v484, 0);
+  v482 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v483 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v483, 0, v481, v482, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     139,
-    (Il2CppObject *)v485,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v483,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v486 = (BuffList_TYPE_array *)v2;
+  v484 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 203;
-  v487 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v488 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v488, 0, v486, v487, 0);
+  v485 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v486 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v486, 0, v484, v485, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     140,
-    (Il2CppObject *)v488,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v486,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v489 = (BuffList_TYPE_array *)v2;
+  v487 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 204;
-  v490 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v491 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v491, 0, v489, v490, 0);
+  v488 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v489 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v489, 0, v487, v488, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     141,
-    (Il2CppObject *)v491,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v489,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v492 = (BuffList_TYPE_array *)v2;
+  v490 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 205;
-  v493 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v494 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v494, 0, v492, v493, 0);
+  v491 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v492 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v492, 0, v490, v491, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     142,
-    (Il2CppObject *)v494,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v492,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v495 = (BuffList_TYPE_array *)v2;
+  v493 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 206;
-  v496 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v497 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v497, 0, v495, v496, 0);
+  v494 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v495 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v495, 0, v493, v494, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     143,
-    (Il2CppObject *)v497,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v495,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v498 = (BuffList_TYPE_array *)v2;
+  v496 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 207;
-  v499 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v500 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v500, 0, v498, v499, 0);
+  v497 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v498 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v498, 0, v496, v497, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     144,
-    (Il2CppObject *)v500,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v498,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v501 = (BuffList_TYPE_array *)v2;
+  v499 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 208;
-  v502 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v503 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v503, 0, v501, v502, 0);
+  v500 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v501 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v501, 0, v499, v500, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     145,
-    (Il2CppObject *)v503,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v501,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v504 = (BuffList_TYPE_array *)v2;
+  v502 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 210;
-  v505 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v506 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v506, 1, v504, v505, 0);
-  if ( !v506 )
+  v503 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v504 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v504, 1, v502, v503, 0);
+  if ( !v504 )
     goto LABEL_515;
-  v507 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v506, 1000, 0);
+  v505 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v504, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     147,
-    v507,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v505,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v508 = (BuffList_TYPE_array *)v2;
+  v506 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 211;
-  v509 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v510 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v510, 0, v508, v509, 0);
+  v507 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v508 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v508, 0, v506, v507, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     148,
-    (Il2CppObject *)v510,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v508,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v511 = (BuffList_TYPE_array *)v2;
+  v509 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 212;
-  v512 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v513 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v513, 0, v511, v512, 0);
+  v510 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v511 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v511, 0, v509, v510, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     149,
-    (Il2CppObject *)v513,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v511,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v514 = (BuffList_TYPE_array *)v2;
+  v512 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 213;
-  v515 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v516 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v516, 0, v514, v515, 0);
+  v513 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v514 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v514, 0, v512, v513, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     150,
-    (Il2CppObject *)v516,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v514,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v517 = (BuffList_TYPE_array *)v2;
+  v515 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 216;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v518 = (BuffList_TYPE_array *)v2;
+  v516 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 217;
-  v519 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v519, 2, v517, v518, 0);
-  if ( !v519 )
+  v517 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v517, 2, v515, v516, 0);
+  if ( !v517 )
     goto LABEL_515;
-  v520 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v519, 1000, 0);
+  v518 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v517, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     151,
-    v520,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v518,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v521 = (BuffList_TYPE_array *)v2;
+  v519 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 218;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v522 = (BuffList_TYPE_array *)v2;
+  v520 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 219;
-  v523 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v523, 2, v521, v522, 0);
-  if ( !v523 )
+  v521 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v521, 2, v519, v520, 0);
+  if ( !v521 )
     goto LABEL_515;
-  v524 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v523, 1000, 0);
+  v522 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v521, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     152,
-    v524,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v522,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v525 = (BuffList_TYPE_array *)v2;
+  v523 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 228;
-  v526 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v527 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v527, 0, v525, v526, 0);
+  v524 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v525 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v525, 0, v523, v524, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     155,
-    (Il2CppObject *)v527,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v525,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v528 = (BuffList_TYPE_array *)v2;
+  v526 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 229;
-  v529 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v530 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v530, 0, v528, v529, 0);
-  if ( !v530 )
+  v527 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v528 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v528, 0, v526, v527, 0);
+  if ( !v528 )
     goto LABEL_515;
-  v531 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v530, 0, 0);
+  v529 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v528, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     156,
-    v531,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v529,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v532 = (BuffList_TYPE_array *)v2;
+  v530 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 230;
-  v533 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v534 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v534, 0, v532, v533, 0);
+  v531 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v532 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v532, 0, v530, v531, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     157,
-    (Il2CppObject *)v534,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v532,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v535 = (BuffList_TYPE_array *)v2;
+  v533 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 231;
-  v536 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v537 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v537, 3, v535, v536, 0);
-  if ( !v537 )
+  v534 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v535 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v535, 3, v533, v534, 0);
+  if ( !v535 )
     goto LABEL_515;
-  v538 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v537, 0, 0);
+  v536 = (Il2CppObject *)BuffList_ActInfo__setBaseParam(v535, 0, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     158,
-    v538,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v536,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v539 = (BuffList_TYPE_array *)v2;
+  v537 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 232;
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v540 = (BuffList_TYPE_array *)v2;
+  v538 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 233;
-  v541 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v541, 3, v539, v540, 0);
-  if ( !v541 )
+  v539 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v539, 3, v537, v538, 0);
+  if ( !v539 )
     goto LABEL_515;
-  v542 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v541, 1000, 0);
+  v540 = (Il2CppObject *)BuffList_ActInfo__setBaseValue(v539, 1000, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     159,
-    v542,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v540,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v543 = (BuffList_TYPE_array *)v2;
+  v541 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 234;
-  v544 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v545 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v545, 3, v543, v544, 0);
+  v542 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v543 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v543, 3, v541, v542, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     161,
-    (Il2CppObject *)v545,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v543,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v546 = (BuffList_TYPE_array *)v2;
+  v544 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 235;
-  v547 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v548 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v548, 0, v546, v547, 0);
+  v545 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v546 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v546, 0, v544, v545, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     160,
-    (Il2CppObject *)v548,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v546,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v549 = (BuffList_TYPE_array *)v2;
+  v547 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 236;
-  v550 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v551 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v551, 0, v549, v550, 0);
-  if ( !v551 )
+  v548 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v549 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v549, 0, v547, v548, 0);
+  if ( !v549 )
     goto LABEL_515;
-  v2 = BuffList_ActInfo__setBaseValue(v551, 1000, 0);
+  v2 = BuffList_ActInfo__setBaseValue(v549, 1000, 0);
   if ( !v2 )
     goto LABEL_515;
-  v552 = (Il2CppObject *)BuffList_ActInfo__SetChangeMaxHp(v2, 1, 0);
+  v550 = (Il2CppObject *)BuffList_ActInfo__SetChangeMaxHp(v2, 1, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     162,
-    v552,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    v550,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v553 = (BuffList_TYPE_array *)v2;
+  v551 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 237;
-  v554 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v555 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v555, 0, v553, v554, 0);
-  if ( !v555
-    || (v2 = BuffList_ActInfo__setBaseParam(v555, 0, 0)) == 0
-    || (v556 = (Il2CppObject *)BuffList_ActInfo__SetChangeMaxHp(v2, 1, 0),
+  v552 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v553 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v553, 0, v551, v552, 0);
+  if ( !v553
+    || (v2 = BuffList_ActInfo__setBaseParam(v553, 0, 0)) == 0
+    || (v554 = (Il2CppObject *)BuffList_ActInfo__SetChangeMaxHp(v2, 1, 0),
         System_Collections_Generic_Dictionary_Int32Enum__object___Add(
           v1,
           163,
-          v556,
-          (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
-        (v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1)) == 0) )
+          v554,
+          (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__),
+        (v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1)) == 0) )
   {
 LABEL_515:
-    sub_1C7BD40(v2, v3);
+    sub_1C93D2C(v2, v3);
   }
-  v557 = (BuffList_TYPE_array *)v2;
+  v555 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 238;
-  v558 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v559 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v559, 0, v557, v558, 0);
+  v556 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v557 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v557, 0, v555, v556, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     164,
-    (Il2CppObject *)v559,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v557,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v560 = (BuffList_TYPE_array *)v2;
+  v558 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 239;
-  v561 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v562 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v562, 0, v560, v561, 0);
+  v559 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v560 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v560, 0, v558, v559, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     165,
-    (Il2CppObject *)v562,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v560,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v563 = (BuffList_TYPE_array *)v2;
+  v561 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 240;
-  v564 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v565 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v565, 0, v563, v564, 0);
+  v562 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v563 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v563, 0, v561, v562, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     166,
-    (Il2CppObject *)v565,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v563,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v566 = (BuffList_TYPE_array *)v2;
+  v564 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 241;
-  v567 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v568 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v568, 0, v566, v567, 0);
+  v565 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v566 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v566, 0, v564, v565, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     167,
-    (Il2CppObject *)v568,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v566,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v569 = (BuffList_TYPE_array *)v2;
+  v567 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 242;
-  v570 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v571 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v571, 0, v569, v570, 0);
+  v568 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v569 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v569, 0, v567, v568, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     168,
-    (Il2CppObject *)v571,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v569,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v572 = (BuffList_TYPE_array *)v2;
+  v570 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 243;
-  v573 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v574 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v574, 0, v572, v573, 0);
+  v571 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v572 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v572, 0, v570, v571, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     169,
-    (Il2CppObject *)v574,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v572,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v575 = (BuffList_TYPE_array *)v2;
+  v573 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 244;
-  v576 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v577 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v577, 0, v575, v576, 0);
+  v574 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v575 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v575, 0, v573, v574, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     170,
-    (Il2CppObject *)v577,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v575,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v578 = (BuffList_TYPE_array *)v2;
+  v576 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 245;
-  v579 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v580 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v580, 0, v578, v579, 0);
+  v577 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v578 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v578, 0, v576, v577, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     171,
-    (Il2CppObject *)v580,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v578,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v581 = (BuffList_TYPE_array *)v2;
+  v579 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
     goto LABEL_516;
   LODWORD(v2->fields.minusTypes) = 246;
-  v582 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v583 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v583, 0, v581, v582, 0);
+  v580 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v581 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v581, 0, v579, v580, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     172,
-    (Il2CppObject *)v583,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
-  v2 = (BuffList_ActInfo_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 1);
+    (Il2CppObject *)v581,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+  v2 = (BuffList_ActInfo_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 1);
   if ( !v2 )
     goto LABEL_515;
-  v584 = (BuffList_TYPE_array *)v2;
+  v582 = (BuffList_TYPE_array *)v2;
   if ( !LODWORD(v2->fields.plusTypes) )
 LABEL_516:
-    sub_1C7BD48(v2);
+    sub_1C93D34(v2);
   LODWORD(v2->fields.minusTypes) = 247;
-  v585 = (BuffList_TYPE_array *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 0);
-  v586 = (BuffList_ActInfo_o *)sub_1C7BD34(BuffList_ActInfo_TypeInfo);
-  BuffList_ActInfo___ctor(v586, 0, v584, v585, 0);
+  v583 = (BuffList_TYPE_array *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 0);
+  v584 = (BuffList_ActInfo_o *)sub_1C93D20(BuffList_ActInfo_TypeInfo);
+  BuffList_ActInfo___ctor(v584, 0, v582, v583, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     173,
-    (Il2CppObject *)v586,
-    (const MethodInfo_34BC54C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
+    (Il2CppObject *)v584,
+    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__Add__);
   BuffList_TypeInfo->static_fields->ActionList = (struct System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)BuffList_TypeInfo->static_fields,
     (int32_t)v1,
+    v585,
+    v586,
     v587,
     v588,
     v589,
-    v590,
+    v590);
+  v591 = (System_Array_o *)sub_1C93B7C(BuffList_TYPE___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
     v591,
-    v592);
-  v593 = (System_Array_o *)sub_1C7BB90(BuffList_TYPE___TypeInfo, 4);
-  v594.fields.value = Field__PrivateImplementationDetails__4DCEA73076A551DAEDFBF7D13EF3DC1D62E99512969075595348B65A4AC9216C;
-  v595 = v593;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v593, v594, 0);
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__4DCEA73076A551DAEDFBF7D13EF3DC1D62E99512969075595348B65A4AC9216C,
+    0);
   static_fields = BuffList_TypeInfo->static_fields;
-  static_fields->GUTS_LIST = (struct BuffList_TYPE_array *)v595;
-  sub_1C7BA8C(
+  static_fields->GUTS_LIST = (struct BuffList_TYPE_array *)v591;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&static_fields->GUTS_LIST,
-    (int32_t)v595,
+    (int32_t)v591,
+    v593,
+    v594,
+    v595,
+    v596,
     v597,
-    v598,
+    v598);
+  v599 = (System_Array_o *)sub_1C93B7C(BuffList_ACTION___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
     v599,
-    v600,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E,
+    0);
+  v600 = BuffList_TypeInfo->static_fields;
+  v600->CommandCodeFunctionActs = (struct BuffList_ACTION_array *)v599;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v600->CommandCodeFunctionActs,
+    (int32_t)v599,
     v601,
-    v602);
-  v603 = (System_Array_o *)sub_1C7BB90(BuffList_ACTION___TypeInfo, 4);
-  v604.fields.value = Field__PrivateImplementationDetails__4EECD95FEC87B9ABE1EA9376D9C9CF1F7F1C01299268E427022C2F5192383D9E;
-  v605 = v603;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v603, v604, 0);
-  v606 = BuffList_TypeInfo->static_fields;
-  v606->CommandCodeFunctionActs = (struct BuffList_ACTION_array *)v605;
-  sub_1C7BA8C(
-    (GrandQuestFolderBoardItem_o *)&v606->CommandCodeFunctionActs,
-    (int32_t)v605,
+    v602,
+    v603,
+    v604,
+    v605,
+    v606);
+  v607 = (System_Collections_Generic_HashSet_T__o *)sub_1C93D20(System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
+  System_Collections_Generic_HashSet_Int32Enum____ctor(
     v607,
-    v608,
+    (const MethodInfo_372752C *)Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
+  if ( !v607 )
+    goto LABEL_515;
+  System_Collections_Generic_HashSet_Int32Enum___Add(
+    v607,
+    138,
+    (const MethodInfo_3728730 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+  System_Collections_Generic_HashSet_Int32Enum___Add(
+    v607,
+    159,
+    (const MethodInfo_3728730 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+  System_Collections_Generic_HashSet_Int32Enum___Add(
+    v607,
+    177,
+    (const MethodInfo_3728730 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+  System_Collections_Generic_HashSet_Int32Enum___Add(
+    v607,
+    178,
+    (const MethodInfo_3728730 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
+  v608 = BuffList_TypeInfo->static_fields;
+  v608->CommandCodeBuffHash = (struct System_Collections_Generic_HashSet_BuffList_TYPE__o *)v607;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v608->CommandCodeBuffHash,
+    (int32_t)v607,
     v609,
     v610,
     v611,
-    v612);
-  v613 = (System_Collections_Generic_HashSet_T__o *)sub_1C7BD34(System_Collections_Generic_HashSet_BuffList_TYPE__TypeInfo);
-  System_Collections_Generic_HashSet_Int32Enum____ctor(
+    v612,
     v613,
-    (const MethodInfo_36EBAC4 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE___ctor__);
-  if ( !v613 )
-    goto LABEL_515;
-  System_Collections_Generic_HashSet_Int32Enum___Add(
-    v613,
-    138,
-    (const MethodInfo_36ECCC8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-  System_Collections_Generic_HashSet_Int32Enum___Add(
-    v613,
-    159,
-    (const MethodInfo_36ECCC8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-  System_Collections_Generic_HashSet_Int32Enum___Add(
-    v613,
-    177,
-    (const MethodInfo_36ECCC8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-  System_Collections_Generic_HashSet_Int32Enum___Add(
-    v613,
-    178,
-    (const MethodInfo_36ECCC8 *)Method_System_Collections_Generic_HashSet_BuffList_TYPE__Add__);
-  v614 = BuffList_TypeInfo->static_fields;
-  v614->CommandCodeBuffHash = (struct System_Collections_Generic_HashSet_BuffList_TYPE__o *)v613;
-  sub_1C7BA8C(
-    (GrandQuestFolderBoardItem_o *)&v614->CommandCodeBuffHash,
-    (int32_t)v613,
-    v615,
-    v616,
-    v617,
-    v618,
-    v619,
-    v620);
+    v614);
 }
 
 
 bool BuffList__CheckAccumulation(int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4CED461 & 1) == 0 )
+  if ( (byte_4D2F7B2 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    byte_4CED461 = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    byte_4D2F7B2 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -3834,10 +3831,10 @@ bool BuffList__CheckType(int32_t self, int32_t type, const MethodInfo *method)
 
 bool BuffList__CheckUpdateHp(int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4CED460 & 1) == 0 )
+  if ( (byte_4D2F7B1 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    byte_4CED460 = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    byte_4D2F7B1 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -3865,24 +3862,21 @@ bool BuffList__CheckUpdateHp(int32_t type, const MethodInfo *method)
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_ValueTuple_BuffList_ActInfo__int__o BuffList__GetActInfoByBuffType(int32_t buffType, const MethodInfo *method)
 {
   BuffList_c *v3; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *ActionList; // x0
-  const MethodInfo_37980C4 *v5; // x4
+  const MethodInfo_37D5478 *v5; // x4
   __int64 v6; // x0
   __int64 v7; // x1
-  const MethodInfo_3BA47B4 *v8; // x4
+  const MethodInfo_3BDF9DC *v8; // x4
   __int64 v9; // x9
   int v10; // w10
   int v11; // w11
   __int64 v12; // x9
   int v13; // w10
   int v14; // w11
-  struct BuffList_ActInfo_o *v15; // x0
-  __int64 v16; // x1
-  const MethodInfo_3BA47B4 *v17; // x4
+  const MethodInfo_3BDF9DC *v17; // x4
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v18; // [xsp+8h] [xbp-C8h] BYREF
   __int128 v19; // [xsp+30h] [xbp-A0h]
   int32_t key[3]; // [xsp+40h] [xbp-90h] BYREF
@@ -3896,16 +3890,16 @@ System_ValueTuple_BuffList_ActInfo__int__o BuffList__GetActInfoByBuffType(int32_
   System_ValueTuple_object__int__o v28; // 0:x0.16
   System_ValueTuple_BuffList_ActInfo__int__o result; // 0:x0.16
 
-  if ( (byte_4CED45F & 1) == 0 )
+  if ( (byte_4D2F7B0 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_KeyValuePair_BuffList_ACTION__BuffList_ActInfo__Deconstruct__);
-    sub_1C7BAE8(&Method_System_ValueTuple_BuffList_ActInfo__int___ctor__);
-    byte_4CED45F = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_KeyValuePair_BuffList_ACTION__BuffList_ActInfo__Deconstruct__);
+    sub_1C93AD4(&Method_System_ValueTuple_BuffList_ActInfo__int___ctor__);
+    byte_4D2F7B0 = 1;
   }
   v3 = BuffList_TypeInfo;
   memset(&v23, 0, sizeof(v23));
@@ -3919,16 +3913,16 @@ System_ValueTuple_BuffList_ActInfo__int__o BuffList__GetActInfoByBuffType(int32_
   }
   ActionList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->ActionList;
   if ( !ActionList )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   System_Collections_Generic_Dictionary_Int32Enum__object___GetEnumerator(
     &v18,
     ActionList,
-    (const MethodInfo_34BC984 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    (const MethodInfo_34F60CC *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
   v23 = v18;
 LABEL_7:
   while ( System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___MoveNext(
             &v23,
-            (const MethodInfo_35E77FC *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
+            (const MethodInfo_3624160 *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
   {
     current = v23.fields._current;
     *(_QWORD *)&v25.fields.key = &current;
@@ -3939,10 +3933,10 @@ LABEL_7:
       (Il2CppObject **)Method_System_Collections_Generic_KeyValuePair_BuffList_ACTION__BuffList_ActInfo__Deconstruct__,
       v5);
     if ( !*(_QWORD *)key )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     v9 = *(_QWORD *)(*(_QWORD *)key + 24LL);
     if ( !v9 )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     v10 = *(_DWORD *)(v9 + 24);
     if ( v10 >= 1 )
     {
@@ -3950,7 +3944,7 @@ LABEL_7:
       while ( 1 )
       {
         if ( v10 == v11 )
-          sub_1C7BD48(v6);
+          sub_1C93D34(v6);
         if ( *(_DWORD *)(v9 + 4LL * v11 + 32) == buffType )
           break;
         if ( v10 == ++v11 )
@@ -3969,7 +3963,7 @@ LABEL_7:
 LABEL_15:
     v12 = *(_QWORD *)(*(_QWORD *)key + 32LL);
     if ( !v12 )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     v13 = *(_DWORD *)(v12 + 24);
     if ( v13 >= 1 )
     {
@@ -3977,7 +3971,7 @@ LABEL_15:
       while ( 1 )
       {
         if ( v13 == v14 )
-          sub_1C7BD48(v6);
+          sub_1C93D34(v6);
         if ( *(_DWORD *)(v12 + 4LL * v14 + 32) == buffType )
           break;
         if ( v13 == ++v14 )
@@ -3995,23 +3989,21 @@ LABEL_24:
       v19 = *(_OWORD *)&v18.fields._dictionary;
       System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___Dispose(
         &v23,
-        (const MethodInfo_35E7920 *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+        (const MethodInfo_3624284 *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
       v24 = v19;
       goto LABEL_25;
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___Dispose(
     &v23,
-    (const MethodInfo_35E7920 *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    (const MethodInfo_3624284 *)Method_System_Collections_Generic_Dictionary_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
   v28.fields.Item1 = (Il2CppObject *)&v24;
   *(_QWORD *)&v28.fields.Item2 = 0;
   v24 = 0u;
   System_ValueTuple_object__int____ctor(v28, 0, Method_System_ValueTuple_BuffList_ActInfo__int___ctor__, v17);
 LABEL_25:
-  v16 = *((_QWORD *)&v24 + 1);
-  v15 = (struct BuffList_ActInfo_o *)v24;
-  *(_QWORD *)&result.fields.Item2 = v16;
-  result.fields.Item1 = v15;
+  *(_QWORD *)&result.fields.Item2 = *((_QWORD *)&v24 + 1);
+  result.fields.Item1 = (struct BuffList_ActInfo_o *)v24;
   return result;
 }
 
@@ -4030,69 +4022,6 @@ int32_t BuffList__GetProgressTurnCond(int32_t type, const MethodInfo *method)
 }
 
 
-bool BuffList__IsApplyOtherPossibleBuff(int32_t type, const MethodInfo *method)
-{
-  char v2; // w8
-  char v3; // w8
-  unsigned int v4; // w9
-  char v5; // w8
-  unsigned __int64 v6; // x9
-  _BOOL8 v7; // x0
-
-  if ( type <= 66 )
-  {
-    if ( type > 52 )
-    {
-      v3 = type - 60;
-      if ( (unsigned int)(type - 60) < 7 )
-      {
-        v4 = 73;
-LABEL_19:
-        LODWORD(v7) = (v4 >> v3) & 1;
-        return v7;
-      }
-LABEL_20:
-      v2 = 0;
-LABEL_21:
-      LOBYTE(v7) = v2;
-      return v7;
-    }
-    v5 = type - 1;
-    if ( (unsigned int)(type - 1) >= 0x34 )
-      goto LABEL_20;
-    v6 = 0xE060003E7FF0DLL;
-  }
-  else
-  {
-    if ( type > 118 )
-    {
-      if ( type > 136 )
-      {
-        v2 = 1;
-        if ( (unsigned int)(type - 214) <= 0xE && type != 226
-          || (unsigned int)(type - 152) <= 0x3A && ((1LL << ((unsigned __int8)type + 104)) & 0x4801A800000002BLL) != 0 )
-        {
-          goto LABEL_21;
-        }
-        goto LABEL_20;
-      }
-      v3 = type + 0x80;
-      if ( (unsigned int)(type - 128) < 9 )
-      {
-        v4 = 387;
-        goto LABEL_19;
-      }
-      goto LABEL_20;
-    }
-    v5 = type - 72;
-    if ( (unsigned int)(type - 72) >= 0x2F )
-      goto LABEL_20;
-    v6 = 0x63C600780001LL;
-  }
-  return (v6 >> v5) & 1;
-}
-
-
 bool BuffList__IsChangeUseRate(int32_t type, const MethodInfo *method)
 {
   return (unsigned int)(type - 231) < 3;
@@ -4101,12 +4030,12 @@ bool BuffList__IsChangeUseRate(int32_t type, const MethodInfo *method)
 
 bool BuffList__IsConstantMasterIndvAddBuffActive(const MethodInfo *method)
 {
-  if ( (byte_4CED465 & 1) == 0 )
+  if ( (byte_4D2F7B6 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_8834/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/);
-    byte_4CED465 = 1;
+    sub_1C93AD4(&StringLiteral_8861/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/);
+    byte_4D2F7B6 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_8834/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, 0) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_8861/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, 0) == 1;
 }
 
 
@@ -4171,19 +4100,19 @@ bool BuffList__IsGutsType(int32_t type, const MethodInfo *method)
   System_Int32Enum_array *GUTS_LIST; // x19
   System_Func_T__TResult__o *v8; // x21
 
-  if ( (byte_4CED463 & 1) == 0 )
+  if ( (byte_4D2F7B4 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_Any_BuffList_TYPE___);
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    sub_1C7BAE8(&System_Func_BuffList_TYPE__bool__TypeInfo);
-    sub_1C7BAE8(&Method_BuffList___c__DisplayClass18_0__IsGutsType_b__0__);
-    sub_1C7BAE8(&BuffList___c__DisplayClass18_0_TypeInfo);
-    byte_4CED463 = 1;
+    sub_1C93AD4(&Method_BasicHelper_Any_BuffList_TYPE___);
+    sub_1C93AD4(&BuffList_TypeInfo);
+    sub_1C93AD4(&System_Func_BuffList_TYPE__bool__TypeInfo);
+    sub_1C93AD4(&Method_BuffList___c__DisplayClass18_0__IsGutsType_b__0__);
+    sub_1C93AD4(&BuffList___c__DisplayClass18_0_TypeInfo);
+    byte_4D2F7B4 = 1;
   }
-  v3 = (BuffList___c__DisplayClass18_0_o *)sub_1C7BD34(BuffList___c__DisplayClass18_0_TypeInfo);
+  v3 = (BuffList___c__DisplayClass18_0_o *)sub_1C93D20(BuffList___c__DisplayClass18_0_TypeInfo);
   BuffList___c__DisplayClass18_0___ctor(v3, 0);
   if ( !v3 )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   v3->fields.checkType = type;
   v6 = BuffList_TypeInfo;
   if ( !BuffList_TypeInfo->_2.cctor_finished )
@@ -4192,16 +4121,16 @@ bool BuffList__IsGutsType(int32_t type, const MethodInfo *method)
     v6 = BuffList_TypeInfo;
   }
   GUTS_LIST = (System_Int32Enum_array *)v6->static_fields->GUTS_LIST;
-  v8 = (System_Func_T__TResult__o *)sub_1C7BD34(System_Func_BuffList_TYPE__bool__TypeInfo);
+  v8 = (System_Func_T__TResult__o *)sub_1C93D20(System_Func_BuffList_TYPE__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v8,
     (Il2CppObject *)v3,
     Method_BuffList___c__DisplayClass18_0__IsGutsType_b__0__,
     0);
-  return BasicHelper__Any_Int32Enum__51746288(
+  return BasicHelper__Any_Int32Enum__51960384(
            GUTS_LIST,
            (System_Func_T__bool__o *)v8,
-           (const MethodInfo_31595F0 *)Method_BasicHelper_Any_BuffList_TYPE___);
+           (const MethodInfo_318DA40 *)Method_BasicHelper_Any_BuffList_TYPE___);
 }
 
 
@@ -4307,15 +4236,15 @@ void BuffList__SetBattleData(BattleData_o *setData, const MethodInfo *method)
   Il2CppObject *currentValue; // x0
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CED464 & 1) == 0 )
+  if ( (byte_4D2F7B5 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
-    byte_4CED464 = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    byte_4D2F7B5 = 1;
   }
   v3 = BuffList_TypeInfo;
   memset(&v13, 0, sizeof(v13));
@@ -4328,23 +4257,23 @@ void BuffList__SetBattleData(BattleData_o *setData, const MethodInfo *method)
   if ( !ActionList
     || (ActionList = System_Collections_Generic_Dictionary_Int32Enum__object___get_Values(
                        (System_Collections_Generic_Dictionary_TKey__TValue__o *)ActionList,
-                       (const MethodInfo_34BC35C *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__)) == 0 )
+                       (const MethodInfo_34F5AA4 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Values__)) == 0 )
   {
-    sub_1C7BD40(ActionList, method);
+    sub_1C93D2C(ActionList, method);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Int32Enum__object___GetEnumerator(
     &v13,
     ActionList,
-    (const MethodInfo_3B7DAC4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
+    (const MethodInfo_3BB7558 *)Method_System_Collections_Generic_Dictionary_ValueCollection_BuffList_ACTION__BuffList_ActInfo__GetEnumerator__);
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Int32Enum__object___MoveNext(
             &v13,
-            (const MethodInfo_35E7E60 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
+            (const MethodInfo_36247C4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__MoveNext__) )
   {
     currentValue = v13.fields._currentValue;
     if ( !v13.fields._currentValue )
-      sub_1C7BD40(0, v5);
+      sub_1C93D2C(0, v5);
     *(Il2CppClass **)((char *)&v13.fields._currentValue->klass + (unsigned __int64)&dword_40) = (Il2CppClass *)setData;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)((char *)&dword_40 + (_QWORD)currentValue),
       (int32_t)setData,
       v6,
@@ -4356,7 +4285,7 @@ void BuffList__SetBattleData(BattleData_o *setData, const MethodInfo *method)
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Int32Enum__object___Dispose(
     &v13,
-    (const MethodInfo_35E7E5C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
+    (const MethodInfo_36247C0 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_BuffList_ACTION__BuffList_ActInfo__Dispose__);
 }
 
 
@@ -4367,11 +4296,11 @@ BuffList_ActInfo_o *BuffList__getActInfo(int32_t action, BattleServantData_o *op
   Il2CppObject *Item; // x0
   BuffList_ActInfo_o *v8; // x20
 
-  if ( (byte_4CED45E & 1) == 0 )
+  if ( (byte_4D2F7AF & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
-    byte_4CED45E = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
+    byte_4D2F7AF = 1;
   }
   v5 = BuffList_TypeInfo;
   if ( !BuffList_TypeInfo->_2.cctor_finished )
@@ -4385,7 +4314,7 @@ BuffList_ActInfo_o *BuffList__getActInfo(int32_t action, BattleServantData_o *op
   Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
            ActionList,
            action,
-           (const MethodInfo_34BC4AC *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
+           (const MethodInfo_34F5BF4 *)Method_System_Collections_Generic_Dictionary_BuffList_ACTION__BuffList_ActInfo__get_Item__);
   v8 = (BuffList_ActInfo_o *)Item;
   if ( Item )
   {
@@ -4399,7 +4328,7 @@ BuffList_ActInfo_o *BuffList__getActInfo(int32_t action, BattleServantData_o *op
       return v8;
     }
 LABEL_10:
-    sub_1C7BD40(ActionList, opponentSvt);
+    sub_1C93D2C(ActionList, opponentSvt);
   }
   return v8;
 }
@@ -4407,10 +4336,10 @@ LABEL_10:
 
 bool BuffList__isSpHit(int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4CED462 & 1) == 0 )
+  if ( (byte_4D2F7B3 & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_TypeInfo);
-    byte_4CED462 = 1;
+    sub_1C93AD4(&BuffList_TypeInfo);
+    byte_4D2F7B3 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -4467,15 +4396,15 @@ void BuffList_ActInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.limit = inLimit;
   this->fields.plusTypes = inPlus;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.plusTypes, (int32_t)inPlus, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.plusTypes, (int32_t)inPlus, v9, v10, v11, v12, v13, v14);
   this->fields.minusTypes = inMinus;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.minusTypes, (int32_t)inMinus, v15, v16, v17, v18, v19, v20);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.minusTypes, (int32_t)inMinus, v15, v16, v17, v18, v19, v20);
   v21 = (struct BuffList_BaseInvokeCond_o *)((__int64 (__fastcall *)(BuffList_ActInfo_o *, _QWORD, const MethodInfo *))this->klass->vtable._4_MakeInvokeCond.methodPtr)(
                                               this,
                                               0,
                                               this->klass->vtable._4_MakeInvokeCond.method);
   this->fields._OpponentInvokeCond_k__BackingField = v21;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._OpponentInvokeCond_k__BackingField,
     (int32_t)v21,
     v22,
@@ -4495,12 +4424,12 @@ BuffList_BaseInvokeCond_o *BuffList_ActInfo__MakeInvokeCond(
   BuffList_BaseInvokeCond_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CED46C & 1) == 0 )
+  if ( (byte_4D2F7BD & 1) == 0 )
   {
-    sub_1C7BAE8(&BuffList_BaseInvokeCond_TypeInfo);
-    byte_4CED46C = 1;
+    sub_1C93AD4(&BuffList_BaseInvokeCond_TypeInfo);
+    byte_4D2F7BD = 1;
   }
-  v4 = (BuffList_BaseInvokeCond_o *)sub_1C7BD34(BuffList_BaseInvokeCond_TypeInfo);
+  v4 = (BuffList_BaseInvokeCond_o *)sub_1C93D20(BuffList_BaseInvokeCond_TypeInfo);
   BuffList_BaseInvokeCond___ctor(v4, isSelfSide, v5);
   return v4;
 }
@@ -4580,7 +4509,7 @@ void BuffList_ActInfo__set_OpponentInvokeCond(
   System_String_o *v7; // x7
 
   this->fields._OpponentInvokeCond_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._OpponentInvokeCond_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -4617,32 +4546,32 @@ void BuffList_BaseInvokeCond___ctor(BuffList_BaseInvokeCond_o *this, bool isSelf
   struct System_String_o **v25; // x8
   struct System_String_o *v26; // x1
 
-  if ( (byte_4CED469 & 1) == 0 )
+  if ( (byte_4D2F7BA & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
-    sub_1C7BAE8(&StringLiteral_12742/*"Self"*/);
-    sub_1C7BAE8(&StringLiteral_10051/*"Opponent"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CED469 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
+    sub_1C93AD4(&System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
+    sub_1C93AD4(&StringLiteral_12783/*"Self"*/);
+    sub_1C93AD4(&StringLiteral_10081/*"Opponent"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2F7BA = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C93D20(System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v5,
-    (const MethodInfo_34BBB78 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
+    (const MethodInfo_34F52C0 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__);
   this->fields.dicCacheSelfValue = (struct System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____o *)v5;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.dicCacheSelfValue, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.dicCacheSelfValue, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields.targetSideStr = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetSideStr, v12, v13, v14, v15, v16, v17, v18);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.targetSideStr, v12, v13, v14, v15, v16, v17, v18);
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( isSelfSide )
-    v25 = (struct System_String_o **)&StringLiteral_12742/*"Self"*/;
+    v25 = (struct System_String_o **)&StringLiteral_12783/*"Self"*/;
   else
-    v25 = (struct System_String_o **)&StringLiteral_10051/*"Opponent"*/;
+    v25 = (struct System_String_o **)&StringLiteral_10081/*"Opponent"*/;
   v26 = *v25;
   this->fields.targetSideStr = *v25;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetSideStr, (int32_t)v26, v19, v20, v21, v22, v23, v24);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.targetSideStr, (int32_t)v26, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -4658,13 +4587,13 @@ bool BuffList_BaseInvokeCond__CheckBuffTypeCond(
   System_Collections_Generic_Dictionary_TKey__TValue__o *v10; // x22
   System_Int32_array *Item; // x0
 
-  if ( (byte_4CED46B & 1) == 0 )
+  if ( (byte_4D2F7BC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
-    sub_1C7BAE8(&int___TypeInfo);
-    byte_4CED46B = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
+    sub_1C93AD4(&int___TypeInfo);
+    byte_4D2F7BC = 1;
   }
   dicCacheSelfValue = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicCacheSelfValue;
   if ( !dicCacheSelfValue )
@@ -4672,7 +4601,7 @@ bool BuffList_BaseInvokeCond__CheckBuffTypeCond(
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          dicCacheSelfValue,
          1,
-         (const MethodInfo_34BC740 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__) )
+         (const MethodInfo_34F5E88 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____ContainsKey__) )
   {
     goto LABEL_11;
   }
@@ -4693,16 +4622,16 @@ bool BuffList_BaseInvokeCond__CheckBuffTypeCond(
   }
   else
   {
-    dicCacheSelfValue = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C7BB90(int___TypeInfo, 0);
+    dicCacheSelfValue = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C93B7C(int___TypeInfo, 0);
   }
   if ( !v10 )
 LABEL_13:
-    sub_1C7BD40(dicCacheSelfValue, buffData);
+    sub_1C93D2C(dicCacheSelfValue, buffData);
   System_Collections_Generic_Dictionary_Int32Enum__object___set_Item(
     v10,
     1,
     (Il2CppObject *)dicCacheSelfValue,
-    (const MethodInfo_34BC538 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
+    (const MethodInfo_34F5C80 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____set_Item__);
 LABEL_11:
   dicCacheSelfValue = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicCacheSelfValue;
   if ( !dicCacheSelfValue )
@@ -4710,7 +4639,7 @@ LABEL_11:
   Item = (System_Int32_array *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                  dicCacheSelfValue,
                                  1,
-                                 (const MethodInfo_34BC4AC *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
+                                 (const MethodInfo_34F5BF4 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____get_Item__);
   return BattleBuffData__CheckBuffTypeIndiviuality(Item, condValues, buffEnt, 0, 0);
 }
 
@@ -4731,12 +4660,12 @@ bool BuffList_BaseInvokeCond__CheckInvokeCond(
 
   v13 = BuffList_BaseInvokeCond__get_BuffTypeCondKeyName(this, (const MethodInfo *)buffData);
   if ( !buffEnt )
-    sub_1C7BD40(v13, v14);
+    sub_1C93D2C(v13, v14);
   v15 = v13;
   if ( !BuffEntity__checkScript(buffEnt, v13, 0) )
     return BattleBuffData__CheckBuffTypeIndiviuality(selfIndivValues, condIndivValues, buffEnt, targetCount, 0);
   ScriptIntArray = BuffEntity__GetScriptIntArray(buffEnt, v15, 0, 0x2Cu, 0);
-  return ((__int64 (__fastcall *)(BuffList_BaseInvokeCond_o *, BattleBuffData_o *, BuffEntity_o *, System_Int32_array *, const MethodInfo *))this->klass->vtable._6_CheckBuffTypeCond.methodPtr)(
+  return ((bool (__fastcall *)(BuffList_BaseInvokeCond_o *, BattleBuffData_o *, BuffEntity_o *, System_Int32_array *, const MethodInfo *))this->klass->vtable._6_CheckBuffTypeCond.methodPtr)(
            this,
            buffData,
            buffEnt,
@@ -4759,20 +4688,20 @@ void BuffList_BaseInvokeCond__Init(
   __int64 v11; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *monitor; // x0
 
-  if ( (byte_4CED46A & 1) == 0 )
+  if ( (byte_4D2F7BB & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
-    byte_4CED46A = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
+    byte_4D2F7BB = 1;
   }
   this->fields._SvtData_k__BackingField = svtData;
   p_fields = (GrandQuestFolderBoardItem_o *)&this->fields;
-  sub_1C7BA8C(p_fields, (int32_t)svtData, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78(p_fields, (int32_t)svtData, (int32_t)method, v3, v4, v5, v6, v7);
   monitor = (System_Collections_Generic_Dictionary_TKey__TValue__o *)p_fields->monitor;
   if ( !monitor )
-    sub_1C7BD40(0, v11);
+    sub_1C93D2C(0, v11);
   System_Collections_Generic_Dictionary_Int32Enum__object___Clear(
     monitor,
-    (const MethodInfo_34BC6D4 *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
+    (const MethodInfo_34F5E1C *)Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____Clear__);
 }
 
 
@@ -4780,12 +4709,12 @@ System_String_o *BuffList_BaseInvokeCond__get_BuffTypeCondKeyName(
         BuffList_BaseInvokeCond_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CED468 & 1) == 0 )
+  if ( (byte_4D2F7B9 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_4409/*"Check{0}BuffTypes"*/);
-    byte_4CED468 = 1;
+    sub_1C93AD4(&StringLiteral_4425/*"Check{0}BuffTypes"*/);
+    byte_4D2F7B9 = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_4409/*"Check{0}BuffTypes"*/, (Il2CppObject *)this->fields.targetSideStr, 0);
+  return System_String__Format((System_String_o *)StringLiteral_4425/*"Check{0}BuffTypes"*/, (Il2CppObject *)this->fields.targetSideStr, 0);
 }
 
 
@@ -4807,7 +4736,7 @@ void BuffList_BaseInvokeCond__set_SvtData(
   System_String_o *v7; // x7
 
   this->fields._SvtData_k__BackingField = value;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 

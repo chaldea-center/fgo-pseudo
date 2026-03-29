@@ -14,7 +14,6 @@ void CommandSpellAddFunctionLabelComponent__Awake(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CommandSpellAddFunctionLabelComponent__SetData(
         CommandSpellAddFunctionLabelComponent_o *this,
         BattleServantData_o *svtData,
@@ -38,26 +37,23 @@ void CommandSpellAddFunctionLabelComponent__SetData(
   bool IsNullOrEmpty; // w0
   UILabel_o *addFunctionLabel; // x20
   char v24; // w21
-  float v25; // s0 OVERLAPPED
-  float v26; // s1
-  float v27; // s2
-  float v28; // s3
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
+  UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF15E2 & 1) == 0 )
+  if ( (byte_4D339B4 & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_3680/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
-    sub_1C7BAE8(&StringLiteral_3679/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
-    byte_4CF15E2 = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_3696/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
+    sub_1C93AD4(&StringLiteral_3695/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
+    byte_4D339B4 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_object )
     goto LABEL_37;
   v11 = Master_object;
@@ -106,7 +102,7 @@ void CommandSpellAddFunctionLabelComponent__SetData(
       while ( 1 )
       {
         if ( v20 >= (unsigned int)max_length )
-          sub_1C7BD48(Master_object);
+          sub_1C93D34(Master_object);
         v21 = classBoardAddCommandSpells->m_Items[v20];
         if ( !v21 )
           goto LABEL_37;
@@ -144,34 +140,34 @@ void CommandSpellAddFunctionLabelComponent__SetData(
   if ( (v24 & 1) == 0 )
   {
 LABEL_32:
-    Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, 0);
+    Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3695/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, 0);
     if ( addFunctionLabel )
     {
       UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0);
       Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
       if ( Master_object )
       {
-        v25 = 1.0;
-        v26 = 1.0;
-        v27 = 1.0;
+        v28.fields.r = 1.0;
+        v28.fields.g = 1.0;
+        v28.fields.b = 1.0;
         goto LABEL_35;
       }
     }
 LABEL_37:
-    sub_1C7BD40(Master_object, v10);
+    sub_1C93D2C(Master_object, v10);
   }
 LABEL_28:
-  Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3680/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0);
+  Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3696/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0);
   if ( !addFunctionLabel )
     goto LABEL_37;
   UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0);
   Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
   if ( !Master_object )
     goto LABEL_37;
-  v25 = 0.5;
-  v26 = 0.5;
-  v27 = 0.5;
+  v28.fields.r = 0.5;
+  v28.fields.g = 0.5;
+  v28.fields.b = 0.5;
 LABEL_35:
-  v28 = 1.0;
-  UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v25, 0);
+  v28.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)Master_object, v28, 0);
 }

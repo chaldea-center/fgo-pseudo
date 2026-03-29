@@ -20,10 +20,10 @@ void BattleLoadMovieTask__Init(
   System_String_o *v11; // x7
 
   if ( !aiEnt )
-    sub_1C7BD40(this, aiActEnt);
+    sub_1C93D2C(this, aiActEnt);
   MovieName = AiBaseEntity__GetMovieName(aiEnt, 0);
   this->fields.movieName = MovieName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)MovieName, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)MovieName, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -35,13 +35,13 @@ BattleActionData_o *BattleLoadMovieTask__MakeActionData(
   System_String_o *movieName; // x19
   BattleLoadMovieActionData_o *v5; // x20
 
-  if ( (byte_4CF19A0 & 1) == 0 )
+  if ( (byte_4D33D84 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleLoadMovieActionData_TypeInfo);
-    byte_4CF19A0 = 1;
+    sub_1C93AD4(&BattleLoadMovieActionData_TypeInfo);
+    byte_4D33D84 = 1;
   }
   movieName = this->fields.movieName;
-  v5 = (BattleLoadMovieActionData_o *)sub_1C7BD34(BattleLoadMovieActionData_TypeInfo);
+  v5 = (BattleLoadMovieActionData_o *)sub_1C93D20(BattleLoadMovieActionData_TypeInfo);
   BattleLoadMovieActionData___ctor(v5, movieName, 0);
   return (BattleActionData_o *)v5;
 }

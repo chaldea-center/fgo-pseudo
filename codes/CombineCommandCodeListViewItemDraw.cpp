@@ -11,10 +11,10 @@ void CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_4CF25BE & 1) == 0 )
+  if ( (byte_4D349AA & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1166/*"1"*/);
-    byte_4CF25BE = 1;
+    sub_1C93AD4(&StringLiteral_1166/*"1"*/);
+    byte_4D349AA = 1;
   }
   if ( item )
   {
@@ -31,7 +31,7 @@ void CombineCommandCodeListViewItemDraw__SetInput(
         return;
       }
 LABEL_10:
-      sub_1C7BD40(selectImgObj, item);
+      sub_1C93D2C(selectImgObj, item);
     }
     UnityEngine_GameObject__SetActive(selectImgObj, 0, 0);
   }
@@ -50,20 +50,20 @@ void CombineCommandCodeListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x21
   const MethodInfo *v11; // x4
 
-  if ( (byte_4CF25BD & 1) == 0 )
+  if ( (byte_4D349A9 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_9345/*"NOT_SELECT_MAX_EQUIP"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_1166/*"1"*/);
-    byte_4CF25BD = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_9373/*"NOT_SELECT_MAX_EQUIP"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_1166/*"1"*/);
+    byte_4D349A9 = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_38;
-    ServantFaceIconComponent__Set_41666100(
+    ServantFaceIconComponent__Set_41819388(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -118,7 +118,7 @@ void CombineCommandCodeListViewItemDraw__SetItem(
         maskLabel = this->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9345/*"NOT_SELECT_MAX_EQUIP"*/, 0);
+        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9373/*"NOT_SELECT_MAX_EQUIP"*/, 0);
         if ( !maskLabel )
           goto LABEL_38;
         UILabel__set_text(maskLabel, (System_String_o *)icon, 0);
@@ -151,7 +151,7 @@ void CombineCommandCodeListViewItemDraw__SetItem(
         }
       }
 LABEL_38:
-      sub_1C7BD40(icon, item);
+      sub_1C93D2C(icon, item);
     }
   }
 }

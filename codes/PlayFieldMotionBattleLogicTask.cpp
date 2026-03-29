@@ -18,7 +18,7 @@ void PlayFieldMotionBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
-  *(_DWORD *)&v5[-1].fields.isNoCriticalOnAttack = 44;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v5, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
+  v5[-1].fields.afterWaitGroup = 44;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v5, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v5->fields.combo) = v6;
 }

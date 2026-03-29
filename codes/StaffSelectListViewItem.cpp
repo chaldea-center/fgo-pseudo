@@ -4,67 +4,74 @@ void StaffSelectListViewItem___ctor(
         StaffPhotoEntity_o *entity,
         int32_t selectStaffPhotoId,
         int32_t selectedStaffPhotoId,
+        int32_t selectedSvtId,
         UIAtlas_o *photoCampaignAtlas,
         const MethodInfo *method)
 {
-  struct StaffPhotoEntity_o **p_StaffPhotoEntity_k__BackingField; // x24
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  StaffPhotoEntity_o *v19; // x0
-  __int64 v20; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  struct StaffPhotoEntity_o **p_StaffPhotoEntity_k__BackingField; // x22
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  StaffPhotoEntity_o *v21; // x0
+  __int64 v22; // x1
   int32_t id; // w8
-  bool v28; // w8
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  bool IsRestrictionSvt; // w0
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
     (int32_t)entity,
-    v13,
-    v14,
     v15,
     v16,
     v17,
-    v18);
+    v18,
+    v19,
+    v20);
   if ( !entity )
-    goto LABEL_7;
+    goto LABEL_9;
   id = entity->fields.id;
   this->fields._IsSelected_k__BackingField = id == selectStaffPhotoId;
-  if ( id != selectedStaffPhotoId )
+  if ( id == selectedStaffPhotoId )
   {
-    v28 = 0;
-    goto LABEL_6;
+    v21 = *p_StaffPhotoEntity_k__BackingField;
+    if ( !*p_StaffPhotoEntity_k__BackingField )
+      goto LABEL_9;
+    if ( !StaffPhotoEntity__IsEnableSameSet(v21, 0) )
+    {
+      IsRestrictionSvt = 1;
+      goto LABEL_8;
+    }
   }
-  v19 = *p_StaffPhotoEntity_k__BackingField;
+  v21 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
-LABEL_7:
-    sub_1C7BD40(v19, v20);
-  v28 = !StaffPhotoEntity__IsEnableSameSet(v19, 0);
-LABEL_6:
+LABEL_9:
+    sub_1C93D2C(v21, v22);
+  IsRestrictionSvt = StaffPhotoEntity__IsRestrictionSvt(v21, selectedSvtId, 0);
+LABEL_8:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
-  *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v28;
-  sub_1C7BA8C(
+  *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = IsRestrictionSvt;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)p_PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
-    v21,
-    v22,
-    v23,
     v24,
     v25,
-    v26);
+    v26,
+    v27,
+    v28,
+    v29);
 }
 
 
@@ -77,7 +84,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C7BD40(this, selectStaffPhotoId);
+    sub_1C93D2C(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -88,14 +95,12 @@ bool StaffSelectListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct StaffPhotoEntity_o *StaffPhotoEntity_k__BackingField; // x9
-  bool result; // w0
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C7BD40(this, sort);
-  result = 1;
+    sub_1C93D2C(this, sort);
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
-  return result;
+  return 1;
 }
 
 

@@ -24,77 +24,75 @@ void DebugInputUsePlayerTurnSkillComponent___cctor(const MethodInfo *method)
   int32_t v22; // w5
   int64_t v23; // x6
   System_String_o *v24; // x7
-  System_Array_o *v25; // x0
-  System_RuntimeFieldHandle_o v26; // x1
-  System_Array_o *v27; // x19
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v28; // x0
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
-  __int64 v35; // x0
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v36; // x8
-  int32_t v37; // w2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  int32_t v40; // w5
-  int64_t v41; // x6
-  System_String_o *v42; // x7
-  System_Array_o *v43; // x0
-  System_RuntimeFieldHandle_o v44; // x1
-  System_Array_o *v45; // x19
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v46; // x0
-  int32_t v47; // w2
-  int32_t v48; // w3
-  System_String_o *v49; // x4
-  int32_t v50; // w5
-  int64_t v51; // x6
-  System_String_o *v52; // x7
+  System_Array_o *v25; // x19
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v26; // x0
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  __int64 v33; // x0
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v34; // x8
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
+  System_Array_o *v41; // x19
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v42; // x0
+  int32_t v43; // w2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  int32_t v46; // w5
+  int64_t v47; // x6
+  System_String_o *v48; // x7
 
-  if ( (byte_4CEFC0C & 1) == 0 )
+  if ( (byte_4D31F91 & 1) == 0 )
   {
-    sub_1C7BAE8(&bool___TypeInfo);
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    sub_1C7BAE8(&int___TypeInfo);
-    sub_1C7BAE8(&BattleCommand_TYPE___TypeInfo);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9);
-    byte_4CEFC0C = 1;
+    sub_1C93AD4(&bool___TypeInfo);
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    sub_1C93AD4(&int___TypeInfo);
+    sub_1C93AD4(&BattleCommand_TYPE___TypeInfo);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9);
+    byte_4D31F91 = 1;
   }
   DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields->NUM_PARTS_LENGTH = 9;
-  v1 = sub_1C7BB90(int___TypeInfo, 9);
+  v1 = sub_1C93B7C(int___TypeInfo, 9);
   static_fields = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
   static_fields->SelectedUseServantIdxList = (struct System_Int32_array *)v1;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->SelectedUseServantIdxList, v1, v3, v4, v5, v6, v7, v8);
-  v9 = sub_1C7BB90(int___TypeInfo, 9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->SelectedUseServantIdxList, v1, v3, v4, v5, v6, v7, v8);
+  v9 = sub_1C93B7C(int___TypeInfo, 9);
   v10 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
   v10->SelectedTargetServantIdxList = (struct System_Int32_array *)v9;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v10->SelectedTargetServantIdxList, v9, v11, v12, v13, v14, v15, v16);
-  v17 = sub_1C7BB90(int___TypeInfo, 9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v10->SelectedTargetServantIdxList, v9, v11, v12, v13, v14, v15, v16);
+  v17 = sub_1C93B7C(int___TypeInfo, 9);
   v18 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
   v18->SelectedSkillIdxList = (struct System_Int32_array *)v17;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v18->SelectedSkillIdxList, v17, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Array_o *)sub_1C7BB90(BattleCommand_TYPE___TypeInfo, 9);
-  v26.fields.value = Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9;
-  v27 = v25;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v25, v26, 0);
-  v28 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v28->SelectedCommandTypeList = (struct BattleCommand_TYPE_array *)v27;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v28->SelectedCommandTypeList, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v18->SelectedSkillIdxList, v17, v19, v20, v21, v22, v23, v24);
+  v25 = (System_Array_o *)sub_1C93B7C(BattleCommand_TYPE___TypeInfo, 9);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
+    v25,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9,
+    0);
+  v26 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v26->SelectedCommandTypeList = (struct BattleCommand_TYPE_array *)v25;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v26->SelectedCommandTypeList, (int32_t)v25, v27, v28, v29, v30, v31, v32);
   *(_WORD *)&DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields->requestUsePlayerTurnFlg = 256;
-  v35 = sub_1C7BB90(bool___TypeInfo, 9);
-  v36 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v36->RequestUseSkillToggle = (struct System_Boolean_array *)v35;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v36->RequestUseSkillToggle, v35, v37, v38, v39, v40, v41, v42);
-  v43 = (System_Array_o *)sub_1C7BB90(bool___TypeInfo, 9);
-  v44.fields.value = Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E;
-  v45 = v43;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v43, v44, 0);
-  v46 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v46->StarUseToggle = (struct System_Boolean_array *)v45;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v46->StarUseToggle, (int32_t)v45, v47, v48, v49, v50, v51, v52);
+  v33 = sub_1C93B7C(bool___TypeInfo, 9);
+  v34 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v34->RequestUseSkillToggle = (struct System_Boolean_array *)v33;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v34->RequestUseSkillToggle, v33, v35, v36, v37, v38, v39, v40);
+  v41 = (System_Array_o *)sub_1C93B7C(bool___TypeInfo, 9);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
+    v41,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E,
+    0);
+  v42 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v42->StarUseToggle = (struct System_Boolean_array *)v41;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v42->StarUseToggle, (int32_t)v41, v43, v44, v45, v46, v47, v48);
 }
 
 
@@ -120,7 +118,7 @@ void DebugInputUsePlayerTurnSkillComponent__Cancel(
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C7BD40(debugMenuTran, method);
+    sub_1C93D2C(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -135,14 +133,14 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeCloseSelfWindow(
   DebugInputUsePlayerTurnSkillComponent_c *v5; // x8
   bool v6; // w19
 
-  if ( (byte_4CEFC09 & 1) == 0 )
+  if ( (byte_4D31F8E & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC09 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F8E = 1;
   }
   closeSelfWindw = this->fields.closeSelfWindw;
   if ( !closeSelfWindw )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   value = UIToggle__get_value(closeSelfWindw, 0);
   v5 = DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   v6 = value;
@@ -164,14 +162,14 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeRequestUsePlayerTurn(
   DebugInputUsePlayerTurnSkillComponent_c *v5; // x8
   bool v6; // w19
 
-  if ( (byte_4CEFC08 & 1) == 0 )
+  if ( (byte_4D31F8D & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC08 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F8D = 1;
   }
   requestUsePlayerTurn = this->fields.requestUsePlayerTurn;
   if ( !requestUsePlayerTurn )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   value = UIToggle__get_value(requestUsePlayerTurn, 0);
   v5 = DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   v6 = value;
@@ -199,10 +197,10 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeRequestUseSkillToggle(
   __int64 v11; // x21
 
   v4 = this;
-  if ( (byte_4CEFC0A & 1) == 0 )
+  if ( (byte_4D31F8F & 1) == 0 )
   {
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC0A = 1;
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F8F = 1;
   }
   if ( !parentGameObject )
     goto LABEL_19;
@@ -212,7 +210,7 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeRequestUseSkillToggle(
                                                       0);
   if ( !this || !name )
     goto LABEL_19;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this - 1 < 0 )
@@ -236,16 +234,16 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeRequestUseSkillToggle(
   v9 = settingInfoList->m_Items[v7];
   if ( !v9
     || (requestUseSkillToggle = v9->fields.requestUseSkillToggle) == 0
-    || (v11 = *((_QWORD *)this[2].monitor + 6),
+    || (v11 = *(_QWORD *)(*((_QWORD *)this + 23) + 48LL),
         this = (DebugInputUsePlayerTurnSkillComponent_o *)UIToggle__get_value(requestUseSkillToggle, 0),
         !v11) )
   {
 LABEL_19:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   }
   if ( v7 >= *(_DWORD *)(v11 + 24) )
 LABEL_20:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   *(_BYTE *)(v11 + v7 + 32) = (unsigned __int8)this & 1;
 }
 
@@ -265,10 +263,10 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeStarToggle(
   __int64 v11; // x21
 
   v4 = this;
-  if ( (byte_4CEFC0B & 1) == 0 )
+  if ( (byte_4D31F90 & 1) == 0 )
   {
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC0B = 1;
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F90 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_19;
@@ -278,7 +276,7 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeStarToggle(
                                                       0);
   if ( !this || !name )
     goto LABEL_19;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this - 1 < 0 )
@@ -302,16 +300,16 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeStarToggle(
   v9 = settingInfoList->m_Items[v7];
   if ( !v9
     || (onStarToggle = v9->fields.onStarToggle) == 0
-    || (v11 = *((_QWORD *)this[2].monitor + 7),
+    || (v11 = *(_QWORD *)(*((_QWORD *)this + 23) + 56LL),
         this = (DebugInputUsePlayerTurnSkillComponent_o *)UIToggle__get_value(onStarToggle, 0),
         !v11) )
   {
 LABEL_19:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   }
   if ( v7 >= *(_DWORD *)(v11 + 24) )
 LABEL_20:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   *(_BYTE *)(v11 + v7 + 32) = (unsigned __int8)this & 1;
 }
 
@@ -361,13 +359,13 @@ void DebugInputUsePlayerTurnSkillComponent__OnEnable(
   DebugInputUsePlayerTurnSkillComponent_SettingInfo_o *v41; // x8
   int v42; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CEFBFE & 1) == 0 )
+  if ( (byte_4D31F83 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleCommand_TypeInfo);
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_2362/*"Arts"*/);
-    sub_1C7BAE8(&StringLiteral_25755/*"番目"*/);
-    byte_4CEFBFE = 1;
+    sub_1C93AD4(&BattleCommand_TypeInfo);
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    sub_1C93AD4(&StringLiteral_2374/*"Arts"*/);
+    sub_1C93AD4(&StringLiteral_25825/*"番目"*/);
+    byte_4D31F83 = 1;
   }
   v42 = 0;
   requestUsePlayerTurn = this->fields.requestUsePlayerTurn;
@@ -408,7 +406,7 @@ void DebugInputUsePlayerTurnSkillComponent__OnEnable(
     j_il2cpp_runtime_class_init_0(v7);
   if ( !closeSelfWindw )
 LABEL_87:
-    sub_1C7BD40(requestUsePlayerTurn, method);
+    sub_1C93D2C(requestUsePlayerTurn, method);
   UIToggle__set_value(
     closeSelfWindw,
     DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields->closeSelfWindowFlg,
@@ -485,7 +483,7 @@ LABEL_19:
       goto LABEL_88;
     v42 = SelectedUseServantIdxList->m_Items[i] + 1;
     v20 = System_Int32__ToString((int32_t)&v42, 0);
-    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64176912(v20, (System_String_o *)StringLiteral_25755/*"番目"*/, 0);
+    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64425724(v20, (System_String_o *)StringLiteral_25825/*"番目"*/, 0);
     v21 = this->fields.settingInfoList;
     if ( !v21 )
       goto LABEL_87;
@@ -506,7 +504,7 @@ LABEL_19:
       goto LABEL_88;
     v42 = SelectedSkillIdxList->m_Items[i] + 1;
     v24 = System_Int32__ToString((int32_t)&v42, 0);
-    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64176912(v24, (System_String_o *)StringLiteral_25755/*"番目"*/, 0);
+    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64425724(v24, (System_String_o *)StringLiteral_25825/*"番目"*/, 0);
     v25 = this->fields.settingInfoList;
     if ( !v25 )
       goto LABEL_87;
@@ -566,7 +564,7 @@ LABEL_19:
       goto LABEL_87;
     if ( i >= LODWORD(v33->max_length) )
 LABEL_88:
-      sub_1C7BD48(requestUsePlayerTurn);
+      sub_1C93D34(requestUsePlayerTurn);
     v34 = v33->m_Items[i];
     if ( !v34 )
       goto LABEL_87;
@@ -587,7 +585,7 @@ LABEL_88:
       j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
     requestUsePlayerTurn = (UIToggle_o *)BattleCommand__GetCommandTypeName(
                                            v37,
-                                           (System_String_o *)StringLiteral_2362/*"Arts"*/,
+                                           (System_String_o *)StringLiteral_2374/*"Arts"*/,
                                            0);
     if ( !commandTypeName )
       goto LABEL_87;
@@ -599,7 +597,7 @@ LABEL_88:
       goto LABEL_88;
     v42 = SelectedTargetServantIdxList->m_Items[i] + 1;
     v39 = System_Int32__ToString((int32_t)&v42, 0);
-    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64176912(v39, (System_String_o *)StringLiteral_25755/*"番目"*/, 0);
+    requestUsePlayerTurn = (UIToggle_o *)System_String__Concat_64425724(v39, (System_String_o *)StringLiteral_25825/*"番目"*/, 0);
     v40 = this->fields.settingInfoList;
     if ( !v40 )
       goto LABEL_87;
@@ -639,10 +637,10 @@ void DebugInputUsePlayerTurnSkillComponent__Open(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v21; // x1
 
-  if ( (byte_4CEFBFD & 1) == 0 )
+  if ( (byte_4D31F82 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFBFD = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F82 = 1;
   }
   v11 = DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   v12 = -1;
@@ -657,7 +655,7 @@ void DebugInputUsePlayerTurnSkillComponent__Open(
   }
   while ( v12 < v11->static_fields->NUM_PARTS_LENGTH );
   this->fields.data = inputData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.data,
     (int32_t)inputData,
     (int32_t)inputDebugMenuTran,
@@ -668,7 +666,7 @@ void DebugInputUsePlayerTurnSkillComponent__Open(
     v7);
   this->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = &this->fields.debugMenuTran;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.debugMenuTran,
     (int32_t)inputDebugMenuTran,
     v14,
@@ -686,7 +684,7 @@ void DebugInputUsePlayerTurnSkillComponent__Open(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.attackCardSelectWindow) == 0)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
-    sub_1C7BD40(gameObject, v21);
+    sub_1C93D2C(gameObject, v21);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
@@ -741,16 +739,16 @@ void DebugInputUsePlayerTurnSkillComponent__OpenCommandTypeSelect(
   const MethodInfo *v45; // x3
 
   v4 = this;
-  if ( (byte_4CEFC06 & 1) == 0 )
+  if ( (byte_4D31F8B & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_int__string__TypeInfo);
-    sub_1C7BAE8(&BattleCommand_TypeInfo);
-    sub_1C7BAE8(&Method_DebugInputUsePlayerTurnSkillComponent_TapCommandTypeSelectCallback__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_string__TypeInfo);
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&StringLiteral_2362/*"Arts"*/);
-    byte_4CEFC06 = 1;
+    sub_1C93AD4(&System_Action_int__string__TypeInfo);
+    sub_1C93AD4(&BattleCommand_TypeInfo);
+    sub_1C93AD4(&Method_DebugInputUsePlayerTurnSkillComponent_TapCommandTypeSelectCallback__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_string__TypeInfo);
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&StringLiteral_2374/*"Arts"*/);
+    byte_4D31F8B = 1;
   }
   if ( !parentGameObject )
     goto LABEL_29;
@@ -760,7 +758,7 @@ void DebugInputUsePlayerTurnSkillComponent__OpenCommandTypeSelect(
                                                       0);
   if ( !this || !name )
     goto LABEL_29;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this < 1 )
@@ -773,19 +771,19 @@ void DebugInputUsePlayerTurnSkillComponent__OpenCommandTypeSelect(
   this = (DebugInputUsePlayerTurnSkillComponent_o *)v4->fields.attackCardSelectWindow;
   if ( !this )
 LABEL_29:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   if ( !UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     v4->fields.lastOpenSelectButton = v7;
-    v9 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_string__TypeInfo);
+    v9 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v9,
-      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_string___ctor__);
     if ( !BattleCommand_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
     this = (DebugInputUsePlayerTurnSkillComponent_o *)BattleCommand__GetCommandTypeName(
                                                         1,
-                                                        (System_String_o *)StringLiteral_2362/*"Arts"*/,
+                                                        (System_String_o *)StringLiteral_2374/*"Arts"*/,
                                                         0);
     if ( v9 )
     {
@@ -801,18 +799,18 @@ LABEL_29:
           System_Collections_Generic_List_object___AddWithResize(
             v9,
             (Il2CppObject *)this,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v9->fields._size = size + 1;
           v20[4] = (Il2CppClass *)v19;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
         }
         this = (DebugInputUsePlayerTurnSkillComponent_o *)BattleCommand__GetCommandTypeName(
                                                             2,
-                                                            (System_String_o *)StringLiteral_2362/*"Arts"*/,
+                                                            (System_String_o *)StringLiteral_2374/*"Arts"*/,
                                                             0);
         v27 = v9->fields._items;
         v28 = Method_System_Collections_Generic_List_string__Add__;
@@ -826,18 +824,18 @@ LABEL_29:
             System_Collections_Generic_List_object___AddWithResize(
               v9,
               (Il2CppObject *)this,
-              *(const MethodInfo_383EDFC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+              *(const MethodInfo_387999C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
           }
           else
           {
             v31 = &v27->obj.klass + v29;
             v9->fields._size = v29 + 1;
             v31[4] = (Il2CppClass *)v30;
-            sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v31 + 4), (int32_t)v30, v21, v22, v23, v24, v25, v26);
+            sub_1C93A78((GrandQuestFolderBoardItem_o *)(v31 + 4), (int32_t)v30, v21, v22, v23, v24, v25, v26);
           }
           this = (DebugInputUsePlayerTurnSkillComponent_o *)BattleCommand__GetCommandTypeName(
                                                               3,
-                                                              (System_String_o *)StringLiteral_2362/*"Arts"*/,
+                                                              (System_String_o *)StringLiteral_2374/*"Arts"*/,
                                                               0);
           v38 = v9->fields._items;
           v39 = Method_System_Collections_Generic_List_string__Add__;
@@ -851,17 +849,17 @@ LABEL_29:
               System_Collections_Generic_List_object___AddWithResize(
                 v9,
                 (Il2CppObject *)this,
-                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+                *(const MethodInfo_387999C **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
             }
             else
             {
               v42 = &v38->obj.klass + v40;
               v9->fields._size = v40 + 1;
               v42[4] = (Il2CppClass *)v41;
-              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v42 + 4), (int32_t)v41, v32, v33, v34, v35, v36, v37);
+              sub_1C93A78((GrandQuestFolderBoardItem_o *)(v42 + 4), (int32_t)v41, v32, v33, v34, v35, v36, v37);
             }
             attackCardSelectWindow = v4->fields.attackCardSelectWindow;
-            v44 = (System_Action_T1__T2__o *)sub_1C7BD34(System_Action_int__string__TypeInfo);
+            v44 = (System_Action_T1__T2__o *)sub_1C93D20(System_Action_int__string__TypeInfo);
             System_Action_int__object____ctor(
               v44,
               (Il2CppObject *)v4,
@@ -910,13 +908,13 @@ void DebugInputUsePlayerTurnSkillComponent__OpenNumSelectWindow(
   bool v22; // nf
   int v23; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CEFC01 & 1) == 0 )
+  if ( (byte_4D31F86 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C7BAE8(&StringLiteral_25755/*"番目"*/);
-    byte_4CEFC01 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C93AD4(&StringLiteral_25825/*"番目"*/);
+    byte_4D31F86 = 1;
   }
   attackCardSelectWindow = (UnityEngine_Behaviour_o *)this->fields.attackCardSelectWindow;
   if ( !attackCardSelectWindow )
@@ -924,17 +922,17 @@ void DebugInputUsePlayerTurnSkillComponent__OpenNumSelectWindow(
   if ( UnityEngine_Behaviour__get_isActiveAndEnabled(attackCardSelectWindow, 0) )
     return;
   this->fields.lastOpenSelectButton = buttonIdx;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_string__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_string___ctor__);
   v23 = 1;
   do
   {
     v9 = System_Int32__ToString((int32_t)&v23, 0);
-    attackCardSelectWindow = (UnityEngine_Behaviour_o *)System_String__Concat_64176912(
+    attackCardSelectWindow = (UnityEngine_Behaviour_o *)System_String__Concat_64425724(
                                                           v9,
-                                                          (System_String_o *)StringLiteral_25755/*"番目"*/,
+                                                          (System_String_o *)StringLiteral_25825/*"番目"*/,
                                                           0);
     if ( !v8 )
       goto LABEL_15;
@@ -950,14 +948,14 @@ void DebugInputUsePlayerTurnSkillComponent__OpenNumSelectWindow(
       System_Collections_Generic_List_object___AddWithResize(
         v8,
         (Il2CppObject *)attackCardSelectWindow,
-        *(const MethodInfo_383EDFC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_387999C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
       v20 = &items->obj.klass + size;
       v8->fields._size = size + 1;
       v20[4] = (Il2CppClass *)v19;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
     }
     v22 = v23 - 3 < 0;
     ++v23;
@@ -966,7 +964,7 @@ void DebugInputUsePlayerTurnSkillComponent__OpenNumSelectWindow(
   attackCardSelectWindow = (UnityEngine_Behaviour_o *)this->fields.attackCardSelectWindow;
   if ( !attackCardSelectWindow )
 LABEL_15:
-    sub_1C7BD40(attackCardSelectWindow, *(_QWORD *)&buttonIdx);
+    sub_1C93D2C(attackCardSelectWindow, *(_QWORD *)&buttonIdx);
   DebugAttackCardSelectComponent__Open(
     (DebugAttackCardSelectComponent_o *)attackCardSelectWindow,
     callback,
@@ -989,11 +987,11 @@ void DebugInputUsePlayerTurnSkillComponent__OpenSkillSelect(
   const MethodInfo *v10; // x3
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4CEFC04 & 1) == 0 )
+  if ( (byte_4D31F89 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_int__string__TypeInfo);
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&Method_DebugInputUsePlayerTurnSkillComponent_TapSkillSelectCallback__);
-    byte_4CEFC04 = 1;
+    sub_1C93AD4(&System_Action_int__string__TypeInfo);
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&Method_DebugInputUsePlayerTurnSkillComponent_TapSkillSelectCallback__);
+    byte_4D31F89 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_11;
@@ -1003,7 +1001,7 @@ void DebugInputUsePlayerTurnSkillComponent__OpenSkillSelect(
                                                       0);
   if ( !this || !name )
     goto LABEL_11;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this < 1 )
@@ -1011,10 +1009,10 @@ void DebugInputUsePlayerTurnSkillComponent__OpenSkillSelect(
   klass = v4[3].klass;
   if ( !klass )
 LABEL_11:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   if ( (int)this <= SLODWORD(klass->_1.namespaze) )
   {
-    v9 = (System_Action_T1__T2__o *)sub_1C7BD34(System_Action_int__string__TypeInfo);
+    v9 = (System_Action_T1__T2__o *)sub_1C93D20(System_Action_int__string__TypeInfo);
     System_Action_int__object____ctor(v9, v4, Method_DebugInputUsePlayerTurnSkillComponent_TapSkillSelectCallback__, 0);
     DebugInputUsePlayerTurnSkillComponent__OpenNumSelectWindow(
       (DebugInputUsePlayerTurnSkillComponent_o *)v4,
@@ -1039,11 +1037,11 @@ void DebugInputUsePlayerTurnSkillComponent__OpenTargetServantSelect(
   const MethodInfo *v10; // x3
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4CEFC00 & 1) == 0 )
+  if ( (byte_4D31F85 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_int__string__TypeInfo);
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&Method_DebugInputUsePlayerTurnSkillComponent_TapTargetServantSelectCallback__);
-    byte_4CEFC00 = 1;
+    sub_1C93AD4(&System_Action_int__string__TypeInfo);
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&Method_DebugInputUsePlayerTurnSkillComponent_TapTargetServantSelectCallback__);
+    byte_4D31F85 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_11;
@@ -1053,7 +1051,7 @@ void DebugInputUsePlayerTurnSkillComponent__OpenTargetServantSelect(
                                                       0);
   if ( !this || !name )
     goto LABEL_11;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this < 1 )
@@ -1061,10 +1059,10 @@ void DebugInputUsePlayerTurnSkillComponent__OpenTargetServantSelect(
   klass = v4[3].klass;
   if ( !klass )
 LABEL_11:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   if ( (int)this <= SLODWORD(klass->_1.namespaze) )
   {
-    v9 = (System_Action_T1__T2__o *)sub_1C7BD34(System_Action_int__string__TypeInfo);
+    v9 = (System_Action_T1__T2__o *)sub_1C93D20(System_Action_int__string__TypeInfo);
     System_Action_int__object____ctor(
       v9,
       v4,
@@ -1093,11 +1091,11 @@ void DebugInputUsePlayerTurnSkillComponent__OpenUseServantSelect(
   const MethodInfo *v10; // x3
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4CEFBFF & 1) == 0 )
+  if ( (byte_4D31F84 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_int__string__TypeInfo);
-    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C7BAE8(&Method_DebugInputUsePlayerTurnSkillComponent_TapUseServantSelectCallback__);
-    byte_4CEFBFF = 1;
+    sub_1C93AD4(&System_Action_int__string__TypeInfo);
+    this = (DebugInputUsePlayerTurnSkillComponent_o *)sub_1C93AD4(&Method_DebugInputUsePlayerTurnSkillComponent_TapUseServantSelectCallback__);
+    byte_4D31F84 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_11;
@@ -1107,7 +1105,7 @@ void DebugInputUsePlayerTurnSkillComponent__OpenUseServantSelect(
                                                       0);
   if ( !this || !name )
     goto LABEL_11;
-  v6 = System_String__Substring_64222852(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_64471664(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputUsePlayerTurnSkillComponent_o *)System_Int32__Parse(v6, 0);
   v7 = (_DWORD)this - 1;
   if ( (int)this < 1 )
@@ -1115,10 +1113,10 @@ void DebugInputUsePlayerTurnSkillComponent__OpenUseServantSelect(
   klass = v4[3].klass;
   if ( !klass )
 LABEL_11:
-    sub_1C7BD40(this, parentGameObject);
+    sub_1C93D2C(this, parentGameObject);
   if ( (int)this <= SLODWORD(klass->_1.namespaze) )
   {
-    v9 = (System_Action_T1__T2__o *)sub_1C7BD34(System_Action_int__string__TypeInfo);
+    v9 = (System_Action_T1__T2__o *)sub_1C93D20(System_Action_int__string__TypeInfo);
     System_Action_int__object____ctor(
       v9,
       v4,
@@ -1146,10 +1144,10 @@ void DebugInputUsePlayerTurnSkillComponent__SetCommandType(
   struct DebugInputUsePlayerTurnSkillComponent_SettingInfo_array *settingInfoList; // x9
   DebugInputUsePlayerTurnSkillComponent_SettingInfo_o *v12; // x8
 
-  if ( (byte_4CEFC07 & 1) == 0 )
+  if ( (byte_4D31F8C & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC07 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F8C = 1;
   }
   commandTypeName = (UILabel_o *)DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   if ( !DebugInputUsePlayerTurnSkillComponent_TypeInfo->_2.cctor_finished )
@@ -1168,11 +1166,11 @@ void DebugInputUsePlayerTurnSkillComponent__SetCommandType(
     goto LABEL_12;
   if ( LODWORD(settingInfoList->max_length) <= inputIdx )
 LABEL_13:
-    sub_1C7BD48(commandTypeName);
+    sub_1C93D34(commandTypeName);
   v12 = settingInfoList->m_Items[inputIdx];
   if ( !v12 || (commandTypeName = v12->fields.commandTypeName) == 0 )
 LABEL_12:
-    sub_1C7BD40(commandTypeName, *(_QWORD *)&inputIdx);
+    sub_1C93D2C(commandTypeName, *(_QWORD *)&inputIdx);
   UILabel__set_text(commandTypeName, inputName, 0);
 }
 
@@ -1218,10 +1216,10 @@ void DebugInputUsePlayerTurnSkillComponent__TapSkillSelectCallback(
   __int64 v11; // x9
   DebugInputUsePlayerTurnSkillComponent_SettingInfo_o *v12; // x8
 
-  if ( (byte_4CEFC05 & 1) == 0 )
+  if ( (byte_4D31F8A & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC05 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F8A = 1;
   }
   useSkillIdx = (UILabel_o *)DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   if ( !DebugInputUsePlayerTurnSkillComponent_TypeInfo->_2.cctor_finished )
@@ -1242,11 +1240,11 @@ void DebugInputUsePlayerTurnSkillComponent__TapSkillSelectCallback(
   v11 = this->fields.lastOpenSelectButton;
   if ( (unsigned int)v11 >= LODWORD(settingInfoList->max_length) )
 LABEL_13:
-    sub_1C7BD48(useSkillIdx);
+    sub_1C93D34(useSkillIdx);
   v12 = settingInfoList->m_Items[v11];
   if ( !v12 || (useSkillIdx = v12->fields.useSkillIdx) == 0 )
 LABEL_12:
-    sub_1C7BD40(useSkillIdx, *(_QWORD *)&inputIdx);
+    sub_1C93D2C(useSkillIdx, *(_QWORD *)&inputIdx);
   UILabel__set_text(useSkillIdx, inputName, 0);
 }
 
@@ -1265,10 +1263,10 @@ void DebugInputUsePlayerTurnSkillComponent__TapTargetServantSelectCallback(
   __int64 v11; // x9
   DebugInputUsePlayerTurnSkillComponent_SettingInfo_o *v12; // x8
 
-  if ( (byte_4CEFC03 & 1) == 0 )
+  if ( (byte_4D31F88 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC03 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F88 = 1;
   }
   targetServantIdx = (UILabel_o *)DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   if ( !DebugInputUsePlayerTurnSkillComponent_TypeInfo->_2.cctor_finished )
@@ -1289,11 +1287,11 @@ void DebugInputUsePlayerTurnSkillComponent__TapTargetServantSelectCallback(
   v11 = this->fields.lastOpenSelectButton;
   if ( (unsigned int)v11 >= LODWORD(settingInfoList->max_length) )
 LABEL_13:
-    sub_1C7BD48(targetServantIdx);
+    sub_1C93D34(targetServantIdx);
   v12 = settingInfoList->m_Items[v11];
   if ( !v12 || (targetServantIdx = v12->fields.targetServantIdx) == 0 )
 LABEL_12:
-    sub_1C7BD40(targetServantIdx, *(_QWORD *)&inputIdx);
+    sub_1C93D2C(targetServantIdx, *(_QWORD *)&inputIdx);
   UILabel__set_text(targetServantIdx, inputName, 0);
 }
 
@@ -1312,10 +1310,10 @@ void DebugInputUsePlayerTurnSkillComponent__TapUseServantSelectCallback(
   __int64 v11; // x9
   DebugInputUsePlayerTurnSkillComponent_SettingInfo_o *v12; // x8
 
-  if ( (byte_4CEFC02 & 1) == 0 )
+  if ( (byte_4D31F87 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
-    byte_4CEFC02 = 1;
+    sub_1C93AD4(&DebugInputUsePlayerTurnSkillComponent_TypeInfo);
+    byte_4D31F87 = 1;
   }
   useServantIdx = (UILabel_o *)DebugInputUsePlayerTurnSkillComponent_TypeInfo;
   if ( !DebugInputUsePlayerTurnSkillComponent_TypeInfo->_2.cctor_finished )
@@ -1336,11 +1334,11 @@ void DebugInputUsePlayerTurnSkillComponent__TapUseServantSelectCallback(
   v11 = this->fields.lastOpenSelectButton;
   if ( (unsigned int)v11 >= LODWORD(settingInfoList->max_length) )
 LABEL_13:
-    sub_1C7BD48(useServantIdx);
+    sub_1C93D34(useServantIdx);
   v12 = settingInfoList->m_Items[v11];
   if ( !v12 || (useServantIdx = v12->fields.useServantIdx) == 0 )
 LABEL_12:
-    sub_1C7BD40(useServantIdx, *(_QWORD *)&inputIdx);
+    sub_1C93D2C(useServantIdx, *(_QWORD *)&inputIdx);
   UILabel__set_text(useServantIdx, inputName, 0);
 }
 

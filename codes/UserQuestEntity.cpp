@@ -1,9 +1,9 @@
 void UserQuestEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CEF577 & 1) == 0 )
+  if ( (byte_4D318F8 & 1) == 0 )
   {
-    sub_1C7BAE8(&UserQuestEntity_TypeInfo);
-    byte_4CEF577 = 1;
+    sub_1C93AD4(&UserQuestEntity_TypeInfo);
+    byte_4D318F8 = 1;
   }
   UserQuestEntity_TypeInfo->static_fields->oldId = -1;
 }
@@ -11,15 +11,15 @@ void UserQuestEntity___cctor(const MethodInfo *method)
 
 void UserQuestEntity___ctor(UserQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF576 & 1) == 0 )
+  if ( (byte_4D318F7 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEF576 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D318F7 = 1;
   }
   this->fields.EXPIRE_NO_LIMIT_TIME = 1893423600;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -43,11 +43,11 @@ System_String_o *UserQuestEntity__CreatePK(int64_t userId, int32_t questId, cons
 
   v19 = userId;
   v18 = questId;
-  if ( (byte_4CEF573 & 1) == 0 )
+  if ( (byte_4D318F4 & 1) == 0 )
   {
-    sub_1C7BAE8(&UserQuestEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1451/*":"*/);
-    byte_4CEF573 = 1;
+    sub_1C93AD4(&UserQuestEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1451/*":"*/);
+    byte_4D318F4 = 1;
   }
   v4 = UserQuestEntity_TypeInfo;
   if ( !UserQuestEntity_TypeInfo->_2.cctor_finished )
@@ -65,10 +65,10 @@ System_String_o *UserQuestEntity__CreatePK(int64_t userId, int32_t questId, cons
     }
     static_fields->oldId = userId;
     v6 = System_Int64__ToString((int64_t)&v19, 0);
-    v7 = System_String__Concat_64176912(v6, (System_String_o *)StringLiteral_1451/*":"*/, 0);
+    v7 = System_String__Concat_64425724(v6, (System_String_o *)StringLiteral_1451/*":"*/, 0);
     v8 = UserQuestEntity_TypeInfo->static_fields;
     v8->userIdString = v7;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v8->userIdString, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->userIdString, (int32_t)v7, v9, v10, v11, v12, v13, v14);
     v4 = UserQuestEntity_TypeInfo;
   }
   if ( !v4->_2.cctor_finished )
@@ -78,7 +78,7 @@ System_String_o *UserQuestEntity__CreatePK(int64_t userId, int32_t questId, cons
   }
   userIdString = v4->static_fields->userIdString;
   v16 = System_Int32__ToString((int32_t)&v18, 0);
-  return System_String__Concat_64176912(userIdString, v16, 0);
+  return System_String__Concat_64425724(userIdString, v16, 0);
 }
 
 
@@ -88,10 +88,10 @@ System_String_o *UserQuestEntity__CreatePrimaryKey(UserQuestEntity_o *this, cons
   int64_t userId; // x20
   int32_t questId; // w19
 
-  if ( (byte_4CEF572 & 1) == 0 )
+  if ( (byte_4D318F3 & 1) == 0 )
   {
-    sub_1C7BAE8(&UserQuestEntity_TypeInfo);
-    byte_4CEF572 = 1;
+    sub_1C93AD4(&UserQuestEntity_TypeInfo);
+    byte_4D318F3 = 1;
   }
   userId = this->fields.userId;
   questId = this->fields.questId;
@@ -107,7 +107,7 @@ bool UserQuestEntity__HasStatus(UserQuestEntity_o *this, int32_t statusFlag, con
 }
 
 
-bool UserQuestEntity__HasStatus_43650936(UserQuestEntity_o *this, int32_t status, const MethodInfo *method)
+bool UserQuestEntity__HasStatus_43811564(UserQuestEntity_o *this, int32_t status, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.status >> status) & 1;
 }
@@ -123,10 +123,10 @@ bool UserQuestEntity__IsNotExpired(UserQuestEntity_o *this, const MethodInfo *me
 {
   int64_t expireAt; // x19
 
-  if ( (byte_4CEF574 & 1) == 0 )
+  if ( (byte_4D318F5 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEF574 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D318F5 = 1;
   }
   expireAt = this->fields.expireAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -141,28 +141,28 @@ bool UserQuestEntity__IsResetInterval(UserQuestEntity_o *this, const MethodInfo 
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CEF575 & 1) == 0 )
+  if ( (byte_4D318F6 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C7BAE8(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CEF575 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C93AD4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D318F6 = 1;
   }
   entity = 0;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataMasterBase_object__object__int___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                &entity,
                this->fields.questId,
-               (const MethodInfo_342E348 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+               (const MethodInfo_34632C0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
   if ( (Instance & 1) != 0 )
   {
     if ( !entity )
@@ -175,7 +175,7 @@ bool UserQuestEntity__IsResetInterval(UserQuestEntity_o *this, const MethodInfo 
       if ( entity )
         return Instance >= this->fields.lastStartedAt + 3600 * QuestEntity__getIntervalHours((QuestEntity_o *)entity, 0);
 LABEL_14:
-      sub_1C7BD40(Instance, v4);
+      sub_1C93D2C(Instance, v4);
     }
   }
   return 0;

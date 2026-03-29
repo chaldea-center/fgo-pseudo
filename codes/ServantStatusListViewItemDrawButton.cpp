@@ -33,40 +33,40 @@ void ServantStatusListViewItemDrawButton___cctor(const MethodInfo *method)
   int64_t v31; // x6
   System_String_o *v32; // x7
 
-  if ( (byte_4CEBBB6 & 1) == 0 )
+  if ( (byte_4D2DB5C & 1) == 0 )
   {
-    sub_1C7BAE8(&ServantStatusListViewItemDrawButton_TypeInfo);
-    sub_1C7BAE8(&string___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_12044/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
-    sub_1C7BAE8(&StringLiteral_12042/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
-    sub_1C7BAE8(&StringLiteral_12038/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
-    byte_4CEBBB6 = 1;
+    sub_1C93AD4(&ServantStatusListViewItemDrawButton_TypeInfo);
+    sub_1C93AD4(&string___TypeInfo);
+    sub_1C93AD4(&StringLiteral_12081/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
+    sub_1C93AD4(&StringLiteral_12079/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
+    sub_1C93AD4(&StringLiteral_12075/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
+    byte_4D2DB5C = 1;
   }
   static_fields = ServantStatusListViewItemDrawButton_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->TD_SPEED_EXPLANATION_LABEL_HEIGHT = 0xC238000000000046LL;
   static_fields->TD_SPEED_BASE_SPRITE_HEIGHT = 184;
-  v2 = sub_1C7BB90(string___TypeInfo, 3);
+  v2 = sub_1C93B7C(string___TypeInfo, 3);
   if ( !v2 )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   v10 = v2;
   if ( !*(_DWORD *)(v2 + 24)
-    || (v11 = StringLiteral_12042/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
-        *(_QWORD *)(v2 + 32) = StringLiteral_12042/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v2 + 32), v11, v4, v5, v6, v7, v8, v9),
+    || (v11 = StringLiteral_12079/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
+        *(_QWORD *)(v2 + 32) = StringLiteral_12079/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v2 + 32), v11, v4, v5, v6, v7, v8, v9),
         *(_DWORD *)(v10 + 24) <= 1u)
-    || (v18 = StringLiteral_12038/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
-        *(_QWORD *)(v10 + 40) = StringLiteral_12038/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v10 + 40), v18, v12, v13, v14, v15, v16, v17),
+    || (v18 = StringLiteral_12075/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
+        *(_QWORD *)(v10 + 40) = StringLiteral_12075/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v10 + 40), v18, v12, v13, v14, v15, v16, v17),
         *(_DWORD *)(v10 + 24) <= 2u) )
   {
-    sub_1C7BD48(v2);
+    sub_1C93D34(v2);
   }
-  v25 = StringLiteral_12044/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
-  *(_QWORD *)(v10 + 48) = StringLiteral_12044/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v10 + 48), v25, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_12081/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
+  *(_QWORD *)(v10 + 48) = StringLiteral_12081/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v10 + 48), v25, v19, v20, v21, v22, v23, v24);
   v26 = ServantStatusListViewItemDrawButton_TypeInfo->static_fields;
   v26->TD_SPEED_LOCALIZATION_KEYS = (struct System_String_array *)v10;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v26->TD_SPEED_LOCALIZATION_KEYS, v10, v27, v28, v29, v30, v31, v32);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v26->TD_SPEED_LOCALIZATION_KEYS, v10, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -88,12 +88,12 @@ System_String_o *ServantStatusListViewItemDrawButton__GetTDSpeedLocalization(int
   struct System_String_array *TD_SPEED_LOCALIZATION_KEYS; // x8
   System_String_o *v5; // x19
 
-  if ( (byte_4CEBBB4 & 1) == 0 )
+  if ( (byte_4D2DB5A & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&ServantStatusListViewItemDrawButton_TypeInfo);
-    sub_1C7BAE8(&string_TypeInfo);
-    byte_4CEBBB4 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&ServantStatusListViewItemDrawButton_TypeInfo);
+    sub_1C93AD4(&string_TypeInfo);
+    byte_4D2DB5A = 1;
   }
   v3 = ServantStatusListViewItemDrawButton_TypeInfo;
   if ( !ServantStatusListViewItemDrawButton_TypeInfo->_2.cctor_finished )
@@ -112,10 +112,10 @@ System_String_o *ServantStatusListViewItemDrawButton__GetTDSpeedLocalization(int
     TD_SPEED_LOCALIZATION_KEYS = ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_LOCALIZATION_KEYS;
     if ( !TD_SPEED_LOCALIZATION_KEYS )
 LABEL_14:
-      sub_1C7BD40(v3, method);
+      sub_1C93D2C(v3, method);
   }
   if ( LODWORD(TD_SPEED_LOCALIZATION_KEYS->max_length) <= index )
-    sub_1C7BD48(v3);
+    sub_1C93D34(v3);
   v5 = TD_SPEED_LOCALIZATION_KEYS->m_Items[index];
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -148,7 +148,7 @@ int32_t ServantStatusListViewItemDrawButton__Selected(
       if ( item )
         return ServantStatusListViewItem__get_TreasureDeviceSpeedSelect(item, 0);
 LABEL_8:
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     }
     return 0;
   }
@@ -187,23 +187,23 @@ void ServantStatusListViewItemDrawButton__SetItem(
   UnityEngine_GameObject_o *buttonBase; // x20
   float v31; // s0
   UnityEngine_BoxCollider_o *collider; // x20
-  unsigned int size; // s0
-  float v34; // s8
+  float v33; // s8
   int32_t TD_SPEED_BASE_SPRITE_HEIGHT; // s9
-  UnityEngine_GameObject_o *v36; // x0
+  UnityEngine_GameObject_o *v35; // x0
+  unsigned int size; // s0
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEBBB5 & 1) == 0 )
+  if ( (byte_4D2DB5B & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&ServantStatusListViewItemDrawButton_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_11958/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/);
-    sub_1C7BAE8(&StringLiteral_20867/*"img_txt_npspeed"*/);
-    sub_1C7BAE8(&StringLiteral_11960/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/);
-    sub_1C7BAE8(&StringLiteral_20796/*"img_txt_battlevoice"*/);
-    sub_1C7BAE8(&StringLiteral_12043/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
-    sub_1C7BAE8(&StringLiteral_11959/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/);
-    byte_4CEBBB5 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&ServantStatusListViewItemDrawButton_TypeInfo);
+    sub_1C93AD4(&StringLiteral_11995/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/);
+    sub_1C93AD4(&StringLiteral_20929/*"img_txt_npspeed"*/);
+    sub_1C93AD4(&StringLiteral_11997/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/);
+    sub_1C93AD4(&StringLiteral_20858/*"img_txt_battlevoice"*/);
+    sub_1C93AD4(&StringLiteral_12080/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
+    sub_1C93AD4(&StringLiteral_11996/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/);
+    byte_4D2DB5B = 1;
   }
   ServantStatusListViewItemDrawButtonsBase__SetItem(
     (ServantStatusListViewItemDrawButtonsBase_o *)this,
@@ -257,7 +257,7 @@ void ServantStatusListViewItemDrawButton__SetItem(
       v19 = tdSpeedRangeLabelList->m_Items[0];
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11958/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/, 0);
+      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11995/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/, 0);
       if ( !v19 )
         goto LABEL_15;
       UIRangeLabel__Set(v19, (System_String_o *)gameObject, 0, 1, 0, 0, 0);
@@ -266,9 +266,9 @@ void ServantStatusListViewItemDrawButton__SetItem(
         goto LABEL_15;
       if ( LODWORD(v20->max_length) <= 1 )
 LABEL_55:
-        sub_1C7BD48(gameObject);
+        sub_1C93D34(gameObject);
       v21 = v20->m_Items[1];
-      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11959/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/, 0);
+      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11996/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/, 0);
       if ( !v21 )
         goto LABEL_15;
       UIRangeLabel__Set(v21, (System_String_o *)gameObject, 0, 1, 0, 0, 0);
@@ -277,7 +277,7 @@ LABEL_55:
         goto LABEL_15;
       UIWidget__set_height((UIWidget_o *)gameObject, 20, 0);
       explanationLabel = this->fields.explanationLabel;
-      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11960/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/, 0);
+      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11997/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/, 0);
       if ( !explanationLabel )
         goto LABEL_15;
       UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0);
@@ -288,7 +288,7 @@ LABEL_55:
       gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
       if ( !gameObject )
         goto LABEL_15;
-      v23 = &StringLiteral_20796/*"img_txt_battlevoice"*/;
+      v23 = &StringLiteral_20858/*"img_txt_battlevoice"*/;
     }
     else
     {
@@ -322,7 +322,7 @@ LABEL_55:
       v24 = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12043/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
+      gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12080/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
       if ( !v24 )
         goto LABEL_15;
       UILabel__set_text(v24, (System_String_o *)gameObject, 0);
@@ -351,11 +351,11 @@ LABEL_55:
       gameObject = (UnityEngine_Component_o *)this->fields.collider;
       if ( !gameObject )
         goto LABEL_15;
-      v34 = *(float *)&size;
+      v33 = *(float *)&size;
       TD_SPEED_BASE_SPRITE_HEIGHT = ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_BASE_SPRITE_HEIGHT;
-      v37 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)gameObject, 0);
+      v37.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)gameObject, 0).fields.z;
       v37.fields.y = (float)TD_SPEED_BASE_SPRITE_HEIGHT;
-      v37.fields.x = v34;
+      v37.fields.x = v33;
       UnityEngine_BoxCollider__set_size(collider, v37, 0);
       gameObject = (UnityEngine_Component_o *)this->fields.explanationLabel;
       if ( !gameObject )
@@ -367,15 +367,15 @@ LABEL_55:
       gameObject = (UnityEngine_Component_o *)this->fields.explanationLabel;
       if ( !gameObject )
         goto LABEL_15;
-      v36 = UnityEngine_Component__get_gameObject(gameObject, 0);
+      v35 = UnityEngine_Component__get_gameObject(gameObject, 0);
       GameObjectExtensions__SetLocalPositionY(
-        v36,
+        v35,
         ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_EXPLANATION_LABEL_POS_Y,
         0);
       gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
       if ( !gameObject )
         goto LABEL_15;
-      v23 = &StringLiteral_20867/*"img_txt_npspeed"*/;
+      v23 = &StringLiteral_20929/*"img_txt_npspeed"*/;
     }
     UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)*v23, 0);
 LABEL_53:
@@ -388,6 +388,6 @@ LABEL_53:
       return;
     }
 LABEL_15:
-    sub_1C7BD40(gameObject, v8);
+    sub_1C93D2C(gameObject, v8);
   }
 }

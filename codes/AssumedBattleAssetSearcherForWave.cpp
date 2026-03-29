@@ -1,15 +1,20 @@
+void AssumedBattleAssetSearcherForWave___ctor(AssumedBattleAssetSearcherForWave_o *this, const MethodInfo *method)
+{
+  AssumedBattleAssetSearcherBase___ctor((AssumedBattleAssetSearcherBase_o *)this, 0);
+}
+
+
 AssumedBattleAssetSearcherForWave_o *AssumedBattleAssetSearcherForWave__Create(const MethodInfo *method)
 {
   AssumedBattleAssetSearcherBase_o *v1; // x19
-  const MethodInfo *v2; // x1
 
-  if ( (byte_4CF0B3A & 1) == 0 )
+  if ( (byte_4D32EE0 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssumedBattleAssetSearcherForWave_TypeInfo);
-    byte_4CF0B3A = 1;
+    sub_1C93AD4(&AssumedBattleAssetSearcherForWave_TypeInfo);
+    byte_4D32EE0 = 1;
   }
-  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1C7BD34(AssumedBattleAssetSearcherForWave_TypeInfo);
-  AssumedBattleAssetSearcherBase___ctor(v1, v2);
+  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1C93D20(AssumedBattleAssetSearcherForWave_TypeInfo);
+  AssumedBattleAssetSearcherBase___ctor(v1, 0);
   return (AssumedBattleAssetSearcherForWave_o *)v1;
 }
 
@@ -23,24 +28,24 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *AssumedBattleAssetSearcherF
   struct BattlePerformance_o *Perf_k__BackingField; // x8
   StageEntity_o *StageEntity; // x19
   AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v6; // x20
-  const MethodInfo *v7; // x1
+  const MethodInfo *v7; // x2
 
   v2 = this;
-  if ( (byte_4CF0B39 & 1) == 0 )
+  if ( (byte_4D32EDF & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1C7BAE8(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
-    byte_4CF0B39 = 1;
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1C93AD4(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+    byte_4D32EDF = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0
     || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0 )
   {
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0);
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1C7BD34(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
-  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
-  AssumedEffectExtractLogic__FromStage(StageEntity, v6, 0);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1C93D20(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, 0);
+  AssumedEffectExtractLogic__FromStage(StageEntity, v6, v7);
   return v6;
 }

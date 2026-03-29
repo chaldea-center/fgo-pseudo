@@ -1,14 +1,14 @@
 void UserBgImagePartsGroupMaster___ctor(UserBgImagePartsGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF3A4 & 1) == 0 )
+  if ( (byte_4D31724 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int___ctor__);
-    byte_4CEF3A4 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int___ctor__);
+    byte_4D31724 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     557,
-    (const MethodInfo_342BFD8 *)Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int___ctor__);
+    (const MethodInfo_3460CFC *)Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int___ctor__);
 }
 
 
@@ -22,17 +22,17 @@ bool UserBgImagePartsGroupMaster__ContainsImagePartsGroupIdx(
   char v8; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CEF3A5 & 1) == 0 )
+  if ( (byte_4D31725 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int__TryGetEntity__);
-    byte_4CEF3A5 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int__TryGetEntity__);
+    byte_4D31725 = 1;
   }
   entity = 0;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_342E348 *)Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int__TryGetEntity__) )
+         (const MethodInfo_34632C0 *)Method_DataMasterBase_UserBgImagePartsGroupMaster__UserBgImagePartsGroupEntity__int__TryGetEntity__) )
   {
     v8 = (char)entity;
     if ( entity )

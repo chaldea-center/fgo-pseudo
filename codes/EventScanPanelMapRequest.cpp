@@ -12,22 +12,22 @@ void EventScanPanelMapRequest__beginRequest(
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x1
 
-  if ( (byte_4CF0158 & 1) == 0 )
+  if ( (byte_4D324E8 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_19287/*"eventId"*/);
-    sub_1C7BAE8(&StringLiteral_21620/*"mapId"*/);
-    sub_1C7BAE8(&StringLiteral_22838/*"panelMapDetailId"*/);
-    sub_1C7BAE8(&StringLiteral_22839/*"panelScanId"*/);
-    byte_4CF0158 = 1;
+    sub_1C93AD4(&StringLiteral_19339/*"eventId"*/);
+    sub_1C93AD4(&StringLiteral_21684/*"mapId"*/);
+    sub_1C93AD4(&StringLiteral_22903/*"panelMapDetailId"*/);
+    sub_1C93AD4(&StringLiteral_22904/*"panelScanId"*/);
+    byte_4D324E8 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19287/*"eventId"*/,
+    (System_String_o *)StringLiteral_19339/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&panelMapDetailId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21620/*"mapId"*/, mapId, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22838/*"panelMapDetailId"*/, panelMapDetailId, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22839/*"panelScanId"*/, panelScanId, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21684/*"mapId"*/, mapId, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22903/*"panelMapDetailId"*/, panelMapDetailId, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22904/*"panelScanId"*/, panelScanId, v13);
   RequestBase__beginRequest((RequestBase_o *)this, v14);
 }
 
@@ -36,16 +36,16 @@ System_String_o *EventScanPanelMapRequest__getURL(EventScanPanelMapRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF0157 & 1) == 0 )
+  if ( (byte_4D324E7 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19278/*"event/scanPanelMap"*/);
-    byte_4CF0157 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19330/*"event/scanPanelMap"*/);
+    byte_4D324E7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19278/*"event/scanPanelMap"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19330/*"event/scanPanelMap"*/, 0);
 }
 
 
@@ -62,12 +62,12 @@ void EventScanPanelMapRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CF0159 & 1) == 0 )
+  if ( (byte_4D324E9 & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF0159 = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D324E9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -92,7 +92,7 @@ void EventScanPanelMapRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22419/*"ng"*/,
+        StringLiteral_22483/*"ng"*/,
         v11->fields.method);
   }
 }

@@ -8,15 +8,15 @@ void CharaGraphSortOwnerServantMission___ctor(CharaGraphSortOwnerServantMission_
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEA582 & 1) == 0 )
+  if ( (byte_4D2C8A0 & 1) == 0 )
   {
-    sub_1C7BAE8(&CharaGraphSortManageUnitServantMission_TypeInfo);
-    byte_4CEA582 = 1;
+    sub_1C93AD4(&CharaGraphSortManageUnitServantMission_TypeInfo);
+    byte_4D2C8A0 = 1;
   }
-  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1C7BD34(CharaGraphSortManageUnitServantMission_TypeInfo);
+  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1C93D20(CharaGraphSortManageUnitServantMission_TypeInfo);
   CharaGraphSortManageUnitSvtCollection___ctor(v3, 0);
   this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
@@ -41,12 +41,12 @@ System_String_o *CharaGraphSortOwnerServantMission__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CEA581 & 1) == 0 )
+  if ( (byte_4D2C89F & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_4399/*"CharaGraphSort_SvtMission_"*/);
-    byte_4CEA581 = 1;
+    sub_1C93AD4(&StringLiteral_4415/*"CharaGraphSort_SvtMission_"*/);
+    byte_4D2C89F = 1;
   }
-  return (System_String_o *)StringLiteral_4399/*"CharaGraphSort_SvtMission_"*/;
+  return (System_String_o *)StringLiteral_4415/*"CharaGraphSort_SvtMission_"*/;
 }
 
 
@@ -62,7 +62,7 @@ void CharaGraphSortOwnerServantMission__set_ServantCollectionSortManageUnit(
   System_String_o *v7; // x7
 
   this->fields._ServantCollectionSortManageUnit_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -15,10 +15,10 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
   float v12; // s0
   UnityEngine_Transform_o *touchIconPosition; // x20
   float v14; // s11
+  float v15; // s10
+  float v16; // s12
   unsigned int localPosition; // s0
-  float v16; // s10
-  float v17; // s12
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  float v18; // s1
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
@@ -26,11 +26,11 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
 
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4CED2CF & 1) == 0 )
+  if ( (byte_4D2F620 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_13594/*"TUTORIAL_ARROW_MARK_MESSAGE"*/);
-    byte_4CED2CF = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_13635/*"TUTORIAL_ARROW_MARK_MESSAGE"*/);
+    byte_4D2F620 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -54,16 +54,16 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
   v9 = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13594/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0);
+  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13635/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0);
   if ( !v9 )
     goto LABEL_17;
   UILabel__set_text(v9, (System_String_o *)messageLabel, 0);
   rotation = this->fields.rotation;
-  v18.fields.y = 0.0;
+  v19.fields.y = 0.0;
   v11 = way * 0.017453;
-  v18.fields.x = 0.0;
-  v18.fields.z = v11;
-  v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v18, 0);
+  v19.fields.x = 0.0;
+  v19.fields.z = v11;
+  v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0);
   if ( !rotation )
     goto LABEL_17;
   UnityEngine_Transform__set_localRotation(rotation, v22, 0);
@@ -76,24 +76,24 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
   messageLabel = (UnityEngine_Component_o *)this->fields.touchIconPosition;
   if ( !messageLabel )
     goto LABEL_17;
-  v16 = *(float *)&localPosition;
-  v19 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0);
+  v15 = *(float *)&localPosition;
+  v18 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0).fields.y;
   messageLabel = (UnityEngine_Component_o *)this->fields.touchIconPosition;
   if ( !messageLabel
-    || (v17 = v19.fields.y,
-        v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0),
-        v20.fields.y = (float)(fabsf(v14) * 40.0) + v17,
-        v20.fields.x = v16,
-        UnityEngine_Transform__set_localPosition(touchIconPosition, v20, 0),
+    || (v16 = v18,
+        v21.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0).fields.z,
+        v21.fields.y = (float)(fabsf(v14) * 40.0) + v16,
+        v21.fields.x = v15,
+        UnityEngine_Transform__set_localPosition(touchIconPosition, v21, 0),
         (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                      (UnityEngine_Component_o *)this,
                                                      0)) == 0) )
   {
 LABEL_17:
-    sub_1C7BD40(messageLabel, method);
+    sub_1C93D2C(messageLabel, method);
   }
-  v21.fields.x = x;
-  v21.fields.y = y;
-  v21.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)messageLabel, v21, 0);
+  v20.fields.x = x;
+  v20.fields.y = y;
+  v20.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)messageLabel, v20, 0);
 }

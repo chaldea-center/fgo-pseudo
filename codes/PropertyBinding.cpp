@@ -47,17 +47,17 @@ void PropertyBinding__OnValidate(PropertyBinding_o *this, const MethodInfo *meth
   if ( source )
   {
     source->fields.mField = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&source->fields.mField, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&source->fields.mField, 0, v2, v3, v4, v5, v6, v7);
     source->fields.mProperty = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&source->fields.mProperty, 0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&source->fields.mProperty, 0, v10, v11, v12, v13, v14, v15);
   }
   target = this->fields.target;
   if ( target )
   {
     target->fields.mField = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&target->fields.mField, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&target->fields.mField, 0, v2, v3, v4, v5, v6, v7);
     target->fields.mProperty = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&target->fields.mProperty, 0, v17, v18, v19, v20, v21, v22);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&target->fields.mProperty, 0, v17, v18, v19, v20, v21, v22);
   }
 }
 
@@ -106,10 +106,10 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
   int64_t v27; // x6
   System_String_o *v28; // x7
 
-  if ( (byte_4CF2E37 & 1) == 0 )
+  if ( (byte_4D35227 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Type_TypeInfo);
-    byte_4CF2E37 = 1;
+    sub_1C93AD4(&System_Type_TypeInfo);
+    byte_4D35227 = 1;
   }
   source = this->fields.source;
   if ( source && this->fields.target && PropertyReference__get_isValid(source, method) )
@@ -136,7 +136,7 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
           }
         }
 LABEL_32:
-        sub_1C7BD40(target, v4);
+        sub_1C93D2C(target, v4);
       }
       v7 = this->fields.source;
       if ( direction == 1 )
@@ -150,7 +150,7 @@ LABEL_32:
             v9 = (Il2CppObject *)target;
             target = v7;
 LABEL_30:
-            PropertyReference__Set_49888784(target, v9, v8);
+            PropertyReference__Set_50093136(target, v9, v8);
             return;
           }
         }
@@ -197,7 +197,7 @@ LABEL_30:
               & 1) != 0 )
             return;
           this->fields.mLastValue = v22;
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&this->fields.mLastValue,
             (int32_t)v22,
             v23,
@@ -213,7 +213,7 @@ LABEL_30:
         else
         {
           this->fields.mLastValue = v22;
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&this->fields.mLastValue,
             (int32_t)v22,
             v14,

@@ -1,15 +1,15 @@
 void UITexture___ctor(UITexture_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF2FBC & 1) == 0 )
+  if ( (byte_4D353AC & 1) == 0 )
   {
-    sub_1C7BAE8(&UIBasicSprite_TypeInfo);
-    byte_4CF2FBC = 1;
+    sub_1C93AD4(&UIBasicSprite_TypeInfo);
+    byte_4D353AC = 1;
   }
-  this->fields.mRect = (struct UnityEngine_Rect_o)xmmword_CF54D0;
-  if ( !byte_4CE8146 )
+  this->fields.mRect = (struct UnityEngine_Rect_o)xmmword_D00630;
+  if ( !byte_4D2A426 )
   {
-    sub_1C7BAE8(&UnityEngine_Vector4_TypeInfo);
-    byte_4CE8146 = 1;
+    sub_1C93AD4(&UnityEngine_Vector4_TypeInfo);
+    byte_4D2A426 = 1;
   }
   this->fields.mBorder = UnityEngine_Vector4_TypeInfo->static_fields->zeroVector;
   this->fields.mPMA = -1;
@@ -29,10 +29,10 @@ void UITexture__MakePixelPerfect(UITexture_o *this, const MethodInfo *method)
   int v8; // w0
   int32_t v9; // w20
 
-  if ( (byte_4CF2FB9 & 1) == 0 )
+  if ( (byte_4D353A9 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB9 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A9 = 1;
   }
   UIWidget__MakePixelPerfect((UIWidget_o *)this, 0);
   if ( this->fields.mType != 2 )
@@ -53,7 +53,7 @@ void UITexture__MakePixelPerfect(UITexture_o *this, const MethodInfo *method)
         if ( v5 )
         {
           if ( !v3 )
-            sub_1C7BD40(v5, v6);
+            sub_1C93D2C(v5, v6);
           v7 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v3->klass[1]._1.image)(
                  v3,
                  v3->klass[1]._1.gc_desc);
@@ -116,10 +116,10 @@ void UITexture__OnFill(
   UnityEngine_Rect_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v46; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CF2FBB & 1) == 0 )
+  if ( (byte_4D353AB & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FBB = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353AB = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -162,7 +162,7 @@ void UITexture__OnFill(
             *(_QWORD *)&v9->klass[1]._1.byval_arg.bits);
     if ( !verts )
 LABEL_11:
-      sub_1C7BD40(v10, v11);
+      sub_1C93D2C(v10, v11);
     v31 = m_XMin * (float)v15;
     v32 = m_YMin * (float)v16;
     v33 = v31 + v23;
@@ -201,7 +201,6 @@ LABEL_11:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *v3; // x20
@@ -212,15 +211,12 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
   float mWidth; // s0
   float mHeight; // s1
   float v10; // s2
-  float v11; // s0 OVERLAPPED
-  float v12; // s1
-  float v13; // s2
-  float v14; // s3
+  UnityEngine_Vector4_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF2FBA & 1) == 0 )
+  if ( (byte_4D353AA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FBA = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353AA = 1;
   }
   UIWidget__OnUpdate((UIWidget_o *)this, 0);
   if ( this->fields.mFixedAspect )
@@ -234,7 +230,7 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
     if ( v4 )
     {
       if ( !v3 )
-        sub_1C7BD40(v4, v5);
+        sub_1C93D2C(v4, v5);
       v6 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v3->klass[1]._1.image)(v3, v3->klass[1]._1.gc_desc);
       v7 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v3->klass[1]._1.byval_arg.data)(
              v3,
@@ -244,19 +240,19 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
       v10 = (float)((v6 & 1) + v6) / (float)((v7 & 1) + v7);
       if ( v10 >= (float)(mWidth / mHeight) )
       {
-        v12 = (float)((float)(mHeight - (float)(mWidth / v10)) / mHeight) * 0.5;
-        v11 = 0.0;
-        v14 = 1.0 - v12;
-        v13 = 1.0;
+        v14.fields.y = (float)((float)(mHeight - (float)(mWidth / v10)) / mHeight) * 0.5;
+        v14.fields.x = 0.0;
+        v14.fields.w = 1.0 - v14.fields.y;
+        v14.fields.z = 1.0;
       }
       else
       {
-        v11 = (float)((float)(mWidth - (float)(v10 * mHeight)) / mWidth) * 0.5;
-        v12 = 0.0;
-        v13 = 1.0 - v11;
-        v14 = 1.0;
+        v14.fields.x = (float)((float)(mWidth - (float)(v10 * mHeight)) / mWidth) * 0.5;
+        v14.fields.y = 0.0;
+        v14.fields.z = 1.0 - v14.fields.x;
+        v14.fields.w = 1.0;
       }
-      UIWidget__set_drawRegion((UIWidget_o *)this, *(UnityEngine_Vector4_o *)&v11, 0);
+      UIWidget__set_drawRegion((UIWidget_o *)this, v14, 0);
     }
   }
 }
@@ -264,20 +260,12 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
 
 UnityEngine_Vector4_o UITexture__get_border(UITexture_o *this, const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
-  float w; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  x = this->fields.mBorder.fields.x;
-  y = this->fields.mBorder.fields.y;
-  z = this->fields.mBorder.fields.z;
-  w = this->fields.mBorder.fields.w;
-  result.fields.w = w;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.mBorder.fields.x;
+  result.fields.y = this->fields.mBorder.fields.y;
+  result.fields.z = this->fields.mBorder.fields.z;
+  result.fields.w = this->fields.mBorder.fields.w;
   return result;
 }
 
@@ -318,7 +306,6 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
   float v34; // s2
   float z; // s4
   float v36; // s7
-  float v37; // s0
   float w; // s2
   float v39; // s5
   float v40; // s16
@@ -326,15 +313,12 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
   float v42; // s4
   float v43; // s1
   float v44; // s3
-  float v45; // s1
-  float v46; // s2
-  float v47; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF2FB8 & 1) == 0 )
+  if ( (byte_4D353A8 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB8 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A8 = 1;
   }
   pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
   mTexture = (UnityEngine_Object_o *)this->fields.mTexture;
@@ -355,7 +339,7 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
                                                   v12->klass->vtable._4_get_width.method),
           (v13 = this->fields.mTexture) == 0) )
     {
-      sub_1C7BD40(v12, v11);
+      sub_1C93D2C(v12, v11);
     }
     v14 = (int)v12;
     v15 = (unsigned int)((_QWORD *(__fastcall *)(struct UnityEngine_Texture_o *__return_ptr, struct UnityEngine_Texture_o *, const MethodInfo *))v13->klass->vtable._6_get_height.methodPtr)(
@@ -413,7 +397,7 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
   v34 = (float)((float)(v9 - v25) - v6) * v33;
   z = this->fields.mDrawRegion.fields.z;
   v36 = v6 + v25;
-  v37 = v6 + v34;
+  result.fields.x = v6 + v34;
   w = this->fields.mDrawRegion.fields.w;
   v32 = y < 0.0;
   v39 = fminf(y, 1.0);
@@ -427,15 +411,11 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
   v44 = fminf(w, 1.0);
   if ( v32 )
     v42 = 0.0;
-  v45 = v8 + v43;
+  result.fields.y = v8 + v43;
   if ( w < 0.0 )
     v44 = 0.0;
-  v46 = v36 + (float)((float)(v9 - v36) * v42);
-  v47 = v40 + (float)((float)(v10 - v40) * v44);
-  result.fields.w = v47;
-  result.fields.z = v46;
-  result.fields.y = v45;
-  result.fields.x = v37;
+  result.fields.z = v36 + (float)((float)(v9 - v36) * v42);
+  result.fields.w = v40 + (float)((float)(v10 - v40) * v44);
   return result;
 }
 
@@ -455,10 +435,10 @@ UnityEngine_Texture_o *UITexture__get_mainTexture(UITexture_o *this, const Metho
   bool v7; // w8
   UnityEngine_Material_o *v8; // x0
 
-  if ( (byte_4CF2FB2 & 1) == 0 )
+  if ( (byte_4D353A2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB2 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A2 = 1;
   }
   mTexture = (UnityEngine_Object_o *)this->fields.mTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -474,7 +454,7 @@ UnityEngine_Texture_o *UITexture__get_mainTexture(UITexture_o *this, const Metho
   {
     v8 = this->fields.mMat;
     if ( !v8 )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     return UnityEngine_Material__get_mainTexture(v8, 0);
   }
   return result;
@@ -497,11 +477,11 @@ bool UITexture__get_premultipliedAlpha(UITexture_o *this, const MethodInfo *meth
   UnityEngine_Object_o *shader; // x21
   int32_t v9; // w8
 
-  if ( (byte_4CF2FB7 & 1) == 0 )
+  if ( (byte_4D353A7 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10767/*"Premultiplied"*/);
-    byte_4CF2FB7 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10803/*"Premultiplied"*/);
+    byte_4D353A7 = 1;
   }
   mPMA = this->fields.mPMA;
   if ( mPMA == -1 )
@@ -541,7 +521,7 @@ LABEL_20:
           goto LABEL_22;
         name = (UnityEngine_Object_o *)System_String__Contains(
                                          (System_String_o *)name,
-                                         (System_String_o *)StringLiteral_10767/*"Premultiplied"*/,
+                                         (System_String_o *)StringLiteral_10803/*"Premultiplied"*/,
                                          0);
         v9 = (unsigned __int8)name & 1;
       }
@@ -554,7 +534,7 @@ LABEL_20:
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1C7BD40(name, v6);
+    sub_1C93D2C(name, v6);
   }
   return mPMA == 1;
 }
@@ -575,11 +555,11 @@ UnityEngine_Shader_o *UITexture__get_shader(UITexture_o *this, const MethodInfo 
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CF2FB5 & 1) == 0 )
+  if ( (byte_4D353A5 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15191/*"Unlit/Transparent Colored"*/);
-    byte_4CF2FB5 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15233/*"Unlit/Transparent Colored"*/);
+    byte_4D353A5 = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -588,7 +568,7 @@ UnityEngine_Shader_o *UITexture__get_shader(UITexture_o *this, const MethodInfo 
   {
     v5 = this->fields.mMat;
     if ( !v5 )
-      sub_1C7BD40(0, v4);
+      sub_1C93D2C(0, v4);
     return UnityEngine_Material__get_shader(v5, 0);
   }
   else
@@ -599,9 +579,9 @@ UnityEngine_Shader_o *UITexture__get_shader(UITexture_o *this, const MethodInfo 
     p_mShader = (GrandQuestFolderBoardItem_o *)&this->fields.mShader;
     if ( UnityEngine_Object__op_Equality(mShader, 0, 0) )
     {
-      v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15191/*"Unlit/Transparent Colored"*/, 0);
+      v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15233/*"Unlit/Transparent Colored"*/, 0);
       p_mShader->klass = (GrandQuestFolderBoardItem_c *)v9;
-      sub_1C7BA8C(p_mShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+      sub_1C93A78(p_mShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     }
     return (UnityEngine_Shader_o *)p_mShader->klass;
   }
@@ -610,20 +590,12 @@ UnityEngine_Shader_o *UITexture__get_shader(UITexture_o *this, const MethodInfo 
 
 UnityEngine_Rect_o UITexture__get_uvRect(UITexture_o *this, const MethodInfo *method)
 {
-  float m_XMin; // s0
-  float m_YMin; // s1
-  float m_Width; // s2
-  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  m_XMin = this->fields.mRect.fields.m_XMin;
-  m_YMin = this->fields.mRect.fields.m_YMin;
-  m_Width = this->fields.mRect.fields.m_Width;
-  m_Height = this->fields.mRect.fields.m_Height;
-  result.fields.m_Height = m_Height;
-  result.fields.m_Width = m_Width;
-  result.fields.m_YMin = m_YMin;
-  result.fields.m_XMin = m_XMin;
+  result.fields.m_XMin = this->fields.mRect.fields.m_XMin;
+  result.fields.m_YMin = this->fields.mRect.fields.m_YMin;
+  result.fields.m_Width = this->fields.mRect.fields.m_Width;
+  result.fields.m_Height = this->fields.mRect.fields.m_Height;
   return result;
 }
 
@@ -658,7 +630,7 @@ void UITexture__set_fixedAspect(UITexture_o *this, bool value, const MethodInfo 
   {
     klass = this->klass;
     this->fields.mFixedAspect = value;
-    this->fields.mDrawRegion = (struct UnityEngine_Vector4_o)xmmword_CF54D0;
+    this->fields.mDrawRegion = (struct UnityEngine_Vector4_o)xmmword_D00630;
     ((void (__fastcall *)(UITexture_o *, const MethodInfo *))klass->vtable._30_MarkAsChanged.methodPtr)(
       this,
       klass->vtable._30_MarkAsChanged.method);
@@ -688,10 +660,10 @@ void UITexture__set_mainTexture(UITexture_o *this, UnityEngine_Texture_o *value,
   System_String_o *v22; // x7
   UITexture_c *klass; // x8
 
-  if ( (byte_4CF2FB3 & 1) == 0 )
+  if ( (byte_4D353A3 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB3 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A3 = 1;
   }
   mTexture = (UnityEngine_Object_o *)this->fields.mTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -715,7 +687,7 @@ void UITexture__set_mainTexture(UITexture_o *this, UnityEngine_Texture_o *value,
         if ( UnityEngine_Object__op_Equality(mMat, 0, 0) )
         {
           this->fields.mTexture = value;
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&this->fields.mTexture,
             (int32_t)value,
             v11,
@@ -731,13 +703,13 @@ void UITexture__set_mainTexture(UITexture_o *this, UnityEngine_Texture_o *value,
             return;
           }
 LABEL_18:
-          sub_1C7BD40(v7, v8);
+          sub_1C93D2C(v7, v8);
         }
       }
     }
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mTexture = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTexture, (int32_t)value, v17, v18, v19, v20, v21, v22);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTexture, (int32_t)value, v17, v18, v19, v20, v21, v22);
     klass = this->klass;
     this->fields.mPMA = -1;
     ((void (__fastcall *)(UITexture_o *, const MethodInfo *))klass->vtable._30_MarkAsChanged.methodPtr)(
@@ -764,10 +736,10 @@ void UITexture__set_material(UITexture_o *this, UnityEngine_Material_o *value, c
   System_String_o *v17; // x7
   UITexture_c *klass; // x8
 
-  if ( (byte_4CF2FB4 & 1) == 0 )
+  if ( (byte_4D353A4 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB4 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A4 = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -776,9 +748,9 @@ void UITexture__set_material(UITexture_o *this, UnityEngine_Material_o *value, c
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mShader = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mShader, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mShader, 0, v6, v7, v8, v9, v10, v11);
     this->fields.mMat = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)value, v12, v13, v14, v15, v16, v17);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)value, v12, v13, v14, v15, v16, v17);
     klass = this->klass;
     this->fields.mPMA = -1;
     ((void (__fastcall *)(UITexture_o *, const MethodInfo *))klass->vtable._30_MarkAsChanged.methodPtr)(
@@ -815,10 +787,10 @@ void UITexture__set_shader(UITexture_o *this, UnityEngine_Shader_o *value, const
   int64_t v27; // x6
   System_String_o *v28; // x7
 
-  if ( (byte_4CF2FB6 & 1) == 0 )
+  if ( (byte_4D353A6 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2FB6 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D353A6 = 1;
   }
   mShader = (UnityEngine_Object_o *)this->fields.mShader;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -842,7 +814,7 @@ void UITexture__set_shader(UITexture_o *this, UnityEngine_Shader_o *value, const
         if ( UnityEngine_Object__op_Equality(mMat, 0, 0) )
         {
           this->fields.mShader = value;
-          sub_1C7BA8C(
+          sub_1C93A78(
             (GrandQuestFolderBoardItem_o *)&this->fields.mShader,
             (int32_t)value,
             v11,
@@ -858,16 +830,16 @@ void UITexture__set_shader(UITexture_o *this, UnityEngine_Shader_o *value, const
             return;
           }
 LABEL_18:
-          sub_1C7BD40(v7, v8);
+          sub_1C93D2C(v7, v8);
         }
       }
     }
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mShader = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mShader, (int32_t)value, v17, v18, v19, v20, v21, v22);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mShader, (int32_t)value, v17, v18, v19, v20, v21, v22);
     this->fields.mPMA = -1;
     this->fields.mMat = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mMat, 0, v23, v24, v25, v26, v27, v28);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mMat, 0, v23, v24, v25, v26, v27, v28);
     ((void (__fastcall *)(UITexture_o *, const MethodInfo *))this->klass->vtable._30_MarkAsChanged.methodPtr)(
       this,
       this->klass->vtable._30_MarkAsChanged.method);

@@ -107,31 +107,38 @@ BattleWaveInfoData_SaveData_o *BattleWaveInfoData__GetSaveData(BattleWaveInfoDat
   int32_t v101; // w5
   int64_t v102; // x6
   System_String_o *v103; // x7
-  struct System_String_o *bgData; // x1
+  struct System_Int32_array *LastSortieWaves; // x1
   int32_t v105; // w2
   int32_t v106; // w3
   System_String_o *v107; // x4
   int32_t v108; // w5
   int64_t v109; // x6
   System_String_o *v110; // x7
-  struct System_String_o *battleDataRelated; // x1
+  struct System_String_o *bgData; // x1
   int32_t v112; // w2
   int32_t v113; // w3
   System_String_o *v114; // x4
   int32_t v115; // w5
   int64_t v116; // x6
   System_String_o *v117; // x7
-  __int64 v119; // x0
+  struct System_String_o *battleDataRelated; // x1
+  int32_t v119; // w2
+  int32_t v120; // w3
+  System_String_o *v121; // x4
+  int32_t v122; // w5
+  int64_t v123; // x6
+  System_String_o *v124; // x7
+  __int64 v126; // x0
 
-  if ( (byte_4CEE123 & 1) == 0 )
+  if ( (byte_4D3047F & 1) == 0 )
   {
-    sub_1C7BAE8(&int___TypeInfo);
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo);
-    sub_1C7BAE8(&DropInfo_SaveData___TypeInfo);
-    sub_1C7BAE8(&BattleWaveInfoData_SaveData_TypeInfo);
-    byte_4CEE123 = 1;
+    sub_1C93AD4(&int___TypeInfo);
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo);
+    sub_1C93AD4(&DropInfo_SaveData___TypeInfo);
+    sub_1C93AD4(&BattleWaveInfoData_SaveData_TypeInfo);
+    byte_4D3047F = 1;
   }
-  v3 = sub_1C7BD34(BattleWaveInfoData_SaveData_TypeInfo);
+  v3 = sub_1C93D20(BattleWaveInfoData_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_44;
@@ -148,10 +155,10 @@ BattleWaveInfoData_SaveData_o *BattleWaveInfoData__GetSaveData(BattleWaveInfoDat
       goto LABEL_44;
     max_length = equipSkillChargeNum->max_length;
   }
-  v8 = sub_1C7BB90(int___TypeInfo, (unsigned int)max_length);
+  v8 = sub_1C93B7C(int___TypeInfo, (unsigned int)max_length);
   *(_QWORD *)(v3 + 24) = v8;
   v9 = (__int64 *)(v3 + 24);
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 24), v8, v10, v11, v12, v13, v14, v15);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 24), v8, v10, v11, v12, v13, v14, v15);
   if ( max_length >= 1 )
   {
     v16 = this->fields.equipSkillChargeNum;
@@ -170,7 +177,7 @@ BattleWaveInfoData_SaveData_o *BattleWaveInfoData__GetSaveData(BattleWaveInfoDat
         goto LABEL_44;
       if ( v19 >= *(unsigned int *)(v17 + 24) )
 LABEL_45:
-        sub_1C7BD48(IsNullOrEmpty);
+        sub_1C93D34(IsNullOrEmpty);
       *(_DWORD *)(v21 + 4 * v19) = m_Items[v19];
       ++v19;
     }
@@ -188,9 +195,9 @@ LABEL_45:
       goto LABEL_44;
     v22 = dropInfos->max_length;
   }
-  v24 = sub_1C7BB90(DropInfo_SaveData___TypeInfo, (unsigned int)v22);
+  v24 = sub_1C93B7C(DropInfo_SaveData___TypeInfo, (unsigned int)v22);
   *(_QWORD *)(v3 + 32) = v24;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), v24, v25, v26, v27, v28, v29, v30);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), v24, v25, v26, v27, v28, v29, v30);
   if ( v22 >= 1 )
   {
     v31 = 0;
@@ -211,24 +218,24 @@ LABEL_45:
       v40 = IsNullOrEmpty;
       if ( IsNullOrEmpty )
       {
-        IsNullOrEmpty = sub_1C7BC24(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v33 + 64LL));
+        IsNullOrEmpty = sub_1C93C10(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v33 + 64LL));
         if ( !IsNullOrEmpty )
         {
 LABEL_46:
-          v119 = sub_1C7BD64(IsNullOrEmpty);
-          sub_1C7BC10(v119, 0);
+          v126 = sub_1C93D50(IsNullOrEmpty);
+          sub_1C93BFC(v126, 0);
         }
       }
       if ( v31 >= v33[6] )
         goto LABEL_45;
       v41 = &v33[2 * v31];
       *((_QWORD *)v41 + 4) = v40;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v41 + 8), v40, v34, v35, v36, v37, v38, v39);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v41 + 8), v40, v34, v35, v36, v37, v38, v39);
       if ( v22 == ++v31 )
         goto LABEL_29;
     }
 LABEL_44:
-    sub_1C7BD40(IsNullOrEmpty, v5);
+    sub_1C93D2C(IsNullOrEmpty, v5);
   }
 LABEL_29:
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleItemInfos, 0);
@@ -243,9 +250,9 @@ LABEL_29:
       goto LABEL_44;
     v42 = battleItemInfos->max_length;
   }
-  v44 = sub_1C7BB90(BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, (unsigned int)v42);
+  v44 = sub_1C93B7C(BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, (unsigned int)v42);
   *(_QWORD *)(v3 + 40) = v44;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 40), v44, v45, v46, v47, v48, v49, v50);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 40), v44, v45, v46, v47, v48, v49, v50);
   if ( v42 >= 1 )
   {
     v57 = 0;
@@ -268,7 +275,7 @@ LABEL_29:
       v66 = IsNullOrEmpty;
       if ( IsNullOrEmpty )
       {
-        IsNullOrEmpty = sub_1C7BC24(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
+        IsNullOrEmpty = sub_1C93C10(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
         if ( !IsNullOrEmpty )
           goto LABEL_46;
       }
@@ -276,38 +283,41 @@ LABEL_29:
         goto LABEL_45;
       v67 = &v59[2 * v57];
       *((_QWORD *)v67 + 4) = v66;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v67 + 8), v66, v60, v61, v62, v63, v64, v65);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v67 + 8), v66, v60, v61, v62, v63, v64, v65);
     }
     while ( v42 != ++v57 );
   }
   *(_DWORD *)(v3 + 48) = this->fields.star;
   enemySvtInfos = this->fields.enemySvtInfos;
   *(_QWORD *)(v3 + 56) = enemySvtInfos;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 56), (int32_t)enemySvtInfos, v51, v52, v53, v54, v55, v56);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 56), (int32_t)enemySvtInfos, v51, v52, v53, v54, v55, v56);
   battleFlag = this->fields.battleFlag;
   *(_QWORD *)(v3 + 64) = battleFlag;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)battleFlag, v70, v71, v72, v73, v74, v75);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)battleFlag, v70, v71, v72, v73, v74, v75);
   fieldEnvironmentData = this->fields.fieldEnvironmentData;
   *(_QWORD *)(v3 + 72) = fieldEnvironmentData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 72), (int32_t)fieldEnvironmentData, v77, v78, v79, v80, v81, v82);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 72), (int32_t)fieldEnvironmentData, v77, v78, v79, v80, v81, v82);
   battleMissionFlag = this->fields.battleMissionFlag;
   *(_QWORD *)(v3 + 80) = battleMissionFlag;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 80), (int32_t)battleMissionFlag, v84, v85, v86, v87, v88, v89);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 80), (int32_t)battleMissionFlag, v84, v85, v86, v87, v88, v89);
   *(_DWORD *)(v3 + 88) = this->fields.totalStopLimitTurn;
   mySvtInfos = this->fields.mySvtInfos;
   *(_QWORD *)(v3 + 96) = mySvtInfos;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 96), (int32_t)mySvtInfos, v91, v92, v93, v94, v95, v96);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 96), (int32_t)mySvtInfos, v91, v92, v93, v94, v95, v96);
   *(_DWORD *)(v3 + 104) = this->fields.startPartyId;
   firstSortieWaves = this->fields.firstSortieWaves;
   *(_QWORD *)(v3 + 112) = firstSortieWaves;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 112), (int32_t)firstSortieWaves, v98, v99, v100, v101, v102, v103);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 112), (int32_t)firstSortieWaves, v98, v99, v100, v101, v102, v103);
   *(_DWORD *)(v3 + 120) = this->fields.switchPartyChargeTurn;
+  LastSortieWaves = this->fields.LastSortieWaves;
+  *(_QWORD *)(v3 + 144) = LastSortieWaves;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 144), (int32_t)LastSortieWaves, v105, v106, v107, v108, v109, v110);
   bgData = this->fields.bgData;
   *(_QWORD *)(v3 + 128) = bgData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 128), (int32_t)bgData, v105, v106, v107, v108, v109, v110);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 128), (int32_t)bgData, v112, v113, v114, v115, v116, v117);
   battleDataRelated = this->fields.battleDataRelated;
   *(_QWORD *)(v3 + 136) = battleDataRelated;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 136), (int32_t)battleDataRelated, v112, v113, v114, v115, v116, v117);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 136), (int32_t)battleDataRelated, v119, v120, v121, v122, v123, v124);
   return (BattleWaveInfoData_SaveData_o *)v3;
 }
 
@@ -420,31 +430,38 @@ void BattleWaveInfoData__SetDataFromSaveData(
   int32_t v104; // w5
   int64_t v105; // x6
   System_String_o *v106; // x7
-  struct System_String_o *bgData; // x1
+  struct System_Int32_array *LastSortieWaves; // x1
   int32_t v108; // w2
   int32_t v109; // w3
   System_String_o *v110; // x4
   int32_t v111; // w5
   int64_t v112; // x6
   System_String_o *v113; // x7
-  struct System_String_o *battleDataRelated; // x1
+  struct System_String_o *bgData; // x1
   int32_t v115; // w2
   int32_t v116; // w3
   System_String_o *v117; // x4
   int32_t v118; // w5
   int64_t v119; // x6
   System_String_o *v120; // x7
-  __int64 v121; // x0
+  struct System_String_o *battleDataRelated; // x1
+  int32_t v122; // w2
+  int32_t v123; // w3
+  System_String_o *v124; // x4
+  int32_t v125; // w5
+  int64_t v126; // x6
+  System_String_o *v127; // x7
+  __int64 v128; // x0
 
   v4 = this;
-  if ( (byte_4CEE122 & 1) == 0 )
+  if ( (byte_4D3047E & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo___TypeInfo);
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo_TypeInfo);
-    sub_1C7BAE8(&DropInfo___TypeInfo);
-    sub_1C7BAE8(&DropInfo_TypeInfo);
-    this = (BattleWaveInfoData_o *)sub_1C7BAE8(&int___TypeInfo);
-    byte_4CEE122 = 1;
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo___TypeInfo);
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo_TypeInfo);
+    sub_1C93AD4(&DropInfo___TypeInfo);
+    sub_1C93AD4(&DropInfo_TypeInfo);
+    this = (BattleWaveInfoData_o *)sub_1C93AD4(&int___TypeInfo);
+    byte_4D3047E = 1;
   }
   if ( !saveData )
     goto LABEL_34;
@@ -453,10 +470,10 @@ void BattleWaveInfoData__SetDataFromSaveData(
   if ( !equipSkillChargeNum )
     goto LABEL_34;
   max_length = equipSkillChargeNum->max_length;
-  v7 = sub_1C7BB90(int___TypeInfo, (unsigned int)max_length);
+  v7 = sub_1C93B7C(int___TypeInfo, (unsigned int)max_length);
   v4->fields.equipSkillChargeNum = (struct System_Int32_array *)v7;
   p_equipSkillChargeNum = &v4->fields.equipSkillChargeNum;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.equipSkillChargeNum, v7, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.equipSkillChargeNum, v7, v9, v10, v11, v12, v13, v14);
   if ( (int)max_length >= 1 )
   {
     v15 = saveData->fields.equipSkillChargeNum;
@@ -475,7 +492,7 @@ void BattleWaveInfoData__SetDataFromSaveData(
         goto LABEL_34;
       if ( v18 >= LODWORD(v16->max_length) )
 LABEL_35:
-        sub_1C7BD48(this);
+        sub_1C93D34(this);
       *(_DWORD *)(v20 + 4 * v18) = m_Items[v18];
       ++v18;
     }
@@ -484,12 +501,12 @@ LABEL_35:
   dropInfos = saveData->fields.dropInfos;
   if ( !dropInfos )
 LABEL_34:
-    sub_1C7BD40(this, saveData);
+    sub_1C93D2C(this, saveData);
   v22 = dropInfos->max_length;
-  v23 = sub_1C7BB90(DropInfo___TypeInfo, (unsigned int)v22);
+  v23 = sub_1C93B7C(DropInfo___TypeInfo, (unsigned int)v22);
   v4->fields.dropInfos = (struct DropInfo_array *)v23;
   p_dropInfos = (unsigned int **)&v4->fields.dropInfos;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.dropInfos, v23, v25, v26, v27, v28, v29, v30);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.dropInfos, v23, v25, v26, v27, v28, v29, v30);
   if ( (int)v22 >= 1 )
   {
     v31 = 0;
@@ -497,7 +514,7 @@ LABEL_34:
     v33 = 8;
     do
     {
-      v34 = (DropInfo_o *)sub_1C7BD34(DropInfo_TypeInfo);
+      v34 = (DropInfo_o *)sub_1C93D20(DropInfo_TypeInfo);
       DropInfo___ctor(v34, 0);
       v35 = saveData->fields.dropInfos;
       if ( !v35 )
@@ -510,17 +527,17 @@ LABEL_34:
       v36 = *p_dropInfos;
       if ( !*p_dropInfos )
         goto LABEL_34;
-      this = (BattleWaveInfoData_o *)sub_1C7BC24(v34, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
+      this = (BattleWaveInfoData_o *)sub_1C93C10(v34, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
       if ( !this )
       {
 LABEL_36:
-        v121 = sub_1C7BD64(this);
-        sub_1C7BC10(v121, 0);
+        v128 = sub_1C93D50(this);
+        sub_1C93BFC(v128, 0);
       }
       if ( v31 >= v36[6] )
         goto LABEL_35;
       *(_QWORD *)&v36[v33] = v34;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v36[v33], (int32_t)v34, v37, v38, v39, v40, v41, v42);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v36[v33], (int32_t)v34, v37, v38, v39, v40, v41, v42);
       ++v31;
       v33 += 2;
     }
@@ -530,16 +547,16 @@ LABEL_36:
   if ( !battleItemInfos )
     goto LABEL_34;
   v44 = battleItemInfos->max_length;
-  v45 = sub_1C7BB90(BattleWaveInfoData_BattleItemInfo___TypeInfo, (unsigned int)v44);
+  v45 = sub_1C93B7C(BattleWaveInfoData_BattleItemInfo___TypeInfo, (unsigned int)v44);
   v4->fields.battleItemInfos = (struct BattleWaveInfoData_BattleItemInfo_array *)v45;
   p_battleItemInfos = &v4->fields.battleItemInfos;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.battleItemInfos, v45, v47, v48, v49, v50, v51, v52);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.battleItemInfos, v45, v47, v48, v49, v50, v51, v52);
   if ( v44 >= 1 )
   {
     v59 = 0;
     do
     {
-      v60 = (Il2CppObject *)sub_1C7BD34(BattleWaveInfoData_BattleItemInfo_TypeInfo);
+      v60 = (Il2CppObject *)sub_1C93D20(BattleWaveInfoData_BattleItemInfo_TypeInfo);
       System_Object___ctor(v60, 0);
       v61 = saveData->fields.battleItemInfos;
       if ( !v61 )
@@ -555,21 +572,21 @@ LABEL_36:
       v63 = *p_battleItemInfos;
       if ( !*p_battleItemInfos )
         goto LABEL_34;
-      this = (BattleWaveInfoData_o *)sub_1C7BC24(v60, v63->obj.klass->_1.element_class);
+      this = (BattleWaveInfoData_o *)sub_1C93C10(v60, v63->obj.klass->_1.element_class);
       if ( !this )
         goto LABEL_36;
       if ( v59 >= LODWORD(v63->max_length) )
         goto LABEL_35;
       v70 = &v63->obj.klass + (int)v59;
       v70[4] = (Il2CppClass *)v60;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v70 + 4), (int32_t)v60, v64, v65, v66, v67, v68, v69);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v70 + 4), (int32_t)v60, v64, v65, v66, v67, v68, v69);
     }
     while ( v44 != ++v59 );
   }
   v4->fields.star = saveData->fields.star;
   enemySvtInfos = saveData->fields.enemySvtInfos;
   v4->fields.enemySvtInfos = enemySvtInfos;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v4->fields.enemySvtInfos,
     (int32_t)enemySvtInfos,
     v53,
@@ -580,10 +597,10 @@ LABEL_36:
     v58);
   battleFlag = saveData->fields.battleFlag;
   v4->fields.battleFlag = battleFlag;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.battleFlag, (int32_t)battleFlag, v73, v74, v75, v76, v77, v78);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.battleFlag, (int32_t)battleFlag, v73, v74, v75, v76, v77, v78);
   fieldEnvironmentData = saveData->fields.fieldEnvironmentData;
   v4->fields.fieldEnvironmentData = fieldEnvironmentData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v4->fields.fieldEnvironmentData,
     (int32_t)fieldEnvironmentData,
     v80,
@@ -594,7 +611,7 @@ LABEL_36:
     v85);
   battleMissionFlag = saveData->fields.battleMissionFlag;
   v4->fields.battleMissionFlag = battleMissionFlag;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v4->fields.battleMissionFlag,
     (int32_t)battleMissionFlag,
     v87,
@@ -606,11 +623,11 @@ LABEL_36:
   v4->fields.totalStopLimitTurn = saveData->fields.totalStopLimitTurn;
   mySvtInfos = saveData->fields.mySvtInfos;
   v4->fields.mySvtInfos = mySvtInfos;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.mySvtInfos, (int32_t)mySvtInfos, v94, v95, v96, v97, v98, v99);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.mySvtInfos, (int32_t)mySvtInfos, v94, v95, v96, v97, v98, v99);
   v4->fields.startPartyId = saveData->fields.startPartyId;
   firstSortieWaves = saveData->fields.firstSortieWaves;
   v4->fields.firstSortieWaves = firstSortieWaves;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v4->fields.firstSortieWaves,
     (int32_t)firstSortieWaves,
     v101,
@@ -620,20 +637,31 @@ LABEL_36:
     v105,
     v106);
   v4->fields.switchPartyChargeTurn = saveData->fields.switchPartyChargeTurn;
+  LastSortieWaves = saveData->fields.LastSortieWaves;
+  v4->fields.LastSortieWaves = LastSortieWaves;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v4->fields.LastSortieWaves,
+    (int32_t)LastSortieWaves,
+    v108,
+    v109,
+    v110,
+    v111,
+    v112,
+    v113);
   bgData = saveData->fields.bgData;
   v4->fields.bgData = bgData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.bgData, (int32_t)bgData, v108, v109, v110, v111, v112, v113);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.bgData, (int32_t)bgData, v115, v116, v117, v118, v119, v120);
   battleDataRelated = saveData->fields.battleDataRelated;
   v4->fields.battleDataRelated = battleDataRelated;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v4->fields.battleDataRelated,
     (int32_t)battleDataRelated,
-    v115,
-    v116,
-    v117,
-    v118,
-    v119,
-    v120);
+    v122,
+    v123,
+    v124,
+    v125,
+    v126,
+    v127);
 }
 
 
@@ -725,113 +753,124 @@ void BattleWaveInfoData__SetWaveInfoData(
   int32_t v85; // w5
   int64_t v86; // x6
   System_String_o *v87; // x7
-  System_Collections_Generic_Dictionary_int__int__o *BattleValueDict; // x0
+  System_Int32_array *v88; // x0
   int32_t v89; // w2
   int32_t v90; // w3
   System_String_o *v91; // x4
   int32_t v92; // w5
   int64_t v93; // x6
   System_String_o *v94; // x7
-  Il2CppObject *SaveData; // x0
+  System_Collections_Generic_Dictionary_int__int__o *BattleValueDict; // x0
   int32_t v96; // w2
   int32_t v97; // w3
   System_String_o *v98; // x4
   int32_t v99; // w5
   int64_t v100; // x6
   System_String_o *v101; // x7
-  struct System_Int32_array *v102; // x1
+  Il2CppObject *SaveData; // x0
+  int32_t v103; // w2
+  int32_t v104; // w3
+  System_String_o *v105; // x4
+  int32_t v106; // w5
+  int64_t v107; // x6
+  System_String_o *v108; // x7
+  struct System_Int32_array *v109; // x1
   struct System_Collections_Generic_Dictionary_int__int__o *BattleMissionValueDict_k__BackingField; // x1
-  int32_t v104; // w2
-  int32_t v105; // w3
-  System_String_o *v106; // x4
-  int32_t v107; // w5
-  int64_t v108; // x6
-  System_String_o *v109; // x7
+  int32_t v111; // w2
+  int32_t v112; // w3
+  System_String_o *v113; // x4
+  int32_t v114; // w5
+  int64_t v115; // x6
+  System_String_o *v116; // x7
   struct BattlePerformance_o *perf; // x8
-  Il2CppObject *v111; // x0
+  Il2CppObject *v118; // x0
   System_String_o *StringFromMessagePackTargetData_object; // x0
-  int32_t v113; // w2
-  int32_t v114; // w3
-  System_String_o *v115; // x4
-  int32_t v116; // w5
-  int64_t v117; // x6
-  System_String_o *v118; // x7
-  int32_t v119; // w2
-  int32_t v120; // w3
-  System_String_o *v121; // x4
-  int32_t v122; // w5
-  int64_t v123; // x6
-  System_String_o *v124; // x7
+  int32_t v120; // w2
+  int32_t v121; // w3
+  System_String_o *v122; // x4
+  int32_t v123; // w5
+  int64_t v124; // x6
+  System_String_o *v125; // x7
+  int32_t v126; // w2
+  int32_t v127; // w3
+  System_String_o *v128; // x4
+  int32_t v129; // w5
+  int64_t v130; // x6
+  System_String_o *v131; // x7
   struct BattleCommandData_array *fixedCommands; // x1
-  System_String_o *v126; // x0
-  int32_t v127; // w2
-  int32_t v128; // w3
-  System_String_o *v129; // x4
-  int32_t v130; // w5
-  int64_t v131; // x6
-  System_String_o *v132; // x7
-  __int64 v133; // x0
+  System_String_o *v133; // x0
+  int32_t v134; // w2
+  int32_t v135; // w3
+  System_String_o *v136; // x4
+  int32_t v137; // w5
+  int64_t v138; // x6
+  System_String_o *v139; // x7
+  __int64 v140; // x0
 
   v6 = this;
-  if ( (byte_4CEE124 & 1) == 0 )
+  if ( (byte_4D30480 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleWaveInfoData_BattleDataSaveData_TypeInfo);
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo___TypeInfo);
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo_TypeInfo);
-    sub_1C7BAE8(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattleWaveInfoData_BattleDataSaveData___);
-    sub_1C7BAE8(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattlePerformanceBg_SaveData___);
-    sub_1C7BAE8(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattleServantData_SaveData___);
-    sub_1C7BAE8(&Method_ByteCompressor_ImportMiniMessagePack_BattleFieldEnvironmentData_SaveData___);
-    sub_1C7BAE8(&DropInfo___TypeInfo);
-    sub_1C7BAE8(&int___TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
-    sub_1C7BAE8(&Method_SingletonTemplate_BattleItemData__get_Instance__);
-    this = (BattleWaveInfoData_o *)sub_1C7BAE8(&string___TypeInfo);
-    byte_4CEE124 = 1;
+    sub_1C93AD4(&BattleWaveInfoData_BattleDataSaveData_TypeInfo);
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo___TypeInfo);
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo_TypeInfo);
+    sub_1C93AD4(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattleWaveInfoData_BattleDataSaveData___);
+    sub_1C93AD4(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattlePerformanceBg_SaveData___);
+    sub_1C93AD4(&Method_BattleUtility_GetStringFromMessagePackTargetData_BattleServantData_SaveData___);
+    sub_1C93AD4(&Method_ByteCompressor_ImportMiniMessagePack_BattleFieldEnvironmentData_SaveData___);
+    sub_1C93AD4(&DropInfo___TypeInfo);
+    sub_1C93AD4(&int___TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+    sub_1C93AD4(&Method_SingletonTemplate_BattleItemData__get_Instance__);
+    this = (BattleWaveInfoData_o *)sub_1C93AD4(&string___TypeInfo);
+    byte_4D30480 = 1;
   }
   if ( !battleData )
-    goto LABEL_50;
+    goto LABEL_51;
   this = (BattleWaveInfoData_o *)BattleData__getDispWaveCount(battleData, 0);
   v6->fields.wave = (int)this;
   v6->fields.turn = battleData->fields.totalTurnCount + 1;
   masterSkillInfo = battleData->fields.masterSkillInfo;
   if ( !masterSkillInfo )
-    goto LABEL_50;
+    goto LABEL_51;
   size = (unsigned int)masterSkillInfo->fields._size;
-  v9 = sub_1C7BB90(int___TypeInfo, (unsigned int)size);
+  v9 = sub_1C93B7C(int___TypeInfo, (unsigned int)size);
   v6->fields.equipSkillChargeNum = (struct System_Int32_array *)v9;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v6->fields.equipSkillChargeNum, v9, v10, v11, v12, v13, v14, v15);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.equipSkillChargeNum, v9, v10, v11, v12, v13, v14, v15);
   if ( (int)size >= 1 )
   {
     v16 = 0;
-    do
+    while ( 1 )
     {
       this = (BattleWaveInfoData_o *)battleData->fields.masterSkillInfo;
       if ( !this )
-        goto LABEL_50;
+        break;
       equipSkillChargeNum = v6->fields.equipSkillChargeNum;
       this = (BattleWaveInfoData_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)this,
                                        v16,
-                                       (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+                                       (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
       if ( !this )
-        goto LABEL_50;
+        break;
       this = (BattleWaveInfoData_o *)((__int64 (__fastcall *)(BattleWaveInfoData_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
                                        this,
                                        *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
       if ( !equipSkillChargeNum )
-        goto LABEL_50;
+        break;
       if ( v16 >= LODWORD(equipSkillChargeNum->max_length) )
-        goto LABEL_51;
+        goto LABEL_52;
       v18 = (char *)equipSkillChargeNum + 4 * v16++;
       *((_DWORD *)v18 + 8) = (_DWORD)this;
+      if ( size == v16 )
+        goto LABEL_12;
     }
-    while ( size != v16 );
+LABEL_51:
+    sub_1C93D2C(this, battleData);
   }
+LABEL_12:
   this = (BattleWaveInfoData_o *)BasicHelper__IsNullOrEmpty(
                                    (System_Collections_ICollection_o *)battleData->fields.droplist,
                                    0);
@@ -839,11 +878,11 @@ void BattleWaveInfoData__SetWaveInfoData(
   {
     droplist = battleData->fields.droplist;
     if ( !droplist )
-      goto LABEL_50;
+      goto LABEL_51;
     v20 = (unsigned int)droplist->fields._size;
-    v21 = sub_1C7BB90(DropInfo___TypeInfo, (unsigned int)v20);
+    v21 = sub_1C93B7C(DropInfo___TypeInfo, (unsigned int)v20);
     v6->fields.dropInfos = (struct DropInfo_array *)v21;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v6->fields.dropInfos, v21, v22, v23, v24, v25, v26, v27);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.dropInfos, v21, v22, v23, v24, v25, v26, v27);
     if ( (int)v20 >= 1 )
     {
       v28 = 0;
@@ -852,79 +891,79 @@ void BattleWaveInfoData__SetWaveInfoData(
       {
         this = (BattleWaveInfoData_o *)battleData->fields.droplist;
         if ( !this )
-          goto LABEL_50;
+          goto LABEL_51;
         dropInfos = (unsigned int *)v6->fields.dropInfos;
         this = (BattleWaveInfoData_o *)System_Collections_Generic_List_object___get_Item(
                                          (System_Collections_Generic_List_object__o *)this,
                                          v28,
-                                         (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
+                                         (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
         if ( !this )
-          goto LABEL_50;
+          goto LABEL_51;
         this = (BattleWaveInfoData_o *)BattleDropItem__GetDropInfo((BattleDropItem_o *)this, 0);
         if ( !dropInfos )
-          goto LABEL_50;
+          goto LABEL_51;
         v37 = this;
         if ( this )
         {
-          this = (BattleWaveInfoData_o *)sub_1C7BC24(this, *(_QWORD *)(*(_QWORD *)dropInfos + 64LL));
+          this = (BattleWaveInfoData_o *)sub_1C93C10(this, *(_QWORD *)(*(_QWORD *)dropInfos + 64LL));
           if ( !this )
-            goto LABEL_52;
+            goto LABEL_53;
         }
         if ( v28 >= dropInfos[6] )
-          goto LABEL_51;
+          goto LABEL_52;
         *(_QWORD *)&dropInfos[v29] = v37;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&dropInfos[v29], (int32_t)v37, v31, v32, v33, v34, v35, v36);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&dropInfos[v29], (int32_t)v37, v31, v32, v33, v34, v35, v36);
         ++v28;
         v29 += 2;
       }
       while ( v20 != v28 );
     }
   }
-  this = (BattleWaveInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A8CA98 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+  this = (BattleWaveInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3AC57EC *)Method_SingletonTemplate_BattleItemData__get_Instance__);
   if ( !this )
-    goto LABEL_50;
+    goto LABEL_51;
   wave = this->fields.wave;
   v39 = this;
-  v40 = sub_1C7BB90(BattleWaveInfoData_BattleItemInfo___TypeInfo, wave > 0);
+  v40 = sub_1C93B7C(BattleWaveInfoData_BattleItemInfo___TypeInfo, wave > 0);
   v6->fields.battleItemInfos = (struct BattleWaveInfoData_BattleItemInfo_array *)v40;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v6->fields.battleItemInfos, v40, v41, v42, v43, v44, v45, v46);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.battleItemInfos, v40, v41, v42, v43, v44, v45, v46);
   if ( wave >= 1 )
   {
     battleItemInfos = v6->fields.battleItemInfos;
-    v48 = (Il2CppObject *)sub_1C7BD34(BattleWaveInfoData_BattleItemInfo_TypeInfo);
+    v48 = (Il2CppObject *)sub_1C93D20(BattleWaveInfoData_BattleItemInfo_TypeInfo);
     System_Object___ctor(v48, 0);
     if ( !v48 )
-      goto LABEL_50;
+      goto LABEL_51;
     v48[1].klass = *(Il2CppClass **)&v39->fields.wave;
     if ( !battleItemInfos )
-      goto LABEL_50;
-    this = (BattleWaveInfoData_o *)sub_1C7BC24(v48, battleItemInfos->obj.klass->_1.element_class);
+      goto LABEL_51;
+    this = (BattleWaveInfoData_o *)sub_1C93C10(v48, battleItemInfos->obj.klass->_1.element_class);
     if ( !this )
     {
-LABEL_52:
-      v133 = sub_1C7BD64(this);
-      sub_1C7BC10(v133, 0);
+LABEL_53:
+      v140 = sub_1C93D50(this);
+      sub_1C93BFC(v140, 0);
     }
     if ( !LODWORD(battleItemInfos->max_length) )
-LABEL_51:
-      sub_1C7BD48(this);
+LABEL_52:
+      sub_1C93D34(this);
     battleItemInfos->m_Items[0] = (BattleWaveInfoData_BattleItemInfo_o *)v48;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)battleItemInfos->m_Items, (int32_t)v48, v49, v50, v51, v52, v53, v54);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)battleItemInfos->m_Items, (int32_t)v48, v49, v50, v51, v52, v53, v54);
   }
   v6->fields.star = battleData->fields.totalCriticalStars;
   questphase_ent = battleData->fields.questphase_ent;
-  v56 = sub_1C7BD34(BattleWaveInfoData_BattleDataSaveData_TypeInfo);
+  v56 = sub_1C93D20(BattleWaveInfoData_BattleDataSaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v56, 0);
   if ( !questphase_ent )
-    goto LABEL_50;
+    goto LABEL_51;
   this = (BattleWaveInfoData_o *)QuestPhaseEntity__IsSaveInterruptionEnemyData(questphase_ent, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( !enemySaveData )
-      goto LABEL_50;
-    v57 = sub_1C7BB90(string___TypeInfo, LODWORD(enemySaveData->max_length));
+      goto LABEL_51;
+    v57 = sub_1C93B7C(string___TypeInfo, LODWORD(enemySaveData->max_length));
     v6->fields.enemySvtInfos = (struct System_String_array *)v57;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v6->fields.enemySvtInfos, v57, v58, v59, v60, v61, v62, v63);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.enemySvtInfos, v57, v58, v59, v60, v61, v62, v63);
     max_length = enemySaveData->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -935,13 +974,13 @@ LABEL_51:
         enemySvtInfos = v6->fields.enemySvtInfos;
         this = (BattleWaveInfoData_o *)BattleUtility__GetStringFromMessagePackTargetData_object_(
                                          *(Il2CppObject **)((char *)&enemySaveData->obj.klass + v66),
-                                         (const MethodInfo_3161900 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattleServantData_SaveData___);
+                                         (const MethodInfo_3195D50 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattleServantData_SaveData___);
         if ( !enemySvtInfos )
-          goto LABEL_50;
+          goto LABEL_51;
         if ( v65 >= LODWORD(enemySvtInfos->max_length) )
           break;
         *(Il2CppClass **)((char *)&enemySvtInfos->obj.klass + v66) = (Il2CppClass *)this;
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)((char *)enemySvtInfos + v66),
           (int32_t)this,
           v68,
@@ -956,7 +995,7 @@ LABEL_51:
         if ( (__int64)v65 >= (int)max_length )
           goto LABEL_39;
       }
-      goto LABEL_51;
+      goto LABEL_52;
     }
   }
 LABEL_39:
@@ -964,7 +1003,7 @@ LABEL_39:
   {
     MySvtInfos = BattleData__get_MySvtInfos(battleData, 0);
     v6->fields.mySvtInfos = MySvtInfos;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&v6->fields.mySvtInfos,
       (int32_t)MySvtInfos,
       v75,
@@ -976,101 +1015,109 @@ LABEL_39:
     v6->fields.startPartyId = battleData->fields._SelectedPartyIndex_k__BackingField + 1;
     this = (BattleWaveInfoData_o *)battleData->fields._FirstSortieWaves_k__BackingField;
     if ( !this )
-      goto LABEL_50;
+      goto LABEL_51;
     v81 = System_Collections_Generic_List_int___ToArray(
             (System_Collections_Generic_List_int__o *)this,
-            (const MethodInfo_3823890 *)Method_System_Collections_Generic_List_int__ToArray__);
+            (const MethodInfo_385E430 *)Method_System_Collections_Generic_List_int__ToArray__);
     v6->fields.firstSortieWaves = v81;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v6->fields.firstSortieWaves, (int32_t)v81, v82, v83, v84, v85, v86, v87);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.firstSortieWaves, (int32_t)v81, v82, v83, v84, v85, v86, v87);
     v6->fields.switchPartyChargeTurn = battleData->fields._SwitchPartyChargeTurn_k__BackingField;
+    this = (BattleWaveInfoData_o *)battleData->fields._LastSortieWaves_k__BackingField;
+    if ( !this )
+      goto LABEL_51;
+    v88 = System_Collections_Generic_List_int___ToArray(
+            (System_Collections_Generic_List_int__o *)this,
+            (const MethodInfo_385E430 *)Method_System_Collections_Generic_List_int__ToArray__);
+    v6->fields.LastSortieWaves = v88;
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v6->fields.LastSortieWaves, (int32_t)v88, v89, v90, v91, v92, v93, v94);
   }
   BattleValueDict = BattleData__GetBattleValueDict(battleData, 0);
   v6->fields.battleFlag = BattleValueDict;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v6->fields.battleFlag,
     (int32_t)BattleValueDict,
-    v89,
-    v90,
-    v91,
-    v92,
-    v93,
-    v94);
-  this = (BattleWaveInfoData_o *)battleData->fields._FieldEnvData_k__BackingField;
-  if ( !this )
-    goto LABEL_50;
-  SaveData = (Il2CppObject *)BattleFieldEnvironmentData__GetSaveData((BattleFieldEnvironmentData_o *)this, 0);
-  this = (BattleWaveInfoData_o *)ByteCompressor__ImportMiniMessagePack_object_(
-                                   SaveData,
-                                   (const MethodInfo_31629A0 *)Method_ByteCompressor_ImportMiniMessagePack_BattleFieldEnvironmentData_SaveData___);
-  if ( !this )
-    goto LABEL_50;
-  this = (BattleWaveInfoData_o *)ByteCompressor__ToGzip((ByteCompressor_o *)this, 0);
-  if ( !this )
-    goto LABEL_50;
-  this = (BattleWaveInfoData_o *)ByteCompressor__ToBase64Str((ByteCompressor_o *)this, 0);
-  if ( !this )
-    goto LABEL_50;
-  v102 = this->fields.equipSkillChargeNum;
-  v6->fields.fieldEnvironmentData = (struct System_String_o *)v102;
-  sub_1C7BA8C(
-    (GrandQuestFolderBoardItem_o *)&v6->fields.fieldEnvironmentData,
-    (int32_t)v102,
     v96,
     v97,
     v98,
     v99,
     v100,
     v101);
-  BattleMissionValueDict_k__BackingField = battleData->fields._BattleMissionValueDict_k__BackingField;
-  v6->fields.battleMissionFlag = BattleMissionValueDict_k__BackingField;
-  sub_1C7BA8C(
-    (GrandQuestFolderBoardItem_o *)&v6->fields.battleMissionFlag,
-    (int32_t)BattleMissionValueDict_k__BackingField,
+  this = (BattleWaveInfoData_o *)battleData->fields._FieldEnvData_k__BackingField;
+  if ( !this )
+    goto LABEL_51;
+  SaveData = (Il2CppObject *)BattleFieldEnvironmentData__GetSaveData((BattleFieldEnvironmentData_o *)this, 0);
+  this = (BattleWaveInfoData_o *)ByteCompressor__ImportMiniMessagePack_object_(
+                                   SaveData,
+                                   (const MethodInfo_3196FE8 *)Method_ByteCompressor_ImportMiniMessagePack_BattleFieldEnvironmentData_SaveData___);
+  if ( !this )
+    goto LABEL_51;
+  this = (BattleWaveInfoData_o *)ByteCompressor__ToGzip((ByteCompressor_o *)this, 0);
+  if ( !this )
+    goto LABEL_51;
+  this = (BattleWaveInfoData_o *)ByteCompressor__ToBase64Str((ByteCompressor_o *)this, 0);
+  if ( !this )
+    goto LABEL_51;
+  v109 = this->fields.equipSkillChargeNum;
+  v6->fields.fieldEnvironmentData = (struct System_String_o *)v109;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v6->fields.fieldEnvironmentData,
+    (int32_t)v109,
+    v103,
     v104,
     v105,
     v106,
     v107,
-    v108,
-    v109);
+    v108);
+  BattleMissionValueDict_k__BackingField = battleData->fields._BattleMissionValueDict_k__BackingField;
+  v6->fields.battleMissionFlag = BattleMissionValueDict_k__BackingField;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v6->fields.battleMissionFlag,
+    (int32_t)BattleMissionValueDict_k__BackingField,
+    v111,
+    v112,
+    v113,
+    v114,
+    v115,
+    v116);
   v6->fields.totalStopLimitTurn = battleData->fields.totalStopLimitTurnCount;
   perf = battleData->fields.perf;
-  if ( !perf
-    || (this = (BattleWaveInfoData_o *)perf->fields.bgPerf) == 0
-    || (v111 = (Il2CppObject *)BattlePerformanceBg__getSaveData((BattlePerformanceBg_o *)this, 0),
-        StringFromMessagePackTargetData_object = BattleUtility__GetStringFromMessagePackTargetData_object_(
-                                                   v111,
-                                                   (const MethodInfo_3161900 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattlePerformanceBg_SaveData___),
-        v6->fields.bgData = StringFromMessagePackTargetData_object,
-        sub_1C7BA8C(
-          (GrandQuestFolderBoardItem_o *)&v6->fields.bgData,
-          (int32_t)StringFromMessagePackTargetData_object,
-          v113,
-          v114,
-          v115,
-          v116,
-          v117,
-          v118),
-        !v56) )
-  {
-LABEL_50:
-    sub_1C7BD40(this, battleData);
-  }
+  if ( !perf )
+    goto LABEL_51;
+  this = (BattleWaveInfoData_o *)perf->fields.bgPerf;
+  if ( !this )
+    goto LABEL_51;
+  v118 = (Il2CppObject *)BattlePerformanceBg__getSaveData((BattlePerformanceBg_o *)this, 0);
+  StringFromMessagePackTargetData_object = BattleUtility__GetStringFromMessagePackTargetData_object_(
+                                             v118,
+                                             (const MethodInfo_3195D50 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattlePerformanceBg_SaveData___);
+  v6->fields.bgData = StringFromMessagePackTargetData_object;
+  sub_1C93A78(
+    (GrandQuestFolderBoardItem_o *)&v6->fields.bgData,
+    (int32_t)StringFromMessagePackTargetData_object,
+    v120,
+    v121,
+    v122,
+    v123,
+    v124,
+    v125);
+  if ( !v56 )
+    goto LABEL_51;
   fixedCommands = battleData->fields.fixedCommands;
   *(_QWORD *)(v56 + 16) = fixedCommands;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v56 + 16), (int32_t)fixedCommands, v119, v120, v121, v122, v123, v124);
-  v126 = BattleUtility__GetStringFromMessagePackTargetData_object_(
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v56 + 16), (int32_t)fixedCommands, v126, v127, v128, v129, v130, v131);
+  v133 = BattleUtility__GetStringFromMessagePackTargetData_object_(
            (Il2CppObject *)v56,
-           (const MethodInfo_3161900 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattleWaveInfoData_BattleDataSaveData___);
-  v6->fields.battleDataRelated = v126;
-  sub_1C7BA8C(
+           (const MethodInfo_3195D50 *)Method_BattleUtility_GetStringFromMessagePackTargetData_BattleWaveInfoData_BattleDataSaveData___);
+  v6->fields.battleDataRelated = v133;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v6->fields.battleDataRelated,
-    (int32_t)v126,
-    v127,
-    v128,
-    v129,
-    v130,
-    v131,
-    v132);
+    (int32_t)v133,
+    v134,
+    v135,
+    v136,
+    v137,
+    v138,
+    v139);
 }
 
 
@@ -1094,41 +1141,41 @@ void BattleWaveInfoData_BattleDataSaveData__SetData(
   System_String_o *v7; // x7
   long double inited; // q0
   BattleWaveInfoData_BattleDataSaveData_o *v10; // x20
-  Il2CppClass *FixedCommands; // x1
+  struct BattleCommandData_array *FixedCommands; // x1
   _QWORD *v12; // x20
   __int64 v13; // x8
   __int64 v14; // x0
 
   v10 = this;
-  if ( (byte_4CEE126 & 1) == 0 )
+  if ( (byte_4D30482 & 1) == 0 )
   {
-    this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_1C7BAE8(&Method_System_Array_Empty_BattleCommandData___);
-    byte_4CEE126 = 1;
+    this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_1C93AD4(&Method_System_Array_Empty_BattleCommandData___);
+    byte_4D30482 = 1;
   }
-  FixedCommands = (Il2CppClass *)v10->fields.FixedCommands;
+  FixedCommands = v10->fields.FixedCommands;
   if ( !FixedCommands )
   {
     v12 = Method_System_Array_Empty_BattleCommandData___;
     v13 = *((_QWORD *)Method_System_Array_Empty_BattleCommandData___ + 7);
     if ( !v13 )
     {
-      sub_1C51BD8(Method_System_Array_Empty_BattleCommandData___);
+      sub_1C69BC4(Method_System_Array_Empty_BattleCommandData___);
       v13 = v12[7];
     }
     v14 = *(_QWORD *)(v13 + 16);
     if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-      v14 = sub_1C51B7C(inited);
+      v14 = sub_1C69B68(inited);
     if ( !*(_DWORD *)(v14 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v14);
     this = *(BattleWaveInfoData_BattleDataSaveData_o **)(v12[7] + 16LL);
-    if ( (BYTE5(this[12].fields.FixedCommands) & 1) == 0 )
-      this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_1C51B7C(inited);
-    FixedCommands = this[7].fields.FixedCommands->obj.klass;
+    if ( (*((_BYTE *)this + 309) & 1) == 0 )
+      this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_1C69B68(inited);
+    FixedCommands = (struct BattleCommandData_array *)**((_QWORD **)this + 23);
   }
   if ( !data )
-    sub_1C7BD40(this, FixedCommands);
-  data->fields.fixedCommands = (struct BattleCommandData_array *)FixedCommands;
-  sub_1C7BA8C(
+    sub_1C93D2C(this, FixedCommands);
+  data->fields.fixedCommands = FixedCommands;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&data->fields.fixedCommands,
     (int32_t)FixedCommands,
     (int32_t)method,
@@ -1153,20 +1200,18 @@ BattleWaveInfoData_BattleItemInfo_SaveData_o *BattleWaveInfoData_BattleItemInfo_
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  BattleWaveInfoData_BattleItemInfo_SaveData_o *result; // x0
 
-  if ( (byte_4CEE125 & 1) == 0 )
+  if ( (byte_4D30481 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
-    byte_4CEE125 = 1;
+    sub_1C93AD4(&BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
+    byte_4D30481 = 1;
   }
-  v3 = sub_1C7BD34(BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
+  v3 = sub_1C93D20(BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1C7BD40(v4, v5);
-  result = (BattleWaveInfoData_BattleItemInfo_SaveData_o *)v3;
+    sub_1C93D2C(v4, v5);
   *(BattleWaveInfoData_BattleItemInfo_Fields *)(v3 + 16) = this->fields;
-  return result;
+  return (BattleWaveInfoData_BattleItemInfo_SaveData_o *)v3;
 }
 
 
@@ -1176,7 +1221,7 @@ void BattleWaveInfoData_BattleItemInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   this->fields = (BattleWaveInfoData_BattleItemInfo_Fields)saveData->fields;
 }
 

@@ -2,8 +2,8 @@ void ScriptActionAdvPrefabLightSetting___ctor(ScriptActionAdvPrefabLightSetting_
 {
   this->fields.fog = 1;
   *(_QWORD *)&this->fields.fogMode = 0x3F80000000000001LL;
-  this->fields.ambientColor = (struct UnityEngine_Color_o)xmmword_CF5380;
-  this->fields.fogColor = (struct UnityEngine_Color_o)xmmword_CF5380;
+  this->fields.ambientColor = (struct UnityEngine_Color_o)xmmword_D004E0;
+  this->fields.fogColor = (struct UnityEngine_Color_o)xmmword_D004E0;
   this->fields.fogEndDistance = 100.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }

@@ -15,7 +15,7 @@ void EventInfoHappinessCounterControl__CheckAssertions(
 
   happinessCounterNumberSp = this->fields.happinessCounterNumberSp;
   if ( !happinessCounterNumberSp )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   max_length = happinessCounterNumberSp->max_length;
   v4 = -1;
   do
@@ -31,10 +31,10 @@ int32_t EventInfoHappinessCounterControl__GetDigit(
 {
   double v4; // d0
 
-  if ( (byte_4CEFA53 & 1) == 0 )
+  if ( (byte_4D31DD7 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    byte_4CEFA53 = 1;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    byte_4D31DD7 = 1;
   }
   if ( !num )
     return 0;
@@ -57,10 +57,10 @@ int64_t EventInfoHappinessCounterControl__GetDigitNumber(
   double v6; // d0
   signed __int64 v7; // x8
 
-  if ( (byte_4CEFA54 & 1) == 0 )
+  if ( (byte_4D31DD8 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Math_TypeInfo);
-    byte_4CEFA54 = 1;
+    sub_1C93AD4(&System_Math_TypeInfo);
+    byte_4D31DD8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -97,24 +97,24 @@ void EventInfoHappinessCounterControl__Initialization(
   __int64 v22; // x8
   struct UISprite_array *happinessCounterNumberSp; // x9
 
-  if ( (byte_4CEFA4D & 1) == 0 )
+  if ( (byte_4D31DD1 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_EventInfoHappinessCounterControl___c__DisplayClass22_0__Initialization_b__0__);
-    sub_1C7BAE8(&EventInfoHappinessCounterControl___c__DisplayClass22_0_TypeInfo);
-    byte_4CEFA4D = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_EventInfoHappinessCounterControl___c__DisplayClass22_0__Initialization_b__0__);
+    sub_1C93AD4(&EventInfoHappinessCounterControl___c__DisplayClass22_0_TypeInfo);
+    byte_4D31DD1 = 1;
   }
-  v5 = sub_1C7BD34(EventInfoHappinessCounterControl___c__DisplayClass22_0_TypeInfo);
+  v5 = sub_1C93D20(EventInfoHappinessCounterControl___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_6;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = entity;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)entity, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)entity, v14, v15, v16, v17, v18, v19);
   EventInfoUIBase__Initialization((EventInfoUIBase_o *)this, *(EventUiEntity_o **)(v5 + 24), 0);
   v20 = *(EventUiEntity_o **)(v5 + 24);
-  v21 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -128,7 +128,7 @@ void EventInfoHappinessCounterControl__Initialization(
         !happinessCounterNumberSp) )
   {
 LABEL_6:
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   }
 }
 
@@ -183,12 +183,12 @@ void EventInfoHappinessCounterControl__SetPointNumSprite(
   int v23; // [xsp+Ch] [xbp-64h] BYREF
 
   v6 = (EventInfoUIBase_o *)this;
-  if ( (byte_4CEFA52 & 1) == 0 )
+  if ( (byte_4D31DD6 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Count_UISprite___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    this = (EventInfoHappinessCounterControl_o *)sub_1C7BAE8(&StringLiteral_19316/*"event_counter_number_"*/);
-    byte_4CEFA52 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Count_UISprite___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    this = (EventInfoHappinessCounterControl_o *)sub_1C93AD4(&StringLiteral_19369/*"event_counter_number_"*/);
+    byte_4D31DD6 = 1;
   }
   v23 = 0;
   DigitNumber = 0;
@@ -197,7 +197,7 @@ void EventInfoHappinessCounterControl__SetPointNumSprite(
     Digit = EventInfoHappinessCounterControl__GetDigit(this, number, (const MethodInfo *)sprites);
     v8 = (EventInfoHappinessCounterControl_o *)System_Linq_Enumerable__Count_object_(
                                                  (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                                 (const MethodInfo_318FACC *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                                 (const MethodInfo_31C4444 *)Method_System_Linq_Enumerable_Count_UISprite___);
     if ( (int)v8 >= 1 )
     {
       v9 = 0;
@@ -208,7 +208,7 @@ void EventInfoHappinessCounterControl__SetPointNumSprite(
       {
         if ( v9 >= LODWORD(sprites->max_length) )
 LABEL_19:
-          sub_1C7BD48(v8);
+          sub_1C93D34(v8);
         v13 = (UnityEngine_Object_o *)m_Items[v9];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -222,13 +222,13 @@ LABEL_19:
           {
             DigitNumber = EventInfoHappinessCounterControl__GetDigitNumber(v8, number, v10, v14);
             v18 = System_Int64__ToString((int64_t)&DigitNumber, 0);
-            v19 = System_String__Concat_64176912((System_String_o *)StringLiteral_19316/*"event_counter_number_"*/, v18, 0);
+            v19 = System_String__Concat_64425724((System_String_o *)StringLiteral_19369/*"event_counter_number_"*/, v18, 0);
             v8 = (EventInfoHappinessCounterControl_o *)EventInfoUIBase__SetSpriteByLocalAtlas(v6, v15, v19, 0);
             if ( v9 >= LODWORD(sprites->max_length) )
               goto LABEL_19;
             v21 = m_Items[v9];
             if ( !v21 )
-              sub_1C7BD40(0, v20);
+              sub_1C93D2C(0, v20);
             ((void (__fastcall *)(UISprite_o *, const MethodInfo *))v21->klass->vtable._33_MakePixelPerfect.methodPtr)(
               v21,
               v21->klass->vtable._33_MakePixelPerfect.method);
@@ -237,7 +237,7 @@ LABEL_19:
           {
             v23 = 0;
             v16 = System_Int32__ToString((int32_t)&v23, 0);
-            v17 = System_String__Concat_64176912((System_String_o *)StringLiteral_19316/*"event_counter_number_"*/, v16, 0);
+            v17 = System_String__Concat_64425724((System_String_o *)StringLiteral_19369/*"event_counter_number_"*/, v16, 0);
             EventInfoUIBase__SetSpriteByLocalAtlas(v6, v15, v17, 0);
           }
           ++v10;
@@ -245,7 +245,7 @@ LABEL_19:
         ++v9;
         v8 = (EventInfoHappinessCounterControl_o *)System_Linq_Enumerable__Count_object_(
                                                      (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                                     (const MethodInfo_318FACC *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                                     (const MethodInfo_31C4444 *)Method_System_Linq_Enumerable_Count_UISprite___);
       }
       while ( (__int64)v9 < (int)v8 );
     }
@@ -266,7 +266,7 @@ void EventInfoHappinessCounterControl__SetUIDisp(
   EventInfoUIBase__SetUIDisp((EventInfoUIBase_o *)this, isDisp, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   UnityEngine_GameObject__SetActive(gameObject, v3, 0);
 }
 
@@ -291,7 +291,6 @@ void EventInfoHappinessCounterControl__Setup(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void EventInfoHappinessCounterControl__SetupEventPoint(
         EventInfoHappinessCounterControl_o *this,
         const MethodInfo *method)
@@ -301,23 +300,21 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
   __int64 v5; // x1
   UILabel_o *v6; // x20
   int64_t eventPoint; // x21
-  unsigned int localPosition; // s0 OVERLAPPED
-  int v9; // s2
-  __int64 v10; // x8
-  int v11; // s1
+  __int64 v9; // x8
   UnityEngine_Component_o *eventPointLabelRoot; // x8
-  char v13; // w19
-  bool v14; // w1
+  char v11; // w19
+  bool v12; // w1
   EventUiEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEFA4F & 1) == 0 )
+  if ( (byte_4D31DD3 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_EventUiMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_EventUiReleaseMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFA4F = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_EventUiMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_EventUiReleaseMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D31DD3 = 1;
   }
   entity = 0;
   eventPointLabel = (UnityEngine_Object_o *)this->fields.eventPointLabel;
@@ -327,7 +324,7 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_EventUiMaster___);
+    Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EventUiMaster___);
     if ( Master_object )
     {
       if ( EventUiMaster__TryGetEntity((EventUiMaster_o *)Master_object, &entity, this->fields.eventPointGroupId, 1, 0) )
@@ -343,24 +340,21 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
           Master_object = (System_String_o *)this->fields.eventPointLabelRoot;
           if ( Master_object )
           {
-            localPosition = (unsigned int)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)Master_object,
-                                            0);
+            LODWORD(v14.fields.x) = (unsigned int)UnityEngine_Transform__get_localPosition(
+                                                    (UnityEngine_Transform_o *)Master_object,
+                                                    0);
             Master_object = (System_String_o *)this->fields.eventPointLabelRoot;
             if ( Master_object )
             {
-              v9 = 0;
-              v10 = 144;
+              v14.fields.z = 0.0;
+              v9 = 144;
               if ( this->fields.isHappinessPointCountStop )
-                v10 = 148;
-              v11 = *(_DWORD *)((char *)&this->klass + v10);
-              UnityEngine_Transform__set_localPosition(
-                (UnityEngine_Transform_o *)Master_object,
-                *(UnityEngine_Vector3_o *)&localPosition,
-                0);
+                v9 = 148;
+              v14.fields.y = *(float *)((char *)&this->klass + v9);
+              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Master_object, v14, 0);
               if ( !DataManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-              Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_EventUiReleaseMaster___);
+              Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EventUiReleaseMaster___);
               if ( Master_object )
               {
                 Master_object = (System_String_o *)EventUiReleaseMaster__IsOpen(
@@ -370,13 +364,13 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
                 eventPointLabelRoot = (UnityEngine_Component_o *)this->fields.eventPointLabelRoot;
                 if ( eventPointLabelRoot )
                 {
-                  v13 = (char)Master_object;
+                  v11 = (char)Master_object;
                   Master_object = (System_String_o *)UnityEngine_Component__get_gameObject(eventPointLabelRoot, 0);
                   if ( Master_object )
                   {
-                    v14 = v13 & 1;
+                    v12 = v11 & 1;
 LABEL_26:
-                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v14, 0);
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v12, 0);
                     return;
                   }
                 }
@@ -395,13 +389,13 @@ LABEL_26:
                                                0);
           if ( Master_object )
           {
-            v14 = 0;
+            v12 = 0;
             goto LABEL_26;
           }
         }
       }
     }
-    sub_1C7BD40(Master_object, v5);
+    sub_1C93D2C(Master_object, v5);
   }
 }
 
@@ -414,11 +408,11 @@ void EventInfoHappinessCounterControl__SetupEventPointBg(
   __int64 v4; // x1
   struct UISprite_o *v5; // x0
 
-  if ( (byte_4CEFA4E & 1) == 0 )
+  if ( (byte_4D31DD2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19367/*"event_point_base"*/);
-    byte_4CEFA4E = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19420/*"event_point_base"*/);
+    byte_4D31DD2 = 1;
   }
   eventPointBgSprite = (UnityEngine_Object_o *)this->fields.eventPointBgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -428,11 +422,11 @@ void EventInfoHappinessCounterControl__SetupEventPointBg(
     EventInfoUIBase__SetSpriteByLocalAtlas(
       (EventInfoUIBase_o *)this,
       this->fields.eventPointBgSprite,
-      (System_String_o *)StringLiteral_19367/*"event_point_base"*/,
+      (System_String_o *)StringLiteral_19420/*"event_point_base"*/,
       0);
     v5 = this->fields.eventPointBgSprite;
     if ( !v5 )
-      sub_1C7BD40(0, v4);
+      sub_1C93D2C(0, v4);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v5,
       v5->klass->vtable._33_MakePixelPerfect.method);
@@ -449,10 +443,10 @@ void EventInfoHappinessCounterControl__SetupHappinessCounter(
   UnityEngine_GameObject_o *v5; // x0
   const MethodInfo *v6; // x3
 
-  if ( (byte_4CEFA51 & 1) == 0 )
+  if ( (byte_4D31DD5 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFA51 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D31DD5 = 1;
   }
   happinessCounterNumberSpRoot = (UnityEngine_Object_o *)this->fields.happinessCounterNumberSpRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -462,7 +456,7 @@ void EventInfoHappinessCounterControl__SetupHappinessCounter(
   {
     v5 = this->fields.happinessCounterNumberSpRoot;
     if ( !v5 )
-      sub_1C7BD40(0, v4);
+      sub_1C93D2C(0, v4);
     UnityEngine_GameObject__SetActive(v5, !this->fields.isHappinessPointCountStop, 0);
     EventInfoHappinessCounterControl__SetPointNumSprite(
       this,
@@ -482,12 +476,12 @@ void EventInfoHappinessCounterControl__SetupHappinessCounterBg(
   __int64 v5; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4CEFA50 & 1) == 0 )
+  if ( (byte_4D31DD4 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19314/*"event_counter_base_first"*/);
-    sub_1C7BAE8(&StringLiteral_19315/*"event_counter_base_max"*/);
-    byte_4CEFA50 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19367/*"event_counter_base_first"*/);
+    sub_1C93AD4(&StringLiteral_19368/*"event_counter_base_max"*/);
+    byte_4D31DD4 = 1;
   }
   happinessCounterBgSpriteFirst = (UnityEngine_Object_o *)this->fields.happinessCounterBgSpriteFirst;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -502,12 +496,12 @@ void EventInfoHappinessCounterControl__SetupHappinessCounterBg(
       EventInfoUIBase__SetSpriteByLocalAtlas(
         (EventInfoUIBase_o *)this,
         this->fields.happinessCounterBgSpriteFirst,
-        (System_String_o *)StringLiteral_19314/*"event_counter_base_first"*/,
+        (System_String_o *)StringLiteral_19367/*"event_counter_base_first"*/,
         0);
       EventInfoUIBase__SetSpriteByLocalAtlas(
         (EventInfoUIBase_o *)this,
         this->fields.happinessCounterBgSpriteMax,
-        (System_String_o *)StringLiteral_19315/*"event_counter_base_max"*/,
+        (System_String_o *)StringLiteral_19368/*"event_counter_base_max"*/,
         0);
       gameObject = (UnityEngine_Component_o *)this->fields.happinessCounterBgSpriteFirst;
       if ( !gameObject )
@@ -531,7 +525,7 @@ void EventInfoHappinessCounterControl__SetupHappinessCounterBg(
             (gameObject = (UnityEngine_Component_o *)this->fields.happinessCounterBgSpriteMax) == 0) )
       {
 LABEL_17:
-        sub_1C7BD40(gameObject, v5);
+        sub_1C93D2C(gameObject, v5);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.parent)(
         gameObject,
@@ -574,6 +568,6 @@ void EventInfoHappinessCounterControl___c__DisplayClass22_0___Initialization_b__
 
   entity = this->fields.entity;
   if ( !entity || (this = (EventInfoHappinessCounterControl___c__DisplayClass22_0_o *)this->fields.__4__this) == 0 )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, entity->fields.eventId, 0);
 }

@@ -9,11 +9,11 @@ void WarBoardVerticalSchedule___ctor(WarBoardVerticalSchedule_o *this, const Met
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, method);
   this->fields.tasks = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.tasks, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.tasks, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
-void WarBoardVerticalSchedule___ctor_38750268(
+void WarBoardVerticalSchedule___ctor_38969420(
         WarBoardVerticalSchedule_o *this,
         WarBoardTaskBase_array *taskBases,
         const MethodInfo *method)
@@ -27,11 +27,11 @@ void WarBoardVerticalSchedule___ctor_38750268(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   this->fields.tasks = taskBases;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6, v7, v8, v9, v10);
 }
 
 
-void WarBoardVerticalSchedule___ctor_38750312(
+void WarBoardVerticalSchedule___ctor_38969464(
         WarBoardVerticalSchedule_o *this,
         System_Collections_Generic_List_WarBoardTaskBase__o *taskBases,
         const MethodInfo *method)
@@ -46,19 +46,19 @@ void WarBoardVerticalSchedule___ctor_38750312(
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CEC27B & 1) == 0 )
+  if ( (byte_4D2E650 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
-    byte_4CEC27B = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+    byte_4D2E650 = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   if ( !taskBases )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   v7 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   this->fields.tasks = (struct WarBoardTaskBase_array *)v7;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -74,16 +74,16 @@ System_Collections_IEnumerator_o *WarBoardVerticalSchedule__Execute(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEC27D & 1) == 0 )
+  if ( (byte_4D2E652 & 1) == 0 )
   {
-    sub_1C7BAE8(&WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
-    byte_4CEC27D = 1;
+    sub_1C93AD4(&WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
+    byte_4D2E652 = 1;
   }
-  v3 = sub_1C7BD34(WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
+  v3 = sub_1C93D20(WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -129,7 +129,7 @@ void WarBoardVerticalSchedule__OnStart(WarBoardVerticalSchedule_o *this, const M
       return;
     }
 LABEL_8:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
 }
 
@@ -149,18 +149,18 @@ void WarBoardVerticalSchedule__SetTask(
   System_String_o *v11; // x7
 
   v4 = this;
-  if ( (byte_4CEC27C & 1) == 0 )
+  if ( (byte_4D2E651 & 1) == 0 )
   {
-    this = (WarBoardVerticalSchedule_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
-    byte_4CEC27C = 1;
+    this = (WarBoardVerticalSchedule_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+    byte_4D2E651 = 1;
   }
   if ( !taskBases )
-    sub_1C7BD40(this, taskBases);
+    sub_1C93D2C(this, taskBases);
   v5 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   v4->fields.tasks = (struct WarBoardTaskBase_array *)v5;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v4->fields.tasks, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.tasks, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -240,7 +240,6 @@ bool WarBoardVerticalSchedule__Execute_d__7__MoveNext(
   int32_t v61; // w5
   int64_t v62; // x6
   System_String_o *v63; // x7
-  bool result; // w0
   int count_5__2; // w8
   unsigned __int64 v66; // x21
   struct System_Boolean_array *v67; // x26
@@ -267,18 +266,18 @@ bool WarBoardVerticalSchedule__Execute_d__7__MoveNext(
   __int64 v88; // x0
 
   v2 = this;
-  if ( (byte_4CEC27F & 1) == 0 )
+  if ( (byte_4D2E654 & 1) == 0 )
   {
-    sub_1C7BAE8(&bool___TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_All_bool___);
-    sub_1C7BAE8(&System_Func_bool__bool__TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator___TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C7BAE8(&object___TypeInfo);
-    sub_1C7BAE8(&Method_WarBoardVerticalSchedule___c__Execute_b__7_0__);
-    sub_1C7BAE8(&WarBoardVerticalSchedule___c_TypeInfo);
-    this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C7BAE8(&WarBoardManager_TypeInfo);
-    byte_4CEC27F = 1;
+    sub_1C93AD4(&bool___TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_All_bool___);
+    sub_1C93AD4(&System_Func_bool__bool__TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator___TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C93AD4(&object___TypeInfo);
+    sub_1C93AD4(&Method_WarBoardVerticalSchedule___c__Execute_b__7_0__);
+    sub_1C93AD4(&WarBoardVerticalSchedule___c_TypeInfo);
+    this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C93AD4(&WarBoardManager_TypeInfo);
+    byte_4D2E654 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -298,16 +297,16 @@ bool WarBoardVerticalSchedule__Execute_d__7__MoveNext(
       goto LABEL_72;
     max_length_low = LODWORD(tasks->max_length);
     v2->fields._count_5__2 = max_length_low;
-    v7 = sub_1C7BB90(bool___TypeInfo, max_length_low);
+    v7 = sub_1C93B7C(bool___TypeInfo, max_length_low);
     v2->fields._endFlags_5__3 = (struct System_Boolean_array *)v7;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._endFlags_5__3, v7, v8, v9, v10, v11, v12, v13);
-    v14 = sub_1C7BB90(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._endFlags_5__3, v7, v8, v9, v10, v11, v12, v13);
+    v14 = sub_1C93B7C(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._currentObjects_5__4 = (struct System_Object_array *)v14;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._currentObjects_5__4, v14, v15, v16, v17, v18, v19, v20);
-    v21 = sub_1C7BB90(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._currentObjects_5__4, v14, v15, v16, v17, v18, v19, v20);
+    v21 = sub_1C93B7C(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._executes_5__5 = (struct System_Collections_IEnumerator_array *)v21;
     p_executes_5__5 = (unsigned int **)&v2->fields._executes_5__5;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields._executes_5__5, v21, v23, v24, v25, v26, v27, v28);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._executes_5__5, v21, v23, v24, v25, v26, v27, v28);
     if ( v2->fields._count_5__2 >= 1 )
     {
       v35 = 0;
@@ -320,7 +319,7 @@ bool WarBoardVerticalSchedule__Execute_d__7__MoveNext(
         if ( v35 >= v37[6] )
           goto LABEL_73;
         *(_QWORD *)&v37[v36] = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v37[v36], 0, v29, v30, v31, v32, v33, v34);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v37[v36], 0, v29, v30, v31, v32, v33, v34);
         v38 = _4__this->fields.tasks;
         if ( !v38 )
           break;
@@ -338,19 +337,19 @@ bool WarBoardVerticalSchedule__Execute_d__7__MoveNext(
           v46 = this;
           if ( this )
           {
-            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C7BC24(this, *(_QWORD *)(*(_QWORD *)v39 + 64LL));
+            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C93C10(this, *(_QWORD *)(*(_QWORD *)v39 + 64LL));
             if ( !this )
             {
 LABEL_74:
-              v88 = sub_1C7BD64();
-              sub_1C7BC10(v88, 0);
+              v88 = sub_1C93D50();
+              sub_1C93BFC(v88, 0);
             }
           }
           if ( v35 >= v39[6] )
 LABEL_73:
-            sub_1C7BD48(this);
+            sub_1C93D34(this);
           *(_QWORD *)&v39[v36] = v46;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v39[v36], (int32_t)v46, v40, v41, v42, v43, v44, v45);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v39[v36], (int32_t)v46, v40, v41, v42, v43, v44, v45);
         }
         ++v35;
         v36 += 2;
@@ -358,7 +357,7 @@ LABEL_73:
           goto LABEL_22;
       }
 LABEL_72:
-      sub_1C7BD40(this, method);
+      sub_1C93D2C(this, method);
     }
   }
 LABEL_22:
@@ -378,16 +377,16 @@ LABEL_22:
       v48 = WarBoardVerticalSchedule___c_TypeInfo;
     }
     v50 = (Il2CppObject *)v48->static_fields->__9;
-    _9__7_0 = (System_Func_bool__bool__o *)sub_1C7BD34(System_Func_bool__bool__TypeInfo);
+    _9__7_0 = (System_Func_bool__bool__o *)sub_1C93D20(System_Func_bool__bool__TypeInfo);
     System_Func_bool__bool____ctor(_9__7_0, v50, Method_WarBoardVerticalSchedule___c__Execute_b__7_0__, 0);
     static_fields = WarBoardVerticalSchedule___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = _9__7_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v52, v53, v54, v55, v56, v57);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v52, v53, v54, v55, v56, v57);
   }
   this = (WarBoardVerticalSchedule__Execute_d__7_o *)System_Linq_Enumerable__All_bool_(
                                                        endFlags_5__3,
                                                        (System_Func_TSource__bool__o *)_9__7_0,
-                                                       (const MethodInfo_3179F1C *)Method_System_Linq_Enumerable_All_bool___);
+                                                       (const MethodInfo_31AE6C4 *)Method_System_Linq_Enumerable_All_bool___);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0;
   count_5__2 = v2->fields._count_5__2;
@@ -436,7 +435,7 @@ LABEL_22:
           else
           {
 LABEL_45:
-            v75 = sub_1C51E70(v70, System_Collections_IEnumerator_TypeInfo, 1);
+            v75 = sub_1C69E5C(v70, System_Collections_IEnumerator_TypeInfo, 1);
           }
           this = (WarBoardVerticalSchedule__Execute_d__7_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v75)(
                                                                v70,
@@ -446,7 +445,7 @@ LABEL_45:
           v78 = this;
           if ( this )
           {
-            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C7BC24(
+            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C93C10(
                                                                  this,
                                                                  *(_QWORD *)(*(_QWORD *)currentObjects_5__4 + 64LL));
             if ( !this )
@@ -471,7 +470,7 @@ LABEL_45:
           v77[4] = 0;
           v79 = (GrandQuestFolderBoardItem_o *)(v77 + 4);
         }
-        sub_1C7BA8C(v79, (int32_t)v78, v58, v59, v60, v61, v62, v63);
+        sub_1C93A78(v79, (int32_t)v78, v58, v59, v60, v61, v62, v63);
         v81 = v2->fields._endFlags_5__3;
         if ( !v81 )
           goto LABEL_72;
@@ -524,10 +523,9 @@ LABEL_45:
   v86 = v2->fields._currentObjects_5__4;
   v2->fields.__2__current = &v86->obj;
   p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-  sub_1C7BA8C(p__2__current, (int32_t)v86, v58, v59, v60, v61, v62, v63);
-  result = 1;
+  sub_1C93A78(p__2__current, (int32_t)v86, v58, v59, v60, v61, v62, v63);
   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-  return result;
+  return 1;
 }
 
 
@@ -547,11 +545,11 @@ void __noreturn WarBoardVerticalSchedule__Execute_d__7__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_WarBoardVerticalSchedule__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_WarBoardVerticalSchedule__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -581,15 +579,15 @@ void WarBoardVerticalSchedule___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEC27E & 1) == 0 )
+  if ( (byte_4D2E653 & 1) == 0 )
   {
-    sub_1C7BAE8(&WarBoardVerticalSchedule___c_TypeInfo);
-    byte_4CEC27E = 1;
+    sub_1C93AD4(&WarBoardVerticalSchedule___c_TypeInfo);
+    byte_4D2E653 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(WarBoardVerticalSchedule___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(WarBoardVerticalSchedule___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardVerticalSchedule___c_TypeInfo->static_fields->__9 = (struct WarBoardVerticalSchedule___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)WarBoardVerticalSchedule___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

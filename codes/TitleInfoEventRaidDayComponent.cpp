@@ -9,17 +9,17 @@ void TitleInfoEventRaidDayComponent___cctor(const MethodInfo *method)
   struct TitleInfoEventRaidDayComponent_StaticFields *static_fields; // x0
   int32_t v8; // w1
 
-  if ( (byte_4CECFB0 & 1) == 0 )
+  if ( (byte_4D2F2FD & 1) == 0 )
   {
-    sub_1C7BAE8(&TitleInfoEventRaidDayComponent_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19385/*"event_raid_num_"*/);
-    byte_4CECFB0 = 1;
+    sub_1C93AD4(&TitleInfoEventRaidDayComponent_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19438/*"event_raid_num_"*/);
+    byte_4D2F2FD = 1;
   }
   static_fields = TitleInfoEventRaidDayComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEPTH_FRONT = 0x100000003LL;
-  v8 = StringLiteral_19385/*"event_raid_num_"*/;
-  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_19385/*"event_raid_num_"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->NUM_SPNAME_PREFIX, v8, v1, v2, v3, v4, v5, v6);
+  v8 = StringLiteral_19438/*"event_raid_num_"*/;
+  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_19438/*"event_raid_num_"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->NUM_SPNAME_PREFIX, v8, v1, v2, v3, v4, v5, v6);
 }
 
 
@@ -42,7 +42,7 @@ void TitleInfoEventRaidDayComponent__SetDepth(
     || (UIWidget__set_depth(dayStrSp, depth, 0), (dayStrSp = (UIWidget_o *)this->fields.dayNumSp) == 0)
     || (UIWidget__set_depth(dayStrSp, depth, 0), (dayStrSp = (UIWidget_o *)this->fields.dayLastSp) == 0) )
   {
-    sub_1C7BD40(dayStrSp, *(_QWORD *)&depth);
+    sub_1C93D2C(dayStrSp, *(_QWORD *)&depth);
   }
   UIWidget__set_depth(dayStrSp, depth, 0);
 }
@@ -70,20 +70,20 @@ void TitleInfoEventRaidDayComponent__Setup(
   int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
   v20 = dispDayNum;
-  if ( (byte_4CECFAF & 1) == 0 )
+  if ( (byte_4D2F2FC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1C7BAE8(&EventRaidMaster_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&TitleInfoEventRaidDayComponent_TypeInfo);
-    byte_4CECFAF = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_1C93AD4(&EventRaidMaster_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&TitleInfoEventRaidDayComponent_TypeInfo);
+    byte_4D2F2FC = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   DataManager__GetMasterData_object_(
     Instance,
-    (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+    (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventRaidMaster___);
   v10 = EventRaidMaster_TypeInfo;
   if ( !EventRaidMaster_TypeInfo->_2.cctor_finished )
   {
@@ -133,7 +133,7 @@ void TitleInfoEventRaidDayComponent__Setup(
       }
     }
 LABEL_40:
-    sub_1C7BD40(Instance, v9);
+    sub_1C93D2C(Instance, v9);
   }
   Instance = (DataManager_o *)this->fields.dayLastSp;
   if ( !Instance )
@@ -165,7 +165,7 @@ LABEL_40:
   }
   NUM_SPNAME_PREFIX = v14->static_fields->NUM_SPNAME_PREFIX;
   v16 = System_Int32__ToString((int32_t)&v20, 0);
-  Instance = (DataManager_o *)System_String__Concat_64176912(NUM_SPNAME_PREFIX, v16, 0);
+  Instance = (DataManager_o *)System_String__Concat_64425724(NUM_SPNAME_PREFIX, v16, 0);
   if ( !dayNumSp )
     goto LABEL_40;
   UISprite__set_spriteName(dayNumSp, (System_String_o *)Instance, 0);

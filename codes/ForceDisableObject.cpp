@@ -14,10 +14,10 @@ void ForceDisableObject__DisableAllObjects(ForceDisableObject_o *this, const Met
   __int64 v7; // x1
 
   v2 = this;
-  if ( (byte_4CF0B0B & 1) == 0 )
+  if ( (byte_4D32EAF & 1) == 0 )
   {
-    this = (ForceDisableObject_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0B0B = 1;
+    this = (ForceDisableObject_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D32EAF = 1;
   }
   disableObjects = v2->fields.disableObjects;
   if ( disableObjects )
@@ -29,7 +29,7 @@ void ForceDisableObject__DisableAllObjects(ForceDisableObject_o *this, const Met
       do
       {
         if ( v5 >= (unsigned int)max_length )
-          sub_1C7BD48(this);
+          sub_1C93D34(this);
         v6 = (UnityEngine_Object_o *)disableObjects->m_Items[v5];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -39,7 +39,7 @@ void ForceDisableObject__DisableAllObjects(ForceDisableObject_o *this, const Met
           if ( !v6
             || (this = (ForceDisableObject_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0)) == 0 )
           {
-            sub_1C7BD40(this, v7);
+            sub_1C93D2C(this, v7);
           }
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
         }

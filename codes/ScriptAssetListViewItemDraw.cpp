@@ -4,7 +4,6 @@ void ScriptAssetListViewItemDraw___ctor(ScriptAssetListViewItemDraw_o *this, con
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ScriptAssetListViewItemDraw__SetItem(
         ScriptAssetListViewItemDraw_o *this,
         ScriptAssetListViewItem_o *item,
@@ -15,16 +14,13 @@ void ScriptAssetListViewItemDraw__SetItem(
   UILabel_o *titleTextLabel; // x22
   System_String_o *TitleText; // x0
   Il2CppObject *Component_object; // x21
-  float v11; // s0 OVERLAPPED
-  float v12; // s3
-  float v13; // s1
-  float v14; // s2
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEBB95 & 1) == 0 )
+  if ( (byte_4D2DF20 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBB95 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2DF20 = 1;
   }
   if ( item && mode )
   {
@@ -44,7 +40,7 @@ void ScriptAssetListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)TitleText,
-                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         TitleText = (System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -55,20 +51,20 @@ void ScriptAssetListViewItemDraw__SetItem(
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
         }
         TitleText = (System_String_o *)this->fields.baseImageTexture;
-        v11 = 1.0;
+        v11.fields.r = 1.0;
         if ( mode == 1 )
-          v11 = 0.5;
+          v11.fields.r = 0.5;
         if ( TitleText )
         {
-          v12 = 1.0;
-          v13 = v11;
-          v14 = v11;
-          UIWidget__set_color((UIWidget_o *)TitleText, *(UnityEngine_Color_o *)&v11, 0);
+          v11.fields.a = 1.0;
+          v11.fields.g = v11.fields.r;
+          v11.fields.b = v11.fields.r;
+          UIWidget__set_color((UIWidget_o *)TitleText, v11, 0);
           return;
         }
       }
     }
 LABEL_20:
-    sub_1C7BD40(TitleText, v7);
+    sub_1C93D2C(TitleText, v7);
   }
 }

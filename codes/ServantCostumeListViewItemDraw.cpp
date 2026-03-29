@@ -17,14 +17,14 @@ void ServantCostumeListViewItemDraw__Awake(ServantCostumeListViewItemDraw_o *thi
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C7BA8C(&this->fields.defaultMaskAtlas, mAtlas);
+  sub_1C93A78(&this->fields.defaultMaskAtlas, mAtlas);
   v5 = this->fields.maskSprite;
   if ( v5 )
     mSpriteName = v5->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C7BA8C(&this->fields.defaultMaskName, mSpriteName);
+  sub_1C93A78(&this->fields.defaultMaskName, mSpriteName);
 }
 
 
@@ -38,10 +38,10 @@ void ServantCostumeListViewItemDraw__SetButtonState(
   UITouchPress_o *touchPress; // x0
   _BOOL4 v8; // w20
 
-  if ( (byte_4CE85C2 & 1) == 0 )
+  if ( (byte_4D2A895 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE85C2 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2A895 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,7 +58,7 @@ void ServantCostumeListViewItemDraw__SetButtonState(
           (touchPress = this->fields.touchPress) == 0)
       || (UITouchPress__set_IsEnabled(touchPress, v8, 0), (touchPress = (UITouchPress_o *)this->fields.baseButton) == 0) )
     {
-      sub_1C7BD40(touchPress, v6);
+      sub_1C93D2C(touchPress, v6);
     }
     ((void (__fastcall *)(UITouchPress_o *, _QWORD, __int64, Il2CppClass **))touchPress->klass[1]._1.nestedTypes)(
       touchPress,
@@ -123,7 +123,7 @@ void ServantCostumeListViewItemDraw__SetItem(
       {
         if ( !servantFaceIcon )
           goto LABEL_13;
-        ServantFaceIconComponent__Set_41658632(
+        ServantFaceIconComponent__Set_41811860(
           servantFaceIcon,
           userServantEntity,
           item->fields.iconLabelInfo1,
@@ -134,11 +134,12 @@ void ServantCostumeListViewItemDraw__SetItem(
       {
         if ( !servantFaceIcon )
           goto LABEL_13;
-        ServantFaceIconComponent__Set_41662528(
+        ServantFaceIconComponent__Set_41815756(
           servantFaceIcon,
           servantData->fields.notHaveServantEntity,
           item->fields.iconLabelInfo1,
           item->fields.iconLabelInfo2,
+          0,
           0,
           0,
           0);
@@ -174,7 +175,7 @@ void ServantCostumeListViewItemDraw__SetItem(
         }
       }
 LABEL_13:
-      sub_1C7BD40(servantFaceIcon, userServantEntity);
+      sub_1C93D2C(servantFaceIcon, userServantEntity);
     }
   }
 }
@@ -195,15 +196,15 @@ void ServantCostumeListViewItemDraw__SetMaskLabelText(
   System_String_o *v12; // x1
   _BOOL4 isLetgo; // w20
 
-  if ( (byte_4CE85C4 & 1) == 0 )
+  if ( (byte_4D2A897 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_9344/*"NOT_SELECT_LET_GO"*/);
-    sub_1C7BAE8(&StringLiteral_11571/*"SELECT_CANNOT"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_8603/*"MATERIAL_FIND_SERVANT"*/);
-    sub_1C7BAE8(&StringLiteral_9342/*"NOT_SELECT_COSTUME"*/);
-    byte_4CE85C4 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_9372/*"NOT_SELECT_LET_GO"*/);
+    sub_1C93AD4(&StringLiteral_11608/*"SELECT_CANNOT"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_8628/*"MATERIAL_FIND_SERVANT"*/);
+    sub_1C93AD4(&StringLiteral_9370/*"NOT_SELECT_COSTUME"*/);
+    byte_4D2A897 = 1;
   }
   if ( !item )
     return;
@@ -227,7 +228,7 @@ LABEL_27:
       return;
     }
 LABEL_28:
-    sub_1C7BD40(maskLabel, item);
+    sub_1C93D2C(maskLabel, item);
   }
   servantData = item->fields.servantData;
   if ( !servantData )
@@ -239,9 +240,9 @@ LABEL_28:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isLetgo )
-      v11 = &StringLiteral_9344/*"NOT_SELECT_LET_GO"*/;
+      v11 = &StringLiteral_9372/*"NOT_SELECT_LET_GO"*/;
     else
-      v11 = &StringLiteral_8603/*"MATERIAL_FIND_SERVANT"*/;
+      v11 = &StringLiteral_8628/*"MATERIAL_FIND_SERVANT"*/;
 LABEL_25:
     maskLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v11, 0);
     if ( v10 )
@@ -257,7 +258,7 @@ LABEL_25:
     v10 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_11571/*"SELECT_CANNOT"*/;
+    v11 = &StringLiteral_11608/*"SELECT_CANNOT"*/;
     goto LABEL_25;
   }
   if ( !item->fields.isReleaseItemHaving )
@@ -265,7 +266,7 @@ LABEL_25:
     v10 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_9342/*"NOT_SELECT_COSTUME"*/;
+    v11 = &StringLiteral_9370/*"NOT_SELECT_COSTUME"*/;
     goto LABEL_25;
   }
 }
@@ -285,12 +286,12 @@ void ServantCostumeListViewItemDraw__SetNonColorStatusLabel(
   struct UILabel_o *v10; // x19
 
   v3 = item;
-  if ( (byte_4CE85C6 & 1) == 0 )
+  if ( (byte_4D2A899 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_9340/*"NOT_RELEASE_COSTUME"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE85C6 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_9368/*"NOT_RELEASE_COSTUME"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2A899 = 1;
   }
   if ( v3 )
   {
@@ -337,7 +338,7 @@ void ServantCostumeListViewItemDraw__SetNonColorStatusLabel(
     v10 = this->fields.nonColorStatusLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    nonColorStatusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9340/*"NOT_RELEASE_COSTUME"*/, 0);
+    nonColorStatusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9368/*"NOT_RELEASE_COSTUME"*/, 0);
     if ( v10 )
     {
       v9 = (System_String_o *)nonColorStatusLabel;
@@ -347,7 +348,7 @@ LABEL_24:
       return;
     }
 LABEL_29:
-    sub_1C7BD40(nonColorStatusLabel, item);
+    sub_1C93D2C(nonColorStatusLabel, item);
   }
 }
 
@@ -361,7 +362,7 @@ void ServantCostumeListViewItemDraw__SetPartyIcon(
 
   partyIcon = this->fields.partyIcon;
   if ( !partyIcon )
-    sub_1C7BD40(0, isShow);
+    sub_1C93D2C(0, isShow);
   if ( isShow )
     FlashingIconComponent__Set(partyIcon, 0);
   else
@@ -378,10 +379,10 @@ void ServantCostumeListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CE85C3 & 1) == 0 )
+  if ( (byte_4D2A896 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE85C3 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2A896 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -389,7 +390,7 @@ void ServantCostumeListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
-      sub_1C7BD40(gameObject, v7);
+      sub_1C93D2C(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
@@ -412,18 +413,18 @@ void ServantCostumeListViewItemDraw__SetStatusLabel(
   UnityEngine_Color_o v14; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-30h] BYREF
 
-  if ( (byte_4CE85C5 & 1) == 0 )
+  if ( (byte_4D2A898 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_428/*"#FFFFFF"*/);
-    sub_1C7BAE8(&StringLiteral_424/*"#FEEF99"*/);
-    sub_1C7BAE8(&StringLiteral_427/*"#FFFF00"*/);
-    sub_1C7BAE8(&StringLiteral_5558/*"EVENT_COMBINE_COSTUME_LF"*/);
-    sub_1C7BAE8(&StringLiteral_3840/*"COSTUME_CAN_RELEASE"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_419/*"#E1A545"*/);
-    sub_1C7BAE8(&StringLiteral_5550/*"EVENT_COMBINE_COSTUME_ITEM"*/);
-    byte_4CE85C5 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_428/*"#FFFFFF"*/);
+    sub_1C93AD4(&StringLiteral_424/*"#FEEF99"*/);
+    sub_1C93AD4(&StringLiteral_427/*"#FFFF00"*/);
+    sub_1C93AD4(&StringLiteral_5575/*"EVENT_COMBINE_COSTUME_LF"*/);
+    sub_1C93AD4(&StringLiteral_3856/*"COSTUME_CAN_RELEASE"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_419/*"#E1A545"*/);
+    sub_1C93AD4(&StringLiteral_5567/*"EVENT_COMBINE_COSTUME_ITEM"*/);
+    byte_4D2A898 = 1;
   }
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
@@ -442,8 +443,8 @@ void ServantCostumeListViewItemDraw__SetStatusLabel(
         v7 = this->fields.statusTxtLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5558/*"EVENT_COMBINE_COSTUME_LF"*/, 0);
-        v9 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5550/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5575/*"EVENT_COMBINE_COSTUME_LF"*/, 0);
+        v9 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5567/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
         statusTxtLabel = (UILabel_o *)System_String__Format(v8, v9, 0);
         if ( !v7 )
           goto LABEL_24;
@@ -467,7 +468,7 @@ LABEL_16:
         v11 = this->fields.statusTxtLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        statusTxtLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3840/*"COSTUME_CAN_RELEASE"*/, 0);
+        statusTxtLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3856/*"COSTUME_CAN_RELEASE"*/, 0);
         if ( !v11 )
           goto LABEL_24;
         UILabel__set_text(v11, (System_String_o *)statusTxtLabel, 0);
@@ -494,6 +495,6 @@ LABEL_19:
       }
     }
 LABEL_24:
-    sub_1C7BD40(statusTxtLabel, item);
+    sub_1C93D2C(statusTxtLabel, item);
   }
 }

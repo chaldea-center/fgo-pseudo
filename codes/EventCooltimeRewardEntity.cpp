@@ -1,13 +1,13 @@
 void EventCooltimeRewardEntity___ctor(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE5B9 & 1) == 0 )
+  if ( (byte_4D3091C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEE5B9 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D3091C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4CEE5B5 & 1) == 0 )
+  if ( (byte_4D30918 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CEE5B5 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4D30918 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            spotId,
            lv,
-           (const MethodInfo_316EA0C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_31A3054 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,17 +51,17 @@ GiftEntity_o *EventCooltimeRewardEntity__GetGiftEntity(EventCooltimeRewardEntity
   Il2CppObject *Master_object; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEE5B8 & 1) == 0 )
+  if ( (byte_4D3091B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    byte_4CEE5B8 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    byte_4D3091B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0);
 }
 
@@ -76,14 +76,14 @@ EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *EventCooltimeRewardEntity__G
   int v6; // w8
   int v7; // w9
 
-  if ( (byte_4CEE5B6 & 1) == 0 )
+  if ( (byte_4D30919 & 1) == 0 )
   {
-    sub_1C7BAE8(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
-    byte_4CEE5B6 = 1;
+    sub_1C93AD4(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
+    byte_4D30919 = 1;
   }
   cooltime = this->fields.cooltime;
   upperLimitGiftNum = this->fields.upperLimitGiftNum;
-  v5 = sub_1C7BD34(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
+  v5 = sub_1C93D20(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( cooltime >= upperLimitGiftNum )
   {
@@ -119,17 +119,17 @@ bool EventCooltimeRewardEntity__IsOpen(EventCooltimeRewardEntity_o *this, const 
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_4CEE5B7 & 1) == 0 )
+  if ( (byte_4D3091A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    byte_4CEE5B7 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    byte_4D3091A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0, 0, v5);
 }
 

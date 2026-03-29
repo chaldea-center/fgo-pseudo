@@ -1,9 +1,9 @@
 void InputUserBirthDayConfirmWindow___ctor(InputUserBirthDayConfirmWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE963C & 1) == 0 )
+  if ( (byte_4D2B9E4 & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CE963C = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2B9E4 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -31,7 +31,7 @@ void InputUserBirthDayConfirmWindow__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C7BA8C(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C93A78(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -44,11 +44,11 @@ void InputUserBirthDayConfirmWindow__Close(InputUserBirthDayConfirmWindow_o *thi
 {
   const MethodInfo *v2; // x2
 
-  InputUserBirthDayConfirmWindow__Close_33633920(this, 0, v2);
+  InputUserBirthDayConfirmWindow__Close_33825988(this, 0, v2);
 }
 
 
-void InputUserBirthDayConfirmWindow__Close_33633920(
+void InputUserBirthDayConfirmWindow__Close_33825988(
         InputUserBirthDayConfirmWindow_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -60,14 +60,14 @@ void InputUserBirthDayConfirmWindow__Close_33633920(
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4CE9639 & 1) == 0 )
+  if ( (byte_4D2B9E1 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_InputUserBirthDayConfirmWindow_EndClose__);
-    byte_4CE9639 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_InputUserBirthDayConfirmWindow_EndClose__);
+    byte_4D2B9E1 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -77,7 +77,7 @@ void InputUserBirthDayConfirmWindow__Close_33633920(
     v6,
     v7);
   this->fields.state = 2;
-  v10 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_InputUserBirthDayConfirmWindow_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -100,7 +100,7 @@ void InputUserBirthDayConfirmWindow__EndClose(InputUserBirthDayConfirmWindow_o *
   InputUserBirthDayConfirmWindow__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc;
@@ -108,7 +108,7 @@ void InputUserBirthDayConfirmWindow__EndClose(InputUserBirthDayConfirmWindow_o *
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C7BA8C(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -127,7 +127,7 @@ void InputUserBirthDayConfirmWindow__Init(InputUserBirthDayConfirmWindow_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -140,15 +140,15 @@ void InputUserBirthDayConfirmWindow__OnClickCancel(InputUserBirthDayConfirmWindo
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CE963A & 1) == 0 )
+  if ( (byte_4D2B9E2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_InputUserBirthDayConfirmWindow_OnClickCancel__);
-    byte_4CE963A = 1;
+    sub_1C93AD4(&Method_InputUserBirthDayConfirmWindow_OnClickCancel__);
+    byte_4D2B9E2 = 1;
   }
   v3 = Method_InputUserBirthDayConfirmWindow_OnClickCancel__;
   if ( (*((_BYTE *)Method_InputUserBirthDayConfirmWindow_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_InputUserBirthDayConfirmWindow_OnClickCancel__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_InputUserBirthDayConfirmWindow_OnClickCancel__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   InputUserBirthDayConfirmWindow__Callback(this, 0, v5);
 }
@@ -185,21 +185,21 @@ void InputUserBirthDayConfirmWindow__OpenConfirmWindow(
   UILabel_o *cancelTxt; // x20
   System_Action_o *v26; // x20
 
-  if ( (byte_4CE9638 & 1) == 0 )
+  if ( (byte_4D2B9E0 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_InputUserBirthDayConfirmWindow_EndOpen__);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4CE9638 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_InputUserBirthDayConfirmWindow_EndOpen__);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4D2B9E0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_14;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.callbackFunc = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v17,
@@ -232,19 +232,19 @@ void InputUserBirthDayConfirmWindow__OpenConfirmWindow(
   confirmTxt = this->fields.confirmTxt;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !confirmTxt
     || (UILabel__set_text(confirmTxt, (System_String_o *)gameObject, 0),
         cancelTxt = this->fields.cancelTxt,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelTxt) )
   {
 LABEL_14:
-    sub_1C7BD40(gameObject, v16);
+    sub_1C93D2C(gameObject, v16);
   }
   UILabel__set_text(cancelTxt, (System_String_o *)gameObject, 0);
   this->fields.state = 1;
-  v26 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)this, Method_InputUserBirthDayConfirmWindow_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v26, 0, 0, 0);
 }
@@ -265,10 +265,10 @@ void InputUserBirthDayConfirmWindow__add_callbackFunc(
   InputUserBirthDayConfirmWindow_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CE9636 & 1) == 0 )
+  if ( (byte_4D2B9DE & 1) == 0 )
   {
-    sub_1C7BAE8(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
-    byte_4CE9636 = 1;
+    sub_1C93AD4(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+    byte_4D2B9DE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -281,13 +281,13 @@ void InputUserBirthDayConfirmWindow__add_callbackFunc(
       if ( (InputUserBirthDayConfirmWindow_CallbackFunc_c *)v8->klass != InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (InputUserBirthDayConfirmWindow_o *)sub_1C7C0DC(v8);
+  v11 = (InputUserBirthDayConfirmWindow_o *)sub_1C940C8(v8);
   InputUserBirthDayConfirmWindow__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -296,12 +296,12 @@ System_String_o *InputUserBirthDayConfirmWindow__get_closeBtnPath(
         InputUserBirthDayConfirmWindow_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CE963B & 1) == 0 )
+  if ( (byte_4D2B9E3 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_3074/*"BaseWindow/CancleBtn"*/);
-    byte_4CE963B = 1;
+    sub_1C93AD4(&StringLiteral_3087/*"BaseWindow/CancleBtn"*/);
+    byte_4D2B9E3 = 1;
   }
-  return (System_String_o *)StringLiteral_3074/*"BaseWindow/CancleBtn"*/;
+  return (System_String_o *)StringLiteral_3087/*"BaseWindow/CancleBtn"*/;
 }
 
 
@@ -319,10 +319,10 @@ void InputUserBirthDayConfirmWindow__remove_callbackFunc(
   InputUserBirthDayConfirmWindow_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CE9637 & 1) == 0 )
+  if ( (byte_4D2B9DF & 1) == 0 )
   {
-    sub_1C7BAE8(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
-    byte_4CE9637 = 1;
+    sub_1C93AD4(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+    byte_4D2B9DF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -335,13 +335,13 @@ void InputUserBirthDayConfirmWindow__remove_callbackFunc(
       if ( (InputUserBirthDayConfirmWindow_CallbackFunc_c *)v8->klass != InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (InputUserBirthDayConfirmWindow_o *)sub_1C7C0DC(v8);
+  v11 = (InputUserBirthDayConfirmWindow_o *)sub_1C940C8(v8);
   InputUserBirthDayConfirmWindow__Init(v11, v12);
 }
 
@@ -365,7 +365,7 @@ void InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -376,12 +376,12 @@ void InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -393,9 +393,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA9E08;
+  this->fields.invoke_impl = (intptr_t)sub_1AC13C4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA9DC0;
+  this->fields.extra_arg = (intptr_t)sub_1AC137C;
 }
 
 
@@ -410,14 +410,14 @@ System_IAsyncResult_o *InputUserBirthDayConfirmWindow_CallbackFunc__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4CE963D & 1) == 0 )
+  if ( (byte_4D2B9E5 & 1) == 0 )
   {
-    sub_1C7BAE8(&bool_TypeInfo);
-    byte_4CE963D = 1;
+    sub_1C93AD4(&bool_TypeInfo);
+    byte_4D2B9E5 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -426,7 +426,7 @@ void InputUserBirthDayConfirmWindow_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

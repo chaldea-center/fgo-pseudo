@@ -8,19 +8,19 @@ void AdManager___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEDC7A & 1) == 0 )
+  if ( (byte_4D2FFD3 & 1) == 0 )
   {
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
-    byte_4CEDC7A = 1;
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
+    byte_4D2FFD3 = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
   AdManager_TypeInfo->static_fields->_adInstanceList = (struct System_Collections_Generic_List_AdImplementation_Base__o *)v1;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)AdManager_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)AdManager_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -34,15 +34,15 @@ void AdManager___ctor(AdManager_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEDC79 & 1) == 0 )
+  if ( (byte_4D2FFD2 & 1) == 0 )
   {
-    sub_1C7BAE8(&bool___TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AdManager___ctor__);
-    byte_4CEDC79 = 1;
+    sub_1C93AD4(&bool___TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AdManager___ctor__);
+    byte_4D2FFD2 = 1;
   }
-  v3 = (struct System_Boolean_array *)sub_1C7BB90(bool___TypeInfo, 3);
+  v3 = (struct System_Boolean_array *)sub_1C93B7C(bool___TypeInfo, 3);
   this->fields._isInitializedAdLibraries = v3;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._isInitializedAdLibraries,
     (int32_t)v3,
     v4,
@@ -53,7 +53,7 @@ void AdManager___ctor(AdManager_o *this, const MethodInfo *method)
     v9);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A8CA90 *)Method_SingletonMonoBehaviour_AdManager___ctor__);
+    (const MethodInfo_3AC57E4 *)Method_SingletonMonoBehaviour_AdManager___ctor__);
 }
 
 
@@ -62,10 +62,10 @@ void AdManager__Initialize(AdManager_o *this, int32_t adLibrary, const MethodInf
 {
   ManagerConfig_c *v5; // x0
 
-  if ( (byte_4CEDC70 & 1) == 0 )
+  if ( (byte_4D2FFC9 & 1) == 0 )
   {
-    sub_1C7BAE8(&ManagerConfig_TypeInfo);
-    byte_4CEDC70 = 1;
+    sub_1C93AD4(&ManagerConfig_TypeInfo);
+    byte_4D2FFC9 = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -111,12 +111,12 @@ void AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo *method)
   struct System_Boolean_array *v18; // x8
 
   v2 = this;
-  if ( (byte_4CEDC71 & 1) == 0 )
+  if ( (byte_4D2FFCA & 1) == 0 )
   {
-    sub_1C7BAE8(&Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    this = (AdManager_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__);
-    byte_4CEDC71 = 1;
+    sub_1C93AD4(&Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    this = (AdManager_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__);
+    byte_4D2FFCA = 1;
   }
   isInitializedAdLibraries = v2->fields._isInitializedAdLibraries;
   if ( !isInitializedAdLibraries )
@@ -132,7 +132,7 @@ void AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo *method)
     v4 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v4->static_fields->_adInstanceList;
-  v6 = (Framework_Core_Ad_AdImplementation_Adjust_o *)sub_1C7BD34(Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
+  v6 = (Framework_Core_Ad_AdImplementation_Adjust_o *)sub_1C93D20(Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
   Framework_Core_Ad_AdImplementation_Adjust___ctor(v6, 0);
   if ( !v6 )
     goto LABEL_18;
@@ -153,22 +153,22 @@ void AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       adInstanceList,
       (Il2CppObject *)this,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     adInstanceList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v16;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
   }
   v18 = v2->fields._isInitializedAdLibraries;
   if ( !v18 )
 LABEL_18:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   if ( !LODWORD(v18->max_length) )
 LABEL_19:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   v18->m_Items[0] = 1;
 }
 
@@ -194,12 +194,12 @@ void AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *method)
   struct System_Boolean_array *v18; // x8
 
   v2 = this;
-  if ( (byte_4CEDC72 & 1) == 0 )
+  if ( (byte_4D2FFCB & 1) == 0 )
   {
-    sub_1C7BAE8(&Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    this = (AdManager_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__);
-    byte_4CEDC72 = 1;
+    sub_1C93AD4(&Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    this = (AdManager_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__);
+    byte_4D2FFCB = 1;
   }
   isInitializedAdLibraries = v2->fields._isInitializedAdLibraries;
   if ( !isInitializedAdLibraries )
@@ -215,7 +215,7 @@ void AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *method)
     v4 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v4->static_fields->_adInstanceList;
-  v6 = (Framework_Core_Ad_AdImplementation_Repro_o *)sub_1C7BD34(Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
+  v6 = (Framework_Core_Ad_AdImplementation_Repro_o *)sub_1C93D20(Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
   Framework_Core_Ad_AdImplementation_Repro___ctor(v6, 0);
   if ( !v6 )
     goto LABEL_18;
@@ -236,22 +236,22 @@ void AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       adInstanceList,
       (Il2CppObject *)this,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     adInstanceList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v16;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
   }
   v18 = v2->fields._isInitializedAdLibraries;
   if ( !v18 )
 LABEL_18:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   if ( LODWORD(v18->max_length) <= 1 )
 LABEL_19:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   v18->m_Items[1] = 1;
 }
 
@@ -271,21 +271,21 @@ void AdManager__SendPushRegistrationId(AdManager_o *this, System_String_o *regId
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v15; // x21
 
-  if ( (byte_4CEDC75 & 1) == 0 )
+  if ( (byte_4D2FFCE & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass12_0__SendPushRegistrationId_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass12_0_TypeInfo);
-    byte_4CEDC75 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass12_0__SendPushRegistrationId_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass12_0_TypeInfo);
+    byte_4D2FFCE = 1;
   }
-  v4 = sub_1C7BD34(AdManager___c__DisplayClass12_0_TypeInfo);
+  v4 = sub_1C93D20(AdManager___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_8;
   *(_QWORD *)(v4 + 16) = regId;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 16), (int32_t)regId, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 16), (int32_t)regId, v7, v8, v9, v10, v11, v12);
   v13 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -293,7 +293,7 @@ void AdManager__SendPushRegistrationId(AdManager_o *this, System_String_o *regId
     v13 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v13->static_fields->_adInstanceList;
-  v15 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v15 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v15,
     (Il2CppObject *)v4,
@@ -301,11 +301,11 @@ void AdManager__SendPushRegistrationId(AdManager_o *this, System_String_o *regId
     0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v15,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -324,21 +324,21 @@ void AdManager__SetFriendCode(AdManager_o *this, System_String_o *friendCode, co
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v15; // x21
 
-  if ( (byte_4CEDC73 & 1) == 0 )
+  if ( (byte_4D2FFCC & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass10_0__SetFriendCode_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass10_0_TypeInfo);
-    byte_4CEDC73 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass10_0__SetFriendCode_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass10_0_TypeInfo);
+    byte_4D2FFCC = 1;
   }
-  v4 = sub_1C7BD34(AdManager___c__DisplayClass10_0_TypeInfo);
+  v4 = sub_1C93D20(AdManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_8;
   *(_QWORD *)(v4 + 16) = friendCode;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v4 + 16), (int32_t)friendCode, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v4 + 16), (int32_t)friendCode, v7, v8, v9, v10, v11, v12);
   v13 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -346,15 +346,15 @@ void AdManager__SetFriendCode(AdManager_o *this, System_String_o *friendCode, co
     v13 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v13->static_fields->_adInstanceList;
-  v15 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v15 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(v15, (Il2CppObject *)v4, Method_AdManager___c__DisplayClass10_0__SetFriendCode_b__0__, 0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v15,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -367,16 +367,16 @@ void AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questId, const Me
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v9; // x21
 
-  if ( (byte_4CEDC74 & 1) == 0 )
+  if ( (byte_4D2FFCD & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass11_0__SetOpenedStoryQuest_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass11_0_TypeInfo);
-    byte_4CEDC74 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass11_0__SetOpenedStoryQuest_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass11_0_TypeInfo);
+    byte_4D2FFCD = 1;
   }
-  v4 = sub_1C7BD34(AdManager___c__DisplayClass11_0_TypeInfo);
+  v4 = sub_1C93D20(AdManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_8;
@@ -388,7 +388,7 @@ void AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questId, const Me
     v7 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v7->static_fields->_adInstanceList;
-  v9 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v9 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v9,
     (Il2CppObject *)v4,
@@ -396,11 +396,11 @@ void AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questId, const Me
     0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v9,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -418,7 +418,7 @@ void AdManager__SetUserId(AdManager_o *this, int64_t userId, const MethodInfo *m
   v11 = userId;
   v4 = System_Int64__ToString((int64_t)&v11, 0);
   this->fields._userIdStr = v4;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields._userIdStr, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields._userIdStr, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -450,16 +450,16 @@ void AdManager__TrackEvent(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v30; // x20
 
-  if ( (byte_4CEDC76 & 1) == 0 )
+  if ( (byte_4D2FFCF & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass13_0_TypeInfo);
-    byte_4CEDC76 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass13_0_TypeInfo);
+    byte_4D2FFCF = 1;
   }
-  v13 = sub_1C7BD34(AdManager___c__DisplayClass13_0_TypeInfo);
+  v13 = sub_1C93D20(AdManager___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_8;
@@ -468,9 +468,9 @@ void AdManager__TrackEvent(
   *(_DWORD *)(v13 + 24) = num;
   *(_DWORD *)(v13 + 28) = num2;
   *(_QWORD *)(v13 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 32), (int32_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v13 + 32), (int32_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 40) = propertyStr;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v13 + 40), (int32_t)propertyStr, v22, v23, v24, v25, v26, v27);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v13 + 40), (int32_t)propertyStr, v22, v23, v24, v25, v26, v27);
   v28 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -478,15 +478,15 @@ void AdManager__TrackEvent(
     v28 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v28->static_fields->_adInstanceList;
-  v30 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v30 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(v30, (Il2CppObject *)v13, Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__, 0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v14, v15);
+    sub_1C93D2C(v14, v15);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v30,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -523,27 +523,27 @@ void AdManager__TrackPurchase(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v34; // x20
 
-  if ( (byte_4CEDC77 & 1) == 0 )
+  if ( (byte_4D2FFD0 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass14_0__TrackPurchase_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass14_0_TypeInfo);
-    byte_4CEDC77 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass14_0__TrackPurchase_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass14_0_TypeInfo);
+    byte_4D2FFD0 = 1;
   }
-  v11 = sub_1C7BD34(AdManager___c__DisplayClass14_0_TypeInfo);
+  v11 = sub_1C93D20(AdManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_8;
   *(_DWORD *)(v11 + 16) = actionId;
   *(double *)(v11 + 24) = price;
   *(_QWORD *)(v11 + 32) = currency;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)currency, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)currency, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 40) = transactionId;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)transactionId, v20, v21, v22, v23, v24, v25);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)transactionId, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v11 + 48) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 48), (int32_t)this, v26, v27, v28, v29, v30, v31);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 48), (int32_t)this, v26, v27, v28, v29, v30, v31);
   v32 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -551,7 +551,7 @@ void AdManager__TrackPurchase(
     v32 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v32->static_fields->_adInstanceList;
-  v34 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v34 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v34,
     (Il2CppObject *)v11,
@@ -559,11 +559,11 @@ void AdManager__TrackPurchase(
     0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v12, v13);
+    sub_1C93D2C(v12, v13);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v34,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -600,27 +600,27 @@ void AdManager__TrackPurchaseExternal(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v34; // x20
 
-  if ( (byte_4CEDC78 & 1) == 0 )
+  if ( (byte_4D2FFD1 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_AdImplementation_Base__TypeInfo);
-    sub_1C7BAE8(&AdManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
-    sub_1C7BAE8(&Method_AdManager___c__DisplayClass15_0__TrackPurchaseExternal_b__0__);
-    sub_1C7BAE8(&AdManager___c__DisplayClass15_0_TypeInfo);
-    byte_4CEDC78 = 1;
+    sub_1C93AD4(&System_Action_AdImplementation_Base__TypeInfo);
+    sub_1C93AD4(&AdManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    sub_1C93AD4(&Method_AdManager___c__DisplayClass15_0__TrackPurchaseExternal_b__0__);
+    sub_1C93AD4(&AdManager___c__DisplayClass15_0_TypeInfo);
+    byte_4D2FFD1 = 1;
   }
-  v11 = sub_1C7BD34(AdManager___c__DisplayClass15_0_TypeInfo);
+  v11 = sub_1C93D20(AdManager___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_8;
   *(_DWORD *)(v11 + 16) = actionId;
   *(double *)(v11 + 24) = price;
   *(_QWORD *)(v11 + 32) = currency;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)currency, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)currency, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 40) = transactionId;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)transactionId, v20, v21, v22, v23, v24, v25);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 40), (int32_t)transactionId, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v11 + 48) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v11 + 48), (int32_t)this, v26, v27, v28, v29, v30, v31);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v11 + 48), (int32_t)this, v26, v27, v28, v29, v30, v31);
   v32 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -628,7 +628,7 @@ void AdManager__TrackPurchaseExternal(
     v32 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v32->static_fields->_adInstanceList;
-  v34 = (System_Action_object__o *)sub_1C7BD34(System_Action_AdImplementation_Base__TypeInfo);
+  v34 = (System_Action_object__o *)sub_1C93D20(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v34,
     (Il2CppObject *)v11,
@@ -636,11 +636,11 @@ void AdManager__TrackPurchaseExternal(
     0);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1C7BD40(v12, v13);
+    sub_1C93D2C(v12, v13);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v34,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -656,7 +656,7 @@ void AdManager___c__DisplayClass10_0___SetFriendCode_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, struct System_String_o *, const MethodInfo *))ad->klass->vtable._7_SetFriendCode.methodPtr)(
     ad,
     this->fields.friendCode,
@@ -676,7 +676,7 @@ void AdManager___c__DisplayClass11_0___SetOpenedStoryQuest_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, const MethodInfo *))ad->klass->vtable._8_SetOpenedStoryQuest.methodPtr)(
     ad,
     (unsigned int)this->fields.questId,
@@ -696,7 +696,7 @@ void AdManager___c__DisplayClass12_0___SendPushRegistrationId_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, struct System_String_o *, const MethodInfo *))ad->klass->vtable._9_SendPushRegistrationId.methodPtr)(
     ad,
     this->fields.regId,
@@ -719,7 +719,7 @@ void AdManager___c__DisplayClass13_0___TrackEvent_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1C7BD40(this, ad);
+    sub_1C93D2C(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, _QWORD, _QWORD, _QWORD, struct System_String_o *, struct System_String_o *, const MethodInfo *))ad->klass->vtable._10_TrackEvent.methodPtr)(
     ad,
     (unsigned int)this->fields.category,
@@ -747,7 +747,7 @@ void AdManager___c__DisplayClass14_0___TrackPurchase_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1C7BD40(this, ad);
+    sub_1C93D2C(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, struct System_String_o *, struct System_String_o *, struct System_String_o *, const MethodInfo *, double))ad->klass->vtable._11_TrackPurchase.methodPtr)(
     ad,
     (unsigned int)this->fields.actionId,
@@ -774,7 +774,7 @@ void AdManager___c__DisplayClass15_0___TrackPurchaseExternal_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1C7BD40(this, ad);
+    sub_1C93D2C(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, struct System_String_o *, struct System_String_o *, struct System_String_o *, const MethodInfo *, double))ad->klass->vtable._12_TrackPurchaseExternal.methodPtr)(
     ad,
     (unsigned int)this->fields.actionId,

@@ -23,7 +23,7 @@ void ServantStatusBattleListViewItemDraw__SetInput(
     IsSelect = ListViewItem__get_IsSelect((ListViewItem_o *)item, 0);
     baseButton = this->fields.baseButton;
     if ( !baseButton )
-      sub_1C7BD40(IsSelect, v8);
+      sub_1C93D2C(IsSelect, v8);
     if ( IsSelect & isEnabled & (unsigned int)v5 )
       UICommonButton__SetColliderEnable(baseButton, 0, 1, 0);
     else
@@ -71,19 +71,19 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   int32_t DispLimitCount; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEA7E4 & 1) == 0 )
+  if ( (byte_4D2C20E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_8298/*"LIMIT_COUNT_SELECT_SEALED"*/);
-    sub_1C7BAE8(&StringLiteral_11990/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_1C7BAE8(&StringLiteral_17535/*"btn_bg_20"*/);
-    sub_1C7BAE8(&StringLiteral_11991/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    sub_1C7BAE8(&StringLiteral_17536/*"btn_bg_21"*/);
-    byte_4CEA7E4 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_8323/*"LIMIT_COUNT_SELECT_SEALED"*/);
+    sub_1C93AD4(&StringLiteral_12027/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    sub_1C93AD4(&StringLiteral_17578/*"btn_bg_20"*/);
+    sub_1C93AD4(&StringLiteral_12028/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    sub_1C93AD4(&StringLiteral_17579/*"btn_bg_21"*/);
+    byte_4D2C20E = 1;
   }
   if ( !item || !mode )
     return;
@@ -99,10 +99,10 @@ void ServantStatusBattleListViewItemDraw__SetItem(
     if ( (v13 & 1) != 0 )
     {
 LABEL_7:
-      if ( !byte_4CE8D0C )
+      if ( !byte_4D2AFE0 )
       {
-        sub_1C7BAE8(&LocalizationManager_TypeInfo);
-        byte_4CE8D0C = 1;
+        sub_1C93AD4(&LocalizationManager_TypeInfo);
+        byte_4D2AFE0 = 1;
       }
       v14 = LocalizationManager_TypeInfo;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -124,10 +124,10 @@ LABEL_7:
     if ( (v13 & 1) != 0 )
       goto LABEL_7;
   }
-  if ( !byte_4CE8D0B )
+  if ( !byte_4D2AFDF )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    byte_4CE8D0B = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    byte_4D2AFDF = 1;
   }
   v20 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -162,7 +162,7 @@ LABEL_18:
     {
       v23 = this->fields.nameRangeLabel;
       v24 = System_Int32__ToString((int32_t)&DispLimitCount, 0);
-      v25 = System_String__Concat_64176912((System_String_o *)StringLiteral_11990/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v24, 0);
+      v25 = System_String__Concat_64425724((System_String_o *)StringLiteral_12027/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v24, 0);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       v26 = LocalizationManager__Get(v25, 0);
@@ -172,7 +172,7 @@ LABEL_18:
       v23 = this->fields.nameRangeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v26 = (System_String_o *)StringLiteral_11991/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
+      v26 = (System_String_o *)StringLiteral_12028/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
     }
     nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get(v26, 0);
     if ( !v23 )
@@ -184,9 +184,9 @@ LABEL_18:
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseSpite;
   if ( !nameRangeLabel )
     goto LABEL_67;
-  v28 = &StringLiteral_17536/*"btn_bg_21"*/;
+  v28 = &StringLiteral_17579/*"btn_bg_21"*/;
   if ( !v12 )
-    v28 = &StringLiteral_17535/*"btn_bg_20"*/;
+    v28 = &StringLiteral_17578/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)nameRangeLabel, (System_String_o *)*v28, 0);
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseButton;
   if ( !nameRangeLabel )
@@ -203,12 +203,12 @@ LABEL_18:
     if ( !isCanSelect )
       goto LABEL_55;
   }
-  nameRangeLabel = (UIRangeLabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  nameRangeLabel = (UIRangeLabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !nameRangeLabel )
     goto LABEL_67;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)nameRangeLabel,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   nameRangeLabel = (UIRangeLabel_o *)ServantStatusBattleListViewItem__get_SvtId(item, v30);
   if ( !MasterData_object )
     goto LABEL_67;
@@ -262,7 +262,7 @@ LABEL_55:
     v33 = this->fields.limitSealLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8298/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
+    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8323/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
     if ( v33 )
     {
       v34 = (System_String_o *)nameRangeLabel;
@@ -272,6 +272,6 @@ LABEL_65:
       return;
     }
 LABEL_67:
-    sub_1C7BD40(nameRangeLabel, v11);
+    sub_1C93D2C(nameRangeLabel, v11);
   }
 }

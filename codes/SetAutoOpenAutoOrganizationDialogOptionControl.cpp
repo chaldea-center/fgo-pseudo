@@ -24,25 +24,25 @@ void SetAutoOpenAutoOrganizationDialogOptionControl__Init(
   UILabel_o *infoLabel; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CE958F & 1) == 0 )
+  if ( (byte_4D2B860 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&OptionManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_9683/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG"*/);
-    sub_1C7BAE8(&StringLiteral_9684/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG_INFO"*/);
-    byte_4CE958F = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&OptionManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_9713/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG"*/);
+    sub_1C93AD4(&StringLiteral_9714/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG_INFO"*/);
+    byte_4D2B860 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9683/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9713/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG"*/, 0);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v4, 0),
         infoLabel = this->fields.infoLabel,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9684/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG_INFO"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9714/*"OPTION_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG_INFO"*/, 0),
         !infoLabel) )
   {
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   }
   UILabel__set_text(infoLabel, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -62,10 +62,10 @@ void SetAutoOpenAutoOrganizationDialogOptionControl__OnClickButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CE9592 & 1) == 0 )
+  if ( (byte_4D2B863 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__);
-    byte_4CE9592 = 1;
+    sub_1C93AD4(&Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__);
+    byte_4D2B863 = 1;
   }
   klass = this->klass;
   this->fields.flag ^= 1u;
@@ -75,8 +75,8 @@ void SetAutoOpenAutoOrganizationDialogOptionControl__OnClickButton(
   v4 = Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__;
   flag = this->fields.flag;
   if ( (*((_BYTE *)Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C7BB00(Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C93AEC(Method_SetAutoOpenAutoOrganizationDialogOptionControl_OnClickButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, !flag, 0, 0);
   SetAutoOpenAutoOrganizationDialogOptionControl__RefreshDisplay(this, v7);
 }
@@ -88,10 +88,10 @@ void SetAutoOpenAutoOrganizationDialogOptionControl__Reflection(
 {
   _BOOL4 flag; // w19
 
-  if ( (byte_4CE9590 & 1) == 0 )
+  if ( (byte_4D2B861 & 1) == 0 )
   {
-    sub_1C7BAE8(&OptionManager_TypeInfo);
-    byte_4CE9590 = 1;
+    sub_1C93AD4(&OptionManager_TypeInfo);
+    byte_4D2B861 = 1;
   }
   flag = this->fields.flag;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -107,18 +107,18 @@ void SetAutoOpenAutoOrganizationDialogOptionControl__RefreshDisplay(
   UIButton_o *switchButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4CE9591 & 1) == 0 )
+  if ( (byte_4D2B862 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_17595/*"btn_on"*/);
-    sub_1C7BAE8(&StringLiteral_17594/*"btn_off"*/);
-    byte_4CE9591 = 1;
+    sub_1C93AD4(&StringLiteral_17638/*"btn_on"*/);
+    sub_1C93AD4(&StringLiteral_17637/*"btn_off"*/);
+    byte_4D2B862 = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   if ( this->fields.flag )
-    v4 = &StringLiteral_17595/*"btn_on"*/;
+    v4 = &StringLiteral_17638/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17594/*"btn_off"*/;
+    v4 = &StringLiteral_17637/*"btn_off"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v4, 0);
 }

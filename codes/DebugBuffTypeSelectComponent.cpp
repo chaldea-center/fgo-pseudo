@@ -1,43 +1,41 @@
 void DebugBuffTypeSelectComponent___ctor(DebugBuffTypeSelectComponent_o *this, const MethodInfo *method)
 {
   Il2CppType *v3; // x20
-  System_RuntimeTypeHandle_o v4; // x0
   System_Type_o *TypeFromHandle; // x20
   System_Array_o *Values; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
-  struct System_Collections_Generic_List_BuffList_TYPE__o *v8; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
+  struct System_Collections_Generic_List_BuffList_TYPE__o *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CEFBD8 & 1) == 0 )
+  if ( (byte_4D31F5D & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Enum_TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Cast_BuffList_TYPE___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToList_BuffList_TYPE___);
-    sub_1C7BAE8(&BuffList_TYPE_var);
-    sub_1C7BAE8(&System_Type_TypeInfo);
-    byte_4CEFBD8 = 1;
+    sub_1C93AD4(&System_Enum_TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Cast_BuffList_TYPE___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToList_BuffList_TYPE___);
+    sub_1C93AD4(&BuffList_TYPE_var);
+    sub_1C93AD4(&System_Type_TypeInfo);
+    byte_4D31F5D = 1;
   }
   v3 = BuffList_TYPE_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v4.fields.value = (intptr_t)v3;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
+  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v3, 0);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
+  v6 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
                                                               (System_Collections_IEnumerable_o *)Values,
-                                                              (const MethodInfo_317EDB4 *)Method_System_Linq_Enumerable_Cast_BuffList_TYPE___);
-  v8 = (struct System_Collections_Generic_List_BuffList_TYPE__o *)System_Linq_Enumerable__ToList_Int32Enum_(
-                                                                    v7,
-                                                                    (const MethodInfo_31B3C90 *)Method_System_Linq_Enumerable_ToList_BuffList_TYPE___);
-  this->fields.buffList = v8;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.buffList, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+                                                              (const MethodInfo_31B32C4 *)Method_System_Linq_Enumerable_Cast_BuffList_TYPE___);
+  v7 = (struct System_Collections_Generic_List_BuffList_TYPE__o *)System_Linq_Enumerable__ToList_Int32Enum_(
+                                                                    v6,
+                                                                    (const MethodInfo_31E8C4C *)Method_System_Linq_Enumerable_ToList_BuffList_TYPE___);
+  this->fields.buffList = v7;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.buffList, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -49,7 +47,7 @@ void DebugBuffTypeSelectComponent__Close(DebugBuffTypeSelectComponent_o *this, c
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -70,16 +68,16 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
   const MethodInfo *v13; // x3
 
   v2 = this;
-  if ( (byte_4CEFBD7 & 1) == 0 )
+  if ( (byte_4D31F5C & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_BuffList_TYPE__TypeInfo);
-    sub_1C7BAE8(&Method_DebugBuffTypeSelectComponent_TapBuffTypeSelectCallback__);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_DebugBuffTypeSelectCellComponent___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BuffList_TYPE__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BuffList_TYPE__get_Item__);
-    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (DebugBuffTypeSelectComponent_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFBD7 = 1;
+    sub_1C93AD4(&System_Action_BuffList_TYPE__TypeInfo);
+    sub_1C93AD4(&Method_DebugBuffTypeSelectComponent_TapBuffTypeSelectCallback__);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_DebugBuffTypeSelectCellComponent___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BuffList_TYPE__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BuffList_TYPE__get_Item__);
+    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (DebugBuffTypeSelectComponent_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D31F5C = 1;
   }
   buffList = v2->fields.buffList;
   if ( !buffList )
@@ -92,7 +90,7 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (DebugBuffTypeSelectComponent_o *)UnityEngine_Object__Instantiate_object_(
                                                BaseCell,
-                                               (const MethodInfo_31FBEB0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( this )
     {
       v6 = this;
@@ -111,10 +109,10 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
                                                      (UnityEngine_GameObject_o *)v6,
                                                      0);
           v8 = this;
-          if ( !byte_4CE7E59 )
+          if ( !byte_4D2A139 )
           {
-            this = (DebugBuffTypeSelectComponent_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-            byte_4CE7E59 = 1;
+            this = (DebugBuffTypeSelectComponent_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+            byte_4D2A139 = 1;
           }
           if ( v8 )
           {
@@ -126,10 +124,10 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
                                                        (UnityEngine_GameObject_o *)v6,
                                                        0);
             v9 = this;
-            if ( !byte_4CE7E5E )
+            if ( !byte_4D2A13E )
             {
-              this = (DebugBuffTypeSelectComponent_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-              byte_4CE7E5E = 1;
+              this = (DebugBuffTypeSelectComponent_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+              byte_4D2A13E = 1;
             }
             if ( v9 )
             {
@@ -139,15 +137,15 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
                 0);
               this = (DebugBuffTypeSelectComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          (UnityEngine_GameObject_o *)v6,
-                                                         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffTypeSelectCellComponent___);
+                                                         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffTypeSelectCellComponent___);
               if ( v2->fields.buffList )
               {
                 v10 = (DebugBuffTypeSelectCellComponent_o *)this;
                 Item = System_Collections_Generic_List_Int32Enum___get_Item(
                          (System_Collections_Generic_List_T__o *)v2->fields.buffList,
                          v4,
-                         (const MethodInfo_3824314 *)Method_System_Collections_Generic_List_BuffList_TYPE__get_Item__);
-                v12 = (System_Action_T__o *)sub_1C7BD34(System_Action_BuffList_TYPE__TypeInfo);
+                         (const MethodInfo_385EEB4 *)Method_System_Collections_Generic_List_BuffList_TYPE__get_Item__);
+                v12 = (System_Action_T__o *)sub_1C93D20(System_Action_BuffList_TYPE__TypeInfo);
                 System_Action_Int32Enum____ctor(
                   v12,
                   (Il2CppObject *)v2,
@@ -172,7 +170,7 @@ void DebugBuffTypeSelectComponent__CreateListCoroutine(DebugBuffTypeSelectCompon
   this = (DebugBuffTypeSelectComponent_o *)v2->fields.grid;
   if ( !this )
 LABEL_23:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   ((void (__fastcall *)(DebugBuffTypeSelectComponent_o *, Il2CppClass *))this->klass[1]._1.element_class)(
     this,
     this->klass[1]._1.castClass);
@@ -196,10 +194,10 @@ void DebugBuffTypeSelectComponent__Open(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject || (UnityEngine_GameObject__SetActive(gameObject, 1, 0), (gameObject = this->fields.BaseCell) == 0) )
-    sub_1C7BD40(gameObject, v6);
+    sub_1C93D2C(gameObject, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.callback = callback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callback, (int32_t)callback, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callback, (int32_t)callback, v7, v8, v9, v10, v11, v12);
   if ( !this->fields.isListCreate )
   {
     this->fields.isListCreate = 1;
@@ -225,6 +223,6 @@ void DebugBuffTypeSelectComponent__TapBuffTypeSelectCallback(
       callback->fields.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }

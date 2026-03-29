@@ -3,12 +3,12 @@ void FriendAcceptRequest__beginRequest(FriendAcceptRequest_o *this, int64_t targ
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4CF018F & 1) == 0 )
+  if ( (byte_4D3251F & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_24237/*"targetUserId"*/);
-    byte_4CF018F = 1;
+    sub_1C93AD4(&StringLiteral_24304/*"targetUserId"*/);
+    byte_4D3251F = 1;
   }
-  RequestBase__addField_44745468((RequestBase_o *)this, (System_String_o *)StringLiteral_24237/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_44911784((RequestBase_o *)this, (System_String_o *)StringLiteral_24304/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -17,16 +17,16 @@ System_String_o *FriendAcceptRequest__getURL(FriendAcceptRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF018E & 1) == 0 )
+  if ( (byte_4D3251E & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19826/*"friend/accept"*/);
-    byte_4CF018E = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19880/*"friend/accept"*/);
+    byte_4D3251E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19826/*"friend/accept"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19880/*"friend/accept"*/, 0);
 }
 
 
@@ -43,12 +43,12 @@ void FriendAcceptRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CF0190 & 1) == 0 )
+  if ( (byte_4D32520 & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF0190 = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D32520 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -72,7 +72,7 @@ void FriendAcceptRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22419/*"ng"*/,
+        StringLiteral_22483/*"ng"*/,
         v11->fields.method);
   }
 }

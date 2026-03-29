@@ -8,15 +8,15 @@ void NpMaterialSvtInfo___ctor(NpMaterialSvtInfo_o *this, const MethodInfo *metho
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CF2730 & 1) == 0 )
+  if ( (byte_4D34B1F & 1) == 0 )
   {
-    sub_1C7BAE8(&IconLabelInfo_TypeInfo);
-    byte_4CF2730 = 1;
+    sub_1C93AD4(&IconLabelInfo_TypeInfo);
+    byte_4D34B1F = 1;
   }
-  v3 = (IconLabelInfo_o *)sub_1C7BD34(IconLabelInfo_TypeInfo);
+  v3 = (IconLabelInfo_o *)sub_1C93D20(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v3, 0);
   this->fields.iconLabelInfo = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.iconLabelInfo, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.iconLabelInfo, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -86,15 +86,15 @@ void NpMaterialSvtInfo__setMaterialSvtInfo(
   UnityEngine_GameObject_o *v29; // x21
   UISprite_o *v30; // x21
 
-  if ( (byte_4CF272F & 1) == 0 )
+  if ( (byte_4D34B1E & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C7BAE8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_23336/*"ribbon_noblephantasmup_01"*/);
-    byte_4CF272F = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C93AD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_23401/*"ribbon_noblephantasmup_01"*/);
+    byte_4D34B1E = 1;
   }
   npLvInfo = this->fields.npLvInfo;
   this->fields.index = idx;
@@ -102,21 +102,21 @@ void NpMaterialSvtInfo__setMaterialSvtInfo(
   if ( !npLvInfo )
     goto LABEL_21;
   UnityEngine_GameObject__SetActive(npLvInfo, 0, 0);
-  npLvInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  npLvInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !npLvInfo )
     goto LABEL_21;
   npLvInfo = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)npLvInfo,
-                                           (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                           (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !npLvInfo )
     goto LABEL_21;
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)npLvInfo,
              selectUsrSvtId,
-             (const MethodInfo_3430858 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+             (const MethodInfo_3465A24 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   this->fields.selectUsrSvtEnt = (struct UserServantEntity_o *)Entity;
   p_selectUsrSvtEnt = &this->fields.selectUsrSvtEnt;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.selectUsrSvtEnt,
     (int32_t)Entity,
     v13,
@@ -133,11 +133,11 @@ void NpMaterialSvtInfo__setMaterialSvtInfo(
   npLvInfo = (UnityEngine_GameObject_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)npLvInfo, 0);
   if ( !iconLabelInfo )
     goto LABEL_21;
-  IconLabelInfo__Set_41483756(iconLabelInfo, 2, m_CachedPtr, (int32_t)npLvInfo, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_41636824(iconLabelInfo, 2, m_CachedPtr, (int32_t)npLvInfo, 0, 0, 0, 0, 0, 0);
   npLvInfo = (UnityEngine_GameObject_o *)this->fields.svtFaseIconComp;
   if ( !npLvInfo )
     goto LABEL_21;
-  ServantFaceIconComponent__Set_41658420(
+  ServantFaceIconComponent__Set_41811648(
     (ServantFaceIconComponent_o *)npLvInfo,
     selectUsrSvtId,
     this->fields.iconLabelInfo,
@@ -168,7 +168,7 @@ void NpMaterialSvtInfo__setMaterialSvtInfo(
               v30 = this->fields.materialTdSprite;
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetEventSprite(v30, (System_String_o *)StringLiteral_23336/*"ribbon_noblephantasmup_01"*/, 0);
+              AtlasManager__SetEventSprite(v30, (System_String_o *)StringLiteral_23401/*"ribbon_noblephantasmup_01"*/, 0);
             }
             goto LABEL_20;
           }
@@ -176,11 +176,11 @@ void NpMaterialSvtInfo__setMaterialSvtInfo(
       }
     }
 LABEL_21:
-    sub_1C7BD40(npLvInfo, *(_QWORD *)&idx);
+    sub_1C93D2C(npLvInfo, *(_QWORD *)&idx);
   }
 LABEL_20:
   this->fields.callbackFunc = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v23,
@@ -211,7 +211,7 @@ void NpMaterialSvtInfo__setNpLvInfo(NpMaterialSvtInfo_o *this, const MethodInfo 
         !tdInfo) )
   {
 LABEL_9:
-    sub_1C7BD40(selectUsrSvtEnt, method);
+    sub_1C93D2C(selectUsrSvtEnt, method);
   }
   selectUsrSvtEnt = (UserServantEntity_o *)this->fields.iconLabel;
   if ( tdInfo->fields.id < 1 )
@@ -226,7 +226,7 @@ LABEL_9:
     if ( !selectUsrSvtEnt )
       goto LABEL_9;
   }
-  UIIconLabel__Set_41680724((UIIconLabel_o *)selectUsrSvtEnt, 33, lv, tdInfo->fields.maxLv, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_41834012((UIIconLabel_o *)selectUsrSvtEnt, 33, lv, tdInfo->fields.maxLv, 0, 0, 0, 0, 0, 0, 0);
   selectUsrSvtEnt = (UserServantEntity_o *)this->fields.npLvInfo;
   if ( !selectUsrSvtEnt )
     goto LABEL_9;
@@ -253,7 +253,7 @@ void NpMaterialSvtInfo_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -264,12 +264,12 @@ void NpMaterialSvtInfo_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -281,9 +281,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AB658C;
+  this->fields.invoke_impl = (intptr_t)sub_1ACD954;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AB6534;
+  this->fields.extra_arg = (intptr_t)sub_1ACD8FC;
 }
 
 
@@ -301,16 +301,16 @@ System_IAsyncResult_o *NpMaterialSvtInfo_ClickDelegate__BeginInvoke(
 
   v11 = usrSvtId;
   v12 = type;
-  if ( (byte_4CF2731 & 1) == 0 )
+  if ( (byte_4D34B20 & 1) == 0 )
   {
-    sub_1C7BAE8(&long_TypeInfo);
-    sub_1C7BAE8(&CombineMenuControl_TargetType_TypeInfo);
-    byte_4CF2731 = 1;
+    sub_1C93AD4(&long_TypeInfo);
+    sub_1C93AD4(&CombineMenuControl_TargetType_TypeInfo);
+    byte_4D34B20 = 1;
   }
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(CombineMenuControl_TargetType_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(long_TypeInfo, &v11);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v10, callback, object);
+  return sub_1C93A88(this, v10, callback, object);
 }
 
 
@@ -319,7 +319,7 @@ void NpMaterialSvtInfo_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

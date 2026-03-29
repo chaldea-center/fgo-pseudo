@@ -15,16 +15,16 @@ void BgmPlayArgs___ctor(
   float value; // s0
   BgmManager_c *v18; // x0
 
-  if ( (byte_4CEDCE6 & 1) == 0 )
+  if ( (byte_4D3003F & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1C7BAE8(&Method_System_Nullable_float__get_HasValue__);
-    byte_4CEDCE6 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_1C93AD4(&Method_System_Nullable_float__get_HasValue__);
+    byte_4D3003F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
   if ( volume.fields.hasValue )
   {
     value = volume.fields.value;
@@ -61,18 +61,18 @@ void BgmPlayArgs__Update(
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4CEDCE7 & 1) == 0 )
+  if ( (byte_4D30040 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1C7BAE8(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1C7BAE8(&Method_System_Nullable_long__get_HasValue__);
-    this = (BgmPlayArgs_o *)sub_1C7BAE8(&Method_System_Nullable_float__get_HasValue__);
-    byte_4CEDCE7 = 1;
+    sub_1C93AD4(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_1C93AD4(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_1C93AD4(&Method_System_Nullable_long__get_HasValue__);
+    this = (BgmPlayArgs_o *)sub_1C93AD4(&Method_System_Nullable_float__get_HasValue__);
+    byte_4D30040 = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C7BD40)(this, volume);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C93D2C)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -124,7 +124,7 @@ void BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *value, const
   System_String_o *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 

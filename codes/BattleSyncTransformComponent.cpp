@@ -8,15 +8,15 @@ void BattleSyncTransformComponent___ctor(BattleSyncTransformComponent_o *this, c
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CF1E75 & 1) == 0 )
+  if ( (byte_4D3425D & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleSyncTransformComponent_SyncData_TypeInfo);
-    byte_4CF1E75 = 1;
+    sub_1C93AD4(&BattleSyncTransformComponent_SyncData_TypeInfo);
+    byte_4D3425D = 1;
   }
-  v3 = (Il2CppObject *)sub_1C7BD34(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C93D20(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -45,10 +45,10 @@ void BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.targetObj, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.targetObj, 0, v3, v4, v5, v6, v7, v8);
   v15 = (float *)*(p_targetObj - 1);
   if ( !v15 )
-    sub_1C7BD40(v13, v14);
+    sub_1C93D2C(v13, v14);
   v15[5] = x;
   v15[6] = y;
   v15[7] = z;
@@ -85,7 +85,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget(
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSetting,
@@ -95,15 +95,15 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget(
     v6,
     v7);
   if ( !syncSetting )
-    sub_1C7BD40(v10, v11);
+    sub_1C93D2C(v10, v11);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)syncData, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.syncData, (int32_t)syncData, v12, v13, v14, v15, v16, v17);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48217636(
+BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48419352(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -121,7 +121,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48217636
   System_String_o *v15; // x7
 
   this->fields.targetObj = target;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSettingData,
@@ -131,7 +131,7 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_48217636
     v6,
     v7);
   this->fields.syncData = syncSettingData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.syncData,
     (int32_t)syncSettingData,
     v10,
@@ -155,18 +155,19 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
   const MethodInfo *v9; // x1
   UnityEngine_Transform_o *v10; // x21
   UnityEngine_Transform_o *v11; // x21
-  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:kr30_12.12
+  UnityEngine_Vector3_o lossyScale; // 0:kr44_12.12
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF1E74 & 1) == 0 )
+  if ( (byte_4D3425C & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1E74 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3425C = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -186,10 +187,10 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
         position = UnityEngine_Transform__get_position(transform, 0);
         if ( v7 )
         {
-          v13.fields.z = position.fields.z + syncData->fields.positionDiff.fields.z;
-          v13.fields.y = position.fields.y + syncData->fields.positionDiff.fields.y;
-          v13.fields.x = position.fields.x + syncData->fields.positionDiff.fields.x;
-          UnityEngine_Transform__set_position(v7, v13, 0);
+          v15.fields.z = position.fields.z + syncData->fields.positionDiff.fields.z;
+          v15.fields.y = position.fields.y + syncData->fields.positionDiff.fields.y;
+          v15.fields.x = position.fields.x + syncData->fields.positionDiff.fields.x;
+          UnityEngine_Transform__set_position(v7, v15, 0);
           syncData = this->fields.syncData;
           if ( syncData )
           {
@@ -211,10 +212,10 @@ LABEL_26:
                 localScale = UnityEngine_Transform__get_localScale(transform, 0);
                 if ( v10 )
                 {
-                  v15.fields.z = localScale.fields.z + syncData->fields.scaleDiff.fields.z;
-                  v15.fields.y = localScale.fields.y + syncData->fields.scaleDiff.fields.y;
-                  v15.fields.x = localScale.fields.x + syncData->fields.scaleDiff.fields.x;
-                  UnityEngine_Transform__set_localScale(v10, v15, 0);
+                  v16.fields.z = localScale.fields.z + syncData->fields.scaleDiff.fields.z;
+                  v16.fields.y = localScale.fields.y + syncData->fields.scaleDiff.fields.y;
+                  v16.fields.x = localScale.fields.x + syncData->fields.scaleDiff.fields.x;
+                  UnityEngine_Transform__set_localScale(v10, v16, 0);
                   syncData = this->fields.syncData;
                   if ( syncData )
                   {
@@ -226,10 +227,10 @@ LABEL_19:
                     if ( transform )
                     {
                       lossyScale = UnityEngine_Transform__get_lossyScale(transform, 0);
-                      lossyScale.fields.x = lossyScale.fields.x + syncData->fields.scaleDiff.fields.x;
-                      lossyScale.fields.y = lossyScale.fields.y + syncData->fields.scaleDiff.fields.y;
-                      lossyScale.fields.z = lossyScale.fields.z + syncData->fields.scaleDiff.fields.z;
-                      TransformHelper__SetLossyScale(v11, lossyScale, 0);
+                      v17.fields.x = lossyScale.fields.x + syncData->fields.scaleDiff.fields.x;
+                      v17.fields.y = lossyScale.fields.y + syncData->fields.scaleDiff.fields.y;
+                      v17.fields.z = lossyScale.fields.z + syncData->fields.scaleDiff.fields.z;
+                      TransformHelper__SetLossyScale(v11, v17, 0);
                       return;
                     }
                   }
@@ -240,7 +241,7 @@ LABEL_19:
         }
       }
     }
-    sub_1C7BD40(transform, v5);
+    sub_1C93D2C(transform, v5);
   }
 }
 
@@ -257,7 +258,7 @@ void BattleSyncTransformComponent__UpdateTarget(
   System_String_o *v7; // x7
 
   this->fields.targetObj = target;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)method,
@@ -275,7 +276,7 @@ bool BattleSyncTransformComponent__get_IsNotExecSync(BattleSyncTransformComponen
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   return syncData->fields.syncType == 0;
 }
 
@@ -293,17 +294,11 @@ UnityEngine_Vector3_o BattleSyncTransformComponent_SyncData__GetFixPosition(
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
 {
-  float v3; // s0
-  float v4; // s1
-  float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v3 = position.fields.x + this->fields.positionDiff.fields.x;
-  v4 = position.fields.y + this->fields.positionDiff.fields.y;
-  v5 = position.fields.z + this->fields.positionDiff.fields.z;
-  result.fields.z = v5;
-  result.fields.y = v4;
-  result.fields.x = v3;
+  result.fields.x = position.fields.x + this->fields.positionDiff.fields.x;
+  result.fields.y = position.fields.y + this->fields.positionDiff.fields.y;
+  result.fields.z = position.fields.z + this->fields.positionDiff.fields.z;
   return result;
 }
 
@@ -313,18 +308,20 @@ UnityEngine_Quaternion_o BattleSyncTransformComponent_SyncData__GetFixRotation(
         UnityEngine_Quaternion_o rotation,
         const MethodInfo *method)
 {
-  UnityEngine_Vector3_o v4; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v4; // 0:kr00_12.12
+  UnityEngine_Vector3_o Positive; // 0:kr14_12.12
+  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = UnityEngine_Quaternion__Internal_ToEulerRad(rotation, 0);
-  v4.fields.x = v4.fields.x * 57.296;
-  v4.fields.y = v4.fields.y * 57.296;
-  v4.fields.z = v4.fields.z * 57.296;
-  Positive = UnityEngine_Quaternion__Internal_MakePositive(v4, 0);
-  Positive.fields.x = (float)(Positive.fields.x + this->fields.rotationDiff.fields.x) * 0.017453;
-  Positive.fields.y = (float)(Positive.fields.y + this->fields.rotationDiff.fields.y) * 0.017453;
-  Positive.fields.z = (float)(Positive.fields.z + this->fields.rotationDiff.fields.z) * 0.017453;
-  return UnityEngine_Quaternion__Internal_FromEulerRad(Positive, 0);
+  v6.fields.x = v4.fields.x * 57.296;
+  v6.fields.y = v4.fields.y * 57.296;
+  v6.fields.z = v4.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v6, 0);
+  v7.fields.x = (float)(Positive.fields.x + this->fields.rotationDiff.fields.x) * 0.017453;
+  v7.fields.y = (float)(Positive.fields.y + this->fields.rotationDiff.fields.y) * 0.017453;
+  v7.fields.z = (float)(Positive.fields.z + this->fields.rotationDiff.fields.z) * 0.017453;
+  return UnityEngine_Quaternion__Internal_FromEulerRad(v7, 0);
 }
 
 
@@ -333,17 +330,11 @@ UnityEngine_Vector3_o BattleSyncTransformComponent_SyncData__GetFixScale(
         UnityEngine_Vector3_o scale,
         const MethodInfo *method)
 {
-  float v3; // s0
-  float v4; // s1
-  float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v3 = scale.fields.x + this->fields.scaleDiff.fields.x;
-  v4 = scale.fields.y + this->fields.scaleDiff.fields.y;
-  v5 = scale.fields.z + this->fields.scaleDiff.fields.z;
-  result.fields.z = v5;
-  result.fields.y = v4;
-  result.fields.x = v3;
+  result.fields.x = scale.fields.x + this->fields.scaleDiff.fields.x;
+  result.fields.y = scale.fields.y + this->fields.scaleDiff.fields.y;
+  result.fields.z = scale.fields.z + this->fields.scaleDiff.fields.z;
   return result;
 }
 

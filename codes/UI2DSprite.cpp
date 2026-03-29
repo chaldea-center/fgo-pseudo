@@ -1,14 +1,14 @@
 void UI2DSprite___ctor(UI2DSprite_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF2EF3 & 1) == 0 )
+  if ( (byte_4D352E3 & 1) == 0 )
   {
-    sub_1C7BAE8(&UIBasicSprite_TypeInfo);
-    byte_4CF2EF3 = 1;
+    sub_1C93AD4(&UIBasicSprite_TypeInfo);
+    byte_4D352E3 = 1;
   }
-  if ( !byte_4CE8146 )
+  if ( !byte_4D2A426 )
   {
-    sub_1C7BAE8(&UnityEngine_Vector4_TypeInfo);
-    byte_4CE8146 = 1;
+    sub_1C93AD4(&UnityEngine_Vector4_TypeInfo);
+    byte_4D2A426 = 1;
   }
   this->fields.mBorder = UnityEngine_Vector4_TypeInfo->static_fields->zeroVector;
   this->fields.mPixelSize = 1.0;
@@ -25,30 +25,28 @@ void UI2DSprite__MakePixelPerfect(UI2DSprite_o *this, const MethodInfo *method)
   int32_t mType; // w8
   __int64 v5; // x1
   UnityEngine_Sprite_o *mSprite; // x0
-  float m_Width; // s9
-  float m_Height; // s8
-  double v9; // d10
-  double v10; // d0
-  double v11; // d0
-  double v12; // d1
-  double v13; // d1
-  int v14; // w22
-  double v15; // d9
-  const MethodInfo *v16; // x2
-  double v17; // d0
-  double v18; // d0
-  double v19; // d1
-  double v20; // d1
-  int v21; // w8
-  int32_t v22; // w20
-  const MethodInfo *v23; // x2
+  double m_Width; // d10
+  double v8; // d0
+  double v9; // d0
+  double v10; // d1
+  double v11; // d1
+  int v12; // w22
+  double m_Height; // d9
+  const MethodInfo *v14; // x2
+  double v15; // d0
+  double v16; // d0
+  double v17; // d1
+  double v18; // d1
+  int v19; // w8
+  int32_t v20; // w20
+  const MethodInfo *v21; // x2
   double iptr; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o rect; // 0:kr00_16.16
 
-  if ( (byte_4CF2EF1 & 1) == 0 )
+  if ( (byte_4D352E1 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EF1 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352E1 = 1;
   }
   UIWidget__MakePixelPerfect((UIWidget_o *)this, method);
   if ( this->fields.mType != 2 )
@@ -69,87 +67,85 @@ void UI2DSprite__MakePixelPerfect(UI2DSprite_o *this, const MethodInfo *method)
         {
           mSprite = this->fields.mSprite;
           if ( !mSprite )
-            sub_1C7BD40(0, v5);
+            sub_1C93D2C(0, v5);
           rect = UnityEngine_Sprite__get_rect(mSprite, 0);
+          if ( !byte_4D2A83C )
+          {
+            sub_1C93AD4(&System_Math_TypeInfo);
+            byte_4D2A83C = 1;
+          }
+          if ( !System_Math_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
           m_Width = rect.fields.m_Width;
-          m_Height = rect.fields.m_Height;
-          if ( !byte_4CE8569 )
+          v8 = modf(rect.fields.m_Width, &iptr);
+          if ( rect.fields.m_Width >= 0.0 )
           {
-            sub_1C7BAE8(&System_Math_TypeInfo);
-            byte_4CE8569 = 1;
-          }
-          if ( !System_Math_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v9 = m_Width;
-          v10 = modf(m_Width, &iptr);
-          if ( m_Width >= 0.0 )
-          {
-            if ( v10 != 0.5 )
+            if ( v8 != 0.5 )
             {
-              v11 = floor(v9 + 0.5);
+              v9 = floor(m_Width + 0.5);
               goto LABEL_29;
             }
-            v11 = iptr;
-            v12 = 1.0;
+            v9 = iptr;
+            v10 = 1.0;
           }
           else
           {
-            if ( v10 != -0.5 )
+            if ( v8 != -0.5 )
             {
-              v11 = ceil(v9 + -0.5);
+              v9 = ceil(m_Width + -0.5);
               goto LABEL_29;
             }
-            v11 = iptr;
-            v12 = -1.0;
+            v9 = iptr;
+            v10 = -1.0;
           }
-          v13 = v11 + v12;
-          if ( ((__int64)v11 & 1) != 0 )
-            v11 = v13;
+          v11 = v9 + v10;
+          if ( ((__int64)v9 & 1) != 0 )
+            v9 = v11;
 LABEL_29:
-          if ( v11 == INFINITY )
-            v14 = 0x80000000;
+          if ( v9 == INFINITY )
+            v12 = 0x80000000;
           else
-            v14 = (int)v11;
-          if ( !byte_4CE8569 )
+            v12 = (int)v9;
+          if ( !byte_4D2A83C )
           {
-            sub_1C7BAE8(&System_Math_TypeInfo);
-            byte_4CE8569 = 1;
+            sub_1C93AD4(&System_Math_TypeInfo);
+            byte_4D2A83C = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v15 = m_Height;
-          v17 = modf(m_Height, &iptr);
-          if ( m_Height >= 0.0 )
+          m_Height = rect.fields.m_Height;
+          v15 = modf(rect.fields.m_Height, &iptr);
+          if ( rect.fields.m_Height >= 0.0 )
           {
-            if ( v17 == 0.5 )
+            if ( v15 == 0.5 )
             {
-              v18 = iptr;
-              v19 = 1.0;
+              v16 = iptr;
+              v17 = 1.0;
 LABEL_41:
-              v20 = v18 + v19;
-              if ( ((__int64)v18 & 1) != 0 )
-                v18 = v20;
+              v18 = v16 + v17;
+              if ( ((__int64)v16 & 1) != 0 )
+                v16 = v18;
               goto LABEL_46;
             }
-            v18 = floor(v15 + 0.5);
+            v16 = floor(m_Height + 0.5);
           }
           else
           {
-            if ( v17 == -0.5 )
+            if ( v15 == -0.5 )
             {
-              v18 = iptr;
-              v19 = -1.0;
+              v16 = iptr;
+              v17 = -1.0;
               goto LABEL_41;
             }
-            v18 = ceil(v15 + -0.5);
+            v16 = ceil(m_Height + -0.5);
           }
 LABEL_46:
-          v21 = (int)v18;
-          if ( v18 == INFINITY )
-            v21 = 0x80000000;
-          v22 = (v21 & 1) + v21;
-          UIWidget__set_width((UIWidget_o *)this, (v14 & 1) + v14, v16);
-          UIWidget__set_height((UIWidget_o *)this, v22, v23);
+          v19 = (int)v16;
+          if ( v16 == INFINITY )
+            v19 = 0x80000000;
+          v20 = (v19 & 1) + v19;
+          UIWidget__set_width((UIWidget_o *)this, (v12 & 1) + v12, v14);
+          UIWidget__set_height((UIWidget_o *)this, v20, v21);
         }
       }
     }
@@ -185,14 +181,14 @@ void UI2DSprite__OnFill(
   float v27; // s17
   unsigned int size; // w23
   struct UIWidget_OnPostFillCallback_o *onPostFill; // x8
-  UnityEngine_Rect_o textureRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o textureRect; // 0:kr00_16.16
   UnityEngine_Rect_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v32; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CF2EF2 & 1) == 0 )
+  if ( (byte_4D352E2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EF2 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352E2 = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UI2DSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -297,12 +293,11 @@ void UI2DSprite__OnFill(
       }
     }
 LABEL_18:
-    sub_1C7BD40(v11, v12);
+    sub_1C93D2C(v11, v12);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *nextSprite; // x20
@@ -372,22 +367,17 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
   float mWidth; // s0
   float mHeight; // s1
   float v69; // s2
-  float v70; // s0 OVERLAPPED
-  float v71; // s1
-  float v72; // s2
-  float v73; // s3
+  float v73; // s2
+  float v74; // s2
+  float v75; // s3
+  float v76; // s3
   double iptr; // [xsp+8h] [xbp-68h] BYREF
-  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v77; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o textureRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v79; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v80; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v78; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF2EF0 & 1) == 0 )
+  if ( (byte_4D352E0 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EF0 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352E0 = 1;
   }
   nextSprite = (UnityEngine_Object_o *)this->fields.nextSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -401,7 +391,7 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Inequality(v5, mSprite, 0) )
       UI2DSprite__set_sprite2D(this, this->fields.nextSprite, v7);
     this->fields.nextSprite = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.nextSprite, 0, (int32_t)v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.nextSprite, 0, (int32_t)v7, v8, v9, v10, v11, v12);
   }
   UIWidget__OnUpdate((UIWidget_o *)this, v4);
   if ( this->fields.mFixedAspect )
@@ -416,12 +406,11 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
       v15 = this->fields.mSprite;
       if ( !v15 )
         goto LABEL_131;
-      rect = UnityEngine_Sprite__get_rect(v15, 0);
-      m_Width = rect.fields.m_Width;
-      if ( !byte_4CE8569 )
+      m_Width = UnityEngine_Sprite__get_rect(v15, 0).fields.m_Width;
+      if ( !byte_4D2A83C )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE8569 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A83C = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -458,12 +447,11 @@ LABEL_31:
         v22 = (int)v19;
       if ( !v15 )
         goto LABEL_131;
-      v76 = UnityEngine_Sprite__get_rect(v15, 0);
-      m_Height = v76.fields.m_Height;
-      if ( !byte_4CE8569 )
+      m_Height = UnityEngine_Sprite__get_rect(v15, 0).fields.m_Height;
+      if ( !byte_4D2A83C )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE8569 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A83C = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -501,10 +489,10 @@ LABEL_49:
       if ( !v15 )
         goto LABEL_131;
       LODWORD(v30) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v15, 0);
-      if ( !byte_4CE8569 )
+      if ( !byte_4D2A83C )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE8569 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A83C = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -542,10 +530,10 @@ LABEL_67:
       if ( !v15 )
         goto LABEL_131;
       y = UnityEngine_Sprite__get_textureRectOffset(v15, 0).fields.y;
-      if ( !byte_4CE8569 )
+      if ( !byte_4D2A83C )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE8569 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A83C = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -582,22 +570,22 @@ LABEL_85:
         v43 = (int)v40;
       if ( !v15 )
         goto LABEL_131;
-      v77 = UnityEngine_Sprite__get_rect(v15, 0);
+      v73 = UnityEngine_Sprite__get_rect(v15, 0).fields.m_Width;
       v15 = this->fields.mSprite;
       if ( !v15 )
         goto LABEL_131;
-      v44 = v77.fields.m_Width;
-      textureRect = UnityEngine_Sprite__get_textureRect(v15, 0);
+      v44 = v73;
+      v74 = UnityEngine_Sprite__get_textureRect(v15, 0).fields.m_Width;
       v15 = this->fields.mSprite;
       if ( !v15 )
         goto LABEL_131;
-      v45 = textureRect.fields.m_Width;
+      v45 = v74;
       LODWORD(v46) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v15, 0);
       v47 = v44 - v45;
-      if ( !byte_4CE8569 )
+      if ( !byte_4D2A83C )
       {
-        sub_1C7BAE8(&System_Math_TypeInfo);
-        byte_4CE8569 = 1;
+        sub_1C93AD4(&System_Math_TypeInfo);
+        byte_4D2A83C = 1;
       }
       v48 = v47 - v46;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -635,22 +623,22 @@ LABEL_105:
         v54 = (int)v51;
       if ( v15 )
       {
-        v79 = UnityEngine_Sprite__get_rect(v15, 0);
+        v75 = UnityEngine_Sprite__get_rect(v15, 0).fields.m_Height;
         v15 = this->fields.mSprite;
         if ( v15 )
         {
-          v55 = v79.fields.m_Height;
-          v80 = UnityEngine_Sprite__get_textureRect(v15, 0);
+          v55 = v75;
+          v76 = UnityEngine_Sprite__get_textureRect(v15, 0).fields.m_Height;
           v15 = this->fields.mSprite;
           if ( v15 )
           {
-            v56 = v80.fields.m_Height;
+            v56 = v76;
             v57 = UnityEngine_Sprite__get_textureRectOffset(v15, 0).fields.y;
             v58 = v55 - v56;
-            if ( !byte_4CE8569 )
+            if ( !byte_4D2A83C )
             {
-              sub_1C7BAE8(&System_Math_TypeInfo);
-              byte_4CE8569 = 1;
+              sub_1C93AD4(&System_Math_TypeInfo);
+              byte_4D2A83C = 1;
             }
             v59 = v58 - v57;
             if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -690,25 +678,25 @@ LABEL_125:
             v69 = (float)(v36 + v22 + v54) / (float)(v43 + v29 + v66);
             if ( v69 >= (float)(mWidth / mHeight) )
             {
-              v71 = (float)((float)(mHeight - (float)(mWidth / v69)) / mHeight) * 0.5;
-              v70 = 0.0;
-              v73 = 1.0 - v71;
-              v72 = 1.0;
+              v78.fields.y = (float)((float)(mHeight - (float)(mWidth / v69)) / mHeight) * 0.5;
+              v78.fields.x = 0.0;
+              v78.fields.w = 1.0 - v78.fields.y;
+              v78.fields.z = 1.0;
             }
             else
             {
-              v70 = (float)((float)(mWidth - (float)(v69 * mHeight)) / mWidth) * 0.5;
-              v71 = 0.0;
-              v72 = 1.0 - v70;
-              v73 = 1.0;
+              v78.fields.x = (float)((float)(mWidth - (float)(v69 * mHeight)) / mWidth) * 0.5;
+              v78.fields.y = 0.0;
+              v78.fields.z = 1.0 - v78.fields.x;
+              v78.fields.w = 1.0;
             }
-            UIWidget__set_drawRegion((UIWidget_o *)this, *(UnityEngine_Vector4_o *)&v70, v61);
+            UIWidget__set_drawRegion((UIWidget_o *)this, v78, v61);
             return;
           }
         }
       }
 LABEL_131:
-      sub_1C7BD40(v15, v14);
+      sub_1C93D2C(v15, v14);
     }
   }
 }
@@ -716,27 +704,19 @@ LABEL_131:
 
 UnityEngine_Vector4_o UI2DSprite__get_border(UI2DSprite_o *this, const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
-  float w; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  x = this->fields.mBorder.fields.x;
-  y = this->fields.mBorder.fields.y;
-  z = this->fields.mBorder.fields.z;
-  w = this->fields.mBorder.fields.w;
-  result.fields.w = w;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.mBorder.fields.x;
+  result.fields.y = this->fields.mBorder.fields.y;
+  result.fields.z = this->fields.mBorder.fields.z;
+  result.fields.w = this->fields.mBorder.fields.w;
   return result;
 }
 
 
 UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, const MethodInfo *method)
 {
-  UnityEngine_Vector2_o PivotOffset; // kr00_8
+  UnityEngine_Vector2_o PivotOffset; // kr60_8
   UnityEngine_Object_o *mSprite; // x20
   float mWidth; // s8
   float v6; // s12
@@ -823,7 +803,6 @@ UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, cons
   float v93; // s2
   float z; // s4
   float v95; // s7
-  float v96; // s0
   float w; // s2
   float v98; // s5
   float v99; // s16
@@ -831,23 +810,18 @@ UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, cons
   float v101; // s4
   float v102; // s3
   float v103; // s1
-  float v104; // s1
-  float v105; // s2
-  float v106; // s3
-  float v107; // [xsp+Ch] [xbp-94h]
+  float v107; // s2
+  float v108; // s2
+  float v109; // s3
+  float v110; // s3
+  float v111; // [xsp+Ch] [xbp-94h]
   double iptr; // [xsp+58h] [xbp-48h] BYREF
-  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v110; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v111; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o textureRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v113; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v114; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF2EEF & 1) == 0 )
+  if ( (byte_4D352DF & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EEF = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352DF = 1;
   }
   PivotOffset = NGUIMath__GetPivotOffset(this->fields.mPivot, 0);
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
@@ -864,12 +838,11 @@ UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, cons
     v12 = this->fields.mSprite;
     if ( !v12 )
       goto LABEL_144;
-    rect = UnityEngine_Sprite__get_rect(v12, 0);
-    m_Width = rect.fields.m_Width;
-    if ( !byte_4CE8569 )
+    m_Width = UnityEngine_Sprite__get_rect(v12, 0).fields.m_Width;
+    if ( !byte_4D2A83C )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE8569 = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A83C = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -906,12 +879,11 @@ LABEL_22:
       v19 = (int)v16;
     if ( !v12 )
       goto LABEL_144;
-    v110 = UnityEngine_Sprite__get_rect(v12, 0);
-    m_Height = v110.fields.m_Height;
-    if ( !byte_4CE8569 )
+    m_Height = UnityEngine_Sprite__get_rect(v12, 0).fields.m_Height;
+    if ( !byte_4D2A83C )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE8569 = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A83C = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -949,10 +921,10 @@ LABEL_40:
     if ( !v12 )
       goto LABEL_144;
     LODWORD(v27) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v12, 0);
-    if ( !byte_4CE8569 )
+    if ( !byte_4D2A83C )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE8569 = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A83C = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -990,10 +962,10 @@ LABEL_58:
     if ( !v12 )
       goto LABEL_144;
     y = UnityEngine_Sprite__get_textureRectOffset(v12, 0).fields.y;
-    if ( !byte_4CE8569 )
+    if ( !byte_4D2A83C )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE8569 = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A83C = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1031,22 +1003,22 @@ LABEL_76:
     if ( !v12 )
       goto LABEL_144;
     v41 = v9;
-    v111 = UnityEngine_Sprite__get_rect(v12, 0);
+    v107 = UnityEngine_Sprite__get_rect(v12, 0).fields.m_Width;
     v12 = this->fields.mSprite;
     if ( !v12 )
       goto LABEL_144;
-    v42 = v111.fields.m_Width;
-    textureRect = UnityEngine_Sprite__get_textureRect(v12, 0);
+    v42 = v107;
+    v108 = UnityEngine_Sprite__get_textureRect(v12, 0).fields.m_Width;
     v12 = this->fields.mSprite;
     if ( !v12 )
       goto LABEL_144;
-    v43 = textureRect.fields.m_Width;
+    v43 = v108;
     LODWORD(v44) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v12, 0);
     v45 = v42 - v43;
-    if ( !byte_4CE8569 )
+    if ( !byte_4D2A83C )
     {
-      sub_1C7BAE8(&System_Math_TypeInfo);
-      byte_4CE8569 = 1;
+      sub_1C93AD4(&System_Math_TypeInfo);
+      byte_4D2A83C = 1;
     }
     v46 = v45 - v44;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1084,22 +1056,22 @@ LABEL_96:
       v52 = (int)v49;
     if ( v12 )
     {
-      v113 = UnityEngine_Sprite__get_rect(v12, 0);
+      v109 = UnityEngine_Sprite__get_rect(v12, 0).fields.m_Height;
       v12 = this->fields.mSprite;
       if ( v12 )
       {
-        v53 = v113.fields.m_Height;
-        v114 = UnityEngine_Sprite__get_textureRect(v12, 0);
+        v53 = v109;
+        v110 = UnityEngine_Sprite__get_textureRect(v12, 0).fields.m_Height;
         v12 = this->fields.mSprite;
         if ( v12 )
         {
-          v54 = v114.fields.m_Height;
+          v54 = v110;
           v55 = UnityEngine_Sprite__get_textureRectOffset(v12, 0).fields.y;
           v56 = v53 - v54;
-          if ( !byte_4CE8569 )
+          if ( !byte_4D2A83C )
           {
-            sub_1C7BAE8(&System_Math_TypeInfo);
-            byte_4CE8569 = 1;
+            sub_1C93AD4(&System_Math_TypeInfo);
+            byte_4D2A83C = 1;
           }
           v57 = v56 - v55;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1177,7 +1149,7 @@ LABEL_116:
       }
     }
 LABEL_144:
-    sub_1C7BD40(v12, v11);
+    sub_1C93D2C(v12, v11);
   }
 LABEL_130:
   v75 = 0.0;
@@ -1192,7 +1164,7 @@ LABEL_130:
                 0.0,
                 0.0)));
     v79 = v78;
-    v107 = v6;
+    v111 = v6;
     v80 = v9;
     v82 = v81;
     v83 = v10;
@@ -1202,7 +1174,7 @@ LABEL_130:
             this->klass->vtable._42_get_pixelSize.method);
     v87 = v82 * v86;
     v9 = v80;
-    v6 = v107;
+    v6 = v111;
     v88 = v79 * v86;
     v89 = v85 * v86;
     v10 = v83;
@@ -1218,7 +1190,7 @@ LABEL_130:
   v93 = (float)((float)(v9 - v76) - v6) * v92;
   z = this->fields.mDrawRegion.fields.z;
   v95 = v6 + v76;
-  v96 = v6 + v93;
+  result.fields.x = v6 + v93;
   w = this->fields.mDrawRegion.fields.w;
   _NF = v91 < 0.0;
   v98 = fminf(v91, 1.0);
@@ -1232,15 +1204,11 @@ LABEL_130:
   v103 = v100 * v98;
   if ( _NF )
     v101 = 0.0;
-  v104 = v8 + v103;
+  result.fields.y = v8 + v103;
   if ( w < 0.0 )
     v102 = 0.0;
-  v105 = v95 + (float)((float)(v9 - v95) * v101);
-  v106 = v99 + (float)((float)(v10 - v99) * v102);
-  result.fields.w = v106;
-  result.fields.z = v105;
-  result.fields.y = v104;
-  result.fields.x = v96;
+  result.fields.z = v95 + (float)((float)(v9 - v95) * v101);
+  result.fields.w = v99 + (float)((float)(v10 - v99) * v102);
   return result;
 }
 
@@ -1252,10 +1220,10 @@ UnityEngine_Texture_o *UI2DSprite__get_mainTexture(UI2DSprite_o *this, const Met
   UnityEngine_Sprite_o *v5; // x0
   UnityEngine_Object_o *mMat; // x20
 
-  if ( (byte_4CF2EED & 1) == 0 )
+  if ( (byte_4D352DD & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EED = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352DD = 1;
   }
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1266,7 +1234,7 @@ UnityEngine_Texture_o *UI2DSprite__get_mainTexture(UI2DSprite_o *this, const Met
     if ( v5 )
       return (UnityEngine_Texture_o *)UnityEngine_Sprite__get_texture(v5, 0);
 LABEL_14:
-    sub_1C7BD40(v5, v4);
+    sub_1C93D2C(v5, v4);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1300,11 +1268,11 @@ bool UI2DSprite__get_premultipliedAlpha(UI2DSprite_o *this, const MethodInfo *me
   __int64 v6; // x1
   int v7; // w20
 
-  if ( (byte_4CF2EEE & 1) == 0 )
+  if ( (byte_4D352DE & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10767/*"Premultiplied"*/);
-    byte_4CF2EEE = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10803/*"Premultiplied"*/);
+    byte_4D352DE = 1;
   }
   mPMA = this->fields.mPMA;
   if ( mPMA == -1 )
@@ -1319,10 +1287,10 @@ bool UI2DSprite__get_premultipliedAlpha(UI2DSprite_o *this, const MethodInfo *me
     {
       if ( !v4
         || (v7 = (int)name, (name = UnityEngine_Object__get_name(v4, 0)) == 0)
-        || (name = (System_String_o *)System_String__Contains(name, (System_String_o *)StringLiteral_10767/*"Premultiplied"*/, 0), !this)
+        || (name = (System_String_o *)System_String__Contains(name, (System_String_o *)StringLiteral_10803/*"Premultiplied"*/, 0), !this)
         || ((v7 ^ 1) & 1) != 0 )
       {
-        sub_1C7BD40(name, v6);
+        sub_1C93D2C(name, v6);
       }
       mPMA = (unsigned __int8)name & 1;
     }
@@ -1351,11 +1319,11 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CF2EEB & 1) == 0 )
+  if ( (byte_4D352DB & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15191/*"Unlit/Transparent Colored"*/);
-    byte_4CF2EEB = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15233/*"Unlit/Transparent Colored"*/);
+    byte_4D352DB = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1364,7 +1332,7 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
   {
     v5 = this->fields.mMat;
     if ( !v5 )
-      sub_1C7BD40(0, v4);
+      sub_1C93D2C(0, v4);
     return UnityEngine_Material__get_shader(v5, 0);
   }
   else
@@ -1375,9 +1343,9 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
     p_mShader = (GrandQuestFolderBoardItem_o *)&this->fields.mShader;
     if ( UnityEngine_Object__op_Equality(mShader, 0, 0) )
     {
-      v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15191/*"Unlit/Transparent Colored"*/, 0);
+      v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15233/*"Unlit/Transparent Colored"*/, 0);
       p_mShader->klass = (GrandQuestFolderBoardItem_c *)v9;
-      sub_1C7BA8C(p_mShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+      sub_1C93A78(p_mShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     }
     return (UnityEngine_Shader_o *)p_mShader->klass;
   }
@@ -1424,10 +1392,10 @@ void UI2DSprite__set_material(UI2DSprite_o *this, UnityEngine_Material_o *value,
   System_String_o *v12; // x7
   UI2DSprite_c *klass; // x8
 
-  if ( (byte_4CF2EEA & 1) == 0 )
+  if ( (byte_4D352DA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EEA = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352DA = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1436,7 +1404,7 @@ void UI2DSprite__set_material(UI2DSprite_o *this, UnityEngine_Material_o *value,
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mMat = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)value, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)value, v7, v8, v9, v10, v11, v12);
     klass = this->klass;
     this->fields.mPMA = -1;
     ((void (__fastcall *)(UI2DSprite_o *, const MethodInfo *))klass->vtable._30_MarkAsChanged.methodPtr)(
@@ -1459,10 +1427,10 @@ void UI2DSprite__set_shader(UI2DSprite_o *this, UnityEngine_Shader_o *value, con
   UnityEngine_Object_o *mMat; // x20
   UI2DSprite_c *klass; // x8
 
-  if ( (byte_4CF2EEC & 1) == 0 )
+  if ( (byte_4D352DC & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EEC = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352DC = 1;
   }
   mShader = (UnityEngine_Object_o *)this->fields.mShader;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1471,7 +1439,7 @@ void UI2DSprite__set_shader(UI2DSprite_o *this, UnityEngine_Shader_o *value, con
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mShader = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mShader, (int32_t)value, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mShader, (int32_t)value, v7, v8, v9, v10, v11, v12);
     mMat = (UnityEngine_Object_o *)this->fields.mMat;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1505,10 +1473,10 @@ void UI2DSprite__set_sprite2D(UI2DSprite_o *this, UnityEngine_Sprite_o *value, c
   System_String_o *v18; // x7
   const MethodInfo *v19; // x1
 
-  if ( (byte_4CF2EE9 & 1) == 0 )
+  if ( (byte_4D352D9 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2EE9 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D352D9 = 1;
   }
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1517,9 +1485,9 @@ void UI2DSprite__set_sprite2D(UI2DSprite_o *this, UnityEngine_Sprite_o *value, c
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mSprite = value;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)value, v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)value, v7, v8, v9, v10, v11, v12);
     this->fields.nextSprite = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.nextSprite, 0, v13, v14, v15, v16, v17, v18);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.nextSprite, 0, v13, v14, v15, v16, v17, v18);
     UIWidget__CreatePanel((UIWidget_o *)this, v19);
   }
 }

@@ -10,24 +10,24 @@ void ContinueInputRequest__beginRequest(
         System_String_o *continuePass,
         const MethodInfo *method)
 {
-  if ( (byte_4CF0111 & 1) == 0 )
+  if ( (byte_4D3249E & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_18351/*"continueKey"*/);
-    sub_1C7BAE8(&StringLiteral_18353/*"continuePass"*/);
-    byte_4CF0111 = 1;
+    sub_1C93AD4(&StringLiteral_18401/*"continueKey"*/);
+    sub_1C93AD4(&StringLiteral_18403/*"continuePass"*/);
+    byte_4D3249E = 1;
   }
-  RequestBase__addField_44748720((RequestBase_o *)this, (System_String_o *)StringLiteral_18351/*"continueKey"*/, continueKey, 0);
-  RequestBase__addField_44748720((RequestBase_o *)this, (System_String_o *)StringLiteral_18353/*"continuePass"*/, continuePass, 0);
+  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_18401/*"continueKey"*/, continueKey, 0);
+  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"continuePass"*/, continuePass, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *ContinueInputRequest__getMockData(ContinueInputRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF0110 & 1) == 0 )
+  if ( (byte_4D3249D & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF0110 = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D3249D = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -37,16 +37,16 @@ System_String_o *ContinueInputRequest__getURL(ContinueInputRequest_o *this, cons
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF010F & 1) == 0 )
+  if ( (byte_4D3249C & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_18349/*"continue/input"*/);
-    byte_4CF010F = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_18399/*"continue/input"*/);
+    byte_4D3249C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_18349/*"continue/input"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_18399/*"continue/input"*/, 0);
 }
 
 
@@ -62,34 +62,34 @@ void ContinueInputRequest__requestCompleted(
   Il2CppObject *Item; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4CF0112 & 1) == 0 )
+  if ( (byte_4D3249F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    sub_1C7BAE8(&StringLiteral_24797/*"userGame"*/);
-    byte_4CF0112 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    sub_1C93AD4(&StringLiteral_24866/*"userGame"*/);
+    byte_4D3249F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(32, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44743216(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44908744(v5, 0)) )
   {
     success = (System_Collections_Generic_Dictionary_object__object__o *)v6->fields.success;
     if ( !success )
-      sub_1C7BD40(0, v7);
+      sub_1C93D2C(0, v7);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24797/*"userGame"*/,
-             (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24866/*"userGame"*/,
+             (const MethodInfo_352EB28 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v10 = JsonManager__toJson(Item, 0, 0, 0);
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_22419/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22483/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0);
 }

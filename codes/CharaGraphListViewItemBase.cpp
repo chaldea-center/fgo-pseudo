@@ -50,12 +50,12 @@ void CharaGraphListViewItemBase___ctor(
   System_String_o *v49; // x7
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.filterLogic,
     (int32_t)FilterLogic,
     v9,
@@ -66,10 +66,10 @@ void CharaGraphListViewItemBase___ctor(
     v14);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
   this->fields.sortLogic = SortLogic;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v17, v18, v19, v20, v21, v22);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v17, v18, v19, v20, v21, v22);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)ItemDrawPattern,
     v25,
@@ -80,7 +80,7 @@ void CharaGraphListViewItemBase___ctor(
     v30);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)RootInfo_k__BackingField,
     v32,
@@ -92,14 +92,14 @@ void CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v6 + 24), (int32_t)this, v38, v39, v40, v41, v42, v43),
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v6 + 24), (int32_t)this, v38, v39, v40, v41, v42, v43),
         (v6 = (char *)this->fields.sortLogic) == 0) )
   {
 LABEL_5:
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v6 + 24), (int32_t)this, v44, v45, v46, v47, v48, v49);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v6 + 24), (int32_t)this, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -134,7 +134,7 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
   p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)IconInfo1_k__BackingField,
     v2,
@@ -146,10 +146,10 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   v18 = (__int64)*(p_IconInfo1_k__BackingField - 9);
   if ( !v18 )
 LABEL_4:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   v19 = *(struct IconLabelInfo_o **)(v18 + 104);
   this->fields._IconInfo2_k__BackingField = v19;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)v19,
     v12,
@@ -174,15 +174,15 @@ bool CharaGraphListViewItemBase__GetNpInfo(
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CED970 & 1) == 0 )
+  if ( (byte_4D2FCC9 & 1) == 0 )
   {
-    sub_1C7BAE8(&TreasureDvcInfo_TypeInfo);
-    byte_4CED970 = 1;
+    sub_1C93AD4(&TreasureDvcInfo_TypeInfo);
+    byte_4D2FCC9 = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_1C7BD34(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1C93D20(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0);
   *tdInfo = v4;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)tdInfo, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)tdInfo, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   return 0;
 }
 
@@ -202,7 +202,7 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)&filterLogic->fields,
           (int32_t)sort,
           (int32_t)method,
@@ -213,9 +213,9 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
           v7),
         (filterLogic = this->fields.filterLogic) == 0) )
   {
-    sub_1C7BD40(filterLogic, sort);
+    sub_1C93D2C(filterLogic, sort);
   }
-  return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
+  return ((bool (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
            filterLogic,
            filterLogic->klass->vtable._4_unknown.method);
 }
@@ -234,7 +234,7 @@ void CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._10_ModifyLocal.method);
   if ( !args )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -299,10 +299,10 @@ bool CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8, v9, v10, v11, v12),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8, v9, v10, v11, v12),
           (v15 = this->fields.sortLogic) == 0) )
     {
-      sub_1C7BD40(sortLogic, v6);
+      sub_1C93D2C(sortLogic, v6);
     }
     CharaGraphSortLogicBase__InitSortValue(this->fields.sortLogic, v6);
     ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, const MethodInfo *))v15->klass->vtable._4_SetSortValueLocal.methodPtr)(
@@ -594,7 +594,7 @@ void CharaGraphListViewItemBase__set_DrawPattern(
   System_String_o *v7; // x7
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -645,7 +645,7 @@ void CharaGraphListViewItemBase__set_IconInfo1(
   System_String_o *v7; // x7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -669,7 +669,7 @@ void CharaGraphListViewItemBase__set_IconInfo2(
   System_String_o *v7; // x7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -828,7 +828,7 @@ void CharaGraphListViewItemBase__set_RootInfo(
   System_String_o *v7; // x7
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,

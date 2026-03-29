@@ -1,7 +1,7 @@
 void UIButtonScale___ctor(UIButtonScale_o *this, const MethodInfo *method)
 {
   *(int32x2_t *)&this->fields.pressed.fields.y = vdup_n_s32(0x3F866666u);
-  *(_OWORD *)&this->fields.hover.fields.x = xmmword_CF5170;
+  *(_OWORD *)&this->fields.hover.fields.x = xmmword_D002D0;
   this->fields.duration = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -14,11 +14,11 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
   struct UnityEngine_Transform_o *v5; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4CF2C78 & 1) == 0 )
+  if ( (byte_4D35068 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_TweenScale___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2C78 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_TweenScale___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D35068 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -32,7 +32,7 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
         goto LABEL_14;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v5,
-                           (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
+                           (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_TweenScale___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
@@ -48,7 +48,7 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
           return;
         }
 LABEL_14:
-        sub_1C7BD40(v5, v4);
+        sub_1C93D2C(v5, v4);
       }
     }
   }
@@ -61,10 +61,10 @@ void UIButtonScale__OnEnable(UIButtonScale_o *this, const MethodInfo *method)
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CF2C77 & 1) == 0 )
+  if ( (byte_4D35067 & 1) == 0 )
   {
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CF2C77 = 1;
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D35067 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -77,15 +77,14 @@ void UIButtonScale__OnEnable(UIButtonScale_o *this, const MethodInfo *method)
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UIButtonScale__OnHover(UIButtonScale_o *this, bool isOver, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   UnityEngine_Component_o *tweenTarget; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  float32x2_t v8; // d1 OVERLAPPED
+  float32x2_t v8; // d1
   float z; // s3
-  unsigned __int32 v10; // s2
+  UnityEngine_Vector3_o v10; // 0:kr00_12.12
 
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -102,15 +101,12 @@ void UIButtonScale__OnHover(UIButtonScale_o *this, bool isOver, const MethodInfo
       v8.n64_u64[0] = vmul_f32(v8, *(float32x2_t *)&this->fields.hover.fields.x).n64_u64[0];
       z = z * this->fields.hover.fields.z;
     }
-    v10 = v8.n64_u32[1];
-    tweenTarget = (UnityEngine_Component_o *)TweenScale__Begin(
-                                               gameObject,
-                                               this->fields.duration,
-                                               *(UnityEngine_Vector3_o *)v8.n64_u64,
-                                               0);
+    *(float32x2_t *)&v10.fields.x = v8;
+    v10.fields.z = z;
+    tweenTarget = (UnityEngine_Component_o *)TweenScale__Begin(gameObject, this->fields.duration, v10, 0);
     if ( !tweenTarget )
 LABEL_10:
-      sub_1C7BD40(tweenTarget, v5);
+      sub_1C93D2C(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -124,17 +120,16 @@ void UIButtonScale__OnPress(UIButtonScale_o *this, bool isPressed, const MethodI
   UnityEngine_GameObject_o *gameObject; // x0
   float duration; // s8
   UnityEngine_GameObject_o *v9; // x20
-  float x; // s1 OVERLAPPED
-  int32x2_t v11; // d0
-  UnityEngine_GameObject_o *v12; // x21
+  int32x2_t v10; // d0
+  UnityEngine_GameObject_o *v11; // x21
   bool IsHighlighted; // w0
-  unsigned __int64 v14; // d3
-  int v15; // s2
+  float v13; // v3.s[1]
+  UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4 OVERLAPPED
 
-  if ( (byte_4CF2C79 & 1) == 0 )
+  if ( (byte_4D35069 & 1) == 0 )
   {
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CF2C79 = 1;
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D35069 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -148,31 +143,31 @@ void UIButtonScale__OnPress(UIButtonScale_o *this, bool isPressed, const MethodI
     v9 = gameObject;
     if ( isPressed )
     {
-      x = this->fields.mScale.fields.x * this->fields.pressed.fields.x;
-      v11.n64_u64[0] = vmul_f32(
+      v14.fields.x = this->fields.mScale.fields.x * this->fields.pressed.fields.x;
+      v10.n64_u64[0] = vmul_f32(
                          *(float32x2_t *)&this->fields.mScale.fields.y,
                          *(float32x2_t *)&this->fields.pressed.fields.y).n64_u64[0];
     }
     else
     {
-      v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UICamera_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      IsHighlighted = UICamera__IsHighlighted(v12, 0);
-      x = this->fields.mScale.fields.x;
-      v11.n64_u64[0] = *(unsigned __int64 *)&this->fields.mScale.fields.y;
+      IsHighlighted = UICamera__IsHighlighted(v11, 0);
+      v14.fields.x = this->fields.mScale.fields.x;
+      v10.n64_u64[0] = *(unsigned __int64 *)&this->fields.mScale.fields.y;
       if ( IsHighlighted )
       {
-        x = x * this->fields.hover.fields.x;
-        v11.n64_u64[0] = vmul_f32(v11, *(float32x2_t *)&this->fields.hover.fields.y).n64_u64[0];
+        v14.fields.x = v14.fields.x * this->fields.hover.fields.x;
+        v10.n64_u64[0] = vmul_f32(v10, *(float32x2_t *)&this->fields.hover.fields.y).n64_u64[0];
       }
     }
-    v14 = vrev64_s32(v11).n64_u64[0];
-    v15 = HIDWORD(v14);
-    tweenTarget = (UnityEngine_Component_o *)TweenScale__Begin(v9, duration, *(UnityEngine_Vector3_o *)&x, 0);
+    *(int32x2_t *)&v14.fields.z = vrev64_s32(v10);
+    v14.fields.y = v13;
+    tweenTarget = (UnityEngine_Component_o *)TweenScale__Begin(v9, duration, v14, 0);
     if ( !tweenTarget )
 LABEL_16:
-      sub_1C7BD40(tweenTarget, v5);
+      sub_1C93D2C(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -183,10 +178,10 @@ void UIButtonScale__OnSelect(UIButtonScale_o *this, bool isSelected, const Metho
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4CF2C7A & 1) == 0 )
+  if ( (byte_4D3506A & 1) == 0 )
   {
-    sub_1C7BAE8(&UICamera_TypeInfo);
-    byte_4CF2C7A = 1;
+    sub_1C93AD4(&UICamera_TypeInfo);
+    byte_4D3506A = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -218,10 +213,10 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4CF2C76 & 1) == 0 )
+  if ( (byte_4D35066 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF2C76 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D35066 = 1;
   }
   if ( !this->fields.mStarted )
   {
@@ -234,7 +229,7 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.tweenTarget = transform;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&this->fields.tweenTarget,
         (int32_t)transform,
         v7,
@@ -245,7 +240,7 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
         v12);
     }
     if ( !*p_tweenTarget )
-      sub_1C7BD40(0, v5);
+      sub_1C93D2C(0, v5);
     this->fields.mScale = UnityEngine_Transform__get_localScale(*p_tweenTarget, 0);
   }
 }

@@ -12,22 +12,22 @@ void WarBoardFinishRequest__beginRequest(
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x1
 
-  if ( (byte_4CF0299 & 1) == 0 )
+  if ( (byte_4D32629 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_23873/*"stageId"*/);
-    sub_1C7BAE8(&StringLiteral_25078/*"winCondId"*/);
-    sub_1C7BAE8(&StringLiteral_25077/*"winCondGroup"*/);
-    sub_1C7BAE8(&StringLiteral_21131/*"isResult"*/);
-    byte_4CF0299 = 1;
+    sub_1C93AD4(&StringLiteral_23940/*"stageId"*/);
+    sub_1C93AD4(&StringLiteral_25147/*"winCondId"*/);
+    sub_1C93AD4(&StringLiteral_25146/*"winCondGroup"*/);
+    sub_1C93AD4(&StringLiteral_21196/*"isResult"*/);
+    byte_4D32629 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23873/*"stageId"*/,
+    (System_String_o *)StringLiteral_23940/*"stageId"*/,
     stageId,
     *(const MethodInfo **)&winCondId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21131/*"isResult"*/, isResult, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25078/*"winCondId"*/, winCondId, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25077/*"winCondGroup"*/, winCondGroup, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21196/*"isResult"*/, isResult, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25147/*"winCondId"*/, winCondId, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25146/*"winCondGroup"*/, winCondGroup, v13);
   RequestBase__beginRequest((RequestBase_o *)this, v14);
 }
 
@@ -36,16 +36,16 @@ System_String_o *WarBoardFinishRequest__getURL(WarBoardFinishRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF0298 & 1) == 0 )
+  if ( (byte_4D32628 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_24988/*"warBoard/finish"*/);
-    byte_4CF0298 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_25057/*"warBoard/finish"*/);
+    byte_4D32628 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_24988/*"warBoard/finish"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_25057/*"warBoard/finish"*/, 0);
 }
 
 
@@ -62,12 +62,12 @@ void WarBoardFinishRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CF029A & 1) == 0 )
+  if ( (byte_4D3262A & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF029A = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D3262A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -92,7 +92,7 @@ void WarBoardFinishRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22419/*"ng"*/,
+        StringLiteral_22483/*"ng"*/,
         v11->fields.method);
   }
 }

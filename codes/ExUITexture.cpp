@@ -28,10 +28,10 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CEFD32 & 1) == 0 )
+  if ( (byte_4D320B7 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    byte_4CEFD32 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    byte_4D320B7 = 1;
   }
   ((void (__fastcall *)(ExUITexture_o *, _QWORD, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
     this,
@@ -42,9 +42,9 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_41096272(assetData, 0);
+    AssetManager__releaseAsset_41247948(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v4, v5, v6, v7, v8, v9);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v4, v5, v6, v7, v8, v9);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -53,10 +53,10 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v11, v12, v13, v14, v15, v16);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v11, v12, v13, v14, v15, v16);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v18, v19, v20, v21, v22, v23);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v18, v19, v20, v21, v22, v23);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -81,7 +81,7 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
   int32_t v16; // w5
   int64_t v17; // x6
   System_String_o *v18; // x7
-  Il2CppObject *Object_object__51713432; // x0
+  Il2CppObject *Object_object__51927708; // x0
   int32_t v20; // w2
   int32_t v21; // w3
   System_String_o *v22; // x4
@@ -90,11 +90,11 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
   System_String_o *v25; // x7
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4CEFD35 & 1) == 0 )
+  if ( (byte_4D320BA & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    byte_4CEFD35 = 1;
+    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    byte_4D320BA = 1;
   }
   if ( data )
   {
@@ -103,30 +103,30 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_41093944(data, loadAssetName, 0) )
+      if ( AssetManager__compAssetStorage_41245620(data, loadAssetName, 0) )
       {
         assetData = this->fields.assetData;
         this->fields.assetData = data;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.assetData, (int32_t)data, v6, v7, v8, v9, v10, v11);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.assetData, (int32_t)data, v6, v7, v8, v9, v10, v11);
         this->fields.loadAssetName = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
-        Object_object__51713432 = AssetData__GetObject_object__51713432(
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
+        Object_object__51927708 = AssetData__GetObject_object__51927708(
                                     data,
                                     this->fields.assetLabel,
-                                    (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600);
+                                    (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
         ((void (__fastcall *)(ExUITexture_o *, Il2CppObject *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
           this,
-          Object_object__51713432,
+          Object_object__51927708,
           this->klass->vtable._27_set_mainTexture.method);
         if ( assetData )
         {
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_41096272(assetData, 0);
+          AssetManager__releaseAsset_41247948(assetData, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         this->fields.callbackFunc = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v20, v21, v22, v23, v24, v25);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v20, v21, v22, v23, v24, v25);
         if ( callbackFunc )
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
@@ -145,11 +145,11 @@ bool ExUITexture__SetAssetImage(
 {
   const MethodInfo *v4; // x4
 
-  return ExUITexture__SetAssetImage_44320492(this, assetName, 0, callback, v4);
+  return ExUITexture__SetAssetImage_44482672(this, assetName, 0, callback, v4);
 }
 
 
-bool ExUITexture__SetAssetImage_44320492(
+bool ExUITexture__SetAssetImage_44482672(
         ExUITexture_o *this,
         System_String_o *assetName,
         System_String_o *assetLabel,
@@ -180,7 +180,7 @@ bool ExUITexture__SetAssetImage_44320492(
   AssetData_o *assetData; // x23
   __int64 v31; // x1
   AssetData_o *v32; // x0
-  Il2CppObject *Object_object__51713432; // x0
+  Il2CppObject *Object_object__51927708; // x0
   System_String_o *klass; // x23
   System_Delegate_o *v35; // x0
   int32_t v36; // w2
@@ -192,17 +192,17 @@ bool ExUITexture__SetAssetImage_44320492(
   System_Action_c *v42; // x1
   AssetLoader_LoadEndDataHandler_o *v43; // x21
 
-  if ( (byte_4CEFD34 & 1) == 0 )
+  if ( (byte_4D320B9 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    sub_1C7BAE8(&Method_ExUITexture_EndLoad__);
-    sub_1C7BAE8(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4CEFD34 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    sub_1C93AD4(&Method_ExUITexture_EndLoad__);
+    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4D320B9 = 1;
   }
   this->fields.assetLabel = assetLabel;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.assetLabel,
     (int32_t)assetLabel,
     (int32_t)assetLabel,
@@ -238,7 +238,7 @@ bool ExUITexture__SetAssetImage_44320492(
         {
           this->klass = 0;
         }
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)this, (int32_t)v21, v22, v23, v24, v25, v26, v27);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)this, (int32_t)v21, v22, v23, v24, v25, v26, v27);
       }
       return 1;
     }
@@ -254,18 +254,18 @@ bool ExUITexture__SetAssetImage_44320492(
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_41093944(assetData, assetName, 0) )
+      if ( AssetManager__compAssetStorage_41245620(assetData, assetName, 0) )
       {
         v32 = this->fields.assetData;
         if ( !v32 )
-          sub_1C7BD40(0, v31);
-        Object_object__51713432 = AssetData__GetObject_object__51713432(
+          sub_1C93D2C(0, v31);
+        Object_object__51927708 = AssetData__GetObject_object__51927708(
                                     v32,
                                     this->fields.assetLabel,
-                                    (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600);
+                                    (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
         ((void (__fastcall *)(ExUITexture_o *, Il2CppObject *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
           this,
-          Object_object__51713432,
+          Object_object__51927708,
           this->klass->vtable._27_set_mainTexture.method);
         if ( callback )
           ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
@@ -276,7 +276,7 @@ bool ExUITexture__SetAssetImage_44320492(
     }
   }
   p_loadAssetName->klass = (GrandQuestFolderBoardItem_c *)assetName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName,
     (int32_t)assetName,
     v12,
@@ -295,7 +295,7 @@ bool ExUITexture__SetAssetImage_44320492(
 LABEL_27:
       p_loadAssetName->klass = v28;
 LABEL_28:
-      sub_1C7BA8C(p_loadAssetName, (int32_t)v28, v36, v37, v38, v39, v40, v41);
+      sub_1C93A78(p_loadAssetName, (int32_t)v28, v36, v37, v38, v39, v40, v41);
       goto LABEL_29;
     }
     v42 = System_Action_TypeInfo;
@@ -306,11 +306,11 @@ LABEL_28:
         goto LABEL_28;
     }
 LABEL_26:
-    sub_1C7C0DC(v28);
+    sub_1C940C8(v28);
     goto LABEL_27;
   }
 LABEL_29:
-  v43 = (AssetLoader_LoadEndDataHandler_o *)sub_1C7BD34(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v43 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v43, (Il2CppObject *)this, Method_ExUITexture_EndLoad__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -342,10 +342,10 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4CEFD33 & 1) == 0 )
+  if ( (byte_4D320B8 & 1) == 0 )
   {
-    sub_1C7BAE8(&AssetManager_TypeInfo);
-    byte_4CEFD33 = 1;
+    sub_1C93AD4(&AssetManager_TypeInfo);
+    byte_4D320B8 = 1;
   }
   ((void (__fastcall *)(ExUITexture_o *, UnityEngine_Texture_o *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
     this,
@@ -356,9 +356,9 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_41096272(assetData, 0);
+    AssetManager__releaseAsset_41247948(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v6, v7, v8, v9, v10, v11);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -367,10 +367,10 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v20, v21, v22, v23, v24, v25);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v20, v21, v22, v23, v24, v25);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,

@@ -6,7 +6,7 @@ void SelectImageLimitListViewItem___ctor(
         int32_t selectedImageId,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   this->fields.svtId = svtId;
   this->fields.limitCount = limitCount;
   this->fields.isSelected = limitCount == selectedImageId;
@@ -34,12 +34,10 @@ bool SelectImageLimitListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   int32_t index; // w9
-  bool result; // w0
 
   index = this->fields.index;
-  result = 1;
   this->fields.sortValue0 = -index;
-  return result;
+  return 1;
 }
 
 

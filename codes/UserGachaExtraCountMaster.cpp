@@ -1,14 +1,14 @@
 void UserGachaExtraCountMaster___ctor(UserGachaExtraCountMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF4FA & 1) == 0 )
+  if ( (byte_4D3187B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
-    byte_4CEF4FA = 1;
+    sub_1C93AD4(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
+    byte_4D3187B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     285,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserGachaExtraCountEntity_o *UserGachaExtraCountMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEF4F8 & 1) == 0 )
+  if ( (byte_4D31879 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
-    byte_4CEF4F8 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
+    byte_4D31879 = 1;
   }
   PK = (Il2CppObject *)UserGachaExtraCountEntity__CreatePK(userId, extraGroupId, *(const MethodInfo **)&extraGroupId);
   return (UserGachaExtraCountEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_3432DB4 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
+                                          (const MethodInfo_34681D4 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
 }
 
 
@@ -43,17 +43,17 @@ bool UserGachaExtraCountMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEF4F9 & 1) == 0 )
+  if ( (byte_4D3187A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
-    byte_4CEF4F9 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
+    byte_4D3187A = 1;
   }
   PK = (Il2CppObject *)UserGachaExtraCountEntity__CreatePK(userId, extraGroupId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
 }
 
 
@@ -69,19 +69,19 @@ int32_t UserGachaExtraCountMaster__getExtraCount(
   int32_t v8; // w22
   Il2CppObject *Item; // x0
 
-  if ( (byte_4CEF4FB & 1) == 0 )
+  if ( (byte_4D3187C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Item__);
-    byte_4CEF4FB = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Item__);
+    byte_4D3187C = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_12:
-    sub_1C7BD40(list, *(_QWORD *)&extraGroupId);
+    sub_1C93D2C(list, *(_QWORD *)&extraGroupId);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Count__);
   if ( Count < 1 )
     return 0;
   v7 = Count;
@@ -94,7 +94,7 @@ LABEL_12:
     Item = System_Collections_ObjectModel_Collection_object___get_Item(
              list,
              v8,
-             (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Item__);
+             (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_UserGachaExtraCountEntity__get_Item__);
     if ( Item )
     {
       if ( LODWORD(Item[1].monitor) == extraGroupId )

@@ -11,10 +11,10 @@ CompleteMissionListViewItem_o *CompleteMissionListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CED0D9 & 1) == 0 )
+  if ( (byte_4D2F423 & 1) == 0 )
   {
-    sub_1C7BAE8(&CompleteMissionListViewItem_TypeInfo);
-    byte_4CED0D9 = 1;
+    sub_1C93AD4(&CompleteMissionListViewItem_TypeInfo);
+    byte_4D2F423 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -38,10 +38,10 @@ void CompleteMissionListViewObject__OnChangeAlphaAnim(CompleteMissionListViewObj
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CED0DA & 1) == 0 )
+  if ( (byte_4D2F424 & 1) == 0 )
   {
-    sub_1C7BAE8(&CompleteMissionListViewManager_TypeInfo);
-    byte_4CED0DA = 1;
+    sub_1C93AD4(&CompleteMissionListViewManager_TypeInfo);
+    byte_4D2F424 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -62,7 +62,7 @@ void CompleteMissionListViewObject__OnChangeAlphaAnim(CompleteMissionListViewObj
     }
     CompleteMissionItemDraw = CompleteMissionListViewObject__get_CompleteMissionItemDraw(this, v3);
     if ( !CompleteMissionItemDraw )
-      sub_1C7BD40(0, v8);
+      sub_1C93D2C(0, v8);
     CompleteMissionListViewItemDraw__ChangeNextRewardIcon(
       CompleteMissionItemDraw,
       (CompleteMissionListViewManager_o *)v6,
@@ -84,10 +84,10 @@ CompleteMissionListViewItemDraw_o *CompleteMissionListViewObject__get_CompleteMi
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CED0D8 & 1) == 0 )
+  if ( (byte_4D2F422 & 1) == 0 )
   {
-    sub_1C7BAE8(&CompleteMissionListViewItemDraw_TypeInfo);
-    byte_4CED0D8 = 1;
+    sub_1C93AD4(&CompleteMissionListViewItemDraw_TypeInfo);
+    byte_4D2F422 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

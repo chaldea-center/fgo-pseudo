@@ -11,22 +11,22 @@ bool FollowerRecommendSupportSetupRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4CF0182 & 1) == 0 )
+  if ( (byte_4D32512 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Convert_TypeInfo);
-    sub_1C7BAE8(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_23204/*"recommendDeckData"*/);
-    byte_4CF0182 = 1;
+    sub_1C93AD4(&System_Convert_TypeInfo);
+    sub_1C93AD4(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_1C93AD4(&StringLiteral_23269/*"recommendDeckData"*/);
+    byte_4D32512 = 1;
   }
-  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C7BD34(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C93D20(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v5, 0);
   if ( !v5 )
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   v8 = MiniMessagePack_MiniMessagePacker__PackClass(v5, &updateDeckData->obj, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v9 = System_Convert__ToBase64String(v8, 0);
-  RequestBase__addField_44748720((RequestBase_o *)this, (System_String_o *)StringLiteral_23204/*"recommendDeckData"*/, v9, v10);
+  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_23269/*"recommendDeckData"*/, v9, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
   return 1;
 }
@@ -38,16 +38,16 @@ System_String_o *FollowerRecommendSupportSetupRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF0181 & 1) == 0 )
+  if ( (byte_4D32511 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19681/*"follower/setupRecommendSupport"*/);
-    byte_4CF0181 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19734/*"follower/setupRecommendSupport"*/);
+    byte_4D32511 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_19681/*"follower/setupRecommendSupport"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19734/*"follower/setupRecommendSupport"*/, 0);
 }
 
 
@@ -61,12 +61,12 @@ void FollowerRecommendSupportSetupRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4CF0183 & 1) == 0 )
+  if ( (byte_4D32513 & 1) == 0 )
   {
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22590/*"ok"*/);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF0183 = 1;
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D32513 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -76,14 +76,14 @@ void FollowerRecommendSupportSetupRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22590/*"ok"*/;
+    v8 = &StringLiteral_22655/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22419/*"ng"*/;
+    v8 = &StringLiteral_22483/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

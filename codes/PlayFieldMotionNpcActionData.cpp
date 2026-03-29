@@ -4,10 +4,10 @@ void PlayFieldMotionNpcActionData___ctor(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4CF0C40 & 1) == 0 )
+  if ( (byte_4D32FE9 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleActionData_TypeInfo);
-    byte_4CF0C40 = 1;
+    sub_1C93AD4(&BattleActionData_TypeInfo);
+    byte_4D32FE9 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
@@ -32,10 +32,10 @@ void PlayFieldMotionNpcActionData__PreActionProcess(
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CF0C41 & 1) == 0 )
+  if ( (byte_4D32FEA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0C41 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D32FEA = 1;
   }
   BattleActionData__PreActionProcess((BattleActionData_o *)this, data, method);
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
@@ -45,10 +45,10 @@ void PlayFieldMotionNpcActionData__PreActionProcess(
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
     if ( !data || (perf = data->fields.perf) == 0 )
-      sub_1C7BD40(perf, v7);
+      sub_1C93D2C(perf, v7);
     ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0);
     this->fields.targetObject = ServantGameObject;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.targetObject,
       (int32_t)ServantGameObject,
       v9,

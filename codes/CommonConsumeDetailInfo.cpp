@@ -37,9 +37,9 @@ void CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
   this->fields.targetEntity = targetEntity;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetEntity,
     (int32_t)targetEntity,
     v15,
@@ -49,7 +49,7 @@ void CommonConsumeDetailInfo___ctor(
     v19,
     v20);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.userOwnStatusEntity,
     (int32_t)userOwnStatusEntity,
     v21,
@@ -60,11 +60,11 @@ void CommonConsumeDetailInfo___ctor(
     v26);
   v29 = this->fields.CommonConsumeEntity;
   if ( !v29 )
-    sub_1C7BD40(v27, v28);
+    sub_1C93D2C(v27, v28);
   this->fields._Num_k__BackingField = v29->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)TargetName,
     v31,
@@ -85,11 +85,11 @@ bool CommonConsumeDetailInfo__CheckIsOwnedEnoughly(CommonConsumeDetailInfo_o *th
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v7; // x11
 
-  if ( (byte_4CEE12E & 1) == 0 )
+  if ( (byte_4D3048A & 1) == 0 )
   {
-    sub_1C7BAE8(&ItemEntity_TypeInfo);
-    sub_1C7BAE8(&UserItemEntity_TypeInfo);
-    byte_4CEE12E = 1;
+    sub_1C93AD4(&ItemEntity_TypeInfo);
+    sub_1C93AD4(&UserItemEntity_TypeInfo);
+    byte_4D3048A = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -111,11 +111,11 @@ System_String_o *CommonConsumeDetailInfo__GetTargetName(CommonConsumeDetailInfo_
   __int64 naturalAligment; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4CEE12D & 1) == 0 )
+  if ( (byte_4D30489 & 1) == 0 )
   {
-    sub_1C7BAE8(&ItemEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEE12D = 1;
+    sub_1C93AD4(&ItemEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D30489 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -172,7 +172,7 @@ void CommonConsumeDetailInfo__set_Name(
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,

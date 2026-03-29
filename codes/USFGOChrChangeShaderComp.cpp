@@ -26,22 +26,22 @@ void USFGOChrChangeShaderComp__ChangeShaders(USFGOChrChangeShaderComp_o *this, c
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-80h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+40h] [xbp-60h] BYREF
 
-  if ( (byte_4CEFFE0 & 1) == 0 )
+  if ( (byte_4D3236A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Material___ctor__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Material__get_Count__);
-    sub_1C7BAE8(&System_Collections_Generic_HashSet_Material__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFFE0 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Material___ctor__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Material__get_Count__);
+    sub_1C93AD4(&System_Collections_Generic_HashSet_Material__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3236A = 1;
   }
   memset(&i, 0, sizeof(i));
   memset(&v20, 0, sizeof(v20));
@@ -51,14 +51,14 @@ void USFGOChrChangeShaderComp__ChangeShaders(USFGOChrChangeShaderComp_o *this, c
     v5 = (System_Collections_Generic_List_object__o *)Targets;
     if ( Targets->fields._size >= 1 )
     {
-      v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C7BD34(System_Collections_Generic_HashSet_Material__TypeInfo);
+      v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C93D20(System_Collections_Generic_HashSet_Material__TypeInfo);
       System_Collections_Generic_HashSet_object____ctor(
         v6,
-        (const MethodInfo_36EFD64 *)Method_System_Collections_Generic_HashSet_Material___ctor__);
+        (const MethodInfo_372B7CC *)Method_System_Collections_Generic_HashSet_Material___ctor__);
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v19,
         v5,
-        (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+        (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
       for ( i = v19;
             ;
             USFGOChrChangeShaderComp__CollectRendererMaterials(
@@ -70,13 +70,13 @@ void USFGOChrChangeShaderComp__ChangeShaders(USFGOChrChangeShaderComp_o *this, c
       {
         v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &i,
-               (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+               (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
         if ( !v7 )
           break;
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &i,
-        (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+        (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
       if ( v6 )
       {
         if ( v6->fields._count <= 0 )
@@ -96,11 +96,11 @@ void USFGOChrChangeShaderComp__ChangeShaders(USFGOChrChangeShaderComp_o *this, c
             System_Collections_Generic_List_object___GetEnumerator(
               (System_Collections_Generic_List_Enumerator_T__o *)&v19,
               items,
-              (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
+              (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
             v20 = v19;
             while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                       &v20,
-                      (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__) )
+                      (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__) )
             {
               if ( v20.fields._current )
                 USFGOChrChangeShaderComp_ShaderPair__ChangeShader(
@@ -111,7 +111,7 @@ void USFGOChrChangeShaderComp__ChangeShaders(USFGOChrChangeShaderComp_o *this, c
             }
             System_Collections_Generic_List_Enumerator_object___Dispose(
               &v20,
-              (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
+              (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
 LABEL_20:
             shaderPairs = this->fields.shaderPairs;
             if ( shaderPairs )
@@ -124,7 +124,7 @@ LABEL_20:
                 do
                 {
                   if ( v17 >= (unsigned int)max_length )
-                    sub_1C7BD48(items);
+                    sub_1C93D34(items);
                   if ( shaderPairs->m_Items[v17] )
                   {
                     USFGOChrChangeShaderComp_ShaderPair__ChangeShader(
@@ -143,7 +143,7 @@ LABEL_20:
           }
         }
       }
-      sub_1C7BD40(items, v10);
+      sub_1C93D2C(items, v10);
     }
   }
 }
@@ -160,14 +160,14 @@ void USFGOChrChangeShaderComp__CheckAssert(USFGOChrChangeShaderComp_o *this, con
   int i; // w9
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CEFFE2 & 1) == 0 )
+  if ( (byte_4D3236C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFFE2 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3236C = 1;
   }
   memset(&v10, 0, sizeof(v10));
   shaderPairsPreset = (UnityEngine_Object_o *)this->fields.shaderPairsPreset;
@@ -178,18 +178,18 @@ void USFGOChrChangeShaderComp__CheckAssert(USFGOChrChangeShaderComp_o *this, con
   {
     v6 = this->fields.shaderPairsPreset;
     if ( !v6 || (items = (System_Collections_Generic_List_object__o *)v6->fields.items) == 0 )
-      sub_1C7BD40(items, v5);
+      sub_1C93D2C(items, v5);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       items,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_USFGOChrChangeShaderComp_ShaderPair__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v10,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__MoveNext__) )
       ;
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v10,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_USFGOChrChangeShaderComp_ShaderPair__Dispose__);
   }
   shaderPairs = this->fields.shaderPairs;
   if ( shaderPairs )
@@ -200,7 +200,7 @@ void USFGOChrChangeShaderComp__CheckAssert(USFGOChrChangeShaderComp_o *this, con
       for ( i = 0; i < max_length; ++i )
       {
         if ( i >= (unsigned int)max_length )
-          sub_1C7BD48(items);
+          sub_1C93D34(items);
       }
     }
   }
@@ -222,20 +222,20 @@ void USFGOChrChangeShaderComp__CollectRendererMaterials(
   unsigned __int64 v13; // x26
   UnityEngine_Object_o *v14; // x22
 
-  if ( (byte_4CEFFE3 & 1) == 0 )
+  if ( (byte_4D3236D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78863456);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Material__Add__);
-    this = (USFGOChrChangeShaderComp_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFFE3 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____79129976);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Material__Add__);
+    this = (USFGOChrChangeShaderComp_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3236D = 1;
   }
   if ( !gameObject )
 LABEL_22:
-    sub_1C7BD40(this, gameObject);
+    sub_1C93D2C(this, gameObject);
   this = (USFGOChrChangeShaderComp_o *)UnityEngine_GameObject__GetComponentsInChildren_object_(
                                          gameObject,
                                          isIncludeInactive,
-                                         (const MethodInfo_31C7D68 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78863456);
+                                         (const MethodInfo_31FCD24 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____79129976);
   if ( this )
   {
     m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
@@ -276,14 +276,14 @@ LABEL_19:
           this = (USFGOChrChangeShaderComp_o *)System_Collections_Generic_HashSet_object___Add(
                                                  (System_Collections_Generic_HashSet_T__o *)result,
                                                  (Il2CppObject *)v14,
-                                                 (const MethodInfo_36F0F48 *)Method_System_Collections_Generic_HashSet_Material__Add__);
+                                                 (const MethodInfo_372C9B0 *)Method_System_Collections_Generic_HashSet_Material__Add__);
         }
         LODWORD(v11) = v12->fields.m_CancellationTokenSource;
         if ( (__int64)++v13 >= (int)v11 )
           goto LABEL_19;
       }
 LABEL_21:
-      sub_1C7BD48(this);
+      sub_1C93D34(this);
     }
   }
 }
@@ -295,67 +295,66 @@ void USFGOChrChangeShaderComp__RestoreShaders(USFGOChrChangeShaderComp_o *this, 
   System_Collections_Generic_Dictionary_object__object__o **p_originalShaders; // x19
   struct System_Collections_Generic_Dictionary_Material__Shader__o *originalShaders; // t1
   __int64 v6; // x1
-  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v16; // [xsp+0h] [xbp-60h] BYREF
+  Il2CppObject *value; // x20
+  Il2CppObject *key; // x21
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v17; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4CEFFE1 & 1) == 0 )
+  if ( (byte_4D3236B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Material__Shader__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Material__Shader__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_KeyValuePair_Material__Shader__get_Key__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_KeyValuePair_Material__Shader__get_Value__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFFE1 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Material__Shader__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Material__Shader__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_KeyValuePair_Material__Shader__get_Key__);
+    sub_1C93AD4(&Method_System_Collections_Generic_KeyValuePair_Material__Shader__get_Value__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3236B = 1;
   }
-  memset(&v16, 0, sizeof(v16));
+  memset(&v17, 0, sizeof(v17));
   originalShaders = this->fields.originalShaders;
   p_originalShaders = (System_Collections_Generic_Dictionary_object__object__o **)&this->fields.originalShaders;
   v3 = (System_Collections_Generic_Dictionary_object__object__o *)originalShaders;
   if ( originalShaders
     && System_Collections_Generic_Dictionary_object__object___get_Count(
          v3,
-         (const MethodInfo_34F215C *)Method_System_Collections_Generic_Dictionary_Material__Shader__get_Count__) >= 1 )
+         (const MethodInfo_352E878 *)Method_System_Collections_Generic_Dictionary_Material__Shader__get_Count__) >= 1 )
   {
     if ( !*p_originalShaders )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v16,
+      &v17,
       *p_originalShaders,
-      (const MethodInfo_34F28BC *)Method_System_Collections_Generic_Dictionary_Material__Shader__GetEnumerator__);
+      (const MethodInfo_352EFD8 *)Method_System_Collections_Generic_Dictionary_Material__Shader__GetEnumerator__);
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v16,
-              (const MethodInfo_35F10F0 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__MoveNext__) )
+              &v17,
+              (const MethodInfo_362E224 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__MoveNext__) )
     {
-      current = v16.fields._current;
+      key = v17.fields._current.fields.key;
+      value = v17.fields._current.fields.value;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current.fields.key, 0, 0);
-      if ( v8 )
+      v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)key, 0, 0);
+      if ( v9 )
       {
-        if ( !current.fields.key )
-          sub_1C7BD40(v8, v9);
-        UnityEngine_Material__set_shader(
-          (UnityEngine_Material_o *)current.fields.key,
-          (UnityEngine_Shader_o *)current.fields.value,
-          0);
+        if ( !key )
+          sub_1C93D2C(v9, v10);
+        UnityEngine_Material__set_shader((UnityEngine_Material_o *)key, (UnityEngine_Shader_o *)value, 0);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v16,
-      (const MethodInfo_35F1210 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__Dispose__);
+      &v17,
+      (const MethodInfo_362E344 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__Dispose__);
     *p_originalShaders = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_originalShaders, 0, v10, v11, v12, v13, v14, v15);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)p_originalShaders, 0, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -381,9 +380,9 @@ void USFGOChrChangeShaderComp_ChangeShaderProp___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.targetShaderName = targetShaderName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)targetShaderName, v7, v8, v9, v10, v11, v12);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)targetShaderName, v7, v8, v9, v10, v11, v12);
   this->fields.changeShaderPropValues = changeShaderPropValues;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.changeShaderPropValues,
     (int32_t)changeShaderPropValues,
     v13,
@@ -405,7 +404,7 @@ void USFGOChrChangeShaderComp_ChangeShaderProp__CheckAssert(
 
   changeShaderPropValues = this->fields.changeShaderPropValues;
   if ( !changeShaderPropValues )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   max_length = changeShaderPropValues->max_length;
   v4 = -1;
   do
@@ -427,14 +426,14 @@ void USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue(
     || (v4 = this,
         (this = (USFGOChrChangeShaderComp_ChangeShaderProp_o *)UnityEngine_Material__get_shader(material, 0)) == 0) )
   {
-    sub_1C7BD40(this, material);
+    sub_1C93D2C(this, material);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44654560(v4, material, name, v6);
+  USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44818464(v4, material, name, v6);
 }
 
 
-void USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44654560(
+void USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44818464(
         USFGOChrChangeShaderComp_ChangeShaderProp_o *this,
         UnityEngine_Material_o *material,
         System_String_o *shaderName,
@@ -463,7 +462,7 @@ void USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44654560(
       while ( 1 )
       {
         if ( v11 >= max_length )
-          sub_1C7BD48(v6);
+          sub_1C93D34(v6);
         v6 = changeShaderPropValues->m_Items[v11];
         if ( !v6 )
           break;
@@ -473,7 +472,7 @@ void USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44654560(
           return;
       }
 LABEL_10:
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     }
   }
 }
@@ -503,11 +502,11 @@ void USFGOChrChangeShaderComp_ChangeShaderPropValue___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.propName = propName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v8->fields, (int32_t)propName, v9, v10, v11, v12, v13, v14);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields, (int32_t)propName, v9, v10, v11, v12, v13, v14);
   v8->fields.propValue = propValue;
   v8 = (USFGOChrChangeShaderComp_ChangeShaderPropValue_o *)((char *)v8 + 32);
   v8[-1].fields._propNameID = propType;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v8, (int32_t)propValue, v15, v16, v17, v18, v19, v20);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v8, (int32_t)propValue, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -544,7 +543,7 @@ void USFGOChrChangeShaderComp_ChangeShaderPropValue__SetPropValue(
     v9 = System_Int32__Parse(propValue, 0);
     if ( !material )
       goto LABEL_8;
-    UnityEngine_Material__SetInt_71739004(material, v14, v9, 0);
+    UnityEngine_Material__SetInt_71988764(material, v14, v9, 0);
   }
   else if ( !propType )
   {
@@ -554,11 +553,11 @@ void USFGOChrChangeShaderComp_ChangeShaderPropValue__SetPropValue(
     v11 = System_Single__Parse(v7, 0);
     if ( material )
     {
-      UnityEngine_Material__SetFloat_71739216(material, v8, v11, 0);
+      UnityEngine_Material__SetFloat_71988976(material, v8, v11, 0);
       return;
     }
 LABEL_8:
-    sub_1C7BD40(v9, v10);
+    sub_1C93D2C(v9, v10);
   }
 }
 
@@ -630,78 +629,78 @@ void USFGOChrChangeShaderComp_ShaderPair__ChangeShader(
   System_Collections_Generic_HashSet_Enumerator_T__o v35; // [xsp+20h] [xbp-80h] BYREF
 
   v6 = this;
-  if ( (byte_4CEFFE4 & 1) == 0 )
+  if ( (byte_4D3236E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Material__Shader__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Material__Shader__ContainsKey__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_Material__Shader___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_Dictionary_Material__Shader__TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Contains_string___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Enumerator_Material__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Enumerator_Material__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Enumerator_Material__get_Current__);
-    this = (USFGOChrChangeShaderComp_ShaderPair_o *)sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_Material__GetEnumerator__);
-    byte_4CEFFE4 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Material__Shader__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Material__Shader__ContainsKey__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_Material__Shader___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_Dictionary_Material__Shader__TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Contains_string___);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Enumerator_Material__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Enumerator_Material__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Enumerator_Material__get_Current__);
+    this = (USFGOChrChangeShaderComp_ShaderPair_o *)sub_1C93AD4(&Method_System_Collections_Generic_HashSet_Material__GetEnumerator__);
+    byte_4D3236E = 1;
   }
   memset(&v35, 0, sizeof(v35));
   if ( !targetMaterials )
-    sub_1C7BD40(this, targetMaterials);
+    sub_1C93D2C(this, targetMaterials);
   System_Collections_Generic_HashSet_object___GetEnumerator(
     &v34,
     (System_Collections_Generic_HashSet_T__o *)targetMaterials,
-    (const MethodInfo_36F08CC *)Method_System_Collections_Generic_HashSet_Material__GetEnumerator__);
+    (const MethodInfo_372C334 *)Method_System_Collections_Generic_HashSet_Material__GetEnumerator__);
   v35 = v34;
   while ( 1 )
   {
     v7 = System_Collections_Generic_HashSet_Enumerator_object___MoveNext(
            &v35,
-           (const MethodInfo_35BDA28 *)Method_System_Collections_Generic_HashSet_Enumerator_Material__MoveNext__);
+           (const MethodInfo_35F9AA8 *)Method_System_Collections_Generic_HashSet_Enumerator_Material__MoveNext__);
     if ( !v7 )
       break;
     current = v35.fields._current;
     if ( !v35.fields._current )
-      sub_1C7BD40(v7, v8);
+      sub_1C93D2C(v7, v8);
     targetShaderNames = (System_Collections_Generic_IEnumerable_TSource__o *)v6->fields.targetShaderNames;
     shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v35.fields._current, 0);
     if ( !shader )
-      sub_1C7BD40(0, v12);
+      sub_1C93D2C(0, v12);
     name = (Il2CppObject *)UnityEngine_Object__get_name(shader, 0);
     if ( System_Linq_Enumerable__Contains_object_(
            targetShaderNames,
            name,
-           (const MethodInfo_318C9E8 *)Method_System_Linq_Enumerable_Contains_string___) )
+           (const MethodInfo_31C1360 *)Method_System_Linq_Enumerable_Contains_string___) )
     {
       v14 = *originalShaders;
       if ( !*originalShaders )
       {
-        v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C7BD34(System_Collections_Generic_Dictionary_Material__Shader__TypeInfo);
+        v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C93D20(System_Collections_Generic_Dictionary_Material__Shader__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v15,
-          (const MethodInfo_34F1ADC *)Method_System_Collections_Generic_Dictionary_Material__Shader___ctor__);
+          (const MethodInfo_352E1F8 *)Method_System_Collections_Generic_Dictionary_Material__Shader___ctor__);
         *originalShaders = (System_Collections_Generic_Dictionary_Material__Shader__o *)v15;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)originalShaders, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)originalShaders, (int32_t)v15, v16, v17, v18, v19, v20, v21);
         v14 = *originalShaders;
         if ( !*originalShaders )
-          sub_1C7BD40(0, v22);
+          sub_1C93D2C(0, v22);
       }
       if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
               (System_Collections_Generic_Dictionary_object__object__o *)v14,
               current,
-              (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_Material__Shader__ContainsKey__) )
+              (const MethodInfo_352ED9C *)Method_System_Collections_Generic_Dictionary_Material__Shader__ContainsKey__) )
       {
         v23 = *originalShaders;
         v24 = (Il2CppObject *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)current, 0);
         if ( !v23 )
-          sub_1C7BD40(v24, v25);
+          sub_1C93D2C(v24, v25);
         System_Collections_Generic_Dictionary_object__object___Add(
           (System_Collections_Generic_Dictionary_object__object__o *)v23,
           current,
           v24,
-          (const MethodInfo_34F248C *)Method_System_Collections_Generic_Dictionary_Material__Shader__Add__);
+          (const MethodInfo_352EBA8 *)Method_System_Collections_Generic_Dictionary_Material__Shader__Add__);
       }
       v26 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)current, 0);
       if ( !v26 )
-        sub_1C7BD40(0, v27);
+        sub_1C93D2C(0, v27);
       v28 = UnityEngine_Object__get_name(v26, 0);
       UnityEngine_Material__set_shader((UnityEngine_Material_o *)current, v6->fields.changeShader, 0);
       changeShaderProps = v6->fields.changeShaderProps;
@@ -714,10 +713,10 @@ void USFGOChrChangeShaderComp_ShaderPair__ChangeShader(
           do
           {
             if ( v33 >= (unsigned int)max_length )
-              sub_1C7BD48(v29);
+              sub_1C93D34(v29);
             if ( changeShaderProps->m_Items[v33] )
             {
-              USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44654560(
+              USFGOChrChangeShaderComp_ChangeShaderProp__SetPropValue_44818464(
                 changeShaderProps->m_Items[v33],
                 (UnityEngine_Material_o *)current,
                 v28,
@@ -733,7 +732,7 @@ void USFGOChrChangeShaderComp_ShaderPair__ChangeShader(
   }
   System_Collections_Generic_HashSet_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_35BDA24 *)Method_System_Collections_Generic_HashSet_Enumerator_Material__Dispose__);
+    (const MethodInfo_35F9AA4 *)Method_System_Collections_Generic_HashSet_Enumerator_Material__Dispose__);
 }
 
 
@@ -747,7 +746,7 @@ void USFGOChrChangeShaderComp_ShaderPair__CheckAssert(
 
   targetShaderNames = this->fields.targetShaderNames;
   if ( !targetShaderNames )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   max_length = targetShaderNames->max_length;
   v4 = -1;
   do

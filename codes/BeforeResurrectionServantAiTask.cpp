@@ -21,10 +21,10 @@ bool BeforeResurrectionServantAiTask__IsActable(
   BattleBuffData_BuffData_o *gutsBuff; // [xsp+8h] [xbp-8h] BYREF
 
   if ( !logic || (v4 = this, (this = (BeforeResurrectionServantAiTask_o *)logic->fields.logicReaction) == 0) )
-    sub_1C7BD40(this, logic);
+    sub_1C93D2C(this, logic);
   svtData = v4->fields.svtData;
   gutsBuff = 0;
-  return BattleLogicReaction__CheckExecutableResurrection_47629932(
+  return BattleLogicReaction__CheckExecutableResurrection_47828868(
            (BattleLogicReaction_o *)this,
            svtData,
            &gutsBuff,

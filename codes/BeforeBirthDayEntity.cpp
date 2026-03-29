@@ -1,13 +1,13 @@
 void BeforeBirthDayEntity___ctor(BeforeBirthDayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE306 & 1) == 0 )
+  if ( (byte_4D30666 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_long___ctor__);
-    byte_4CEE306 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_long___ctor__);
+    byte_4D30666 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_342BE60 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3460B84 *)Method_DataEntityBase_long___ctor__);
 }
 
 

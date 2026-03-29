@@ -24,31 +24,31 @@ void SampleEventListViewItemDraw___cctor(const MethodInfo *method)
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CEBDA1 & 1) == 0 )
+  if ( (byte_4D2E0E5 & 1) == 0 )
   {
-    sub_1C7BAE8(&SampleEventListViewItemDraw_TypeInfo);
-    sub_1C7BAE8(&string___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16808/*"ai_quest_free"*/);
-    sub_1C7BAE8(&StringLiteral_16807/*"ai_quest_event"*/);
-    byte_4CEBDA1 = 1;
+    sub_1C93AD4(&SampleEventListViewItemDraw_TypeInfo);
+    sub_1C93AD4(&string___TypeInfo);
+    sub_1C93AD4(&StringLiteral_16850/*"ai_quest_free"*/);
+    sub_1C93AD4(&StringLiteral_16849/*"ai_quest_event"*/);
+    byte_4D2E0E5 = 1;
   }
-  v1 = sub_1C7BB90(string___TypeInfo, 2);
+  v1 = sub_1C93B7C(string___TypeInfo, 2);
   if ( !v1 )
-    sub_1C7BD40(0, v2);
+    sub_1C93D2C(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v10 = StringLiteral_16807/*"ai_quest_event"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_16807/*"ai_quest_event"*/,
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
+    || (v10 = StringLiteral_16849/*"ai_quest_event"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_16849/*"ai_quest_event"*/,
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
         *(_DWORD *)(v9 + 24) <= 1u) )
   {
-    sub_1C7BD48(v1);
+    sub_1C93D34(v1);
   }
-  v17 = StringLiteral_16808/*"ai_quest_free"*/;
-  *(_QWORD *)(v9 + 40) = StringLiteral_16808/*"ai_quest_free"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_16850/*"ai_quest_free"*/;
+  *(_QWORD *)(v9 + 40) = StringLiteral_16850/*"ai_quest_free"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
   SampleEventListViewItemDraw_TypeInfo->static_fields->eventTypeSpriteList = (struct System_String_array *)v9;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)SampleEventListViewItemDraw_TypeInfo->static_fields,
     v9,
     v18,
@@ -67,7 +67,6 @@ void SampleEventListViewItemDraw___ctor(SampleEventListViewItemDraw_o *this, con
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void SampleEventListViewItemDraw__SetItem(
         SampleEventListViewItemDraw_o *this,
         SampleEventListViewItem_o *item,
@@ -80,18 +79,15 @@ void SampleEventListViewItemDraw__SetItem(
   UILabel_o *eventTextLabel; // x0
   UIWidget_OnDimensionsChanged_c *klass; // x8
   Il2CppObject *Component_object; // x21
-  float v12; // s0 OVERLAPPED
-  float v13; // s3
-  float v14; // s1
-  float v15; // s2
+  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v5 = item;
-  if ( (byte_4CEBDA0 & 1) == 0 )
+  if ( (byte_4D2E0E4 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&SampleEventListViewItemDraw_TypeInfo);
-    byte_4CEBDA0 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&SampleEventListViewItemDraw_TypeInfo);
+    byte_4D2E0E4 = 1;
   }
   if ( v5 && mode )
   {
@@ -109,7 +105,7 @@ void SampleEventListViewItemDraw__SetItem(
       if ( !klass )
         goto LABEL_27;
       if ( (unsigned int)eventType >= LODWORD(klass->_1.namespaze) )
-        sub_1C7BD48(eventTextLabel);
+        sub_1C93D34(eventTextLabel);
       if ( !iconImageSprite )
         goto LABEL_27;
       UISprite__set_spriteName(iconImageSprite, *((System_String_o **)&klass->_1.byval_arg.data + eventType), 0);
@@ -131,7 +127,7 @@ void SampleEventListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)eventTextLabel,
-                             (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -142,21 +138,21 @@ void SampleEventListViewItemDraw__SetItem(
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
         }
         eventTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-        v12 = 1.0;
+        v12.fields.r = 1.0;
         if ( mode == 1 )
-          v12 = 0.5;
+          v12.fields.r = 0.5;
         if ( eventTextLabel )
         {
-          v13 = 1.0;
-          v14 = v12;
-          v15 = v12;
-          UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v12, 0);
+          v12.fields.a = 1.0;
+          v12.fields.g = v12.fields.r;
+          v12.fields.b = v12.fields.r;
+          UIWidget__set_color((UIWidget_o *)eventTextLabel, v12, 0);
           return;
         }
       }
     }
 LABEL_27:
-    sub_1C7BD40(eventTextLabel, item);
+    sub_1C93D2C(eventTextLabel, item);
   }
   this->fields.eventType = -1;
 }

@@ -18,13 +18,13 @@ void PointGroupNameEffectSubComponent__RecvParam(
   int32_t v11; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CEFCFF & 1) == 0 )
+  if ( (byte_4D32084 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1C7BAE8(&RaceResultEffectParam_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEFCFF = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C93AD4(&RaceResultEffectParam_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D32084 = 1;
   }
   entity = 0;
   if ( param )
@@ -43,12 +43,12 @@ void PointGroupNameEffectSubComponent__RecvParam(
           {
             v10 = *((_DWORD *)monitor + 8);
             v11 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
@@ -69,7 +69,7 @@ void PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1C7BD40(Instance, param);
+              sub_1C93D2C(Instance, param);
             }
           }
         }

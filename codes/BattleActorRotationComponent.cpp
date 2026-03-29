@@ -26,7 +26,7 @@ void BattleActorRotationComponent__RotationStop(BattleActorRotationComponent_o *
   v6.fields.x = 0.0;
   v7 = UnityEngine_Quaternion__Internal_FromEulerRad(v6, 0);
   if ( !transform )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   UnityEngine_Transform__set_localRotation(transform, v7, 0);
 }
 
@@ -35,21 +35,22 @@ void BattleActorRotationComponent__Start(BattleActorRotationComponent_o *this, c
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s1
+  UnityEngine_Vector3_o v6; // 0:kr10_12.12
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   localRotation = UnityEngine_Transform__get_localRotation(transform, 0);
-  v5 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0);
-  v5.fields.x = v5.fields.x * 57.296;
-  v5.fields.y = v5.fields.y * 57.296;
-  v5.fields.z = v5.fields.z * 57.296;
-  Positive = UnityEngine_Quaternion__Internal_MakePositive(v5, 0);
-  this->fields.RotationY = Positive.fields.y;
-  this->fields.ResetRotationY = Positive.fields.y;
+  v6 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0);
+  v7.fields.x = v6.fields.x * 57.296;
+  v7.fields.y = v6.fields.y * 57.296;
+  v7.fields.z = v6.fields.z * 57.296;
+  y = UnityEngine_Quaternion__Internal_MakePositive(v7, 0).fields.y;
+  this->fields.RotationY = y;
+  this->fields.ResetRotationY = y;
 }
 
 
@@ -78,7 +79,7 @@ void BattleActorRotationComponent__Update(BattleActorRotationComponent_o *this, 
     v10.fields.x = 0.0;
     v11 = UnityEngine_Quaternion__Internal_FromEulerRad(v10, 0);
     if ( !transform )
-      sub_1C7BD40(v8, v9);
+      sub_1C93D2C(v8, v9);
     UnityEngine_Transform__set_localRotation(transform, v11, 0);
   }
 }

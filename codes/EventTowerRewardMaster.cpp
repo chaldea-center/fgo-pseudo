@@ -1,14 +1,14 @@
 void EventTowerRewardMaster___ctor(EventTowerRewardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE81F & 1) == 0 )
+  if ( (byte_4D30B82 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string___ctor__);
-    byte_4CEE81F = 1;
+    sub_1C93AD4(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string___ctor__);
+    byte_4D30B82 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     241,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventTowerRewardEntity_o *EventTowerRewardMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEE81D & 1) == 0 )
+  if ( (byte_4D30B80 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__GetEntity__);
-    byte_4CEE81D = 1;
+    sub_1C93AD4(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__GetEntity__);
+    byte_4D30B80 = 1;
   }
   PK = (Il2CppObject *)EventTowerRewardEntity__CreatePK(eventId, towerId, floor, *(const MethodInfo **)&floor);
   return (EventTowerRewardEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3432DB4 *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__GetEntity__);
+                                       (const MethodInfo_34681D4 *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__GetEntity__);
 }
 
 
@@ -66,30 +66,30 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardAllEntityLis
   int64_t v28; // x6
   System_String_o *v29; // x7
 
-  if ( (byte_4CEE821 & 1) == 0 )
+  if ( (byte_4D30B84 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
-    sub_1C7BAE8(&System_Comparison_EventTowerRewardEntity__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
-    sub_1C7BAE8(&Method_EventTowerRewardMaster___c__GetTowerRewardAllEntityList_b__4_0__);
-    sub_1C7BAE8(&EventTowerRewardMaster___c_TypeInfo);
-    byte_4CEE821 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
+    sub_1C93AD4(&System_Comparison_EventTowerRewardEntity__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
+    sub_1C93AD4(&Method_EventTowerRewardMaster___c__GetTowerRewardAllEntityList_b__4_0__);
+    sub_1C93AD4(&EventTowerRewardMaster___c_TypeInfo);
+    byte_4D30B84 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_23;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -102,7 +102,7 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardAllEntityLis
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v10,
-               (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
+               (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
       if ( !list )
         break;
       v6 = (Il2CppClass *)list;
@@ -121,21 +121,21 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardAllEntityLis
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             (Il2CppObject *)list,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v5->fields._size = size + 1;
           v20[4] = v6;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
         }
       }
       if ( v9 == ++v10 )
         goto LABEL_15;
     }
 LABEL_23:
-    sub_1C7BD40(list, v6);
+    sub_1C93D2C(list, v6);
   }
 LABEL_15:
   list = EventTowerRewardMaster___c_TypeInfo;
@@ -153,7 +153,7 @@ LABEL_15:
       list = EventTowerRewardMaster___c_TypeInfo;
     }
     v22 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v21 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_EventTowerRewardEntity__TypeInfo);
+    v21 = (System_Comparison_T__o *)sub_1C93D20(System_Comparison_EventTowerRewardEntity__TypeInfo);
     System_Comparison_object____ctor(
       v21,
       v22,
@@ -161,17 +161,17 @@ LABEL_15:
       0);
     static_fields = EventTowerRewardMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Comparison_EventTowerRewardEntity__o *)v21;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__4_0, (int32_t)v21, v24, v25, v26, v27, v28, v29);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__4_0, (int32_t)v21, v24, v25, v26, v27, v28, v29);
   }
   if ( !v5 )
     goto LABEL_23;
-  System_Collections_Generic_List_object___Sort_58984640(
+  System_Collections_Generic_List_object___Sort_59225184(
     v5,
     v21,
-    (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
+    (const MethodInfo_387B460 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
   return (EventTowerRewardEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v5,
-                                           (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
+                                           (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
 }
 
 
@@ -207,30 +207,30 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardEntityList(
   int64_t v30; // x6
   System_String_o *v31; // x7
 
-  if ( (byte_4CEE820 & 1) == 0 )
+  if ( (byte_4D30B83 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
-    sub_1C7BAE8(&System_Comparison_EventTowerRewardEntity__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
-    sub_1C7BAE8(&Method_EventTowerRewardMaster___c__GetTowerRewardEntityList_b__3_0__);
-    sub_1C7BAE8(&EventTowerRewardMaster___c_TypeInfo);
-    byte_4CEE820 = 1;
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
+    sub_1C93AD4(&System_Comparison_EventTowerRewardEntity__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
+    sub_1C93AD4(&Method_EventTowerRewardMaster___c__GetTowerRewardEntityList_b__3_0__);
+    sub_1C93AD4(&EventTowerRewardMaster___c_TypeInfo);
+    byte_4D30B83 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventTowerRewardEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventTowerRewardEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_33C6990 *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
+            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -243,7 +243,7 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardEntityList(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v12,
-               (const MethodInfo_33C6A20 *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
+               (const MethodInfo_33FBE3C *)Method_System_Collections_ObjectModel_Collection_EventTowerRewardEntity__get_Item__);
       if ( !list )
         break;
       v8 = (Il2CppClass *)list;
@@ -262,21 +262,21 @@ EventTowerRewardEntity_array *EventTowerRewardMaster__GetTowerRewardEntityList(
           System_Collections_Generic_List_object___AddWithResize(
             v7,
             (Il2CppObject *)list,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
           v22 = &items->obj.klass + size;
           v7->fields._size = size + 1;
           v22[4] = v8;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v8, v13, v14, v15, v16, v17, v18);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v8, v13, v14, v15, v16, v17, v18);
         }
       }
       if ( v11 == ++v12 )
         goto LABEL_16;
     }
 LABEL_24:
-    sub_1C7BD40(list, v8);
+    sub_1C93D2C(list, v8);
   }
 LABEL_16:
   list = EventTowerRewardMaster___c_TypeInfo;
@@ -294,21 +294,21 @@ LABEL_16:
       list = EventTowerRewardMaster___c_TypeInfo;
     }
     v24 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v23 = (System_Comparison_T__o *)sub_1C7BD34(System_Comparison_EventTowerRewardEntity__TypeInfo);
+    v23 = (System_Comparison_T__o *)sub_1C93D20(System_Comparison_EventTowerRewardEntity__TypeInfo);
     System_Comparison_object____ctor(v23, v24, Method_EventTowerRewardMaster___c__GetTowerRewardEntityList_b__3_0__, 0);
     static_fields = EventTowerRewardMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_EventTowerRewardEntity__o *)v23;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__3_0, (int32_t)v23, v26, v27, v28, v29, v30, v31);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__3_0, (int32_t)v23, v26, v27, v28, v29, v30, v31);
   }
   if ( !v7 )
     goto LABEL_24;
-  System_Collections_Generic_List_object___Sort_58984640(
+  System_Collections_Generic_List_object___Sort_59225184(
     v7,
     v23,
-    (const MethodInfo_38408C0 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
+    (const MethodInfo_387B460 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__Sort__);
   return (EventTowerRewardEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v7,
-                                           (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
+                                           (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_EventTowerRewardEntity__ToArray__);
 }
 
 
@@ -323,17 +323,17 @@ bool EventTowerRewardMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEE81E & 1) == 0 )
+  if ( (byte_4D30B81 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__TryGetEntity__);
-    byte_4CEE81E = 1;
+    sub_1C93AD4(&Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__TryGetEntity__);
+    byte_4D30B81 = 1;
   }
   PK = (Il2CppObject *)EventTowerRewardEntity__CreatePK(eventId, towerId, floor, *(const MethodInfo **)&towerId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_EventTowerRewardMaster__EventTowerRewardEntity__string__TryGetEntity__);
 }
 
 
@@ -347,15 +347,15 @@ void EventTowerRewardMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEE822 & 1) == 0 )
+  if ( (byte_4D30B85 & 1) == 0 )
   {
-    sub_1C7BAE8(&EventTowerRewardMaster___c_TypeInfo);
-    byte_4CEE822 = 1;
+    sub_1C93AD4(&EventTowerRewardMaster___c_TypeInfo);
+    byte_4D30B85 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(EventTowerRewardMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(EventTowerRewardMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventTowerRewardMaster___c_TypeInfo->static_fields->__9 = (struct EventTowerRewardMaster___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)EventTowerRewardMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -380,7 +380,7 @@ int32_t EventTowerRewardMaster___c___GetTowerRewardAllEntityList_b__4_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1C7BD40(this, a);
+    sub_1C93D2C(this, a);
   return a->fields.floor - b->fields.floor;
 }
 
@@ -392,6 +392,6 @@ int32_t EventTowerRewardMaster___c___GetTowerRewardEntityList_b__3_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1C7BD40(this, a);
+    sub_1C93D2C(this, a);
   return a->fields.floor - b->fields.floor;
 }

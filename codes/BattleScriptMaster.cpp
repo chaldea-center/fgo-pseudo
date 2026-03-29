@@ -1,14 +1,14 @@
 void BattleScriptMaster___ctor(BattleScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE302 & 1) == 0 )
+  if ( (byte_4D30662 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string___ctor__);
-    byte_4CEE302 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string___ctor__);
+    byte_4D30662 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     555,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string___ctor__);
 }
 
 
@@ -48,28 +48,28 @@ BattleScriptEntity_array *BattleScriptMaster__GetBattleScriptEntities(
   System_String_o *v33; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v34; // x0
 
-  if ( (byte_4CEE301 & 1) == 0 )
+  if ( (byte_4D30661 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OrderBy_BattleScriptEntity__int___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ThenBy_BattleScriptEntity__int___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BattleScriptEntity___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_BattleScriptEntity___);
-    sub_1C7BAE8(&System_Func_BattleScriptEntity__int__TypeInfo);
-    sub_1C7BAE8(&System_Func_BattleScriptEntity__bool__TypeInfo);
-    sub_1C7BAE8(&Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_1__);
-    sub_1C7BAE8(&Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_2__);
-    sub_1C7BAE8(&Method_BattleScriptMaster___c__DisplayClass0_0__GetBattleScriptEntities_b__0__);
-    sub_1C7BAE8(&BattleScriptMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1C7BAE8(&BattleScriptMaster___c_TypeInfo);
-    byte_4CEE301 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OrderBy_BattleScriptEntity__int___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ThenBy_BattleScriptEntity__int___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BattleScriptEntity___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Where_BattleScriptEntity___);
+    sub_1C93AD4(&System_Func_BattleScriptEntity__int__TypeInfo);
+    sub_1C93AD4(&System_Func_BattleScriptEntity__bool__TypeInfo);
+    sub_1C93AD4(&Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_1__);
+    sub_1C93AD4(&Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_2__);
+    sub_1C93AD4(&Method_BattleScriptMaster___c__DisplayClass0_0__GetBattleScriptEntities_b__0__);
+    sub_1C93AD4(&BattleScriptMaster___c__DisplayClass0_0_TypeInfo);
+    sub_1C93AD4(&BattleScriptMaster___c_TypeInfo);
+    byte_4D30661 = 1;
   }
-  v5 = sub_1C7BD34(BattleScriptMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C93D20(BattleScriptMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   *(_DWORD *)(v5 + 16) = battleScriptId;
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_BattleScriptEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_BattleScriptEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -78,7 +78,7 @@ BattleScriptEntity_array *BattleScriptMaster__GetBattleScriptEntities(
   v10 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_BattleScriptEntity___);
+          (const MethodInfo_31EB2BC *)Method_System_Linq_Enumerable_Where_BattleScriptEntity___);
   v11 = BattleScriptMaster___c_TypeInfo;
   v12 = v10;
   if ( !BattleScriptMaster___c_TypeInfo->_2.cctor_finished )
@@ -95,16 +95,16 @@ BattleScriptEntity_array *BattleScriptMaster__GetBattleScriptEntities(
       v11 = BattleScriptMaster___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_BattleScriptEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C93D20(System_Func_BattleScriptEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_1, v14, Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_1__, 0);
     static_fields = BattleScriptMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_1 = (struct System_Func_BattleScriptEntity__int__o *)_9__0_1;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v16, v17, v18, v19, v20, v21);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v16, v17, v18, v19, v20, v21);
   }
   v22 = System_Linq_Enumerable__OrderBy_object__int_(
           v12,
           (System_Func_TSource__TKey__o *)_9__0_1,
-          (const MethodInfo_319EF58 *)Method_System_Linq_Enumerable_OrderBy_BattleScriptEntity__int___);
+          (const MethodInfo_31D38D0 *)Method_System_Linq_Enumerable_OrderBy_BattleScriptEntity__int___);
   v23 = BattleScriptMaster___c_TypeInfo;
   v24 = v22;
   if ( !BattleScriptMaster___c_TypeInfo->_2.cctor_finished )
@@ -121,19 +121,19 @@ BattleScriptEntity_array *BattleScriptMaster__GetBattleScriptEntities(
       v23 = BattleScriptMaster___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v23->static_fields->__9;
-    _9__0_2 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_BattleScriptEntity__int__TypeInfo);
+    _9__0_2 = (System_Func_object__int__o *)sub_1C93D20(System_Func_BattleScriptEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_2, v26, Method_BattleScriptMaster___c__GetBattleScriptEntities_b__0_2__, 0);
     v27 = BattleScriptMaster___c_TypeInfo->static_fields;
     v27->__9__0_2 = (struct System_Func_BattleScriptEntity__int__o *)_9__0_2;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v27->__9__0_2, (int32_t)_9__0_2, v28, v29, v30, v31, v32, v33);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->__9__0_2, (int32_t)_9__0_2, v28, v29, v30, v31, v32, v33);
   }
   v34 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                v24,
                                                                (System_Func_TSource__TKey__o *)_9__0_2,
-                                                               (const MethodInfo_31AE27C *)Method_System_Linq_Enumerable_ThenBy_BattleScriptEntity__int___);
+                                                               (const MethodInfo_31E2E7C *)Method_System_Linq_Enumerable_ThenBy_BattleScriptEntity__int___);
   return (BattleScriptEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                        v34,
-                                       (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BattleScriptEntity___);
+                                       (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BattleScriptEntity___);
 }
 
 
@@ -147,16 +147,16 @@ BattleScriptEntity_o *BattleScriptMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEE303 & 1) == 0 )
+  if ( (byte_4D30663 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__GetEntity__);
-    byte_4CEE303 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__GetEntity__);
+    byte_4D30663 = 1;
   }
   PK = (Il2CppObject *)BattleScriptEntity__CreatePK(id, playOrder, idx, *(const MethodInfo **)&idx);
   return (BattleScriptEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_3432DB4 *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__GetEntity__);
+                                   (const MethodInfo_34681D4 *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__GetEntity__);
 }
 
 
@@ -171,17 +171,17 @@ bool BattleScriptMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEE304 & 1) == 0 )
+  if ( (byte_4D30664 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__TryGetEntity__);
-    byte_4CEE304 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__TryGetEntity__);
+    byte_4D30664 = 1;
   }
   PK = (Il2CppObject *)BattleScriptEntity__CreatePK(id, playOrder, idx, *(const MethodInfo **)&playOrder);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_BattleScriptMaster__BattleScriptEntity__string__TryGetEntity__);
 }
 
 
@@ -195,15 +195,15 @@ void BattleScriptMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEE305 & 1) == 0 )
+  if ( (byte_4D30665 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleScriptMaster___c_TypeInfo);
-    byte_4CEE305 = 1;
+    sub_1C93AD4(&BattleScriptMaster___c_TypeInfo);
+    byte_4D30665 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(BattleScriptMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(BattleScriptMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleScriptMaster___c_TypeInfo->static_fields->__9 = (struct BattleScriptMaster___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)BattleScriptMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -227,7 +227,7 @@ int32_t BattleScriptMaster___c___GetBattleScriptEntities_b__0_1(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return l->fields.playOrder;
 }
 
@@ -238,7 +238,7 @@ int32_t BattleScriptMaster___c___GetBattleScriptEntities_b__0_2(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return l->fields.idx;
 }
 
@@ -257,6 +257,6 @@ bool BattleScriptMaster___c__DisplayClass0_0___GetBattleScriptEntities_b__0(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return l->fields.id == this->fields.battleScriptId;
 }

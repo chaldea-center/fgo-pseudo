@@ -24,7 +24,7 @@ void NpcServantAiActArgument___ctor(
   v9 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
   v9->fields._SvtData_k__BackingField = svtData;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v9->fields._SvtData_k__BackingField,
     (int32_t)svtData,
     v10,
@@ -36,7 +36,7 @@ void NpcServantAiActArgument___ctor(
   v9->fields._NpcAi_k__BackingField = npcAi;
   v9 = (NpcServantAiActArgument_o *)((char *)v9 + 56);
   LOBYTE(v9[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v9, (int32_t)npcAi, v16, v17, v18, v19, v20, v21);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v9, (int32_t)npcAi, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -68,10 +68,10 @@ void NpcServantAiActArgument__InitCommonTask(
   BattleActionData_o *v25; // x20
   __int64 v26; // x0
 
-  if ( (byte_4CF16E3 & 1) == 0 )
+  if ( (byte_4D33AB7 & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleActionData___TypeInfo);
-    byte_4CF16E3 = 1;
+    sub_1C93AD4(&BattleActionData___TypeInfo);
+    byte_4D33AB7 = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
   NpcAi_k__BackingField = (__int64)this->fields._NpcAi_k__BackingField;
@@ -105,7 +105,7 @@ LABEL_8:
            this->fields._AiEnt_k__BackingField,
            *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 768LL));
   }
-  v8 = sub_1C7BB90(BattleActionData___TypeInfo, 2);
+  v8 = sub_1C93B7C(BattleActionData___TypeInfo, 2);
   v9 = this->fields._NpcAi_k__BackingField;
   v10 = (BattleActionData_array *)v8;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
@@ -119,38 +119,38 @@ LABEL_8:
   v17 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_1C7BC24(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_1C93C10(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
     {
 LABEL_23:
-      v26 = sub_1C7BD64(NpcAi_k__BackingField);
-      sub_1C7BC10(v26, 0);
+      v26 = sub_1C93D50(NpcAi_k__BackingField);
+      sub_1C93BFC(v26, 0);
     }
   }
   if ( !LODWORD(v10->max_length) )
     goto LABEL_22;
   v10->m_Items[0] = v17;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
   v18 = this->fields._NpcAi_k__BackingField;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
                             this,
                             this->klass->vtable._4_get_UniqueId.method);
   if ( !v18 )
 LABEL_21:
-    sub_1C7BD40(NpcAi_k__BackingField, v5);
+    sub_1C93D2C(NpcAi_k__BackingField, v5);
   NpcAi_k__BackingField = (__int64)BattleLogicNpcAi__MakeStepInAction(v18, NpcAi_k__BackingField, v7 & 1, 0);
   v25 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_1C7BC24(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_1C93C10(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
       goto LABEL_23;
   }
   if ( LODWORD(v10->max_length) <= 1 )
 LABEL_22:
-    sub_1C7BD48(NpcAi_k__BackingField);
+    sub_1C93D34(NpcAi_k__BackingField);
   v10->m_Items[1] = v25;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v10->m_Items[1], (int32_t)v25, v19, v20, v21, v22, v23, v24);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v10->m_Items[1], (int32_t)v25, v19, v20, v21, v22, v23, v24);
   BattleLogicTask__SetInterruptAction((BattleLogicTask_o *)task, v10, 0);
 }
 
@@ -173,7 +173,7 @@ void NpcServantAiActArgument__set_NpcAi(
   System_String_o *v7; // x7
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)value,
     (int32_t)method,

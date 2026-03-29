@@ -24,10 +24,10 @@ void GrandQuestFolderBoardItem___ctor(
   System_String_o *v26; // x7
 
   v14 = this;
-  ListViewItem___ctor_44325320((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44487500((ListViewItem_o *)this, index, 0);
   v14->fields._WarId_k__BackingField = warId;
   v14->fields._Name_k__BackingField = boardName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v14->fields._Name_k__BackingField,
     (int32_t)boardName,
     v15,
@@ -40,7 +40,7 @@ void GrandQuestFolderBoardItem___ctor(
   v14 = (GrandQuestFolderBoardItem_o *)((char *)v14 + 152);
   LODWORD(v14[-1].fields._ListCreatedTime_k__BackingField) = iconId;
   v14[-1].fields._ClosedMessage_k__BackingField = (struct System_String_o *)listCreatedTime;
-  sub_1C7BA8C(v14, (int32_t)closedMessage, v21, v22, v23, v24, v25, v26);
+  sub_1C93A78(v14, (int32_t)closedMessage, v21, v22, v23, v24, v25, v26);
 }
 
 

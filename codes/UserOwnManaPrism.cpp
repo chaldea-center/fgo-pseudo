@@ -15,7 +15,7 @@ void UserOwnManaPrism___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void UserOwnManaPrism___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_1C7BD40(v13, v14);
+    sub_1C93D2C(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.mana;
 }

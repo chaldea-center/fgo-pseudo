@@ -1,7 +1,7 @@
 void GrandServantIconComponentNameEffect___ctor(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
-  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_CF6A40;
-  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_CF6BA0;
+  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_D01BB0;
+  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_D01D10;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -48,7 +48,6 @@ void GrandServantIconComponentNameEffect__OnEnable(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
   float t; // s8
@@ -63,14 +62,13 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
   float v12; // s1
   float a; // s1
   float v14; // s3
-  unsigned __int64 v15; // d0 OVERLAPPED
+  unsigned __int64 v15; // d0
   float v16; // s2
   float v17; // s4
   float v18; // s2
   bool v19; // nf
   float v20; // s2
-  float v21; // s3
-  int v22; // s1
+  UnityEngine_Color_o v21; // 0:kr00_16.16
 
   t = this->fields.t;
   deltaTime = UnityEngine_Time__get_deltaTime(0);
@@ -84,7 +82,7 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
     v10 = 2.0;
   this->fields.t = v10;
   if ( !texture )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   if ( v10 >= 1.0 )
   {
     v18 = 1.0 - (float)(v10 + -1.0);
@@ -123,7 +121,8 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
         + (float)(v14 * (float)(this->fields.toColor.fields.b - this->fields.fromColor.fields.b));
     v17 = this->fields.toColor.fields.a - a;
   }
-  v21 = a + (float)(v14 * v17);
-  v22 = HIDWORD(v15);
-  UIWidget__set_color(texture, *(UnityEngine_Color_o *)&v15, 0);
+  *(_QWORD *)&v21.fields.r = v15;
+  v21.fields.b = v16;
+  v21.fields.a = a + (float)(v14 * v17);
+  UIWidget__set_color(texture, v21, 0);
 }

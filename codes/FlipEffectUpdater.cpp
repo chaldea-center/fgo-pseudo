@@ -30,10 +30,10 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
   UnityEngine_Transform_o *v17; // x21
   UnityEngine_Transform_o *v18; // x21
 
-  if ( (byte_4CEDA98 & 1) == 0 )
+  if ( (byte_4D2FDF1 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEDA98 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2FDF1 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -48,7 +48,7 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9, v10, v11, v12, v13);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9, v10, v11, v12, v13);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -59,35 +59,35 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     v15 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0);
     v16 = this->fields.mTrans;
-    if ( !byte_4CE7E59 )
+    if ( !byte_4D2A139 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-      byte_4CE7E59 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+      byte_4D2A139 = 1;
     }
     if ( !v16 )
       goto LABEL_24;
     UnityEngine_Transform__set_localPosition(v16, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     v17 = *p_mTrans;
-    if ( !byte_4CE7E59 )
+    if ( !byte_4D2A139 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-      byte_4CE7E59 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+      byte_4D2A139 = 1;
     }
     if ( !v17 )
       goto LABEL_24;
     UnityEngine_Transform__set_localEulerAngles(v17, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     v18 = *p_mTrans;
-    if ( !byte_4CE7E5E )
+    if ( !byte_4D2A13E )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-      byte_4CE7E5E = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+      byte_4D2A13E = 1;
     }
     if ( !v18
       || (UnityEngine_Transform__set_localScale(v18, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (parent = *p_mTrans) == 0) )
     {
 LABEL_24:
-      sub_1C7BD40(parent, v6);
+      sub_1C93D2C(parent, v6);
     }
     UnityEngine_Transform__set_parent(parent, v15, 0);
   }
@@ -106,5 +106,5 @@ void FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const MethodInfo *metho
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }

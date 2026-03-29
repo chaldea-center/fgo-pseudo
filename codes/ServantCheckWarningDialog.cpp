@@ -1,11 +1,11 @@
 void ServantCheckWarningDialog___ctor(ServantCheckWarningDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEA521 & 1) == 0 )
+  if ( (byte_4D2C83F & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CEA521 = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2C83F = 1;
   }
-  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_CF5EF0;
+  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_D01050;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -39,12 +39,12 @@ void ServantCheckWarningDialog__Init(ServantCheckWarningDialog_o *this, const Me
   const MethodInfo *v12; // x2
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEA518 & 1) == 0 )
+  if ( (byte_4D2C836 & 1) == 0 )
   {
-    sub_1C7BAE8(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_OnSliderDragFinished__);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEA518 = 1;
+    sub_1C93AD4(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_OnSliderDragFinished__);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2C836 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -80,7 +80,7 @@ void ServantCheckWarningDialog__Init(ServantCheckWarningDialog_o *this, const Me
     goto LABEL_13;
   UIProgressBar__set_value((UIProgressBar_o *)titleLabel, 0.0, 0);
   checkSlider = this->fields.checkSlider;
-  v5 = (UIProgressBar_OnDragFinished_o *)sub_1C7BD34(UIProgressBar_OnDragFinished_TypeInfo);
+  v5 = (UIProgressBar_OnDragFinished_o *)sub_1C93D20(UIProgressBar_OnDragFinished_TypeInfo);
   UIProgressBar_OnDragFinished___ctor(
     v5,
     (Il2CppObject *)this,
@@ -88,7 +88,7 @@ void ServantCheckWarningDialog__Init(ServantCheckWarningDialog_o *this, const Me
     0);
   if ( !checkSlider
     || (checkSlider->fields.onDragFinished = v5,
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)&checkSlider->fields.onDragFinished,
           (int32_t)v5,
           v6,
@@ -101,7 +101,7 @@ void ServantCheckWarningDialog__Init(ServantCheckWarningDialog_o *this, const Me
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_13:
-    sub_1C7BD40(titleLabel, method);
+    sub_1C93D2C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -114,22 +114,22 @@ void ServantCheckWarningDialog__OnClickCancel(ServantCheckWarningDialog_o *this,
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CEA51F & 1) == 0 )
+  if ( (byte_4D2C83D & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_OnClickCancel__);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog__OnClickCancel_b__28_0__);
-    byte_4CEA51F = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_OnClickCancel__);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog__OnClickCancel_b__28_0__);
+    byte_4D2C83D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ServantCheckWarningDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ServantCheckWarningDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_ServantCheckWarningDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_ServantCheckWarningDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_ServantCheckWarningDialog__OnClickCancel_b__28_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -144,28 +144,28 @@ void ServantCheckWarningDialog__OnClickDecide(ServantCheckWarningDialog_o *this,
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4CEA51E & 1) == 0 )
+  if ( (byte_4D2C83C & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_OnClickDecide__);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog__OnClickDecide_b__27_0__);
-    byte_4CEA51E = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_OnClickDecide__);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog__OnClickDecide_b__27_0__);
+    byte_4D2C83C = 1;
   }
   if ( this->fields.state == 2 )
   {
     checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
     if ( !checkSlider )
-      sub_1C7BD40(0, method);
+      sub_1C93D2C(0, method);
     value = UIProgressBar__get_value(checkSlider, 0);
     v5 = Method_ServantCheckWarningDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ServantCheckWarningDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C7BB00(Method_ServantCheckWarningDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C93AEC(Method_ServantCheckWarningDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
     if ( value >= 1.0 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       this->fields.state = 3;
-      v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_ServantCheckWarningDialog__OnClickDecide_b__27_0__, 0);
       BaseDialog__Close((BaseDialog_o *)this, v7, 0);
     }
@@ -181,13 +181,13 @@ void ServantCheckWarningDialog__OnEnable(ServantCheckWarningDialog_o *this, cons
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CEA520 & 1) == 0 )
+  if ( (byte_4D2C83E & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_15707/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4CEA520 = 1;
+    sub_1C93AD4(&StringLiteral_15749/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4D2C83E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45495228(transform, (System_String_o *)StringLiteral_15707/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45665756(transform, (System_String_o *)StringLiteral_15749/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -205,7 +205,7 @@ void ServantCheckWarningDialog__OnSliderDragFinished(ServantCheckWarningDialog_o
     || (value = UIProgressBar__get_value(checkSlider, 0),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0) )
   {
-    sub_1C7BD40(checkSlider, method);
+    sub_1C93D2C(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -241,23 +241,23 @@ void ServantCheckWarningDialog__OpenAppendSkillWarning(
   UILabel_o *cancelButtonLabel; // x20
   System_Action_o *v22; // x20
 
-  if ( (byte_4CEA51D & 1) == 0 )
+  if ( (byte_4D2C83B & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_2011/*"APPEND_SKILL_WARNING_CONFIRM"*/);
-    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C7BAE8(&StringLiteral_2013/*"APPEND_SKILL_WARNING_TITLE"*/);
-    sub_1C7BAE8(&StringLiteral_2012/*"APPEND_SKILL_WARNING_SLIDER"*/);
-    byte_4CEA51D = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_2023/*"APPEND_SKILL_WARNING_CONFIRM"*/);
+    sub_1C93AD4(&StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C93AD4(&StringLiteral_2025/*"APPEND_SKILL_WARNING_TITLE"*/);
+    sub_1C93AD4(&StringLiteral_2024/*"APPEND_SKILL_WARNING_SLIDER"*/);
+    byte_4D2C83B = 1;
   }
   if ( this->fields.state != 1 )
   {
     ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
     this->fields.closeFunc = closeCallback;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.closeFunc,
       (int32_t)closeCallback,
       v7,
@@ -280,36 +280,36 @@ void ServantCheckWarningDialog__OpenAppendSkillWarning(
     gameObject = (UnityEngine_GameObject_o *)this->fields.servantEquipListViewManager;
     if ( !gameObject )
       goto LABEL_16;
-    ServantCheckEquipListViewManager__SetMode_35333124((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
+    ServantCheckEquipListViewManager__SetMode_35457448((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2013/*"APPEND_SKILL_WARNING_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2025/*"APPEND_SKILL_WARNING_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     warningLabel = this->fields.warningLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2011/*"APPEND_SKILL_WARNING_CONFIRM"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2023/*"APPEND_SKILL_WARNING_CONFIRM"*/, 0);
     if ( !warningLabel )
       goto LABEL_16;
     UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
     reInforeceLabel = this->fields.reInforeceLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2012/*"APPEND_SKILL_WARNING_SLIDER"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2024/*"APPEND_SKILL_WARNING_SLIDER"*/, 0);
     if ( !reInforeceLabel
       || (UILabel__set_text(reInforeceLabel, (System_String_o *)gameObject, 0),
           decideButtonLabel = this->fields.decideButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/, 0),
           !decideButtonLabel)
       || (UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/, 0),
           !cancelButtonLabel) )
     {
 LABEL_16:
-      sub_1C7BD40(gameObject, v14);
+      sub_1C93D2C(gameObject, v14);
     }
     UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
-    v22 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ServantCheckWarningDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0, 0);
     this->fields.state = 1;
@@ -340,23 +340,23 @@ void ServantCheckWarningDialog__OpenSellCombineWarning(
   UILabel_o *cancelButtonLabel; // x20
   System_Action_o *v22; // x20
 
-  if ( (byte_4CEA51A & 1) == 0 )
+  if ( (byte_4D2C838 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_11749/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/);
-    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C7BAE8(&StringLiteral_11750/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/);
-    sub_1C7BAE8(&StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/);
-    byte_4CEA51A = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_11786/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/);
+    sub_1C93AD4(&StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C93AD4(&StringLiteral_11787/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/);
+    sub_1C93AD4(&StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/);
+    byte_4D2C838 = 1;
   }
   if ( this->fields.state != 1 )
   {
     ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
     this->fields.closeFunc = closeCallback;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.closeFunc,
       (int32_t)closeCallback,
       v7,
@@ -379,36 +379,36 @@ void ServantCheckWarningDialog__OpenSellCombineWarning(
     gameObject = (UnityEngine_GameObject_o *)this->fields.servantEquipListViewManager;
     if ( !gameObject )
       goto LABEL_16;
-    ServantCheckEquipListViewManager__SetMode_35333124((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
+    ServantCheckEquipListViewManager__SetMode_35457448((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11750/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11787/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     warningLabel = this->fields.warningLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11749/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11786/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/, 0);
     if ( !warningLabel )
       goto LABEL_16;
     UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
     reInforeceLabel = this->fields.reInforeceLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
     if ( !reInforeceLabel
       || (UILabel__set_text(reInforeceLabel, (System_String_o *)gameObject, 0),
           decideButtonLabel = this->fields.decideButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/, 0),
           !decideButtonLabel)
       || (UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/, 0),
           !cancelButtonLabel) )
     {
 LABEL_16:
-      sub_1C7BD40(gameObject, v14);
+      sub_1C93D2C(gameObject, v14);
     }
     UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
-    v22 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ServantCheckWarningDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0, 0);
     this->fields.state = 1;
@@ -439,23 +439,23 @@ void ServantCheckWarningDialog__OpenSellMaterialTdWarning(
   UILabel_o *cancelButtonLabel; // x20
   System_Action_o *v22; // x20
 
-  if ( (byte_4CEA51C & 1) == 0 )
+  if ( (byte_4D2C83A & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_11751/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/);
-    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C7BAE8(&StringLiteral_11752/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/);
-    sub_1C7BAE8(&StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/);
-    byte_4CEA51C = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_11788/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/);
+    sub_1C93AD4(&StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C93AD4(&StringLiteral_11789/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/);
+    sub_1C93AD4(&StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/);
+    byte_4D2C83A = 1;
   }
   if ( this->fields.state != 1 )
   {
     ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
     this->fields.closeFunc = closeCallback;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.closeFunc,
       (int32_t)closeCallback,
       v7,
@@ -478,36 +478,36 @@ void ServantCheckWarningDialog__OpenSellMaterialTdWarning(
     gameObject = (UnityEngine_GameObject_o *)this->fields.servantEquipListViewManager;
     if ( !gameObject )
       goto LABEL_16;
-    ServantCheckEquipListViewManager__SetMode_35333124((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
+    ServantCheckEquipListViewManager__SetMode_35457448((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11752/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11789/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     warningLabel = this->fields.warningLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11751/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11788/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/, 0);
     if ( !warningLabel )
       goto LABEL_16;
     UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
     reInforeceLabel = this->fields.reInforeceLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
     if ( !reInforeceLabel
       || (UILabel__set_text(reInforeceLabel, (System_String_o *)gameObject, 0),
           decideButtonLabel = this->fields.decideButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/, 0),
           !decideButtonLabel)
       || (UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/, 0),
           !cancelButtonLabel) )
     {
 LABEL_16:
-      sub_1C7BD40(gameObject, v14);
+      sub_1C93D2C(gameObject, v14);
     }
     UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
-    v22 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ServantCheckWarningDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0, 0);
     this->fields.state = 1;
@@ -538,23 +538,23 @@ void ServantCheckWarningDialog__OpenSellSSRareWarning(
   UILabel_o *cancelButtonLabel; // x20
   System_Action_o *v22; // x20
 
-  if ( (byte_4CEA51B & 1) == 0 )
+  if ( (byte_4D2C839 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_ServantCheckWarningDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_11754/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/);
-    sub_1C7BAE8(&StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C7BAE8(&StringLiteral_11755/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/);
-    sub_1C7BAE8(&StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/);
-    byte_4CEA51B = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_ServantCheckWarningDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_11791/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/);
+    sub_1C93AD4(&StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C93AD4(&StringLiteral_11792/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/);
+    sub_1C93AD4(&StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/);
+    byte_4D2C839 = 1;
   }
   if ( this->fields.state != 1 )
   {
     ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
     this->fields.closeFunc = closeCallback;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.closeFunc,
       (int32_t)closeCallback,
       v7,
@@ -577,36 +577,36 @@ void ServantCheckWarningDialog__OpenSellSSRareWarning(
     gameObject = (UnityEngine_GameObject_o *)this->fields.servantEquipListViewManager;
     if ( !gameObject )
       goto LABEL_16;
-    ServantCheckEquipListViewManager__SetMode_35333124((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
+    ServantCheckEquipListViewManager__SetMode_35457448((ServantCheckEquipListViewManager_o *)gameObject, 3, v16);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11755/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11792/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     warningLabel = this->fields.warningLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11754/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11791/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/, 0);
     if ( !warningLabel )
       goto LABEL_16;
     UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
     reInforeceLabel = this->fields.reInforeceLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11753/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11790/*"SERVANT_SELL_WARNING_SLIDER"*/, 0);
     if ( !reInforeceLabel
       || (UILabel__set_text(reInforeceLabel, (System_String_o *)gameObject, 0),
           decideButtonLabel = this->fields.decideButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_CONFIRM_DECIDE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3708/*"COMMON_CONFIRM_DECIDE"*/, 0),
           !decideButtonLabel)
       || (UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3706/*"COMMON_CONFIRM_CANCEL"*/, 0),
           !cancelButtonLabel) )
     {
 LABEL_16:
-      sub_1C7BD40(gameObject, v14);
+      sub_1C93D2C(gameObject, v14);
     }
     UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
-    v22 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ServantCheckWarningDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0, 0);
     this->fields.state = 1;
@@ -619,50 +619,42 @@ void ServantCheckWarningDialog__SetSlider(ServantCheckWarningDialog_o *this, boo
 {
   UISprite_o *sliderSprite; // x0
   System_String_o **v6; // x8
-  float a; // s3
-  float b; // s2
-  float g; // s1
-  float r; // s0 OVERLAPPED
-  __int64 v11; // x1
+  __int64 v10; // x1
+  UnityEngine_Color_o DisableColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CEA519 & 1) == 0 )
+  if ( (byte_4D2C837 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_20753/*"img_slider_thumb_locked"*/);
-    sub_1C7BAE8(&StringLiteral_20752/*"img_slider_thumb"*/);
-    byte_4CEA519 = 1;
+    sub_1C93AD4(&StringLiteral_20815/*"img_slider_thumb_locked"*/);
+    sub_1C93AD4(&StringLiteral_20814/*"img_slider_thumb"*/);
+    byte_4D2C837 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_15;
-  v6 = (System_String_o **)&StringLiteral_20752/*"img_slider_thumb"*/;
+  v6 = (System_String_o **)&StringLiteral_20814/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = (System_String_o **)&StringLiteral_20753/*"img_slider_thumb_locked"*/;
+    v6 = (System_String_o **)&StringLiteral_20815/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v6, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  a = 1.0;
-  b = 1.0;
-  g = 1.0;
-  r = 1.0;
+  DisableColor.fields.a = 1.0;
+  DisableColor.fields.b = 1.0;
+  DisableColor.fields.g = 1.0;
+  DisableColor.fields.r = 1.0;
   if ( !sliderOn )
-  {
-    r = this->fields.DisableColor.fields.r;
-    g = this->fields.DisableColor.fields.g;
-    b = this->fields.DisableColor.fields.b;
-    a = this->fields.DisableColor.fields.a;
-  }
+    DisableColor = this->fields.DisableColor;
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&r, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, DisableColor, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0)
-    || (!sliderOn ? (v11 = 3) : (v11 = 0),
+    || (!sliderOn ? (v10 = 3) : (v10 = 0),
         ((void (__fastcall *)(UISprite_o *, __int64, __int64, const MethodInfo *))sliderSprite->klass->vtable._14_OnEnable.methodPtr)(
           sliderSprite,
-          v11,
+          v10,
           1,
           sliderSprite->klass->vtable._14_OnEnable.method),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_15:
-    sub_1C7BD40(sliderSprite, sliderOn);
+    sub_1C93D2C(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
     sliderSprite,
@@ -677,7 +669,7 @@ void ServantCheckWarningDialog___OnClickCancel_b__28_0(ServantCheckWarningDialog
 
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     0,
@@ -691,7 +683,7 @@ void ServantCheckWarningDialog___OnClickDecide_b__27_0(ServantCheckWarningDialog
 
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     1,
@@ -718,7 +710,7 @@ void ServantCheckWarningDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -729,12 +721,12 @@ void ServantCheckWarningDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -746,9 +738,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AAC728;
+  this->fields.invoke_impl = (intptr_t)sub_1AC3BB8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AAC6E0;
+  this->fields.extra_arg = (intptr_t)sub_1AC3B70;
 }
 
 
@@ -763,14 +755,14 @@ System_IAsyncResult_o *ServantCheckWarningDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4CEA522 & 1) == 0 )
+  if ( (byte_4D2C840 & 1) == 0 )
   {
-    sub_1C7BAE8(&bool_TypeInfo);
-    byte_4CEA522 = 1;
+    sub_1C93AD4(&bool_TypeInfo);
+    byte_4D2C840 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v9, callback, object);
+  return sub_1C93A88(this, v9, callback, object);
 }
 
 
@@ -779,7 +771,7 @@ void ServantCheckWarningDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

@@ -1,13 +1,13 @@
 void WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF7B2 & 1) == 0 )
+  if ( (byte_4D31B36 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
-    byte_4CEF7B2 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_int___ctor__);
+    byte_4D31B36 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3460B3C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t WarBoardEventEntity__CreatePrimaryKey(WarBoardEventEntity_o *this, const
 
 System_Int32_array *WarBoardEventEntity__GetSquareIndicesToAdd(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF7AF & 1) == 0 )
+  if ( (byte_4D31B33 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_16755/*"addSquareIndex"*/);
-    byte_4CEF7AF = 1;
+    sub_1C93AD4(&StringLiteral_16797/*"addSquareIndex"*/);
+    byte_4D31B33 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16755/*"addSquareIndex"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16797/*"addSquareIndex"*/, 0, 0);
 }
 
 
@@ -44,7 +44,7 @@ bool WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this, const Met
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -54,23 +54,23 @@ LABEL_7:
 
 bool WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF7B0 & 1) == 0 )
+  if ( (byte_4D31B34 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_20918/*"includeInvolvedAttacker"*/);
-    byte_4CEF7B0 = 1;
+    sub_1C93AD4(&StringLiteral_20980/*"includeInvolvedAttacker"*/);
+    byte_4D31B34 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20918/*"includeInvolvedAttacker"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20980/*"includeInvolvedAttacker"*/, 0, 0) == 1;
 }
 
 
 bool WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF7B1 & 1) == 0 )
+  if ( (byte_4D31B35 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_20919/*"includeInvolvedDefender"*/);
-    byte_4CEF7B1 = 1;
+    sub_1C93AD4(&StringLiteral_20981/*"includeInvolvedDefender"*/);
+    byte_4D31B35 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20919/*"includeInvolvedDefender"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20981/*"includeInvolvedDefender"*/, 0, 0) == 1;
 }
 
 
@@ -92,14 +92,14 @@ bool WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this, const Met
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_4CEF7AE & 1) == 0 )
+  if ( (byte_4D31B32 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4CEF7AE = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4D31B32 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0 )
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0);
   if ( !PlayedEventData )
     return 1;

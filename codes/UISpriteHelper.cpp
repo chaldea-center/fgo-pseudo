@@ -7,10 +7,10 @@ bool UISpriteHelper__SetSprite(
   UISpriteData_o *Sprite; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CF0045 & 1) == 0 )
+  if ( (byte_4D323D2 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0045 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D323D2 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -33,7 +33,7 @@ LABEL_9:
       return (char)Sprite;
     if ( !self )
 LABEL_15:
-      sub_1C7BD40(Sprite, v8);
+      sub_1C93D2C(Sprite, v8);
     UISprite__set_atlas(self, atlas, 0);
     UISprite__set_spriteName(self, spriteName, 0);
     LOBYTE(Sprite) = 1;
@@ -42,7 +42,7 @@ LABEL_15:
 }
 
 
-bool UISpriteHelper__SetSprite_44683280(
+bool UISpriteHelper__SetSprite_44848316(
         UISprite_o *self,
         System_String_o *spriteName,
         System_Collections_Generic_IEnumerable_UIAtlas__o *atlasList,
@@ -75,14 +75,14 @@ bool UISpriteHelper__SetSprite_44683280(
   int *v33; // x10
   __int64 v34; // x0
 
-  if ( (byte_4CF0046 & 1) == 0 )
+  if ( (byte_4D323D3 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_IDisposable_TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_UIAtlas__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_UIAtlas__TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF0046 = 1;
+    sub_1C93AD4(&System_IDisposable_TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerable_UIAtlas__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerator_UIAtlas__TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D323D3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -108,13 +108,13 @@ bool UISpriteHelper__SetSprite_44683280(
   else
   {
 LABEL_11:
-    v16 = sub_1C51E70(atlasList, System_Collections_Generic_IEnumerable_UIAtlas__TypeInfo, 0);
+    v16 = sub_1C69E5C(atlasList, System_Collections_Generic_IEnumerable_UIAtlas__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_UIAtlas__o *, _QWORD))v16)(
           atlasList,
           *(_QWORD *)(v16 + 8));
   if ( !v18 )
-    sub_1C7BD40(0, v17);
+    sub_1C93D2C(0, v17);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -134,7 +134,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v22 = sub_1C51E70(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C69E5C(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8));
     if ( (v23 & 1) == 0 )
@@ -156,7 +156,7 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v27 = sub_1C51E70(v18, System_Collections_Generic_IEnumerator_UIAtlas__TypeInfo, 0);
+      v27 = sub_1C69E5C(v18, System_Collections_Generic_IEnumerator_UIAtlas__TypeInfo, 0);
     }
     v28 = (UIAtlas_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v18, *(_QWORD *)(v27 + 8));
     if ( UISpriteHelper__SetSprite(self, spriteName, v28, v29) )
@@ -185,14 +185,14 @@ LABEL_30:
   else
   {
 LABEL_34:
-    v34 = sub_1C51E70(v18, System_IDisposable_TypeInfo, 0);
+    v34 = sub_1C69E5C(v18, System_IDisposable_TypeInfo, 0);
   }
   v11 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v18, *(_QWORD *)(v34 + 8));
   if ( v30 == 7 )
   {
 LABEL_37:
     if ( !self )
-      sub_1C7BD40(v11, v12);
+      sub_1C93D2C(v11, v12);
     UISprite__set_atlas(self, defaultAtlas, 0);
     UISprite__set_spriteName(self, defaultSpriteName, 0);
 LABEL_39:

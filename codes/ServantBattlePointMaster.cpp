@@ -1,14 +1,14 @@
 void ServantBattlePointMaster___ctor(ServantBattlePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEEEBE & 1) == 0 )
+  if ( (byte_4D31233 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string___ctor__);
-    byte_4CEEEBE = 1;
+    sub_1C93AD4(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string___ctor__);
+    byte_4D31233 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     513,
-    (const MethodInfo_3430A90 *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string___ctor__);
+    (const MethodInfo_3465C5C *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string___ctor__);
 }
 
 
@@ -47,27 +47,27 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
   int64_t v32; // x6
   System_String_o *v33; // x7
 
-  if ( (byte_4CEEEBD & 1) == 0 )
+  if ( (byte_4D31232 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OrderBy_ServantBattlePointEntity__int___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ThenBy_ServantBattlePointEntity__int___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_ServantBattlePointEntity___);
-    sub_1C7BAE8(&System_Func_ServantBattlePointEntity__bool__TypeInfo);
-    sub_1C7BAE8(&System_Func_ServantBattlePointEntity__int__TypeInfo);
-    sub_1C7BAE8(&Method_ServantBattlePointMaster___c__GetBattlePointEntities_b__0_1__);
-    sub_1C7BAE8(&Method_ServantBattlePointMaster___c__GetBattlePointEntities_b__0_2__);
-    sub_1C7BAE8(&Method_ServantBattlePointMaster___c__DisplayClass0_0__GetBattlePointEntities_b__0__);
-    sub_1C7BAE8(&ServantBattlePointMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1C7BAE8(&ServantBattlePointMaster___c_TypeInfo);
-    byte_4CEEEBD = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OrderBy_ServantBattlePointEntity__int___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ThenBy_ServantBattlePointEntity__int___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Where_ServantBattlePointEntity___);
+    sub_1C93AD4(&System_Func_ServantBattlePointEntity__bool__TypeInfo);
+    sub_1C93AD4(&System_Func_ServantBattlePointEntity__int__TypeInfo);
+    sub_1C93AD4(&Method_ServantBattlePointMaster___c__GetBattlePointEntities_b__0_1__);
+    sub_1C93AD4(&Method_ServantBattlePointMaster___c__GetBattlePointEntities_b__0_2__);
+    sub_1C93AD4(&Method_ServantBattlePointMaster___c__DisplayClass0_0__GetBattlePointEntities_b__0__);
+    sub_1C93AD4(&ServantBattlePointMaster___c__DisplayClass0_0_TypeInfo);
+    sub_1C93AD4(&ServantBattlePointMaster___c_TypeInfo);
+    byte_4D31232 = 1;
   }
-  v5 = sub_1C7BD34(ServantBattlePointMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C93D20(ServantBattlePointMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   *(_DWORD *)(v5 + 16) = svtId;
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_ServantBattlePointEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_ServantBattlePointEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -76,7 +76,7 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
   v10 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_ServantBattlePointEntity___);
+          (const MethodInfo_31EB2BC *)Method_System_Linq_Enumerable_Where_ServantBattlePointEntity___);
   v11 = ServantBattlePointMaster___c_TypeInfo;
   v12 = v10;
   if ( !ServantBattlePointMaster___c_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
       v11 = ServantBattlePointMaster___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_ServantBattlePointEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C93D20(System_Func_ServantBattlePointEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
       v14,
@@ -101,12 +101,12 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
       0);
     static_fields = ServantBattlePointMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_1 = (struct System_Func_ServantBattlePointEntity__int__o *)_9__0_1;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v16, v17, v18, v19, v20, v21);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v16, v17, v18, v19, v20, v21);
   }
   v22 = System_Linq_Enumerable__OrderBy_object__int_(
           v12,
           (System_Func_TSource__TKey__o *)_9__0_1,
-          (const MethodInfo_319EF58 *)Method_System_Linq_Enumerable_OrderBy_ServantBattlePointEntity__int___);
+          (const MethodInfo_31D38D0 *)Method_System_Linq_Enumerable_OrderBy_ServantBattlePointEntity__int___);
   v23 = ServantBattlePointMaster___c_TypeInfo;
   v24 = v22;
   if ( !ServantBattlePointMaster___c_TypeInfo->_2.cctor_finished )
@@ -123,7 +123,7 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
       v23 = ServantBattlePointMaster___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v23->static_fields->__9;
-    _9__0_2 = (System_Func_object__int__o *)sub_1C7BD34(System_Func_ServantBattlePointEntity__int__TypeInfo);
+    _9__0_2 = (System_Func_object__int__o *)sub_1C93D20(System_Func_ServantBattlePointEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_2,
       v26,
@@ -131,12 +131,12 @@ System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *ServantBattl
       0);
     v27 = ServantBattlePointMaster___c_TypeInfo->static_fields;
     v27->__9__0_2 = (struct System_Func_ServantBattlePointEntity__int__o *)_9__0_2;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v27->__9__0_2, (int32_t)_9__0_2, v28, v29, v30, v31, v32, v33);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->__9__0_2, (int32_t)_9__0_2, v28, v29, v30, v31, v32, v33);
   }
   return (System_Collections_Generic_IEnumerable_ServantBattlePointEntity__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                                  v24,
                                                                                  (System_Func_TSource__TKey__o *)_9__0_2,
-                                                                                 (const MethodInfo_31AE27C *)Method_System_Linq_Enumerable_ThenBy_ServantBattlePointEntity__int___);
+                                                                                 (const MethodInfo_31E2E7C *)Method_System_Linq_Enumerable_ThenBy_ServantBattlePointEntity__int___);
 }
 
 
@@ -148,16 +148,16 @@ ServantBattlePointEntity_o *ServantBattlePointMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CEEEBF & 1) == 0 )
+  if ( (byte_4D31234 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__GetEntity__);
-    byte_4CEEEBF = 1;
+    sub_1C93AD4(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__GetEntity__);
+    byte_4D31234 = 1;
   }
   PK = (Il2CppObject *)ServantBattlePointEntity__CreatePK(svtId, battlePointId, 0);
   return (ServantBattlePointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3432DB4 *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__GetEntity__);
+                                         (const MethodInfo_34681D4 *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__GetEntity__);
 }
 
 
@@ -170,17 +170,17 @@ bool ServantBattlePointMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CEEEC0 & 1) == 0 )
+  if ( (byte_4D31235 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__TryGetEntity__);
-    byte_4CEEEC0 = 1;
+    sub_1C93AD4(&Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__TryGetEntity__);
+    byte_4D31235 = 1;
   }
   PK = (Il2CppObject *)ServantBattlePointEntity__CreatePK(svtId, battlePointId, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3432E00 *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__TryGetEntity__);
+           (const MethodInfo_3468220 *)Method_DataMasterBase_ServantBattlePointMaster__ServantBattlePointEntity__string__TryGetEntity__);
 }
 
 
@@ -194,15 +194,15 @@ void ServantBattlePointMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEEEC1 & 1) == 0 )
+  if ( (byte_4D31236 & 1) == 0 )
   {
-    sub_1C7BAE8(&ServantBattlePointMaster___c_TypeInfo);
-    byte_4CEEEC1 = 1;
+    sub_1C93AD4(&ServantBattlePointMaster___c_TypeInfo);
+    byte_4D31236 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(ServantBattlePointMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(ServantBattlePointMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantBattlePointMaster___c_TypeInfo->static_fields->__9 = (struct ServantBattlePointMaster___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)ServantBattlePointMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -226,7 +226,7 @@ int32_t ServantBattlePointMaster___c___GetBattlePointEntities_b__0_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return entity->fields.svtId;
 }
 
@@ -237,7 +237,7 @@ int32_t ServantBattlePointMaster___c___GetBattlePointEntities_b__0_2(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return entity->fields.battlePointId;
 }
 
@@ -256,6 +256,6 @@ bool ServantBattlePointMaster___c__DisplayClass0_0___GetBattlePointEntities_b__0
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return entity->fields.svtId == this->fields.svtId;
 }

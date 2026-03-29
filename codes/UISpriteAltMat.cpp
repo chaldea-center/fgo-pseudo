@@ -15,18 +15,18 @@ void UISpriteAltMat__ResetMaterial(UISpriteAltMat_o *this, const MethodInfo *met
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CEFF41 & 1) == 0 )
+  if ( (byte_4D322CB & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFF41 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D322CB = 1;
   }
   exMaterial = (UnityEngine_Object_o *)this->fields.exMaterial;
   p_exMaterial = (GrandQuestFolderBoardItem_o *)&this->fields.exMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71870148(exMaterial, 0);
+  UnityEngine_Object__Destroy_72119908(exMaterial, 0);
   p_exMaterial->klass = 0;
-  sub_1C7BA8C(p_exMaterial, 0, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78(p_exMaterial, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -47,43 +47,43 @@ void UISpriteAltMat__SetMaterialKeepTexture(
   __int64 v14; // x1
   UnityEngine_Material_o *v15; // x20
 
-  if ( (byte_4CEFF42 & 1) == 0 )
+  if ( (byte_4D322CC & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16323/*"_MainTex"*/);
-    sub_1C7BAE8(&StringLiteral_16328/*"_MaskTex"*/);
-    byte_4CEFF42 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_16365/*"_MainTex"*/);
+    sub_1C93AD4(&StringLiteral_16370/*"_MaskTex"*/);
+    byte_4D322CC = 1;
   }
   exMaterial = (UnityEngine_Object_o *)this->fields.exMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71870148(exMaterial, 0);
+  UnityEngine_Object__Destroy_72119908(exMaterial, 0);
   this->fields.exMaterial = mat;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.exMaterial, (int32_t)mat, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.exMaterial, (int32_t)mat, v6, v7, v8, v9, v10, v11);
   v12 = this->fields.exMaterial;
   material = UISprite__get_material((UISprite_o *)this, 0);
   if ( !material
     || (material = (UnityEngine_Material_o *)UnityEngine_Material__GetTexture(
                                                material,
-                                               (System_String_o *)StringLiteral_16323/*"_MainTex"*/,
+                                               (System_String_o *)StringLiteral_16365/*"_MainTex"*/,
                                                0),
         !v12)
     || (UnityEngine_Material__SetTexture(
           v12,
-          (System_String_o *)StringLiteral_16323/*"_MainTex"*/,
+          (System_String_o *)StringLiteral_16365/*"_MainTex"*/,
           (UnityEngine_Texture_o *)material,
           0),
         v15 = this->fields.exMaterial,
         (material = UISprite__get_material((UISprite_o *)this, 0)) == 0)
     || (material = (UnityEngine_Material_o *)UnityEngine_Material__GetTexture(
                                                material,
-                                               (System_String_o *)StringLiteral_16328/*"_MaskTex"*/,
+                                               (System_String_o *)StringLiteral_16370/*"_MaskTex"*/,
                                                0),
         !v15) )
   {
-    sub_1C7BD40(material, v14);
+    sub_1C93D2C(material, v14);
   }
-  UnityEngine_Material__SetTexture(v15, (System_String_o *)StringLiteral_16328/*"_MaskTex"*/, (UnityEngine_Texture_o *)material, 0);
+  UnityEngine_Material__SetTexture(v15, (System_String_o *)StringLiteral_16370/*"_MaskTex"*/, (UnityEngine_Texture_o *)material, 0);
 }
 
 
@@ -91,10 +91,10 @@ UnityEngine_Material_o *UISpriteAltMat__get_material(UISpriteAltMat_o *this, con
 {
   UnityEngine_Object_o *exMaterial; // x20
 
-  if ( (byte_4CEFF40 & 1) == 0 )
+  if ( (byte_4D322CA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEFF40 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D322CA = 1;
   }
   exMaterial = (UnityEngine_Object_o *)this->fields.exMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

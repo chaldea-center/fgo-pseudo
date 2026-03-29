@@ -20,6 +20,6 @@ void GrandSvtInfo___ctor(
   v10 = (GrandSvtInfo_o *)((char *)v10 + 32);
   LODWORD(v10[-1].fields.userSvtEquipIds) = grandGraphId;
   *(_QWORD *)&v10[-1].fields.equipTarget2SkillChange = userSvtId;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v10, (int32_t)userSvtEquipIds, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v10, (int32_t)userSvtEquipIds, v11, v12, v13, v14, v15, v16);
   LODWORD(v10->monitor) = equipTarget2SkillChange;
 }

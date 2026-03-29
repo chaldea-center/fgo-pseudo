@@ -2,10 +2,10 @@ void PaymentHistoryRequest___cctor(const MethodInfo *method)
 {
   struct PaymentHistoryRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4CF01BB & 1) == 0 )
+  if ( (byte_4D3254B & 1) == 0 )
   {
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01BB = 1;
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D3254B = 1;
   }
   static_fields = PaymentHistoryRequest_TypeInfo->static_fields;
   static_fields->reflectResetTime = -1;
@@ -19,11 +19,11 @@ void PaymentHistoryRequest__SetRemainTime(int64_t remain, const MethodInfo *meth
 {
   PaymentHistoryRequest_c *v3; // x0
 
-  if ( (byte_4CF01B9 & 1) == 0 )
+  if ( (byte_4D32549 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01B9 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D32549 = 1;
   }
   v3 = PaymentHistoryRequest_TypeInfo;
   if ( !PaymentHistoryRequest_TypeInfo->_2.cctor_finished )
@@ -44,11 +44,11 @@ void PaymentHistoryRequest__beginRequest(PaymentHistoryRequest_o *this, bool isF
   const MethodInfo *v5; // x1
   PaymentHistoryRequest_c *v6; // x0
 
-  if ( (byte_4CF01B5 & 1) == 0 )
+  if ( (byte_4D32545 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01B5 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D32545 = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, (const MethodInfo *)isFirstReflect);
   RequestBase__WriteParameter((RequestBase_o *)this, v5);
@@ -72,12 +72,12 @@ bool PaymentHistoryRequest__checkReflectRate(const MethodInfo *method)
   PaymentHistoryRequest_c *v3; // x8
   int64_t v4; // x19
 
-  if ( (byte_4CF01B7 & 1) == 0 )
+  if ( (byte_4D32547 & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01B7 = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D32547 = 1;
   }
   v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -105,10 +105,10 @@ void PaymentHistoryRequest__clearReflectRate(const MethodInfo *method)
 {
   PaymentHistoryRequest_c *v1; // x0
 
-  if ( (byte_4CF01B6 & 1) == 0 )
+  if ( (byte_4D32546 & 1) == 0 )
   {
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01B6 = 1;
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D32546 = 1;
   }
   v1 = PaymentHistoryRequest_TypeInfo;
   if ( !PaymentHistoryRequest_TypeInfo->_2.cctor_finished )
@@ -129,12 +129,12 @@ int64_t PaymentHistoryRequest__getReflectRemain(const MethodInfo *method)
   int64_t reflectResetTime; // x19
   int64_t Time; // x0
 
-  if ( (byte_4CF01B8 & 1) == 0 )
+  if ( (byte_4D32548 & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    byte_4CF01B8 = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    byte_4D32548 = 1;
   }
   v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -188,16 +188,16 @@ System_String_o *PaymentHistoryRequest__getURL(PaymentHistoryRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF01B4 & 1) == 0 )
+  if ( (byte_4D32544 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_23657/*"shop/paymentHistory"*/);
-    byte_4CF01B4 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_23723/*"shop/paymentHistory"*/);
+    byte_4D32544 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_23657/*"shop/paymentHistory"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_23723/*"shop/paymentHistory"*/, 0);
 }
 
 
@@ -218,19 +218,19 @@ void PaymentHistoryRequest__requestCompleted(
   __int64 *v13; // x9
 
   v4 = this;
-  if ( (byte_4CF01BA & 1) == 0 )
+  if ( (byte_4D3254A & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&PaymentHistoryRequest_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22590/*"ok"*/);
-    this = (PaymentHistoryRequest_o *)sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF01BA = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&PaymentHistoryRequest_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
+    this = (PaymentHistoryRequest_o *)sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D3254A = 1;
   }
   if ( !responseList )
-    sub_1C7BD40(this, responseList);
+    sub_1C93D2C(this, responseList);
   if ( !LODWORD(responseList->max_length) )
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   v5 = responseList->m_Items[0];
   if ( v5 && ResponseData__checkError((ResponseData_o *)this, v5->fields.resCode, method) )
   {
@@ -274,7 +274,7 @@ void PaymentHistoryRequest__requestCompleted(
     CallBack = v4->fields.CallBack;
     if ( CallBack )
     {
-      v13 = &StringLiteral_22590/*"ok"*/;
+      v13 = &StringLiteral_22655/*"ok"*/;
       goto LABEL_24;
     }
   }
@@ -283,7 +283,7 @@ void PaymentHistoryRequest__requestCompleted(
     CallBack = v4->fields.CallBack;
     if ( CallBack )
     {
-      v13 = &StringLiteral_22419/*"ng"*/;
+      v13 = &StringLiteral_22483/*"ng"*/;
 LABEL_24:
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
         CallBack->fields.method_code,

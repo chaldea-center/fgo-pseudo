@@ -1,13 +1,13 @@
 void EventMissionEntity___ctor(EventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEE6CC & 1) == 0 )
+  if ( (byte_4D30A2F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
-    byte_4CEE6CC = 1;
+    sub_1C93AD4(&Method_DataEntityBase_int___ctor__);
+    byte_4D30A2F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3460B3C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -43,10 +43,10 @@ GiftEntity_o *EventMissionEntity__GetQpGiftEntity(EventMissionEntity_o *this, co
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1C7BD48(GiftData);
+      sub_1C93D34(GiftData);
     v7 = v5->m_Items[v6];
     if ( !v7 )
-      sub_1C7BD40(GiftData, v3);
+      sub_1C93D2C(GiftData, v3);
     GiftData = (GiftEntity_array *)GiftEntity__isQp(v5->m_Items[v6], 0);
     if ( ((unsigned __int8)GiftData & 1) != 0 )
       break;
@@ -123,19 +123,19 @@ GiftEntity_array *EventMissionEntity__getGiftData(EventMissionEntity_o *this, co
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEE6C9 & 1) == 0 )
+  if ( (byte_4D30A2C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CEE6C9 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D30A2C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
+                     (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
   {
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   return GiftMaster__GetGiftListById((GiftMaster_o *)Instance, this->fields.giftId, 0);
 }
@@ -147,19 +147,19 @@ EventRewardSetEntity_o *EventMissionEntity__getSetRewardData(EventMissionEntity_
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_4CEE6CA & 1) == 0 )
+  if ( (byte_4D30A2D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CEE6CA = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D30A2D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0 )
+                     (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0 )
   {
-    sub_1C7BD40(Instance, v4);
+    sub_1C93D2C(Instance, v4);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
@@ -174,10 +174,10 @@ bool EventMissionEntity__isNowMission(EventMissionEntity_o *this, const MethodIn
 {
   int64_t Time; // x0
 
-  if ( (byte_4CEE6CB & 1) == 0 )
+  if ( (byte_4D30A2E & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CEE6CB = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D30A2E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

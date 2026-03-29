@@ -13,19 +13,19 @@ void WarehouseRootComponent__EndClickBackRequest(
   __int64 v5; // x1
   bool IsStackScene; // w19
 
-  if ( (byte_4CEC476 & 1) == 0 )
+  if ( (byte_4D2E7AD & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CEC476 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4D2E7AD = 1;
   }
   if ( this->fields.state == 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance
       || (IsStackScene = AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)Instance, 0),
-          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
+          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
     {
-      sub_1C7BD40(Instance, v5);
+      sub_1C93D2C(Instance, v5);
     }
     if ( IsStackScene )
       AvalonSceneManager__popScene((AvalonSceneManager_o *)Instance, 1, 0, 0);
@@ -43,10 +43,10 @@ void WarehouseRootComponent__EndLoadCommonBg(WarehouseRootComponent_o *this, con
   if ( !backSkinSprite
     || (backSkinSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(backSkinSprite, 0)) == 0 )
   {
-    sub_1C7BD40(backSkinSprite, method);
+    sub_1C93D2C(backSkinSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)backSkinSprite, 1, 0);
-  SceneRootComponent__beginStartUp_42059656((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_42213664((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -58,14 +58,14 @@ void WarehouseRootComponent__EndServantQuestRequest(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEC477 & 1) == 0 )
+  if ( (byte_4D2E7AE & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CEC477 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4D2E7AE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 34, 1, 0, 0);
 }
 
@@ -90,12 +90,12 @@ void WarehouseRootComponent__Init(WarehouseRootComponent_o *this, const MethodIn
   EventUpValSetupInfo_o *v18; // x20
   WarehouseListMenu_CallbackFunc_o *v19; // x22
 
-  if ( (byte_4CEC473 & 1) == 0 )
+  if ( (byte_4D2E7AA & 1) == 0 )
   {
-    sub_1C7BAE8(&WarehouseListMenu_CallbackFunc_TypeInfo);
-    sub_1C7BAE8(&Method_WarehouseRootComponent_OnSelectWarehouseList__);
-    sub_1C7BAE8(&StringLiteral_12784/*"ServantEquipList"*/);
-    byte_4CEC473 = 1;
+    sub_1C93AD4(&WarehouseListMenu_CallbackFunc_TypeInfo);
+    sub_1C93AD4(&Method_WarehouseRootComponent_OnSelectWarehouseList__);
+    sub_1C93AD4(&StringLiteral_12825/*"ServantEquipList"*/);
+    byte_4D2E7AA = 1;
   }
   if ( !this->fields.state )
   {
@@ -103,11 +103,11 @@ void WarehouseRootComponent__Init(WarehouseRootComponent_o *this, const MethodIn
     this->fields.state = 1;
     if ( transitionData )
     {
-      v4 = System_String__op_Equality(transitionData->fields.name, (System_String_o *)StringLiteral_12784/*"ServantEquipList"*/, 0);
+      v4 = System_String__op_Equality(transitionData->fields.name, (System_String_o *)StringLiteral_12825/*"ServantEquipList"*/, 0);
       warehouseListMenu = this->fields.warehouseListMenu;
       setupInfo = this->fields.setupInfo;
       v7 = v4;
-      v8 = (WarehouseListMenu_CallbackFunc_o *)sub_1C7BD34(WarehouseListMenu_CallbackFunc_TypeInfo);
+      v8 = (WarehouseListMenu_CallbackFunc_o *)sub_1C93D20(WarehouseListMenu_CallbackFunc_TypeInfo);
       WarehouseListMenu_CallbackFunc___ctor(
         v8,
         (Il2CppObject *)this,
@@ -117,15 +117,15 @@ void WarehouseRootComponent__Init(WarehouseRootComponent_o *this, const MethodIn
       {
         WarehouseListMenu__Open(warehouseListMenu, v7, setupInfo, v8, 0);
         this->fields.transitionData = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.transitionData, 0, v11, v12, v13, v14, v15, v16);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.transitionData, 0, v11, v12, v13, v14, v15, v16);
         return;
       }
 LABEL_9:
-      sub_1C7BD40(v9, v10);
+      sub_1C93D2C(v9, v10);
     }
     v17 = this->fields.warehouseListMenu;
     v18 = this->fields.setupInfo;
-    v19 = (WarehouseListMenu_CallbackFunc_o *)sub_1C7BD34(WarehouseListMenu_CallbackFunc_TypeInfo);
+    v19 = (WarehouseListMenu_CallbackFunc_o *)sub_1C93D20(WarehouseListMenu_CallbackFunc_TypeInfo);
     WarehouseListMenu_CallbackFunc___ctor(
       v19,
       (Il2CppObject *)this,
@@ -147,27 +147,27 @@ void WarehouseRootComponent__OnClickBack(WarehouseRootComponent_o *this, const M
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CEC475 & 1) == 0 )
+  if ( (byte_4D2E7AC & 1) == 0 )
   {
-    sub_1C7BAE8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo);
-    sub_1C7BAE8(&Method_WarehouseRootComponent_EndClickBackRequest__);
-    sub_1C7BAE8(&Method_WarehouseRootComponent_OnClickBack__);
-    byte_4CEC475 = 1;
+    sub_1C93AD4(&WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+    sub_1C93AD4(&Method_WarehouseRootComponent_EndClickBackRequest__);
+    sub_1C93AD4(&Method_WarehouseRootComponent_OnClickBack__);
+    byte_4D2E7AC = 1;
   }
   v3 = Method_WarehouseRootComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_WarehouseRootComponent_OnClickBack__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_WarehouseRootComponent_OnClickBack__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_WarehouseRootComponent_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   warehouseListMenu = this->fields.warehouseListMenu;
-  v6 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1C7BD34(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+  v6 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1C93D20(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
   WarehouseListMenu_RequestCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
     Method_WarehouseRootComponent_EndClickBackRequest__,
     0);
   if ( !warehouseListMenu )
-    sub_1C7BD40(v7, v8);
+    sub_1C93D2C(v7, v8);
   WarehouseListMenu__StatusRequest(warehouseListMenu, v6, 0);
 }
 
@@ -183,25 +183,25 @@ void WarehouseRootComponent__OnSelectWarehouseList(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CEC474 & 1) == 0 )
+  if ( (byte_4D2E7AB & 1) == 0 )
   {
-    sub_1C7BAE8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo);
-    sub_1C7BAE8(&Method_WarehouseRootComponent_EndServantQuestRequest__);
-    byte_4CEC474 = 1;
+    sub_1C93AD4(&WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+    sub_1C93AD4(&Method_WarehouseRootComponent_EndServantQuestRequest__);
+    byte_4D2E7AB = 1;
   }
   if ( this->fields.state == 1 )
   {
     if ( result == 2 )
     {
       warehouseListMenu = this->fields.warehouseListMenu;
-      v6 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1C7BD34(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v6 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1C93D20(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v6,
         (Il2CppObject *)this,
         Method_WarehouseRootComponent_EndServantQuestRequest__,
         0);
       if ( !warehouseListMenu )
-        sub_1C7BD40(v7, v8);
+        sub_1C93D2C(v7, v8);
       WarehouseListMenu__StatusRequest(warehouseListMenu, v6, 0);
     }
     else
@@ -219,7 +219,7 @@ void WarehouseRootComponent__Quit(WarehouseRootComponent_o *this, const MethodIn
   warehouseListMenu = this->fields.warehouseListMenu;
   this->fields.state = 0;
   if ( !warehouseListMenu )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   WarehouseListMenu__Init(warehouseListMenu, 0);
 }
 
@@ -228,10 +228,10 @@ void WarehouseRootComponent__beginFinish(WarehouseRootComponent_o *this, const M
 {
   WarehouseListMenu_o *warehouseListMenu; // x0
 
-  if ( (byte_4CEC472 & 1) == 0 )
+  if ( (byte_4D2E7A9 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4CEC472 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4D2E7A9 = 1;
   }
   warehouseListMenu = this->fields.warehouseListMenu;
   this->fields.state = 0;
@@ -244,9 +244,9 @@ void WarehouseRootComponent__beginFinish(WarehouseRootComponent_o *this, const M
                                                      (UnityEngine_Component_o *)warehouseListMenu,
                                                      0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)warehouseListMenu, 0, 0),
-        (warehouseListMenu = (WarehouseListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0) )
+        (warehouseListMenu = (WarehouseListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0) )
   {
-    sub_1C7BD40(warehouseListMenu, method);
+    sub_1C93D2C(warehouseListMenu, method);
   }
   AtlasManager__ReleaseUISkin((AtlasManager_o *)warehouseListMenu, 2, 0, 0);
 }
@@ -257,15 +257,15 @@ void WarehouseRootComponent__beginInitialize(WarehouseRootComponent_o *this, con
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEC470 & 1) == 0 )
+  if ( (byte_4D2E7A7 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CEC470 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4D2E7A7 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -297,19 +297,19 @@ void WarehouseRootComponent__beginStartUp(WarehouseRootComponent_o *this, Il2Cpp
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_o *v28; // x20
 
-  if ( (byte_4CEC471 & 1) == 0 )
+  if ( (byte_4D2E7A8 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C7BAE8(&EventUpValSetupInfo_TypeInfo);
-    sub_1C7BAE8(&SceneJumpInfo_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&SoundManager_TypeInfo);
-    sub_1C7BAE8(&Method_WarehouseRootComponent_EndLoadCommonBg__);
-    byte_4CEC471 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C93AD4(&EventUpValSetupInfo_TypeInfo);
+    sub_1C93AD4(&SceneJumpInfo_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&SoundManager_TypeInfo);
+    sub_1C93AD4(&Method_WarehouseRootComponent_EndLoadCommonBg__);
+    byte_4D2E7A8 = 1;
   }
   if ( !data )
   {
@@ -341,7 +341,7 @@ LABEL_11:
   else
     v14 = 0;
 LABEL_15:
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_transitionData, v14, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)p_transitionData, v14, (int32_t)method, v3, v4, v5, v6, v7);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
   MainBgmName = BgmManager__GetMainBgmName(0, 0);
@@ -351,29 +351,29 @@ LABEL_15:
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_30;
-  TitleInfoControl__setTitleInfo(titleInfo, this->fields.myFSM, 1, 0, 87, 1, 0);
+  TitleInfoControl__setTitleInfo(titleInfo, this->fields.myFSM, 1, 0, 87, 0);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_30;
-  TitleInfoControl__setBackBtnSprite_40473788(titleInfo, 1, 0, 0, 0);
+  TitleInfoControl__setBackBtnSprite_40620696(titleInfo, 1, 0, 0, 0);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 0, 40, 0);
   MainMenuBar__setMenuActive(0, 0, 0);
-  titleInfo = (TitleInfoControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  titleInfo = (TitleInfoControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !titleInfo )
     goto LABEL_30;
   titleInfo = (TitleInfoControl_o *)DataManager__GetMasterData_object_(
                                       (DataManager_o *)titleInfo,
-                                      (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_EventMaster___);
+                                      (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !titleInfo )
     goto LABEL_30;
   EventValUpEventIdHash = EventMaster__GetEventValUpEventIdHash((EventMaster_o *)titleInfo, 0, 0, 0);
   v19 = System_Linq_Enumerable__ToArray_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
-          (const MethodInfo_31AF04C *)Method_System_Linq_Enumerable_ToArray_int___);
-  v20 = (EventUpValSetupInfo_o *)sub_1C7BD34(EventUpValSetupInfo_TypeInfo);
-  EventUpValSetupInfo___ctor_42311644(v20, v19, 0, 0, 0, 0);
+          (const MethodInfo_31E3B80 *)Method_System_Linq_Enumerable_ToArray_int___);
+  v20 = (EventUpValSetupInfo_o *)sub_1C93D20(EventUpValSetupInfo_TypeInfo);
+  EventUpValSetupInfo___ctor_42466312(v20, v19, 0, 0, 0, 0);
   this->fields.setupInfo = v20;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.setupInfo, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.setupInfo, (int32_t)v20, v21, v22, v23, v24, v25, v26);
   titleInfo = (TitleInfoControl_o *)this->fields.bgTxtSprite;
   if ( !titleInfo
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleInfo, 0),
@@ -384,10 +384,10 @@ LABEL_15:
     || (titleInfo = (TitleInfoControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleInfo, 0)) == 0 )
   {
 LABEL_30:
-    sub_1C7BD40(titleInfo, v16);
+    sub_1C93D2C(titleInfo, v16);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 0, 0);
-  v28 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v28 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v28, (Il2CppObject *)this, Method_WarehouseRootComponent_EndLoadCommonBg__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);

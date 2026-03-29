@@ -4,7 +4,7 @@ void ClassBoardEffectPlayer___ctor(ClassBoardEffectPlayer_o *this, const MethodI
 }
 
 
-void ClassBoardEffectPlayer___ctor_48650144(
+void ClassBoardEffectPlayer___ctor_48851620(
         ClassBoardEffectPlayer_o *this,
         System_String_o *playerName,
         const MethodInfo *method)
@@ -18,7 +18,7 @@ void ClassBoardEffectPlayer___ctor_48650144(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Name_k__BackingField = playerName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)playerName, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)playerName, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -40,14 +40,13 @@ void ClassBoardEffectPlayer__End(ClassBoardEffectPlayer_o *this, const MethodInf
       endCallback->fields.method_code,
       endCallback->fields.method);
   p_endCallback->klass = 0;
-  sub_1C7BA8C(p_endCallback, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78(p_endCallback, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__GetData___Il2CppFullySharedGenericType_(
         ClassBoardEffectPlayer_o *this,
-        const MethodInfo_3163BB0 *method)
+        const MethodInfo_31981F8 *method)
 {
   __int64 v2; // x2
   long double v3; // q0
@@ -57,8 +56,6 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__G
   size_t v9; // x20
   Il2CppObject *data; // x21
   const void *v11; // x0
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v12; // x0
-  void *v13; // x1
   _QWORD v14[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -67,88 +64,86 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__G
   if ( !v6 )
   {
     v7 = v2;
-    sub_1C51BD8();
+    sub_1C69BC4();
     v6 = *(__int64 **)(v7 + 56);
   }
   v8 = *v6;
   v9 = *(unsigned int *)(*v6 + 252);
   data = this->fields.data;
   if ( (*(_BYTE *)(*v6 + 309) & 1) == 0 )
-    v8 = sub_1C51B7C(v3);
-  v11 = (const void *)sub_1C7BC34(data, v8, (char *)v14 - ((v9 + 15) & 0x1FFFFFFF0LL));
-  v12 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v9);
-  result.monitor = v13;
-  result.klass = v12;
+    v8 = sub_1C69B68(v3);
+  v11 = (const void *)sub_1C93C20(data, v8, (char *)v14 - ((v9 + 15) & 0x1FFFFFFF0LL));
+  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v9);
   return result;
 }
 
 
-bool ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_3163AC0 *method)
+bool ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_3198108 *method)
 {
   __int64 v2; // x2
   __int64 v3; // x3
   long double v4; // q0
-  const MethodInfo_3163AC0_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3198108_RGCTXs *rgctx_data; // x8
   ClassBoardEffectPlayer_o *v6; // x19
   ClassBoardEffectPlayer_o *_0_T; // x1
   Il2CppObject *data; // x19
   ClassBoardEffectPlayer_o *v11; // x0
-  const MethodInfo_3163B38 *v12; // x1
+  const MethodInfo_3198180 *v12; // x1
 
   rgctx_data = method->rgctx_data;
   v6 = this;
   if ( !rgctx_data )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1C51BD8(method);
+    this = (ClassBoardEffectPlayer_o *)sub_1C69BC4(method);
     rgctx_data = method->rgctx_data;
   }
   _0_T = (ClassBoardEffectPlayer_o *)rgctx_data->_0_T;
   data = v6->fields.data;
   if ( (*(&rgctx_data->_0_T->_2.bitflags2 + 2) & 1) == 0 )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1C51B7C(v4);
+    this = (ClassBoardEffectPlayer_o *)sub_1C69B68(v4);
     _0_T = this;
   }
   if ( !data )
-    sub_1C7BD40(this, _0_T);
+    sub_1C93D2C(this, _0_T);
   if ( data->klass->_1.element_class == (Il2CppClass *)_0_T[1].fields._Name_k__BackingField )
     return *(_BYTE *)j_il2cpp_object_unbox_0(data, _0_T, v2, v3);
-  sub_1C7C0DC(data);
+  sub_1C940C8(data);
   return ClassBoardEffectPlayer__GetData_int_(v11, v12);
 }
 
 
-int32_t ClassBoardEffectPlayer__GetData_int_(ClassBoardEffectPlayer_o *this, const MethodInfo_3163B38 *method)
+int32_t ClassBoardEffectPlayer__GetData_int_(ClassBoardEffectPlayer_o *this, const MethodInfo_3198180 *method)
 {
   __int64 v2; // x2
   __int64 v3; // x3
   long double v4; // q0
-  const MethodInfo_3163B38_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3198180_RGCTXs *rgctx_data; // x8
   ClassBoardEffectPlayer_o *v6; // x19
   ClassBoardEffectPlayer_o *_0_T; // x1
   Il2CppObject *data; // x19
   ClassBoardEffectPlayer_o *v11; // x0
-  const MethodInfo_3163BB0 *v12; // x1
+  const MethodInfo_31981F8 *v12; // x1
 
   rgctx_data = method->rgctx_data;
   v6 = this;
   if ( !rgctx_data )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1C51BD8(method);
+    this = (ClassBoardEffectPlayer_o *)sub_1C69BC4(method);
     rgctx_data = method->rgctx_data;
   }
   _0_T = (ClassBoardEffectPlayer_o *)rgctx_data->_0_T;
   data = v6->fields.data;
   if ( (*(&rgctx_data->_0_T->_2.bitflags2 + 2) & 1) == 0 )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1C51B7C(v4);
+    this = (ClassBoardEffectPlayer_o *)sub_1C69B68(v4);
     _0_T = this;
   }
   if ( !data )
-    sub_1C7BD40(this, _0_T);
+    sub_1C93D2C(this, _0_T);
   if ( data->klass->_1.element_class == (Il2CppClass *)_0_T[1].fields._Name_k__BackingField )
     return *(_DWORD *)j_il2cpp_object_unbox_0(data, _0_T, v2, v3);
-  sub_1C7C0DC(data);
+  sub_1C940C8(data);
   return (unsigned int)ClassBoardEffectPlayer__GetData___Il2CppFullySharedGenericType_(v11, v12).klass;
 }
 
@@ -168,7 +163,7 @@ void ClassBoardEffectPlayer__Play(ClassBoardEffectPlayer_o *this, const MethodIn
 void ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
         ClassBoardEffectPlayer_o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o obj,
-        const MethodInfo_3163D2C *method)
+        const MethodInfo_3198374 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
   _QWORD *v5; // x23
@@ -192,7 +187,7 @@ void ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
   if ( !v5 )
   {
     monitor = obj.monitor;
-    sub_1C51BD8();
+    sub_1C69BC4();
     v5 = (_QWORD *)monitor[7];
   }
   v7 = *(unsigned int *)(*v5 + 252LL);
@@ -204,13 +199,13 @@ void ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
   memcpy((char *)v17 - ((v7 + 15) & 0x1FFFFFFF0LL), v9, v7);
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(*v5, v8);
   this->fields.data = v10;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v10, v11, v12, v13, v14, v15, v16);
 }
 
 
-void ClassBoardEffectPlayer__SetData_bool_(ClassBoardEffectPlayer_o *this, bool obj, const MethodInfo_3163C70 *method)
+void ClassBoardEffectPlayer__SetData_bool_(ClassBoardEffectPlayer_o *this, bool obj, const MethodInfo_31982B8 *method)
 {
-  const MethodInfo_3163C70_RGCTXs *rgctx_data; // x8
+  const MethodInfo_31982B8_RGCTXs *rgctx_data; // x8
   Il2CppObject *v7; // x0
   int32_t v8; // w2
   int32_t v9; // w3
@@ -223,22 +218,22 @@ void ClassBoardEffectPlayer__SetData_bool_(ClassBoardEffectPlayer_o *this, bool 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8();
+    sub_1C69BC4();
     rgctx_data = method->rgctx_data;
   }
   v14[0] = obj;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(rgctx_data->_0_T, v14);
   this->fields.data = v7;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
 void ClassBoardEffectPlayer__SetData_int_(
         ClassBoardEffectPlayer_o *this,
         int32_t obj,
-        const MethodInfo_3163CD0 *method)
+        const MethodInfo_3198318 *method)
 {
-  const MethodInfo_3163CD0_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3198318_RGCTXs *rgctx_data; // x8
   Il2CppObject *v7; // x0
   int32_t v8; // w2
   int32_t v9; // w3
@@ -251,13 +246,13 @@ void ClassBoardEffectPlayer__SetData_int_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8();
+    sub_1C69BC4();
     rgctx_data = method->rgctx_data;
   }
   v14 = obj;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(rgctx_data->_0_T, &v14);
   this->fields.data = v7;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -273,7 +268,7 @@ void ClassBoardEffectPlayer__SetEndEvent(
   System_String_o *v7; // x7
 
   this->fields.endCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.endCallback,
     (int32_t)callback,
     (int32_t)method,
@@ -297,7 +292,7 @@ void ClassBoardEffectPlayer__SetPlayEvent(
   System_String_o *v7; // x7
 
   this->fields.playCallback = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.playCallback,
     (int32_t)callback,
     (int32_t)method,

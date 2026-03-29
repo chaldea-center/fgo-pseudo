@@ -15,36 +15,36 @@ void EventInfoSkillExplanationDialog___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CF045C & 1) == 0 )
+  if ( (byte_4D3280A & 1) == 0 )
   {
-    sub_1C7BAE8(&EventInfoSkillExplanationDialog_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_5629/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/);
-    sub_1C7BAE8(&StringLiteral_5628/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/);
-    byte_4CF045C = 1;
+    sub_1C93AD4(&EventInfoSkillExplanationDialog_TypeInfo);
+    sub_1C93AD4(&StringLiteral_5647/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/);
+    sub_1C93AD4(&StringLiteral_5646/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/);
+    byte_4D3280A = 1;
   }
-  EventInfoSkillExplanationDialog_TypeInfo->static_fields->Message01LocalizationKey = (struct System_String_o *)StringLiteral_5629/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/;
-  sub_1C7BA8C(
+  EventInfoSkillExplanationDialog_TypeInfo->static_fields->Message01LocalizationKey = (struct System_String_o *)StringLiteral_5647/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)EventInfoSkillExplanationDialog_TypeInfo->static_fields,
-    StringLiteral_5629/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/,
+    StringLiteral_5647/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_5628/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
+  v7 = StringLiteral_5646/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
   static_fields = EventInfoSkillExplanationDialog_TypeInfo->static_fields;
-  static_fields->Message02LocalizationKey = (struct System_String_o *)StringLiteral_5628/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->Message02LocalizationKey, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->Message02LocalizationKey = (struct System_String_o *)StringLiteral_5646/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->Message02LocalizationKey, v7, v9, v10, v11, v12, v13, v14);
 }
 
 
 void EventInfoSkillExplanationDialog___ctor(EventInfoSkillExplanationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CF045B & 1) == 0 )
+  if ( (byte_4D32809 & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CF045B = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D32809 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -73,7 +73,7 @@ void EventInfoSkillExplanationDialog__Init(EventInfoSkillExplanationDialog_o *th
   v2->fields.callback = 0;
   v2 = (EventInfoSkillExplanationDialog_o *)((char *)v2 + 224);
   LOBYTE(v2->monitor) = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -85,21 +85,21 @@ void EventInfoSkillExplanationDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CF0459 & 1) == 0 )
+  if ( (byte_4D32807 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog__OnClickCancelButton_b__23_0__);
-    byte_4CF0459 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog__OnClickCancelButton_b__23_0__);
+    byte_4D32807 = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoSkillExplanationDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillExplanationDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -119,21 +119,21 @@ void EventInfoSkillExplanationDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CF0458 & 1) == 0 )
+  if ( (byte_4D32806 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog__OnClickDecideButton_b__22_0__);
-    byte_4CF0458 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog__OnClickDecideButton_b__22_0__);
+    byte_4D32806 = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoSkillExplanationDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillExplanationDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -190,31 +190,31 @@ void EventInfoSkillExplanationDialog__Open(
   int32_t v44; // w20
   System_Action_o *v45; // x21
 
-  if ( (byte_4CF0457 & 1) == 0 )
+  if ( (byte_4D32805 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog___c__DisplayClass21_0__Open_b__0__);
-    sub_1C7BAE8(&Method_EventInfoSkillExplanationDialog___c__DisplayClass21_0__Open_b__1__);
-    sub_1C7BAE8(&EventInfoSkillExplanationDialog___c__DisplayClass21_0_TypeInfo);
-    byte_4CF0457 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog___c__DisplayClass21_0__Open_b__0__);
+    sub_1C93AD4(&Method_EventInfoSkillExplanationDialog___c__DisplayClass21_0__Open_b__1__);
+    sub_1C93AD4(&EventInfoSkillExplanationDialog___c__DisplayClass21_0_TypeInfo);
+    byte_4D32805 = 1;
   }
-  v9 = sub_1C7BD34(EventInfoSkillExplanationDialog___c__DisplayClass21_0_TypeInfo);
+  v9 = sub_1C93D20(EventInfoSkillExplanationDialog___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_10;
   *(_QWORD *)(v9 + 16) = clickCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)clickCallback, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)clickCallback, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = imagePartsGroupEntity;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)imagePartsGroupEntity, v18, v19, v20, v21, v22, v23);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)imagePartsGroupEntity, v18, v19, v20, v21, v22, v23);
   *(_QWORD *)(v9 + 40) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)this, v24, v25, v26, v27, v28, v29);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)this, v24, v25, v26, v27, v28, v29);
   *(_DWORD *)(v9 + 48) = eventId;
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.callback = 0;
   this->fields.isClose = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callback, 0, v30, v31, v32, v33, v34, v35);
-  v36 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callback, 0, v30, v31, v32, v33, v34, v35);
+  v36 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(
     v36,
     (Il2CppObject *)v9,
@@ -222,7 +222,7 @@ void EventInfoSkillExplanationDialog__Open(
     0);
   *(_QWORD *)(v9 + 32) = v36;
   v37 = v9 + 32;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v36, v38, v39, v40, v41, v42, v43);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v36, v38, v39, v40, v41, v42, v43);
   if ( !*(_QWORD *)(v9 + 24) )
   {
     if ( *(_QWORD *)v37 )
@@ -233,10 +233,10 @@ void EventInfoSkillExplanationDialog__Open(
       return;
     }
 LABEL_10:
-    sub_1C7BD40(v10, v11);
+    sub_1C93D2C(v10, v11);
   }
   v44 = *(_DWORD *)(v9 + 48);
-  v45 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v45 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(
     v45,
     (Il2CppObject *)v9,
@@ -244,7 +244,7 @@ LABEL_10:
     0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_41168332(v44, v45, 1, 0);
+  AtlasManager__LoadEventUI_41320056(v44, v45, 1, 0);
 }
 
 
@@ -271,7 +271,7 @@ void EventInfoSkillExplanationDialog___OnClickCancelButton_b__23_0(
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.isClose = 0;
   this->fields.callback = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_callback, 0, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)p_callback, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -298,7 +298,7 @@ void EventInfoSkillExplanationDialog___OnClickDecideButton_b__22_0(
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.isClose = 0;
   this->fields.callback = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_callback, 0, v5, v6, v7, v8, v9, v10);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)p_callback, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -310,10 +310,10 @@ UnityEngine_GameObject_o *EventInfoSkillExplanationDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4CF045A & 1) == 0 )
+  if ( (byte_4D32808 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF045A = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D32808 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -322,7 +322,7 @@ UnityEngine_GameObject_o *EventInfoSkillExplanationDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }
 
@@ -412,23 +412,23 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
   int32_t condId; // [xsp+14h] [xbp-4Ch] BYREF
   SkillLvEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4CF045D & 1) == 0 )
+  if ( (byte_4D3280B & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&EventInfoSkillExplanationDialog_TypeInfo);
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10926/*"QUEST_MESSAGE_DLG_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_10925/*"QUEST_MESSAGE_DLG_CANCEL"*/);
-    byte_4CF045D = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&EventInfoSkillExplanationDialog_TypeInfo);
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10962/*"QUEST_MESSAGE_DLG_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_10961/*"QUEST_MESSAGE_DLG_CANCEL"*/);
+    byte_4D3280B = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !this->fields.imagePartsGroupEntity )
     goto LABEL_60;
   v5 = (SkillLvMaster_o *)Master_object;
@@ -454,7 +454,7 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_QuestMaster___);
   imagePartsGroupEntity = this->fields.imagePartsGroupEntity;
   if ( !imagePartsGroupEntity )
     goto LABEL_60;
@@ -518,7 +518,7 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
   v24 = (Il2CppObject *)Master_object;
   imageValue = v23->fields.imageValue;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageValue);
-  Master_object = (__int64)System_String__Format_64218220(imagePartsIconSpriteNameFormat, v24, v25, 0);
+  Master_object = (__int64)System_String__Format_64467032(imagePartsIconSpriteNameFormat, v24, v25, 0);
   v26 = this->fields.__4__this;
   if ( !v26 )
     goto LABEL_60;
@@ -527,7 +527,7 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
   imagePartsIconSprite = v26->fields.imagePartsIconSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  Master_object = AtlasManager__SetEventUI_41168628(eventId, imagePartsIconSprite, v27, 0);
+  Master_object = AtlasManager__SetEventUI_41320352(eventId, imagePartsIconSprite, v27, 0);
   v30 = this->fields.__4__this;
   if ( !v30 )
     goto LABEL_60;
@@ -541,7 +541,7 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
     v33 = this->fields.__4__this;
     if ( v33 )
     {
-      Master_object = AtlasManager__SetEventUI_41168628(
+      Master_object = AtlasManager__SetEventUI_41320352(
                         this->fields.eventId,
                         v33->fields.imagePartsSkillIconBg,
                         v33->fields.imagePartsSkillIconBgName,
@@ -555,7 +555,7 @@ void EventInfoSkillExplanationDialog___c__DisplayClass21_0___Open_b__1(
       }
     }
 LABEL_60:
-    sub_1C7BD40(Master_object, v4);
+    sub_1C93D2C(Master_object, v4);
   }
   skillIcon = v30->fields.skillIcon;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -600,7 +600,7 @@ LABEL_43:
   decideLabel = v45->fields.decideLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10926/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
+  Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10962/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
   if ( !decideLabel )
     goto LABEL_60;
   UILabel__set_text(decideLabel, (System_String_o *)Master_object, 0);
@@ -608,7 +608,7 @@ LABEL_43:
   if ( !v47 )
     goto LABEL_60;
   cancelLabel = v47->fields.cancelLabel;
-  Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10925/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0);
+  Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10961/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0);
   if ( !cancelLabel )
     goto LABEL_60;
   UILabel__set_text(cancelLabel, (System_String_o *)Master_object, 0);
@@ -617,7 +617,7 @@ LABEL_43:
     goto LABEL_60;
   clickCallback = this->fields.clickCallback;
   *(_QWORD *)(Master_object + 224) = clickCallback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)(Master_object + 224),
     (int32_t)clickCallback,
     v49,

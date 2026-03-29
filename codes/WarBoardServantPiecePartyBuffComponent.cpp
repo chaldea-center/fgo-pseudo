@@ -10,18 +10,18 @@ void WarBoardServantPiecePartyBuffComponent___ctor(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEBEDD & 1) == 0 )
+  if ( (byte_4D2E221 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4CEBEDD = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4D2E221 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.objList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.objList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -37,15 +37,15 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
   int v7; // w9
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CEBEDB & 1) == 0 )
+  if ( (byte_4D2E21F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBEDB = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E21F = 1;
   }
   memset(&v8, 0, sizeof(v8));
   objList = this->fields.objList;
@@ -54,10 +54,10 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)objList,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v8.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -66,16 +66,16 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_71870336((UnityEngine_Object_o *)current, 0);
+      UnityEngine_Object__DestroyImmediate_72120096((UnityEngine_Object_o *)current, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v5 = this->fields.objList;
   if ( !v5 )
 LABEL_16:
-    sub_1C7BD40(objList, method);
+    sub_1C93D2C(objList, method);
   size = v5->fields._size;
   v7 = v5->fields._version + 1;
   v5->fields._size = 0;
@@ -104,55 +104,42 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v8; // x20
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  float w; // s11
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v14; // x1
-  UnityEngine_Transform_o *v15; // x21
+  __int64 v10; // x1
+  UnityEngine_Transform_o *v11; // x21
+  UnityEngine_Quaternion_o v13; // 0:kr00_16.16
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v24; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4CEBEDC & 1) == 0 )
+  if ( (byte_4D2E220 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Object_Instantiate_GameObject____78880120);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBEDC = 1;
+    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject____79146688);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E220 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = 0;
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)prefab, 0, 0) )
   {
-    v17.fields.x = 0.0;
-    v17.fields.y = 0.0;
-    v17.fields.z = 0.0;
-    v23 = UnityEngine_Quaternion__Internal_FromEulerRad(v17, 0);
-    x = v23.fields.x;
-    y = v23.fields.y;
-    z = v23.fields.z;
-    w = v23.fields.w;
+    v14.fields.x = 0.0;
+    v14.fields.y = 0.0;
+    v14.fields.z = 0.0;
+    v13 = UnityEngine_Quaternion__Internal_FromEulerRad(v14, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v18.fields.x = 0.0;
-    v18.fields.y = 0.0;
-    v18.fields.z = 0.0;
-    v24.fields.x = x;
-    v24.fields.y = y;
-    v24.fields.z = z;
-    v24.fields.w = w;
-    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__52412684(
+    v15.fields.x = 0.0;
+    v15.fields.y = 0.0;
+    v15.fields.z = 0.0;
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__52629704(
                                               (Il2CppObject *)prefab,
-                                              v18,
-                                              v24,
-                                              (const MethodInfo_31FC10C *)Method_UnityEngine_Object_Instantiate_GameObject____78880120);
+                                              v15,
+                                              v13,
+                                              (const MethodInfo_32310C8 *)Method_UnityEngine_Object_Instantiate_GameObject____79146688);
     if ( !transform )
       goto LABEL_18;
     v8 = transform;
@@ -163,39 +150,39 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v19.fields.x = 0.0;
-    v19.fields.y = 0.0;
-    v19.fields.z = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v19, 0);
+    v16.fields.x = 0.0;
+    v16.fields.y = 0.0;
+    v16.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v16, 0);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v20.fields.x = 0.0;
-    v20.fields.y = 0.0;
-    v20.fields.z = 0.0;
-    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, v20, 0);
+    v17.fields.x = 0.0;
+    v17.fields.y = 0.0;
+    v17.fields.z = 0.0;
+    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, v17, 0);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v21.fields.x = 1.0;
-    v21.fields.y = 1.0;
-    v21.fields.z = 1.0;
-    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v21, 0);
+    v18.fields.x = 1.0;
+    v18.fields.y = 1.0;
+    v18.fields.z = 1.0;
+    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v18, 0);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)pos, 0, 0) )
     {
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
       if ( pos )
       {
-        v15 = (UnityEngine_Transform_o *)transform;
+        v11 = (UnityEngine_Transform_o *)transform;
         position = UnityEngine_Transform__get_position(pos, 0);
-        if ( v15 )
+        if ( v11 )
         {
-          UnityEngine_Transform__set_position(v15, position, 0);
+          UnityEngine_Transform__set_position(v11, position, 0);
           return v8;
         }
       }
 LABEL_18:
-      sub_1C7BD40(transform, v14);
+      sub_1C93D2C(transform, v10);
     }
   }
   return v8;
@@ -218,7 +205,7 @@ void WarBoardServantPiecePartyBuffComponent__SetActive(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)partyBuffLabelSprite, v6, 0),
         (partyBuffLabelSprite = (UnityEngine_Component_o *)this->fields.arrowListObject) == 0) )
   {
-    sub_1C7BD40(partyBuffLabelSprite, flag);
+    sub_1C93D2C(partyBuffLabelSprite, flag);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)partyBuffLabelSprite, v6, 0);
 }
@@ -247,11 +234,11 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
   Il2CppClass **v20; // x8
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEBEDA & 1) == 0 )
+  if ( (byte_4D2E21E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBEDA = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E21E = 1;
   }
   WarBoardServantPiecePartyBuffComponent__SetActive(this, 1, method);
   if ( level >= 1 )
@@ -282,7 +269,7 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
               ++objList->fields._version,
               !items) )
         {
-          sub_1C7BD40(objList, v10);
+          sub_1C93D2C(objList, v10);
         }
         size = objList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -290,14 +277,14 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
           System_Collections_Generic_List_object___AddWithResize(
             objList,
             (Il2CppObject *)Object,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           objList->fields._size = size + 1;
           v20[4] = (Il2CppClass *)Object;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)Object, v11, v12, v13, v14, v15, v16);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)Object, v11, v12, v13, v14, v15, v16);
         }
       }
       ++v7;

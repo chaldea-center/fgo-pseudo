@@ -1,6 +1,6 @@
 void SetTDPlaySpeedControl___ctor(SetTDPlaySpeedControl_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+  GameOptionContentBase___ctor((GameOptionContentBase_o *)this, 0);
 }
 
 
@@ -12,25 +12,25 @@ void SetTDPlaySpeedControl__Init(SetTDPlaySpeedControl_o *this, const MethodInfo
   UILabel_o *tdPlaySpeedDispInfoLb; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CE95E5 & 1) == 0 )
+  if ( (byte_4D2B98D & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&OptionManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_9740/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/);
-    sub_1C7BAE8(&StringLiteral_9739/*"OPTION_TD_PLAY_SPEED_DISP"*/);
-    byte_4CE95E5 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&OptionManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_9770/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/);
+    sub_1C93AD4(&StringLiteral_9769/*"OPTION_TD_PLAY_SPEED_DISP"*/);
+    byte_4D2B98D = 1;
   }
   tdPlaySpeedDispTitle = this->fields.tdPlaySpeedDispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9739/*"OPTION_TD_PLAY_SPEED_DISP"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9769/*"OPTION_TD_PLAY_SPEED_DISP"*/, 0);
   if ( !tdPlaySpeedDispTitle
     || (UILabel__set_text(tdPlaySpeedDispTitle, v4, 0),
         tdPlaySpeedDispInfoLb = this->fields.tdPlaySpeedDispInfoLb,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9740/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9770/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/, 0),
         !tdPlaySpeedDispInfoLb) )
   {
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   }
   UILabel__set_text(tdPlaySpeedDispInfoLb, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -46,15 +46,15 @@ void SetTDPlaySpeedControl__OnChangeBtn(SetTDPlaySpeedControl_o *this, const Met
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CE95E8 & 1) == 0 )
+  if ( (byte_4D2B990 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SetTDPlaySpeedControl_OnChangeBtn__);
-    byte_4CE95E8 = 1;
+    sub_1C93AD4(&Method_SetTDPlaySpeedControl_OnChangeBtn__);
+    byte_4D2B990 = 1;
   }
   v3 = Method_SetTDPlaySpeedControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetTDPlaySpeedControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C7BB00(Method_SetTDPlaySpeedControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C93AEC(Method_SetTDPlaySpeedControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, !this->fields.isTDPlaySpeed, 0, 0);
   this->fields.isTDPlaySpeed ^= 1u;
   SetTDPlaySpeedControl__setDispValue(this, v5);
@@ -65,10 +65,10 @@ void SetTDPlaySpeedControl__Reflection(SetTDPlaySpeedControl_o *this, const Meth
 {
   _BOOL4 isTDPlaySpeed; // w19
 
-  if ( (byte_4CE95E7 & 1) == 0 )
+  if ( (byte_4D2B98F & 1) == 0 )
   {
-    sub_1C7BAE8(&OptionManager_TypeInfo);
-    byte_4CE95E7 = 1;
+    sub_1C93AD4(&OptionManager_TypeInfo);
+    byte_4D2B98F = 1;
   }
   isTDPlaySpeed = this->fields.isTDPlaySpeed;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -82,18 +82,18 @@ void SetTDPlaySpeedControl__setDispValue(SetTDPlaySpeedControl_o *this, const Me
   UIButton_o *tdPlaySpeedDispBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4CE95E6 & 1) == 0 )
+  if ( (byte_4D2B98E & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_17595/*"btn_on"*/);
-    sub_1C7BAE8(&StringLiteral_17594/*"btn_off"*/);
-    byte_4CE95E6 = 1;
+    sub_1C93AD4(&StringLiteral_17638/*"btn_on"*/);
+    sub_1C93AD4(&StringLiteral_17637/*"btn_off"*/);
+    byte_4D2B98E = 1;
   }
   tdPlaySpeedDispBtn = this->fields.tdPlaySpeedDispBtn;
   if ( !tdPlaySpeedDispBtn )
-    sub_1C7BD40(0, method);
+    sub_1C93D2C(0, method);
   if ( this->fields.isTDPlaySpeed )
-    v4 = &StringLiteral_17594/*"btn_off"*/;
+    v4 = &StringLiteral_17637/*"btn_off"*/;
   else
-    v4 = &StringLiteral_17595/*"btn_on"*/;
+    v4 = &StringLiteral_17638/*"btn_on"*/;
   UIButton__set_normalSprite(tdPlaySpeedDispBtn, (System_String_o *)*v4, 0);
 }

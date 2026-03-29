@@ -16,10 +16,10 @@ void CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const MethodInfo *
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4CE86C1 & 1) == 0 )
+  if ( (byte_4D2A995 & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonUI_TypeInfo);
-    byte_4CE86C1 = 1;
+    sub_1C93AD4(&CommonUI_TypeInfo);
+    byte_4D2A995 = 1;
   }
   if ( this->fields.hide )
   {
@@ -35,10 +35,10 @@ void CinemascopeSideFrame__HideLater(CinemascopeSideFrame_o *this, const MethodI
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4CE86C2 & 1) == 0 )
+  if ( (byte_4D2A996 & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonUI_TypeInfo);
-    byte_4CE86C2 = 1;
+    sub_1C93AD4(&CommonUI_TypeInfo);
+    byte_4D2A996 = 1;
   }
   if ( !this->fields.hide )
   {
@@ -58,17 +58,16 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
   bool IsFullScreenMovie; // w19
   bool v6; // w0
   int32_t v7; // w19
-  System_Nullable_int__o v8; // x0
-  System_Nullable_int__o v10; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v8; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CE86C0 & 1) == 0 )
+  if ( (byte_4D2A994 & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonUI_TypeInfo);
-    sub_1C7BAE8(&FSUtility_TypeInfo);
-    sub_1C7BAE8(&Method_System_Nullable_int___ctor__);
-    byte_4CE86C0 = 1;
+    sub_1C93AD4(&CommonUI_TypeInfo);
+    sub_1C93AD4(&FSUtility_TypeInfo);
+    sub_1C93AD4(&Method_System_Nullable_int___ctor__);
+    byte_4D2A994 = 1;
   }
-  v10 = 0;
+  v8 = 0;
   if ( this->fields.show )
   {
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
@@ -85,8 +84,10 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
     else
       v7 = 1024;
     CommonUI__SetForceObi_16_9(v6, 0);
-    v8 = (System_Nullable_int__o)&v10;
-    System_Nullable_int____ctor(v8, v7, (const MethodInfo_3964C54 *)Method_System_Nullable_int___ctor__);
+    System_Nullable_int____ctor(
+      (System_Nullable_int__o)&v8,
+      v7,
+      (const MethodInfo_399F80C *)Method_System_Nullable_int___ctor__);
   }
-  return v10;
+  return v8;
 }

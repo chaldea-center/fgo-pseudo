@@ -1,13 +1,13 @@
 void GalleryEntity___ctor(GalleryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEEA72 & 1) == 0 )
+  if ( (byte_4D30DDD & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_int___ctor__);
-    byte_4CEEA72 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_int___ctor__);
+    byte_4D30DDD = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_342BE18 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3460B3C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,17 +25,17 @@ System_Collections_Generic_List_GalleryResourceEntity__o *GalleryEntity__GetEnab
   __int64 v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CEEA70 & 1) == 0 )
+  if ( (byte_4D30DDB & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_GalleryResourceMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    byte_4CEEA70 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_GalleryResourceMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    byte_4D30DDB = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_GalleryResourceMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_GalleryResourceMaster___);
   if ( !Master_object )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return GalleryResourceMaster__GetEnableGalleryResourceEntityListByGalleryId(
            (GalleryResourceMaster_o *)Master_object,
            this->fields.id,
@@ -47,13 +47,13 @@ bool GalleryEntity__IsEnableGallery(GalleryEntity_o *this, const MethodInfo *met
 {
   System_Collections_Generic_List_GalleryResourceEntity__o *EnableGalleryResourceEntityList; // x0
 
-  if ( (byte_4CEEA71 & 1) == 0 )
+  if ( (byte_4D30DDC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
-    byte_4CEEA71 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
+    byte_4D30DDC = 1;
   }
   EnableGalleryResourceEntityList = GalleryEntity__GetEnableGalleryResourceEntityList(this, method);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EnableGalleryResourceEntityList,
-           (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
+           (const MethodInfo_31B0714 *)Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
 }

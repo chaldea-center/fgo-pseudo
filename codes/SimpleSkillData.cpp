@@ -11,10 +11,10 @@ bool SimpleSkillData__Equals(SimpleSkillData_o this, Il2CppObject *obj, const Me
   _QWORD *v6; // x0
   bool result; // w0
 
-  if ( (byte_4CF0FE7 & 1) == 0 )
+  if ( (byte_4D333A5 & 1) == 0 )
   {
-    sub_1C7BAE8(&SimpleSkillData_TypeInfo);
-    byte_4CF0FE7 = 1;
+    sub_1C93AD4(&SimpleSkillData_TypeInfo);
+    byte_4D333A5 = 1;
   }
   result = obj
         && (SimpleSkillData_c *)obj->klass == SimpleSkillData_TypeInfo
@@ -24,7 +24,7 @@ bool SimpleSkillData__Equals(SimpleSkillData_o this, Il2CppObject *obj, const Me
 }
 
 
-bool SimpleSkillData__Equals_46526236(SimpleSkillData_o this, SimpleSkillData_o toCompare, const MethodInfo *method)
+bool SimpleSkillData__Equals_46710304(SimpleSkillData_o this, SimpleSkillData_o toCompare, const MethodInfo *method)
 {
   return *(_DWORD *)this.fields.id == toCompare.fields.id && *(_DWORD *)(*(_QWORD *)&this + 4LL) == toCompare.fields.lv;
 }
@@ -35,18 +35,18 @@ int32_t SimpleSkillData__GetHashCode(SimpleSkillData_o this, const MethodInfo *m
   System_Tuple_T1__T2__o *int__int; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CF0FE8 & 1) == 0 )
+  if ( (byte_4D333A6 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Tuple_Create_int__int___);
-    byte_4CF0FE8 = 1;
+    sub_1C93AD4(&Method_System_Tuple_Create_int__int___);
+    byte_4D333A6 = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_3241D38 *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_327633C *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_1C7BD40(0, v4);
-  return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, const MethodInfo *))int__int->klass->vtable._2_GetHashCode.methodPtr)(
+    sub_1C93D2C(0, v4);
+  return ((int32_t (__fastcall *)(System_Tuple_T1__T2__o *, const MethodInfo *))int__int->klass->vtable._2_GetHashCode.methodPtr)(
            int__int,
            int__int->klass->vtable._2_GetHashCode.method);
 }

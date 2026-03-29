@@ -4,7 +4,7 @@ void GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodInfo *method)
 }
 
 
-void GachaRqParamData___ctor_35852912(
+void GachaRqParamData___ctor_35969412(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -44,7 +44,7 @@ void GachaRqParamData___ctor_35852912(
   v19->fields.shopIdIdx = shopIdIdx;
   v19->fields.gachaSubId = gachaSubId;
   v19->fields.storyAdjustIds = storyAdjustIds;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v19->fields.storyAdjustIds,
     (int32_t)storyAdjustIds,
     v20,
@@ -56,5 +56,5 @@ void GachaRqParamData___ctor_35852912(
   v19->fields.selectBonusList = selectBonusList;
   v19 = (GachaRqParamData_o *)((char *)v19 + 64);
   LOBYTE(v19[-1].fields.selectBonusList) = isAppendSummon;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)v19, (int32_t)selectBonusList, v26, v27, v28, v29, v30, v31);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)v19, (int32_t)selectBonusList, v26, v27, v28, v29, v30, v31);
 }

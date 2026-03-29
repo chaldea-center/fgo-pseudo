@@ -23,19 +23,19 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *ReactTaskTargetFilt
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4CF1931 & 1) == 0 )
+  if ( (byte_4D33D14 & 1) == 0 )
   {
-    sub_1C7BAE8(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
-    byte_4CF1931 = 1;
+    sub_1C93AD4(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    byte_4D33D14 = 1;
   }
-  v5 = sub_1C7BD34(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+  v5 = sub_1C93D20(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 56) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 56), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 56), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 48) = targets;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)targets, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)targets, v12, v13, v14, v15, v16, v17);
   return (System_Collections_Generic_IEnumerable_BattleServantData__o *)v5;
 }
 
@@ -48,13 +48,11 @@ bool ReactTaskTargetFilter__IsFilterFuncMatched(
   struct System_Func_BattleServantData__bool__o *FilterFunc_k__BackingField; // x8
 
   FilterFunc_k__BackingField = this->fields._FilterFunc_k__BackingField;
-  if ( FilterFunc_k__BackingField )
-    return ((__int64 (__fastcall *)(intptr_t, BattleServantData_o *, intptr_t))FilterFunc_k__BackingField->fields.invoke_impl)(
-             FilterFunc_k__BackingField->fields.method_code,
-             target,
-             FilterFunc_k__BackingField->fields.method);
-  else
-    return 1;
+  return !FilterFunc_k__BackingField
+      || ((bool (__fastcall *)(intptr_t, BattleServantData_o *, intptr_t))FilterFunc_k__BackingField->fields.invoke_impl)(
+           FilterFunc_k__BackingField->fields.method_code,
+           target,
+           FilterFunc_k__BackingField->fields.method);
 }
 
 
@@ -78,7 +76,7 @@ void ReactTaskTargetFilter__set_FilterFunc(
   System_String_o *v7; // x7
 
   this->fields._FilterFunc_k__BackingField = value;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -133,7 +131,6 @@ bool ReactTaskTargetFilter__Apply_d__4__MoveNext(ReactTaskTargetFilter__Apply_d_
   System_String_o *v37; // x7
   struct System_Func_BattleServantData__bool__o *FilterFunc_k__BackingField; // x8
   struct BattleServantData_o *v39; // x19
-  bool result; // w0
   int32_t v41; // w2
   int32_t v42; // w3
   System_String_o *v43; // x4
@@ -144,13 +141,13 @@ bool ReactTaskTargetFilter__Apply_d__4__MoveNext(ReactTaskTargetFilter__Apply_d_
 
   v47 = this;
   v2 = this;
-  if ( (byte_4CF1932 & 1) == 0 )
+  if ( (byte_4D33D15 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_ExcludeNull_BattleServantData___);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo);
-    this = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    byte_4CF1932 = 1;
+    sub_1C93AD4(&Method_BasicHelper_ExcludeNull_BattleServantData___);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo);
+    this = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    byte_4D33D15 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -161,10 +158,10 @@ bool ReactTaskTargetFilter__Apply_d__4__MoveNext(ReactTaskTargetFilter__Apply_d_
     v2->fields.__1__state = -1;
     v5 = BasicHelper__ExcludeNull_object_(
            (System_Collections_Generic_IEnumerable_T__o *)v2->fields.targets,
-           (const MethodInfo_315A07C *)Method_BasicHelper_ExcludeNull_BattleServantData___);
+           (const MethodInfo_318E4CC *)Method_BasicHelper_ExcludeNull_BattleServantData___);
     v7 = v5;
     if ( !v5 )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     klass = v5->klass;
     v9 = *(unsigned __int16 *)&v5->klass->_2.rank;
     if ( *(_WORD *)&v5->klass->_2.rank )
@@ -182,20 +179,20 @@ bool ReactTaskTargetFilter__Apply_d__4__MoveNext(ReactTaskTargetFilter__Apply_d_
     else
     {
 LABEL_10:
-      v11 = sub_1C51E70(v5, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0);
+      v11 = sub_1C69E5C(v5, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))v11)(
             v7,
             *(_QWORD *)(v11 + 8));
     v47->fields.__7__wrap1 = (struct System_Collections_Generic_IEnumerator_BattleServantData__o *)v12;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v47->fields.__7__wrap1, v12, v13, v14, v15, v16, v17, v18);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v47->fields.__7__wrap1, v12, v13, v14, v15, v16, v17, v18);
     v2 = v47;
   }
   _7__wrap1 = v2->fields.__7__wrap1;
   v2->fields.__1__state = -3;
   if ( !_7__wrap1 )
 LABEL_32:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   while ( 1 )
   {
     v20 = _7__wrap1->klass;
@@ -215,7 +212,7 @@ LABEL_32:
     else
     {
 LABEL_18:
-      v23 = sub_1C51E70(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0);
+      v23 = sub_1C69E5C(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v23)(
             _7__wrap1,
@@ -224,7 +221,7 @@ LABEL_18:
       break;
     v25 = v47->fields.__7__wrap1;
     if ( !v25 )
-      sub_1C7BD40(v47, v24);
+      sub_1C93D2C(v47, v24);
     v26 = v25->klass;
     v27 = *(unsigned __int16 *)&v25->klass->_2.rank;
     if ( *(_WORD *)&v25->klass->_2.rank )
@@ -242,13 +239,13 @@ LABEL_18:
     else
     {
 LABEL_26:
-      v29 = sub_1C51E70(v47->fields.__7__wrap1, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0);
+      v29 = sub_1C69E5C(v47->fields.__7__wrap1, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0);
     }
     v30 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v29)(
             v25,
             *(_QWORD *)(v29 + 8));
     if ( !_4__this )
-      sub_1C7BD40(v30, v31);
+      sub_1C93D2C(v30, v31);
     FilterFunc_k__BackingField = _4__this->fields._FilterFunc_k__BackingField;
     v39 = (struct BattleServantData_o *)v30;
     if ( !FilterFunc_k__BackingField
@@ -259,10 +256,9 @@ LABEL_26:
           ((unsigned __int8)this & 1) != 0) )
     {
       v47->fields.__2__current = v39;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v47->fields.__2__current, (int32_t)v39, v32, v33, v34, v35, v36, v37);
-      result = 1;
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v47->fields.__2__current, (int32_t)v39, v32, v33, v34, v35, v36, v37);
       v47->fields.__1__state = 1;
-      return result;
+      return 1;
     }
     _7__wrap1 = v47->fields.__7__wrap1;
     if ( !_7__wrap1 )
@@ -270,7 +266,7 @@ LABEL_26:
   }
   ReactTaskTargetFilter__Apply_d__4____m__Finally1(v47, v24);
   v47->fields.__7__wrap1 = 0;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v47->fields.__7__wrap1, 0, v41, v42, v43, v44, v45, v46);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v47->fields.__7__wrap1, 0, v41, v42, v43, v44, v45, v46);
   return 0;
 }
 
@@ -296,10 +292,10 @@ System_Collections_Generic_IEnumerator_BattleServantData__o *ReactTaskTargetFilt
   System_String_o *v17; // x7
   struct System_Collections_Generic_IEnumerable_BattleServantData__o *_3__targets; // x1
 
-  if ( (byte_4CF1934 & 1) == 0 )
+  if ( (byte_4D33D17 & 1) == 0 )
   {
-    sub_1C7BAE8(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
-    byte_4CF1934 = 1;
+    sub_1C93AD4(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    byte_4D33D17 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -310,17 +306,17 @@ System_Collections_Generic_IEnumerator_BattleServantData__o *ReactTaskTargetFilt
   }
   else
   {
-    v10 = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C7BD34(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    v10 = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C93D20(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
     System_Object___ctor((Il2CppObject *)v10, 0);
     v10->fields.__1__state = 0;
     v10->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     v10->fields.__4__this = _4__this;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v10->fields.__4__this, (int32_t)_4__this, v12, v13, v14, v15, v16, v17);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v10->fields.__4__this, (int32_t)_4__this, v12, v13, v14, v15, v16, v17);
   }
   _3__targets = this->fields.__3__targets;
   v10->fields.targets = _3__targets;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v10->fields.targets, (int32_t)_3__targets, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v10->fields.targets, (int32_t)_3__targets, v4, v5, v6, v7, v8, v9);
   return (System_Collections_Generic_IEnumerator_BattleServantData__o *)v10;
 }
 
@@ -341,11 +337,11 @@ void __noreturn ReactTaskTargetFilter__Apply_d__4__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_ReactTaskTargetFilter__Apply_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_ReactTaskTargetFilter__Apply_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -379,10 +375,10 @@ void ReactTaskTargetFilter__Apply_d__4____m__Finally1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4CF1933 & 1) == 0 )
+  if ( (byte_4D33D16 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_IDisposable_TypeInfo);
-    byte_4CF1933 = 1;
+    sub_1C93AD4(&System_IDisposable_TypeInfo);
+    byte_4D33D16 = 1;
   }
   _7__wrap1 = this->fields.__7__wrap1;
   this->fields.__1__state = -1;
@@ -405,7 +401,7 @@ void ReactTaskTargetFilter__Apply_d__4____m__Finally1(
     else
     {
 LABEL_8:
-      v7 = sub_1C51E70(_7__wrap1, System_IDisposable_TypeInfo, 0);
+      v7 = sub_1C69E5C(_7__wrap1, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v7)(
       _7__wrap1,

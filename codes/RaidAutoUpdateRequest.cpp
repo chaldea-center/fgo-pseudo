@@ -1,9 +1,9 @@
 int64_t RaidAutoUpdateRequest__GetAccessCompletedTimeEventMap(const MethodInfo *method)
 {
-  if ( (byte_4CF01DA & 1) == 0 )
+  if ( (byte_4D3256A & 1) == 0 )
   {
-    sub_1C7BAE8(&RaidAutoUpdateRequest_TypeInfo);
-    byte_4CF01DA = 1;
+    sub_1C93AD4(&RaidAutoUpdateRequest_TypeInfo);
+    byte_4D3256A = 1;
   }
   return RaidAutoUpdateRequest_TypeInfo->static_fields->accessCompletedTimeEventMap;
 }
@@ -11,11 +11,11 @@ int64_t RaidAutoUpdateRequest__GetAccessCompletedTimeEventMap(const MethodInfo *
 
 bool RaidAutoUpdateRequest__IsExpirationDateUpdateEventMap(const MethodInfo *method)
 {
-  if ( (byte_4CF01D7 & 1) == 0 )
+  if ( (byte_4D32567 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&RaidAutoUpdateRequest_TypeInfo);
-    byte_4CF01D7 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&RaidAutoUpdateRequest_TypeInfo);
+    byte_4D32567 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -29,12 +29,12 @@ void RaidAutoUpdateRequest__UpdateAccessTime(const MethodInfo *method)
   BalanceConfig_c *v2; // x8
   int64_t v3; // x19
 
-  if ( (byte_4CF01D9 & 1) == 0 )
+  if ( (byte_4D32569 & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&RaidAutoUpdateRequest_TypeInfo);
-    byte_4CF01D9 = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&RaidAutoUpdateRequest_TypeInfo);
+    byte_4D32569 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -55,16 +55,16 @@ System_String_o *RaidAutoUpdateRequest__getURL(RaidAutoUpdateRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF01D6 & 1) == 0 )
+  if ( (byte_4D32566 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_7361/*"Home/RaidAutoUpdate"*/);
-    byte_4CF01D6 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_7384/*"Home/RaidAutoUpdate"*/);
+    byte_4D32566 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_7361/*"Home/RaidAutoUpdate"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_7384/*"Home/RaidAutoUpdate"*/, 0);
 }
 
 
@@ -96,19 +96,19 @@ void RaidAutoUpdateRequest__requestCompleted(
   void (__fastcall *invoke_impl)(intptr_t, __int64, intptr_t); // x3
   intptr_t method_code; // x0
 
-  if ( (byte_4CF01D8 & 1) == 0 )
+  if ( (byte_4D32568 & 1) == 0 )
   {
-    sub_1C7BAE8(&CatAndMouseGame_TypeInfo);
-    sub_1C7BAE8(&System_Convert_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&RaidAutoUpdateRequest_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22590/*"ok"*/);
-    sub_1C7BAE8(&StringLiteral_16995/*"assetbundleKey"*/);
-    byte_4CF01D8 = 1;
+    sub_1C93AD4(&CatAndMouseGame_TypeInfo);
+    sub_1C93AD4(&System_Convert_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&RaidAutoUpdateRequest_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
+    sub_1C93AD4(&StringLiteral_17037/*"assetbundleKey"*/);
+    byte_4D32568 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -128,15 +128,15 @@ void RaidAutoUpdateRequest__requestCompleted(
   {
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success,
-           (Il2CppObject *)StringLiteral_16995/*"assetbundleKey"*/,
-           (const MethodInfo_34F2680 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (Il2CppObject *)StringLiteral_17037/*"assetbundleKey"*/,
+           (const MethodInfo_352ED9C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                success,
-               (Il2CppObject *)StringLiteral_16995/*"assetbundleKey"*/,
-               (const MethodInfo_34F240C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+               (Il2CppObject *)StringLiteral_17037/*"assetbundleKey"*/,
+               (const MethodInfo_352EB28 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
-        sub_1C7BD40(0, v11);
+        sub_1C93D2C(0, v11);
       v12 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
                                  Item,
                                  Item->klass->vtable[3].method);
@@ -170,7 +170,7 @@ LABEL_21:
     {
       invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl;
       method_code = CallBack->fields.method_code;
-      v18 = StringLiteral_22590/*"ok"*/;
+      v18 = StringLiteral_22655/*"ok"*/;
       goto LABEL_23;
     }
   }

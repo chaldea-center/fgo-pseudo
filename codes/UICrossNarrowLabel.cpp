@@ -1,9 +1,9 @@
 void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEFE44 & 1) == 0 )
+  if ( (byte_4D321C9 & 1) == 0 )
   {
-    sub_1C7BAE8(&UILabel_TypeInfo);
-    byte_4CEFE44 = 1;
+    sub_1C93AD4(&UILabel_TypeInfo);
+    byte_4D321C9 = 1;
   }
   if ( !UILabel_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
@@ -21,20 +21,18 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   float v7; // s10
   UnityEngine_Transform_o *transform; // x0
   __int64 v9; // x1
-  float y; // s8
   float baseWidth; // s0
-  float v12; // s1
-  bool v13; // cc
-  float v14; // s0
-  float z; // s9
+  float v11; // s1
+  bool v12; // cc
+  float v13; // s0
   float value; // [xsp+Ch] [xbp-34h]
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CEFE43 & 1) == 0 )
+  if ( (byte_4D321C8 & 1) == 0 )
   {
-    sub_1C7BAE8(&ManagerConfig_TypeInfo);
-    byte_4CEFE43 = 1;
+    sub_1C93AD4(&ManagerConfig_TypeInfo);
+    byte_4D321C8 = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -55,21 +53,19 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   if ( !transform )
     goto LABEL_12;
   localScale = UnityEngine_Transform__get_localScale(transform, 0);
-  y = localScale.fields.y;
   baseWidth = (float)this->fields.baseWidth;
-  v12 = baseWidth / v7;
-  v13 = v7 <= baseWidth;
-  v14 = 1.0;
-  if ( !v13 )
-    v14 = v12;
-  z = localScale.fields.z;
-  value = v14;
+  v11 = baseWidth / v7;
+  v12 = v7 <= baseWidth;
+  v13 = 1.0;
+  if ( !v12 )
+    v13 = v11;
+  value = v13;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_12:
-    sub_1C7BD40(transform, v9);
-  v18.fields.x = value;
-  v18.fields.y = y;
-  v18.fields.z = z;
-  UnityEngine_Transform__set_localScale(transform, v18, 0);
+    sub_1C93D2C(transform, v9);
+  v16.fields.x = value;
+  v16.fields.y = localScale.fields.y;
+  v16.fields.z = localScale.fields.z;
+  UnityEngine_Transform__set_localScale(transform, v16, 0);
 }

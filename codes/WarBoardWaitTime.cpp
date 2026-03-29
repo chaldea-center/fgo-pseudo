@@ -15,16 +15,16 @@ System_Collections_IEnumerator_o *WarBoardWaitTime__Execute(WarBoardWaitTime_o *
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CEC284 & 1) == 0 )
+  if ( (byte_4D2E659 & 1) == 0 )
   {
-    sub_1C7BAE8(&WarBoardWaitTime__Execute_d__2_TypeInfo);
-    byte_4CEC284 = 1;
+    sub_1C93AD4(&WarBoardWaitTime__Execute_d__2_TypeInfo);
+    byte_4D2E659 = 1;
   }
-  v3 = sub_1C7BD34(WarBoardWaitTime__Execute_d__2_TypeInfo);
+  v3 = sub_1C93D20(WarBoardWaitTime__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -52,7 +52,6 @@ bool WarBoardWaitTime__Execute_d__2__MoveNext(WarBoardWaitTime__Execute_d__2_o *
   float v11; // s0
   float espTime_5__2; // s8
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -70,7 +69,7 @@ bool WarBoardWaitTime__Execute_d__2__MoveNext(WarBoardWaitTime__Execute_d__2_o *
       goto LABEL_7;
     }
 LABEL_10:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
   espTime_5__2 = this->fields._espTime_5__2;
   this->fields.__1__state = -1;
@@ -83,10 +82,9 @@ LABEL_7:
   {
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
     *((_DWORD *)p__2__current - 2) = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -108,11 +106,11 @@ void __noreturn WarBoardWaitTime__Execute_d__2__System_Collections_IEnumerator_R
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 

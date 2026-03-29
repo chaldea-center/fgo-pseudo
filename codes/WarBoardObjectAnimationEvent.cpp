@@ -17,10 +17,10 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
   il2cpp_array_size_t max_length; // x21
   unsigned int v10; // w22
 
-  if ( (byte_4CEBE76 & 1) == 0 )
+  if ( (byte_4D2E1BA & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBE76 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E1BA = 1;
   }
   if ( !this->fields.isInit )
     WarBoardObjectAnimationEvent__Init(this, *(const MethodInfo **)&value);
@@ -47,7 +47,7 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         do
         {
           if ( v10 >= LODWORD(children->max_length) )
-            sub_1C7BD48(v6);
+            sub_1C93D34(v6);
           v6 = children->m_Items[v10];
           if ( !v6 )
             break;
@@ -58,7 +58,7 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         }
         while ( children );
 LABEL_18:
-        sub_1C7BD40(v6, v7);
+        sub_1C93D2C(v6, v7);
       }
     }
   }
@@ -73,14 +73,14 @@ void WarBoardObjectAnimationEvent__ForceEndInProgressTask(
   __int64 v3; // x1
   Il2CppClass *klass; // x8
 
-  if ( (byte_4CEBE78 & 1) == 0 )
+  if ( (byte_4D2E1BC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4CEBE78 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4D2E1BC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   klass = Instance[63].klass;
   if ( klass )
     BYTE1(klass->_1.namespaze) = 1;
@@ -105,14 +105,14 @@ void WarBoardObjectAnimationEvent__ForceEndWallBreakAnimTask(
   __int64 v3; // x1
   _BYTE *monitor; // x8
 
-  if ( (byte_4CEBE79 & 1) == 0 )
+  if ( (byte_4D2E1BD & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4CEBE79 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4D2E1BD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   monitor = Instance[63].monitor;
   if ( monitor )
     monitor[25] = 1;
@@ -137,12 +137,12 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4CEBE74 & 1) == 0 )
+  if ( (byte_4D2E1B8 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78814528);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBE74 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____79080888);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E1B8 = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -151,9 +151,9 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
       ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                       (UnityEngine_Component_o *)this,
                                       1,
-                                      (const MethodInfo_31678E8 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78814528);
+                                      (const MethodInfo_319BF30 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____79080888);
       this->fields.children = (struct UIWidget_array *)ComponentsInChildren_object;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&this->fields.children,
         (int32_t)ComponentsInChildren_object,
         v4,
@@ -170,9 +170,9 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                           (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.myWidget = (struct UIWidget_o *)Component_object;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&this->fields.myWidget,
         (int32_t)Component_object,
         v12,
@@ -202,21 +202,21 @@ void WarBoardObjectAnimationEvent__SetDispBgDiff(
   const MethodInfo *v11; // x3
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CEBE77 & 1) == 0 )
+  if ( (byte_4D2E1BB & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    this = (WarBoardObjectAnimationEvent_o *)sub_1C7BAE8(&StringLiteral_14639/*"True"*/);
-    byte_4CEBE77 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardObjectAnimationEvent_o *)sub_1C93AD4(&StringLiteral_14681/*"True"*/);
+    byte_4D2E1BB = 1;
   }
   result = 0;
   if ( !value || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(value, 0x2Cu, 0, 0)) == 0 )
 LABEL_16:
-    sub_1C7BD40(this, value);
+    sub_1C93D2C(this, value);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v5 = this;
   if ( (int)m_CancellationTokenSource >= 2 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     v6 = this;
     v7 = 0;
     v8 = 2LL * ((unsigned int)m_CancellationTokenSource >> 1);
@@ -226,11 +226,11 @@ LABEL_16:
         || (v9 = (System_String_o **)(&v5->klass + v7),
             this = (WarBoardObjectAnimationEvent_o *)System_String__op_Equality(
                                                        v9[5],
-                                                       (System_String_o *)StringLiteral_14639/*"True"*/,
+                                                       (System_String_o *)StringLiteral_14681/*"True"*/,
                                                        0),
             v7 >= LODWORD(v5->fields.m_CancellationTokenSource)) )
       {
-        sub_1C7BD48(this);
+        sub_1C93D34(this);
       }
       v10 = (char)this;
       this = (WarBoardObjectAnimationEvent_o *)System_Int32__TryParse(v9[4], &result, 0);
@@ -276,17 +276,17 @@ void WarBoardObjectAnimationEvent__SetWidgetDepth(
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4CEBE75 & 1) == 0 )
+  if ( (byte_4D2E1B9 & 1) == 0 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBE75 = 1;
+    this = (WarBoardObjectAnimationEvent_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2E1B9 = 1;
   }
   result = 0;
   if ( !v4->fields.isInit )
     WarBoardObjectAnimationEvent__Init(v4, (const MethodInfo *)nameAndDepth);
   if ( !nameAndDepth || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(nameAndDepth, 0x2Cu, 0, 0)) == 0 )
 LABEL_37:
-    sub_1C7BD40(this, nameAndDepth);
+    sub_1C93D2C(this, nameAndDepth);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v6 = this;
   if ( (int)m_CancellationTokenSource >= 2 )
@@ -379,6 +379,6 @@ LABEL_33:
       }
     }
 LABEL_35:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   }
 }

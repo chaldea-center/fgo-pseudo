@@ -15,38 +15,38 @@ void AiFieldEntity___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CEE258 & 1) == 0 )
+  if ( (byte_4D305B7 & 1) == 0 )
   {
-    sub_1C7BAE8(&AiFieldEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19175/*"enemyMasterEffectType"*/);
-    sub_1C7BAE8(&StringLiteral_24962/*"voicePlay"*/);
-    byte_4CEE258 = 1;
+    sub_1C93AD4(&AiFieldEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_19226/*"enemyMasterEffectType"*/);
+    sub_1C93AD4(&StringLiteral_25031/*"voicePlay"*/);
+    byte_4D305B7 = 1;
   }
-  AiFieldEntity_TypeInfo->static_fields->KEY_VOICE_NAME = (struct System_String_o *)StringLiteral_24962/*"voicePlay"*/;
-  sub_1C7BA8C(
+  AiFieldEntity_TypeInfo->static_fields->KEY_VOICE_NAME = (struct System_String_o *)StringLiteral_25031/*"voicePlay"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)AiFieldEntity_TypeInfo->static_fields,
-    StringLiteral_24962/*"voicePlay"*/,
+    StringLiteral_25031/*"voicePlay"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_19175/*"enemyMasterEffectType"*/;
+  v7 = StringLiteral_19226/*"enemyMasterEffectType"*/;
   static_fields = AiFieldEntity_TypeInfo->static_fields;
-  static_fields->KEY_EFFECT_TYPE = (struct System_String_o *)StringLiteral_19175/*"enemyMasterEffectType"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->KEY_EFFECT_TYPE, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->KEY_EFFECT_TYPE = (struct System_String_o *)StringLiteral_19226/*"enemyMasterEffectType"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->KEY_EFFECT_TYPE, v7, v9, v10, v11, v12, v13, v14);
 }
 
 
 float AiFieldEntity__GetCutinAdditionalTime(AiFieldEntity_o *this, float def, const MethodInfo *method)
 {
-  if ( (byte_4CEE256 & 1) == 0 )
+  if ( (byte_4D305B5 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_18533/*"cutinAdditionalTime"*/);
-    byte_4CEE256 = 1;
+    sub_1C93AD4(&StringLiteral_18583/*"cutinAdditionalTime"*/);
+    byte_4D305B5 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18533/*"cutinAdditionalTime"*/, def, 0);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18583/*"cutinAdditionalTime"*/, def, 0);
 }
 
 
@@ -54,12 +54,12 @@ int32_t AiFieldEntity__GetFieldHp(AiFieldEntity_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CEE254 & 1) == 0 )
+  if ( (byte_4D305B3 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_19571/*"fieldHp"*/);
-    byte_4CEE254 = 1;
+    sub_1C93AD4(&StringLiteral_19624/*"fieldHp"*/);
+    byte_4D305B3 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19571/*"fieldHp"*/, -1, v2);
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19624/*"fieldHp"*/, -1, v2);
 }
 
 
@@ -67,12 +67,12 @@ int32_t AiFieldEntity__GetFieldUIId(AiFieldEntity_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CEE255 & 1) == 0 )
+  if ( (byte_4D305B4 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_19577/*"fieldHpUiId"*/);
-    byte_4CEE255 = 1;
+    sub_1C93AD4(&StringLiteral_19630/*"fieldHpUiId"*/);
+    byte_4D305B4 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19577/*"fieldHpUiId"*/, -1, v2);
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19630/*"fieldHpUiId"*/, -1, v2);
 }
 
 
@@ -81,10 +81,10 @@ int32_t AiFieldEntity__getEffectType(AiFieldEntity_o *this, const MethodInfo *me
   const MethodInfo *v2; // x3
   AiFieldEntity_c *v4; // x0
 
-  if ( (byte_4CEE251 & 1) == 0 )
+  if ( (byte_4D305B0 & 1) == 0 )
   {
-    sub_1C7BAE8(&AiFieldEntity_TypeInfo);
-    byte_4CEE251 = 1;
+    sub_1C93AD4(&AiFieldEntity_TypeInfo);
+    byte_4D305B0 = 1;
   }
   v4 = AiFieldEntity_TypeInfo;
   if ( !AiFieldEntity_TypeInfo->_2.cctor_finished )
@@ -102,10 +102,10 @@ System_String_o *AiFieldEntity__getVoice(AiFieldEntity_o *this, const MethodInfo
   AiFieldEntity_c *v4; // x0
   System_String_o *result; // x0
 
-  if ( (byte_4CEE252 & 1) == 0 )
+  if ( (byte_4D305B1 & 1) == 0 )
   {
-    sub_1C7BAE8(&AiFieldEntity_TypeInfo);
-    byte_4CEE252 = 1;
+    sub_1C93AD4(&AiFieldEntity_TypeInfo);
+    byte_4D305B1 = 1;
   }
   v4 = AiFieldEntity_TypeInfo;
   if ( !AiFieldEntity_TypeInfo->_2.cctor_finished )
@@ -115,9 +115,9 @@ System_String_o *AiFieldEntity__getVoice(AiFieldEntity_o *this, const MethodInfo
   }
   result = (System_String_o *)AiBaseEntity__getScriptObj((AiBaseEntity_o *)this, v4->static_fields->KEY_VOICE_NAME, v2);
   if ( result )
-    return (System_String_o *)((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))result->klass->vtable._3_ToString.methodPtr)(
-                                result,
-                                result->klass->vtable._3_ToString.method);
+    return ((System_String_o *(__fastcall *)(System_String_o *, const MethodInfo *))result->klass->vtable._3_ToString.methodPtr)(
+             result,
+             result->klass->vtable._3_ToString.method);
   return result;
 }
 
@@ -129,17 +129,17 @@ System_String_o *AiFieldEntity__get_FirstTimeSaveKey(AiFieldEntity_o *this, cons
   int32_t idx; // [xsp+8h] [xbp-28h] BYREF
   int32_t id; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CEE257 & 1) == 0 )
+  if ( (byte_4D305B6 & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_6705/*"FieldAi_{0}_{1}"*/);
-    byte_4CEE257 = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&StringLiteral_6727/*"FieldAi_{0}_{1}"*/);
+    byte_4D305B6 = 1;
   }
   id = this->fields.id;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id);
   idx = this->fields.idx;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &idx);
-  return System_String__Format_64218220((System_String_o *)StringLiteral_6705/*"FieldAi_{0}_{1}"*/, v3, v4, 0);
+  return System_String__Format_64467032((System_String_o *)StringLiteral_6727/*"FieldAi_{0}_{1}"*/, v3, v4, 0);
 }
 
 
@@ -147,12 +147,12 @@ bool AiFieldEntity__isForcedSkillSpeedOne(AiFieldEntity_o *this, const MethodInf
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CEE253 & 1) == 0 )
+  if ( (byte_4D305B2 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_19717/*"forcedSkillSpeed"*/);
-    byte_4CEE253 = 1;
+    sub_1C93AD4(&StringLiteral_19771/*"forcedSkillSpeed"*/);
+    byte_4D305B2 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19717/*"forcedSkillSpeed"*/, 0, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19771/*"forcedSkillSpeed"*/, 0, v2) == 1;
 }
 
 
@@ -166,5 +166,5 @@ bool AiFieldEntity__isTiming(
   int v5; // w8
 
   v5 = state - 2;
-  return (unsigned int)(state - 2) <= 0x17 && ((0xBA2F15u >> v5) & 1) != 0 && this->fields.timing == dword_D2A694[v5];
+  return (unsigned int)(state - 2) <= 0x17 && ((0xBA2F15u >> v5) & 1) != 0 && this->fields.timing == dword_D35A24[v5];
 }

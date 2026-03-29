@@ -18,7 +18,7 @@ bool AiResetChecker__IsReset(AiResetChecker_o *this, const MethodInfo *method)
          this,
          this->klass->vtable._5_get_AiResetTiming.method);
   if ( v3 == 1 )
-    return ((__int64 (__fastcall *)(AiResetChecker_o *, const MethodInfo *))this->klass->vtable._6_IsDead.methodPtr)(
+    return ((bool (__fastcall *)(AiResetChecker_o *, const MethodInfo *))this->klass->vtable._6_IsDead.methodPtr)(
              this,
              this->klass->vtable._6_IsDead.method);
   else

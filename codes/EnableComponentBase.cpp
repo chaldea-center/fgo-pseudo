@@ -16,10 +16,10 @@ void EnableComponentBase__Awake(EnableComponentBase_o *this, const MethodInfo *m
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CEDB19 & 1) == 0 )
+  if ( (byte_4D2FE72 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEDB19 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2FE72 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -28,7 +28,7 @@ void EnableComponentBase__Awake(EnableComponentBase_o *this, const MethodInfo *m
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     this->fields.target = gameObject;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.target, (int32_t)gameObject, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.target, (int32_t)gameObject, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -51,7 +51,7 @@ void EnableComponentBase__Refresh(EnableComponentBase_o *this, const MethodInfo 
          this,
          this->klass[1]._1.gc_desc);
   if ( !target )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   UnityEngine_GameObject__SetActive(target, this->fields.visibleIsOpen == (v4 & 1), 0);
 }
 

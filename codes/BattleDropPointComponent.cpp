@@ -30,13 +30,13 @@ void BattleDropPointComponent__Initialize(
   System_String_o *v26; // x7
   const MethodInfo *v27; // x1
 
-  if ( (byte_4CF10AC & 1) == 0 )
+  if ( (byte_4D3346C & 1) == 0 )
   {
-    sub_1C7BAE8(&ServantAssetLoadManager_TypeInfo);
-    byte_4CF10AC = 1;
+    sub_1C93AD4(&ServantAssetLoadManager_TypeInfo);
+    byte_4D3346C = 1;
   }
   this->fields.dropPointData = data;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.dropPointData,
     (int32_t)data,
     (int32_t)svtPosTr,
@@ -46,7 +46,7 @@ void BattleDropPointComponent__Initialize(
     (int64_t)method,
     v7);
   this->fields.defaultPosTransform = svtPosTr;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.defaultPosTransform,
     (int32_t)svtPosTr,
     v14,
@@ -63,7 +63,7 @@ void BattleDropPointComponent__Initialize(
                                                 isForceAppearance,
                                                 0);
   this->fields.adjustSetting = Manager__LoadBattleDropPointAdjustSetting;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.adjustSetting,
     (int32_t)Manager__LoadBattleDropPointAdjustSetting,
     v21,
@@ -91,10 +91,10 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
   struct BattleDropPointAdjustSetting_o *v13; // x10
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF10AD & 1) == 0 )
+  if ( (byte_4D3346D & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF10AD = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3346D = 1;
   }
   adjustSetting = (UnityEngine_Object_o *)this->fields.adjustSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -126,7 +126,7 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
         }
       }
 LABEL_20:
-      sub_1C7BD40(transform, v5);
+      sub_1C93D2C(transform, v5);
     }
   }
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -143,10 +143,10 @@ LABEL_20:
   UnityEngine_Transform__SetParent(v8, (UnityEngine_Transform_o *)transform, 0);
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v9 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4CE7E59 )
+  if ( !byte_4D2A139 )
   {
-    transform = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-    byte_4CE7E59 = 1;
+    transform = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+    byte_4D2A139 = 1;
   }
   if ( !v9 )
     goto LABEL_20;

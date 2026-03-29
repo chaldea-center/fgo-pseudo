@@ -7,16 +7,16 @@ void PlanetMapBackground___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4CEB14F & 1) == 0 )
+  if ( (byte_4D2D47F & 1) == 0 )
   {
-    sub_1C7BAE8(&PlanetMapBackground_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_10671/*"PlanetEarthBg"*/);
-    byte_4CEB14F = 1;
+    sub_1C93AD4(&PlanetMapBackground_TypeInfo);
+    sub_1C93AD4(&StringLiteral_10706/*"PlanetEarthBg"*/);
+    byte_4D2D47F = 1;
   }
-  PlanetMapBackground_TypeInfo->static_fields->Fgo20251220MapBaseName = (struct System_String_o *)StringLiteral_10671/*"PlanetEarthBg"*/;
-  sub_1C7BA8C(
+  PlanetMapBackground_TypeInfo->static_fields->Fgo20251220MapBaseName = (struct System_String_o *)StringLiteral_10706/*"PlanetEarthBg"*/;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)PlanetMapBackground_TypeInfo->static_fields,
-    StringLiteral_10671/*"PlanetEarthBg"*/,
+    StringLiteral_10706/*"PlanetEarthBg"*/,
     v1,
     v2,
     v3,
@@ -42,7 +42,7 @@ void PlanetMapBackground__Setup(
   System_String_o *Fgo20251220MapBaseName; // x21
   System_String_o *v8; // x0
   System_String_o *v9; // x0
-  Il2CppObject *Object_object__51713432; // x21
+  Il2CppObject *Object_object__51927708; // x21
   __int64 v11; // x1
   struct UITexture_o *bgTexture; // x0
   UITexture_c *klass; // x8
@@ -51,13 +51,13 @@ void PlanetMapBackground__Setup(
   int32_t v16; // [xsp+Ch] [xbp-44h] BYREF
 
   v16 = mapImageId;
-  if ( (byte_4CEB14E & 1) == 0 )
+  if ( (byte_4D2D47E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_AssetData_GetObject_Texture2D____78791600);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&PlanetMapBackground_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_16165/*"_"*/);
-    byte_4CEB14E = 1;
+    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&PlanetMapBackground_TypeInfo);
+    sub_1C93AD4(&StringLiteral_16207/*"_"*/);
+    byte_4D2D47E = 1;
   }
   if ( assetData )
   {
@@ -69,14 +69,14 @@ void PlanetMapBackground__Setup(
     }
     Fgo20251220MapBaseName = v6->static_fields->Fgo20251220MapBaseName;
     v8 = System_Int32__ToString((int32_t)&v16, 0);
-    v9 = System_String__Concat_64215176(Fgo20251220MapBaseName, (System_String_o *)StringLiteral_16165/*"_"*/, v8, 0);
-    Object_object__51713432 = AssetData__GetObject_object__51713432(
+    v9 = System_String__Concat_64463988(Fgo20251220MapBaseName, (System_String_o *)StringLiteral_16207/*"_"*/, v8, 0);
+    Object_object__51927708 = AssetData__GetObject_object__51927708(
                                 assetData,
                                 v9,
-                                (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600);
+                                (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51713432, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51927708, 0, 0) )
     {
       bgTexture = this->fields.bgTexture;
       if ( bgTexture )
@@ -94,10 +94,10 @@ LABEL_18:
       j_il2cpp_runtime_class_init_0(PlanetMapBackground_TypeInfo);
       v14 = PlanetMapBackground_TypeInfo;
     }
-    v15 = AssetData__GetObject_object__51713432(
+    v15 = AssetData__GetObject_object__51927708(
             assetData,
             v14->static_fields->Fgo20251220MapBaseName,
-            (const MethodInfo_3151598 *)Method_AssetData_GetObject_Texture2D____78791600);
+            (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v15, 0, 0) )
@@ -109,7 +109,7 @@ LABEL_18:
         goto LABEL_18;
       }
 LABEL_20:
-      sub_1C7BD40(bgTexture, v11);
+      sub_1C93D2C(bgTexture, v11);
     }
   }
 }

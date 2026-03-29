@@ -1,13 +1,13 @@
 void PhotoFrameEntity___ctor(PhotoFrameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEF910 & 1) == 0 )
+  if ( (byte_4D31C94 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_string___ctor__);
-    byte_4CEF910 = 1;
+    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
+    byte_4D31C94 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_342BE90 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *PhotoFrameEntity__CreatePK(
         System_String_o *name,
         const MethodInfo *method)
 {
-  if ( (byte_4CEF90F & 1) == 0 )
+  if ( (byte_4D31C93 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataEntityBase_CreateMultiplePK_int__int__string__string___);
-    byte_4CEF90F = 1;
+    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__string__string___);
+    byte_4D31C93 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__object__object_(
            id,
            priority,
            (Il2CppObject *)spriteName,
            (Il2CppObject *)name,
-           (const MethodInfo_316F004 *)Method_DataEntityBase_CreateMultiplePK_int__int__string__string___);
+           (const MethodInfo_31A364C *)Method_DataEntityBase_CreateMultiplePK_int__int__string__string___);
 }
 
 

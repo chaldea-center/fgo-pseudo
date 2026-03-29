@@ -11,8 +11,6 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__GetPositionByIndices(
         const MethodInfo *method)
 {
   unsigned __int64 v4; // d0
-  float v5; // s1
-  float v6; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = vadd_f32(
@@ -25,11 +23,9 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__GetPositionByIndices(
                  (int32x2_t)(vshl_n_s32((int32x2_t)__PAIR64__(vIndex, hIndex), 1u).n64_u64[0] | 0x100000001LL),
                  *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
            (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  v5 = *((float *)&v4 + 1);
-  v6 = 0.0;
+  result.fields.y = *((float *)&v4 + 1);
+  result.fields.z = 0.0;
   result.fields.x = *(float *)&v4;
-  result.fields.z = v6;
-  result.fields.y = v5;
   return result;
 }
 
@@ -40,7 +36,7 @@ void SubmarinePanelPositionCalculator__LoadSettings(
         const MethodInfo *method)
 {
   if ( !settings )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   this->fields._OffsetX_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.x;
   this->fields._OffsetY_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.y;
   this->fields._PanelUnitSize_k__BackingField = settings->fields._PanelUnitSize_k__BackingField;
@@ -60,8 +56,6 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s1
-  float v4; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vsub_f32(
@@ -73,11 +67,9 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(
                vcvt_f32_s32(vsub_s32((int32x2_t)0x100000001LL, *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
              (float32x2_t)0x3F0000003F000000LL)),
          vmul_f32((float32x2_t)this->fields._PanelUnitSize_k__BackingField, (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  v3 = *((float *)&v2 + 1);
-  v4 = 0.0;
+  result.fields.y = *((float *)&v2 + 1);
+  result.fields.z = 0.0;
   result.fields.x = *(float *)&v2;
-  result.fields.z = v4;
-  result.fields.y = v3;
   return result;
 }
 
@@ -98,14 +90,10 @@ UnityEngine_Vector2_o SubmarinePanelPositionCalculator__get_PanelUnitSize(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  x = this->fields._PanelUnitSize_k__BackingField.fields.x;
-  y = this->fields._PanelUnitSize_k__BackingField.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields._PanelUnitSize_k__BackingField.fields.x;
+  result.fields.y = this->fields._PanelUnitSize_k__BackingField.fields.y;
   return result;
 }
 
@@ -143,8 +131,6 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_RightTopEdgePos(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s1
-  float v4; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vadd_f32(
@@ -159,11 +145,9 @@ UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_RightTopEdgePos(
                    vmvn_s8(*(int8x8_t *)&this->fields._HorizontalPanelNum_k__BackingField),
                    vshl_n_s32(*(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField, 1u)))),
              (float32x2_t)0x3F0000003F000000LL))).n64_u64[0];
-  v3 = *((float *)&v2 + 1);
-  v4 = 0.0;
+  result.fields.y = *((float *)&v2 + 1);
+  result.fields.z = 0.0;
   result.fields.x = *(float *)&v2;
-  result.fields.z = v4;
-  result.fields.y = v3;
   return result;
 }
 

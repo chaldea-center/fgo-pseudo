@@ -23,15 +23,15 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
   int64_t v17; // x6
   System_String_o *v18; // x7
   UnityEngine_Rigidbody_o *v19; // x19
+  UnityEngine_Vector3_o localPosition; // 0:kr34_12.12
   UnityEngine_Vector3_o StartAcceleration; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalGravity; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF109D & 1) == 0 )
+  if ( (byte_4D3345D & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF109D = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3345D = 1;
   }
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,14 +75,15 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
               activeSelf = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
               if ( activeSelf )
               {
-                localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)activeSelf, 0);
-                if ( localPosition.fields.y > 0.0 )
+                if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(
+                                            (UnityEngine_Transform_o *)activeSelf,
+                                            0).fields.y)) > 0.0 )
                   return;
                 v10 = this->fields.rigidbodyComp;
-                if ( !byte_4CE7E59 )
+                if ( !byte_4D2A139 )
                 {
-                  activeSelf = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-                  byte_4CE7E59 = 1;
+                  activeSelf = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+                  byte_4D2A139 = 1;
                 }
                 if ( v10 )
                 {
@@ -91,12 +92,14 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
                   if ( activeSelf )
                   {
                     v11 = (UnityEngine_Transform_o *)activeSelf;
-                    v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)activeSelf, 0);
+                    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)activeSelf, 0);
+                    v23.fields.x = localPosition.fields.x;
+                    v23.fields.z = localPosition.fields.z;
                     v23.fields.y = 0.0;
                     UnityEngine_Transform__set_localPosition(v11, v23, 0);
                     this->fields.overwriteSetting = 0;
                     p_overwriteSetting = &this->fields.overwriteSetting;
-                    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p_overwriteSetting, 0, v13, v14, v15, v16, v17, v18);
+                    sub_1C93A78((GrandQuestFolderBoardItem_o *)p_overwriteSetting, 0, v13, v14, v15, v16, v17, v18);
                     *((_BYTE *)p_overwriteSetting - 4) = 0;
                     return;
                   }
@@ -107,10 +110,10 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
           else
           {
             v19 = this->fields.rigidbodyComp;
-            if ( !byte_4CE7E59 )
+            if ( !byte_4D2A139 )
             {
-              activeSelf = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-              byte_4CE7E59 = 1;
+              activeSelf = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+              byte_4D2A139 = 1;
             }
             if ( v19 )
             {
@@ -121,7 +124,7 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
         }
       }
 LABEL_30:
-      sub_1C7BD40(activeSelf, v5);
+      sub_1C93D2C(activeSelf, v5);
     }
   }
 }
@@ -147,31 +150,26 @@ void BattleDropHighPosition__Initialize(
   UnityEngine_Transform_o *transform; // x0
   __int64 v18; // x1
   UnityEngine_Transform_o *v19; // x20
-  float v20; // s11
-  float v21; // s12
-  float v22; // s13
-  const MethodInfo *v23; // x1
+  const MethodInfo *v20; // x1
   UnityEngine_Object_o *rigidbodyComp; // x20
-  const MethodInfo *v25; // x1
-  const MethodInfo *v26; // x1
-  float v27; // s8
-  float v28; // s9
-  float v29; // s10
+  const MethodInfo *v22; // x1
+  const MethodInfo *v23; // x1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Rigidbody_o *v31; // x20
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o StartPos; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o StartAcceleration; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rigidbody_o *v25; // x20
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o StartPos; // 0:kr14_12.12
+  UnityEngine_Vector3_o StartAcceleration; // 0:kr20_12.12
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4CF109C & 1) == 0 )
+  if ( (byte_4D3345C & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleDropHighPositionOverwriteSetting_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF109C = 1;
+    sub_1C93AD4(&BattleDropHighPositionOverwriteSetting_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3345C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -184,7 +182,7 @@ void BattleDropHighPosition__Initialize(
         && (BattleDropHighPositionOverwriteSetting_c *)scriptableObject->klass->_2.typeHierarchy[naturalAligment - 1] == BattleDropHighPositionOverwriteSetting_TypeInfo )
       {
         this->fields.overwriteSetting = (struct BattleDropHighPositionOverwriteSetting_o *)scriptableObject;
-        sub_1C7BA8C(
+        sub_1C93A78(
           (GrandQuestFolderBoardItem_o *)&this->fields.overwriteSetting,
           (int32_t)scriptableObject,
           v9,
@@ -207,45 +205,39 @@ void BattleDropHighPosition__Initialize(
       goto LABEL_23;
     v19 = transform;
     localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
-    v20 = localPosition.fields.x;
-    v21 = localPosition.fields.y;
-    v22 = localPosition.fields.z;
-    StartPos = BattleDropHighPosition__get_StartPos(this, v23);
-    StartPos.fields.x = v20 + (float)(x + StartPos.fields.x);
-    StartPos.fields.y = v21 + (float)(y + StartPos.fields.y);
-    StartPos.fields.z = v22 + (float)(z + StartPos.fields.z);
-    UnityEngine_Transform__set_localPosition(v19, StartPos, 0);
+    StartPos = BattleDropHighPosition__get_StartPos(this, v20);
+    v29.fields.x = localPosition.fields.x + (float)(x + StartPos.fields.x);
+    v29.fields.y = localPosition.fields.y + (float)(y + StartPos.fields.y);
+    v29.fields.z = localPosition.fields.z + (float)(z + StartPos.fields.z);
+    UnityEngine_Transform__set_localPosition(v19, v29, 0);
     rigidbodyComp = (UnityEngine_Object_o *)this->fields.rigidbodyComp;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality(rigidbodyComp, 0, 0) )
     {
-      StartAcceleration = BattleDropHighPosition__get_StartAcceleration(this, v25);
-      v27 = StartAcceleration.fields.x;
-      v28 = StartAcceleration.fields.y;
-      v29 = StartAcceleration.fields.z;
-      if ( !byte_4CE7E59 )
+      StartAcceleration = BattleDropHighPosition__get_StartAcceleration(this, v22);
+      if ( !byte_4D2A139 )
       {
-        sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-        byte_4CE7E59 = 1;
+        sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+        byte_4D2A139 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      if ( (float)((float)((float)(v29 - static_fields->zeroVector.fields.z)
-                         * (float)(v29 - static_fields->zeroVector.fields.z))
-                 + (float)((float)((float)(v27 - static_fields->zeroVector.fields.x)
-                                 * (float)(v27 - static_fields->zeroVector.fields.x))
-                         + (float)((float)(v28 - static_fields->zeroVector.fields.y)
-                                 * (float)(v28 - static_fields->zeroVector.fields.y)))) >= 1.0e-10 )
+      if ( (float)((float)((float)(StartAcceleration.fields.z - static_fields->zeroVector.fields.z)
+                         * (float)(StartAcceleration.fields.z - static_fields->zeroVector.fields.z))
+                 + (float)((float)((float)(StartAcceleration.fields.x - static_fields->zeroVector.fields.x)
+                                 * (float)(StartAcceleration.fields.x - static_fields->zeroVector.fields.x))
+                         + (float)((float)(StartAcceleration.fields.y - static_fields->zeroVector.fields.y)
+                                 * (float)(StartAcceleration.fields.y - static_fields->zeroVector.fields.y)))) >= 1.0e-10 )
       {
-        v31 = this->fields.rigidbodyComp;
-        v35 = BattleDropHighPosition__get_StartAcceleration(this, v26);
-        if ( v31 )
+        v25 = this->fields.rigidbodyComp;
+        v30 = BattleDropHighPosition__get_StartAcceleration(this, v23);
+        if ( v25 )
         {
-          UnityEngine_Rigidbody__AddForce(v31, v35, 1, 0);
+          UnityEngine_Rigidbody__AddForce(v25, v30, 1, 0);
           return;
         }
 LABEL_23:
-        sub_1C7BD40(transform, v18);
+        sub_1C93D2C(transform, v18);
       }
     }
   }
@@ -264,7 +256,7 @@ void BattleDropHighPosition__StopMoving(BattleDropHighPosition_o *this, const Me
 
   this->fields.overwriteSetting = 0;
   p_overwriteSetting = &this->fields.overwriteSetting;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.overwriteSetting, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.overwriteSetting, 0, v2, v3, v4, v5, v6, v7);
   *((_BYTE *)p_overwriteSetting - 4) = 0;
 }
 
@@ -280,15 +272,12 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_LocalGravity(
   struct UnityEngine_Vector3_o *p_localGravity; // x8
   float *p_y; // x9
   float *p_z; // x10
-  float v10; // s2
-  float v11; // s1
-  float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF109A & 1) == 0 )
+  if ( (byte_4D3345A & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF109A = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3345A = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -298,7 +287,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_LocalGravity(
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     p_localGravity = &v6->fields.localGravity;
     p_y = &v6->fields.localGravity.fields.y;
     p_z = &v6->fields.localGravity.fields.z;
@@ -309,12 +298,9 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_LocalGravity(
     p_y = &this->fields.localGravity.fields.y;
     p_z = &this->fields.localGravity.fields.z;
   }
-  v10 = *p_z;
-  v11 = *p_y;
-  x = p_localGravity->fields.x;
-  result.fields.z = v10;
-  result.fields.y = v11;
-  result.fields.x = x;
+  result.fields.z = *p_z;
+  result.fields.y = *p_y;
+  result.fields.x = p_localGravity->fields.x;
   return result;
 }
 
@@ -330,15 +316,12 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartAcceleration(
   struct UnityEngine_Vector3_o *p_startAcceleration; // x8
   float *p_y; // x9
   float *p_z; // x10
-  float v10; // s2
-  float v11; // s1
-  float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF109B & 1) == 0 )
+  if ( (byte_4D3345B & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF109B = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D3345B = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -348,7 +331,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartAcceleration(
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     p_startAcceleration = &v6->fields.startAcceleration;
     p_y = &v6->fields.startAcceleration.fields.y;
     p_z = &v6->fields.startAcceleration.fields.z;
@@ -359,12 +342,9 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartAcceleration(
     p_y = &this->fields.startAcceleration.fields.y;
     p_z = &this->fields.startAcceleration.fields.z;
   }
-  v10 = *p_z;
-  v11 = *p_y;
-  x = p_startAcceleration->fields.x;
-  result.fields.z = v10;
-  result.fields.y = v11;
-  result.fields.x = x;
+  result.fields.z = *p_z;
+  result.fields.y = *p_y;
+  result.fields.x = p_startAcceleration->fields.x;
   return result;
 }
 
@@ -378,15 +358,12 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartPos(BattleDropHighPositio
   struct UnityEngine_Vector3_o *p_startPos; // x8
   float *p_y; // x9
   float *p_z; // x10
-  float v10; // s2
-  float v11; // s1
-  float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CF1099 & 1) == 0 )
+  if ( (byte_4D33459 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1099 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D33459 = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -396,7 +373,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartPos(BattleDropHighPositio
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     p_startPos = &v6->fields.startPos;
     p_y = &v6->fields.startPos.fields.y;
     p_z = &v6->fields.startPos.fields.z;
@@ -407,12 +384,9 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartPos(BattleDropHighPositio
     p_y = &this->fields.startPos.fields.y;
     p_z = &this->fields.startPos.fields.z;
   }
-  v10 = *p_z;
-  v11 = *p_y;
-  x = p_startPos->fields.x;
-  result.fields.z = v10;
-  result.fields.y = v11;
-  result.fields.x = x;
+  result.fields.z = *p_z;
+  result.fields.y = *p_y;
+  result.fields.x = p_startPos->fields.x;
   return result;
 }
 

@@ -34,14 +34,14 @@ void WaveBattleWaveServantInfoItem__EndShowEquip(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEA36B & 1) == 0 )
+  if ( (byte_4D2C689 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CEA36B = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2C689 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -57,18 +57,18 @@ void WaveBattleWaveServantInfoItem__EndShowServant(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CEA369 & 1) == 0 )
+  if ( (byte_4D2C687 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&Method_WaveBattleWaveServantInfoItem_EndCloseShowServant__);
-    byte_4CEA369 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&Method_WaveBattleWaveServantInfoItem_EndCloseShowServant__);
+    byte_4D2C687 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_WaveBattleWaveServantInfoItem_EndCloseShowServant__, 0);
   if ( !Instance )
-    sub_1C7BD40(v7, v8);
+    sub_1C93D2C(v7, v8);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v6, 0);
 }
 
@@ -135,16 +135,16 @@ void WaveBattleWaveServantInfoItem__OpenEquipDetail(WaveBattleWaveServantInfoIte
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4CEA36A & 1) == 0 )
+  if ( (byte_4D2C688 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C7BAE8(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&Method_WaveBattleWaveServantInfoItem_EndShowEquip__);
-    this = (WaveBattleWaveServantInfoItem_o *)sub_1C7BAE8(&Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
-    byte_4CEA36A = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C93AD4(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&Method_WaveBattleWaveServantInfoItem_EndShowEquip__);
+    this = (WaveBattleWaveServantInfoItem_o *)sub_1C93AD4(&Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
+    byte_4D2C688 = 1;
   }
   entity = 0;
   monitor = v2[7].monitor;
@@ -161,7 +161,7 @@ void WaveBattleWaveServantInfoItem__OpenEquipDetail(WaveBattleWaveServantInfoIte
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantMaster___);
+    this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantMaster___);
     v5 = v2[7].monitor;
     if ( !v5 )
       goto LABEL_26;
@@ -176,16 +176,16 @@ void WaveBattleWaveServantInfoItem__OpenEquipDetail(WaveBattleWaveServantInfoIte
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            &entity,
            *(_QWORD *)(v6 + 32),
-           (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+           (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
     v8 = Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__;
     v9 = v7;
     if ( (*((_BYTE *)Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C7BB00(Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C93AEC(Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v8, v8[4]);
     if ( v9 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
-      this = (WaveBattleWaveServantInfoItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (WaveBattleWaveServantInfoItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v11 = v2[7].monitor;
       if ( !v11 )
         goto LABEL_26;
@@ -196,7 +196,7 @@ void WaveBattleWaveServantInfoItem__OpenEquipDetail(WaveBattleWaveServantInfoIte
       {
         v13 = *(_QWORD *)(v12 + 32);
         v14 = (CommonUI_o *)this;
-        v15 = (ServantStatusDialog_EndDelegate_o *)sub_1C7BD34(ServantStatusDialog_EndDelegate_TypeInfo);
+        v15 = (ServantStatusDialog_EndDelegate_o *)sub_1C93D20(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(v15, v2, Method_WaveBattleWaveServantInfoItem_EndShowEquip__, 0);
         if ( v14 )
         {
@@ -204,10 +204,10 @@ void WaveBattleWaveServantInfoItem__OpenEquipDetail(WaveBattleWaveServantInfoIte
           return;
         }
 LABEL_26:
-        sub_1C7BD40(this, method);
+        sub_1C93D2C(this, method);
       }
 LABEL_27:
-      sub_1C7BD48(this);
+      sub_1C93D34(this);
     }
   }
   else
@@ -215,8 +215,8 @@ LABEL_27:
 LABEL_22:
     v16 = Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__;
     if ( (*((_BYTE *)Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_1C7BB00(Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v16, v16[4]);
+      v16 = (_QWORD *)sub_1C93AEC(Method_WaveBattleWaveServantInfoItem_OpenEquipDetail__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v16, v16[4]);
   }
   OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
 }
@@ -241,16 +241,16 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
   Il2CppObject *entity; // [xsp+38h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4CEA368 & 1) == 0 )
+  if ( (byte_4D2C686 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C7BAE8(&ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&Method_WaveBattleWaveServantInfoItem_EndShowServant__);
-    this = (WaveBattleWaveServantInfoItem_o *)sub_1C7BAE8(&Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
-    byte_4CEA368 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C93AD4(&ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&Method_WaveBattleWaveServantInfoItem_EndShowServant__);
+    this = (WaveBattleWaveServantInfoItem_o *)sub_1C93AD4(&Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
+    byte_4D2C686 = 1;
   }
   entity = 0;
   servantData = v2->fields.servantData;
@@ -260,7 +260,7 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantMaster___);
+    this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantMaster___);
     v4 = v2->fields.servantData;
     if ( !v4 || !this )
       goto LABEL_23;
@@ -268,7 +268,7 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            &entity,
            v4->fields.userSvtId,
-           (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+           (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
     {
       this = (WaveBattleWaveServantInfoItem_o *)entity;
       if ( entity )
@@ -277,10 +277,10 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
           goto LABEL_12;
         v7 = Method_WaveBattleWaveServantInfoItem_OpenServantDetail__;
         if ( (*((_BYTE *)Method_WaveBattleWaveServantInfoItem_OpenServantDetail__ + 83) & 2) != 0 )
-          v7 = (_QWORD *)sub_1C7BB00(Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
-        v8 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v7, v7[4]);
+          v7 = (_QWORD *)sub_1C93AEC(Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
+        v8 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v7, v7[4]);
         OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
-        this = (WaveBattleWaveServantInfoItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (WaveBattleWaveServantInfoItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         v9 = v2->fields.servantData;
         if ( v9 )
         {
@@ -288,7 +288,7 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
           v11 = entity;
           questRestrictionInfo = v2->fields.questRestrictionInfo;
           v13 = (CommonUI_o *)this;
-          v14 = (ServantStatusDialog_EndIndividualityDelegate_o *)sub_1C7BD34(ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
+          v14 = (ServantStatusDialog_EndIndividualityDelegate_o *)sub_1C93D20(ServantStatusDialog_EndIndividualityDelegate_TypeInfo);
           ServantStatusDialog_EndIndividualityDelegate___ctor(
             v14,
             (Il2CppObject *)v2,
@@ -307,7 +307,7 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
           }
           if ( v13 )
           {
-            CommonUI__OpenServantStatusDialog_31493520(
+            CommonUI__OpenServantStatusDialog_31591660(
               v13,
               1,
               (UserServantEntity_o *)v11,
@@ -326,14 +326,14 @@ void WaveBattleWaveServantInfoItem__OpenServantDetail(WaveBattleWaveServantInfoI
         }
       }
 LABEL_23:
-      sub_1C7BD40(this, method);
+      sub_1C93D2C(this, method);
     }
   }
 LABEL_12:
   v5 = Method_WaveBattleWaveServantInfoItem_OpenServantDetail__;
   if ( (*((_BYTE *)Method_WaveBattleWaveServantInfoItem_OpenServantDetail__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C7BB00(Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C93AEC(Method_WaveBattleWaveServantInfoItem_OpenServantDetail__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
 }
 
@@ -359,13 +359,13 @@ void WaveBattleWaveServantInfoItem__SetBlank(
   System_String_o *v17; // x7
   struct System_Int64_array *v18; // x8
 
-  if ( (byte_4CEA366 & 1) == 0 )
+  if ( (byte_4D2C684 & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&long___TypeInfo);
-    sub_1C7BAE8(&StringLiteral_19771/*"formation_select_small"*/);
-    byte_4CEA366 = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&long___TypeInfo);
+    sub_1C93AD4(&StringLiteral_19825/*"formation_select_small"*/);
+    byte_4D2C684 = 1;
   }
   servantSetSprite = (UnityEngine_Component_o *)this->fields.servantSetSprite;
   if ( !servantSetSprite )
@@ -388,7 +388,7 @@ void WaveBattleWaveServantInfoItem__SetBlank(
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     servantSetSprite = (UnityEngine_Component_o *)AtlasManager__SetPartyOrganizationImage(
                                                     v6,
-                                                    (System_String_o *)StringLiteral_19771/*"formation_select_small"*/,
+                                                    (System_String_o *)StringLiteral_19825/*"formation_select_small"*/,
                                                     0);
   }
   servantData = this->fields.servantData;
@@ -405,9 +405,9 @@ void WaveBattleWaveServantInfoItem__SetBlank(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v10 = BalanceConfig_TypeInfo;
     }
-    v11 = sub_1C7BB90(long___TypeInfo, (unsigned int)v10->static_fields->SvtEquipMax);
+    v11 = sub_1C93B7C(long___TypeInfo, (unsigned int)v10->static_fields->SvtEquipMax);
     p_userSvtEquipIds->klass = (GrandQuestFolderBoardItem_c *)v11;
-    sub_1C7BA8C(p_userSvtEquipIds, v11, v12, v13, v14, v15, v16, v17);
+    sub_1C93A78(p_userSvtEquipIds, v11, v12, v13, v14, v15, v16, v17);
     servantData = this->fields.servantData;
     if ( !servantData )
       goto LABEL_22;
@@ -416,7 +416,7 @@ void WaveBattleWaveServantInfoItem__SetBlank(
   if ( !v18 )
     goto LABEL_22;
   if ( !LODWORD(v18->max_length) )
-    sub_1C7BD48(servantSetSprite);
+    sub_1C93D34(servantSetSprite);
   v18->m_Items[0] = 0;
   servantSetSprite = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
   if ( !servantSetSprite
@@ -424,7 +424,7 @@ void WaveBattleWaveServantInfoItem__SetBlank(
         (servantSetSprite = (UnityEngine_Component_o *)this->fields.classCompatibilityIcon) == 0) )
   {
 LABEL_22:
-    sub_1C7BD40(servantSetSprite, isSelectWaveFlag);
+    sub_1C93D2C(servantSetSprite, isSelectWaveFlag);
   }
   ServantClassCompatibilityIconComponent__Clear((ServantClassCompatibilityIconComponent_o *)servantSetSprite, 0);
 }
@@ -513,23 +513,23 @@ void WaveBattleWaveServantInfoItem__SetItem(
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
 
   v16 = this;
-  if ( (byte_4CEA365 & 1) == 0 )
+  if ( (byte_4D2C683 & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantStorageMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C7BAE8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C7BAE8(&long___TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&string_TypeInfo);
-    sub_1C7BAE8(&UserServantEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15553/*"WAVE_BATTLE_DISAPPEAR_SERVANT_SMALL"*/);
-    this = (WaveBattleWaveServantInfoItem_o *)sub_1C7BAE8(&StringLiteral_21733/*"member_txt_"*/);
-    byte_4CEA365 = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantStorageMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C93AD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C93AD4(&long___TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&string_TypeInfo);
+    sub_1C93AD4(&UserServantEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15595/*"WAVE_BATTLE_DISAPPEAR_SERVANT_SMALL"*/);
+    this = (WaveBattleWaveServantInfoItem_o *)sub_1C93AD4(&StringLiteral_21797/*"member_txt_"*/);
+    byte_4D2C683 = 1;
   }
   entity = 0;
   v83 = 0;
@@ -542,9 +542,9 @@ void WaveBattleWaveServantInfoItem__SetItem(
   v17 = DeckServantData__Clone(servantData, 0);
   v16->fields.servantData = v17;
   p_servantData = &v16->fields.servantData;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16->fields.servantData, (int32_t)v17, v19, v20, v21, v22, v23, v24);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v16->fields.servantData, (int32_t)v17, v19, v20, v21, v22, v23, v24);
   v16->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v16->fields.questRestrictionInfo,
     (int32_t)questRestrictionInfo,
     v25,
@@ -554,7 +554,7 @@ void WaveBattleWaveServantInfoItem__SetItem(
     v29,
     v30);
   v16->fields.callbackFunc = callback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v16->fields.callbackFunc, (int32_t)callback, v31, v32, v33, v34, v35, v36);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v16->fields.callbackFunc, (int32_t)callback, v31, v32, v33, v34, v35, v36);
   this = (WaveBattleWaveServantInfoItem_o *)v16->fields.maskServantObj;
   if ( !this )
     goto LABEL_84;
@@ -574,8 +574,8 @@ void WaveBattleWaveServantInfoItem__SetItem(
   numberSprite = v16->fields.numberSprite;
   v83 = idx + 1;
   v38 = System_Int32__ToString((int32_t)&v83, 0);
-  this = (WaveBattleWaveServantInfoItem_o *)System_String__Concat_64176912(
-                                              (System_String_o *)StringLiteral_21733/*"member_txt_"*/,
+  this = (WaveBattleWaveServantInfoItem_o *)System_String__Concat_64425724(
+                                              (System_String_o *)StringLiteral_21797/*"member_txt_"*/,
                                               v38,
                                               0);
   if ( !numberSprite )
@@ -583,8 +583,8 @@ void WaveBattleWaveServantInfoItem__SetItem(
   UISprite__set_spriteName(numberSprite, (System_String_o *)this, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantMaster___);
-  this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantMaster___);
+  this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !*p_servantData )
     goto LABEL_84;
   userSvtId = (const MethodInfo *)(*p_servantData)->fields.userSvtId;
@@ -597,7 +597,7 @@ void WaveBattleWaveServantInfoItem__SetItem(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                               &entity,
                                               (int64_t)userSvtId,
-                                              (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                                              (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
 LABEL_40:
@@ -610,10 +610,10 @@ LABEL_40:
       {
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4CE827C )
+        if ( !byte_4D2A55B )
         {
-          sub_1C7BAE8(&NetworkManager_TypeInfo);
-          byte_4CE827C = 1;
+          sub_1C93AD4(&NetworkManager_TypeInfo);
+          byte_4D2A55B = 1;
         }
         this = (WaveBattleWaveServantInfoItem_o *)NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -626,7 +626,7 @@ LABEL_40:
         if ( UserServantCollectionMaster__TryGetEntity(
                v41,
                &v81,
-               this[1].fields.classCompatibilityIcon[1].fields.m_CachedPtr,
+               *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
                (*p_servantData)->fields.svtId,
                0) )
         {
@@ -662,7 +662,7 @@ LABEL_40:
                        (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                        &v82,
                        v56,
-                       (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                       (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
             }
           }
           else
@@ -673,9 +673,9 @@ LABEL_40:
               j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
               v67 = BalanceConfig_TypeInfo;
             }
-            v68 = sub_1C7BB90(long___TypeInfo, (unsigned int)v67->static_fields->SvtEquipMax);
+            v68 = sub_1C93B7C(long___TypeInfo, (unsigned int)v67->static_fields->SvtEquipMax);
             p_userSvtEquipIds->klass = (GrandQuestFolderBoardItem_c *)v68;
-            sub_1C7BA8C(p_userSvtEquipIds, v68, v69, v70, v71, v72, v73, v74);
+            sub_1C93A78(p_userSvtEquipIds, v68, v69, v70, v71, v72, v73, v74);
             if ( !*p_servantData )
               goto LABEL_84;
             v75 = (*p_servantData)->fields.userSvtEquipIds;
@@ -688,22 +688,22 @@ LABEL_40:
           }
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantStorageMaster___);
+          this = (WaveBattleWaveServantInfoItem_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantStorageMaster___);
           if ( !this )
             goto LABEL_84;
           if ( DataMasterBase_object__object__long___TryGetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                  &v80,
                  servantData->fields.userSvtId,
-                 (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__) )
+                 (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__) )
           {
             v77 = v80;
           }
           else
           {
             v78 = v81;
-            v77 = (Il2CppObject *)sub_1C7BD34(UserServantEntity_TypeInfo);
-            UserServantEntity___ctor_43695540((UserServantEntity_o *)v77, v78, 1, 0);
+            v77 = (Il2CppObject *)sub_1C93D20(UserServantEntity_TypeInfo);
+            UserServantEntity___ctor_43857036((UserServantEntity_o *)v77, v78, 1, 0);
           }
           entity = v77;
           WaveBattleWaveServantInfoItem__SetServant(v16, (UserServantEntity_o *)v77, classIds, v57, v76);
@@ -744,9 +744,9 @@ LABEL_50:
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v58 = BalanceConfig_TypeInfo;
     }
-    v59 = sub_1C7BB90(long___TypeInfo, (unsigned int)v58->static_fields->SvtEquipMax);
+    v59 = sub_1C93B7C(long___TypeInfo, (unsigned int)v58->static_fields->SvtEquipMax);
     v45->klass = (GrandQuestFolderBoardItem_c *)v59;
-    sub_1C7BA8C(v45, v59, v60, v61, v62, v63, v64, v65);
+    sub_1C93A78(v45, v59, v60, v61, v62, v63, v64, v65);
 LABEL_54:
     if ( !*p_servantData )
       goto LABEL_84;
@@ -760,7 +760,7 @@ LABEL_54:
       goto LABEL_58;
     }
 LABEL_85:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   }
   if ( !(_DWORD)v47 )
     goto LABEL_85;
@@ -774,7 +774,7 @@ LABEL_85:
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                               &v82,
                                               v48,
-                                              (const MethodInfo_34308A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                                              (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   v49 = (unsigned __int8)this ^ 1;
   if ( ((unsigned __int8)this & 1) == 0 && !isInterruption )
     goto LABEL_54;
@@ -793,7 +793,7 @@ LABEL_75:
       maskServantLabel = v16->fields.maskServantLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      this = (WaveBattleWaveServantInfoItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15553/*"WAVE_BATTLE_DISAPPEAR_SERVANT_SMALL"*/, 0);
+      this = (WaveBattleWaveServantInfoItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15595/*"WAVE_BATTLE_DISAPPEAR_SERVANT_SMALL"*/, 0);
       if ( maskServantLabel )
       {
         UILabel__set_text(maskServantLabel, (System_String_o *)this, 0);
@@ -801,7 +801,7 @@ LABEL_75:
       }
     }
 LABEL_84:
-    sub_1C7BD40(this, *(_QWORD *)&idx);
+    sub_1C93D2C(this, *(_QWORD *)&idx);
   }
 LABEL_80:
   this = (WaveBattleWaveServantInfoItem_o *)v16->fields.servantFaceIcon;
@@ -840,25 +840,25 @@ void WaveBattleWaveServantInfoItem__SetServant(
   UserServantCollectionEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
 
-  if ( (byte_4CEA367 & 1) == 0 )
+  if ( (byte_4D2C685 & 1) == 0 )
   {
-    sub_1C7BAE8(&AtlasManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C7BAE8(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C7BAE8(&IconLabelInfo_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&UserServantEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15551/*"WAVE_BATTLE_DISAPPEAR_EQUIP"*/);
-    sub_1C7BAE8(&StringLiteral_20571/*"img_frames_mask14"*/);
-    byte_4CEA367 = 1;
+    sub_1C93AD4(&AtlasManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C93AD4(&IconLabelInfo_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&UserServantEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15593/*"WAVE_BATTLE_DISAPPEAR_EQUIP"*/);
+    sub_1C93AD4(&StringLiteral_20631/*"img_frames_mask14"*/);
+    byte_4D2C685 = 1;
   }
   entity = 0;
-  v9 = (IconLabelInfo_o *)sub_1C7BD34(IconLabelInfo_TypeInfo);
+  v9 = (IconLabelInfo_o *)sub_1C93D20(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v9, 0);
   if ( !userServantEntity )
     goto LABEL_36;
@@ -866,7 +866,7 @@ void WaveBattleWaveServantInfoItem__SetServant(
   LevelMax = (void *)UserServantEntity__getLevelMax(userServantEntity, 0);
   if ( !v9 )
     goto LABEL_36;
-  IconLabelInfo__Set_41483756(v9, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_41636824(v9, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0);
   servantData = this->fields.servantData;
   if ( !servantData )
     goto LABEL_36;
@@ -888,13 +888,13 @@ void WaveBattleWaveServantInfoItem__SetServant(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4CE827C )
+    if ( !byte_4D2A55B )
     {
-      sub_1C7BAE8(&NetworkManager_TypeInfo);
-      byte_4CE827C = 1;
+      sub_1C93AD4(&NetworkManager_TypeInfo);
+      byte_4D2A55B = 1;
     }
     LevelMax = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -909,7 +909,7 @@ void WaveBattleWaveServantInfoItem__SetServant(
     if ( !svtEquipIds )
       goto LABEL_36;
     if ( !LODWORD(svtEquipIds->max_length) )
-      sub_1C7BD48(LevelMax);
+      sub_1C93D34(LevelMax);
     if ( !Master_object )
       goto LABEL_36;
     if ( UserServantCollectionMaster__TryGetEntity(
@@ -920,8 +920,8 @@ void WaveBattleWaveServantInfoItem__SetServant(
            0) )
     {
       v17 = entity;
-      v18 = (UserServantEntity_o *)sub_1C7BD34(UserServantEntity_TypeInfo);
-      UserServantEntity___ctor_43695540(v18, v17, 0, 0);
+      v18 = (UserServantEntity_o *)sub_1C93D20(UserServantEntity_TypeInfo);
+      UserServantEntity___ctor_43857036(v18, v17, 0, 0);
       LevelMax = this->fields.servantFaceIcon;
       if ( LevelMax )
       {
@@ -933,11 +933,11 @@ void WaveBattleWaveServantInfoItem__SetServant(
           maskEquipSprite = this->fields.maskEquipSprite;
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          AtlasManager__SetEventSprite(maskEquipSprite, (System_String_o *)StringLiteral_20571/*"img_frames_mask14"*/, 0);
+          AtlasManager__SetEventSprite(maskEquipSprite, (System_String_o *)StringLiteral_20631/*"img_frames_mask14"*/, 0);
           maskEquipLabel = this->fields.maskEquipLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          LevelMax = LocalizationManager__Get((System_String_o *)StringLiteral_15551/*"WAVE_BATTLE_DISAPPEAR_EQUIP"*/, 0);
+          LevelMax = LocalizationManager__Get((System_String_o *)StringLiteral_15593/*"WAVE_BATTLE_DISAPPEAR_EQUIP"*/, 0);
           if ( maskEquipLabel )
           {
             UILabel__set_text(maskEquipLabel, (System_String_o *)LevelMax, 0);
@@ -946,16 +946,16 @@ void WaveBattleWaveServantInfoItem__SetServant(
         }
       }
 LABEL_36:
-      sub_1C7BD40(LevelMax, v11);
+      sub_1C93D2C(LevelMax, v11);
     }
   }
 LABEL_29:
-  LevelMax = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  LevelMax = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !LevelMax )
     goto LABEL_36;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)LevelMax,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_ServantMaster___);
   v23 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
   v22 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
   v24 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -963,13 +963,13 @@ LABEL_29:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v26.fields.currentCryptoKey = v23;
   *(_QWORD *)&v26.fields.fakeValue = v22;
-  LevelMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49449776(v26, 0);
+  LevelMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v26, 0);
   if ( !v24 )
     goto LABEL_36;
   LevelMax = DataMasterBase_object__object__int___GetEntity(
                v24,
                (int32_t)LevelMax,
-               (const MethodInfo_342E2FC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+               (const MethodInfo_3463274 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !LevelMax || !this->fields.classCompatibilityIcon )
     goto LABEL_36;
   ServantClassCompatibilityIconComponent__SetIcon(
@@ -996,10 +996,10 @@ void WaveBattleWaveServantInfoItem__add_callbackFunc(
   WaveBattleWaveServantInfoItem_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CEA363 & 1) == 0 )
+  if ( (byte_4D2C681 & 1) == 0 )
   {
-    sub_1C7BAE8(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    byte_4CEA363 = 1;
+    sub_1C93AD4(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    byte_4D2C681 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1012,13 +1012,13 @@ void WaveBattleWaveServantInfoItem__add_callbackFunc(
       if ( (WaveBattleWaveServantInfoItem_CallbackFunc_c *)v8->klass != WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleWaveServantInfoItem_o *)sub_1C7C0DC(v8);
+  v11 = (WaveBattleWaveServantInfoItem_o *)sub_1C940C8(v8);
   WaveBattleWaveServantInfoItem__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1037,10 +1037,10 @@ void WaveBattleWaveServantInfoItem__remove_callbackFunc(
   WaveBattleWaveServantInfoItem_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CEA364 & 1) == 0 )
+  if ( (byte_4D2C682 & 1) == 0 )
   {
-    sub_1C7BAE8(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    byte_4CEA364 = 1;
+    sub_1C93AD4(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    byte_4D2C682 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1053,13 +1053,13 @@ void WaveBattleWaveServantInfoItem__remove_callbackFunc(
       if ( (WaveBattleWaveServantInfoItem_CallbackFunc_c *)v8->klass != WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleWaveServantInfoItem_o *)sub_1C7C0DC(v8);
+  v11 = (WaveBattleWaveServantInfoItem_o *)sub_1C940C8(v8);
   WaveBattleWaveServantInfoItem__Awake(v11, v12);
 }
 
@@ -1083,7 +1083,7 @@ void WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1094,12 +1094,12 @@ void WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v14, 0);
+      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1111,9 +1111,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AAC3B8;
+  this->fields.invoke_impl = (intptr_t)sub_1AC3848;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AAC360;
+  this->fields.extra_arg = (intptr_t)sub_1AC37F0;
 }
 
 
@@ -1131,16 +1131,16 @@ System_IAsyncResult_o *WaveBattleWaveServantInfoItem_CallbackFunc__BeginInvoke(
 
   v11 = n;
   v12 = result;
-  if ( (byte_4CEA36C & 1) == 0 )
+  if ( (byte_4D2C68A & 1) == 0 )
   {
-    sub_1C7BAE8(&int_TypeInfo);
-    sub_1C7BAE8(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo);
-    byte_4CEA36C = 1;
+    sub_1C93AD4(&int_TypeInfo);
+    sub_1C93AD4(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo);
+    byte_4D2C68A = 1;
   }
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(int_TypeInfo, &v11);
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v10, callback, object);
+  return sub_1C93A88(this, v10, callback, object);
 }
 
 
@@ -1149,7 +1149,7 @@ void WaveBattleWaveServantInfoItem_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

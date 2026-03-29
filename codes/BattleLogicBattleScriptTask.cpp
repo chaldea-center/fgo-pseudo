@@ -25,7 +25,7 @@ void BattleLogicBattleScriptTask__Init(
 
   v10 = isEach;
   this->fields.battleScriptEntities = entities;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.battleScriptEntities,
     (int32_t)entities,
     (int32_t)arg,
@@ -35,7 +35,7 @@ void BattleLogicBattleScriptTask__Init(
     v6,
     v7);
   this->fields.aiActArg = arg;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.aiActArg, (int32_t)arg, v11, v12, v13, v14, v15, v16);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.aiActArg, (int32_t)arg, v11, v12, v13, v14, v15, v16);
   this->fields.isEachLoad = v10;
 }
 
@@ -51,25 +51,25 @@ BattleActionData_o *BattleLogicBattleScriptTask__MakeActionData(
   struct System_Int32_array *actorIdlist; // x8
   int v9; // w8
 
-  if ( (byte_4CF19A6 & 1) == 0 )
+  if ( (byte_4D33D8A & 1) == 0 )
   {
-    sub_1C7BAE8(&BattleScriptActionData_TypeInfo);
-    byte_4CF19A6 = 1;
+    sub_1C93AD4(&BattleScriptActionData_TypeInfo);
+    byte_4D33D8A = 1;
   }
   v5 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleScriptEntities, 0) )
   {
-    v5 = (BattleScriptActionData_o *)sub_1C7BD34(BattleScriptActionData_TypeInfo);
+    v5 = (BattleScriptActionData_o *)sub_1C93D20(BattleScriptActionData_TypeInfo);
     BattleScriptActionData___ctor(v5, 0);
     actorIdlist = this->fields.actorIdlist;
     if ( actorIdlist )
     {
       if ( !LODWORD(actorIdlist->max_length) )
-        sub_1C7BD48(v6);
+        sub_1C93D34(v6);
       v9 = actorIdlist->m_Items[0];
       if ( !v5 )
 LABEL_12:
-        sub_1C7BD40(v6, v7);
+        sub_1C93D2C(v6, v7);
     }
     else
     {

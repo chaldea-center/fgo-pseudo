@@ -11,30 +11,22 @@ UnityEngine_Color_o PartyOrganizationEventPointListViewItemDraw__GetLabelColor(
         PartyOrganizationEventPointListViewItem_o *item,
         const MethodInfo *method)
 {
-  float v3; // s1
-  float v4; // s0
-  float v5; // s2
-  float v6; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( item )
   {
-    v3 = 1.0;
-    v4 = 0.0;
+    result.fields.g = 1.0;
+    result.fields.r = 0.0;
     if ( item->fields.displayValueType )
-      v4 = 1.0;
+      result.fields.r = 1.0;
   }
   else
   {
-    v4 = 1.0;
-    v3 = 1.0;
+    result.fields.r = 1.0;
+    result.fields.g = 1.0;
   }
-  v5 = 1.0;
-  v6 = 1.0;
-  result.fields.a = v6;
-  result.fields.b = v5;
-  result.fields.g = v3;
-  result.fields.r = v4;
+  result.fields.b = 1.0;
+  result.fields.a = 1.0;
   return result;
 }
 
@@ -122,6 +114,6 @@ void PartyOrganizationEventPointListViewItemDraw__SetItem(
       }
     }
 LABEL_17:
-    sub_1C7BD40(titleLabel, item);
+    sub_1C93D2C(titleLabel, item);
   }
 }

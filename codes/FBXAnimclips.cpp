@@ -1,9 +1,9 @@
 void FBXAnimclips___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CEDA92 & 1) == 0 )
+  if ( (byte_4D2FDEB & 1) == 0 )
   {
-    sub_1C7BAE8(&FBXAnimclips_TypeInfo);
-    byte_4CEDA92 = 1;
+    sub_1C93AD4(&FBXAnimclips_TypeInfo);
+    byte_4D2FDEB = 1;
   }
   LODWORD(FBXAnimclips_TypeInfo->static_fields->animFps) = (struct FBXAnimclips_StaticFields)1106247680;
 }
@@ -36,40 +36,39 @@ void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int3
   System_String_o *v9; // x0
   Il2CppType *v10; // x20
   System_String_o *v11; // x19
-  System_RuntimeTypeHandle_o v12; // x0
   System_Type_o *TypeFromHandle; // x0
-  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  v14 = svtId;
-  if ( (byte_4CEDA91 & 1) == 0 )
+  v13 = svtId;
+  if ( (byte_4D2FDEA & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C7BAE8(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&UnityEngine_TextAsset_var);
-    sub_1C7BAE8(&UnityEngine_TextAsset_TypeInfo);
-    sub_1C7BAE8(&System_Type_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1095/*"/fbxevent"*/);
-    sub_1C7BAE8(&StringLiteral_12811/*"Servants/"*/);
-    sub_1C7BAE8(&StringLiteral_1089/*"/chr"*/);
-    byte_4CEDA91 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C93AD4(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&UnityEngine_TextAsset_var);
+    sub_1C93AD4(&UnityEngine_TextAsset_TypeInfo);
+    sub_1C93AD4(&System_Type_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1095/*"/fbxevent"*/);
+    sub_1C93AD4(&StringLiteral_12852/*"Servants/"*/);
+    sub_1C93AD4(&StringLiteral_1089/*"/chr"*/);
+    byte_4D2FDEA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_ServantMaster___);
-  v6 = System_Int32__ToString((int32_t)&v14, 0);
-  v7 = System_String__Concat_64215176(
-         (System_String_o *)StringLiteral_12811/*"Servants/"*/,
+    (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_ServantMaster___);
+  v6 = System_Int32__ToString((int32_t)&v13, 0);
+  v7 = System_String__Concat_64463988(
+         (System_String_o *)StringLiteral_12852/*"Servants/"*/,
          v6,
          (System_String_o *)StringLiteral_1089/*"/chr"*/,
          0);
-  UnityEngine_Resources__Load_object_(v7, (const MethodInfo_320C160 *)Method_UnityEngine_Resources_Load_GameObject___);
-  v8 = System_Int32__ToString((int32_t)&v14, 0);
-  v9 = System_String__Concat_64215176(
-         (System_String_o *)StringLiteral_12811/*"Servants/"*/,
+  UnityEngine_Resources__Load_object_(v7, (const MethodInfo_324111C *)Method_UnityEngine_Resources_Load_GameObject___);
+  v8 = System_Int32__ToString((int32_t)&v13, 0);
+  v9 = System_String__Concat_64463988(
+         (System_String_o *)StringLiteral_12852/*"Servants/"*/,
          v8,
          (System_String_o *)StringLiteral_1095/*"/fbxevent"*/,
          0);
@@ -77,7 +76,6 @@ void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int3
   v11 = v9;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v12.fields.value = (intptr_t)v10;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v12, 0);
-  UnityEngine_Resources__Load_71830048(v11, TypeFromHandle, 0);
+  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v10, 0);
+  UnityEngine_Resources__Load_72079808(v11, TypeFromHandle, 0);
 }

@@ -21,7 +21,7 @@ void *__fastcall BrotliDecoderCreateInstance(unsigned __int64 a1, unsigned __int
   v9 = v8;
   if ( !v8 )
     return 0;
-  v10 = sub_1CDB1E8(v8, a1, a2, a3);
+  v10 = sub_1CF31D4(v8, a1, a2, a3);
   result = v9;
   if ( v10 )
     return result;

@@ -8,16 +8,16 @@ System_String_o *CheckDateVersionRequest__getURL(CheckDateVersionRequest_o *this
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CF00D7 & 1) == 0 )
+  if ( (byte_4D32464 & 1) == 0 )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_18037/*"checkDateVersion/check"*/);
-    byte_4CF00D7 = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_18085/*"checkDateVersion/check"*/);
+    byte_4D32464 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64176912(BaseUrl, (System_String_o *)StringLiteral_18037/*"checkDateVersion/check"*/, 0);
+  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_18085/*"checkDateVersion/check"*/, 0);
 }
 
 
@@ -31,17 +31,17 @@ void CheckDateVersionRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4CF00D8 & 1) == 0 )
+  if ( (byte_4D32465 & 1) == 0 )
   {
-    sub_1C7BAE8(&JsonManager_TypeInfo);
-    sub_1C7BAE8(&ResponseCommandKind_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    byte_4CF00D8 = 1;
+    sub_1C93AD4(&JsonManager_TypeInfo);
+    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    byte_4D32465 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(106, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44743216(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44908744(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -50,7 +50,7 @@ void CheckDateVersionRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22419/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22483/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

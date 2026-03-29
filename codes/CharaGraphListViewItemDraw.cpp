@@ -37,7 +37,7 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mAtlas = 0;
   this->fields._DefaultMaskAtlas_k__BackingField = mAtlas;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)mAtlas,
     v2,
@@ -52,7 +52,7 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mSpriteName = 0;
   this->fields._DefaultMaskName_k__BackingField = mSpriteName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)mSpriteName,
     v11,
@@ -254,7 +254,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskAtlas(
   System_String_o *v7; // x7
 
   this->fields._DefaultMaskAtlas_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -278,7 +278,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskName(
   System_String_o *v7; // x7
 
   this->fields._DefaultMaskName_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

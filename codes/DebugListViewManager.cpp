@@ -26,14 +26,14 @@ void DebugListViewManager__CreateList(DebugListViewManager_o *this, const Method
   Il2CppObject *DebugListViewItem; // x20
   const MethodInfo *v21; // x2
 
-  if ( (byte_4CEBAC5 & 1) == 0 )
+  if ( (byte_4D2DE50 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugListViewItem_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__Remove__);
-    sub_1C7BAE8(&StringLiteral_4972/*"DEBUG_MENU_START_BATTLE_MOCK_SCENE"*/);
-    sub_1C7BAE8(&StringLiteral_4970/*"DEBUG_MENU_EDIT_BATTLE_MOCK"*/);
-    byte_4CEBAC5 = 1;
+    sub_1C93AD4(&DebugListViewItem_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__Remove__);
+    sub_1C93AD4(&StringLiteral_4988/*"DEBUG_MENU_START_BATTLE_MOCK_SCENE"*/);
+    sub_1C93AD4(&StringLiteral_4986/*"DEBUG_MENU_EDIT_BATTLE_MOCK"*/);
+    byte_4D2DE50 = 1;
   }
   debugDataList = this->fields.debugDataList;
   if ( !debugDataList )
@@ -49,7 +49,7 @@ void DebugListViewManager__CreateList(DebugListViewManager_o *this, const Method
       if ( !debugDataList )
         break;
       v7 = FsmEventDataList__Get(debugDataList, v6, 0);
-      v8 = (DebugListViewItem_o *)sub_1C7BD34(DebugListViewItem_TypeInfo);
+      v8 = (DebugListViewItem_o *)sub_1C93D20(DebugListViewItem_TypeInfo);
       DebugListViewItem___ctor(v8, v6, v7, v9);
       debugDataList = (FsmEventDataList_o *)this->fields.itemList;
       if ( !debugDataList )
@@ -65,34 +65,34 @@ void DebugListViewManager__CreateList(DebugListViewManager_o *this, const Method
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)debugDataList,
           (Il2CppObject *)v8,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
         v19 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(debugDataList->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v19 + 32) = v8;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v19 + 32), (int32_t)v8, v10, v11, v12, v13, v14, v15);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v19 + 32), (int32_t)v8, v10, v11, v12, v13, v14, v15);
       }
       if ( Length == ++v6 )
         goto LABEL_13;
     }
 LABEL_15:
-    sub_1C7BD40(debugDataList, method);
+    sub_1C93D2C(debugDataList, method);
   }
 LABEL_13:
   DebugListViewItem = (Il2CppObject *)DebugListViewManager__GetDebugListViewItem(
                                         this,
-                                        (System_String_o *)StringLiteral_4972/*"DEBUG_MENU_START_BATTLE_MOCK_SCENE"*/,
+                                        (System_String_o *)StringLiteral_4988/*"DEBUG_MENU_START_BATTLE_MOCK_SCENE"*/,
                                         v5);
-  DebugListViewManager__GetDebugListViewItem(this, (System_String_o *)StringLiteral_4970/*"DEBUG_MENU_EDIT_BATTLE_MOCK"*/, v21);
+  DebugListViewManager__GetDebugListViewItem(this, (System_String_o *)StringLiteral_4986/*"DEBUG_MENU_EDIT_BATTLE_MOCK"*/, v21);
   debugDataList = (FsmEventDataList_o *)this->fields.itemList;
   if ( !debugDataList )
     goto LABEL_15;
   System_Collections_Generic_List_object___Remove(
     (System_Collections_Generic_List_object__o *)debugDataList,
     DebugListViewItem,
-    (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_ListViewItem__Remove__);
+    (const MethodInfo_387AEC4 *)Method_System_Collections_Generic_List_ListViewItem__Remove__);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
 }
 
@@ -117,29 +117,29 @@ DebugListViewItem_o *DebugListViewManager__GetDebugListViewItem(
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4CEBAC6 & 1) == 0 )
+  if ( (byte_4D2DE51 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugListViewItem_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    byte_4CEBAC6 = 1;
+    sub_1C93AD4(&DebugListViewItem_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    byte_4D2DE51 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   itemList = this->fields.itemList;
   if ( !itemList )
-    sub_1C7BD40(0, eventName);
+    sub_1C93D2C(0, eventName);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     (System_Collections_Generic_List_object__o *)itemList,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
   v13 = v12;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v13,
-           (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+           (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
     if ( !v6 )
       break;
     current = v13.fields._current;
@@ -149,13 +149,13 @@ DebugListViewItem_o *DebugListViewManager__GetDebugListViewItem(
     if ( v13.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (DebugListViewItem_c *)v13.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != DebugListViewItem_TypeInfo )
     {
-      sub_1C7C0DC(v13.fields._current);
+      sub_1C940C8(v13.fields._current);
 LABEL_15:
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     }
     monitor = (System_String_o **)v13.fields._current[7].monitor;
     if ( !monitor )
-      sub_1C7BD40(v6, DebugListViewItem_TypeInfo);
+      sub_1C93D2C(v6, DebugListViewItem_TypeInfo);
     if ( System_String__op_Equality(monitor[2], eventName, 0) )
       goto LABEL_13;
   }
@@ -163,12 +163,12 @@ LABEL_15:
 LABEL_13:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   return (DebugListViewItem_o *)current;
 }
 
 
-DebugListViewItem_o *DebugListViewManager__GetDebugListViewItem_37818780(
+DebugListViewItem_o *DebugListViewManager__GetDebugListViewItem_38027460(
         DebugListViewManager_o *this,
         ListViewObject_o *listViewObject,
         const MethodInfo *method)
@@ -182,34 +182,34 @@ DebugListViewItem_o *DebugListViewManager__GetDebugListViewItem_37818780(
   DebugListViewItem_o *v11; // x19
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4CEBAC7 & 1) == 0 )
+  if ( (byte_4D2DE52 & 1) == 0 )
   {
-    sub_1C7BAE8(&DebugListViewItem_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBAC7 = 1;
+    sub_1C93AD4(&DebugListViewItem_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2DE52 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   itemList = this->fields.itemList;
   if ( !itemList )
-    sub_1C7BD40(0, listViewObject);
+    sub_1C93D2C(0, listViewObject);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)itemList,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
   do
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v13,
-           (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+           (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
     if ( !v6 )
       goto LABEL_11;
     current = v13.fields._current;
     if ( !v13.fields._current )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     v9 = *(UnityEngine_Object_o **)((char *)&v13.fields._current->klass + (unsigned __int64)&qword_70);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -229,7 +229,7 @@ LABEL_11:
 LABEL_15:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   return v11;
 }
 
@@ -239,25 +239,25 @@ void DebugListViewManager__OnClickListView(
         ListViewObject_o *listViewObject,
         const MethodInfo *method)
 {
-  PlayMakerFSM_o *DebugListViewItem_37818780; // x0
+  PlayMakerFSM_o *DebugListViewItem_38027460; // x0
   __int64 v5; // x1
   struct FsmEventDataList_o *debugDataList; // x8
   struct PlayMakerFSM_AddEventHandlerDelegate_o *addEventHandlers; // x9
 
-  DebugListViewItem_37818780 = (PlayMakerFSM_o *)DebugListViewManager__GetDebugListViewItem_37818780(
+  DebugListViewItem_38027460 = (PlayMakerFSM_o *)DebugListViewManager__GetDebugListViewItem_38027460(
                                                    this,
                                                    listViewObject,
                                                    method);
-  if ( DebugListViewItem_37818780 )
+  if ( DebugListViewItem_38027460 )
   {
     debugDataList = this->fields.debugDataList;
     if ( !debugDataList
-      || (addEventHandlers = DebugListViewItem_37818780[1].fields.addEventHandlers) == 0
-      || (DebugListViewItem_37818780 = debugDataList->fields.targetFSM) == 0 )
+      || (addEventHandlers = DebugListViewItem_38027460[1].fields.addEventHandlers) == 0
+      || (DebugListViewItem_38027460 = debugDataList->fields.targetFSM) == 0 )
     {
-      sub_1C7BD40(DebugListViewItem_37818780, v5);
+      sub_1C93D2C(DebugListViewItem_38027460, v5);
     }
-    PlayMakerFSM__SendEvent(DebugListViewItem_37818780, (System_String_o *)addEventHandlers->fields.method_ptr, 0);
+    PlayMakerFSM__SendEvent(DebugListViewItem_38027460, (System_String_o *)addEventHandlers->fields.method_ptr, 0);
   }
 }
 
@@ -278,10 +278,10 @@ void DebugListViewManager__OnMoveEnd(DebugListViewManager_o *this, const MethodI
   struct UIScrollView_o *v14; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4CEBACB & 1) == 0 )
+  if ( (byte_4D2DE56 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBACB = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2DE56 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -298,7 +298,7 @@ void DebugListViewManager__OnMoveEnd(DebugListViewManager_o *this, const MethodI
       {
         v14 = this->fields.scrollView;
         if ( !v14 )
-          sub_1C7BD40(0, v7);
+          sub_1C93D2C(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v14->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v14,
           1,
@@ -308,7 +308,7 @@ void DebugListViewManager__OnMoveEnd(DebugListViewManager_o *this, const MethodI
       if ( callbackFunc )
       {
         this->fields.callbackFunc = 0;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v8, v9, v10, v11, v12, v13);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v8, v9, v10, v11, v12, v13);
         ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
           callbackFunc->fields.method_code,
           callbackFunc->fields.method);
@@ -335,31 +335,31 @@ void DebugListViewManager__RequestListObject(
   const MethodInfo *v14; // x3
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CEBAC9 & 1) == 0 )
+  if ( (byte_4D2DE54 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_DebugListViewManager_OnMoveEnd__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject__get_Count__);
-    sub_1C7BAE8(&StringLiteral_9968/*"OnMoveEnd"*/);
-    byte_4CEBAC9 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_DebugListViewManager_OnMoveEnd__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject__get_Count__);
+    sub_1C93AD4(&StringLiteral_9998/*"OnMoveEnd"*/);
+    byte_4D2DE54 = 1;
   }
   memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)DebugListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C7BD40(0, v8);
+    sub_1C93D2C(0, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9968/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9998/*"OnMoveEnd"*/,
       delay,
       0);
   }
@@ -369,27 +369,27 @@ void DebugListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v15,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__) )
     {
       current = v15.fields._current;
-      v11 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_DebugListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C7BD40(v12, v13);
-      DebugListViewObject__Init_37820616((DebugListViewObject_o *)current, mode, v11, delay, v14);
+        sub_1C93D2C(v12, v13);
+      DebugListViewObject__Init_38029296((DebugListViewObject_o *)current, mode, v11, delay, v14);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v15,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugListViewManager__RequestListObject_37819588(
+void DebugListViewManager__RequestListObject_38028268(
         DebugListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -404,31 +404,31 @@ void DebugListViewManager__RequestListObject_37819588(
   const MethodInfo *v12; // x3
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CEBACA & 1) == 0 )
+  if ( (byte_4D2DE55 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_DebugListViewManager_OnMoveEnd__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject__get_Count__);
-    sub_1C7BAE8(&StringLiteral_9968/*"OnMoveEnd"*/);
-    byte_4CEBACA = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_DebugListViewManager_OnMoveEnd__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject__get_Count__);
+    sub_1C93AD4(&StringLiteral_9998/*"OnMoveEnd"*/);
+    byte_4D2DE55 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)DebugListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C7BD40(0, v6);
+    sub_1C93D2C(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9968/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9998/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -438,21 +438,21 @@ void DebugListViewManager__RequestListObject_37819588(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_DebugListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__MoveNext__) )
     {
       current = v13.fields._current;
-      v9 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)this, Method_DebugListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C7BD40(v10, v11);
-      DebugListViewObject__Init_37820700((DebugListViewObject_o *)current, mode, v9, v12);
+        sub_1C93D2C(v10, v11);
+      DebugListViewObject__Init_38029380((DebugListViewObject_o *)current, mode, v9, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_DebugListViewObject__Dispose__);
   }
 }
 
@@ -461,11 +461,11 @@ void DebugListViewManager__SetMode(DebugListViewManager_o *this, int32_t mode, c
 {
   const MethodInfo *v3; // x3
 
-  DebugListViewManager__SetMode_37819476(this, mode, 0, v3);
+  DebugListViewManager__SetMode_38028156(this, mode, 0, v3);
 }
 
 
-void DebugListViewManager__SetMode_37819476(
+void DebugListViewManager__SetMode_38028156(
         DebugListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -479,7 +479,7 @@ void DebugListViewManager__SetMode_37819476(
 
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -491,7 +491,7 @@ void DebugListViewManager__SetMode_37819476(
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 1, 0);
   if ( mode == 1 )
-    DebugListViewManager__RequestListObject_37819588(this, 5, v10);
+    DebugListViewManager__RequestListObject_38028268(this, 5, v10);
 }
 
 
@@ -506,23 +506,23 @@ void DebugListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4CEBAC8 & 1) == 0 )
+  if ( (byte_4D2DE53 & 1) == 0 )
   {
-    this = (DebugListViewManager_o *)sub_1C7BAE8(&DebugListViewObject_TypeInfo);
-    byte_4CEBAC8 = 1;
+    this = (DebugListViewManager_o *)sub_1C93AD4(&DebugListViewObject_TypeInfo);
+    byte_4D2DE53 = 1;
   }
   if ( !obj
     || (naturalAligment = DebugListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (DebugListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != DebugListViewObject_TypeInfo )
   {
-    sub_1C7BD40(this, obj);
+    sub_1C93D2C(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 5;
   else
     v7 = 2;
-  DebugListViewObject__Init_37819396((DebugListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  DebugListViewObject__Init_38028076((DebugListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -540,10 +540,10 @@ void DebugListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4CEBAC2 & 1) == 0 )
+  if ( (byte_4D2DE4D & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    byte_4CEBAC2 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    byte_4D2DE4D = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -555,13 +555,13 @@ void DebugListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1CD78BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CEF8A8(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C7C0DC(v7);
+  sub_1C940C8(v7);
   DebugListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -591,35 +591,35 @@ System_Collections_Generic_List_DebugListViewObject__o *DebugListViewManager__ge
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4CEBAC4 & 1) == 0 )
+  if ( (byte_4D2DE4F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_DebugListViewObject___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_DebugListViewObject__TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEBAC4 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_DebugListViewObject___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_DebugListViewObject__TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2DE4F = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_DebugListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_DebugListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_DebugListViewObject___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_DebugListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v23 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v23.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -628,38 +628,38 @@ System_Collections_Generic_List_DebugListViewObject__o *DebugListViewManager__ge
     if ( v7 )
     {
       if ( !current )
-        sub_1C7BD40(v7, v8);
+        sub_1C93D2C(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
+                           (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
       v16 = Component_object;
       if ( !v3 )
-        sub_1C7BD40(Component_object, Component_object);
+        sub_1C93D2C(Component_object, Component_object);
       items = v3->fields._items;
       v18 = Method_System_Collections_Generic_List_DebugListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C7BD40(Component_object, Component_object);
+        sub_1C93D2C(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v16;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_DebugListViewObject__o *)v3;
 }
 
@@ -677,10 +677,10 @@ void DebugListViewManager__remove_callbackFunc(
   DebugListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4CEBAC3 & 1) == 0 )
+  if ( (byte_4D2DE4E & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    byte_4CEBAC3 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    byte_4D2DE4E = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -692,12 +692,12 @@ void DebugListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1CD78BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CEF8A8(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C7C0DC(v7);
+  sub_1C940C8(v7);
   DebugListViewManager__get_ObjectList(v10, v11);
 }

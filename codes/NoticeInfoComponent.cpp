@@ -2,10 +2,10 @@ void NoticeInfoComponent___cctor(const MethodInfo *method)
 {
   struct NoticeInfoComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4CE9B2D & 1) == 0 )
+  if ( (byte_4D2BE13 & 1) == 0 )
   {
-    sub_1C7BAE8(&NoticeInfoComponent_TypeInfo);
-    byte_4CE9B2D = 1;
+    sub_1C93AD4(&NoticeInfoComponent_TypeInfo);
+    byte_4D2BE13 = 1;
   }
   static_fields = NoticeInfoComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ACCOUNT_DELETE_RECONFIRM_MESSAGE_FONT_SIZE = 0x180000001CLL;
@@ -26,22 +26,22 @@ void NoticeInfoComponent__OpenAccountDeleteConfirmDialog(NoticeInfoComponent_o *
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CE9B27 & 1) == 0 )
+  if ( (byte_4D2BE0D & 1) == 0 )
   {
-    sub_1C7BAE8(&AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CE9B27 = 1;
+    sub_1C93AD4(&AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2BE0D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v4 = (AccountDeleteConfirmDialog_ClickDelegate_o *)sub_1C7BD34(AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = (AccountDeleteConfirmDialog_ClickDelegate_o *)sub_1C93D20(AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
   AccountDeleteConfirmDialog_ClickDelegate___ctor(
     v4,
     (Il2CppObject *)this,
     Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__,
     0);
   if ( !Instance )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   CommonUI__OpenAccountDeleteConfirmDialog((CommonUI_o *)Instance, v4, 0);
 }
 
@@ -56,22 +56,22 @@ void NoticeInfoComponent__OpenAccountDeletePasswordDialog(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CE9B2B & 1) == 0 )
+  if ( (byte_4D2BE11 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CE9B2B = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2BE11 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(
     v6,
     (Il2CppObject *)this,
     Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__,
     0);
   if ( !Instance )
-    sub_1C7BD40(v7, v8);
+    sub_1C93D2C(v7, v8);
   CommonUI__OpenAccountDeletePasswordDialog((CommonUI_o *)Instance, 0, password, v6, 0);
 }
 
@@ -86,26 +86,26 @@ void NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(NoticeInfoComponent_o
   __int64 v8; // x1
   NoticeInfoComponent_c *v9; // x0
 
-  if ( (byte_4CE9B28 & 1) == 0 )
+  if ( (byte_4D2BE0E & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_NoticeInfoComponent__OpenAccountDeleteReConfirmDialog_b__19_0__);
-    sub_1C7BAE8(&NoticeInfoComponent_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_1857/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/);
-    sub_1C7BAE8(&StringLiteral_1856/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/);
-    sub_1C7BAE8(&StringLiteral_1858/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE9B28 = 1;
+    sub_1C93AD4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_NoticeInfoComponent__OpenAccountDeleteReConfirmDialog_b__19_0__);
+    sub_1C93AD4(&NoticeInfoComponent_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&StringLiteral_1857/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/);
+    sub_1C93AD4(&StringLiteral_1856/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/);
+    sub_1C93AD4(&StringLiteral_1858/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2BE0E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v4 = LocalizationManager__Get((System_String_o *)StringLiteral_1858/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/, 0);
   v5 = LocalizationManager__Get((System_String_o *)StringLiteral_1857/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/, 0);
   v6 = LocalizationManager__Get((System_String_o *)StringLiteral_1856/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/, 0);
-  v7 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C7BD34(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v7 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v7,
     (Il2CppObject *)this,
@@ -118,8 +118,8 @@ void NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(NoticeInfoComponent_o
     v9 = NoticeInfoComponent_TypeInfo;
   }
   if ( !Instance )
-    sub_1C7BD40(v9, v8);
-  CommonUI__OpenConfirmDialog_31482992(
+    sub_1C93D2C(v9, v8);
+  CommonUI__OpenConfirmDialog_31581132(
     (CommonUI_o *)Instance,
     (System_String_o *)StringLiteral_1/*""*/,
     v4,
@@ -153,16 +153,16 @@ void NoticeInfoComponent__SetReboot(NoticeInfoComponent_o *this, const MethodInf
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B2C & 1) == 0 )
+  if ( (byte_4D2BE12 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&AvalonSceneManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&Method_NoticeInfoComponent___c__SetReboot_b__23_0__);
-    sub_1C7BAE8(&NoticeInfoComponent___c_TypeInfo);
-    byte_4CE9B2C = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&AvalonSceneManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&Method_NoticeInfoComponent___c__SetReboot_b__23_0__);
+    sub_1C93AD4(&NoticeInfoComponent___c_TypeInfo);
+    byte_4D2BE12 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -186,11 +186,11 @@ void NoticeInfoComponent__SetReboot(NoticeInfoComponent_o *this, const MethodInf
       v6 = NoticeInfoComponent___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__23_0 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__23_0 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(_9__23_0, v9, Method_NoticeInfoComponent___c__SetReboot_b__23_0__, 0);
     static_fields = NoticeInfoComponent___c_TypeInfo->static_fields;
     static_fields->__9__23_0 = _9__23_0;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__23_0,
       (int32_t)_9__23_0,
       v11,
@@ -201,7 +201,7 @@ void NoticeInfoComponent__SetReboot(NoticeInfoComponent_o *this, const MethodInf
       v16);
   }
   if ( !v5 )
-    sub_1C7BD40(v6, v3);
+    sub_1C93D2C(v6, v3);
   CommonUI__maskFadeout(v5, 1, DEFAULT_FADE_TIME, _9__23_0, 0);
 }
 
@@ -216,7 +216,7 @@ void NoticeInfoComponent__Start(NoticeInfoComponent_o *this, const MethodInfo *m
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
   {
-    sub_1C7BD40(gameObject, v3);
+    sub_1C93D2C(gameObject, v3);
   }
   v4.fields.y = 0.0;
   v4.fields.z = 0.0;
@@ -235,16 +235,16 @@ System_Collections_IEnumerator_o *NoticeInfoComponent__WaitForSE(NoticeInfoCompo
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CE9B20 & 1) == 0 )
+  if ( (byte_4D2BE06 & 1) == 0 )
   {
-    sub_1C7BAE8(&NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
-    byte_4CE9B20 = 1;
+    sub_1C93AD4(&NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
+    byte_4D2BE06 = 1;
   }
-  v3 = sub_1C7BD34(NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
+  v3 = sub_1C93D20(NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -258,22 +258,22 @@ void NoticeInfoComponent___OpenAccountDeleteConfirmDialog_b__18_0(
   __int64 v6; // x1
   __int64 *v7; // x8
 
-  if ( (byte_4CE9B2E & 1) == 0 )
+  if ( (byte_4D2BE14 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_3476/*"CLICK_OK"*/);
-    sub_1C7BAE8(&StringLiteral_3447/*"CLICK_CANCLE"*/);
-    byte_4CE9B2E = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&StringLiteral_3492/*"CLICK_OK"*/);
+    sub_1C93AD4(&StringLiteral_3463/*"CLICK_CANCLE"*/);
+    byte_4D2BE14 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseAccountDeleteConfirmDialog(Instance, 0, 0), (Instance = (CommonUI_o *)this->fields.myRoomFsm) == 0) )
   {
-    sub_1C7BD40(Instance, v6);
+    sub_1C93D2C(Instance, v6);
   }
-  v7 = &StringLiteral_3476/*"CLICK_OK"*/;
+  v7 = &StringLiteral_3492/*"CLICK_OK"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_3447/*"CLICK_CANCLE"*/;
+    v7 = &StringLiteral_3463/*"CLICK_CANCLE"*/;
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)*v7, 0);
 }
 
@@ -287,14 +287,14 @@ void NoticeInfoComponent___OpenAccountDeletePasswordDialog_b__22_0(
   NoticeInfoComponent_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CE9B30 & 1) == 0 )
+  if ( (byte_4D2BE16 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CE9B30 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2BE16 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   CommonUI__CloseAccountDeletePasswordDialog((CommonUI_o *)Instance, 0, 0);
   NoticeInfoComponent__SetReboot(v4, v5);
 }
@@ -308,13 +308,13 @@ void NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   CommonUI_o *Instance; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4CE9B2F & 1) == 0 )
+  if ( (byte_4D2BE15 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_3447/*"CLICK_CANCLE"*/);
-    byte_4CE9B2F = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&StringLiteral_3463/*"CLICK_CANCLE"*/);
+    byte_4D2BE15 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   CommonUI__CloseConfirmDialog(Instance, 0);
@@ -326,8 +326,8 @@ void NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   Instance = (CommonUI_o *)this->fields.myRoomFsm;
   if ( !Instance )
 LABEL_8:
-    sub_1C7BD40(Instance, v6);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3447/*"CLICK_CANCLE"*/, 0);
+    sub_1C93D2C(Instance, v6);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3463/*"CLICK_CANCLE"*/, 0);
 }
 
 
@@ -335,15 +335,15 @@ void NoticeInfoComponent__onEndWebView(NoticeInfoComponent_o *this, const Method
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CE9B25 & 1) == 0 )
+  if ( (byte_4D2BE0B & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_3530/*"CLOSE_WEBVIEW"*/);
-    byte_4CE9B25 = 1;
+    sub_1C93AD4(&StringLiteral_3546/*"CLOSE_WEBVIEW"*/);
+    byte_4D2BE0B = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C7BD40(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3530/*"CLOSE_WEBVIEW"*/, 0);
+    sub_1C93D2C(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3546/*"CLOSE_WEBVIEW"*/, 0);
 }
 
 
@@ -351,10 +351,10 @@ void NoticeInfoComponent__openBrowser(NoticeInfoComponent_o *this, const MethodI
 {
   System_String_o *path; // x19
 
-  if ( (byte_4CE9B26 & 1) == 0 )
+  if ( (byte_4D2BE0C & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Application_TypeInfo);
-    byte_4CE9B26 = 1;
+    sub_1C93AD4(&UnityEngine_Application_TypeInfo);
+    byte_4D2BE0C = 1;
   }
   path = this->fields.path;
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -369,16 +369,16 @@ void NoticeInfoComponent__openWebView(NoticeInfoComponent_o *this, const MethodI
   System_String_o *path; // x21
   System_Action_o *v5; // x22
 
-  if ( (byte_4CE9B24 & 1) == 0 )
+  if ( (byte_4D2BE0A & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_NoticeInfoComponent_onEndWebView__);
-    sub_1C7BAE8(&WebViewManager_TypeInfo);
-    byte_4CE9B24 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_NoticeInfoComponent_onEndWebView__);
+    sub_1C93AD4(&WebViewManager_TypeInfo);
+    byte_4D2BE0A = 1;
   }
   title = this->fields.title;
   path = this->fields.path;
-  v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_NoticeInfoComponent_onEndWebView__, 0);
   if ( !WebViewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
@@ -392,23 +392,23 @@ void NoticeInfoComponent__requestUserDelete(NoticeInfoComponent_o *this, const M
   Il2CppObject *Request_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CE9B29 & 1) == 0 )
+  if ( (byte_4D2BE0F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_NetworkManager_getRequest_UserDeleteRequest___);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&Method_NoticeInfoComponent_userDeleteCallback__);
-    sub_1C7BAE8(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4CE9B29 = 1;
+    sub_1C93AD4(&Method_NetworkManager_getRequest_UserDeleteRequest___);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&Method_NoticeInfoComponent_userDeleteCallback__);
+    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4D2BE0F = 1;
   }
-  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C7BD34(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v3, (Il2CppObject *)this, Method_NoticeInfoComponent_userDeleteCallback__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v3,
-                     (const MethodInfo_31FABE0 *)Method_NetworkManager_getRequest_UserDeleteRequest___);
+                     (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_UserDeleteRequest___);
   if ( !Request_object )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   RequestBase__beginRequest((RequestBase_o *)Request_object, 0);
 }
 
@@ -422,7 +422,7 @@ void NoticeInfoComponent__setCreditWebViewInfo(NoticeInfoComponent_o *this, cons
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -430,25 +430,25 @@ void NoticeInfoComponent__setCreditWebViewInfo(NoticeInfoComponent_o *this, cons
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B22 & 1) == 0 )
+  if ( (byte_4D2BE08 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15606/*"WEB_VIEW_TITLE_CREDIT"*/);
-    byte_4CE9B22 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15648/*"WEB_VIEW_TITLE_CREDIT"*/);
+    byte_4D2BE08 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15606/*"WEB_VIEW_TITLE_CREDIT"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15648/*"WEB_VIEW_TITLE_CREDIT"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(5, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(5, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -467,7 +467,7 @@ void NoticeInfoComponent__setHelpWebViewInfo(NoticeInfoComponent_o *this, const 
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -475,25 +475,25 @@ void NoticeInfoComponent__setHelpWebViewInfo(NoticeInfoComponent_o *this, const 
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B1E & 1) == 0 )
+  if ( (byte_4D2BE04 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15607/*"WEB_VIEW_TITLE_HELP"*/);
-    byte_4CE9B1E = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15649/*"WEB_VIEW_TITLE_HELP"*/);
+    byte_4D2BE04 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15607/*"WEB_VIEW_TITLE_HELP"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15649/*"WEB_VIEW_TITLE_HELP"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(2, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(2, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -512,7 +512,7 @@ void NoticeInfoComponent__setInfomationWebViewInfo(NoticeInfoComponent_o *this, 
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -520,25 +520,25 @@ void NoticeInfoComponent__setInfomationWebViewInfo(NoticeInfoComponent_o *this, 
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B1D & 1) == 0 )
+  if ( (byte_4D2BE03 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15608/*"WEB_VIEW_TITLE_INFOMATION"*/);
-    byte_4CE9B1D = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15650/*"WEB_VIEW_TITLE_INFOMATION"*/);
+    byte_4D2BE03 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15608/*"WEB_VIEW_TITLE_INFOMATION"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15650/*"WEB_VIEW_TITLE_INFOMATION"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(0, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(0, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -557,7 +557,7 @@ void NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o *this, con
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -567,25 +567,25 @@ void NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o *this, con
   const MethodInfo *v17; // x1
   System_Collections_IEnumerator_o *v18; // x1
 
-  if ( (byte_4CE9B1F & 1) == 0 )
+  if ( (byte_4D2BE05 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15605/*"WEB_VIEW_TITLE_CONTACT_US"*/);
-    byte_4CE9B1F = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15647/*"WEB_VIEW_TITLE_CONTACT_US"*/);
+    byte_4D2BE05 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15605/*"WEB_VIEW_TITLE_CONTACT_US"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15647/*"WEB_VIEW_TITLE_CONTACT_US"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(3, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(3, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -593,7 +593,7 @@ void NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o *this, con
     v15,
     v16);
   v18 = NoticeInfoComponent__WaitForSE(this, v17);
-  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v18, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v18, 0);
 }
 
 
@@ -616,21 +616,21 @@ void NoticeInfoComponent__setNoticeInfo(NoticeInfoComponent_o *this, const Metho
   int64_t v17; // x6
   System_String_o *v18; // x7
 
-  if ( (byte_4CE9B1C & 1) == 0 )
+  if ( (byte_4D2BE02 & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE9B1C = 1;
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2BE02 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   v5 = StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, v5, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, v5, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields.path = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.path, v12, v13, v14, v15, v16, v17, v18);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.path, v12, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -643,7 +643,7 @@ void NoticeInfoComponent__setRightWebViewInfo(NoticeInfoComponent_o *this, const
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -651,25 +651,25 @@ void NoticeInfoComponent__setRightWebViewInfo(NoticeInfoComponent_o *this, const
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B23 & 1) == 0 )
+  if ( (byte_4D2BE09 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15609/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/);
-    byte_4CE9B23 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15651/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/);
+    byte_4D2BE09 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15609/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15651/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(6, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(6, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -688,7 +688,7 @@ void NoticeInfoComponent__setRulesWebViewInfo(NoticeInfoComponent_o *this, const
   int32_t v7; // w5
   int64_t v8; // x6
   System_String_o *v9; // x7
-  struct System_String_o *WebViewAddress_41955716; // x0
+  struct System_String_o *WebViewAddress_42109268; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -696,25 +696,25 @@ void NoticeInfoComponent__setRulesWebViewInfo(NoticeInfoComponent_o *this, const
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CE9B21 & 1) == 0 )
+  if ( (byte_4D2BE07 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_15613/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/);
-    byte_4CE9B21 = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_15655/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/);
+    byte_4D2BE07 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15613/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_15655/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0);
   this->fields.title = v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  WebViewAddress_41955716 = NetworkManager__getWebViewAddress_41955716(4, 0);
-  this->fields.path = WebViewAddress_41955716;
-  sub_1C7BA8C(
+  WebViewAddress_42109268 = NetworkManager__getWebViewAddress_42109268(4, 0);
+  this->fields.path = WebViewAddress_42109268;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.path,
-    (int32_t)WebViewAddress_41955716,
+    (int32_t)WebViewAddress_42109268,
     v11,
     v12,
     v13,
@@ -735,35 +735,35 @@ void NoticeInfoComponent__userDeleteCallback(
   const MethodInfo *v7; // x2
 
   v4 = this;
-  if ( (byte_4CE9B2A & 1) == 0 )
+  if ( (byte_4D2BE10 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&UserDeleteReservationEntity_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_22419/*"ng"*/);
-    this = (NoticeInfoComponent_o *)sub_1C7BAE8(&StringLiteral_3447/*"CLICK_CANCLE"*/);
-    byte_4CE9B2A = 1;
+    sub_1C93AD4(&Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&UserDeleteReservationEntity_TypeInfo);
+    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
+    this = (NoticeInfoComponent_o *)sub_1C93AD4(&StringLiteral_3463/*"CLICK_CANCLE"*/);
+    byte_4D2BE10 = 1;
   }
   if ( !result )
     goto LABEL_19;
-  if ( System_String__Equals_64212232(result, (System_String_o *)StringLiteral_22419/*"ng"*/, 0) )
+  if ( System_String__Equals_64461044(result, (System_String_o *)StringLiteral_22483/*"ng"*/, 0) )
     goto LABEL_17;
   if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
   UserDeleteReservationEntity__SetUserDeleteFlag(1, 0);
-  this = (NoticeInfoComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (NoticeInfoComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CE827C )
+  if ( !byte_4D2A55B )
   {
-    sub_1C7BAE8(&NetworkManager_TypeInfo);
-    byte_4CE827C = 1;
+    sub_1C93AD4(&NetworkManager_TypeInfo);
+    byte_4D2A55B = 1;
   }
   this = (NoticeInfoComponent_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -773,10 +773,10 @@ void NoticeInfoComponent__userDeleteCallback(
   }
   if ( !MasterData_object )
 LABEL_19:
-    sub_1C7BD40(this, result);
+    sub_1C93D2C(this, result);
   v6 = UserDeleteReservationMaster__GetEntity(
          (UserDeleteReservationMaster_o *)MasterData_object,
-         *(_QWORD *)(this[3].fields.m_CachedPtr + 64),
+         *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
          0);
   if ( v6 )
   {
@@ -787,7 +787,7 @@ LABEL_17:
   this = (NoticeInfoComponent_o *)v4->fields.myRoomFsm;
   if ( !this )
     goto LABEL_19;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3447/*"CLICK_CANCLE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3463/*"CLICK_CANCLE"*/, 0);
 }
 
 
@@ -814,7 +814,6 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
   int64_t v8; // x6
   System_String_o *v9; // x7
   GrandQuestFolderBoardItem_o *p__2__current; // x19
-  bool result; // w0
   struct NoticeInfoComponent_o *_4__this; // x8
   UnityEngine_WaitForSeconds_o *v13; // x20
   GrandQuestFolderBoardItem_o *v14; // x19
@@ -826,12 +825,12 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
   System_String_o *v20; // x7
 
   v2 = this;
-  if ( (byte_4CE9B33 & 1) == 0 )
+  if ( (byte_4D2BE19 & 1) == 0 )
   {
-    sub_1C7BAE8(&SoundManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (NoticeInfoComponent__WaitForSE_d__11_o *)sub_1C7BAE8(&StringLiteral_9661/*"OPEN_BROWSER"*/);
-    byte_4CE9B33 = 1;
+    sub_1C93AD4(&SoundManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (NoticeInfoComponent__WaitForSE_d__11_o *)sub_1C93AD4(&StringLiteral_9691/*"OPEN_BROWSER"*/);
+    byte_4D2BE19 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state >= 2 )
@@ -841,8 +840,8 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
       _4__this = v2->fields.__4__this;
       v2->fields.__1__state = -1;
       if ( !_4__this || (this = (NoticeInfoComponent__WaitForSE_d__11_o *)_4__this->fields.myRoomFsm) == 0 )
-        sub_1C7BD40(this, method);
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_9661/*"OPEN_BROWSER"*/, 0);
+        sub_1C93D2C(this, method);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_9691/*"OPEN_BROWSER"*/, 0);
     }
     return 0;
   }
@@ -855,22 +854,20 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
     {
       v2->fields.__2__current = 0;
       p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1C7BA8C(p__2__current, 0, v4, v5, v6, v7, v8, v9);
-      result = 1;
+      sub_1C93A78(p__2__current, 0, v4, v5, v6, v7, v8, v9);
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
     }
     else
     {
-      v13 = (UnityEngine_WaitForSeconds_o *)sub_1C7BD34(UnityEngine_WaitForSeconds_TypeInfo);
+      v13 = (UnityEngine_WaitForSeconds_o *)sub_1C93D20(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v13, 0.5, 0);
       v2->fields.__2__current = (Il2CppObject *)v13;
       v14 = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1C7BA8C(v14, (int32_t)v13, v15, v16, v17, v18, v19, v20);
+      sub_1C93A78(v14, (int32_t)v13, v15, v16, v17, v18, v19, v20);
       LODWORD(v14[-1].fields._ClosedMessage_k__BackingField) = 2;
-      return 1;
     }
+    return 1;
   }
-  return result;
 }
 
 
@@ -890,11 +887,11 @@ void __noreturn NoticeInfoComponent__WaitForSE_d__11__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_NoticeInfoComponent__WaitForSE_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_NoticeInfoComponent__WaitForSE_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -924,15 +921,15 @@ void NoticeInfoComponent___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CE9B31 & 1) == 0 )
+  if ( (byte_4D2BE17 & 1) == 0 )
   {
-    sub_1C7BAE8(&NoticeInfoComponent___c_TypeInfo);
-    byte_4CE9B31 = 1;
+    sub_1C93AD4(&NoticeInfoComponent___c_TypeInfo);
+    byte_4D2BE17 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(NoticeInfoComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(NoticeInfoComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   NoticeInfoComponent___c_TypeInfo->static_fields->__9 = (struct NoticeInfoComponent___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)NoticeInfoComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -955,13 +952,13 @@ void NoticeInfoComponent___c___SetReboot_b__23_0(NoticeInfoComponent___c_o *this
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CE9B32 & 1) == 0 )
+  if ( (byte_4D2BE18 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4CE9B32 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4D2BE18 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0);
 }

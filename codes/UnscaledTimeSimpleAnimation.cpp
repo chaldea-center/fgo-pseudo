@@ -22,7 +22,7 @@ void UnscaledTimeSimpleAnimation__ApplyUpdateMode(UnscaledTimeSimpleAnimation_o 
            this,
            this->klass->vtable._9_GetAnimatorUpdateMode.method);
     if ( !m_Animator )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     UnityEngine_Animator__set_updateMode(m_Animator, v4, 0);
     *(_QWORD *)&v7.fields.m_Version = ((unsigned int (__fastcall *)(UnscaledTimeSimpleAnimation_o *, const MethodInfo *))this->klass->vtable._10_GetDirectorUpdateMode.methodPtr)(
                                         this,

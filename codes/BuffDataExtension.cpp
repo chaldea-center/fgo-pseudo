@@ -31,15 +31,15 @@ void BuffDataExtension_GeneralParamAccessorsBase__Assertion(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CEC4DA & 1) == 0 )
+  if ( (byte_4D2E812 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Diagnostics_StackFrame_TypeInfo);
-    byte_4CEC4DA = 1;
+    sub_1C93AD4(&System_Diagnostics_StackFrame_TypeInfo);
+    byte_4D2E812 = 1;
   }
-  v4 = (System_Diagnostics_StackFrame_o *)sub_1C7BD34(System_Diagnostics_StackFrame_TypeInfo);
-  System_Diagnostics_StackFrame___ctor_65478444(v4, stackBackCount, 1, 0);
+  v4 = (System_Diagnostics_StackFrame_o *)sub_1C93D20(System_Diagnostics_StackFrame_TypeInfo);
+  System_Diagnostics_StackFrame___ctor_65727256(v4, stackBackCount, 1, 0);
   if ( !v4 )
-    sub_1C7BD40(v5, v6);
+    sub_1C93D2C(v5, v6);
   ((void (__fastcall *)(System_Diagnostics_StackFrame_o *, const MethodInfo *))v4->klass->vtable._7_GetMethod.methodPtr)(
     v4,
     v4->klass->vtable._7_GetMethod.method);
@@ -66,7 +66,7 @@ void BuffDataExtension_GeneralParamAccessorsBase__SetGeneralParams(
   System_String_o *v7; // x7
 
   this->fields.generalParams = inputGeneralParams;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields,
     (int32_t)inputGeneralParams,
     (int32_t)method,
@@ -95,16 +95,16 @@ System_Int32_array *BuffDataExtension_GeneralParamContinueFunction__MakeGeneralP
   __int64 v5; // x1
   __int64 v6; // x20
 
-  if ( (byte_4CEC4DC & 1) == 0 )
+  if ( (byte_4D2E814 & 1) == 0 )
   {
-    sub_1C7BAE8(&int___TypeInfo);
-    byte_4CEC4DC = 1;
+    sub_1C93AD4(&int___TypeInfo);
+    byte_4D2E814 = 1;
   }
-  Param = sub_1C7BB90(int___TypeInfo, 1);
-  if ( !dataVals || (v6 = Param, Param = DataVals__GetParam(dataVals, 151, 0, 0), !v6) )
-    sub_1C7BD40(Param, v5);
+  Param = sub_1C93B7C(int___TypeInfo, 1);
+  if ( !dataVals || (v6 = Param, Param = DataVals__GetParam(dataVals, 153, 0, 0), !v6) )
+    sub_1C93D2C(Param, v5);
   if ( !*(_DWORD *)(v6 + 24) )
-    sub_1C7BD48(Param);
+    sub_1C93D34(Param);
   *(_DWORD *)(v6 + 32) = Param;
   return (System_Int32_array *)v6;
 }
@@ -114,14 +114,14 @@ bool BuffDataExtension_GeneralParamContinueFunction__get_NotExecFunctionIfKeepAl
         BuffDataExtension_GeneralParamContinueFunction_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CEC4DB & 1) == 0 )
+  if ( (byte_4D2E813 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_int____78796912);
-    byte_4CEC4DB = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_int____79063232);
+    byte_4D2E813 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.generalParams,
            0,
            0,
-           (const MethodInfo_315E844 *)Method_BasicHelper_IndexValue_int____78796912) > 0;
+           (const MethodInfo_3192C94 *)Method_BasicHelper_IndexValue_int____79063232) > 0;
 }

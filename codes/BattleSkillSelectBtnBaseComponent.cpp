@@ -11,21 +11,21 @@ void BattleSkillSelectBtnBaseComponent__Awake(BattleSkillSelectBtnBaseComponent_
   int v4; // w10
 
   v2 = this;
-  if ( (byte_4CF1E60 & 1) == 0 )
+  if ( (byte_4D34248 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_UISprite__get_Count__);
-    this = (BattleSkillSelectBtnBaseComponent_o *)sub_1C7BAE8(&StringLiteral_415/*"#808080"*/);
-    byte_4CF1E60 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_UISprite__get_Count__);
+    this = (BattleSkillSelectBtnBaseComponent_o *)sub_1C93AD4(&StringLiteral_415/*"#808080"*/);
+    byte_4D34248 = 1;
   }
   btnTop = v2->fields.btnTop;
   if ( !btnTop )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   v4 = -1;
   do
     ++v4;
   while ( v4 < btnTop->fields._size );
   if ( !UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_415/*"#808080"*/, &v2->fields.disableColor, 0) )
-    v2->fields.disableColor = (struct UnityEngine_Color_o)xmmword_CF5380;
+    v2->fields.disableColor = (struct UnityEngine_Color_o)xmmword_D004E0;
 }
 
 
@@ -72,25 +72,25 @@ void BattleSkillSelectBtnBaseComponent__InitBtn(
   __int64 v41; // x22
   Il2CppObject *Item; // x0
   UnityEngine_GameObject_o *v43; // x22
-  Il2CppObject *ComponentInChildren_object__51801640; // x0
+  Il2CppObject *ComponentInChildren_object__52016240; // x0
   const MethodInfo *v45; // x4
 
-  if ( (byte_4CF1E61 & 1) == 0 )
+  if ( (byte_4D34249 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Array_Empty_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&Method_BattleSkillSelectBtnBaseComponent__InitBtn_b__9_0__);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_Dictionary_string__object____);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Select_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&System_Func_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_UISprite__get_Item__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CF1E61 = 1;
+    sub_1C93AD4(&Method_System_Array_Empty_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&Method_BattleSkillSelectBtnBaseComponent__InitBtn_b__9_0__);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_Dictionary_string__object____);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Select_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&System_Func_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_UISprite__get_Item__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D34249 = 1;
   }
   this->fields.battleData = data;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.battleData,
     (int32_t)data,
     (int32_t)data,
@@ -108,28 +108,28 @@ void BattleSkillSelectBtnBaseComponent__InitBtn(
     v20 = *((_QWORD *)Method_System_Array_Empty_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ + 7);
     if ( !v20 )
     {
-      sub_1C51BD8(Method_System_Array_Empty_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+      sub_1C69BC4(Method_System_Array_Empty_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
       v20 = v19[7];
     }
     v21 = *(_QWORD *)(v20 + 16);
     if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
-      v21 = sub_1C51B7C(inited);
+      v21 = sub_1C69B68(inited);
     if ( !*(_DWORD *)(v21 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v21);
     v22 = *(_QWORD *)(v19[7] + 16LL);
     if ( (*(_BYTE *)(v22 + 309) & 1) == 0 )
-      v22 = sub_1C51B7C(inited);
+      v22 = sub_1C69B68(inited);
     v23 = *(struct BattleSkillSelectBtnBaseComponent_SelectBtnInfo_array ***)(v22 + 184);
     v24 = *v23;
     this->fields.selBtnArray = *v23;
     p_selBtnArray = (System_Collections_Generic_IEnumerable_TSource__o **)&this->fields.selBtnArray;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selBtnArray, (int32_t)v24, v12, v13, v14, v15, v16, v17);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selBtnArray, (int32_t)v24, v12, v13, v14, v15, v16, v17);
     if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)btnList, 0) )
     {
       v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                    (System_Collections_IEnumerable_o *)btnList,
-                                                                   (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_Dictionary_string__object____);
-      v27 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo__TypeInfo);
+                                                                   (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_Dictionary_string__object____);
+      v27 = (System_Func_object__object__o *)sub_1C93D20(System_Func_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo__TypeInfo);
       System_Func_object__object____ctor(
         v27,
         (Il2CppObject *)this,
@@ -138,16 +138,16 @@ void BattleSkillSelectBtnBaseComponent__InitBtn(
       v28 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                    v26,
                                                                    (System_Func_TSource__TResult__o *)v27,
-                                                                   (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+                                                                   (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_Dictionary_string__object___BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
       v29 = System_Linq_Enumerable__ToArray_object_(
               v28,
-              (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+              (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
       this->fields.selBtnArray = (struct BattleSkillSelectBtnBaseComponent_SelectBtnInfo_array *)v29;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.selBtnArray, (int32_t)v29, v30, v31, v32, v33, v34, v35);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.selBtnArray, (int32_t)v29, v30, v31, v32, v33, v34, v35);
     }
     btnTop = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__Any_object_(
                                                             *p_selBtnArray,
-                                                            (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+                                                            (const MethodInfo_31B0714 *)Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
     if ( ((unsigned __int8)btnTop & 1) != 0 )
     {
       if ( !*p_selBtnArray
@@ -158,7 +158,7 @@ void BattleSkillSelectBtnBaseComponent__InitBtn(
             (selBtnArray = this->fields.selBtnArray) == 0) )
       {
 LABEL_32:
-        sub_1C7BD40(btnTop, v37);
+        sub_1C93D2C(btnTop, v37);
       }
       v39 = 0;
       while ( (__int64)v39 < SLODWORD(selBtnArray->max_length) )
@@ -169,7 +169,7 @@ LABEL_32:
           btnTop = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   btnTop,
                                                                   v39,
-                                                                  (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                                                                  (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISprite__get_Item__);
           if ( btnTop )
           {
             btnTop = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -182,7 +182,7 @@ LABEL_32:
               if ( *p_selBtnArray )
               {
                 if ( v39 >= LODWORD(v40[1].monitor) )
-                  sub_1C7BD48(btnTop);
+                  sub_1C93D34(btnTop);
                 btnTop = (System_Collections_Generic_List_object__o *)this->fields.btnTop;
                 if ( btnTop )
                 {
@@ -190,7 +190,7 @@ LABEL_32:
                   Item = System_Collections_Generic_List_object___get_Item(
                            btnTop,
                            v39,
-                           (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                           (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISprite__get_Item__);
                   ((void (__fastcall *)(BattleSkillSelectBtnBaseComponent_o *, __int64, Il2CppObject *, const MethodInfo *))this->klass->vtable._5_SetBtnSprite.methodPtr)(
                     this,
                     v41,
@@ -202,7 +202,7 @@ LABEL_32:
                     btnTop = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                             btnTop,
                                                                             v39,
-                                                                            (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                                                                            (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISprite__get_Item__);
                     if ( btnTop )
                     {
                       btnTop = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -214,17 +214,17 @@ LABEL_32:
                         btnTop = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                 (System_Collections_Generic_List_object__o *)this->fields.btnTop,
                                                                                 v39,
-                                                                                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                                                                                (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISprite__get_Item__);
                         if ( btnTop )
                         {
-                          ComponentInChildren_object__51801640 = UnityEngine_Component__GetComponentInChildren_object__51801640(
+                          ComponentInChildren_object__52016240 = UnityEngine_Component__GetComponentInChildren_object__52016240(
                                                                    (UnityEngine_Component_o *)btnTop,
-                                                                   (const MethodInfo_3166E28 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+                                                                   (const MethodInfo_319B470 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
                           BattleSkillSelectBtnBaseComponent__UpdateButton(
                             this,
                             v39,
                             v43,
-                            (UILabel_o *)ComponentInChildren_object__51801640,
+                            (UILabel_o *)ComponentInChildren_object__52016240,
                             v45);
                           selBtnArray = this->fields.selBtnArray;
                           ++v39;
@@ -259,18 +259,16 @@ bool BattleSkillSelectBtnBaseComponent__IsCondCheck(
   struct BattleData_o *v11; // x8
   System_String_o *v12; // x19
   int32_t totalCriticalStars; // w20
-  bool v14; // w0
-  int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CF1E64 & 1) == 0 )
+  if ( (byte_4D3424C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_string___);
-    sub_1C7BAE8(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_12402/*"STAR_HIGHER"*/);
-    sub_1C7BAE8(&StringLiteral_9302/*"NONE"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF1E64 = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_string___);
+    sub_1C93AD4(&BattleSkillSelectAddFuncConfComponent_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_12439/*"STAR_HIGHER"*/);
+    sub_1C93AD4(&StringLiteral_9330/*"NONE"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D3424C = 1;
   }
   if ( System_String__IsNullOrEmpty(condStr, 0) )
     return 0;
@@ -281,34 +279,32 @@ bool BattleSkillSelectBtnBaseComponent__IsCondCheck(
   if ( ((unsigned __int8)v6 & 1) != 0 )
     return 0;
   if ( !condStr )
-    goto LABEL_19;
+    goto LABEL_18;
   v6 = System_String__Split(condStr, 0x3Au, 0, 0);
   if ( !v6 )
-    goto LABEL_19;
+    goto LABEL_18;
   v9 = (System_Object_array *)v6;
   if ( !LODWORD(v6->max_length) )
-    sub_1C7BD48(v6);
+    sub_1C93D34(v6);
   v10 = v6->m_Items[0];
-  if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_9302/*"NONE"*/, 0) )
+  if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_9330/*"NONE"*/, 0) )
     return 1;
-  if ( !System_String__op_Equality(v10, (System_String_o *)StringLiteral_12402/*"STAR_HIGHER"*/, 0) )
+  if ( !System_String__op_Equality(v10, (System_String_o *)StringLiteral_12439/*"STAR_HIGHER"*/, 0) )
     return 0;
   v6 = (System_String_array *)BasicHelper__IndexValue_object_(
                                 v9,
                                 1,
                                 (Il2CppObject *)StringLiteral_1/*""*/,
-                                (const MethodInfo_315E928 *)Method_BasicHelper_IndexValue_string___);
+                                (const MethodInfo_3192D78 *)Method_BasicHelper_IndexValue_string___);
   v11 = this->fields.battleData;
   if ( !v11 )
-LABEL_19:
-    sub_1C7BD40(v6, v7);
+LABEL_18:
+    sub_1C93D2C(v6, v7);
   v12 = (System_String_o *)v6;
   totalCriticalStars = v11->fields.totalCriticalStars;
   if ( !BattleSkillSelectAddFuncConfComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleSkillSelectAddFuncConfComponent_TypeInfo);
-  result = 0;
-  v14 = System_Int32__TryParse(v12, &result, 0);
-  return v14 && result <= totalCriticalStars;
+  return BattleSkillSelectAddFuncConfComponent__IsIntHigher(v12, totalCriticalStars, 0);
 }
 
 
@@ -319,16 +315,16 @@ bool BattleSkillSelectBtnBaseComponent__IsEnableBtn(
 {
   Il2CppObject *v5; // x0
 
-  if ( (byte_4CF1E63 & 1) == 0 )
+  if ( (byte_4D3424B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    byte_4CF1E63 = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    byte_4D3424B = 1;
   }
   v5 = BasicHelper__IndexValue_object_(
          (System_Object_array *)this->fields.selBtnArray,
          index,
          0,
-         (const MethodInfo_315E928 *)Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+         (const MethodInfo_3192D78 *)Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
   if ( v5 )
     LOBYTE(v5) = LOBYTE(v5[1].monitor) != 0;
   return (char)v5;
@@ -354,7 +350,6 @@ void BattleSkillSelectBtnBaseComponent__SetBtnSprite(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BattleSkillSelectBtnBaseComponent__UpdateButton(
         BattleSkillSelectBtnBaseComponent_o *this,
         int32_t index,
@@ -366,37 +361,31 @@ void BattleSkillSelectBtnBaseComponent__UpdateButton(
   __int64 v10; // x1
   Il2CppObject *v11; // x21
   _BOOL4 v12; // w23
-  float a; // s3
-  float b; // s2
-  float g; // s1
-  float r; // s0 OVERLAPPED
   System_String_o *klass; // x8
-  System_String_o *v18; // x1
-  float v19; // s3
-  float v20; // s2
-  float v21; // s1
-  float v22; // s0 OVERLAPPED
+  System_String_o *v17; // x1
   Il2CppObject *component; // [xsp+8h] [xbp-38h] BYREF
+  UnityEngine_Color_o disableColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CF1E62 & 1) == 0 )
+  if ( (byte_4D3424A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_TryGetComponent_UIButton___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF1E62 = 1;
+    sub_1C93AD4(&Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_TryGetComponent_UIButton___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D3424A = 1;
   }
   component = 0;
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.selBtnArray,
-         (const MethodInfo_317C204 *)Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___) )
+         (const MethodInfo_31B0714 *)Method_System_Linq_Enumerable_Any_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___) )
   {
     v9 = BasicHelper__IndexValue_object_(
            (System_Object_array *)this->fields.selBtnArray,
            index,
            0,
-           (const MethodInfo_315E928 *)Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
+           (const MethodInfo_3192D78 *)Method_BasicHelper_IndexValue_BattleSkillSelectBtnBaseComponent_SelectBtnInfo___);
     v11 = v9;
     if ( v9 )
     {
@@ -413,24 +402,19 @@ void BattleSkillSelectBtnBaseComponent__UpdateButton(
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            obj,
            &component,
-           (const MethodInfo_31C8358 *)Method_UnityEngine_GameObject_TryGetComponent_UIButton___) )
+           (const MethodInfo_31FD314 *)Method_UnityEngine_GameObject_TryGetComponent_UIButton___) )
     {
       v9 = component;
-      a = 1.0;
-      b = 1.0;
-      g = 1.0;
-      r = 1.0;
+      disableColor.fields.a = 1.0;
+      disableColor.fields.b = 1.0;
+      disableColor.fields.g = 1.0;
+      disableColor.fields.r = 1.0;
       if ( v12 )
-      {
-        r = this->fields.disableColor.fields.r;
-        g = this->fields.disableColor.fields.g;
-        b = this->fields.disableColor.fields.b;
-        a = this->fields.disableColor.fields.a;
-      }
+        disableColor = this->fields.disableColor;
       if ( !component )
 LABEL_26:
-        sub_1C7BD40(v9, v10);
-      UIButtonColor__set_defaultColor((UIButtonColor_o *)component, *(UnityEngine_Color_o *)&r, 0);
+        sub_1C93D2C(v9, v10);
+      UIButtonColor__set_defaultColor((UIButtonColor_o *)component, disableColor, 0);
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -450,22 +434,17 @@ LABEL_26:
           goto LABEL_26;
       }
       if ( klass )
-        v18 = klass;
+        v17 = klass;
       else
-        v18 = (System_String_o *)StringLiteral_1/*""*/;
-      UILabel__set_text(label, v18, 0);
-      v19 = 1.0;
-      v20 = 1.0;
-      v21 = 1.0;
-      v22 = 1.0;
+        v17 = (System_String_o *)StringLiteral_1/*""*/;
+      UILabel__set_text(label, v17, 0);
+      v23.fields.a = 1.0;
+      v23.fields.b = 1.0;
+      v23.fields.g = 1.0;
+      v23.fields.r = 1.0;
       if ( v12 )
-      {
-        v22 = this->fields.disableColor.fields.r;
-        v21 = this->fields.disableColor.fields.g;
-        v20 = this->fields.disableColor.fields.b;
-        v19 = this->fields.disableColor.fields.a;
-      }
-      UIWidget__set_color((UIWidget_o *)label, *(UnityEngine_Color_o *)&v22, 0);
+        v23 = this->fields.disableColor;
+      UIWidget__set_color((UIWidget_o *)label, v23, 0);
     }
   }
 }
@@ -478,18 +457,19 @@ BattleSkillSelectBtnBaseComponent_SelectBtnInfo_o *BattleSkillSelectBtnBaseCompo
 {
   System_Func_object__bool__o *v5; // x21
   BattleSkillSelectBtnBaseComponent_SelectBtnInfo_o *v6; // x20
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4CF1E65 & 1) == 0 )
+  if ( (byte_4D3424D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BattleSkillSelectBtnBaseComponent_IsCondCheck__);
-    sub_1C7BAE8(&System_Func_string__bool__TypeInfo);
-    sub_1C7BAE8(&BattleSkillSelectBtnBaseComponent_SelectBtnInfo_TypeInfo);
-    byte_4CF1E65 = 1;
+    sub_1C93AD4(&Method_BattleSkillSelectBtnBaseComponent_IsCondCheck__);
+    sub_1C93AD4(&System_Func_string__bool__TypeInfo);
+    sub_1C93AD4(&BattleSkillSelectBtnBaseComponent_SelectBtnInfo_TypeInfo);
+    byte_4D3424D = 1;
   }
-  v5 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_string__bool__TypeInfo);
+  v5 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(v5, (Il2CppObject *)this, Method_BattleSkillSelectBtnBaseComponent_IsCondCheck__, 0);
-  v6 = (BattleSkillSelectBtnBaseComponent_SelectBtnInfo_o *)sub_1C7BD34(BattleSkillSelectBtnBaseComponent_SelectBtnInfo_TypeInfo);
-  BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ctor(v6, dict, (System_Func_string__bool__o *)v5, 0);
+  v6 = (BattleSkillSelectBtnBaseComponent_SelectBtnInfo_o *)sub_1C93D20(BattleSkillSelectBtnBaseComponent_SelectBtnInfo_TypeInfo);
+  BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ctor(v6, dict, (System_Func_string__bool__o *)v5, v7);
   return v6;
 }
 
@@ -523,21 +503,21 @@ void BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ctor(
   bool v27; // w0
   System_Collections_Generic_IEnumerable_TSource__o *v28; // x0
 
-  if ( (byte_4CF1E66 & 1) == 0 )
+  if ( (byte_4D3424E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_GetValue_List_object____);
-    sub_1C7BAE8(&Method_BasicHelper_GetValue_string___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_All_string___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_string___);
-    sub_1C7BAE8(&StringLiteral_18310/*"conds"*/);
-    sub_1C7BAE8(&StringLiteral_20453/*"image"*/);
-    sub_1C7BAE8(&StringLiteral_22354/*"name"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CF1E66 = 1;
+    sub_1C93AD4(&Method_BasicHelper_GetValue_List_object____);
+    sub_1C93AD4(&Method_BasicHelper_GetValue_string___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_All_string___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_string___);
+    sub_1C93AD4(&StringLiteral_18360/*"conds"*/);
+    sub_1C93AD4(&StringLiteral_20513/*"image"*/);
+    sub_1C93AD4(&StringLiteral_22418/*"name"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D3424E = 1;
   }
   v11 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields,
     v11,
     (int32_t)funcCondCheck,
@@ -551,23 +531,23 @@ void BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ctor(
   {
     Value_object = BasicHelper__GetValue_object_(
                      btnDict,
-                     (System_String_o *)StringLiteral_22354/*"name"*/,
+                     (System_String_o *)StringLiteral_22418/*"name"*/,
                      (Il2CppObject *)StringLiteral_1/*""*/,
-                     (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_string___);
+                     (const MethodInfo_319214C *)Method_BasicHelper_GetValue_string___);
     this->fields._Name_k__BackingField = (struct System_String_o *)Value_object;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)Value_object, v13, v14, v15, v16, v17, v18);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)Value_object, v13, v14, v15, v16, v17, v18);
     v19 = BasicHelper__GetValue_object_(
             btnDict,
-            (System_String_o *)StringLiteral_18310/*"conds"*/,
+            (System_String_o *)StringLiteral_18360/*"conds"*/,
             0,
-            (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_List_object____);
+            (const MethodInfo_319214C *)Method_BasicHelper_GetValue_List_object____);
     v20 = BasicHelper__GetValue_object_(
             btnDict,
-            (System_String_o *)StringLiteral_20453/*"image"*/,
+            (System_String_o *)StringLiteral_20513/*"image"*/,
             (Il2CppObject *)StringLiteral_1/*""*/,
-            (const MethodInfo_315DCFC *)Method_BasicHelper_GetValue_string___);
+            (const MethodInfo_319214C *)Method_BasicHelper_GetValue_string___);
     this->fields._ImageName_k__BackingField = (struct System_String_o *)v20;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields._ImageName_k__BackingField,
       (int32_t)v20,
       v21,
@@ -584,11 +564,11 @@ void BattleSkillSelectBtnBaseComponent_SelectBtnInfo___ctor(
     {
       v28 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                    (System_Collections_IEnumerable_o *)v19,
-                                                                   (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_string___);
+                                                                   (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_string___);
       v27 = System_Linq_Enumerable__All_object_(
               v28,
               (System_Func_TSource__bool__o *)funcCondCheck,
-              (const MethodInfo_317A8A4 *)Method_System_Linq_Enumerable_All_string___);
+              (const MethodInfo_31AF04C *)Method_System_Linq_Enumerable_All_string___);
     }
     this->fields._IsEnable_k__BackingField = v27;
   }
@@ -631,7 +611,7 @@ void BattleSkillSelectBtnBaseComponent_SelectBtnInfo__set_ImageName(
   System_String_o *v7; // x7
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields._ImageName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -664,5 +644,5 @@ void BattleSkillSelectBtnBaseComponent_SelectBtnInfo__set_Name(
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

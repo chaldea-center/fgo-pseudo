@@ -2,10 +2,10 @@ void NoticeNumberComponent___cctor(const MethodInfo *method)
 {
   struct NoticeNumberComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4CEAFC6 & 1) == 0 )
+  if ( (byte_4D2D381 & 1) == 0 )
   {
-    sub_1C7BAE8(&NoticeNumberComponent_TypeInfo);
-    byte_4CEAFC6 = 1;
+    sub_1C93AD4(&NoticeNumberComponent_TypeInfo);
+    byte_4D2D381 = 1;
   }
   static_fields = NoticeNumberComponent_TypeInfo->static_fields;
   static_fields->ALPHA_SPEED_RATE = 0.4;
@@ -31,19 +31,19 @@ void NoticeNumberComponent__Awake(NoticeNumberComponent_o *this, const MethodInf
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CEAFC0 & 1) == 0 )
+  if ( (byte_4D2D37B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    byte_4CEAFC0 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    byte_4D2D37B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -57,11 +57,11 @@ AlphaTransitionCalculator_o *NoticeNumberComponent__CreateWidgetAlphaCalculator(
   AlphaTransitionCalculator_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CEAFC5 & 1) == 0 )
+  if ( (byte_4D2D380 & 1) == 0 )
   {
-    sub_1C7BAE8(&AlphaTransitionCalculator_TypeInfo);
-    sub_1C7BAE8(&NoticeNumberComponent_TypeInfo);
-    byte_4CEAFC5 = 1;
+    sub_1C93AD4(&AlphaTransitionCalculator_TypeInfo);
+    sub_1C93AD4(&NoticeNumberComponent_TypeInfo);
+    byte_4D2D380 = 1;
   }
   v2 = NoticeNumberComponent_TypeInfo;
   if ( !NoticeNumberComponent_TypeInfo->_2.cctor_finished )
@@ -74,7 +74,7 @@ AlphaTransitionCalculator_o *NoticeNumberComponent__CreateWidgetAlphaCalculator(
          NoticeNumberComponent_TypeInfo->static_fields->ALPHA_SPEED_RATE,
          (float)NoticeNumberComponent_TypeInfo->static_fields->ALPHA_FADE_FRAME_NUM,
          0);
-  v5 = (AlphaTransitionCalculator_o *)sub_1C7BD34(AlphaTransitionCalculator_TypeInfo);
+  v5 = (AlphaTransitionCalculator_o *)sub_1C93D20(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v5, v3, v4, v6);
   return v5;
 }
@@ -91,17 +91,17 @@ UISprite_o *NoticeNumberComponent__GetNumberBg(NoticeNumberComponent_o *this, co
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEAFC2 & 1) == 0 )
+  if ( (byte_4D2D37D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    byte_4CEAFC2 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    byte_4D2D37D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
 }
 
 
@@ -119,7 +119,7 @@ void NoticeNumberComponent__SetDisp(NoticeNumberComponent_o *this, bool is_disp,
 
   WidgetAlphaCalculator = NoticeNumberComponent__get_WidgetAlphaCalculator(this, (const MethodInfo *)is_disp);
   if ( !WidgetAlphaCalculator )
-    sub_1C7BD40(0, v5);
+    sub_1C93D2C(0, v5);
   if ( is_disp )
     AlphaTransitionCalculator__SwitchFadeIn(WidgetAlphaCalculator, v5);
   else
@@ -136,10 +136,10 @@ void NoticeNumberComponent__SetDispForce(NoticeNumberComponent_o *this, bool is_
   UIWidget_o *MyWidget; // x20
   const MethodInfo *v9; // x1
 
-  if ( (byte_4CEAFC4 & 1) == 0 )
+  if ( (byte_4D2D37F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_TransitionCalculator_float__get_Current__);
-    byte_4CEAFC4 = 1;
+    sub_1C93AD4(&Method_TransitionCalculator_float__get_Current__);
+    byte_4D2D37F = 1;
   }
   WidgetAlphaCalculator = NoticeNumberComponent__get_WidgetAlphaCalculator(this, (const MethodInfo *)is_disp);
   if ( !WidgetAlphaCalculator )
@@ -152,7 +152,7 @@ void NoticeNumberComponent__SetDispForce(NoticeNumberComponent_o *this, bool is_
   WidgetAlphaCalculator = NoticeNumberComponent__get_WidgetAlphaCalculator(this, v9);
   if ( !WidgetAlphaCalculator || !MyWidget )
 LABEL_10:
-    sub_1C7BD40(WidgetAlphaCalculator, v6);
+    sub_1C93D2C(WidgetAlphaCalculator, v6);
   ((void (__fastcall *)(UIWidget_o *, const MethodInfo *, float))MyWidget->klass->vtable._8_set_alpha.methodPtr)(
     MyWidget,
     MyWidget->klass->vtable._8_set_alpha.method,
@@ -172,11 +172,11 @@ void NoticeNumberComponent__SetNumber(NoticeNumberComponent_o *this, int32_t num
   System_String_o *v12; // x0
   int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CEAFC3 & 1) == 0 )
+  if ( (byte_4D2D37E & 1) == 0 )
   {
-    sub_1C7BAE8(&NoticeNumberComponent_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_801/*"+"*/);
-    byte_4CEAFC3 = 1;
+    sub_1C93AD4(&NoticeNumberComponent_TypeInfo);
+    sub_1C93AD4(&StringLiteral_801/*"+"*/);
+    byte_4D2D37E = 1;
   }
   v13 = 0;
   this->fields.mNumber = number;
@@ -207,7 +207,7 @@ void NoticeNumberComponent__SetNumber(NoticeNumberComponent_o *this, int32_t num
     }
     v13 = DISP_NUMBER_MAX;
     v12 = System_Int32__ToString((int32_t)&v13, 0);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Concat_64176912(
+    gameObject = (UnityEngine_GameObject_o *)System_String__Concat_64425724(
                                                v12,
                                                (System_String_o *)StringLiteral_801/*"+"*/,
                                                0);
@@ -215,7 +215,7 @@ void NoticeNumberComponent__SetNumber(NoticeNumberComponent_o *this, int32_t num
   v7 = gameObject;
   if ( !numberLabel )
 LABEL_13:
-    sub_1C7BD40(gameObject, v7);
+    sub_1C93D2C(gameObject, v7);
   UILabel__set_text(numberLabel, (System_String_o *)gameObject, 0);
 }
 
@@ -228,20 +228,20 @@ void NoticeNumberComponent__Update(NoticeNumberComponent_o *this, const MethodIn
   __int64 v6; // x1
   float v7; // s0
 
-  if ( (byte_4CEAFC1 & 1) == 0 )
+  if ( (byte_4D2D37C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_TransitionCalculator_float__Update__);
-    byte_4CEAFC1 = 1;
+    sub_1C93AD4(&Method_TransitionCalculator_float__Update__);
+    byte_4D2D37C = 1;
   }
   MyWidget = NoticeNumberComponent__get_MyWidget(this, method);
   WidgetAlphaCalculator = (TransitionCalculator_float__o *)NoticeNumberComponent__get_WidgetAlphaCalculator(this, v4);
   if ( !WidgetAlphaCalculator
     || (v7 = TransitionCalculator_float___Update(
                WidgetAlphaCalculator,
-               (const MethodInfo_3B2E9AC *)Method_TransitionCalculator_float__Update__),
+               (const MethodInfo_3B67808 *)Method_TransitionCalculator_float__Update__),
         !MyWidget) )
   {
-    sub_1C7BD40(WidgetAlphaCalculator, v6);
+    sub_1C93D2C(WidgetAlphaCalculator, v6);
   }
   ((void (__fastcall *)(UIWidget_o *, const MethodInfo *, float))MyWidget->klass->vtable._8_set_alpha.methodPtr)(
     MyWidget,
@@ -264,11 +264,11 @@ UIWidget_o *NoticeNumberComponent__get_MyWidget(NoticeNumberComponent_o *this, c
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CEAFBF & 1) == 0 )
+  if ( (byte_4D2D37A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEAFBF = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D37A = 1;
   }
   p_mWidget = &this->fields.mWidget;
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
@@ -278,12 +278,12 @@ UIWidget_o *NoticeNumberComponent__get_MyWidget(NoticeNumberComponent_o *this, c
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     *p_mWidget = (UIWidget_o *)Component_object;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.mWidget,
       (int32_t)Component_object,
       v8,
@@ -318,9 +318,9 @@ AlphaTransitionCalculator_o *NoticeNumberComponent__get_WidgetAlphaCalculator(
   {
     WidgetAlphaCalculator = NoticeNumberComponent__CreateWidgetAlphaCalculator(0, method);
     p_widgetAlphaCalculator->klass = (GrandQuestFolderBoardItem_c *)WidgetAlphaCalculator;
-    sub_1C7BA8C(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6, v7, v8, v9, v10);
+    sub_1C93A78(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6, v7, v8, v9, v10);
     if ( !p_widgetAlphaCalculator->klass )
-      sub_1C7BD40(0, v11);
+      sub_1C93D2C(0, v11);
     AlphaTransitionCalculator__MakeFadeInFinished((AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass, v11);
     return (AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass;
   }

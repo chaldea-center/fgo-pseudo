@@ -18,22 +18,22 @@ void BgmManager___cctor(const MethodInfo *method)
   System_String_o *v16; // x7
   struct BgmManager_StaticFields *v17; // x8
 
-  if ( (byte_4CEDCDB & 1) == 0 )
+  if ( (byte_4D30038 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_2913/*"BGM_CHALDEA_1"*/);
-    sub_1C7BAE8(&StringLiteral_2914/*"BGM_CHALDEA_2"*/);
-    byte_4CEDCDB = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_2925/*"BGM_CHALDEA_1"*/);
+    sub_1C93AD4(&StringLiteral_2926/*"BGM_CHALDEA_2"*/);
+    byte_4D30038 = 1;
   }
   static_fields = BgmManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEFAULT_VOLUME = 0x3DCCCCCD3F800000LL;
-  v8 = StringLiteral_2913/*"BGM_CHALDEA_1"*/;
-  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2913/*"BGM_CHALDEA_1"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->DEFAULT_MAIN_BGM_NAME, v8, v1, v2, v3, v4, v5, v6);
-  v9 = StringLiteral_2914/*"BGM_CHALDEA_2"*/;
+  v8 = StringLiteral_2925/*"BGM_CHALDEA_1"*/;
+  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2925/*"BGM_CHALDEA_1"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->DEFAULT_MAIN_BGM_NAME, v8, v1, v2, v3, v4, v5, v6);
+  v9 = StringLiteral_2926/*"BGM_CHALDEA_2"*/;
   v10 = BgmManager_TypeInfo->static_fields;
-  v10->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2914/*"BGM_CHALDEA_2"*/;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v10->COSMOS_IN_THE_LOSTBELT_BGM_NAME, v9, v11, v12, v13, v14, v15, v16);
+  v10->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2926/*"BGM_CHALDEA_2"*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v10->COSMOS_IN_THE_LOSTBELT_BGM_NAME, v9, v11, v12, v13, v14, v15, v16);
   v17 = BgmManager_TypeInfo->static_fields;
   *(_QWORD *)&v17->ADD_BIND_MAX = 0x400000005LL;
   v17->isMute = 0;
@@ -65,27 +65,27 @@ void BgmManager___ctor(BgmManager_o *this, const MethodInfo *method)
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CEDCDA & 1) == 0 )
+  if ( (byte_4D30037 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager___ctor__);
-    byte_4CEDCDA = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager___ctor__);
+    byte_4D30037 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.addBindList = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.addBindList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.addBindList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.loadingBgmCueNameList = (struct System_Collections_Generic_List_string__o *)v10;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.loadingBgmCueNameList,
     (int32_t)v10,
     v11,
@@ -94,15 +94,15 @@ void BgmManager___ctor(BgmManager_o *this, const MethodInfo *method)
     v14,
     v15,
     v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
   this->fields.bgmPlayers = (struct System_Collections_Generic_List_BgmPlayerBase__o *)v17;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.bgmPlayers, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.bgmPlayers, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A8CA90 *)Method_SingletonMonoBehaviour_BgmManager___ctor__);
+    (const MethodInfo_3AC57E4 *)Method_SingletonMonoBehaviour_BgmManager___ctor__);
 }
 
 
@@ -120,25 +120,26 @@ void BgmManager__ChangePlayerVolume(System_String_o *bgmName, float volume, cons
   UnityEngine_Object_o *Instance; // x20
   System_Collections_Generic_List_object__o *m_CachedPtr; // x20
   System_Predicate_object__o *v16; // x21
-  Il2CppObject *v17; // x0
+  BgmPlayerBase_o *v17; // x0
+  const MethodInfo *v18; // x1
 
-  if ( (byte_4CEDCB1 & 1) == 0 )
+  if ( (byte_4D3000E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&System_Predicate_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass29_0__ChangePlayerVolume_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass29_0_TypeInfo);
-    byte_4CEDCB1 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&System_Predicate_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass29_0__ChangePlayerVolume_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass29_0_TypeInfo);
+    byte_4D3000E = 1;
   }
-  v5 = sub_1C7BD34(BgmManager___c__DisplayClass29_0_TypeInfo);
-  BgmManager___c__DisplayClass29_0___ctor((BgmManager___c__DisplayClass29_0_o *)v5, 0);
+  v5 = sub_1C93D20(BgmManager___c__DisplayClass29_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_12;
   *(_QWORD *)(v5 + 16) = bgmName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)bgmName, v8, v9, v10, v11, v12, v13);
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)bgmName, v8, v9, v10, v11, v12, v13);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality(Instance, 0, 0);
@@ -147,7 +148,7 @@ void BgmManager__ChangePlayerVolume(System_String_o *bgmName, float volume, cons
     if ( Instance )
     {
       m_CachedPtr = (System_Collections_Generic_List_object__o *)Instance[2].fields.m_CachedPtr;
-      v16 = (System_Predicate_object__o *)sub_1C7BD34(System_Predicate_BgmPlayerBase__TypeInfo);
+      v16 = (System_Predicate_object__o *)sub_1C93D20(System_Predicate_BgmPlayerBase__TypeInfo);
       System_Predicate_object____ctor(
         v16,
         (Il2CppObject *)v5,
@@ -155,17 +156,20 @@ void BgmManager__ChangePlayerVolume(System_String_o *bgmName, float volume, cons
         0);
       if ( m_CachedPtr )
       {
-        v17 = System_Collections_Generic_List_object___Find(
-                m_CachedPtr,
-                (System_Predicate_T__o *)v16,
-                (const MethodInfo_383F464 *)Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
+        v17 = (BgmPlayerBase_o *)System_Collections_Generic_List_object___Find(
+                                   m_CachedPtr,
+                                   (System_Predicate_T__o *)v16,
+                                   (const MethodInfo_387A004 *)Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
         if ( v17 )
-          BgmPlayerBase__set_BgmVolume((BgmPlayerBase_o *)v17, volume, 0);
+        {
+          v17->fields.bgmVolume = volume;
+          BgmPlayerBase__UpdateVolume(v17, v18);
+        }
         return;
       }
     }
 LABEL_12:
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   }
 }
 
@@ -177,42 +181,39 @@ System_Collections_IEnumerator_o *BgmManager__CoWaitSameAudioLoading(
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  int32_t v25; // w5
-  int64_t v26; // x6
-  System_String_o *v27; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
 
-  if ( (byte_4CEDCCE & 1) == 0 )
+  if ( (byte_4D3002B & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
-    byte_4CEDCCE = 1;
+    sub_1C93AD4(&BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
+    byte_4D3002B = 1;
   }
-  v7 = sub_1C7BD34(BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
-  BgmManager__CoWaitSameAudioLoading_d__63___ctor((BgmManager__CoWaitSameAudioLoading_d__63_o *)v7, 0, 0);
-  if ( !v7 )
-    sub_1C7BD40(v8, v9);
+  v7 = sub_1C93D20(BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = bgmName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)bgmName, v16, v17, v18, v19, v20, v21);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)bgmName, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)finishCallback, v22, v23, v24, v25, v26, v27);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)finishCallback, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -224,20 +225,20 @@ void BgmManager__Enable_KeepSubBgm(bool value, const MethodInfo *method)
   __int64 v5; // x1
   int v6; // w9
 
-  if ( (byte_4CEDCC4 & 1) == 0 )
+  if ( (byte_4D30021 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCC4 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30021 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     if ( value )
       v6 = 1;
     else
@@ -250,10 +251,10 @@ void BgmManager__Enable_KeepSubBgm(bool value, const MethodInfo *method)
 System_Collections_Generic_IEnumerable_T__o *BgmManager__EnumeratePlayersHavingBgmName_object_(
         BgmManager_o *this,
         System_String_o *bgmNameFilter,
-        const MethodInfo_316194C *method)
+        const MethodInfo_3195D9C *method)
 {
   long double v3; // q0
-  const MethodInfo_316194C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3195D9C_RGCTXs *rgctx_data; // x8
   __int64 _0_BgmManager___c__DisplayClass54_0_T; // x0
   __int64 v9; // x22
   __int64 v10; // x0
@@ -267,14 +268,14 @@ System_Collections_Generic_IEnumerable_T__o *BgmManager__EnumeratePlayersHavingB
   __int64 v18; // x21
   System_Collections_Generic_IEnumerable_TResult__o *v19; // x0
   long double inited; // q0
-  const MethodInfo_316194C_RGCTXs *v21; // x8
+  const MethodInfo_3195D9C_RGCTXs *v21; // x8
   System_Collections_Generic_IEnumerable_TSource__o *v22; // x20
   __int64 _5_System_Func_T__bool; // x0
   System_Func_object__bool__o *v24; // x21
   __int64 _6_BgmManager___c__54_T; // x0
   Il2CppClass *v26; // x0
   Il2CppClass *v27; // x0
-  const MethodInfo_316194C_RGCTXs *v28; // x8
+  const MethodInfo_3195D9C_RGCTXs *v28; // x8
   __int64 v29; // x0
   __int64 v30; // x8
   Il2CppObject *v31; // x22
@@ -291,81 +292,81 @@ System_Collections_Generic_IEnumerable_T__o *BgmManager__EnumeratePlayersHavingB
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8(method);
+    sub_1C69BC4(method);
     rgctx_data = method->rgctx_data;
   }
   _0_BgmManager___c__DisplayClass54_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass54_0_T_;
   if ( (*(&rgctx_data->_0_BgmManager___c__DisplayClass54_0_T_->_2.bitflags2 + 2) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass54_0_T = sub_1C51B7C(v3);
-  v9 = sub_1C7BD34(_0_BgmManager___c__DisplayClass54_0_T);
+    _0_BgmManager___c__DisplayClass54_0_T = sub_1C69B68(v3);
+  v9 = sub_1C93D20(_0_BgmManager___c__DisplayClass54_0_T);
   BgmManager___c__DisplayClass54_0_object____ctor(
     (BgmManager___c__DisplayClass54_0_T__o *)v9,
-    (const MethodInfo_3343FC0 *)method->rgctx_data->_1_BgmManager___c__DisplayClass54_0_T___ctor);
+    (const MethodInfo_337988C *)method->rgctx_data->_1_BgmManager___c__DisplayClass54_0_T___ctor);
   if ( !v9 )
-    sub_1C7BD40(v10, v11);
+    sub_1C93D2C(v10, v11);
   *(_QWORD *)(v9 + 16) = bgmNameFilter;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)bgmNameFilter, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)bgmNameFilter, v12, v13, v14, v15, v16, v17);
   v18 = *(_QWORD *)(v9 + 16);
   v19 = System_Linq_Enumerable__OfType_object_(
           (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-          (const MethodInfo_319E9E0 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
+          (const MethodInfo_31D3358 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
   v21 = method->rgctx_data;
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)v19;
   if ( v18 )
   {
     _5_System_Func_T__bool = (__int64)v21->_5_System_Func_T__bool_;
     if ( (*(_BYTE *)(_5_System_Func_T__bool + 309) & 1) == 0 )
-      _5_System_Func_T__bool = sub_1C51B7C(inited);
-    v24 = (System_Func_object__bool__o *)sub_1C7BD34(_5_System_Func_T__bool);
+      _5_System_Func_T__bool = sub_1C69B68(inited);
+    v24 = (System_Func_object__bool__o *)sub_1C93D20(_5_System_Func_T__bool);
     System_Func_object__bool____ctor(
       v24,
       (Il2CppObject *)v9,
       (intptr_t)method->rgctx_data->_10_BgmManager___c__DisplayClass54_0_T___EnumeratePlayersHavingBgmName_b__1,
-      (const MethodInfo_36CCF78 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
+      (const MethodInfo_3708F00 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
   }
   else
   {
     _6_BgmManager___c__54_T = (__int64)v21->_6_BgmManager___c__54_T_;
     if ( (*(_BYTE *)(_6_BgmManager___c__54_T + 309) & 1) == 0 )
-      _6_BgmManager___c__54_T = sub_1C51B7C(inited);
+      _6_BgmManager___c__54_T = sub_1C69B68(inited);
     if ( !*(_DWORD *)(_6_BgmManager___c__54_T + 224) )
       inited = j_il2cpp_runtime_class_init_0(_6_BgmManager___c__54_T);
     v26 = method->rgctx_data->_6_BgmManager___c__54_T_;
     if ( (*(&v26->_2.bitflags2 + 2) & 1) == 0 )
-      v26 = (Il2CppClass *)sub_1C51B7C(inited);
+      v26 = (Il2CppClass *)sub_1C69B68(inited);
     v24 = (System_Func_object__bool__o *)*((_QWORD *)v26->static_fields + 1);
     if ( !v24 )
     {
       v27 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (*(&v27->_2.bitflags2 + 2) & 1) == 0 )
-        v27 = (Il2CppClass *)sub_1C51B7C(inited);
+        v27 = (Il2CppClass *)sub_1C69B68(inited);
       if ( !v27->_2.cctor_finished )
         inited = j_il2cpp_runtime_class_init_0(v27);
       v28 = method->rgctx_data;
       v29 = (__int64)v28->_6_BgmManager___c__54_T_;
       if ( (*(_BYTE *)(v29 + 309) & 1) == 0 )
       {
-        v29 = sub_1C51B7C(inited);
+        v29 = sub_1C69B68(inited);
         v28 = method->rgctx_data;
       }
       v30 = (__int64)v28->_5_System_Func_T__bool_;
       v31 = **(Il2CppObject ***)(v29 + 184);
       if ( (*(_BYTE *)(v30 + 309) & 1) == 0 )
-        v30 = sub_1C51B7C(inited);
-      v24 = (System_Func_object__bool__o *)sub_1C7BD34(v30);
+        v30 = sub_1C69B68(inited);
+      v24 = (System_Func_object__bool__o *)sub_1C93D20(v30);
       System_Func_object__bool____ctor(
         v24,
         v31,
         (intptr_t)method->rgctx_data->_7_BgmManager___c__54_T___EnumeratePlayersHavingBgmName_b__54_0,
-        (const MethodInfo_36CCF78 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
+        (const MethodInfo_3708F00 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
       v39 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (*(&v39->_2.bitflags2 + 2) & 1) == 0 )
-        v39 = (Il2CppClass *)sub_1C51B7C(v38);
+        v39 = (Il2CppClass *)sub_1C69B68(v38);
       *((_QWORD *)v39->static_fields + 1) = v24;
       v40 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (*(&v40->_2.bitflags2 + 2) & 1) == 0 )
-        v40 = (Il2CppClass *)sub_1C51B7C(v38);
-      sub_1C7BA8C(
+        v40 = (Il2CppClass *)sub_1C69B68(v38);
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)((char *)v40->static_fields + 8),
         (int32_t)v24,
         v32,
@@ -379,28 +380,28 @@ System_Collections_Generic_IEnumerable_T__o *BgmManager__EnumeratePlayersHavingB
   return (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                           v22,
                                                           (System_Func_TSource__bool__o *)v24,
-                                                          (const MethodInfo_31B6300 *)method->rgctx_data->_9_System_Linq_Enumerable_Where_T_);
+                                                          (const MethodInfo_31EB2BC *)method->rgctx_data->_9_System_Linq_Enumerable_Where_T_);
 }
 
 
 bool BgmManager__ExistsPlayerHavingBgmName_object_(
         BgmManager_o *this,
         System_String_o *bgmNameFilter,
-        const MethodInfo_3161B18 *method)
+        const MethodInfo_3195F68 *method)
 {
-  const MethodInfo_316194C **rgctx_data; // x8
+  const MethodInfo_3195D9C **rgctx_data; // x8
   System_Collections_Generic_IEnumerable_T__o *v7; // x0
 
-  rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8(method);
-    rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+    sub_1C69BC4(method);
+    rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
   }
   v7 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, bgmNameFilter, *rgctx_data);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v7,
-           (const MethodInfo_317C204 *)method->rgctx_data->_2_System_Linq_Enumerable_Any_T_);
+           (const MethodInfo_31B0714 *)method->rgctx_data->_2_System_Linq_Enumerable_Any_T_);
 }
 
 
@@ -410,37 +411,37 @@ BgmPlayArgsGroup_o *BgmManager__ExportPlayArgsGroup(const MethodInfo *method)
   _BOOL8 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CEDCA9 & 1) == 0 )
+  if ( (byte_4D30006 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCA9 = 1;
+    sub_1C93AD4(&Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30006 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v2 )
     return 0;
   if ( !Instance )
-    sub_1C7BD40(v2, v3);
+    sub_1C93D2C(v2, v3);
   return BgmManager__ExportPlayArgsGroupLocal_object_(
            (BgmManager_o *)Instance,
-           (const MethodInfo_3161B64 *)Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
+           (const MethodInfo_3195FB4 *)Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
 }
 
 
-BgmPlayArgsGroup_o *BgmManager__ExportPlayArgsGroupLocal_object_(BgmManager_o *this, const MethodInfo_3161B64 *method)
+BgmPlayArgsGroup_o *BgmManager__ExportPlayArgsGroupLocal_object_(BgmManager_o *this, const MethodInfo_3195FB4 *method)
 {
-  const MethodInfo_316194C **rgctx_data; // x8
+  const MethodInfo_3195D9C **rgctx_data; // x8
   System_Collections_Generic_IEnumerable_T__o *v5; // x20
   long double inited; // q0
   Il2CppClass *_4_BgmManager___c__76_T; // x8
   Il2CppClass *v8; // x0
   System_Func_object__object__o *v9; // x21
   Il2CppClass *v10; // x0
-  const MethodInfo_3161B64_RGCTXs *v11; // x8
+  const MethodInfo_3195FB4_RGCTXs *v11; // x8
   __int64 v12; // x0
   __int64 _3_System_Func_T__BgmPlayArgs; // x8
   Il2CppObject *v14; // x22
@@ -457,60 +458,60 @@ BgmPlayArgsGroup_o *BgmManager__ExportPlayArgsGroupLocal_object_(BgmManager_o *t
   System_Object_array *v25; // x19
   BgmPlayArgsGroup_o *v26; // x20
 
-  rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C7BAE8(&BgmPlayArgsGroup_TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+    sub_1C93AD4(&BgmPlayArgsGroup_TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+    rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C51BD8(method);
-      rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+      sub_1C69BC4(method);
+      rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
     }
   }
   v5 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, 0, *rgctx_data);
   _4_BgmManager___c__76_T = method->rgctx_data->_4_BgmManager___c__76_T_;
   if ( (*(&_4_BgmManager___c__76_T->_2.bitflags2 + 2) & 1) == 0 )
-    _4_BgmManager___c__76_T = (Il2CppClass *)sub_1C51B7C(inited);
+    _4_BgmManager___c__76_T = (Il2CppClass *)sub_1C69B68(inited);
   if ( !_4_BgmManager___c__76_T->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(_4_BgmManager___c__76_T);
   v8 = method->rgctx_data->_4_BgmManager___c__76_T_;
   if ( (*(&v8->_2.bitflags2 + 2) & 1) == 0 )
-    v8 = (Il2CppClass *)sub_1C51B7C(inited);
+    v8 = (Il2CppClass *)sub_1C69B68(inited);
   v9 = (System_Func_object__object__o *)*((_QWORD *)v8->static_fields + 1);
   if ( !v9 )
   {
     v10 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (*(&v10->_2.bitflags2 + 2) & 1) == 0 )
-      v10 = (Il2CppClass *)sub_1C51B7C(inited);
+      v10 = (Il2CppClass *)sub_1C69B68(inited);
     if ( !v10->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v10);
     v11 = method->rgctx_data;
     v12 = (__int64)v11->_4_BgmManager___c__76_T_;
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
     {
-      v12 = sub_1C51B7C(inited);
+      v12 = sub_1C69B68(inited);
       v11 = method->rgctx_data;
     }
     _3_System_Func_T__BgmPlayArgs = (__int64)v11->_3_System_Func_T__BgmPlayArgs_;
     v14 = **(Il2CppObject ***)(v12 + 184);
     if ( (*(_BYTE *)(_3_System_Func_T__BgmPlayArgs + 309) & 1) == 0 )
-      _3_System_Func_T__BgmPlayArgs = sub_1C51B7C(inited);
-    v9 = (System_Func_object__object__o *)sub_1C7BD34(_3_System_Func_T__BgmPlayArgs);
+      _3_System_Func_T__BgmPlayArgs = sub_1C69B68(inited);
+    v9 = (System_Func_object__object__o *)sub_1C93D20(_3_System_Func_T__BgmPlayArgs);
     System_Func_object__object____ctor(
       v9,
       v14,
       (intptr_t)method->rgctx_data->_5_BgmManager___c__76_T___ExportPlayArgsGroupLocal_b__76_0,
-      (const MethodInfo_36CD620 *)method->rgctx_data->_6_System_Func_T__BgmPlayArgs___ctor);
+      (const MethodInfo_37095A8 *)method->rgctx_data->_6_System_Func_T__BgmPlayArgs___ctor);
     v22 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (*(&v22->_2.bitflags2 + 2) & 1) == 0 )
-      v22 = (Il2CppClass *)sub_1C51B7C(v21);
+      v22 = (Il2CppClass *)sub_1C69B68(v21);
     *((_QWORD *)v22->static_fields + 1) = v9;
     v23 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (*(&v23->_2.bitflags2 + 2) & 1) == 0 )
-      v23 = (Il2CppClass *)sub_1C51B7C(v21);
-    sub_1C7BA8C(
+      v23 = (Il2CppClass *)sub_1C69B68(v21);
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)((char *)v23->static_fields + 8),
       (int32_t)v9,
       v15,
@@ -523,12 +524,12 @@ BgmPlayArgsGroup_o *BgmManager__ExportPlayArgsGroupLocal_object_(BgmManager_o *t
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v5,
                                                                (System_Func_TSource__TResult__o *)v9,
-                                                               (const MethodInfo_31A5F40 *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__BgmPlayArgs_);
+                                                               (const MethodInfo_31DAB40 *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__BgmPlayArgs_);
   v25 = System_Linq_Enumerable__ToArray_object_(
           v24,
-          (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-  v26 = (BgmPlayArgsGroup_o *)sub_1C7BD34(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor_41778376(v26, (BgmPlayArgs_array *)v25, 0);
+          (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+  v26 = (BgmPlayArgsGroup_o *)sub_1C93D20(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor_41932724(v26, (BgmPlayArgs_array *)v25, 0);
   return v26;
 }
 
@@ -539,25 +540,25 @@ System_String_o *BgmManager__ExtractCueName(BgmManager_o *this, System_String_o 
   System_String_array *v5; // x1
   il2cpp_array_size_t max_length; // x8
 
-  if ( (byte_4CEDCD1 & 1) == 0 )
+  if ( (byte_4D3002E & 1) == 0 )
   {
-    sub_1C7BAE8(&char___TypeInfo);
-    byte_4CEDCD1 = 1;
+    sub_1C93AD4(&char___TypeInfo);
+    byte_4D3002E = 1;
   }
-  v4 = (System_String_array *)sub_1C7BB90(char___TypeInfo, 1);
+  v4 = (System_String_array *)sub_1C93B7C(char___TypeInfo, 1);
   if ( !v4 )
     goto LABEL_9;
   v5 = v4;
   if ( !LODWORD(v4->max_length) )
     goto LABEL_10;
   LOWORD(v4->m_Items[0]) = 47;
-  if ( !name || (v4 = System_String__Split_64226004(name, (System_Char_array *)v4, 0)) == 0 )
+  if ( !name || (v4 = System_String__Split_64474816(name, (System_Char_array *)v4, 0)) == 0 )
 LABEL_9:
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   max_length = v4->max_length;
   if ( !(_DWORD)max_length )
 LABEL_10:
-    sub_1C7BD48(v4);
+    sub_1C93D34(v4);
   return *(System_String_o **)((char *)v4->m_Items + ((__int64)((max_length << 32) - 0x100000000LL) >> 29));
 }
 
@@ -566,10 +567,10 @@ void BgmManager__FadeoutBgm(float fadeoutTime, System_Action_o *callback, const 
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4CEDCB9 & 1) == 0 )
+  if ( (byte_4D30016 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    byte_4CEDCB9 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    byte_4D30016 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -582,9 +583,9 @@ bool BgmManager__FadeoutBgmLocal_object_(
         BgmManager_o *this,
         float fadeoutTime,
         System_String_o *name,
-        const MethodInfo_3161D20 *method)
+        const MethodInfo_3196170 *method)
 {
-  const MethodInfo_3161D20_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3196170_RGCTXs *rgctx_data; // x8
   __int64 _0_BgmManager___c__DisplayClass67_0_T; // x0
   BgmManager___c__DisplayClass67_0_T__o *v10; // x22
   __int64 v11; // x0
@@ -599,46 +600,46 @@ bool BgmManager__FadeoutBgmLocal_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_bool___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_bool___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_bool___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_bool___);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C51BD8(method);
+      sub_1C69BC4(method);
       rgctx_data = method->rgctx_data;
     }
   }
   _0_BgmManager___c__DisplayClass67_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass67_0_T_;
   if ( (*(&rgctx_data->_0_BgmManager___c__DisplayClass67_0_T_->_2.bitflags2 + 2) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass67_0_T = sub_1C51B7C(*(long double *)&fadeoutTime);
-  v10 = (BgmManager___c__DisplayClass67_0_T__o *)sub_1C7BD34(_0_BgmManager___c__DisplayClass67_0_T);
+    _0_BgmManager___c__DisplayClass67_0_T = sub_1C69B68(*(long double *)&fadeoutTime);
+  v10 = (BgmManager___c__DisplayClass67_0_T__o *)sub_1C93D20(_0_BgmManager___c__DisplayClass67_0_T);
   BgmManager___c__DisplayClass67_0_object____ctor(
     v10,
-    (const MethodInfo_3344DB0 *)method->rgctx_data->_1_BgmManager___c__DisplayClass67_0_T___ctor);
+    (const MethodInfo_337A67C *)method->rgctx_data->_1_BgmManager___c__DisplayClass67_0_T___ctor);
   if ( !v10 )
-    sub_1C7BD40(v11, v12);
+    sub_1C93D2C(v11, v12);
   v10->fields.fadeoutTime = fadeoutTime;
   v13 = BgmManager__EnumeratePlayersHavingBgmName_object_(
           this,
           name,
-          (const MethodInfo_316194C *)method->rgctx_data->_2_BgmManager_EnumeratePlayersHavingBgmName_T_);
+          (const MethodInfo_3195D9C *)method->rgctx_data->_2_BgmManager_EnumeratePlayersHavingBgmName_T_);
   _5_System_Func_T__bool = method->rgctx_data->_5_System_Func_T__bool_;
   if ( (*(&_5_System_Func_T__bool->_2.bitflags2 + 2) & 1) == 0 )
-    _5_System_Func_T__bool = (Il2CppClass *)sub_1C51B7C(v14);
-  v16 = (System_Func_object__bool__o *)sub_1C7BD34(_5_System_Func_T__bool);
+    _5_System_Func_T__bool = (Il2CppClass *)sub_1C69B68(v14);
+  v16 = (System_Func_object__bool__o *)sub_1C93D20(_5_System_Func_T__bool);
   System_Func_object__bool____ctor(
     v16,
     (Il2CppObject *)v10,
     (intptr_t)method->rgctx_data->_4_BgmManager___c__DisplayClass67_0_T___FadeoutBgmLocal_b__0,
-    (const MethodInfo_36CCF78 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
+    (const MethodInfo_3708F00 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
   v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__bool_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v13,
                                                                (System_Func_TSource__TResult__o *)v16,
-                                                               (const MethodInfo_31A507C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
+                                                               (const MethodInfo_31D9C7C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_bool_(
                                                                v17,
-                                                               (const MethodInfo_31AEEB4 *)Method_System_Linq_Enumerable_ToArray_bool___);
-  return System_Linq_Enumerable__Any_bool_(v18, (const MethodInfo_317BA3C *)Method_System_Linq_Enumerable_Any_bool___);
+                                                               (const MethodInfo_31E39E8 *)Method_System_Linq_Enumerable_ToArray_bool___);
+  return System_Linq_Enumerable__Any_bool_(v18, (const MethodInfo_31AFF4C *)Method_System_Linq_Enumerable_Any_bool___);
 }
 
 
@@ -648,26 +649,26 @@ void BgmManager__FadeoutJingle(float fadeoutTime, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CEDCC2 & 1) == 0 )
+  if ( (byte_4D3001F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCC2 = 1;
+    sub_1C93AD4(&Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3001F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     BgmManager__FadeoutBgmLocal_object_(
       (BgmManager_o *)Instance,
       fadeoutTime,
       0,
-      (const MethodInfo_3161D20 *)Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
+      (const MethodInfo_3196170 *)Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
   }
 }
 
@@ -731,29 +732,29 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
   System_String_o *v56; // x7
 
   v2 = this;
-  if ( (byte_4CEDCD8 & 1) == 0 )
+  if ( (byte_4D30035 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_GeneralBgmPlayer__TypeInfo);
-    sub_1C7BAE8(&System_Action_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&System_Action_BgmPlayArgs__TypeInfo);
-    sub_1C7BAE8(&Method_BasicHelper_ForEach_BgmPlayArgs___);
-    sub_1C7BAE8(&Method_BasicHelper_ForEach_GeneralBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    sub_1C7BAE8(&System_Func_GeneralBgmPlayer__bool__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
-    sub_1C7BAE8(&Method_BgmManager___c__FixedUpdate_b__78_0__);
-    sub_1C7BAE8(&Method_BgmManager___c__FixedUpdate_b__78_1__);
-    sub_1C7BAE8(&Method_BgmManager___c__FixedUpdate_b__78_2__);
-    sub_1C7BAE8(&Method_BgmManager___c__FixedUpdate_b__78_3__);
-    this = (BgmManager_o *)sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCD8 = 1;
+    sub_1C93AD4(&System_Action_GeneralBgmPlayer__TypeInfo);
+    sub_1C93AD4(&System_Action_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&System_Action_BgmPlayArgs__TypeInfo);
+    sub_1C93AD4(&Method_BasicHelper_ForEach_BgmPlayArgs___);
+    sub_1C93AD4(&Method_BasicHelper_ForEach_GeneralBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+    sub_1C93AD4(&System_Func_GeneralBgmPlayer__bool__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
+    sub_1C93AD4(&Method_BgmManager___c__FixedUpdate_b__78_0__);
+    sub_1C93AD4(&Method_BgmManager___c__FixedUpdate_b__78_1__);
+    sub_1C93AD4(&Method_BgmManager___c__FixedUpdate_b__78_2__);
+    sub_1C93AD4(&Method_BgmManager___c__FixedUpdate_b__78_3__);
+    this = (BgmManager_o *)sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30035 = 1;
   }
   p_bgmPlayers = (System_Collections_IEnumerable_o **)&v2->fields.bgmPlayers;
   bgmPlayers = (System_Collections_IEnumerable_o *)v2->fields.bgmPlayers;
@@ -764,7 +765,7 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
     jinglePlayer = (BgmPlayerBase_o *)v2->fields.jinglePlayer;
     if ( jinglePlayer )
     {
-      IsPlaying = BgmPlayerBase__IsPlaying(jinglePlayer, 0);
+      IsPlaying = BgmPlayerBase__IsPlaying(jinglePlayer, method);
       bgmPlayers = *p_bgmPlayers;
       v7 = IsPlaying;
     }
@@ -774,7 +775,7 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
     }
     v8 = System_Linq_Enumerable__OfType_object_(
            bgmPlayers,
-           (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
+           (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
     v9 = BgmManager___c_TypeInfo;
     v10 = (System_Collections_Generic_IEnumerable_TSource__o *)v8;
     if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -791,11 +792,11 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
         v9 = BgmManager___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v9->static_fields->__9;
-      _9__78_0 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_GeneralBgmPlayer__bool__TypeInfo);
+      _9__78_0 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_GeneralBgmPlayer__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__78_0, v12, Method_BgmManager___c__FixedUpdate_b__78_0__, 0);
       static_fields = BgmManager___c_TypeInfo->static_fields;
       static_fields->__9__78_0 = (struct System_Func_GeneralBgmPlayer__bool__o *)_9__78_0;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__78_0,
         (int32_t)_9__78_0,
         v14,
@@ -805,15 +806,15 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
         v18,
         v19);
     }
-    v20 = System_Linq_Enumerable__Any_object__51896536(
+    v20 = System_Linq_Enumerable__Any_object__52110824(
             v10,
             (System_Func_TSource__bool__o *)_9__78_0,
-            (const MethodInfo_317E0D8 *)Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
+            (const MethodInfo_31B25E8 *)Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
     if ( (v20 & v7) != 0 )
     {
       v21 = System_Linq_Enumerable__OfType_object_(
               *p_bgmPlayers,
-              (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
+              (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
       v22 = BgmManager___c_TypeInfo;
       v23 = (System_Collections_Generic_IEnumerable_T__o *)v21;
       if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -830,16 +831,16 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
           v22 = BgmManager___c_TypeInfo;
         }
         v25 = (Il2CppObject *)v22->static_fields->__9;
-        _9__78_1 = (System_Action_object__o *)sub_1C7BD34(System_Action_GeneralBgmPlayer__TypeInfo);
+        _9__78_1 = (System_Action_object__o *)sub_1C93D20(System_Action_GeneralBgmPlayer__TypeInfo);
         System_Action_object____ctor(_9__78_1, v25, Method_BgmManager___c__FixedUpdate_b__78_1__, 0);
         v26 = BgmManager___c_TypeInfo->static_fields;
         v26->__9__78_1 = (struct System_Action_GeneralBgmPlayer__o *)_9__78_1;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v26->__9__78_1, (int32_t)_9__78_1, v27, v28, v29, v30, v31, v32);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v26->__9__78_1, (int32_t)_9__78_1, v27, v28, v29, v30, v31, v32);
       }
       BasicHelper__ForEach_object_(
         v23,
         (System_Action_T__o *)_9__78_1,
-        (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_GeneralBgmPlayer___);
+        (const MethodInfo_3190798 *)Method_BasicHelper_ForEach_GeneralBgmPlayer___);
       v2->fields.isBgmStopJingle = 1;
     }
     else if ( !v20
@@ -848,22 +849,22 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
            && BgmManager__ExistsPlayerHavingBgmName_object_(
                 v2,
                 0,
-                (const MethodInfo_3161B18 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___) )
+                (const MethodInfo_3195F68 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___) )
     {
       this = (BgmManager_o *)BgmManager__ExportPlayArgsGroupLocal_object_(
                                v2,
-                               (const MethodInfo_3161B64 *)Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
+                               (const MethodInfo_3195FB4 *)Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
       if ( !this )
         goto LABEL_47;
       v33 = this;
-      v34 = BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, 0);
+      v34 = BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, method);
       v35 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__ToArray_object_(
                                                              (System_Collections_Generic_IEnumerable_TSource__o *)v34,
-                                                             (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+                                                             (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
       this = (BgmManager_o *)BgmManager__StopBgmLocal_object_(
                                v2,
                                0,
-                               (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
+                               (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
       if ( !v35 )
         goto LABEL_47;
       if ( v35[1].monitor )
@@ -883,19 +884,19 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
             v36 = BgmManager___c_TypeInfo;
           }
           v38 = (Il2CppObject *)v36->static_fields->__9;
-          _9__78_3 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayArgs__TypeInfo);
+          _9__78_3 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayArgs__TypeInfo);
           System_Action_object____ctor(_9__78_3, v38, Method_BgmManager___c__FixedUpdate_b__78_3__, 0);
           v39 = BgmManager___c_TypeInfo->static_fields;
           v39->__9__78_3 = (struct System_Action_BgmPlayArgs__o *)_9__78_3;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v39->__9__78_3, (int32_t)_9__78_3, v40, v41, v42, v43, v44, v45);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v39->__9__78_3, (int32_t)_9__78_3, v40, v41, v42, v43, v44, v45);
         }
         BasicHelper__ForEach_object_(
           v35,
           (System_Action_T__o *)_9__78_3,
-          (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_BgmPlayArgs___);
+          (const MethodInfo_3190798 *)Method_BasicHelper_ForEach_BgmPlayArgs___);
         if ( !BgmManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-        BgmManager__PlayBgm_41761528((BgmPlayArgsGroup_o *)v33, 0, v46);
+        BgmManager__PlayBgm_41915296((BgmPlayArgsGroup_o *)v33, 0, v46);
       }
     }
     if ( !v7 )
@@ -907,31 +908,31 @@ void BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(BgmManager___c_TypeInfo);
       this = (BgmManager_o *)BgmManager___c_TypeInfo;
     }
-    v48 = (System_Action_object__o *)*((_QWORD *)this[2].monitor + 10);
+    v48 = *(System_Action_object__o **)(*((_QWORD *)this + 23) + 80LL);
     if ( !v48 )
     {
-      if ( !LODWORD(this[2].fields.mainBgmPlayer) )
+      if ( !*((_DWORD *)this + 56) )
       {
         j_il2cpp_runtime_class_init_0(this);
         this = (BgmManager_o *)BgmManager___c_TypeInfo;
       }
-      v49 = *(Il2CppObject **)this[2].monitor;
-      v48 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayerBase__TypeInfo);
+      v49 = (Il2CppObject *)**((_QWORD **)this + 23);
+      v48 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayerBase__TypeInfo);
       System_Action_object____ctor(v48, v49, Method_BgmManager___c__FixedUpdate_b__78_2__, 0);
       v50 = BgmManager___c_TypeInfo->static_fields;
       v50->__9__78_2 = (struct System_Action_BgmPlayerBase__o *)v48;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v50->__9__78_2, (int32_t)v48, v51, v52, v53, v54, v55, v56);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v50->__9__78_2, (int32_t)v48, v51, v52, v53, v54, v55, v56);
     }
     if ( v47 )
     {
       System_Collections_Generic_List_object___ForEach(
         (System_Collections_Generic_List_object__o *)v47,
         (System_Action_T__o *)v48,
-        (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+        (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
       return;
     }
 LABEL_47:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   }
 }
 
@@ -942,20 +943,20 @@ void BgmManager__ForceDisable_KeepSubBgm(const MethodInfo *method)
   _BOOL8 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CEDCC5 & 1) == 0 )
+  if ( (byte_4D30022 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCC5 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30022 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C7BD40(v2, v3);
+      sub_1C93D2C(v2, v3);
     LODWORD(Instance[4].monitor) = 0;
   }
 }
@@ -966,17 +967,17 @@ CriAtomSource_o *BgmManager__GenerateCriAtomSource(BgmManager_o *this, const Met
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CEDCD6 & 1) == 0 )
+  if ( (byte_4D30033 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
-    byte_4CEDCD6 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+    byte_4D30033 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   return (CriAtomSource_o *)UnityEngine_GameObject__AddComponent_object_(
                               gameObject,
-                              (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+                              (const MethodInfo_31FBF9C *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
 }
 
 
@@ -988,15 +989,15 @@ int32_t BgmManager__GetAssetType(System_String_o *name, const MethodInfo *method
   SoundManager_c *v6; // x8
   System_String_o *v7; // x19
 
-  if ( (byte_4CEDCAB & 1) == 0 )
+  if ( (byte_4D30008 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C7BAE8(&SoundManager_TypeInfo);
-    byte_4CEDCAB = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C93AD4(&SoundManager_TypeInfo);
+    byte_4D30008 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   CueSheet = SoundManager__GetCueSheet((SoundManager_o *)Instance, name, 0);
   v6 = SoundManager_TypeInfo;
   v7 = CueSheet;
@@ -1017,13 +1018,13 @@ System_String_o *BgmManager__GetBgmName(const MethodInfo *method)
   System_String_o *result; // x0
   UnityEngine_Object_c *klass; // x8
 
-  if ( (byte_4CEDCBD & 1) == 0 )
+  if ( (byte_4D3001A & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBD = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3001A = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v3 = UnityEngine_Object__op_Equality(Instance, 0, 0);
@@ -1031,7 +1032,7 @@ System_String_o *BgmManager__GetBgmName(const MethodInfo *method)
   if ( !v3 )
   {
     if ( !Instance || (klass = Instance[2].klass) == 0 )
-      sub_1C7BD40(0, v2);
+      sub_1C93D2C(0, v2);
     return (System_String_o *)klass->_1.namespaze;
   }
   return result;
@@ -1055,25 +1056,25 @@ System_String_o *BgmManager__GetMainBgmName(bool isFormation, const MethodInfo *
   TerminalOverwriteEntity_o *v16; // [xsp+0h] [xbp-30h] BYREF
   System_String_o *bgmName; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CEDCD9 & 1) == 0 )
+  if ( (byte_4D30036 & 1) == 0 )
   {
-    sub_1C7BAE8(&BalanceConfig_TypeInfo);
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C7BAE8(&ServantCommentManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_19464/*"excludeFormation"*/);
-    byte_4CEDCD9 = 1;
+    sub_1C93AD4(&BalanceConfig_TypeInfo);
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C93AD4(&ServantCommentManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C93AD4(&StringLiteral_19517/*"excludeFormation"*/);
+    byte_4D30036 = 1;
   }
   v16 = 0;
   bgmName = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_31703F4 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( !MasterData_object )
     goto LABEL_9;
   Instance = (Il2CppObject *)TerminalOverwriteMaster__TryGetOverwriteMainBgmName(
@@ -1091,8 +1092,8 @@ LABEL_26:
   }
   if ( !v16 )
 LABEL_31:
-    sub_1C7BD40(Instance, v4);
-  if ( EntityScriptUtil__GetIntValue(v16->fields.script, (System_String_o *)StringLiteral_19464/*"excludeFormation"*/, 0, 0) != 1 )
+    sub_1C93D2C(Instance, v4);
+  if ( EntityScriptUtil__GetIntValue(v16->fields.script, (System_String_o *)StringLiteral_19517/*"excludeFormation"*/, 0, 0) != 1 )
     goto LABEL_26;
 LABEL_9:
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
@@ -1123,7 +1124,7 @@ LABEL_9:
     if ( !System_Linq_Enumerable__Contains_int_(
             v8,
             v9->static_fields->OrdealCallWarId,
-            (const MethodInfo_318C6F4 *)Method_System_Linq_Enumerable_Contains_int___) )
+            (const MethodInfo_31C106C *)Method_System_Linq_Enumerable_Contains_int___) )
     {
 LABEL_27:
       v14 = BgmManager_TypeInfo;
@@ -1163,10 +1164,10 @@ float BgmManager__GetMasterVolume(const MethodInfo *method)
 {
   BgmManager_c *v1; // x0
 
-  if ( (byte_4CEDCAF & 1) == 0 )
+  if ( (byte_4D3000C & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    byte_4CEDCAF = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    byte_4D3000C = 1;
   }
   v1 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -1185,7 +1186,7 @@ JinglePlayer_o *BgmManager__GetOrCreateJinglePlayer(BgmManager_o *this, const Me
   Il2CppObject *jinglePlayer; // x1
   struct System_String_o *bgmName; // x8
   JinglePlayer_o **p_jinglePlayer; // x20
-  JinglePlayer_o *v8; // x21
+  __int64 v8; // x21
   int32_t v9; // w2
   int32_t v10; // w3
   System_String_o *v11; // x4
@@ -1205,31 +1206,32 @@ JinglePlayer_o *BgmManager__GetOrCreateJinglePlayer(BgmManager_o *this, const Me
   __int64 bgmName_low; // x10
   __int64 v26; // x8
 
-  if ( (byte_4CEDCD5 & 1) == 0 )
+  if ( (byte_4D30032 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_JinglePlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
-    sub_1C7BAE8(&JinglePlayer_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
-    byte_4CEDCD5 = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_JinglePlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
+    sub_1C93AD4(&JinglePlayer_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
+    byte_4D30032 = 1;
   }
   v3 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                              (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_JinglePlayer___);
+                                                              (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_JinglePlayer___);
   v4 = (JinglePlayer_o *)System_Linq_Enumerable__ToArray_object_(
                            v3,
-                           (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
+                           (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
   if ( !v4 )
     goto LABEL_15;
   bgmName = v4->fields.bgmName;
   if ( !bgmName )
   {
-    v8 = (JinglePlayer_o *)sub_1C7BD34(JinglePlayer_TypeInfo);
-    JinglePlayer___ctor(v8, 0);
-    this->fields.jinglePlayer = v8;
+    v8 = sub_1C93D20(JinglePlayer_TypeInfo);
+    *(_DWORD *)(v8 + 36) = -1082130432;
+    System_Object___ctor((Il2CppObject *)v8, 0);
+    this->fields.jinglePlayer = (struct JinglePlayer_o *)v8;
     p_jinglePlayer = &this->fields.jinglePlayer;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.jinglePlayer, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.jinglePlayer, v8, v9, v10, v11, v12, v13, v14);
     bgmPlayers = this->fields.bgmPlayers;
     if ( bgmPlayers )
     {
@@ -1256,14 +1258,14 @@ JinglePlayer_o *BgmManager__GetOrCreateJinglePlayer(BgmManager_o *this, const Me
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)v4,
                 jinglePlayer,
-                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                *(const MethodInfo_387999C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
             }
             else
             {
               v26 = v23 + 8 * bgmName_low;
               LODWORD(v4->fields.bgmName) = bgmName_low + 1;
               *(_QWORD *)(v26 + 32) = jinglePlayer;
-              sub_1C7BA8C(
+              sub_1C93A78(
                 (GrandQuestFolderBoardItem_o *)(v26 + 32),
                 (int32_t)jinglePlayer,
                 v17,
@@ -1279,10 +1281,10 @@ JinglePlayer_o *BgmManager__GetOrCreateJinglePlayer(BgmManager_o *this, const Me
       }
     }
 LABEL_15:
-    sub_1C7BD40(v4, jinglePlayer);
+    sub_1C93D2C(v4, jinglePlayer);
   }
   if ( !(_DWORD)bgmName )
-    sub_1C7BD48(v4);
+    sub_1C93D34(v4);
   p_jinglePlayer = (JinglePlayer_o **)&v4->fields.bgmVolume;
   return *p_jinglePlayer;
 }
@@ -1305,7 +1307,7 @@ SubBgmPlayer_o *BgmManager__GetOrCreateSubBgmPlayer(
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
   System_Object_array *v15; // x20
   System_Func_object__bool__o *v16; // x22
-  SubBgmPlayer_o *object; // x21
+  Il2CppObject *object; // x21
   BgmManager___c_c *v18; // x0
   System_Func_object__bool__o *_9__72_1; // x21
   Il2CppObject *v20; // x22
@@ -1317,7 +1319,7 @@ SubBgmPlayer_o *BgmManager__GetOrCreateSubBgmPlayer(
   int64_t v26; // x6
   System_String_o *v27; // x7
   struct System_Collections_Generic_List_BgmPlayerBase__o *bgmPlayers; // x8
-  SubBgmPlayer_c *klass; // x9
+  Il2CppClass *klass; // x9
   int32_t v31; // w2
   int32_t v32; // w3
   System_String_o *v33; // x4
@@ -1329,46 +1331,46 @@ SubBgmPlayer_o *BgmManager__GetOrCreateSubBgmPlayer(
   __int64 size; // x10
   Il2CppClass **v40; // x8
 
-  if ( (byte_4CEDCD4 & 1) == 0 )
+  if ( (byte_4D30031 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BasicHelper_Find_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_First_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
-    sub_1C7BAE8(&System_Func_SubBgmPlayer__bool__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
-    sub_1C7BAE8(&SubBgmPlayer_TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass72_0_TypeInfo);
-    sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCD4 = 1;
+    sub_1C93AD4(&Method_BasicHelper_Find_SubBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_First_SubBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
+    sub_1C93AD4(&System_Func_SubBgmPlayer__bool__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
+    sub_1C93AD4(&SubBgmPlayer_TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass72_0_TypeInfo);
+    sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30031 = 1;
   }
-  v5 = sub_1C7BD34(BgmManager___c__DisplayClass72_0_TypeInfo);
-  BgmManager___c__DisplayClass72_0___ctor((BgmManager___c__DisplayClass72_0_o *)v5, 0);
+  v5 = sub_1C93D20(BgmManager___c__DisplayClass72_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    goto LABEL_23;
+    goto LABEL_22;
   *(_QWORD *)(v5 + 16) = bgmName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)bgmName, v8, v9, v10, v11, v12, v13);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)bgmName, v8, v9, v10, v11, v12, v13);
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                               (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+                                                               (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
   v15 = System_Linq_Enumerable__ToArray_object_(
           v14,
-          (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
-  v16 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_SubBgmPlayer__bool__TypeInfo);
+          (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
+  v16 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_SubBgmPlayer__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v16,
     (Il2CppObject *)v5,
     Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__,
     0);
-  object = (SubBgmPlayer_o *)BasicHelper__Find_object_(
-                               v15,
-                               (System_Func_T__bool__o *)v16,
-                               (const MethodInfo_315A2F4 *)Method_BasicHelper_Find_SubBgmPlayer___);
+  object = BasicHelper__Find_object_(
+             v15,
+             (System_Func_T__bool__o *)v16,
+             (const MethodInfo_318E744 *)Method_BasicHelper_Find_SubBgmPlayer___);
   if ( object )
-    return object;
+    return (SubBgmPlayer_o *)object;
   v18 = BgmManager___c_TypeInfo;
   if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
   {
@@ -1384,11 +1386,11 @@ SubBgmPlayer_o *BgmManager__GetOrCreateSubBgmPlayer(
       v18 = BgmManager___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v18->static_fields->__9;
-    _9__72_1 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_SubBgmPlayer__bool__TypeInfo);
+    _9__72_1 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_SubBgmPlayer__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__72_1, v20, Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__, 0);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__72_1 = (struct System_Func_SubBgmPlayer__bool__o *)_9__72_1;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__72_1,
       (int32_t)_9__72_1,
       v22,
@@ -1401,60 +1403,58 @@ SubBgmPlayer_o *BgmManager__GetOrCreateSubBgmPlayer(
   v6 = (System_Collections_Generic_List_object__o *)BasicHelper__Find_object_(
                                                       v15,
                                                       (System_Func_T__bool__o *)_9__72_1,
-                                                      (const MethodInfo_315A2F4 *)Method_BasicHelper_Find_SubBgmPlayer___);
-  object = (SubBgmPlayer_o *)v6;
+                                                      (const MethodInfo_318E744 *)Method_BasicHelper_Find_SubBgmPlayer___);
+  object = (Il2CppObject *)v6;
   if ( v6 )
-    return object;
+    return (SubBgmPlayer_o *)object;
   if ( !v15 )
-LABEL_23:
-    sub_1C7BD40(v6, v7);
+LABEL_22:
+    sub_1C93D2C(v6, v7);
   if ( SLODWORD(v15->max_length) <= 1 )
   {
-    object = (SubBgmPlayer_o *)sub_1C7BD34(SubBgmPlayer_TypeInfo);
-    SubBgmPlayer___ctor(object, 0);
+    object = (Il2CppObject *)sub_1C93D20(SubBgmPlayer_TypeInfo);
+    HIDWORD(object[2].klass) = -1082130432;
+    System_Object___ctor(object, 0);
     bgmPlayers = this->fields.bgmPlayers;
     if ( bgmPlayers )
     {
-      if ( object )
+      klass = object->klass;
+      LODWORD(object[1].klass) = bgmPlayers->fields._size;
+      ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))klass->vtable[5].methodPtr)(
+        object,
+        klass->vtable[5].method);
+      v6 = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
+      if ( v6 )
       {
-        klass = object->klass;
-        object->fields.index = bgmPlayers->fields._size;
-        ((void (__fastcall *)(SubBgmPlayer_o *, const MethodInfo *))klass->vtable._5_Initialize.methodPtr)(
-          object,
-          klass->vtable._5_Initialize.method);
-        v6 = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
-        if ( v6 )
+        items = v6->fields._items;
+        v38 = Method_System_Collections_Generic_List_BgmPlayerBase__Add__;
+        ++v6->fields._version;
+        if ( items )
         {
-          items = v6->fields._items;
-          v38 = Method_System_Collections_Generic_List_BgmPlayerBase__Add__;
-          ++v6->fields._version;
-          if ( items )
+          size = v6->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
-            size = v6->fields._size;
-            if ( (unsigned int)size >= LODWORD(items->max_length) )
-            {
-              System_Collections_Generic_List_object___AddWithResize(
-                v6,
-                (Il2CppObject *)object,
-                *(const MethodInfo_383EDFC **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
-            }
-            else
-            {
-              v40 = &items->obj.klass + size;
-              v6->fields._size = size + 1;
-              v40[4] = (Il2CppClass *)object;
-              sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v40 + 4), (int32_t)object, v31, v32, v33, v34, v35, v36);
-            }
-            return object;
+            System_Collections_Generic_List_object___AddWithResize(
+              v6,
+              object,
+              *(const MethodInfo_387999C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
           }
+          else
+          {
+            v40 = &items->obj.klass + size;
+            v6->fields._size = size + 1;
+            v40[4] = (Il2CppClass *)object;
+            sub_1C93A78((GrandQuestFolderBoardItem_o *)(v40 + 4), (int32_t)object, v31, v32, v33, v34, v35, v36);
+          }
+          return (SubBgmPlayer_o *)object;
         }
       }
     }
-    goto LABEL_23;
+    goto LABEL_22;
   }
   return (SubBgmPlayer_o *)System_Linq_Enumerable__First_object_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)v15,
-                             (const MethodInfo_319601C *)Method_System_Linq_Enumerable_First_SubBgmPlayer___);
+                             (const MethodInfo_31CA994 *)Method_System_Linq_Enumerable_First_SubBgmPlayer___);
 }
 
 
@@ -1464,20 +1464,20 @@ void BgmManager__Initialize(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4CEDCAA & 1) == 0 )
+  if ( (byte_4D30007 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCAA = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30007 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C7BD40(v2, v3);
+      sub_1C93D2C(v2, v3);
     BgmManager__InitializeLocal((BgmManager_o *)Instance, v3);
   }
 }
@@ -1487,7 +1487,7 @@ void BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo *method)
 {
   BgmManager_o *v2; // x19
   struct System_Collections_Generic_List_BgmPlayerBase__o *bgmPlayers; // x8
-  MainBgmPlayer_o *v4; // x20
+  __int64 v4; // x20
   int32_t v5; // w2
   int32_t v6; // w3
   System_String_o *v7; // x4
@@ -1517,27 +1517,28 @@ void BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo *method)
   BgmManager_c *v31; // x0
 
   v2 = this;
-  if ( (byte_4CEDCC6 & 1) == 0 )
+  if ( (byte_4D30023 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
-    sub_1C7BAE8(&MainBgmPlayer_TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__InitializeLocal_b__50_0__);
-    this = (BgmManager_o *)sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCC6 = 1;
+    sub_1C93AD4(&System_Action_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__);
+    sub_1C93AD4(&MainBgmPlayer_TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__InitializeLocal_b__50_0__);
+    this = (BgmManager_o *)sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30023 = 1;
   }
   bgmPlayers = v2->fields.bgmPlayers;
   if ( !bgmPlayers )
     goto LABEL_21;
   if ( bgmPlayers->fields._size <= 0 )
   {
-    v4 = (MainBgmPlayer_o *)sub_1C7BD34(MainBgmPlayer_TypeInfo);
-    MainBgmPlayer___ctor(v4, 0);
-    v2->fields.mainBgmPlayer = v4;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v2->fields.mainBgmPlayer, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    v4 = sub_1C93D20(MainBgmPlayer_TypeInfo);
+    *(_DWORD *)(v4 + 36) = -1082130432;
+    System_Object___ctor((Il2CppObject *)v4, 0);
+    v2->fields.mainBgmPlayer = (struct MainBgmPlayer_o *)v4;
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.mainBgmPlayer, v4, v5, v6, v7, v8, v9, v10);
     method = (const MethodInfo *)v2->fields.mainBgmPlayer;
     if ( !method )
       goto LABEL_21;
@@ -1556,14 +1557,14 @@ void BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo *method)
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
         (Il2CppObject *)method,
-        *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
       v20 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
       LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
       *(_QWORD *)(v20 + 32) = method;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v20 + 32), (int32_t)method, v11, v12, v13, v14, v15, v16);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 32), (int32_t)method, v11, v12, v13, v14, v15, v16);
     }
   }
   v21 = (System_Collections_Generic_List_object__o *)v2->fields.bgmPlayers;
@@ -1573,28 +1574,28 @@ void BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(BgmManager___c_TypeInfo);
     this = (BgmManager_o *)BgmManager___c_TypeInfo;
   }
-  v22 = (System_Action_object__o *)*((_QWORD *)this[2].monitor + 1);
+  v22 = *(System_Action_object__o **)(*((_QWORD *)this + 23) + 8LL);
   if ( !v22 )
   {
-    if ( !LODWORD(this[2].fields.mainBgmPlayer) )
+    if ( !*((_DWORD *)this + 56) )
     {
       j_il2cpp_runtime_class_init_0(this);
       this = (BgmManager_o *)BgmManager___c_TypeInfo;
     }
-    v23 = *(Il2CppObject **)this[2].monitor;
-    v22 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayerBase__TypeInfo);
+    v23 = (Il2CppObject *)**((_QWORD **)this + 23);
+    v22 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(v22, v23, Method_BgmManager___c__InitializeLocal_b__50_0__, 0);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__50_0 = (struct System_Action_BgmPlayerBase__o *)v22;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__50_0, (int32_t)v22, v25, v26, v27, v28, v29, v30);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__50_0, (int32_t)v22, v25, v26, v27, v28, v29, v30);
   }
   if ( !v21 )
 LABEL_21:
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   System_Collections_Generic_List_object___ForEach(
     v21,
     (System_Action_T__o *)v22,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
   v31 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -1615,11 +1616,11 @@ bool BgmManager__IsLoadingLocal(BgmManager_o *this, System_String_o *name, const
   struct System_Collections_Generic_List_string__o *v7; // x8
 
   v4 = this;
-  if ( (byte_4CEDCD0 & 1) == 0 )
+  if ( (byte_4D3002D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Contains__);
-    this = (BgmManager_o *)sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4CEDCD0 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Contains__);
+    this = (BgmManager_o *)sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_4D3002D = 1;
   }
   if ( name )
   {
@@ -1629,9 +1630,9 @@ bool BgmManager__IsLoadingLocal(BgmManager_o *this, System_String_o *name, const
       return System_Collections_Generic_List_object___Contains(
                loadingBgmCueNameList,
                (Il2CppObject *)this,
-               (const MethodInfo_383F18C *)Method_System_Collections_Generic_List_string__Contains__);
+               (const MethodInfo_3879D2C *)Method_System_Collections_Generic_List_string__Contains__);
 LABEL_8:
-    sub_1C7BD40(this, name);
+    sub_1C93D2C(this, name);
   }
   v7 = v4->fields.loadingBgmCueNameList;
   if ( !v7 )
@@ -1646,25 +1647,25 @@ bool BgmManager__IsPlayBgm(System_String_o *name, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CEDCB2 & 1) == 0 )
+  if ( (byte_4D3000F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCB2 = 1;
+    sub_1C93AD4(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3000F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   return BgmManager__ExistsPlayerHavingBgmName_object_(
            (BgmManager_o *)Instance,
            name,
-           (const MethodInfo_3161B18 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
+           (const MethodInfo_3195F68 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
 }
 
 
@@ -1674,25 +1675,25 @@ bool BgmManager__IsPlayJingle(System_String_o *name, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CEDCBE & 1) == 0 )
+  if ( (byte_4D3001B & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBE = 1;
+    sub_1C93AD4(&Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3001B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   return BgmManager__ExistsPlayerHavingBgmName_object_(
            (BgmManager_o *)Instance,
            name,
-           (const MethodInfo_3161B18 *)Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
+           (const MethodInfo_3195F68 *)Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
 }
 
 
@@ -1703,15 +1704,15 @@ bool BgmManager__IsPreloadSucceeded(BgmManager_o *this, System_String_o *bgmName
   System_String_o *CueName; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CEDCCF & 1) == 0 )
+  if ( (byte_4D3002C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    byte_4CEDCCF = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    byte_4D3002C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CueName = BgmManager__ExtractCueName((BgmManager_o *)Instance, bgmName, v5);
   if ( !Instance )
-    sub_1C7BD40(CueName, v7);
+    sub_1C93D2C(CueName, v7);
   return SoundManager__GetCueSheet((SoundManager_o *)Instance, CueName, 0) != 0;
 }
 
@@ -1723,33 +1724,33 @@ void BgmManager__PauseBgm(bool isPause, const MethodInfo *method)
   __int64 v5; // x1
   bool v6; // w19
 
-  if ( (byte_4CEDCC3 & 1) == 0 )
+  if ( (byte_4D30020 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCC3 = 1;
+    sub_1C93AD4(&Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30020 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     v6 = isPause;
     BgmManager__PauseBgmLocal_object_(
       (BgmManager_o *)Instance,
       v6,
       0,
-      (const MethodInfo_3161E3C *)Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
+      (const MethodInfo_319628C *)Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
     BgmManager__PauseBgmLocal_object_(
       (BgmManager_o *)Instance,
       v6,
       0,
-      (const MethodInfo_3161E3C *)Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
+      (const MethodInfo_319628C *)Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
   }
 }
 
@@ -1758,10 +1759,10 @@ void BgmManager__PauseBgmLocal_object_(
         BgmManager_o *this,
         bool isPause,
         System_String_o *name,
-        const MethodInfo_3161E3C *method)
+        const MethodInfo_319628C *method)
 {
   long double v4; // q0
-  const MethodInfo_3161E3C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_319628C_RGCTXs *rgctx_data; // x8
   __int64 _0_BgmManager___c__DisplayClass70_0_T; // x0
   BgmManager___c__DisplayClass70_0_T__o *v10; // x22
   __int64 v11; // x0
@@ -1774,35 +1775,35 @@ void BgmManager__PauseBgmLocal_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C51BD8(method);
+    sub_1C69BC4(method);
     rgctx_data = method->rgctx_data;
   }
   _0_BgmManager___c__DisplayClass70_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass70_0_T_;
   if ( (*(&rgctx_data->_0_BgmManager___c__DisplayClass70_0_T_->_2.bitflags2 + 2) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass70_0_T = sub_1C51B7C(v4);
-  v10 = (BgmManager___c__DisplayClass70_0_T__o *)sub_1C7BD34(_0_BgmManager___c__DisplayClass70_0_T);
+    _0_BgmManager___c__DisplayClass70_0_T = sub_1C69B68(v4);
+  v10 = (BgmManager___c__DisplayClass70_0_T__o *)sub_1C93D20(_0_BgmManager___c__DisplayClass70_0_T);
   BgmManager___c__DisplayClass70_0_object____ctor(
     v10,
-    (const MethodInfo_3346194 *)method->rgctx_data->_1_BgmManager___c__DisplayClass70_0_T___ctor);
+    (const MethodInfo_337BA60 *)method->rgctx_data->_1_BgmManager___c__DisplayClass70_0_T___ctor);
   if ( !v10 )
-    sub_1C7BD40(v11, v12);
+    sub_1C93D2C(v11, v12);
   v10->fields.isPause = isPause;
   v13 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__OfType_object_(
                                                          (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                         (const MethodInfo_319E9E0 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
+                                                         (const MethodInfo_31D3358 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
   _5_System_Action_T = method->rgctx_data->_5_System_Action_T_;
   if ( (*(&_5_System_Action_T->_2.bitflags2 + 2) & 1) == 0 )
-    _5_System_Action_T = (Il2CppClass *)sub_1C51B7C(v14);
-  v16 = (System_Action_object__o *)sub_1C7BD34(_5_System_Action_T);
+    _5_System_Action_T = (Il2CppClass *)sub_1C69B68(v14);
+  v16 = (System_Action_object__o *)sub_1C93D20(_5_System_Action_T);
   System_Action_object____ctor(
     v16,
     (Il2CppObject *)v10,
     (intptr_t)method->rgctx_data->_4_BgmManager___c__DisplayClass70_0_T___PauseBgmLocal_b__0,
-    (const MethodInfo_349D254 *)method->rgctx_data->_6_System_Action_T___ctor);
+    (const MethodInfo_34D4374 *)method->rgctx_data->_6_System_Action_T___ctor);
   BasicHelper__ForEach_object_(
     v13,
     (System_Action_T__o *)v16,
-    (const MethodInfo_315C348 *)method->rgctx_data->_7_BasicHelper_ForEach_T_);
+    (const MethodInfo_3190798 *)method->rgctx_data->_7_BasicHelper_ForEach_T_);
 }
 
 
@@ -1814,37 +1815,32 @@ void BgmManager__PlayBgm(
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  System_Nullable_float__o p_volumeNullable; // x0
-  BgmPlayArgsGroup_o *v12; // x0
-  System_Nullable_float__o v13; // x2
-  BgmPlayArgsGroup_o *v14; // x22
-  const MethodInfo *v15; // x2
+  BgmPlayArgsGroup_o *v11; // x22
+  const MethodInfo *v12; // x4
+  const MethodInfo *v13; // x2
   System_Nullable_float__o volumeNullable; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4CEDCB4 & 1) == 0 )
+  if ( (byte_4D30011 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&BgmPlayArgsGroup_TypeInfo);
-    sub_1C7BAE8(&Method_System_Nullable_float___ctor__);
-    byte_4CEDCB4 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&BgmPlayArgsGroup_TypeInfo);
+    sub_1C93AD4(&Method_System_Nullable_float___ctor__);
+    byte_4D30011 = 1;
   }
-  p_volumeNullable = (System_Nullable_float__o)&volumeNullable;
   volumeNullable = 0;
   System_Nullable_float____ctor(
-    p_volumeNullable,
+    (System_Nullable_float__o)&volumeNullable,
     volume,
-    (const MethodInfo_3967354 *)Method_System_Nullable_float___ctor__);
-  v12 = (BgmPlayArgsGroup_o *)sub_1C7BD34(BgmPlayArgsGroup_TypeInfo);
-  v13 = volumeNullable;
-  v14 = v12;
-  BgmPlayArgsGroup___ctor_41779496(v12, name, v13, fadeTime, startTime, 0);
+    (const MethodInfo_39A1F0C *)Method_System_Nullable_float___ctor__);
+  v11 = (BgmPlayArgsGroup_o *)sub_1C93D20(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor_41915192(v11, name, volumeNullable, fadeTime, startTime, v12);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_41761528(v14, finishCallback, v15);
+  BgmManager__PlayBgm_41915296(v11, finishCallback, v13);
 }
 
 
-void BgmManager__PlayBgm_41761528(
+void BgmManager__PlayBgm_41915296(
         BgmPlayArgsGroup_o *argsGroup,
         System_Action_o *finishCallback,
         const MethodInfo *method)
@@ -1854,13 +1850,13 @@ void BgmManager__PlayBgm_41761528(
   __int64 v7; // x1
   const MethodInfo *v8; // x4
 
-  if ( (byte_4CEDCB6 & 1) == 0 )
+  if ( (byte_4D30013 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCB6 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30013 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
@@ -1871,32 +1867,33 @@ void BgmManager__PlayBgm_41761528(
   else
   {
     if ( !Instance )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     BgmManager__PreloadAndPlayBgms((BgmManager_o *)Instance, argsGroup, finishCallback, 1, v8);
   }
 }
 
 
-void BgmManager__PlayBgm_41761724(
+void BgmManager__PlayBgm_41915492(
         MainBgmPlayArgs_o *main,
         SubBgmPlayArgs_array *subArray,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
   BgmPlayArgsGroup_o *v7; // x22
-  const MethodInfo *v8; // x2
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4CEDCB5 & 1) == 0 )
+  if ( (byte_4D30012 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&BgmPlayArgsGroup_TypeInfo);
-    byte_4CEDCB5 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&BgmPlayArgsGroup_TypeInfo);
+    byte_4D30012 = 1;
   }
-  v7 = (BgmPlayArgsGroup_o *)sub_1C7BD34(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor(v7, main, (BgmPlayArgs_array *)subArray, 0);
+  v7 = (BgmPlayArgsGroup_o *)sub_1C93D20(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor(v7, main, (BgmPlayArgs_array *)subArray, v8);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_41761528(v7, finishCallback, v8);
+  BgmManager__PlayBgm_41915296(v7, finishCallback, v9);
 }
 
 
@@ -1911,20 +1908,20 @@ void BgmManager__PlayJingle(
   __int64 v9; // x1
   const MethodInfo *v10; // x3
 
-  if ( (byte_4CEDCBF & 1) == 0 )
+  if ( (byte_4D3001C & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBF = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3001C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1C7BD40(v8, v9);
+      sub_1C93D2C(v8, v9);
     BgmManager__PlayJingleLocal((BgmManager_o *)Instance, name, volume, callbackFunc, v10);
   }
 }
@@ -1962,39 +1959,39 @@ void BgmManager__PlayJingleLocal(
   System_Action_o *v31; // x21
   const MethodInfo *v32; // x3
 
-  if ( (byte_4CEDCD3 & 1) == 0 )
+  if ( (byte_4D30030 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass71_0_TypeInfo);
-    byte_4CEDCD3 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass71_0_TypeInfo);
+    byte_4D30030 = 1;
   }
-  v9 = sub_1C7BD34(BgmManager___c__DisplayClass71_0_TypeInfo);
-  BgmManager___c__DisplayClass71_0___ctor((BgmManager___c__DisplayClass71_0_o *)v9, 0);
+  v9 = sub_1C93D20(BgmManager___c__DisplayClass71_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C7BD40(v10, v11);
+    sub_1C93D2C(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = name;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)name, v18, v19, v20, v21, v22, v23);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)name, v18, v19, v20, v21, v22, v23);
   *(float *)(v9 + 32) = volume;
   *(_QWORD *)(v9 + 40) = callbackFunc;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)callbackFunc, v24, v25, v26, v27, v28, v29);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)callbackFunc, v24, v25, v26, v27, v28, v29);
   v30 = *(System_String_o **)(v9 + 24);
-  v31 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v31, (Il2CppObject *)v9, Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__, 0);
   BgmManager__PreloadBgm(this, v30, v31, v32);
 }
 
 
-void BgmManager__PlayJingle_41765692(System_String_o *name, float volume, const MethodInfo *method)
+void BgmManager__PlayJingle_41919892(System_String_o *name, float volume, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4CEDCC0 & 1) == 0 )
+  if ( (byte_4D3001D & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    byte_4CEDCC0 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    byte_4D3001D = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -2006,14 +2003,14 @@ void BgmManager__PlayMainBgm(MainBgmPlayArgs_o *args, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CEDCB7 & 1) == 0 )
+  if ( (byte_4D30014 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    byte_4CEDCB7 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    byte_4D30014 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_41761724(args, 0, 0, v2);
+  BgmManager__PlayBgm_41915492(args, 0, 0, v2);
 }
 
 
@@ -2033,20 +2030,20 @@ void BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo *method)
   System_Object_array *v14; // x21
   unsigned __int64 v15; // x22
 
-  if ( (byte_4CEDCCB & 1) == 0 )
+  if ( (byte_4D30028 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    byte_4CEDCCB = 1;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+    byte_4D30028 = 1;
   }
   cacheArgsGroup = this->fields.cacheArgsGroup;
   if ( cacheArgsGroup )
   {
-    v4 = BgmPlayArgsGroup__AllArgsListNullExcluded(cacheArgsGroup, 0);
+    v4 = BgmPlayArgsGroup__AllArgsListNullExcluded(cacheArgsGroup, method);
     v5 = System_Linq_Enumerable__ToArray_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v4,
-           (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+           (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
     if ( !v5 )
-      sub_1C7BD40(0, v6);
+      sub_1C93D2C(0, v6);
     max_length = v5->max_length;
     v14 = v5;
     if ( (int)max_length >= 1 )
@@ -2055,7 +2052,7 @@ void BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo *method)
       do
       {
         if ( v15 >= (unsigned int)max_length )
-          sub_1C7BD48(v5);
+          sub_1C93D34(v5);
         BgmManager__PlayPreloadedBgm(this, (BgmPlayArgs_o *)v14->m_Items[v15], v7);
         LODWORD(max_length) = v14->max_length;
         ++v15;
@@ -2063,7 +2060,7 @@ void BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo *method)
       while ( (__int64)v15 < (int)max_length );
     }
     this->fields.cacheArgsGroup = 0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cacheArgsGroup, 0, (int32_t)v7, v8, v9, v10, v11, v12);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.cacheArgsGroup, 0, (int32_t)v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -2079,11 +2076,11 @@ void BgmManager__PlayPreloadedBgm(BgmManager_o *this, BgmPlayArgs_o *args, const
   __int64 v11; // x11
   void *mainBgmPlayer; // x0
 
-  if ( (byte_4CEDCCC & 1) == 0 )
+  if ( (byte_4D30029 & 1) == 0 )
   {
-    sub_1C7BAE8(&MainBgmPlayArgs_TypeInfo);
-    sub_1C7BAE8(&SubBgmPlayArgs_TypeInfo);
-    byte_4CEDCCC = 1;
+    sub_1C93AD4(&MainBgmPlayArgs_TypeInfo);
+    sub_1C93AD4(&SubBgmPlayArgs_TypeInfo);
+    byte_4D30029 = 1;
   }
   if ( args )
   {
@@ -2111,7 +2108,7 @@ void BgmManager__PlayPreloadedBgm(BgmManager_o *this, BgmPlayArgs_o *args, const
           mainBgmPlayer = BgmManager__GetOrCreateSubBgmPlayer(this, BgmName_k__BackingField, v7);
         }
         if ( !mainBgmPlayer )
-          sub_1C7BD40(0, v6);
+          sub_1C93D2C(0, v6);
         (*(void (__fastcall **)(void *, System_String_o *, int64_t, _QWORD, float, float))(*(_QWORD *)mainBgmPlayer
                                                                                          + 456LL))(
           mainBgmPlayer,
@@ -2151,25 +2148,25 @@ void BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo *method)
   System_Action_o *v23; // x22
   const MethodInfo *v24; // x3
 
-  if ( (byte_4CEDCB8 & 1) == 0 )
+  if ( (byte_4D30015 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass36_0_TypeInfo);
-    byte_4CEDCB8 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass36_0_TypeInfo);
+    byte_4D30015 = 1;
   }
-  v3 = sub_1C7BD34(BgmManager___c__DisplayClass36_0_TypeInfo);
-  BgmManager___c__DisplayClass36_0___ctor((BgmManager___c__DisplayClass36_0_o *)v3, 0);
+  v3 = sub_1C93D20(BgmManager___c__DisplayClass36_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_10;
   *(_QWORD *)(v3 + 24) = args;
   v12 = v3 + 24;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)args, v6, v7, v8, v9, v10, v11);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)args, v6, v7, v8, v9, v10, v11);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   *(_QWORD *)(v3 + 16) = Instance;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)Instance, v14, v15, v16, v17, v18, v19);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)Instance, v14, v15, v16, v17, v18, v19);
   v20 = *(UnityEngine_Object_o **)(v3 + 16);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2180,7 +2177,7 @@ void BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo *method)
     {
       v21 = *(System_String_o **)(*(_QWORD *)v12 + 16LL);
       v22 = *(BgmManager_o **)(v3 + 16);
-      v23 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+      v23 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
       System_Action___ctor(v23, (Il2CppObject *)v3, Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__, 0);
       if ( v22 )
       {
@@ -2189,7 +2186,7 @@ void BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo *method)
       }
     }
 LABEL_10:
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   }
 }
 
@@ -2203,7 +2200,7 @@ void BgmManager__PreloadAndPlayBgms(
 {
   __int64 v9; // x19
   BgmPlayArgsGroup_o *v10; // x0
-  __int64 v11; // x1
+  const MethodInfo *v11; // x1
   int32_t v12; // w2
   int32_t v13; // w3
   System_String_o *v14; // x4
@@ -2278,54 +2275,54 @@ void BgmManager__PreloadAndPlayBgms(
   int64_t v83; // x6
   System_String_o *v84; // x7
 
-  if ( (byte_4CEDCCA & 1) == 0 )
+  if ( (byte_4D30027 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action___TypeInfo);
-    sub_1C7BAE8(&System_Action_Action__TypeInfo);
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&ChainableActionParallel_TypeInfo);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Action_Action___Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Action_Action___ToArray__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Action_Action____ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_Action_Action___TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass57_0__PreloadAndPlayBgms_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass57_0_TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass57_1__PreloadAndPlayBgms_b__1__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass57_1_TypeInfo);
-    byte_4CEDCCA = 1;
+    sub_1C93AD4(&System_Action___TypeInfo);
+    sub_1C93AD4(&System_Action_Action__TypeInfo);
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&ChainableActionParallel_TypeInfo);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Action_Action___Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Action_Action___ToArray__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Action_Action____ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_Action_Action___TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass57_0__PreloadAndPlayBgms_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass57_0_TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass57_1__PreloadAndPlayBgms_b__1__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass57_1_TypeInfo);
+    byte_4D30027 = 1;
   }
-  v9 = sub_1C7BD34(BgmManager___c__DisplayClass57_0_TypeInfo);
-  BgmManager___c__DisplayClass57_0___ctor((BgmManager___c__DisplayClass57_0_o *)v9, 0);
+  v9 = sub_1C93D20(BgmManager___c__DisplayClass57_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_24;
   *(_QWORD *)(v9 + 16) = this;
   v18 = isPlay;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = argsGroup;
   v19 = (BgmPlayArgsGroup_o **)(v9 + 24);
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)argsGroup, v20, v21, v22, v23, v24, v25);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)argsGroup, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v9 + 48) = finishCallback;
   *(_BYTE *)(v9 + 32) = v18;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)finishCallback, v26, v27, v28, v29, v30, v31);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)finishCallback, v26, v27, v28, v29, v30, v31);
   v38 = *(struct BgmPlayArgsGroup_o **)(v9 + 24);
   if ( v38 )
   {
     this->fields.cacheArgsGroup = v38;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.cacheArgsGroup, (int32_t)v38, v32, v33, v34, v35, v36, v37);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.cacheArgsGroup, (int32_t)v38, v32, v33, v34, v35, v36, v37);
     v10 = *v19;
     if ( !*v19 )
       goto LABEL_24;
-    v39 = BgmPlayArgsGroup__AllArgsListNullExcluded(v10, 0);
+    v39 = BgmPlayArgsGroup__AllArgsListNullExcluded(v10, v11);
     v40 = System_Linq_Enumerable__ToArray_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)v39,
-            (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+            (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
     *(_QWORD *)(v9 + 40) = v40;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)v40, v41, v42, v43, v44, v45, v46);
-    v47 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_Action_Action___TypeInfo);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)v40, v41, v42, v43, v44, v45, v46);
+    v47 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_Action_Action___TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v47,
-      (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_Action_Action____ctor__);
+      (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_Action_Action____ctor__);
     v48 = *(_QWORD *)(v9 + 40);
     if ( !v48 )
       goto LABEL_24;
@@ -2334,18 +2331,18 @@ void BgmManager__PreloadAndPlayBgms(
       v49 = 0;
       while ( 1 )
       {
-        v50 = sub_1C7BD34(BgmManager___c__DisplayClass57_1_TypeInfo);
-        BgmManager___c__DisplayClass57_1___ctor((BgmManager___c__DisplayClass57_1_o *)v50, 0);
+        v50 = sub_1C93D20(BgmManager___c__DisplayClass57_1_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v50, 0);
         if ( !v50 )
           break;
         *(_QWORD *)(v50 + 24) = v9;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v50 + 24), v9, v51, v52, v53, v54, v55, v56);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v50 + 24), v9, v51, v52, v53, v54, v55, v56);
         if ( v49 >= *(unsigned int *)(v48 + 24) )
           goto LABEL_25;
         v63 = *(_QWORD *)(v48 + 32 + 8 * v49);
         *(_QWORD *)(v50 + 16) = v63;
-        sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v50 + 16), v63, v57, v58, v59, v60, v61, v62);
-        v64 = (System_Action_object__o *)sub_1C7BD34(System_Action_Action__TypeInfo);
+        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v50 + 16), v63, v57, v58, v59, v60, v61, v62);
+        v64 = (System_Action_object__o *)sub_1C93D20(System_Action_Action__TypeInfo);
         System_Action_object____ctor(
           v64,
           (Il2CppObject *)v50,
@@ -2364,39 +2361,39 @@ void BgmManager__PreloadAndPlayBgms(
           System_Collections_Generic_List_object___AddWithResize(
             v47,
             (Il2CppObject *)v64,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
         }
         else
         {
           v74 = &items->obj.klass + size;
           v47->fields._size = size + 1;
           v74[4] = (Il2CppClass *)v64;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v74 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v74 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
         }
         if ( (__int64)++v49 >= *(int *)(v48 + 24) )
           goto LABEL_17;
       }
 LABEL_24:
-      sub_1C7BD40(v10, v11);
+      sub_1C93D2C(v10, v11);
     }
 LABEL_17:
     if ( !v47 )
       goto LABEL_24;
     v75 = System_Collections_Generic_List_object___ToArray(
             v47,
-            (const MethodInfo_3840954 *)Method_System_Collections_Generic_List_Action_Action___ToArray__);
-    v76 = (ChainableActionParallel_o *)sub_1C7BD34(ChainableActionParallel_TypeInfo);
-    ChainableActionParallel___ctor_49560952(v76, (System_Action_Action__array *)v75, 0);
-    v77 = sub_1C7BB90(System_Action___TypeInfo, 1);
-    v78 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+            (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_Action_Action___ToArray__);
+    v76 = (ChainableActionParallel_o *)sub_1C93D20(ChainableActionParallel_TypeInfo);
+    ChainableActionParallel___ctor_49765204(v76, (System_Action_Action__array *)v75, 0);
+    v77 = sub_1C93B7C(System_Action___TypeInfo, 1);
+    v78 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v78, (Il2CppObject *)v9, Method_BgmManager___c__DisplayClass57_0__PreloadAndPlayBgms_b__0__, 0);
     if ( !v77 )
       goto LABEL_24;
     if ( !*(_DWORD *)(v77 + 24) )
 LABEL_25:
-      sub_1C7BD48(v10);
+      sub_1C93D34(v10);
     *(_QWORD *)(v77 + 32) = v78;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v77 + 32), (int32_t)v78, v79, v80, v81, v82, v83, v84);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v77 + 32), (int32_t)v78, v79, v80, v81, v82, v83, v84);
     if ( !v76 )
       goto LABEL_24;
     v10 = (BgmPlayArgsGroup_o *)ChainableActionBase__Final((ChainableActionBase_o *)v76, (System_Action_array *)v77, 0);
@@ -2454,35 +2451,35 @@ bool BgmManager__PreloadBgm(
   const MethodInfo *v41; // x3
   System_Collections_IEnumerator_o *v42; // x0
 
-  if ( (byte_4CEDCCD & 1) == 0 )
+  if ( (byte_4D3002A & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Insert__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass61_0_TypeInfo);
-    byte_4CEDCCD = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Insert__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Remove__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass61_0_TypeInfo);
+    byte_4D3002A = 1;
   }
-  v7 = sub_1C7BD34(BgmManager___c__DisplayClass61_0_TypeInfo);
-  BgmManager___c__DisplayClass61_0___ctor((BgmManager___c__DisplayClass61_0_o *)v7, 0);
+  v7 = sub_1C93D20(BgmManager___c__DisplayClass61_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_14;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 40) = finishCallback;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)finishCallback, v16, v17, v18, v19, v20, v21);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)finishCallback, v16, v17, v18, v19, v20, v21);
   CueName = BgmManager__ExtractCueName(v22, name, v23);
   *(_QWORD *)(v7 + 24) = CueName;
   v25 = (Il2CppObject **)(v7 + 24);
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)CueName, v26, v27, v28, v29, v30, v31);
-  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)CueName, v26, v27, v28, v29, v30, v31);
+  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CueSheet = SoundManager__GetCueSheet(Instance, *(System_String_o **)(v7 + 24), 0);
   *(_QWORD *)(v7 + 16) = CueSheet;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)CueSheet, v33, v34, v35, v36, v37, v38);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)CueSheet, v33, v34, v35, v36, v37, v38);
   IsNullOrEmpty = System_String__IsNullOrEmpty(*(System_String_o **)(v7 + 16), 0);
   if ( !IsNullOrEmpty )
   {
@@ -2492,7 +2489,7 @@ bool BgmManager__PreloadBgm(
       if ( !System_Collections_Generic_List_object___Contains(
               (System_Collections_Generic_List_object__o *)Instance,
               *v25,
-              (const MethodInfo_383F18C *)Method_System_Collections_Generic_List_string__Contains__) )
+              (const MethodInfo_3879D2C *)Method_System_Collections_Generic_List_string__Contains__) )
       {
 LABEL_12:
         ActionExtensions__Call(*(System_Action_o **)(v7 + 40), 0);
@@ -2504,7 +2501,7 @@ LABEL_12:
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)Instance,
           *v25,
-          (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_string__Remove__);
+          (const MethodInfo_387AEC4 *)Method_System_Collections_Generic_List_string__Remove__);
         Instance = (SoundManager_o *)this->fields.addBindList;
         if ( Instance )
         {
@@ -2512,18 +2509,18 @@ LABEL_12:
             (System_Collections_Generic_List_object__o *)Instance,
             0,
             *v25,
-            (const MethodInfo_383FBAC *)Method_System_Collections_Generic_List_string__Insert__);
+            (const MethodInfo_387A74C *)Method_System_Collections_Generic_List_string__Insert__);
           goto LABEL_12;
         }
       }
     }
 LABEL_14:
-    sub_1C7BD40(Instance, v9);
+    sub_1C93D2C(Instance, v9);
   }
-  v40 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)v7, Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__, 0);
   v42 = BgmManager__CoWaitSameAudioLoading(this, name, v40, v41);
-  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v42, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v42, 0);
   return !IsNullOrEmpty;
 }
 
@@ -2554,13 +2551,13 @@ void BgmManager__ReflectMasterVolumeLocal(BgmManager_o *this, const MethodInfo *
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CEDCC9 & 1) == 0 )
+  if ( (byte_4D30026 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
-    sub_1C7BAE8(&Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__);
-    sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCC9 = 1;
+    sub_1C93AD4(&System_Action_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    sub_1C93AD4(&Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__);
+    sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30026 = 1;
   }
   v3 = BgmManager___c_TypeInfo;
   bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
@@ -2578,18 +2575,18 @@ void BgmManager__ReflectMasterVolumeLocal(BgmManager_o *this, const MethodInfo *
       v3 = BgmManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__53_0 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayerBase__TypeInfo);
+    _9__53_0 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(_9__53_0, v6, Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__, 0);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__53_0 = (struct System_Action_BgmPlayerBase__o *)_9__53_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v8, v9, v10, v11, v12, v13);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v8, v9, v10, v11, v12, v13);
   }
   if ( !bgmPlayers )
-    sub_1C7BD40(v3, method);
+    sub_1C93D2C(v3, method);
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)_9__53_0,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -2600,7 +2597,7 @@ void BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, const MethodInf
   int32_t m_CancellationTokenSource; // w20
   BgmManager_c *v5; // x0
   System_Collections_Generic_HashSet_T__o *v6; // x20
-  __int64 v7; // x1
+  const MethodInfo *v7; // x1
   System_Collections_Generic_IEnumerable_T__o *UsingCueNames; // x0
   BgmManager_c *klass; // x8
   BgmManager_o *v10; // x21
@@ -2634,27 +2631,27 @@ void BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, const MethodInf
   System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+20h] [xbp-70h] BYREF
 
   v2 = (BgmManager_o **)this;
-  if ( (byte_4CEDCD7 & 1) == 0 )
+  if ( (byte_4D30034 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__get_Current__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_string__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_string__Contains__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_string__UnionWith__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_HashSet_string___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_HashSet_string__TypeInfo);
-    sub_1C7BAE8(&System_IDisposable_TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo);
-    sub_1C7BAE8(&System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo);
-    sub_1C7BAE8(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__RemoveAt__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (BgmManager_o *)sub_1C7BAE8(&SoundManager_TypeInfo);
-    byte_4CEDCD7 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__get_Current__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_string__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_string__Contains__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_string__UnionWith__);
+    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_string___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_HashSet_string__TypeInfo);
+    sub_1C93AD4(&System_IDisposable_TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo);
+    sub_1C93AD4(&System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo);
+    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__RemoveAt__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Item__);
+    this = (BgmManager_o *)sub_1C93AD4(&SoundManager_TypeInfo);
+    byte_4D30034 = 1;
   }
   memset(&v38, 0, sizeof(v38));
   v3 = v2[4];
@@ -2669,41 +2666,41 @@ void BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, const MethodInf
   }
   if ( m_CancellationTokenSource > v5->static_fields->ADD_BIND_MAX )
   {
-    v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C7BD34(System_Collections_Generic_HashSet_string__TypeInfo);
+    v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C93D20(System_Collections_Generic_HashSet_string__TypeInfo);
     System_Collections_Generic_HashSet_object____ctor(
       v6,
-      (const MethodInfo_36EFD64 *)Method_System_Collections_Generic_HashSet_string___ctor__);
+      (const MethodInfo_372B7CC *)Method_System_Collections_Generic_HashSet_string___ctor__);
     this = v2[8];
     if ( !this )
       goto LABEL_59;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v37,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
+      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
     v38 = v37;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v38,
-              (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__) )
+              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__) )
     {
       if ( !v38.fields._current )
-        sub_1C7BD40(0, v7);
+        sub_1C93D2C(0, v7);
       UsingCueNames = (System_Collections_Generic_IEnumerable_T__o *)BgmPlayerBase__GetUsingCueNames(
                                                                        (BgmPlayerBase_o *)v38.fields._current,
-                                                                       0);
+                                                                       v7);
       if ( !v6 )
-        sub_1C7BD40(UsingCueNames, UsingCueNames);
+        sub_1C93D2C(UsingCueNames, UsingCueNames);
       System_Collections_Generic_HashSet_object___UnionWith(
         v6,
         UsingCueNames,
-        (const MethodInfo_36F0F58 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
+        (const MethodInfo_372C9C0 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v38,
-      (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
+      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
     this = v2[10];
     if ( this )
     {
-      this = (BgmManager_o *)BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, 0);
+      this = (BgmManager_o *)BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, method);
       if ( !this )
         goto LABEL_59;
       klass = this->klass;
@@ -2724,11 +2721,11 @@ void BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, const MethodInf
       else
       {
 LABEL_19:
-        v13 = sub_1C51E70(this, System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, 0);
+        v13 = sub_1C69E5C(this, System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, 0);
       }
       v15 = (*(__int64 (__fastcall **)(BgmManager_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
       if ( !v15 )
-        sub_1C7BD40(0, v14);
+        sub_1C93D2C(0, v14);
       while ( 1 )
       {
         v16 = *(_QWORD *)v15;
@@ -2748,7 +2745,7 @@ LABEL_19:
         else
         {
 LABEL_26:
-          v19 = sub_1C51E70(v15, System_Collections_IEnumerator_TypeInfo, 0);
+          v19 = sub_1C69E5C(v15, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8)) & 1) == 0 )
           break;
@@ -2769,18 +2766,18 @@ LABEL_26:
         else
         {
 LABEL_33:
-          v23 = sub_1C51E70(v15, System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, 0);
+          v23 = sub_1C69E5C(v15, System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, 0);
         }
         v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v15, *(_QWORD *)(v23 + 8));
         if ( !v24 )
-          sub_1C7BD40(0, v25);
+          sub_1C93D2C(0, v25);
         CueName = (Il2CppObject *)BgmManager__ExtractCueName((BgmManager_o *)v24, *(System_String_o **)(v24 + 16), v26);
         if ( !v6 )
-          sub_1C7BD40(CueName, CueName);
+          sub_1C93D2C(CueName, CueName);
         System_Collections_Generic_HashSet_object___Add(
           v6,
           CueName,
-          (const MethodInfo_36F0F48 *)Method_System_Collections_Generic_HashSet_string__Add__);
+          (const MethodInfo_372C9B0 *)Method_System_Collections_Generic_HashSet_string__Add__);
       }
       v28 = *(_QWORD *)v15;
       v29 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
@@ -2799,14 +2796,14 @@ LABEL_33:
       else
       {
 LABEL_42:
-        v31 = sub_1C51E70(v15, System_IDisposable_TypeInfo, 0);
+        v31 = sub_1C69E5C(v15, System_IDisposable_TypeInfo, 0);
       }
       this = (BgmManager_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v15, *(_QWORD *)(v31 + 8));
     }
     v32 = (System_Collections_Generic_List_object__o *)v2[4];
     if ( !v32 )
 LABEL_59:
-      sub_1C7BD40(this, method);
+      sub_1C93D2C(this, method);
     v33 = v32->fields._size - 1;
     if ( v33 >= 1 )
     {
@@ -2815,13 +2812,13 @@ LABEL_59:
         this = (BgmManager_o *)System_Collections_Generic_List_object___get_Item(
                                  v32,
                                  v33,
-                                 (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                 (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( !v6 )
           break;
         this = (BgmManager_o *)System_Collections_Generic_HashSet_object___Contains(
                                  v6,
                                  (Il2CppObject *)this,
-                                 (const MethodInfo_36F0458 *)Method_System_Collections_Generic_HashSet_string__Contains__);
+                                 (const MethodInfo_372BEC0 *)Method_System_Collections_Generic_HashSet_string__Contains__);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
           this = v2[4];
@@ -2830,7 +2827,7 @@ LABEL_59:
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)this,
                    v33,
-                   (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                   (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
           if ( !SoundManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
           SoundManager__releaseAudioAssetStorage((System_String_o *)Item, 0);
@@ -2840,7 +2837,7 @@ LABEL_59:
           System_Collections_Generic_List_object___RemoveAt(
             (System_Collections_Generic_List_object__o *)this,
             v33,
-            (const MethodInfo_38405D0 *)Method_System_Collections_Generic_List_string__RemoveAt__);
+            (const MethodInfo_387B170 *)Method_System_Collections_Generic_List_string__RemoveAt__);
           v35 = v2[4];
           if ( !v35 )
             goto LABEL_59;
@@ -2851,7 +2848,7 @@ LABEL_59:
             j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
             this = (BgmManager_o *)BgmManager_TypeInfo;
           }
-          if ( v36 <= *((_DWORD *)this[2].monitor + 6) )
+          if ( v36 <= *(_DWORD *)(*((_QWORD *)this + 23) + 24LL) )
             return;
         }
         if ( --v33 < 1 )
@@ -2871,20 +2868,20 @@ void BgmManager__Reset(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4CEDCAC & 1) == 0 )
+  if ( (byte_4D30009 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCAC = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30009 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C7BD40(v2, v3);
+      sub_1C93D2C(v2, v3);
     BgmManager__ResetLocal((BgmManager_o *)Instance, v3);
   }
 }
@@ -2904,13 +2901,13 @@ void BgmManager__ResetLocal(BgmManager_o *this, const MethodInfo *method)
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CEDCC7 & 1) == 0 )
+  if ( (byte_4D30024 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
-    sub_1C7BAE8(&Method_BgmManager___c__ResetLocal_b__51_0__);
-    sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCC7 = 1;
+    sub_1C93AD4(&System_Action_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    sub_1C93AD4(&Method_BgmManager___c__ResetLocal_b__51_0__);
+    sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30024 = 1;
   }
   v3 = BgmManager___c_TypeInfo;
   bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
@@ -2928,18 +2925,18 @@ void BgmManager__ResetLocal(BgmManager_o *this, const MethodInfo *method)
       v3 = BgmManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__51_0 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayerBase__TypeInfo);
+    _9__51_0 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(_9__51_0, v6, Method_BgmManager___c__ResetLocal_b__51_0__, 0);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__51_0 = (struct System_Action_BgmPlayerBase__o *)_9__51_0;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v8, v9, v10, v11, v12, v13);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v8, v9, v10, v11, v12, v13);
   }
   if ( !bgmPlayers )
-    sub_1C7BD40(v3, method);
+    sub_1C93D2C(v3, method);
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)_9__51_0,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -2951,12 +2948,12 @@ void BgmManager__SetMasterVolume(float volume, const MethodInfo *method)
   _BOOL8 v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CEDCB0 & 1) == 0 )
+  if ( (byte_4D3000D & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCB0 = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3000D = 1;
   }
   v3 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -2973,14 +2970,14 @@ void BgmManager__SetMasterVolume(float volume, const MethodInfo *method)
       static_fields = BgmManager_TypeInfo->static_fields;
     }
     static_fields->masterVolume = volume;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( !v6 )
     {
       if ( !Instance )
-        sub_1C7BD40(v6, v7);
+        sub_1C93D2C(v6, v7);
       BgmManager__ReflectMasterVolumeLocal((BgmManager_o *)Instance, v7);
     }
   }
@@ -2997,12 +2994,12 @@ void BgmManager__SetMute(bool isMute, const MethodInfo *method)
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CEDCAE & 1) == 0 )
+  if ( (byte_4D3000B & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCAE = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3000B = 1;
   }
   v3 = BgmManager_TypeInfo;
   v4 = isMute;
@@ -3020,14 +3017,14 @@ void BgmManager__SetMute(bool isMute, const MethodInfo *method)
       static_fields = BgmManager_TypeInfo->static_fields;
     }
     static_fields->isMute = v4;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( !v7 )
     {
       if ( !Instance )
-        sub_1C7BD40(v7, v8);
+        sub_1C93D2C(v7, v8);
       BgmManager__SetMuteLocal((BgmManager_o *)Instance, isMute, v9);
     }
   }
@@ -3036,26 +3033,26 @@ void BgmManager__SetMute(bool isMute, const MethodInfo *method)
 
 void BgmManager__SetMuteLocal(BgmManager_o *this, bool isMute, const MethodInfo *method)
 {
-  BgmManager___c__DisplayClass52_0_o *v5; // x21
+  __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
   System_Collections_Generic_List_object__o *bgmPlayers; // x19
   System_Action_object__o *v9; // x20
 
-  if ( (byte_4CEDCC8 & 1) == 0 )
+  if ( (byte_4D30025 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_BgmPlayerBase__TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass52_0__SetMuteLocal_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass52_0_TypeInfo);
-    byte_4CEDCC8 = 1;
+    sub_1C93AD4(&System_Action_BgmPlayerBase__TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass52_0__SetMuteLocal_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass52_0_TypeInfo);
+    byte_4D30025 = 1;
   }
-  v5 = (BgmManager___c__DisplayClass52_0_o *)sub_1C7BD34(BgmManager___c__DisplayClass52_0_TypeInfo);
-  BgmManager___c__DisplayClass52_0___ctor(v5, 0);
+  v5 = sub_1C93D20(BgmManager___c__DisplayClass52_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
-    || (v5->fields.isMute = isMute,
+    || (*(_BYTE *)(v5 + 16) = isMute,
         bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers,
-        v9 = (System_Action_object__o *)sub_1C7BD34(System_Action_BgmPlayerBase__TypeInfo),
+        v9 = (System_Action_object__o *)sub_1C93D20(System_Action_BgmPlayerBase__TypeInfo),
         System_Action_object____ctor(
           v9,
           (Il2CppObject *)v5,
@@ -3063,12 +3060,12 @@ void BgmManager__SetMuteLocal(BgmManager_o *this, bool isMute, const MethodInfo 
           0),
         !bgmPlayers) )
   {
-    sub_1C7BD40(v6, v7);
+    sub_1C93D2C(v6, v7);
   }
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)v9,
-    (const MethodInfo_383F83C *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -3078,33 +3075,33 @@ void BgmManager__StopAll(float fadeoutTime, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CEDCBB & 1) == 0 )
+  if ( (byte_4D30018 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBB = 1;
+    sub_1C93AD4(&Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30018 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C7BD40(v4, v5);
+      sub_1C93D2C(v4, v5);
     if ( fadeoutTime <= 0.0 )
       BgmManager__StopBgmLocal_object_(
         (BgmManager_o *)Instance,
         0,
-        (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
+        (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
     else
       BgmManager__FadeoutBgmLocal_object_(
         (BgmManager_o *)Instance,
         fadeoutTime,
         0,
-        (const MethodInfo_3161D20 *)Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
+        (const MethodInfo_3196170 *)Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
   }
 }
 
@@ -3120,37 +3117,37 @@ void BgmManager__StopBgm(
   __int64 v9; // x1
   bool v10; // w22
 
-  if ( (byte_4CEDCBA & 1) == 0 )
+  if ( (byte_4D30017 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBA = 1;
+    sub_1C93AD4(&Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30017 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1C7BD40(v8, v9);
+      sub_1C93D2C(v8, v9);
     if ( fadeoutTime <= 0.0 )
     {
       v10 = BgmManager__StopBgmLocal_object_(
               (BgmManager_o *)Instance,
               name,
-              (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
+              (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
       if ( name && !v10 )
         return;
       if ( SLODWORD(Instance[4].monitor) <= 0 )
         BgmManager__StopBgmLocal_object_(
           (BgmManager_o *)Instance,
           0,
-          (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+          (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
     }
     else
     {
@@ -3158,7 +3155,7 @@ void BgmManager__StopBgm(
               (BgmManager_o *)Instance,
               fadeoutTime,
               name,
-              (const MethodInfo_3161D20 *)Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
+              (const MethodInfo_3196170 *)Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
       if ( name && !v10 )
         return;
       if ( SLODWORD(Instance[4].monitor) <= 0 )
@@ -3166,7 +3163,7 @@ void BgmManager__StopBgm(
           (BgmManager_o *)Instance,
           fadeoutTime,
           0,
-          (const MethodInfo_3161D20 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+          (const MethodInfo_3196170 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
     }
     if ( v10 )
       ActionExtensions__Call(successCallback, 0);
@@ -3174,16 +3171,16 @@ void BgmManager__StopBgm(
 }
 
 
-bool BgmManager__StopBgmLocal_object_(BgmManager_o *this, System_String_o *name, const MethodInfo_3161F0C *method)
+bool BgmManager__StopBgmLocal_object_(BgmManager_o *this, System_String_o *name, const MethodInfo_319635C *method)
 {
-  const MethodInfo_316194C **rgctx_data; // x8
+  const MethodInfo_3195D9C **rgctx_data; // x8
   System_Collections_Generic_IEnumerable_T__o *v7; // x20
   long double inited; // q0
   Il2CppClass *_4_BgmManager___c__68_T; // x8
   Il2CppClass *v10; // x0
   System_Func_object__bool__o *v11; // x21
   Il2CppClass *v12; // x0
-  const MethodInfo_3161F0C_RGCTXs *v13; // x8
+  const MethodInfo_319635C_RGCTXs *v13; // x8
   __int64 v14; // x0
   __int64 _3_System_Func_T__bool; // x8
   Il2CppObject *v16; // x22
@@ -3199,60 +3196,60 @@ bool BgmManager__StopBgmLocal_object_(BgmManager_o *this, System_String_o *name,
   System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v27; // x0
 
-  rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Any_bool___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_bool___);
-    rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_bool___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_bool___);
+    rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C51BD8(method);
-      rgctx_data = (const MethodInfo_316194C **)method->rgctx_data;
+      sub_1C69BC4(method);
+      rgctx_data = (const MethodInfo_3195D9C **)method->rgctx_data;
     }
   }
   v7 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, name, *rgctx_data);
   _4_BgmManager___c__68_T = method->rgctx_data->_4_BgmManager___c__68_T_;
   if ( (*(&_4_BgmManager___c__68_T->_2.bitflags2 + 2) & 1) == 0 )
-    _4_BgmManager___c__68_T = (Il2CppClass *)sub_1C51B7C(inited);
+    _4_BgmManager___c__68_T = (Il2CppClass *)sub_1C69B68(inited);
   if ( !_4_BgmManager___c__68_T->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(_4_BgmManager___c__68_T);
   v10 = method->rgctx_data->_4_BgmManager___c__68_T_;
   if ( (*(&v10->_2.bitflags2 + 2) & 1) == 0 )
-    v10 = (Il2CppClass *)sub_1C51B7C(inited);
+    v10 = (Il2CppClass *)sub_1C69B68(inited);
   v11 = (System_Func_object__bool__o *)*((_QWORD *)v10->static_fields + 1);
   if ( !v11 )
   {
     v12 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (*(&v12->_2.bitflags2 + 2) & 1) == 0 )
-      v12 = (Il2CppClass *)sub_1C51B7C(inited);
+      v12 = (Il2CppClass *)sub_1C69B68(inited);
     if ( !v12->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v12);
     v13 = method->rgctx_data;
     v14 = (__int64)v13->_4_BgmManager___c__68_T_;
     if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
     {
-      v14 = sub_1C51B7C(inited);
+      v14 = sub_1C69B68(inited);
       v13 = method->rgctx_data;
     }
     _3_System_Func_T__bool = (__int64)v13->_3_System_Func_T__bool_;
     v16 = **(Il2CppObject ***)(v14 + 184);
     if ( (*(_BYTE *)(_3_System_Func_T__bool + 309) & 1) == 0 )
-      _3_System_Func_T__bool = sub_1C51B7C(inited);
-    v11 = (System_Func_object__bool__o *)sub_1C7BD34(_3_System_Func_T__bool);
+      _3_System_Func_T__bool = sub_1C69B68(inited);
+    v11 = (System_Func_object__bool__o *)sub_1C93D20(_3_System_Func_T__bool);
     System_Func_object__bool____ctor(
       v11,
       v16,
       (intptr_t)method->rgctx_data->_5_BgmManager___c__68_T___StopBgmLocal_b__68_0,
-      (const MethodInfo_36CCF78 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
+      (const MethodInfo_3708F00 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
     v24 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (*(&v24->_2.bitflags2 + 2) & 1) == 0 )
-      v24 = (Il2CppClass *)sub_1C51B7C(v23);
+      v24 = (Il2CppClass *)sub_1C69B68(v23);
     *((_QWORD *)v24->static_fields + 1) = v11;
     v25 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (*(&v25->_2.bitflags2 + 2) & 1) == 0 )
-      v25 = (Il2CppClass *)sub_1C51B7C(v23);
-    sub_1C7BA8C(
+      v25 = (Il2CppClass *)sub_1C69B68(v23);
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)((char *)v25->static_fields + 8),
       (int32_t)v11,
       v17,
@@ -3265,11 +3262,11 @@ bool BgmManager__StopBgmLocal_object_(BgmManager_o *this, System_String_o *name,
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__bool_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v7,
                                                                (System_Func_TSource__TResult__o *)v11,
-                                                               (const MethodInfo_31A507C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
+                                                               (const MethodInfo_31D9C7C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
   v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_bool_(
                                                                v26,
-                                                               (const MethodInfo_31AEEB4 *)Method_System_Linq_Enumerable_ToArray_bool___);
-  return System_Linq_Enumerable__Any_bool_(v27, (const MethodInfo_317BA3C *)Method_System_Linq_Enumerable_Any_bool___);
+                                                               (const MethodInfo_31E39E8 *)Method_System_Linq_Enumerable_ToArray_bool___);
+  return System_Linq_Enumerable__Any_bool_(v27, (const MethodInfo_31AFF4C *)Method_System_Linq_Enumerable_Any_bool___);
 }
 
 
@@ -3279,25 +3276,25 @@ void BgmManager__StopJingle(const MethodInfo *method)
   _BOOL8 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CEDCC1 & 1) == 0 )
+  if ( (byte_4D3001E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_JinglePlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCC1 = 1;
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_JinglePlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D3001E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C7BD40(v2, v3);
+      sub_1C93D2C(v2, v3);
     BgmManager__StopBgmLocal_object_(
       (BgmManager_o *)Instance,
       0,
-      (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_JinglePlayer___);
+      (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_JinglePlayer___);
   }
 }
 
@@ -3308,33 +3305,33 @@ void BgmManager__StopSubBgm(System_String_o *name, float fadeoutTime, const Meth
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CEDCBC & 1) == 0 )
+  if ( (byte_4D30019 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCBC = 1;
+    sub_1C93AD4(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+    sub_1C93AD4(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30019 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     if ( fadeoutTime <= 0.0 )
       BgmManager__StopBgmLocal_object_(
         (BgmManager_o *)Instance,
         name,
-        (const MethodInfo_3161F0C *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+        (const MethodInfo_319635C *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
     else
       BgmManager__FadeoutBgmLocal_object_(
         (BgmManager_o *)Instance,
         fadeoutTime,
         name,
-        (const MethodInfo_3161D20 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+        (const MethodInfo_3196170 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
   }
 }
 
@@ -3380,25 +3377,25 @@ void BgmManager__StopUnrequestedSubBgm(
   int64_t v38; // x6
   System_String_o *v39; // x7
 
-  if ( (byte_4CEDCD2 & 1) == 0 )
+  if ( (byte_4D3002F & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_SubBgmPlayer__TypeInfo);
-    sub_1C7BAE8(&Method_BasicHelper_ForEach_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_ToArray_string___);
-    sub_1C7BAE8(&Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
-    sub_1C7BAE8(&System_Func_SubBgmPlayArgs__string__TypeInfo);
-    sub_1C7BAE8(&System_Func_SubBgmPlayer__bool__TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__);
-    sub_1C7BAE8(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass69_0__StopUnrequestedSubBgm_b__1__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass69_0_TypeInfo);
-    sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCD2 = 1;
+    sub_1C93AD4(&System_Action_SubBgmPlayer__TypeInfo);
+    sub_1C93AD4(&Method_BasicHelper_ForEach_SubBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_1C93AD4(&Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
+    sub_1C93AD4(&System_Func_SubBgmPlayArgs__string__TypeInfo);
+    sub_1C93AD4(&System_Func_SubBgmPlayer__bool__TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__);
+    sub_1C93AD4(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass69_0__StopUnrequestedSubBgm_b__1__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass69_0_TypeInfo);
+    sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D3002F = 1;
   }
-  v5 = sub_1C7BD34(BgmManager___c__DisplayClass69_0_TypeInfo);
-  BgmManager___c__DisplayClass69_0___ctor((BgmManager___c__DisplayClass69_0_o *)v5, 0);
+  v5 = sub_1C93D20(BgmManager___c__DisplayClass69_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( this->fields.enableCounter_KeepSubBgm <= 0 )
   {
     if ( !requestedBgmArgs )
@@ -3419,11 +3416,11 @@ void BgmManager__StopUnrequestedSubBgm(
         v9 = BgmManager___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__69_0 = (System_Func_object__object__o *)sub_1C7BD34(System_Func_SubBgmPlayArgs__string__TypeInfo);
+      _9__69_0 = (System_Func_object__object__o *)sub_1C93D20(System_Func_SubBgmPlayArgs__string__TypeInfo);
       System_Func_object__object____ctor(_9__69_0, v11, Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__, 0);
       static_fields = BgmManager___c_TypeInfo->static_fields;
       static_fields->__9__69_0 = (struct System_Func_SubBgmPlayArgs__string__o *)_9__69_0;
-      sub_1C7BA8C(
+      sub_1C93A78(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__69_0,
         (int32_t)_9__69_0,
         v13,
@@ -3436,19 +3433,19 @@ void BgmManager__StopUnrequestedSubBgm(
     v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)SubArgsList_k__BackingField,
                                                                  (System_Func_TSource__TResult__o *)_9__69_0,
-                                                                 (const MethodInfo_31A5F40 *)Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
+                                                                 (const MethodInfo_31DAB40 *)Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
     v6 = System_Linq_Enumerable__ToArray_object_(
            v19,
-           (const MethodInfo_31AF1E4 *)Method_System_Linq_Enumerable_ToArray_string___);
+           (const MethodInfo_31E3D18 *)Method_System_Linq_Enumerable_ToArray_string___);
     if ( !v5 )
 LABEL_19:
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     *(_QWORD *)(v5 + 16) = v6;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v6, v20, v21, v22, v23, v24, v25);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v6, v20, v21, v22, v23, v24, v25);
     v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                  (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                                 (const MethodInfo_319E9E0 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
-    v27 = (System_Func_object__bool__o *)sub_1C7BD34(System_Func_SubBgmPlayer__bool__TypeInfo);
+                                                                 (const MethodInfo_31D3358 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+    v27 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_SubBgmPlayer__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v27,
       (Il2CppObject *)v5,
@@ -3457,7 +3454,7 @@ LABEL_19:
     v28 = System_Linq_Enumerable__Where_object_(
             v26,
             (System_Func_TSource__bool__o *)v27,
-            (const MethodInfo_31B6300 *)Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
+            (const MethodInfo_31EB2BC *)Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
     v29 = BgmManager___c_TypeInfo;
     v30 = (System_Collections_Generic_IEnumerable_T__o *)v28;
     if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -3474,16 +3471,16 @@ LABEL_19:
         v29 = BgmManager___c_TypeInfo;
       }
       v32 = (Il2CppObject *)v29->static_fields->__9;
-      _9__69_2 = (System_Action_object__o *)sub_1C7BD34(System_Action_SubBgmPlayer__TypeInfo);
+      _9__69_2 = (System_Action_object__o *)sub_1C93D20(System_Action_SubBgmPlayer__TypeInfo);
       System_Action_object____ctor(_9__69_2, v32, Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__, 0);
       v33 = BgmManager___c_TypeInfo->static_fields;
       v33->__9__69_2 = (struct System_Action_SubBgmPlayer__o *)_9__69_2;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&v33->__9__69_2, (int32_t)_9__69_2, v34, v35, v36, v37, v38, v39);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v33->__9__69_2, (int32_t)_9__69_2, v34, v35, v36, v37, v38, v39);
     }
     BasicHelper__ForEach_object_(
       v30,
       (System_Action_T__o *)_9__69_2,
-      (const MethodInfo_315C348 *)Method_BasicHelper_ForEach_SubBgmPlayer___);
+      (const MethodInfo_3190798 *)Method_BasicHelper_ForEach_SubBgmPlayer___);
   }
 }
 
@@ -3497,7 +3494,7 @@ void BgmManager__WaitSameAudioLoading(
   System_Collections_IEnumerator_o *v5; // x1
 
   v5 = BgmManager__CoWaitSameAudioLoading(this, bgmName, finishCallback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71855340((UnityEngine_MonoBehaviour_o *)this, v5, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v5, 0);
 }
 
 
@@ -3507,7 +3504,7 @@ System_String_o *BgmManager__get_BgmName(BgmManager_o *this, const MethodInfo *m
 
   mainBgmPlayer = this->fields.mainBgmPlayer;
   if ( !mainBgmPlayer )
-    sub_1C7BD40(this, method);
+    sub_1C93D2C(this, method);
   return mainBgmPlayer->fields.bgmName;
 }
 
@@ -3519,20 +3516,20 @@ bool BgmManager__get_IsBusy(const MethodInfo *method)
   __int64 v3; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_4CEDCA8 & 1) == 0 )
+  if ( (byte_4D30005 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCA8 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30005 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
     return 0;
-  v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !v2 )
-    sub_1C7BD40(0, v3);
+    sub_1C93D2C(0, v3);
   return BgmManager__IsLoadingLocal((BgmManager_o *)v2, 0, v4);
 }
 
@@ -3541,10 +3538,10 @@ bool BgmManager__get_IsMute(const MethodInfo *method)
 {
   BgmManager_c *v1; // x0
 
-  if ( (byte_4CEDCAD & 1) == 0 )
+  if ( (byte_4D3000A & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager_TypeInfo);
-    byte_4CEDCAD = 1;
+    sub_1C93AD4(&BgmManager_TypeInfo);
+    byte_4D3000A = 1;
   }
   v1 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -3563,20 +3560,20 @@ bool BgmManager__isLoading(System_String_o *name, const MethodInfo *method)
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CEDCB3 & 1) == 0 )
+  if ( (byte_4D30010 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4CEDCB3 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    byte_4D30010 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C7BD40(v4, v5);
+    sub_1C93D2C(v4, v5);
   return BgmManager__IsLoadingLocal((BgmManager_o *)Instance, name, v6);
 }
 
@@ -3614,25 +3611,25 @@ bool BgmManager__CoWaitSameAudioLoading_d__63__MoveNext(
   int32_t v19; // w5
   int64_t v20; // x6
   System_String_o *v21; // x7
-  System_Func_bool__o *v22; // x21
-  UnityEngine_WaitWhile_o *v23; // x20
+  const MethodInfo *v22; // x2
+  System_Func_bool__o *v23; // x21
+  UnityEngine_WaitWhile_o *v24; // x20
   Il2CppObject **p__2__current; // x19
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  bool result; // w0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
   System_Action_o *finishCallback; // x0
 
-  if ( (byte_4CEDCE5 & 1) == 0 )
+  if ( (byte_4D3003E & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Func_bool__TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__);
-    sub_1C7BAE8(&BgmManager___c__DisplayClass63_0_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4CEDCE5 = 1;
+    sub_1C93AD4(&System_Func_bool__TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__);
+    sub_1C93AD4(&BgmManager___c__DisplayClass63_0_TypeInfo);
+    sub_1C93AD4(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4D3003E = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -3647,35 +3644,34 @@ LABEL_11:
   {
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    v5 = sub_1C7BD34(BgmManager___c__DisplayClass63_0_TypeInfo);
+    v5 = sub_1C93D20(BgmManager___c__DisplayClass63_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     if ( !v5
       || (v14 = this->fields.__4__this,
           *(_QWORD *)(v5 + 16) = v14,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v14, v8, v9, v10, v11, v12, v13),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v14, v8, v9, v10, v11, v12, v13),
           bgmName = this->fields.bgmName,
           *(_QWORD *)(v5 + 24) = bgmName,
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)bgmName, v16, v17, v18, v19, v20, v21),
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)bgmName, v16, v17, v18, v19, v20, v21),
           !_4__this) )
     {
-      sub_1C7BD40(v6, v7);
+      sub_1C93D2C(v6, v7);
     }
-    if ( BgmManager__IsLoadingLocal(_4__this, *(System_String_o **)(v5 + 24), 0) )
+    if ( BgmManager__IsLoadingLocal(_4__this, *(System_String_o **)(v5 + 24), v22) )
     {
-      v22 = (System_Func_bool__o *)sub_1C7BD34(System_Func_bool__TypeInfo);
+      v23 = (System_Func_bool__o *)sub_1C93D20(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
-        v22,
+        v23,
         (Il2CppObject *)v5,
         Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__,
         0);
-      v23 = (UnityEngine_WaitWhile_o *)sub_1C7BD34(UnityEngine_WaitWhile_TypeInfo);
-      UnityEngine_WaitWhile___ctor(v23, v22, 0);
-      this->fields.__2__current = (Il2CppObject *)v23;
+      v24 = (UnityEngine_WaitWhile_o *)sub_1C93D20(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v24, v23, 0);
+      this->fields.__2__current = (Il2CppObject *)v24;
       p__2__current = &this->fields.__2__current;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v23, v25, v26, v27, v28, v29, v30);
-      result = 1;
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v24, v26, v27, v28, v29, v30, v31);
       *((_DWORD *)p__2__current - 2) = 1;
-      return result;
+      return 1;
     }
     finishCallback = this->fields.finishCallback;
     goto LABEL_11;
@@ -3700,11 +3696,11 @@ void __noreturn BgmManager__CoWaitSameAudioLoading_d__63__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C7BAFC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C7BD34(v2);
+  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C7BAFC(&Method_BgmManager__CoWaitSameAudioLoading_d__63_System_Collections_IEnumerator_Reset__);
-  sub_1C7BC10(v3, v4);
+  v4 = sub_1C93AE8(&Method_BgmManager__CoWaitSameAudioLoading_d__63_System_Collections_IEnumerator_Reset__);
+  sub_1C93BFC(v3, v4);
 }
 
 
@@ -3734,15 +3730,15 @@ void BgmManager___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CEDCE0 & 1) == 0 )
+  if ( (byte_4D30039 & 1) == 0 )
   {
-    sub_1C7BAE8(&BgmManager___c_TypeInfo);
-    byte_4CEDCE0 = 1;
+    sub_1C93AD4(&BgmManager___c_TypeInfo);
+    byte_4D30039 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C7BD34(BgmManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C93D20(BgmManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BgmManager___c_TypeInfo->static_fields->__9 = (struct BgmManager___c_o *)v1;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)BgmManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -3763,7 +3759,7 @@ void BgmManager___c___ctor(BgmManager___c_o *this, const MethodInfo *method)
 bool BgmManager___c___FixedUpdate_b__78_0(BgmManager___c_o *this, GeneralBgmPlayer_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return BgmPlayerBase__IsPlaying((BgmPlayerBase_o *)x, (const MethodInfo *)x);
 }
 
@@ -3771,7 +3767,7 @@ bool BgmManager___c___FixedUpdate_b__78_0(BgmManager___c_o *this, GeneralBgmPlay
 void BgmManager___c___FixedUpdate_b__78_1(BgmManager___c_o *this, GeneralBgmPlayer_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(GeneralBgmPlayer_o *, __int64, const MethodInfo *))x->klass->vtable._11_StopBgm.methodPtr)(
     x,
     1,
@@ -3782,7 +3778,7 @@ void BgmManager___c___FixedUpdate_b__78_1(BgmManager___c_o *this, GeneralBgmPlay
 void BgmManager___c___FixedUpdate_b__78_2(BgmManager___c_o *this, BgmPlayerBase_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(BgmPlayerBase_o *, const MethodInfo *))x->klass->vtable._13_FixedUpdate.methodPtr)(
     x,
     x->klass->vtable._13_FixedUpdate.method);
@@ -3791,36 +3787,33 @@ void BgmManager___c___FixedUpdate_b__78_2(BgmManager___c_o *this, BgmPlayerBase_
 
 void BgmManager___c___FixedUpdate_b__78_3(BgmManager___c_o *this, BgmPlayArgs_o *x, const MethodInfo *method)
 {
-  System_Nullable_float__o p_fadeTime; // x0
-  const MethodInfo_39653E0 *v5; // x3
-  __int64 v6; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x5
-  System_Nullable_float__o v9; // x2
-  System_Nullable_float__o v10; // x1
-  System_Nullable_long__o v11; // [xsp+0h] [xbp-40h] BYREF
+  const MethodInfo_399FF98 *v4; // x3
+  __int64 v5; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x5
+  System_Nullable_long__o v8; // [xsp+0h] [xbp-40h] BYREF
   System_Nullable_float__o fadeTime; // [xsp+18h] [xbp-28h] BYREF
-  System_Nullable_long__o v13; // 0:x0.16
+  System_Nullable_long__o v10; // 0:x0.16
 
-  if ( (byte_4CEDCE1 & 1) == 0 )
+  if ( (byte_4D3003A & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Nullable_long___ctor__);
-    sub_1C7BAE8(&Method_System_Nullable_float___ctor__);
-    byte_4CEDCE1 = 1;
+    sub_1C93AD4(&Method_System_Nullable_long___ctor__);
+    sub_1C93AD4(&Method_System_Nullable_float___ctor__);
+    byte_4D3003A = 1;
   }
-  p_fadeTime = (System_Nullable_float__o)&fadeTime;
   fadeTime = 0;
-  *(_QWORD *)&v11.fields.hasValue = 0;
-  v11.fields.value = 0;
-  System_Nullable_float____ctor(p_fadeTime, 0.0, (const MethodInfo_3967354 *)Method_System_Nullable_float___ctor__);
-  *(_QWORD *)&v13.fields.hasValue = &v11;
-  v13.fields.value = 0;
-  System_Nullable_long____ctor(v13, Method_System_Nullable_long___ctor__, v5);
+  *(_QWORD *)&v8.fields.hasValue = 0;
+  v8.fields.value = 0;
+  System_Nullable_float____ctor(
+    (System_Nullable_float__o)&fadeTime,
+    0.0,
+    (const MethodInfo_39A1F0C *)Method_System_Nullable_float___ctor__);
+  *(_QWORD *)&v10.fields.hasValue = &v8;
+  v10.fields.value = 0;
+  System_Nullable_long____ctor(v10, Method_System_Nullable_long___ctor__, v4);
   if ( !x )
-    sub_1C7BD40(v6, v7);
-  v9 = fadeTime;
-  v10 = 0;
-  BgmPlayArgs__Update(x, v10, v9, v11, v8);
+    sub_1C93D2C(v5, v6);
+  BgmPlayArgs__Update(x, 0, fadeTime, v8, v7);
 }
 
 
@@ -3830,7 +3823,7 @@ bool BgmManager___c___GetOrCreateSubBgmPlayer_b__72_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return x->fields.bgmName == 0;
 }
 
@@ -3838,7 +3831,7 @@ bool BgmManager___c___GetOrCreateSubBgmPlayer_b__72_1(
 void BgmManager___c___InitializeLocal_b__50_0(BgmManager___c_o *this, BgmPlayerBase_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(BgmPlayerBase_o *, const MethodInfo *))x->klass->vtable._5_Initialize.methodPtr)(
     x,
     x->klass->vtable._5_Initialize.method);
@@ -3851,7 +3844,7 @@ void BgmManager___c___ReflectMasterVolumeLocal_b__53_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(BgmPlayerBase_o *, const MethodInfo *))x->klass->vtable._8_ReflectMasterVolume.methodPtr)(
     x,
     x->klass->vtable._8_ReflectMasterVolume.method);
@@ -3861,7 +3854,7 @@ void BgmManager___c___ReflectMasterVolumeLocal_b__53_0(
 void BgmManager___c___ResetLocal_b__51_0(BgmManager___c_o *this, BgmPlayerBase_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(BgmPlayerBase_o *, const MethodInfo *))x->klass->vtable._6_Reset.methodPtr)(
     x,
     x->klass->vtable._6_Reset.method);
@@ -3874,7 +3867,7 @@ System_String_o *BgmManager___c___StopUnrequestedSubBgm_b__69_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return x->fields._BgmName_k__BackingField;
 }
 
@@ -3885,7 +3878,7 @@ void BgmManager___c___StopUnrequestedSubBgm_b__69_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(SubBgmPlayer_o *, _QWORD, const MethodInfo *))x->klass->vtable._11_StopBgm.methodPtr)(
     x,
     0,
@@ -3893,7 +3886,7 @@ void BgmManager___c___StopUnrequestedSubBgm_b__69_2(
 }
 
 
-void BgmManager___c__54_object____cctor(const MethodInfo_333E508 *method)
+void BgmManager___c__54_object____cctor(const MethodInfo_3373DA8 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -3911,32 +3904,32 @@ void BgmManager___c__54_object____cctor(const MethodInfo_333E508 *method)
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C51B7C();
+    klass = sub_1C69B68();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C();
-  v4 = (Il2CppObject *)sub_1C7BD34(v3);
+    v3 = sub_1C69B68();
+  v4 = (Il2CppObject *)sub_1C93D20(v3);
   if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
-    sub_1C51B7C();
+    sub_1C69B68();
   System_Object___ctor(v4, 0);
   v11 = (__int64)method->klass;
   if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C51B7C();
+    v11 = sub_1C69B68();
   v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C51B7C();
+    v12 = sub_1C69B68();
   **(_QWORD **)(v12 + 184) = v4;
   v13 = (__int64)method->klass;
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C51B7C();
+    v13 = sub_1C69B68();
   v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C51B7C();
-  sub_1C7BA8C(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    v14 = sub_1C69B68();
+  sub_1C93A78(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
-void BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this, const MethodInfo_333E5C4 *method)
+void BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this, const MethodInfo_3373E64 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -3945,15 +3938,15 @@ void BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this, const Meth
 bool BgmManager___c__54_object____EnumeratePlayersHavingBgmName_b__54_0(
         BgmManager___c__54_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_333E5CC *method)
+        const MethodInfo_3373E6C *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return x[1].monitor != 0;
 }
 
 
-void BgmManager___c__68_object____cctor(const MethodInfo_333E838 *method)
+void BgmManager___c__68_object____cctor(const MethodInfo_33740D8 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -3971,32 +3964,32 @@ void BgmManager___c__68_object____cctor(const MethodInfo_333E838 *method)
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C51B7C();
+    klass = sub_1C69B68();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C();
-  v4 = (Il2CppObject *)sub_1C7BD34(v3);
+    v3 = sub_1C69B68();
+  v4 = (Il2CppObject *)sub_1C93D20(v3);
   if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
-    sub_1C51B7C();
+    sub_1C69B68();
   System_Object___ctor(v4, 0);
   v11 = (__int64)method->klass;
   if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C51B7C();
+    v11 = sub_1C69B68();
   v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C51B7C();
+    v12 = sub_1C69B68();
   **(_QWORD **)(v12 + 184) = v4;
   v13 = (__int64)method->klass;
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C51B7C();
+    v13 = sub_1C69B68();
   v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C51B7C();
-  sub_1C7BA8C(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    v14 = sub_1C69B68();
+  sub_1C93A78(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
-void BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this, const MethodInfo_333E8F4 *method)
+void BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this, const MethodInfo_3374194 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -4005,18 +3998,18 @@ void BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this, const Meth
 bool BgmManager___c__68_object____StopBgmLocal_b__68_0(
         BgmManager___c__68_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_333E8FC *method)
+        const MethodInfo_337419C *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
-  return ((__int64 (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))x->klass->vtable[11].methodPtr)(
+    sub_1C93D2C(this, 0);
+  return ((bool (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))x->klass->vtable[11].methodPtr)(
            x,
            0,
            x->klass->vtable[11].method);
 }
 
 
-void BgmManager___c__76_object____cctor(const MethodInfo_333E920 *method)
+void BgmManager___c__76_object____cctor(const MethodInfo_33741C0 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -4034,32 +4027,32 @@ void BgmManager___c__76_object____cctor(const MethodInfo_333E920 *method)
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C51B7C();
+    klass = sub_1C69B68();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C51B7C();
-  v4 = (Il2CppObject *)sub_1C7BD34(v3);
+    v3 = sub_1C69B68();
+  v4 = (Il2CppObject *)sub_1C93D20(v3);
   if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
-    sub_1C51B7C();
+    sub_1C69B68();
   System_Object___ctor(v4, 0);
   v11 = (__int64)method->klass;
   if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C51B7C();
+    v11 = sub_1C69B68();
   v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C51B7C();
+    v12 = sub_1C69B68();
   **(_QWORD **)(v12 + 184) = v4;
   v13 = (__int64)method->klass;
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C51B7C();
+    v13 = sub_1C69B68();
   v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C51B7C();
-  sub_1C7BA8C(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    v14 = sub_1C69B68();
+  sub_1C93A78(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
-void BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this, const MethodInfo_333E9DC *method)
+void BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this, const MethodInfo_337427C *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -4068,13 +4061,13 @@ void BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this, const Meth
 BgmPlayArgs_o *BgmManager___c__76_object____ExportPlayArgsGroupLocal_b__76_0(
         BgmManager___c__76_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_333E9E4 *method)
+        const MethodInfo_3374284 *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
-  return (BgmPlayArgs_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[12].methodPtr)(
-                            x,
-                            x->klass->vtable[12].method);
+    sub_1C93D2C(this, 0);
+  return ((BgmPlayArgs_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[12].methodPtr)(
+           x,
+           x->klass->vtable[12].method);
 }
 
 
@@ -4090,7 +4083,7 @@ bool BgmManager___c__DisplayClass29_0___ChangePlayerVolume_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return System_String__op_Equality(x->fields.bgmName, this->fields.bgmName, 0);
 }
 
@@ -4105,12 +4098,11 @@ void BgmManager___c__DisplayClass36_0___PlaySubBgm_b__0(
         BgmManager___c__DisplayClass36_0_o *this,
         const MethodInfo *method)
 {
-  BgmManager_o *ins; // x0
+  const MethodInfo *v2; // x2
 
-  ins = this->fields.ins;
-  if ( !ins )
-    sub_1C7BD40(0, method);
-  BgmManager__PlayPreloadedBgm(ins, (BgmPlayArgs_o *)this->fields.args, 0);
+  if ( !this->fields.ins )
+    sub_1C93D2C(this, method);
+  BgmManager__PlayPreloadedBgm(this->fields.ins, (BgmPlayArgs_o *)this->fields.args, v2);
 }
 
 
@@ -4126,7 +4118,7 @@ void BgmManager___c__DisplayClass52_0___SetMuteLocal_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   ((void (__fastcall *)(BgmPlayerBase_o *, bool, const MethodInfo *))x->klass->vtable._7_SetMute.methodPtr)(
     x,
     this->fields.isMute,
@@ -4136,7 +4128,7 @@ void BgmManager___c__DisplayClass52_0___SetMuteLocal_b__0(
 
 void BgmManager___c__DisplayClass54_0_object____ctor(
         BgmManager___c__DisplayClass54_0_T__o *this,
-        const MethodInfo_3343FC0 *method)
+        const MethodInfo_337988C *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -4145,10 +4137,10 @@ void BgmManager___c__DisplayClass54_0_object____ctor(
 bool BgmManager___c__DisplayClass54_0_object____EnumeratePlayersHavingBgmName_b__1(
         BgmManager___c__DisplayClass54_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_3343FC8 *method)
+        const MethodInfo_3379894 *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return System_String__op_Equality((System_String_o *)x[1].monitor, this->fields.bgmNameFilter, 0);
 }
 
@@ -4163,16 +4155,17 @@ void BgmManager___c__DisplayClass57_0___PreloadAndPlayBgms_b__0(
         BgmManager___c__DisplayClass57_0_o *this,
         const MethodInfo *method)
 {
+  const MethodInfo *v2; // x2
   struct BgmManager_o *_4__this; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  const MethodInfo *v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   struct BgmPlayArgs_array *nonNullArgsAll; // x20
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v12; // x21
+  unsigned __int64 v13; // x21
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -4180,7 +4173,7 @@ void BgmManager___c__DisplayClass57_0___PreloadAndPlayBgms_b__0(
   method = (const MethodInfo *)this->fields.argsGroup;
   if ( (const MethodInfo *)_4__this->fields.cacheArgsGroup == method )
   {
-    BgmManager__StopUnrequestedSubBgm(_4__this, (BgmPlayArgsGroup_o *)method, 0);
+    BgmManager__StopUnrequestedSubBgm(_4__this, (BgmPlayArgsGroup_o *)method, v2);
     if ( this->fields.isPlay )
     {
       nonNullArgsAll = this->fields.nonNullArgsAll;
@@ -4189,34 +4182,34 @@ void BgmManager___c__DisplayClass57_0___PreloadAndPlayBgms_b__0(
       max_length = nonNullArgsAll->max_length;
       if ( (int)max_length >= 1 )
       {
-        v12 = 0;
+        v13 = 0;
         while ( 1 )
         {
-          if ( v12 >= (unsigned int)max_length )
-            sub_1C7BD48(_4__this);
+          if ( v13 >= (unsigned int)max_length )
+            sub_1C93D34(_4__this);
           _4__this = this->fields.__4__this;
           if ( !_4__this )
             break;
-          BgmManager__PlayPreloadedBgm(_4__this, nonNullArgsAll->m_Items[v12], 0);
+          BgmManager__PlayPreloadedBgm(_4__this, nonNullArgsAll->m_Items[v13], v5);
           LODWORD(max_length) = nonNullArgsAll->max_length;
-          if ( (__int64)++v12 >= (int)max_length )
+          if ( (__int64)++v13 >= (int)max_length )
             goto LABEL_10;
         }
 LABEL_14:
-        sub_1C7BD40(_4__this, method);
+        sub_1C93D2C(_4__this, method);
       }
 LABEL_10:
       _4__this = this->fields.__4__this;
       if ( !_4__this )
         goto LABEL_14;
       _4__this->fields.cacheArgsGroup = 0;
-      sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&_4__this->fields.cacheArgsGroup, 0, v4, v5, v6, v7, v8, v9);
+      sub_1C93A78((GrandQuestFolderBoardItem_o *)&_4__this->fields.cacheArgsGroup, 0, (int32_t)v5, v6, v7, v8, v9, v10);
     }
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_14;
-  BgmManager__RemoveUnusedOldFromBindList(_4__this, 0);
+  BgmManager__RemoveUnusedOldFromBindList(_4__this, method);
   ActionExtensions__Call(this->fields.finishCallback, 0);
 }
 
@@ -4232,6 +4225,7 @@ void BgmManager___c__DisplayClass57_1___PreloadAndPlayBgms_b__1(
         System_Action_o *callback,
         const MethodInfo *method)
 {
+  const MethodInfo *v3; // x3
   struct BgmManager___c__DisplayClass57_0_o *CS___8__locals1; // x9
   struct BgmPlayArgs_o *args; // x8
 
@@ -4240,9 +4234,9 @@ void BgmManager___c__DisplayClass57_1___PreloadAndPlayBgms_b__1(
     || (args = this->fields.args) == 0
     || (this = (BgmManager___c__DisplayClass57_1_o *)CS___8__locals1->fields.__4__this) == 0 )
   {
-    sub_1C7BD40(this, callback);
+    sub_1C93D2C(this, callback);
   }
-  BgmManager__PreloadBgm((BgmManager_o *)this, args->fields._BgmName_k__BackingField, callback, 0);
+  BgmManager__PreloadBgm((BgmManager_o *)this, args->fields._BgmName_k__BackingField, callback, v3);
 }
 
 
@@ -4285,17 +4279,17 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4CEDCE2 & 1) == 0 )
+  if ( (byte_4D3003B & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C7BAE8(&SoundManager_TypeInfo);
-    sub_1C7BAE8(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__);
-    byte_4CEDCE2 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C93AD4(&SoundManager_TypeInfo);
+    sub_1C93AD4(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__);
+    byte_4D3003B = 1;
   }
   cueName = this->fields.cueName;
   this->fields.tempCueSheetName = cueName;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)cueName, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)cueName, v2, v3, v4, v5, v6, v7);
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (loadingBgmCueNameList = (System_Collections_Generic_List_object__o *)_4__this->fields.loadingBgmCueNameList) == 0
@@ -4305,7 +4299,7 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
         ++loadingBgmCueNameList->fields._version,
         !items) )
   {
-    sub_1C7BD40(loadingBgmCueNameList, v11);
+    sub_1C93D2C(loadingBgmCueNameList, v11);
   }
   size = loadingBgmCueNameList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -4313,23 +4307,23 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
     System_Collections_Generic_List_object___AddWithResize(
       loadingBgmCueNameList,
       v11,
-      *(const MethodInfo_383EDFC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_387999C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = &items->obj.klass + size;
     loadingBgmCueNameList->fields._size = size + 1;
     v22[4] = (Il2CppClass *)v11;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v11, v12, v13, v14, v15, v16, v17);
   }
   _9__1 = this->fields.__9__1;
   tempCueSheetName = this->fields.tempCueSheetName;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(_9__1, (Il2CppObject *)this, Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__, 0);
     this->fields.__9__1 = _9__1;
-    sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v25, v26, v27, v28, v29, v30);
+    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v25, v26, v27, v28, v29, v30);
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -4347,13 +4341,13 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
   struct BgmManager_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4CEDCE3 & 1) == 0 )
+  if ( (byte_4D3003C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Insert__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__Remove__);
-    this = (BgmManager___c__DisplayClass61_0_o *)sub_1C7BAE8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    byte_4CEDCE3 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Insert__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Remove__);
+    this = (BgmManager___c__DisplayClass61_0_o *)sub_1C93AD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    byte_4D3003C = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -4364,8 +4358,8 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
   System_Collections_Generic_List_object___Remove(
     (System_Collections_Generic_List_object__o *)this,
     (Il2CppObject *)v2->fields.cueName,
-    (const MethodInfo_3840324 *)Method_System_Collections_Generic_List_string__Remove__);
-  this = (BgmManager___c__DisplayClass61_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    (const MethodInfo_387AEC4 *)Method_System_Collections_Generic_List_string__Remove__);
+  this = (BgmManager___c__DisplayClass61_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !this )
     goto LABEL_14;
   this = (BgmManager___c__DisplayClass61_0_o *)SoundManager__GetCueSheet((SoundManager_o *)this, v2->fields.cueName, 0);
@@ -4380,7 +4374,7 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
     this = (BgmManager___c__DisplayClass61_0_o *)System_Collections_Generic_List_object___Contains(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    (Il2CppObject *)v2->fields.cueName,
-                                                   (const MethodInfo_383F18C *)Method_System_Collections_Generic_List_string__Contains__);
+                                                   (const MethodInfo_3879D2C *)Method_System_Collections_Generic_List_string__Contains__);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
       v5 = v2->fields.__4__this;
@@ -4393,12 +4387,12 @@ void BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
             (System_Collections_Generic_List_object__o *)this,
             0,
             (Il2CppObject *)v2->fields.cueName,
-            (const MethodInfo_383FBAC *)Method_System_Collections_Generic_List_string__Insert__);
+            (const MethodInfo_387A74C *)Method_System_Collections_Generic_List_string__Insert__);
           goto LABEL_13;
         }
       }
 LABEL_14:
-      sub_1C7BD40(this, method);
+      sub_1C93D2C(this, method);
     }
   }
 LABEL_13:
@@ -4416,18 +4410,17 @@ bool BgmManager___c__DisplayClass63_0___CoWaitSameAudioLoading_b__0(
         BgmManager___c__DisplayClass63_0_o *this,
         const MethodInfo *method)
 {
-  BgmManager_o *_4__this; // x0
+  const MethodInfo *v2; // x2
 
-  _4__this = this->fields.__4__this;
-  if ( !_4__this )
-    sub_1C7BD40(0, method);
-  return BgmManager__IsLoadingLocal(_4__this, this->fields.bgmName, 0);
+  if ( !this->fields.__4__this )
+    sub_1C93D2C(this, method);
+  return BgmManager__IsLoadingLocal(this->fields.__4__this, this->fields.bgmName, v2);
 }
 
 
 void BgmManager___c__DisplayClass67_0_object____ctor(
         BgmManager___c__DisplayClass67_0_T__o *this,
-        const MethodInfo_3344DB0 *method)
+        const MethodInfo_337A67C *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -4436,11 +4429,11 @@ void BgmManager___c__DisplayClass67_0_object____ctor(
 bool BgmManager___c__DisplayClass67_0_object____FadeoutBgmLocal_b__0(
         BgmManager___c__DisplayClass67_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_3344DB8 *method)
+        const MethodInfo_337A684 *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
-  return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, float))x->klass->vtable[10].methodPtr)(
+    sub_1C93D2C(this, 0);
+  return ((bool (__fastcall *)(Il2CppObject *, const MethodInfo *, float))x->klass->vtable[10].methodPtr)(
            x,
            x->klass->vtable[10].method,
            this->fields.fadeoutTime);
@@ -4461,23 +4454,23 @@ bool BgmManager___c__DisplayClass69_0___StopUnrequestedSubBgm_b__1(
   BgmManager___c__DisplayClass69_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4CEDCE4 & 1) == 0 )
+  if ( (byte_4D3003D & 1) == 0 )
   {
-    this = (BgmManager___c__DisplayClass69_0_o *)sub_1C7BAE8(&Method_System_Array_IndexOf_string___);
-    byte_4CEDCE4 = 1;
+    this = (BgmManager___c__DisplayClass69_0_o *)sub_1C93AD4(&Method_System_Array_IndexOf_string___);
+    byte_4D3003D = 1;
   }
   if ( !x )
-    sub_1C7BD40(this, x);
+    sub_1C93D2C(this, x);
   return (unsigned int)System_Array__IndexOf_object_(
                          (System_Object_array *)v4->fields.subBgmNamesToPlay,
                          (Il2CppObject *)x->fields.bgmName,
-                         (const MethodInfo_3275398 *)Method_System_Array_IndexOf_string___) >> 31;
+                         (const MethodInfo_32AB2EC *)Method_System_Array_IndexOf_string___) >> 31;
 }
 
 
 void BgmManager___c__DisplayClass70_0_object____ctor(
         BgmManager___c__DisplayClass70_0_T__o *this,
-        const MethodInfo_3346194 *method)
+        const MethodInfo_337BA60 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -4486,10 +4479,10 @@ void BgmManager___c__DisplayClass70_0_object____ctor(
 void BgmManager___c__DisplayClass70_0_object____PauseBgmLocal_b__0(
         BgmManager___c__DisplayClass70_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_334619C *method)
+        const MethodInfo_337BA68 *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   BgmPlayerBase__PauseBgm((BgmPlayerBase_o *)x, this->fields.isPause, 0);
 }
 
@@ -4508,8 +4501,8 @@ void BgmManager___c__DisplayClass71_0___PlayJingleLocal_b__0(
   const MethodInfo *v4; // x3
 
   _4__this = this->fields.__4__this;
-  if ( !_4__this || (_4__this = (BgmManager_o *)BgmManager__GetOrCreateJinglePlayer(_4__this, 0)) == 0 )
-    sub_1C7BD40(_4__this, method);
+  if ( !_4__this || (_4__this = (BgmManager_o *)BgmManager__GetOrCreateJinglePlayer(_4__this, method)) == 0 )
+    sub_1C93D2C(_4__this, method);
   JinglePlayer__PlayBgm(
     (JinglePlayer_o *)_4__this,
     this->fields.name,
@@ -4531,6 +4524,6 @@ bool BgmManager___c__DisplayClass72_0___GetOrCreateSubBgmPlayer_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C7BD40(this, 0);
+    sub_1C93D2C(this, 0);
   return System_String__op_Equality(x->fields.bgmName, this->fields.bgmName, 0);
 }

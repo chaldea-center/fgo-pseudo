@@ -1,9 +1,9 @@
 void FriendSearchMenu___ctor(FriendSearchMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CE91D9 & 1) == 0 )
+  if ( (byte_4D2B4AA & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseMenu_TypeInfo);
-    byte_4CE91D9 = 1;
+    sub_1C93AD4(&BaseMenu_TypeInfo);
+    byte_4D2B4AA = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -15,11 +15,11 @@ void FriendSearchMenu__BlockInput(FriendSearchMenu_o *this, const MethodInfo *me
 {
   UnityEngine_Component_o *searchDataInput; // x0
 
-  if ( (byte_4CE91D2 & 1) == 0 )
+  if ( (byte_4D2B4A3 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    byte_4CE91D2 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    byte_4D2B4A3 = 1;
   }
   if ( this->fields.state == 2 )
     this->fields.state = 3;
@@ -27,12 +27,12 @@ void FriendSearchMenu__BlockInput(FriendSearchMenu_o *this, const MethodInfo *me
   if ( !searchDataInput
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1C7BD40(searchDataInput, method);
+    sub_1C93D2C(searchDataInput, method);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)searchDataInput, 0, 0);
 }
@@ -51,10 +51,10 @@ void FriendSearchMenu__Callback(FriendSearchMenu_o *this, bool result, const Met
   {
     searchDataInput = this->fields.searchDataInput;
     if ( !searchDataInput )
-      sub_1C7BD40(0, result);
+      sub_1C93D2C(0, result);
     Text = UILineInput__GetText(searchDataInput, 0);
     *p_callbackFunc = 0;
-    sub_1C7BA8C(p_callbackFunc, 0);
+    sub_1C93A78(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, bool, System_String_o *, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
       result,
@@ -68,40 +68,40 @@ void FriendSearchMenu__Close(FriendSearchMenu_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  FriendSearchMenu__Close_33224580(this, 0, v2);
+  FriendSearchMenu__Close_33297444(this, 0, v2);
 }
 
 
-void FriendSearchMenu__Close_33224580(FriendSearchMenu_o *this, System_Action_o *callback, const MethodInfo *method)
+void FriendSearchMenu__Close_33297444(FriendSearchMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   __int64 v5; // x1
   UnityEngine_Component_o *searchDataInput; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4CE91D3 & 1) == 0 )
+  if ( (byte_4D2B4A4 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C7BAE8(&Method_FriendSearchMenu_EndClose__);
-    byte_4CE91D3 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C93AD4(&Method_FriendSearchMenu_EndClose__);
+    byte_4D2B4A4 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C7BA8C(&this->fields.closeCallbackFunc, callback);
+  sub_1C93A78(&this->fields.closeCallbackFunc, callback);
   searchDataInput = (UnityEngine_Component_o *)this->fields.searchDataInput;
   this->fields.state = 4;
   if ( !searchDataInput
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1C7BD40(searchDataInput, v5);
+    sub_1C93D2C(searchDataInput, v5);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)searchDataInput, 0, 0);
-  v7 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_FriendSearchMenu_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v7, 0);
 }
@@ -118,7 +118,7 @@ void FriendSearchMenu__EndClose(FriendSearchMenu_o *this, const MethodInfo *meth
   FriendSearchMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -126,7 +126,7 @@ void FriendSearchMenu__EndClose(FriendSearchMenu_o *this, const MethodInfo *meth
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C7BA8C(p_closeCallbackFunc, 0);
+    sub_1C93A78(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -137,14 +137,14 @@ void FriendSearchMenu__EndCopyDialog(FriendSearchMenu_o *this, bool isDecide, co
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CE91D6 & 1) == 0 )
+  if ( (byte_4D2B4A7 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CE91D6 = 1;
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2B4A7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C7BD40(0, v4);
+    sub_1C93D2C(0, v4);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -153,23 +153,23 @@ void FriendSearchMenu__EndOpen(FriendSearchMenu_o *this, const MethodInfo *metho
 {
   UnityEngine_Component_o *searchDataInput; // x0
 
-  if ( (byte_4CE91D1 & 1) == 0 )
+  if ( (byte_4D2B4A2 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    byte_4CE91D1 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    byte_4D2B4A2 = 1;
   }
   searchDataInput = (UnityEngine_Component_o *)this->fields.searchDataInput;
   this->fields.state = 2;
   if ( !searchDataInput
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
     || (searchDataInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        searchDataInput,
-                                                       (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
+                                                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1C7BD40(searchDataInput, method);
+    sub_1C93D2C(searchDataInput, method);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)searchDataInput, 1, 0);
 }
@@ -180,12 +180,12 @@ void FriendSearchMenu__Init(FriendSearchMenu_o *this, const MethodInfo *method)
   UILabel_o *title1Label; // x0
   UIInput_o *v4; // x20
 
-  if ( (byte_4CE91CF & 1) == 0 )
+  if ( (byte_4D2B4A0 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE91CF = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2B4A0 = 1;
   }
   title1Label = this->fields.title1Label;
   if ( !title1Label )
@@ -203,18 +203,18 @@ void FriendSearchMenu__Init(FriendSearchMenu_o *this, const MethodInfo *method)
   if ( !title1Label
     || (title1Label = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)title1Label,
-                                     (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
+                                     (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0
     || (v4 = (UIInput_o *)title1Label,
         UIInput__set_value((UIInput_o *)title1Label, (System_String_o *)StringLiteral_1/*""*/, 0),
         UIInput__set_defaultText(v4, (System_String_o *)StringLiteral_1/*""*/, 0),
         (title1Label = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                                       (UnityEngine_Component_o *)v4,
-                                      (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                      (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)title1Label, 0, 0),
         (title1Label = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_11:
-    sub_1C7BD40(title1Label, method);
+    sub_1C93D2C(title1Label, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)title1Label, 0, 0);
   this->fields.state = 0;
@@ -233,12 +233,12 @@ void FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, const Metho
   UILineInput_c *klass; // x8
   uint16_t Chars; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CE91D4 & 1) == 0 )
+  if ( (byte_4D2B4A5 & 1) == 0 )
   {
-    sub_1C7BAE8(&char_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE91D4 = 1;
+    sub_1C93AD4(&char_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2B4A5 = 1;
   }
   Chars = 0;
   searchDataInput = this->fields.searchDataInput;
@@ -260,7 +260,7 @@ void FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, const Metho
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v7 = System_Char__ToString((uint16_t)&Chars, 0);
-        v5 = System_String__Concat_64176912(v5, v7, 0);
+        v5 = System_String__Concat_64425724(v5, v7, 0);
       }
       ++v6;
     }
@@ -273,7 +273,7 @@ void FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, const Metho
       goto LABEL_25;
     searchDataInput = (UILineInput_o *)UnityEngine_Component__GetComponent_object_(
                                          (UnityEngine_Component_o *)searchDataInput,
-                                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                         (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !searchDataInput )
       goto LABEL_25;
     UIInput__set_value((UIInput_o *)searchDataInput, v5, 0);
@@ -299,7 +299,7 @@ void FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, const Metho
       }
     }
 LABEL_25:
-    sub_1C7BD40(searchDataInput, method);
+    sub_1C93D2C(searchDataInput, method);
   }
   searchDataInput = (UILineInput_o *)this->fields.decideButton;
   if ( !searchDataInput )
@@ -323,18 +323,18 @@ void FriendSearchMenu__OnClickCancel(FriendSearchMenu_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CE91D8 & 1) == 0 )
+  if ( (byte_4D2B4A9 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_FriendSearchMenu_OnClickCancel__);
-    byte_4CE91D8 = 1;
+    sub_1C93AD4(&Method_FriendSearchMenu_OnClickCancel__);
+    byte_4D2B4A9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FriendSearchMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_FriendSearchMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_FriendSearchMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_FriendSearchMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     FriendSearchMenu__Callback(this, 0, v5);
   }
@@ -353,23 +353,23 @@ void FriendSearchMenu__OnClickCopy(FriendSearchMenu_o *this, const MethodInfo *m
   System_String_o *v10; // x21
   NotificationDialog_ClickDelegate_o *v11; // x22
 
-  if ( (byte_4CE91D5 & 1) == 0 )
+  if ( (byte_4D2B4A6 & 1) == 0 )
   {
-    sub_1C7BAE8(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_1C7BAE8(&Method_FriendSearchMenu_EndCopyDialog__);
-    sub_1C7BAE8(&Method_FriendSearchMenu_OnClickCopy__);
-    sub_1C7BAE8(&UnityEngine_GUIUtility_TypeInfo);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C7BAE8(&StringLiteral_3839/*"COPY_MY_ID"*/);
-    byte_4CE91D5 = 1;
+    sub_1C93AD4(&NotificationDialog_ClickDelegate_TypeInfo);
+    sub_1C93AD4(&Method_FriendSearchMenu_EndCopyDialog__);
+    sub_1C93AD4(&Method_FriendSearchMenu_OnClickCopy__);
+    sub_1C93AD4(&UnityEngine_GUIUtility_TypeInfo);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C93AD4(&StringLiteral_3855/*"COPY_MY_ID"*/);
+    byte_4D2B4A6 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_FriendSearchMenu_OnClickCopy__;
     if ( (*((_BYTE *)Method_FriendSearchMenu_OnClickCopy__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_FriendSearchMenu_OnClickCopy__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_FriendSearchMenu_OnClickCopy__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     myAddressLabel = this->fields.myAddressLabel;
     if ( !myAddressLabel )
@@ -380,16 +380,16 @@ void FriendSearchMenu__OnClickCopy(FriendSearchMenu_o *this, const MethodInfo *m
     if ( !UnityEngine_GUIUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUIUtility_TypeInfo);
     UnityEngine_GUIUtility__set_systemCopyBuffer(mText, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3839/*"COPY_MY_ID"*/, 0);
-    v11 = (NotificationDialog_ClickDelegate_o *)sub_1C7BD34(NotificationDialog_ClickDelegate_TypeInfo);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3855/*"COPY_MY_ID"*/, 0);
+    v11 = (NotificationDialog_ClickDelegate_o *)sub_1C93D20(NotificationDialog_ClickDelegate_TypeInfo);
     NotificationDialog_ClickDelegate___ctor(v11, (Il2CppObject *)this, Method_FriendSearchMenu_EndCopyDialog__, 0);
     if ( !Instance )
 LABEL_15:
-      sub_1C7BD40(v5, v6);
-    CommonUI__OpenNotificationDialog_31485276(
+      sub_1C93D2C(v5, v6);
+    CommonUI__OpenNotificationDialog_31583416(
       (CommonUI_o *)Instance,
       0,
       v10,
@@ -422,24 +422,24 @@ void FriendSearchMenu__OnClickDecide(FriendSearchMenu_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4CE91D7 & 1) == 0 )
+  if ( (byte_4D2B4A8 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_FriendSearchMenu_OnClickDecide__);
-    byte_4CE91D7 = 1;
+    sub_1C93AD4(&Method_FriendSearchMenu_OnClickDecide__);
+    byte_4D2B4A8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     searchDataInput = this->fields.searchDataInput;
     if ( !searchDataInput )
-      sub_1C7BD40(0, method);
+      sub_1C93D2C(0, method);
     Text = UILineInput__GetText(searchDataInput, 0);
     this->fields.searchId = Text;
-    sub_1C7BA8C(&this->fields.searchId, Text);
+    sub_1C93A78(&this->fields.searchId, Text);
     this->fields.state = 3;
     v5 = Method_FriendSearchMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_FriendSearchMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C7BB00(Method_FriendSearchMenu_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C93AEC(Method_FriendSearchMenu_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     FriendSearchMenu__Callback(this, 1, v7);
   }
@@ -463,59 +463,59 @@ void FriendSearchMenu__Open(
   System_Action_o *v15; // x20
   const MethodInfo *v16; // x1
 
-  if ( (byte_4CE91D0 & 1) == 0 )
+  if ( (byte_4D2B4A1 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C7BAE8(&Method_FriendSearchMenu_EndOpen__);
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_6571/*"FRIEND_SEARCH_EXPLANATION"*/);
-    sub_1C7BAE8(&StringLiteral_6573/*"FRIEND_SEARCH_TITLE1"*/);
-    sub_1C7BAE8(&StringLiteral_6574/*"FRIEND_SEARCH_TITLE2"*/);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CE91D0 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C93AD4(&Method_FriendSearchMenu_EndOpen__);
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_6593/*"FRIEND_SEARCH_EXPLANATION"*/);
+    sub_1C93AD4(&StringLiteral_6595/*"FRIEND_SEARCH_TITLE1"*/);
+    sub_1C93AD4(&StringLiteral_6596/*"FRIEND_SEARCH_TITLE2"*/);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2B4A1 = 1;
   }
   if ( isCodeClear || !this->fields.searchId )
   {
     v7 = StringLiteral_1/*""*/;
     this->fields.searchId = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C7BA8C(&this->fields.searchId, v7);
+    sub_1C93A78(&this->fields.searchId, v7);
   }
   searchDataInput = this->fields.searchDataInput;
   if ( !searchDataInput )
     goto LABEL_24;
   searchDataInput = UnityEngine_Component__GetComponent_object_(
                       (UnityEngine_Component_o *)searchDataInput,
-                      (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                      (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIInput___);
   if ( !searchDataInput )
     goto LABEL_24;
   v9 = (UIInput_o *)searchDataInput;
   UIInput__set_value((UIInput_o *)searchDataInput, this->fields.searchId, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_6571/*"FRIEND_SEARCH_EXPLANATION"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_6593/*"FRIEND_SEARCH_EXPLANATION"*/, 0);
   UIInput__set_defaultText(v9, v10, 0);
   state = this->fields.state;
   if ( state == 3 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C7BA8C(&this->fields.callbackFunc, callback);
+    sub_1C93A78(&this->fields.callbackFunc, callback);
     FriendSearchMenu__EndOpen(this, v16);
   }
   else if ( !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C7BA8C(&this->fields.callbackFunc, callback);
+    sub_1C93A78(&this->fields.callbackFunc, callback);
     title1Label = this->fields.title1Label;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    searchDataInput = LocalizationManager__Get((System_String_o *)StringLiteral_6573/*"FRIEND_SEARCH_TITLE1"*/, 0);
+    searchDataInput = LocalizationManager__Get((System_String_o *)StringLiteral_6595/*"FRIEND_SEARCH_TITLE1"*/, 0);
     if ( title1Label )
     {
       UILabel__set_text(title1Label, (System_String_o *)searchDataInput, 0);
       title2Label = this->fields.title2Label;
-      searchDataInput = LocalizationManager__Get((System_String_o *)StringLiteral_6574/*"FRIEND_SEARCH_TITLE2"*/, 0);
+      searchDataInput = LocalizationManager__Get((System_String_o *)StringLiteral_6596/*"FRIEND_SEARCH_TITLE2"*/, 0);
       if ( title2Label )
       {
         UILabel__set_text(title2Label, (System_String_o *)searchDataInput, 0);
@@ -523,7 +523,7 @@ void FriendSearchMenu__Open(
         if ( searchDataInput )
         {
           myAddressLabel = this->fields.myAddressLabel;
-          searchDataInput = LocalizationManager__GetNumberFormat_41846716(
+          searchDataInput = LocalizationManager__GetNumberFormat_42000268(
                               *((System_String_o **)searchDataInput + 14),
                               0);
           if ( myAddressLabel )
@@ -531,7 +531,7 @@ void FriendSearchMenu__Open(
             UILabel__set_text(myAddressLabel, (System_String_o *)searchDataInput, 0);
             searchDataInput = UnityEngine_Component__GetComponent_object_(
                                 (UnityEngine_Component_o *)v9,
-                                (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___);
             if ( searchDataInput )
             {
               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)searchDataInput, 0, 0);
@@ -551,7 +551,7 @@ void FriendSearchMenu__Open(
                     0,
                     *(_QWORD *)(*(_QWORD *)searchDataInput + 544LL));
                   this->fields.state = 1;
-                  v15 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+                  v15 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
                   System_Action___ctor(v15, (Il2CppObject *)this, Method_FriendSearchMenu_EndOpen__, 0);
                   BaseMenu__Open((BaseMenu_o *)this, v15, 0);
                   return;
@@ -563,7 +563,7 @@ void FriendSearchMenu__Open(
       }
     }
 LABEL_24:
-    sub_1C7BD40(searchDataInput, callback);
+    sub_1C93D2C(searchDataInput, callback);
   }
 }
 
@@ -583,10 +583,10 @@ void FriendSearchMenu__add_callbackFunc(
   FriendSearchMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CE91CD & 1) == 0 )
+  if ( (byte_4D2B49E & 1) == 0 )
   {
-    sub_1C7BAE8(&FriendSearchMenu_CallbackFunc_TypeInfo);
-    byte_4CE91CD = 1;
+    sub_1C93AD4(&FriendSearchMenu_CallbackFunc_TypeInfo);
+    byte_4D2B49E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -599,13 +599,13 @@ void FriendSearchMenu__add_callbackFunc(
       if ( (FriendSearchMenu_CallbackFunc_c *)v8->klass != FriendSearchMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FriendSearchMenu_o *)sub_1C7C0DC(v8);
+  v11 = (FriendSearchMenu_o *)sub_1C940C8(v8);
   FriendSearchMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -624,10 +624,10 @@ void FriendSearchMenu__remove_callbackFunc(
   FriendSearchMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CE91CE & 1) == 0 )
+  if ( (byte_4D2B49F & 1) == 0 )
   {
-    sub_1C7BAE8(&FriendSearchMenu_CallbackFunc_TypeInfo);
-    byte_4CE91CE = 1;
+    sub_1C93AD4(&FriendSearchMenu_CallbackFunc_TypeInfo);
+    byte_4D2B49F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -640,14 +640,14 @@ void FriendSearchMenu__remove_callbackFunc(
       if ( (FriendSearchMenu_CallbackFunc_c *)v8->klass != FriendSearchMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CD78BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FriendSearchMenu_o *)sub_1C7C0DC(v8);
-  FriendSearchMenu__Init(v11, v12);
+  v11 = (FriendSearchMenu_o *)sub_1C940C8(v8);
+  FriendSearchMenu__EndOpen(v11, v12);
 }
 
 
@@ -666,15 +666,15 @@ void FriendSearchMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C7BA8C(&this->fields.m_target, object);
+  sub_1C93A78(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C7BBA8(method) & 1) == 0 )
+  if ( (sub_1C93B94(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C7BD5C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C7BC10(v10, 0);
+      v10 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C93BFC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -686,9 +686,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA9458;
+  this->fields.invoke_impl = (intptr_t)sub_1AC07BC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA9400;
+  this->fields.extra_arg = (intptr_t)sub_1AC0764;
 }
 
 
@@ -704,15 +704,15 @@ System_IAsyncResult_o *FriendSearchMenu_CallbackFunc__BeginInvoke(
   bool v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12[0] = result;
-  if ( (byte_4CE91DA & 1) == 0 )
+  if ( (byte_4D2B4AB & 1) == 0 )
   {
-    sub_1C7BAE8(&bool_TypeInfo);
-    byte_4CE91DA = 1;
+    sub_1C93AD4(&bool_TypeInfo);
+    byte_4D2B4AB = 1;
   }
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(bool_TypeInfo, v12);
   v11[1] = friendCode;
-  return (System_IAsyncResult_o *)sub_1C7BA9C(this, v11, callback, object);
+  return sub_1C93A88(this, v11, callback, object);
 }
 
 
@@ -721,7 +721,7 @@ void FriendSearchMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C7BAA0(result, 0, method);
+  sub_1C93A8C(result, 0, method);
 }
 
 

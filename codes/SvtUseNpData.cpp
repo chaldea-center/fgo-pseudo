@@ -1,4 +1,20 @@
 void SvtUseNpData___ctor(SvtUseNpData_o *this, const MethodInfo *method)
 {
+  int32_t v2; // w2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w1
+
+  if ( (byte_4D34A69 & 1) == 0 )
+  {
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D34A69 = 1;
+  }
+  v9 = StringLiteral_1/*""*/;
+  this->fields.ClosedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.ClosedMessage, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }

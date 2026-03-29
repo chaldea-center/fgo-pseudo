@@ -29,14 +29,14 @@ void PhotoCampaignListViewItemDraw__Awake(PhotoCampaignListViewItemDraw_o *this,
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
   v17 = this->fields.maskSprite;
   if ( v17 )
     mSpriteName = v17->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskName,
     (int32_t)mSpriteName,
     v11,
@@ -64,11 +64,11 @@ void PhotoCampaignListViewItemDraw__SetInput(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4CE9B69 & 1) == 0 )
+  if ( (byte_4D2BE4F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE9B69 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2BE4F = 1;
   }
   if ( item )
   {
@@ -89,7 +89,7 @@ void PhotoCampaignListViewItemDraw__SetInput(
             goto LABEL_45;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_45;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0);
@@ -169,7 +169,7 @@ LABEL_43:
       }
     }
 LABEL_45:
-    sub_1C7BD40(maskLb, item);
+    sub_1C93D2C(maskLb, item);
   }
 }
 
@@ -190,17 +190,17 @@ void PhotoCampaignListViewItemDraw__SetItem(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4CE9B68 & 1) == 0 )
+  if ( (byte_4D2BE4E & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CE9B68 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2BE4E = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_41658632(
+      ServantFaceIconComponent__Set_41811860(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -241,7 +241,7 @@ void PhotoCampaignListViewItemDraw__SetItem(
                   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                   if ( !servantFaceIcon )
                     goto LABEL_48;
-                  FlashingIconComponent__Set_41466896(
+                  FlashingIconComponent__Set_41619952(
                     (FlashingIconComponent_o *)servantFaceIcon,
                     item->fields.partyIndex >= 0,
                     0);
@@ -325,7 +325,7 @@ LABEL_46:
       }
     }
 LABEL_48:
-    sub_1C7BD40(servantFaceIcon, item);
+    sub_1C93D2C(servantFaceIcon, item);
   }
 }
 
@@ -341,12 +341,12 @@ void PhotoCampaignListViewItemDraw__SetMaskInfo(
   __int64 *v7; // x8
 
   v4 = this;
-  if ( (byte_4CE9B6A & 1) == 0 )
+  if ( (byte_4D2BE50 & 1) == 0 )
   {
-    sub_1C7BAE8(&LocalizationManager_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_11571/*"SELECT_CANNOT"*/);
-    this = (PhotoCampaignListViewItemDraw_o *)sub_1C7BAE8(&StringLiteral_11603/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    byte_4CE9B6A = 1;
+    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1C93AD4(&StringLiteral_11608/*"SELECT_CANNOT"*/);
+    this = (PhotoCampaignListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_11640/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    byte_4D2BE50 = 1;
   }
   if ( !item )
     goto LABEL_28;
@@ -375,7 +375,7 @@ LABEL_18:
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_11571/*"SELECT_CANNOT"*/;
+    v7 = &StringLiteral_11608/*"SELECT_CANNOT"*/;
     goto LABEL_25;
   }
   userSvtEntity = item->fields.userSvtEntity;
@@ -398,7 +398,7 @@ LABEL_18:
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_11603/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v7 = &StringLiteral_11640/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_25:
     this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v7, 0);
     if ( maskLb )
@@ -407,7 +407,7 @@ LABEL_25:
       return;
     }
 LABEL_28:
-    sub_1C7BD40(this, item);
+    sub_1C93D2C(this, item);
   }
   if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
     goto LABEL_18;

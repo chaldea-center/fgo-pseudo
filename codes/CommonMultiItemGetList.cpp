@@ -1,9 +1,9 @@
 void CommonMultiItemGetList___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CED037 & 1) == 0 )
+  if ( (byte_4D2F380 & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonMultiItemGetList_TypeInfo);
-    byte_4CED037 = 1;
+    sub_1C93AD4(&CommonMultiItemGetList_TypeInfo);
+    byte_4D2F380 = 1;
   }
   CommonMultiItemGetList_TypeInfo->static_fields->baseCol = 5;
 }
@@ -19,19 +19,19 @@ void CommonMultiItemGetList___ctor(CommonMultiItemGetList_o *this, const MethodI
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CED036 & 1) == 0 )
+  if ( (byte_4D2F37F & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4CED036 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4D2F37F = 1;
   }
   *(_QWORD *)&this->fields.width = 0x4320000043160000LL;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.itemObjectList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&this->fields.itemObjectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.itemObjectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -42,10 +42,10 @@ void CommonMultiItemGetList__setHide(CommonMultiItemGetList_o *this, const Metho
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4CED034 & 1) == 0 )
+  if ( (byte_4D2F37D & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CED034 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2F37D = 1;
   }
   listRoot = (UnityEngine_Object_o *)this->fields.listRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -56,7 +56,7 @@ void CommonMultiItemGetList__setHide(CommonMultiItemGetList_o *this, const Metho
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C7BD40(gameObject, v4);
+      sub_1C93D2C(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   }
@@ -113,18 +113,18 @@ void CommonMultiItemGetList__setListData(
   UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
 
   v46 = callBack;
-  if ( (byte_4CED033 & 1) == 0 )
+  if ( (byte_4D2F37C & 1) == 0 )
   {
-    sub_1C7BAE8(&CommonMultiItemGetList_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CED033 = 1;
+    sub_1C93AD4(&CommonMultiItemGetList_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2F37C = 1;
   }
   Object = (__int64)CommonMultiItemGetList_TypeInfo;
   memset(&v45, 0, sizeof(v45));
@@ -139,20 +139,20 @@ void CommonMultiItemGetList__setListData(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v44,
     (System_Collections_Generic_List_object__o *)this->fields.itemObjectList,
-    (const MethodInfo_383F8F4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v45 = v44;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v45,
-            (const MethodInfo_35BDF98 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v45.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71870148((UnityEngine_Object_o *)current, 0);
+    UnityEngine_Object__Destroy_72119908((UnityEngine_Object_o *)current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v45,
-    (const MethodInfo_35BDF94 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   itemObjectList = this->fields.itemObjectList;
   if ( !itemObjectList )
     goto LABEL_35;
@@ -177,7 +177,7 @@ void CommonMultiItemGetList__setListData(
       while ( 1 )
       {
         if ( v19 >= (unsigned int)max_length )
-          sub_1C7BD48(Object);
+          sub_1C93D34(Object);
         v22 = itemlist->m_Items[v19];
         Object = (__int64)BaseMonoBehaviour__createObject(
                             (BaseMonoBehaviour_o *)this,
@@ -197,10 +197,10 @@ void CommonMultiItemGetList__setListData(
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Object, v47, 0);
         Object = (__int64)UnityEngine_GameObject__get_transform(v23, 0);
         v24 = (UnityEngine_Transform_o *)Object;
-        if ( !byte_4CE7E5E )
+        if ( !byte_4D2A13E )
         {
-          Object = sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-          byte_4CE7E5E = 1;
+          Object = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+          byte_4D2A13E = 1;
         }
         if ( !v24 )
           break;
@@ -215,14 +215,14 @@ void CommonMultiItemGetList__setListData(
         {
           Object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                               v23,
-                              (const MethodInfo_31C70C8 *)Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
+                              (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
           if ( !Object )
             break;
           v32 = Object;
           GiftListViewItemIcon__Set((GiftListViewItemIcon_o *)Object, v22, 0);
           v33 = (int)v46;
           *(_QWORD *)(v32 + 48) = v46;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v32 + 48), v33, v34, v35, v36, v37, v38, v39);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v32 + 48), v33, v34, v35, v36, v37, v38, v39);
           GiftListViewItemIcon__Show((GiftListViewItemIcon_o *)v32, 0);
         }
         Object = (__int64)this->fields.itemObjectList;
@@ -239,21 +239,21 @@ void CommonMultiItemGetList__setListData(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Object,
             (Il2CppObject *)v23,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
         }
         else
         {
           v43 = v40 + 8 * v42;
           *(_DWORD *)(Object + 24) = v42 + 1;
           *(_QWORD *)(v43 + 32) = v23;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v43 + 32), (int32_t)v23, v26, v27, v28, v29, v30, v31);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v43 + 32), (int32_t)v23, v26, v27, v28, v29, v30, v31);
         }
         LODWORD(max_length) = itemlist->max_length;
         if ( (__int64)++v19 >= (int)max_length )
           return;
       }
 LABEL_35:
-      sub_1C7BD40(Object, itemlist);
+      sub_1C93D2C(Object, itemlist);
     }
   }
 }
@@ -265,10 +265,10 @@ void CommonMultiItemGetList__setShow(CommonMultiItemGetList_o *this, const Metho
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4CED035 & 1) == 0 )
+  if ( (byte_4D2F37E & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CED035 = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2F37E = 1;
   }
   listRoot = (UnityEngine_Object_o *)this->fields.listRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -279,7 +279,7 @@ void CommonMultiItemGetList__setShow(CommonMultiItemGetList_o *this, const Metho
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C7BD40(gameObject, v4);
+      sub_1C93D2C(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
   }

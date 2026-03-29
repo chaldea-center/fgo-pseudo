@@ -3,24 +3,24 @@ void OnPressEvent___ctor(OnPressEvent_o *this, const MethodInfo *method)
   System_Collections_Generic_List_object__o *v3; // x20
   System_Collections_Generic_List_object__o *v4; // x20
 
-  if ( (byte_4CE86E7 & 1) == 0 )
+  if ( (byte_4D2A9BB & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4CE86E7 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4D2A9BB = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPressDown = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C7BA8C(&this->fields.onPressDown, v3);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C93A78(&this->fields.onPressDown, v3);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPressUp = (struct System_Collections_Generic_List_EventDelegate__o *)v4;
-  sub_1C7BA8C(&this->fields.onPressUp, v4);
+  sub_1C93A78(&this->fields.onPressUp, v4);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -29,10 +29,10 @@ void OnPressEvent__OnPress(OnPressEvent_o *this, bool isPressed, const MethodInf
 {
   System_Collections_Generic_List_EventDelegate__o *onPressDown; // x19
 
-  if ( (byte_4CE86E6 & 1) == 0 )
+  if ( (byte_4D2A9BA & 1) == 0 )
   {
-    sub_1C7BAE8(&EventDelegate_TypeInfo);
-    byte_4CE86E6 = 1;
+    sub_1C93AD4(&EventDelegate_TypeInfo);
+    byte_4D2A9BA = 1;
   }
   if ( isPressed )
     onPressDown = this->fields.onPressDown;
@@ -40,5 +40,5 @@ void OnPressEvent__OnPress(OnPressEvent_o *this, bool isPressed, const MethodInf
     onPressDown = this->fields.onPressUp;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Execute_49739380(onPressDown, 0);
+  EventDelegate__Execute_49943632(onPressDown, 0);
 }

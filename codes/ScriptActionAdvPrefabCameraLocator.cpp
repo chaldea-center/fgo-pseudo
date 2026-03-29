@@ -7,7 +7,7 @@ void ScriptActionAdvPrefabCameraLocator___ctor(ScriptActionAdvPrefabCameraLocato
 void ScriptActionAdvPrefabCameraLocator__Awake(ScriptActionAdvPrefabCameraLocator_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *targetRig; // x0
-  System_Object_array *ComponentsInChildren_object__52198636; // x0
+  System_Object_array *ComponentsInChildren_object__52415656; // x0
   int32_t v5; // w2
   int32_t v6; // w3
   System_String_o *v7; // x4
@@ -15,21 +15,21 @@ void ScriptActionAdvPrefabCameraLocator__Awake(ScriptActionAdvPrefabCameraLocato
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CF0537 & 1) == 0 )
+  if ( (byte_4D328CD & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-    byte_4CF0537 = 1;
+    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+    byte_4D328CD = 1;
   }
   targetRig = this->fields.targetRig;
   if ( !targetRig )
-    sub_1C7BD40(0, method);
-  ComponentsInChildren_object__52198636 = UnityEngine_GameObject__GetComponentsInChildren_object__52198636(
+    sub_1C93D2C(0, method);
+  ComponentsInChildren_object__52415656 = UnityEngine_GameObject__GetComponentsInChildren_object__52415656(
                                             targetRig,
-                                            (const MethodInfo_31C7CEC *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__52198636;
-  sub_1C7BA8C(
+                                            (const MethodInfo_31FCCA8 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__52415656;
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetCameras,
-    (int32_t)ComponentsInChildren_object__52198636,
+    (int32_t)ComponentsInChildren_object__52415656,
     v5,
     v6,
     v7,
@@ -51,9 +51,9 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
   unsigned int v8; // w22
   UnityEngine_Camera_o *v9; // x20
   float v10; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   targetRig = this->fields.targetRig;
@@ -90,7 +90,7 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
       do
       {
         if ( v8 >= LODWORD(targetCameras->max_length) )
-          sub_1C7BD48(targetRig);
+          sub_1C93D34(targetRig);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
@@ -102,20 +102,20 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
-        UnityEngine_Camera__set_farClipPlane(v9, localScale.fields.y, 0);
+        y = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0).fields.y;
+        UnityEngine_Camera__set_farClipPlane(v9, y, 0);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        v13 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
-        UnityEngine_Camera__set_fieldOfView(v9, v13.fields.z, 0);
+        z = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0).fields.z;
+        UnityEngine_Camera__set_fieldOfView(v9, z, 0);
         if ( max_length == ++v8 )
           return;
         targetCameras = this->fields.targetCameras;
       }
       while ( targetCameras );
 LABEL_18:
-      sub_1C7BD40(targetRig, method);
+      sub_1C93D2C(targetRig, method);
     }
   }
 }

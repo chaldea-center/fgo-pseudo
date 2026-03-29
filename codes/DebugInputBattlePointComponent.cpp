@@ -17,7 +17,7 @@ void DebugInputBattlePointComponent__Cancel(DebugInputBattlePointComponent_o *th
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C7BD40(debugMenuTran, method);
+    sub_1C93D2C(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -47,21 +47,21 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *DebugInputBattlePoi
   UIToggle_o *v20; // x1
   Il2CppClass **v21; // x0
 
-  if ( (byte_4CEFBE4 & 1) == 0 )
+  if ( (byte_4D31F69 & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4CEFBE4 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4D31F69 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C7BD34(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_383E5C8 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   targetPlayerToggleList = this->fields.targetPlayerToggleList;
   if ( !targetPlayerToggleList )
 LABEL_20:
-    sub_1C7BD40(value, v5);
+    sub_1C93D2C(value, v5);
   v7 = 0;
   while ( 1 )
   {
@@ -87,7 +87,7 @@ LABEL_20:
         return (System_Collections_Generic_IEnumerable_BattleServantData__o *)v3;
       if ( (unsigned int)v7 >= invoke_impl )
 LABEL_22:
-        sub_1C7BD48(value);
+        sub_1C93D34(value);
       value = (UIToggle_o *)BattleData__getPlayerServantData(
                               (BattleData_o *)value,
                               *((_DWORD *)&validator->fields.m_target + v7),
@@ -108,14 +108,14 @@ LABEL_22:
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             (Il2CppObject *)value,
-            *(const MethodInfo_383EDFC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v3->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v20;
-          sub_1C7BA8C((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
+          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
         }
       }
     }
@@ -201,7 +201,7 @@ void DebugInputBattlePointComponent__Open(
     ++v19;
   while ( v19 < v18 );
   this->fields.data = data;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&this->fields.data,
     (int32_t)data,
     (int32_t)debugMenuTran,
@@ -211,7 +211,7 @@ void DebugInputBattlePointComponent__Open(
     v6,
     v7);
   v12->fields.debugMenuTran = debugMenuTran;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v12->fields.debugMenuTran,
     (int32_t)debugMenuTran,
     v20,
@@ -221,7 +221,7 @@ void DebugInputBattlePointComponent__Open(
     v24,
     v25);
   v12->fields.onSubmitCallback = onSubmitCallback;
-  sub_1C7BA8C(
+  sub_1C93A78(
     (GrandQuestFolderBoardItem_o *)&v12->fields.onSubmitCallback,
     (int32_t)onSubmitCallback,
     v26,
@@ -271,7 +271,7 @@ void DebugInputBattlePointComponent__Open(
         goto LABEL_21;
     }
 LABEL_34:
-    sub_1C7BD48(this);
+    sub_1C93D34(this);
   }
 LABEL_21:
   v37 = v12->fields.overwriteToggleList;
@@ -313,7 +313,7 @@ LABEL_27:
     || (v45 = v12->fields.battlePointIdInput, v44->fields.validation = 1, !v45) )
   {
 LABEL_33:
-    sub_1C7BD40(this, data);
+    sub_1C93D2C(this, data);
   }
   v45->fields.validation = 1;
   v44->fields.keyboardType = 4;
@@ -347,7 +347,7 @@ void DebugInputBattlePointComponent__Submit(DebugInputBattlePointComponent_o *th
     goto LABEL_16;
   if ( !LODWORD(overwriteToggleList->max_length) )
 LABEL_17:
-    sub_1C7BD48(battlePointIdInput);
+    sub_1C93D34(battlePointIdInput);
   battlePointIdInput = overwriteToggleList->m_Items[0];
   if ( !battlePointIdInput )
     goto LABEL_16;
@@ -377,7 +377,7 @@ LABEL_17:
           goto LABEL_15;
         }
 LABEL_16:
-        sub_1C7BD40(battlePointIdInput, method);
+        sub_1C93D2C(battlePointIdInput, method);
       }
       goto LABEL_17;
     }

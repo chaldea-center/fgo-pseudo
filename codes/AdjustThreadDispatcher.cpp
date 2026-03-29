@@ -2,19 +2,19 @@ void AdjustThreadDispatcher___cctor(const MethodInfo *method)
 {
   System_Collections_Generic_Queue_T__o *v1; // x19
 
-  if ( (byte_4CE6913 & 1) == 0 )
+  if ( (byte_4D28BF3 & 1) == 0 )
   {
-    sub_1C7BAE8(&AdjustThreadDispatcher_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_Action___ctor__);
-    sub_1C7BAE8(&System_Collections_Generic_Queue_Action__TypeInfo);
-    byte_4CE6913 = 1;
+    sub_1C93AD4(&AdjustThreadDispatcher_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_Queue_Action___ctor__);
+    sub_1C93AD4(&System_Collections_Generic_Queue_Action__TypeInfo);
+    byte_4D28BF3 = 1;
   }
-  v1 = (System_Collections_Generic_Queue_T__o *)sub_1C7BD34(System_Collections_Generic_Queue_Action__TypeInfo);
+  v1 = (System_Collections_Generic_Queue_T__o *)sub_1C93D20(System_Collections_Generic_Queue_Action__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v1,
-    (const MethodInfo_39E74A4 *)Method_System_Collections_Generic_Queue_Action___ctor__);
+    (const MethodInfo_3A217C4 *)Method_System_Collections_Generic_Queue_Action___ctor__);
   AdjustThreadDispatcher_TypeInfo->static_fields->executionQueue = (struct System_Collections_Generic_Queue_Action__o *)v1;
-  sub_1C7BA8C(AdjustThreadDispatcher_TypeInfo->static_fields, v1);
+  sub_1C93A78(AdjustThreadDispatcher_TypeInfo->static_fields, v1);
 }
 
 
@@ -34,14 +34,14 @@ void AdjustThreadDispatcher__Initialize(const MethodInfo *method)
   Il2CppObject *v6; // x20
   struct AdjustThreadDispatcher_StaticFields *static_fields; // x0
 
-  if ( (byte_4CE6912 & 1) == 0 )
+  if ( (byte_4D28BF2 & 1) == 0 )
   {
-    sub_1C7BAE8(&AdjustThreadDispatcher_TypeInfo);
-    sub_1C7BAE8(&Method_UnityEngine_GameObject_AddComponent_AdjustThreadDispatcher___);
-    sub_1C7BAE8(&UnityEngine_GameObject_TypeInfo);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_2168/*"AdjustThreadDispatcher"*/);
-    byte_4CE6912 = 1;
+    sub_1C93AD4(&AdjustThreadDispatcher_TypeInfo);
+    sub_1C93AD4(&Method_UnityEngine_GameObject_AddComponent_AdjustThreadDispatcher___);
+    sub_1C93AD4(&UnityEngine_GameObject_TypeInfo);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_2180/*"AdjustThreadDispatcher"*/);
+    byte_4D28BF2 = 1;
   }
   v1 = AdjustThreadDispatcher_TypeInfo;
   if ( !AdjustThreadDispatcher_TypeInfo->_2.cctor_finished )
@@ -54,13 +54,13 @@ void AdjustThreadDispatcher__Initialize(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(instance, 0, 0) )
   {
-    v3 = (UnityEngine_GameObject_o *)sub_1C7BD34(UnityEngine_GameObject_TypeInfo);
-    UnityEngine_GameObject___ctor(v3, (System_String_o *)StringLiteral_2168/*"AdjustThreadDispatcher"*/, 0);
+    v3 = (UnityEngine_GameObject_o *)sub_1C93D20(UnityEngine_GameObject_TypeInfo);
+    UnityEngine_GameObject___ctor(v3, (System_String_o *)StringLiteral_2180/*"AdjustThreadDispatcher"*/, 0);
     if ( !v3 )
-      sub_1C7BD40();
+      sub_1C93D2C();
     v4 = UnityEngine_GameObject__AddComponent_object_(
            v3,
-           (const MethodInfo_31C6FE0 *)Method_UnityEngine_GameObject_AddComponent_AdjustThreadDispatcher___);
+           (const MethodInfo_31FBF9C *)Method_UnityEngine_GameObject_AddComponent_AdjustThreadDispatcher___);
     v5 = AdjustThreadDispatcher_TypeInfo;
     v6 = v4;
     if ( !AdjustThreadDispatcher_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ void AdjustThreadDispatcher__Initialize(const MethodInfo *method)
     }
     static_fields = v5->static_fields;
     static_fields->instance = (struct AdjustThreadDispatcher_o *)v6;
-    sub_1C7BA8C(&static_fields->instance, v6);
+    sub_1C93A78(&static_fields->instance, v6);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     UnityEngine_Object__DontDestroyOnLoad((UnityEngine_Object_o *)v3, 0);
@@ -87,11 +87,11 @@ void AdjustThreadDispatcher__RunOnMainThread(System_Action_o *action, const Meth
   System_Collections_Generic_Queue_T__o *v7; // x0
   bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CE6910 & 1) == 0 )
+  if ( (byte_4D28BF0 & 1) == 0 )
   {
-    sub_1C7BAE8(&AdjustThreadDispatcher_TypeInfo, method);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_Action__Enqueue__, v3);
-    byte_4CE6910 = 1;
+    sub_1C93AD4(&AdjustThreadDispatcher_TypeInfo, method);
+    sub_1C93AD4(&Method_System_Collections_Generic_Queue_Action__Enqueue__, v3);
+    byte_4D28BF0 = 1;
   }
   if ( action )
   {
@@ -103,7 +103,7 @@ void AdjustThreadDispatcher__RunOnMainThread(System_Action_o *action, const Meth
     }
     executionQueue = (Il2CppObject *)v4->static_fields->executionQueue;
     lockTaken = 0;
-    System_Threading_Monitor__Enter_66104560(executionQueue, &lockTaken, 0);
+    System_Threading_Monitor__Enter_66353364(executionQueue, &lockTaken, 0);
     v6 = AdjustThreadDispatcher_TypeInfo;
     if ( !AdjustThreadDispatcher_TypeInfo->_2.cctor_finished )
     {
@@ -112,11 +112,11 @@ void AdjustThreadDispatcher__RunOnMainThread(System_Action_o *action, const Meth
     }
     v7 = (System_Collections_Generic_Queue_T__o *)v6->static_fields->executionQueue;
     if ( !v7 )
-      sub_1C7BD40();
+      sub_1C93D2C();
     System_Collections_Generic_Queue_object___Enqueue(
       v7,
       (Il2CppObject *)action,
-      (const MethodInfo_39E7A6C *)Method_System_Collections_Generic_Queue_Action__Enqueue__);
+      (const MethodInfo_3A21D8C *)Method_System_Collections_Generic_Queue_Action__Enqueue__);
     if ( lockTaken )
       System_Threading_Monitor__Exit(executionQueue, 0);
   }
@@ -135,12 +135,12 @@ void AdjustThreadDispatcher__Update(AdjustThreadDispatcher_o *this, const Method
   Il2CppObject *v9; // x24
   bool lockTaken; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CE6911 & 1) == 0 )
+  if ( (byte_4D28BF1 & 1) == 0 )
   {
-    sub_1C7BAE8(&AdjustThreadDispatcher_TypeInfo, method);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_Action__Dequeue__, v2);
-    sub_1C7BAE8(&Method_System_Collections_Generic_Queue_Action__get_Count__, v3);
-    byte_4CE6911 = 1;
+    sub_1C93AD4(&AdjustThreadDispatcher_TypeInfo, method);
+    sub_1C93AD4(&Method_System_Collections_Generic_Queue_Action__Dequeue__, v2);
+    sub_1C93AD4(&Method_System_Collections_Generic_Queue_Action__get_Count__, v3);
+    byte_4D28BF1 = 1;
   }
   lockTaken = 0;
   while ( 1 )
@@ -153,7 +153,7 @@ void AdjustThreadDispatcher__Update(AdjustThreadDispatcher_o *this, const Method
     }
     executionQueue = v4->static_fields->executionQueue;
     if ( !executionQueue )
-      sub_1C7BD40();
+      sub_1C93D2C();
     if ( executionQueue->fields._size <= 0 )
       break;
     if ( !v4->_2.cctor_finished )
@@ -163,7 +163,7 @@ void AdjustThreadDispatcher__Update(AdjustThreadDispatcher_o *this, const Method
     }
     v6 = (Il2CppObject *)v4->static_fields->executionQueue;
     lockTaken = 0;
-    System_Threading_Monitor__Enter_66104560(v6, &lockTaken, 0);
+    System_Threading_Monitor__Enter_66353364(v6, &lockTaken, 0);
     v7 = AdjustThreadDispatcher_TypeInfo;
     if ( !AdjustThreadDispatcher_TypeInfo->_2.cctor_finished )
     {
@@ -172,10 +172,10 @@ void AdjustThreadDispatcher__Update(AdjustThreadDispatcher_o *this, const Method
     }
     v8 = (System_Collections_Generic_Queue_T__o *)v7->static_fields->executionQueue;
     if ( !v8 )
-      sub_1C7BD40();
+      sub_1C93D2C();
     v9 = System_Collections_Generic_Queue_object___Dequeue(
            v8,
-           (const MethodInfo_39E7BFC *)Method_System_Collections_Generic_Queue_Action__Dequeue__);
+           (const MethodInfo_3A21F1C *)Method_System_Collections_Generic_Queue_Action__Dequeue__);
     if ( lockTaken )
       System_Threading_Monitor__Exit(v6, 0);
     if ( v9 )

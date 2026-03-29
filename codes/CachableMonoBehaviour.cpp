@@ -15,11 +15,11 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CEAFB1 & 1) == 0 )
+  if ( (byte_4D2D36C & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEAFB1 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D36C = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -28,9 +28,9 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.mRenderer,
       (int32_t)Component_object,
       v5,
@@ -55,11 +55,11 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CEAFB2 & 1) == 0 )
+  if ( (byte_4D2D36D & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEAFB2 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D36D = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -68,9 +68,9 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.mRigidbody,
       (int32_t)Component_object,
       v5,
@@ -95,11 +95,11 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CEAFB3 & 1) == 0 )
+  if ( (byte_4D2D36E & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    byte_4CEAFB3 = 1;
+    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    byte_4D2D36E = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -108,9 +108,9 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3166BC4 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_1C7BA8C(
+    sub_1C93A78(
       (GrandQuestFolderBoardItem_o *)&this->fields.mTransform,
       (int32_t)Component_object,
       v5,

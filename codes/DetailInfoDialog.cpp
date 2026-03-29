@@ -2,10 +2,10 @@ void DetailInfoDialog___cctor(const MethodInfo *method)
 {
   struct DetailInfoDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4CEDB13 & 1) == 0 )
+  if ( (byte_4D2FE6C & 1) == 0 )
   {
-    sub_1C7BAE8(&DetailInfoDialog_TypeInfo);
-    byte_4CEDB13 = 1;
+    sub_1C93AD4(&DetailInfoDialog_TypeInfo);
+    byte_4D2FE6C = 1;
   }
   static_fields = DetailInfoDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEFAULT_LABEL_HEIGHT = 0x18100000082LL;
@@ -15,10 +15,10 @@ void DetailInfoDialog___cctor(const MethodInfo *method)
 
 void DetailInfoDialog___ctor(DetailInfoDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEDB12 & 1) == 0 )
+  if ( (byte_4D2FE6B & 1) == 0 )
   {
-    sub_1C7BAE8(&BaseDialog_TypeInfo);
-    byte_4CEDB12 = 1;
+    sub_1C93AD4(&BaseDialog_TypeInfo);
+    byte_4D2FE6B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -39,11 +39,11 @@ void DetailInfoDialog__Init(DetailInfoDialog_o *this, const MethodInfo *method)
   UnityEngine_Object_o *infoLabel; // x20
   UnityEngine_Object_o *detailMsgLabel; // x20
 
-  if ( (byte_4CEDB0C & 1) == 0 )
+  if ( (byte_4D2FE65 & 1) == 0 )
   {
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEDB0C = 1;
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2FE65 = 1;
   }
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
@@ -90,7 +90,7 @@ void DetailInfoDialog__Init(DetailInfoDialog_o *this, const MethodInfo *method)
   nameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !nameLabel )
 LABEL_23:
-    sub_1C7BD40(nameLabel, method);
+    sub_1C93D2C(nameLabel, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)nameLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -102,22 +102,22 @@ void DetailInfoDialog__OnClickClose(DetailInfoDialog_o *this, const MethodInfo *
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CEDB10 & 1) == 0 )
+  if ( (byte_4D2FE69 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_DetailInfoDialog_EndClose__);
-    sub_1C7BAE8(&Method_DetailInfoDialog_OnClickClose__);
-    byte_4CEDB10 = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_DetailInfoDialog_EndClose__);
+    sub_1C93AD4(&Method_DetailInfoDialog_OnClickClose__);
+    byte_4D2FE69 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_DetailInfoDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_DetailInfoDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C7BB00(Method_DetailInfoDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C7BACC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C93AEC(Method_DetailInfoDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.isButtonEnable = 0;
-    v5 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_DetailInfoDialog_EndClose__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -137,12 +137,12 @@ void DetailInfoDialog__Open(
   System_String_o *v12; // x1
   System_Action_o *v13; // x20
 
-  if ( (byte_4CEDB0D & 1) == 0 )
+  if ( (byte_4D2FE66 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_DetailInfoDialog_EndOpen__);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEDB0D = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_DetailInfoDialog_EndOpen__);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2FE66 = 1;
   }
   DetailInfoDialog__SetOverFlowName(this, 0, (const MethodInfo *)info);
   nameLabel = this->fields.nameLabel;
@@ -153,13 +153,13 @@ void DetailInfoDialog__Open(
          UILabel__set_text(nameLabel, v12, 0),
          (nameLabel = this->fields.infoLongLabel) == 0)) )
   {
-    sub_1C7BD40(nameLabel, v9);
+    sub_1C93D2C(nameLabel, v9);
   }
   UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   if ( detail )
     WrapControlText__textBBCodeAdjust(this->fields.detailMsgLabel, detail, 22, 0, 0);
   this->fields.isButtonEnable = 0;
-  v13 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_DetailInfoDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
 }
@@ -186,13 +186,13 @@ void DetailInfoDialog__OpenWithLongInfo(
   UILabel_o *v22; // x20
   System_Action_o *v23; // x20
 
-  if ( (byte_4CEDB0E & 1) == 0 )
+  if ( (byte_4D2FE67 & 1) == 0 )
   {
-    sub_1C7BAE8(&System_Action_TypeInfo);
-    sub_1C7BAE8(&Method_DetailInfoDialog_EndOpen__);
-    sub_1C7BAE8(&DetailInfoDialog_TypeInfo);
-    sub_1C7BAE8(&StringLiteral_1/*""*/);
-    byte_4CEDB0E = 1;
+    sub_1C93AD4(&System_Action_TypeInfo);
+    sub_1C93AD4(&Method_DetailInfoDialog_EndOpen__);
+    sub_1C93AD4(&DetailInfoDialog_TypeInfo);
+    sub_1C93AD4(&StringLiteral_1/*""*/);
+    byte_4D2FE67 = 1;
   }
   DetailInfoDialog__SetOverFlowName(this, isCondensedName, (const MethodInfo *)info);
   nameLabel = this->fields.nameLabel;
@@ -295,11 +295,11 @@ LABEL_30:
       goto LABEL_35;
     }
 LABEL_39:
-    sub_1C7BD40(nameLabel, v13);
+    sub_1C93D2C(nameLabel, v13);
   }
 LABEL_35:
   this->fields.isButtonEnable = 0;
-  v23 = (System_Action_o *)sub_1C7BD34(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
   System_Action___ctor(v23, (Il2CppObject *)this, Method_DetailInfoDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v23, 0, 0, 0);
 }
@@ -312,20 +312,20 @@ void DetailInfoDialog__SetOverFlowName(DetailInfoDialog_o *this, bool isCondense
   UnityEngine_Transform_o *v6; // x21
   UIWidget_o *v7; // x19
 
-  if ( (byte_4CEDB0F & 1) == 0 )
+  if ( (byte_4D2FE68 & 1) == 0 )
   {
-    sub_1C7BAE8(&DetailInfoDialog_TypeInfo);
-    byte_4CEDB0F = 1;
+    sub_1C93AD4(&DetailInfoDialog_TypeInfo);
+    byte_4D2FE68 = 1;
   }
   nameLabel = (UnityEngine_Component_o *)this->fields.nameLabel;
   if ( !nameLabel )
     goto LABEL_14;
   nameLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(nameLabel, 0);
   v6 = (UnityEngine_Transform_o *)nameLabel;
-  if ( !byte_4CE7E5E )
+  if ( !byte_4D2A13E )
   {
-    nameLabel = (UnityEngine_Component_o *)sub_1C7BAE8(&UnityEngine_Vector3_TypeInfo);
-    byte_4CE7E5E = 1;
+    nameLabel = (UnityEngine_Component_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
+    byte_4D2A13E = 1;
   }
   if ( !v6 )
     goto LABEL_14;
@@ -345,17 +345,17 @@ void DetailInfoDialog__SetOverFlowName(DetailInfoDialog_o *this, bool isCondense
     j_il2cpp_runtime_class_init_0(DetailInfoDialog_TypeInfo);
   if ( !v7 )
 LABEL_14:
-    sub_1C7BD40(nameLabel, isCondensedName);
+    sub_1C93D2C(nameLabel, isCondensedName);
   UIWidget__set_width(v7, DetailInfoDialog_TypeInfo->static_fields->DEFAULT_NAME_WIDTH, 0);
 }
 
 
 System_String_o *DetailInfoDialog__get_closeBtnPath(DetailInfoDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CEDB11 & 1) == 0 )
+  if ( (byte_4D2FE6A & 1) == 0 )
   {
-    sub_1C7BAE8(&StringLiteral_15700/*"Window/CloseBtn"*/);
-    byte_4CEDB11 = 1;
+    sub_1C93AD4(&StringLiteral_15742/*"Window/CloseBtn"*/);
+    byte_4D2FE6A = 1;
   }
-  return (System_String_o *)StringLiteral_15700/*"Window/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_15742/*"Window/CloseBtn"*/;
 }

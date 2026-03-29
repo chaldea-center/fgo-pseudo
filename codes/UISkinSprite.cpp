@@ -16,11 +16,11 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
   int32_t v10; // w22
   __int64 v11; // x1
 
-  if ( (byte_4CEFF34 & 1) == 0 )
+  if ( (byte_4D322BE & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
-    byte_4CEFF34 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+    byte_4D322BE = 1;
   }
   result = (System_String_o *)this->fields.replaceDataList;
   if ( result )
@@ -39,7 +39,7 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
         result = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)result,
                                       v10,
-                                      (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+                                      (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
         if ( !result )
           goto LABEL_19;
         if ( result->fields._stringLength == uiChangeType )
@@ -50,7 +50,7 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
           result = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)result,
                                         v10,
-                                        (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+                                        (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
           if ( !result )
             goto LABEL_19;
           if ( *(_DWORD *)&result->fields._firstChar == version )
@@ -68,10 +68,10 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
         || (result = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)result,
                                           v10,
-                                          (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__)) == 0 )
+                                          (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__)) == 0 )
       {
 LABEL_19:
-        sub_1C7BD40(result, v11);
+        sub_1C93D2C(result, v11);
       }
       return (System_String_o *)result[1].klass;
     }
@@ -96,13 +96,13 @@ System_String_o *UISkinSprite__GetSpriteName(
   TerminalOverwriteEntity_o *overwriteEntity; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *overwriteId; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4CEFF33 & 1) == 0 )
+  if ( (byte_4D322BD & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
-    sub_1C7BAE8(&DataManager_TypeInfo);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C7BAE8(&ServantCommentManager_TypeInfo);
-    byte_4CEFF33 = 1;
+    sub_1C93AD4(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    sub_1C93AD4(&DataManager_TypeInfo);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C93AD4(&ServantCommentManager_TypeInfo);
+    byte_4D322BD = 1;
   }
   overwriteId = 0;
   overwriteEntity = 0;
@@ -110,7 +110,7 @@ System_String_o *UISkinSprite__GetSpriteName(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_31703A0 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
     if ( Master_object )
     {
       v8 = (TerminalOverwriteMaster_o *)Master_object;
@@ -144,11 +144,11 @@ LABEL_10:
 LABEL_16:
     spriteNameList = this->fields.spriteNameList;
     if ( !spriteNameList )
-      sub_1C7BD40(0, *(_QWORD *)&uiChangeType);
+      sub_1C93D2C(0, *(_QWORD *)&uiChangeType);
     return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)spriteNameList,
                                 uiChangeType,
-                                (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
   }
   return ReplaceSpriteName;
 }
@@ -184,22 +184,22 @@ void UISkinSprite__setupSprite(UISkinSprite_o *this, bool ignoreOverwrite, const
   int32_t v14; // w1
   System_String_o *SpriteName; // x0
 
-  if ( (byte_4CEFF32 & 1) == 0 )
+  if ( (byte_4D322BC & 1) == 0 )
   {
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C7BAE8(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C7BAE8(&UnityEngine_Object_TypeInfo);
-    sub_1C7BAE8(&ServantCommentManager_TypeInfo);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AtlasManager__getInstance__);
-    sub_1C7BAE8(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4CEFF32 = 1;
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C93AD4(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
+    sub_1C93AD4(&ServantCommentManager_TypeInfo);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AtlasManager__getInstance__);
+    sub_1C93AD4(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4D322BC = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_AtlasManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C51B7C(v3);
+    v6 = sub_1C69B68(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C51B7C(v3);
+    v7 = sub_1C69B68(v3);
   v8 = **(UnityEngine_Object_o ***)(v7 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -211,12 +211,12 @@ void UISkinSprite__setupSprite(UISkinSprite_o *this, bool ignoreOverwrite, const
       goto LABEL_26;
     if ( spriteNameList->fields._size )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
       if ( Instance )
       {
         if ( AtlasManager__SetSkinLocal((AtlasManager_o *)Instance, (UISprite_o *)this, this->fields.skinType, 0) )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A8C5A8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
           if ( Instance )
           {
             Instance = AtlasManager__getSkinAtlasData((AtlasManager_o *)Instance, this->fields.skinType, 0);
@@ -251,13 +251,13 @@ LABEL_18:
             SpriteName = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)Instance,
                                               0,
-                                              (const MethodInfo_383EB2C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                              (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_string__get_Item__);
             goto LABEL_25;
           }
         }
       }
 LABEL_26:
-      sub_1C7BD40(Instance, v10);
+      sub_1C93D2C(Instance, v10);
     }
   }
 }

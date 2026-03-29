@@ -1,31 +1,30 @@
 void Crc32___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x0
-  System_RuntimeFieldHandle_o v2; // x1
-  System_Array_o *v3; // x19
+  System_Array_o *v1; // x19
   struct Crc32_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  int32_t v3; // w2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
 
-  if ( (byte_4CEDD4E & 1) == 0 )
+  if ( (byte_4D300A7 & 1) == 0 )
   {
-    sub_1C7BAE8(&Crc32_TypeInfo);
-    sub_1C7BAE8(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
-    sub_1C7BAE8(&uint___TypeInfo);
-    byte_4CEDD4E = 1;
+    sub_1C93AD4(&Crc32_TypeInfo);
+    sub_1C93AD4(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
+    sub_1C93AD4(&uint___TypeInfo);
+    byte_4D300A7 = 1;
   }
   Crc32_TypeInfo->static_fields->CRC_UNIT = 256;
-  v1 = (System_Array_o *)sub_1C7BB90(uint___TypeInfo, 256);
-  v2.fields.value = Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86;
-  v3 = v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64876136(v1, v2, 0);
+  v1 = (System_Array_o *)sub_1C93B7C(uint___TypeInfo, 256);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
+    v1,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86,
+    0);
   static_fields = Crc32_TypeInfo->static_fields;
-  static_fields->CrcTable = (struct System_UInt32_array *)v3;
-  sub_1C7BA8C((GrandQuestFolderBoardItem_o *)&static_fields->CrcTable, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  static_fields->CrcTable = (struct System_UInt32_array *)v1;
+  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->CrcTable, (int32_t)v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -40,14 +39,14 @@ uint32_t Crc32__Compute(System_Byte_array *buffer, const MethodInfo *method)
   unsigned int v8; // w10
 
   v2 = buffer;
-  if ( (byte_4CEDD4B & 1) == 0 )
+  if ( (byte_4D300A4 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C7BAE8(&Crc32_TypeInfo);
-    byte_4CEDD4B = 1;
+    buffer = (System_Byte_array *)sub_1C93AD4(&Crc32_TypeInfo);
+    byte_4D300A4 = 1;
   }
   if ( !v2 )
 LABEL_15:
-    sub_1C7BD40(buffer, method);
+    sub_1C93D2C(buffer, method);
   max_length = v2->max_length;
   if ( (int)max_length - 1 < 0 )
     return 0;
@@ -71,7 +70,7 @@ LABEL_15:
     v8 = (unsigned __int8)v5 ^ v2->m_Items[v4];
     if ( v8 >= *(_DWORD *)(v7 + 24) )
 LABEL_14:
-      sub_1C7BD48(buffer);
+      sub_1C93D34(buffer);
     ++v4;
     v5 = *(_DWORD *)(v7 + 4LL * v8 + 32) ^ (v5 >> 8);
   }
@@ -81,7 +80,7 @@ LABEL_14:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t Crc32__Compute_41817988(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
+uint32_t Crc32__Compute_41971560(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
 {
   int32_t v3; // w20
   System_Byte_array *v4; // x19
@@ -93,14 +92,14 @@ uint32_t Crc32__Compute_41817988(System_Byte_array *buffer, int32_t length, cons
 
   v3 = length;
   v4 = buffer;
-  if ( (byte_4CEDD4C & 1) == 0 )
+  if ( (byte_4D300A5 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C7BAE8(&Crc32_TypeInfo);
-    byte_4CEDD4C = 1;
+    buffer = (System_Byte_array *)sub_1C93AD4(&Crc32_TypeInfo);
+    byte_4D300A5 = 1;
   }
   if ( !v4 )
 LABEL_17:
-    sub_1C7BD40(buffer, *(_QWORD *)&length);
+    sub_1C93D2C(buffer, *(_QWORD *)&length);
   max_length = v4->max_length;
   if ( (int)max_length < v3 )
     v3 = v4->max_length;
@@ -125,7 +124,7 @@ LABEL_17:
     v9 = (unsigned __int8)v7 ^ v4->m_Items[v6];
     if ( v9 >= *(_DWORD *)(v8 + 24) )
 LABEL_16:
-      sub_1C7BD48(buffer);
+      sub_1C93D34(buffer);
     ++v6;
     v7 = *(_DWORD *)(v8 + 4LL * v9 + 32) ^ (v7 >> 8);
   }
@@ -135,7 +134,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t Crc32__Compute_41818212(System_Byte_array *buffer, int32_t length, uint32_t crc, const MethodInfo *method)
+uint32_t Crc32__Compute_41971784(System_Byte_array *buffer, int32_t length, uint32_t crc, const MethodInfo *method)
 {
   int32_t v5; // w21
   System_Byte_array *v6; // x19
@@ -147,14 +146,14 @@ uint32_t Crc32__Compute_41818212(System_Byte_array *buffer, int32_t length, uint
 
   v5 = length;
   v6 = buffer;
-  if ( (byte_4CEDD4D & 1) == 0 )
+  if ( (byte_4D300A6 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C7BAE8(&Crc32_TypeInfo);
-    byte_4CEDD4D = 1;
+    buffer = (System_Byte_array *)sub_1C93AD4(&Crc32_TypeInfo);
+    byte_4D300A6 = 1;
   }
   if ( !v6 )
 LABEL_16:
-    sub_1C7BD40(buffer, *(_QWORD *)&length);
+    sub_1C93D2C(buffer, *(_QWORD *)&length);
   max_length = v6->max_length;
   v8 = ~crc;
   if ( (int)max_length < v5 )
@@ -179,7 +178,7 @@ LABEL_16:
       v11 = (unsigned __int8)v8 ^ v6->m_Items[v9];
       if ( v11 >= *(_DWORD *)(v10 + 24) )
 LABEL_15:
-        sub_1C7BD48(buffer);
+        sub_1C93D34(buffer);
       ++v9;
       v8 = *(_DWORD *)(v10 + 4LL * v11 + 32) ^ (v8 >> 8);
     }
