@@ -1,13 +1,13 @@
 void CommandCodeSkillReleaseEntity___ctor(CommandCodeSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D307DE & 1) == 0 )
+  if ( (byte_4E04814 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D307DE = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04814 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *CommandCodeSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4D307DC & 1) == 0 )
+  if ( (byte_4E04812 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4D307DC = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4E04812 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            commandCodeId,
            num,
            priority,
            idx,
-           (const MethodInfo_31A3514 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3202E80 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -111,52 +111,52 @@ System_String_o *CommandCodeSkillReleaseEntity__getCreatePrimarykey(
   v57 = commandCodeId;
   v54 = idx;
   v55 = priority;
-  if ( (byte_4D307DB & 1) == 0 )
+  if ( (byte_4E04811 & 1) == 0 )
   {
-    sub_1C93AD4(&string___TypeInfo);
-    sub_1C93AD4(&StringLiteral_1451/*":"*/);
-    byte_4D307DB = 1;
+    sub_1CE6700(&string___TypeInfo);
+    sub_1CE6700(&StringLiteral_1452/*":"*/);
+    byte_4E04811 = 1;
   }
-  v5 = sub_1C93B7C(string___TypeInfo, 7);
+  v5 = sub_1CE67A8(string___TypeInfo, 7);
   v6 = System_Int32__ToString((int32_t)&v57, 0);
   if ( !v5 )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)v6, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)v6, v8, v9, v10, v11, v12, v13);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v20 = StringLiteral_1451/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1451/*":"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
+  v20 = StringLiteral_1452/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1452/*":"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
   v6 = System_Int32__ToString((int32_t)&v56, 0);
   if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v5 + 48) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)v6, v21, v22, v23, v24, v25, v26);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)v6, v21, v22, v23, v24, v25, v26);
   if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v33 = StringLiteral_1451/*":"*/;
-  *(_QWORD *)(v5 + 56) = StringLiteral_1451/*":"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32);
+  v33 = StringLiteral_1452/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1452/*":"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32);
   v6 = System_Int32__ToString((int32_t)&v55, 0);
   if ( *(_DWORD *)(v5 + 24) <= 4u
     || (*(_QWORD *)(v5 + 64) = v6,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 64), (int32_t)v6, v34, v35, v36, v37, v38, v39),
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 64), (int32_t)v6, v34, v35, v36, v37, v38, v39),
         *(_DWORD *)(v5 + 24) <= 5u)
-    || (v46 = StringLiteral_1451/*":"*/,
-        *(_QWORD *)(v5 + 72) = StringLiteral_1451/*":"*/,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 72), v46, v40, v41, v42, v43, v44, v45),
+    || (v46 = StringLiteral_1452/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1452/*":"*/,
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 72), v46, v40, v41, v42, v43, v44, v45),
         v6 = System_Int32__ToString((int32_t)&v54, 0),
         *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C93D34(v6);
+    sub_1CE6960(v6);
   }
   *(_QWORD *)(v5 + 80) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 80), (int32_t)v6, v47, v48, v49, v50, v51, v52);
-  return System_String__Concat_64466256((System_String_array *)v5, 0);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 80), (int32_t)v6, v47, v48, v49, v50, v51, v52);
+  return System_String__Concat_65163360((System_String_array *)v5, 0);
 }
 
 
@@ -173,21 +173,21 @@ bool CommandCodeSkillReleaseEntity__isUse(
   int32_t v11; // w22
   int64_t v12; // x19
 
-  if ( (byte_4D307DD & 1) == 0 )
+  if ( (byte_4E04813 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D307DD = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4E04813 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4D2A55B )
+    if ( !byte_4DFE4CA )
     {
-      sub_1C93AD4(&NetworkManager_TypeInfo);
-      byte_4D2A55B = 1;
+      sub_1CE6700(&NetworkManager_TypeInfo);
+      byte_4DFE4CA = 1;
     }
     v6 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )

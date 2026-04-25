@@ -12,23 +12,28 @@ System_Nullable_bool__o BattleMovieParam__get_HasMovieCrossFadeSetting(
 {
   int32_t movieAfterCrossFadeTime; // w8
   System_Nullable_bool__o *v4; // x0
-  System_Nullable_bool__o v5; // [xsp+Ch] [xbp-14h] BYREF
+  System_Nullable_bool__o v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4D3051D & 1) == 0 )
+  if ( (byte_4E04556 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Nullable_bool___ctor__);
-    byte_4D3051D = 1;
+    sub_1CE6700(&Method_System_Nullable_bool___ctor__);
+    byte_4E04556 = 1;
   }
   movieAfterCrossFadeTime = this->fields.movieAfterCrossFadeTime;
-  v5 = 0;
+  v6 = 0;
   if ( movieAfterCrossFadeTime < 0 )
-    return 0;
-  v4 = &v5;
-  System_Nullable_bool____ctor(
-    (System_Nullable_bool__o)v4,
-    movieAfterCrossFadeTime != 0,
-    (const MethodInfo_399C0AC *)Method_System_Nullable_bool___ctor__);
-  return v5;
+  {
+    return (System_Nullable_bool__o)0;
+  }
+  else
+  {
+    v4 = &v6;
+    System_Nullable_bool____ctor(
+      (System_Nullable_bool__o)v4,
+      movieAfterCrossFadeTime != 0,
+      (const MethodInfo_3A2A238 *)Method_System_Nullable_bool___ctor__);
+    return v6;
+  }
 }
 
 
@@ -38,23 +43,28 @@ System_Nullable_bool__o BattleMovieParam__get_IsFadeOutBgmBeforeMovie(
 {
   int32_t FadeOutBgmBeforeMovie; // w8
   System_Nullable_bool__o *v4; // x0
-  System_Nullable_bool__o v5; // [xsp+Ch] [xbp-14h] BYREF
+  System_Nullable_bool__o v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4D3051A & 1) == 0 )
+  if ( (byte_4E04553 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Nullable_bool___ctor__);
-    byte_4D3051A = 1;
+    sub_1CE6700(&Method_System_Nullable_bool___ctor__);
+    byte_4E04553 = 1;
   }
   FadeOutBgmBeforeMovie = this->fields.FadeOutBgmBeforeMovie;
-  v5 = 0;
+  v6 = 0;
   if ( FadeOutBgmBeforeMovie < 0 )
-    return 0;
-  v4 = &v5;
-  System_Nullable_bool____ctor(
-    (System_Nullable_bool__o)v4,
-    FadeOutBgmBeforeMovie != 0,
-    (const MethodInfo_399C0AC *)Method_System_Nullable_bool___ctor__);
-  return v5;
+  {
+    return (System_Nullable_bool__o)0;
+  }
+  else
+  {
+    v4 = &v6;
+    System_Nullable_bool____ctor(
+      (System_Nullable_bool__o)v4,
+      FadeOutBgmBeforeMovie != 0,
+      (const MethodInfo_3A2A238 *)Method_System_Nullable_bool___ctor__);
+    return v6;
+  }
 }
 
 
@@ -63,22 +73,29 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeStartFrame(
         const MethodInfo *method)
 {
   int32_t movieAfterCrossFadeStartFrame; // w1
-  System_Nullable_int__o v4; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v4; // x0
+  System_Nullable_int__o v6; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4D3051B & 1) == 0 )
+  if ( (byte_4E04554 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Nullable_int___ctor__);
-    byte_4D3051B = 1;
+    sub_1CE6700(&Method_System_Nullable_int___ctor__);
+    byte_4E04554 = 1;
   }
   movieAfterCrossFadeStartFrame = this->fields.movieAfterCrossFadeStartFrame;
-  v4 = 0;
+  v6 = 0;
   if ( movieAfterCrossFadeStartFrame < 0 )
-    return 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v4,
-    movieAfterCrossFadeStartFrame,
-    (const MethodInfo_399F80C *)Method_System_Nullable_int___ctor__);
-  return v4;
+  {
+    return (System_Nullable_int__o)0LL;
+  }
+  else
+  {
+    v4 = (System_Nullable_int__o)&v6;
+    System_Nullable_int____ctor(
+      v4,
+      movieAfterCrossFadeStartFrame,
+      (const MethodInfo_3A2DE74 *)Method_System_Nullable_int___ctor__);
+    return v6;
+  }
 }
 
 
@@ -87,20 +104,27 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeTime(
         const MethodInfo *method)
 {
   int32_t movieAfterCrossFadeTime; // w1
-  System_Nullable_int__o v4; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v4; // x0
+  System_Nullable_int__o v6; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4D3051C & 1) == 0 )
+  if ( (byte_4E04555 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Nullable_int___ctor__);
-    byte_4D3051C = 1;
+    sub_1CE6700(&Method_System_Nullable_int___ctor__);
+    byte_4E04555 = 1;
   }
   movieAfterCrossFadeTime = this->fields.movieAfterCrossFadeTime;
-  v4 = 0;
+  v6 = 0;
   if ( movieAfterCrossFadeTime < 0 )
-    return 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v4,
-    movieAfterCrossFadeTime,
-    (const MethodInfo_399F80C *)Method_System_Nullable_int___ctor__);
-  return v4;
+  {
+    return (System_Nullable_int__o)0LL;
+  }
+  else
+  {
+    v4 = (System_Nullable_int__o)&v6;
+    System_Nullable_int____ctor(
+      v4,
+      movieAfterCrossFadeTime,
+      (const MethodInfo_3A2DE74 *)Method_System_Nullable_int___ctor__);
+    return v6;
+  }
 }

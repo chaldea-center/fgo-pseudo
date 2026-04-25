@@ -13,12 +13,20 @@ void ColorChange__Awake(ColorChange_o *this, const MethodInfo *method)
 
 UnityEngine_Color_o ColorChange__GetColor(ColorChange_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.mNowColor.fields.r;
-  result.fields.g = this->fields.mNowColor.fields.g;
-  result.fields.b = this->fields.mNowColor.fields.b;
-  result.fields.a = this->fields.mNowColor.fields.a;
+  r = this->fields.mNowColor.fields.r;
+  g = this->fields.mNowColor.fields.g;
+  b = this->fields.mNowColor.fields.b;
+  a = this->fields.mNowColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -65,7 +73,7 @@ UnityEngine_Color_o ColorChange__PingPong(
     to.fields.b = b;
     to.fields.a = a;
   }
-  return Easing__Func_49776096(from, to, v10, easingType, 0);
+  return Easing__Func_50160076(from, to, v10, easingType, 0);
 }
 
 
@@ -115,14 +123,14 @@ void ColorChange__Play(
   v11->fields.mCount = count;
   v11->fields.mNowCount = 0;
   v11->fields.mEndAct = endAct;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22, v23, v24, v25, v26);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22, v23, v24, v25, v26);
   v11->fields.mProcessAct = procAct;
   v11 = (ColorChange_o *)((char *)v11 + 112);
   *(float *)&v11[-1].fields.mNowCount = r;
   v11[-1].fields.mDelay = g;
   *(&v11[-1].fields.mDelay + 1) = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v11, (int32_t)procAct, v27, v28, v29, v30, v31, v32);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v11, (int32_t)procAct, v27, v28, v29, v30, v31, v32);
   klass = (System_Action_o *)v11->klass;
   LODWORD(v11->fields.m_CancellationTokenSource) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
@@ -179,6 +187,7 @@ void ColorChange__Stop(ColorChange_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
 {
   float mStartTime; // s8
@@ -187,23 +196,24 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
   float v6; // s6
   float v7; // s17
   float v8; // s7
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  float v13; // s4 OVERLAPPED
+  float v14; // s5
+  float v15; // s6
+  float v16; // s7
   int32_t mEasingType; // w1
   float time; // s8
   struct System_Action_o *mProcessAct; // x8
   int32_t mCount; // w8
-  int32_t v19; // w9
+  int32_t v21; // w9
   struct System_Action_o *mEndAct; // x8
-  float v21; // s0
+  float v23; // s0
   int32_t mStyle; // w8
-  struct UnityEngine_Color_o mToColor; // q0
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  UnityEngine_Color_o v28; // 0:kr00_16.16
-  UnityEngine_Color_o v29; // 0:kr10_16.16
-  UnityEngine_Color_o mFromColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v31; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  struct UnityEngine_Color_o mFromColor; // q0
+  UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( this->fields.mIsChangeColor && !this->fields.mPause )
   {
@@ -216,36 +226,23 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
          / this->fields.mTime;
       v7 = 0.0;
       v8 = fminf(v6, 1.0);
-      mFromColor = this->fields.mFromColor;
-      v31.fields.r = this->fields.mToColor.fields.r;
-      v31.fields.g = this->fields.mToColor.fields.g;
+      r = this->fields.mFromColor.fields.r;
+      g = this->fields.mFromColor.fields.g;
+      b = this->fields.mFromColor.fields.b;
+      a = this->fields.mFromColor.fields.a;
+      v13 = this->fields.mToColor.fields.r;
+      v14 = this->fields.mToColor.fields.g;
       if ( v6 >= 0.0 )
         v7 = v8;
-      v31.fields.b = this->fields.mToColor.fields.b;
-      v31.fields.a = this->fields.mToColor.fields.a;
+      v15 = this->fields.mToColor.fields.b;
+      v16 = this->fields.mToColor.fields.a;
       mEasingType = this->fields.mEasingType;
       time = this->fields.mIsSkip ? 1.0 : v7;
-      if ( this->fields.mStyle == 1 )
-      {
-        v28 = ColorChange__PingPong(this, mFromColor, v31, time, mEasingType, v5);
-        r = v28.fields.r;
-        g = v28.fields.g;
-        b = v28.fields.b;
-        a = v28.fields.a;
-      }
-      else
-      {
-        v29 = Easing__Func_49776096(mFromColor, v31, time, mEasingType, 0);
-        r = v29.fields.r;
-        g = v29.fields.g;
-        b = v29.fields.b;
-        a = v29.fields.a;
-      }
+      v26 = this->fields.mStyle == 1
+          ? ColorChange__PingPong(this, *(UnityEngine_Color_o *)&r, *(UnityEngine_Color_o *)&v13, time, mEasingType, v5)
+          : Easing__Func_50160076(*(UnityEngine_Color_o *)&r, *(UnityEngine_Color_o *)&v13, time, mEasingType, 0);
       mProcessAct = this->fields.mProcessAct;
-      this->fields.mNowColor.fields.r = r;
-      this->fields.mNowColor.fields.g = g;
-      this->fields.mNowColor.fields.b = b;
-      this->fields.mNowColor.fields.a = a;
+      this->fields.mNowColor = v26;
       if ( mProcessAct )
         ((void (__fastcall *)(intptr_t, intptr_t))mProcessAct->fields.invoke_impl)(
           mProcessAct->fields.method_code,
@@ -253,24 +250,24 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
       if ( time >= 1.0 )
       {
         mCount = this->fields.mCount;
-        v19 = this->fields.mNowCount + 1;
-        this->fields.mNowCount = v19;
-        if ( mCount > v19 || !mCount )
+        v21 = this->fields.mNowCount + 1;
+        this->fields.mNowCount = v21;
+        if ( mCount > v21 || !mCount )
         {
-          v21 = UnityEngine_Time__get_time(0);
+          v23 = UnityEngine_Time__get_time(0);
           mStyle = this->fields.mStyle;
-          this->fields.mStartTime = v21;
+          this->fields.mStartTime = v23;
           if ( mStyle == 1 )
           {
-            mToColor = this->fields.mFromColor;
+            mFromColor = this->fields.mFromColor;
           }
           else
           {
             if ( mStyle )
               return;
-            mToColor = this->fields.mToColor;
+            mFromColor = this->fields.mToColor;
           }
-          this->fields.mNowColor = mToColor;
+          this->fields.mNowColor = mFromColor;
           return;
         }
         mEndAct = this->fields.mEndAct;

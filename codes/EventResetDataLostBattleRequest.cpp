@@ -1,21 +1,24 @@
+void EventResetDataLostBattleRequest___ctor(EventResetDataLostBattleRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0);
+}
+
+
 void EventResetDataLostBattleRequest__beginRequest(
         EventResetDataLostBattleRequest_o *this,
         int32_t dataLostBattleId,
         int32_t resetIdx,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
-
-  if ( (byte_4D324E2 & 1) == 0 )
+  if ( (byte_4E0652A & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_18630/*"dataLostBattleId"*/);
-    sub_1C93AD4(&StringLiteral_20492/*"idx"*/);
-    byte_4D324E2 = 1;
+    sub_1CE6700(&StringLiteral_18690/*"dataLostBattleId"*/);
+    sub_1CE6700(&StringLiteral_20560/*"idx"*/);
+    byte_4E0652A = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18630/*"dataLostBattleId"*/, dataLostBattleId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20492/*"idx"*/, resetIdx, v7);
-  RequestBase__beginRequest((RequestBase_o *)this, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18690/*"dataLostBattleId"*/, dataLostBattleId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20560/*"idx"*/, resetIdx, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
@@ -25,16 +28,16 @@ System_String_o *EventResetDataLostBattleRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D324E1 & 1) == 0 )
+  if ( (byte_4E06529 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_19328/*"event/resetDataLostBattle"*/);
-    byte_4D324E1 = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_19389/*"event/resetDataLostBattle"*/);
+    byte_4E06529 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19328/*"event/resetDataLostBattle"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_19389/*"event/resetDataLostBattle"*/, 0);
 }
 
 
@@ -44,43 +47,30 @@ void EventResetDataLostBattleRequest__requestCompleted(
         const MethodInfo *method)
 {
   ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v9; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
+  System_String_o *v8; // x1
 
-  if ( (byte_4D324E3 & 1) == 0 )
+  if ( (byte_4E0652B & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D324E3 = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E0652B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(124, responseList, 0);
-  if ( v5 && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45365352(v5, 0)) )
   {
-    success = (Il2CppObject *)v7->fields.success;
+    success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
-        CallBack->fields.method_code,
-        v9,
-        CallBack->fields.method);
+    v8 = JsonManager__toJson(success, 0, 0, 0);
   }
   else
   {
-    v11 = this->fields.CallBack;
-    if ( v11 )
-      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
-        v11->fields.method_code,
-        StringLiteral_22483/*"ng"*/,
-        v11->fields.method);
+    v8 = (System_String_o *)StringLiteral_22555/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

@@ -6,12 +6,12 @@ void EventDailyPointRequest___ctor(EventDailyPointRequest_o *this, const MethodI
 
 void EventDailyPointRequest__beginRequest(EventDailyPointRequest_o *this, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4D324C0 & 1) == 0 )
+  if ( (byte_4E06509 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_19339/*"eventId"*/);
-    byte_4D324C0 = 1;
+    sub_1CE6700(&StringLiteral_19400/*"eventId"*/);
+    byte_4E06509 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19339/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19400/*"eventId"*/, eventId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -20,16 +20,16 @@ System_String_o *EventDailyPointRequest__getURL(EventDailyPointRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D324BF & 1) == 0 )
+  if ( (byte_4E06508 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_19320/*"event/dailyPoint"*/);
-    byte_4D324BF = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_19381/*"event/dailyPoint"*/);
+    byte_4E06508 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19320/*"event/dailyPoint"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_19381/*"event/dailyPoint"*/, 0);
 }
 
 
@@ -43,17 +43,17 @@ void EventDailyPointRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4D324C1 & 1) == 0 )
+  if ( (byte_4E0650A & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D324C1 = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E0650A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(83, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44908744(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45365352(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -61,7 +61,7 @@ void EventDailyPointRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22483/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22555/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

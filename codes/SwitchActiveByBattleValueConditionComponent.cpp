@@ -9,13 +9,14 @@ void SwitchActiveByBattleValueConditionComponent___ctor(
 bool SwitchActiveByBattleValueConditionComponent__IsSatisfyCond(
         SwitchActiveByBattleValueConditionComponent_o *this,
         BattleData_o *data,
+        BattleActorControl_o *actor,
         const MethodInfo *method)
 {
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
   value = 0;
   if ( !data )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   if ( BattleData__TryGetBattleValue(data, this->fields.BattleValKeyId, &value, 0) )
     return BattleUtility__IsSatisfyValueCond(this->fields.CondType, this->fields.CondValArray, value, 0);
   else

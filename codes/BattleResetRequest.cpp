@@ -6,12 +6,12 @@ void BattleResetRequest___ctor(BattleResetRequest_o *this, const MethodInfo *met
 
 void BattleResetRequest__beginRequest(BattleResetRequest_o *this, int32_t questId, const MethodInfo *method)
 {
-  if ( (byte_4D32408 & 1) == 0 )
+  if ( (byte_4E0644E & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_23146/*"questId"*/);
-    byte_4D32408 = 1;
+    sub_1CE6700(&StringLiteral_23225/*"questId"*/);
+    byte_4E0644E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23146/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23225/*"questId"*/, questId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -20,16 +20,16 @@ System_String_o *BattleResetRequest__getURL(BattleResetRequest_o *this, const Me
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D32407 & 1) == 0 )
+  if ( (byte_4E0644D & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_17179/*"battle/reset"*/);
-    byte_4D32407 = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_17232/*"battle/reset"*/);
+    byte_4E0644D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_17179/*"battle/reset"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_17232/*"battle/reset"*/, 0);
 }
 
 
@@ -43,17 +43,17 @@ void BattleResetRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4D32409 & 1) == 0 )
+  if ( (byte_4E0644F & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D32409 = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E0644F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(113, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44908744(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45365352(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -62,7 +62,7 @@ void BattleResetRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22483/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22555/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

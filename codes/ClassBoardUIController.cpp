@@ -17,10 +17,10 @@ void ClassBoardUIController__ActivateClassBoardResetButton(
   bool activeSelf; // w0
   __int64 v11; // x8
 
-  if ( (byte_4D346F8 & 1) == 0 )
+  if ( (byte_4E08778 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D346F8 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E08778 = 1;
   }
   classBoardResetBtnSprite = (UnityEngine_Object_o *)this->fields.classBoardResetBtnSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -40,7 +40,7 @@ void ClassBoardUIController__ActivateClassBoardResetButton(
         || (v9 = (UnityEngine_Component_o *)this->fields.classBoardResetBtnSprite,
             (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0) )
       {
-        sub_1C93D2C(gameObject, v7);
+        sub_1CE6958(gameObject, v7);
       }
       activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)gameObject, 0);
       v11 = 240;
@@ -82,7 +82,7 @@ void ClassBoardUIController__ActivateEffectListButton(
   if ( !effectListBtnSprite
     || (effectListBtnSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(effectListBtnSprite, 0)) == 0 )
   {
-    sub_1C93D2C(effectListBtnSprite, value);
+    sub_1CE6958(effectListBtnSprite, value);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)effectListBtnSprite, value, 0);
 }
@@ -102,7 +102,7 @@ void ClassBoardUIController__ActivateGrandScoreButton(
   {
     gameObject = UnityEngine_Component__get_gameObject(grandScoreBtnSprite, 0);
     if ( !gameObject )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_GameObject__SetActive(gameObject, value, 0);
   }
 }
@@ -122,7 +122,7 @@ void ClassBoardUIController__ActivateToGrandServantListButton(
   {
     gameObject = UnityEngine_Component__get_gameObject(toGrandServantListBtnSprite, 0);
     if ( !gameObject )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_GameObject__SetActive(gameObject, value, 0);
   }
 }
@@ -184,22 +184,22 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
   UnityEngine_GameObject_o *v19; // x0
 
   v2 = this;
-  if ( (byte_4D346F7 & 1) == 0 )
+  if ( (byte_4E08777 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_17666/*"btn_to_grand_scoreboard"*/);
-    sub_1C93AD4(&StringLiteral_17663/*"btn_to_class_scoreboard"*/);
-    sub_1C93AD4(&StringLiteral_17624/*"btn_list"*/);
-    sub_1C93AD4(&StringLiteral_17641/*"btn_regression_hourglass"*/);
-    sub_1C93AD4(&StringLiteral_17665/*"btn_to_crown_formation"*/);
-    this = (ClassBoardUIController_o *)sub_1C93AD4(&StringLiteral_17667/*"btn_to_grand_scoreboard_2"*/);
-    byte_4D346F7 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_17722/*"btn_to_grand_scoreboard"*/);
+    sub_1CE6700(&StringLiteral_17719/*"btn_to_class_scoreboard"*/);
+    sub_1CE6700(&StringLiteral_17681/*"btn_list"*/);
+    sub_1CE6700(&StringLiteral_17697/*"btn_regression_hourglass"*/);
+    sub_1CE6700(&StringLiteral_17721/*"btn_to_crown_formation"*/);
+    this = (ClassBoardUIController_o *)sub_1CE6700(&StringLiteral_17723/*"btn_to_grand_scoreboard_2"*/);
+    byte_4E08777 = 1;
   }
   v2->fields.touchBlockCount = 0;
   UiAtlasManagerUnit = ClassBoardGlobalObject__get_UiAtlasManagerUnit((const MethodInfo *)this);
   if ( !UiAtlasManagerUnit )
     goto LABEL_37;
-  AtlasManagerUnit__SetUI(UiAtlasManagerUnit, v2->fields.effectListBtnSprite, (System_String_o *)StringLiteral_17624/*"btn_list"*/, 0);
+  AtlasManagerUnit__SetUI(UiAtlasManagerUnit, v2->fields.effectListBtnSprite, (System_String_o *)StringLiteral_17681/*"btn_list"*/, 0);
   toGrandServantListBtnSprite = (UnityEngine_Object_o *)v2->fields.toGrandServantListBtnSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -212,7 +212,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.toGrandServantListBtnSprite,
-      (System_String_o *)StringLiteral_17665/*"btn_to_crown_formation"*/,
+      (System_String_o *)StringLiteral_17721/*"btn_to_crown_formation"*/,
       0);
   }
   grandScoreBtnSprite = (UnityEngine_Object_o *)v2->fields.grandScoreBtnSprite;
@@ -227,7 +227,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.grandScoreBtnSprite,
-      (System_String_o *)StringLiteral_17666/*"btn_to_grand_scoreboard"*/,
+      (System_String_o *)StringLiteral_17722/*"btn_to_grand_scoreboard"*/,
       0);
   }
   classScoreBtnSprite = (UnityEngine_Object_o *)v2->fields.classScoreBtnSprite;
@@ -242,7 +242,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.classScoreBtnSprite,
-      (System_String_o *)StringLiteral_17663/*"btn_to_class_scoreboard"*/,
+      (System_String_o *)StringLiteral_17719/*"btn_to_class_scoreboard"*/,
       0);
   }
   classBoardResetBtnSprite = (UnityEngine_Object_o *)v2->fields.classBoardResetBtnSprite;
@@ -257,7 +257,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.classBoardResetBtnSprite,
-      (System_String_o *)StringLiteral_17641/*"btn_regression_hourglass"*/,
+      (System_String_o *)StringLiteral_17697/*"btn_regression_hourglass"*/,
       0);
   }
   backBtnToClassScoreSprite = (UnityEngine_Object_o *)v2->fields.backBtnToClassScoreSprite;
@@ -272,7 +272,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.backBtnToClassScoreSprite,
-      (System_String_o *)StringLiteral_17663/*"btn_to_class_scoreboard"*/,
+      (System_String_o *)StringLiteral_17719/*"btn_to_class_scoreboard"*/,
       0);
   }
   backBtnToGrandScoreSprite = (UnityEngine_Object_o *)v2->fields.backBtnToGrandScoreSprite;
@@ -287,7 +287,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
     AtlasManagerUnit__SetUI(
       UiAtlasManagerUnit,
       v2->fields.backBtnToGrandScoreSprite,
-      (System_String_o *)StringLiteral_17667/*"btn_to_grand_scoreboard_2"*/,
+      (System_String_o *)StringLiteral_17723/*"btn_to_grand_scoreboard_2"*/,
       0);
   }
   ClassBoardUIController__ChangeDisplayBackButtonClose(v2, v17);
@@ -299,7 +299,7 @@ void ClassBoardUIController__Init(ClassBoardUIController_o *this, const MethodIn
         (UiAtlasManagerUnit = (AtlasManagerUnit_o *)v2->fields.backBtnToGrandScoreSprite) == 0) )
   {
 LABEL_37:
-    sub_1C93D2C(UiAtlasManagerUnit, v4);
+    sub_1CE6958(UiAtlasManagerUnit, v4);
   }
   v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)UiAtlasManagerUnit, 0);
   AndroidBackKeyManager__AddBackBtn(v19, 0);
@@ -318,26 +318,26 @@ bool ClassBoardUIController__IsOpenQuestOpenDialog(
   bool result; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D34707 & 1) == 0 )
+  if ( (byte_4E08787 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    byte_4D34707 = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    byte_4E08787 = 1;
   }
   entity = 0;
   *questId = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_16;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           baseId,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity
@@ -345,7 +345,7 @@ bool ClassBoardUIController__IsOpenQuestOpenDialog(
         (Master_object = entity) == 0) )
   {
 LABEL_16:
-    sub_1C93D2C(Master_object, v7);
+    sub_1CE6958(Master_object, v7);
   }
   QuestOpenDialogCondSignNum = ClassBoardBaseEntity__GetQuestOpenDialogCondSignNum((ClassBoardBaseEntity_o *)entity, 0);
   result = 0;
@@ -364,15 +364,15 @@ void ClassBoardUIController__OnClickBack(ClassBoardUIController_o *this, const M
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4D34702 & 1) == 0 )
+  if ( (byte_4E08782 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickBack__);
-    byte_4D34702 = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickBack__);
+    byte_4E08782 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickBack__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickBack__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickBack__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   ActionExtensions__Call(this->fields.onClickBack, 0);
 }
@@ -383,15 +383,15 @@ void ClassBoardUIController__OnClickClassBoardResetButton(ClassBoardUIController
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4D34701 & 1) == 0 )
+  if ( (byte_4E08781 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickClassBoardResetButton__);
-    byte_4D34701 = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickClassBoardResetButton__);
+    byte_4E08781 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickClassBoardResetButton__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickClassBoardResetButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickClassBoardResetButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickClassBoardResetButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onClickClassBoardResetButton, 0);
 }
@@ -403,15 +403,15 @@ void ClassBoardUIController__OnClickClassBoardSelectButton(ClassBoardUIControlle
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_o *onClickClassBoardSelectButton; // x8
 
-  if ( (byte_4D34703 & 1) == 0 )
+  if ( (byte_4E08783 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickClassBoardSelectButton__);
-    byte_4D34703 = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickClassBoardSelectButton__);
+    byte_4E08783 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickClassBoardSelectButton__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickClassBoardSelectButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickClassBoardSelectButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickClassBoardSelectButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   onClickClassBoardSelectButton = this->fields.onClickClassBoardSelectButton;
   if ( onClickClassBoardSelectButton )
@@ -431,21 +431,21 @@ void ClassBoardUIController__OnClickClassScoreButton(ClassBoardUIController_o *t
   System_Reflection_MethodBase_o *v7; // x0
 
   v2 = this;
-  if ( (byte_4D34700 & 1) == 0 )
+  if ( (byte_4E08780 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickClassScoreButton__);
-    this = (ClassBoardUIController_o *)sub_1C93AD4(&StringLiteral_17664/*"btn_to_class_scoreboard_blackout"*/);
-    byte_4D34700 = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickClassScoreButton__);
+    this = (ClassBoardUIController_o *)sub_1CE6700(&StringLiteral_17720/*"btn_to_class_scoreboard_blackout"*/);
+    byte_4E08780 = 1;
   }
   classScoreBtnSprite = v2->fields.classScoreBtnSprite;
   if ( !classScoreBtnSprite )
-    sub_1C93D2C(this, method);
-  v4 = System_String__op_Equality(classScoreBtnSprite->fields.mSpriteName, (System_String_o *)StringLiteral_17664/*"btn_to_class_scoreboard_blackout"*/, 0);
+    sub_1CE6958(this, method);
+  v4 = System_String__op_Equality(classScoreBtnSprite->fields.mSpriteName, (System_String_o *)StringLiteral_17720/*"btn_to_class_scoreboard_blackout"*/, 0);
   v5 = Method_ClassBoardUIController_OnClickClassScoreButton__;
   v6 = v4;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickClassScoreButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickClassScoreButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
+    v5 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickClassScoreButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
   if ( v6 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
@@ -463,15 +463,15 @@ void ClassBoardUIController__OnClickEffectListButton(ClassBoardUIController_o *t
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4D346FD & 1) == 0 )
+  if ( (byte_4E0877D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickEffectListButton__);
-    byte_4D346FD = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickEffectListButton__);
+    byte_4E0877D = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickEffectListButton__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickEffectListButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickEffectListButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickEffectListButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onClickEffectList, 0);
 }
@@ -487,21 +487,21 @@ void ClassBoardUIController__OnClickGrandScoreButton(ClassBoardUIController_o *t
   System_Reflection_MethodBase_o *v7; // x0
 
   v2 = this;
-  if ( (byte_4D346FF & 1) == 0 )
+  if ( (byte_4E0877F & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickGrandScoreButton__);
-    this = (ClassBoardUIController_o *)sub_1C93AD4(&StringLiteral_17668/*"btn_to_grand_scoreboard_blackout"*/);
-    byte_4D346FF = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickGrandScoreButton__);
+    this = (ClassBoardUIController_o *)sub_1CE6700(&StringLiteral_17724/*"btn_to_grand_scoreboard_blackout"*/);
+    byte_4E0877F = 1;
   }
   grandScoreBtnSprite = v2->fields.grandScoreBtnSprite;
   if ( !grandScoreBtnSprite )
-    sub_1C93D2C(this, method);
-  v4 = System_String__op_Equality(grandScoreBtnSprite->fields.mSpriteName, (System_String_o *)StringLiteral_17668/*"btn_to_grand_scoreboard_blackout"*/, 0);
+    sub_1CE6958(this, method);
+  v4 = System_String__op_Equality(grandScoreBtnSprite->fields.mSpriteName, (System_String_o *)StringLiteral_17724/*"btn_to_grand_scoreboard_blackout"*/, 0);
   v5 = Method_ClassBoardUIController_OnClickGrandScoreButton__;
   v6 = v4;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickGrandScoreButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickGrandScoreButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
+    v5 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickGrandScoreButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
   if ( v6 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
@@ -519,15 +519,15 @@ void ClassBoardUIController__OnClickHelp(ClassBoardUIController_o *this, const M
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4D346FE & 1) == 0 )
+  if ( (byte_4E0877E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickHelp__);
-    byte_4D346FE = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickHelp__);
+    byte_4E0877E = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickHelp__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickHelp__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickHelp__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickHelp__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onClickHelp, 0);
 }
@@ -538,15 +538,15 @@ void ClassBoardUIController__OnClickToGrandServantList(ClassBoardUIController_o 
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4D34704 & 1) == 0 )
+  if ( (byte_4E08784 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ClassBoardUIController_OnClickToGrandServantList__);
-    byte_4D34704 = 1;
+    sub_1CE6700(&Method_ClassBoardUIController_OnClickToGrandServantList__);
+    byte_4E08784 = 1;
   }
   v3 = Method_ClassBoardUIController_OnClickToGrandServantList__;
   if ( (*((_BYTE *)Method_ClassBoardUIController_OnClickToGrandServantList__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_ClassBoardUIController_OnClickToGrandServantList__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_ClassBoardUIController_OnClickToGrandServantList__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onClickToGrandServantList, 0);
 }
@@ -568,21 +568,21 @@ void ClassBoardUIController__OpenMissionClearDialog(
   System_String_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D34706 & 1) == 0 )
+  if ( (byte_4E08786 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&string_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3431/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/);
-    byte_4D34706 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&string_TypeInfo);
+    sub_1CE6700(&StringLiteral_3436/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/);
+    byte_4E08786 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   Empty = string_TypeInfo->static_fields->Empty;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3431/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3436/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, 0);
   if ( !Instance )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   CommonUI__OpenNotificationDialog((CommonUI_o *)Instance, Empty, v6, callback, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0.0, 0, 0);
 }
 
@@ -597,10 +597,10 @@ void ClassBoardUIController__SetCameraWorkBlock(ClassBoardUIController_o *this, 
   __int64 v8; // x1
   __int64 v9; // x19
 
-  if ( (byte_4D34705 & 1) == 0 )
+  if ( (byte_4E08785 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D34705 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E08785 = 1;
   }
   ClassBoardPageSwitcher__SetCameraWorkBlockNum(value, (const MethodInfo *)value);
   MapCamera = (UnityEngine_Object_o *)ClassBoardGlobalObject__get_MapCamera(v4);
@@ -611,13 +611,13 @@ void ClassBoardUIController__SetCameraWorkBlock(ClassBoardUIController_o *this, 
   {
     v7 = (__int64)ClassBoardGlobalObject__get_MapCamera((const MethodInfo *)v6);
     v9 = v7;
-    if ( !byte_4D34752 )
+    if ( !byte_4E087D2 )
     {
-      v7 = sub_1C93AD4(&ClassBoardPageSwitcher_TypeInfo);
-      byte_4D34752 = 1;
+      v7 = sub_1CE6700(&ClassBoardPageSwitcher_TypeInfo);
+      byte_4E087D2 = 1;
     }
     if ( !v9 )
-      sub_1C93D2C(v7, v8);
+      sub_1CE6958(v7, v8);
     *(_BYTE *)(v9 + 97) = ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum < 1;
   }
 }
@@ -638,24 +638,24 @@ void ClassBoardUIController__SetClassScoreButton(
   UISprite_o *backBtnToClassScoreSprite; // x20
   __int64 *v14; // x8
 
-  if ( (byte_4D346FC & 1) == 0 )
+  if ( (byte_4E0877C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
-    sub_1C93AD4(&StringLiteral_17663/*"btn_to_class_scoreboard"*/);
-    sub_1C93AD4(&StringLiteral_17664/*"btn_to_class_scoreboard_blackout"*/);
-    byte_4D346FC = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+    sub_1CE6700(&StringLiteral_17719/*"btn_to_class_scoreboard"*/);
+    sub_1CE6700(&StringLiteral_17720/*"btn_to_class_scoreboard_blackout"*/);
+    byte_4E0877C = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_16;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              classBaseId,
-             (const MethodInfo_3463274 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+             (const MethodInfo_34E925C *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Entity )
     return;
   classScoreBtnSprite = this->fields.classScoreBtnSprite;
@@ -663,17 +663,17 @@ void ClassBoardUIController__SetClassScoreButton(
   Master_object = (Il2CppObject *)ClassBoardBaseEntity__IsOpen((ClassBoardBaseEntity_o *)Entity, 0);
   if ( !atlasManagerUnit )
 LABEL_16:
-    sub_1C93D2C(Master_object, v8);
+    sub_1CE6958(Master_object, v8);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
-    v12 = &StringLiteral_17663/*"btn_to_class_scoreboard"*/;
+    v12 = &StringLiteral_17719/*"btn_to_class_scoreboard"*/;
   else
-    v12 = &StringLiteral_17664/*"btn_to_class_scoreboard_blackout"*/;
+    v12 = &StringLiteral_17720/*"btn_to_class_scoreboard_blackout"*/;
   AtlasManagerUnit__SetUI(atlasManagerUnit, classScoreBtnSprite, (System_String_o *)*v12, 0);
   backBtnToClassScoreSprite = this->fields.backBtnToClassScoreSprite;
   if ( ClassBoardBaseEntity__IsOpen(v11, 0) )
-    v14 = &StringLiteral_17663/*"btn_to_class_scoreboard"*/;
+    v14 = &StringLiteral_17719/*"btn_to_class_scoreboard"*/;
   else
-    v14 = &StringLiteral_17664/*"btn_to_class_scoreboard_blackout"*/;
+    v14 = &StringLiteral_17720/*"btn_to_class_scoreboard_blackout"*/;
   AtlasManagerUnit__SetUI(atlasManagerUnit, backBtnToClassScoreSprite, (System_String_o *)*v14, 0);
 }
 
@@ -693,26 +693,26 @@ void ClassBoardUIController__SetGrandScoreButton(
   UISprite_o *backBtnToGrandScoreSprite; // x20
   System_String_o **v14; // x8
 
-  if ( (byte_4D346FB & 1) == 0 )
+  if ( (byte_4E0877B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
-    sub_1C93AD4(&StringLiteral_17666/*"btn_to_grand_scoreboard"*/);
-    sub_1C93AD4(&StringLiteral_17668/*"btn_to_grand_scoreboard_blackout"*/);
-    sub_1C93AD4(&StringLiteral_17669/*"btn_to_grand_scoreboard_blackout_2"*/);
-    sub_1C93AD4(&StringLiteral_17667/*"btn_to_grand_scoreboard_2"*/);
-    byte_4D346FB = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+    sub_1CE6700(&StringLiteral_17722/*"btn_to_grand_scoreboard"*/);
+    sub_1CE6700(&StringLiteral_17724/*"btn_to_grand_scoreboard_blackout"*/);
+    sub_1CE6700(&StringLiteral_17725/*"btn_to_grand_scoreboard_blackout_2"*/);
+    sub_1CE6700(&StringLiteral_17723/*"btn_to_grand_scoreboard_2"*/);
+    byte_4E0877B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              grandBaseId,
-             (const MethodInfo_3463274 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+             (const MethodInfo_34E925C *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Entity )
     return;
   grandScoreBtnSprite = this->fields.grandScoreBtnSprite;
@@ -720,16 +720,16 @@ void ClassBoardUIController__SetGrandScoreButton(
   Master_object = (Il2CppObject *)ClassBoardBaseEntity__IsOpen((ClassBoardBaseEntity_o *)Entity, 0);
   if ( !atlasManagerUnit )
 LABEL_15:
-    sub_1C93D2C(Master_object, v8);
-  v12 = &StringLiteral_17666/*"btn_to_grand_scoreboard"*/;
+    sub_1CE6958(Master_object, v8);
+  v12 = &StringLiteral_17722/*"btn_to_grand_scoreboard"*/;
   if ( ((unsigned __int8)Master_object & 1) == 0 )
-    v12 = &StringLiteral_17668/*"btn_to_grand_scoreboard_blackout"*/;
+    v12 = &StringLiteral_17724/*"btn_to_grand_scoreboard_blackout"*/;
   AtlasManagerUnit__SetUI(atlasManagerUnit, grandScoreBtnSprite, (System_String_o *)*v12, 0);
   backBtnToGrandScoreSprite = this->fields.backBtnToGrandScoreSprite;
   if ( ClassBoardBaseEntity__IsOpen(v11, 0) )
-    v14 = (System_String_o **)&StringLiteral_17667/*"btn_to_grand_scoreboard_2"*/;
+    v14 = (System_String_o **)&StringLiteral_17723/*"btn_to_grand_scoreboard_2"*/;
   else
-    v14 = (System_String_o **)&StringLiteral_17669/*"btn_to_grand_scoreboard_blackout_2"*/;
+    v14 = (System_String_o **)&StringLiteral_17725/*"btn_to_grand_scoreboard_blackout_2"*/;
   AtlasManagerUnit__SetUI(atlasManagerUnit, backBtnToGrandScoreSprite, *v14, 0);
 }
 
@@ -749,11 +749,11 @@ void ClassBoardUIController__SetHeaderMessage(
   UnityEngine_Component_o *v15; // x0
   UnityEngine_Component_o *transform; // x0
 
-  if ( (byte_4D346F9 & 1) == 0 )
+  if ( (byte_4E08779 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20595/*"img_commonbg_11"*/);
-    byte_4D346F9 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_20663/*"img_commonbg_11"*/);
+    byte_4E08779 = 1;
   }
   headerMessageBgSprite = (UnityEngine_Component_o *)this->fields.headerMessageBgSprite;
   if ( !headerMessageBgSprite )
@@ -791,14 +791,14 @@ void ClassBoardUIController__SetHeaderMessage(
       AtlasManagerUnit__SetUI(
         atlasManagerUnit,
         this->fields.headerMessageBgSprite,
-        (System_String_o *)StringLiteral_20595/*"img_commonbg_11"*/,
+        (System_String_o *)StringLiteral_20663/*"img_commonbg_11"*/,
         0);
       headerMessageBgSprite = (UnityEngine_Component_o *)this->fields.headerMessageLabel;
       if ( headerMessageBgSprite )
         goto LABEL_17;
     }
 LABEL_18:
-    sub_1C93D2C(headerMessageBgSprite, atlasManagerUnit);
+    sub_1CE6958(headerMessageBgSprite, atlasManagerUnit);
   }
   BasicHelper__SetActiveSafely(parent, 0, 0);
   headerMessageBgSprite = (UnityEngine_Component_o *)this->fields.underMessageLabel;
@@ -827,7 +827,7 @@ void ClassBoardUIController__SetHeaderTitle(
         AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.headerTitleSprite, spriteName, 0),
         (this = (ClassBoardUIController_o *)v4->fields.headerTitleSprite) == 0) )
   {
-    sub_1C93D2C(this, atlasManagerUnit);
+    sub_1CE6958(this, atlasManagerUnit);
   }
   ((void (__fastcall *)(ClassBoardUIController_o *, void *))this->klass[2]._1.parent)(
     this,
@@ -855,11 +855,11 @@ void ClassBoardUIController__SetItemList(
   UnityEngine_Object_o *headerGrandItemParent; // x21
 
   v8 = this;
-  if ( (byte_4D346FA & 1) == 0 )
+  if ( (byte_4E0877A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    this = (ClassBoardUIController_o *)sub_1C93AD4(&StringLiteral_20648/*"img_item_bg"*/);
-    byte_4D346FA = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    this = (ClassBoardUIController_o *)sub_1CE6700(&StringLiteral_20716/*"img_item_bg"*/);
+    byte_4E0877A = 1;
   }
   if ( !isGrand || (headerItemComponentList = v8->fields.headerGrandItemComponentList) == 0 )
   {
@@ -897,14 +897,14 @@ void ClassBoardUIController__SetItemList(
         EventItemComponent__Set((EventItemComponent_o *)this, dispItemIds->m_Items[v11], 0);
         if ( v11 >= LODWORD(headerItemComponentList->max_length) )
 LABEL_44:
-          sub_1C93D34(this);
+          sub_1CE6960(this);
         v14 = m_Items[v11];
         if ( !v14 || !atlasManagerUnit )
           break;
         this = (ClassBoardUIController_o *)AtlasManagerUnit__SetUI(
                                              atlasManagerUnit,
                                              v14->fields.baseSp,
-                                             (System_String_o *)StringLiteral_20648/*"img_item_bg"*/,
+                                             (System_String_o *)StringLiteral_20716/*"img_item_bg"*/,
                                              0);
         if ( v11 >= LODWORD(headerItemComponentList->max_length) )
           goto LABEL_44;
@@ -922,7 +922,7 @@ LABEL_44:
         goto LABEL_25;
     }
 LABEL_43:
-    sub_1C93D2C(this, dispItemIds);
+    sub_1CE6958(this, dispItemIds);
   }
 LABEL_25:
   headerItemGrid = (UnityEngine_Object_o *)v8->fields.headerItemGrid;
@@ -976,7 +976,7 @@ void ClassBoardUIController__SetOnClickBack(
   System_String_o *v7; // x7
 
   this->fields.onClickBack = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickBack,
     (int32_t)action,
     (int32_t)method,
@@ -1000,7 +1000,7 @@ void ClassBoardUIController__SetOnClickClassBoardResetButton(
   System_String_o *v7; // x7
 
   this->fields.onClickClassBoardResetButton = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickClassBoardResetButton,
     (int32_t)action,
     (int32_t)method,
@@ -1024,7 +1024,7 @@ void ClassBoardUIController__SetOnClickClassBoardSelectButton(
   System_String_o *v7; // x7
 
   this->fields.onClickClassBoardSelectButton = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickClassBoardSelectButton,
     (int32_t)action,
     (int32_t)method,
@@ -1048,7 +1048,7 @@ void ClassBoardUIController__SetOnClickClassScoreButton(
   System_String_o *v7; // x7
 
   this->fields.onClickClassScoreButton = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickClassScoreButton,
     (int32_t)action,
     (int32_t)method,
@@ -1072,7 +1072,7 @@ void ClassBoardUIController__SetOnClickEffectList(
   System_String_o *v7; // x7
 
   this->fields.onClickEffectList = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickEffectList,
     (int32_t)action,
     (int32_t)method,
@@ -1096,7 +1096,7 @@ void ClassBoardUIController__SetOnClickGrandScoreButton(
   System_String_o *v7; // x7
 
   this->fields.onClickGrandScoreButton = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickGrandScoreButton,
     (int32_t)action,
     (int32_t)method,
@@ -1120,7 +1120,7 @@ void ClassBoardUIController__SetOnClickHelp(
   System_String_o *v7; // x7
 
   this->fields.onClickHelp = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickHelp,
     (int32_t)action,
     (int32_t)method,
@@ -1144,7 +1144,7 @@ void ClassBoardUIController__SetOnClickToGrandServantList(
   System_String_o *v7; // x7
 
   this->fields.onClickToGrandServantList = action;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClickToGrandServantList,
     (int32_t)action,
     (int32_t)method,
@@ -1169,7 +1169,7 @@ void ClassBoardUIController__TouchDisable(ClassBoardUIController_o *this, const 
   {
     touchBlock = this->fields.touchBlock;
     if ( !touchBlock )
-      sub_1C93D2C(0, method);
+      sub_1CE6958(0, method);
     UnityEngine_GameObject__SetActive(touchBlock, 1, 0);
   }
 }
@@ -1188,7 +1188,7 @@ void ClassBoardUIController__TouchEnable(ClassBoardUIController_o *this, const M
   {
     touchBlock = this->fields.touchBlock;
     if ( !touchBlock )
-      sub_1C93D2C(0, method);
+      sub_1CE6958(0, method);
     UnityEngine_GameObject__SetActive(touchBlock, 0, 0);
   }
 }
@@ -1218,7 +1218,7 @@ void ClassBoardUIController__UpdateItemList(ClassBoardUIController_o *this, bool
     {
       if ( v5 >= max_length )
 LABEL_16:
-        sub_1C93D34(this);
+        sub_1CE6960(this);
       v6 = &headerItemComponentList->obj.klass + (int)v5;
       v8 = (ClassBoardUIController_o *)v6[4];
       v7 = (ClassBoardUIController_o **)(v6 + 4);
@@ -1243,7 +1243,7 @@ LABEL_16:
         return;
     }
 LABEL_15:
-    sub_1C93D2C(this, isGrand);
+    sub_1CE6958(this, isGrand);
   }
 }
 

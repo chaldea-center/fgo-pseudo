@@ -1,21 +1,24 @@
+void EventScriptFlagRequest___ctor(EventScriptFlagRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0);
+}
+
+
 void EventScriptFlagRequest__beginRequest(
         EventScriptFlagRequest_o *this,
         int32_t eventId,
         int32_t flagId,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
-
-  if ( (byte_4D324EB & 1) == 0 )
+  if ( (byte_4E06533 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_19339/*"eventId"*/);
-    sub_1C93AD4(&StringLiteral_19686/*"flagId"*/);
-    byte_4D324EB = 1;
+    sub_1CE6700(&StringLiteral_19400/*"eventId"*/);
+    sub_1CE6700(&StringLiteral_19750/*"flagId"*/);
+    byte_4E06533 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19339/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19686/*"flagId"*/, flagId, v7);
-  RequestBase__beginRequest((RequestBase_o *)this, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19400/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19750/*"flagId"*/, flagId, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
@@ -23,16 +26,16 @@ System_String_o *EventScriptFlagRequest__getURL(EventScriptFlagRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D324EA & 1) == 0 )
+  if ( (byte_4E06532 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_19331/*"event/scriptFlag"*/);
-    byte_4D324EA = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_19392/*"event/scriptFlag"*/);
+    byte_4E06532 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_19331/*"event/scriptFlag"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_19392/*"event/scriptFlag"*/, 0);
 }
 
 
@@ -42,42 +45,36 @@ void EventScriptFlagRequest__requestCompleted(
         const MethodInfo *method)
 {
   ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  ResponseData_o *v6; // x20
+  bool v7; // w0
+  System_String_o *v8; // x1
   Il2CppObject *success; // x20
-  System_String_o *v9; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4D324EC & 1) == 0 )
+  if ( (byte_4E06534 & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    byte_4D324EC = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    byte_4E06534 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(67, responseList, 0);
-  if ( v5 && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6)) )
+  if ( v5 )
   {
-    success = (Il2CppObject *)v7->fields.success;
-    if ( !JsonManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
-        CallBack->fields.method_code,
-        v9,
-        CallBack->fields.method);
+    v6 = v5;
+    v7 = ResponseData__checkError_45365352(v5, 0);
+    v8 = 0;
+    if ( v7 )
+    {
+      success = (Il2CppObject *)v6->fields.success;
+      if ( !JsonManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+      v8 = JsonManager__toJson(success, 0, 0, 0);
+    }
   }
   else
   {
-    v11 = this->fields.CallBack;
-    if ( v11 )
-      ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v11->fields.invoke_impl)(
-        v11->fields.method_code,
-        0,
-        v11->fields.method);
+    v8 = 0;
   }
+  RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

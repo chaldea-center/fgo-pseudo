@@ -9,11 +9,11 @@ void BattleWaveTurnLimitUtil___ctor(BattleWaveTurnLimitUtil_o *this, StageEntity
   System_String_o *v10; // x7
 
   if ( !stageEnt )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   script = stageEnt->fields.script;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.EntityScript = script;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
 }
 
 

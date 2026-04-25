@@ -1,3 +1,10 @@
+// attributes: thunk
+void EventInfoRepairComponent___ctor(EventInfoRepairComponent_o *this, const MethodInfo *method)
+{
+  EventInfoUIBase___ctor((EventInfoUIBase_o *)this, method);
+}
+
+
 void EventInfoRepairComponent__Awake(EventInfoRepairComponent_o *this, const MethodInfo *method)
 {
   ;
@@ -16,7 +23,7 @@ void EventInfoRepairComponent__Initialization(
   System_String_o *v7; // x7
 
   this->fields.eventUiEntity = entity;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (int32_t)method,
@@ -46,13 +53,13 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
   EventInfoOpenRepairDialogComponent_o *v10; // x20
   System_Action_o *v11; // x22
 
-  if ( (byte_4D327D7 & 1) == 0 )
+  if ( (byte_4E066EE & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoRepairComponent_OnClick__);
-    sub_1C93AD4(&Method_EventInfoRepairComponent__OnClick_b__7_0__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D327D7 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoRepairComponent_OnClick__);
+    sub_1CE6700(&Method_EventInfoRepairComponent__OnClick_b__7_0__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E066EE = 1;
   }
   if ( (((__int64 (__fastcall *)(EventInfoRepairComponent_o *, const MethodInfo *))this->klass->vtable._17_IsBusy.methodPtr)(
           this,
@@ -62,8 +69,8 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
     this->fields.isBusy = 1;
     v3 = Method_EventInfoRepairComponent_OnClick__;
     if ( (*((_BYTE *)Method_EventInfoRepairComponent_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_EventInfoRepairComponent_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_EventInfoRepairComponent_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     eventInfoRepairDialog = (UnityEngine_Object_o *)this->fields.eventInfoRepairDialog;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,11 +82,11 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
       if ( !eventUiEntity
         || (eventId = eventUiEntity->fields.eventId,
             v10 = this->fields.eventInfoRepairDialog,
-            v11 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+            v11 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
             System_Action___ctor(v11, (Il2CppObject *)this, Method_EventInfoRepairComponent__OnClick_b__7_0__, 0),
             !v10) )
       {
-        sub_1C93D2C(v6, v7);
+        sub_1CE6958(v6, v7);
       }
       EventInfoOpenRepairDialogComponent__OpenEventInfoRepairDialog(v10, eventId, v11, 0);
     }
@@ -89,43 +96,43 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
 
 void EventInfoRepairComponent__Redisplay(EventInfoRepairComponent_o *this, const MethodInfo *method)
 {
-  System_Object_array *ComponentsInChildren_object__52018868; // x0
+  System_Object_array *ComponentsInChildren_object__52410400; // x0
   __int64 v4; // x1
   int max_length; // w8
   System_Object_array *v6; // x19
   unsigned int v7; // w20
 
-  if ( (byte_4D327D6 & 1) == 0 )
+  if ( (byte_4E066ED & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
-    byte_4D327D6 = 1;
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
+    byte_4E066ED = 1;
   }
-  ComponentsInChildren_object__52018868 = UnityEngine_Component__GetComponentsInChildren_object__52018868(
+  ComponentsInChildren_object__52410400 = UnityEngine_Component__GetComponentsInChildren_object__52410400(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_319BEB4 *)Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
-  if ( !ComponentsInChildren_object__52018868 )
+                                            (const MethodInfo_31FB820 *)Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
+  if ( !ComponentsInChildren_object__52410400 )
     goto LABEL_11;
-  max_length = ComponentsInChildren_object__52018868->max_length;
-  v6 = ComponentsInChildren_object__52018868;
+  max_length = ComponentsInChildren_object__52410400->max_length;
+  v6 = ComponentsInChildren_object__52410400;
   if ( max_length >= 1 )
   {
     v7 = 0;
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1C93D34(ComponentsInChildren_object__52018868);
-      ComponentsInChildren_object__52018868 = (System_Object_array *)v6->m_Items[v7];
-      if ( !ComponentsInChildren_object__52018868 )
+        sub_1CE6960(ComponentsInChildren_object__52410400);
+      ComponentsInChildren_object__52410400 = (System_Object_array *)v6->m_Items[v7];
+      if ( !ComponentsInChildren_object__52410400 )
         break;
       EventInfoAssistSkillIconComponent__Redisplay(
-        (EventInfoAssistSkillIconComponent_o *)ComponentsInChildren_object__52018868,
+        (EventInfoAssistSkillIconComponent_o *)ComponentsInChildren_object__52410400,
         0);
       max_length = v6->max_length;
       if ( (int)++v7 >= max_length )
         return;
     }
 LABEL_11:
-    sub_1C93D2C(ComponentsInChildren_object__52018868, v4);
+    sub_1CE6958(ComponentsInChildren_object__52410400, v4);
   }
 }
 

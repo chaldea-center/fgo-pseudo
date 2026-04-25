@@ -1,9 +1,9 @@
 void MasterMissionReceiveResultDialog___ctor(MasterMissionReceiveResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D33C14 & 1) == 0 )
+  if ( (byte_4E07C2E & 1) == 0 )
   {
-    sub_1C93AD4(&BaseDialog_TypeInfo);
-    byte_4D33C14 = 1;
+    sub_1CE6700(&BaseDialog_TypeInfo);
+    byte_4E07C2E = 1;
   }
   this->fields.state = 1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -20,13 +20,13 @@ void MasterMissionReceiveResultDialog__Init(MasterMissionReceiveResultDialog_o *
   UILabel_o *subTitleLabel; // x20
   UILabel_o *closeLabel; // x20
 
-  if ( (byte_4D33C11 & 1) == 0 )
+  if ( (byte_4E07C2B & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_8614/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/);
-    sub_1C93AD4(&StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C93AD4(&StringLiteral_8613/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/);
-    byte_4D33C11 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_8631/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/);
+    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1CE6700(&StringLiteral_8630/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/);
+    byte_4E07C2B = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   receiveResultListViewManager = (ListViewManager_o *)this->fields.receiveResultListViewManager;
@@ -36,23 +36,23 @@ void MasterMissionReceiveResultDialog__Init(MasterMissionReceiveResultDialog_o *
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8614/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, 0);
+  receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8631/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, 0);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, (System_String_o *)receiveResultListViewManager, 0),
         subTitleLabel = this->fields.subTitleLabel,
         receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8613/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/,
+                                                              (System_String_o *)StringLiteral_8630/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/,
                                                               0),
         !subTitleLabel)
     || (UILabel__set_text(subTitleLabel, (System_String_o *)receiveResultListViewManager, 0),
         closeLabel = this->fields.closeLabel,
         receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/,
+                                                              (System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/,
                                                               0),
         !closeLabel) )
   {
 LABEL_10:
-    sub_1C93D2C(receiveResultListViewManager, v3);
+    sub_1CE6958(receiveResultListViewManager, v3);
   }
   UILabel__set_text(closeLabel, (System_String_o *)receiveResultListViewManager, 0);
   this->fields.state = 1;
@@ -67,22 +67,22 @@ void MasterMissionReceiveResultDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4D33C12 & 1) == 0 )
+  if ( (byte_4E07C2C & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
-    sub_1C93AD4(&Method_MasterMissionReceiveResultDialog__OnClickCloseButton_b__9_0__);
-    byte_4D33C12 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
+    sub_1CE6700(&Method_MasterMissionReceiveResultDialog__OnClickCloseButton_b__9_0__);
+    byte_4E07C2C = 1;
   }
   if ( !this->fields.state )
   {
     v3 = Method_MasterMissionReceiveResultDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveResultDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.state = 1;
-    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -119,11 +119,11 @@ void MasterMissionReceiveResultDialog__Open(
   BaseDialog__Open(v6, 0, 0, 0, 0);
   v6[1].fields.basePanelList = (struct UIPanel_array *)action;
   v6 = (BaseDialog_o *)((char *)v6 + 144);
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v6, (int32_t)action, v7, v8, v9, v10, v11, v12);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v6, (int32_t)action, v7, v8, v9, v10, v11, v12);
   v15 = *(MasterMissionReceiveResultListViewManager_o **)&v6[-1].fields.baseState;
   LODWORD(v6[-1].fields._closeBtnObject) = 0;
   if ( !v15 )
-    sub_1C93D2C(0, v13);
+    sub_1CE6958(0, v13);
   MasterMissionReceiveResultListViewManager__CreateList(v15, receiveMissionIds, v14);
 }
 
@@ -149,10 +149,10 @@ System_String_o *MasterMissionReceiveResultDialog__get_closeBtnPath(
         MasterMissionReceiveResultDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D33C13 & 1) == 0 )
+  if ( (byte_4E07C2D & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_15743/*"Window/CloseButton"*/);
-    byte_4D33C13 = 1;
+    sub_1CE6700(&StringLiteral_15793/*"Window/CloseButton"*/);
+    byte_4E07C2D = 1;
   }
-  return (System_String_o *)StringLiteral_15743/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15793/*"Window/CloseButton"*/;
 }

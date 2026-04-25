@@ -1,13 +1,13 @@
 void UserSuperBossEntity___ctor(UserSuperBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D31A78 & 1) == 0 )
+  if ( (byte_4E05ACA & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D31A78 = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E05ACA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *UserSuperBossEntity__CreatePK(
         int32_t superBossId,
         const MethodInfo *method)
 {
-  if ( (byte_4D31A77 & 1) == 0 )
+  if ( (byte_4E05AC9 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4D31A77 = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4E05AC9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            superBossId,
-           (const MethodInfo_31A3210 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_3202B7C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

@@ -4,6 +4,7 @@ void BattleServantHeadUpComponent___ctor(BattleServantHeadUpComponent_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantHeadUpComponent__SetEnableTargetMark(
         BattleServantHeadUpComponent_o *this,
         bool enable,
@@ -17,17 +18,20 @@ void BattleServantHeadUpComponent__SetEnableTargetMark(
   long double v10; // q0
   UnityEngine_Object_o *v11; // x20
   Il2CppObject *v12; // x20
-  UIWidget_o *v16; // x0
-  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  float v15; // s2
+  float v16; // s3
+  UIWidget_o *v17; // x0
 
-  if ( (byte_4D34177 & 1) == 0 )
+  if ( (byte_4E081F8 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UITexture___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_24200/*"symbol_adjust/mapsymbol_001"*/);
-    sub_1C93AD4(&StringLiteral_24201/*"symbol_adjust/target"*/);
-    byte_4D34177 = 1;
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_24283/*"symbol_adjust/mapsymbol_001"*/);
+    sub_1CE6700(&StringLiteral_24284/*"symbol_adjust/target"*/);
+    byte_4E081F8 = 1;
   }
   targetMark = (UnityEngine_Object_o *)this->fields.targetMark;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,7 +46,7 @@ void BattleServantHeadUpComponent__SetEnableTargetMark(
       goto LABEL_36;
     v8 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                    (UnityEngine_Transform_o *)transform,
-                                   (System_String_o *)StringLiteral_24201/*"symbol_adjust/target"*/,
+                                   (System_String_o *)StringLiteral_24284/*"symbol_adjust/target"*/,
                                    0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -53,7 +57,7 @@ void BattleServantHeadUpComponent__SetEnableTargetMark(
         goto LABEL_36;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v8,
-                           (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                           (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UISprite___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -79,11 +83,11 @@ void BattleServantHeadUpComponent__SetEnableTargetMark(
       || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
     {
 LABEL_36:
-      sub_1C93D2C(transform, v6);
+      sub_1CE6958(transform, v6);
     }
     v11 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                     (UnityEngine_Transform_o *)transform,
-                                    (System_String_o *)StringLiteral_24200/*"symbol_adjust/mapsymbol_001"*/,
+                                    (System_String_o *)StringLiteral_24283/*"symbol_adjust/mapsymbol_001"*/,
                                     0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -94,7 +98,7 @@ LABEL_36:
         goto LABEL_36;
       v12 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)v11,
-              (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UITexture___);
+              (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UITexture___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v12, 0, 0);
@@ -104,23 +108,23 @@ LABEL_36:
         {
           if ( v12 )
           {
-            v17.fields.r = 1.0;
-            v17.fields.g = 1.0;
-            v17.fields.b = 1.0;
-            v17.fields.a = 1.0;
-            v16 = (UIWidget_o *)v12;
+            v13 = 1.0;
+            v14 = 1.0;
+            v15 = 1.0;
+            v16 = 1.0;
+            v17 = (UIWidget_o *)v12;
 LABEL_35:
-            UIWidget__set_color(v16, v17, 0);
+            UIWidget__set_color(v17, *(UnityEngine_Color_o *)&v13, 0);
             return;
           }
         }
         else if ( v12 )
         {
-          v17.fields.r = 0.50588;
-          v17.fields.a = 0.0039216;
-          v16 = (UIWidget_o *)v12;
-          v17.fields.g = 0.50588;
-          v17.fields.b = 0.50588;
+          v13 = 0.50588;
+          v16 = 0.0039216;
+          v17 = (UIWidget_o *)v12;
+          v14 = 0.50588;
+          v15 = 0.50588;
           goto LABEL_35;
         }
         goto LABEL_36;
@@ -148,7 +152,7 @@ LABEL_8:
       goto LABEL_9;
     }
 LABEL_6:
-    sub_1C93D2C(rootObject, flg);
+    sub_1CE6958(rootObject, flg);
   }
   rootObject = (UnityEngine_GameObject_o *)BattleServantData__isAlive(tmp_svtData, 0, 0);
   if ( !this->fields.rootObject )
@@ -180,13 +184,13 @@ void BattleServantHeadUpComponent__setData(
   UnityEngine_GameObject_o *targetMark; // x0
   UnityEngine_Object_o *lockTargetMark; // x20
 
-  if ( (byte_4D34175 & 1) == 0 )
+  if ( (byte_4E081F6 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D34175 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E081F6 = 1;
   }
   this->fields.tmp_svtData = svtData;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.tmp_svtData,
     (int32_t)svtData,
     (int32_t)method,
@@ -221,7 +225,7 @@ void BattleServantHeadUpComponent__setData(
         }
       }
 LABEL_14:
-      sub_1C93D2C(targetMark, v11);
+      sub_1CE6958(targetMark, v11);
     }
   }
   else
@@ -285,10 +289,10 @@ void BattleServantHeadUpComponent__setTargetMark(
   UnityEngine_Object_o *v13; // x21
   UpHateData_o *upHateData; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D34176 & 1) == 0 )
+  if ( (byte_4E081F7 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D34176 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E081F7 = 1;
   }
   upHateData = 0;
   tmp_svtData = this->fields.tmp_svtData;
@@ -325,7 +329,7 @@ void BattleServantHeadUpComponent__setTargetMark(
                 targetMark = (UnityEngine_GameObject_o *)this->fields.tmp_svtData;
                 if ( !targetMark )
                   goto LABEL_32;
-                if ( !BattleServantData__isUpHate((BattleServantData_o *)targetMark, 0, &upHateData, 0) )
+                if ( !BattleServantData__isUpHate((BattleServantData_o *)targetMark, 0, &upHateData, 0, 0) )
                 {
 LABEL_30:
                   BattleServantHeadUpComponent__SetEnableTargetMark(this, !isTargetLock, v10);
@@ -382,7 +386,7 @@ LABEL_29:
       }
     }
 LABEL_32:
-    sub_1C93D2C(targetMark, *(_QWORD *)&uniqueId);
+    sub_1CE6958(targetMark, *(_QWORD *)&uniqueId);
   }
 }
 
@@ -396,10 +400,10 @@ void BattleServantHeadUpComponent__setTargetRoot(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4D34174 & 1) == 0 )
+  if ( (byte_4E081F5 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D34174 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E081F5 = 1;
   }
   targetRoot = (UnityEngine_Object_o *)this->fields.targetRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -408,7 +412,7 @@ void BattleServantHeadUpComponent__setTargetRoot(
   {
     v7 = this->fields.targetRoot;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_GameObject__SetActive(v7, flg, 0);
   }
 }

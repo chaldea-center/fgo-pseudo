@@ -15,24 +15,24 @@ void FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInf
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4D333A4 & 1) == 0 )
+  if ( (byte_4E07416 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4D333A4 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4E07416 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v10;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -55,10 +55,10 @@ void FieldAliveServantData__addSvtData(
   __int64 size; // x10
   Il2CppClass **v16; // x8
 
-  if ( (byte_4D333A3 & 1) == 0 )
+  if ( (byte_4E07415 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    byte_4D333A3 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    byte_4E07415 = 1;
   }
   v11 = 16;
   if ( isEnemySide )
@@ -70,7 +70,7 @@ void FieldAliveServantData__addSvtData(
         ++v12->fields._version,
         !items) )
   {
-    sub_1C93D2C(v12, isEnemySide);
+    sub_1CE6958(v12, isEnemySide);
   }
   size = v12->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -78,14 +78,14 @@ void FieldAliveServantData__addSvtData(
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_387999C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v16[4] = (Il2CppClass *)svtData;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)(v16 + 4),
       (int32_t)svtData,
       (int32_t)svtData,

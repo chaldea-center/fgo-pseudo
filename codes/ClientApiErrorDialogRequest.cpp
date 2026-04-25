@@ -16,23 +16,23 @@ void ClientApiErrorDialogRequest__beginRequest(
   __int64 v12; // x1
   System_String_o *v13; // x2
 
-  if ( (byte_4D3246E & 1) == 0 )
+  if ( (byte_4E064B7 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_19264/*"errorMessage"*/);
-    sub_1C93AD4(&StringLiteral_21602/*"logDetail"*/);
-    sub_1C93AD4(&StringLiteral_19265/*"errorTitle"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D3246E = 1;
+    sub_1CE6700(&StringLiteral_19325/*"errorMessage"*/);
+    sub_1CE6700(&StringLiteral_21673/*"logDetail"*/);
+    sub_1CE6700(&StringLiteral_19326/*"errorTitle"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E064B7 = 1;
   }
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_19265/*"errorTitle"*/, errorTitle, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_19264/*"errorMessage"*/, errorMessage, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_19326/*"errorTitle"*/, errorTitle, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_19325/*"errorMessage"*/, errorMessage, 0);
   if ( !this )
-    sub_1C93D2C(v11, v12);
+    sub_1CE6958(v11, v12);
   if ( isSendLogDetail )
     v13 = logDetail;
   else
     v13 = (System_String_o *)StringLiteral_1/*""*/;
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_21602/*"logDetail"*/, v13, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_21673/*"logDetail"*/, v13, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -41,10 +41,10 @@ System_String_o *ClientApiErrorDialogRequest__getMockData(
         ClientApiErrorDialogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D3246D & 1) == 0 )
+  if ( (byte_4E064B6 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D3246D = 1;
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E064B6 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -54,16 +54,16 @@ System_String_o *ClientApiErrorDialogRequest__getURL(ClientApiErrorDialogRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D3246C & 1) == 0 )
+  if ( (byte_4E064B5 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_4520/*"ClientApi/ErrorDialog"*/);
-    byte_4D3246C = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_4530/*"ClientApi/ErrorDialog"*/);
+    byte_4E064B5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_4520/*"ClientApi/ErrorDialog"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_4530/*"ClientApi/ErrorDialog"*/, 0);
 }
 
 
@@ -75,19 +75,19 @@ void ClientApiErrorDialogRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4D3246F & 1) == 0 )
+  if ( (byte_4E064B8 & 1) == 0 )
   {
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D3246F = 1;
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E064B8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(118, responseList, 0);
-  if ( v5 && ResponseData__checkError_44908744(v5, 0) )
-    v6 = &StringLiteral_22655/*"ok"*/;
+  if ( v5 && ResponseData__checkError_45365352(v5, 0) )
+    v6 = &StringLiteral_22728/*"ok"*/;
   else
-    v6 = &StringLiteral_22483/*"ng"*/;
+    v6 = &StringLiteral_22555/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

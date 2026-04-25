@@ -1,13 +1,13 @@
 void ServantSkillReleaseEntity___ctor(ServantSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D3144B & 1) == 0 )
+  if ( (byte_4E05499 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D3144B = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E05499 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *ServantSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4D31449 & 1) == 0 )
+  if ( (byte_4E05497 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4D31449 = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4E05497 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_31A3514 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3202E80 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -84,32 +84,32 @@ bool ServantSkillReleaseEntity__IsUseInternal(
   System_String_o *v40; // x7
   bool value; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4D3144A & 1) == 0 )
+  if ( (byte_4E05498 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
-    sub_1C93AD4(&System_Collections_Generic_Dictionary_int__bool__TypeInfo);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_Any_bool____79098080);
-    sub_1C93AD4(&System_Func_bool__bool__TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&Method_ServantSkillReleaseEntity___c__IsUseInternal_b__12_0__);
-    sub_1C93AD4(&ServantSkillReleaseEntity___c_TypeInfo);
-    byte_4D3144A = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+    sub_1CE6700(&System_Collections_Generic_Dictionary_int__bool__TypeInfo);
+    sub_1CE6700(&Method_System_Linq_Enumerable_Any_bool____79945424);
+    sub_1CE6700(&System_Func_bool__bool__TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&Method_ServantSkillReleaseEntity___c__IsUseInternal_b__12_0__);
+    sub_1CE6700(&ServantSkillReleaseEntity___c_TypeInfo);
+    byte_4E05498 = 1;
   }
   value = 0;
   if ( currentCondType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4D2A55B )
+    if ( !byte_4DFE4CA )
     {
-      sub_1C93AD4(&NetworkManager_TypeInfo);
-      byte_4D2A55B = 1;
+      sub_1CE6700(&NetworkManager_TypeInfo);
+      byte_4DFE4CA = 1;
     }
     v17 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -159,17 +159,17 @@ LABEL_52:
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
     if ( !Master_object
       || (List = CommonReleaseMaster__getList((CommonReleaseMaster_o *)Master_object, currentCondTargetId, 0),
-          v23 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1C93D20(System_Collections_Generic_Dictionary_int__bool__TypeInfo),
+          v23 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1CE694C(System_Collections_Generic_Dictionary_int__bool__TypeInfo),
           System_Collections_Generic_Dictionary_int__bool____ctor(
             v23,
-            (const MethodInfo_34ADB50 *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__),
+            (const MethodInfo_354C2B0 *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__),
           !List) )
     {
 LABEL_56:
-      sub_1C93D2C(Master_object, v21);
+      sub_1CE6958(Master_object, v21);
     }
     max_length = List->max_length;
     if ( max_length >= 1 )
@@ -178,7 +178,7 @@ LABEL_56:
       do
       {
         if ( v25 >= max_length )
-          sub_1C93D34(Master_object);
+          sub_1CE6960(Master_object);
         v26 = (int32_t *)List->m_Items[v25];
         if ( !v26 || !v23 )
           goto LABEL_56;
@@ -186,7 +186,7 @@ LABEL_56:
                                           v23,
                                           v26[6],
                                           &value,
-                                          (const MethodInfo_34AFBDC *)Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
+                                          (const MethodInfo_354E33C *)Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
         if ( value || ((unsigned __int8)Master_object & 1) == 0 )
         {
           v28 = v26[6];
@@ -203,7 +203,7 @@ LABEL_56:
             v23,
             v28,
             IsUseInternal,
-            (const MethodInfo_34AE510 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+            (const MethodInfo_354CC70 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
         }
         max_length = List->max_length;
       }
@@ -213,7 +213,7 @@ LABEL_56:
       goto LABEL_56;
     Values = System_Collections_Generic_Dictionary_int__bool___get_Values(
                v23,
-               (const MethodInfo_34AE330 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
+               (const MethodInfo_354CA90 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
     v31 = ServantSkillReleaseEntity___c_TypeInfo;
     if ( !ServantSkillReleaseEntity___c_TypeInfo->_2.cctor_finished )
     {
@@ -229,11 +229,11 @@ LABEL_56:
         v31 = ServantSkillReleaseEntity___c_TypeInfo;
       }
       v33 = (Il2CppObject *)v31->static_fields->__9;
-      _9__12_0 = (System_Func_bool__bool__o *)sub_1C93D20(System_Func_bool__bool__TypeInfo);
+      _9__12_0 = (System_Func_bool__bool__o *)sub_1CE694C(System_Func_bool__bool__TypeInfo);
       System_Func_bool__bool____ctor(_9__12_0, v33, Method_ServantSkillReleaseEntity___c__IsUseInternal_b__12_0__, 0);
       static_fields = ServantSkillReleaseEntity___c_TypeInfo->static_fields;
       static_fields->__9__12_0 = _9__12_0;
-      sub_1C93A78(
+      sub_1CE66A4(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0,
         (int32_t)_9__12_0,
         v35,
@@ -243,10 +243,10 @@ LABEL_56:
         v39,
         v40);
     }
-    return System_Linq_Enumerable__Any_bool__52108372(
+    return System_Linq_Enumerable__Any_bool__52499904(
              (System_Collections_Generic_IEnumerable_TSource__o *)Values,
              (System_Func_TSource__bool__o *)_9__12_0,
-             (const MethodInfo_31B1C54 *)Method_System_Linq_Enumerable_Any_bool____79098080);
+             (const MethodInfo_32115C0 *)Method_System_Linq_Enumerable_Any_bool____79945424);
   }
 }
 
@@ -315,52 +315,52 @@ System_String_o *ServantSkillReleaseEntity__getCreatePrimarykey(
   v57 = svtId;
   v54 = idx;
   v55 = priority;
-  if ( (byte_4D31448 & 1) == 0 )
+  if ( (byte_4E05496 & 1) == 0 )
   {
-    sub_1C93AD4(&string___TypeInfo);
-    sub_1C93AD4(&StringLiteral_1451/*":"*/);
-    byte_4D31448 = 1;
+    sub_1CE6700(&string___TypeInfo);
+    sub_1CE6700(&StringLiteral_1452/*":"*/);
+    byte_4E05496 = 1;
   }
-  v5 = sub_1C93B7C(string___TypeInfo, 7);
+  v5 = sub_1CE67A8(string___TypeInfo, 7);
   v6 = System_Int32__ToString((int32_t)&v57, 0);
   if ( !v5 )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)v6, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)v6, v8, v9, v10, v11, v12, v13);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v20 = StringLiteral_1451/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1451/*":"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
+  v20 = StringLiteral_1452/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1452/*":"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
   v6 = System_Int32__ToString((int32_t)&v56, 0);
   if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v5 + 48) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)v6, v21, v22, v23, v24, v25, v26);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 48), (int32_t)v6, v21, v22, v23, v24, v25, v26);
   if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v33 = StringLiteral_1451/*":"*/;
-  *(_QWORD *)(v5 + 56) = StringLiteral_1451/*":"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32);
+  v33 = StringLiteral_1452/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1452/*":"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32);
   v6 = System_Int32__ToString((int32_t)&v55, 0);
   if ( *(_DWORD *)(v5 + 24) <= 4u
     || (*(_QWORD *)(v5 + 64) = v6,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 64), (int32_t)v6, v34, v35, v36, v37, v38, v39),
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 64), (int32_t)v6, v34, v35, v36, v37, v38, v39),
         *(_DWORD *)(v5 + 24) <= 5u)
-    || (v46 = StringLiteral_1451/*":"*/,
-        *(_QWORD *)(v5 + 72) = StringLiteral_1451/*":"*/,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 72), v46, v40, v41, v42, v43, v44, v45),
+    || (v46 = StringLiteral_1452/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1452/*":"*/,
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 72), v46, v40, v41, v42, v43, v44, v45),
         v6 = System_Int32__ToString((int32_t)&v54, 0),
         *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C93D34(v6);
+    sub_1CE6960(v6);
   }
   *(_QWORD *)(v5 + 80) = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 80), (int32_t)v6, v47, v48, v49, v50, v51, v52);
-  return System_String__Concat_64466256((System_String_array *)v5, 0);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 80), (int32_t)v6, v47, v48, v49, v50, v51, v52);
+  return System_String__Concat_65163360((System_String_array *)v5, 0);
 }
 
 
@@ -396,15 +396,15 @@ void ServantSkillReleaseEntity___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D3144C & 1) == 0 )
+  if ( (byte_4E0549A & 1) == 0 )
   {
-    sub_1C93AD4(&ServantSkillReleaseEntity___c_TypeInfo);
-    byte_4D3144C = 1;
+    sub_1CE6700(&ServantSkillReleaseEntity___c_TypeInfo);
+    byte_4E0549A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(ServantSkillReleaseEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(ServantSkillReleaseEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantSkillReleaseEntity___c_TypeInfo->static_fields->__9 = (struct ServantSkillReleaseEntity___c_o *)v1;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)ServantSkillReleaseEntity___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

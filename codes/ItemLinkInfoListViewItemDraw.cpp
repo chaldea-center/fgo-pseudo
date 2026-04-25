@@ -11,146 +11,146 @@ void ItemLinkInfoListViewItemDraw___cctor(const MethodInfo *method)
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D33298 & 1) == 0 )
+  if ( (byte_4E07195 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__TypeInfo);
-    sub_1C93AD4(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    sub_1C93AD4(&string_TypeInfo);
-    sub_1C93AD4(&StringLiteral_23750/*"shortcut_board_icon_shop_burning"*/);
-    sub_1C93AD4(&StringLiteral_23758/*"shortcut_board_icon_war_1002"*/);
-    sub_1C93AD4(&StringLiteral_23745/*"shortcut_board_icon_holy_grail_casting"*/);
-    sub_1C93AD4(&StringLiteral_23756/*"shortcut_board_icon_summon"*/);
-    sub_1C93AD4(&StringLiteral_23755/*"shortcut_board_icon_shop_rare_prism"*/);
-    sub_1C93AD4(&StringLiteral_23752/*"shortcut_board_icon_shop_evocation"*/);
-    sub_1C93AD4(&StringLiteral_23746/*"shortcut_board_icon_holy_grail_drop"*/);
-    sub_1C93AD4(&StringLiteral_23753/*"shortcut_board_icon_shop_mana_prism"*/);
-    sub_1C93AD4(&StringLiteral_23747/*"shortcut_board_icon_mainquest"*/);
-    sub_1C93AD4(&StringLiteral_23748/*"shortcut_board_icon_master_mission"*/);
-    sub_1C93AD4(&StringLiteral_23744/*"shortcut_board_icon_friend"*/);
-    sub_1C93AD4(&StringLiteral_23759/*"shortcut_board_icon_war_9999"*/);
-    sub_1C93AD4(&StringLiteral_23741/*"shortcut_board_icon_bronze_sapling"*/);
-    sub_1C93AD4(&StringLiteral_23749/*"shortcut_board_icon_ordeal_call"*/);
-    sub_1C93AD4(&StringLiteral_23754/*"shortcut_board_icon_shop_pure_prism"*/);
-    sub_1C93AD4(&StringLiteral_23751/*"shortcut_board_icon_shop_event"*/);
-    sub_1C93AD4(&StringLiteral_23743/*"shortcut_board_icon_freequest"*/);
-    byte_4D33298 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string___ctor__);
+    sub_1CE6700(&System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__TypeInfo);
+    sub_1CE6700(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    sub_1CE6700(&string_TypeInfo);
+    sub_1CE6700(&StringLiteral_23831/*"shortcut_board_icon_shop_burning"*/);
+    sub_1CE6700(&StringLiteral_23839/*"shortcut_board_icon_war_1002"*/);
+    sub_1CE6700(&StringLiteral_23826/*"shortcut_board_icon_holy_grail_casting"*/);
+    sub_1CE6700(&StringLiteral_23837/*"shortcut_board_icon_summon"*/);
+    sub_1CE6700(&StringLiteral_23836/*"shortcut_board_icon_shop_rare_prism"*/);
+    sub_1CE6700(&StringLiteral_23833/*"shortcut_board_icon_shop_evocation"*/);
+    sub_1CE6700(&StringLiteral_23827/*"shortcut_board_icon_holy_grail_drop"*/);
+    sub_1CE6700(&StringLiteral_23834/*"shortcut_board_icon_shop_mana_prism"*/);
+    sub_1CE6700(&StringLiteral_23828/*"shortcut_board_icon_mainquest"*/);
+    sub_1CE6700(&StringLiteral_23829/*"shortcut_board_icon_master_mission"*/);
+    sub_1CE6700(&StringLiteral_23825/*"shortcut_board_icon_friend"*/);
+    sub_1CE6700(&StringLiteral_23840/*"shortcut_board_icon_war_9999"*/);
+    sub_1CE6700(&StringLiteral_23822/*"shortcut_board_icon_bronze_sapling"*/);
+    sub_1CE6700(&StringLiteral_23830/*"shortcut_board_icon_ordeal_call"*/);
+    sub_1CE6700(&StringLiteral_23835/*"shortcut_board_icon_shop_pure_prism"*/);
+    sub_1CE6700(&StringLiteral_23832/*"shortcut_board_icon_shop_event"*/);
+    sub_1CE6700(&StringLiteral_23824/*"shortcut_board_icon_freequest"*/);
+    byte_4E07195 = 1;
   }
   ItemLinkInfoListViewItemDraw_TypeInfo->static_fields->DEFAULT_FRAME_SIZE_HEIGHT = 200.0;
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C93D20(System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1CE694C(System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_34F52C0 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string___ctor__);
+    (const MethodInfo_357B178 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string___ctor__);
   if ( !v1 )
-    sub_1C93D2C(v2, v3);
+    sub_1CE6958(v2, v3);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     0,
     (Il2CppObject *)string_TypeInfo->static_fields->Empty,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     1,
-    (Il2CppObject *)StringLiteral_23751/*"shortcut_board_icon_shop_event"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23832/*"shortcut_board_icon_shop_event"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
-    (Il2CppObject *)StringLiteral_23749/*"shortcut_board_icon_ordeal_call"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23830/*"shortcut_board_icon_ordeal_call"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     18,
-    (Il2CppObject *)StringLiteral_23749/*"shortcut_board_icon_ordeal_call"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23830/*"shortcut_board_icon_ordeal_call"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     3,
-    (Il2CppObject *)StringLiteral_23759/*"shortcut_board_icon_war_9999"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23840/*"shortcut_board_icon_war_9999"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     4,
-    (Il2CppObject *)StringLiteral_23743/*"shortcut_board_icon_freequest"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23824/*"shortcut_board_icon_freequest"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     5,
-    (Il2CppObject *)StringLiteral_23758/*"shortcut_board_icon_war_1002"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23839/*"shortcut_board_icon_war_1002"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     6,
-    (Il2CppObject *)StringLiteral_23747/*"shortcut_board_icon_mainquest"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23828/*"shortcut_board_icon_mainquest"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     7,
-    (Il2CppObject *)StringLiteral_23748/*"shortcut_board_icon_master_mission"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23829/*"shortcut_board_icon_master_mission"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     8,
-    (Il2CppObject *)StringLiteral_23741/*"shortcut_board_icon_bronze_sapling"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23822/*"shortcut_board_icon_bronze_sapling"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     9,
-    (Il2CppObject *)StringLiteral_23746/*"shortcut_board_icon_holy_grail_drop"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23827/*"shortcut_board_icon_holy_grail_drop"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     10,
-    (Il2CppObject *)StringLiteral_23745/*"shortcut_board_icon_holy_grail_casting"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23826/*"shortcut_board_icon_holy_grail_casting"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     11,
-    (Il2CppObject *)StringLiteral_23750/*"shortcut_board_icon_shop_burning"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23831/*"shortcut_board_icon_shop_burning"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     12,
-    (Il2CppObject *)StringLiteral_23744/*"shortcut_board_icon_friend"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23825/*"shortcut_board_icon_friend"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     13,
-    (Il2CppObject *)StringLiteral_23753/*"shortcut_board_icon_shop_mana_prism"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23834/*"shortcut_board_icon_shop_mana_prism"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     14,
-    (Il2CppObject *)StringLiteral_23754/*"shortcut_board_icon_shop_pure_prism"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23835/*"shortcut_board_icon_shop_pure_prism"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     15,
-    (Il2CppObject *)StringLiteral_23755/*"shortcut_board_icon_shop_rare_prism"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23836/*"shortcut_board_icon_shop_rare_prism"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     16,
-    (Il2CppObject *)StringLiteral_23756/*"shortcut_board_icon_summon"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23837/*"shortcut_board_icon_summon"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     17,
-    (Il2CppObject *)StringLiteral_23752/*"shortcut_board_icon_shop_evocation"*/,
-    (const MethodInfo_34F5C94 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_23833/*"shortcut_board_icon_shop_evocation"*/,
+    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__Add__);
   static_fields = ItemLinkInfoListViewItemDraw_TypeInfo->static_fields;
   static_fields->boardIconNameList = (struct System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__o *)v1;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->boardIconNameList, (int32_t)v1, v5, v6, v7, v8, v9, v10);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->boardIconNameList, (int32_t)v1, v5, v6, v7, v8, v9, v10);
 }
 
 
 void ItemLinkInfoListViewItemDraw___ctor(ItemLinkInfoListViewItemDraw_o *this, const MethodInfo *method)
 {
-  if ( !byte_4D2A019 )
+  if ( !byte_4DFDF89 )
   {
-    sub_1C93AD4(&UnityEngine_Vector2_TypeInfo);
-    byte_4D2A019 = 1;
+    sub_1CE6700(&UnityEngine_Vector2_TypeInfo);
+    byte_4DFDF89 = 1;
   }
   this->fields.frameSize = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -179,10 +179,10 @@ void ItemLinkInfoListViewItemDraw__Awake(ItemLinkInfoListViewItemDraw_o *this, c
   struct UISprite_o *v20; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4D3328C & 1) == 0 )
+  if ( (byte_4E07189 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3328C = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07189 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -194,14 +194,14 @@ void ItemLinkInfoListViewItemDraw__Awake(ItemLinkInfoListViewItemDraw_o *this, c
     if ( !v12
       || (mAtlas = v12->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7, v8, v9, v10, v11),
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7, v8, v9, v10, v11),
           (v20 = this->fields.baseSprite) == 0) )
     {
-      sub_1C93D2C(v4, v5);
+      sub_1CE6958(v4, v5);
     }
     mSpriteName = v20->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.baseSpriteName,
       (int32_t)mSpriteName,
       v14,
@@ -229,10 +229,10 @@ void ItemLinkInfoListViewItemDraw__DeleteCallback(ItemLinkInfoListViewItemDraw_o
   HorizontalQuestInformationIconListComponent_o *v5; // x0
   UnityEngine_Object_o *enemyInformationComponent; // x20
 
-  if ( (byte_4D33297 & 1) == 0 )
+  if ( (byte_4E07194 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33297 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07194 = 1;
   }
   rewardInformationComponent = (UnityEngine_Object_o *)this->fields.rewardInformationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -256,7 +256,7 @@ void ItemLinkInfoListViewItemDraw__DeleteCallback(ItemLinkInfoListViewItemDraw_o
       return;
     }
 LABEL_14:
-    sub_1C93D2C(v5, v4);
+    sub_1CE6958(v5, v4);
   }
 }
 
@@ -269,20 +269,20 @@ System_String_o *ItemLinkInfoListViewItemDraw__GetBoardIconName(
   ItemLinkInfoListViewItemDraw_c *v4; // x0
   ItemLinkInfoListViewItemDraw_c *v5; // x0
 
-  if ( (byte_4D33295 & 1) == 0 )
+  if ( (byte_4E07192 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__ContainsKey__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__get_Item__);
-    sub_1C93AD4(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    sub_1C93AD4(&string_TypeInfo);
-    this = (ItemLinkInfoListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_23740/*"shortcut_board_icon_"*/);
-    byte_4D33295 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__ContainsKey__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__get_Item__);
+    sub_1CE6700(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    sub_1CE6700(&string_TypeInfo);
+    this = (ItemLinkInfoListViewItemDraw_o *)sub_1CE6700(&StringLiteral_23821/*"shortcut_board_icon_"*/);
+    byte_4E07192 = 1;
   }
   if ( !item )
     goto LABEL_15;
   if ( !System_String__IsNullOrEmpty(item->fields._IconName_k__BackingField, 0) )
-    return System_String__Concat_64425724(
-             (System_String_o *)StringLiteral_23740/*"shortcut_board_icon_"*/,
+    return System_String__Concat_65122828(
+             (System_String_o *)StringLiteral_23821/*"shortcut_board_icon_"*/,
              item->fields._IconName_k__BackingField,
              0);
   v4 = ItemLinkInfoListViewItemDraw_TypeInfo;
@@ -297,7 +297,7 @@ System_String_o *ItemLinkInfoListViewItemDraw__GetBoardIconName(
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
          item->fields._Type_k__BackingField,
-         (const MethodInfo_34F5E88 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__ContainsKey__) )
+         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__ContainsKey__) )
   {
     v5 = ItemLinkInfoListViewItemDraw_TypeInfo;
     if ( !ItemLinkInfoListViewItemDraw_TypeInfo->_2.cctor_finished )
@@ -310,9 +310,9 @@ System_String_o *ItemLinkInfoListViewItemDraw__GetBoardIconName(
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
                                   item->fields._Type_k__BackingField,
-                                  (const MethodInfo_34F5BF4 *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__get_Item__);
+                                  (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_ItemTransitionType_Type__string__get_Item__);
 LABEL_15:
-    sub_1C93D2C(this, item);
+    sub_1CE6958(this, item);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -323,10 +323,10 @@ float ItemLinkInfoListViewItemDraw__GetHeight(ItemLinkInfoListViewItemDraw_o *th
   float result; // s0
   ItemLinkInfoListViewItemDraw_c *v4; // x0
 
-  if ( (byte_4D33296 & 1) == 0 )
+  if ( (byte_4E07193 & 1) == 0 )
   {
-    sub_1C93AD4(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    byte_4D33296 = 1;
+    sub_1CE6700(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    byte_4E07193 = 1;
   }
   result = this->fields.frameSize.fields.y;
   if ( result <= 0.0 )
@@ -359,10 +359,10 @@ System_String_o *ItemLinkInfoListViewItemDraw__ModifyNameText(
   unsigned int v13; // w8
 
   v4 = this;
-  if ( (byte_4D3328E & 1) == 0 )
+  if ( (byte_4E0718B & 1) == 0 )
   {
-    this = (ItemLinkInfoListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_43/*"\n"*/);
-    byte_4D3328E = 1;
+    this = (ItemLinkInfoListViewItemDraw_o *)sub_1CE6700(&StringLiteral_43/*"\n"*/);
+    byte_4E0718B = 1;
   }
   if ( !displayName )
     goto LABEL_21;
@@ -372,7 +372,7 @@ System_String_o *ItemLinkInfoListViewItemDraw__ModifyNameText(
   nameLabel = v4->fields.nameLabel;
   if ( !nameLabel )
 LABEL_21:
-    sub_1C93D2C(this, displayName);
+    sub_1CE6958(this, displayName);
   mFontSize = nameLabel->fields.mFontSize;
   if ( mFontSize < 1 )
     v8 = 0;
@@ -388,10 +388,10 @@ LABEL_21:
   else
   {
     v10 = (float)stringLength;
-    if ( !byte_4D2A7BA )
+    if ( !byte_4DFE732 )
     {
-      sub_1C93AD4(&System_Math_TypeInfo);
-      byte_4D2A7BA = 1;
+      sub_1CE6700(&System_Math_TypeInfo);
+      byte_4DFE732 = 1;
     }
     v11 = v10 * 0.5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -413,7 +413,7 @@ void ItemLinkInfoListViewItemDraw__OnClickButton(ItemLinkInfoListViewItemDraw_o 
 
   viewItem = this->fields.viewItem;
   if ( !viewItem )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   ActionExtensions__Call(viewItem->fields._LinkAction_k__BackingField, 0);
 }
 
@@ -429,10 +429,10 @@ void ItemLinkInfoListViewItemDraw__SetBaseButtonState(
   struct UICommonButton_o *v8; // x8
   float v9; // s1
 
-  if ( (byte_4D3328F & 1) == 0 )
+  if ( (byte_4E0718C & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3328F = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0718C = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -454,7 +454,7 @@ void ItemLinkInfoListViewItemDraw__SetBaseButtonState(
           (v6 = this->fields.baseButton) == 0) )
     {
 LABEL_12:
-      sub_1C93D2C(v6, v7);
+      sub_1CE6958(v6, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, bool, const MethodInfo *))v6->klass->vtable._5_set_isEnabled.methodPtr)(
       v6,
@@ -471,12 +471,12 @@ void ItemLinkInfoListViewItemDraw__SetBoardImage(ItemLinkInfoListViewItemDraw_o 
   __int64 v5; // x1
   struct UISprite_o *v6; // x0
 
-  if ( (byte_4D33291 & 1) == 0 )
+  if ( (byte_4E0718E & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20656/*"img_list_bg03"*/);
-    byte_4D33291 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_20724/*"img_list_bg03"*/);
+    byte_4E0718E = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -486,10 +486,10 @@ void ItemLinkInfoListViewItemDraw__SetBoardImage(ItemLinkInfoListViewItemDraw_o 
     v4 = this->fields.baseSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBanner(v4, (System_String_o *)StringLiteral_20656/*"img_list_bg03"*/, 0);
+    AtlasManager__SetBanner(v4, (System_String_o *)StringLiteral_20724/*"img_list_bg03"*/, 0);
     v6 = this->fields.baseSprite;
     if ( !v6 )
-      sub_1C93D2C(0, v5);
+      sub_1CE6958(0, v5);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v6,
       v6->klass->vtable._33_MakePixelPerfect.method);
@@ -510,11 +510,11 @@ void ItemLinkInfoListViewItemDraw__SetBoardTypeIconImage(
   __int64 v10; // x1
   struct UISprite_o *v11; // x0
 
-  if ( (byte_4D33294 & 1) == 0 )
+  if ( (byte_4E07191 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33294 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07191 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -531,7 +531,7 @@ void ItemLinkInfoListViewItemDraw__SetBoardTypeIconImage(
       AtlasManager__SetBanner(v9, BoardIconName, 0);
       v11 = this->fields.iconSprite;
       if ( !v11 )
-        sub_1C93D2C(0, v10);
+        sub_1CE6958(0, v10);
       ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v11->klass->vtable._33_MakePixelPerfect.methodPtr)(
         v11,
         v11->klass->vtable._33_MakePixelPerfect.method);
@@ -557,13 +557,13 @@ void ItemLinkInfoListViewItemDraw__SetDispItemIcon(
   struct ItemEntity_o *ItemEnt_k__BackingField; // x8
   int32_t id; // w2
 
-  if ( (byte_4D33290 & 1) == 0 )
+  if ( (byte_4E0718D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject____79146536);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33290 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject____79994096);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0718D = 1;
   }
   arrowObject = (UnityEngine_Object_o *)this->fields.arrowObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -611,10 +611,10 @@ void ItemLinkInfoListViewItemDraw__SetDispItemIcon(
         transform = UnityEngine_GameObject__get_transform(v6, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v12 = UnityEngine_Object__Instantiate_object__52629400(
+        v12 = UnityEngine_Object__Instantiate_object__53022032(
                 v10,
                 transform,
-                (const MethodInfo_3230F98 *)Method_UnityEngine_Object_Instantiate_GameObject____79146536);
+                (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_GameObject____79994096);
         v6 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v12, 0, 0);
         if ( ((unsigned __int8)v6 & 1) != 0 )
         {
@@ -622,17 +622,17 @@ void ItemLinkInfoListViewItemDraw__SetDispItemIcon(
             goto LABEL_42;
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)v12,
-                               (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+                               (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
           {
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4D2A55B )
+            if ( !byte_4DFE4CA )
             {
-              sub_1C93AD4(&NetworkManager_TypeInfo);
-              byte_4D2A55B = 1;
+              sub_1CE6700(&NetworkManager_TypeInfo);
+              byte_4DFE4CA = 1;
             }
             v6 = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -656,7 +656,7 @@ void ItemLinkInfoListViewItemDraw__SetDispItemIcon(
               return;
             }
 LABEL_42:
-            sub_1C93D2C(v6, IsFirst_k__BackingField);
+            sub_1CE6958(v6, IsFirst_k__BackingField);
           }
         }
       }
@@ -711,19 +711,19 @@ bool ItemLinkInfoListViewItemDraw__SetItem(
   int64_t endedAt; // [xsp+10h] [xbp-40h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4D3328D & 1) == 0 )
+  if ( (byte_4E0718A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C93AD4(&string_TypeInfo);
-    sub_1C93AD4(&StringLiteral_13529/*"TIME_REST_QUEST_BOARD_QUEST"*/);
-    sub_1C93AD4(&StringLiteral_8736/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/);
-    byte_4D3328D = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1CE6700(&string_TypeInfo);
+    sub_1CE6700(&StringLiteral_13569/*"TIME_REST_QUEST_BOARD_QUEST"*/);
+    sub_1CE6700(&StringLiteral_8751/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/);
+    byte_4E0718A = 1;
   }
   endedAt = 0;
   entity = 0;
@@ -732,7 +732,7 @@ bool ItemLinkInfoListViewItemDraw__SetItem(
   {
     this->fields.viewItem = item;
     p_viewItem = &this->fields.viewItem;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.viewItem,
       (int32_t)item,
       (int32_t)method,
@@ -764,14 +764,14 @@ bool ItemLinkInfoListViewItemDraw__SetItem(
         goto LABEL_61;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EventMaster___);
+      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventMaster___);
       if ( !Master_object )
         goto LABEL_63;
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
               &entity,
               TargetId_k__BackingField,
-              (const MethodInfo_34632C0 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+              (const MethodInfo_34E92A8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
         goto LABEL_61;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -783,8 +783,8 @@ bool ItemLinkInfoListViewItemDraw__SetItem(
         goto LABEL_61;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8736/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_13529/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8751/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_13569/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
       RestTime2 = (Il2CppObject *)LocalizationManager__GetRestTime2((int64_t)v26, 0, 0);
       Master_object = System_String__Format(v28, RestTime2, 0);
       viewItem = this->fields.viewItem;
@@ -840,7 +840,7 @@ LABEL_60:
             0);
         }
       }
-      Master_object = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3AC57EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Master_object = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( Master_object )
       {
         QuestInfo = QuestTree__GetQuestInfo((QuestTree_o *)Master_object, v17, 0);
@@ -868,7 +868,7 @@ LABEL_60:
             goto LABEL_52;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_13529/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
+          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_13569/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
           v24 = endedAt;
           v23 = v33;
         }
@@ -879,7 +879,7 @@ LABEL_52:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_8736/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
+          Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_8751/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
           v35 = this->fields.viewItem;
           if ( v35 )
           {
@@ -909,7 +909,7 @@ LABEL_61:
       }
     }
 LABEL_63:
-    sub_1C93D2C(Master_object, v12);
+    sub_1CE6958(Master_object, v12);
   }
   return item != 0;
 }
@@ -947,7 +947,7 @@ void ItemLinkInfoListViewItemDraw__SetLockBoard(
       }
     }
 LABEL_8:
-    sub_1C93D2C(this, boardItem);
+    sub_1CE6958(this, boardItem);
   }
 }
 
@@ -959,12 +959,12 @@ void ItemLinkInfoListViewItemDraw__SetMaskImage(ItemLinkInfoListViewItemDraw_o *
   __int64 v5; // x1
   struct UISprite_o *v6; // x0
 
-  if ( (byte_4D33292 & 1) == 0 )
+  if ( (byte_4E0718F & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20656/*"img_list_bg03"*/);
-    byte_4D33292 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_20724/*"img_list_bg03"*/);
+    byte_4E0718F = 1;
   }
   enableMask = (UnityEngine_Object_o *)this->fields.enableMask;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -974,10 +974,10 @@ void ItemLinkInfoListViewItemDraw__SetMaskImage(ItemLinkInfoListViewItemDraw_o *
     v4 = this->fields.enableMask;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBanner(v4, (System_String_o *)StringLiteral_20656/*"img_list_bg03"*/, 0);
+    AtlasManager__SetBanner(v4, (System_String_o *)StringLiteral_20724/*"img_list_bg03"*/, 0);
     v6 = this->fields.enableMask;
     if ( !v6 )
-      sub_1C93D2C(0, v5);
+      sub_1CE6958(0, v5);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v6,
       v6->klass->vtable._33_MakePixelPerfect.method);
@@ -995,12 +995,12 @@ void ItemLinkInfoListViewItemDraw__SetRecommendIcon(
   UnityEngine_Component_o *gameObject; // x0
   UISprite_o *v8; // x19
 
-  if ( (byte_4D33293 & 1) == 0 )
+  if ( (byte_4E07190 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20471/*"icon_support_recommend_yellow"*/);
-    byte_4D33293 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_20539/*"icon_support_recommend_yellow"*/);
+    byte_4E07190 = 1;
   }
   recommendIconSprite = (UnityEngine_Object_o *)this->fields.recommendIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1012,7 +1012,7 @@ void ItemLinkInfoListViewItemDraw__SetRecommendIcon(
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0), !item)
       || !gameObject )
     {
-      sub_1C93D2C(gameObject, v6);
+      sub_1CE6958(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive(
       (UnityEngine_GameObject_o *)gameObject,
@@ -1021,6 +1021,6 @@ void ItemLinkInfoListViewItemDraw__SetRecommendIcon(
     v8 = this->fields.recommendIconSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetDownloadCommonSprite(v8, (System_String_o *)StringLiteral_20471/*"icon_support_recommend_yellow"*/, 0);
+    AtlasManager__SetDownloadCommonSprite(v8, (System_String_o *)StringLiteral_20539/*"icon_support_recommend_yellow"*/, 0);
   }
 }

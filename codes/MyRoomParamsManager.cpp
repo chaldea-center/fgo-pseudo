@@ -82,60 +82,60 @@ void MyRoomParamsManager___cctor(const MethodInfo *method)
   int64_t v80; // x6
   System_String_o *v81; // x7
 
-  if ( (byte_4D2BCFB & 1) == 0 )
+  if ( (byte_4DFFD26 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_8085/*"IsListActive"*/);
-    sub_1C93AD4(&StringLiteral_8412/*"LastPlayedEventId"*/);
-    sub_1C93AD4(&StringLiteral_8414/*"LastPlayedTitle"*/);
-    sub_1C93AD4(&StringLiteral_8413/*"LastPlayedQuestId"*/);
-    sub_1C93AD4(&StringLiteral_5413/*"DummyFolderHistory"*/);
-    sub_1C93AD4(&StringLiteral_8418/*"LastSelectSubFolderId"*/);
-    sub_1C93AD4(&StringLiteral_8411/*"LastPlayMovedQuestId"*/);
-    sub_1C93AD4(&StringLiteral_8415/*"LastPlayedWarId"*/);
-    byte_4D2BCFB = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_8101/*"IsListActive"*/);
+    sub_1CE6700(&StringLiteral_8428/*"LastPlayedEventId"*/);
+    sub_1CE6700(&StringLiteral_8430/*"LastPlayedTitle"*/);
+    sub_1CE6700(&StringLiteral_8429/*"LastPlayedQuestId"*/);
+    sub_1CE6700(&StringLiteral_5427/*"DummyFolderHistory"*/);
+    sub_1CE6700(&StringLiteral_8434/*"LastSelectSubFolderId"*/);
+    sub_1CE6700(&StringLiteral_8427/*"LastPlayMovedQuestId"*/);
+    sub_1CE6700(&StringLiteral_8431/*"LastPlayedWarId"*/);
+    byte_4DFFD26 = 1;
   }
   static_fields = MyRoomParamsManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->SETTING_PROLOG_PART1 = -4294956296LL;
   static_fields->DUMMY_PLAY_DEFAULT_VALUE = -2;
-  v2 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  v2 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v2,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   v3 = MyRoomParamsManager_TypeInfo->static_fields;
   v3->DummyFolderHistory = v2;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v3->DummyFolderHistory, (int32_t)v2, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v3->DummyFolderHistory, (int32_t)v2, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   v11 = MyRoomParamsManager_TypeInfo->static_fields;
   v11->TmpDummyFolderHistory = v10;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v11->TmpDummyFolderHistory, (int32_t)v10, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v11->TmpDummyFolderHistory, (int32_t)v10, v12, v13, v14, v15, v16, v17);
   v18 = MyRoomParamsManager_TypeInfo->static_fields;
   *(_QWORD *)&v18->_DisplayMyRoomBgGroupId_k__BackingField = -1;
   v18->temporaryLastSelectSubFolderId = 0;
-  v19 = StringLiteral_8413/*"LastPlayedQuestId"*/;
-  v18->SAVE_KEY_LAST_PLAY_QUEST_ID = (struct System_String_o *)StringLiteral_8413/*"LastPlayedQuestId"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v18->SAVE_KEY_LAST_PLAY_QUEST_ID, v19, v20, v21, v22, v23, v24, v25);
-  v26 = StringLiteral_8415/*"LastPlayedWarId"*/;
+  v19 = StringLiteral_8429/*"LastPlayedQuestId"*/;
+  v18->SAVE_KEY_LAST_PLAY_QUEST_ID = (struct System_String_o *)StringLiteral_8429/*"LastPlayedQuestId"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v18->SAVE_KEY_LAST_PLAY_QUEST_ID, v19, v20, v21, v22, v23, v24, v25);
+  v26 = StringLiteral_8431/*"LastPlayedWarId"*/;
   v27 = MyRoomParamsManager_TypeInfo->static_fields;
-  v27->SAVE_KEY_LAST_PLAY_WAR_ID = (struct System_String_o *)StringLiteral_8415/*"LastPlayedWarId"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->SAVE_KEY_LAST_PLAY_WAR_ID, v26, v28, v29, v30, v31, v32, v33);
-  v34 = StringLiteral_8412/*"LastPlayedEventId"*/;
+  v27->SAVE_KEY_LAST_PLAY_WAR_ID = (struct System_String_o *)StringLiteral_8431/*"LastPlayedWarId"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v27->SAVE_KEY_LAST_PLAY_WAR_ID, v26, v28, v29, v30, v31, v32, v33);
+  v34 = StringLiteral_8428/*"LastPlayedEventId"*/;
   v35 = MyRoomParamsManager_TypeInfo->static_fields;
-  v35->SAVE_KEY_LAST_PLAY_EVENT_ID = (struct System_String_o *)StringLiteral_8412/*"LastPlayedEventId"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v35->SAVE_KEY_LAST_PLAY_EVENT_ID, v34, v36, v37, v38, v39, v40, v41);
-  v42 = StringLiteral_8414/*"LastPlayedTitle"*/;
+  v35->SAVE_KEY_LAST_PLAY_EVENT_ID = (struct System_String_o *)StringLiteral_8428/*"LastPlayedEventId"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v35->SAVE_KEY_LAST_PLAY_EVENT_ID, v34, v36, v37, v38, v39, v40, v41);
+  v42 = StringLiteral_8430/*"LastPlayedTitle"*/;
   v43 = MyRoomParamsManager_TypeInfo->static_fields;
-  v43->SAVE_KEY_LAST_PLAY_TITLE = (struct System_String_o *)StringLiteral_8414/*"LastPlayedTitle"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v43->SAVE_KEY_LAST_PLAY_TITLE, v42, v44, v45, v46, v47, v48, v49);
-  v50 = StringLiteral_8418/*"LastSelectSubFolderId"*/;
+  v43->SAVE_KEY_LAST_PLAY_TITLE = (struct System_String_o *)StringLiteral_8430/*"LastPlayedTitle"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v43->SAVE_KEY_LAST_PLAY_TITLE, v42, v44, v45, v46, v47, v48, v49);
+  v50 = StringLiteral_8434/*"LastSelectSubFolderId"*/;
   v51 = MyRoomParamsManager_TypeInfo->static_fields;
-  v51->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID = (struct System_String_o *)StringLiteral_8418/*"LastSelectSubFolderId"*/;
-  sub_1C93A78(
+  v51->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID = (struct System_String_o *)StringLiteral_8434/*"LastSelectSubFolderId"*/;
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&v51->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID,
     v50,
     v52,
@@ -144,18 +144,18 @@ void MyRoomParamsManager___cctor(const MethodInfo *method)
     v55,
     v56,
     v57);
-  v58 = StringLiteral_8085/*"IsListActive"*/;
+  v58 = StringLiteral_8101/*"IsListActive"*/;
   v59 = MyRoomParamsManager_TypeInfo->static_fields;
-  v59->SAVE_KEY_IS_LIST_ACTIVE = (struct System_String_o *)StringLiteral_8085/*"IsListActive"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v59->SAVE_KEY_IS_LIST_ACTIVE, v58, v60, v61, v62, v63, v64, v65);
-  v66 = StringLiteral_5413/*"DummyFolderHistory"*/;
+  v59->SAVE_KEY_IS_LIST_ACTIVE = (struct System_String_o *)StringLiteral_8101/*"IsListActive"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v59->SAVE_KEY_IS_LIST_ACTIVE, v58, v60, v61, v62, v63, v64, v65);
+  v66 = StringLiteral_5427/*"DummyFolderHistory"*/;
   v67 = MyRoomParamsManager_TypeInfo->static_fields;
-  v67->SAVE_KEY_DUMMY_FOLDER_HISTORY = (struct System_String_o *)StringLiteral_5413/*"DummyFolderHistory"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v67->SAVE_KEY_DUMMY_FOLDER_HISTORY, v66, v68, v69, v70, v71, v72, v73);
+  v67->SAVE_KEY_DUMMY_FOLDER_HISTORY = (struct System_String_o *)StringLiteral_5427/*"DummyFolderHistory"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v67->SAVE_KEY_DUMMY_FOLDER_HISTORY, v66, v68, v69, v70, v71, v72, v73);
   v74 = MyRoomParamsManager_TypeInfo->static_fields;
-  v75 = StringLiteral_8411/*"LastPlayMovedQuestId"*/;
-  v74->SAVE_KEY_LAST_MOVED_QUEST_ID = (struct System_String_o *)StringLiteral_8411/*"LastPlayMovedQuestId"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v74->SAVE_KEY_LAST_MOVED_QUEST_ID, v75, v76, v77, v78, v79, v80, v81);
+  v75 = StringLiteral_8427/*"LastPlayMovedQuestId"*/;
+  v74->SAVE_KEY_LAST_MOVED_QUEST_ID = (struct System_String_o *)StringLiteral_8427/*"LastPlayMovedQuestId"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v74->SAVE_KEY_LAST_MOVED_QUEST_ID, v75, v76, v77, v78, v79, v80, v81);
 }
 
 
@@ -164,12 +164,12 @@ void MyRoomParamsManager__DeleteContinueData(const MethodInfo *method)
   MyRoomParamsManager_c *v1; // x0
   const MethodInfo *v2; // x0
 
-  if ( (byte_4D2BCF0 & 1) == 0 )
+  if ( (byte_4DFFD1B & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_10687/*"PhotoCampaignSelectedUsrSvtId"*/);
-    sub_1C93AD4(&StringLiteral_10685/*"PhotoCampaignSelectImageLimit"*/);
-    byte_4D2BCF0 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_10718/*"PhotoCampaignSelectedUsrSvtId"*/);
+    sub_1CE6700(&StringLiteral_10716/*"PhotoCampaignSelectImageLimit"*/);
+    byte_4DFFD1B = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -185,8 +185,8 @@ void MyRoomParamsManager__DeleteContinueData(const MethodInfo *method)
   UnityEngine_PlayerPrefs__DeleteKey(MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_IS_LIST_ACTIVE, 0);
   UnityEngine_PlayerPrefs__DeleteKey(MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_DUMMY_FOLDER_HISTORY, 0);
   UnityEngine_PlayerPrefs__DeleteKey(MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_MOVED_QUEST_ID, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10685/*"PhotoCampaignSelectImageLimit"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10687/*"PhotoCampaignSelectedUsrSvtId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10716/*"PhotoCampaignSelectImageLimit"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10718/*"PhotoCampaignSelectedUsrSvtId"*/, 0);
   MyRoomParamsManager__InitParameter(v2);
 }
 
@@ -217,12 +217,12 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
   int v22; // w10
   int32_t DUMMY_PLAY_DEFAULT_VALUE; // w20
 
-  if ( (byte_4D2BCF1 & 1) == 0 )
+  if ( (byte_4DFFD1C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2BCF1 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFFD1C = 1;
   }
   v7 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -231,11 +231,11 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
     v7 = MyRoomParamsManager_TypeInfo;
   }
   LAST_PLAY_ID_DEFAULT_VALUE = v7->static_fields->LAST_PLAY_ID_DEFAULT_VALUE;
-  if ( !byte_4D2BD04 )
+  if ( !byte_4DFFD2F )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v7 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD04 = 1;
+    byte_4DFFD2F = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -245,11 +245,11 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
   static_fields = v7->static_fields;
   static_fields->_LastPlayQuestId_k__BackingField = LAST_PLAY_ID_DEFAULT_VALUE;
   v10 = static_fields->LAST_PLAY_ID_DEFAULT_VALUE;
-  if ( !byte_4D2BD05 )
+  if ( !byte_4DFFD30 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v7 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD05 = 1;
+    byte_4DFFD30 = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -259,11 +259,11 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
   v11 = v7->static_fields;
   v11->_LastPlayWarId_k__BackingField = v10;
   v12 = v11->LAST_PLAY_ID_DEFAULT_VALUE;
-  if ( !byte_4D2BD06 )
+  if ( !byte_4DFFD31 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v7 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD06 = 1;
+    byte_4DFFD31 = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -272,11 +272,11 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
   }
   v7->static_fields->_LastPlayEventId_k__BackingField = v12;
   v13 = StringLiteral_1/*""*/;
-  if ( !byte_4D2BD07 )
+  if ( !byte_4DFFD32 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v7 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD07 = 1;
+    byte_4DFFD32 = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -285,14 +285,14 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
   }
   v14 = v7->static_fields;
   v14->_LastPlayTitle_k__BackingField = (struct System_String_o *)v13;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v14->_LastPlayTitle_k__BackingField, v13, v1, v2, v3, v4, v5, v6);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v14->_LastPlayTitle_k__BackingField, v13, v1, v2, v3, v4, v5, v6);
   v16 = MyRoomParamsManager_TypeInfo;
   v17 = MyRoomParamsManager_TypeInfo->static_fields->LAST_PLAY_ID_DEFAULT_VALUE;
-  if ( !byte_4D2BD08 )
+  if ( !byte_4DFFD33 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v16 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD08 = 1;
+    byte_4DFFD33 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -308,17 +308,17 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
         DummyFolderHistory->fields._version = v20,
         (TmpDummyFolderHistory = v18->TmpDummyFolderHistory) == 0) )
   {
-    sub_1C93D2C(v16, v15);
+    sub_1CE6958(v16, v15);
   }
   v22 = TmpDummyFolderHistory->fields._version + 1;
   TmpDummyFolderHistory->fields._size = 0;
   TmpDummyFolderHistory->fields._version = v22;
   DUMMY_PLAY_DEFAULT_VALUE = v18->DUMMY_PLAY_DEFAULT_VALUE;
-  if ( !byte_4D2BD09 )
+  if ( !byte_4DFFD34 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v16 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD09 = 1;
+    byte_4DFFD34 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -326,11 +326,11 @@ void MyRoomParamsManager__InitParameter(const MethodInfo *method)
     v16 = MyRoomParamsManager_TypeInfo;
   }
   v16->static_fields->_LastPlayMovedQuestId_k__BackingField = DUMMY_PLAY_DEFAULT_VALUE;
-  if ( !byte_4D2BD0A )
+  if ( !byte_4DFFD35 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v16 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD0A = 1;
+    byte_4DFFD35 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -345,10 +345,10 @@ void MyRoomParamsManager__InitTemporaryParameter(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCF2 & 1) == 0 )
+  if ( (byte_4DFFD1D & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF2 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD1D = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -388,15 +388,15 @@ void MyRoomParamsManager__LastDummyPlaySaveData(
   System_String_o *SAVE_KEY_LAST_MOVED_QUEST_ID; // x20
   const MethodInfo *v26; // x5
 
-  if ( (byte_4D2BCF5 & 1) == 0 )
+  if ( (byte_4DFFD20 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor___79008552);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2BCF5 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor___79855024);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFFD20 = 1;
   }
   if ( history )
   {
@@ -415,16 +415,16 @@ void MyRoomParamsManager__LastDummyPlaySaveData(
     System_Collections_Generic_List_int___AddRange(
       TmpDummyFolderHistory,
       (System_Collections_Generic_IEnumerable_T__o *)history,
-      (const MethodInfo_385CB84 *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_38E9150 *)Method_System_Collections_Generic_List_int__AddRange__);
   }
   if ( questId )
   {
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4D2BD09 )
+    if ( !byte_4DFFD34 )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-      byte_4D2BD09 = 1;
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+      byte_4DFFD34 = 1;
     }
     v10 = MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -443,14 +443,14 @@ void MyRoomParamsManager__LastDummyPlaySaveData(
       v11 = MyRoomParamsManager_TypeInfo;
     }
     v12 = (System_Collections_Generic_IEnumerable_T__o *)v11->static_fields->TmpDummyFolderHistory;
-    v13 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
-    System_Collections_Generic_List_int____ctor_59097676(
+    v13 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_59672600(
       v13,
       v12,
-      (const MethodInfo_385C24C *)Method_System_Collections_Generic_List_int___ctor___79008552);
+      (const MethodInfo_38E8818 *)Method_System_Collections_Generic_List_int___ctor___79855024);
     static_fields = MyRoomParamsManager_TypeInfo->static_fields;
     static_fields->DummyFolderHistory = v13;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&static_fields->DummyFolderHistory,
       (int32_t)v13,
       v15,
@@ -470,11 +470,11 @@ void MyRoomParamsManager__LastDummyPlaySaveData(
       UnityEngine_PlayerPrefs__SetString(SAVE_KEY_DUMMY_FOLDER_HISTORY, v23, 0);
       v24 = MyRoomParamsManager_TypeInfo;
       SAVE_KEY_LAST_MOVED_QUEST_ID = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_MOVED_QUEST_ID;
-      if ( !byte_4D2BB74 )
+      if ( !byte_4DFFB96 )
       {
-        sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+        sub_1CE6700(&MyRoomParamsManager_TypeInfo);
         v24 = MyRoomParamsManager_TypeInfo;
-        byte_4D2BB74 = 1;
+        byte_4DFFB96 = 1;
       }
       if ( !v24->_2.cctor_finished )
       {
@@ -496,7 +496,7 @@ void MyRoomParamsManager__LastDummyPlaySaveData(
       return;
     }
 LABEL_26:
-    sub_1C93D2C(TmpDummyFolderHistory, *(_QWORD *)&questId);
+    sub_1CE6958(TmpDummyFolderHistory, *(_QWORD *)&questId);
   }
 }
 
@@ -541,18 +541,18 @@ void MyRoomParamsManager__LastPlay_SaveData(
   System_String_o *SAVE_KEY_DUMMY_FOLDER_HISTORY; // x19
   System_String_o *v40; // x0
 
-  if ( (byte_4D2BCF4 & 1) == 0 )
+  if ( (byte_4DFFD1F & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF4 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD1F = 1;
   }
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4D2BD05 )
+  if ( !byte_4DFFD30 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD05 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD30 = 1;
   }
   v13 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -561,11 +561,11 @@ void MyRoomParamsManager__LastPlay_SaveData(
     v13 = MyRoomParamsManager_TypeInfo;
   }
   v13->static_fields->_LastPlayWarId_k__BackingField = warId;
-  if ( !byte_4D2BD04 )
+  if ( !byte_4DFFD2F )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v13 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD04 = 1;
+    byte_4DFFD2F = 1;
   }
   if ( !v13->_2.cctor_finished )
   {
@@ -573,11 +573,11 @@ void MyRoomParamsManager__LastPlay_SaveData(
     v13 = MyRoomParamsManager_TypeInfo;
   }
   v13->static_fields->_LastPlayQuestId_k__BackingField = questId;
-  if ( !byte_4D2BD06 )
+  if ( !byte_4DFFD31 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v13 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD06 = 1;
+    byte_4DFFD31 = 1;
   }
   if ( !v13->_2.cctor_finished )
   {
@@ -585,11 +585,11 @@ void MyRoomParamsManager__LastPlay_SaveData(
     v13 = MyRoomParamsManager_TypeInfo;
   }
   v13->static_fields->_LastPlayEventId_k__BackingField = eventId;
-  if ( !byte_4D2BD07 )
+  if ( !byte_4DFFD32 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v13 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD07 = 1;
+    byte_4DFFD32 = 1;
   }
   if ( !v13->_2.cctor_finished )
   {
@@ -598,7 +598,7 @@ void MyRoomParamsManager__LastPlay_SaveData(
   }
   static_fields = v13->static_fields;
   static_fields->_LastPlayTitle_k__BackingField = title;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&static_fields->_LastPlayTitle_k__BackingField,
     (int32_t)title,
     eventId,
@@ -609,11 +609,11 @@ void MyRoomParamsManager__LastPlay_SaveData(
     v7);
   v16 = MyRoomParamsManager_TypeInfo;
   temporaryLastSelectSubFolderId = MyRoomParamsManager_TypeInfo->static_fields->temporaryLastSelectSubFolderId;
-  if ( !byte_4D2BD08 )
+  if ( !byte_4DFFD33 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v16 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BD08 = 1;
+    byte_4DFFD33 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -643,11 +643,11 @@ void MyRoomParamsManager__LastPlay_SaveData(
     TmpDummyFolderHistory->fields._size = 0;
     TmpDummyFolderHistory->fields._version = v22;
     DUMMY_PLAY_DEFAULT_VALUE = v18->DUMMY_PLAY_DEFAULT_VALUE;
-    if ( !byte_4D2BD09 )
+    if ( !byte_4DFFD34 )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
       v16 = MyRoomParamsManager_TypeInfo;
-      byte_4D2BD09 = 1;
+      byte_4DFFD34 = 1;
     }
     if ( !v16->_2.cctor_finished )
     {
@@ -659,7 +659,7 @@ void MyRoomParamsManager__LastPlay_SaveData(
     v24->_LastPlayMovedQuestId_k__BackingField = DUMMY_PLAY_DEFAULT_VALUE;
     if ( !v16 )
 LABEL_64:
-      sub_1C93D2C(v16, v15);
+      sub_1CE6958(v16, v15);
     SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID = v24->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID;
     v26 = (System_String_o *)(*((__int64 (__fastcall **)(MyRoomParamsManager_c *, _QWORD))v16->_1.image + 45))(
                                v16,
@@ -667,11 +667,11 @@ LABEL_64:
     UnityEngine_PlayerPrefs__SetString(SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID, v26, 0);
     v27 = MyRoomParamsManager_TypeInfo;
     SAVE_KEY_LAST_MOVED_QUEST_ID = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_MOVED_QUEST_ID;
-    if ( !byte_4D2BB74 )
+    if ( !byte_4DFFB96 )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
       v27 = MyRoomParamsManager_TypeInfo;
-      byte_4D2BB74 = 1;
+      byte_4DFFB96 = 1;
     }
     if ( !v27->_2.cctor_finished )
     {
@@ -690,11 +690,11 @@ LABEL_64:
     v16 = MyRoomParamsManager_TypeInfo;
   }
   SAVE_KEY_LAST_PLAY_QUEST_ID = v16->static_fields->SAVE_KEY_LAST_PLAY_QUEST_ID;
-  if ( !byte_4D2BA90 )
+  if ( !byte_4DFFAB2 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v16 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BA90 = 1;
+    byte_4DFFAB2 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -704,11 +704,11 @@ LABEL_64:
   UnityEngine_PlayerPrefs__SetInt(SAVE_KEY_LAST_PLAY_QUEST_ID, v16->static_fields->_LastPlayQuestId_k__BackingField, 0);
   v30 = MyRoomParamsManager_TypeInfo;
   SAVE_KEY_LAST_PLAY_WAR_ID = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_PLAY_WAR_ID;
-  if ( !byte_4D2BA91 )
+  if ( !byte_4DFFAB3 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v30 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BA91 = 1;
+    byte_4DFFAB3 = 1;
   }
   if ( !v30->_2.cctor_finished )
   {
@@ -718,11 +718,11 @@ LABEL_64:
   UnityEngine_PlayerPrefs__SetInt(SAVE_KEY_LAST_PLAY_WAR_ID, v30->static_fields->_LastPlayWarId_k__BackingField, 0);
   v32 = MyRoomParamsManager_TypeInfo;
   SAVE_KEY_LAST_PLAY_EVENT_ID = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_PLAY_EVENT_ID;
-  if ( !byte_4D2BB75 )
+  if ( !byte_4DFFB97 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v32 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BB75 = 1;
+    byte_4DFFB97 = 1;
   }
   if ( !v32->_2.cctor_finished )
   {
@@ -732,11 +732,11 @@ LABEL_64:
   UnityEngine_PlayerPrefs__SetInt(SAVE_KEY_LAST_PLAY_EVENT_ID, v32->static_fields->_LastPlayEventId_k__BackingField, 0);
   v34 = MyRoomParamsManager_TypeInfo;
   SAVE_KEY_LAST_PLAY_TITLE = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_PLAY_TITLE;
-  if ( !byte_4D2BA92 )
+  if ( !byte_4DFFAB4 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v34 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BA92 = 1;
+    byte_4DFFAB4 = 1;
   }
   if ( !v34->_2.cctor_finished )
   {
@@ -746,11 +746,11 @@ LABEL_64:
   UnityEngine_PlayerPrefs__SetString(SAVE_KEY_LAST_PLAY_TITLE, v34->static_fields->_LastPlayTitle_k__BackingField, 0);
   v36 = MyRoomParamsManager_TypeInfo;
   v37 = MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID;
-  if ( !byte_4D2BA93 )
+  if ( !byte_4DFFAB5 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v36 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BA93 = 1;
+    byte_4DFFAB5 = 1;
   }
   if ( !v36->_2.cctor_finished )
   {
@@ -778,10 +778,10 @@ void MyRoomParamsManager__LoadIsListActive(const MethodInfo *method)
   MyRoomParamsManager_c *v3; // x0
   char v4; // w8
 
-  if ( (byte_4D2BCF7 & 1) == 0 )
+  if ( (byte_4DFFD22 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF7 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD22 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -794,10 +794,10 @@ void MyRoomParamsManager__LoadIsListActive(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   if ( Int == 1 )
   {
-    if ( !byte_4D2BD0A )
+    if ( !byte_4DFFD35 )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-      byte_4D2BD0A = 1;
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+      byte_4DFFD35 = 1;
     }
     v3 = MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -809,10 +809,10 @@ void MyRoomParamsManager__LoadIsListActive(const MethodInfo *method)
   }
   else
   {
-    if ( !byte_4D2BD0A )
+    if ( !byte_4DFFD35 )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-      byte_4D2BD0A = 1;
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+      byte_4DFFD35 = 1;
     }
     v3 = MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -871,13 +871,13 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   struct MyRoomParamsManager_StaticFields *v41; // x8
   int32_t v42; // w9
 
-  if ( (byte_4D2BCF3 & 1) == 0 )
+  if ( (byte_4DFFD1E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_JsonManager_Deserialize_List_int____);
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2BCF3 = 1;
+    sub_1CE6700(&Method_JsonManager_Deserialize_List_int____);
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFFD1E = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -889,10 +889,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
           v1->static_fields->SAVE_KEY_LAST_PLAY_QUEST_ID,
           v1->static_fields->LAST_PLAY_ID_DEFAULT_VALUE,
           0);
-  if ( !byte_4D2BD04 )
+  if ( !byte_4DFFD2F )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD04 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD2F = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -905,10 +905,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   LAST_PLAY_ID_DEFAULT_VALUE = static_fields->LAST_PLAY_ID_DEFAULT_VALUE;
   static_fields->_LastPlayQuestId_k__BackingField = Int;
   v7 = UnityEngine_PlayerPrefs__GetInt(SAVE_KEY_LAST_PLAY_WAR_ID, LAST_PLAY_ID_DEFAULT_VALUE, 0);
-  if ( !byte_4D2BD05 )
+  if ( !byte_4DFFD30 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD05 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD30 = 1;
   }
   v8 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -921,10 +921,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   v11 = v9->LAST_PLAY_ID_DEFAULT_VALUE;
   v9->_LastPlayWarId_k__BackingField = v7;
   v12 = UnityEngine_PlayerPrefs__GetInt(SAVE_KEY_LAST_PLAY_EVENT_ID, v11, 0);
-  if ( !byte_4D2BD06 )
+  if ( !byte_4DFFD31 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD06 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD31 = 1;
   }
   v13 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -935,10 +935,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   v14 = v13->static_fields;
   v14->_LastPlayEventId_k__BackingField = v12;
   String = UnityEngine_PlayerPrefs__GetString(v14->SAVE_KEY_LAST_PLAY_TITLE, (System_String_o *)StringLiteral_1/*""*/, 0);
-  if ( !byte_4D2BD07 )
+  if ( !byte_4DFFD32 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD07 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD32 = 1;
   }
   v22 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -948,7 +948,7 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   }
   v23 = v22->static_fields;
   v23->_LastPlayTitle_k__BackingField = String;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&v23->_LastPlayTitle_k__BackingField,
     (int32_t)String,
     v15,
@@ -961,10 +961,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
           MyRoomParamsManager_TypeInfo->static_fields->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID,
           MyRoomParamsManager_TypeInfo->static_fields->LAST_PLAY_ID_DEFAULT_VALUE,
           0);
-  if ( !byte_4D2BD08 )
+  if ( !byte_4DFFD33 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD08 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD33 = 1;
   }
   v25 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -982,7 +982,7 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v28 = JsonManager__Deserialize_object_(v27, (const MethodInfo_3213E20 *)Method_JsonManager_Deserialize_List_int____);
+    v28 = JsonManager__Deserialize_object_(v27, (const MethodInfo_3273BD8 *)Method_JsonManager_Deserialize_List_int____);
     v35 = MyRoomParamsManager_TypeInfo;
     v36 = v28;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -992,7 +992,7 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
     }
     v37 = v35->static_fields;
     v37->DummyFolderHistory = (struct System_Collections_Generic_List_int__o *)v36;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v37->DummyFolderHistory, (int32_t)v36, v29, v30, v31, v32, v33, v34);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v37->DummyFolderHistory, (int32_t)v36, v29, v30, v31, v32, v33, v34);
   }
   v38 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1004,10 +1004,10 @@ void MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
           v38->static_fields->SAVE_KEY_LAST_MOVED_QUEST_ID,
           v38->static_fields->DUMMY_PLAY_DEFAULT_VALUE,
           0);
-  if ( !byte_4D2BD09 )
+  if ( !byte_4DFFD34 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BD09 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD34 = 1;
   }
   v40 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1026,17 +1026,17 @@ void MyRoomParamsManager__Reboot(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCF9 & 1) == 0 )
+  if ( (byte_4DFFD24 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF9 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD24 = 1;
   }
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4D2BC2D )
+  if ( !byte_4DFFC58 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BC2D = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFC58 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1045,11 +1045,11 @@ void MyRoomParamsManager__Reboot(const MethodInfo *method)
     v1 = MyRoomParamsManager_TypeInfo;
   }
   v1->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = -1;
-  if ( !byte_4D2BC2F )
+  if ( !byte_4DFFC5A )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
     v1 = MyRoomParamsManager_TypeInfo;
-    byte_4D2BC2F = 1;
+    byte_4DFFC5A = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -1064,10 +1064,10 @@ void MyRoomParamsManager__SaveIsListActive(bool value, const MethodInfo *method)
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCF8 & 1) == 0 )
+  if ( (byte_4DFFD23 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF8 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD23 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1119,54 +1119,54 @@ void MyRoomParamsManager__SetClearQuestWarEnableMyRoomBgChange(int32_t questId, 
   Il2CppObject *v37; // [xsp+0h] [xbp-50h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D2BCFA & 1) == 0 )
+  if ( (byte_4DFFD25 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_MyRoomAddMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C93AD4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C93AD4(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C93AD4(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__getEntityList__);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomAddEntity___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_OrderByDescending_MyRoomAddEntity__int___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_ThenByDescending_MyRoomAddEntity__int___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_ToList_MyRoomAddEntity___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_Where_MyRoomAddEntity___);
-    sub_1C93AD4(&System_Func_MyRoomAddEntity__int__TypeInfo);
-    sub_1C93AD4(&System_Func_MyRoomAddEntity__bool__TypeInfo);
-    sub_1C93AD4(&MyRoomControl_TypeInfo);
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&Method_MyRoomParamsManager___c__SetClearQuestWarEnableMyRoomBgChange_b__65_1__);
-    sub_1C93AD4(&Method_MyRoomParamsManager___c__SetClearQuestWarEnableMyRoomBgChange_b__65_2__);
-    sub_1C93AD4(&Method_MyRoomParamsManager___c__DisplayClass65_0__SetClearQuestWarEnableMyRoomBgChange_b__0__);
-    sub_1C93AD4(&MyRoomParamsManager___c__DisplayClass65_0_TypeInfo);
-    sub_1C93AD4(&MyRoomParamsManager___c_TypeInfo);
-    sub_1C93AD4(&StringLiteral_5317/*"DisplayMyRoomBgWar"*/);
-    sub_1C93AD4(&StringLiteral_5316/*"DisplayMyRoomBgGroupId"*/);
-    byte_4D2BCFA = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_MyRoomAddMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1CE6700(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1CE6700(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1CE6700(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__getEntityList__);
+    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomAddEntity___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_OrderByDescending_MyRoomAddEntity__int___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_ThenByDescending_MyRoomAddEntity__int___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_ToList_MyRoomAddEntity___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_Where_MyRoomAddEntity___);
+    sub_1CE6700(&System_Func_MyRoomAddEntity__int__TypeInfo);
+    sub_1CE6700(&System_Func_MyRoomAddEntity__bool__TypeInfo);
+    sub_1CE6700(&MyRoomControl_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&Method_MyRoomParamsManager___c__SetClearQuestWarEnableMyRoomBgChange_b__65_1__);
+    sub_1CE6700(&Method_MyRoomParamsManager___c__SetClearQuestWarEnableMyRoomBgChange_b__65_2__);
+    sub_1CE6700(&Method_MyRoomParamsManager___c__DisplayClass65_0__SetClearQuestWarEnableMyRoomBgChange_b__0__);
+    sub_1CE6700(&MyRoomParamsManager___c__DisplayClass65_0_TypeInfo);
+    sub_1CE6700(&MyRoomParamsManager___c_TypeInfo);
+    sub_1CE6700(&StringLiteral_5332/*"DisplayMyRoomBgWar"*/);
+    sub_1CE6700(&StringLiteral_5331/*"DisplayMyRoomBgGroupId"*/);
+    byte_4DFFD25 = 1;
   }
   v37 = 0;
   entity = 0;
-  v3 = sub_1C93D20(MyRoomParamsManager___c__DisplayClass65_0_TypeInfo);
+  v3 = sub_1CE694C(MyRoomParamsManager___c__DisplayClass65_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Master_object )
     goto LABEL_66;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &entity,
           questId,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !entity )
     goto LABEL_66;
   v6 = Master_object;
@@ -1177,11 +1177,11 @@ void MyRoomParamsManager__SetClearQuestWarEnableMyRoomBgChange(int32_t questId, 
           v6,
           &v37,
           (int32_t)Master_object,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !v3 || !v37 || !Master_object )
     goto LABEL_66;
   v7 = (WarEntity_o **)(v3 + 16);
@@ -1189,20 +1189,20 @@ void MyRoomParamsManager__SetClearQuestWarEnableMyRoomBgChange(int32_t questId, 
           Master_object,
           (Il2CppObject **)(v3 + 16),
           HIDWORD(v37[1].klass),
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
   if ( !Master_object )
     goto LABEL_66;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)Master_object->fields.list,
-                                                              (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_MyRoomAddEntity___);
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5316/*"DisplayMyRoomBgGroupId"*/, 0) )
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5316/*"DisplayMyRoomBgGroupId"*/, 0);
+                                                              (const MethodInfo_3248A54 *)Method_System_Linq_Enumerable_ToList_MyRoomAddEntity___);
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5331/*"DisplayMyRoomBgGroupId"*/, 0) )
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5331/*"DisplayMyRoomBgGroupId"*/, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_PlayerPrefs__GetInt(
-                                                                  (System_String_o *)StringLiteral_5317/*"DisplayMyRoomBgWar"*/,
+                                                                  (System_String_o *)StringLiteral_5332/*"DisplayMyRoomBgWar"*/,
                                                                   0,
                                                                   0);
   if ( !*v7 )
@@ -1223,10 +1223,10 @@ void MyRoomParamsManager__SetClearQuestWarEnableMyRoomBgChange(int32_t questId, 
 LABEL_69:
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4D2BC2F )
+    if ( !byte_4DFFC5A )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-      byte_4D2BC2F = 1;
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+      byte_4DFFC5A = 1;
     }
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1247,7 +1247,7 @@ LABEL_36:
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     *(_QWORD *)(v3 + 24) = NetworkManager__getTime(0);
-    v10 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_MyRoomAddEntity__bool__TypeInfo);
+    v10 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_MyRoomAddEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v10,
       (Il2CppObject *)v3,
@@ -1256,7 +1256,7 @@ LABEL_36:
     v11 = System_Linq_Enumerable__Where_object_(
             v8,
             (System_Func_TSource__bool__o *)v10,
-            (const MethodInfo_31EB2BC *)Method_System_Linq_Enumerable_Where_MyRoomAddEntity___);
+            (const MethodInfo_324B214 *)Method_System_Linq_Enumerable_Where_MyRoomAddEntity___);
     v12 = MyRoomParamsManager___c_TypeInfo;
     if ( !MyRoomParamsManager___c_TypeInfo->_2.cctor_finished )
     {
@@ -1272,7 +1272,7 @@ LABEL_36:
         v12 = MyRoomParamsManager___c_TypeInfo;
       }
       v14 = (Il2CppObject *)v12->static_fields->__9;
-      _9__65_1 = (System_Func_object__int__o *)sub_1C93D20(System_Func_MyRoomAddEntity__int__TypeInfo);
+      _9__65_1 = (System_Func_object__int__o *)sub_1CE694C(System_Func_MyRoomAddEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__65_1,
         v14,
@@ -1280,7 +1280,7 @@ LABEL_36:
         0);
       static_fields = MyRoomParamsManager___c_TypeInfo->static_fields;
       static_fields->__9__65_1 = (struct System_Func_MyRoomAddEntity__int__o *)_9__65_1;
-      sub_1C93A78(
+      sub_1CE66A4(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__65_1,
         (int32_t)_9__65_1,
         v16,
@@ -1293,7 +1293,7 @@ LABEL_36:
     v22 = System_Linq_Enumerable__OrderByDescending_object__int_(
             v11,
             (System_Func_TSource__TKey__o *)_9__65_1,
-            (const MethodInfo_31D3DE4 *)Method_System_Linq_Enumerable_OrderByDescending_MyRoomAddEntity__int___);
+            (const MethodInfo_32338E0 *)Method_System_Linq_Enumerable_OrderByDescending_MyRoomAddEntity__int___);
     v23 = MyRoomParamsManager___c_TypeInfo;
     v24 = v22;
     if ( !MyRoomParamsManager___c_TypeInfo->_2.cctor_finished )
@@ -1310,7 +1310,7 @@ LABEL_36:
         v23 = MyRoomParamsManager___c_TypeInfo;
       }
       v26 = (Il2CppObject *)v23->static_fields->__9;
-      _9__65_2 = (System_Func_object__int__o *)sub_1C93D20(System_Func_MyRoomAddEntity__int__TypeInfo);
+      _9__65_2 = (System_Func_object__int__o *)sub_1CE694C(System_Func_MyRoomAddEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__65_2,
         v26,
@@ -1318,24 +1318,24 @@ LABEL_36:
         0);
       v27 = MyRoomParamsManager___c_TypeInfo->static_fields;
       v27->__9__65_2 = (struct System_Func_MyRoomAddEntity__int__o *)_9__65_2;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v27->__9__65_2, (int32_t)_9__65_2, v28, v29, v30, v31, v32, v33);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v27->__9__65_2, (int32_t)_9__65_2, v28, v29, v30, v31, v32, v33);
     }
     v34 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenByDescending_object__int_(
                                                                  v24,
                                                                  (System_Func_TSource__TKey__o *)_9__65_2,
-                                                                 (const MethodInfo_31E35A8 *)Method_System_Linq_Enumerable_ThenByDescending_MyRoomAddEntity__int___);
+                                                                 (const MethodInfo_3243138 *)Method_System_Linq_Enumerable_ThenByDescending_MyRoomAddEntity__int___);
     v35 = System_Linq_Enumerable__FirstOrDefault_object_(
             v34,
-            (const MethodInfo_31CC378 *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomAddEntity___);
+            (const MethodInfo_322BD9C *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomAddEntity___);
     if ( !v35 )
       goto LABEL_62;
     monitor_high = HIDWORD(v35[1].monitor);
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4D2BC2F )
+    if ( !byte_4DFFC5A )
     {
-      sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-      byte_4D2BC2F = 1;
+      sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+      byte_4DFFC5A = 1;
     }
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1347,13 +1347,13 @@ LABEL_36:
   }
   if ( !*v7 )
 LABEL_66:
-    sub_1C93D2C(Master_object, v5);
+    sub_1CE6958(Master_object, v5);
   id = (*v7)->fields.id;
 LABEL_62:
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
   MyRoomControl__ClearBackGroundData(0);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_5317/*"DisplayMyRoomBgWar"*/, id, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_5332/*"DisplayMyRoomBgWar"*/, id, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -1362,10 +1362,10 @@ void MyRoomParamsManager__SetTemporaryLastSelectSubFolderId(int32_t questId, con
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCF6 & 1) == 0 )
+  if ( (byte_4DFFD21 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCF6 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD21 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1381,10 +1381,10 @@ int32_t MyRoomParamsManager__get_DisplayMyRoomBgGroupId(const MethodInfo *method
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCEC & 1) == 0 )
+  if ( (byte_4DFFD17 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCEC = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD17 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1400,10 +1400,10 @@ int32_t MyRoomParamsManager__get_DisplayMyRoomBgGroupIdByLastClearQuest(const Me
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCEE & 1) == 0 )
+  if ( (byte_4DFFD19 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCEE = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD19 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1419,10 +1419,10 @@ bool MyRoomParamsManager__get_IsListActive(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCE8 & 1) == 0 )
+  if ( (byte_4DFFD13 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE8 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD13 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1438,10 +1438,10 @@ int32_t MyRoomParamsManager__get_LastPlayEventId(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCE2 & 1) == 0 )
+  if ( (byte_4DFFD0D & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE2 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0D = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1457,10 +1457,10 @@ int32_t MyRoomParamsManager__get_LastPlayMovedQuestId(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCEA & 1) == 0 )
+  if ( (byte_4DFFD15 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCEA = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD15 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1476,10 +1476,10 @@ int32_t MyRoomParamsManager__get_LastPlayQuestId(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCDE & 1) == 0 )
+  if ( (byte_4DFFD09 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCDE = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD09 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1495,10 +1495,10 @@ System_String_o *MyRoomParamsManager__get_LastPlayTitle(const MethodInfo *method
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCE4 & 1) == 0 )
+  if ( (byte_4DFFD0F & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE4 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0F = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1514,10 +1514,10 @@ int32_t MyRoomParamsManager__get_LastPlayWarId(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCE0 & 1) == 0 )
+  if ( (byte_4DFFD0B & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE0 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0B = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1533,10 +1533,10 @@ int32_t MyRoomParamsManager__get_LastSelectSubFolderId(const MethodInfo *method)
 {
   MyRoomParamsManager_c *v1; // x0
 
-  if ( (byte_4D2BCE6 & 1) == 0 )
+  if ( (byte_4DFFD11 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE6 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD11 = 1;
   }
   v1 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1552,10 +1552,10 @@ void MyRoomParamsManager__set_DisplayMyRoomBgGroupId(int32_t value, const Method
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCED & 1) == 0 )
+  if ( (byte_4DFFD18 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCED = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD18 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1571,10 +1571,10 @@ void MyRoomParamsManager__set_DisplayMyRoomBgGroupIdByLastClearQuest(int32_t val
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCEF & 1) == 0 )
+  if ( (byte_4DFFD1A & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCEF = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD1A = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1590,10 +1590,10 @@ void MyRoomParamsManager__set_IsListActive(bool value, const MethodInfo *method)
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCE9 & 1) == 0 )
+  if ( (byte_4DFFD14 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE9 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD14 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1609,10 +1609,10 @@ void MyRoomParamsManager__set_LastPlayEventId(int32_t value, const MethodInfo *m
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCE3 & 1) == 0 )
+  if ( (byte_4DFFD0E & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE3 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0E = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1628,10 +1628,10 @@ void MyRoomParamsManager__set_LastPlayMovedQuestId(int32_t value, const MethodIn
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCEB & 1) == 0 )
+  if ( (byte_4DFFD16 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCEB = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD16 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1647,10 +1647,10 @@ void MyRoomParamsManager__set_LastPlayQuestId(int32_t value, const MethodInfo *m
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCDF & 1) == 0 )
+  if ( (byte_4DFFD0A & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCDF = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0A = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1673,10 +1673,10 @@ void MyRoomParamsManager__set_LastPlayTitle(System_String_o *value, const Method
   MyRoomParamsManager_c *v9; // x0
   struct MyRoomParamsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4D2BCE5 & 1) == 0 )
+  if ( (byte_4DFFD10 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE5 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD10 = 1;
   }
   v9 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1686,7 +1686,7 @@ void MyRoomParamsManager__set_LastPlayTitle(System_String_o *value, const Method
   }
   static_fields = v9->static_fields;
   static_fields->_LastPlayTitle_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&static_fields->_LastPlayTitle_k__BackingField,
     (int32_t)value,
     v2,
@@ -1702,10 +1702,10 @@ void MyRoomParamsManager__set_LastPlayWarId(int32_t value, const MethodInfo *met
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCE1 & 1) == 0 )
+  if ( (byte_4DFFD0C & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE1 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD0C = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1721,10 +1721,10 @@ void MyRoomParamsManager__set_LastSelectSubFolderId(int32_t value, const MethodI
 {
   MyRoomParamsManager_c *v3; // x0
 
-  if ( (byte_4D2BCE7 & 1) == 0 )
+  if ( (byte_4DFFD12 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager_TypeInfo);
-    byte_4D2BCE7 = 1;
+    sub_1CE6700(&MyRoomParamsManager_TypeInfo);
+    byte_4DFFD12 = 1;
   }
   v3 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1746,15 +1746,15 @@ void MyRoomParamsManager___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2BCFC & 1) == 0 )
+  if ( (byte_4DFFD27 & 1) == 0 )
   {
-    sub_1C93AD4(&MyRoomParamsManager___c_TypeInfo);
-    byte_4D2BCFC = 1;
+    sub_1CE6700(&MyRoomParamsManager___c_TypeInfo);
+    byte_4DFFD27 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(MyRoomParamsManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(MyRoomParamsManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MyRoomParamsManager___c_TypeInfo->static_fields->__9 = (struct MyRoomParamsManager___c_o *)v1;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)MyRoomParamsManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1778,7 +1778,7 @@ int32_t MyRoomParamsManager___c___SetClearQuestWarEnableMyRoomBgChange_b__65_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return MyRoomAddEntity__GetSortPriority(entity, 0);
 }
 
@@ -1789,7 +1789,7 @@ int32_t MyRoomParamsManager___c___SetClearQuestWarEnableMyRoomBgChange_b__65_2(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return entity->fields.priority;
 }
 
@@ -1810,6 +1810,6 @@ bool MyRoomParamsManager___c__DisplayClass65_0___SetClearQuestWarEnableMyRoomBgC
   struct WarEntity_o *warEntity; // x8
 
   if ( !entity || (warEntity = this->fields.warEntity) == 0 )
-    sub_1C93D2C(this, entity);
+    sub_1CE6958(this, entity);
   return entity->fields.warId == warEntity->fields.id && MyRoomAddEntity__IsOpen(entity, this->fields.nowTime, 0);
 }

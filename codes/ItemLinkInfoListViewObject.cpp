@@ -15,19 +15,19 @@ void ItemLinkInfoListViewObject__Awake(ItemLinkInfoListViewObject_o *this, const
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D332A4 & 1) == 0 )
+  if ( (byte_4E071A1 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
-    byte_4D332A4 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+    byte_4E071A1 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
   this->fields.itemDraw = (struct ItemLinkInfoListViewItemDraw_o *)Component_object;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -37,10 +37,10 @@ void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *th
   const MethodInfo *v4; // x1
   ItemLinkInfoListViewItemDraw_o *v5; // x0
 
-  if ( (byte_4D332A8 & 1) == 0 )
+  if ( (byte_4E071A5 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D332A8 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E071A5 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,7 +49,7 @@ void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *th
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1C93D2C(0, v4);
+      sub_1CE6958(0, v4);
     ItemLinkInfoListViewItemDraw__DeleteCallback(v5, v4);
   }
 }
@@ -62,11 +62,11 @@ float ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, 
   ItemLinkInfoListViewItemDraw_o *v5; // x0
   ItemLinkInfoListViewItemDraw_c *v7; // x0
 
-  if ( (byte_4D332A7 & 1) == 0 )
+  if ( (byte_4E071A4 & 1) == 0 )
   {
-    sub_1C93AD4(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D332A7 = 1;
+    sub_1CE6700(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E071A4 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,7 +75,7 @@ float ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, 
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1C93D2C(0, v4);
+      sub_1CE6958(0, v4);
     return ItemLinkInfoListViewItemDraw__GetHeight(v5, v4);
   }
   else
@@ -104,7 +104,7 @@ void ItemLinkInfoListViewObject__SetItem(
   const MethodInfo *v9; // x1
 
   this->fields.linkItem = item;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3, v4, v5, v6, v7);
   ItemLinkInfoListViewObject__SetupDisp(this, v9);
 }
 
@@ -118,10 +118,10 @@ void ItemLinkInfoListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4D332A6 & 1) == 0 )
+  if ( (byte_4E071A3 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D332A6 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E071A3 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -130,7 +130,7 @@ void ItemLinkInfoListViewObject__SetVisible(
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0);
   }
 }
@@ -144,10 +144,10 @@ void ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject_o *this, c
   __int64 v6; // x1
   struct ItemLinkInfoListViewItemDraw_o *v7; // x0
 
-  if ( (byte_4D332A5 & 1) == 0 )
+  if ( (byte_4E071A2 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D332A5 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E071A2 = 1;
   }
   linkItem = this->fields.linkItem;
   ItemLinkInfoListViewObject__SetVisible(this, linkItem != 0, v2);
@@ -158,7 +158,7 @@ void ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject_o *this, c
   {
     v7 = this->fields.itemDraw;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, const MethodInfo *))v7->klass->vtable._4_SetItem.methodPtr)(
       v7,
       linkItem,

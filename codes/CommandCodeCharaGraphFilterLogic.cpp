@@ -10,14 +10,20 @@ bool CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(
 {
   const MethodInfo *v3; // x1
 
-  return (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
-            this,
-            this->klass->vtable._5_IsMatchRarityFilter.method)
-        & 1) != 0
-      && CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(this, v3)
-      && ((bool (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr)(
-           this,
-           this->klass->vtable._6_IsMatchSelectedItemFilter.method);
+  if ( (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
+          this,
+          this->klass->vtable._5_IsMatchRarityFilter.method)
+      & 1) != 0
+    && CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(this, v3) )
+  {
+    return ((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr)(
+             this,
+             this->klass->vtable._6_IsMatchSelectedItemFilter.method);
+  }
+  else
+  {
+    return 0;
+  }
 }
 
 
@@ -36,7 +42,7 @@ bool CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(
   sort = CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1C93D2C(sort, method);
+    sub_1CE6958(sort, method);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
            *((System_Int32_array **)sort + 31),
            this->fields.sort,
@@ -61,10 +67,10 @@ CharaGraphCommandCodeListViewItem_o *CommandCodeCharaGraphFilterLogic__get_Comma
   CommandCodeCharaGraphFilterLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4D2FC9D & 1) == 0 )
+  if ( (byte_4E03CD8 & 1) == 0 )
   {
-    sub_1C93AD4(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    byte_4D2FC9D = 1;
+    sub_1CE6700(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    byte_4E03CD8 = 1;
   }
   p_listViewItem = (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -78,9 +84,9 @@ CharaGraphCommandCodeListViewItem_o *CommandCodeCharaGraphFilterLogic__get_Comma
   {
     item = this->fields.item;
     p_listViewItem->klass = (GrandQuestFolderBoardItem_c *)listViewItem;
-    sub_1C93A78(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
+    sub_1CE66A4(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1C940C8(this->fields.item);
+  sub_1CE6CF4(this->fields.item);
   return (CharaGraphCommandCodeListViewItem_o *)CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
 }

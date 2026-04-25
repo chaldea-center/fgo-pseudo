@@ -1,10 +1,10 @@
-void SingletonTemplate_object____ctor(SingletonTemplate_CLASS__o *this, const MethodInfo_3AC58E4 *method)
+void SingletonTemplate_object____ctor(SingletonTemplate_CLASS__o *this, const MethodInfo_3B5532C *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void SingletonTemplate_object___Delete(const MethodInfo_3AC58F0 *method)
+void SingletonTemplate_object___Delete(const MethodInfo_3B55338 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -13,30 +13,30 @@ void SingletonTemplate_object___Delete(const MethodInfo_3AC58F0 *method)
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C69B68();
+    klass = sub_1CBC788();
   v3 = *(_QWORD *)(*(_QWORD *)(klass + 192) + 16LL);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C69B68();
+    v3 = sub_1CBC788();
   if ( **(_QWORD **)(v3 + 184) )
   {
     v4 = (__int64)method->klass;
     if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-      v4 = sub_1C69B68();
+      v4 = sub_1CBC788();
     v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
     if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-      v5 = sub_1C69B68();
+      v5 = sub_1CBC788();
     **(_QWORD **)(v5 + 184) = 0;
   }
 }
 
 
-void SingletonTemplate_object___Destroy(SingletonTemplate_CLASS__o *this, const MethodInfo_3AC58EC *method)
+void SingletonTemplate_object___Destroy(SingletonTemplate_CLASS__o *this, const MethodInfo_3B55334 *method)
 {
   ;
 }
 
 
-Il2CppObject *SingletonTemplate_object___get_Instance(const MethodInfo_3AC57EC *method)
+Il2CppObject *SingletonTemplate_object___get_Instance(const MethodInfo_3B55234 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -58,38 +58,38 @@ Il2CppObject *SingletonTemplate_object___get_Instance(const MethodInfo_3AC57EC *
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C69B68();
+    klass = sub_1CBC788();
   v3 = *(_QWORD *)(*(_QWORD *)(klass + 192) + 16LL);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C69B68();
+    v3 = sub_1CBC788();
   if ( !**(_QWORD **)(v3 + 184) )
   {
     v4 = (__int64)method->klass;
     if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-      v4 = sub_1C69B68();
-    Instance_object = System_Activator__CreateInstance_object_(*(const MethodInfo_30ECFBC **)(*(_QWORD *)(v4 + 192)
+      v4 = sub_1CBC788();
+    Instance_object = System_Activator__CreateInstance_object_(*(const MethodInfo_314ADAC **)(*(_QWORD *)(v4 + 192)
                                                                                             + 24LL));
     v12 = (__int64)method->klass;
     v13 = Instance_object;
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C69B68();
+      v12 = sub_1CBC788();
     v14 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
     if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-      v14 = sub_1C69B68();
+      v14 = sub_1CBC788();
     **(_QWORD **)(v14 + 184) = v13;
     v15 = (__int64)method->klass;
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-      v15 = sub_1C69B68();
+      v15 = sub_1CBC788();
     v16 = *(_QWORD *)(*(_QWORD *)(v15 + 192) + 16LL);
     if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-      v16 = sub_1C69B68();
-    sub_1C93A78(*(GrandQuestFolderBoardItem_o **)(v16 + 184), (int32_t)v13, v6, v7, v8, v9, v10, v11);
+      v16 = sub_1CBC788();
+    sub_1CE66A4(*(GrandQuestFolderBoardItem_o **)(v16 + 184), (int32_t)v13, v6, v7, v8, v9, v10, v11);
   }
   v17 = (__int64)method->klass;
   if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C69B68();
+    v17 = sub_1CBC788();
   v18 = *(_QWORD *)(*(_QWORD *)(v17 + 192) + 16LL);
   if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1C69B68();
+    v18 = sub_1CBC788();
   return **(Il2CppObject ***)(v18 + 184);
 }

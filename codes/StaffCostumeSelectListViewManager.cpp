@@ -11,7 +11,7 @@ void StaffCostumeSelectListViewManager__CreateList(
         UIAtlas_o *photoCampaignAtlas,
         const MethodInfo *method)
 {
-  StaffCostumeSelectListViewManager___c__DisplayClass6_0_o *v9; // x20
+  __int64 v9; // x20
   System_Collections_Generic_List_object__o *itemList; // x0
   __int64 v11; // x1
   int32_t v12; // w23
@@ -36,24 +36,24 @@ void StaffCostumeSelectListViewManager__CreateList(
   System_Predicate_object__o *v31; // x22
   Il2CppObject *v32; // x0
 
-  if ( (byte_4D2BEF1 & 1) == 0 )
+  if ( (byte_4DFFF34 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__Find__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Count__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&System_Predicate_ListViewItem__TypeInfo);
-    sub_1C93AD4(&StaffCostumeSelectListViewItem_TypeInfo);
-    sub_1C93AD4(&Method_StaffCostumeSelectListViewManager___c__DisplayClass6_0__CreateList_b__0__);
-    sub_1C93AD4(&StaffCostumeSelectListViewManager___c__DisplayClass6_0_TypeInfo);
-    byte_4D2BEF1 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ListViewItem__Find__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Count__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&System_Predicate_ListViewItem__TypeInfo);
+    sub_1CE6700(&StaffCostumeSelectListViewItem_TypeInfo);
+    sub_1CE6700(&Method_StaffCostumeSelectListViewManager___c__DisplayClass6_0__CreateList_b__0__);
+    sub_1CE6700(&StaffCostumeSelectListViewManager___c__DisplayClass6_0_TypeInfo);
+    byte_4DFFF34 = 1;
   }
-  v9 = (StaffCostumeSelectListViewManager___c__DisplayClass6_0_o *)sub_1C93D20(StaffCostumeSelectListViewManager___c__DisplayClass6_0_TypeInfo);
-  StaffCostumeSelectListViewManager___c__DisplayClass6_0___ctor(v9, 0);
+  v9 = sub_1CE694C(StaffCostumeSelectListViewManager___c__DisplayClass6_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_25;
-  v9->fields.selectedCostumeIdx = selectedCostumeIdx;
+  *(_DWORD *)(v9 + 16) = selectedCostumeIdx;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !staffPhotoCostumeEntityList )
     goto LABEL_25;
@@ -65,10 +65,10 @@ void StaffCostumeSelectListViewManager__CreateList(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)staffPhotoCostumeEntityList,
                v12,
-               (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
-      v14 = v9->fields.selectedCostumeIdx;
+               (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
+      v14 = *(_DWORD *)(v9 + 16);
       v15 = (StaffPhotoCostumeEntity_o *)Item;
-      v16 = (StaffCostumeSelectListViewItem_o *)sub_1C93D20(StaffCostumeSelectListViewItem_TypeInfo);
+      v16 = (StaffCostumeSelectListViewItem_o *)sub_1CE694C(StaffCostumeSelectListViewItem_TypeInfo);
       StaffCostumeSelectListViewItem___ctor(v16, v12, v15, v14, photoCampaignAtlas, v17);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList )
@@ -84,20 +84,20 @@ void StaffCostumeSelectListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v16,
-          *(const MethodInfo_387999C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
         v27 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v27[4] = (Il2CppClass *)v16;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v27 + 4), (int32_t)v16, v18, v19, v20, v21, v22, v23);
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v27 + 4), (int32_t)v16, v18, v19, v20, v21, v22, v23);
       }
       if ( ++v12 >= staffPhotoCostumeEntityList->fields._size )
         goto LABEL_13;
     }
 LABEL_25:
-    sub_1C93D2C(itemList, v11);
+    sub_1CE6958(itemList, v11);
   }
 LABEL_13:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -125,7 +125,7 @@ LABEL_13:
       if ( v29->fields.mSize <= 0.98 )
       {
         v30 = this->fields.itemList;
-        v31 = (System_Predicate_object__o *)sub_1C93D20(System_Predicate_ListViewItem__TypeInfo);
+        v31 = (System_Predicate_object__o *)sub_1CE694C(System_Predicate_ListViewItem__TypeInfo);
         System_Predicate_object____ctor(
           v31,
           (Il2CppObject *)v9,
@@ -136,7 +136,7 @@ LABEL_13:
         v32 = System_Collections_Generic_List_object___Find(
                 (System_Collections_Generic_List_object__o *)v30,
                 (System_Predicate_T__o *)v31,
-                (const MethodInfo_387A004 *)Method_System_Collections_Generic_List_ListViewItem__Find__);
+                (const MethodInfo_39065D0 *)Method_System_Collections_Generic_List_ListViewItem__Find__);
         if ( v32 )
           ListViewManager__JumpItem((ListViewManager_o *)this, HIDWORD(v32[1].klass), 0);
       }
@@ -155,7 +155,7 @@ void StaffCostumeSelectListViewManager__DestroyList(
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   sort = this->fields.sort;
   if ( !sort )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   ListViewSort__Save(sort, 0);
 }
 
@@ -177,15 +177,15 @@ void StaffCostumeSelectListViewManager__ModifyItem(
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4D2BEF2 & 1) == 0 )
+  if ( (byte_4DFFF35 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4D2BEF2 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4DFFF35 = 1;
   }
   memset(&v15, 0, sizeof(v15));
   itemList = this->fields.itemList;
@@ -194,13 +194,13 @@ void StaffCostumeSelectListViewManager__ModifyItem(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v14,
       (System_Collections_Generic_List_object__o *)itemList,
-      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+      (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
     v15 = v14;
     while ( 1 )
     {
       v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v15,
-             (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+             (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
       if ( !v6 )
         break;
       current = v15.fields._current;
@@ -212,7 +212,7 @@ void StaffCostumeSelectListViewManager__ModifyItem(
         {
           monitor = v15.fields._current[7].monitor;
           if ( !monitor )
-            sub_1C93D2C(v6, v7);
+            sub_1CE6958(v6, v7);
           klass = v15.fields._current[7].klass;
           LOBYTE(v15.fields._current[8].klass) = monitor[5] == selectedCostumeIdx;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -221,7 +221,7 @@ void StaffCostumeSelectListViewManager__ModifyItem(
           {
             v13 = current[7].klass;
             if ( !v13 )
-              sub_1C93D2C(0, v12);
+              sub_1CE6958(0, v12);
             (*((void (__fastcall **)(Il2CppClass *, Il2CppObject *, _QWORD))v13->_1.image + 49))(
               v13,
               current,
@@ -232,7 +232,7 @@ void StaffCostumeSelectListViewManager__ModifyItem(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v15,
-      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+      (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   }
 }
 
@@ -248,11 +248,11 @@ void StaffCostumeSelectListViewManager__OnClickSelectListView(
   __int64 v8; // x1
   struct StaffPhotoCostumeEntity_o *StaffPhotoCostumeEntity_k__BackingField; // x8
 
-  if ( (byte_4D2BEF6 & 1) == 0 )
+  if ( (byte_4DFFF39 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ActionExtensions_Call_int___);
-    sub_1C93AD4(&StaffCostumeSelectListViewObject_TypeInfo);
-    byte_4D2BEF6 = 1;
+    sub_1CE6700(&Method_ActionExtensions_Call_int___);
+    sub_1CE6700(&StaffCostumeSelectListViewObject_TypeInfo);
+    byte_4DFFF39 = 1;
   }
   if ( obj )
   {
@@ -261,16 +261,18 @@ void StaffCostumeSelectListViewManager__OnClickSelectListView(
       && (StaffCostumeSelectListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] == StaffCostumeSelectListViewObject_TypeInfo )
     {
       callbackFunc = (System_Action_T__o *)this->fields.callbackFunc;
-      Item = StaffCostumeSelectListViewObject__GetItem((StaffCostumeSelectListViewObject_o *)obj, 0);
+      Item = StaffCostumeSelectListViewObject__GetItem(
+               (StaffCostumeSelectListViewObject_o *)obj,
+               (const MethodInfo *)obj);
       if ( !Item
         || (StaffPhotoCostumeEntity_k__BackingField = Item->fields._StaffPhotoCostumeEntity_k__BackingField) == 0 )
       {
-        sub_1C93D2C(Item, v8);
+        sub_1CE6958(Item, v8);
       }
       ActionExtensions__Call_int_(
         callbackFunc,
         StaffPhotoCostumeEntity_k__BackingField->fields.idx,
-        (const MethodInfo_30EBBB4 *)Method_ActionExtensions_Call_int___);
+        (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
     }
   }
 }
@@ -285,10 +287,10 @@ void StaffCostumeSelectListViewManager__OnMoveEnd(StaffCostumeSelectListViewMana
   __int64 v7; // x1
   struct UIScrollView_o *v8; // x0
 
-  if ( (byte_4D2BEF5 & 1) == 0 )
+  if ( (byte_4DFFF38 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BEF5 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFF38 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -305,7 +307,7 @@ void StaffCostumeSelectListViewManager__OnMoveEnd(StaffCostumeSelectListViewMana
       {
         v8 = this->fields.scrollView;
         if ( !v8 )
-          sub_1C93D2C(0, v7);
+          sub_1CE6958(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v8,
           1,
@@ -329,33 +331,34 @@ void StaffCostumeSelectListViewManager__RequestListObject(
   System_Action_o *v9; // x22
   __int64 v10; // x0
   __int64 v11; // x1
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
+  const MethodInfo *v12; // x3
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4D2BEF4 & 1) == 0 )
+  if ( (byte_4DFFF37 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__get_Count__);
-    sub_1C93AD4(&Method_StaffCostumeSelectListViewManager_OnMoveEnd__);
-    sub_1C93AD4(&StringLiteral_9998/*"OnMoveEnd"*/);
-    byte_4D2BEF4 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__get_Count__);
+    sub_1CE6700(&Method_StaffCostumeSelectListViewManager_OnMoveEnd__);
+    sub_1CE6700(&StringLiteral_10019/*"OnMoveEnd"*/);
+    byte_4DFFF37 = 1;
   }
-  memset(&v12, 0, sizeof(v12));
+  memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)StaffCostumeSelectListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C93D2C(0, v6);
+    sub_1CE6958(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9998/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10019/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -363,23 +366,23 @@ void StaffCostumeSelectListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__GetEnumerator__);
+      (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v12,
-              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__MoveNext__) )
+              &v13,
+              (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__MoveNext__) )
     {
-      current = v12.fields._current;
-      v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+      current = v13.fields._current;
+      v9 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)this, Method_StaffCostumeSelectListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C93D2C(v10, v11);
-      StaffCostumeSelectListViewObject__Init((StaffCostumeSelectListViewObject_o *)current, mode, v9, 0);
+        sub_1CE6958(v10, v11);
+      StaffCostumeSelectListViewObject__Init((StaffCostumeSelectListViewObject_o *)current, mode, v9, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v12,
-      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__Dispose__);
+      &v13,
+      (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_StaffCostumeSelectListViewObject__Dispose__);
   }
 }
 
@@ -397,7 +400,7 @@ void StaffCostumeSelectListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -406,11 +409,11 @@ void StaffCostumeSelectListViewManager__SetMode(
     v5,
     v6,
     v7);
-  StaffCostumeSelectListViewManager__SetMode_34382792(this, mode, v10);
+  StaffCostumeSelectListViewManager__SetMode_34816308(this, mode, v10);
 }
 
 
-void StaffCostumeSelectListViewManager__SetMode_34382792(
+void StaffCostumeSelectListViewManager__SetMode_34816308(
         StaffCostumeSelectListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -433,7 +436,7 @@ void StaffCostumeSelectListViewManager__SetMode_34382792(
         (scrollView = (UnityEngine_Behaviour_o *)this->fields.scrollView) == 0) )
   {
 LABEL_9:
-    sub_1C93D2C(scrollView, v5);
+    sub_1CE6958(scrollView, v5);
   }
   UIScrollView__UpdatePosition((UIScrollView_o *)scrollView, 0);
 LABEL_6:
@@ -452,10 +455,10 @@ void StaffCostumeSelectListViewManager__SetObjectItem(
   StaffCostumeSelectListViewObject_o *v7; // x0
   int32_t v8; // w1
 
-  if ( (byte_4D2BEF3 & 1) == 0 )
+  if ( (byte_4DFFF36 & 1) == 0 )
   {
-    sub_1C93AD4(&StaffCostumeSelectListViewObject_TypeInfo);
-    byte_4D2BEF3 = 1;
+    sub_1CE6700(&StaffCostumeSelectListViewObject_TypeInfo);
+    byte_4DFFF36 = 1;
   }
   if ( obj )
   {
@@ -471,7 +474,7 @@ void StaffCostumeSelectListViewManager__SetObjectItem(
           v8 = 3;
         else
           v8 = 2;
-        StaffCostumeSelectListViewObject__Init_34384808(v7, v8, 0);
+        StaffCostumeSelectListViewObject__Init(v7, v8, 0, method);
       }
     }
   }
@@ -503,35 +506,35 @@ System_Collections_Generic_List_StaffCostumeSelectListViewObject__o *StaffCostum
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4D2BEF0 & 1) == 0 )
+  if ( (byte_4DFFF33 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_StaffCostumeSelectListViewObject__TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BEF0 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_StaffCostumeSelectListViewObject__TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFF33 = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_StaffCostumeSelectListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_StaffCostumeSelectListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v23 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v23.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -540,38 +543,38 @@ System_Collections_Generic_List_StaffCostumeSelectListViewObject__o *StaffCostum
     if ( v7 )
     {
       if ( !current )
-        sub_1C93D2C(v7, v8);
+        sub_1CE6958(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
+                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
       v16 = Component_object;
       if ( !v3 )
-        sub_1C93D2C(Component_object, Component_object);
+        sub_1CE6958(Component_object, Component_object);
       items = v3->fields._items;
       v18 = Method_System_Collections_Generic_List_StaffCostumeSelectListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C93D2C(Component_object, Component_object);
+        sub_1CE6958(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v16;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_StaffCostumeSelectListViewObject__o *)v3;
 }
 
@@ -599,10 +602,10 @@ bool StaffCostumeSelectListViewManager___c__DisplayClass6_0___CreateList_b__0(
 
   v3 = item;
   v4 = this;
-  if ( (byte_4D2BEF7 & 1) == 0 )
+  if ( (byte_4DFFF3A & 1) == 0 )
   {
-    this = (StaffCostumeSelectListViewManager___c__DisplayClass6_0_o *)sub_1C93AD4(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4D2BEF7 = 1;
+    this = (StaffCostumeSelectListViewManager___c__DisplayClass6_0_o *)sub_1CE6700(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4DFFF3A = 1;
   }
   if ( !v3 )
     goto LABEL_8;
@@ -615,9 +618,9 @@ bool StaffCostumeSelectListViewManager___c__DisplayClass6_0___CreateList_b__0(
     if ( klass )
       return HIDWORD(klass->_1.name) == v4->fields.selectedCostumeIdx;
 LABEL_8:
-    sub_1C93D2C(this, item);
+    sub_1CE6958(this, item);
   }
-  v8 = (StaffCostumeSelectListViewObject_o *)sub_1C940C8(v3);
+  v8 = (StaffCostumeSelectListViewObject_o *)sub_1CE6CF4(v3);
   StaffCostumeSelectListViewObject__Awake(v8, v9);
   return result;
 }

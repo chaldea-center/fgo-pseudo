@@ -14,14 +14,14 @@ System_String_o *ReplaceMasterName__Replace(
   __int64 v5; // x1
   System_String_o *name; // x19
 
-  if ( (byte_4D33EA9 & 1) == 0 )
+  if ( (byte_4E07F24 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    byte_4D33EA9 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    byte_4E07F24 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1C93D2C(0, v5);
+    sub_1CE6958(0, v5);
   name = SelfUserGame->fields.name;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -31,10 +31,10 @@ System_String_o *ReplaceMasterName__Replace(
 
 System_String_o *ReplaceMasterName__get_Tag(ReplaceMasterName_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D33EA8 & 1) == 0 )
+  if ( (byte_4E07F23 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_21723/*"masterName"*/);
-    byte_4D33EA8 = 1;
+    sub_1CE6700(&StringLiteral_21794/*"masterName"*/);
+    byte_4E07F23 = 1;
   }
-  return (System_String_o *)StringLiteral_21723/*"masterName"*/;
+  return (System_String_o *)StringLiteral_21794/*"masterName"*/;
 }

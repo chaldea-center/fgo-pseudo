@@ -73,15 +73,6 @@ void ServantStatusListViewItemDraw__ModifyStatus(
 }
 
 
-void ServantStatusListViewItemDraw__PlayBattle(
-        ServantStatusListViewItemDraw_o *this,
-        ServantStatusListViewItem_o *item,
-        const MethodInfo *method)
-{
-  ;
-}
-
-
 void ServantStatusListViewItemDraw__SetItem(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,

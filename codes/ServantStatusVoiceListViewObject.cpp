@@ -1,9 +1,9 @@
 void ServantStatusVoiceListViewObject___ctor(ServantStatusVoiceListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2E5EF & 1) == 0 )
+  if ( (byte_4E02C41 & 1) == 0 )
   {
-    sub_1C93AD4(&ListViewObject_TypeInfo);
-    byte_4D2E5EF = 1;
+    sub_1CE6700(&ListViewObject_TypeInfo);
+    byte_4E02C41 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void ServantStatusVoiceListViewObject__Awake(ServantStatusVoiceListViewObject_o 
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D2E5E8 & 1) == 0 )
+  if ( (byte_4E02C3A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
-    byte_4D2E5E8 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
+    byte_4E02C3A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
+                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
   this->fields.itemDraw = (struct ServantStatusVoiceListViewItemDraw_o *)Component_object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -57,21 +57,21 @@ UnityEngine_GameObject_o *ServantStatusVoiceListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4D2E5EC & 1) == 0 )
+  if ( (byte_4E02C3E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___);
-    byte_4D2E5EC = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___);
+    byte_4E02C3E = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___)) == 0) )
+                                                    (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___)) == 0) )
   {
-    sub_1C93D2C(DragObject, v4);
+    sub_1CE6958(DragObject, v4);
   }
-  ServantStatusVoiceListViewObject__Init_38932976((ServantStatusVoiceListViewObject_o *)DragObject, 2, v6);
+  ServantStatusVoiceListViewObject__Init_40112388((ServantStatusVoiceListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -96,7 +96,7 @@ void ServantStatusVoiceListViewObject__EventMoveEnd(ServantStatusVoiceListViewOb
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C93A78(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_1CE66A4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -109,10 +109,10 @@ ServantStatusVoiceListViewItem_o *ServantStatusVoiceListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4D2E5EA & 1) == 0 )
+  if ( (byte_4E02C3C & 1) == 0 )
   {
-    sub_1C93AD4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_4D2E5EA = 1;
+    sub_1CE6700(&ServantStatusVoiceListViewItem_TypeInfo);
+    byte_4E02C3C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -158,13 +158,12 @@ void ServantStatusVoiceListViewObject__Init(
   int32_t v30; // w8
   GrandQuestFolderBoardItem_c *klass; // x19
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v33; // x2
 
-  if ( (byte_4D2E5ED & 1) == 0 )
+  if ( (byte_4E02C3F & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_4D2E5ED = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&ServantStatusVoiceListViewItem_TypeInfo);
+    byte_4E02C3F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem
@@ -191,7 +190,7 @@ LABEL_7:
         UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
         this->fields.callbackFunc = callbackFunc;
         p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
-        sub_1C93A78(
+        sub_1CE66A4(
           (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
           (int32_t)callbackFunc,
           v16,
@@ -230,7 +229,7 @@ LABEL_18:
             if ( p_callbackFunc->klass )
             {
               p_callbackFunc->klass = 0;
-              sub_1C93A78(p_callbackFunc, 0, v23, v24, v25, v26, v27, v28);
+              sub_1CE66A4(p_callbackFunc, 0, v23, v24, v25, v26, v27, v28);
               ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
                 klass->_1.element_class,
                 *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -241,7 +240,7 @@ LABEL_18:
       }
     }
 LABEL_28:
-    sub_1C93D2C(transform, v14);
+    sub_1CE6958(transform, v14);
   }
   if ( initMode != 4 )
     goto LABEL_7;
@@ -256,7 +255,7 @@ LABEL_28:
       ServantStatusVoiceListViewItemDraw__SetPlay(
         (ServantStatusVoiceListViewItemDraw_o *)transform,
         (ServantStatusVoiceListViewItem_o *)linkItem,
-        v33);
+        0);
       return;
     }
     goto LABEL_28;
@@ -270,75 +269,60 @@ void ServantStatusVoiceListViewObject__InitItem(ServantStatusVoiceListViewObject
 }
 
 
-void ServantStatusVoiceListViewObject__Init_38932976(
+// local variable allocation has failed, the output may be wrong!
+void ServantStatusVoiceListViewObject__Init_40112388(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D2A139 )
+  if ( !byte_4DFE0A9 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A139 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0A9 = 1;
   }
-  v10.fields.x = v5;
-  v10.fields.y = v6;
-  v10.fields.z = v7;
-  ServantStatusVoiceListViewObject__Init(this, initMode, 0, v4, v10, v3);
+  ServantStatusVoiceListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
-void ServantStatusVoiceListViewObject__Init_38934580(
+// local variable allocation has failed, the output may be wrong!
+void ServantStatusVoiceListViewObject__Init_40113256(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D2A139 )
+  if ( !byte_4DFE0A9 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A139 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0A9 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, delay, v11, method);
+  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
-void ServantStatusVoiceListViewObject__Init_38935188(
+// local variable allocation has failed, the output may be wrong!
+void ServantStatusVoiceListViewObject__Init_40113340(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4D2A139 )
+  if ( !byte_4DFE0A9 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A139 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0A9 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, v4, v11, method);
+  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
@@ -355,11 +339,11 @@ void ServantStatusVoiceListViewObject__OnDestroy(ServantStatusVoiceListViewObjec
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2E5E9 & 1) == 0 )
+  if ( (byte_4E02C3B & 1) == 0 )
   {
-    sub_1C93AD4(&NGUITools_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2E5E9 = 1;
+    sub_1CE6700(&NGUITools_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E02C3B = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
@@ -373,7 +357,7 @@ void ServantStatusVoiceListViewObject__OnDestroy(ServantStatusVoiceListViewObjec
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C93A78(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
+    sub_1CE66A4(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -384,17 +368,16 @@ void ServantStatusVoiceListViewObject__SetInput(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v6; // x3
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
-  struct ListViewItem_o *v9; // x1
-  ServantStatusVoiceListViewItemDraw_o *v10; // x0
+  struct ListViewItem_o *v8; // x1
+  ServantStatusVoiceListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4D2E5EB & 1) == 0 )
+  if ( (byte_4E02C3D & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_4D2E5EB = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&ServantStatusVoiceListViewItem_TypeInfo);
+    byte_4E02C3D = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -408,18 +391,18 @@ void ServantStatusVoiceListViewObject__SetInput(
           linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
     {
       if ( (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == ServantStatusVoiceListViewItem_TypeInfo )
-        v9 = this->fields.linkItem;
+        v8 = this->fields.linkItem;
       else
-        v9 = 0;
+        v8 = 0;
     }
     else
     {
-      v9 = 0;
+      v8 = 0;
     }
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1C93D2C(0, v9);
-    ServantStatusVoiceListViewItemDraw__SetInput(v10, (ServantStatusVoiceListViewItem_o *)v9, isInput, v6);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1CE6958(0, v8);
+    ServantStatusVoiceListViewItemDraw__SetInput(v9, (ServantStatusVoiceListViewItem_o *)v8, isInput, 0);
   }
 }
 
@@ -430,12 +413,12 @@ void ServantStatusVoiceListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_44518484((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44952984((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void ServantStatusVoiceListViewObject__SetItem_38936744(
+void ServantStatusVoiceListViewObject__SetItem_40112000(
         ServantStatusVoiceListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -452,14 +435,13 @@ void ServantStatusVoiceListViewObject__SetupDisp(ServantStatusVoiceListViewObjec
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  ServantStatusVoiceListViewItemDraw_o *v9; // x0
+  ServantStatusVoiceListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4D2E5EE & 1) == 0 )
+  if ( (byte_4E02C40 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_4D2E5EE = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&ServantStatusVoiceListViewItem_TypeInfo);
+    byte_4E02C40 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -481,14 +463,14 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C93D2C(0, v7);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1CE6958(0, v7);
     ServantStatusVoiceListViewItemDraw__SetItem(
-      v9,
+      v8,
       (ServantStatusVoiceListViewItem_o *)linkItem,
       this->fields.dispMode,
-      v8);
+      0);
   }
 }
 
@@ -508,10 +490,10 @@ void ServantStatusVoiceListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D2E5E6 & 1) == 0 )
+  if ( (byte_4E02C38 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    byte_4D2E5E6 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    byte_4E02C38 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -524,13 +506,13 @@ void ServantStatusVoiceListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C940C8(v8);
+  sub_1CE6CF4(v8);
   ServantStatusVoiceListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -549,10 +531,10 @@ void ServantStatusVoiceListViewObject__remove_callbackFunc(
   ServantStatusVoiceListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2E5E7 & 1) == 0 )
+  if ( (byte_4E02C39 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    byte_4D2E5E7 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    byte_4E02C39 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -565,12 +547,12 @@ void ServantStatusVoiceListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C940C8(v8);
+  sub_1CE6CF4(v8);
   ServantStatusVoiceListViewObject__Awake(v11, v12);
 }

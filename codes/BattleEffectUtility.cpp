@@ -48,15 +48,15 @@ void BattleEffectUtility___cctor(const MethodInfo *method)
   int64_t v46; // x6
   System_String_o *v47; // x7
 
-  if ( (byte_4D334AD & 1) == 0 )
+  if ( (byte_4E07521 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&string___TypeInfo);
-    sub_1C93AD4(&StringLiteral_16426/*"_S"*/);
-    sub_1C93AD4(&StringLiteral_16363/*"_M"*/);
-    sub_1C93AD4(&StringLiteral_16356/*"_L"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D334AD = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&string___TypeInfo);
+    sub_1CE6700(&StringLiteral_16477/*"_S"*/);
+    sub_1CE6700(&StringLiteral_16414/*"_M"*/);
+    sub_1CE6700(&StringLiteral_16407/*"_L"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E07521 = 1;
   }
   v7 = BattleEffectUtility_TypeInfo;
   static_fields = BattleEffectUtility_TypeInfo->static_fields;
@@ -65,35 +65,35 @@ void BattleEffectUtility___cctor(const MethodInfo *method)
   *(_QWORD *)&static_fields->wkVec.fields.y = 0;
   v9 = v7->static_fields;
   v9->auraPosOverwriteMst = 0;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v9->auraPosOverwriteMst, 0, v1, v2, v3, v4, v5, v6);
-  v10 = sub_1C93B7C(string___TypeInfo, 4);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v9->auraPosOverwriteMst, 0, v1, v2, v3, v4, v5, v6);
+  v10 = sub_1CE67A8(string___TypeInfo, 4);
   if ( !v10 )
-    sub_1C93D2C(0, v11);
+    sub_1CE6958(0, v11);
   v18 = v10;
   if ( !*(_DWORD *)(v10 + 24) )
     goto LABEL_9;
   v19 = StringLiteral_1/*""*/;
   *(_QWORD *)(v10 + 32) = StringLiteral_1/*""*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v10 + 32), v19, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v10 + 32), v19, v12, v13, v14, v15, v16, v17);
   if ( *(_DWORD *)(v18 + 24) <= 1u
-    || (v26 = StringLiteral_16426/*"_S"*/,
-        *(_QWORD *)(v18 + 40) = StringLiteral_16426/*"_S"*/,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v18 + 40), v26, v20, v21, v22, v23, v24, v25),
+    || (v26 = StringLiteral_16477/*"_S"*/,
+        *(_QWORD *)(v18 + 40) = StringLiteral_16477/*"_S"*/,
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v18 + 40), v26, v20, v21, v22, v23, v24, v25),
         *(_DWORD *)(v18 + 24) <= 2u)
-    || (v33 = StringLiteral_16363/*"_M"*/,
-        *(_QWORD *)(v18 + 48) = StringLiteral_16363/*"_M"*/,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v18 + 48), v33, v27, v28, v29, v30, v31, v32),
+    || (v33 = StringLiteral_16414/*"_M"*/,
+        *(_QWORD *)(v18 + 48) = StringLiteral_16414/*"_M"*/,
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v18 + 48), v33, v27, v28, v29, v30, v31, v32),
         *(_DWORD *)(v18 + 24) <= 3u) )
   {
 LABEL_9:
-    sub_1C93D34(v10);
+    sub_1CE6960(v10);
   }
-  v40 = StringLiteral_16356/*"_L"*/;
-  *(_QWORD *)(v18 + 56) = StringLiteral_16356/*"_L"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v18 + 56), v40, v34, v35, v36, v37, v38, v39);
+  v40 = StringLiteral_16407/*"_L"*/;
+  *(_QWORD *)(v18 + 56) = StringLiteral_16407/*"_L"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v18 + 56), v40, v34, v35, v36, v37, v38, v39);
   v41 = BattleEffectUtility_TypeInfo->static_fields;
   v41->scalelist = (struct System_String_array *)v18;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v41->scalelist, v18, v42, v43, v44, v45, v46, v47);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v41->scalelist, v18, v42, v43, v44, v45, v46, v47);
 }
 
 
@@ -103,22 +103,22 @@ void BattleEffectUtility__AddNotPreloadEffectId(System_Int32_array *effectIdList
   System_Collections_Generic_HashSet_int__o *NotPreloadEffectIdHashSet; // x0
   __int64 v5; // x1
 
-  if ( (byte_4D334A1 & 1) == 0 )
+  if ( (byte_4E07515 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    byte_4D334A1 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    byte_4E07515 = 1;
   }
   v3 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   NotPreloadEffectIdHashSet = BattleEffectUtility__get_NotPreloadEffectIdHashSet((const MethodInfo *)v3);
   if ( !NotPreloadEffectIdHashSet )
-    sub_1C93D2C(0, v5);
+    sub_1CE6958(0, v5);
   System_Collections_Generic_HashSet_int___UnionWith(
     NotPreloadEffectIdHashSet,
     (System_Collections_Generic_IEnumerable_T__o *)effectIdList,
-    (const MethodInfo_37265BC *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_37AE4D4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
 }
 
 
@@ -140,24 +140,24 @@ void BattleEffectUtility__AddRelatedFunctionEffectIdList(
   _QWORD *v15; // x9
   __int64 m_CancellationTokenSource_low; // x10
 
-  if ( (byte_4D3349C & 1) == 0 )
+  if ( (byte_4E07510 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_FunctionMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D3349C = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_FunctionMaster___);
+    sub_1CE6700(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E07510 = 1;
   }
   if ( funcIds )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
 LABEL_24:
-      sub_1C93D2C(Instance, v6);
+      sub_1CE6958(Instance, v6);
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_FunctionMaster___);
+                                  (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_FunctionMaster___);
     max_length = funcIds->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -172,7 +172,7 @@ LABEL_24:
         Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                       v8,
                                       funcIds->m_Items[v9],
-                                      (const MethodInfo_3463274 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+                                      (const MethodInfo_34E925C *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
         if ( Instance )
         {
           Instance = (DataManager_o *)FunctionEntity__getEffectList((FunctionEntity_o *)Instance, 0);
@@ -198,7 +198,7 @@ LABEL_22:
         Instance = (DataManager_o *)System_Collections_Generic_List_int___Contains(
                                       (System_Collections_Generic_List_int__o *)Instance,
                                       v13,
-                                      (const MethodInfo_385CCF0 *)Method_System_Collections_Generic_List_int__Contains__);
+                                      (const MethodInfo_38E92BC *)Method_System_Collections_Generic_List_int__Contains__);
         if ( ((unsigned __int8)Instance & 1) == 0 )
         {
           Instance = (DataManager_o *)*effectIdList;
@@ -215,7 +215,7 @@ LABEL_22:
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)Instance,
               v13,
-              *(const MethodInfo_385C978 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              *(const MethodInfo_38E8F44 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
@@ -228,7 +228,7 @@ LABEL_22:
           goto LABEL_22;
       }
 LABEL_25:
-      sub_1C93D34(Instance);
+      sub_1CE6960(Instance);
     }
   }
 }
@@ -310,26 +310,26 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
   UnityEngine_Color_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v10 = svtData;
-  if ( (byte_4D334A8 & 1) == 0 )
+  if ( (byte_4E0751C & 1) == 0 )
   {
-    sub_1C93AD4(&BattleDataDefine_TypeInfo);
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__ToArray__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C93AD4(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1C93AD4(&Method_System_Nullable_Color__get_HasValue__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&ServantAssetLoadManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1C93AD4(&string___TypeInfo);
-    sub_1C93AD4(&StringLiteral_19165/*"en_waist"*/);
-    sub_1C93AD4(&StringLiteral_16273/*"_Color"*/);
-    svtData = (BattleServantData_o *)sub_1C93AD4(&StringLiteral_16219/*"_AddColor"*/);
-    byte_4D334A8 = 1;
+    sub_1CE6700(&BattleDataDefine_TypeInfo);
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__ToArray__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1CE6700(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1CE6700(&Method_System_Nullable_Color__get_HasValue__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&ServantAssetLoadManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1CE6700(&string___TypeInfo);
+    sub_1CE6700(&StringLiteral_19226/*"en_waist"*/);
+    sub_1CE6700(&StringLiteral_16324/*"_Color"*/);
+    svtData = (BattleServantData_o *)sub_1CE6700(&StringLiteral_16270/*"_AddColor"*/);
+    byte_4E0751C = 1;
   }
   v11 = 0.0;
   entity = 0;
@@ -351,15 +351,15 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
     goto LABEL_95;
   BattleServantData__TryGetDisplayTypeDetailEntity(v10, &entity, 0);
   v12 = entity ? entity->fields.effectId : 0;
-  svtData = (BattleServantData_o *)sub_1C93B7C(string___TypeInfo, 1);
+  svtData = (BattleServantData_o *)sub_1CE67A8(string___TypeInfo, 1);
   if ( !svtData )
     goto LABEL_95;
   v27 = svtData;
   if ( !svtData->fields.uniqueId )
     goto LABEL_96;
-  v28 = StringLiteral_19165/*"en_waist"*/;
-  svtData->fields.userSvtId.fields.currentCryptoKey = StringLiteral_19165/*"en_waist"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&svtData->fields.userSvtId, v28, v21, v22, v23, v24, v25, v26);
+  v28 = StringLiteral_19226/*"en_waist"*/;
+  svtData->fields.userSvtId.fields.currentCryptoKey = StringLiteral_19226/*"en_waist"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&svtData->fields.userSvtId, v28, v21, v22, v23, v24, v25, v26);
   if ( limitAddEntity )
   {
     svtData = (BattleServantData_o *)ServantLimitAddEntity__GetOverwriteShadowServantEffectNodes(limitAddEntity, 0);
@@ -384,7 +384,7 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
       svtData = (BattleServantData_o *)UnityEngine_Object__op_Inequality(NodeFromName, 0, 0);
       if ( ((unsigned __int8)svtData & 1) != 0 )
       {
-        svtData = (BattleServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+        svtData = (BattleServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
         if ( !svtData )
           goto LABEL_95;
         svtData = (BattleServantData_o *)ServantAssetLoadManager__createShadowEffect(
@@ -404,10 +404,10 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
           0);
         svtData = (BattleServantData_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v34, 0);
         v35 = svtData;
-        if ( !byte_4D2A139 )
+        if ( !byte_4DFE0A9 )
         {
-          svtData = (BattleServantData_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-          byte_4D2A139 = 1;
+          svtData = (BattleServantData_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+          byte_4DFE0A9 = 1;
         }
         if ( !v35 )
           goto LABEL_95;
@@ -417,10 +417,10 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
           0);
         svtData = (BattleServantData_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v34, 0);
         v36 = svtData;
-        if ( !byte_4D2A139 )
+        if ( !byte_4DFE0A9 )
         {
-          svtData = (BattleServantData_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-          byte_4D2A139 = 1;
+          svtData = (BattleServantData_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+          byte_4DFE0A9 = 1;
         }
         if ( !v36 )
           goto LABEL_95;
@@ -430,10 +430,10 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
           0);
         svtData = (BattleServantData_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v34, 0);
         v37 = svtData;
-        if ( !byte_4D2A13E )
+        if ( !byte_4DFE0AE )
         {
-          svtData = (BattleServantData_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-          byte_4D2A13E = 1;
+          svtData = (BattleServantData_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+          byte_4DFE0AE = 1;
         }
         if ( !v37 )
           goto LABEL_95;
@@ -443,10 +443,10 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
           0);
         if ( !v13 )
         {
-          v13 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_GameObject__TypeInfo);
+          v13 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v13,
-            (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+            (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
           if ( !v13 )
             goto LABEL_95;
         }
@@ -461,14 +461,14 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
           System_Collections_Generic_List_object___AddWithResize(
             v13,
             (Il2CppObject *)v34,
-            *(const MethodInfo_387999C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+            *(const MethodInfo_3905F68 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
         }
         else
         {
           v47 = &items->obj.klass + size;
           v13->fields._size = size + 1;
           v47[4] = (Il2CppClass *)v34;
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)(v47 + 4), (int32_t)v34, v38, v39, v40, v41, v42, v43);
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v47 + 4), (int32_t)v34, v38, v39, v40, v41, v42, v43);
         }
       }
       LODWORD(v29) = v27->fields.uniqueId;
@@ -476,7 +476,7 @@ UnityEngine_GameObject_array *BattleEffectUtility__ChangeServantView(
         goto LABEL_42;
     }
 LABEL_96:
-    sub_1C93D34(svtData);
+    sub_1CE6960(svtData);
   }
   v13 = 0;
 LABEL_42:
@@ -543,9 +543,9 @@ LABEL_59:
   svtData = (BattleServantData_o *)UnityEngine_GameObject__get_transform(actorObj, 0);
   if ( !svtData )
     goto LABEL_95;
-  svtData = (BattleServantData_o *)UnityEngine_Component__GetComponentsInChildren_object__52018868(
+  svtData = (BattleServantData_o *)UnityEngine_Component__GetComponentsInChildren_object__52410400(
                                      (UnityEngine_Component_o *)svtData,
-                                     (const MethodInfo_319BEB4 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+                                     (const MethodInfo_31FB820 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
   if ( svtData )
   {
     v52 = *(_QWORD *)&svtData->fields.uniqueId;
@@ -589,12 +589,12 @@ LABEL_75:
         v73.fields.g = g;
         v73.fields.b = b;
         v73.fields.a = a;
-        UnityEngine_Material__SetColor((UnityEngine_Material_o *)v59[4], (System_String_o *)StringLiteral_16273/*"_Color"*/, v73, 0);
+        UnityEngine_Material__SetColor((UnityEngine_Material_o *)v59[4], (System_String_o *)StringLiteral_16324/*"_Color"*/, v73, 0);
         v74.fields.r = v17;
         v74.fields.g = v16;
         v74.fields.b = v15;
         v74.fields.a = v11;
-        UnityEngine_Material__SetColor(v60, (System_String_o *)StringLiteral_16219/*"_AddColor"*/, v74, 0);
+        UnityEngine_Material__SetColor(v60, (System_String_o *)StringLiteral_16270/*"_AddColor"*/, v74, 0);
         uniqueId = v57->fields.uniqueId;
         if ( (int)++v58 >= uniqueId )
           goto LABEL_75;
@@ -606,10 +606,10 @@ LABEL_76:
   svtData = (BattleServantData_o *)UnityEngine_GameObject__get_transform(actorObj, 0);
   if ( !svtData )
 LABEL_95:
-    sub_1C93D2C(svtData, actorObj);
-  svtData = (BattleServantData_o *)UnityEngine_Component__GetComponentsInChildren_object__52018868(
+    sub_1CE6958(svtData, actorObj);
+  svtData = (BattleServantData_o *)UnityEngine_Component__GetComponentsInChildren_object__52410400(
                                      (UnityEngine_Component_o *)svtData,
-                                     (const MethodInfo_319BEB4 *)Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
+                                     (const MethodInfo_31FB820 *)Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
   if ( svtData )
   {
     v61 = *(_QWORD *)&svtData->fields.uniqueId;
@@ -653,12 +653,12 @@ LABEL_91:
         v75.fields.g = g;
         v75.fields.b = b;
         v75.fields.a = a;
-        UnityEngine_Material__SetColor((UnityEngine_Material_o *)v68[4], (System_String_o *)StringLiteral_16273/*"_Color"*/, v75, 0);
+        UnityEngine_Material__SetColor((UnityEngine_Material_o *)v68[4], (System_String_o *)StringLiteral_16324/*"_Color"*/, v75, 0);
         v76.fields.r = v17;
         v76.fields.g = v16;
         v76.fields.b = v15;
         v76.fields.a = v11;
-        UnityEngine_Material__SetColor(v69, (System_String_o *)StringLiteral_16219/*"_AddColor"*/, v76, 0);
+        UnityEngine_Material__SetColor(v69, (System_String_o *)StringLiteral_16270/*"_AddColor"*/, v76, 0);
         v65 = v66->fields.uniqueId;
         if ( (int)++v67 >= v65 )
           goto LABEL_91;
@@ -670,7 +670,7 @@ LABEL_92:
   if ( v13 )
     return (UnityEngine_GameObject_array *)System_Collections_Generic_List_object___ToArray(
                                              v13,
-                                             (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+                                             (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
   else
     return 0;
 }
@@ -682,21 +682,21 @@ void BattleEffectUtility__ClearNotPreloadEffectId(const MethodInfo *method)
   System_Collections_Generic_HashSet_int__o *NotPreloadEffectIdHashSet; // x0
   __int64 v3; // x1
 
-  if ( (byte_4D334A2 & 1) == 0 )
+  if ( (byte_4E07516 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__Clear__);
-    byte_4D334A2 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__Clear__);
+    byte_4E07516 = 1;
   }
   v1 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   NotPreloadEffectIdHashSet = BattleEffectUtility__get_NotPreloadEffectIdHashSet((const MethodInfo *)v1);
   if ( !NotPreloadEffectIdHashSet )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   System_Collections_Generic_HashSet_int___Clear(
     NotPreloadEffectIdHashSet,
-    (const MethodInfo_3725A3C *)Method_System_Collections_Generic_HashSet_int__Clear__);
+    (const MethodInfo_37AD954 *)Method_System_Collections_Generic_HashSet_int__Clear__);
 }
 
 
@@ -749,28 +749,28 @@ UnityEngine_GameObject_array *BattleEffectUtility__CreateShadowEffectAndAttachFo
   __int64 v46; // x0
   const MethodInfo *v47; // x2
 
-  if ( (byte_4D334A9 & 1) == 0 )
+  if ( (byte_4E0751D & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&System_IDisposable_TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
-    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__ToArray__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    byte_4D334A9 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&System_IDisposable_TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerable_Transform__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerator_Transform__TypeInfo);
+    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__ToArray__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    byte_4E0751D = 1;
   }
   if ( displayTypeDetailEntity )
     effectId = displayTypeDetailEntity->fields.effectId;
   else
     effectId = 0;
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_GameObject__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   if ( !nodeEnumerable )
     goto LABEL_50;
   klass = nodeEnumerable->klass;
@@ -790,13 +790,13 @@ UnityEngine_GameObject_array *BattleEffectUtility__CreateShadowEffectAndAttachFo
   else
   {
 LABEL_11:
-    v12 = sub_1C69E5C(nodeEnumerable, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
+    v12 = sub_1CBCA7C(nodeEnumerable, System_Collections_Generic_IEnumerable_Transform__TypeInfo, 0);
   }
   v14 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_Transform__o *, _QWORD))v12)(
           nodeEnumerable,
           *(_QWORD *)(v12 + 8));
   if ( !v14 )
-    sub_1C93D2C(0, v13);
+    sub_1CE6958(0, v13);
   while ( 1 )
   {
     v15 = *(_QWORD *)v14;
@@ -816,7 +816,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v18 = sub_1C69E5C(v14, System_Collections_IEnumerator_TypeInfo, 0);
+      v18 = sub_1CBCA7C(v14, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
       break;
@@ -837,42 +837,42 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v22 = sub_1C69E5C(v14, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
+      v22 = sub_1CBCA7C(v14, System_Collections_Generic_IEnumerator_Transform__TypeInfo, 0);
     }
     v23 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
     if ( !Instance )
-      sub_1C93D2C(0, v25);
+      sub_1CE6958(0, v25);
     ShadowEffect = ServantAssetLoadManager__createShadowEffect((ServantAssetLoadManager_o *)Instance, 0, effectId, 0);
     v28 = ShadowEffect;
     if ( !ShadowEffect )
-      sub_1C93D2C(0, v27);
+      sub_1CE6958(0, v27);
     transform = UnityEngine_GameObject__get_transform(ShadowEffect, 0);
     if ( !transform )
-      sub_1C93D2C(0, v30);
+      sub_1CE6958(0, v30);
     UnityEngine_Transform__SetParent(transform, v23, 0);
     GameObjectExtensions__ResetTransform(v28, 0);
     if ( !v6 )
-      sub_1C93D2C(v31, v32);
+      sub_1CE6958(v31, v32);
     items = v6->fields._items;
     v40 = Method_System_Collections_Generic_List_GameObject__Add__;
     ++v6->fields._version;
     if ( !items )
-      sub_1C93D2C(v31, v32);
+      sub_1CE6958(v31, v32);
     size = v6->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v6,
         (Il2CppObject *)v28,
-        *(const MethodInfo_387999C **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+        *(const MethodInfo_3905F68 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
     }
     else
     {
       v42 = &items->obj.klass + size;
       v6->fields._size = size + 1;
       v42[4] = (Il2CppClass *)v28;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)(v42 + 4), (int32_t)v28, v33, v34, v35, v36, v37, v38);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v42 + 4), (int32_t)v28, v33, v34, v35, v36, v37, v38);
     }
   }
   v43 = *(_QWORD *)v14;
@@ -892,7 +892,7 @@ LABEL_25:
   else
   {
 LABEL_39:
-    v46 = sub_1C69E5C(v14, System_IDisposable_TypeInfo, 0);
+    v46 = sub_1CBCA7C(v14, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v46)(v14, *(_QWORD *)(v46 + 8));
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -903,10 +903,10 @@ LABEL_39:
     v47);
   if ( !v6 )
 LABEL_50:
-    sub_1C93D2C(v7, v8);
+    sub_1CE6958(v7, v8);
   return (UnityEngine_GameObject_array *)System_Collections_Generic_List_object___ToArray(
                                            v6,
-                                           (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+                                           (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
 }
 
 
@@ -917,7 +917,7 @@ void BattleEffectUtility__GetBattleCommonEffectPathAndName(
         const MethodInfo *method)
 {
   System_String_o *v6; // x20
-  int32_t IndexOf_64485880; // w0
+  int32_t IndexOf_65182984; // w0
   int32_t v8; // w22
   Il2CppObject *v9; // x0
   System_String_o *v10; // x0
@@ -945,37 +945,37 @@ void BattleEffectUtility__GetBattleCommonEffectPathAndName(
   System_String_o *v32; // x7
 
   v6 = baseName;
-  if ( (byte_4D3349E & 1) == 0 )
+  if ( (byte_4E07512 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1042/*"/"*/);
-    baseName = (System_String_o *)sub_1C93AD4(&StringLiteral_5880/*"Effect/BattleCommon/{0}"*/);
-    byte_4D3349E = 1;
+    sub_1CE6700(&StringLiteral_1043/*"/"*/);
+    baseName = (System_String_o *)sub_1CE6700(&StringLiteral_5894/*"Effect/BattleCommon/{0}"*/);
+    byte_4E07512 = 1;
   }
   if ( !v6 )
-    sub_1C93D2C(baseName, path);
-  IndexOf_64485880 = System_String__LastIndexOf_64485880(v6, (System_String_o *)StringLiteral_1042/*"/"*/, 0);
-  if ( IndexOf_64485880 == -1 )
+    sub_1CE6958(baseName, path);
+  IndexOf_65182984 = System_String__LastIndexOf_65182984(v6, (System_String_o *)StringLiteral_1043/*"/"*/, 0);
+  if ( IndexOf_65182984 == -1 )
   {
-    v26 = System_String__Format((System_String_o *)StringLiteral_5880/*"Effect/BattleCommon/{0}"*/, (Il2CppObject *)v6, 0);
+    v26 = System_String__Format((System_String_o *)StringLiteral_5894/*"Effect/BattleCommon/{0}"*/, (Il2CppObject *)v6, 0);
     *path = v26;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)path, (int32_t)v26, v27, v28, v29, v30, v31, v32);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)path, (int32_t)v26, v27, v28, v29, v30, v31, v32);
     v25 = name;
     v24 = (int)v6;
     *name = v6;
   }
   else
   {
-    v8 = IndexOf_64485880;
-    v9 = (Il2CppObject *)System_String__Substring_64471664(v6, 0, IndexOf_64485880, 0);
-    v10 = System_String__Format((System_String_o *)StringLiteral_5880/*"Effect/BattleCommon/{0}"*/, v9, 0);
+    v8 = IndexOf_65182984;
+    v9 = (Il2CppObject *)System_String__Substring_65168768(v6, 0, IndexOf_65182984, 0);
+    v10 = System_String__Format((System_String_o *)StringLiteral_5894/*"Effect/BattleCommon/{0}"*/, v9, 0);
     *path = v10;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)path, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)path, (int32_t)v10, v11, v12, v13, v14, v15, v16);
     v17 = System_String__Substring(v6, v8 + 1, 0);
     v24 = (int)v17;
     *name = v17;
     v25 = name;
   }
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v25, v24, v18, v19, v20, v21, v22, v23);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v25, v24, v18, v19, v20, v21, v22, v23);
 }
 
 
@@ -1004,31 +1004,31 @@ System_String_array *BattleEffectUtility__GetBattleCommonEffectPathList(
   System_String_o *name; // [xsp+8h] [xbp-68h] BYREF
   System_String_o *path; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4D3349D & 1) == 0 )
+  if ( (byte_4E07511 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EffectMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D3349D = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_EffectMaster___);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E07511 = 1;
   }
   path = 0;
   name = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EffectMaster___);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_string__TypeInfo);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EffectMaster___);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !effectIdList )
     goto LABEL_22;
   max_length = effectIdList->max_length;
@@ -1038,13 +1038,13 @@ System_String_array *BattleEffectUtility__GetBattleCommonEffectPathList(
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C93D34(Instance);
+        sub_1CE6960(Instance);
       if ( !MasterData_object )
         break;
       Instance = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                    effectIdList->m_Items[v8],
-                   (const MethodInfo_3463274 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+                   (const MethodInfo_34E925C *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
       if ( Instance && HIDWORD(Instance[1].klass) == 5 )
       {
         monitor = (System_String_o *)Instance[2].monitor;
@@ -1056,7 +1056,7 @@ System_String_array *BattleEffectUtility__GetBattleCommonEffectPathList(
         Instance = (Il2CppObject *)System_Collections_Generic_List_object___Contains(
                                      v6,
                                      (Il2CppObject *)path,
-                                     (const MethodInfo_3879D2C *)Method_System_Collections_Generic_List_string__Contains__);
+                                     (const MethodInfo_39062F8 *)Method_System_Collections_Generic_List_string__Contains__);
         if ( ((unsigned __int8)Instance & 1) == 0 )
         {
           v4 = (Il2CppObject *)path;
@@ -1071,14 +1071,14 @@ System_String_array *BattleEffectUtility__GetBattleCommonEffectPathList(
             System_Collections_Generic_List_object___AddWithResize(
               v6,
               v4,
-              *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_3905F68 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v6->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v4;
-            sub_1C93A78((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v4, v11, v12, v13, v14, v15, v16);
+            sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v4, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -1087,14 +1087,14 @@ System_String_array *BattleEffectUtility__GetBattleCommonEffectPathList(
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   }
 LABEL_20:
   if ( !v6 )
     goto LABEL_22;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v6,
-                                  (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -1106,22 +1106,22 @@ System_String_o *BattleEffectUtility__GetEffectSeName(int32_t effectId, const Me
   System_String_o *v6; // x19
   bool isSe; // w8
 
-  if ( (byte_4D334A6 & 1) == 0 )
+  if ( (byte_4E0751A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_EffectMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    byte_4D334A6 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_EffectMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    byte_4E0751A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EffectMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EffectMaster___);
   if ( !Master_object )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   result = (System_String_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                 effectId,
-                                (const MethodInfo_3463274 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+                                (const MethodInfo_34E925C *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
   if ( result )
   {
     v6 = result;
@@ -1139,15 +1139,15 @@ System_String_o *BattleEffectUtility__GetSideEffectPath(int32_t effectId, const 
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D33499 & 1) == 0 )
+  if ( (byte_4E0750D & 1) == 0 )
   {
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&StringLiteral_5917/*"Effect/SideEffect/"*/);
-    byte_4D33499 = 1;
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&StringLiteral_5931/*"Effect/SideEffect/"*/);
+    byte_4E0750D = 1;
   }
   v5 = effectId;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
-  return System_String__Concat((Il2CppObject *)StringLiteral_5917/*"Effect/SideEffect/"*/, v3, 0);
+  return System_String__Concat((Il2CppObject *)StringLiteral_5931/*"Effect/SideEffect/"*/, v3, 0);
 }
 
 
@@ -1169,16 +1169,16 @@ bool BattleEffectUtility__IsEffectNotLoadedYet(
   System_String_o *monitor; // x20
   System_String_o *name; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D334A0 & 1) == 0 )
+  if ( (byte_4E07514 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4D334A0 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4E07514 = 1;
   }
   name = 0;
   *effectPath = 0;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)effectPath, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)effectPath, 0, (int32_t)method, v3, v4, v5, v6, v7);
   if ( effectId < 1 )
     goto LABEL_13;
   v10 = BattleEffectUtility_TypeInfo;
@@ -1190,7 +1190,7 @@ bool BattleEffectUtility__IsEffectNotLoadedYet(
   Entity = DataMasterBase_object__object__int___GetEntity(
              EffectMaster,
              effectId,
-             (const MethodInfo_3463274 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+             (const MethodInfo_34E925C *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
   if ( Entity )
   {
     if ( HIDWORD(Entity[1].klass) == 5 )
@@ -1206,14 +1206,14 @@ LABEL_13:
       LOBYTE(Entity) = 0;
       return (unsigned __int8)Entity & 1;
     }
-    EffectMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    EffectMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( EffectMaster )
     {
       LOBYTE(Entity) = AssetManager__IsAssetStorageExistsButEmpty((AssetManager_o *)EffectMaster, *effectPath, 0);
       return (unsigned __int8)Entity & 1;
     }
 LABEL_17:
-    sub_1C93D2C(EffectMaster, v12);
+    sub_1CE6958(EffectMaster, v12);
   }
   return (unsigned __int8)Entity & 1;
 }
@@ -1252,30 +1252,30 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
   int32_t v31; // [xsp+4h] [xbp-4Ch] BYREF
   System_String_o *effectPath; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D334A3 & 1) == 0 )
+  if ( (byte_4E07517 & 1) == 0 )
   {
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&BattleDataDefine_TypeInfo);
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C93AD4(&Method_BattleEffectUtility___c__DisplayClass33_0__LoadEffectAssetIfNotYet_b__0__);
-    sub_1C93AD4(&Method_BattleEffectUtility___c__DisplayClass33_0__LoadEffectAssetIfNotYet_b__1__);
-    sub_1C93AD4(&BattleEffectUtility___c__DisplayClass33_0_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22533/*"non-loaded asset was detected. effectId = {0}"*/);
-    byte_4D334A3 = 1;
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&BattleDataDefine_TypeInfo);
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1CE6700(&Method_BattleEffectUtility___c__DisplayClass33_0__LoadEffectAssetIfNotYet_b__0__);
+    sub_1CE6700(&Method_BattleEffectUtility___c__DisplayClass33_0__LoadEffectAssetIfNotYet_b__1__);
+    sub_1CE6700(&BattleEffectUtility___c__DisplayClass33_0_TypeInfo);
+    sub_1CE6700(&StringLiteral_22605/*"non-loaded asset was detected. effectId = {0}"*/);
+    byte_4E07517 = 1;
   }
   effectPath = 0;
-  v7 = sub_1C93D20(BattleEffectUtility___c__DisplayClass33_0_TypeInfo);
+  v7 = sub_1CE694C(BattleEffectUtility___c__DisplayClass33_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_37;
   *(_QWORD *)(v7 + 16) = finishCallback;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)finishCallback, v10, v11, v12, v13, v14, v15);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)finishCallback, v10, v11, v12, v13, v14, v15);
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   if ( !BattleEffectUtility__IsEffectNotLoadedYet(effectId, &effectPath, v16) )
@@ -1289,7 +1289,7 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
   if ( !System_Collections_Generic_HashSet_int___Contains(
           (System_Collections_Generic_HashSet_int__o *)SentEffectIdHashSet,
           effectId,
-          (const MethodInfo_3725A9C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+          (const MethodInfo_37AD9B4 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
   {
     v18 = BattleEffectUtility_TypeInfo;
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -1300,7 +1300,7 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
     if ( !System_Collections_Generic_HashSet_int___Contains(
             (System_Collections_Generic_HashSet_int__o *)SentEffectIdHashSet,
             effectId,
-            (const MethodInfo_3725A9C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+            (const MethodInfo_37AD9B4 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
     {
       v19 = BattleEffectUtility_TypeInfo;
       if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -1313,11 +1313,11 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
       {
         v31 = effectId;
         v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
-        v22 = System_String__Format((System_String_o *)StringLiteral_22533/*"non-loaded asset was detected. effectId = {0}"*/, v21, 0);
-        SentEffectIdHashSet = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+        v22 = System_String__Format((System_String_o *)StringLiteral_22605/*"non-loaded asset was detected. effectId = {0}"*/, v21, 0);
+        SentEffectIdHashSet = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
         if ( !SentEffectIdHashSet )
           goto LABEL_37;
-        CrashReporter__SendReport_31464636(SentEffectIdHashSet, v22, 0, 0, 0);
+        CrashReporter__SendReport_31803600(SentEffectIdHashSet, v22, 0, 0, 0);
         v23 = BattleEffectUtility_TypeInfo;
         if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -1327,7 +1327,7 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
         System_Collections_Generic_HashSet_int___Add(
           (System_Collections_Generic_HashSet_int__o *)SentEffectIdHashSet,
           effectId,
-          (const MethodInfo_37265AC *)Method_System_Collections_Generic_HashSet_int__Add__);
+          (const MethodInfo_37AE4C4 *)Method_System_Collections_Generic_HashSet_int__Add__);
       }
     }
   }
@@ -1347,7 +1347,7 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
     {
       assetStorageLoadWrapper_k__BackingField = perf->fields._assetStorageLoadWrapper_k__BackingField;
       v27 = effectPath;
-      v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
+      v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1CE694C(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
         v28,
         (Il2CppObject *)v7,
@@ -1368,10 +1368,10 @@ void BattleEffectUtility__LoadEffectAssetIfNotYet(
       }
     }
 LABEL_37:
-    sub_1C93D2C(SentEffectIdHashSet, v9);
+    sub_1CE6958(SentEffectIdHashSet, v9);
   }
   v29 = effectPath;
-  v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1CE694C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v30,
     (Il2CppObject *)v7,
@@ -1379,7 +1379,7 @@ LABEL_37:
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__loadAssetStorage(v29, v30, ASSET_PARALLEL_LOAD_MAX, 0) )
+  if ( !AssetManager__loadAssetStorage(v29, v30, ASSET_PARALLEL_LOAD_MAX, 0, 0) )
 LABEL_35:
     ActionExtensions__Call(*(System_Action_o **)(v7 + 16), 0);
 }
@@ -1437,55 +1437,57 @@ void BattleEffectUtility__SetColorToShadowEffectParticles(
   __int64 v43; // x1
   const MethodInfo *v44; // x2
   System_String_o *name; // x21
-  __int64 v46; // x8
-  __int64 v47; // x9
-  int *v48; // x10
-  __int64 v49; // x0
-  UnityEngine_ParticleSystem_MinMaxGradient_o v50; // [xsp+0h] [xbp-100h] BYREF
-  UnityEngine_ParticleSystem_MinMaxGradient_o v51; // [xsp+38h] [xbp-C8h] BYREF
-  System_Nullable_Color__o v52; // [xsp+70h] [xbp-90h] BYREF
-  BattleEffectUtility___c__DisplayClass42_0_o v53; // [xsp+90h] [xbp-70h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v46; // x0
+  __int64 v47; // x8
+  __int64 v48; // x9
+  int *v49; // x10
+  __int64 v50; // x0
+  UnityEngine_ParticleSystem_MinMaxGradient_o v51; // [xsp+0h] [xbp-100h] BYREF
+  UnityEngine_ParticleSystem_MinMaxGradient_o v52; // [xsp+38h] [xbp-C8h] BYREF
+  System_Nullable_Color__o v53; // [xsp+70h] [xbp-90h] BYREF
+  BattleEffectUtility___c__DisplayClass42_0_o v54; // [xsp+90h] [xbp-70h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+B8h] [xbp-48h] BYREF
   UnityEngine_Color_o Value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D334AA & 1) == 0 )
+  if ( (byte_4E0751E & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_SelectMany_GameObject__ParticleSystem___);
-    sub_1C93AD4(&System_Func_GameObject__IEnumerable_ParticleSystem___TypeInfo);
-    sub_1C93AD4(&System_IDisposable_TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerable_ParticleSystem__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerator_ParticleSystem__TypeInfo);
-    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C93AD4(&Method_System_Nullable_Color__get_HasValue__);
-    sub_1C93AD4(&Method_System_Nullable_Color__get_Value__);
-    sub_1C93AD4(&Method_BattleEffectUtility___c__SetColorToShadowEffectParticles_b__42_1__);
-    sub_1C93AD4(&BattleEffectUtility___c_TypeInfo);
-    byte_4D334AA = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Linq_Enumerable_SelectMany_GameObject__ParticleSystem___);
+    sub_1CE6700(&System_Func_GameObject__IEnumerable_ParticleSystem___TypeInfo);
+    sub_1CE6700(&System_IDisposable_TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerable_ParticleSystem__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerator_ParticleSystem__TypeInfo);
+    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
+    sub_1CE6700(&Method_System_Nullable_Color__get_HasValue__);
+    sub_1CE6700(&Method_System_Nullable_Color__get_Value__);
+    sub_1CE6700(&Method_BattleEffectUtility___c__SetColorToShadowEffectParticles_b__42_1__);
+    sub_1CE6700(&BattleEffectUtility___c_TypeInfo);
+    byte_4E0751E = 1;
   }
-  memset(&v52, 0, sizeof(v52));
   memset(&v53, 0, sizeof(v53));
+  memset(&v54, 0, sizeof(v54));
   m_ParticleSystem = 0;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)objectList, 0);
   if ( displayTypeDetailEntity )
   {
     if ( !IsNullOrEmpty )
     {
-      NpcServantDisplayTypeDetailEntity__get_EffectColor((System_Nullable_Color__o *)&v51, displayTypeDetailEntity, 0);
-      v53.fields.effectColor = *(struct System_Nullable_Color__o *)&v51.fields.m_Mode;
-      v53.fields.effectColorDetailDict = NpcServantDisplayTypeDetailEntity__GetEffectColorDetailDict(
+      NpcServantDisplayTypeDetailEntity__get_EffectColor((System_Nullable_Color__o *)&v52, displayTypeDetailEntity, 0);
+      *(_OWORD *)&v54.fields.effectColor.fields.hasValue = *(_OWORD *)&v52.fields.m_Mode;
+      v54.fields.effectColor.fields.value.fields.a = *(float *)&v52.fields.m_GradientMax;
+      v54.fields.effectColorDetailDict = NpcServantDisplayTypeDetailEntity__GetEffectColorDetailDict(
                                            displayTypeDetailEntity,
                                            0);
-      sub_1C93A78(
-        (GrandQuestFolderBoardItem_o *)&v53,
-        (int32_t)v53.fields.effectColorDetailDict,
+      sub_1CE66A4(
+        (GrandQuestFolderBoardItem_o *)&v54,
+        (int32_t)v54.fields.effectColorDetailDict,
         v6,
         v7,
         v8,
         v9,
         v10,
         v11);
-      if ( v53.fields.effectColor.fields.hasValue || v53.fields.effectColorDetailDict )
+      if ( v54.fields.effectColor.fields.hasValue || v54.fields.effectColorDetailDict )
       {
         v12 = BattleEffectUtility___c_TypeInfo;
         if ( !BattleEffectUtility___c_TypeInfo->_2.cctor_finished )
@@ -1502,7 +1504,7 @@ void BattleEffectUtility__SetColorToShadowEffectParticles(
             v12 = BattleEffectUtility___c_TypeInfo;
           }
           v14 = (Il2CppObject *)v12->static_fields->__9;
-          _9__42_1 = (System_Func_object__object__o *)sub_1C93D20(System_Func_GameObject__IEnumerable_ParticleSystem___TypeInfo);
+          _9__42_1 = (System_Func_object__object__o *)sub_1CE694C(System_Func_GameObject__IEnumerable_ParticleSystem___TypeInfo);
           System_Func_object__object____ctor(
             _9__42_1,
             v14,
@@ -1510,7 +1512,7 @@ void BattleEffectUtility__SetColorToShadowEffectParticles(
             0);
           static_fields = BattleEffectUtility___c_TypeInfo->static_fields;
           static_fields->__9__42_1 = (struct System_Func_GameObject__IEnumerable_ParticleSystem___o *)_9__42_1;
-          sub_1C93A78(
+          sub_1CE66A4(
             (GrandQuestFolderBoardItem_o *)&static_fields->__9__42_1,
             (int32_t)_9__42_1,
             v16,
@@ -1523,9 +1525,9 @@ void BattleEffectUtility__SetColorToShadowEffectParticles(
         v22 = System_Linq_Enumerable__SelectMany_object__object_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)objectList,
                 (System_Func_TSource__IEnumerable_TResult___o *)_9__42_1,
-                (const MethodInfo_31DD3D0 *)Method_System_Linq_Enumerable_SelectMany_GameObject__ParticleSystem___);
+                (const MethodInfo_323CECC *)Method_System_Linq_Enumerable_SelectMany_GameObject__ParticleSystem___);
         if ( !v22 )
-          sub_1C93D2C(0, v23);
+          sub_1CE6958(0, v23);
         klass = v22->klass;
         v25 = v22;
         v26 = *(unsigned __int16 *)&v22->klass->_2.rank;
@@ -1544,13 +1546,13 @@ void BattleEffectUtility__SetColorToShadowEffectParticles(
         else
         {
 LABEL_18:
-          v28 = sub_1C69E5C(v22, System_Collections_Generic_IEnumerable_ParticleSystem__TypeInfo, 0);
+          v28 = sub_1CBCA7C(v22, System_Collections_Generic_IEnumerable_ParticleSystem__TypeInfo, 0);
         }
         v30 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v28)(
                 v25,
                 *(_QWORD *)(v28 + 8));
         if ( !v30 )
-          sub_1C93D2C(0, v29);
+          sub_1CE6958(0, v29);
         while ( 1 )
         {
           v31 = *(_QWORD *)v30;
@@ -1570,7 +1572,7 @@ LABEL_18:
           else
           {
 LABEL_25:
-            v34 = sub_1C69E5C(v30, System_Collections_IEnumerator_TypeInfo, 0);
+            v34 = sub_1CBCA7C(v30, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v30, *(_QWORD *)(v34 + 8)) & 1) == 0 )
             break;
@@ -1591,58 +1593,57 @@ LABEL_25:
           else
           {
 LABEL_32:
-            v38 = sub_1C69E5C(v30, System_Collections_Generic_IEnumerator_ParticleSystem__TypeInfo, 0);
+            v38 = sub_1CBCA7C(v30, System_Collections_Generic_IEnumerator_ParticleSystem__TypeInfo, 0);
           }
           v39 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v30, *(_QWORD *)(v38 + 8));
           v41 = (UnityEngine_ParticleSystem_o *)v39;
           if ( !v39 )
-            sub_1C93D2C(0, v40);
+            sub_1CE6958(0, v40);
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v39, 0);
           if ( !gameObject )
-            sub_1C93D2C(0, v43);
+            sub_1CE6958(0, v43);
           name = UnityEngine_Object__get_name(gameObject, 0);
           if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
           BattleEffectUtility___SetColorToShadowEffectParticles_g__GetColor_42_0(
-            (System_Nullable_Color__o *)&v51,
+            (System_Nullable_Color__o *)&v52,
             name,
-            &v53,
+            &v54,
             v44);
-          v52 = *(System_Nullable_Color__o *)&v51.fields.m_Mode;
-          if ( LOBYTE(v51.fields.m_Mode) )
+          *(_OWORD *)&v53.fields.hasValue = *(_OWORD *)&v52.fields.m_Mode;
+          v53.fields.value.fields.a = *(float *)&v52.fields.m_GradientMax;
+          if ( LOBYTE(v52.fields.m_Mode) )
           {
             m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v41, 0).fields.m_ParticleSystem;
             Value = System_Nullable_Color___get_Value(
-                      &v52,
-                      (const MethodInfo_399CD64 *)Method_System_Nullable_Color__get_Value__);
-            UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v51, Value, 0);
-            v50 = v51;
-            UnityEngine_ParticleSystem_MainModule__set_startColor(
-              (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-              &v50,
-              0);
+                      &v53,
+                      (const MethodInfo_3A2AEF0 *)Method_System_Nullable_Color__get_Value__);
+            UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v52, Value, 0);
+            v51 = v52;
+            v46.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+            UnityEngine_ParticleSystem_MainModule__set_startColor(v46, &v51, 0);
           }
         }
-        v46 = *(_QWORD *)v30;
-        v47 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
+        v47 = *(_QWORD *)v30;
+        v48 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
         if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
         {
-          v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
+          v49 = (int *)(*(_QWORD *)(v47 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v49 - 1) != System_IDisposable_TypeInfo )
           {
-            --v47;
-            v48 += 4;
-            if ( !v47 )
+            --v48;
+            v49 += 4;
+            if ( !v48 )
               goto LABEL_44;
           }
-          v49 = v46 + 16LL * *v48 + 312;
+          v50 = v47 + 16LL * *v49 + 312;
         }
         else
         {
 LABEL_44:
-          v49 = sub_1C69E5C(v30, System_IDisposable_TypeInfo, 0);
+          v50 = sub_1CBCA7C(v30, System_IDisposable_TypeInfo, 0);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v49)(v30, *(_QWORD *)(v49 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v50)(v30, *(_QWORD *)(v50 + 8));
       }
     }
   }
@@ -1662,24 +1663,24 @@ void BattleEffectUtility__SetEffectParent(
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D33498 & 1) == 0 )
+  if ( (byte_4E0750C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_EffectMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
-    byte_4D33498 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_EffectMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
+    byte_4E0750C = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EffectMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EffectMaster___);
   if ( !Master_object )
     goto LABEL_19;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &entity,
           effectId,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__) )
     return;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
   if ( !entity
@@ -1703,25 +1704,25 @@ void BattleEffectUtility__SetEffectParent(
         !v10) )
   {
 LABEL_19:
-    sub_1C93D2C(Master_object, v8);
+    sub_1CE6958(Master_object, v8);
   }
   UnityEngine_Transform__set_parent(v10, (UnityEngine_Transform_o *)Master_object, 0);
-  if ( !byte_4D2A139 )
+  if ( !byte_4DFE0A9 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A139 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0A9 = 1;
   }
   UnityEngine_Transform__set_localPosition(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  if ( !byte_4D2A141 )
+  if ( !byte_4DFE0B1 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A141 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0B1 = 1;
   }
   UnityEngine_Transform__set_eulerAngles(v10, UnityEngine_Vector3_TypeInfo->static_fields->upVector, 0);
-  if ( !byte_4D2A13E )
+  if ( !byte_4DFE0AE )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A13E = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0AE = 1;
   }
   UnityEngine_Transform__set_localScale(v10, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
 }
@@ -1770,19 +1771,19 @@ void BattleEffectUtility__SetShadowServantColorToMaterials(
   UnityEngine_Color_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D334AB & 1) == 0 )
+  if ( (byte_4E0751F & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BasicHelper_ExcludeNull_Material___);
-    sub_1C93AD4(&BattleDataDefine_TypeInfo);
-    sub_1C93AD4(&System_IDisposable_TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerable_Material__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_IEnumerator_Material__TypeInfo);
-    sub_1C93AD4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C93AD4(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1C93AD4(&Method_System_Nullable_Color__get_HasValue__);
-    sub_1C93AD4(&StringLiteral_16273/*"_Color"*/);
-    sub_1C93AD4(&StringLiteral_16219/*"_AddColor"*/);
-    byte_4D334AB = 1;
+    sub_1CE6700(&Method_BasicHelper_ExcludeNull_Material___);
+    sub_1CE6700(&BattleDataDefine_TypeInfo);
+    sub_1CE6700(&System_IDisposable_TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerable_Material__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_IEnumerator_Material__TypeInfo);
+    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
+    sub_1CE6700(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1CE6700(&Method_System_Nullable_Color__get_HasValue__);
+    sub_1CE6700(&StringLiteral_16324/*"_Color"*/);
+    sub_1CE6700(&StringLiteral_16270/*"_AddColor"*/);
+    byte_4E0751F = 1;
   }
   if ( displayTypeDetailEntity
     && (NpcServantDisplayTypeDetailEntity__get_MainColor(&v39, displayTypeDetailEntity, 0), v39.fields.hasValue) )
@@ -1825,9 +1826,9 @@ LABEL_11:
 LABEL_12:
   v15 = BasicHelper__ExcludeNull_object_(
           (System_Collections_Generic_IEnumerable_T__o *)materialEnumerable,
-          (const MethodInfo_318E4CC *)Method_BasicHelper_ExcludeNull_Material___);
+          (const MethodInfo_31EDE30 *)Method_BasicHelper_ExcludeNull_Material___);
   if ( !v15 )
-    sub_1C93D2C(0, v16);
+    sub_1CE6958(0, v16);
   klass = v15->klass;
   v18 = v15;
   v19 = *(unsigned __int16 *)&v15->klass->_2.rank;
@@ -1846,13 +1847,13 @@ LABEL_12:
   else
   {
 LABEL_17:
-    v21 = sub_1C69E5C(v15, System_Collections_Generic_IEnumerable_Material__TypeInfo, 0);
+    v21 = sub_1CBCA7C(v15, System_Collections_Generic_IEnumerable_Material__TypeInfo, 0);
   }
   v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))v21)(
           v18,
           *(_QWORD *)(v21 + 8));
   if ( !v23 )
-    sub_1C93D2C(0, v22);
+    sub_1CE6958(0, v22);
   while ( 1 )
   {
     v24 = *(_QWORD *)v23;
@@ -1872,7 +1873,7 @@ LABEL_17:
     else
     {
 LABEL_24:
-      v27 = sub_1C69E5C(v23, System_Collections_IEnumerator_TypeInfo, 0);
+      v27 = sub_1CBCA7C(v23, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v23, *(_QWORD *)(v27 + 8)) & 1) == 0 )
       break;
@@ -1893,22 +1894,22 @@ LABEL_24:
     else
     {
 LABEL_31:
-      v31 = sub_1C69E5C(v23, System_Collections_Generic_IEnumerator_Material__TypeInfo, 0);
+      v31 = sub_1CBCA7C(v23, System_Collections_Generic_IEnumerator_Material__TypeInfo, 0);
     }
     v32 = (UnityEngine_Material_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v23, *(_QWORD *)(v31 + 8));
     v34 = v32;
     if ( !v32 )
-      sub_1C93D2C(0, v33);
+      sub_1CE6958(0, v33);
     v40.fields.r = r;
     v40.fields.g = g;
     v40.fields.b = b;
     v40.fields.a = a;
-    UnityEngine_Material__SetColor(v32, (System_String_o *)StringLiteral_16273/*"_Color"*/, v40, 0);
+    UnityEngine_Material__SetColor(v32, (System_String_o *)StringLiteral_16324/*"_Color"*/, v40, 0);
     v41.fields.r = v11;
     v41.fields.g = v12;
     v41.fields.b = v13;
     v41.fields.a = v14;
-    UnityEngine_Material__SetColor(v34, (System_String_o *)StringLiteral_16219/*"_AddColor"*/, v41, 0);
+    UnityEngine_Material__SetColor(v34, (System_String_o *)StringLiteral_16270/*"_AddColor"*/, v41, 0);
   }
   v35 = *(_QWORD *)v23;
   v36 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
@@ -1927,7 +1928,7 @@ LABEL_31:
   else
   {
 LABEL_39:
-    v38 = sub_1C69E5C(v23, System_IDisposable_TypeInfo, 0);
+    v38 = sub_1CBCA7C(v23, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v38)(v23, *(_QWORD *)(v38 + 8));
 }
@@ -1955,39 +1956,40 @@ bool BattleEffectUtility__TryGetAuraEffectPosOverwriteEntity(
   Il2CppObject *v22; // x24
   struct BattleEffectUtility_StaticFields *static_fields; // x0
   System_Collections_Generic_List_ValueTuple_int__int___o *v24; // x24
-  __int64 v25; // x0
-  System_ValueTuple_int__int__o v26; // x1
+  System_ValueTuple_int__int__o p_item; // x0
+  __int64 v26; // x0
+  System_ValueTuple_int__int__o v27; // x1
   struct System_ValueTuple_int__int__array *items; // x8
-  _QWORD *v28; // x9
+  _QWORD *v29; // x9
   __int64 size; // x10
-  __int64 v30; // x1
-  bool v31; // w21
-  BattleEffectUtility_c *v32; // x0
+  __int64 v31; // x1
+  bool v32; // w21
+  BattleEffectUtility_c *v33; // x0
   int32_t current_high; // w22
   int32_t current; // w23
   AuraEffectPosOverwriteMaster_o *auraPosOverwriteMst; // x0
-  int v36; // w19
-  System_Collections_Generic_List_Enumerator_T__o v38; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v39; // [xsp+20h] [xbp-80h] BYREF
+  int v37; // w19
+  System_Collections_Generic_List_Enumerator_T__o v39; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v40; // [xsp+20h] [xbp-80h] BYREF
   System_ValueTuple_int__int__o item; // [xsp+48h] [xbp-58h] BYREF
 
-  if ( (byte_4D33496 & 1) == 0 )
+  if ( (byte_4E0750A & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ValueTuple_int__int___Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ValueTuple_int__int___GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ValueTuple_int__int____ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_ValueTuple_int__int___TypeInfo);
-    sub_1C93AD4(&Method_System_ValueTuple_int__int___ctor__);
-    byte_4D33496 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ValueTuple_int__int___Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ValueTuple_int__int___GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ValueTuple_int__int____ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_ValueTuple_int__int___TypeInfo);
+    sub_1CE6700(&Method_System_ValueTuple_int__int___ctor__);
+    byte_4E0750A = 1;
   }
   v13 = BattleEffectUtility_TypeInfo;
-  memset(&v39, 0, sizeof(v39));
+  memset(&v40, 0, sizeof(v40));
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -1997,7 +1999,7 @@ bool BattleEffectUtility__TryGetAuraEffectPosOverwriteEntity(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
     v21 = BattleEffectUtility_TypeInfo;
     v22 = Master_object;
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2007,7 +2009,7 @@ bool BattleEffectUtility__TryGetAuraEffectPosOverwriteEntity(
     }
     static_fields = v21->static_fields;
     static_fields->auraPosOverwriteMst = (struct AuraEffectPosOverwriteMaster_o *)v22;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&static_fields->auraPosOverwriteMst,
       (int32_t)v22,
       v15,
@@ -2018,79 +2020,80 @@ bool BattleEffectUtility__TryGetAuraEffectPosOverwriteEntity(
       v20);
   }
   *ent = 0;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)ent, 0, svtId, limitCount, (System_String_o *)arg, (int32_t)method, v6, v7);
-  v24 = (System_Collections_Generic_List_ValueTuple_int__int___o *)sub_1C93D20(System_Collections_Generic_List_ValueTuple_int__int___TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)ent, 0, svtId, limitCount, (System_String_o *)arg, (int32_t)method, v6, v7);
+  v24 = (System_Collections_Generic_List_ValueTuple_int__int___o *)sub_1CE694C(System_Collections_Generic_List_ValueTuple_int__int___TypeInfo);
   System_Collections_Generic_List_ValueTuple_int__int_____ctor(
     v24,
-    (const MethodInfo_381E284 *)Method_System_Collections_Generic_List_ValueTuple_int__int____ctor__);
+    (const MethodInfo_38AA850 *)Method_System_Collections_Generic_List_ValueTuple_int__int____ctor__);
   if ( arg )
     ((void (__fastcall *)(BattleEffectUtility_EffectLoadArgument_o *, System_Collections_Generic_List_ValueTuple_int__int___o *, const MethodInfo *))arg->klass->vtable._6_AddAuraPosOverwriteTarget.methodPtr)(
       arg,
       v24,
       arg->klass->vtable._6_AddAuraPosOverwriteTarget.method);
+  p_item = (System_ValueTuple_int__int__o)&item;
   item = 0;
   System_ValueTuple_int__int____ctor(
-    (System_ValueTuple_int__int__o)&item,
+    p_item,
     svtId,
     limitCount,
-    (const MethodInfo_3BD76B8 *)Method_System_ValueTuple_int__int___ctor__);
+    (const MethodInfo_3C7F8C0 *)Method_System_ValueTuple_int__int___ctor__);
   if ( !v24
-    || (v26 = item,
+    || (v27 = item,
         items = v24->fields._items,
-        v28 = Method_System_Collections_Generic_List_ValueTuple_int__int___Add__,
+        v29 = Method_System_Collections_Generic_List_ValueTuple_int__int___Add__,
         ++v24->fields._version,
         !items) )
   {
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C93D2C)(v25, v26);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1CE6958)(v26, v27);
   }
   size = v24->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_ValueTuple_int__int____AddWithResize(
       v24,
-      v26,
-      *(const MethodInfo_381EAD8 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      v27,
+      *(const MethodInfo_38AB0A4 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
   }
   else
   {
     v24->fields._size = size + 1;
-    items->m_Items[size] = v26;
+    items->m_Items[size] = v27;
   }
   System_Collections_Generic_List_ValueTuple_int__int____GetEnumerator(
-    &v38,
+    &v39,
     v24,
-    (const MethodInfo_381F5AC *)Method_System_Collections_Generic_List_ValueTuple_int__int___GetEnumerator__);
-  v39 = v38;
+    (const MethodInfo_38ABB78 *)Method_System_Collections_Generic_List_ValueTuple_int__int___GetEnumerator__);
+  v40 = v39;
   while ( 1 )
   {
-    v31 = System_Collections_Generic_List_Enumerator_ValueTuple_int__int____MoveNext(
-            &v39,
-            (const MethodInfo_35F066C *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___MoveNext__);
-    if ( !v31 )
+    v32 = System_Collections_Generic_List_Enumerator_ValueTuple_int__int____MoveNext(
+            &v40,
+            (const MethodInfo_3677044 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___MoveNext__);
+    if ( !v32 )
       break;
-    v32 = BattleEffectUtility_TypeInfo;
-    current = (int32_t)v39.fields._current;
-    current_high = HIDWORD(v39.fields._current);
+    v33 = BattleEffectUtility_TypeInfo;
+    current = (int32_t)v40.fields._current;
+    current_high = HIDWORD(v40.fields._current);
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
-      v32 = BattleEffectUtility_TypeInfo;
+      v33 = BattleEffectUtility_TypeInfo;
     }
-    auraPosOverwriteMst = v32->static_fields->auraPosOverwriteMst;
+    auraPosOverwriteMst = v33->static_fields->auraPosOverwriteMst;
     if ( !auraPosOverwriteMst )
-      sub_1C93D2C(0, v30);
+      sub_1CE6958(0, v31);
     if ( AuraEffectPosOverwriteMaster__TryGetEntity(auraPosOverwriteMst, ent, auraEffectId, current, current_high, 0) )
     {
-      v36 = 6;
+      v37 = 6;
       goto LABEL_26;
     }
   }
-  v36 = 7;
+  v37 = 7;
 LABEL_26:
   System_Collections_Generic_List_Enumerator_ValueTuple_int__int____Dispose(
-    &v39,
-    (const MethodInfo_35F0668 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___Dispose__);
-  return v31 && v36 == 6;
+    &v40,
+    (const MethodInfo_3677040 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_int__int___Dispose__);
+  return v32 && v37 == 6;
 }
 
 
@@ -2112,16 +2115,16 @@ bool BattleEffectUtility__TryGetBattleCommonEffectPath(
   System_String_o *name; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D3349F & 1) == 0 )
+  if ( (byte_4E07513 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
-    byte_4D3349F = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
+    byte_4E07513 = 1;
   }
   entity = 0;
   name = 0;
   *effectPath = 0;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)effectPath, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)effectPath, 0, (int32_t)method, v3, v4, v5, v6, v7);
   v10 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -2132,12 +2135,12 @@ bool BattleEffectUtility__TryGetBattleCommonEffectPath(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)EffectMaster,
                                      &entity,
                                      effectId,
-                                     (const MethodInfo_34632C0 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
+                                     (const MethodInfo_34E92A8 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)EffectMaster & 1) == 0 )
     return 0;
   if ( !entity )
 LABEL_15:
-    sub_1C93D2C(EffectMaster, v12);
+    sub_1CE6958(EffectMaster, v12);
   if ( HIDWORD(entity[1].klass) == 5 )
   {
     monitor = (System_String_o *)entity[2].monitor;
@@ -2161,10 +2164,10 @@ System_Nullable_Color__o *BattleEffectUtility___SetColorToShadowEffectParticles_
   System_Nullable_Color__o v10; // [xsp+0h] [xbp-60h] BYREF
   System_Nullable_Color__o v11; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4D334AE & 1) == 0 )
+  if ( (byte_4E07522 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BasicHelper_GetValue_string__Nullable_Color____);
-    byte_4D334AE = 1;
+    sub_1CE6700(&Method_BasicHelper_GetValue_string__Nullable_Color____);
+    byte_4E07522 = 1;
   }
   result = (System_Nullable_Color__o *)a3->fields.effectColorDetailDict;
   if ( a3->fields.effectColorDetailDict )
@@ -2175,7 +2178,7 @@ System_Nullable_Color__o *BattleEffectUtility___SetColorToShadowEffectParticles_
                (System_Collections_Generic_Dictionary_K__V__o *)result,
                (Il2CppObject *)objectName,
                &v11,
-               (const MethodInfo_31927B8 *)Method_BasicHelper_GetValue_string__Nullable_Color____);
+               (const MethodInfo_31F211C *)Method_BasicHelper_GetValue_string__Nullable_Color____);
     a = v10.fields.value.fields.a;
     v9 = *(_OWORD *)&v10.fields.hasValue;
   }
@@ -2235,51 +2238,56 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject(
   BattleEffectUtility_c *v43; // x0
   DataManager_o *v44; // x19
   int m_CancellationTokenSource; // w8
-  unsigned int v46; // w21
+  float r; // s8
+  float g; // s9
+  float b; // s10
+  float a; // s11
+  unsigned int v50; // w21
   int32_t id; // [xsp+Ch] [xbp-84h] BYREF
   System_String_o *name; // [xsp+10h] [xbp-80h] BYREF
   System_String_o *path; // [xsp+18h] [xbp-78h] BYREF
-  UnityEngine_Color_o WeaponColor; // 0:kr00_16.16
+  UnityEngine_Color_o WeaponColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D334A5 & 1) == 0 )
+  if ( (byte_4E07519 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_AssetData_GetObject_GameObject____79057888);
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&Method_BattleEffectUtility_getEffectObject__);
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EffectMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
-    sub_1C93AD4(&UnityEngine_GameObject_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&ServantAssetLoadManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_19052/*"effect load failed. effectId = {0}"*/);
-    sub_1C93AD4(&StringLiteral_19053/*"effect/"*/);
-    sub_1C93AD4(&StringLiteral_3106/*"Battle/Effect/"*/);
-    sub_1C93AD4(&StringLiteral_3098/*"Battle"*/);
-    byte_4D334A5 = 1;
+    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&Method_BattleEffectUtility_getEffectObject__);
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_EffectMaster___);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+    sub_1CE6700(&UnityEngine_GameObject_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&ServantAssetLoadManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_19113/*"effect load failed. effectId = {0}"*/);
+    sub_1CE6700(&StringLiteral_19114/*"effect/"*/);
+    sub_1CE6700(&StringLiteral_3111/*"Battle/Effect/"*/);
+    sub_1CE6700(&StringLiteral_3103/*"Battle"*/);
+    byte_4E07519 = 1;
   }
   name = 0;
   path = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_88;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EffectMaster___);
+                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EffectMaster___);
   if ( !Instance )
     goto LABEL_88;
   Entity = (EffectEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                effectId,
-                               (const MethodInfo_3463274 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+                               (const MethodInfo_34E925C *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (DataManager_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)procObject, 0, 0);
@@ -2290,7 +2298,7 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject(
       goto LABEL_88;
     Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                   procObject,
-                                  (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+                                  (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
     v11 = (UnityEngine_Object_o *)Instance;
   }
   if ( !Entity )
@@ -2298,7 +2306,7 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject(
   switch ( Entity->fields.folderType )
   {
     case 1:
-      v12 = System_String__Concat_64425724((System_String_o *)StringLiteral_19053/*"effect/"*/, Entity->fields.name, 0);
+      v12 = System_String__Concat_65122828((System_String_o *)StringLiteral_19114/*"effect/"*/, Entity->fields.name, 0);
       v13 = UnityEngine_Resources__Load(v12, 0);
       if ( !v13 )
         goto LABEL_16;
@@ -2367,7 +2375,7 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject(
         goto LABEL_88;
       if ( (unsigned int)WeaponScale >= LODWORD(scalelist->max_length) )
         goto LABEL_89;
-      v28 = System_String__Concat_64425724(v24, scalelist->m_Items[WeaponScale], 0);
+      v28 = System_String__Concat_65122828(v24, scalelist->m_Items[WeaponScale], 0);
       if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
       Manager__LoadNoblePhantasmEffect = (Il2CppObject *)ServantAssetLoadManager__loadWeaponGroupEffect(
@@ -2382,11 +2390,11 @@ LABEL_50:
       {
         v35 = Method_BattleEffectUtility_getEffectObject__;
         if ( (*((_BYTE *)Method_BattleEffectUtility_getEffectObject__ + 83) & 2) != 0 )
-          v35 = (_QWORD *)sub_1C93AEC(Method_BattleEffectUtility_getEffectObject__);
-        v36 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v35, v35[4]);
-        OverwriteAssetSoundName__PlaySe_42150528(
+          v35 = (_QWORD *)sub_1CE6718(Method_BattleEffectUtility_getEffectObject__);
+        v36 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v35, v35[4]);
+        OverwriteAssetSoundName__PlaySe_42574504(
           v36,
-          (System_String_o *)StringLiteral_3098/*"Battle"*/,
+          (System_String_o *)StringLiteral_3103/*"Battle"*/,
           Entity->fields.se,
           1.0,
           0,
@@ -2401,7 +2409,7 @@ LABEL_50:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         Instance = (DataManager_o *)UnityEngine_Object__Instantiate_object_(
                                       v14,
-                                      (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                      (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         v40 = (UnityEngine_Object_o *)Instance;
         if ( Entity->fields.folderType != 3 )
           goto LABEL_85;
@@ -2412,9 +2420,9 @@ LABEL_50:
           goto LABEL_85;
         if ( !v40 )
           goto LABEL_88;
-        Instance = (DataManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__52415656(
+        Instance = (DataManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__52808288(
                                       (UnityEngine_GameObject_o *)v40,
-                                      (const MethodInfo_31FCCA8 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                      (const MethodInfo_325CA60 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
         if ( !v11 )
           goto LABEL_88;
         v44 = Instance;
@@ -2424,18 +2432,26 @@ LABEL_50:
         m_CancellationTokenSource = (int)v44->fields.m_CancellationTokenSource;
         if ( m_CancellationTokenSource >= 1 )
         {
-          v46 = 0;
+          r = WeaponColor.fields.r;
+          g = WeaponColor.fields.g;
+          b = WeaponColor.fields.b;
+          a = WeaponColor.fields.a;
+          v50 = 0;
           while ( 1 )
           {
-            if ( v46 >= m_CancellationTokenSource )
+            if ( v50 >= m_CancellationTokenSource )
 LABEL_89:
-              sub_1C93D34(Instance);
-            Instance = (DataManager_o *)*((_QWORD *)&v44->fields._DispLog + (int)v46);
+              sub_1CE6960(Instance);
+            Instance = (DataManager_o *)*((_QWORD *)&v44->fields._DispLog + (int)v50);
             if ( !Instance )
               break;
-            UIWidget__set_color((UIWidget_o *)Instance, WeaponColor, 0);
+            v56.fields.r = r;
+            v56.fields.g = g;
+            v56.fields.b = b;
+            v56.fields.a = a;
+            UIWidget__set_color((UIWidget_o *)Instance, v56, 0);
             m_CancellationTokenSource = (int)v44->fields.m_CancellationTokenSource;
-            if ( (int)++v46 >= m_CancellationTokenSource )
+            if ( (int)++v50 >= m_CancellationTokenSource )
               goto LABEL_85;
           }
         }
@@ -2449,7 +2465,7 @@ LABEL_85:
           }
         }
 LABEL_88:
-        sub_1C93D2C(Instance, v8);
+        sub_1CE6958(Instance, v8);
       }
       v37 = BattleEffectUtility_TypeInfo;
       if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2460,7 +2476,7 @@ LABEL_88:
       if ( System_Collections_Generic_HashSet_int___Contains(
              (System_Collections_Generic_HashSet_int__o *)Instance,
              Entity->fields.id,
-             (const MethodInfo_3725A9C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+             (const MethodInfo_37AD9B4 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
       {
         return 0;
       }
@@ -2476,11 +2492,11 @@ LABEL_88:
       {
         id = Entity->fields.id;
         v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id);
-        v42 = System_String__Format((System_String_o *)StringLiteral_19052/*"effect load failed. effectId = {0}"*/, v41, 0);
-        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+        v42 = System_String__Format((System_String_o *)StringLiteral_19113/*"effect load failed. effectId = {0}"*/, v41, 0);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
         if ( Instance )
         {
-          CrashReporter__SendReport_31464636((CrashReporter_o *)Instance, v42, 0, 0, 0);
+          CrashReporter__SendReport_31803600((CrashReporter_o *)Instance, v42, 0, 0, 0);
           v43 = BattleEffectUtility_TypeInfo;
           if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -2490,7 +2506,7 @@ LABEL_88:
             System_Collections_Generic_HashSet_int___Add(
               (System_Collections_Generic_HashSet_int__o *)Instance,
               Entity->fields.id,
-              (const MethodInfo_37265AC *)Method_System_Collections_Generic_HashSet_int__Add__);
+              (const MethodInfo_37AE4C4 *)Method_System_Collections_Generic_HashSet_int__Add__);
             return 0;
           }
         }
@@ -2505,16 +2521,16 @@ LABEL_88:
         v29 = BattleEffectUtility_TypeInfo;
       }
       v30 = System_Int32__ToString((unsigned int)v29->static_fields + 24, 0);
-      v31 = System_String__Concat_64425724((System_String_o *)StringLiteral_3106/*"Battle/Effect/"*/, v30, 0);
+      v31 = System_String__Concat_65122828((System_String_o *)StringLiteral_3111/*"Battle/Effect/"*/, v30, 0);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       Instance = (DataManager_o *)AssetManager__getAssetStorage(v31, 0);
       if ( !Instance )
         goto LABEL_88;
-      Manager__LoadNoblePhantasmEffect = AssetData__GetObject_object__51927708(
+      Manager__LoadNoblePhantasmEffect = AssetData__GetObject_object__52317288(
                                            (AssetData_o *)Instance,
                                            Entity->fields.name,
-                                           (const MethodInfo_3185A9C *)Method_AssetData_GetObject_GameObject____79057888);
+                                           (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
       goto LABEL_49;
     case 5:
       v32 = Entity->fields.name;
@@ -2546,14 +2562,14 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObjectSafe(
   Il2CppObject *v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4D334A4 & 1) == 0 )
+  if ( (byte_4E07518 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_AddComponent_AutoDestroyObjectComponent___);
-    sub_1C93AD4(&UnityEngine_GameObject_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_5874/*"Effect Default"*/);
-    byte_4D334A4 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_GameObject_AddComponent_AutoDestroyObjectComponent___);
+    sub_1CE6700(&UnityEngine_GameObject_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_5888/*"Effect Default"*/);
+    byte_4E07518 = 1;
   }
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -2562,14 +2578,14 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObjectSafe(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)EffectObject, 0, 0) )
   {
-    EffectObject = (UnityEngine_GameObject_o *)sub_1C93D20(UnityEngine_GameObject_TypeInfo);
-    UnityEngine_GameObject___ctor(EffectObject, (System_String_o *)StringLiteral_5874/*"Effect Default"*/, 0);
+    EffectObject = (UnityEngine_GameObject_o *)sub_1CE694C(UnityEngine_GameObject_TypeInfo);
+    UnityEngine_GameObject___ctor(EffectObject, (System_String_o *)StringLiteral_5888/*"Effect Default"*/, 0);
     if ( !EffectObject
       || (v10 = UnityEngine_GameObject__AddComponent_object_(
                   EffectObject,
-                  (const MethodInfo_31FBF9C *)Method_UnityEngine_GameObject_AddComponent_AutoDestroyObjectComponent___)) == 0 )
+                  (const MethodInfo_325BD54 *)Method_UnityEngine_GameObject_AddComponent_AutoDestroyObjectComponent___)) == 0 )
     {
-      sub_1C93D2C(v10, v11);
+      sub_1CE6958(v10, v11);
     }
     *(float *)&v10[2].klass = lostTime;
   }
@@ -2577,7 +2593,7 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObjectSafe(
 }
 
 
-UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject_46772236(
+UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject_47222016(
         int32_t folder,
         System_String_o *name,
         UnityEngine_GameObject_o *actorObject,
@@ -2589,20 +2605,20 @@ UnityEngine_GameObject_o *BattleEffectUtility__getEffectObject_46772236(
   __int64 v10; // x1
   bool v11; // w8
 
-  if ( (byte_4D334A7 & 1) == 0 )
+  if ( (byte_4E0751B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
-    sub_1C93AD4(&UnityEngine_GameObject_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3102/*"Battle/CommonEffects/"*/);
-    sub_1C93AD4(&StringLiteral_19053/*"effect/"*/);
-    byte_4D334A7 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+    sub_1CE6700(&UnityEngine_GameObject_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_3107/*"Battle/CommonEffects/"*/);
+    sub_1CE6700(&StringLiteral_19114/*"effect/"*/);
+    byte_4E0751B = 1;
   }
   if ( folder == 2 )
   {
-    v7 = &StringLiteral_19053/*"effect/"*/;
+    v7 = &StringLiteral_19114/*"effect/"*/;
 LABEL_8:
-    v8 = System_String__Concat_64425724((System_String_o *)*v7, name, 0);
+    v8 = System_String__Concat_65122828((System_String_o *)*v7, name, 0);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v8, 0);
     if ( result )
     {
@@ -2615,7 +2631,7 @@ LABEL_8:
   {
     if ( folder )
       return 0;
-    v7 = &StringLiteral_3102/*"Battle/CommonEffects/"*/;
+    v7 = &StringLiteral_3107/*"Battle/CommonEffects/"*/;
     goto LABEL_8;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2627,9 +2643,9 @@ LABEL_8:
     if ( !actorObject
       || (result = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  actorObject,
-                                                 (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0 )
+                                                 (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0 )
     {
-      sub_1C93D2C(result, v10);
+      sub_1CE6958(result, v10);
     }
     return BattleActorControl__getActorEffect((BattleActorControl_o *)result, name, 0);
   }
@@ -2645,34 +2661,34 @@ System_String_o *BattleEffectUtility__getNodeNameFromEffectEntity(int32_t id, co
   System_String_o *NodeName; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D334AC & 1) == 0 )
+  if ( (byte_4E07520 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EffectMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_19159/*"en_body"*/);
-    byte_4D334AC = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EffectMaster___);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_19220/*"en_body"*/);
+    byte_4E07520 = 1;
   }
-  v3 = (System_String_o *)StringLiteral_19159/*"en_body"*/;
+  v3 = (System_String_o *)StringLiteral_19220/*"en_body"*/;
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EffectMaster___);
+               (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EffectMaster___);
   if ( !Instance )
     goto LABEL_10;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           id,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__) )
     return v3;
   Instance = entity;
   if ( !entity )
 LABEL_10:
-    sub_1C93D2C(Instance, v5);
+    sub_1CE6958(Instance, v5);
   NodeName = EffectEntity__getNodeName((EffectEntity_o *)entity, 0);
   if ( !System_String__IsNullOrEmpty(NodeName, 0) )
     return NodeName;
@@ -2685,11 +2701,11 @@ System_String_o *BattleEffectUtility__get_EffectAssetName(const MethodInfo *meth
   BattleEffectUtility_c *v1; // x0
   System_String_o *v2; // x0
 
-  if ( (byte_4D33493 & 1) == 0 )
+  if ( (byte_4E07507 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3106/*"Battle/Effect/"*/);
-    byte_4D33493 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&StringLiteral_3111/*"Battle/Effect/"*/);
+    byte_4E07507 = 1;
   }
   v1 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2698,7 +2714,7 @@ System_String_o *BattleEffectUtility__get_EffectAssetName(const MethodInfo *meth
     v1 = BattleEffectUtility_TypeInfo;
   }
   v2 = System_Int32__ToString((unsigned int)v1->static_fields + 24, 0);
-  return System_String__Concat_64425724((System_String_o *)StringLiteral_3106/*"Battle/Effect/"*/, v2, 0);
+  return System_String__Concat_65122828((System_String_o *)StringLiteral_3111/*"Battle/Effect/"*/, v2, 0);
 }
 
 
@@ -2716,12 +2732,12 @@ EffectMaster_o *BattleEffectUtility__get_EffectMaster(const MethodInfo *method)
   BattleEffectUtility_c *v10; // x8
   struct BattleEffectUtility_StaticFields *static_fields; // x0
 
-  if ( (byte_4D33494 & 1) == 0 )
+  if ( (byte_4E07508 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_EffectMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    byte_4D33494 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_EffectMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    byte_4E07508 = 1;
   }
   v1 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2734,7 +2750,7 @@ EffectMaster_o *BattleEffectUtility__get_EffectMaster(const MethodInfo *method)
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EffectMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EffectMaster___);
     v10 = BattleEffectUtility_TypeInfo;
     effectMst = (EffectMaster_o *)Master_object;
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2744,7 +2760,7 @@ EffectMaster_o *BattleEffectUtility__get_EffectMaster(const MethodInfo *method)
     }
     static_fields = v10->static_fields;
     static_fields->effectMst = effectMst;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->effectMst, (int32_t)effectMst, v4, v5, v6, v7, v8, v9);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->effectMst, (int32_t)effectMst, v4, v5, v6, v7, v8, v9);
   }
   return effectMst;
 }
@@ -2763,12 +2779,12 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_NotPreloadEf
   BattleEffectUtility_c *v9; // x0
   struct BattleEffectUtility_StaticFields *static_fields; // x0
 
-  if ( (byte_4D33491 & 1) == 0 )
+  if ( (byte_4E07505 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4D33491 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1CE6700(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4E07505 = 1;
   }
   v1 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2779,10 +2795,10 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_NotPreloadEf
   notPreloadEffectIdHashSet = v1->static_fields->notPreloadEffectIdHashSet;
   if ( !notPreloadEffectIdHashSet )
   {
-    notPreloadEffectIdHashSet = (System_Collections_Generic_HashSet_int__o *)sub_1C93D20(System_Collections_Generic_HashSet_int__TypeInfo);
+    notPreloadEffectIdHashSet = (System_Collections_Generic_HashSet_int__o *)sub_1CE694C(System_Collections_Generic_HashSet_int__TypeInfo);
     System_Collections_Generic_HashSet_int____ctor(
       notPreloadEffectIdHashSet,
-      (const MethodInfo_37253A8 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+      (const MethodInfo_37AD2C0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
     v9 = BattleEffectUtility_TypeInfo;
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     {
@@ -2791,7 +2807,7 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_NotPreloadEf
     }
     static_fields = v9->static_fields;
     static_fields->notPreloadEffectIdHashSet = notPreloadEffectIdHashSet;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&static_fields->notPreloadEffectIdHashSet,
       (int32_t)notPreloadEffectIdHashSet,
       v3,
@@ -2818,12 +2834,12 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_SentEffectId
   BattleEffectUtility_c *v9; // x0
   struct BattleEffectUtility_StaticFields *static_fields; // x0
 
-  if ( (byte_4D33490 & 1) == 0 )
+  if ( (byte_4E07504 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4D33490 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1CE6700(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4E07504 = 1;
   }
   v1 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2834,10 +2850,10 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_SentEffectId
   sentEffectIdHashSet = v1->static_fields->sentEffectIdHashSet;
   if ( !sentEffectIdHashSet )
   {
-    sentEffectIdHashSet = (System_Collections_Generic_HashSet_int__o *)sub_1C93D20(System_Collections_Generic_HashSet_int__TypeInfo);
+    sentEffectIdHashSet = (System_Collections_Generic_HashSet_int__o *)sub_1CE694C(System_Collections_Generic_HashSet_int__TypeInfo);
     System_Collections_Generic_HashSet_int____ctor(
       sentEffectIdHashSet,
-      (const MethodInfo_37253A8 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+      (const MethodInfo_37AD2C0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
     v9 = BattleEffectUtility_TypeInfo;
     if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     {
@@ -2846,7 +2862,7 @@ System_Collections_Generic_HashSet_int__o *BattleEffectUtility__get_SentEffectId
     }
     static_fields = v9->static_fields;
     static_fields->sentEffectIdHashSet = sentEffectIdHashSet;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&static_fields->sentEffectIdHashSet,
       (int32_t)sentEffectIdHashSet,
       v3,
@@ -2864,22 +2880,22 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadActivateSideEffect(const Meth
 {
   Il2CppObject *object; // x19
 
-  if ( (byte_4D3349B & 1) == 0 )
+  if ( (byte_4E0750F & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_1C93AD4(&StringLiteral_19087/*"effect/ef_sideeffect01"*/);
-    byte_4D3349B = 1;
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_1CE6700(&StringLiteral_19148/*"effect/ef_sideeffect01"*/);
+    byte_4E0750F = 1;
   }
   object = UnityEngine_Resources__Load_object_(
-             (System_String_o *)StringLiteral_19087/*"effect/ef_sideeffect01"*/,
-             (const MethodInfo_324111C *)Method_UnityEngine_Resources_Load_GameObject___);
+             (System_String_o *)StringLiteral_19148/*"effect/ef_sideeffect01"*/,
+             (const MethodInfo_32A11D4 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   return (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                        object,
-                                       (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
 }
 
 
@@ -2915,26 +2931,22 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode(
   UnityEngine_Component_o *v32; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v34; // x0
-  struct UnityEngine_Vector3_StaticFields *v35; // x8
-  float v37; // s0
-  float v38; // s1
-  float v39; // s2
   AuraEffectPosOverwriteEntity_o *ent; // [xsp+38h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o v41; // 0:kr00_12.12
-  UnityEngine_Vector3_o Rotation; // 0:kr14_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Rotation; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
   z = offset.fields.z;
   y = offset.fields.y;
   x = offset.fields.x;
-  if ( (byte_4D33495 & 1) == 0 )
+  if ( (byte_4E07509 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33495 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07509 = 1;
   }
   ent = 0;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -2953,7 +2965,7 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode(
       EffectMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                      EffectMaster,
                                                                      effectId,
-                                                                     (const MethodInfo_3463274 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+                                                                     (const MethodInfo_34E925C *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
       if ( EffectMaster )
       {
         v21 = (EffectEntity_o *)EffectMaster;
@@ -2963,10 +2975,10 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode(
                                           arg,
                                           NodeName,
                                           arg->klass->vtable._4_GetParentNodeName.method);
-        if ( !byte_4D2A141 )
+        if ( !byte_4DFE0B1 )
         {
-          sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-          byte_4D2A141 = 1;
+          sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+          byte_4DFE0B1 = 1;
         }
         static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
         v24 = static_fields->upVector.fields.x;
@@ -2989,13 +3001,13 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode(
           if ( !ent )
             goto LABEL_38;
           NodeName = ent->fields.nodeName;
-          v41 = AuraEffectPosOverwriteEntity__GetOffset(ent, 0);
+          v37 = AuraEffectPosOverwriteEntity__GetOffset(ent, 0);
           EffectMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)ent;
           if ( !ent )
             goto LABEL_38;
-          x = v41.fields.x;
-          y = v41.fields.y;
-          z = v41.fields.z;
+          x = v37.fields.x;
+          y = v37.fields.y;
+          z = v37.fields.z;
           Rotation = AuraEffectPosOverwriteEntity__GetRotation(ent, 0);
           EffectMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)ent;
           if ( !ent )
@@ -3039,22 +3051,19 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode(
               {
                 UnityEngine_Transform__set_parent(v30, (UnityEngine_Transform_o *)EffectMaster, 0);
                 localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)v32, 0);
-                v37 = localPosition.fields.x;
-                v38 = localPosition.fields.y;
-                v39 = localPosition.fields.z;
 LABEL_34:
-                v44.fields.z = z + v39;
-                v44.fields.y = y + v38;
-                v44.fields.x = x + v37;
-                UnityEngine_Transform__set_localPosition(v30, v44, 0);
-                v45.fields.x = v24;
-                v45.fields.y = v25;
-                v45.fields.z = v26;
-                UnityEngine_Transform__set_eulerAngles(v30, v45, 0);
-                if ( !byte_4D2A13E )
+                v40.fields.z = z + localPosition.fields.z;
+                v40.fields.y = y + localPosition.fields.y;
+                v40.fields.x = x + localPosition.fields.x;
+                UnityEngine_Transform__set_localPosition(v30, v40, 0);
+                v41.fields.x = v24;
+                v41.fields.y = v25;
+                v41.fields.z = v26;
+                UnityEngine_Transform__set_eulerAngles(v30, v41, 0);
+                if ( !byte_4DFE0AE )
                 {
-                  sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-                  byte_4D2A13E = 1;
+                  sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+                  byte_4DFE0AE = 1;
                 }
                 UnityEngine_Transform__set_localScale(v30, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
                 return EffectObject;
@@ -3066,15 +3075,12 @@ LABEL_30:
               if ( v30 )
               {
                 UnityEngine_Transform__set_parent(v30, (UnityEngine_Transform_o *)v32, 0);
-                if ( !byte_4D2A139 )
+                if ( !byte_4DFE0A9 )
                 {
-                  sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-                  byte_4D2A139 = 1;
+                  sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+                  byte_4DFE0A9 = 1;
                 }
-                v35 = UnityEngine_Vector3_TypeInfo->static_fields;
-                v37 = v35->zeroVector.fields.x;
-                v38 = v35->zeroVector.fields.y;
-                v39 = v35->zeroVector.fields.z;
+                localPosition = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
                 goto LABEL_34;
               }
             }
@@ -3083,13 +3089,13 @@ LABEL_30:
       }
     }
 LABEL_38:
-    sub_1C93D2C(EffectMaster, v20);
+    sub_1CE6958(EffectMaster, v20);
   }
   return EffectObject;
 }
 
 
-UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode_46767368(
+UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode_47217140(
         UnityEngine_GameObject_o *targetObject,
         int32_t effectId,
         UnityEngine_GameObject_o *procObject,
@@ -3100,10 +3106,10 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode_46767368(
   const MethodInfo *v6; // x6
   BattleEffectUtility_c *v12; // x0
 
-  if ( (byte_4D33497 & 1) == 0 )
+  if ( (byte_4E0750B & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    byte_4D33497 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    byte_4E0750B = 1;
   }
   v12 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -3126,11 +3132,13 @@ UnityEngine_GameObject_o *BattleEffectUtility__loadEffectToNode_46767368(
 int32_t BattleEffectUtility__setBattleEffectId(int32_t inId, const MethodInfo *method)
 {
   BattleEffectUtility_c *v3; // x0
+  struct BattleEffectUtility_StaticFields *static_fields; // x8
+  int32_t result; // w0
 
-  if ( (byte_4D33492 & 1) == 0 )
+  if ( (byte_4E07506 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    byte_4D33492 = 1;
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    byte_4E07506 = 1;
   }
   v3 = BattleEffectUtility_TypeInfo;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
@@ -3138,8 +3146,10 @@ int32_t BattleEffectUtility__setBattleEffectId(int32_t inId, const MethodInfo *m
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
     v3 = BattleEffectUtility_TypeInfo;
   }
-  v3->static_fields->battleEffectId = inId;
-  return inId;
+  static_fields = v3->static_fields;
+  result = inId;
+  static_fields->battleEffectId = inId;
+  return result;
 }
 
 
@@ -3176,33 +3186,33 @@ void BattleEffectUtility__showSideEffect(
   z = scl.fields.z;
   y = scl.fields.y;
   x = scl.fields.x;
-  if ( (byte_4D3349A & 1) == 0 )
+  if ( (byte_4E0750E & 1) == 0 )
   {
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&BattleEffectUtility_TypeInfo);
-    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C93AD4(&Method_BattleEffectUtility___c__DisplayClass24_0__showSideEffect_b__0__);
-    sub_1C93AD4(&BattleEffectUtility___c__DisplayClass24_0_TypeInfo);
-    sub_1C93AD4(&StringLiteral_19003/*"ef_enchant"*/);
-    byte_4D3349A = 1;
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&BattleEffectUtility_TypeInfo);
+    sub_1CE6700(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1CE6700(&Method_BattleEffectUtility___c__DisplayClass24_0__showSideEffect_b__0__);
+    sub_1CE6700(&BattleEffectUtility___c__DisplayClass24_0_TypeInfo);
+    sub_1CE6700(&StringLiteral_19064/*"ef_enchant"*/);
+    byte_4E0750E = 1;
   }
-  v9 = sub_1C93D20(BattleEffectUtility___c__DisplayClass24_0_TypeInfo);
+  v9 = sub_1CE694C(BattleEffectUtility___c__DisplayClass24_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C93D2C(v10, v11);
+    sub_1CE6958(v10, v11);
   *(_QWORD *)(v9 + 24) = parent;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)parent, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)parent, v12, v13, v14, v15, v16, v17);
   *(float *)(v9 + 32) = x;
   *(float *)(v9 + 36) = y;
   *(float *)(v9 + 40) = z;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   SideEffectPath = BattleEffectUtility__GetSideEffectPath(effectId, v18);
-  v20 = StringLiteral_19003/*"ef_enchant"*/;
+  v20 = StringLiteral_19064/*"ef_enchant"*/;
   v21 = SideEffectPath;
-  *(_QWORD *)(v9 + 16) = StringLiteral_19003/*"ef_enchant"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), v20, v22, v23, v24, v25, v26, v27);
-  v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
+  *(_QWORD *)(v9 + 16) = StringLiteral_19064/*"ef_enchant"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 16), v20, v22, v23, v24, v25, v26, v27);
+  v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1CE694C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v28,
     (Il2CppObject *)v9,
@@ -3210,7 +3220,7 @@ void BattleEffectUtility__showSideEffect(
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v21, v28, 1, 0);
+  AssetManager__loadAssetStorage(v21, v28, 1, 0, 0);
 }
 
 
@@ -3237,10 +3247,10 @@ void BattleEffectUtility_BuffEffectLoadArgument___ctor(
   struct BattleServantData_o *battleSvtData; // x8
   struct ChangeModelData_o *ChangeModelData_k__BackingField; // x1
 
-  if ( (byte_4D334B0 & 1) == 0 )
+  if ( (byte_4E07524 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D334B0 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07524 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3249,10 +3259,10 @@ void BattleEffectUtility_BuffEffectLoadArgument___ctor(
   if ( v5 )
   {
     if ( !bActor )
-      sub_1C93D2C(v5, v6);
+      sub_1CE6958(v5, v6);
     BuffEffectNodeName_k__BackingField = bActor->fields._BuffEffectNodeName_k__BackingField;
     this->fields.effectNodeName = BuffEffectNodeName_k__BackingField;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields,
       (int32_t)BuffEffectNodeName_k__BackingField,
       v7,
@@ -3267,7 +3277,7 @@ void BattleEffectUtility_BuffEffectLoadArgument___ctor(
     else
       ChangeModelData_k__BackingField = 0;
     this->fields.ChangeModelData = ChangeModelData_k__BackingField;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.ChangeModelData,
       (int32_t)ChangeModelData_k__BackingField,
       v14,
@@ -3295,50 +3305,52 @@ void BattleEffectUtility_EffectLoadArgument__AddAuraPosOverwriteTarget(
 {
   struct ChangeModelData_o *ChangeModelData; // x8
   int32_t modelId; // w1
-  __int64 v7; // x0
-  System_ValueTuple_int__int__o v8; // x1
+  System_ValueTuple_int__int__o p_item; // x0
+  __int64 v8; // x0
+  System_ValueTuple_int__int__o v9; // x1
   struct System_ValueTuple_int__int__array *items; // x8
-  _QWORD *v10; // x9
+  _QWORD *v11; // x9
   __int64 size; // x10
   System_ValueTuple_int__int__o item; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D334AF & 1) == 0 )
+  if ( (byte_4E07523 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ValueTuple_int__int___Add__);
-    sub_1C93AD4(&Method_System_ValueTuple_int__int___ctor__);
-    byte_4D334AF = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_ValueTuple_int__int___Add__);
+    sub_1CE6700(&Method_System_ValueTuple_int__int___ctor__);
+    byte_4E07523 = 1;
   }
   ChangeModelData = this->fields.ChangeModelData;
   if ( ChangeModelData )
   {
     modelId = ChangeModelData->fields.modelId;
+    p_item = (System_ValueTuple_int__int__o)&item;
     item = 0;
     System_ValueTuple_int__int____ctor(
-      (System_ValueTuple_int__int__o)&item,
+      p_item,
       modelId,
       0,
-      (const MethodInfo_3BD76B8 *)Method_System_ValueTuple_int__int___ctor__);
+      (const MethodInfo_3C7F8C0 *)Method_System_ValueTuple_int__int___ctor__);
     if ( !targetList
-      || (v8 = item,
+      || (v9 = item,
           items = targetList->fields._items,
-          v10 = Method_System_Collections_Generic_List_ValueTuple_int__int___Add__,
+          v11 = Method_System_Collections_Generic_List_ValueTuple_int__int___Add__,
           ++targetList->fields._version,
           !items) )
     {
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C93D2C)(v7, v8);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1CE6958)(v8, v9);
     }
     size = targetList->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_ValueTuple_int__int____AddWithResize(
         targetList,
-        v8,
-        *(const MethodInfo_381EAD8 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+        v9,
+        *(const MethodInfo_38AB0A4 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     }
     else
     {
       targetList->fields._size = size + 1;
-      items->m_Items[size] = v8;
+      items->m_Items[size] = v9;
     }
   }
 }
@@ -3358,7 +3370,7 @@ UnityEngine_Transform_o *BattleEffectUtility_EffectLoadArgument__GetParentNode(
   if ( IsNullOrEmpty )
     return defParentTr;
   if ( !targetObj )
-    sub_1C93D2C(IsNullOrEmpty, v8);
+    sub_1CE6958(IsNullOrEmpty, v8);
   transform = UnityEngine_GameObject__get_transform(targetObj, 0);
   return TransformHelper__getNodeFromLvName(transform, this->fields.effectNodeName, -1, 0, 0);
 }
@@ -3386,15 +3398,15 @@ void BattleEffectUtility___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D334B1 & 1) == 0 )
+  if ( (byte_4E07525 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleEffectUtility___c_TypeInfo);
-    byte_4D334B1 = 1;
+    sub_1CE6700(&BattleEffectUtility___c_TypeInfo);
+    byte_4E07525 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(BattleEffectUtility___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(BattleEffectUtility___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleEffectUtility___c_TypeInfo->static_fields->__9 = (struct BattleEffectUtility___c_o *)v1;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)BattleEffectUtility___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -3417,17 +3429,17 @@ System_Collections_Generic_IEnumerable_ParticleSystem__o *BattleEffectUtility___
         UnityEngine_GameObject_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_4D334B2 & 1) == 0 )
+  if ( (byte_4E07526 & 1) == 0 )
   {
-    this = (BattleEffectUtility___c_o *)sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem____79129960);
-    byte_4D334B2 = 1;
+    this = (BattleEffectUtility___c_o *)sub_1CE6700(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem____79977488);
+    byte_4E07526 = 1;
   }
   if ( !x )
-    sub_1C93D2C(this, x);
+    sub_1CE6958(this, x);
   return (System_Collections_Generic_IEnumerable_ParticleSystem__o *)UnityEngine_GameObject__GetComponentsInChildren_object_(
                                                                        x,
                                                                        1,
-                                                                       (const MethodInfo_31FCD24 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem____79129960);
+                                                                       (const MethodInfo_325CADC *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem____79977488);
 }
 
 
@@ -3445,42 +3457,42 @@ void BattleEffectUtility___c__DisplayClass24_0___showSideEffect_b__0(
         const MethodInfo *method)
 {
   BattleEffectUtility___c__DisplayClass24_0_o *v4; // x19
-  Il2CppObject *Object_object__51927708; // x20
+  Il2CppObject *Object_object__52317288; // x20
   BattleEffectUtility___c__DisplayClass24_0_o *v6; // x20
 
   v4 = this;
-  if ( (byte_4D334B3 & 1) == 0 )
+  if ( (byte_4E07527 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_AssetData_GetObject_GameObject____79057888);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (BattleEffectUtility___c__DisplayClass24_0_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D334B3 = 1;
+    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (BattleEffectUtility___c__DisplayClass24_0_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E07527 = 1;
   }
   if ( !data )
     goto LABEL_11;
-  Object_object__51927708 = AssetData__GetObject_object__51927708(
+  Object_object__52317288 = AssetData__GetObject_object__52317288(
                               data,
                               v4->fields.name,
-                              (const MethodInfo_3185A9C *)Method_AssetData_GetObject_GameObject____79057888);
+                              (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (BattleEffectUtility___c__DisplayClass24_0_o *)UnityEngine_Object__Instantiate_object_(
-                                                          Object_object__51927708,
-                                                          (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                          Object_object__52317288,
+                                                          (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this
     || (this = (BattleEffectUtility___c__DisplayClass24_0_o *)UnityEngine_GameObject__get_transform(
                                                                 (UnityEngine_GameObject_o *)this,
                                                                 0)) == 0 )
   {
 LABEL_11:
-    sub_1C93D2C(this, data);
+    sub_1CE6958(this, data);
   }
   v6 = this;
   UnityEngine_Transform__SetParent((UnityEngine_Transform_o *)this, v4->fields.parent, 0);
-  if ( !byte_4D2A139 )
+  if ( !byte_4DFE0A9 )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A139 = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0A9 = 1;
   }
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)v6,

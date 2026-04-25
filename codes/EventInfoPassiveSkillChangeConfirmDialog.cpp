@@ -2,10 +2,10 @@ void EventInfoPassiveSkillChangeConfirmDialog___ctor(
         EventInfoPassiveSkillChangeConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D31E01 & 1) == 0 )
+  if ( (byte_4E05E38 & 1) == 0 )
   {
-    sub_1C93AD4(&BaseDialog_TypeInfo);
-    byte_4D31E01 = 1;
+    sub_1CE6700(&BaseDialog_TypeInfo);
+    byte_4E05E38 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -42,28 +42,28 @@ System_String_o *EventInfoPassiveSkillChangeConfirmDialog__GetServantName(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4D31DFF & 1) == 0 )
+  if ( (byte_4E05E36 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C93AD4(&string_TypeInfo);
-    byte_4D31DFF = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1CE6700(&string_TypeInfo);
+    byte_4E05E36 = 1;
   }
   entity = 0;
   if ( !servantEntity )
     return string_TypeInfo->static_fields->Empty;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2A55B )
+  if ( !byte_4DFE4CA )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2A55B = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFE4CA = 1;
   }
   v5 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -78,7 +78,7 @@ System_String_o *EventInfoPassiveSkillChangeConfirmDialog__GetServantName(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v18.fields.currentCryptoKey = v7;
   *(_QWORD *)&v18.fields.fakeValue = v6;
-  ServantLimitCountSealAfter = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v18, 0);
+  ServantLimitCountSealAfter = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v18, 0);
   if ( !Master_object )
     goto LABEL_30;
   if ( UserServantCollectionMaster__TryGetEntity(
@@ -90,7 +90,7 @@ System_String_o *EventInfoPassiveSkillChangeConfirmDialog__GetServantName(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v11 = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    v11 = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     v13 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
     v12 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
     v14 = (ServantLimitImageMaster_o *)v11;
@@ -98,7 +98,7 @@ System_String_o *EventInfoPassiveSkillChangeConfirmDialog__GetServantName(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v19.fields.currentCryptoKey = v13;
     *(_QWORD *)&v19.fields.fakeValue = v12;
-    ServantLimitCountSealAfter = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v19, 0);
+    ServantLimitCountSealAfter = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v19, 0);
     if ( entity )
     {
       if ( v14 )
@@ -114,15 +114,15 @@ System_String_o *EventInfoPassiveSkillChangeConfirmDialog__GetServantName(
             v15 = -1;
           else
             v15 = ServantLimitCountSealAfter;
-          return ServantEntity__getName(servantEntity, v15, -1, 1, 0);
+          return ServantEntity__getName(servantEntity, v15, -1, 1, 0, 0);
         }
       }
     }
 LABEL_30:
-    sub_1C93D2C(ServantLimitCountSealAfter, v10);
+    sub_1CE6958(ServantLimitCountSealAfter, v10);
   }
   v15 = -1;
-  return ServantEntity__getName(servantEntity, v15, -1, 1, 0);
+  return ServantEntity__getName(servantEntity, v15, -1, 1, 0, 0);
 }
 
 
@@ -134,21 +134,21 @@ void EventInfoPassiveSkillChangeConfirmDialog__OnClose(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4D31DFE & 1) == 0 )
+  if ( (byte_4E05E35 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__);
-    sub_1C93AD4(&Method_EventInfoPassiveSkillChangeConfirmDialog__OnClose_b__9_0__);
-    byte_4D31DFE = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__);
+    sub_1CE6700(&Method_EventInfoPassiveSkillChangeConfirmDialog__OnClose_b__9_0__);
+    byte_4E05E35 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_EventInfoPassiveSkillChangeConfirmDialog_OnClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoPassiveSkillChangeConfirmDialog__OnClose_b__9_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -189,15 +189,15 @@ void EventInfoPassiveSkillChangeConfirmDialog__Open(
   const MethodInfo *v34; // x3
   __int64 v35; // x0
 
-  if ( (byte_4D31DFD & 1) == 0 )
+  if ( (byte_4E05E34 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&object___TypeInfo);
-    sub_1C93AD4(&StringLiteral_5645/*"EVENT_INFO_PASSIVE_SKILL_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/);
-    byte_4D31DFD = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&object___TypeInfo);
+    sub_1CE6700(&StringLiteral_5659/*"EVENT_INFO_PASSIVE_SKILL_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/);
+    byte_4E05E34 = 1;
   }
   this->fields.onClose = inOnClose;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClose,
     (int32_t)inOnClose,
     (int32_t)beforeSkillEntity,
@@ -211,8 +211,8 @@ void EventInfoPassiveSkillChangeConfirmDialog__Open(
   descriptionLabel = this->fields.descriptionLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5645/*"EVENT_INFO_PASSIVE_SKILL_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, 0);
-  ClassName = (System_String_o *)sub_1C93B7C(object___TypeInfo, 2);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_INFO_PASSIVE_SKILL_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, 0);
+  ClassName = (System_String_o *)sub_1CE67A8(object___TypeInfo, 2);
   v23 = (System_Object_array *)ClassName;
   if ( !servantEntity )
   {
@@ -222,7 +222,7 @@ void EventInfoPassiveSkillChangeConfirmDialog__Open(
       goto LABEL_12;
     }
 LABEL_18:
-    sub_1C93D2C(ClassName, v16);
+    sub_1CE6958(ClassName, v16);
   }
   ClassName = ServantEntity__getClassName(servantEntity, 0);
   if ( !v23 )
@@ -230,33 +230,33 @@ LABEL_18:
   v24 = (Il2CppObject *)ClassName;
   if ( ClassName )
   {
-    ClassName = (System_String_o *)sub_1C93C10(ClassName, v23->obj.klass->_1.element_class);
+    ClassName = (System_String_o *)sub_1CE683C(ClassName, v23->obj.klass->_1.element_class);
     if ( !ClassName )
     {
 LABEL_19:
-      v35 = sub_1C93D50(ClassName);
-      sub_1C93BFC(v35, 0);
+      v35 = sub_1CE697C(ClassName);
+      sub_1CE6828(v35, 0);
     }
   }
 LABEL_12:
   if ( !LODWORD(v23->max_length) )
     goto LABEL_17;
   v23->m_Items[0] = v24;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v23->m_Items, (int32_t)v24, v17, v18, v19, v20, v21, v22);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v23->m_Items, (int32_t)v24, v17, v18, v19, v20, v21, v22);
   ClassName = EventInfoPassiveSkillChangeConfirmDialog__GetServantName(v25, servantEntity, v26);
   v33 = (Il2CppObject *)ClassName;
   if ( ClassName )
   {
-    ClassName = (System_String_o *)sub_1C93C10(ClassName, v23->obj.klass->_1.element_class);
+    ClassName = (System_String_o *)sub_1CE683C(ClassName, v23->obj.klass->_1.element_class);
     if ( !ClassName )
       goto LABEL_19;
   }
   if ( LODWORD(v23->max_length) <= 1 )
 LABEL_17:
-    sub_1C93D34(ClassName);
+    sub_1CE6960(ClassName);
   v23->m_Items[1] = v33;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v23->m_Items[1], (int32_t)v33, v27, v28, v29, v30, v31, v32);
-  UILabelHelper__SetTextSafely_44847596(descriptionLabel, v14, v23, 0);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v23->m_Items[1], (int32_t)v33, v27, v28, v29, v30, v31, v32);
+  UILabelHelper__SetTextSafely_45280216(descriptionLabel, v14, v23, 0);
   EventInfoPassiveSkillChangeConfirmDialog__SetupSkill(this, beforeSkillEntity, afterSkillEntity, v34);
 }
 
@@ -274,10 +274,10 @@ void EventInfoPassiveSkillChangeConfirmDialog__SetupSkill(
   UnityEngine_Object_o *afterSkill; // x21
   const MethodInfo *v12; // x4
 
-  if ( (byte_4D31E00 & 1) == 0 )
+  if ( (byte_4E05E37 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D31E00 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E05E37 = 1;
   }
   beforeSkill = (UnityEngine_Object_o *)this->fields.beforeSkill;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -301,7 +301,7 @@ void EventInfoPassiveSkillChangeConfirmDialog__SetupSkill(
       return;
     }
 LABEL_14:
-    sub_1C93D2C(v10, v8);
+    sub_1CE6958(v10, v8);
   }
 }
 
@@ -312,15 +312,15 @@ void EventInfoPassiveSkillChangeConfirmDialog___OnClose_b__9_0(
 {
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4D31E02 & 1) == 0 )
+  if ( (byte_4E05E39 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D31E02 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E05E39 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72119908(gameObject, 0);
+  UnityEngine_Object__Destroy_72918540(gameObject, 0);
   ActionExtensions__Call(this->fields.onClose, 0);
 }
 

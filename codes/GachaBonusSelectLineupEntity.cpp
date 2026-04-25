@@ -1,13 +1,13 @@
 void GachaBonusSelectLineupEntity___ctor(GachaBonusSelectLineupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30D7E & 1) == 0 )
+  if ( (byte_4E04DBF & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D30D7E = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04DBF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *GachaBonusSelectLineupEntity__CreatePK(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_4D30D7C & 1) == 0 )
+  if ( (byte_4E04DBD & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4D30D7C = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4E04DBD = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            type,
            giftId,
-           (const MethodInfo_31A3054 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_32029C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,10 +45,10 @@ int32_t GachaBonusSelectLineupEntity__GetSummonCategoryId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_4D30D7D & 1) == 0 )
+  if ( (byte_4E04DBE & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_24129/*"summonCategoryId"*/);
-    byte_4D30D7D = 1;
+    sub_1CE6700(&StringLiteral_24212/*"summonCategoryId"*/);
+    byte_4E04DBE = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24129/*"summonCategoryId"*/, defId, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24212/*"summonCategoryId"*/, defId, 0);
 }

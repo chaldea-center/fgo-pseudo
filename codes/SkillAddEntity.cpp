@@ -1,27 +1,27 @@
 void SkillAddEntity___ctor(SkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D3154B & 1) == 0 )
+  if ( (byte_4E055A5 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D3154B = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E055A5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *SkillAddEntity__CreatePK(int32_t skillId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4D31549 & 1) == 0 )
+  if ( (byte_4E055A3 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D31549 = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E055A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            skillId,
            priority,
-           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -38,19 +38,19 @@ bool SkillAddEntity__IsOpen(SkillAddEntity_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4D3154A & 1) == 0 )
+  if ( (byte_4E055A4 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D3154A = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E055A4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
+                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
   {
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0, 0, 0);
 }

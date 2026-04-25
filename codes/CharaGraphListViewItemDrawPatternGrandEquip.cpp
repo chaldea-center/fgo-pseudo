@@ -13,7 +13,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupUseSprite(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     (UnityEngine_Component_o *)itemDraw->fields.useSprite,
@@ -53,16 +53,16 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
 
   v5 = itemDraw;
   v6 = (CharaGraphListViewItemDrawPatternDefault_o *)this;
-  if ( (byte_4D2B5EF & 1) == 0 )
+  if ( (byte_4DFF613 & 1) == 0 )
   {
-    sub_1C93AD4(&BalanceConfig_TypeInfo);
-    sub_1C93AD4(&CharaGraphGrandEquipListViewItem_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_43/*"\n"*/);
-    sub_1C93AD4(&StringLiteral_7044/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1C93AD4(&StringLiteral_5516/*"EQUIP_GRAPH_USE"*/);
-    byte_4D2B5EF = 1;
+    sub_1CE6700(&BalanceConfig_TypeInfo);
+    sub_1CE6700(&CharaGraphGrandEquipListViewItem_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_43/*"\n"*/);
+    sub_1CE6700(&StringLiteral_7060/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1CE6700(&StringLiteral_5530/*"EQUIP_GRAPH_USE"*/);
+    byte_4DFF613 = 1;
   }
   v26 = 0;
   if ( !item )
@@ -128,7 +128,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
         if ( v12 - 4 >= (int)v14 )
           break;
         if ( v12 - 4 >= v14 )
-          sub_1C93D34(this);
+          sub_1CE6960(this);
         if ( *(_QWORD *)(v13 + 8 * v12) == v9[1].fields.sortValueLast )
         {
           warningLabel3 = v5->fields.warningLabel3;
@@ -136,11 +136,11 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
           {
             v26 = v12 - 3;
             v16 = System_Int32__ToString((int32_t)&v26, 0);
-            v17 = System_String__Concat_64425724((System_String_o *)StringLiteral_7044/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
+            v17 = System_String__Concat_65122828((System_String_o *)StringLiteral_7060/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v18 = LocalizationManager__Get(v17, 0);
-            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_64425724(
+            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_65122828(
                                                                       (System_String_o *)StringLiteral_43/*"\n"*/,
                                                                       v18,
                                                                       0);
@@ -173,7 +173,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
           this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)BalanceConfig_TypeInfo;
         }
-        if ( mWidth > *(_DWORD *)(*((_QWORD *)this + 23) + 1308LL) )
+        if ( mWidth > *((_DWORD *)this[11].monitor + 325) )
         {
           v21 = v5->fields.warningLabel3;
           if ( v21 )
@@ -209,7 +209,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
             }
           }
 LABEL_36:
-          sub_1C93D2C(this, itemDraw);
+          sub_1CE6958(this, itemDraw);
         }
         this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)v5->fields.warningLabel3;
         if ( !this )
@@ -229,8 +229,8 @@ LABEL_53:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5516/*"EQUIP_GRAPH_USE"*/, 0);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_64425724(
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5530/*"EQUIP_GRAPH_USE"*/, 0);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_65122828(
                                                               v24,
                                                               (System_String_o *)StringLiteral_43/*"\n"*/,
                                                               0);

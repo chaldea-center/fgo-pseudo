@@ -1,14 +1,14 @@
 void TreasureDvcMaster___ctor(TreasureDvcMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D31710 & 1) == 0 )
+  if ( (byte_4E0576C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
-    byte_4D31710 = 1;
+    sub_1CE6700(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
+    byte_4E0576C = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     6,
-    (const MethodInfo_3460CFC *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
+    (const MethodInfo_34E6CE4 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
 }
 
 
@@ -23,20 +23,20 @@ TreasureDvcEntity_o *TreasureDvcMaster__GetEntityCheckServantOverwrite(
   int32_t ServantOverwriteTreasureDeviceId; // w0
   int32_t v10; // w1
 
-  if ( (byte_4D31711 & 1) == 0 )
+  if ( (byte_4E0576D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_ServantOverwriteMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D31711 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_ServantOverwriteMaster___);
+    sub_1CE6700(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E0576D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_ServantOverwriteMaster___)) == 0 )
+                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ServantOverwriteMaster___)) == 0 )
   {
-    sub_1C93D2C(Instance, v8);
+    sub_1CE6958(Instance, v8);
   }
   ServantOverwriteTreasureDeviceId = ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
                                        (ServantOverwriteMaster_o *)Instance,
@@ -50,5 +50,5 @@ TreasureDvcEntity_o *TreasureDvcMaster__GetEntityCheckServantOverwrite(
   return (TreasureDvcEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   v10,
-                                  (const MethodInfo_3463274 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                  (const MethodInfo_34E925C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
 }

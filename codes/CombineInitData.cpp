@@ -8,18 +8,18 @@ void CombineInitData___ctor(CombineInitData_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D3494F & 1) == 0 )
+  if ( (byte_4E089D4 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4D3494F = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4E089D4 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.eventIdList = v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.eventIdList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.eventIdList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -38,22 +38,22 @@ EventCampaignEntity_o *CombineInitData__getCombineEventData(
   _QWORD *v12; // x9
   __int64 MasterName_k__BackingField_low; // x10
 
-  if ( (byte_4D3494E & 1) == 0 )
+  if ( (byte_4E089D3 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_EventCampaignMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Add__);
-    byte_4D3494E = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_EventCampaignMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Add__);
+    byte_4E089D3 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EventCampaignMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventCampaignMaster___);
   if ( !Master_object )
     goto LABEL_20;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__object___getEntitys(
                                                                   Master_object,
-                                                                  (const MethodInfo_3467458 *)Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
+                                                                  (const MethodInfo_34ED440 *)Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
   if ( !Master_object )
     return 0;
   MasterName_k__BackingField = (int)Master_object->fields._MasterName_k__BackingField;
@@ -63,7 +63,7 @@ EventCampaignEntity_o *CombineInitData__getCombineEventData(
   while ( 1 )
   {
     if ( (unsigned int)v8 >= MasterName_k__BackingField )
-      sub_1C93D34(Master_object);
+      sub_1CE6960(Master_object);
     v9 = (EventCampaignEntity_o *)*((_QWORD *)&Master_object->fields.revision + v8);
     if ( !v9 )
       goto LABEL_20;
@@ -80,7 +80,7 @@ EventCampaignEntity_o *CombineInitData__getCombineEventData(
         !v11) )
   {
 LABEL_20:
-    sub_1C93D2C(Master_object, v6);
+    sub_1CE6958(Master_object, v6);
   }
   MasterName_k__BackingField_low = SLODWORD(Master_object->fields._MasterName_k__BackingField);
   if ( (unsigned int)MasterName_k__BackingField_low >= *(_DWORD *)(v11 + 24) )
@@ -88,7 +88,7 @@ LABEL_20:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)Master_object,
       eventId,
-      *(const MethodInfo_385C978 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_38E8F44 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
@@ -121,48 +121,48 @@ void CombineInitData__getEventData(CombineInitData_o *this, const MethodInfo *me
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4D3494D & 1) == 0 )
+  if ( (byte_4E089D2 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventEntity__AddRange__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventEntity__ToArray__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventEntity___ctor___79001264);
-    sub_1C93AD4(&System_Collections_Generic_List_EventEntity__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D3494D = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventEntity__ToArray__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventEntity___ctor___79847736);
+    sub_1CE6700(&System_Collections_Generic_List_EventEntity__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E089D2 = 1;
   }
-  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (EventEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventMaster___)) == 0
+                                          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventMaster___)) == 0
     || (v5 = (EventMaster_o *)Instance,
         EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 5, 1, 0, 0),
         Instance = EventMaster__GetEnableEntityList(v5, 13, 1, 0, 0),
         !EnableEntityList)
     || (v7 = Instance) == 0
-    || (v8 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventEntity__TypeInfo),
-        System_Collections_Generic_List_object____ctor_59216344(
+    || (v8 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventEntity__TypeInfo),
+        System_Collections_Generic_List_object____ctor_59791268(
           v8,
           LODWORD(v7->max_length) + LODWORD(EnableEntityList->max_length),
-          (const MethodInfo_38791D8 *)Method_System_Collections_Generic_List_EventEntity___ctor___79001264),
+          (const MethodInfo_39057A4 *)Method_System_Collections_Generic_List_EventEntity___ctor___79847736),
         !v8) )
   {
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   }
   System_Collections_Generic_List_object___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)EnableEntityList,
-    (const MethodInfo_3879BA8 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    (const MethodInfo_3906174 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
   System_Collections_Generic_List_object___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)v7,
-    (const MethodInfo_3879BA8 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    (const MethodInfo_3906174 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
   v9 = (struct EventEntity_array *)System_Collections_Generic_List_object___ToArray(
                                      v8,
-                                     (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
+                                     (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
   this->fields.combineEventList = v9;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.combineEventList, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.combineEventList, (int32_t)v9, v10, v11, v12, v13, v14, v15);
 }
 
 

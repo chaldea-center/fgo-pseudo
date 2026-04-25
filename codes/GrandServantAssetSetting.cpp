@@ -17,21 +17,21 @@ System_String_o *GrandServantAssetSetting__GetImageName(
   Il2CppObject *object; // x0
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4D2B5F3 & 1) == 0 )
+  if ( (byte_4DFF617 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
-    sub_1C93AD4(&System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
-    sub_1C93AD4(&Method_GrandServantAssetSetting___c__DisplayClass8_0__GetImageName_b__0__);
-    sub_1C93AD4(&GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2B5F3 = 1;
+    sub_1CE6700(&Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
+    sub_1CE6700(&System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
+    sub_1CE6700(&Method_GrandServantAssetSetting___c__DisplayClass8_0__GetImageName_b__0__);
+    sub_1CE6700(&GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFF617 = 1;
   }
-  v6 = sub_1C93D20(GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
+  v6 = sub_1CE694C(GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
-    sub_1C93D2C(v7, v8);
+    sub_1CE6958(v7, v8);
   *(_DWORD *)(v6 + 16) = frameType;
-  v9 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v6,
@@ -40,7 +40,7 @@ System_String_o *GrandServantAssetSetting__GetImageName(
   object = BasicHelper__Find_object_(
              (System_Object_array *)list,
              (System_Func_T__bool__o *)v9,
-             (const MethodInfo_318E744 *)Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
+             (const MethodInfo_31EE0A8 *)Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
   p_monitor = (System_String_o **)&object[1].monitor;
   if ( !object )
     p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
@@ -52,22 +52,22 @@ GrandServantAssetSetting_o *GrandServantAssetSetting__GetInstance(const MethodIn
 {
   GrandServantAssetSetting_o *result; // x0
 
-  if ( (byte_4D2B5F0 & 1) == 0 )
+  if ( (byte_4DFF614 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_AssetData_GetObject_GrandServantAssetSetting___);
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_7197/*"GrandServantList"*/);
-    sub_1C93AD4(&StringLiteral_7195/*"GrandServantAssetSetting"*/);
-    byte_4D2B5F0 = 1;
+    sub_1CE6700(&Method_AssetData_GetObject_GrandServantAssetSetting___);
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_7213/*"GrandServantList"*/);
+    sub_1CE6700(&StringLiteral_7211/*"GrandServantAssetSetting"*/);
+    byte_4DFF614 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  result = (GrandServantAssetSetting_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_7197/*"GrandServantList"*/, 0);
+  result = (GrandServantAssetSetting_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_7213/*"GrandServantList"*/, 0);
   if ( result )
-    return (GrandServantAssetSetting_o *)AssetData__GetObject_object__51927708(
+    return (GrandServantAssetSetting_o *)AssetData__GetObject_object__52317288(
                                            (AssetData_o *)result,
-                                           (System_String_o *)StringLiteral_7195/*"GrandServantAssetSetting"*/,
-                                           (const MethodInfo_3185A9C *)Method_AssetData_GetObject_GrandServantAssetSetting___);
+                                           (System_String_o *)StringLiteral_7211/*"GrandServantAssetSetting"*/,
+                                           (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GrandServantAssetSetting___);
   return result;
 }
 
@@ -87,11 +87,11 @@ void GrandServantAssetSetting__SetGrandServantListBackgroundSprite(
   System_String_o *v14; // x20
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D2B5F1 & 1) == 0 )
+  if ( (byte_4DFF615 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    byte_4D2B5F1 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    byte_4DFF615 = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -133,11 +133,11 @@ void GrandServantAssetSetting__SetGrandServantListFrameSprite(
   System_String_o *v14; // x20
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D2B5F2 & 1) == 0 )
+  if ( (byte_4DFF616 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    byte_4D2B5F2 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    byte_4DFF616 = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -202,6 +202,6 @@ bool GrandServantAssetSetting___c__DisplayClass8_0___GetImageName_b__0(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return data->fields.frameType == this->fields.frameType;
 }

@@ -22,10 +22,10 @@ void BaseAiActArgument___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields, (int32_t)aiActEnt, v9, v10, v11, v12, v13, v14);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->fields, (int32_t)aiActEnt, v9, v10, v11, v12, v13, v14);
   v8->fields._AiEnt_k__BackingField = aiEnt;
   v8 = (BaseAiActArgument_o *)((char *)v8 + 24);
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v8, (int32_t)aiEnt, v15, v16, v17, v18, v19, v20);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v8, (int32_t)aiEnt, v15, v16, v17, v18, v19, v20);
   LODWORD(v8->monitor) = fromProcState;
 }
 
@@ -58,7 +58,7 @@ BattleLogicTask_o *BaseAiActArgument__MakeNoMotionTask(
                                         v5->klass->vtable._4_get_UniqueId.method),
         !task) )
   {
-    sub_1C93D2C(this, task);
+    sub_1CE6958(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, const MethodInfo *))task->klass->vtable._12_Init.methodPtr)(
@@ -80,18 +80,18 @@ BattleLogicTask_o *BaseAiActArgument__MakeTask(
   BaseAiActBattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4D33AB6 & 1) == 0 )
+  if ( (byte_4E07B33 & 1) == 0 )
   {
-    sub_1C93AD4(&BaseAiActBattleLogicTask_TypeInfo);
-    byte_4D33AB6 = 1;
+    sub_1CE6700(&BaseAiActBattleLogicTask_TypeInfo);
+    byte_4E07B33 = 1;
   }
-  v7 = (BaseAiActBattleLogicTask_o *)sub_1C93D20(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BaseAiActBattleLogicTask_o *)sub_1CE694C(BaseAiActBattleLogicTask_TypeInfo);
   BaseAiActBattleLogicTask___ctor(v7, actType, 0);
-  return BaseAiActArgument__MakeTask_47488232(this, v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_47943544(this, v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *BaseAiActArgument__MakeTask_47488232(
+BattleLogicTask_o *BaseAiActArgument__MakeTask_47943544(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -110,7 +110,7 @@ BattleLogicTask_o *BaseAiActArgument__MakeTask_47488232(
                                         v5->klass->vtable._4_get_UniqueId.method),
         !task) )
   {
-    sub_1C93D2C(this, task);
+    sub_1CE6958(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, const MethodInfo *))task->klass->vtable._12_Init.methodPtr)(
@@ -159,7 +159,7 @@ void BaseAiActArgument__set_AiActEnt(BaseAiActArgument_o *this, AiActEntity_o *v
   System_String_o *v7; // x7
 
   this->fields._AiActEnt_k__BackingField = value;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -172,7 +172,7 @@ void BaseAiActArgument__set_AiEnt(BaseAiActArgument_o *this, AiBaseEntity_o *val
   System_String_o *v7; // x7
 
   this->fields._AiEnt_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._AiEnt_k__BackingField,
     (int32_t)value,
     (int32_t)method,

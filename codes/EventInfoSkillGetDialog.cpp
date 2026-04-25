@@ -23,28 +23,28 @@ void EventInfoSkillGetDialog___cctor(const MethodInfo *method)
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4D32811 & 1) == 0 )
+  if ( (byte_4E06729 & 1) == 0 )
   {
-    sub_1C93AD4(&EventInfoSkillGetDialog_TypeInfo);
-    sub_1C93AD4(&StringLiteral_5649/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/);
-    sub_1C93AD4(&StringLiteral_5650/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/);
-    sub_1C93AD4(&StringLiteral_5648/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/);
-    byte_4D32811 = 1;
+    sub_1CE6700(&EventInfoSkillGetDialog_TypeInfo);
+    sub_1CE6700(&StringLiteral_5663/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/);
+    sub_1CE6700(&StringLiteral_5664/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/);
+    sub_1CE6700(&StringLiteral_5662/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/);
+    byte_4E06729 = 1;
   }
-  EventInfoSkillGetDialog_TypeInfo->static_fields->MessageLocalizationKey = (struct System_String_o *)StringLiteral_5650/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/;
-  sub_1C93A78(
+  EventInfoSkillGetDialog_TypeInfo->static_fields->MessageLocalizationKey = (struct System_String_o *)StringLiteral_5664/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/;
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)EventInfoSkillGetDialog_TypeInfo->static_fields,
-    StringLiteral_5650/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/,
+    StringLiteral_5664/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_5648/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/;
+  v7 = StringLiteral_5662/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/;
   static_fields = EventInfoSkillGetDialog_TypeInfo->static_fields;
-  static_fields->MessageTitleLocalizationKeyDefault = (struct System_String_o *)StringLiteral_5648/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/;
-  sub_1C93A78(
+  static_fields->MessageTitleLocalizationKeyDefault = (struct System_String_o *)StringLiteral_5662/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/;
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&static_fields->MessageTitleLocalizationKeyDefault,
     v7,
     v9,
@@ -53,19 +53,19 @@ void EventInfoSkillGetDialog___cctor(const MethodInfo *method)
     v12,
     v13,
     v14);
-  v15 = StringLiteral_5649/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/;
+  v15 = StringLiteral_5663/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/;
   v16 = EventInfoSkillGetDialog_TypeInfo->static_fields;
-  v16->MessageTitleLocalizationKey = (struct System_String_o *)StringLiteral_5649/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v16->MessageTitleLocalizationKey, v15, v17, v18, v19, v20, v21, v22);
+  v16->MessageTitleLocalizationKey = (struct System_String_o *)StringLiteral_5663/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE_{0}"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v16->MessageTitleLocalizationKey, v15, v17, v18, v19, v20, v21, v22);
 }
 
 
 void EventInfoSkillGetDialog___ctor(EventInfoSkillGetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D32810 & 1) == 0 )
+  if ( (byte_4E06728 & 1) == 0 )
   {
-    sub_1C93AD4(&BaseDialog_TypeInfo);
-    byte_4D32810 = 1;
+    sub_1CE6700(&BaseDialog_TypeInfo);
+    byte_4E06728 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -91,22 +91,22 @@ void EventInfoSkillGetDialog__OnClickCloseButton(EventInfoSkillGetDialog_o *this
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4D3280D & 1) == 0 )
+  if ( (byte_4E06725 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoSkillGetDialog_OnClickCloseButton__);
-    sub_1C93AD4(&Method_EventInfoSkillGetDialog__OnClickCloseButton_b__21_0__);
-    byte_4D3280D = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillGetDialog_OnClickCloseButton__);
+    sub_1CE6700(&Method_EventInfoSkillGetDialog__OnClickCloseButton_b__22_0__);
+    byte_4E06725 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventInfoSkillGetDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillGetDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_EventInfoSkillGetDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_EventInfoSkillGetDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
-    System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoSkillGetDialog__OnClickCloseButton_b__21_0__, 0);
+    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoSkillGetDialog__OnClickCloseButton_b__22_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
 }
@@ -159,28 +159,28 @@ void EventInfoSkillGetDialog__Open(
   int v46; // [xsp+8h] [xbp-38h] BYREF
   int v47; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D3280C & 1) == 0 )
+  if ( (byte_4E06723 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoSkillGetDialog___c__DisplayClass20_0__Open_b__0__);
-    sub_1C93AD4(&EventInfoSkillGetDialog___c__DisplayClass20_0_TypeInfo);
-    byte_4D3280C = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillGetDialog___c__DisplayClass20_0__Open_b__0__);
+    sub_1CE6700(&EventInfoSkillGetDialog___c__DisplayClass20_0_TypeInfo);
+    byte_4E06723 = 1;
   }
-  v9 = sub_1C93D20(EventInfoSkillGetDialog___c__DisplayClass20_0_TypeInfo);
+  v9 = sub_1CE694C(EventInfoSkillGetDialog___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_13;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_DWORD *)(v9 + 24) = eventId;
   *(_QWORD *)(v9 + 48) = imagePartsGroupEntity;
   v18 = v9 + 48;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)imagePartsGroupEntity, v19, v20, v21, v22, v23, v24);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)imagePartsGroupEntity, v19, v20, v21, v22, v23, v24);
   *(_QWORD *)(v9 + 56) = closeAction;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)closeAction, v25, v26, v27, v28, v29, v30);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)closeAction, v25, v26, v27, v28, v29, v30);
   v31 = *(ImagePartsGroupEntity_o **)(v9 + 48);
   if ( v31 )
   {
@@ -197,11 +197,11 @@ void EventInfoSkillGetDialog__Open(
         v34 = (Il2CppObject *)SkillId;
         v46 = *(_DWORD *)(*(_QWORD *)v18 + 28LL);
         v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
-        v36 = System_String__Format_64467032(imagePartsIconSpriteNameFormat, v34, v35, 0);
+        v36 = System_String__Format_65164136(imagePartsIconSpriteNameFormat, v34, v35, 0);
         *(_QWORD *)(v9 + 32) = v36;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v36, v37, v38, v39, v40, v41, v42);
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v36, v37, v38, v39, v40, v41, v42);
         v43 = *(_DWORD *)(v9 + 24);
-        v44 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+        v44 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
         System_Action___ctor(
           v44,
           (Il2CppObject *)v9,
@@ -209,18 +209,18 @@ void EventInfoSkillGetDialog__Open(
           0);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__LoadEventUI_41320056(v43, v44, 1, 0);
+        AtlasManager__LoadEventUI_41749456(v43, v44, 1, 0);
         return;
       }
     }
 LABEL_13:
-    sub_1C93D2C(SkillId, v11);
+    sub_1CE6958(SkillId, v11);
   }
   ActionExtensions__Call(*(System_Action_o **)(v9 + 56), 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72119908(gameObject, 0);
+  UnityEngine_Object__Destroy_72918540(gameObject, 0);
 }
 
 
@@ -236,19 +236,19 @@ void EventInfoSkillGetDialog__SetBasePanel(EventInfoSkillGetDialog_o *this, cons
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D3280F & 1) == 0 )
+  if ( (byte_4E06727 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4D3280F = 1;
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4E06727 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_1C93D2C(transform, v4);
+    sub_1CE6958(transform, v4);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.basePanel,
     (int32_t)Component_object,
     v6,
@@ -260,7 +260,59 @@ void EventInfoSkillGetDialog__SetBasePanel(EventInfoSkillGetDialog_o *this, cons
 }
 
 
-void EventInfoSkillGetDialog___OnClickCloseButton_b__21_0(EventInfoSkillGetDialog_o *this, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+Cysharp_Threading_Tasks_UniTask_o EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync(
+        EventInfoSkillGetDialog_o *this,
+        System_Threading_CancellationToken_o cancellationToken,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  const MethodInfo *v22; // x1
+  struct Cysharp_Threading_Tasks_IUniTaskSource_o *v23; // x0
+  __int64 v24; // x1
+  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o v25; // [xsp+0h] [xbp-80h] BYREF
+  Cysharp_Threading_Tasks_UniTask_o result; // 0:x0.16
+
+  if ( (byte_4E06724 & 1) == 0 )
+  {
+    sub_1CE6700(&Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
+    byte_4E06724 = 1;
+  }
+  memset(&v25, 0, sizeof(v25));
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v25.fields.__t__builder, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  v25.fields.__4__this = this;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v25.fields.__4__this, (int32_t)this, v10, v11, v12, v13, v14, v15);
+  v25.fields.cancellationToken = cancellationToken;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v25.fields.cancellationToken, 0, v16, v17, v18, v19, v20, v21);
+  v25.fields.__1__state = -1;
+  if ( !*((_QWORD *)Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___
+        + 7) )
+    sub_1CBC7E4(Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
+  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(&v25, v22);
+  v23 = (struct Cysharp_Threading_Tasks_IUniTaskSource_o *)sub_2ADF6D0(&v25.fields.__t__builder, 0);
+  *(_QWORD *)&result.fields.token = v24;
+  result.fields.source = v23;
+  return result;
+}
+
+
+void EventInfoSkillGetDialog___OnClickCloseButton_b__22_0(EventInfoSkillGetDialog_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
   int32_t v4; // w3
@@ -270,18 +322,18 @@ void EventInfoSkillGetDialog___OnClickCloseButton_b__21_0(EventInfoSkillGetDialo
   System_String_o *v8; // x7
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4D32812 & 1) == 0 )
+  if ( (byte_4E0672A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D32812 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0672A = 1;
   }
   ActionExtensions__Call(this->fields.closeCallback, 0);
   this->fields.closeCallback = 0;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.closeCallback, 0, v3, v4, v5, v6, v7, v8);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.closeCallback, 0, v3, v4, v5, v6, v7, v8);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72119908(gameObject, 0);
+  UnityEngine_Object__Destroy_72918540(gameObject, 0);
 }
 
 
@@ -293,10 +345,10 @@ UnityEngine_GameObject_o *EventInfoSkillGetDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4D3280E & 1) == 0 )
+  if ( (byte_4E06726 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3280E = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E06726 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -305,8 +357,322 @@ UnityEngine_GameObject_o *EventInfoSkillGetDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
+}
+
+
+void EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(
+        EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *this,
+        const MethodInfo *method)
+{
+  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *v2; // x19
+  struct EventInfoSkillGetDialog_o *_4__this; // x22
+  EventInfoSkillGetDialog___c_c *v4; // x8
+  System_Func_bool__o *_9__21_0; // x20
+  Il2CppObject *v6; // x21
+  struct EventInfoSkillGetDialog___c_StaticFields *static_fields; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  struct System_Threading_CancellationTokenSource_o *source; // x21
+  System_Threading_CancellationToken_o v15; // x2
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  Cysharp_Threading_Tasks_IUniTaskSource_c *klass; // x8
+  __int64 v23; // x9
+  int *p_offset; // x10
+  __int64 v25; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  Cysharp_Threading_Tasks_IUniTaskSource_c *v32; // x8
+  __int64 v33; // x9
+  Cysharp_Threading_Tasks_IUniTaskSource_c **v34; // x10
+  __int64 v35; // x0
+  UnityEngine_Object_o *closeButton; // x20
+  __int64 v37; // x1
+  UnityEngine_Component_o *v38; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
+  struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *runnerPromise; // x19
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c *v41; // x8
+  __int64 v42; // x9
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **v43; // x10
+  __int64 v44; // x0
+  struct Cysharp_Threading_Tasks_UniTask_Awaiter_o u__1; // [xsp+0h] [xbp-50h] BYREF
+  Cysharp_Threading_Tasks_UniTask_o v46; // [xsp+10h] [xbp-40h] BYREF
+
+  v2 = this;
+  if ( (byte_4E0672E & 1) == 0 )
+  {
+    sub_1CE6700(&Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_AwaitUnsafeOnCompleted_UniTask_Awaiter__EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
+    sub_1CE6700(&System_Func_bool__TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillGetDialog___c__WaitFadeAndRegisterBackKeyAsync_b__21_0__);
+    sub_1CE6700(&EventInfoSkillGetDialog___c_TypeInfo);
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)sub_1CE6700(&Cysharp_Threading_Tasks_UniTask_TypeInfo);
+    byte_4E0672E = 1;
+  }
+  u__1 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)0LL;
+  _4__this = v2->fields.__4__this;
+  if ( v2->fields.__1__state )
+  {
+    v4 = EventInfoSkillGetDialog___c_TypeInfo;
+    if ( !EventInfoSkillGetDialog___c_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(EventInfoSkillGetDialog___c_TypeInfo);
+      v4 = EventInfoSkillGetDialog___c_TypeInfo;
+    }
+    _9__21_0 = v4->static_fields->__9__21_0;
+    if ( !_9__21_0 )
+    {
+      if ( !v4->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(v4);
+        v4 = EventInfoSkillGetDialog___c_TypeInfo;
+      }
+      v6 = (Il2CppObject *)v4->static_fields->__9;
+      _9__21_0 = (System_Func_bool__o *)sub_1CE694C(System_Func_bool__TypeInfo);
+      System_Func_bool____ctor(
+        _9__21_0,
+        v6,
+        Method_EventInfoSkillGetDialog___c__WaitFadeAndRegisterBackKeyAsync_b__21_0__,
+        0);
+      static_fields = EventInfoSkillGetDialog___c_TypeInfo->static_fields;
+      static_fields->__9__21_0 = _9__21_0;
+      sub_1CE66A4(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__21_0,
+        (int32_t)_9__21_0,
+        v8,
+        v9,
+        v10,
+        v11,
+        v12,
+        v13);
+    }
+    source = v2->fields.cancellationToken.fields._source;
+    if ( !Cysharp_Threading_Tasks_UniTask_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo);
+    v15.fields._source = source;
+    v46 = Cysharp_Threading_Tasks_UniTask__WaitWhile(_9__21_0, 8, v15, 0, 0);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v46, 0, v16, v17, v18, v19, v20, v21);
+    u__1 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)v46;
+    if ( !byte_4E06154 )
+    {
+      sub_1CE6700(&Cysharp_Threading_Tasks_UniTask_TypeInfo);
+      byte_4E06154 = 1;
+    }
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)Cysharp_Threading_Tasks_UniTask_TypeInfo;
+    if ( !Cysharp_Threading_Tasks_UniTask_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo);
+    if ( !byte_4E06155 )
+    {
+      this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)sub_1CE6700(&Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo);
+      byte_4E06155 = 1;
+    }
+    if ( u__1.fields.task.fields.source )
+    {
+      klass = u__1.fields.task.fields.source->klass;
+      v23 = *(unsigned __int16 *)&u__1.fields.task.fields.source->klass->_2.rank;
+      if ( *(_WORD *)&u__1.fields.task.fields.source->klass->_2.rank )
+      {
+        p_offset = &klass->_1.interfaceOffsets->offset;
+        while ( *((Cysharp_Threading_Tasks_IUniTaskSource_c **)p_offset - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
+        {
+          --v23;
+          p_offset += 4;
+          if ( !v23 )
+            goto LABEL_23;
+        }
+        v25 = (__int64)&klass->vtable[*p_offset];
+      }
+      else
+      {
+LABEL_23:
+        v25 = sub_1CBCA7C(u__1.fields.task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 0);
+      }
+      this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v25)(
+                                                                                   u__1.fields.task.fields.source,
+                                                                                   (unsigned __int16)u__1.fields.task.fields.token,
+                                                                                   *(_QWORD *)(v25 + 8));
+      if ( !(_DWORD)this )
+      {
+        v2->fields.__1__state = 0;
+        v2->fields.__u__1 = u__1;
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields.__u__1, 0, v26, v27, v28, v29, v30, v31);
+        sub_2B8EB78(
+          &v2->fields.__t__builder,
+          &u__1,
+          v2,
+          Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_AwaitUnsafeOnCompleted_UniTask_Awaiter__EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
+        return;
+      }
+    }
+  }
+  else
+  {
+    u__1 = v2->fields.__u__1;
+    v2->fields.__u__1.fields.task.fields.source = 0;
+    *(_QWORD *)&v2->fields.__u__1.fields.task.fields.token = 0;
+    v2->fields.__1__state = -1;
+  }
+  if ( !byte_4E06156 )
+  {
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)sub_1CE6700(&Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo);
+    byte_4E06156 = 1;
+  }
+  if ( u__1.fields.task.fields.source )
+  {
+    v32 = u__1.fields.task.fields.source->klass;
+    v33 = *(unsigned __int16 *)&u__1.fields.task.fields.source->klass->_2.rank;
+    if ( *(_WORD *)&u__1.fields.task.fields.source->klass->_2.rank )
+    {
+      v34 = (Cysharp_Threading_Tasks_IUniTaskSource_c **)&v32->_1.interfaceOffsets->offset;
+      while ( *(v34 - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
+      {
+        --v33;
+        v34 += 2;
+        if ( !v33 )
+          goto LABEL_34;
+      }
+      v35 = (__int64)&v32->vtable[*(_DWORD *)v34 + 2];
+    }
+    else
+    {
+LABEL_34:
+      v35 = sub_1CBCA7C(u__1.fields.task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 2);
+    }
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v35)(
+                                                                                 u__1.fields.task.fields.source,
+                                                                                 (unsigned __int16)u__1.fields.task.fields.token,
+                                                                                 *(_QWORD *)(v35 + 8));
+  }
+  if ( !_4__this )
+    sub_1CE6958(this, method);
+  closeButton = (UnityEngine_Object_o *)_4__this->fields.closeButton;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(closeButton, 0, 0) )
+  {
+    v38 = (UnityEngine_Component_o *)_4__this->fields.closeButton;
+    if ( !v38 )
+      sub_1CE6958(0, v37);
+    gameObject = UnityEngine_Component__get_gameObject(v38, 0);
+    AndroidBackKeyManager__AddBackBtn(gameObject, 0);
+  }
+  v2->fields.__1__state = -2;
+  if ( !byte_4E06158 )
+  {
+    sub_1CE6700(&Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo);
+    byte_4E06158 = 1;
+  }
+  runnerPromise = v2->fields.__t__builder.fields.runnerPromise;
+  if ( runnerPromise )
+  {
+    v41 = runnerPromise->klass;
+    v42 = *(unsigned __int16 *)&runnerPromise->klass->_2.rank;
+    if ( *(_WORD *)&runnerPromise->klass->_2.rank )
+    {
+      v43 = (Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **)&v41->_1.interfaceOffsets->offset;
+      while ( *(v43 - 1) != Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo )
+      {
+        --v42;
+        v43 += 2;
+        if ( !v42 )
+          goto LABEL_50;
+      }
+      v44 = (__int64)&v41->vtable[*(_DWORD *)v43 + 2];
+    }
+    else
+    {
+LABEL_50:
+      v44 = sub_1CBCA7C(runnerPromise, Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo, 2);
+    }
+    (*(void (__fastcall **)(struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *, _QWORD))v44)(
+      runnerPromise,
+      *(_QWORD *)(v44 + 8));
+  }
+}
+
+
+void EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__SetStateMachine(
+        EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *this,
+        System_Runtime_CompilerServices_IAsyncStateMachine_o *stateMachine,
+        const MethodInfo *method)
+{
+  ;
+}
+
+
+void EventInfoSkillGetDialog___c___cctor(const MethodInfo *method)
+{
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
+  if ( (byte_4E0672B & 1) == 0 )
+  {
+    sub_1CE6700(&EventInfoSkillGetDialog___c_TypeInfo);
+    byte_4E0672B = 1;
+  }
+  v1 = (Il2CppObject *)sub_1CE694C(EventInfoSkillGetDialog___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  EventInfoSkillGetDialog___c_TypeInfo->static_fields->__9 = (struct EventInfoSkillGetDialog___c_o *)v1;
+  sub_1CE66A4(
+    (GrandQuestFolderBoardItem_o *)EventInfoSkillGetDialog___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+}
+
+
+void EventInfoSkillGetDialog___c___ctor(EventInfoSkillGetDialog___c_o *this, const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+bool EventInfoSkillGetDialog___c___WaitFadeAndRegisterBackKeyAsync_b__21_0(
+        EventInfoSkillGetDialog___c_o *this,
+        const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x19
+  Il2CppObject *v3; // x0
+  __int64 v4; // x1
+
+  if ( (byte_4E0672C & 1) == 0 )
+  {
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E0672C = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
+    return 0;
+  v3 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !v3 )
+    sub_1CE6958(0, v4);
+  return CommonUI__maskFadeIsBusy((CommonUI_o *)v3, 0);
 }
 
 
@@ -377,31 +743,41 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
   UILabel_o *skillExplanationLabel; // x20
   struct EventInfoSkillGetDialog_o *v56; // x8
   UILabel_o *closeLabel; // x20
-  int32_t v58; // w2
-  int32_t v59; // w3
-  System_String_o *v60; // x4
-  int32_t v61; // w5
-  int64_t v62; // x6
-  System_String_o *v63; // x7
+  System_Action_o *_9__1; // x21
+  BaseDialog_o *v59; // x20
+  int32_t v60; // w2
+  int32_t v61; // w3
+  System_String_o *v62; // x4
+  int32_t v63; // w5
+  int64_t v64; // x6
+  System_String_o *v65; // x7
+  int32_t v66; // w2
+  int32_t v67; // w3
+  System_String_o *v68; // x4
+  int32_t v69; // w5
+  int64_t v70; // x6
+  System_String_o *v71; // x7
   struct System_Action_o *closeAction; // x1
   UnityEngine_Object_o *gameObject; // x19
   int32_t id; // [xsp+8h] [xbp-48h] BYREF
   int32_t condId; // [xsp+Ch] [xbp-44h] BYREF
   SkillLvEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4D32813 & 1) == 0 )
+  if ( (byte_4E0672D & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&EventInfoSkillGetDialog_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&string___TypeInfo);
-    sub_1C93AD4(&StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4D32813 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&EventInfoSkillGetDialog_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&string___TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillGetDialog___c__DisplayClass20_0__Open_b__1__);
+    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4E0672D = 1;
   }
   entity = 0;
   _4__this = (UnityEngine_Object_o *)this->fields.__4__this;
@@ -412,16 +788,16 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
   {
     v6 = this->fields.__4__this;
     if ( !v6 )
-      goto LABEL_61;
+      goto LABEL_63;
     eventId = this->fields.eventId;
     imagePartsIconSprite = v6->fields.imagePartsIconSprite;
     spriteName = this->fields.spriteName;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    Master_object = AtlasManager__SetEventUI_41320352(eventId, imagePartsIconSprite, spriteName, 0);
+    Master_object = AtlasManager__SetEventUI_41749752(eventId, imagePartsIconSprite, spriteName, 0);
     v10 = this->fields.__4__this;
     if ( !v10 )
-      goto LABEL_61;
+      goto LABEL_63;
     v11 = Master_object;
     if ( (Master_object & 1) != 0 )
     {
@@ -432,15 +808,15 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
       Master_object = AtlasManager__SetSkillIcon(imagePartsSkillIcon, skillId, 0);
       v14 = this->fields.__4__this;
       if ( !v14 )
-        goto LABEL_61;
-      Master_object = AtlasManager__SetEventUI_41320352(
+        goto LABEL_63;
+      Master_object = AtlasManager__SetEventUI_41749752(
                         this->fields.eventId,
                         v14->fields.imagePartsSkillIconBg,
                         v14->fields.imagePartsSkillIconBgName,
                         0);
       v15 = this->fields.__4__this;
       if ( !v15 )
-        goto LABEL_61;
+        goto LABEL_63;
       imagePartsSkillIconObject = v15->fields.imagePartsSkillIconObject;
       v17 = 1;
     }
@@ -453,33 +829,33 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
       Master_object = AtlasManager__SetSkillIcon(skillIcon, v19, 0);
       v20 = this->fields.__4__this;
       if ( !v20 )
-        goto LABEL_61;
+        goto LABEL_63;
       imagePartsSkillIconObject = v20->fields.imagePartsSkillIconObject;
       v17 = 0;
     }
     GameObjectHelper__SetActiveSafely(imagePartsSkillIconObject, v17, 0);
     v21 = this->fields.__4__this;
     if ( !v21 )
-      goto LABEL_61;
+      goto LABEL_63;
     GameObjectHelper__SetActiveSafely(v21->fields.skillIconObject, (v11 & 1) == 0, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SkillLvMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillLvMaster___);
     if ( !this->fields.imagePartsGroupEntity )
-      goto LABEL_61;
+      goto LABEL_63;
     v22 = (SkillLvMaster_o *)Master_object;
     Master_object = ImagePartsGroupEntity__GetSkillId(this->fields.imagePartsGroupEntity, 0);
     if ( !this->fields.imagePartsGroupEntity )
-      goto LABEL_61;
+      goto LABEL_63;
     v23 = Master_object;
     Master_object = ImagePartsGroupEntity__GetSkillLv(this->fields.imagePartsGroupEntity, 0);
     if ( !v22 )
-      goto LABEL_61;
+      goto LABEL_63;
     if ( SkillLvMaster__TryGetEntity(v22, &entity, v23, Master_object, 0) )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_QuestMaster___);
+      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_QuestMaster___);
       imagePartsGroupEntity = this->fields.imagePartsGroupEntity;
       if ( imagePartsGroupEntity )
       {
@@ -518,7 +894,7 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
                   if ( v33 )
                   {
                     skillExplanationTitle = v33->fields.skillExplanationTitle;
-                    Master_object = sub_1C93B7C(string___TypeInfo, 2);
+                    Master_object = sub_1CE67A8(string___TypeInfo, 2);
                     v35 = this->fields.imagePartsGroupEntity;
                     if ( v35 )
                     {
@@ -531,7 +907,7 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
                       {
                         if ( !*(_DWORD *)(v36 + 24)
                           || (*(_QWORD *)(v36 + 32) = Master_object,
-                              sub_1C93A78(
+                              sub_1CE66A4(
                                 (GrandQuestFolderBoardItem_o *)(v36 + 32),
                                 Master_object,
                                 v39,
@@ -542,11 +918,11 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
                                 v44),
                               *(_DWORD *)(v36 + 24) <= 1u) )
                         {
-                          sub_1C93D34(Master_object);
+                          sub_1CE6960(Master_object);
                         }
                         MessageTitleLocalizationKeyDefault = EventInfoSkillGetDialog_TypeInfo->static_fields->MessageTitleLocalizationKeyDefault;
                         *(_QWORD *)(v36 + 40) = MessageTitleLocalizationKeyDefault;
-                        sub_1C93A78(
+                        sub_1CE66A4(
                           (GrandQuestFolderBoardItem_o *)(v36 + 40),
                           (int32_t)MessageTitleLocalizationKeyDefault,
                           v45,
@@ -588,29 +964,49 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
                                       {
                                         closeLabel = v56->fields.closeLabel;
                                         Master_object = (__int64)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_3707/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                   (System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/,
                                                                    0);
                                         if ( closeLabel )
                                         {
                                           UILabel__set_text(closeLabel, (System_String_o *)Master_object, 0);
-                                          Master_object = (__int64)this->fields.__4__this;
-                                          if ( Master_object )
+                                          _9__1 = this->fields.__9__1;
+                                          v59 = (BaseDialog_o *)this->fields.__4__this;
+                                          if ( !_9__1 )
                                           {
-                                            BaseDialog__SafeOpen((BaseDialog_o *)Master_object, 0, 0, 0);
+                                            _9__1 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+                                            System_Action___ctor(
+                                              _9__1,
+                                              (Il2CppObject *)this,
+                                              Method_EventInfoSkillGetDialog___c__DisplayClass20_0__Open_b__1__,
+                                              0);
+                                            this->fields.__9__1 = _9__1;
+                                            sub_1CE66A4(
+                                              (GrandQuestFolderBoardItem_o *)&this->fields.__9__1,
+                                              (int32_t)_9__1,
+                                              v60,
+                                              v61,
+                                              v62,
+                                              v63,
+                                              v64,
+                                              v65);
+                                          }
+                                          if ( v59 )
+                                          {
+                                            BaseDialog__SafeOpen(v59, _9__1, 0, 0);
                                             Master_object = (__int64)this->fields.__4__this;
                                             if ( Master_object )
                                             {
                                               closeAction = this->fields.closeAction;
                                               *(_QWORD *)(Master_object + 216) = closeAction;
-                                              sub_1C93A78(
+                                              sub_1CE66A4(
                                                 (GrandQuestFolderBoardItem_o *)(Master_object + 216),
                                                 (int32_t)closeAction,
-                                                v58,
-                                                v59,
-                                                v60,
-                                                v61,
-                                                v62,
-                                                v63);
+                                                v66,
+                                                v67,
+                                                v68,
+                                                v69,
+                                                v70,
+                                                v71);
                                               return;
                                             }
                                           }
@@ -632,18 +1028,42 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__0(
           }
         }
       }
-LABEL_61:
-      sub_1C93D2C(Master_object, v5);
+LABEL_63:
+      sub_1CE6958(Master_object, v5);
     }
     ActionExtensions__Call(this->fields.closeAction, 0);
     Master_object = (__int64)this->fields.__4__this;
     if ( !Master_object )
-      goto LABEL_61;
+      goto LABEL_63;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)Master_object,
                                            0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72119908(gameObject, 0);
+    UnityEngine_Object__Destroy_72918540(gameObject, 0);
   }
+}
+
+
+void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__1(
+        EventInfoSkillGetDialog___c__DisplayClass20_0_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_MonoBehaviour_o *_4__this; // x19
+  System_Threading_CancellationToken_o v3; // x0
+  System_Threading_CancellationToken_o v4; // x1
+  System_Threading_CancellationToken_o v5; // x2
+  System_Threading_CancellationToken_o v6; // x1
+  Cysharp_Threading_Tasks_UniTask_o Dialog__WaitFadeAndRegisterBackKeyAsync; // 0:x0.16
+
+  _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
+  v3.fields._source = Cysharp_Threading_Tasks_UniTaskCancellationExtensions__GetCancellationTokenOnDestroy(_4__this, 0).fields._source;
+  if ( !_4__this )
+    sub_1CE6958(v3.fields._source, v4.fields._source);
+  v6.fields._source = v3.fields._source;
+  Dialog__WaitFadeAndRegisterBackKeyAsync = EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync(
+                                              (EventInfoSkillGetDialog_o *)_4__this,
+                                              v6,
+                                              (const MethodInfo *)v5.fields._source);
+  Cysharp_Threading_Tasks_UniTaskExtensions__Forget(Dialog__WaitFadeAndRegisterBackKeyAsync, 0);
 }

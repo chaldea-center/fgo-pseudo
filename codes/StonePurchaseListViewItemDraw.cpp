@@ -20,10 +20,10 @@ void StonePurchaseListViewItemDraw__SetInput(
   __int64 v7; // x1
   struct UICommonButton_o *v8; // x0
 
-  if ( (byte_4D2F122 & 1) == 0 )
+  if ( (byte_4E02C6A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2F122 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E02C6A = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ void StonePurchaseListViewItemDraw__SetInput(
             v8->klass->vtable._5_set_isEnabled.method),
           (v8 = this->fields.baseButton) == 0) )
     {
-      sub_1C93D2C(v8, v7);
+      sub_1CE6958(v8, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, _QWORD, const MethodInfo *))v8->klass->vtable._14_SetState.methodPtr)(
       v8,
@@ -81,20 +81,20 @@ void StonePurchaseListViewItemDraw__SetItem(
   int v30; // [xsp+8h] [xbp-38h] BYREF
   int32_t boardImageId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D2F120 & 1) == 0 )
+  if ( (byte_4E02C68 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_PaymentLimitMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20659/*"img_list_bg{0:00}_sp"*/);
-    sub_1C93AD4(&StringLiteral_12485/*"STONE_SHOP_LIMIT_TEMPLATE"*/);
-    sub_1C93AD4(&StringLiteral_20654/*"img_list_bg01"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    sub_1C93AD4(&StringLiteral_12480/*"STONE_SHOP_DETAIL_BUTTON"*/);
-    byte_4D2F120 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_PaymentLimitMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_20727/*"img_list_bg{0:00}_sp"*/);
+    sub_1CE6700(&StringLiteral_12520/*"STONE_SHOP_LIMIT_TEMPLATE"*/);
+    sub_1CE6700(&StringLiteral_20722/*"img_list_bg01"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    sub_1CE6700(&StringLiteral_12515/*"STONE_SHOP_DETAIL_BUTTON"*/);
+    byte_4E02C68 = 1;
   }
   if ( item )
   {
@@ -148,7 +148,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             {
               boardImageId = bankShop->fields.boardImageId;
               v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &boardImageId);
-              v18 = System_String__Format((System_String_o *)StringLiteral_20659/*"img_list_bg{0:00}_sp"*/, v17, 0);
+              v18 = System_String__Format((System_String_o *)StringLiteral_20727/*"img_list_bg{0:00}_sp"*/, v17, 0);
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
               AtlasManager__SetDownloadCommonSprite(v16, v18, 0);
@@ -161,7 +161,7 @@ void StonePurchaseListViewItemDraw__SetItem(
               itemIcon = (ItemIconComponent_o *)this->fields.baseSprite;
               if ( !itemIcon )
                 goto LABEL_60;
-              UISprite__set_spriteName((UISprite_o *)itemIcon, (System_String_o *)StringLiteral_20654/*"img_list_bg01"*/, 0);
+              UISprite__set_spriteName((UISprite_o *)itemIcon, (System_String_o *)StringLiteral_20722/*"img_list_bg01"*/, 0);
             }
             itemIcon = (ItemIconComponent_o *)this->fields.baseSprite;
             if ( !itemIcon )
@@ -188,7 +188,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             v21 = this->fields.detailButtonLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            itemIcon = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12480/*"STONE_SHOP_DETAIL_BUTTON"*/, 0);
+            itemIcon = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12515/*"STONE_SHOP_DETAIL_BUTTON"*/, 0);
             if ( !v21 )
               goto LABEL_60;
             UILabel__set_text(v21, (System_String_o *)itemIcon, 0);
@@ -211,7 +211,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             UILabel__set_text((UILabel_o *)itemIcon, bankShop->fields.datesDetail, 0);
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            itemIcon = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_PaymentLimitMaster___);
+            itemIcon = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_PaymentLimitMaster___);
             if ( !itemIcon )
               goto LABEL_60;
             itemIcon = (ItemIconComponent_o *)PaymentLimitMaster__GetBuyableCount(
@@ -227,11 +227,11 @@ void StonePurchaseListViewItemDraw__SetItem(
               mText = v23->fields.mText;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12485/*"STONE_SHOP_LIMIT_TEMPLATE"*/, 0);
+              v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12520/*"STONE_SHOP_LIMIT_TEMPLATE"*/, 0);
               v30 = v24;
               v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30);
               v28 = System_String__Format(v26, v27, 0);
-              v29 = System_String__Concat_64425724(mText, v28, 0);
+              v29 = System_String__Concat_65122828(mText, v28, 0);
               UILabel__set_text(v23, v29, 0);
             }
           }
@@ -248,7 +248,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             }
           }
 LABEL_60:
-          sub_1C93D2C(itemIcon, iconId);
+          sub_1CE6958(itemIcon, iconId);
         }
       }
     }
@@ -291,13 +291,13 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
   Il2CppObject *v33; // x0
   int32_t v34; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4D2F121 & 1) == 0 )
+  if ( (byte_4E02C69 & 1) == 0 )
   {
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_113/*" "*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2F121 = 1;
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_113/*" "*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E02C69 = 1;
   }
   spPriceTextLabel = this->fields.spPriceTextLabel;
   if ( !spPriceTextLabel )
@@ -318,10 +318,10 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
   UILabel__set_text(nameTextLabel, v11, 0);
   if ( !item )
     goto LABEL_55;
-  if ( (byte_4D2F11E & 1) == 0 )
+  if ( (byte_4E02C66 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2F11E = 1;
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E02C66 = 1;
   }
   bankShop = item->fields.bankShop;
   if ( bankShop )
@@ -330,10 +330,10 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
     p_numDetail = (System_String_o **)&StringLiteral_1/*""*/;
   v14 = *p_numDetail;
   IsNullOrEmpty = System_String__IsNullOrEmpty(*p_numDetail, 0);
-  if ( (byte_4D2F11C & 1) == 0 )
+  if ( (byte_4E02C64 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_19260/*"error"*/);
-    byte_4D2F11C = 1;
+    sub_1CE6700(&StringLiteral_19321/*"error"*/);
+    byte_4E02C64 = 1;
   }
   v17 = item->fields.bankShop;
   if ( v17 )
@@ -346,19 +346,19 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_19260/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_19321/*"error"*/;
   }
   v20 = *p_name;
   CountText = StonePurchaseListViewItem__get_CountText(item, v15);
   if ( IsNullOrEmpty )
-    v22 = System_String__Concat_64463988(v20, (System_String_o *)StringLiteral_113/*" "*/, CountText, 0);
+    v22 = System_String__Concat_65161092(v20, (System_String_o *)StringLiteral_113/*" "*/, CountText, 0);
   else
-    v22 = System_String__Format_64467032(v14, (Il2CppObject *)v20, (Il2CppObject *)CountText, 0);
+    v22 = System_String__Format_65164136(v14, (Il2CppObject *)v20, (Il2CppObject *)CountText, 0);
   v23 = v22;
-  if ( (byte_4D2F11F & 1) == 0 )
+  if ( (byte_4E02C67 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2F11F = 1;
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E02C67 = 1;
   }
   v24 = item->fields.bankShop;
   if ( v24 )
@@ -417,7 +417,7 @@ LABEL_44:
         goto LABEL_46;
     }
 LABEL_55:
-    sub_1C93D2C(spPriceTextLabel, item);
+    sub_1CE6958(spPriceTextLabel, item);
   }
 LABEL_39:
   spPriceTextLabel = this->fields.nameTextLabel;

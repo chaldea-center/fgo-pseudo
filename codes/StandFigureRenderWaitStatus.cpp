@@ -8,11 +8,11 @@ void StandFigureRenderWaitStatus___ctor(
 {
   const MethodInfo *v6; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_41470928(this, 0, id, faceType, 0, 0, textureList, callback, v6);
+  StandFigureRenderWaitStatus___ctor_41896020(this, 0, id, faceType, 0, 0, textureList, callback, v6);
 }
 
 
-void StandFigureRenderWaitStatus___ctor_41469816(
+void StandFigureRenderWaitStatus___ctor_41894908(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -23,11 +23,11 @@ void StandFigureRenderWaitStatus___ctor_41469816(
 {
   const MethodInfo *v7; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_41470928(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
+  StandFigureRenderWaitStatus___ctor_41896020(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
 }
 
 
-void StandFigureRenderWaitStatus___ctor_41470280(
+void StandFigureRenderWaitStatus___ctor_41895372(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -39,11 +39,11 @@ void StandFigureRenderWaitStatus___ctor_41470280(
 {
   const MethodInfo *v8; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_41470928(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
+  StandFigureRenderWaitStatus___ctor_41896020(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
 }
 
 
-void StandFigureRenderWaitStatus___ctor_41470532(
+void StandFigureRenderWaitStatus___ctor_41895624(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -85,7 +85,7 @@ void StandFigureRenderWaitStatus___ctor_41470532(
   this->fields.formId = formId;
   this->fields._MultiPortraitIndex_k__BackingField = multiPortraitIndex;
   this->fields.textureList = textureList;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.textureList,
     (int32_t)textureList,
     v19,
@@ -95,13 +95,13 @@ void StandFigureRenderWaitStatus___ctor_41470532(
     v23,
     v24);
   this->fields.renderTex = renderTex;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.renderTex, (int32_t)renderTex, v25, v26, v27, v28, v29, v30);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.renderTex, (int32_t)renderTex, v25, v26, v27, v28, v29, v30);
   this->fields.isFaceOnly = v17;
   this->fields.withEffect = v18;
   if ( callback )
   {
     this->fields.callbackFunc = callback;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v31,
@@ -114,7 +114,7 @@ void StandFigureRenderWaitStatus___ctor_41470532(
 }
 
 
-void StandFigureRenderWaitStatus___ctor_41470928(
+void StandFigureRenderWaitStatus___ctor_41896020(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -151,7 +151,7 @@ void StandFigureRenderWaitStatus___ctor_41470928(
   this->fields.faceType = faceType;
   this->fields.formId = formId;
   this->fields.textureList = textureList;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.textureList,
     (int32_t)textureList,
     v17,
@@ -161,12 +161,12 @@ void StandFigureRenderWaitStatus___ctor_41470928(
     v21,
     v22);
   this->fields.renderTex = renderTex;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.renderTex, (int32_t)renderTex, v23, v24, v25, v26, v27, v28);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.renderTex, (int32_t)renderTex, v23, v24, v25, v26, v27, v28);
   this->fields.isFaceOnly = v16;
   if ( callback )
   {
     this->fields.callbackFunc = callback;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v29,
@@ -197,7 +197,7 @@ void StandFigureRenderWaitStatus__Callback(
   else
   {
     if ( !renderTex )
-      sub_1C93D2C(this, 0);
+      sub_1CE6958(this, 0);
     UnityEngine_RenderTexture__Release(renderTex, 0);
   }
 }
@@ -228,7 +228,7 @@ void StandFigureRenderWaitStatus__SetCharacter(
   UnityEngine_Texture2D_array *textureList; // x4
 
   if ( !standFigureRender )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   imageId = this->fields.imageId;
   faceType = this->fields.faceType;
   formId = this->fields.formId;
@@ -261,10 +261,10 @@ void StandFigureRenderWaitStatus__add_callbackFunc(
   StandFigureRenderWaitStatus_EndHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D2FC5F & 1) == 0 )
+  if ( (byte_4E03C9A & 1) == 0 )
   {
-    sub_1C93AD4(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
-    byte_4D2FC5F = 1;
+    sub_1CE6700(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    byte_4E03C9A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -277,13 +277,13 @@ void StandFigureRenderWaitStatus__add_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C940C8(v8);
+  sub_1CE6CF4(v8);
   StandFigureRenderWaitStatus__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -316,10 +316,10 @@ void StandFigureRenderWaitStatus__remove_callbackFunc(
   StandFigureRenderWaitStatus_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2FC60 & 1) == 0 )
+  if ( (byte_4E03C9B & 1) == 0 )
   {
-    sub_1C93AD4(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
-    byte_4D2FC60 = 1;
+    sub_1CE6700(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    byte_4E03C9B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -332,13 +332,13 @@ void StandFigureRenderWaitStatus__remove_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C940C8(v8);
+  sub_1CE6CF4(v8);
   StandFigureRenderWaitStatus__get_MultiPortraitIndex(v11, v12);
 }
 
@@ -374,7 +374,7 @@ void StandFigureRenderWaitStatus_EndHandler___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -385,11 +385,11 @@ void StandFigureRenderWaitStatus_EndHandler___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C93B94(method) & 1) != 0 )
+  if ( (sub_1CE67C0(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1AC8960;
+      v13 = sub_1B176EC;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -401,41 +401,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1C93B8C(method);
-        v16 = sub_1C94120(method);
+        v15 = sub_1CE67B8(method);
+        v16 = sub_1CE6D4C(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1AC8A5C;
+            v13 = sub_1B177E8;
           else
-            v13 = sub_1AC8A20;
+            v13 = sub_1B177AC;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1AC899C;
+          v13 = sub_1B17728;
         }
         else
         {
-          v13 = sub_1AC8970;
+          v13 = sub_1B176FC;
         }
       }
       else
       {
-        v13 = sub_1AC8940;
+        v13 = sub_1B176CC;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C93BFC(v17, 0);
+      v17 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1CE6828(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1AC88F8;
+  this->fields.extra_arg = (intptr_t)sub_1B17684;
 }
 
 
@@ -449,7 +449,7 @@ System_IAsyncResult_o *StandFigureRenderWaitStatus_EndHandler__BeginInvoke(
   UnityEngine_RenderTexture_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = texture;
-  return sub_1C93A88(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v6, callback, object);
 }
 
 
@@ -458,7 +458,7 @@ void StandFigureRenderWaitStatus_EndHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C93A8C(result, 0, method);
+  sub_1CE66B8(result, 0, method);
 }
 
 

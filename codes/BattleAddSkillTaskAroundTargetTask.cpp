@@ -13,53 +13,59 @@ bool BattleAddSkillTaskAroundTargetTask__AddTask(
         System_Nullable_int__o actorId,
         const MethodInfo *method)
 {
+  System_Nullable_int__o v11; // x2
   System_Collections_Generic_List_BattleLogicTask__o *IsFirstChecked; // x0
-  __int64 v12; // x1
+  __int64 v13; // x1
   BattleData_o *data; // x25
-  BattleAddSkillTaskAroundTargetTask_Argument_o *v14; // x24
-  const MethodInfo *v15; // x5
-  const MethodInfo *v16; // x4
-  System_Object_array *v17; // x0
+  BattleAddSkillTaskAroundTargetTask_Argument_o *v15; // x0
+  System_Nullable_int__o v16; // x4
+  BattleAddSkillTaskAroundTargetTask_Argument_o *v17; // x24
+  const MethodInfo *v18; // x5
+  const MethodInfo *v19; // x4
+  System_Object_array *v20; // x0
   System_Collections_Generic_List_BattleLogicTask__o *taskList; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D33A4C & 1) == 0 )
+  if ( (byte_4E07AC9 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    byte_4D33A4C = 1;
+    sub_1CE6700(&BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    byte_4E07AC9 = 1;
   }
+  v11 = actorId;
   taskList = 0;
   IsFirstChecked = (System_Collections_Generic_List_BattleLogicTask__o *)BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
                                                                            this,
                                                                            task,
-                                                                           actorId,
+                                                                           v11,
                                                                            *(const MethodInfo **)&targetId);
   if ( ((unsigned __int8)IsFirstChecked & 1) != 0 )
   {
     if ( !logic )
       goto LABEL_10;
     data = logic->fields.data;
-    v14 = (BattleAddSkillTaskAroundTargetTask_Argument_o *)sub_1C93D20(BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
-    BattleAddSkillTaskAroundTargetTask_Argument___ctor(v14, data, task, targetId, actorId, v15);
-    if ( BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(this, &taskList, logic, v14, v16) )
+    v15 = (BattleAddSkillTaskAroundTargetTask_Argument_o *)sub_1CE694C(BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
+    v16 = actorId;
+    v17 = v15;
+    BattleAddSkillTaskAroundTargetTask_Argument___ctor(v15, data, task, targetId, v16, v18);
+    if ( BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(this, &taskList, logic, v17, v19) )
     {
       ((void (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, System_Collections_Generic_List_BattleLogicTask__o *, BattleLogic_o *, BattleAddSkillTaskAroundTargetTask_Argument_o *, const MethodInfo *))this->klass->vtable._5_PrevAddTask.methodPtr)(
         this,
         taskList,
         logic,
-        v14,
+        v17,
         this->klass->vtable._5_PrevAddTask.method);
       IsFirstChecked = taskList;
       if ( taskList )
       {
-        v17 = System_Collections_Generic_List_object___ToArray(
+        v20 = System_Collections_Generic_List_object___ToArray(
                 (System_Collections_Generic_List_object__o *)taskList,
-                (const MethodInfo_387B4F4 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-        BattleLogic__AddTaskTargetTaskAfter_47358780(logic, task, (BattleLogicTask_array *)v17, 0);
+                (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+        BattleLogic__AddTaskTargetTaskAfter_47813124(logic, task, (BattleLogicTask_array *)v20, 0);
         return 1;
       }
 LABEL_10:
-      sub_1C93D2C(IsFirstChecked, v12);
+      sub_1CE6958(IsFirstChecked, v13);
     }
   }
   return 0;
@@ -76,26 +82,26 @@ CreateSkillTaskFromBuffAction_array *BattleAddSkillTaskAroundTargetTask__GetCrea
   __int64 v5; // x0
   __int64 v6; // x0
 
-  if ( (byte_4D33A50 & 1) == 0 )
+  if ( (byte_4E07ACD & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Array_Empty_CreateSkillTaskFromBuffAction___);
-    byte_4D33A50 = 1;
+    sub_1CE6700(&Method_System_Array_Empty_CreateSkillTaskFromBuffAction___);
+    byte_4E07ACD = 1;
   }
   v3 = Method_System_Array_Empty_CreateSkillTaskFromBuffAction___;
   v4 = *((_QWORD *)Method_System_Array_Empty_CreateSkillTaskFromBuffAction___ + 7);
   if ( !v4 )
   {
-    sub_1C69BC4(Method_System_Array_Empty_CreateSkillTaskFromBuffAction___);
+    sub_1CBC7E4(Method_System_Array_Empty_CreateSkillTaskFromBuffAction___);
     v4 = v3[7];
   }
   v5 = *(_QWORD *)(v4 + 16);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C69B68(inited);
+    v5 = sub_1CBC788(inited);
   if ( !*(_DWORD *)(v5 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v5);
   v6 = *(_QWORD *)(v3[7] + 16LL);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C69B68(inited);
+    v6 = sub_1CBC788(inited);
   return **(CreateSkillTaskFromBuffAction_array ***)(v6 + 184);
 }
 
@@ -118,19 +124,21 @@ bool BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
   int32_t v14; // w5
   int64_t v15; // x6
   System_String_o *v16; // x7
-  const MethodInfo_3BDB218 *v17; // x4
+  int32_t v17; // w0
+  System_Nullable_int__o v18; // x3
+  const MethodInfo_3C822A4 *v19; // x4
   System_ValueTuple_Int32Enum__Nullable_int___o item; // [xsp+0h] [xbp-40h] BYREF
-  System_ValueTuple_Int32Enum__Nullable_int___o v20; // 0:x0.12
+  System_ValueTuple_Int32Enum__Nullable_int___o v22; // 0:x0.12
 
   v4 = *(_DWORD *)&actorId.fields.hasValue;
   v6 = this;
-  if ( (byte_4D33A4F & 1) == 0 )
+  if ( (byte_4E07ACC & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int_____ctor__);
-    sub_1C93AD4(&System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____TypeInfo);
-    this = (BattleAddSkillTaskAroundTargetTask_o *)sub_1C93AD4(&Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__);
-    byte_4D33A4F = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int_____ctor__);
+    sub_1CE6700(&System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____TypeInfo);
+    this = (BattleAddSkillTaskAroundTargetTask_o *)sub_1CE6700(&Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__);
+    byte_4E07ACC = 1;
   }
   if ( !task )
     goto LABEL_8;
@@ -139,34 +147,32 @@ bool BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
   klass = (System_Collections_Generic_HashSet_T__o *)HashAddSkillTaskCheckedTiming;
   if ( !HashAddSkillTaskCheckedTiming )
   {
-    v10 = (System_Collections_Generic_HashSet_T__o *)sub_1C93D20(System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____TypeInfo);
+    v10 = (System_Collections_Generic_HashSet_T__o *)sub_1CE694C(System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____TypeInfo);
     System_Collections_Generic_HashSet_ValueTuple_Int32Enum__Nullable_int______ctor(
       v10,
-      (const MethodInfo_372310C *)Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int_____ctor__);
+      (const MethodInfo_37AB024 *)Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int_____ctor__);
     p_HashAddSkillTaskCheckedTiming->klass = (GrandQuestFolderBoardItem_c *)v10;
-    sub_1C93A78(p_HashAddSkillTaskCheckedTiming, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+    sub_1CE66A4(p_HashAddSkillTaskCheckedTiming, (int32_t)v10, v11, v12, v13, v14, v15, v16);
     klass = (System_Collections_Generic_HashSet_T__o *)p_HashAddSkillTaskCheckedTiming->klass;
   }
-  v20.fields.Item2.fields.value = ((__int64 (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, const MethodInfo *, System_Nullable_int__o, const MethodInfo *))v6->klass->vtable._4_get_AddTiming.methodPtr)(
-                                    v6,
-                                    v6->klass->vtable._4_get_AddTiming.method,
-                                    actorId,
-                                    method);
-  *(_QWORD *)&v20.fields.Item1 = &item;
+  v17 = ((__int64 (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, const MethodInfo *, System_Nullable_int__o, const MethodInfo *))v6->klass->vtable._4_get_AddTiming.methodPtr)(
+          v6,
+          v6->klass->vtable._4_get_AddTiming.method,
+          actorId,
+          method);
+  v18 = (System_Nullable_int__o)Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__;
+  v22.fields.Item2.fields.value = v17;
+  *(_QWORD *)&v22.fields.Item1 = &item;
   item.fields.Item2.fields.value = 0;
   *(_QWORD *)&item.fields.Item1 = 0;
-  System_ValueTuple_Int32Enum__Nullable_int_____ctor(
-    v20,
-    v4,
-    (System_Nullable_int__o)Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__,
-    v17);
+  System_ValueTuple_Int32Enum__Nullable_int_____ctor(v22, v4, v18, v19);
   if ( !klass )
 LABEL_8:
-    sub_1C93D2C(this, task);
+    sub_1CE6958(this, task);
   return System_Collections_Generic_HashSet_ValueTuple_Int32Enum__Nullable_int_____Add(
            klass,
            item,
-           (const MethodInfo_3724350 *)Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____Add__);
+           (const MethodInfo_37AC268 *)Method_System_Collections_Generic_HashSet_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____Add__);
 }
 
 
@@ -185,52 +191,52 @@ void BattleAddSkillTaskAroundTargetTask__PrevAddTask(
   Il2CppObject *current; // x8
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D33A4E & 1) == 0 )
+  if ( (byte_4E07ACB & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_BattleLogicTask__Insert__);
-    this = (BattleAddSkillTaskAroundTargetTask_o *)sub_1C93AD4(&PlayBackStepLogicTask_TypeInfo);
-    byte_4D33A4E = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_BattleLogicTask__Insert__);
+    this = (BattleAddSkillTaskAroundTargetTask_o *)sub_1CE6700(&PlayBackStepLogicTask_TypeInfo);
+    byte_4E07ACB = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( !arg
     || (ActSvt_k__BackingField = arg->fields._ActSvt_k__BackingField) == 0
     || (uniqueId = ActSvt_k__BackingField->fields.uniqueId,
-        v9 = (PlayBackStepLogicTask_o *)sub_1C93D20(PlayBackStepLogicTask_TypeInfo),
+        v9 = (PlayBackStepLogicTask_o *)sub_1CE694C(PlayBackStepLogicTask_TypeInfo),
         PlayBackStepLogicTask___ctor(v9, uniqueId, 0),
         !taskList) )
   {
-    sub_1C93D2C(this, taskList);
+    sub_1CE6958(this, taskList);
   }
   System_Collections_Generic_List_object___Insert(
     (System_Collections_Generic_List_object__o *)taskList,
     0,
     (Il2CppObject *)v9,
-    (const MethodInfo_387A74C *)Method_System_Collections_Generic_List_BattleLogicTask__Insert__);
+    (const MethodInfo_3906D18 *)Method_System_Collections_Generic_List_BattleLogicTask__Insert__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)taskList,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
   while ( 1 )
   {
     v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v13,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
     if ( !v10 )
       break;
     current = v13.fields._current;
     if ( !v13.fields._current )
-      sub_1C93D2C(v10, v11);
+      sub_1CE6958(v10, v11);
     *((_BYTE *)&v13.fields._current->klass + (unsigned __int64)&qword_108 + 1) = 1;
     *(_WORD *)((char *)&qword_68 + (_QWORD)current) = 0;
     *((_BYTE *)off_50 + (_QWORD)current + 1) = 1;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
 }
 
 
@@ -267,27 +273,27 @@ bool BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(
   int64_t v32; // x6
   System_String_o *v33; // x7
 
-  if ( (byte_4D33A4D & 1) == 0 )
+  if ( (byte_4E07ACA & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Linq_Enumerable_SelectMany_CreateSkillTaskFromBuffAction__BattleLogicTask___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_ToList_BattleLogicTask___);
-    sub_1C93AD4(&System_Func_CreateSkillTaskFromBuffAction__IEnumerable_BattleLogicTask___TypeInfo);
-    sub_1C93AD4(&Method_BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0__TryGetAddableTaskList_b__0__);
-    sub_1C93AD4(&BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0_TypeInfo);
-    byte_4D33A4D = 1;
+    sub_1CE6700(&Method_System_Linq_Enumerable_SelectMany_CreateSkillTaskFromBuffAction__BattleLogicTask___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_ToList_BattleLogicTask___);
+    sub_1CE6700(&System_Func_CreateSkillTaskFromBuffAction__IEnumerable_BattleLogicTask___TypeInfo);
+    sub_1CE6700(&Method_BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0__TryGetAddableTaskList_b__0__);
+    sub_1CE6700(&BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0_TypeInfo);
+    byte_4E07ACA = 1;
   }
-  v9 = sub_1C93D20(BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0_TypeInfo);
+  v9 = sub_1CE694C(BattleAddSkillTaskAroundTargetTask___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C93D2C(v10, v11);
+    sub_1CE6958(v10, v11);
   *(_QWORD *)(v9 + 16) = logic;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)logic, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)logic, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = arg;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)arg, v18, v19, v20, v21, v22, v23);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)arg, v18, v19, v20, v21, v22, v23);
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, const MethodInfo *))this->klass->vtable._6_GetCreateSkillTaskArray.methodPtr)(
                                                                this,
                                                                this->klass->vtable._6_GetCreateSkillTaskArray.method);
-  v25 = (System_Func_object__object__o *)sub_1C93D20(System_Func_CreateSkillTaskFromBuffAction__IEnumerable_BattleLogicTask___TypeInfo);
+  v25 = (System_Func_object__object__o *)sub_1CE694C(System_Func_CreateSkillTaskFromBuffAction__IEnumerable_BattleLogicTask___TypeInfo);
   System_Func_object__object____ctor(
     v25,
     (Il2CppObject *)v9,
@@ -296,12 +302,12 @@ bool BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__object_(
                                                                v24,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)v25,
-                                                               (const MethodInfo_31DD3D0 *)Method_System_Linq_Enumerable_SelectMany_CreateSkillTaskFromBuffAction__BattleLogicTask___);
+                                                               (const MethodInfo_323CECC *)Method_System_Linq_Enumerable_SelectMany_CreateSkillTaskFromBuffAction__BattleLogicTask___);
   v27 = (System_Collections_Generic_List_BattleLogicTask__o *)System_Linq_Enumerable__ToList_object_(
                                                                 v26,
-                                                                (const MethodInfo_31E8E3C *)Method_System_Linq_Enumerable_ToList_BattleLogicTask___);
+                                                                (const MethodInfo_3248A54 *)Method_System_Linq_Enumerable_ToList_BattleLogicTask___);
   *taskList = v27;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)taskList, (int32_t)v27, v28, v29, v30, v31, v32, v33);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)taskList, (int32_t)v27, v28, v29, v30, v31, v32, v33);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*taskList, 0);
 }
 
@@ -360,15 +366,15 @@ void BattleAddSkillTaskAroundTargetTask_Argument___ctor(
   int64_t v46; // x6
   System_String_o *v47; // x7
 
-  if ( (byte_4D33A51 & 1) == 0 )
+  if ( (byte_4E07ACE & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C93AD4(&Method_System_Nullable_int__get_HasValue__);
-    byte_4D33A51 = 1;
+    sub_1CE6700(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1CE6700(&Method_System_Nullable_int__get_HasValue__);
+    byte_4E07ACE = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Task_k__BackingField = task;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)task, v11, v12, v13, v14, v15, v16);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)task, v11, v12, v13, v14, v15, v16);
   if ( actorId.fields.hasValue )
   {
     v18 = HIDWORD(*(unsigned __int64 *)&actorId);
@@ -378,11 +384,11 @@ void BattleAddSkillTaskAroundTargetTask_Argument___ctor(
   else if ( !task || (v17 = BattleLogicTask__getActorId(task, 0), v18 = (unsigned int)v17, !data) )
   {
 LABEL_16:
-    sub_1C93D2C(v17, v18);
+    sub_1CE6958(v17, v18);
   }
   ServantData = BattleData__getServantData(data, v18, 0);
   this->fields._ActSvt_k__BackingField = ServantData;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._ActSvt_k__BackingField,
     (int32_t)ServantData,
     v20,
@@ -393,7 +399,7 @@ LABEL_16:
     v25);
   v26 = BattleData__getServantData(data, targetId, 0);
   this->fields._TargetSvt_k__BackingField = v26;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._TargetSvt_k__BackingField,
     (int32_t)v26,
     v27,
@@ -414,7 +420,7 @@ LABEL_16:
     v41 = command;
   else
     v41 = 0;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._Command_k__BackingField,
     (int32_t)v40,
     v33,
@@ -424,7 +430,7 @@ LABEL_16:
     v37,
     v38);
   this->fields._CommandOpponent_k__BackingField = v41;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommandOpponent_k__BackingField,
     (int32_t)v41,
     v42,
@@ -468,7 +474,7 @@ bool BattleAddSkillTaskAroundTargetTask_Argument__get_IsActorEnemy(
 
   ActSvt_k__BackingField = this->fields._ActSvt_k__BackingField;
   if ( !ActSvt_k__BackingField )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   return ActSvt_k__BackingField->fields.isEnemy;
 }
 
@@ -481,8 +487,8 @@ bool BattleAddSkillTaskAroundTargetTask_Argument__get_IsAiNpc(
 
   ActSvt_k__BackingField = this->fields._ActSvt_k__BackingField;
   if ( !ActSvt_k__BackingField )
-    sub_1C93D2C(0, method);
-  return ((bool (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.methodPtr)(
+    sub_1CE6958(0, method);
+  return ((__int64 (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.methodPtr)(
            ActSvt_k__BackingField,
            ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.method);
 }
@@ -520,7 +526,7 @@ System_Collections_Generic_IEnumerable_BattleLogicTask__o *BattleAddSkillTaskAro
   const MethodInfo *v3; // x3
 
   if ( !creator )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return (System_Collections_Generic_IEnumerable_BattleLogicTask__o *)CreateSkillTaskFromBuffAction__CreateTaskArray(
                                                                         creator,
                                                                         this->fields.logic,

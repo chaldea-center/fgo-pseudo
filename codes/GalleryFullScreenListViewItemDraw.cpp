@@ -28,14 +28,14 @@ void GalleryFullScreenListViewItemDraw__DownloadMovieAsset(
 {
   AssetLoader_LoadEndDataHandler_o *v5; // x21
 
-  if ( (byte_4D2B811 & 1) == 0 )
+  if ( (byte_4DFF905 & 1) == 0 )
   {
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw__DownloadMovieAsset_b__31_0__);
-    sub_1C93AD4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4D2B811 = 1;
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw__DownloadMovieAsset_b__31_0__);
+    sub_1CE6700(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4DFF905 = 1;
   }
-  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1C93D20(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1CE694C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v5,
     (Il2CppObject *)this,
@@ -152,21 +152,21 @@ void GalleryFullScreenListViewItemDraw__Init(
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, loadCoroutine, 0);
     v4->fields.loadCoroutine = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, 0, v13, v14, v15, v16, v17, v18);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, 0, v13, v14, v15, v16, v17, v18);
   }
   playMovieCoroutine = v4->fields.playMovieCoroutine;
   if ( playMovieCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, playMovieCoroutine, 0);
     v4->fields.playMovieCoroutine = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.playMovieCoroutine, 0, v20, v21, v22, v23, v24, v25);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.playMovieCoroutine, 0, v20, v21, v22, v23, v24, v25);
   }
   playSeekSequenceCoroutine = v4->fields.playSeekSequenceCoroutine;
   if ( playSeekSequenceCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, playSeekSequenceCoroutine, 0);
     v4->fields.playSeekSequenceCoroutine = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.playSeekSequenceCoroutine, 0, v27, v28, v29, v30, v31, v32);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.playSeekSequenceCoroutine, 0, v27, v28, v29, v30, v31, v32);
   }
   callAction = (System_Action_o *)v4->fields.seekSequenceCoroutine;
   if ( callAction )
@@ -176,12 +176,12 @@ void GalleryFullScreenListViewItemDraw__Init(
       (System_Collections_IEnumerator_o *)callAction,
       0);
     v4->fields.seekSequenceCoroutine = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.seekSequenceCoroutine, 0, v33, v34, v35, v36, v37, v38);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.seekSequenceCoroutine, 0, v33, v34, v35, v36, v37, v38);
   }
   v39 = v4->fields.galleryFullScreenListViewItem;
   if ( !v39 )
 LABEL_25:
-    sub_1C93D2C(this, callAction);
+    sub_1CE6958(this, callAction);
   v40 = v39->fields._CurrentGalleryType_k__BackingField;
   if ( v40 == 2 )
   {
@@ -193,9 +193,9 @@ LABEL_25:
     v41 = GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine(v4, (System_String_o *)v8, v6, v10);
 LABEL_23:
     v4->fields.loadCoroutine = v41;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, (int32_t)v41, v42, v43, v44, v45, v46, v47);
   }
-  UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)v4, v4->fields.loadCoroutine, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72903732((UnityEngine_MonoBehaviour_o *)v4, v4->fields.loadCoroutine, 0);
 }
 
 
@@ -204,14 +204,14 @@ bool GalleryFullScreenListViewItemDraw__IsGallerySubstituteData(
         System_String_o *textureName,
         const MethodInfo *method)
 {
-  if ( (byte_4D2B819 & 1) == 0 )
+  if ( (byte_4DFF90D & 1) == 0 )
   {
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_9274/*"MyRoom/Gallery/SubstituteData"*/);
-    byte_4D2B819 = 1;
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1CE6700(&StringLiteral_9291/*"MyRoom/Gallery/SubstituteData"*/);
+    byte_4DFF90D = 1;
   }
   if ( !textureName )
-    sub_1C93D2C(this, textureName);
-  return System_String__Contains(textureName, (System_String_o *)StringLiteral_9274/*"MyRoom/Gallery/SubstituteData"*/, 0);
+    sub_1CE6958(this, textureName);
+  return System_String__Contains(textureName, (System_String_o *)StringLiteral_9291/*"MyRoom/Gallery/SubstituteData"*/, 0);
 }
 
 
@@ -227,10 +227,10 @@ bool GalleryFullScreenListViewItemDraw__IsSameName(
   System_String_o *ObjectName; // x21
 
   v4 = this;
-  if ( (byte_4D2B80F & 1) == 0 )
+  if ( (byte_4DFF903 & 1) == 0 )
   {
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_1042/*"/"*/);
-    byte_4D2B80F = 1;
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1CE6700(&StringLiteral_1043/*"/"*/);
+    byte_4DFF903 = 1;
   }
   galleryFullScreenListViewItem = v4->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem
@@ -242,11 +242,11 @@ bool GalleryFullScreenListViewItemDraw__IsSameName(
     || (v7 = (System_String_o *)this,
         (this = (GalleryFullScreenListViewItemDraw_o *)v6->fields._GalleryResourceEntity_k__BackingField) == 0) )
   {
-    sub_1C93D2C(this, targetName);
+    sub_1CE6958(this, targetName);
   }
   ObjectName = GalleryResourceEntity__GetObjectName((GalleryResourceEntity_o *)this, 0);
   if ( !System_String__IsNullOrEmpty(ObjectName, 0) )
-    v7 = System_String__Concat_64463988(v7, (System_String_o *)StringLiteral_1042/*"/"*/, ObjectName, 0);
+    v7 = System_String__Concat_65161092(v7, (System_String_o *)StringLiteral_1043/*"/"*/, ObjectName, 0);
   return System_String__op_Equality(v7, targetName, 0);
 }
 
@@ -274,7 +274,7 @@ bool GalleryFullScreenListViewItemDraw__IsStandardSize(
                                                  v4,
                                                  v4->klass->vtable._26_get_mainTexture.method)) == 0) )
   {
-    sub_1C93D2C(backTexture, method);
+    sub_1CE6958(backTexture, method);
   }
   return v5
        / ((int (__fastcall *)(struct ExUITexture_o *, const MethodInfo *))backTexture->klass->vtable._6_get_canBeAnchored.methodPtr)(
@@ -289,11 +289,11 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
   UnityEngine_Object_o *moviePlayer; // x20
   CRIMoviePlayer_o *v5; // x20
 
-  if ( (byte_4D2B815 & 1) == 0 )
+  if ( (byte_4DFF909 & 1) == 0 )
   {
-    sub_1C93AD4(&BgmManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2B815 = 1;
+    sub_1CE6700(&BgmManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFF909 = 1;
   }
   movieControl = this->fields.movieControl;
   if ( !movieControl )
@@ -307,10 +307,10 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
     v5 = this->fields.moviePlayer;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4D2B5DC )
+    if ( !byte_4DFF6D9 )
     {
-      sub_1C93AD4(&BgmManager_TypeInfo);
-      byte_4D2B5DC = 1;
+      sub_1CE6700(&BgmManager_TypeInfo);
+      byte_4DFF6D9 = 1;
     }
     movieControl = (CRIMovieControl_o *)BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -324,7 +324,7 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
       goto LABEL_15;
     }
 LABEL_17:
-    sub_1C93D2C(movieControl, method);
+    sub_1CE6958(movieControl, method);
   }
 LABEL_15:
   movieControl = this->fields.movieControl;
@@ -343,11 +343,11 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   struct GalleryFullScreenListViewItem_o *v6; // x8
   struct GalleryFullScreenListViewItem_o *v7; // x8
   GalleryResourceEntity_o *GalleryResourceEntity_k__BackingField; // x8
-  MovieFileMerge_o *v9; // x21
+  MovieFileMerge_o *moviePlayerPrefab; // x21
   System_String_o *outputMergeFile; // x22
   GalleryFullScreenListViewItemDraw_o *v11; // x21
   struct GalleryFullScreenListViewItem_o *v12; // x8
-  Il2CppObject *moviePlayerPrefab; // x23
+  Il2CppObject *v13; // x23
   UnityEngine_Transform_o *transform; // x24
   Il2CppObject *v15; // x0
   int32_t v16; // w2
@@ -376,7 +376,7 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   int32_t v39; // w5
   int64_t v40; // x6
   System_String_o *v41; // x7
-  struct UnityEngine_GameObject_o *busyAnim; // x1
+  intptr_t busyAnim; // x1
   struct UITexture_o *v43; // x8
   struct UITexture_o *v44; // x8
   int32_t v45; // w2
@@ -420,19 +420,19 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4D2B814 & 1) == 0 )
+  if ( (byte_4DFF908 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&BgmManager_TypeInfo);
-    sub_1C93AD4(&CinemascopeSideFrame_TypeInfo);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_1__);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2B814 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&BgmManager_TypeInfo);
+    sub_1CE6700(&CinemascopeSideFrame_TypeInfo);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_1__);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFF908 = 1;
   }
   galleryFullScreenListViewItem = v2->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
@@ -464,7 +464,7 @@ LABEL_10:
                                                       0);
       if ( (_DWORD)this == 1 )
       {
-        this = (GalleryFullScreenListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (GalleryFullScreenListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_64;
         v7 = v2->fields.galleryFullScreenListViewItem;
@@ -473,44 +473,44 @@ LABEL_10:
         GalleryResourceEntity_k__BackingField = v7->fields._GalleryResourceEntity_k__BackingField;
         if ( !GalleryResourceEntity_k__BackingField )
           goto LABEL_64;
-        v9 = (MovieFileMerge_o *)*((_QWORD *)this + 243);
+        moviePlayerPrefab = (MovieFileMerge_o *)this[10].fields.moviePlayerPrefab;
         this = (GalleryFullScreenListViewItemDraw_o *)GalleryResourceEntity__GetAssetPath(
                                                         GalleryResourceEntity_k__BackingField,
                                                         0);
-        if ( !v9 )
+        if ( !moviePlayerPrefab )
           goto LABEL_64;
-        MovieFileMerge__Initialize(v9, (System_String_o *)this, 0, 0);
-        outputMergeFile = v9->fields.outputMergeFile;
+        MovieFileMerge__Initialize(moviePlayerPrefab, (System_String_o *)this, 0, 0);
+        outputMergeFile = moviePlayerPrefab->fields.outputMergeFile;
         v11 = (GalleryFullScreenListViewItemDraw_o *)outputMergeFile;
 LABEL_23:
-        moviePlayerPrefab = (Il2CppObject *)v2->fields.moviePlayerPrefab;
+        v13 = (Il2CppObject *)v2->fields.moviePlayerPrefab;
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v15 = UnityEngine_Object__Instantiate_object__52629400(
-                moviePlayerPrefab,
+        v15 = UnityEngine_Object__Instantiate_object__53022032(
+                v13,
                 transform,
-                (const MethodInfo_3230F98 *)Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
+                (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
         v2->fields.moviePlayer = (struct CRIMoviePlayer_o *)v15;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields.moviePlayer, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields.moviePlayer, (int32_t)v15, v16, v17, v18, v19, v20, v21);
         this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.touchPanel;
         if ( this )
         {
           v22 = v2->fields.moviePlayer;
           this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
                                                           (UnityEngine_GameObject_o *)this,
-                                                          (const MethodInfo_31FC2E8 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
+                                                          (const MethodInfo_325C0A0 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
           if ( v22 )
           {
             v22->fields.touch = (struct UIButton_o *)this;
-            sub_1C93A78((GrandQuestFolderBoardItem_o *)&v22->fields.touch, (int32_t)this, v23, v24, v25, v26, v27, v28);
+            sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v22->fields.touch, (int32_t)this, v23, v24, v25, v26, v27, v28);
             this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.moviePlayer;
             if ( this )
             {
               backBgTexture = v2->fields.backBgTexture;
-              *((_QWORD *)this + 25) = backBgTexture;
-              sub_1C93A78(
-                (GrandQuestFolderBoardItem_o *)((char *)this + 200),
+              this[1].monitor = backBgTexture;
+              sub_1CE66A4(
+                (GrandQuestFolderBoardItem_o *)&this[1].monitor,
                 (int32_t)backBgTexture,
                 v29,
                 v30,
@@ -521,17 +521,9 @@ LABEL_23:
               this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.moviePlayer;
               if ( this )
               {
-                busyAnim = v2->fields.busyAnim;
-                *((_QWORD *)this + 26) = busyAnim;
-                sub_1C93A78(
-                  (GrandQuestFolderBoardItem_o *)((char *)this + 208),
-                  (int32_t)busyAnim,
-                  v36,
-                  v37,
-                  v38,
-                  v39,
-                  v40,
-                  v41);
+                busyAnim = (intptr_t)v2->fields.busyAnim;
+                this[1].fields.m_CachedPtr = busyAnim;
+                sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this[1].fields, busyAnim, v36, v37, v38, v39, v40, v41);
                 this = *p_moviePlayer;
                 if ( *p_moviePlayer )
                 {
@@ -564,7 +556,7 @@ LABEL_23:
                                 {
                                   v51 = (struct UITexture_o *)v2->fields.moviePlayer;
                                   this->fields.backBgTexture = v51;
-                                  sub_1C93A78(
+                                  sub_1CE66A4(
                                     (GrandQuestFolderBoardItem_o *)&this->fields.backBgTexture,
                                     (int32_t)v51,
                                     v45,
@@ -581,7 +573,7 @@ LABEL_23:
                                     {
                                       texture = (struct ExUITexture_o *)v58->fields.texture;
                                       this->fields.backTexture = texture;
-                                      sub_1C93A78(
+                                      sub_1CE66A4(
                                         (GrandQuestFolderBoardItem_o *)&this->fields.backTexture,
                                         (int32_t)texture,
                                         v52,
@@ -622,10 +614,10 @@ LABEL_23:
                                                 v62 = *p_moviePlayer;
                                                 if ( !BgmManager_TypeInfo->_2.cctor_finished )
                                                   j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-                                                if ( !byte_4D2B5DC )
+                                                if ( !byte_4DFF6D9 )
                                                 {
-                                                  sub_1C93AD4(&BgmManager_TypeInfo);
-                                                  byte_4D2B5DC = 1;
+                                                  sub_1CE6700(&BgmManager_TypeInfo);
+                                                  byte_4DFF6D9 = 1;
                                                 }
                                                 v63 = BgmManager_TypeInfo;
                                                 if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -634,15 +626,15 @@ LABEL_23:
                                                   v63 = BgmManager_TypeInfo;
                                                 }
                                                 masterVolume = v63->static_fields->masterVolume;
-                                                v65 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                                                v65 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                                                 System_Action___ctor(
                                                   v65,
                                                   (Il2CppObject *)v2,
                                                   Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__,
                                                   0);
-                                                v66 = (CinemascopeSideFrame_o *)sub_1C93D20(CinemascopeSideFrame_TypeInfo);
+                                                v66 = (CinemascopeSideFrame_o *)sub_1CE694C(CinemascopeSideFrame_TypeInfo);
                                                 CinemascopeSideFrame___ctor(v66, 0, 1, 0);
-                                                nonDeleteCallBack = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                                                nonDeleteCallBack = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                                                 System_Action___ctor(
                                                   nonDeleteCallBack,
                                                   (Il2CppObject *)v2,
@@ -678,7 +670,7 @@ LABEL_23:
                                                         (System_Collections_IEnumerator_o *)method,
                                                         0);
                                                       v2->fields.playSeekSequenceCoroutine = 0;
-                                                      sub_1C93A78(
+                                                      sub_1CE66A4(
                                                         (GrandQuestFolderBoardItem_o *)&v2->fields.playSeekSequenceCoroutine,
                                                         0,
                                                         v68,
@@ -696,7 +688,7 @@ LABEL_23:
                                                               0,
                                                               0);
                                                       v2->fields.playSeekSequenceCoroutine = v74;
-                                                      sub_1C93A78(
+                                                      sub_1CE66A4(
                                                         (GrandQuestFolderBoardItem_o *)&v2->fields.playSeekSequenceCoroutine,
                                                         (int32_t)v74,
                                                         v75,
@@ -705,7 +697,7 @@ LABEL_23:
                                                         v78,
                                                         v79,
                                                         v80);
-                                                      this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)v2, v2->fields.playSeekSequenceCoroutine, 0);
+                                                      this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_MonoBehaviour__StartCoroutine_72903732((UnityEngine_MonoBehaviour_o *)v2, v2->fields.playSeekSequenceCoroutine, 0);
                                                       movieControl = v2->fields.movieControl;
                                                       if ( movieControl )
                                                       {
@@ -763,7 +755,7 @@ LABEL_23:
           }
         }
 LABEL_64:
-        sub_1C93D2C(this, method);
+        sub_1CE6958(this, method);
       }
       if ( v2->fields.data )
       {
@@ -813,20 +805,20 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__PlayMovieCo
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D2B813 & 1) == 0 )
+  if ( (byte_4DFF907 & 1) == 0 )
   {
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
-    byte_4D2B813 = 1;
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
+    byte_4DFF907 = 1;
   }
-  v7 = sub_1C93D20(GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
+  v7 = sub_1CE694C(GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 40) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 56) = enableControlCallBack;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 56), (int32_t)enableControlCallBack, v14, v15, v16, v17, v18, v19);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 56), (int32_t)enableControlCallBack, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 32) = endFullScreenAction;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)endFullScreenAction, v20, v21, v22, v23, v24, v25);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)endFullScreenAction, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -864,22 +856,22 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetCGCorout
   int64_t v32; // x6
   System_String_o *v33; // x7
 
-  if ( (byte_4D2B80D & 1) == 0 )
+  if ( (byte_4DFF901 & 1) == 0 )
   {
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
-    byte_4D2B80D = 1;
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
+    byte_4DFF901 = 1;
   }
-  v9 = sub_1C93D20(GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
+  v9 = sub_1CE694C(GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v9 + 40) = assetPath;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)assetPath, v16, v17, v18, v19, v20, v21);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)assetPath, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v9 + 48) = objName;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)objName, v22, v23, v24, v25, v26, v27);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)objName, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)(v9 + 56) = callAction;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)callAction, v28, v29, v30, v31, v32, v33);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)callAction, v28, v29, v30, v31, v32, v33);
   return (System_Collections_IEnumerator_o *)v9;
 }
 
@@ -898,17 +890,17 @@ void GalleryFullScreenListViewItemDraw__SetData(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2B810 & 1) == 0 )
+  if ( (byte_4DFF904 & 1) == 0 )
   {
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    byte_4D2B810 = 1;
+    sub_1CE6700(&AssetManager_TypeInfo);
+    byte_4DFF904 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(assetName, 0);
   this->fields.data = AssetStorage;
   p_data = &this->fields.data;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)p_data, (int32_t)AssetStorage, v7, v8, v9, v10, v11, v12);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_data, (int32_t)AssetStorage, v7, v8, v9, v10, v11, v12);
   *((_BYTE *)p_data + 16) = *p_data == 0;
 }
 
@@ -932,18 +924,18 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetDataCoro
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4D2B80E & 1) == 0 )
+  if ( (byte_4DFF902 & 1) == 0 )
   {
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
-    byte_4D2B80E = 1;
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
+    byte_4DFF902 = 1;
   }
-  v5 = sub_1C93D20(GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
+  v5 = sub_1CE694C(GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = imgName;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)imgName, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)imgName, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -971,11 +963,11 @@ void GalleryFullScreenListViewItemDraw__SetItem(
     {
       backTexture = this->fields.backTexture;
       if ( !backTexture )
-        sub_1C93D2C(0, item);
+        sub_1CE6958(0, item);
       ExUITexture__ClearImage(backTexture, 0);
     }
     this->fields.galleryFullScreenListViewItem = item;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)p_galleryFullScreenListViewItem,
       (int32_t)item,
       mode,
@@ -1010,7 +1002,7 @@ void GalleryFullScreenListViewItemDraw__SetMovieCallBack(
   movieControl = this->fields.movieControl;
   if ( !movieControl
     || (movieControl->fields.enableControlCallBack = enableControlCallBack,
-        sub_1C93A78(
+        sub_1CE66A4(
           (GrandQuestFolderBoardItem_o *)&movieControl->fields.enableControlCallBack,
           (int32_t)enableControlCallBack,
           (int32_t)endFullScreenAction,
@@ -1021,10 +1013,10 @@ void GalleryFullScreenListViewItemDraw__SetMovieCallBack(
           v7),
         (movieControl = this->fields.movieControl) == 0) )
   {
-    sub_1C93D2C(movieControl, enableControlCallBack);
+    sub_1CE6958(movieControl, enableControlCallBack);
   }
   movieControl->fields.endFullScreenAction = endFullScreenAction;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&movieControl->fields.endFullScreenAction,
     (int32_t)endFullScreenAction,
     v11,
@@ -1062,20 +1054,20 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetMovieDat
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D2B812 & 1) == 0 )
+  if ( (byte_4DFF906 & 1) == 0 )
   {
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
-    byte_4D2B812 = 1;
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
+    byte_4DFF906 = 1;
   }
-  v7 = sub_1C93D20(GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
+  v7 = sub_1CE694C(GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = assetPath;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)assetPath, v14, v15, v16, v17, v18, v19);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)assetPath, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = callAction;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)callAction, v20, v21, v22, v23, v24, v25);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)callAction, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -1094,7 +1086,7 @@ void GalleryFullScreenListViewItemDraw__SetMovieLocalScale(
 
   backBgTexture = (UnityEngine_Component_o *)this->fields.backBgTexture;
   if ( !backBgTexture )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
@@ -1128,12 +1120,12 @@ void GalleryFullScreenListViewItemDraw__SetScale(
   struct ExUITexture_o *backTexture; // x8
 
   v6 = this;
-  if ( (byte_4D2B817 & 1) == 0 )
+  if ( (byte_4DFF90B & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C93AD4(&StringLiteral_1042/*"/"*/);
-    byte_4D2B817 = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1CE6700(&StringLiteral_1043/*"/"*/);
+    byte_4DFF90B = 1;
   }
   galleryFullScreenListViewItem = v6->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
@@ -1192,7 +1184,7 @@ void GalleryFullScreenListViewItemDraw__SetScale(
       goto LABEL_34;
     ObjectName = GalleryResourceEntity__GetObjectName((GalleryResourceEntity_o *)this, 0);
     if ( !System_String__IsNullOrEmpty(ObjectName, 0) )
-      v14 = System_String__Concat_64463988(v14, (System_String_o *)StringLiteral_1042/*"/"*/, ObjectName, 0);
+      v14 = System_String__Concat_65161092(v14, (System_String_o *)StringLiteral_1043/*"/"*/, ObjectName, 0);
     IsStandardSize = GalleryFullScreenListViewItemDraw__IsStandardSize(v6, v16);
     if ( IsStandardSize
       && !GalleryFullScreenListViewItemDraw__IsGallerySubstituteData(
@@ -1215,7 +1207,7 @@ LABEL_11:
         }
       }
 LABEL_34:
-      sub_1C93D2C(this, width);
+      sub_1CE6958(this, width);
     }
     this = (GalleryFullScreenListViewItemDraw_o *)v6->fields.backTexture;
     if ( !this )
@@ -1262,7 +1254,7 @@ void GalleryFullScreenListViewItemDraw__SetTextureScale(
   if ( !backTexture
     || (UIWidget__set_width(backTexture, height[1], 0), (backTexture = (UIWidget_o *)this->fields.backTexture) == 0) )
   {
-    sub_1C93D2C(backTexture, v4);
+    sub_1CE6958(backTexture, v4);
   }
   UIWidget__set_height(backTexture, height[0], 0);
 }
@@ -1282,11 +1274,11 @@ void GalleryFullScreenListViewItemDraw__SetUpTextureSize(
   UIWidget_o *v10; // x8
 
   v3 = textureName;
-  if ( (byte_4D2B818 & 1) == 0 )
+  if ( (byte_4DFF90C & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2B818 = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFF90C = 1;
   }
   backTexture = this->fields.backTexture;
   if ( !backTexture )
@@ -1333,7 +1325,7 @@ LABEL_20:
             return;
           }
 LABEL_22:
-          sub_1C93D2C(backTexture, textureName);
+          sub_1CE6958(backTexture, textureName);
         }
       }
       textureName = (System_String_o *)&qword_240;
@@ -1363,7 +1355,7 @@ void GalleryFullScreenListViewItemDraw__StartPlayMovieCoroutine(
 
   galleryFullScreenListViewItem = this->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
-    sub_1C93D2C(this, enableControlCallBack);
+    sub_1CE6958(this, enableControlCallBack);
   if ( galleryFullScreenListViewItem->fields._CurrentGalleryType_k__BackingField == 1 )
   {
     p_playMovieCoroutine = &this->fields.playMovieCoroutine;
@@ -1375,8 +1367,8 @@ void GalleryFullScreenListViewItemDraw__StartPlayMovieCoroutine(
              endFullScreenAction,
              method);
       this->fields.playMovieCoroutine = v7;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)p_playMovieCoroutine, (int32_t)v7, v8, v9, v10, v11, v12, v13);
-      UnityEngine_MonoBehaviour__StartCoroutine_72105100(
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_playMovieCoroutine, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+      UnityEngine_MonoBehaviour__StartCoroutine_72903732(
         (UnityEngine_MonoBehaviour_o *)this,
         this->fields.playMovieCoroutine,
         0);
@@ -1413,10 +1405,10 @@ void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemD
   int64_t v26; // x6
   System_String_o *v27; // x7
 
-  if ( (byte_4D2B816 & 1) == 0 )
+  if ( (byte_4DFF90A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2B816 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFF90A = 1;
   }
   p_moviePlayer = (GrandQuestFolderBoardItem_o *)&this->fields.moviePlayer;
   moviePlayer = (UnityEngine_Object_o *)this->fields.moviePlayer;
@@ -1446,12 +1438,12 @@ void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemD
           if ( !klass )
             goto LABEL_26;
           klass->fields.player = 0;
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)&klass->fields.player, 0, v8, v9, v10, v11, v12, v13);
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)&klass->fields.player, 0, v8, v9, v10, v11, v12, v13);
           klass = this->fields.movieControl;
           if ( !klass )
             goto LABEL_26;
           klass->fields.texture = 0;
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)&klass->fields.texture, 0, v14, v15, v16, v17, v18, v19);
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)&klass->fields.texture, 0, v14, v15, v16, v17, v18, v19);
         }
         movieControlPanel = (UnityEngine_Object_o *)this->fields.movieControlPanel;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1466,15 +1458,15 @@ void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemD
                                                  0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_72119908(gameObject, 0);
+          UnityEngine_Object__Destroy_72918540(gameObject, 0);
           p_moviePlayer->klass = 0;
-          sub_1C93A78(p_moviePlayer, 0, v22, v23, v24, v25, v26, v27);
+          sub_1CE66A4(p_moviePlayer, 0, v22, v23, v24, v25, v26, v27);
           return;
         }
       }
     }
 LABEL_26:
-    sub_1C93D2C(klass, v5);
+    sub_1CE6958(klass, v5);
   }
 }
 
@@ -1499,11 +1491,11 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_0(
   const MethodInfo *v6; // x2
 
   v2 = this;
-  if ( (byte_4D2B81A & 1) == 0 )
+  if ( (byte_4DFF90E & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw_PlayMovie__);
-    byte_4D2B81A = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw_PlayMovie__);
+    byte_4DFF90E = 1;
   }
   moviePlayer = v2->fields.moviePlayer;
   if ( !moviePlayer )
@@ -1519,11 +1511,11 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_0(
         (galleryFullScreenListViewItem = v2->fields.galleryFullScreenListViewItem) == 0) )
   {
 LABEL_11:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   if ( galleryFullScreenListViewItem->fields.isCenterItem )
   {
-    v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)v2, Method_GalleryFullScreenListViewItemDraw_PlayMovie__, 0);
     GalleryFullScreenListViewItemDraw__Init(v2, v5, v6);
   }
@@ -1559,17 +1551,17 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
   int64_t v25; // x6
   System_String_o *v26; // x7
 
-  if ( (byte_4D2B81B & 1) == 0 )
+  if ( (byte_4DFF90F & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&BgmManager_TypeInfo);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw_OpenPause__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&TouchEffectManager_TypeInfo);
-    byte_4D2B81B = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&BgmManager_TypeInfo);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw_OpenPause__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&TouchEffectManager_TypeInfo);
+    byte_4DFF90F = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   CommonUI__SetLoadMode(Instance, 0, 0);
@@ -1633,7 +1625,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
                       seekSequenceCoroutine,
                       0);
                     this->fields.seekSequenceCoroutine = 0;
-                    sub_1C93A78(
+                    sub_1CE66A4(
                       (GrandQuestFolderBoardItem_o *)&this->fields.seekSequenceCoroutine,
                       0,
                       v12,
@@ -1644,7 +1636,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
                       v17);
                   }
                   v18 = this->fields.moviePlayer;
-                  v19 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                  v19 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                   System_Action___ctor(
                     v19,
                     (Il2CppObject *)this,
@@ -1654,7 +1646,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
                   {
                     v20 = CRIMoviePlayer__SeekSequence(v18, 0, v19, 0);
                     this->fields.seekSequenceCoroutine = v20;
-                    sub_1C93A78(
+                    sub_1CE66A4(
                       (GrandQuestFolderBoardItem_o *)&this->fields.seekSequenceCoroutine,
                       (int32_t)v20,
                       v21,
@@ -1663,7 +1655,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
                       v24,
                       v25,
                       v26);
-                    UnityEngine_MonoBehaviour__StartCoroutine_72105100(
+                    UnityEngine_MonoBehaviour__StartCoroutine_72903732(
                       (UnityEngine_MonoBehaviour_o *)this,
                       this->fields.seekSequenceCoroutine,
                       0);
@@ -1673,7 +1665,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
               }
             }
 LABEL_30:
-            sub_1C93D2C(Instance, v4);
+            sub_1CE6958(Instance, v4);
           }
         }
       }
@@ -1769,6 +1761,7 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
   int32_t v61; // w5
   int64_t v62; // x6
   System_String_o *v63; // x7
+  bool result; // w0
   struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_o *_8__1; // x8
   struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_o *_8__2; // x8
   const MethodInfo *v67; // x1
@@ -1784,18 +1777,18 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
   System_String_o *v77; // x7
 
   v8 = this;
-  if ( (byte_4D2B81C & 1) == 0 )
+  if ( (byte_4DFF910 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ActionExtensions_Call_bool___);
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&System_Func_bool__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw___c__DisplayClass34_0__PlayMovieCoroutine_b__0__);
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_TypeInfo);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw___c__DisplayClass34_1__PlayMovieCoroutine_b__1__);
-    sub_1C93AD4(&GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)sub_1C93AD4(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4D2B81C = 1;
+    sub_1CE6700(&Method_ActionExtensions_Call_bool___);
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&System_Func_bool__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw___c__DisplayClass34_0__PlayMovieCoroutine_b__0__);
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_TypeInfo);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw___c__DisplayClass34_1__PlayMovieCoroutine_b__1__);
+    sub_1CE6700(&GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)sub_1CE6700(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4DFF910 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -1814,7 +1807,7 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
     if ( _8__1->fields.isCancel )
       return 0;
     this->klass = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)this, 0, v2, (int32_t)v3, v4, v5, v6, v7);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)this, 0, v2, (int32_t)v3, v4, v5, v6, v7);
 LABEL_24:
     _8__2 = v8->fields.__8__2;
     if ( !_8__2 || !_4__this )
@@ -1828,28 +1821,28 @@ LABEL_24:
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)v8->fields.enableControlCallBack,
       0,
-      (const MethodInfo_30EBB64 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_3149904 *)Method_ActionExtensions_Call_bool___);
     return 0;
   }
   if ( _1__state )
     return 0;
   v8->fields.__1__state = -1;
-  v11 = (Il2CppObject *)sub_1C93D20(GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_TypeInfo);
+  v11 = (Il2CppObject *)sub_1CE694C(GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_TypeInfo);
   System_Object___ctor(v11, 0);
   v8->fields.__8__2 = (struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_o *)v11;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields.__8__2, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->fields.__8__2, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)v8->fields.__8__2;
   if ( !this )
     goto LABEL_29;
   endFullScreenAction = v8->fields.endFullScreenAction;
   *(_QWORD *)&this->fields.__1__state = endFullScreenAction;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)endFullScreenAction, v18, v19, v20, v21, v22, v23);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)endFullScreenAction, v18, v19, v20, v21, v22, v23);
   this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)v8->fields.__8__2;
   if ( !this )
     goto LABEL_29;
   v31 = (Il2CppObject *)v8->fields.__4__this;
   this->fields.__2__current = v31;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v31, v25, v26, v27, v28, v29, v30);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v31, v25, v26, v27, v28, v29, v30);
   if ( !_4__this )
     goto LABEL_29;
   galleryFullScreenListViewItem = _4__this->fields.galleryFullScreenListViewItem;
@@ -1860,21 +1853,21 @@ LABEL_24:
     goto LABEL_29;
   if ( GalleryResourceEntity__GetDownloadType((GalleryResourceEntity_o *)this, 0) == 1 )
   {
-    v33 = (Il2CppObject *)sub_1C93D20(GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_TypeInfo);
+    v33 = (Il2CppObject *)sub_1CE694C(GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_TypeInfo);
     System_Object___ctor(v33, 0);
     v8->fields.__8__1 = (struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_o *)v33;
     p__8__1 = (Il2CppObject **)&v8->fields.__8__1;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v33, v35, v36, v37, v38, v39, v40);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v33, v35, v36, v37, v38, v39, v40);
     this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)v8->fields.__8__1;
     if ( this )
     {
       v47 = (Il2CppObject *)v8->fields.__8__2;
       this->fields.__2__current = v47;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v47, v41, v42, v43, v44, v45, v46);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v47, v41, v42, v43, v44, v45, v46);
       if ( *p__8__1 )
       {
         LOBYTE((*p__8__1)[1].klass) = 0;
-        this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         v48 = _4__this->fields.galleryFullScreenListViewItem;
         if ( v48 )
         {
@@ -1894,7 +1887,7 @@ LABEL_24:
                 questId = GalleryResourceEntity_k__BackingField->fields.questId;
                 v53 = *p__8__1;
                 v54 = this;
-                v55 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                v55 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                 System_Action___ctor(
                   v55,
                   v53,
@@ -1905,9 +1898,10 @@ LABEL_24:
                   v56 = CommonUI__DownloadMovieIfNeeded(v49, (System_String_o *)v54, questId, -1, v55, 0);
                   v8->fields.__2__current = (Il2CppObject *)v56;
                   p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-                  sub_1C93A78(p__2__current, (int32_t)v56, v58, v59, v60, v61, v62, v63);
+                  sub_1CE66A4(p__2__current, (int32_t)v56, v58, v59, v60, v61, v62, v63);
+                  result = 1;
                   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-                  return 1;
+                  return result;
                 }
               }
             }
@@ -1916,20 +1910,20 @@ LABEL_24:
       }
     }
 LABEL_29:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   v68 = (Il2CppObject *)v8->fields.__8__2;
-  v69 = (System_Func_bool__o *)sub_1C93D20(System_Func_bool__TypeInfo);
+  v69 = (System_Func_bool__o *)sub_1CE694C(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v69,
     v68,
     Method_GalleryFullScreenListViewItemDraw___c__DisplayClass34_0__PlayMovieCoroutine_b__0__,
     0);
-  v70 = (UnityEngine_WaitWhile_o *)sub_1C93D20(UnityEngine_WaitWhile_TypeInfo);
+  v70 = (UnityEngine_WaitWhile_o *)sub_1CE694C(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v70, v69, 0);
   v8->fields.__2__current = (Il2CppObject *)v70;
   v71 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-  sub_1C93A78(v71, (int32_t)v70, v72, v73, v74, v75, v76, v77);
+  sub_1CE66A4(v71, (int32_t)v70, v72, v73, v74, v75, v76, v77);
   LODWORD(v71[-1].fields._ClosedMessage_k__BackingField) = 2;
   return 1;
 }
@@ -1951,11 +1945,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
@@ -2022,14 +2016,15 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
   int32_t v32; // w5
   int64_t v33; // x6
   System_String_o *v34; // x7
+  bool result; // w0
 
   v8 = this;
-  if ( (byte_4D2B81D & 1) == 0 )
+  if ( (byte_4DFF911 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_AssetData_GetObject_Texture2D____79057928);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)sub_1C93AD4(&StringLiteral_1042/*"/"*/);
-    byte_4D2B81D = 1;
+    sub_1CE6700(&Method_AssetData_GetObject_Texture2D____79905048);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)sub_1CE6700(&StringLiteral_1043/*"/"*/);
+    byte_4DFF911 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -2041,10 +2036,10 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
     data = _4__this->fields.data;
     if ( data )
     {
-      this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)AssetData__GetObject_object__51927708(
+      this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)AssetData__GetObject_object__52317288(
                                                                             data,
                                                                             v8->fields.objName,
-                                                                            (const MethodInfo_3185A9C *)Method_AssetData_GetObject_Texture2D____79057928);
+                                                                            (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_Texture2D____79905048);
       backTexture = _4__this->fields.backTexture;
       if ( !backTexture )
         goto LABEL_25;
@@ -2099,7 +2094,7 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
       }
     }
 LABEL_25:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   if ( _1__state )
     return 0;
@@ -2109,7 +2104,7 @@ LABEL_25:
   *(_WORD *)&_4__this->fields.setDataWait = 1;
   assetPath = v8->fields.assetPath;
   v8->fields._imgName_5__2 = assetPath;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v8->fields._imgName_5__2, (int32_t)assetPath, v2, v3, v4, v5, v6, v7);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->fields._imgName_5__2, (int32_t)assetPath, v2, v3, v4, v5, v6, v7);
   if ( System_String__IsNullOrEmpty(v8->fields.objName, 0) )
   {
     v8->fields.objName = 0;
@@ -2118,22 +2113,23 @@ LABEL_25:
   }
   else
   {
-    v25 = System_String__Concat_64463988(
+    v25 = System_String__Concat_65161092(
             v8->fields.assetPath,
-            (System_String_o *)StringLiteral_1042/*"/"*/,
+            (System_String_o *)StringLiteral_1043/*"/"*/,
             v8->fields.objName,
             0);
     v19 = (int)v25;
     v8->fields._imgName_5__2 = v25;
     p_objName = (GrandQuestFolderBoardItem_o *)&v8->fields._imgName_5__2;
   }
-  sub_1C93A78(p_objName, v19, v12, v13, v14, v15, v16, v17);
+  sub_1CE66A4(p_objName, v19, v12, v13, v14, v15, v16, v17);
   v27 = GalleryFullScreenListViewItemDraw__SetDataCoroutine(_4__this, v8->fields._imgName_5__2, v26);
   v8->fields.__2__current = (Il2CppObject *)v27;
   p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-  sub_1C93A78(p__2__current, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+  sub_1CE66A4(p__2__current, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+  result = 1;
   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -2153,11 +2149,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
@@ -2203,6 +2199,7 @@ bool GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__MoveNext(
   int64_t v12; // x6
   System_String_o *v13; // x7
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -2218,7 +2215,7 @@ bool GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__MoveNext(
       goto LABEL_6;
     }
 LABEL_12:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   this->fields.__1__state = -1;
   if ( !_4__this )
@@ -2235,14 +2232,16 @@ LABEL_6:
     {
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)p__2__current, 0, v8, v9, v10, v11, v12, v13);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)p__2__current, 0, v8, v9, v10, v11, v12, v13);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
+  result = 0;
   *(_WORD *)&_4__this->fields.setDataWait = 0;
-  return 0;
+  return result;
 }
 
 
@@ -2262,11 +2261,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__Syste
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
@@ -2334,15 +2333,15 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
   UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4D2B81E & 1) == 0 )
+  if ( (byte_4DFF912 & 1) == 0 )
   {
-    sub_1C93AD4(&AssetManager_TypeInfo);
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&System_Func_bool__TypeInfo);
-    sub_1C93AD4(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__);
-    sub_1C93AD4(&string_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)sub_1C93AD4(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4D2B81E = 1;
+    sub_1CE6700(&AssetManager_TypeInfo);
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&System_Func_bool__TypeInfo);
+    sub_1CE6700(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__);
+    sub_1CE6700(&string_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)sub_1CE6700(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4DFF912 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -2359,7 +2358,7 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
     if ( GalleryFullScreenListViewItemDraw__IsSameName(_4__this, v2->fields.assetPath, v9) )
     {
       _4__this->fields.data = (struct AssetData_o *)v10;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)&_4__this->fields.data, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&_4__this->fields.data, (int32_t)v10, v11, v12, v13, v14, v15, v16);
     }
     data = _4__this->fields.data;
     if ( !data || (Empty = AssetData__get_Path(data, 0)) == 0 )
@@ -2396,17 +2395,17 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
       v23 = 1;
       *(_WORD *)&_4__this->fields.setDataWait = 1;
       GalleryFullScreenListViewItemDraw__DownloadMovieAsset(_4__this, v2->fields.assetPath, v6);
-      v25 = (System_Func_bool__o *)sub_1C93D20(System_Func_bool__TypeInfo);
+      v25 = (System_Func_bool__o *)sub_1CE694C(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
         v25,
         (Il2CppObject *)_4__this,
         Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__,
         0);
-      v26 = (UnityEngine_WaitWhile_o *)sub_1C93D20(UnityEngine_WaitWhile_TypeInfo);
+      v26 = (UnityEngine_WaitWhile_o *)sub_1CE694C(UnityEngine_WaitWhile_TypeInfo);
       UnityEngine_WaitWhile___ctor(v26, v25, 0);
       v2->fields.__2__current = (Il2CppObject *)v26;
       p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1C93A78(p__2__current, (int32_t)v26, v28, v29, v30, v31, v32, v33);
+      sub_1CE66A4(p__2__current, (int32_t)v26, v28, v29, v30, v31, v32, v33);
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
       return v23;
     }
@@ -2461,7 +2460,7 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
       }
     }
 LABEL_38:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   return 0;
 }
@@ -2483,11 +2482,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
@@ -2543,7 +2542,7 @@ bool GalleryFullScreenListViewItemDraw___c__DisplayClass34_0___PlayMovieCoroutin
       }
     }
 LABEL_7:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   return 1;
 }
@@ -2567,7 +2566,7 @@ void GalleryFullScreenListViewItemDraw___c__DisplayClass34_1___PlayMovieCoroutin
   CS___8__locals1 = this->fields.CS___8__locals1;
   this->fields.isCancel = 1;
   if ( !CS___8__locals1 )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   endFullScreenAction = CS___8__locals1->fields.endFullScreenAction;
   if ( endFullScreenAction )
     ((void (__fastcall *)(intptr_t, intptr_t))endFullScreenAction->fields.invoke_impl)(

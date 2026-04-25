@@ -1,9 +1,9 @@
 void GrandServantExtraBranchDialog___ctor(GrandServantExtraBranchDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2B5F8 & 1) == 0 )
+  if ( (byte_4DFF61C & 1) == 0 )
   {
-    sub_1C93AD4(&BaseDialog_TypeInfo);
-    byte_4D2B5F8 = 1;
+    sub_1CE6700(&BaseDialog_TypeInfo);
+    byte_4DFF61C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -37,7 +37,7 @@ void GrandServantExtraBranchDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C93A78(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1CE66A4(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)result,
@@ -86,13 +86,13 @@ void GrandServantExtraBranchDialog__OnEnable(GrandServantExtraBranchDialog_o *th
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4D2B5F6 & 1) == 0 )
+  if ( (byte_4DFF61A & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_15738/*"Window/Buttons/CancelButton"*/);
-    byte_4D2B5F6 = 1;
+    sub_1CE6700(&StringLiteral_15788/*"Window/Buttons/CancelButton"*/);
+    byte_4DFF61A = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45665756(transform, (System_String_o *)StringLiteral_15738/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_46098588(transform, (System_String_o *)StringLiteral_15788/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -110,20 +110,19 @@ void GrandServantExtraBranchDialog__Open(
   __int64 v13; // x1
   struct UICommonButton_o *ex1Button; // x8
   __int64 v15; // kr00_8
-  float b; // s2
-  float a; // s3
+  __int64 v16; // kr08_8
   struct UICommonButton_o *ex2Button; // x8
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-50h] BYREF
+  UnityEngine_Color_o v18; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4D2B5F7 & 1) == 0 )
+  if ( (byte_4DFF61B & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_410/*"#4D4D4D"*/);
-    byte_4D2B5F7 = 1;
+    sub_1CE6700(&StringLiteral_410/*"#4D4D4D"*/);
+    byte_4DFF61B = 1;
   }
-  *(_QWORD *)&v19.fields.r = 0;
-  *(_QWORD *)&v19.fields.b = 0;
+  *(_QWORD *)&v18.fields.r = 0;
+  *(_QWORD *)&v18.fields.b = 0;
   this->fields.callbackFunc = callback;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     canSelectEx2,
@@ -134,23 +133,20 @@ void GrandServantExtraBranchDialog__Open(
     v7);
   ex1ButtonCover = (UICommonButton_o *)UnityEngine_ColorUtility__TryParseHtmlString(
                                          (System_String_o *)StringLiteral_410/*"#4D4D4D"*/,
-                                         &v19,
+                                         &v18,
                                          0);
   ex1Button = this->fields.ex1Button;
   if ( !ex1Button )
     goto LABEL_10;
-  v15 = *(_QWORD *)&v19.fields.r;
-  b = v19.fields.b;
-  a = v19.fields.a;
-  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v19.fields.r;
-  ex1Button->fields.specifyDisabledColor.fields.b = b;
-  ex1Button->fields.specifyDisabledColor.fields.a = a;
+  v15 = *(_QWORD *)&v18.fields.r;
+  v16 = *(_QWORD *)&v18.fields.b;
+  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v18.fields.r;
+  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.b = v16;
   ex2Button = this->fields.ex2Button;
   if ( !ex2Button )
     goto LABEL_10;
   *(_QWORD *)&ex2Button->fields.specifyDisabledColor.fields.r = v15;
-  ex2Button->fields.specifyDisabledColor.fields.b = b;
-  ex2Button->fields.specifyDisabledColor.fields.a = a;
+  *(_QWORD *)&ex2Button->fields.specifyDisabledColor.fields.b = v16;
   ex1ButtonCover = this->fields.ex1Button;
   if ( !ex1ButtonCover
     || (UICommonButton__SetButtonEnable(ex1ButtonCover, canSelectEx1, 1, 0),
@@ -161,7 +157,7 @@ void GrandServantExtraBranchDialog__Open(
         (ex1ButtonCover = (UICommonButton_o *)this->fields.ex2ButtonCover) == 0) )
   {
 LABEL_10:
-    sub_1C93D2C(ex1ButtonCover, v13);
+    sub_1CE6958(ex1ButtonCover, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ex1ButtonCover, !canSelectEx2, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -183,10 +179,10 @@ void GrandServantExtraBranchDialog__add_callbackFunc(
   GrandServantExtraBranchDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D2B5F4 & 1) == 0 )
+  if ( (byte_4DFF618 & 1) == 0 )
   {
-    sub_1C93AD4(&GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
-    byte_4D2B5F4 = 1;
+    sub_1CE6700(&GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
+    byte_4DFF618 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -199,13 +195,13 @@ void GrandServantExtraBranchDialog__add_callbackFunc(
       if ( (GrandServantExtraBranchDialog_CallbackFunc_c *)v8->klass != GrandServantExtraBranchDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantExtraBranchDialog_o *)sub_1C940C8(v8);
+  v11 = (GrandServantExtraBranchDialog_o *)sub_1CE6CF4(v8);
   GrandServantExtraBranchDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -224,10 +220,10 @@ void GrandServantExtraBranchDialog__remove_callbackFunc(
   GrandServantExtraBranchDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2B5F5 & 1) == 0 )
+  if ( (byte_4DFF619 & 1) == 0 )
   {
-    sub_1C93AD4(&GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
-    byte_4D2B5F5 = 1;
+    sub_1CE6700(&GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
+    byte_4DFF619 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -240,13 +236,13 @@ void GrandServantExtraBranchDialog__remove_callbackFunc(
       if ( (GrandServantExtraBranchDialog_CallbackFunc_c *)v8->klass != GrandServantExtraBranchDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantExtraBranchDialog_o *)sub_1C940C8(v8);
+  v11 = (GrandServantExtraBranchDialog_o *)sub_1CE6CF4(v8);
   GrandServantExtraBranchDialog__Awake(v11, v12);
 }
 
@@ -270,7 +266,7 @@ void GrandServantExtraBranchDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -281,12 +277,12 @@ void GrandServantExtraBranchDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C93B94(method) & 1) == 0 )
+  if ( (sub_1CE67C0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C93BFC(v14, 0);
+      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1CE6828(v14, 0);
     }
     goto LABEL_5;
   }
@@ -298,9 +294,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC0A4C;
+  this->fields.invoke_impl = (intptr_t)sub_1B0F68C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC0A04;
+  this->fields.extra_arg = (intptr_t)sub_1B0F644;
 }
 
 
@@ -315,14 +311,14 @@ System_IAsyncResult_o *GrandServantExtraBranchDialog_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4D2B5F9 & 1) == 0 )
+  if ( (byte_4DFF61D & 1) == 0 )
   {
-    sub_1C93AD4(&GrandServantExtraBranchDialog_Result_TypeInfo);
-    byte_4D2B5F9 = 1;
+    sub_1CE6700(&GrandServantExtraBranchDialog_Result_TypeInfo);
+    byte_4DFF61D = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(GrandServantExtraBranchDialog_Result_TypeInfo, &v10);
-  return sub_1C93A88(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
 }
 
 
@@ -331,7 +327,7 @@ void GrandServantExtraBranchDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C93A8C(result, 0, method);
+  sub_1CE66B8(result, 0, method);
 }
 
 

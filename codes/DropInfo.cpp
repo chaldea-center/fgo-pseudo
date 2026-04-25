@@ -34,7 +34,7 @@ LABEL_7:
         return (int)dropEffectId;
       }
     }
-    sub_1C93D2C(dropEffectId, dropAddMaster);
+    sub_1CE6958(dropEffectId, dropAddMaster);
   }
   return (int)dropEffectId;
 }
@@ -45,22 +45,24 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_4D30519 & 1) == 0 )
+  if ( (byte_4E04552 & 1) == 0 )
   {
-    sub_1C93AD4(&DropInfo_SaveData_TypeInfo);
-    byte_4D30519 = 1;
+    sub_1CE6700(&DropInfo_SaveData_TypeInfo);
+    byte_4E04552 = 1;
   }
-  v3 = sub_1C93D20(DropInfo_SaveData_TypeInfo);
+  v3 = sub_1CE694C(DropInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1C93D2C(v4, v5);
+    sub_1CE6958(v4, v5);
+  result = (DropInfo_SaveData_o *)v3;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
   *(_QWORD *)(v3 + 32) = *(_QWORD *)&this->fields.lv;
   *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
   *(_QWORD *)(v3 + 44) = *(_QWORD *)&this->fields.originalNum;
   *(_BYTE *)(v3 + 52) = this->fields.isAdd;
-  return (DropInfo_SaveData_o *)v3;
+  return result;
 }
 
 
@@ -80,7 +82,7 @@ bool DropInfo__IsDropDefaultParticleDisable(
   this = (DropInfo_o *)entity;
   if ( !entity )
 LABEL_7:
-    sub_1C93D2C(this, dropAddMaster);
+    sub_1CE6958(this, dropAddMaster);
   return DropAddEntity__IsDropDefaultParticleDisable(entity, 0);
 }
 
@@ -88,8 +90,12 @@ LABEL_7:
 void DropInfo__SetDataFromSaveData(DropInfo_o *this, DropInfo_SaveData_o *saveData, const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C93D2C(this, 0);
-  *(DropInfo_SaveData_Fields *)&this->fields.type = saveData->fields;
+    sub_1CE6958(this, 0);
+  *(_OWORD *)&this->fields.type = *(_OWORD *)&saveData->fields.type;
+  *(_QWORD *)&this->fields.lv = *(_QWORD *)&saveData->fields.lv;
+  this->fields.isRateUp = saveData->fields.isRateUp;
+  *(_QWORD *)&this->fields.originalNum = *(_QWORD *)&saveData->fields.originalNum;
+  this->fields.isAdd = saveData->fields.isAdd;
 }
 
 

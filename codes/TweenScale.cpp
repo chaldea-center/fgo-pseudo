@@ -6,10 +6,10 @@ void TweenScale___ctor(TweenScale_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4D2A13E )
+  if ( !byte_4DFE0AE )
   {
-    sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A13E = 1;
+    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0AE = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -41,17 +41,17 @@ TweenScale_o *TweenScale__Begin(
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
-  if ( (byte_4D352C8 & 1) == 0 )
+  if ( (byte_4E092A8 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UITweener_Begin_TweenScale___);
-    byte_4D352C8 = 1;
+    sub_1CE6700(&Method_UITweener_Begin_TweenScale___);
+    byte_4E092A8 = 1;
   }
   v9 = (TweenScale_o *)UITweener__Begin_object_(
                          go,
                          duration,
-                         (const MethodInfo_327A3AC *)Method_UITweener_Begin_TweenScale___);
+                         (const MethodInfo_32DA710 *)Method_UITweener_Begin_TweenScale___);
   if ( !v9 )
-    sub_1C93D2C(0, v10);
+    sub_1CE6958(0, v10);
   v11 = v9;
   v9->fields.from = TweenScale__get_value(v9, v10);
   v11->fields.to.fields.x = x;
@@ -69,36 +69,42 @@ TweenScale_o *TweenScale__Begin(
 // local variable allocation has failed, the output may be wrong!
 void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
+  float v5; // s1
+  float v6; // s3
+  unsigned __int64 v7; // d0 OVERLAPPED
+  float v8; // s2
+  int v9; // s1
   UITable_o **p_mTable; // x20
   UnityEngine_Object_o *mTable; // x21
-  __int64 v7; // x1
+  __int64 v12; // x1
   UnityEngine_GameObject_o *gameObject; // x21
-  Il2CppObject *v9; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  UnityEngine_Object_o *v16; // x21
-  float v17; // [xsp+0h] [xbp-40h]
-  UnityEngine_Vector3_o v18; // 0:kr00_12.12
+  Il2CppObject *v14; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  UnityEngine_Object_o *v21; // x21
+  float v22; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4D352C7 & 1) == 0 )
+  if ( (byte_4E092A7 & 1) == 0 )
   {
-    v17 = factor;
-    sub_1C93AD4(&Method_NGUITools_FindInParents_UITable___);
-    sub_1C93AD4(&NGUITools_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    factor = v17;
-    byte_4D352C7 = 1;
+    v22 = factor;
+    sub_1CE6700(&Method_NGUITools_FindInParents_UITable___);
+    sub_1CE6700(&NGUITools_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    factor = v22;
+    byte_4E092A7 = 1;
   }
-  *(float32x2_t *)&v18.fields.x = vadd_f32(
-                                    vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
-                                    vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor));
-  v18.fields.z = (float)((float)(1.0 - factor) * this->fields.from.fields.z)
-               + (float)(this->fields.to.fields.z * factor);
-  TweenScale__set_value(this, v18, (const MethodInfo *)isFinished);
+  v5 = (float)(1.0 - factor) * this->fields.from.fields.z;
+  v6 = this->fields.to.fields.z * factor;
+  v7 = vadd_f32(
+         vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
+         vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor)).n64_u64[0];
+  v8 = v5 + v6;
+  v9 = HIDWORD(v7);
+  TweenScale__set_value(this, *(UnityEngine_Vector3_o *)&v7, (const MethodInfo *)isFinished);
   if ( this->fields.updateTable )
   {
     p_mTable = &this->fields.mTable;
@@ -110,15 +116,15 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v9 = NGUITools__FindInParents_object_(
-           gameObject,
-           (const MethodInfo_322EDC8 *)Method_NGUITools_FindInParents_UITable___);
-    *p_mTable = (UITable_o *)v9;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTable, (int32_t)v9, v10, v11, v12, v13, v14, v15);
-    v16 = (UnityEngine_Object_o *)*p_mTable;
+    v14 = NGUITools__FindInParents_object_(
+            gameObject,
+            (const MethodInfo_328EB80 *)Method_NGUITools_FindInParents_UITable___);
+    *p_mTable = (UITable_o *)v14;
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mTable, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+    v21 = (UnityEngine_Object_o *)*p_mTable;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v16, 0, 0) )
+    if ( UnityEngine_Object__op_Equality(v21, 0, 0) )
     {
       this->fields.updateTable = 0;
     }
@@ -126,7 +132,7 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
     {
 LABEL_14:
       if ( !*p_mTable )
-        sub_1C93D2C(0, v7);
+        sub_1CE6958(0, v12);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }
@@ -168,10 +174,10 @@ UnityEngine_Transform_o *TweenScale__get_cachedTransform(TweenScale_o *this, con
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4D352C6 & 1) == 0 )
+  if ( (byte_4E092A6 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D352C6 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E092A6 = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -180,7 +186,7 @@ UnityEngine_Transform_o *TweenScale__get_cachedTransform(TweenScale_o *this, con
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
   }
   return this->fields.mTrans;
 }
@@ -193,7 +199,7 @@ UnityEngine_Vector3_o TweenScale__get_value(TweenScale_o *this, const MethodInfo
 
   cachedTransform = TweenScale__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   return UnityEngine_Transform__get_localScale(cachedTransform, 0);
 }
 
@@ -212,7 +218,7 @@ void TweenScale__set_value(TweenScale_o *this, UnityEngine_Vector3_o value, cons
   x = value.fields.x;
   cachedTransform = TweenScale__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C93D2C(0, v7);
+    sub_1CE6958(0, v7);
   v8.fields.y = y;
   v8.fields.z = z;
   v8.fields.x = x;

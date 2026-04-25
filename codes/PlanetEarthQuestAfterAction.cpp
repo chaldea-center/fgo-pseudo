@@ -10,10 +10,10 @@ BlankEarth_o *PlanetEarthQuestAfterAction__GetBlankEarth(PlanetEarthQuestAfterAc
   _BOOL8 v3; // x0
   __int64 v4; // x1
 
-  if ( (byte_4D2D53B & 1) == 0 )
+  if ( (byte_4E01572 & 1) == 0 )
   {
-    this = (PlanetEarthQuestAfterAction_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2D53B = 1;
+    this = (PlanetEarthQuestAfterAction_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01572 = 1;
   }
   TerminalListTop = (UnityEngine_Object_o *)BlankEarthQuestAfterAction__GetTerminalListTop(
                                               (BlankEarthQuestAfterAction_o *)this,
@@ -24,7 +24,7 @@ BlankEarth_o *PlanetEarthQuestAfterAction__GetBlankEarth(PlanetEarthQuestAfterAc
   if ( !v3 )
     return 0;
   if ( !TerminalListTop )
-    sub_1C93D2C(v3, v4);
+    sub_1CE6958(v3, v4);
   return ScrTerminalListTop__get_PlanetEarth((ScrTerminalListTop_o *)TerminalListTop, 0);
 }
 
@@ -36,10 +36,10 @@ bool PlanetEarthQuestAfterAction__IsBlankEarthActive(PlanetEarthQuestAfterAction
   __int64 v4; // x1
   UnityEngine_Object_o *PlanetEarth; // x19
 
-  if ( (byte_4D2D53A & 1) == 0 )
+  if ( (byte_4E01571 & 1) == 0 )
   {
-    this = (PlanetEarthQuestAfterAction_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2D53A = 1;
+    this = (PlanetEarthQuestAfterAction_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01571 = 1;
   }
   TerminalListTop = (UnityEngine_Object_o *)BlankEarthQuestAfterAction__GetTerminalListTop(
                                               (BlankEarthQuestAfterAction_o *)this,
@@ -50,7 +50,7 @@ bool PlanetEarthQuestAfterAction__IsBlankEarthActive(PlanetEarthQuestAfterAction
   if ( v3 )
     return 0;
   if ( !TerminalListTop )
-    sub_1C93D2C(v3, v4);
+    sub_1CE6958(v3, v4);
   PlanetEarth = (UnityEngine_Object_o *)ScrTerminalListTop__get_PlanetEarth((ScrTerminalListTop_o *)TerminalListTop, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);

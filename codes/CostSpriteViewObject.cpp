@@ -1,9 +1,9 @@
 void CostSpriteViewObject___ctor(CostSpriteViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2DE4A & 1) == 0 )
+  if ( (byte_4E01E87 & 1) == 0 )
   {
-    sub_1C93AD4(&ListViewObject_TypeInfo);
-    byte_4D2DE4A = 1;
+    sub_1CE6700(&ListViewObject_TypeInfo);
+    byte_4E01E87 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void CostSpriteViewObject__Awake(CostSpriteViewObject_o *this, const MethodInfo 
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4D2DE47 & 1) == 0 )
+  if ( (byte_4E01E84 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
-    byte_4D2DE47 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+    byte_4E01E84 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
   this->fields.itemDraw = (struct CostSpriteViewItemDraw_o *)Component_object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -59,7 +59,7 @@ void CostSpriteViewObject__Init(CostSpriteViewObject_o *this, const MethodInfo *
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C93D2C(transform, v4);
+    sub_1CE6958(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   CostSpriteViewObject__SetupDisp(this, v5);
@@ -72,7 +72,7 @@ bool CostSpriteViewObject__IsCostSpriteEnabled(CostSpriteViewObject_o *this, con
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw || (this = (CostSpriteViewObject_o *)itemDraw->fields.costSprite) == 0 )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0);
 }
 
@@ -90,11 +90,11 @@ void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodI
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4D2DE48 & 1) == 0 )
+  if ( (byte_4E01E85 & 1) == 0 )
   {
-    sub_1C93AD4(&NGUITools_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2DE48 = 1;
+    sub_1CE6700(&NGUITools_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01E85 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
@@ -108,7 +108,7 @@ void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodI
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C93A78(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
+    sub_1CE66A4(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -123,11 +123,11 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   const MethodInfo *v8; // x2
   CostSpriteViewItemDraw_o *v9; // x0
 
-  if ( (byte_4D2DE49 & 1) == 0 )
+  if ( (byte_4E01E86 & 1) == 0 )
   {
-    sub_1C93AD4(&CostSpriteViewItem_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2DE49 = 1;
+    sub_1CE6700(&CostSpriteViewItem_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01E86 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -151,7 +151,7 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C93D2C(0, v7);
+      sub_1CE6958(0, v7);
     CostSpriteViewItemDraw__SetItem(v9, (CostSpriteViewItem_o *)v5, v8);
   }
 }

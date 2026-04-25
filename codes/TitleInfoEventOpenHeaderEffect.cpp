@@ -1,9 +1,9 @@
 void TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2F2D5 & 1) == 0 )
+  if ( (byte_4E0331D & 1) == 0 )
   {
-    sub_1C93AD4(&CommonEffectComponent_TypeInfo);
-    byte_4D2F2D5 = 1;
+    sub_1CE6700(&CommonEffectComponent_TypeInfo);
+    byte_4E0331D = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -61,22 +61,22 @@ void TitleInfoEventOpenHeaderEffect__setup(
   int32_t v28; // [xsp+Ch] [xbp-34h] BYREF
 
   v28 = eventId;
-  if ( (byte_4D2F2D4 & 1) == 0 )
+  if ( (byte_4E0331C & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_16639/*"_anim"*/);
-    sub_1C93AD4(&StringLiteral_19020/*"ef_mapnamechange_"*/);
-    byte_4D2F2D4 = 1;
+    sub_1CE6700(&StringLiteral_16690/*"_anim"*/);
+    sub_1CE6700(&StringLiteral_19081/*"ef_mapnamechange_"*/);
+    byte_4E0331C = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v28, 0);
-  v9 = System_String__Concat_64463988(
-         (System_String_o *)StringLiteral_19020/*"ef_mapnamechange_"*/,
+  v9 = System_String__Concat_65161092(
+         (System_String_o *)StringLiteral_19081/*"ef_mapnamechange_"*/,
          v8,
-         (System_String_o *)StringLiteral_16639/*"_anim"*/,
+         (System_String_o *)StringLiteral_16690/*"_anim"*/,
          0);
   this->fields.baseName = v9;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11, v12, v13, v14, v15);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.changeUiCallback,
     (int32_t)changeUiCallback,
     v16,
@@ -86,7 +86,7 @@ void TitleInfoEventOpenHeaderEffect__setup(
     v20,
     v21);
   this->fields.animEndCallback = endCallback;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.animEndCallback,
     (int32_t)endCallback,
     v22,

@@ -3,26 +3,26 @@ void EventExpeditionListViewManager___ctor(EventExpeditionListViewManager_o *thi
   System_Collections_Generic_List_object__o *v3; // x20
   System_Collections_Generic_List_int__o *v4; // x20
 
-  if ( (byte_4D2AAF8 & 1) == 0 )
+  if ( (byte_4DFEB1A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
-    byte_4D2AAF8 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+    byte_4DFEB1A = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
   this->fields.selectEventExpeditionEntityList = (struct System_Collections_Generic_List_EventExpeditionEntity__o *)v3;
-  sub_1C93A78(&this->fields.selectEventExpeditionEntityList, v3);
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  sub_1CE66A4(&this->fields.selectEventExpeditionEntityList, v3);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.SelectPieceIdxList = v4;
-  sub_1C93A78(&this->fields.SelectPieceIdxList, v4);
+  sub_1CE66A4(&this->fields.SelectPieceIdxList, v4);
   ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
@@ -33,34 +33,34 @@ bool EventExpeditionListViewManager__CheckEventEnd(EventExpeditionListViewManage
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4D2AAEE & 1) == 0 )
+  if ( (byte_4DFEB10 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2AAEE = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFEB10 = 1;
   }
   entity = 0;
   if ( this->fields.currentEventId < 1 )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
     goto LABEL_14;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &entity,
           this->fields.currentEventId,
-          (const MethodInfo_34632C0 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+          (const MethodInfo_34E92A8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     return 0;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager__getTime(0);
   if ( !entity )
 LABEL_14:
-    sub_1C93D2C(Master_object, v4);
+    sub_1CE6958(Master_object, v4);
   return (__int64)Master_object >= (__int64)entity[6].klass;
 }
 
@@ -94,41 +94,41 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
   struct EventExpeditionListViewManager___c_StaticFields *v26; // x0
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D2AAEA & 1) == 0 )
+  if ( (byte_4DFEB0C & 1) == 0 )
   {
-    sub_1C93AD4(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_0__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_1__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_4__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c_TypeInfo);
-    byte_4D2AAEA = 1;
+    sub_1CE6700(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_0__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_1__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__CheckServant_b__40_4__);
+    sub_1CE6700(&EventExpeditionListViewManager___c_TypeInfo);
+    byte_4DFEB0C = 1;
   }
   *(_QWORD *)servantEquipSum = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_45;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_45;
   v5 = (UserServantMaster_o *)Instance;
   UserServantMaster__getCount((UserServantMaster_o *)Instance, &servantEquipSum[1], servantEquipSum, 1, 0);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_45;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
   if ( UserServantMaster__CheckServantAdd(v5, 1, 0) )
   {
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !SelfUserGame )
       goto LABEL_45;
     v7 = (CommonUI_o *)Instance;
@@ -149,7 +149,7 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
         Instance = (__int64)EventExpeditionListViewManager___c_TypeInfo;
       }
       v11 = **(Il2CppObject ***)(Instance + 184);
-      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C93D20(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1CE694C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
       ServantFrameShortDlgComponent_CallbackFunc___ctor(
         v10,
         v11,
@@ -157,7 +157,7 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
         0);
       static_fields = EventExpeditionListViewManager___c_TypeInfo->static_fields;
       static_fields->__9__40_0 = v10;
-      Instance = sub_1C93A78(&static_fields->__9__40_0, v10);
+      Instance = sub_1CE66A4(&static_fields->__9__40_0, v10);
     }
     if ( !v7 )
       goto LABEL_45;
@@ -170,7 +170,7 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
   Instance = UserServantMaster__CheckEquipAdd(v5, 1, 1, 0);
   if ( (Instance & 1) != 0 )
   {
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !SelfUserGame )
       goto LABEL_45;
     v17 = (CommonUI_o *)Instance;
@@ -191,7 +191,7 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
         Instance = (__int64)EventExpeditionListViewManager___c_TypeInfo;
       }
       v20 = **(Il2CppObject ***)(Instance + 184);
-      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C93D20(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1CE694C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
       ServantFrameShortDlgComponent_CallbackFunc___ctor(
         v10,
         v20,
@@ -199,7 +199,7 @@ bool EventExpeditionListViewManager__CheckServant(EventExpeditionListViewManager
         0);
       v21 = EventExpeditionListViewManager___c_TypeInfo->static_fields;
       v21->__9__40_1 = v10;
-      Instance = sub_1C93A78(&v21->__9__40_1, v10);
+      Instance = sub_1CE66A4(&v21->__9__40_1, v10);
     }
     if ( !v17 )
       goto LABEL_45;
@@ -210,28 +210,28 @@ LABEL_41:
     v15 = svtEquipKeep;
 LABEL_42:
     CommonUI__OpenSvtFrameShortDlg(v13, v14, v15, v16, 1, v10, 1, 0);
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
     if ( Instance )
     {
       ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)Instance, 0);
       return 0;
     }
 LABEL_45:
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   }
   if ( !MasterData_object )
     goto LABEL_45;
   if ( UserCommandCodeMaster__CheckCommandCodeAdd((UserCommandCodeMaster_o *)MasterData_object, 0, 0) )
   {
     Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)MasterData_object, 0);
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !SelfUserGame )
       goto LABEL_45;
     v23 = (CommonUI_o *)Instance;
-    if ( !byte_4D2AB39 )
+    if ( !byte_4DFEB1E )
     {
-      sub_1C93AD4(&BalanceConfig_TypeInfo);
-      byte_4D2AB39 = 1;
+      sub_1CE6700(&BalanceConfig_TypeInfo);
+      byte_4DFEB1E = 1;
     }
     v24 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -255,7 +255,7 @@ LABEL_45:
         Instance = (__int64)EventExpeditionListViewManager___c_TypeInfo;
       }
       v25 = **(Il2CppObject ***)(Instance + 184);
-      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C93D20(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1CE694C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
       ServantFrameShortDlgComponent_CallbackFunc___ctor(
         v10,
         v25,
@@ -263,7 +263,7 @@ LABEL_45:
         0);
       v26 = EventExpeditionListViewManager___c_TypeInfo->static_fields;
       v26->__9__40_4 = v10;
-      Instance = sub_1C93A78(&v26->__9__40_4, v10);
+      Instance = sub_1CE66A4(&v26->__9__40_4, v10);
     }
     if ( !v23 )
       goto LABEL_45;
@@ -280,18 +280,21 @@ System_Collections_IEnumerator_o *EventExpeditionListViewManager__CoWaitEffectPl
         EventExpeditionListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
+  EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4D2AAF2 & 1) == 0 )
+  if ( (byte_4DFEB14 & 1) == 0 )
   {
-    sub_1C93AD4(&EventExpeditionListViewManager__CoWaitEffectPlay_d__48_TypeInfo);
-    byte_4D2AAF2 = 1;
+    sub_1CE6700(&EventExpeditionListViewManager__CoWaitEffectPlay_d__48_TypeInfo);
+    byte_4DFEB14 = 1;
   }
-  v3 = sub_1C93D20(EventExpeditionListViewManager__CoWaitEffectPlay_d__48_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1C93A78(v3 + 32, this);
+  v3 = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)sub_1CE694C(EventExpeditionListViewManager__CoWaitEffectPlay_d__48_TypeInfo);
+  EventExpeditionListViewManager__CoWaitEffectPlay_d__48___ctor(v3, 0, 0);
+  if ( !v3 )
+    sub_1CE6958(v4, v5);
+  v3->fields.__4__this = this;
+  sub_1CE66A4(&v3->fields.__4__this, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -317,13 +320,13 @@ void EventExpeditionListViewManager__CreateList(
   __int64 size; // x10
   Il2CppClass **v20; // x8
 
-  if ( (byte_4D2AAE5 & 1) == 0 )
+  if ( (byte_4DFEB07 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&EventExpeditionListViewItem_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_UpdateExpeditionNoticeNumber__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    byte_4D2AAE5 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&EventExpeditionListViewItem_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager_UpdateExpeditionNoticeNumber__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    byte_4DFEB07 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !evExpeditionEntList )
@@ -335,19 +338,19 @@ void EventExpeditionListViewManager__CreateList(
     while ( 1 )
     {
       if ( v10 >= max_length )
-        sub_1C93D34(itemList);
+        sub_1CE6960(itemList);
       v11 = evExpeditionEntList->m_Items[v10];
       if ( !v11 )
         break;
       idx = v11->fields.idx;
       assetManager = this->fields.assetManager;
-      v14 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+      v14 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
       System_Action___ctor(
         v14,
         (Il2CppObject *)this,
         Method_EventExpeditionListViewManager_UpdateExpeditionNoticeNumber__,
         0);
-      v15 = (EventExpeditionListViewItem_o *)sub_1C93D20(EventExpeditionListViewItem_TypeInfo);
+      v15 = (EventExpeditionListViewItem_o *)sub_1CE694C(EventExpeditionListViewItem_TypeInfo);
       EventExpeditionListViewItem___ctor(v15, idx, v11, eventId, assetManager, v14, v16);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList )
@@ -363,21 +366,21 @@ void EventExpeditionListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v15,
-          *(const MethodInfo_387999C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v15;
-        itemList = (System_Collections_Generic_List_object__o *)sub_1C93A78(v20 + 4, v15);
+        itemList = (System_Collections_Generic_List_object__o *)sub_1CE66A4(v20 + 4, v15);
       }
       max_length = evExpeditionEntList->max_length;
       if ( (int)++v10 >= max_length )
         goto LABEL_14;
     }
 LABEL_15:
-    sub_1C93D2C(itemList, v8);
+    sub_1CE6958(itemList, v8);
   }
 LABEL_14:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -387,13 +390,12 @@ LABEL_14:
 
 void EventExpeditionListViewManager__DestroyList(EventExpeditionListViewManager_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
   ExpeditionAssetManager_o *assetManager; // x0
 
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   assetManager = this->fields.assetManager;
   if ( assetManager )
-    ExpeditionAssetManager__Release(assetManager, this->fields.currentEventId, v3);
+    ExpeditionAssetManager__Release(assetManager, this->fields.currentEventId, 0);
 }
 
 
@@ -403,7 +405,7 @@ void EventExpeditionListViewManager__FinishResponse(
         System_Action_o *animFinishCallback,
         const MethodInfo *method)
 {
-  Il2CppObject *v7; // x20
+  EventExpeditionListViewManager___c__DisplayClass49_0_o *v7; // x20
   UnityEngine_Component_o *touchPanel; // x0
   __int64 v9; // x1
   Il2CppObject *v10; // x21
@@ -412,55 +414,55 @@ void EventExpeditionListViewManager__FinishResponse(
   System_Action_o *v13; // x21
   const MethodInfo *v14; // x2
 
-  if ( (byte_4D2AAF3 & 1) == 0 )
+  if ( (byte_4DFEB15 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_JsonManager_DeserializeArray_EventExpeditionListViewManager_resData___);
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__0__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass49_0_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    sub_1C93AD4(&StringLiteral_15904/*"["*/);
-    sub_1C93AD4(&StringLiteral_16156/*"]"*/);
-    byte_4D2AAF3 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_JsonManager_DeserializeArray_EventExpeditionListViewManager_resData___);
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__0__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass49_0_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    sub_1CE6700(&StringLiteral_15954/*"["*/);
+    sub_1CE6700(&StringLiteral_16207/*"]"*/);
+    byte_4DFEB15 = 1;
   }
-  v7 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass49_0_TypeInfo);
-  System_Object___ctor(v7, 0);
+  v7 = (EventExpeditionListViewManager___c__DisplayClass49_0_o *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass49_0_TypeInfo);
+  EventExpeditionListViewManager___c__DisplayClass49_0___ctor(v7, 0);
   if ( !v7 )
     goto LABEL_11;
-  v7[1].klass = (Il2CppClass *)animFinishCallback;
-  sub_1C93A78(&v7[1], animFinishCallback);
-  v7[2].klass = (Il2CppClass *)this;
-  sub_1C93A78(&v7[2], this);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22483/*"ng"*/, 0) )
+  v7->fields.animFinishCallback = animFinishCallback;
+  sub_1CE66A4(&v7->fields, animFinishCallback);
+  v7->fields.__4__this = this;
+  sub_1CE66A4(&v7->fields.__4__this, this);
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22555/*"ng"*/, 0) )
     return;
-  v10 = (Il2CppObject *)System_String__Concat_64463988(
-                          (System_String_o *)StringLiteral_15904/*"["*/,
+  v10 = (Il2CppObject *)System_String__Concat_65161092(
+                          (System_String_o *)StringLiteral_15954/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_16156/*"]"*/,
+                          (System_String_o *)StringLiteral_16207/*"]"*/,
                           0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v11 = JsonManager__DeserializeArray_object_(
           v10,
-          (const MethodInfo_3213F70 *)Method_JsonManager_DeserializeArray_EventExpeditionListViewManager_resData___);
-  v7[1].monitor = v11;
-  sub_1C93A78(&v7[1].monitor, v11);
+          (const MethodInfo_3273D28 *)Method_JsonManager_DeserializeArray_EventExpeditionListViewManager_resData___);
+  v7->fields.res = (struct EventExpeditionListViewManager_resData_array *)v11;
+  sub_1CE66A4(&v7->fields.res, v11);
   touchPanel = (UnityEngine_Component_o *)this->fields.touchPanel;
   if ( !touchPanel
     || (touchPanel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(touchPanel, 0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)touchPanel, 0, 0),
         bitExpeditionFinish = this->fields.bitExpeditionFinish,
-        v13 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        v13 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v13,
-          v7,
+          (Il2CppObject *)v7,
           Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__0__,
           0),
         !bitExpeditionFinish) )
   {
 LABEL_11:
-    sub_1C93D2C(touchPanel, v9);
+    sub_1CE6958(touchPanel, v9);
   }
   BitExpeditionFinishComponent__EndSetUp(bitExpeditionFinish, v13, v14);
 }
@@ -477,31 +479,31 @@ void EventExpeditionListViewManager__FinishResponseCallBack(
   const MethodInfo *v7; // x1
   System_Action_o *expeditionCallback; // x0
 
-  if ( (byte_4D2AAF4 & 1) == 0 )
+  if ( (byte_4DFEB16 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
-    byte_4D2AAF4 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+    byte_4DFEB16 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
   this->fields.selectEventExpeditionEntityList = (struct System_Collections_Generic_List_EventExpeditionEntity__o *)v3;
-  sub_1C93A78(&this->fields.selectEventExpeditionEntityList, v3);
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  sub_1CE66A4(&this->fields.selectEventExpeditionEntityList, v3);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.SelectPieceIdxList = v4;
-  sub_1C93A78(&this->fields.SelectPieceIdxList, v4);
+  sub_1CE66A4(&this->fields.SelectPieceIdxList, v4);
   bitExpeditionFinish = (UnityEngine_Component_o *)this->fields.bitExpeditionFinish;
   if ( !bitExpeditionFinish
     || (bitExpeditionFinish = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bitExpeditionFinish, 0)) == 0 )
   {
-    sub_1C93D2C(bitExpeditionFinish, v5);
+    sub_1CE6958(bitExpeditionFinish, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bitExpeditionFinish, 0, 0);
   EventExpeditionListViewManager__UpdateExpeditionNoticeNumber(this, v7);
@@ -519,7 +521,7 @@ void EventExpeditionListViewManager__Init(
         System_Action_BattleDropItem____int__Action__o *requestCallBack,
         const MethodInfo *method)
 {
-  __int64 v11; // x20
+  EventExpeditionListViewManager___c__DisplayClass32_0_o *v11; // x20
   System_String_o *touchPanel; // x0
   __int64 v13; // x1
   int32_t v14; // w8
@@ -529,41 +531,39 @@ void EventExpeditionListViewManager__Init(
   ExpeditionAssetManager_o *assetManager; // x21
   struct ExpeditionAssetManager_o **p_assetManager; // x19
   ExpeditionAssetManager_o *v20; // x21
-  const MethodInfo *v21; // x1
-  int32_t v22; // w19
-  System_Action_o *v23; // x22
-  const MethodInfo *v24; // x3
+  int32_t v21; // w19
+  System_Action_o *v22; // x22
 
-  if ( (byte_4D2AAE4 & 1) == 0 )
+  if ( (byte_4DFEB06 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&ExpeditionAssetManager_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass32_0__Init_b__0__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass32_0_TypeInfo);
-    sub_1C93AD4(&StringLiteral_5837/*"EXPEDITION_PUSH_BTN_LABEL"*/);
-    byte_4D2AAE4 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&ExpeditionAssetManager_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass32_0__Init_b__0__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass32_0_TypeInfo);
+    sub_1CE6700(&StringLiteral_5851/*"EXPEDITION_PUSH_BTN_LABEL"*/);
+    byte_4DFEB06 = 1;
   }
-  v11 = sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass32_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0);
+  v11 = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass32_0_TypeInfo);
+  EventExpeditionListViewManager___c__DisplayClass32_0___ctor(v11, 0);
   if ( !v11 )
     goto LABEL_13;
-  *(_DWORD *)(v11 + 16) = eventId;
-  *(_QWORD *)(v11 + 24) = this;
-  sub_1C93A78(v11 + 24, this);
-  *(_QWORD *)(v11 + 32) = evExpeditionEntList;
-  sub_1C93A78(v11 + 32, evExpeditionEntList);
-  v14 = *(_DWORD *)(v11 + 16);
+  v11->fields.eventId = eventId;
+  v11->fields.__4__this = this;
+  sub_1CE66A4(&v11->fields.__4__this, this);
+  v11->fields.evExpeditionEntList = evExpeditionEntList;
+  sub_1CE66A4(&v11->fields.evExpeditionEntList, evExpeditionEntList);
+  v14 = v11->fields.eventId;
   this->fields.expeditionCallback = expeditionCallback;
   this->fields.currentEventId = v14;
-  sub_1C93A78(&this->fields.expeditionCallback, expeditionCallback);
+  sub_1CE66A4(&this->fields.expeditionCallback, expeditionCallback);
   this->fields.requestCallBack = requestCallBack;
-  sub_1C93A78(&this->fields.requestCallBack, requestCallBack);
+  sub_1CE66A4(&this->fields.requestCallBack, requestCallBack);
   this->fields.isButtonOn = EventRewardSaveData__GetExpeditionNotification(0);
   expeditionNoticeLb = this->fields.expeditionNoticeLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  touchPanel = LocalizationManager__Get((System_String_o *)StringLiteral_5837/*"EXPEDITION_PUSH_BTN_LABEL"*/, 0);
+  touchPanel = LocalizationManager__Get((System_String_o *)StringLiteral_5851/*"EXPEDITION_PUSH_BTN_LABEL"*/, 0);
   if ( !expeditionNoticeLb )
     goto LABEL_13;
   UILabel__set_text(expeditionNoticeLb, touchPanel, 0);
@@ -580,23 +580,23 @@ void EventExpeditionListViewManager__Init(
   if ( !assetManager )
   {
     p_assetManager = &this->fields.assetManager;
-    v20 = (ExpeditionAssetManager_o *)sub_1C93D20(ExpeditionAssetManager_TypeInfo);
-    ExpeditionAssetManager___ctor(v20, v21);
+    v20 = (ExpeditionAssetManager_o *)sub_1CE694C(ExpeditionAssetManager_TypeInfo);
+    ExpeditionAssetManager___ctor(v20, 0);
     *p_assetManager = v20;
-    sub_1C93A78(p_assetManager, v20);
+    sub_1CE66A4(p_assetManager, v20);
     assetManager = *p_assetManager;
   }
-  v22 = *(_DWORD *)(v11 + 16);
-  v23 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v21 = v11->fields.eventId;
+  v22 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(
-    v23,
+    v22,
     (Il2CppObject *)v11,
     Method_EventExpeditionListViewManager___c__DisplayClass32_0__Init_b__0__,
     0);
   if ( !assetManager )
 LABEL_13:
-    sub_1C93D2C(touchPanel, v13);
-  ExpeditionAssetManager__GetAssets(assetManager, v22, v23, v24);
+    sub_1CE6958(touchPanel, v13);
+  ExpeditionAssetManager__GetAssets(assetManager, v21, v22, 0);
 }
 
 
@@ -609,32 +609,32 @@ void EventExpeditionListViewManager__InitEventExpeditionList(
   const MethodInfo *v5; // x2
   System_Collections_Generic_List_Enumerator_object__o v6; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4D2AAEC & 1) == 0 )
+  if ( (byte_4DFEB0E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
-    byte_4D2AAEC = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
+    byte_4DFEB0E = 1;
   }
   memset(&v6, 0, sizeof(v6));
   ObjectList = (System_Collections_Generic_List_object__o *)EventExpeditionListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v6,
     ObjectList,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v6,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__) )
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__) )
     EventExpeditionListViewManager__InitEventExpeditionObj(
       this,
       (EventExpeditionListViewObject_o *)v6.fields._current,
       v5);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v6,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
 }
 
 
@@ -645,24 +645,20 @@ void EventExpeditionListViewManager__InitEventExpeditionObj(
 {
   Il2CppObject *v4; // x20
   System_Action_o *v5; // x21
-  const MethodInfo *v6; // x2
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4D2AAED & 1) == 0 )
+  if ( (byte_4DFEB0F & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    this = (EventExpeditionListViewManager_o *)sub_1C93AD4(&Method_EventExpeditionListViewManager_OnMoveEnd__);
-    byte_4D2AAED = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    this = (EventExpeditionListViewManager_o *)sub_1CE6700(&Method_EventExpeditionListViewManager_OnMoveEnd__);
+    byte_4DFEB0F = 1;
   }
-  if ( !obj
-    || (this = (EventExpeditionListViewManager_o *)EventExpeditionListViewObject__GetItem(obj, (const MethodInfo *)obj)) == 0 )
-  {
-    sub_1C93D2C(this, obj);
-  }
+  if ( !obj || (this = (EventExpeditionListViewManager_o *)EventExpeditionListViewObject__GetItem(obj, 0)) == 0 )
+    sub_1CE6958(this, obj);
   EventExpeditionListViewItem__CheckExpeditionCondition((EventExpeditionListViewItem_o *)this, (const MethodInfo *)obj);
-  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v5, v4, Method_EventExpeditionListViewManager_OnMoveEnd__, 0);
-  EventExpeditionListViewObject__Init(obj, v5, v6);
+  EventExpeditionListViewObject__Init(obj, v5, 0);
 }
 
 
@@ -688,10 +684,10 @@ void EventExpeditionListViewManager__LocateDialogToExpeditionObj(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0);
   this = (EventExpeditionListViewManager_o *)UnityEngine_GameObject__get_transform(obj, 0);
   v6 = this;
-  if ( !byte_4D2A13E )
+  if ( !byte_4DFE0AE )
   {
-    this = (EventExpeditionListViewManager_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A13E = 1;
+    this = (EventExpeditionListViewManager_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0AE = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localScale(
@@ -701,7 +697,7 @@ void EventExpeditionListViewManager__LocateDialogToExpeditionObj(
         (this = (EventExpeditionListViewManager_o *)UnityEngine_GameObject__get_gameObject(obj, 0)) == 0) )
   {
 LABEL_9:
-    sub_1C93D2C(this, obj);
+    sub_1CE6958(this, obj);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -729,10 +725,10 @@ void EventExpeditionListViewManager__LocateDialogToExpeditionPanel(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0);
   this = (EventExpeditionListViewManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)dialog, 0);
   v6 = this;
-  if ( !byte_4D2A13E )
+  if ( !byte_4DFE0AE )
   {
-    this = (EventExpeditionListViewManager_o *)sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A13E = 1;
+    this = (EventExpeditionListViewManager_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0AE = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localScale(
@@ -744,7 +740,7 @@ void EventExpeditionListViewManager__LocateDialogToExpeditionPanel(
                                                       0)) == 0) )
   {
 LABEL_9:
-    sub_1C93D2C(this, dialog);
+    sub_1CE6958(this, dialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -777,30 +773,30 @@ void EventExpeditionListViewManager__OnClickCompleteButton(
   EventExpeditionEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4D2AAEB & 1) == 0 )
+  if ( (byte_4DFEB0D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__get_Current__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_OnClickCompleteButton__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ExpeditionInfo__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ExpeditionInfo__get_Count__);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2AAEB = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__get_Current__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager_OnClickCompleteButton__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ExpeditionInfo__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ExpeditionInfo__get_Count__);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4DFEB0D = 1;
   }
   memset(&v24, 0, sizeof(v24));
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_28;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
   if ( !Instance )
     goto LABEL_28;
   Instance = (DataManager_o *)UserEventExpeditionMaster__GetCompleteExpeditionInfoList(
@@ -818,32 +814,32 @@ void EventExpeditionListViewManager__OnClickCompleteButton(
   Instance = (DataManager_o *)this->fields.maskPanel;
   if ( !Instance )
 LABEL_28:
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     v5,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_ExpeditionInfo__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_ExpeditionInfo__GetEnumerator__);
   v24 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__MoveNext__) )
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__MoveNext__) )
   {
     current = v24.fields._current;
-    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v8 )
-      sub_1C93D2C(0, v9);
+      sub_1CE6958(0, v9);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)v8,
-                          (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
+                          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
     if ( !current )
-      sub_1C93D2C(MasterData_object, v11);
+      sub_1CE6958(MasterData_object, v11);
     if ( !MasterData_object )
-      sub_1C93D2C(0, v11);
+      sub_1CE6958(0, v11);
     v12 = EventExpeditionMaster__TryGetEntity(
             (EventExpeditionMaster_o *)MasterData_object,
             &entity,
@@ -851,32 +847,32 @@ LABEL_28:
             (int32_t)current[1].klass,
             0);
     if ( !v6 )
-      sub_1C93D2C(v12, v13);
+      sub_1CE6958(v12, v13);
     v14 = (Il2CppObject *)entity;
     items = v6->fields._items;
     v16 = Method_System_Collections_Generic_List_EventExpeditionEntity__Add__;
     ++v6->fields._version;
     if ( !items )
-      sub_1C93D2C(v12, v14);
+      sub_1CE6958(v12, v14);
     size = v6->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v6,
         v14,
-        *(const MethodInfo_387999C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+        *(const MethodInfo_3905F68 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
     }
     else
     {
       v18 = &items->obj.klass + size;
       v6->fields._size = size + 1;
       v18[4] = (Il2CppClass *)v14;
-      sub_1C93A78(v18 + 4, v14);
+      sub_1CE66A4(v18 + 4, v14);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_ExpeditionInfo__Dispose__);
   EventExpeditionListViewManager__OnClickCompleteView(
     this,
     (System_Collections_Generic_List_EventExpeditionEntity__o *)v6,
@@ -884,8 +880,8 @@ LABEL_28:
 LABEL_20:
   v20 = Method_EventExpeditionListViewManager_OnClickCompleteButton__;
   if ( (*((_BYTE *)Method_EventExpeditionListViewManager_OnClickCompleteButton__ + 83) & 2) != 0 )
-    v20 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager_OnClickCompleteButton__);
-  v21 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v20, v20[4]);
+    v20 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager_OnClickCompleteButton__);
+  v21 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v20, v20[4]);
   OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0);
 }
 
@@ -895,11 +891,11 @@ void EventExpeditionListViewManager__OnClickCompleteView(
         System_Collections_Generic_List_EventExpeditionEntity__o *eventExpeditionEntities,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x24
+  EventExpeditionListViewManager___c__DisplayClass51_0_o *v5; // x24
   DataManager_o *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x22
-  Il2CppObject *v9; // x23
+  EventExpeditionListViewManager___c__DisplayClass51_1_o *v9; // x23
   __int64 v10; // x0
   __int64 v11; // x1
   Il2CppObject *current; // x1
@@ -931,52 +927,52 @@ void EventExpeditionListViewManager__OnClickCompleteView(
   System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+30h] [xbp-80h] BYREF
   UserEventExpeditionEntity_o *entity; // [xsp+48h] [xbp-68h] BYREF
 
-  if ( (byte_4D2AAF5 & 1) == 0 )
+  if ( (byte_4DFEB17 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_FirstOrDefault_ExpeditionInfo___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_Select_EventExpeditionEntity__int___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__get_Current__);
-    sub_1C93AD4(&System_Func_ExpeditionInfo__bool__TypeInfo);
-    sub_1C93AD4(&System_Func_EventExpeditionEntity__int__TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__GetEnumerator__);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__OnClickCompleteView_b__51_0__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__1__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass51_0_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_1__OnClickCompleteView_b__2__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass51_1_TypeInfo);
-    sub_1C93AD4(&EventExpeditionListViewManager___c_TypeInfo);
-    byte_4D2AAF5 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_ExpeditionInfo___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_Select_EventExpeditionEntity__int___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__get_Current__);
+    sub_1CE6700(&System_Func_ExpeditionInfo__bool__TypeInfo);
+    sub_1CE6700(&System_Func_EventExpeditionEntity__int__TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__GetEnumerator__);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__OnClickCompleteView_b__51_0__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__1__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass51_0_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_1__OnClickCompleteView_b__2__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass51_1_TypeInfo);
+    sub_1CE6700(&EventExpeditionListViewManager___c_TypeInfo);
+    byte_4DFEB17 = 1;
   }
   entity = 0;
   memset(&v38, 0, sizeof(v38));
-  v5 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass51_0_TypeInfo);
-  System_Object___ctor(v5, 0);
+  v5 = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass51_0_TypeInfo);
+  EventExpeditionListViewManager___c__DisplayClass51_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_38;
-  v5[1].klass = (Il2CppClass *)this;
-  sub_1C93A78(&v5[1], this);
+  v5->fields.__4__this = this;
+  sub_1CE66A4(&v5->fields, this);
   this->fields.selectEventExpeditionEntityList = eventExpeditionEntities;
-  sub_1C93A78(&this->fields.selectEventExpeditionEntityList, eventExpeditionEntities);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1CE66A4(&this->fields.selectEventExpeditionEntityList, eventExpeditionEntities);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_38;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2A55B )
+  if ( !byte_4DFE4CA )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2A55B = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFE4CA = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -986,7 +982,7 @@ void EventExpeditionListViewManager__OnClickCompleteView(
   }
   if ( !MasterData_object )
     goto LABEL_38;
-  v36 = v5;
+  v36 = (Il2CppObject *)v5;
   Instance = (DataManager_o *)UserEventExpeditionMaster__TryGetEntity(
                                 (UserEventExpeditionMaster_o *)MasterData_object,
                                 &entity,
@@ -999,50 +995,50 @@ void EventExpeditionListViewManager__OnClickCompleteView(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     (System_Collections_Generic_List_object__o *)eventExpeditionEntities,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_EventExpeditionEntity__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_EventExpeditionEntity__GetEnumerator__);
   v38 = v37;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v38,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__MoveNext__) )
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__MoveNext__) )
   {
-    v9 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass51_1_TypeInfo);
-    System_Object___ctor(v9, 0);
+    v9 = (EventExpeditionListViewManager___c__DisplayClass51_1_o *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass51_1_TypeInfo);
+    EventExpeditionListViewManager___c__DisplayClass51_1___ctor(v9, 0);
     if ( !v9 )
-      sub_1C93D2C(v10, v11);
+      sub_1CE6958(v10, v11);
     current = v38.fields._current;
-    v9[1].klass = (Il2CppClass *)v38.fields._current;
-    v13 = sub_1C93A78(&v9[1], current);
+    v9->fields.entity = (struct EventExpeditionEntity_o *)v38.fields._current;
+    v13 = sub_1CE66A4(&v9->fields, current);
     if ( !entity )
-      sub_1C93D2C(v13, v14);
+      sub_1CE6958(v13, v14);
     SelectPieceIdxList = this->fields.SelectPieceIdxList;
     expeditionInfos = (System_Collections_Generic_IEnumerable_TSource__o *)entity->fields.expeditionInfos;
-    v17 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_ExpeditionInfo__bool__TypeInfo);
+    v17 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_ExpeditionInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v17,
-      v9,
+      (Il2CppObject *)v9,
       Method_EventExpeditionListViewManager___c__DisplayClass51_1__OnClickCompleteView_b__2__,
       0);
-    v18 = System_Linq_Enumerable__FirstOrDefault_object__52221724(
+    v18 = System_Linq_Enumerable__FirstOrDefault_object__52613440(
             expeditionInfos,
             (System_Func_TSource__bool__o *)v17,
-            (const MethodInfo_31CD71C *)Method_System_Linq_Enumerable_FirstOrDefault_ExpeditionInfo___);
+            (const MethodInfo_322D140 *)Method_System_Linq_Enumerable_FirstOrDefault_ExpeditionInfo___);
     if ( !v18 )
-      sub_1C93D2C(0, v19);
+      sub_1CE6958(0, v19);
     if ( !SelectPieceIdxList )
-      sub_1C93D2C(v18, v19);
+      sub_1CE6958(v18, v19);
     klass_high = HIDWORD(v18[1].klass);
     items = SelectPieceIdxList->fields._items;
     v22 = Method_System_Collections_Generic_List_int__Add__;
     ++SelectPieceIdxList->fields._version;
     if ( !items )
-      sub_1C93D2C(v18, klass_high);
+      sub_1CE6958(v18, klass_high);
     size = SelectPieceIdxList->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_int___AddWithResize(
         SelectPieceIdxList,
         klass_high,
-        *(const MethodInfo_385C978 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+        *(const MethodInfo_38E8F44 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1052,7 +1048,7 @@ void EventExpeditionListViewManager__OnClickCompleteView(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v38,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionEntity__Dispose__);
   v24 = EventExpeditionListViewManager___c_TypeInfo;
   if ( !EventExpeditionListViewManager___c_TypeInfo->_2.cctor_finished )
   {
@@ -1068,7 +1064,7 @@ void EventExpeditionListViewManager__OnClickCompleteView(
       v24 = EventExpeditionListViewManager___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v24->static_fields->__9;
-    _9__51_0 = (System_Func_object__int__o *)sub_1C93D20(System_Func_EventExpeditionEntity__int__TypeInfo);
+    _9__51_0 = (System_Func_object__int__o *)sub_1CE694C(System_Func_EventExpeditionEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__51_0,
       v26,
@@ -1076,17 +1072,17 @@ void EventExpeditionListViewManager__OnClickCompleteView(
       0);
     static_fields = EventExpeditionListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__51_0 = (struct System_Func_EventExpeditionEntity__int__o *)_9__51_0;
-    sub_1C93A78(&static_fields->__9__51_0, _9__51_0);
+    sub_1CE66A4(&static_fields->__9__51_0, _9__51_0);
   }
   v28 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v35,
                                                                (System_Func_TSource__TResult__o *)_9__51_0,
-                                                               (const MethodInfo_31DA264 *)Method_System_Linq_Enumerable_Select_EventExpeditionEntity__int___);
+                                                               (const MethodInfo_3239D60 *)Method_System_Linq_Enumerable_Select_EventExpeditionEntity__int___);
   v29 = System_Linq_Enumerable__ToArray_int_(
           v28,
-          (const MethodInfo_31E3B80 *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_3243710 *)Method_System_Linq_Enumerable_ToArray_int___);
   v36[1].monitor = v29;
-  sub_1C93A78(&v36[1].monitor, v29);
+  sub_1CE66A4(&v36[1].monitor, v29);
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   EventExpeditionListViewManager__RequestListObject(this, v30);
   Instance = (DataManager_o *)this->fields.bitExpeditionFinish;
@@ -1095,7 +1091,7 @@ void EventExpeditionListViewManager__OnClickCompleteView(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0),
         bitExpeditionFinish = this->fields.bitExpeditionFinish,
         v32 = this->fields.SelectPieceIdxList,
-        v33 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        v33 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v33,
           v36,
@@ -1104,7 +1100,7 @@ void EventExpeditionListViewManager__OnClickCompleteView(
         !bitExpeditionFinish) )
   {
 LABEL_38:
-    sub_1C93D2C(Instance, v7);
+    sub_1CE6958(Instance, v7);
   }
   BitExpeditionFinishComponent__SetUp(bitExpeditionFinish, v32, v33, 0, v34);
 }
@@ -1123,21 +1119,20 @@ void EventExpeditionListViewManager__OnClickDecide(
   _QWORD *v11; // x9
   __int64 klass_low; // x10
   intptr_t v13; // x8
-  const MethodInfo *v14; // x2
-  intptr_t v15; // x8
-  _QWORD *v16; // x9
-  __int64 v17; // x10
-  NetworkManager_ResultCallbackFunc_o *v18; // x22
+  intptr_t v14; // x8
+  _QWORD *v15; // x9
+  __int64 v16; // x10
+  NetworkManager_ResultCallbackFunc_o *v17; // x22
 
-  if ( (byte_4D2AAF0 & 1) == 0 )
+  if ( (byte_4DFEB12 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_StartResponse__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_EventExpeditionStartRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4D2AAF0 = 1;
+    sub_1CE6700(&Method_EventExpeditionListViewManager_StartResponse__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
+    sub_1CE6700(&Method_NetworkManager_getRequest_EventExpeditionStartRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4DFEB12 = 1;
   }
   if ( !isDecide )
   {
@@ -1148,7 +1143,7 @@ void EventExpeditionListViewManager__OnClickDecide(
       return;
     }
 LABEL_23:
-    sub_1C93D2C(maskPanel, isDecide);
+    sub_1CE6958(maskPanel, isDecide);
   }
   maskPanel = (UnityEngine_GameObject_o *)this->fields.selectEventExpeditionEntityList;
   if ( !maskPanel )
@@ -1164,55 +1159,55 @@ LABEL_23:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)maskPanel,
       (Il2CppObject *)eventExpeditionEntity,
-      *(const MethodInfo_387999C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
     v13 = m_CachedPtr + 8 * klass_low;
     LODWORD(maskPanel[1].klass) = klass_low + 1;
     *(_QWORD *)(v13 + 32) = eventExpeditionEntity;
-    sub_1C93A78(v13 + 32, eventExpeditionEntity);
+    sub_1CE66A4(v13 + 32, eventExpeditionEntity);
   }
   maskPanel = (UnityEngine_GameObject_o *)this->fields.SelectPieceIdxList;
   if ( !maskPanel )
     goto LABEL_23;
-  v15 = maskPanel->fields.m_CachedPtr;
-  v16 = Method_System_Collections_Generic_List_int__Add__;
+  v14 = maskPanel->fields.m_CachedPtr;
+  v15 = Method_System_Collections_Generic_List_int__Add__;
   ++HIDWORD(maskPanel[1].klass);
-  if ( !v15 )
+  if ( !v14 )
     goto LABEL_23;
-  v17 = SLODWORD(maskPanel[1].klass);
-  if ( (unsigned int)v17 >= *(_DWORD *)(v15 + 24) )
+  v16 = SLODWORD(maskPanel[1].klass);
+  if ( (unsigned int)v16 >= *(_DWORD *)(v14 + 24) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)maskPanel,
       pieceIdx,
-      *(const MethodInfo_385C978 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      *(const MethodInfo_38E8F44 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
-    LODWORD(maskPanel[1].klass) = v17 + 1;
-    *(_DWORD *)(v15 + 4 * v17 + 32) = pieceIdx;
+    LODWORD(maskPanel[1].klass) = v16 + 1;
+    *(_DWORD *)(v14 + 4 * v16 + 32) = pieceIdx;
   }
   maskPanel = (UnityEngine_GameObject_o *)this->fields.expeditionConfirmDialog;
   if ( !maskPanel )
     goto LABEL_23;
-  ExpeditionConfirmDialogComponent__Close_32241216((ExpeditionConfirmDialogComponent_o *)maskPanel, 0, v14);
+  ExpeditionConfirmDialogComponent__Close((ExpeditionConfirmDialogComponent_o *)maskPanel, 0);
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_23;
   UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
-  v18 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v18,
+    v17,
     (Il2CppObject *)this,
     Method_EventExpeditionListViewManager_StartResponse__,
     0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   maskPanel = (UnityEngine_GameObject_o *)NetworkManager__getRequest_object_(
-                                            v18,
-                                            (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_EventExpeditionStartRequest___);
+                                            v17,
+                                            (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_EventExpeditionStartRequest___);
   if ( !eventExpeditionEntity || !maskPanel )
     goto LABEL_23;
   EventExpeditionStartRequest__beginRequest(
@@ -1229,10 +1224,10 @@ void EventExpeditionListViewManager__OnClickListView(
         EventExpeditionListViewObject_o *obj,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x21
+  EventExpeditionListViewManager___c__DisplayClass45_0_o *v5; // x21
   void *maskPanel; // x0
   const MethodInfo *v7; // x1
-  EventExpeditionListViewObject_o **p_monitor; // x22
+  EventExpeditionListViewObject_o **p_obj; // x22
   int32_t currentEventId; // w23
   EventExpeditionMaster_o *v10; // x20
   EventExpeditionEntity_o *v11; // x20
@@ -1241,66 +1236,64 @@ void EventExpeditionListViewManager__OnClickListView(
   System_Reflection_MethodBase_o *v14; // x0
   ExpeditionConfirmDialogComponent_o *expeditionConfirmDialog; // x19
   ExpeditionConfirmDialogComponent_ClickDelegate_o *v16; // x22
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x6
-  _QWORD *v19; // x0
-  _QWORD *v20; // x0
-  System_Reflection_MethodBase_o *v21; // x0
-  EventExpeditionListViewManager_o *v22; // x0
-  const MethodInfo *v23; // x1
-  System_Collections_Generic_List_object__o *v24; // x21
+  _QWORD *v17; // x0
+  _QWORD *v18; // x0
+  System_Reflection_MethodBase_o *v19; // x0
+  EventExpeditionListViewManager_o *v20; // x0
+  const MethodInfo *v21; // x1
+  System_Collections_Generic_List_object__o *v22; // x21
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
-  const MethodInfo *v29; // x2
+  Il2CppClass **v26; // x0
+  const MethodInfo *v27; // x2
 
-  if ( (byte_4D2AAEF & 1) == 0 )
+  if ( (byte_4DFEB11 & 1) == 0 )
   {
-    sub_1C93AD4(&ExpeditionConfirmDialogComponent_ClickDelegate_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_OnClickListView__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass45_0__OnClickListView_b__0__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass45_0_TypeInfo);
-    byte_4D2AAEF = 1;
+    sub_1CE6700(&ExpeditionConfirmDialogComponent_ClickDelegate_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
+    sub_1CE6700(&Method_EventExpeditionListViewManager_OnClickListView__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass45_0__OnClickListView_b__0__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass45_0_TypeInfo);
+    byte_4DFEB11 = 1;
   }
-  v5 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass45_0_TypeInfo);
-  System_Object___ctor(v5, 0);
+  v5 = (EventExpeditionListViewManager___c__DisplayClass45_0_o *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass45_0_TypeInfo);
+  EventExpeditionListViewManager___c__DisplayClass45_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_31;
-  v5[1].klass = (Il2CppClass *)this;
-  sub_1C93A78(&v5[1], this);
-  v5[1].monitor = obj;
-  p_monitor = (EventExpeditionListViewObject_o **)&v5[1].monitor;
-  sub_1C93A78(&v5[1].monitor, obj);
+  v5->fields.__4__this = this;
+  sub_1CE66A4(&v5->fields, this);
+  v5->fields.obj = obj;
+  p_obj = &v5->fields.obj;
+  sub_1CE66A4(&v5->fields.obj, obj);
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_31;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
-  maskPanel = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  maskPanel = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !maskPanel )
     goto LABEL_31;
   maskPanel = DataManager__GetMasterData_object_(
                 (DataManager_o *)maskPanel,
-                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
-  if ( !*p_monitor )
+                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
+  if ( !*p_obj )
     goto LABEL_31;
   currentEventId = this->fields.currentEventId;
   v10 = (EventExpeditionMaster_o *)maskPanel;
-  maskPanel = EventExpeditionListViewObject__GetItem(*p_monitor, v7);
+  maskPanel = EventExpeditionListViewObject__GetItem(*p_obj, 0);
   if ( !maskPanel )
     goto LABEL_31;
   if ( !v10 )
     goto LABEL_31;
   maskPanel = EventExpeditionMaster__GetEntity(v10, currentEventId, *((_DWORD *)maskPanel + 5), 0);
-  if ( !*p_monitor )
+  if ( !*p_obj )
     goto LABEL_31;
   v11 = (EventExpeditionEntity_o *)maskPanel;
-  switch ( (*p_monitor)->fields.dispMode )
+  switch ( (*p_obj)->fields.dispMode )
   {
     case 0:
       goto LABEL_20;
@@ -1309,37 +1302,37 @@ void EventExpeditionListViewManager__OnClickListView(
       v12 = EventExpeditionListViewManager__CheckEventEnd(this, v7);
       v13 = Method_EventExpeditionListViewManager_OnClickListView__;
       if ( (*((_BYTE *)Method_EventExpeditionListViewManager_OnClickListView__ + 83) & 2) != 0 )
-        v13 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager_OnClickListView__);
-      v14 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v13, v13[4]);
+        v13 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager_OnClickListView__);
+      v14 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v13, v13[4]);
       if ( v12 )
         goto LABEL_19;
       OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0);
       expeditionConfirmDialog = this->fields.expeditionConfirmDialog;
-      v16 = (ExpeditionConfirmDialogComponent_ClickDelegate_o *)sub_1C93D20(ExpeditionConfirmDialogComponent_ClickDelegate_TypeInfo);
+      v16 = (ExpeditionConfirmDialogComponent_ClickDelegate_o *)sub_1CE694C(ExpeditionConfirmDialogComponent_ClickDelegate_TypeInfo);
       ExpeditionConfirmDialogComponent_ClickDelegate___ctor(
         v16,
-        v5,
+        (Il2CppObject *)v5,
         Method_EventExpeditionListViewManager___c__DisplayClass45_0__OnClickListView_b__0__,
-        v17);
+        0);
       if ( !expeditionConfirmDialog )
         goto LABEL_31;
-      ExpeditionConfirmDialogComponent__Open(expeditionConfirmDialog, v11, 1, v16, 1, 0, v18);
+      ExpeditionConfirmDialogComponent__Open(expeditionConfirmDialog, v11, 1, v16, 1, 0, 0);
       return;
     case 3:
-      v19 = Method_EventExpeditionListViewManager_OnClickListView__;
+      v17 = Method_EventExpeditionListViewManager_OnClickListView__;
       if ( (*((_BYTE *)Method_EventExpeditionListViewManager_OnClickListView__ + 83) & 2) != 0 )
-        v19 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager_OnClickListView__);
-      v14 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v19, v19[4]);
+        v17 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager_OnClickListView__);
+      v14 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v17, v17[4]);
 LABEL_19:
       OverwriteAssetSoundName__PlaySystemSe(v14, 2, 0, 0);
       goto LABEL_20;
     case 4:
-      v20 = Method_EventExpeditionListViewManager_OnClickListView__;
+      v18 = Method_EventExpeditionListViewManager_OnClickListView__;
       if ( (*((_BYTE *)Method_EventExpeditionListViewManager_OnClickListView__ + 83) & 2) != 0 )
-        v20 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager_OnClickListView__);
-      v21 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v20, v20[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0);
-      if ( !EventExpeditionListViewManager__CheckServant(v22, v23) )
+        v18 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager_OnClickListView__);
+      v19 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v18, v18[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0);
+      if ( !EventExpeditionListViewManager__CheckServant(v20, v21) )
       {
 LABEL_20:
         maskPanel = this->fields.maskPanel;
@@ -1349,38 +1342,38 @@ LABEL_20:
           return;
         }
 LABEL_31:
-        sub_1C93D2C(maskPanel, v7);
+        sub_1CE6958(maskPanel, v7);
       }
-      v24 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+      v22 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
       System_Collections_Generic_List_object____ctor(
-        v24,
-        (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-      if ( !v24 )
+        v22,
+        (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+      if ( !v22 )
         goto LABEL_31;
-      items = v24->fields._items;
-      v26 = Method_System_Collections_Generic_List_EventExpeditionEntity__Add__;
-      ++v24->fields._version;
+      items = v22->fields._items;
+      v24 = Method_System_Collections_Generic_List_EventExpeditionEntity__Add__;
+      ++v22->fields._version;
       if ( !items )
         goto LABEL_31;
-      size = v24->fields._size;
+      size = v22->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v24,
+          v22,
           (Il2CppObject *)v11,
-          *(const MethodInfo_387999C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
-        v28 = &items->obj.klass + size;
-        v24->fields._size = size + 1;
-        v28[4] = (Il2CppClass *)v11;
-        sub_1C93A78(v28 + 4, v11);
+        v26 = &items->obj.klass + size;
+        v22->fields._size = size + 1;
+        v26[4] = (Il2CppClass *)v11;
+        sub_1CE66A4(v26 + 4, v11);
       }
       EventExpeditionListViewManager__OnClickCompleteView(
         this,
-        (System_Collections_Generic_List_EventExpeditionEntity__o *)v24,
-        v29);
+        (System_Collections_Generic_List_EventExpeditionEntity__o *)v22,
+        v27);
       return;
     default:
       return;
@@ -1397,17 +1390,17 @@ void EventExpeditionListViewManager__OnClickNoticeButton(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4D2AAF7 & 1) == 0 )
+  if ( (byte_4DFEB19 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_OnClickNoticeButton__);
-    byte_4D2AAF7 = 1;
+    sub_1CE6700(&Method_EventExpeditionListViewManager_OnClickNoticeButton__);
+    byte_4DFEB19 = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventExpeditionListViewManager_OnClickNoticeButton__;
   if ( (*((_BYTE *)Method_EventExpeditionListViewManager_OnClickNoticeButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager_OnClickNoticeButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v4, v4[4]);
+    v4 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager_OnClickNoticeButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetExpeditionNotification(this->fields.isButtonOn, 0);
   EventExpeditionListViewManager__UpdateButtonDisp(this, v6);
@@ -1423,10 +1416,10 @@ void EventExpeditionListViewManager__OnMoveEnd(EventExpeditionListViewManager_o 
   __int64 v7; // x1
   struct UIScrollView_o *v8; // x0
 
-  if ( (byte_4D2AAE8 & 1) == 0 )
+  if ( (byte_4DFEB0A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2AAE8 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFEB0A = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -1444,7 +1437,7 @@ void EventExpeditionListViewManager__OnMoveEnd(EventExpeditionListViewManager_o 
       {
         v8 = this->fields.scrollView;
         if ( !v8 )
-          sub_1C93D2C(0, v7);
+          sub_1CE6958(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v8,
           1,
@@ -1466,32 +1459,31 @@ void EventExpeditionListViewManager__RequestListObject(
   System_Action_o *v7; // x21
   __int64 v8; // x0
   __int64 v9; // x1
-  const MethodInfo *v10; // x2
-  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4D2AAE7 & 1) == 0 )
+  if ( (byte_4DFEB09 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__get_Current__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_OnMoveEnd__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__get_Count__);
-    sub_1C93AD4(&StringLiteral_9998/*"OnMoveEnd"*/);
-    byte_4D2AAE7 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__get_Current__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager_OnMoveEnd__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__get_Count__);
+    sub_1CE6700(&StringLiteral_10019/*"OnMoveEnd"*/);
+    byte_4DFEB09 = 1;
   }
-  memset(&v11, 0, sizeof(v11));
+  memset(&v10, 0, sizeof(v10));
   ObjectList = (System_Collections_Generic_List_object__o *)EventExpeditionListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9998/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10019/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -1499,23 +1491,23 @@ void EventExpeditionListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       ObjectList,
-      (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
+      (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v11,
-              (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__) )
+              &v10,
+              (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__MoveNext__) )
     {
-      current = v11.fields._current;
-      v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+      current = v10.fields._current;
+      v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_EventExpeditionListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C93D2C(v8, v9);
-      EventExpeditionListViewObject__Init((EventExpeditionListViewObject_o *)current, v7, v10);
+        sub_1CE6958(v8, v9);
+      EventExpeditionListViewObject__Init((EventExpeditionListViewObject_o *)current, v7, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v11,
-      (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
+      &v10,
+      (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionListViewObject__Dispose__);
   }
 }
 
@@ -1536,47 +1528,46 @@ void EventExpeditionListViewManager__SetExpeditionObject(
   UnityEngine_Object_o *expeditionConfirmDialog; // x21
   struct ExpeditionConfirmDialogComponent_o **p_expeditionConfirmDialog; // x20
   UnityEngine_GameObject_o *v5; // x0
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x2
+  __int64 v6; // x1
   struct ExpeditionAssetManager_o *assetManager; // x8
   Il2CppObject *expeditionConfirmDialog_k__BackingField; // x21
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v10; // x2
   UnityEngine_Object_o *expeditionRewardDialog; // x21
   struct ExpeditionRewardDialogComponent_o **p_expeditionRewardDialog; // x20
-  struct ExpeditionAssetManager_o *v14; // x8
+  struct ExpeditionAssetManager_o *v13; // x8
   Il2CppObject *expeditionRewardDialog_k__BackingField; // x21
-  Il2CppObject *v16; // x0
-  const MethodInfo *v17; // x2
+  Il2CppObject *v15; // x0
+  const MethodInfo *v16; // x2
   UnityEngine_Object_o *expeditionPointRewardDialog; // x21
   struct ExpeditionPointRewardDialogComponent_o **p_expeditionPointRewardDialog; // x20
-  struct ExpeditionAssetManager_o *v20; // x8
+  struct ExpeditionAssetManager_o *v19; // x8
   Il2CppObject *expeditionPointRewardDialog_k__BackingField; // x21
-  Il2CppObject *v22; // x0
-  const MethodInfo *v23; // x2
+  Il2CppObject *v21; // x0
+  const MethodInfo *v22; // x2
   UnityEngine_Object_o *bitExpeditionStart; // x20
-  struct ExpeditionAssetManager_o *v25; // x8
+  struct ExpeditionAssetManager_o *v24; // x8
   Il2CppObject *bitExpeditionStart_k__BackingField; // x20
-  Il2CppObject *v27; // x0
+  Il2CppObject *v26; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v29; // x2
+  const MethodInfo *v28; // x2
   UnityEngine_Object_o *bitExpeditionFinish; // x20
-  struct ExpeditionAssetManager_o *v31; // x8
+  struct ExpeditionAssetManager_o *v30; // x8
   Il2CppObject *bitExpeditionFinish_k__BackingField; // x20
-  Il2CppObject *v33; // x0
-  UnityEngine_GameObject_o *v34; // x1
-  const MethodInfo *v35; // x2
+  Il2CppObject *v32; // x0
+  UnityEngine_GameObject_o *v33; // x1
+  const MethodInfo *v34; // x2
 
-  if ( (byte_4D2AAE3 & 1) == 0 )
+  if ( (byte_4DFEB05 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_BitExpeditionFinishComponent___);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_BitExpeditionStartComponent___);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ExpeditionConfirmDialogComponent___);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ExpeditionPointRewardDialogComponent___);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_ExpeditionRewardDialogComponent___);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2AAE3 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BitExpeditionFinishComponent___);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BitExpeditionStartComponent___);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ExpeditionConfirmDialogComponent___);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ExpeditionPointRewardDialogComponent___);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_ExpeditionRewardDialogComponent___);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFEB05 = 1;
   }
   expeditionConfirmDialog = (UnityEngine_Object_o *)this->fields.expeditionConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1593,23 +1584,23 @@ void EventExpeditionListViewManager__SetExpeditionObject(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                        expeditionConfirmDialog_k__BackingField,
-                                       (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_49;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          v5,
-                         (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ExpeditionConfirmDialogComponent___);
+                         (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ExpeditionConfirmDialogComponent___);
     this->fields.expeditionConfirmDialog = (struct ExpeditionConfirmDialogComponent_o *)Component_object;
-    sub_1C93A78(&this->fields.expeditionConfirmDialog, Component_object);
+    sub_1CE66A4(&this->fields.expeditionConfirmDialog, Component_object);
     EventExpeditionListViewManager__LocateDialogToExpeditionPanel(
       this,
       (BaseDialog_o *)this->fields.expeditionConfirmDialog,
-      v11);
+      v10);
   }
   v5 = (UnityEngine_GameObject_o *)*p_expeditionConfirmDialog;
   if ( !*p_expeditionConfirmDialog )
     goto LABEL_49;
-  ExpeditionConfirmDialogComponent__Init((ExpeditionConfirmDialogComponent_o *)v5, this->fields.currentEventId, v7);
+  ExpeditionConfirmDialogComponent__Init((ExpeditionConfirmDialogComponent_o *)v5, this->fields.currentEventId, 0);
   expeditionRewardDialog = (UnityEngine_Object_o *)this->fields.expeditionRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1617,31 +1608,31 @@ void EventExpeditionListViewManager__SetExpeditionObject(
   v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(expeditionRewardDialog, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v14 = this->fields.assetManager;
-    if ( !v14 )
+    v13 = this->fields.assetManager;
+    if ( !v13 )
       goto LABEL_49;
-    expeditionRewardDialog_k__BackingField = (Il2CppObject *)v14->fields._expeditionRewardDialog_k__BackingField;
+    expeditionRewardDialog_k__BackingField = (Il2CppObject *)v13->fields._expeditionRewardDialog_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                        expeditionRewardDialog_k__BackingField,
-                                       (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_49;
-    v16 = UnityEngine_GameObject__GetComponent_object_(
+    v15 = UnityEngine_GameObject__GetComponent_object_(
             v5,
-            (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ExpeditionRewardDialogComponent___);
-    this->fields.expeditionRewardDialog = (struct ExpeditionRewardDialogComponent_o *)v16;
-    sub_1C93A78(&this->fields.expeditionRewardDialog, v16);
+            (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ExpeditionRewardDialogComponent___);
+    this->fields.expeditionRewardDialog = (struct ExpeditionRewardDialogComponent_o *)v15;
+    sub_1CE66A4(&this->fields.expeditionRewardDialog, v15);
     EventExpeditionListViewManager__LocateDialogToExpeditionPanel(
       this,
       (BaseDialog_o *)this->fields.expeditionRewardDialog,
-      v17);
+      v16);
   }
   v5 = (UnityEngine_GameObject_o *)*p_expeditionRewardDialog;
   if ( !*p_expeditionRewardDialog )
     goto LABEL_49;
-  ExpeditionRewardDialogComponent__Init((ExpeditionRewardDialogComponent_o *)v5, v6);
+  ExpeditionRewardDialogComponent__Init((ExpeditionRewardDialogComponent_o *)v5, 0);
   expeditionPointRewardDialog = (UnityEngine_Object_o *)this->fields.expeditionPointRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1649,58 +1640,58 @@ void EventExpeditionListViewManager__SetExpeditionObject(
   v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(expeditionPointRewardDialog, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v20 = this->fields.assetManager;
-    if ( !v20 )
+    v19 = this->fields.assetManager;
+    if ( !v19 )
       goto LABEL_49;
-    expeditionPointRewardDialog_k__BackingField = (Il2CppObject *)v20->fields._expeditionPointRewardDialog_k__BackingField;
+    expeditionPointRewardDialog_k__BackingField = (Il2CppObject *)v19->fields._expeditionPointRewardDialog_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                        expeditionPointRewardDialog_k__BackingField,
-                                       (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_49;
-    v22 = UnityEngine_GameObject__GetComponent_object_(
+    v21 = UnityEngine_GameObject__GetComponent_object_(
             v5,
-            (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_ExpeditionPointRewardDialogComponent___);
-    this->fields.expeditionPointRewardDialog = (struct ExpeditionPointRewardDialogComponent_o *)v22;
-    sub_1C93A78(&this->fields.expeditionPointRewardDialog, v22);
+            (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_ExpeditionPointRewardDialogComponent___);
+    this->fields.expeditionPointRewardDialog = (struct ExpeditionPointRewardDialogComponent_o *)v21;
+    sub_1CE66A4(&this->fields.expeditionPointRewardDialog, v21);
     EventExpeditionListViewManager__LocateDialogToExpeditionPanel(
       this,
       (BaseDialog_o *)this->fields.expeditionPointRewardDialog,
-      v23);
+      v22);
   }
   v5 = (UnityEngine_GameObject_o *)*p_expeditionPointRewardDialog;
   if ( !*p_expeditionPointRewardDialog )
     goto LABEL_49;
-  ExpeditionPointRewardDialogComponent__Init((ExpeditionPointRewardDialogComponent_o *)v5, v6);
+  ExpeditionPointRewardDialogComponent__Init((ExpeditionPointRewardDialogComponent_o *)v5, 0);
   bitExpeditionStart = (UnityEngine_Object_o *)this->fields.bitExpeditionStart;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(bitExpeditionStart, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v25 = this->fields.assetManager;
-    if ( !v25 )
+    v24 = this->fields.assetManager;
+    if ( !v24 )
       goto LABEL_49;
-    bitExpeditionStart_k__BackingField = (Il2CppObject *)v25->fields._bitExpeditionStart_k__BackingField;
+    bitExpeditionStart_k__BackingField = (Il2CppObject *)v24->fields._bitExpeditionStart_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                        bitExpeditionStart_k__BackingField,
-                                       (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_49;
-    v27 = UnityEngine_GameObject__GetComponent_object_(
+    v26 = UnityEngine_GameObject__GetComponent_object_(
             v5,
-            (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_BitExpeditionStartComponent___);
-    this->fields.bitExpeditionStart = (struct BitExpeditionStartComponent_o *)v27;
-    sub_1C93A78(&this->fields.bitExpeditionStart, v27);
+            (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BitExpeditionStartComponent___);
+    this->fields.bitExpeditionStart = (struct BitExpeditionStartComponent_o *)v26;
+    sub_1CE66A4(&this->fields.bitExpeditionStart, v26);
     v5 = (UnityEngine_GameObject_o *)this->fields.bitExpeditionStart;
     if ( !v5 )
       goto LABEL_49;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0);
-    EventExpeditionListViewManager__LocateDialogToExpeditionObj(this, gameObject, v29);
+    EventExpeditionListViewManager__LocateDialogToExpeditionObj(this, gameObject, v28);
   }
   bitExpeditionFinish = (UnityEngine_Object_o *)this->fields.bitExpeditionFinish;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1708,33 +1699,33 @@ void EventExpeditionListViewManager__SetExpeditionObject(
   v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(bitExpeditionFinish, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v31 = this->fields.assetManager;
-    if ( v31 )
+    v30 = this->fields.assetManager;
+    if ( v30 )
     {
-      bitExpeditionFinish_k__BackingField = (Il2CppObject *)v31->fields._bitExpeditionFinish_k__BackingField;
+      bitExpeditionFinish_k__BackingField = (Il2CppObject *)v30->fields._bitExpeditionFinish_k__BackingField;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                          bitExpeditionFinish_k__BackingField,
-                                         (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                         (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( v5 )
       {
-        v33 = UnityEngine_GameObject__GetComponent_object_(
+        v32 = UnityEngine_GameObject__GetComponent_object_(
                 v5,
-                (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_BitExpeditionFinishComponent___);
-        this->fields.bitExpeditionFinish = (struct BitExpeditionFinishComponent_o *)v33;
-        sub_1C93A78(&this->fields.bitExpeditionFinish, v33);
+                (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BitExpeditionFinishComponent___);
+        this->fields.bitExpeditionFinish = (struct BitExpeditionFinishComponent_o *)v32;
+        sub_1CE66A4(&this->fields.bitExpeditionFinish, v32);
         v5 = (UnityEngine_GameObject_o *)this->fields.bitExpeditionFinish;
         if ( v5 )
         {
-          v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0);
-          EventExpeditionListViewManager__LocateDialogToExpeditionObj(this, v34, v35);
+          v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0);
+          EventExpeditionListViewManager__LocateDialogToExpeditionObj(this, v33, v34);
           return;
         }
       }
     }
 LABEL_49:
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   }
 }
 
@@ -1745,7 +1736,7 @@ void EventExpeditionListViewManager__SetMaskPanel(
         const MethodInfo *method)
 {
   this->fields.maskPanel = mask;
-  sub_1C93A78(&this->fields.maskPanel, mask);
+  sub_1CE66A4(&this->fields.maskPanel, mask);
 }
 
 
@@ -1758,26 +1749,25 @@ void EventExpeditionListViewManager__SetObjectItem(
   System_Action_o *v6; // x21
   __int64 v7; // x0
   __int64 v8; // x1
-  const MethodInfo *v9; // x2
   __int64 naturalAligment; // x10
 
-  if ( (byte_4D2AAE6 & 1) == 0 )
+  if ( (byte_4DFEB08 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager_OnMoveEnd__);
-    sub_1C93AD4(&EventExpeditionListViewObject_TypeInfo);
-    byte_4D2AAE6 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager_OnMoveEnd__);
+    sub_1CE6700(&EventExpeditionListViewObject_TypeInfo);
+    byte_4DFEB08 = 1;
   }
-  v6 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_EventExpeditionListViewManager_OnMoveEnd__, 0);
   if ( !obj
     || (naturalAligment = EventExpeditionListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (EventExpeditionListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != EventExpeditionListViewObject_TypeInfo )
   {
-    sub_1C93D2C(v7, v8);
+    sub_1CE6958(v7, v8);
   }
-  EventExpeditionListViewObject__Init((EventExpeditionListViewObject_o *)obj, v6, v9);
+  EventExpeditionListViewObject__Init((EventExpeditionListViewObject_o *)obj, v6, 0);
 }
 
 
@@ -1789,15 +1779,15 @@ void EventExpeditionListViewManager__StartResponse(
   const MethodInfo *v5; // x1
   System_Collections_IEnumerator_o *v6; // x1
 
-  if ( (byte_4D2AAF1 & 1) == 0 )
+  if ( (byte_4DFEB13 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D2AAF1 = 1;
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4DFEB13 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22483/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22555/*"ng"*/, 0) )
   {
     v6 = EventExpeditionListViewManager__CoWaitEffectPlay(this, v5);
-    UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v6, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_72903732((UnityEngine_MonoBehaviour_o *)this, v6, 0);
   }
 }
 
@@ -1807,19 +1797,19 @@ void EventExpeditionListViewManager__UpdateButtonDisp(EventExpeditionListViewMan
   UISprite_o *expeditionNoticeBtnSp; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4D2AAF6 & 1) == 0 )
+  if ( (byte_4DFEB18 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_17638/*"btn_on"*/);
-    sub_1C93AD4(&StringLiteral_17637/*"btn_off"*/);
-    byte_4D2AAF6 = 1;
+    sub_1CE6700(&StringLiteral_17694/*"btn_on"*/);
+    sub_1CE6700(&StringLiteral_17693/*"btn_off"*/);
+    byte_4DFEB18 = 1;
   }
   expeditionNoticeBtnSp = this->fields.expeditionNoticeBtnSp;
   if ( !expeditionNoticeBtnSp )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17638/*"btn_on"*/;
+    v4 = &StringLiteral_17694/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17637/*"btn_off"*/;
+    v4 = &StringLiteral_17693/*"btn_off"*/;
   UISprite__set_spriteName(expeditionNoticeBtnSp, (System_String_o *)*v4, 0);
 }
 
@@ -1832,18 +1822,18 @@ void EventExpeditionListViewManager__UpdateExpeditionNoticeNumber(
   __int64 v4; // x1
   DataManager_o *v5; // x8
 
-  if ( (byte_4D2AAE9 & 1) == 0 )
+  if ( (byte_4DFEB0B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_ExpeditionInfo__get_Count__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2AAE9 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_ExpeditionInfo__get_Count__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4DFEB0B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___)) == 0
+                                      (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___)) == 0
     || (Instance = (DataManager_o *)UserEventExpeditionMaster__GetCompleteExpeditionInfoList(
                                       (UserEventExpeditionMaster_o *)Instance,
                                       this->fields.currentEventId,
@@ -1855,7 +1845,7 @@ void EventExpeditionListViewManager__UpdateExpeditionNoticeNumber(
           0),
         (Instance = (DataManager_o *)this->fields.completeBtn) == 0) )
   {
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   }
   ((void (*)(void))Instance->klass[1]._1.name)();
 }
@@ -1873,13 +1863,13 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_1(
   System_Collections_Generic_List_EventDelegate__o *v8; // x20
   EventDelegate_Callback_o *v9; // x21
 
-  if ( (byte_4D2AAF9 & 1) == 0 )
+  if ( (byte_4DFEB1B & 1) == 0 )
   {
-    sub_1C93AD4(&EventDelegate_Callback_TypeInfo);
-    sub_1C93AD4(&EventDelegate_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_3__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4D2AAF9 = 1;
+    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
+    sub_1CE6700(&EventDelegate_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_3__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4DFEB1B = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1904,10 +1894,10 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_1(
         (touchPanel = this->fields.touchPanel) == 0) )
   {
 LABEL_13:
-    sub_1C93D2C(maskPanel, method);
+    sub_1CE6958(maskPanel, method);
   }
   v8 = touchPanel->fields.onClick;
-  v9 = (EventDelegate_Callback_o *)sub_1C93D20(EventDelegate_Callback_TypeInfo);
+  v9 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v9,
     (Il2CppObject *)this,
@@ -1915,7 +1905,7 @@ LABEL_13:
     0);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_49981852(v8, v9, 0);
+  EventDelegate__Set_50365832(v8, v9, 0);
 }
 
 
@@ -1930,14 +1920,14 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_2(
   System_Collections_Generic_List_object__o *v7; // x20
   System_Collections_Generic_List_int__o *v8; // x20
 
-  if ( (byte_4D2AAFB & 1) == 0 )
+  if ( (byte_4DFEB1D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
-    byte_4D2AAFB = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+    byte_4DFEB1D = 1;
   }
   touchPanel = (UnityEngine_Component_o *)this->fields.touchPanel;
   if ( !touchPanel )
@@ -1964,24 +1954,24 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_2(
   if ( !touchPanel )
     goto LABEL_12;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)touchPanel, 0, 0);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionEntity___ctor__);
   this->fields.selectEventExpeditionEntityList = (struct System_Collections_Generic_List_EventExpeditionEntity__o *)v7;
-  sub_1C93A78(&this->fields.selectEventExpeditionEntityList, v7);
-  v8 = (System_Collections_Generic_List_int__o *)sub_1C93D20(System_Collections_Generic_List_int__TypeInfo);
+  sub_1CE66A4(&this->fields.selectEventExpeditionEntityList, v7);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1CE694C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v8,
-    (const MethodInfo_385C124 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_38E86F0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.SelectPieceIdxList = v8;
-  sub_1C93A78(&this->fields.SelectPieceIdxList, v8);
+  sub_1CE66A4(&this->fields.SelectPieceIdxList, v8);
   touchPanel = (UnityEngine_Component_o *)this->fields.bitExpeditionStart;
   if ( !touchPanel
     || (touchPanel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(touchPanel, 0)) == 0 )
   {
 LABEL_12:
-    sub_1C93D2C(touchPanel, method);
+    sub_1CE6958(touchPanel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)touchPanel, 0, 0);
 }
@@ -1997,10 +1987,10 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_3(
   int v6; // w9
   struct BitExpeditionStartComponent_o *bitExpeditionStart; // x8
 
-  if ( (byte_4D2AAFA & 1) == 0 )
+  if ( (byte_4DFEB1C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4D2AAFA = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4DFEB1C = 1;
   }
   touchPanel = (UnityEngine_Component_o *)this->fields.touchPanel;
   if ( !touchPanel )
@@ -2026,7 +2016,7 @@ void EventExpeditionListViewManager___CoWaitEffectPlay_b__48_3(
     || (touchPanel = (UnityEngine_Component_o *)bitExpeditionStart->fields.animation) == 0 )
   {
 LABEL_11:
-    sub_1C93D2C(touchPanel, method);
+    sub_1CE6958(touchPanel, method);
   }
   UnityEngine_Animation__Stop((UnityEngine_Animation_o *)touchPanel, 0);
 }
@@ -2040,7 +2030,7 @@ int32_t EventExpeditionListViewManager__get_HakkenshiBaseWindowHeight(
 
   hakkenshiInfo = this->fields.hakkenshiInfo;
   if ( !hakkenshiInfo )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   return HakkenshiListController__get_HakkenshiBaseWindowHeight(hakkenshiInfo, 0);
 }
 
@@ -2064,35 +2054,35 @@ System_Collections_Generic_List_EventExpeditionListViewObject__o *EventExpeditio
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4D2AAE2 & 1) == 0 )
+  if ( (byte_4DFEB04 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewObject___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_EventExpeditionListViewObject__TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2AAE2 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewObject___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_EventExpeditionListViewObject__TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFEB04 = 1;
   }
   memset(&v17, 0, sizeof(v17));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventExpeditionListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventExpeditionListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_387A494 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v17 = v16;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_35FA018 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v17.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2101,38 +2091,38 @@ System_Collections_Generic_List_EventExpeditionListViewObject__o *EventExpeditio
     if ( v7 )
     {
       if ( !current )
-        sub_1C93D2C(v7, v8);
+        sub_1CE6958(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewObject___);
+                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewObject___);
       v10 = Component_object;
       if ( !v3 )
-        sub_1C93D2C(Component_object, Component_object);
+        sub_1CE6958(Component_object, Component_object);
       items = v3->fields._items;
       v12 = Method_System_Collections_Generic_List_EventExpeditionListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C93D2C(Component_object, Component_object);
+        sub_1CE6958(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_387999C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
         v14 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v14[4] = (Il2CppClass *)v10;
-        sub_1C93A78(v14 + 4, v10);
+        sub_1CE66A4(v14 + 4, v10);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_35FA014 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_EventExpeditionListViewObject__o *)v3;
 }
 
@@ -2154,34 +2144,34 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
   EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *v2; // x20
   int32_t _1__state; // w8
   Il2CppObject **p__2__current; // x20
+  bool result; // w0
   struct EventExpeditionListViewManager_o *_4__this; // x19
   EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *v7; // x20
   EventExpeditionListViewManager___c_c *v8; // x8
   System_Action_object__o *_9__48_0; // x21
   Il2CppObject *v10; // x22
   struct EventExpeditionListViewManager___c_StaticFields *static_fields; // x0
-  const MethodInfo *v12; // x1
   HakkenshiListController_o *hakkenshiInfo; // x20
+  const MethodInfo *v13; // x3
   BitExpeditionStartComponent_o *bitExpeditionStart; // x20
   EventExpeditionEntity_o *v15; // x21
   int32_t Item; // w22
   System_Action_o *v17; // x23
   System_Action_o *v18; // x24
-  const MethodInfo *v19; // x5
 
   v2 = this;
-  if ( (byte_4D2AB0B & 1) == 0 )
+  if ( (byte_4DFEB2E & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_EventExpeditionListViewObject__TypeInfo);
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_1__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_2__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__ForEach__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__CoWaitEffectPlay_b__48_0__);
-    this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)sub_1C93AD4(&EventExpeditionListViewManager___c_TypeInfo);
-    byte_4D2AB0B = 1;
+    sub_1CE6700(&System_Action_EventExpeditionListViewObject__TypeInfo);
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_1__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_2__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__ForEach__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__CoWaitEffectPlay_b__48_0__);
+    this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)sub_1CE6700(&EventExpeditionListViewManager___c_TypeInfo);
+    byte_4DFEB2E = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -2192,7 +2182,7 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
       goto LABEL_25;
     this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)EventExpeditionListViewManager__get_ObjectList(
                                                                          _4__this,
-                                                                         method);
+                                                                         0);
     v7 = this;
     v8 = EventExpeditionListViewManager___c_TypeInfo;
     if ( !EventExpeditionListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -2209,7 +2199,7 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
         v8 = EventExpeditionListViewManager___c_TypeInfo;
       }
       v10 = (Il2CppObject *)v8->static_fields->__9;
-      _9__48_0 = (System_Action_object__o *)sub_1C93D20(System_Action_EventExpeditionListViewObject__TypeInfo);
+      _9__48_0 = (System_Action_object__o *)sub_1CE694C(System_Action_EventExpeditionListViewObject__TypeInfo);
       System_Action_object____ctor(
         _9__48_0,
         v10,
@@ -2217,7 +2207,7 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
         0);
       static_fields = EventExpeditionListViewManager___c_TypeInfo->static_fields;
       static_fields->__9__48_0 = (struct System_Action_EventExpeditionListViewObject__o *)_9__48_0;
-      this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)sub_1C93A78(
+      this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)sub_1CE66A4(
                                                                            &static_fields->__9__48_0,
                                                                            _9__48_0);
     }
@@ -2226,9 +2216,8 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
     System_Collections_Generic_List_object___ForEach(
       (System_Collections_Generic_List_object__o *)v7,
       (System_Action_T__o *)_9__48_0,
-      (const MethodInfo_387A3DC *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__ForEach__);
-    _4__this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)_4__this, 0);
-    EventExpeditionListViewManager__RequestListObject(_4__this, v12);
+      (const MethodInfo_39069A8 *)Method_System_Collections_Generic_List_EventExpeditionListViewObject__ForEach__);
+    EventExpeditionListViewManager__SetCallBack(_4__this, 0);
     this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)_4__this->fields.SelectPieceIdxList;
     if ( !this )
       goto LABEL_25;
@@ -2236,10 +2225,10 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
     this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)System_Collections_Generic_List_int___get_Item(
                                                                          (System_Collections_Generic_List_int__o *)this,
                                                                          0,
-                                                                         (const MethodInfo_385C688 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                                         (const MethodInfo_38E8C54 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !hakkenshiInfo )
       goto LABEL_25;
-    HakkenshiListController__DisplayHakkenshiObj(hakkenshiInfo, (int32_t)this, 0, 0);
+    HakkenshiListController__DisplayHakkenshiObj(hakkenshiInfo, (int32_t)this, 0, v13);
     this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)_4__this->fields.touchPanel;
     if ( !this )
       goto LABEL_25;
@@ -2265,20 +2254,20 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
     this = (EventExpeditionListViewManager__CoWaitEffectPlay_d__48_o *)System_Collections_Generic_List_object___get_Item(
                                                                          (System_Collections_Generic_List_object__o *)this,
                                                                          0,
-                                                                         (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+                                                                         (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
     if ( !_4__this->fields.SelectPieceIdxList
       || (v15 = (EventExpeditionEntity_o *)this,
           Item = System_Collections_Generic_List_int___get_Item(
                    _4__this->fields.SelectPieceIdxList,
                    0,
-                   (const MethodInfo_385C688 *)Method_System_Collections_Generic_List_int__get_Item__),
-          v17 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+                   (const MethodInfo_38E8C54 *)Method_System_Collections_Generic_List_int__get_Item__),
+          v17 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
           System_Action___ctor(
             v17,
             (Il2CppObject *)_4__this,
             Method_EventExpeditionListViewManager__CoWaitEffectPlay_b__48_1__,
             0),
-          v18 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+          v18 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
           System_Action___ctor(
             v18,
             (Il2CppObject *)_4__this,
@@ -2287,18 +2276,19 @@ bool EventExpeditionListViewManager__CoWaitEffectPlay_d__48__MoveNext(
           !bitExpeditionStart) )
     {
 LABEL_25:
-      sub_1C93D2C(this, method);
+      sub_1CE6958(this, method);
     }
-    BitExpeditionStartComponent__SetUp(bitExpeditionStart, v15, Item, v17, v18, v19);
+    BitExpeditionStartComponent__SetUp(bitExpeditionStart, v15, Item, v17, v18, 0);
   }
   else if ( !_1__state )
   {
     v2->fields.__2__current = 0;
     p__2__current = &v2->fields.__2__current;
     *((_DWORD *)p__2__current - 2) = -1;
-    sub_1C93A78(p__2__current, 0);
+    sub_1CE66A4(p__2__current, 0);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   return 0;
 }
@@ -2320,11 +2310,11 @@ void __noreturn EventExpeditionListViewManager__CoWaitEffectPlay_d__48__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_d__48_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_EventExpeditionListViewManager__CoWaitEffectPlay_d__48_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
@@ -2348,15 +2338,15 @@ void EventExpeditionListViewManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4D2AAFC & 1) == 0 )
+  if ( (byte_4DFEB1F & 1) == 0 )
   {
-    sub_1C93AD4(&EventExpeditionListViewManager___c_TypeInfo);
-    byte_4D2AAFC = 1;
+    sub_1CE6700(&EventExpeditionListViewManager___c_TypeInfo);
+    byte_4DFEB1F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(EventExpeditionListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventExpeditionListViewManager___c_TypeInfo->static_fields->__9 = (struct EventExpeditionListViewManager___c_o *)v1;
-  sub_1C93A78(EventExpeditionListViewManager___c_TypeInfo->static_fields, v1);
+  sub_1CE66A4(EventExpeditionListViewManager___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -2377,20 +2367,20 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_0(
   Il2CppObject *Instance; // x19
   System_Action_o *v8; // x21
 
-  if ( (byte_4D2AAFD & 1) == 0 )
+  if ( (byte_4DFEB20 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass40_0__CheckServant_b__2__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass40_0_TypeInfo);
-    byte_4D2AAFD = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass40_0__CheckServant_b__2__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass40_0_TypeInfo);
+    byte_4DFEB20 = 1;
   }
-  v4 = sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass40_0_TypeInfo);
+  v4 = sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass40_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v8,
           (Il2CppObject *)v4,
@@ -2398,7 +2388,7 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_0(
           0),
         !Instance) )
   {
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   }
   CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
 }
@@ -2415,20 +2405,20 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_1(
   Il2CppObject *Instance; // x19
   System_Action_o *v8; // x21
 
-  if ( (byte_4D2AAFE & 1) == 0 )
+  if ( (byte_4DFEB21 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass40_1__CheckServant_b__3__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass40_1_TypeInfo);
-    byte_4D2AAFE = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass40_1__CheckServant_b__3__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass40_1_TypeInfo);
+    byte_4DFEB21 = 1;
   }
-  v4 = sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass40_1_TypeInfo);
+  v4 = sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass40_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v8,
           (Il2CppObject *)v4,
@@ -2436,7 +2426,7 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_1(
           0),
         !Instance) )
   {
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   }
   CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
 }
@@ -2453,20 +2443,20 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_4(
   Il2CppObject *Instance; // x19
   System_Action_o *v8; // x21
 
-  if ( (byte_4D2AAFF & 1) == 0 )
+  if ( (byte_4DFEB22 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass40_2__CheckServant_b__5__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass40_2_TypeInfo);
-    byte_4D2AAFF = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass40_2__CheckServant_b__5__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass40_2_TypeInfo);
+    byte_4DFEB22 = 1;
   }
-  v4 = sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass40_2_TypeInfo);
+  v4 = sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass40_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v8,
           (Il2CppObject *)v4,
@@ -2474,7 +2464,7 @@ void EventExpeditionListViewManager___c___CheckServant_b__40_4(
           0),
         !Instance) )
   {
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   }
   CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
 }
@@ -2488,9 +2478,9 @@ void EventExpeditionListViewManager___c___CoWaitEffectPlay_b__48_0(
   if ( !x
     || (this = (EventExpeditionListViewManager___c_o *)EventExpeditionListViewObject__GetItem(x, (const MethodInfo *)x)) == 0 )
   {
-    sub_1C93D2C(this, x);
+    sub_1CE6958(this, x);
   }
-  EventExpeditionListViewItem__CheckExpeditionCondition((EventExpeditionListViewItem_o *)this, (const MethodInfo *)x);
+  EventExpeditionListViewItem__CheckExpeditionCondition((EventExpeditionListViewItem_o *)this, 0);
 }
 
 
@@ -2500,7 +2490,7 @@ int32_t EventExpeditionListViewManager___c___OnClickCompleteView_b__51_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return x->fields.idx;
 }
 
@@ -2523,19 +2513,17 @@ void EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0(
   UISprite_o *completeBtnSp; // x20
   struct EventExpeditionListViewManager_o *v6; // x8
   UILabel_o *completeBtnLb; // x20
-  struct EventExpeditionListViewManager_o *v8; // x8
-  const MethodInfo *v9; // x3
-  struct EventExpeditionListViewManager_o *v10; // x19
-  const MethodInfo *v11; // x1
+  const MethodInfo *v8; // x3
+  struct EventExpeditionListViewManager_o *v9; // x8
 
   v2 = this;
-  if ( (byte_4D2AB00 & 1) == 0 )
+  if ( (byte_4DFEB23 & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_17604/*"btn_completecheck_bg"*/);
-    this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)sub_1C93AD4(&StringLiteral_5822/*"EXPEDITION_COMP_BTN_LABEL"*/);
-    byte_4D2AB00 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_17661/*"btn_completecheck_bg"*/);
+    this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)sub_1CE6700(&StringLiteral_5836/*"EXPEDITION_COMP_BTN_LABEL"*/);
+    byte_4DFEB23 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -2544,10 +2532,10 @@ void EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0(
   completeBtnSp = _4__this->fields.completeBtnSp;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)AtlasManager__SetEventUI_41320352(
+  this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)AtlasManager__SetEventUI_41749752(
                                                                      eventId,
                                                                      completeBtnSp,
-                                                                     (System_String_o *)StringLiteral_17604/*"btn_completecheck_bg"*/,
+                                                                     (System_String_o *)StringLiteral_17661/*"btn_completecheck_bg"*/,
                                                                      0);
   v6 = v2->fields.__4__this;
   if ( !v6 )
@@ -2556,34 +2544,33 @@ void EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)LocalizationManager__Get(
-                                                                     (System_String_o *)StringLiteral_5822/*"EXPEDITION_COMP_BTN_LABEL"*/,
+                                                                     (System_String_o *)StringLiteral_5836/*"EXPEDITION_COMP_BTN_LABEL"*/,
                                                                      0);
   if ( !completeBtnLb )
     goto LABEL_16;
   UILabel__set_text(completeBtnLb, (System_String_o *)this, 0);
   this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)v2->fields.__4__this;
   if ( !this
-    || (EventExpeditionListViewManager__SetExpeditionObject((EventExpeditionListViewManager_o *)this, method),
-        (v8 = v2->fields.__4__this) == 0)
-    || (this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)v8->fields.hakkenshiInfo) == 0
+    || (EventExpeditionListViewManager__SetExpeditionObject((EventExpeditionListViewManager_o *)this, 0),
+        (v9 = v2->fields.__4__this) == 0)
+    || (this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)v9->fields.hakkenshiInfo) == 0
     || (HakkenshiListController__CreateHakkenshiWindow(
           (HakkenshiListController_o *)this,
           v2->fields.eventId,
-          v8->fields.assetManager,
-          0),
+          v9->fields.assetManager,
+          v8),
         (this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)v2->fields.__4__this) == 0)
     || (EventExpeditionListViewManager__CreateList(
           (EventExpeditionListViewManager_o *)this,
           v2->fields.evExpeditionEntList,
           v2->fields.eventId,
-          v9),
-        (v10 = v2->fields.__4__this) == 0) )
+          0),
+        (this = (EventExpeditionListViewManager___c__DisplayClass32_0_o *)v2->fields.__4__this) == 0) )
   {
 LABEL_16:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
-  v10->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)v10, 0);
-  EventExpeditionListViewManager__RequestListObject(v10, v11);
+  EventExpeditionListViewManager__SetCallBack((EventExpeditionListViewManager_o *)this, 0);
 }
 
 
@@ -2607,30 +2594,30 @@ void EventExpeditionListViewManager___c__DisplayClass40_0___CheckServant_b__2(
   int32_t v8; // w1
   Il2CppObject *v9; // x3
 
-  if ( (byte_4D2AB01 & 1) == 0 )
+  if ( (byte_4DFEB24 & 1) == 0 )
   {
-    sub_1C93AD4(&SceneJumpInfo_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_12785/*"SellServant"*/);
-    sub_1C93AD4(&StringLiteral_12821/*"ServantCombine"*/);
-    byte_4D2AB01 = 1;
+    sub_1CE6700(&SceneJumpInfo_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_12823/*"SellServant"*/);
+    sub_1CE6700(&StringLiteral_12859/*"ServantCombine"*/);
+    byte_4DFEB24 = 1;
   }
   result = this->fields.result;
   switch ( result )
   {
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_42211596(v5, (System_String_o *)StringLiteral_12785/*"SellServant"*/, 0, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_42635572(v5, (System_String_o *)StringLiteral_12823/*"SellServant"*/, 0, 0);
       if ( Instance )
       {
         v8 = 22;
         goto LABEL_10;
       }
 LABEL_15:
-      sub_1C93D2C(v6, v7);
+      sub_1CE6958(v6, v7);
     case 1:
-      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( v6 )
       {
         v8 = 71;
@@ -2639,9 +2626,9 @@ LABEL_15:
       }
       goto LABEL_15;
     case 0:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_42211508(v5, (System_String_o *)StringLiteral_12821/*"ServantCombine"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_42635484(v5, (System_String_o *)StringLiteral_12859/*"ServantCombine"*/, 0);
       if ( Instance )
       {
         v8 = 32;
@@ -2676,33 +2663,33 @@ void EventExpeditionListViewManager___c__DisplayClass40_1___CheckServant_b__3(
   __int64 v7; // x1
   int32_t v8; // w1
 
-  if ( (byte_4D2AB02 & 1) == 0 )
+  if ( (byte_4DFEB25 & 1) == 0 )
   {
-    sub_1C93AD4(&SceneJumpInfo_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_12825/*"ServantEquipList"*/);
-    sub_1C93AD4(&StringLiteral_12785/*"SellServant"*/);
-    sub_1C93AD4(&StringLiteral_12824/*"ServantEQCombine"*/);
-    byte_4D2AB02 = 1;
+    sub_1CE6700(&SceneJumpInfo_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_12863/*"ServantEquipList"*/);
+    sub_1CE6700(&StringLiteral_12823/*"SellServant"*/);
+    sub_1CE6700(&StringLiteral_12862/*"ServantEQCombine"*/);
+    byte_4DFEB25 = 1;
   }
   result = this->fields.result;
   switch ( result )
   {
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_42211596(v5, (System_String_o *)StringLiteral_12785/*"SellServant"*/, 1, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_42635572(v5, (System_String_o *)StringLiteral_12823/*"SellServant"*/, 1, 0);
       if ( Instance )
       {
         v8 = 22;
         goto LABEL_12;
       }
 LABEL_14:
-      sub_1C93D2C(v6, v7);
+      sub_1CE6958(v6, v7);
     case 1:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_42211508(v5, (System_String_o *)StringLiteral_12825/*"ServantEquipList"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_42635484(v5, (System_String_o *)StringLiteral_12863/*"ServantEquipList"*/, 0);
       if ( Instance )
       {
         v8 = 71;
@@ -2710,9 +2697,9 @@ LABEL_14:
       }
       goto LABEL_14;
     case 0:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_42211508(v5, (System_String_o *)StringLiteral_12824/*"ServantEQCombine"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_42635484(v5, (System_String_o *)StringLiteral_12862/*"ServantEQCombine"*/, 0);
       if ( Instance )
       {
         v8 = 32;
@@ -2742,20 +2729,20 @@ void EventExpeditionListViewManager___c__DisplayClass40_2___CheckServant_b__5(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2AB03 & 1) == 0 )
+  if ( (byte_4DFEB26 & 1) == 0 )
   {
-    sub_1C93AD4(&SceneJumpInfo_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_12785/*"SellServant"*/);
-    byte_4D2AB03 = 1;
+    sub_1CE6700(&SceneJumpInfo_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_12823/*"SellServant"*/);
+    byte_4DFEB26 = 1;
   }
   if ( this->fields.result == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    v4 = (SceneJumpInfo_o *)sub_1C93D20(SceneJumpInfo_TypeInfo);
-    SceneJumpInfo___ctor_42211596(v4, (System_String_o *)StringLiteral_12785/*"SellServant"*/, 2, 0);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    v4 = (SceneJumpInfo_o *)sub_1CE694C(SceneJumpInfo_TypeInfo);
+    SceneJumpInfo___ctor_42635572(v4, (System_String_o *)StringLiteral_12823/*"SellServant"*/, 2, 0);
     if ( !Instance )
-      sub_1C93D2C(v5, v6);
+      sub_1CE6958(v5, v6);
     AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, (Il2CppObject *)v4, 0);
   }
 }
@@ -2778,19 +2765,15 @@ void EventExpeditionListViewManager___c__DisplayClass45_0___OnClickListView_b__0
         const MethodInfo *method)
 {
   EventExpeditionListViewManager_o *_4__this; // x0
-  const MethodInfo *v10; // x4
 
   _4__this = this->fields.__4__this;
   if ( !_4__this
-    || (EventExpeditionListViewManager__InitEventExpeditionObj(
-          _4__this,
-          this->fields.obj,
-          (const MethodInfo *)eventExpeditionEntity),
+    || (EventExpeditionListViewManager__InitEventExpeditionObj(_4__this, this->fields.obj, 0),
         (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_1C93D2C(_4__this, isDecide);
+    sub_1CE6958(_4__this, isDecide);
   }
-  EventExpeditionListViewManager__OnClickDecide(_4__this, isDecide, eventExpeditionEntity, pieceIdx, v10);
+  EventExpeditionListViewManager__OnClickDecide(_4__this, isDecide, eventExpeditionEntity, pieceIdx, 0);
 }
 
 
@@ -2827,21 +2810,21 @@ void EventExpeditionListViewManager___c__DisplayClass49_0___FinishResponse_b__0(
   UserGameEntity_array *v21; // x4
   const MethodInfo *v22; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4D2AB04 & 1) == 0 )
+  if ( (byte_4DFEB27 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_bool__TypeInfo);
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_SetActive__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass49_1__FinishResponse_b__1__);
-    sub_1C93AD4(&EventExpeditionListViewManager___c__DisplayClass49_1_TypeInfo);
-    byte_4D2AB04 = 1;
+    sub_1CE6700(&System_Action_bool__TypeInfo);
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_GameObject_SetActive__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass49_1__FinishResponse_b__1__);
+    sub_1CE6700(&EventExpeditionListViewManager___c__DisplayClass49_1_TypeInfo);
+    byte_4DFEB27 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C93D20(EventExpeditionListViewManager___c__DisplayClass49_1_TypeInfo);
+  v3 = (Il2CppObject *)sub_1CE694C(EventExpeditionListViewManager___c__DisplayClass49_1_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v3 )
     goto LABEL_14;
   v3[1].monitor = this;
-  sub_1C93A78(&v3[1].monitor, this);
+  sub_1CE66A4(&v3[1].monitor, this);
   ActionExtensions__Call(this->fields.animFinishCallback, 0);
   res = this->fields.res;
   if ( !res )
@@ -2854,15 +2837,15 @@ void EventExpeditionListViewManager___c__DisplayClass49_0___FinishResponse_b__0(
         resultEventRewardInfos = (Il2CppClass *)v7->fields.resultEventRewardInfos,
         v3[1].klass = resultEventRewardInfos,
         v10 = v3 + 1,
-        v4 = sub_1C93A78(&v3[1], resultEventRewardInfos),
+        v4 = sub_1CE66A4(&v3[1], resultEventRewardInfos),
         (v11 = this->fields.res) == 0) )
   {
 LABEL_14:
-    sub_1C93D2C(v4, v5);
+    sub_1CE6958(v4, v5);
   }
   if ( !LODWORD(v11->max_length) )
 LABEL_15:
-    sub_1C93D34(v4);
+    sub_1CE6960(v4);
   if ( !v11->m_Items[0] )
     goto LABEL_14;
   _4__this = this->fields.__4__this;
@@ -2875,9 +2858,9 @@ LABEL_15:
   selectEventExpeditionEntityList = _4__this->fields.selectEventExpeditionEntityList;
   currentEventId = _4__this->fields.currentEventId;
   maskPanel = (Il2CppObject *)_4__this->fields.maskPanel;
-  v18 = (System_Action_bool__o *)sub_1C93D20(System_Action_bool__TypeInfo);
+  v18 = (System_Action_bool__o *)sub_1CE694C(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v18, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0);
-  closeCallback = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  closeCallback = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(
     closeCallback,
     v3,
@@ -2907,8 +2890,8 @@ void EventExpeditionListViewManager___c__DisplayClass49_0___FinishResponse_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C93D2C(0, method);
-  EventExpeditionListViewManager__FinishResponseCallBack(_4__this, method);
+    sub_1CE6958(0, method);
+  EventExpeditionListViewManager__FinishResponseCallBack(_4__this, 0);
 }
 
 
@@ -2927,7 +2910,7 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__1(
   Il2CppObject *v2; // x19
   Il2CppClass *klass; // x8
   void *monitor; // x9
-  ExpeditionPointRewardDialogComponent_o *v5; // x20
+  ExpeditionPointRewardDialogComponent_o *_9__2; // x20
   _QWORD *v6; // x8
   __int64 v7; // x8
   EventExpeditionEntity_o *v8; // x21
@@ -2939,14 +2922,14 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__1(
   System_Action_o *v14; // x25
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4D2AB05 & 1) == 0 )
+  if ( (byte_4DFEB28 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_bool__TypeInfo);
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_SetActive__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
-    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass49_1__FinishResponse_b__2__);
-    byte_4D2AB05 = 1;
+    sub_1CE6700(&System_Action_bool__TypeInfo);
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_GameObject_SetActive__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass49_1__FinishResponse_b__2__);
+    byte_4DFEB28 = 1;
   }
   klass = v2[1].klass;
   if ( !klass )
@@ -2959,14 +2942,13 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__1(
     goto LABEL_15;
   if ( klass->_1.namespaze )
   {
-    if ( *((_QWORD *)this + 55) )
+    if ( this[11].klass )
     {
-      v5 = (ExpeditionPointRewardDialogComponent_o *)*((_QWORD *)this + 59);
+      _9__2 = (ExpeditionPointRewardDialogComponent_o *)this[11].fields.__9__2;
       this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)System_Collections_Generic_List_object___get_Item(
-                                                                         *((System_Collections_Generic_List_object__o **)this
-                                                                         + 55),
+                                                                         (System_Collections_Generic_List_object__o *)this[11].klass,
                                                                          0,
-                                                                         (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+                                                                         (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
       v6 = v2[1].monitor;
       if ( v6 )
       {
@@ -2977,32 +2959,32 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__1(
           v9 = (BattleDropItem_array *)v2[1].klass;
           v10 = *(_DWORD *)(v7 + 416);
           v11 = *(Il2CppObject **)(v7 + 392);
-          v12 = (System_Action_bool__o *)sub_1C93D20(System_Action_bool__TypeInfo);
+          v12 = (System_Action_bool__o *)sub_1CE694C(System_Action_bool__TypeInfo);
           System_Action_bool____ctor(v12, v11, Method_UnityEngine_GameObject_SetActive__, 0);
           v14 = (System_Action_o *)v2[2].klass;
           if ( !v14 )
           {
-            v14 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+            v14 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
             System_Action___ctor(
               v14,
               v2,
               Method_EventExpeditionListViewManager___c__DisplayClass49_1__FinishResponse_b__2__,
               0);
             v2[2].klass = (Il2CppClass *)v14;
-            this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1C93A78(&v2[2], v14);
+            this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1CE66A4(&v2[2], v14);
           }
-          if ( v5 )
+          if ( _9__2 )
           {
-            ExpeditionPointRewardDialogComponent__Open(v5, v8, v9, v10, v12, v14, v13);
+            ExpeditionPointRewardDialogComponent__Open(_9__2, v8, v9, v10, v12, v14, v13);
             return;
           }
         }
       }
     }
 LABEL_15:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
-  EventExpeditionListViewManager__FinishResponseCallBack((EventExpeditionListViewManager_o *)this, method);
+  EventExpeditionListViewManager__FinishResponseCallBack((EventExpeditionListViewManager_o *)this, 0);
 }
 
 
@@ -3018,11 +3000,11 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__2(
   System_Action_o *monitor; // x21
 
   v2 = this;
-  if ( (byte_4D2AB06 & 1) == 0 )
+  if ( (byte_4DFEB29 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__3__);
-    byte_4D2AB06 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__3__);
+    byte_4DFEB29 = 1;
   }
   CS___8__locals1 = (Il2CppObject *)v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -3035,18 +3017,18 @@ void EventExpeditionListViewManager___c__DisplayClass49_1___FinishResponse_b__2(
   monitor = (System_Action_o *)CS___8__locals1[2].monitor;
   if ( !monitor )
   {
-    monitor = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    monitor = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(
       monitor,
       CS___8__locals1,
       Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__3__,
       0);
     CS___8__locals1[2].monitor = monitor;
-    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1C93A78(&CS___8__locals1[2].monitor, monitor);
+    this = (EventExpeditionListViewManager___c__DisplayClass49_1_o *)sub_1CE66A4(&CS___8__locals1[2].monitor, monitor);
   }
   if ( !methodPtr )
 LABEL_9:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   (*((void (__fastcall **)(_QWORD, struct BattleDropItem_array *, _QWORD, System_Action_o *, _QWORD))methodPtr + 3))(
     *((_QWORD *)methodPtr + 8),
     resultEventRewardInfos,
@@ -3080,13 +3062,13 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
   EventDelegate_Callback_o *v11; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4D2AB07 & 1) == 0 )
+  if ( (byte_4DFEB2A & 1) == 0 )
   {
-    sub_1C93AD4(&EventDelegate_Callback_TypeInfo);
-    sub_1C93AD4(&EventDelegate_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
-    byte_4D2AB07 = 1;
+    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
+    sub_1CE6700(&EventDelegate_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
+    byte_4DFEB2A = 1;
   }
   klass = v2[1].klass;
   if ( !klass )
@@ -3123,23 +3105,23 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
   v9 = v4->vtable[1].methodPtr;
   if ( !v9 )
 LABEL_17:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   v10 = (System_Collections_Generic_List_EventDelegate__o *)*((_QWORD *)v9 + 4);
   v11 = (EventDelegate_Callback_o *)v2[3].klass;
   if ( !v11 )
   {
-    v11 = (EventDelegate_Callback_o *)sub_1C93D20(EventDelegate_Callback_TypeInfo);
+    v11 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       v11,
       v2,
       (intptr_t)Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__,
       0);
     v2[3].klass = (Il2CppClass *)v11;
-    sub_1C93A78(&v2[3], v11);
+    sub_1CE66A4(&v2[3], v11);
   }
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_49981852(v10, v11, 0);
+  EventDelegate__Set_50365832(v10, v11, 0);
 }
 
 
@@ -3159,20 +3141,20 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
   NetworkManager_ResultCallbackFunc_o *_9__4; // x20
   struct EventExpeditionListViewManager_o *v13; // x8
 
-  if ( (byte_4D2AB08 & 1) == 0 )
+  if ( (byte_4DFEB2B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_EventExpeditionFinishRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
-    sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__4__);
-    byte_4D2AB08 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1CE6700(&Method_NetworkManager_getRequest_EventExpeditionFinishRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
+    sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__4__);
+    byte_4DFEB2B = 1;
   }
   v3 = Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__;
   if ( (*((_BYTE *)Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__3__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -3192,24 +3174,24 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
   _9__4 = this->fields.__9__4;
   if ( !_9__4 )
   {
-    _9__4 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+    _9__4 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       _9__4,
       (Il2CppObject *)this,
       Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__4__,
       0);
     this->fields.__9__4 = _9__4;
-    sub_1C93A78(&this->fields.__9__4, _9__4);
+    sub_1CE66A4(&this->fields.__9__4, _9__4);
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      _9__4,
-                     (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_EventExpeditionFinishRequest___);
+                     (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_EventExpeditionFinishRequest___);
   v13 = this->fields.__4__this;
   if ( !v13 || !Request_object )
 LABEL_17:
-    sub_1C93D2C(Request_object, v6);
+    sub_1CE6958(Request_object, v6);
   EventExpeditionFinishRequest__beginRequest(
     (EventExpeditionFinishRequest_o *)Request_object,
     v13->fields.currentEventId,
@@ -3223,34 +3205,33 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
         System_String_o *result,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  Il2CppObject *v5; // x20
-  System_Action_o *klass; // x23
-  EventExpeditionListViewManager_o *v7; // x21
+  Il2CppObject *v4; // x20
+  System_Action_o *klass; // x22
+  EventExpeditionListViewManager_o *v6; // x21
 
-  v5 = (Il2CppObject *)this;
-  if ( (byte_4D2AB09 & 1) == 0 )
+  v4 = (Il2CppObject *)this;
+  if ( (byte_4DFEB2C & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1C93AD4(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__5__);
-    byte_4D2AB09 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1CE6700(&Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__5__);
+    byte_4DFEB2C = 1;
   }
-  klass = (System_Action_o *)v5[2].klass;
-  v7 = (EventExpeditionListViewManager_o *)v5[1].klass;
+  klass = (System_Action_o *)v4[2].klass;
+  v6 = (EventExpeditionListViewManager_o *)v4[1].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(
       klass,
-      v5,
+      v4,
       Method_EventExpeditionListViewManager___c__DisplayClass51_0__OnClickCompleteView_b__5__,
       0);
-    v5[2].klass = (Il2CppClass *)klass;
-    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1C93A78(&v5[2], klass);
+    v4[2].klass = (Il2CppClass *)klass;
+    this = (EventExpeditionListViewManager___c__DisplayClass51_0_o *)sub_1CE66A4(&v4[2], klass);
   }
-  if ( !v7 )
-    sub_1C93D2C(this, result);
-  EventExpeditionListViewManager__FinishResponse(v7, result, klass, v3);
+  if ( !v6 )
+    sub_1CE6958(this, result);
+  EventExpeditionListViewManager__FinishResponse(v6, result, klass, 0);
 }
 
 
@@ -3262,48 +3243,49 @@ void EventExpeditionListViewManager___c__DisplayClass51_0___OnClickCompleteView_
   struct EventExpeditionListViewManager_o *v4; // x8
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  struct EventExpeditionListViewManager_o *v7; // x8
+  const MethodInfo *v7; // x3
+  struct EventExpeditionListViewManager_o *v8; // x8
   HakkenshiListController_o *hakkenshiInfo; // x0
-  System_Collections_Generic_List_Enumerator_int__o v9; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v10; // [xsp+8h] [xbp-58h] BYREF
   System_Collections_Generic_List_Enumerator_int__o i; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4D2AB0A & 1) == 0 )
+  if ( (byte_4DFEB2D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    byte_4D2AB0A = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    byte_4DFEB2D = 1;
   }
   memset(&i, 0, sizeof(i));
   _4__this = this->fields.__4__this;
   if ( !_4__this
-    || (EventExpeditionListViewManager__InitEventExpeditionList(_4__this, method), (v4 = this->fields.__4__this) == 0)
+    || (EventExpeditionListViewManager__InitEventExpeditionList(_4__this, 0), (v4 = this->fields.__4__this) == 0)
     || (_4__this = (EventExpeditionListViewManager_o *)v4->fields.SelectPieceIdxList) == 0 )
   {
-    sub_1C93D2C(_4__this, method);
+    sub_1CE6958(_4__this, method);
   }
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     (System_Collections_Generic_List_int__o *)_4__this,
-    (const MethodInfo_385D44C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  for ( i = v9; ; HakkenshiListController__DisplayHakkenshiObj(hakkenshiInfo, i.fields._current, 1, 0) )
+    (const MethodInfo_38E9A18 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  for ( i = v10; ; HakkenshiListController__DisplayHakkenshiObj(hakkenshiInfo, i.fields._current, 1, v7) )
   {
     v5 = System_Collections_Generic_List_Enumerator_int___MoveNext(
            &i,
-           (const MethodInfo_35F6200 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+           (const MethodInfo_367CBD8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
     if ( !v5 )
       break;
-    v7 = this->fields.__4__this;
-    if ( !v7 )
-      sub_1C93D2C(v5, v6);
-    hakkenshiInfo = v7->fields.hakkenshiInfo;
+    v8 = this->fields.__4__this;
+    if ( !v8 )
+      sub_1CE6958(v5, v6);
+    hakkenshiInfo = v8->fields.hakkenshiInfo;
     if ( !hakkenshiInfo )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &i,
-    (const MethodInfo_35F61FC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_367CBD4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 }
 
 
@@ -3323,7 +3305,7 @@ bool EventExpeditionListViewManager___c__DisplayClass51_1___OnClickCompleteView_
   struct EventExpeditionEntity_o *entity; // x8
 
   if ( !x || (entity = this->fields.entity) == 0 )
-    sub_1C93D2C(this, x);
+    sub_1CE6958(this, x);
   return x->fields.expeditionIdx == entity->fields.idx;
 }
 

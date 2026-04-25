@@ -29,35 +29,35 @@ void FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4D3237D & 1) == 0 )
+  if ( (byte_4E063C3 & 1) == 0 )
   {
-    sub_1C93AD4(&FSAnchor_Absolute_TypeInfo);
-    byte_4D3237D = 1;
+    sub_1CE6700(&FSAnchor_Absolute_TypeInfo);
+    byte_4E063C3 = 1;
   }
-  v3 = sub_1C93D20(FSAnchor_Absolute_TypeInfo);
+  v3 = sub_1CE694C(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_BYTE *)(v3 + 16) = 1;
   *(_QWORD *)(v3 + 20) = 0x4400000000LL;
   this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
-  v10 = sub_1C93D20(FSAnchor_Absolute_TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
+  v10 = sub_1CE694C(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_BYTE *)(v10 + 16) = 1;
   *(_QWORD *)(v10 + 20) = 0xFFFFFFBC00000000LL;
   this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v10;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
-  v17 = sub_1C93D20(FSAnchor_Absolute_TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
+  v17 = sub_1CE694C(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   *(_BYTE *)(v17 + 16) = 0;
   *(_QWORD *)(v17 + 20) = 0;
   this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v17;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
-  v24 = sub_1C93D20(FSAnchor_Absolute_TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
+  v24 = sub_1CE694C(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0);
   *(_BYTE *)(v24 + 16) = 0;
   *(_QWORD *)(v24 + 20) = 0;
   this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v24;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -91,10 +91,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
   const MethodInfo *v18; // x3
   struct UIWidget_o *v19; // x8
 
-  if ( (byte_4D3237C & 1) == 0 )
+  if ( (byte_4E063C2 & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    byte_4D3237C = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    byte_4E063C2 = 1;
   }
   calcNotchSize = this->fields.calcNotchSize;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -105,10 +105,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   SafeAreaWidth = FSUtility__GetSafeAreaWidth((const MethodInfo *)v4);
-  if ( !byte_4D2A7BA )
+  if ( !byte_4DFE732 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    byte_4D2A7BA = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    byte_4DFE732 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -121,10 +121,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   ScreenToConfigSizeRate = FSUtility__GetScreenToConfigSizeRate(width);
-  if ( !byte_4D2A138 )
+  if ( !byte_4DFE0A8 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    byte_4D2A138 = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    byte_4DFE0A8 = 1;
   }
   v13 = System_Math_TypeInfo;
   v14 = (float)((float)(v9 - v7) * 0.5) * ScreenToConfigSizeRate;
@@ -140,7 +140,7 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
     || (FSAnchor__SetAbsoluteValueForNotch(this->fields.leftAbsolute, widget->fields.leftAnchor, v17, v11),
         (v19 = this->fields.widget) == 0) )
   {
-    sub_1C93D2C(v13, v10);
+    sub_1CE6958(v13, v10);
   }
   FSAnchor__SetAbsoluteValueForNotch(this->fields.rightAbsolute, v19->fields.rightAnchor, v17, v18);
   return 1;
@@ -163,7 +163,7 @@ void FSAnchor__SetAbsoluteValueForNotch(
     return;
   if ( !anchorPoint )
 LABEL_10:
-    sub_1C93D2C(absolute, anchorPoint);
+    sub_1CE6958(absolute, anchorPoint);
   relative = anchorPoint->fields.relative;
   vista = absolute->fields.vista;
   anchorPoint->fields.absolute = vista;
@@ -238,10 +238,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v55; // x9
   struct UIRect_AnchorPoint_o *v56; // x9
 
-  if ( (byte_4D3237B & 1) == 0 )
+  if ( (byte_4E063C1 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3237B = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E063C1 = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -297,10 +297,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
         bottomAnchor->fields.absolute = vista;
         if ( v5 < 1.7778 )
         {
-          if ( !byte_4D2A138 )
+          if ( !byte_4DFE0A8 )
           {
-            sub_1C93AD4(&System_Math_TypeInfo);
-            byte_4D2A138 = 1;
+            sub_1CE6700(&System_Math_TypeInfo);
+            byte_4DFE0A8 = 1;
           }
           v19 = (float)((float)((float)(1.7778 - v5) * 576.0) * 16.0) / 9.0;
           v7 = System_Math_TypeInfo;
@@ -330,10 +330,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
             if ( v5 < 1.7778 )
             {
               v26 = (float)((float)(1.7778 - v5) * 576.0) * 16.0;
-              if ( !byte_4D2A138 )
+              if ( !byte_4DFE0A8 )
               {
-                sub_1C93AD4(&System_Math_TypeInfo);
-                byte_4D2A138 = 1;
+                sub_1CE6700(&System_Math_TypeInfo);
+                byte_4DFE0A8 = 1;
               }
               v27 = v26 / 9.0;
               if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -367,10 +367,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
       v32->fields.absolute = v30->fields.scope;
       if ( v5 > 2.3333 )
       {
-        if ( !byte_4D2A138 )
+        if ( !byte_4DFE0A8 )
         {
-          sub_1C93AD4(&System_Math_TypeInfo);
-          byte_4D2A138 = 1;
+          sub_1CE6700(&System_Math_TypeInfo);
+          byte_4DFE0A8 = 1;
         }
         v33 = (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625;
         v7 = System_Math_TypeInfo;
@@ -417,10 +417,10 @@ LABEL_64:
     if ( v5 <= 2.3333 )
       goto LABEL_83;
     v43 = (float)((float)(v5 + -2.3333) * 512.0) * 9.0;
-    if ( !byte_4D2A138 )
+    if ( !byte_4DFE0A8 )
     {
-      sub_1C93AD4(&System_Math_TypeInfo);
-      byte_4D2A138 = 1;
+      sub_1CE6700(&System_Math_TypeInfo);
+      byte_4DFE0A8 = 1;
     }
     v44 = v43 * 0.0625;
     v7 = System_Math_TypeInfo;
@@ -481,7 +481,7 @@ LABEL_83:
       }
     }
 LABEL_94:
-    sub_1C93D2C(v7, v8);
+    sub_1CE6958(v7, v8);
   }
 }
 

@@ -12,12 +12,12 @@ BattleActionData_o *BattleWaitFinishMovieTask__MakeActionData(
 {
   BattleWaitFinishMovieActionData_o *v3; // x19
 
-  if ( (byte_4D33D86 & 1) == 0 )
+  if ( (byte_4E07E01 & 1) == 0 )
   {
-    sub_1C93AD4(&BattleWaitFinishMovieActionData_TypeInfo);
-    byte_4D33D86 = 1;
+    sub_1CE6700(&BattleWaitFinishMovieActionData_TypeInfo);
+    byte_4E07E01 = 1;
   }
-  v3 = (BattleWaitFinishMovieActionData_o *)sub_1C93D20(BattleWaitFinishMovieActionData_TypeInfo);
+  v3 = (BattleWaitFinishMovieActionData_o *)sub_1CE694C(BattleWaitFinishMovieActionData_TypeInfo);
   BattleWaitFinishMovieActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

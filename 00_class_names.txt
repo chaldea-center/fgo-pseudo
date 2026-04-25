@@ -238,6 +238,7 @@ BattleCommandSealStatus
 BattleCommandSpellRequest
 BattleCommonSettings
 BattleConcatLabelMessageComponent
+BattleConcatLabelSkillNameComponent
 BattleCutInComponent
 BattleData
 BattleDataDefine
@@ -1130,6 +1131,7 @@ DebugEx
 DebugInputAttackCardExcuteComponent
 DebugInputAttackCardForceComponent
 DebugInputBattlePointComponent
+DebugInputBattleValueComponent
 DebugInputBuffAllComponent
 DebugInputBuffComponent
 DebugInputCommandCodeComponent
@@ -2553,10 +2555,12 @@ PhotoFrameListViewManager
 PhotoFrameListViewObject
 PhotoFrameMaster
 PhotoFrameSelectDialog
+PhotoGraphicTouchComponent
 PhotoLayerChangeComponent
 PhotoServantSelectMenu
 PhotoSettingButtonComponent
 PhotoStandFigureComponent
+PhotoStandFigureDragProcess
 PhotoTargetSelectDialog
 PickupUserFollowerEntity
 PickupUserFollowerMaster
@@ -2885,6 +2889,9 @@ SampleEventListViewManager
 SampleEventListViewObject
 SampleEventListViewScene
 SaturationImageEffect
+SaveDataDeleteConfirmDialog
+SaveDataDeleteMenuDialog
+SaveDataDeleteWarningDialog
 ScaleAnimationComponent
 SceneJumpInfo
 SceneList
@@ -3002,6 +3009,7 @@ SelectImageLimitListViewManager
 SelectImageLimitListViewObject
 SelectMyServantOrNpcDialog
 SelectServantPortraitLimitCountDialog
+SelectServantStoryDialog
 SelectTakeOverTypeComponent
 SelectTdCommandController
 SelectTdCommandTypeController
@@ -3269,6 +3277,7 @@ ServantVoicePatternMaster
 ServantVoicePerformance
 ServantVoiceRelationEntity
 ServantVoiceRelationMaster
+ServantVoiceSync
 ServantWaveTurnEvent
 ServantWaveTurnEventOwner
 ServerSettingMenu
@@ -3315,6 +3324,8 @@ ShiningIconComponent
 ShopActionEntity
 ShopActionManager
 ShopActionMaster
+ShopAddEntity
+ShopAddMaster
 ShopBuyBulkItemConfirmMenu
 ShopBuyItemConfirmMenu
 ShopBuyItemListViewItem
@@ -3622,6 +3633,7 @@ SvtUseSkillData
 SvtVoiceInfo
 SvtVoiceType
 SwitchActiveBaseConditionComponent
+SwitchActiveByBattlePointConditionComponent
 SwitchActiveByBattleValueConditionComponent
 SwitchEnableComponent
 SwitchParameterDisplayComponent
@@ -3936,6 +3948,7 @@ USFGOChrChangeShaderCompPreset
 USFGOChrTargetUtils
 UVScroll
 UVScrollAnimation
+UnlockSlider
 UnscaledTimeSimpleAnimation
 UpHateData
 UpdateAllViewActionData

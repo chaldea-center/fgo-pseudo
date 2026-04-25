@@ -2,10 +2,10 @@ void MstProfileComponent___cctor(const MethodInfo *method)
 {
   struct MstProfileComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4D2BA22 & 1) == 0 )
+  if ( (byte_4DFFA41 & 1) == 0 )
   {
-    sub_1C93AD4(&MstProfileComponent_TypeInfo);
-    byte_4D2BA22 = 1;
+    sub_1CE6700(&MstProfileComponent_TypeInfo);
+    byte_4DFFA41 = 1;
   }
   static_fields = MstProfileComponent_TypeInfo->static_fields;
   static_fields->CMD_SPELL_SCROLLVIEW_DEPTH = 220;
@@ -16,27 +16,28 @@ void MstProfileComponent___cctor(const MethodInfo *method)
 
 void MstProfileComponent___ctor(MstProfileComponent_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct ImageItem_Id_array *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4D2BA21 & 1) == 0 )
+  if ( (byte_4DFFA40 & 1) == 0 )
   {
-    sub_1C93AD4(&ImageItem_Id___TypeInfo);
-    sub_1C93AD4(&Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91);
-    byte_4D2BA21 = 1;
+    sub_1CE6700(&ImageItem_Id___TypeInfo);
+    sub_1CE6700(&Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91);
+    byte_4DFFA40 = 1;
   }
-  v3 = (System_Array_o *)sub_1C93B7C(ImageItem_Id___TypeInfo, 8);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65124948(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91,
-    0);
-  this->fields.dispItemInfoList = (struct ImageItem_Id_array *)v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.dispItemInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v3 = (System_Array_o *)sub_1CE67A8(ImageItem_Id___TypeInfo, 8);
+  v4.fields.value = Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91;
+  v5 = (struct ImageItem_Id_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65822052(v3, v4, 0);
+  this->fields.dispItemInfoList = v5;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.dispItemInfoList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -50,16 +51,16 @@ void MstProfileComponent__OnClickBack(MstProfileComponent_o *this, const MethodI
   ScrTerminalListTop_o *v7; // x0
   QuestRewardItemAction_c *klass; // x8
 
-  if ( (byte_4D2BA1E & 1) == 0 )
+  if ( (byte_4DFFA3D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_OnClickBack__);
-    sub_1C93AD4(&TerminalSceneComponent_TypeInfo);
-    byte_4D2BA1E = 1;
+    sub_1CE6700(&Method_MstProfileComponent_OnClickBack__);
+    sub_1CE6700(&TerminalSceneComponent_TypeInfo);
+    byte_4DFFA3D = 1;
   }
   v3 = Method_MstProfileComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_MstProfileComponent_OnClickBack__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_OnClickBack__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -68,10 +69,10 @@ void MstProfileComponent__OnClickBack(MstProfileComponent_o *this, const MethodI
       callbackFunc->fields.method);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4D2A6EE )
+  if ( !byte_4DFE666 )
   {
-    sub_1C93AD4(&TerminalSceneComponent_TypeInfo);
-    byte_4D2A6EE = 1;
+    sub_1CE6700(&TerminalSceneComponent_TypeInfo);
+    byte_4DFE666 = 1;
   }
   v7 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -81,7 +82,7 @@ void MstProfileComponent__OnClickBack(MstProfileComponent_o *this, const MethodI
   }
   klass = v7->fields.friendPointBoostItemAction->klass;
   if ( !klass || (v7 = *(ScrTerminalListTop_o **)&klass->_2.element_size) == 0 )
-    sub_1C93D2C(v7, v5);
+    sub_1CE6958(v7, v5);
   ScrTerminalListTop__OnPlayerStatusSetBackMaskActive(v7, 0);
 }
 
@@ -93,11 +94,11 @@ void MstProfileComponent__OnClickNameChangeBtn(MstProfileComponent_o *this, cons
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4D2BA0D & 1) == 0 )
+  if ( (byte_4DFFA2C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_OnClickNameChangeBtn__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BA0D = 1;
+    sub_1CE6700(&Method_MstProfileComponent_OnClickNameChangeBtn__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA2C = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -106,8 +107,8 @@ void MstProfileComponent__OnClickNameChangeBtn(MstProfileComponent_o *this, cons
   {
     v4 = Method_MstProfileComponent_OnClickNameChangeBtn__;
     if ( (*((_BYTE *)Method_MstProfileComponent_OnClickNameChangeBtn__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_OnClickNameChangeBtn__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v4, v4[4]);
+      v4 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_OnClickNameChangeBtn__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     MstProfileComponent__showChangeDlg(this, v6);
   }
@@ -136,12 +137,12 @@ void MstProfileComponent__OnClickSubmit(
   System_String_o *v19; // x7
   const MethodInfo *v20; // x1
 
-  if ( (byte_4D2BA10 & 1) == 0 )
+  if ( (byte_4DFFA2F & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_4387/*"ChangeUserName"*/);
-    sub_1C93AD4(&StringLiteral_3506/*"CLICK_SUBMIT"*/);
-    byte_4D2BA10 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_4396/*"ChangeUserName"*/);
+    sub_1CE6700(&StringLiteral_3513/*"CLICK_SUBMIT"*/);
+    byte_4DFFA2F = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -154,20 +155,20 @@ void MstProfileComponent__OnClickSubmit(
       || (Fsm = (char *)*((_QWORD *)Fsm + 11)) == 0
       || (Fsm = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                           (HutongGames_PlayMaker_FsmVariables_o *)Fsm,
-                          (System_String_o *)StringLiteral_4387/*"ChangeUserName"*/,
+                          (System_String_o *)StringLiteral_4396/*"ChangeUserName"*/,
                           0)) == 0
       || (*((_QWORD *)Fsm + 7) = changeName,
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)(Fsm + 56), (int32_t)changeName, v14, v15, v16, v17, v18, v19),
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)(Fsm + 56), (int32_t)changeName, v14, v15, v16, v17, v18, v19),
           (Fsm = (char *)this->fields.myRoomFsm) == 0) )
     {
-      sub_1C93D2C(Fsm, v6);
+      sub_1CE6958(Fsm, v6);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Fsm, (System_String_o *)StringLiteral_3506/*"CLICK_SUBMIT"*/, 0);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Fsm, (System_String_o *)StringLiteral_3513/*"CLICK_SUBMIT"*/, 0);
   }
   else
   {
     this->fields.changeName = changeName;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.changeName, (int32_t)changeName, v7, v8, v9, v10, v11, v12);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.changeName, (int32_t)changeName, v7, v8, v9, v10, v11, v12);
     MstProfileComponent__checkInput(this, v20);
   }
 }
@@ -182,19 +183,19 @@ void MstProfileComponent__OpenExpInfo(MstProfileComponent_o *this, const MethodI
   const MethodInfo *v7; // x2
   struct UserGameEntity_o *usrGameEnt; // x8
 
-  if ( (byte_4D2BA12 & 1) == 0 )
+  if ( (byte_4DFFA31 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_OpenExpInfo__);
-    byte_4D2BA12 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_OpenExpInfo__);
+    byte_4DFFA31 = 1;
   }
   v3 = Method_MstProfileComponent_OpenExpInfo__;
   if ( (*((_BYTE *)Method_MstProfileComponent_OpenExpInfo__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_OpenExpInfo__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_OpenExpInfo__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt || (expInfoWindow = this->fields.expInfoWindow) == 0 )
-    sub_1C93D2C(expInfoWindow, v6);
+    sub_1CE6958(expInfoWindow, v6);
   MstExpInfoComponent__openExpInfo(expInfoWindow, usrGameEnt->fields.exp, v7);
 }
 
@@ -219,13 +220,13 @@ void MstProfileComponent__SetProfileData(MstProfileComponent_o *this, const Meth
   const MethodInfo *v18; // x1
   const MethodInfo *v19; // x1
 
-  if ( (byte_4D2BA03 & 1) == 0 )
+  if ( (byte_4DFFA22 & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&MstProfileComponent_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_9005/*"MasterProfileInfo"*/);
-    byte_4D2BA03 = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&MstProfileComponent_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_9022/*"MasterProfileInfo"*/);
+    byte_4DFFA22 = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
@@ -238,7 +239,7 @@ void MstProfileComponent__SetProfileData(MstProfileComponent_o *this, const Meth
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !transform )
         goto LABEL_18;
-      v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_9005/*"MasterProfileInfo"*/, 0);
+      v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_9022/*"MasterProfileInfo"*/, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v6, 0, 0) )
@@ -260,7 +261,7 @@ void MstProfileComponent__SetProfileData(MstProfileComponent_o *this, const Meth
           goto LABEL_17;
         }
 LABEL_18:
-        sub_1C93D2C(transform, v5);
+        sub_1CE6958(transform, v5);
       }
     }
   }
@@ -331,27 +332,27 @@ void MstProfileComponent__ShowMstProfile(
   int64_t recoverTime; // [xsp+8h] [xbp-58h] BYREF
   int32_t count; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4D2B9FC & 1) == 0 )
+  if ( (byte_4DFFA1B & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
-    sub_1C93AD4(&Method_MstProfileComponent_OnClickBack__);
-    sub_1C93AD4(&MyRoomControl_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&SoundManager_TypeInfo);
-    sub_1C93AD4(&Method_MstProfileComponent___c__DisplayClass63_0__ShowMstProfile_b__0__);
-    sub_1C93AD4(&MstProfileComponent___c__DisplayClass63_0_TypeInfo);
-    byte_4D2B9FC = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
+    sub_1CE6700(&Method_MstProfileComponent_OnClickBack__);
+    sub_1CE6700(&MyRoomControl_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&SoundManager_TypeInfo);
+    sub_1CE6700(&Method_MstProfileComponent___c__DisplayClass63_0__ShowMstProfile_b__0__);
+    sub_1CE6700(&MstProfileComponent___c__DisplayClass63_0_TypeInfo);
+    byte_4DFFA1B = 1;
   }
   count = 0;
   recoverTime = 0;
-  v7 = sub_1C93D20(MstProfileComponent___c__DisplayClass63_0_TypeInfo);
+  v7 = sub_1CE694C(MstProfileComponent___c__DisplayClass63_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_28;
   *(_QWORD *)(v7 + 16) = endLoadCallback;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)endLoadCallback, v10, v11, v12, v13, v14, v15);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)endLoadCallback, v10, v11, v12, v13, v14, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_28;
@@ -359,7 +360,7 @@ void MstProfileComponent__ShowMstProfile(
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   p_usrGameEnt = &this->fields.usrGameEnt;
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt,
     (int32_t)SelfUserGame,
     v18,
@@ -383,7 +384,7 @@ void MstProfileComponent__ShowMstProfile(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v29 = UnityEngine_Object__Instantiate_object_(
           titleInfoPref,
-          (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_28;
@@ -393,10 +394,10 @@ void MstProfileComponent__ShowMstProfile(
     goto LABEL_28;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v29,
-                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
+                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
   p_titleInfo = &this->fields.titleInfo;
   this->fields.titleInfo = (struct TitleInfoControl_o *)Component_object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.titleInfo,
     (int32_t)Component_object,
     v33,
@@ -425,13 +426,13 @@ void MstProfileComponent__ShowMstProfile(
   gameObject = (UnityEngine_GameObject_o *)*p_titleInfo;
   if ( !*p_titleInfo )
     goto LABEL_28;
-  TitleInfoControl__changeTitleInfo_40624832((TitleInfoControl_o *)gameObject, 1, 49, 0, 0);
+  TitleInfoControl__changeTitleInfo_41045104((TitleInfoControl_o *)gameObject, 1, 49, 0, 0);
   gameObject = (UnityEngine_GameObject_o *)*p_titleInfo;
   if ( !*p_titleInfo )
     goto LABEL_28;
   TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)gameObject, 0, 0);
   v40 = this->fields.titleInfo;
-  v41 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v41 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v41, (Il2CppObject *)this, (intptr_t)Method_MstProfileComponent_OnClickBack__, 0);
   if ( !v40 )
     goto LABEL_28;
@@ -439,7 +440,7 @@ void MstProfileComponent__ShowMstProfile(
   if ( closeCallback )
   {
     this->fields.callbackFunc = closeCallback;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)closeCallback,
       v42,
@@ -459,7 +460,7 @@ void MstProfileComponent__ShowMstProfile(
   }
   MstProfileComponent__SetProfileData(this, v48);
   bgManager = this->fields.bgManager;
-  v51 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v51 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(
     v51,
     (Il2CppObject *)v7,
@@ -470,7 +471,7 @@ void MstProfileComponent__ShowMstProfile(
         (gameObject = (UnityEngine_GameObject_o *)*p_titleInfo) == 0) )
   {
 LABEL_28:
-    sub_1C93D2C(gameObject, v9);
+    sub_1CE6958(gameObject, v9);
   }
   TitleInfoControl__setBackBtnColliderEnable((TitleInfoControl_o *)gameObject, 1, 0);
 }
@@ -483,10 +484,10 @@ void MstProfileComponent__Start(MstProfileComponent_o *this, const MethodInfo *m
   __int64 v5; // x1
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2B9FB & 1) == 0 )
+  if ( (byte_4DFFA1A & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2B9FB = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA1A = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -497,7 +498,7 @@ void MstProfileComponent__Start(MstProfileComponent_o *this, const MethodInfo *m
     if ( !gameObject
       || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
     {
-      sub_1C93D2C(gameObject, v5);
+      sub_1CE6958(gameObject, v5);
     }
     v6.fields.y = 0.0;
     v6.fields.z = 0.0;
@@ -529,11 +530,11 @@ void MstProfileComponent___onClickMessageChange_b__105_0(
   const MethodInfo *v11; // x4
 
   v6 = this;
-  if ( (byte_4D2BA23 & 1) == 0 )
+  if ( (byte_4DFFA42 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_callbackChangeMessage__);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4D2BA23 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_callbackChangeMessage__);
+    this = (MstProfileComponent_o *)sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4DFFA42 = 1;
   }
   if ( result )
   {
@@ -541,7 +542,7 @@ void MstProfileComponent___onClickMessageChange_b__105_0(
     if ( userNameTxt )
     {
       mText = userNameTxt->fields.mText;
-      v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v6,
@@ -551,7 +552,7 @@ void MstProfileComponent___onClickMessageChange_b__105_0(
       return;
     }
 LABEL_8:
-    sub_1C93D2C(this, result);
+    sub_1CE6958(this, result);
   }
   this = (MstProfileComponent_o *)v6->fields.userMessageInputDlg;
   if ( !this )
@@ -570,19 +571,19 @@ void MstProfileComponent__callbackChangeMessage(
   const MethodInfo *v6; // x1
 
   v4 = this;
-  if ( (byte_4D2BA1D & 1) == 0 )
+  if ( (byte_4DFFA3C & 1) == 0 )
   {
-    this = (MstProfileComponent_o *)sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    byte_4D2BA1D = 1;
+    this = (MstProfileComponent_o *)sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    byte_4DFFA3C = 1;
   }
   if ( !result
-    || (this = (MstProfileComponent_o *)System_String__Equals_64461044(
+    || (this = (MstProfileComponent_o *)System_String__Equals_65158148(
                                           result,
-                                          (System_String_o *)StringLiteral_22655/*"ok"*/,
+                                          (System_String_o *)StringLiteral_22728/*"ok"*/,
                                           0),
         !v4->fields.userMessageInputDlg) )
   {
-    sub_1C93D2C(this, result);
+    sub_1CE6958(this, result);
   }
   v5 = (char)this;
   SupportDeckNameInputMenu__Close((SupportDeckNameInputMenu_o *)v4->fields.userMessageInputDlg, 0);
@@ -601,14 +602,14 @@ void MstProfileComponent__callbackChangeName(
   const MethodInfo *v6; // x2
 
   v4 = this;
-  if ( (byte_4D2BA20 & 1) == 0 )
+  if ( (byte_4DFFA3F & 1) == 0 )
   {
-    this = (MstProfileComponent_o *)sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    byte_4D2BA20 = 1;
+    this = (MstProfileComponent_o *)sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    byte_4DFFA3F = 1;
   }
   if ( !result )
     goto LABEL_9;
-  if ( System_String__Equals_64461044(result, (System_String_o *)StringLiteral_22655/*"ok"*/, 0) )
+  if ( System_String__Equals_65158148(result, (System_String_o *)StringLiteral_22728/*"ok"*/, 0) )
   {
     MstProfileComponent__closeChangeDlg(v4, (const MethodInfo *)result);
     MstProfileComponent__showMstProfile(v4, v5);
@@ -620,9 +621,9 @@ void MstProfileComponent__callbackChangeName(
         (this = (MstProfileComponent_o *)v4->fields.changeNameWindow) == 0) )
   {
 LABEL_9:
-    sub_1C93D2C(this, result);
+    sub_1CE6958(this, result);
   }
-  ChangeUserNameWindow__Close_33823960((ChangeUserNameWindow_o *)this, 0, v6);
+  ChangeUserNameWindow__Close_34243636((ChangeUserNameWindow_o *)this, 0, v6);
 }
 
 
@@ -642,7 +643,7 @@ void MstProfileComponent__callbackGenderChange(
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v5, v6, v7, v8, v9, v10);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v5, v6, v7, v8, v9, v10);
   MstProfileComponent__setGenderInfo(this, v11);
 }
 
@@ -663,7 +664,7 @@ void MstProfileComponent__callbackSetBirthDay(
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v5, v6, v7, v8, v9, v10);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v5, v6, v7, v8, v9, v10);
   MstProfileComponent__setBirthDayInfo(this, v11);
 }
 
@@ -679,13 +680,13 @@ void MstProfileComponent__checkInput(MstProfileComponent_o *this, const MethodIn
   MstProfileComponent_o *v9; // x0
   const MethodInfo *v10; // x4
 
-  if ( (byte_4D2BA11 & 1) == 0 )
+  if ( (byte_4DFFA30 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_callbackChangeName__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3369/*"CHECK_OK"*/);
-    byte_4D2BA11 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_callbackChangeName__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1CE6700(&StringLiteral_3374/*"CHECK_OK"*/);
+    byte_4DFFA30 = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -695,18 +696,18 @@ void MstProfileComponent__checkInput(MstProfileComponent_o *this, const MethodIn
     SelfUserGame = this->fields.myRoomFsm;
     if ( SelfUserGame )
     {
-      PlayMakerFSM__SendEvent(SelfUserGame, (System_String_o *)StringLiteral_3369/*"CHECK_OK"*/, 0);
+      PlayMakerFSM__SendEvent(SelfUserGame, (System_String_o *)StringLiteral_3374/*"CHECK_OK"*/, 0);
       return;
     }
 LABEL_10:
-    sub_1C93D2C(SelfUserGame, v4);
+    sub_1CE6958(SelfUserGame, v4);
   }
   changeName = this->fields.changeName;
   SelfUserGame = (PlayMakerFSM_o *)UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
     goto LABEL_10;
   addEventHandlers = (System_String_o *)SelfUserGame[3].fields.addEventHandlers;
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v8, (Il2CppObject *)this, Method_MstProfileComponent_callbackChangeName__, 0);
   MstProfileComponent__requestChangeName(v9, changeName, addEventHandlers, v8, v10);
 }
@@ -719,8 +720,8 @@ void MstProfileComponent__closeChangeDlg(MstProfileComponent_o *this, const Meth
 
   changeNameWindow = this->fields.changeNameWindow;
   if ( !changeNameWindow )
-    sub_1C93D2C(0, method);
-  ChangeUserNameWindow__Close_33823960(changeNameWindow, 0, v2);
+    sub_1CE6958(0, method);
+  ChangeUserNameWindow__Close_34243636(changeNameWindow, 0, v2);
 }
 
 
@@ -731,8 +732,8 @@ void MstProfileComponent__closeSetBirthDayDlg(MstProfileComponent_o *this, const
 
   inputBirthDayWindow = this->fields.inputBirthDayWindow;
   if ( !inputBirthDayWindow )
-    sub_1C93D2C(0, method);
-  InputUserBirthDayWindow__Close_33828504(inputBirthDayWindow, 0, v2);
+    sub_1CE6958(0, method);
+  InputUserBirthDayWindow__Close_34248180(inputBirthDayWindow, 0, v2);
 }
 
 
@@ -754,12 +755,12 @@ void MstProfileComponent__createCmdSpellWindow(MstProfileComponent_o *this, cons
   System_String_o *v16; // x7
   UnityEngine_GameObject_o *v17; // x0
 
-  if ( (byte_4D2BA01 & 1) == 0 )
+  if ( (byte_4DFFA20 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BA01 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA20 = 1;
   }
   p_cmdSpellWinComp = &this->fields.cmdSpellWinComp;
   cmdSpellWinComp = (UnityEngine_Object_o *)this->fields.cmdSpellWinComp;
@@ -772,7 +773,7 @@ void MstProfileComponent__createCmdSpellWindow(MstProfileComponent_o *this, cons
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v6 = UnityEngine_Object__Instantiate_object_(
            cmdSpellWinPrefab,
-           (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
       || (layer = UnityEngine_GameObject__get_layer(gameObject, 0),
@@ -780,9 +781,9 @@ void MstProfileComponent__createCmdSpellWindow(MstProfileComponent_o *this, cons
           !v6)
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)v6,
-                               (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___),
+                               (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___),
           *p_cmdSpellWinComp = (struct CommandSpellWindowComponent_o *)Component_object,
-          sub_1C93A78(
+          sub_1CE66A4(
             (GrandQuestFolderBoardItem_o *)&this->fields.cmdSpellWinComp,
             (int32_t)Component_object,
             v11,
@@ -793,10 +794,10 @@ void MstProfileComponent__createCmdSpellWindow(MstProfileComponent_o *this, cons
             v16),
           (gameObject = (UnityEngine_GameObject_o *)*p_cmdSpellWinComp) == 0) )
     {
-      sub_1C93D2C(gameObject, v8);
+      sub_1CE6958(gameObject, v8);
     }
     v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-    GameObjectExtensions__SafeSetParent_36750960(v17, this->fields.cmdSpellWinInfo, 0);
+    GameObjectExtensions__SafeSetParent_37166960(v17, this->fields.cmdSpellWinInfo, 0);
   }
 }
 
@@ -826,14 +827,14 @@ void MstProfileComponent__dispSetBirth(
   Il2CppObject *v22; // x22
   Il2CppObject *PaddingBirthday; // x0
 
-  if ( (byte_4D2BA09 & 1) == 0 )
+  if ( (byte_4DFFA28 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    sub_1C93AD4(&System_DateTime_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&MstProfileComponent_TypeInfo);
-    sub_1C93AD4(&StringLiteral_2942/*"BIRTHDAY"*/);
-    byte_4D2BA09 = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    sub_1CE6700(&System_DateTime_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&MstProfileComponent_TypeInfo);
+    sub_1CE6700(&StringLiteral_2947/*"BIRTHDAY"*/);
+    byte_4DFFA28 = 1;
   }
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
@@ -895,7 +896,7 @@ void MstProfileComponent__dispSetBirth(
   birthDayLb = this->fields.birthDayLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  IsOpen = (UnityEngine_Transform_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2942/*"BIRTHDAY"*/, 0);
+  IsOpen = (UnityEngine_Transform_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2947/*"BIRTHDAY"*/, 0);
   if ( !this->fields.inputBirthDayWindow )
     goto LABEL_30;
   v20 = (System_String_o *)IsOpen;
@@ -909,14 +910,14 @@ void MstProfileComponent__dispSetBirth(
                                             (InputUserBirthDayWindow_o *)IsOpen,
                                             Day,
                                             v21),
-        IsOpen = (UnityEngine_Transform_o *)System_String__Format_64467032(v20, v22, PaddingBirthday, 0),
+        IsOpen = (UnityEngine_Transform_o *)System_String__Format_65164136(v20, v22, PaddingBirthday, 0),
         !birthDayLb)
     || (UILabel__set_text(birthDayLb, (System_String_o *)IsOpen, 0),
         (IsOpen = (UnityEngine_Transform_o *)this->fields.birthDayInfo) == 0)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsOpen, 1, 0), !callback) )
   {
 LABEL_30:
-    sub_1C93D2C(IsOpen, v10);
+    sub_1CE6958(IsOpen, v10);
   }
   ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
     callback->fields.method_code,
@@ -937,17 +938,17 @@ void MstProfileComponent__endOpenChangeDlg(
   const MethodInfo *v11; // x1
   PlayMakerFSM_o *v12; // x0
 
-  if ( (byte_4D2BA0F & 1) == 0 )
+  if ( (byte_4DFFA2E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_endOpenChangeDlg__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3463/*"CLICK_CANCLE"*/);
-    byte_4D2BA0F = 1;
+    sub_1CE6700(&Method_MstProfileComponent_endOpenChangeDlg__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_3469/*"CLICK_CANCLE"*/);
+    byte_4DFFA2E = 1;
   }
   v7 = Method_MstProfileComponent_endOpenChangeDlg__;
   if ( (*((_BYTE *)Method_MstProfileComponent_endOpenChangeDlg__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_endOpenChangeDlg__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v7, v7[4]);
+    v7 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_endOpenChangeDlg__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v7, v7[4]);
   if ( res )
   {
     OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0);
@@ -963,8 +964,8 @@ void MstProfileComponent__endOpenChangeDlg(
     {
       v12 = this->fields.myRoomFsm;
       if ( !v12 )
-        sub_1C93D2C(0, v11);
-      PlayMakerFSM__SendEvent(v12, (System_String_o *)StringLiteral_3463/*"CLICK_CANCLE"*/, 0);
+        sub_1CE6958(0, v11);
+      PlayMakerFSM__SendEvent(v12, (System_String_o *)StringLiteral_3469/*"CLICK_CANCLE"*/, 0);
     }
     else
     {
@@ -990,14 +991,14 @@ void MstProfileComponent__endOpenSetBirthDay(
   System_Reflection_MethodBase_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4D2BA15 & 1) == 0 )
+  if ( (byte_4DFFA34 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMaster_BeforeBirthDayMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_BeforeBirthDayMaster__BeforeBirthDayEntity__long__GetSingleEntity__);
-    sub_1C93AD4(&Method_MstProfileComponent_endOpenSetBirthDay__);
-    byte_4D2BA15 = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMaster_BeforeBirthDayMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_BeforeBirthDayMaster__BeforeBirthDayEntity__long__GetSingleEntity__);
+    sub_1CE6700(&Method_MstProfileComponent_endOpenSetBirthDay__);
+    byte_4DFFA34 = 1;
   }
   if ( res )
   {
@@ -1007,12 +1008,12 @@ void MstProfileComponent__endOpenSetBirthDay(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_BeforeBirthDayMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_BeforeBirthDayMaster___);
       if ( !Master_object )
         goto LABEL_21;
       Master_object = DataMasterBase_object__object__long___GetSingleEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-                        (const MethodInfo_3465AD0 *)Method_DataMasterBase_BeforeBirthDayMaster__BeforeBirthDayEntity__long__GetSingleEntity__);
+                        (const MethodInfo_34EBAB8 *)Method_DataMasterBase_BeforeBirthDayMaster__BeforeBirthDayEntity__long__GetSingleEntity__);
       usrGameEnt = this->fields.usrGameEnt;
       if ( !usrGameEnt || !Master_object )
         goto LABEL_21;
@@ -1020,23 +1021,23 @@ void MstProfileComponent__endOpenSetBirthDay(
     }
     v10 = Method_MstProfileComponent_endOpenSetBirthDay__;
     if ( (*((_BYTE *)Method_MstProfileComponent_endOpenSetBirthDay__ + 83) & 2) != 0 )
-      v10 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_endOpenSetBirthDay__);
-    v11 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v10, v10[4]);
+      v10 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_endOpenSetBirthDay__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v10, v10[4]);
     OverwriteAssetSoundName__PlaySystemSe(v11, 8, 0, 0);
     if ( paramList )
     {
       if ( LODWORD(paramList->max_length) < 2 )
-        sub_1C93D34(Master_object);
+        sub_1CE6960(Master_object);
       MstProfileComponent__requestSetBirthDay(this, paramList->m_Items[0], paramList->m_Items[1], v12);
       return;
     }
 LABEL_21:
-    sub_1C93D2C(Master_object, v8);
+    sub_1CE6958(Master_object, v8);
   }
   v13 = Method_MstProfileComponent_endOpenSetBirthDay__;
   if ( (*((_BYTE *)Method_MstProfileComponent_endOpenSetBirthDay__ + 83) & 2) != 0 )
-    v13 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_endOpenSetBirthDay__);
-  v14 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v13, v13[4]);
+    v13 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_endOpenSetBirthDay__);
+  v14 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v13, v13[4]);
   OverwriteAssetSoundName__PlaySystemSe(v14, 1, 0, 0);
   MstProfileComponent__closeSetBirthDayDlg(this, v15);
 }
@@ -1052,19 +1053,19 @@ void MstProfileComponent__genderChange(MstProfileComponent_o *this, const Method
   struct UserGameEntity_o *usrGameEnt; // x8
   int32_t v9; // w1
 
-  if ( (byte_4D2BA19 & 1) == 0 )
+  if ( (byte_4DFFA38 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_genderChange__);
-    byte_4D2BA19 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_genderChange__);
+    byte_4DFFA38 = 1;
   }
   v3 = Method_MstProfileComponent_genderChange__;
   if ( (*((_BYTE *)Method_MstProfileComponent_genderChange__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_genderChange__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_genderChange__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt )
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   if ( usrGameEnt->fields.genderType == 1 )
     v9 = 2;
   else
@@ -1085,7 +1086,7 @@ void MstProfileComponent__getCurrentUserData(MstProfileComponent_o *this, const 
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -1100,11 +1101,11 @@ void MstProfileComponent__gradeSetup(MstProfileComponent_o *this, const MethodIn
   UIAtlas_o *mAtlas; // x23
   struct UISprite_o *nameLine; // x8
 
-  if ( (byte_4D2B9FF & 1) == 0 )
+  if ( (byte_4DFFA1E & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&Grade_TypeInfo);
-    byte_4D2B9FF = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&Grade_TypeInfo);
+    byte_4DFFA1E = 1;
   }
   if ( !Grade_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Grade_TypeInfo);
@@ -1127,7 +1128,7 @@ void MstProfileComponent__gradeSetup(MstProfileComponent_o *this, const MethodIn
     nameLine = this->fields.nameLine;
     if ( !nameLine )
 LABEL_14:
-      sub_1C93D2C(MasterProfileBgImage, v6);
+      sub_1CE6958(MasterProfileBgImage, v6);
     AtlasManager__SetGradeBase(nameLine, MasterProfileBgImage, nameLine->fields.mAtlas, 0);
   }
 }
@@ -1150,10 +1151,10 @@ void MstProfileComponent__hideMstProfile(MstProfileComponent_o *this, const Meth
   int v15; // w21
   UnityEngine_Object_o *v16; // x20
 
-  if ( (byte_4D2BA00 & 1) == 0 )
+  if ( (byte_4DFFA1F & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BA00 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA1F = 1;
   }
   masterFigure = (UnityEngine_Object_o *)this->fields.masterFigure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1166,9 +1167,9 @@ void MstProfileComponent__hideMstProfile(MstProfileComponent_o *this, const Meth
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(userMessageInputDlg, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72119908(gameObject, 0);
+    UnityEngine_Object__Destroy_72918540(gameObject, 0);
     this->fields.masterFigure = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.masterFigure, 0, v7, v8, v9, v10, v11, v12);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.masterFigure, 0, v7, v8, v9, v10, v11, v12);
   }
   userMessageInputDlg = (UnityEngine_Component_o *)this->fields.userMessageInputDlg;
   if ( !userMessageInputDlg
@@ -1180,7 +1181,7 @@ void MstProfileComponent__hideMstProfile(MstProfileComponent_o *this, const Meth
     || (userMessageInputDlg = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(userMessageInputDlg, 0)) == 0 )
   {
 LABEL_24:
-    sub_1C93D2C(userMessageInputDlg, v4);
+    sub_1CE6958(userMessageInputDlg, v4);
   }
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)userMessageInputDlg, 0);
   if ( childCount >= 1 )
@@ -1203,7 +1204,7 @@ LABEL_24:
       v16 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(userMessageInputDlg, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72119908(v16, 0);
+      UnityEngine_Object__Destroy_72918540(v16, 0);
     }
     while ( --v15 > 1 );
   }
@@ -1219,18 +1220,22 @@ LABEL_24:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MstProfileComponent__messageSetup(MstProfileComponent_o *this, const MethodInfo *method)
 {
   void *SelfUserGame; // x0
   __int64 v4; // x1
   System_String_o *v5; // x20
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
-  if ( (byte_4D2B9FE & 1) == 0 )
+  if ( (byte_4DFFA1D & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_8718/*"MESSAGE_CHANGE_NO_INPUT"*/);
-    byte_4D2B9FE = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_8733/*"MESSAGE_CHANGE_NO_INPUT"*/);
+    byte_4DFFA1D = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
@@ -1240,7 +1245,7 @@ void MstProfileComponent__messageSetup(MstProfileComponent_o *this, const Method
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_8718/*"MESSAGE_CHANGE_NO_INPUT"*/, 0);
+    SelfUserGame = LocalizationManager__Get((System_String_o *)StringLiteral_8733/*"MESSAGE_CHANGE_NO_INPUT"*/, 0);
     if ( this->fields.messageLabel )
     {
       v5 = (System_String_o *)SelfUserGame;
@@ -1248,12 +1253,12 @@ void MstProfileComponent__messageSetup(MstProfileComponent_o *this, const Method
       SelfUserGame = this->fields.messageLabel;
       if ( SelfUserGame )
       {
-        v6.fields.r = 0.6;
+        v6 = 0.6;
         goto LABEL_13;
       }
     }
 LABEL_15:
-    sub_1C93D2C(SelfUserGame, v4);
+    sub_1CE6958(SelfUserGame, v4);
   }
   SelfUserGame = this->fields.messageLabel;
   if ( !SelfUserGame )
@@ -1262,12 +1267,12 @@ LABEL_15:
   SelfUserGame = this->fields.messageLabel;
   if ( !SelfUserGame )
     goto LABEL_15;
-  v6.fields.r = 1.0;
+  v6 = 1.0;
 LABEL_13:
-  v6.fields.a = 1.0;
-  v6.fields.g = v6.fields.r;
-  v6.fields.b = v6.fields.r;
-  UIWidget__set_color((UIWidget_o *)SelfUserGame, v6, 0);
+  v7 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color((UIWidget_o *)SelfUserGame, *(UnityEngine_Color_o *)&v6, 0);
   SelfUserGame = this->fields.messageLabel;
   if ( !SelfUserGame )
     goto LABEL_15;
@@ -1282,19 +1287,19 @@ void MstProfileComponent__onClickCmdSpell(MstProfileComponent_o *this, const Met
   __int64 v5; // x1
   struct CommandSpellWindowComponent_o *cmdSpellWinComp; // x0
 
-  if ( (byte_4D2BA17 & 1) == 0 )
+  if ( (byte_4DFFA36 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_onClickCmdSpell__);
-    byte_4D2BA17 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_onClickCmdSpell__);
+    byte_4DFFA36 = 1;
   }
   v3 = Method_MstProfileComponent_onClickCmdSpell__;
   if ( (*((_BYTE *)Method_MstProfileComponent_onClickCmdSpell__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_onClickCmdSpell__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_onClickCmdSpell__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   cmdSpellWinComp = this->fields.cmdSpellWinComp;
   if ( !cmdSpellWinComp )
-    sub_1C93D2C(0, v5);
+    sub_1CE6958(0, v5);
   ((void (__fastcall *)(struct CommandSpellWindowComponent_o *, _QWORD, const MethodInfo *))cmdSpellWinComp->klass->vtable._10_Open.methodPtr)(
     cmdSpellWinComp,
     0,
@@ -1313,23 +1318,23 @@ void MstProfileComponent__onClickMessageChange(MstProfileComponent_o *this, cons
   SupportDeckNameInputMenu_CallbackFunc_o *v9; // x22
   const MethodInfo *v10; // x3
 
-  if ( (byte_4D2BA1C & 1) == 0 )
+  if ( (byte_4DFFA3B & 1) == 0 )
   {
-    sub_1C93AD4(&SupportDeckNameInputMenu_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_MstProfileComponent__onClickMessageChange_b__105_0__);
-    sub_1C93AD4(&Method_MstProfileComponent_onClickMessageChange__);
-    byte_4D2BA1C = 1;
+    sub_1CE6700(&SupportDeckNameInputMenu_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_MstProfileComponent__onClickMessageChange_b__105_0__);
+    sub_1CE6700(&Method_MstProfileComponent_onClickMessageChange__);
+    byte_4DFFA3B = 1;
   }
   v3 = Method_MstProfileComponent_onClickMessageChange__;
   if ( (*((_BYTE *)Method_MstProfileComponent_onClickMessageChange__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_onClickMessageChange__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_onClickMessageChange__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame
     || (message = SelfUserGame->fields.message,
         userMessageInputDlg = this->fields.userMessageInputDlg,
-        v9 = (SupportDeckNameInputMenu_CallbackFunc_o *)sub_1C93D20(SupportDeckNameInputMenu_CallbackFunc_TypeInfo),
+        v9 = (SupportDeckNameInputMenu_CallbackFunc_o *)sub_1CE694C(SupportDeckNameInputMenu_CallbackFunc_TypeInfo),
         SupportDeckNameInputMenu_CallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -1337,7 +1342,7 @@ void MstProfileComponent__onClickMessageChange(MstProfileComponent_o *this, cons
           0),
         !userMessageInputDlg) )
   {
-    sub_1C93D2C(SelfUserGame, v6);
+    sub_1CE6958(SelfUserGame, v6);
   }
   UserMessageInputDlg__Open(userMessageInputDlg, message, v9, v10);
 }
@@ -1349,10 +1354,10 @@ void MstProfileComponent__onSpellWindowClose(MstProfileComponent_o *this, const 
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4D2BA18 & 1) == 0 )
+  if ( (byte_4DFFA37 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_onSpellWindowClose__);
-    byte_4D2BA18 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_onSpellWindowClose__);
+    byte_4DFFA37 = 1;
   }
   cmdSpellWinComp = (BattleWindowComponent_o *)this->fields.cmdSpellWinComp;
   if ( !cmdSpellWinComp )
@@ -1361,8 +1366,8 @@ void MstProfileComponent__onSpellWindowClose(MstProfileComponent_o *this, const 
   {
     v4 = Method_MstProfileComponent_onSpellWindowClose__;
     if ( (*((_BYTE *)Method_MstProfileComponent_onSpellWindowClose__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_onSpellWindowClose__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v4, v4[4]);
+      v4 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_onSpellWindowClose__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0);
     cmdSpellWinComp = (BattleWindowComponent_o *)this->fields.cmdSpellWinComp;
     if ( cmdSpellWinComp )
@@ -1374,7 +1379,7 @@ void MstProfileComponent__onSpellWindowClose(MstProfileComponent_o *this, const 
       return;
     }
 LABEL_10:
-    sub_1C93D2C(cmdSpellWinComp, method);
+    sub_1CE6958(cmdSpellWinComp, method);
   }
 }
 
@@ -1393,10 +1398,10 @@ void MstProfileComponent__releaseCmdSpellWindow(MstProfileComponent_o *this, con
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4D2BA02 & 1) == 0 )
+  if ( (byte_4DFFA21 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BA02 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA21 = 1;
   }
   cmdSpellWinComp = this->fields.cmdSpellWinComp;
   p_cmdSpellWinComp = (UnityEngine_Component_o **)&this->fields.cmdSpellWinComp;
@@ -1406,13 +1411,13 @@ void MstProfileComponent__releaseCmdSpellWindow(MstProfileComponent_o *this, con
   if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
   {
     if ( !*p_cmdSpellWinComp )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_cmdSpellWinComp, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_72120096(gameObject, 0);
+    UnityEngine_Object__DestroyImmediate_72918728(gameObject, 0);
     *p_cmdSpellWinComp = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)p_cmdSpellWinComp, 0, v8, v9, v10, v11, v12, v13);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_cmdSpellWinComp, 0, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -1428,11 +1433,11 @@ void MstProfileComponent__requestChangeName(
   __int64 v9; // x1
   int32_t paramInteger_high; // w22
 
-  if ( (byte_4D2BA1F & 1) == 0 )
+  if ( (byte_4DFFA3E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2BA1F = 1;
+    sub_1CE6700(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFFA3E = 1;
   }
   SelfUserGame = (UserNameChangeRequest_o *)UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
@@ -1442,10 +1447,10 @@ void MstProfileComponent__requestChangeName(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   SelfUserGame = (UserNameChangeRequest_o *)NetworkManager__getRequest_object_(
                                               callback,
-                                              (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
+                                              (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
   if ( !SelfUserGame )
 LABEL_8:
-    sub_1C93D2C(SelfUserGame, v9);
+    sub_1CE6958(SelfUserGame, v9);
   UserNameChangeRequest__beginRequest(SelfUserGame, changedName, paramInteger_high, message, 0);
 }
 
@@ -1463,29 +1468,29 @@ void MstProfileComponent__requestGenderChange(
   Il2CppObject *Request_object; // x21
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4D2BA1A & 1) == 0 )
+  if ( (byte_4DFFA39 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_callbackGenderChange__);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4D2BA1A = 1;
+    sub_1CE6700(&Method_MstProfileComponent_callbackGenderChange__);
+    sub_1CE6700(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    this = (MstProfileComponent_o *)sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4DFFA39 = 1;
   }
   klass = v4[25].klass;
   if ( !klass )
     goto LABEL_9;
   namespaze = (System_String_o *)klass->_1.namespaze;
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v7, v4, Method_MstProfileComponent_callbackGenderChange__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
+                     (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
   this = (MstProfileComponent_o *)UserGameMaster__getSelfUserGame(0);
   if ( !this || !Request_object )
 LABEL_9:
-    sub_1C93D2C(this, *(_QWORD *)&genderType);
+    sub_1CE6958(this, *(_QWORD *)&genderType);
   UserNameChangeRequest__beginRequest(
     (UserNameChangeRequest_o *)Request_object,
     namespaze,
@@ -1509,29 +1514,29 @@ void MstProfileComponent__requestSetBirthDay(
   NetworkManager_ResultCallbackFunc_o *v10; // x24
 
   v6 = (Il2CppObject *)this;
-  if ( (byte_4D2BA16 & 1) == 0 )
+  if ( (byte_4DFFA35 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MstProfileComponent_callbackSetBirthDay__);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_SetUserBirthDayRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4D2BA16 = 1;
+    sub_1CE6700(&Method_MstProfileComponent_callbackSetBirthDay__);
+    sub_1CE6700(&Method_NetworkManager_getRequest_SetUserBirthDayRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    this = (MstProfileComponent_o *)sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4DFFA35 = 1;
   }
   klass = v6[25].klass;
   if ( !klass )
     goto LABEL_8;
   namespaze = (System_String_o *)klass->_1.namespaze;
   castClass_high = HIDWORD(klass->_1.castClass);
-  v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v10, v6, Method_MstProfileComponent_callbackSetBirthDay__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   this = (MstProfileComponent_o *)NetworkManager__getRequest_object_(
                                     v10,
-                                    (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_SetUserBirthDayRequest___);
+                                    (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_SetUserBirthDayRequest___);
   if ( !this )
 LABEL_8:
-    sub_1C93D2C(this, *(_QWORD *)&month);
+    sub_1CE6958(this, *(_QWORD *)&month);
   SetUserBirthDayRequest__beginRequest((SetUserBirthDayRequest_o *)this, namespaze, castClass_high, month, day, 0);
 }
 
@@ -1542,7 +1547,7 @@ void MstProfileComponent__resetInput(MstProfileComponent_o *this, const MethodIn
 
   changeNameWindow = this->fields.changeNameWindow;
   if ( !changeNameWindow )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   ChangeUserNameWindow__resetInputVal(changeNameWindow, method);
 }
 
@@ -1560,7 +1565,7 @@ void MstProfileComponent__setBirthDayInfo(MstProfileComponent_o *this, const Met
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
   MstProfileComponent__setUserBirthDay(this, v10);
 }
 
@@ -1582,13 +1587,13 @@ void MstProfileComponent__setCmdSpellImg(MstProfileComponent_o *this, const Meth
   System_String_o *v14; // x7
 
   v3 = this;
-  if ( (byte_4D2BA05 & 1) == 0 )
+  if ( (byte_4DFFA24 & 1) == 0 )
   {
-    sub_1C93AD4(&CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
-    sub_1C93AD4(&Method_MstProfileComponent_onSpellWindowClose__);
-    sub_1C93AD4(&MstProfileComponent_TypeInfo);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BA05 = 1;
+    sub_1CE6700(&CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
+    sub_1CE6700(&Method_MstProfileComponent_onSpellWindowClose__);
+    sub_1CE6700(&MstProfileComponent_TypeInfo);
+    this = (MstProfileComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA24 = 1;
   }
   usrGameEnt = v3->fields.usrGameEnt;
   if ( !usrGameEnt )
@@ -1623,14 +1628,14 @@ void MstProfileComponent__setCmdSpellImg(MstProfileComponent_o *this, const Meth
         if ( v7 )
         {
           v7->fields.mode = 0;
-          v8 = (CommandSpellWindowComponent_CloseButtonCallBack_o *)sub_1C93D20(CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
+          v8 = (CommandSpellWindowComponent_CloseButtonCallBack_o *)sub_1CE694C(CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
           CommandSpellWindowComponent_CloseButtonCallBack___ctor(
             v8,
             (Il2CppObject *)v3,
             (intptr_t)Method_MstProfileComponent_onSpellWindowClose__,
             0);
           v7->fields.callback_close = v8;
-          sub_1C93A78(
+          sub_1CE66A4(
             (GrandQuestFolderBoardItem_o *)&v7->fields.callback_close,
             (int32_t)v8,
             v9,
@@ -1644,7 +1649,7 @@ void MstProfileComponent__setCmdSpellImg(MstProfileComponent_o *this, const Meth
       }
     }
 LABEL_14:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
 }
 
@@ -1678,7 +1683,7 @@ void MstProfileComponent__setCmdSpellInfo(MstProfileComponent_o *this, int32_t g
           (cmdSpellIconMale = (UnityEngine_Component_o *)this->fields.cmdSpellIconFemale) == 0) )
     {
 LABEL_17:
-      sub_1C93D2C(cmdSpellIconMale, *(_QWORD *)&genderType);
+      sub_1CE6958(cmdSpellIconMale, *(_QWORD *)&genderType);
     }
   }
   else
@@ -1732,20 +1737,20 @@ void MstProfileComponent__setCmdSpellRecoverTime(
   int v16; // [xsp+18h] [xbp-48h] BYREF
   int v17; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4D2BA04 & 1) == 0 )
+  if ( (byte_4DFFA23 & 1) == 0 )
   {
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3700/*"COMMAND_SPELL_RECOVER_TIME"*/);
-    sub_1C93AD4(&StringLiteral_3703/*"COMMNAD_SPELL_RECV_TXT"*/);
-    byte_4D2BA04 = 1;
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_3707/*"COMMAND_SPELL_RECOVER_TIME"*/);
+    sub_1CE6700(&StringLiteral_3710/*"COMMNAD_SPELL_RECV_TXT"*/);
+    byte_4DFFA23 = 1;
   }
   if ( recoverTime > 0 )
   {
     recoverTitleLb = this->fields.recoverTitleLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    cmdSpellRecTimeInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3703/*"COMMNAD_SPELL_RECV_TXT"*/, 0);
+    cmdSpellRecTimeInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3710/*"COMMNAD_SPELL_RECV_TXT"*/, 0);
     if ( recoverTitleLb )
     {
       v7 = recoverTime / 0xE10uLL;
@@ -1753,14 +1758,14 @@ void MstProfileComponent__setCmdSpellRecoverTime(
       v9 = recoverTime % 0x3CuLL;
       UILabel__set_text(recoverTitleLb, cmdSpellRecTimeInfo, 0);
       recoverTimeLb = this->fields.recoverTimeLb;
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3700/*"COMMAND_SPELL_RECOVER_TIME"*/, 0);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3707/*"COMMAND_SPELL_RECOVER_TIME"*/, 0);
       v17 = v7;
       v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
       v16 = v8;
       v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
       v15 = v9;
       v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-      cmdSpellRecTimeInfo = System_String__Format_64467100(v11, v12, v13, v14, 0);
+      cmdSpellRecTimeInfo = System_String__Format_65164204(v11, v12, v13, v14, 0);
       if ( recoverTimeLb )
       {
         UILabel__set_text(recoverTimeLb, cmdSpellRecTimeInfo, 0);
@@ -1768,7 +1773,7 @@ void MstProfileComponent__setCmdSpellRecoverTime(
       }
     }
 LABEL_11:
-    sub_1C93D2C(cmdSpellRecTimeInfo, recoverTime);
+    sub_1CE6958(cmdSpellRecTimeInfo, recoverTime);
   }
   cmdSpellRecTimeInfo = (System_String_o *)this->fields.cmdSpellRecTimeInfo;
   if ( !cmdSpellRecTimeInfo )
@@ -1789,7 +1794,7 @@ void MstProfileComponent__setCommandSpellInfo(MstProfileComponent_o *this, const
   recoverTime = 0;
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   UserGameEntity__getCmdSpellInfo(usrGameEnt, &count, &recoverTime, 0);
   MstProfileComponent__setCmdSpellRecoverTime(this, recoverTime, v4);
   if ( this->fields.cmdCnt != count )
@@ -1824,24 +1829,24 @@ void MstProfileComponent__setGenderInfo(MstProfileComponent_o *this, const Metho
   const MethodInfo *v22; // x1
   const MethodInfo *v23; // x1
 
-  if ( (byte_4D2BA1B & 1) == 0 )
+  if ( (byte_4DFFA3A & 1) == 0 )
   {
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D2BA1B = 1;
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4DFFA3A = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt )
-    sub_1C93D2C(v10, v11);
+    sub_1CE6958(v10, v11);
   genderType = usrGameEnt->fields.genderType;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4D2BA8F )
+  if ( !byte_4DFFAB1 )
   {
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D2BA8F = 1;
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4DFFAB1 = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1853,7 +1858,7 @@ void MstProfileComponent__setGenderInfo(MstProfileComponent_o *this, const Metho
   TerminalPramsManager__PlayerGenderType_SaveData(0);
   v15 = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = v15;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)v15, v16, v17, v18, v19, v20, v21);
   MstProfileComponent__setUserGender(this, v22);
   MstProfileComponent__setMstImg(this, v23);
 }
@@ -1873,10 +1878,10 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
   const MethodInfo *v12; // x3
   UnityEngine_Transform_o *v13; // x21
 
-  if ( (byte_4D2BA0C & 1) == 0 )
+  if ( (byte_4DFFA2B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
-    byte_4D2BA0C = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
+    byte_4DFFA2B = 1;
   }
   itemListGrid = (__int64)this->fields.itemListGrid;
   if ( !itemListGrid )
@@ -1897,7 +1902,7 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
     if ( (__int64)v5 >= (int)max_length_low )
       break;
     if ( v5 >= max_length_low )
-      sub_1C93D34(itemListGrid);
+      sub_1CE6960(itemListGrid);
     itemListGrid = (__int64)this->fields.itemListGrid;
     if ( itemListGrid )
     {
@@ -1910,17 +1915,17 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
         v10 = (UnityEngine_GameObject_o *)itemListGrid;
         itemListGrid = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)itemListGrid, 0);
         v11 = (UnityEngine_Transform_o *)itemListGrid;
-        if ( !byte_4D2A13E )
+        if ( !byte_4DFE0AE )
         {
-          itemListGrid = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-          byte_4D2A13E = 1;
+          itemListGrid = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+          byte_4DFE0AE = 1;
         }
         if ( v11 )
         {
           UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
           itemListGrid = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     v10,
-                                    (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
+                                    (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
           if ( itemListGrid )
           {
             MstHaveItemInfoComponent__setItemInfo(
@@ -1943,17 +1948,17 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
     goto LABEL_17;
   itemListGrid = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)itemListGrid, 0);
   v13 = (UnityEngine_Transform_o *)itemListGrid;
-  if ( !byte_4D2A13E )
+  if ( !byte_4DFE0AE )
   {
-    itemListGrid = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-    byte_4D2A13E = 1;
+    itemListGrid = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    byte_4DFE0AE = 1;
   }
   if ( !v13
     || (UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
         (itemListGrid = (__int64)this->fields.itemListGrid) == 0) )
   {
 LABEL_17:
-    sub_1C93D2C(itemListGrid, method);
+    sub_1CE6958(itemListGrid, method);
   }
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)itemListGrid + 440LL))(
     itemListGrid,
@@ -1983,7 +1988,7 @@ void MstProfileComponent__setMstImg(MstProfileComponent_o *this, const MethodInf
   Il2CppClass *v20; // x22
   int32_t v21; // w21
   UnityEngine_Object_o *masterFigure; // x23
-  struct UIMasterFigureTextureOld_o *Prefab_41389760; // x0
+  struct UIMasterFigureTextureOld_o *Prefab_41814828; // x0
   int32_t v24; // w2
   int32_t v25; // w3
   System_String_o *v26; // x4
@@ -1995,39 +2000,39 @@ void MstProfileComponent__setMstImg(MstProfileComponent_o *this, const MethodInf
   System_Action_o *v32; // x23
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
 
-  if ( (byte_4D2BA06 & 1) == 0 )
+  if ( (byte_4DFFA25 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_1C93AD4(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&Method_MstProfileComponent___c__DisplayClass76_0__setMstImg_b__0__);
-    sub_1C93AD4(&MstProfileComponent___c__DisplayClass76_0_TypeInfo);
-    byte_4D2BA06 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_1CE6700(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_1CE6700(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&Method_MstProfileComponent___c__DisplayClass76_0__setMstImg_b__0__);
+    sub_1CE6700(&MstProfileComponent___c__DisplayClass76_0_TypeInfo);
+    byte_4DFFA25 = 1;
   }
-  v3 = sub_1C93D20(MstProfileComponent___c__DisplayClass76_0_TypeInfo);
+  v3 = sub_1CE694C(MstProfileComponent___c__DisplayClass76_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_29;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt )
     goto LABEL_29;
   *(_DWORD *)(v3 + 24) = usrGameEnt->fields.genderType;
   if ( usrGameEnt->fields.activeDeckId < 1 )
     goto LABEL_22;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserDeckMaster___);
+               (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserDeckMaster___);
   v13 = this->fields.usrGameEnt;
   if ( !v13 )
     goto LABEL_29;
@@ -2036,7 +2041,7 @@ void MstProfileComponent__setMstImg(MstProfileComponent_o *this, const MethodInf
   Instance = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                v13->fields.activeDeckId,
-               (const MethodInfo_3465A24 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+               (const MethodInfo_34EBA0C *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
   if ( !Instance )
     goto LABEL_29;
   klass = Instance[3].klass;
@@ -2052,22 +2057,22 @@ LABEL_22:
   {
     v17 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
     if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-      v17 = sub_1C69B68(v14);
+      v17 = sub_1CBC788(v14);
     v18 = *(_QWORD *)(*(_QWORD *)(v17 + 192) + 16LL);
     if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-      v18 = sub_1C69B68(v14);
+      v18 = sub_1CBC788(v14);
     Instance = **(Il2CppObject ***)(v18 + 184);
     if ( !Instance )
       goto LABEL_29;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEquipMaster___);
+                 (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEquipMaster___);
     if ( !Instance )
       goto LABEL_29;
     Instance = DataMasterBase_object__object__long___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                  namespaze,
-                 (const MethodInfo_3465A24 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+                 (const MethodInfo_34EBA0C *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
     if ( !Instance )
       goto LABEL_29;
     v20 = Instance[2].klass;
@@ -2076,14 +2081,14 @@ LABEL_22:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v33.fields.currentCryptoKey = v20;
     *(_QWORD *)&v33.fields.fakeValue = monitor;
-    v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v33, 0);
+    v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v33, 0);
   }
   masterFigure = (UnityEngine_Object_o *)this->fields.masterFigure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(masterFigure, 0, 0) )
   {
-    Prefab_41389760 = MasterFigureManagerOld__CreatePrefab_41389760(
+    Prefab_41814828 = MasterFigureManagerOld__CreatePrefab_41814828(
                         this->fields.mstImgBase,
                         2,
                         *(_DWORD *)(v3 + 24),
@@ -2094,10 +2099,10 @@ LABEL_22:
                         (System_Nullable_Vector3__o)0,
                         0,
                         0);
-    this->fields.masterFigure = Prefab_41389760;
-    sub_1C93A78(
+    this->fields.masterFigure = Prefab_41814828;
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.masterFigure,
-      (int32_t)Prefab_41389760,
+      (int32_t)Prefab_41814828,
       v24,
       v25,
       v26,
@@ -2108,11 +2113,11 @@ LABEL_22:
   }
   v30 = this->fields.masterFigure;
   v31 = *(_DWORD *)(v3 + 24);
-  v32 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v32, (Il2CppObject *)v3, Method_MstProfileComponent___c__DisplayClass76_0__setMstImg_b__0__, 0);
   if ( !v30 )
 LABEL_29:
-    sub_1C93D2C(Instance, v5);
+    sub_1CE6958(Instance, v5);
   UIMasterFigureTextureOld__SetCharacter(v30, 2, v31, v21, v32, 0, 0, 0);
 }
 
@@ -2126,12 +2131,12 @@ void MstProfileComponent__setUserBirthDay(MstProfileComponent_o *this, const Met
   const MethodInfo *v6; // x2
 
   v2 = this;
-  if ( (byte_4D2BA08 & 1) == 0 )
+  if ( (byte_4DFFA27 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MstProfileComponent_closeSetBirthDayDlg__);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2BA08 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MstProfileComponent_closeSetBirthDayDlg__);
+    this = (MstProfileComponent_o *)sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFFA27 = 1;
   }
   usrGameEnt = v2->fields.usrGameEnt;
   if ( !usrGameEnt )
@@ -2146,7 +2151,7 @@ void MstProfileComponent__setUserBirthDay(MstProfileComponent_o *this, const Met
       return;
     }
 LABEL_11:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   this = (MstProfileComponent_o *)v2->fields.setBirthBtn;
   if ( !this )
@@ -2154,8 +2159,8 @@ LABEL_11:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  v2->fields.dtBirthDay = NetworkManager__getDateTime_42096756(birthDay, 0);
-  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v2->fields.dtBirthDay = NetworkManager__getDateTime_42520728(birthDay, 0);
+  v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)v2, Method_MstProfileComponent_closeSetBirthDayDlg__, 0);
   MstProfileComponent__dispSetBirth(v2, v5, v6);
 }
@@ -2174,16 +2179,16 @@ void MstProfileComponent__setUserExp(MstProfileComponent_o *this, const MethodIn
   int64_t lateExp; // [xsp+10h] [xbp-30h] BYREF
   int64_t exp; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D2BA0B & 1) == 0 )
+  if ( (byte_4DFFA2A & 1) == 0 )
   {
-    sub_1C93AD4(&BalanceConfig_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_8679/*"MAX_USER_LEVEL_COND_{0}"*/);
-    sub_1C93AD4(&StringLiteral_397/*"#,0"*/);
-    byte_4D2BA0B = 1;
+    sub_1CE6700(&BalanceConfig_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserExpMaster___);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_8694/*"MAX_USER_LEVEL_COND_{0}"*/);
+    sub_1CE6700(&StringLiteral_397/*"#,0"*/);
+    byte_4DFFA2A = 1;
   }
   lateExp = 0;
   exp = 0;
@@ -2194,7 +2199,7 @@ void MstProfileComponent__setUserExp(MstProfileComponent_o *this, const MethodIn
   if ( UserGameEntity__getExpInfo((UserGameEntity_o *)usrGameEnt, &exp, &lateExp, &barExp, 0) )
   {
     userExpLb = this->fields.userExpLb;
-    usrGameEnt = System_Int64__ToString_65939396((int64_t)&lateExp, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
+    usrGameEnt = System_Int64__ToString_66636500((int64_t)&lateExp, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
     if ( userExpLb )
     {
       UILabel__set_text(userExpLb, usrGameEnt, 0);
@@ -2206,14 +2211,14 @@ void MstProfileComponent__setUserExp(MstProfileComponent_o *this, const MethodIn
       }
     }
 LABEL_20:
-    sub_1C93D2C(usrGameEnt, method);
+    sub_1CE6958(usrGameEnt, method);
   }
-  usrGameEnt = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  usrGameEnt = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !usrGameEnt )
     goto LABEL_20;
   usrGameEnt = (System_String_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)usrGameEnt,
-                                    (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                    (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserExpMaster___);
   if ( !usrGameEnt )
     goto LABEL_20;
   LevelMax = UserExpMaster__GetLevelMax((UserExpMaster_o *)usrGameEnt, 0);
@@ -2234,7 +2239,7 @@ LABEL_20:
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)usrGameEnt, 1, 0);
     v9 = LevelMax + 1;
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-    v8 = System_String__Format((System_String_o *)StringLiteral_8679/*"MAX_USER_LEVEL_COND_{0}"*/, v7, 0);
+    v8 = System_String__Format((System_String_o *)StringLiteral_8694/*"MAX_USER_LEVEL_COND_{0}"*/, v7, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     usrGameEnt = LocalizationManager__Get(v8, 0);
@@ -2253,10 +2258,10 @@ void MstProfileComponent__setUserGender(MstProfileComponent_o *this, const Metho
   UILabel_o *genderTypeLb; // x19
 
   v2 = this;
-  if ( (byte_4D2BA07 & 1) == 0 )
+  if ( (byte_4DFFA26 & 1) == 0 )
   {
-    this = (MstProfileComponent_o *)sub_1C93AD4(&Gender_TypeInfo);
-    byte_4D2BA07 = 1;
+    this = (MstProfileComponent_o *)sub_1CE6700(&Gender_TypeInfo);
+    byte_4DFFA26 = 1;
   }
   usrGameEnt = v2->fields.usrGameEnt;
   if ( !usrGameEnt )
@@ -2269,7 +2274,7 @@ void MstProfileComponent__setUserGender(MstProfileComponent_o *this, const Metho
   this = (MstProfileComponent_o *)Gender__ToName(genderType, 0);
   if ( !genderTypeLb )
 LABEL_8:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   UILabel__set_text(genderTypeLb, (System_String_o *)this, 0);
 }
 
@@ -2285,19 +2290,19 @@ void MstProfileComponent__setUserLv(MstProfileComponent_o *this, const MethodInf
   System_String_o *v9; // x1
   int v10; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2BA0A & 1) == 0 )
+  if ( (byte_4DFFA29 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2BA0A = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserExpMaster___);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4DFFA29 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserExpMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)UserExpMaster__GetLevelMax((UserExpMaster_o *)Instance, 0);
@@ -2315,7 +2320,7 @@ void MstProfileComponent__setUserLv(MstProfileComponent_o *this, const MethodInf
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v10, 0);
   if ( !userMaxLvLb )
 LABEL_15:
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   if ( Instance )
     v9 = (System_String_o *)Instance;
   else
@@ -2330,7 +2335,7 @@ void MstProfileComponent__setUserName(MstProfileComponent_o *this, const MethodI
 
   usrGameEnt = this->fields.usrGameEnt;
   if ( !usrGameEnt || (this = (MstProfileComponent_o *)this->fields.userNameTxt) == 0 )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   UILabel__set_text((UILabel_o *)this, usrGameEnt->fields.name, 0);
 }
 
@@ -2346,21 +2351,21 @@ void MstProfileComponent__showChangeDlg(MstProfileComponent_o *this, const Metho
   const MethodInfo *v8; // x3
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4D2BA0E & 1) == 0 )
+  if ( (byte_4DFFA2D & 1) == 0 )
   {
-    sub_1C93AD4(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
-    this = (MstProfileComponent_o *)sub_1C93AD4(&Method_MstProfileComponent_endOpenChangeDlg__);
-    byte_4D2BA0E = 1;
+    sub_1CE6700(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
+    this = (MstProfileComponent_o *)sub_1CE6700(&Method_MstProfileComponent_endOpenChangeDlg__);
+    byte_4DFFA2D = 1;
   }
   klass = v2[25].klass;
   if ( !klass
     || (monitor = (ChangeUserNameWindow_o *)v2[2].monitor,
         namespaze = (System_String_o *)klass->_1.namespaze,
-        v6 = (ChangeUserNameWindow_CallbackFunc_o *)sub_1C93D20(ChangeUserNameWindow_CallbackFunc_TypeInfo),
+        v6 = (ChangeUserNameWindow_CallbackFunc_o *)sub_1CE694C(ChangeUserNameWindow_CallbackFunc_TypeInfo),
         ChangeUserNameWindow_CallbackFunc___ctor(v6, v2, (intptr_t)Method_MstProfileComponent_endOpenChangeDlg__, v7),
         !monitor) )
   {
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   ChangeUserNameWindow__OpenChangeNameWindow(monitor, namespaze, v6, v8);
 }
@@ -2391,38 +2396,38 @@ void MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *this, const 
   int32_t v23; // [xsp+8h] [xbp-48h] BYREF
   int v24; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4D2BA13 & 1) == 0 )
+  if ( (byte_4DFFA32 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_TotalLoginMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserLoginMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_UserLoginMaster__UserLoginEntity__long__GetEntity__);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C93AD4(&StringLiteral_25417/*"{0:N0}"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    sub_1C93AD4(&StringLiteral_9320/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/);
-    byte_4D2BA13 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_TotalLoginMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserLoginMaster___);
+    sub_1CE6700(&Method_DataMasterBase_UserLoginMaster__UserLoginEntity__long__GetEntity__);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_1CE6700(&StringLiteral_25505/*"{0:N0}"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    sub_1CE6700(&StringLiteral_9338/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/);
+    byte_4DFFA32 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C69B68(v2);
+    v4 = sub_1CBC788(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C69B68(v2);
+    v5 = sub_1CBC788(v2);
   v6 = **(DataManager_o ***)(v5 + 184);
   if ( !v6 )
     goto LABEL_32;
   MasterData_object = DataManager__GetMasterData_object_(
                         v6,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserLoginMaster___);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserLoginMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4D2A55B )
+  if ( !byte_4DFE4CA )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2A55B = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4DFE4CA = 1;
   }
   v6 = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2435,23 +2440,23 @@ void MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *this, const 
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              *(_QWORD *)(*(_QWORD *)&v6[1].fields._DispLog + 64LL),
-             (const MethodInfo_3465A24 *)Method_DataMasterBase_UserLoginMaster__UserLoginEntity__long__GetEntity__);
+             (const MethodInfo_34EBA0C *)Method_DataMasterBase_UserLoginMaster__UserLoginEntity__long__GetEntity__);
   if ( Entity )
   {
     monitor = (int)Entity[1].monitor;
     monitor_high = HIDWORD(Entity[1].monitor);
     v12 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C69B68(v9);
+      v12 = sub_1CBC788(v9);
     v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C69B68(v9);
+      v13 = sub_1CBC788(v9);
     v6 = **(DataManager_o ***)(v13 + 184);
     if ( !v6 )
       goto LABEL_32;
     v6 = (DataManager_o *)DataManager__GetMasterData_object_(
                             v6,
-                            (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_TotalLoginMaster___);
+                            (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TotalLoginMaster___);
     if ( !v6 )
       goto LABEL_32;
     NextLoginBonusDay = TotalLoginMaster__getNextLoginBonusDay((TotalLoginMaster_o *)v6, monitor_high, 0);
@@ -2465,14 +2470,14 @@ void MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *this, const 
   seqLoginLb = this->fields.seqLoginLb;
   v24 = monitor;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
-  v6 = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25417/*"{0:N0}"*/, v16, 0);
+  v6 = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25505/*"{0:N0}"*/, v16, 0);
   if ( !seqLoginLb )
     goto LABEL_32;
   UILabel__set_text(seqLoginLb, (System_String_o *)v6, 0);
   totalLoginLb = this->fields.totalLoginLb;
   v23 = monitor_high;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-  v6 = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25417/*"{0:N0}"*/, v18, 0);
+  v6 = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25505/*"{0:N0}"*/, v18, 0);
   if ( !totalLoginLb )
     goto LABEL_32;
   UILabel__set_text(totalLoginLb, (System_String_o *)v6, 0);
@@ -2483,11 +2488,11 @@ void MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *this, const 
     if ( nextLoginBonusLb )
       goto LABEL_30;
 LABEL_32:
-    sub_1C93D2C(v6, method);
+    sub_1CE6958(v6, method);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_9320/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/, 0);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_9338/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/, 0);
   v22 = NextLoginBonusDay;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
   v6 = (DataManager_o *)System_String__Format(v20, v21, 0);
@@ -2519,10 +2524,10 @@ void MstProfileComponent__showMstProfile(MstProfileComponent_o *this, const Meth
   int64_t recoverTime; // [xsp+0h] [xbp-30h] BYREF
   int32_t count; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2B9FD & 1) == 0 )
+  if ( (byte_4DFFA1C & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2B9FD = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFA1C = 1;
   }
   count = 0;
   recoverTime = 0;
@@ -2538,14 +2543,14 @@ void MstProfileComponent__showMstProfile(MstProfileComponent_o *this, const Meth
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrGameEnt = SelfUserGame;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v7, v8, v9, v10, v11, v12);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.usrGameEnt, (int32_t)SelfUserGame, v7, v8, v9, v10, v11, v12);
   MstProfileComponent__createCmdSpellWindow(this, v13);
   MstProfileComponent__messageSetup(this, v14);
   MstProfileComponent__gradeSetup(this, v15);
   bgManager = (MyRoomBackGroundManager_o *)this->fields.usrGameEnt;
   if ( !bgManager )
 LABEL_12:
-    sub_1C93D2C(bgManager, v4);
+    sub_1CE6958(bgManager, v4);
   if ( UserGameEntity__getCmdSpellInfo((UserGameEntity_o *)bgManager, &count, &recoverTime, 0) )
   {
     this->fields.cmdCnt = count;
@@ -2566,27 +2571,27 @@ void MstProfileComponent__showSetBirthDayDlg(MstProfileComponent_o *this, const 
   __int64 v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_4D2BA14 & 1) == 0 )
+  if ( (byte_4DFFA33 & 1) == 0 )
   {
-    sub_1C93AD4(&InputUserBirthDayWindow_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_MstProfileComponent_endOpenSetBirthDay__);
-    sub_1C93AD4(&Method_MstProfileComponent_showSetBirthDayDlg__);
-    byte_4D2BA14 = 1;
+    sub_1CE6700(&InputUserBirthDayWindow_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_MstProfileComponent_endOpenSetBirthDay__);
+    sub_1CE6700(&Method_MstProfileComponent_showSetBirthDayDlg__);
+    byte_4DFFA33 = 1;
   }
   v3 = Method_MstProfileComponent_showSetBirthDayDlg__;
   if ( (*((_BYTE *)Method_MstProfileComponent_showSetBirthDayDlg__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_MstProfileComponent_showSetBirthDayDlg__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_MstProfileComponent_showSetBirthDayDlg__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   inputBirthDayWindow = this->fields.inputBirthDayWindow;
-  v6 = (InputUserBirthDayWindow_CallbackFunc_o *)sub_1C93D20(InputUserBirthDayWindow_CallbackFunc_TypeInfo);
+  v6 = (InputUserBirthDayWindow_CallbackFunc_o *)sub_1CE694C(InputUserBirthDayWindow_CallbackFunc_TypeInfo);
   InputUserBirthDayWindow_CallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
     (intptr_t)Method_MstProfileComponent_endOpenSetBirthDay__,
     v7);
   if ( !inputBirthDayWindow )
-    sub_1C93D2C(v8, v9);
+    sub_1CE6958(v8, v9);
   InputUserBirthDayWindow__OpenInputBirthDayWindow(inputBirthDayWindow, v6, v10);
 }
 
@@ -2610,7 +2615,7 @@ void MstProfileComponent_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -2621,12 +2626,12 @@ void MstProfileComponent_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C93B94(method) & 1) == 0 )
+  if ( (sub_1CE67C0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C93BFC(v14, 0);
+      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1CE6828(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2638,9 +2643,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC14A8;
+  this->fields.invoke_impl = (intptr_t)sub_1B10084;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC1468;
+  this->fields.extra_arg = (intptr_t)sub_1B10044;
 }
 
 
@@ -2653,7 +2658,7 @@ System_IAsyncResult_o *MstProfileComponent_ClickDelegate__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return sub_1C93A88(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v5, callback, object);
 }
 
 
@@ -2662,7 +2667,7 @@ void MstProfileComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C93A8C(result, 0, method);
+  sub_1CE66B8(result, 0, method);
 }
 
 
@@ -2682,15 +2687,15 @@ void MstProfileComponent___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2BA24 & 1) == 0 )
+  if ( (byte_4DFFA43 & 1) == 0 )
   {
-    sub_1C93AD4(&MstProfileComponent___c_TypeInfo);
-    byte_4D2BA24 = 1;
+    sub_1CE6700(&MstProfileComponent___c_TypeInfo);
+    byte_4DFFA43 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(MstProfileComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(MstProfileComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MstProfileComponent___c_TypeInfo->static_fields->__9 = (struct MstProfileComponent___c_o *)v1;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)MstProfileComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -2713,14 +2718,14 @@ void MstProfileComponent___c___ShowMstProfile_b__63_1(MstProfileComponent___c_o 
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4D2BA25 & 1) == 0 )
+  if ( (byte_4DFFA44 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2BA25 = 1;
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFFA44 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -2753,14 +2758,14 @@ void MstProfileComponent___c__DisplayClass63_0___ShowMstProfile_b__0(
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4D2BA26 & 1) == 0 )
+  if ( (byte_4DFFA45 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&AvalonSceneManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_MstProfileComponent___c__ShowMstProfile_b__63_1__);
-    sub_1C93AD4(&MstProfileComponent___c_TypeInfo);
-    byte_4D2BA26 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AvalonSceneManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_MstProfileComponent___c__ShowMstProfile_b__63_1__);
+    sub_1CE6700(&MstProfileComponent___c_TypeInfo);
+    byte_4DFFA45 = 1;
   }
   endLoadCallback = this->fields.endLoadCallback;
   if ( endLoadCallback )
@@ -2771,7 +2776,7 @@ void MstProfileComponent___c__DisplayClass63_0___ShowMstProfile_b__0(
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v6 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -2794,11 +2799,11 @@ void MstProfileComponent___c__DisplayClass63_0___ShowMstProfile_b__0(
         v7 = MstProfileComponent___c_TypeInfo;
       }
       v10 = (Il2CppObject *)v7->static_fields->__9;
-      _9__63_1 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+      _9__63_1 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
       System_Action___ctor(_9__63_1, v10, Method_MstProfileComponent___c__ShowMstProfile_b__63_1__, 0);
       static_fields = MstProfileComponent___c_TypeInfo->static_fields;
       static_fields->__9__63_1 = _9__63_1;
-      sub_1C93A78(
+      sub_1CE66A4(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__63_1,
         (int32_t)_9__63_1,
         v12,
@@ -2809,7 +2814,7 @@ void MstProfileComponent___c__DisplayClass63_0___ShowMstProfile_b__0(
         v17);
     }
     if ( !Instance )
-      sub_1C93D2C(v7, v4);
+      sub_1CE6958(v7, v4);
     CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, _9__63_1, 0);
   }
 }
@@ -2830,6 +2835,6 @@ void MstProfileComponent___c__DisplayClass76_0___setMstImg_b__0(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   MstProfileComponent__setCmdSpellInfo(this->fields.__4__this, this->fields.genderType, v2);
 }

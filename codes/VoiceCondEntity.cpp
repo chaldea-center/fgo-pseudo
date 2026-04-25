@@ -1,13 +1,13 @@
 void VoiceCondEntity___ctor(VoiceCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D31ABF & 1) == 0 )
+  if ( (byte_4E05B11 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D31ABF = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E05B11 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,10 +20,10 @@ System_String_o *VoiceCondEntity__CreatePK(
         int32_t condGroup,
         const MethodInfo *method)
 {
-  if ( (byte_4D31ABD & 1) == 0 )
+  if ( (byte_4E05B0F & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
-    byte_4D31ABD = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
+    byte_4E05B0F = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object__long__long__long_(
            svtId,
@@ -32,7 +32,7 @@ System_String_o *VoiceCondEntity__CreatePK(
            condType,
            targetId,
            condGroup,
-           (const MethodInfo_31A3EF4 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
+           (const MethodInfo_3203860 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
 }
 
 
@@ -48,11 +48,11 @@ System_String_o *VoiceCondEntity__CreatePrimaryKey(VoiceCondEntity_o *this, cons
   const MethodInfo *v10; // x6
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4D31ABC & 1) == 0 )
+  if ( (byte_4E05B0E & 1) == 0 )
   {
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    byte_4D31ABC = 1;
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    byte_4E05B0E = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -60,13 +60,13 @@ System_String_o *VoiceCondEntity__CreatePrimaryKey(VoiceCondEntity_o *this, cons
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v12.fields.currentCryptoKey = v4;
   *(_QWORD *)&v12.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v12, 0);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v12, 0);
   voicePrefix = this->fields.voicePrefix;
   voiceId = this->fields.voiceId;
   v8 = v5;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_49689872(voiceId, 0);
+  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_50073852(voiceId, 0);
   return VoiceCondEntity__CreatePK(
            v8,
            voicePrefix,
@@ -85,10 +85,10 @@ bool VoiceCondEntity__IsEnable(VoiceCondEntity_o *this, int32_t svtId, int32_t v
   int64_t condValue; // x20
   int32_t v11; // w0
 
-  if ( (byte_4D31ABE & 1) == 0 )
+  if ( (byte_4E05B10 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D31ABE = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E05B10 = 1;
   }
   v7 = this->fields.voicePrefix;
   if ( (v7 & 0x80000000) == 0 && v7 != voicePrefix )

@@ -1,27 +1,27 @@
 void GrandGraphDetailEntity___ctor(GrandGraphDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E1A & 1) == 0 )
+  if ( (byte_4E04E5B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D30E1A = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04E5B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *GrandGraphDetailEntity__CreatePK(int32_t grandGraphId, int32_t baseClassId, const MethodInfo *method)
 {
-  if ( (byte_4D30E19 & 1) == 0 )
+  if ( (byte_4E04E5A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D30E19 = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E04E5A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            grandGraphId,
            baseClassId,
-           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,10 +39,10 @@ bool GrandGraphDetailEntity__IsOpen(GrandGraphDetailEntity_o *this, const Method
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4D30E18 & 1) == 0 )
+  if ( (byte_4E04E59 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D30E18 = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E04E59 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

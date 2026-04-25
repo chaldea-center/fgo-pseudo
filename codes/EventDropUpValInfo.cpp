@@ -17,12 +17,12 @@ void EventDropUpValInfo___ctor(
   v6->fields.funcEntity = funcEntity;
   v6 = (EventDropUpValInfo_o *)((char *)v6 + 24);
   *(_DWORD *)&v6[-1].fields.isInvalid = eventId;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v6, (int32_t)funcEntity, v7, v8, v9, v10, v11, v12);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v6, (int32_t)funcEntity, v7, v8, v9, v10, v11, v12);
   LODWORD(v6->monitor) = 0;
 }
 
 
-void EventDropUpValInfo___ctor_42446848(
+void EventDropUpValInfo___ctor_42871044(
         EventDropUpValInfo_o *this,
         int32_t eventId,
         FunctionEntity_o *funcEntity,
@@ -42,7 +42,7 @@ void EventDropUpValInfo___ctor_42446848(
   v8->fields.funcEntity = funcEntity;
   v8 = (EventDropUpValInfo_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields.isInvalid = eventId;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)v8, (int32_t)funcEntity, v9, v10, v11, v12, v13, v14);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v8, (int32_t)funcEntity, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = individuality;
 }
 
@@ -53,7 +53,7 @@ int32_t EventDropUpValInfo__GetFuncType(EventDropUpValInfo_o *this, const Method
 
   funcEntity = this->fields.funcEntity;
   if ( !funcEntity )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   return funcEntity->fields.funcType;
 }
 

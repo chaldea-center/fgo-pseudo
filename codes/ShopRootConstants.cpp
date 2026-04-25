@@ -26,22 +26,22 @@ void ShopRootConstants___cctor(const MethodInfo *method)
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4D2CBFF & 1) == 0 )
+  if ( (byte_4E00C62 & 1) == 0 )
   {
-    sub_1C93AD4(&ShopRootConstants_TypeInfo);
-    sub_1C93AD4(&StringLiteral_2927/*"BGM_EVENT_128"*/);
-    sub_1C93AD4(&StringLiteral_3046/*"Back/back{0}"*/);
-    byte_4D2CBFF = 1;
+    sub_1CE6700(&ShopRootConstants_TypeInfo);
+    sub_1CE6700(&StringLiteral_2932/*"BGM_EVENT_128"*/);
+    sub_1CE6700(&StringLiteral_3051/*"Back/back{0}"*/);
+    byte_4E00C62 = 1;
   }
   static_fields = ShopRootConstants_TypeInfo->static_fields;
   *(int32x2_t *)&static_fields->OPEN_TIME = vdup_n_s32(0x3E99999Au);
   *(_QWORD *)&static_fields->DEFAULT_FIGURE_ID = 500900;
-  v8 = StringLiteral_3046/*"Back/back{0}"*/;
-  static_fields->BG_ROOT = (struct System_String_o *)StringLiteral_3046/*"Back/back{0}"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&static_fields->BG_ROOT, v8, v1, v2, v3, v4, v5, v6);
+  v8 = StringLiteral_3051/*"Back/back{0}"*/;
+  static_fields->BG_ROOT = (struct System_String_o *)StringLiteral_3051/*"Back/back{0}"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->BG_ROOT, v8, v1, v2, v3, v4, v5, v6);
   v9 = ShopRootConstants_TypeInfo;
   v10 = ShopRootConstants_TypeInfo->static_fields;
-  v10->DISP_RECT = (struct UnityEngine_Rect_o)xmmword_D02000;
+  v10->DISP_RECT = (struct UnityEngine_Rect_o)xmmword_D26230;
   v10->DEFAULT_BG_ID = 10600;
   v11 = v9->static_fields;
   *(_QWORD *)&v11->DEFAULT_GIFT_POS.fields.x = 0xC37A0000C2F00000LL;
@@ -67,9 +67,9 @@ void ShopRootConstants___cctor(const MethodInfo *method)
   v17->SCOPE_HELP_ANCHOR.fields.z = 0.0;
   v18 = v9->static_fields;
   v18->SVT_COSTUME_TITLE_ID = 80319;
-  v19 = StringLiteral_2927/*"BGM_EVENT_128"*/;
-  v18->SVT_COSTUME_BGM_NAME = (struct System_String_o *)StringLiteral_2927/*"BGM_EVENT_128"*/;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v18->SVT_COSTUME_BGM_NAME, v19, v20, v21, v22, v23, v24, v25);
+  v19 = StringLiteral_2932/*"BGM_EVENT_128"*/;
+  v18->SVT_COSTUME_BGM_NAME = (struct System_String_o *)StringLiteral_2932/*"BGM_EVENT_128"*/;
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v18->SVT_COSTUME_BGM_NAME, v19, v20, v21, v22, v23, v24, v25);
 }
 
 
@@ -93,25 +93,27 @@ UnityEngine_Vector3_o ShopRootConstants__GetGiftButtonPos(bool isEvent, int32_t 
   float32x2_t v20; // d0
   float v21; // s1
   unsigned __int64 v22; // d0
+  float v23; // s2
+  float v24; // s1
   unsigned __int32 v25; // [xsp+0h] [xbp-80h]
   float x; // [xsp+10h] [xbp-70h]
   float32x2_t v27; // [xsp+20h] [xbp-60h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2CBFD & 1) == 0 )
+  if ( (byte_4E00C60 & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&ShopRootConstants_TypeInfo);
-    byte_4D2CBFD = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&ShopRootConstants_TypeInfo);
+    byte_4E00C60 = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0) )
   {
-    if ( !byte_4D2A139 )
+    if ( !byte_4DFE0A9 )
     {
-      sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-      byte_4D2A139 = 1;
+      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+      byte_4DFE0A9 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -138,10 +140,10 @@ UnityEngine_Vector3_o ShopRootConstants__GetGiftButtonPos(bool isEvent, int32_t 
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0) )
   {
-    if ( !byte_4D2A139 )
+    if ( !byte_4DFE0A9 )
     {
-      sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-      byte_4D2A139 = 1;
+      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+      byte_4DFE0A9 = 1;
     }
     v11 = ShopRootConstants_TypeInfo;
     p_SCOPE_HELP_ANCHOR = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -185,17 +187,19 @@ UnityEngine_Vector3_o ShopRootConstants__GetGiftButtonPos(bool isEvent, int32_t 
     {
       v16.n64_u32[1] = v17;
       v22 = vadd_f32(v16, vadd_f32(v27, *(float32x2_t *)&v19->DEFAULT_GIFT_POS.fields.x)).n64_u64[0];
-      result.fields.z = v18 + (float)(z + v19->DEFAULT_GIFT_POS.fields.z);
+      v23 = v18 + (float)(z + v19->DEFAULT_GIFT_POS.fields.z);
       goto LABEL_31;
     }
     v20.n64_u64[0] = *(unsigned __int64 *)&v19->EVENT_GIFT_POS.fields.x;
     v21 = v19->EVENT_GIFT_POS.fields.z;
   }
   v22 = vadd_f32(v27, v20).n64_u64[0];
-  result.fields.z = z + v21;
+  v23 = z + v21;
 LABEL_31:
-  result.fields.y = *((float *)&v22 + 1);
+  v24 = *((float *)&v22 + 1);
   result.fields.x = *(float *)&v22;
+  result.fields.z = v23;
+  result.fields.y = v24;
   return result;
 }
 
@@ -215,6 +219,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
   ShopRootConstants_c *v13; // x0
   struct ShopRootConstants_StaticFields *v14; // x8
   unsigned __int64 v15; // d0
+  float v16; // s2
   ShopRootConstants_c *v17; // x0
   struct ShopRootConstants_StaticFields *v18; // x8
   float32x2_t v19; // d0
@@ -223,25 +228,26 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
   float32x2_t *v22; // x8
   ShopRootConstants_c *v23; // x0
   struct ShopRootConstants_StaticFields *v24; // x8
+  float v25; // s1
   unsigned __int32 v26; // [xsp+0h] [xbp-60h]
   float x; // [xsp+10h] [xbp-50h]
   float32x2_t v28; // [xsp+20h] [xbp-40h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D2CBFC & 1) == 0 )
+  if ( (byte_4E00C5F & 1) == 0 )
   {
-    sub_1C93AD4(&FSUtility_TypeInfo);
-    sub_1C93AD4(&ShopRootConstants_TypeInfo);
-    byte_4D2CBFC = 1;
+    sub_1CE6700(&FSUtility_TypeInfo);
+    sub_1CE6700(&ShopRootConstants_TypeInfo);
+    byte_4E00C5F = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0) )
   {
-    if ( !byte_4D2A139 )
+    if ( !byte_4DFE0A9 )
     {
-      sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-      byte_4D2A139 = 1;
+      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+      byte_4DFE0A9 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -258,10 +264,10 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0) )
   {
-    if ( !byte_4D2A139 )
+    if ( !byte_4DFE0A9 )
     {
-      sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-      byte_4D2A139 = 1;
+      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+      byte_4DFE0A9 = 1;
     }
     p_SCOPE_HELP_ANCHOR = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = (unsigned __int32 *)&p_SCOPE_HELP_ANCHOR->zeroVector.fields.y;
@@ -300,7 +306,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
       v14 = v13->static_fields;
       v10.n64_u32[1] = v11;
       v15 = vadd_f32(v10, vadd_f32(v28, *(float32x2_t *)&v14->DEFAULT_HELP_BUTTON_POS.fields.x)).n64_u64[0];
-      result.fields.z = v12 + (float)(z + v14->DEFAULT_HELP_BUTTON_POS.fields.z);
+      v16 = v12 + (float)(z + v14->DEFAULT_HELP_BUTTON_POS.fields.z);
       goto LABEL_37;
     case 2:
     case 4:
@@ -348,10 +354,12 @@ LABEL_33:
         v20 = v24->DEFAULT_HELP_BUTTON_POS.fields.z;
       }
       v15 = vadd_f32(v28, v19).n64_u64[0];
-      result.fields.z = z + v20;
+      v16 = z + v20;
 LABEL_37:
-      result.fields.y = *((float *)&v15 + 1);
+      v25 = *((float *)&v15 + 1);
       result.fields.x = *(float *)&v15;
+      result.fields.z = v16;
+      result.fields.y = v25;
       return result;
   }
 }
@@ -361,27 +369,27 @@ System_String_o *ShopRootConstants__GetHelpSaveKey(int32_t state, const MethodIn
 {
   __int64 *v3; // x8
 
-  if ( (byte_4D2CBFB & 1) == 0 )
+  if ( (byte_4E00C5E & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_13062/*"SpecialItemHelp"*/);
-    sub_1C93AD4(&StringLiteral_12945/*"Shop15Help"*/);
-    sub_1C93AD4(&StringLiteral_12946/*"Shop18Help"*/);
-    sub_1C93AD4(&StringLiteral_2289/*"AnonymousHelp"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    sub_1C93AD4(&StringLiteral_11269/*"RarePriHelp"*/);
-    byte_4D2CBFB = 1;
+    sub_1CE6700(&StringLiteral_13102/*"SpecialItemHelp"*/);
+    sub_1CE6700(&StringLiteral_12983/*"Shop15Help"*/);
+    sub_1CE6700(&StringLiteral_12984/*"Shop18Help"*/);
+    sub_1CE6700(&StringLiteral_2291/*"AnonymousHelp"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    sub_1CE6700(&StringLiteral_11302/*"RarePriHelp"*/);
+    byte_4E00C5E = 1;
   }
   if ( (unsigned int)(state - 3) >= 4 )
   {
     v3 = &StringLiteral_1/*""*/;
     if ( state == 22 )
-      v3 = (__int64 *)&StringLiteral_12946/*"Shop18Help"*/;
+      v3 = (__int64 *)&StringLiteral_12984/*"Shop18Help"*/;
     if ( state == 20 )
-      v3 = &StringLiteral_12945/*"Shop15Help"*/;
+      v3 = &StringLiteral_12983/*"Shop15Help"*/;
   }
   else
   {
-    v3 = off_47418C8[state - 3];
+    v3 = off_48044A8[state - 3];
   }
   return (System_String_o *)*v3;
 }
@@ -389,10 +397,10 @@ System_String_o *ShopRootConstants__GetHelpSaveKey(int32_t state, const MethodIn
 
 bool ShopRootConstants__IsSvtCostumeShopOpen(const MethodInfo *method)
 {
-  if ( (byte_4D2CBFE & 1) == 0 )
+  if ( (byte_4E00C61 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_12123/*"SHOP04_SHOP_STATE"*/);
-    byte_4D2CBFE = 1;
+    sub_1CE6700(&StringLiteral_12158/*"SHOP04_SHOP_STATE"*/);
+    byte_4E00C61 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_12123/*"SHOP04_SHOP_STATE"*/, 0) == 0;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_12158/*"SHOP04_SHOP_STATE"*/, 0) == 0;
 }

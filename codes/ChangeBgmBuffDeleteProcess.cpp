@@ -23,29 +23,29 @@ void ChangeBgmBuffDeleteProcess__Exec(
   const MethodInfo *v16; // x2
   __int64 v17; // x0
 
-  if ( (byte_4D33575 & 1) == 0 )
+  if ( (byte_4E075EE & 1) == 0 )
   {
-    sub_1C93AD4(&BattleBuffData_BuffData___TypeInfo);
-    byte_4D33575 = 1;
+    sub_1CE6700(&BattleBuffData_BuffData___TypeInfo);
+    byte_4E075EE = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1C93B7C(BattleBuffData_BuffData___TypeInfo, 1);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1CE67A8(BattleBuffData_BuffData___TypeInfo, 1);
   if ( !v7 )
     goto LABEL_10;
   v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1C93C10(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1CE683C(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v17 = sub_1C93D50(0);
-      sub_1C93BFC(v17, 0);
+      v17 = sub_1CE697C(0);
+      sub_1CE6828(v17, 0);
     }
   }
   if ( !LODWORD(v15->fields._Data_k__BackingField) )
-    sub_1C93D34(v7);
+    sub_1CE6960(v7);
   v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&v15->fields._Perf_k__BackingField,
     (int32_t)buff,
     v9,
@@ -62,7 +62,7 @@ void ChangeBgmBuffDeleteProcess__Exec(
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0) )
   {
 LABEL_10:
-    sub_1C93D2C(v7, v8);
+    sub_1CE6958(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

@@ -11,17 +11,17 @@ void BattleChrControl__OnAnimEvent(
 {
   UnityEngine_GameObject_o *targetObject; // x0
 
-  if ( (byte_4D2FD67 & 1) == 0 )
+  if ( (byte_4E03DA2 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_9888/*"OnAnimEvent"*/);
-    byte_4D2FD67 = 1;
+    sub_1CE6700(&StringLiteral_9909/*"OnAnimEvent"*/);
+    byte_4E03DA2 = 1;
   }
   targetObject = this->fields.targetObject;
   if ( !targetObject )
-    sub_1C93D2C(0, ev);
-  UnityEngine_GameObject__SendMessage_72101188(
+    sub_1CE6958(0, ev);
+  UnityEngine_GameObject__SendMessage_72899820(
     targetObject,
-    (System_String_o *)StringLiteral_9888/*"OnAnimEvent"*/,
+    (System_String_o *)StringLiteral_9909/*"OnAnimEvent"*/,
     (Il2CppObject *)ev,
     0);
 }
@@ -36,7 +36,7 @@ void BattleChrControl__setTarget(BattleChrControl_o *this, UnityEngine_GameObjec
   System_String_o *v7; // x7
 
   this->fields.targetObject = obj;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetObject,
     (int32_t)obj,
     (int32_t)method,

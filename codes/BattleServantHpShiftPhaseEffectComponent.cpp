@@ -2,10 +2,10 @@ void BattleServantHpShiftPhaseEffectComponent___ctor(
         BattleServantHpShiftPhaseEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4D3419C & 1) == 0 )
+  if ( (byte_4E0821D & 1) == 0 )
   {
-    sub_1C93AD4(&CommonEffectComponent_TypeInfo);
-    byte_4D3419C = 1;
+    sub_1CE6700(&CommonEffectComponent_TypeInfo);
+    byte_4E0821D = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -23,10 +23,10 @@ void BattleServantHpShiftPhaseEffectComponent__FadeOutIcon(
   BattleServantHpShiftComponent_o *v7; // x0
   System_Collections_IEnumerator_o *v8; // x1
 
-  if ( (byte_4D3419B & 1) == 0 )
+  if ( (byte_4E0821C & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3419B = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0821C = 1;
   }
   HpShiftParent_k__BackingField = (UnityEngine_Object_o *)this->fields._HpShiftParent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,9 +35,9 @@ void BattleServantHpShiftPhaseEffectComponent__FadeOutIcon(
   {
     v7 = this->fields._HpShiftParent_k__BackingField;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     v8 = BattleServantHpShiftComponent__FadeOutShiftIcon(v7, duration, 0);
-    UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v8, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_72903732((UnityEngine_MonoBehaviour_o *)this, v8, 0);
   }
 }
 
@@ -76,10 +76,10 @@ void BattleServantHpShiftPhaseEffectComponent__UpdateShiftIcon(
   BattleServantHpShiftComponent_o *IsShiftPhaseIconActive; // x0
   BattleServantHpShiftComponent_o *v8; // x8
 
-  if ( (byte_4D3419A & 1) == 0 )
+  if ( (byte_4E0821B & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3419A = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0821B = 1;
   }
   HpShiftParent_k__BackingField = (UnityEngine_Object_o *)this->fields._HpShiftParent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ void BattleServantHpShiftPhaseEffectComponent__UpdateShiftIcon(
                                                                         0),
           (v8 = this->fields._HpShiftParent_k__BackingField) == 0) )
     {
-      sub_1C93D2C(IsShiftPhaseIconActive, v6);
+      sub_1CE6958(IsShiftPhaseIconActive, v6);
     }
     BattleServantHpShiftComponent__UpdateIconEnabled(v8, ((unsigned __int8)IsShiftPhaseIconActive & 1) + index, 1, 0);
   }
@@ -136,7 +136,7 @@ void BattleServantHpShiftPhaseEffectComponent__set_HpShiftParent(
   System_String_o *v7; // x7
 
   this->fields._HpShiftParent_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._HpShiftParent_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -160,7 +160,7 @@ void BattleServantHpShiftPhaseEffectComponent__set_UpdateHpBarFunc(
   System_String_o *v7; // x7
 
   this->fields._UpdateHpBarFunc_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._UpdateHpBarFunc_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -184,7 +184,7 @@ void BattleServantHpShiftPhaseEffectComponent__set_UpdateHpLabelFunc(
   System_String_o *v7; // x7
 
   this->fields._UpdateHpLabelFunc_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._UpdateHpLabelFunc_k__BackingField,
     (int32_t)value,
     (int32_t)method,

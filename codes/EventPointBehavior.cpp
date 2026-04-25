@@ -16,5 +16,5 @@ void EventPointBehavior___ctor(EventPointBehavior_o *this, const MethodInfo *met
   v2[-1].fields._ListCreatedTime_k__BackingField = 0;
   v2[-1].fields._Name_k__BackingField = 0;
   LODWORD(v2[-1].fields._ClosedMessage_k__BackingField) = 0;
-  sub_1C93A78(v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1CE66A4(v2, 0, v3, v4, v5, v6, v7, v8);
 }

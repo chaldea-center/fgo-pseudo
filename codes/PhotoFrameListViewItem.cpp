@@ -32,7 +32,7 @@ void PhotoFrameListViewItem___ctor(
   this->fields.index = itemIndex;
   this->fields._Id_k__BackingField = id;
   this->fields._ThumbnailSpriteName_k__BackingField = thumbnailSpriteName;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpriteName_k__BackingField,
     (int32_t)thumbnailSpriteName,
     v16,
@@ -42,7 +42,7 @@ void PhotoFrameListViewItem___ctor(
     v20,
     v21);
   this->fields._Name_k__BackingField = name;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v22,
@@ -52,7 +52,7 @@ void PhotoFrameListViewItem___ctor(
     v26,
     v27);
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)atlas,
     v28,
@@ -121,7 +121,7 @@ void PhotoFrameListViewItem__set_Atlas(PhotoFrameListViewItem_o *this, UIAtlas_o
   System_String_o *v7; // x7
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -154,7 +154,7 @@ void PhotoFrameListViewItem__set_Name(PhotoFrameListViewItem_o *this, System_Str
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -178,7 +178,7 @@ void PhotoFrameListViewItem__set_SpriteName(
   System_String_o *v7; // x7
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -202,7 +202,7 @@ void PhotoFrameListViewItem__set_ThumbnailSpriteName(
   System_String_o *v7; // x7
 
   this->fields._ThumbnailSpriteName_k__BackingField = value;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

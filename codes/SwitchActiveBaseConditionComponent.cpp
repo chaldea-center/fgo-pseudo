@@ -7,6 +7,7 @@ void SwitchActiveBaseConditionComponent___ctor(SwitchActiveBaseConditionComponen
 bool SwitchActiveBaseConditionComponent__IsSatisfyCond(
         SwitchActiveBaseConditionComponent_o *this,
         BattleData_o *data,
+        BattleActorControl_o *actor,
         const MethodInfo *method)
 {
   return 0;
@@ -24,28 +25,30 @@ bool SwitchActiveBaseConditionComponent__IsTimingBeforeTreasureDevice(
 void SwitchActiveBaseConditionComponent__SwitchActive(
         SwitchActiveBaseConditionComponent_o *this,
         BattleData_o *data,
+        BattleActorControl_o *actor,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  UnityEngine_GameObject_o *gameObject; // x22
+  __int64 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4D342B8 & 1) == 0 )
+  if ( (byte_4E08339 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D342B8 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E08339 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)data, 0, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v6 = ((__int64 (__fastcall *)(SwitchActiveBaseConditionComponent_o *, BattleData_o *, const MethodInfo *))this->klass->vtable._4_IsSatisfyCond.methodPtr)(
+    v8 = ((__int64 (__fastcall *)(SwitchActiveBaseConditionComponent_o *, BattleData_o *, BattleActorControl_o *, const MethodInfo *))this->klass->vtable._4_IsSatisfyCond.methodPtr)(
            this,
            data,
+           actor,
            this->klass->vtable._4_IsSatisfyCond.method);
     if ( !gameObject )
-      sub_1C93D2C(v6, v7);
-    UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0);
+      sub_1CE6958(v8, v9);
+    UnityEngine_GameObject__SetActive(gameObject, v8 & 1, 0);
   }
 }

@@ -3,8 +3,8 @@ void BattleDropHighPositionOverwriteSetting___ctor(
         const MethodInfo *method)
 {
   this->fields.startAcceleration.fields.z = 0.0;
-  *(_OWORD *)&this->fields.startPos.fields.x = xmmword_D01920;
-  *(_OWORD *)&this->fields.localGravity.fields.y = xmmword_D01500;
+  *(_OWORD *)&this->fields.startPos.fields.x = xmmword_D25B30;
+  *(_OWORD *)&this->fields.localGravity.fields.y = xmmword_D25710;
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 
@@ -13,11 +13,17 @@ UnityEngine_Vector3_o BattleDropHighPositionOverwriteSetting__get_LocalGravity(
         BattleDropHighPositionOverwriteSetting_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.localGravity.fields.x;
-  result.fields.y = this->fields.localGravity.fields.y;
-  result.fields.z = this->fields.localGravity.fields.z;
+  x = this->fields.localGravity.fields.x;
+  y = this->fields.localGravity.fields.y;
+  z = this->fields.localGravity.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -26,11 +32,17 @@ UnityEngine_Vector3_o BattleDropHighPositionOverwriteSetting__get_StartAccelerat
         BattleDropHighPositionOverwriteSetting_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.startAcceleration.fields.x;
-  result.fields.y = this->fields.startAcceleration.fields.y;
-  result.fields.z = this->fields.startAcceleration.fields.z;
+  x = this->fields.startAcceleration.fields.x;
+  y = this->fields.startAcceleration.fields.y;
+  z = this->fields.startAcceleration.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -39,10 +51,16 @@ UnityEngine_Vector3_o BattleDropHighPositionOverwriteSetting__get_StartPos(
         BattleDropHighPositionOverwriteSetting_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.startPos.fields.x;
-  result.fields.y = this->fields.startPos.fields.y;
-  result.fields.z = this->fields.startPos.fields.z;
+  x = this->fields.startPos.fields.x;
+  y = this->fields.startPos.fields.y;
+  z = this->fields.startPos.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }

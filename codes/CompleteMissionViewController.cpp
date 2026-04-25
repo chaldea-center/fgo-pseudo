@@ -8,18 +8,18 @@ void CompleteMissionViewController___ctor(CompleteMissionViewController_o *this,
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2D127 & 1) == 0 )
+  if ( (byte_4E01217 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
-    byte_4D2D127 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    byte_4E01217 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
   this->fields.currentList = (struct System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *)v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.currentList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.currentList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   this->fields.mTargetEndedAt = -1;
   this->fields.mLastDisplayedSecond = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -42,12 +42,12 @@ int32_t CompleteMissionViewController__CalculateClearCount(
   bool v12; // w24
   bool IsIgnoreStartCondition; // w25
   bool v14; // w24
-  int32_t MissionProgressType_47706724; // w0
+  int32_t MissionProgressType_48073580; // w0
 
-  if ( (byte_4D2D126 & 1) == 0 )
+  if ( (byte_4E01216 & 1) == 0 )
   {
-    this = (CompleteMissionViewController_o *)sub_1C93AD4(&MissionInfoMaker_TypeInfo);
-    byte_4D2D126 = 1;
+    this = (CompleteMissionViewController_o *)sub_1CE6700(&MissionInfoMaker_TypeInfo);
+    byte_4E01216 = 1;
   }
   if ( !list )
     goto LABEL_16;
@@ -59,7 +59,7 @@ int32_t CompleteMissionViewController__CalculateClearCount(
     while ( 1 )
     {
       if ( v5 >= (unsigned int)max_length )
-        sub_1C93D34(this);
+        sub_1CE6960(this);
       v7 = &list->obj.klass + v5;
       v8 = (EventMissionEntity_o *)v7[4];
       if ( !v8 )
@@ -72,7 +72,7 @@ int32_t CompleteMissionViewController__CalculateClearCount(
       if ( !MissionInfoMaker_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo);
       v14 = v12;
-      MissionProgressType_47706724 = MissionInfoMaker__GetMissionProgressType_47706724(
+      MissionProgressType_48073580 = MissionInfoMaker__GetMissionProgressType_48073580(
                                        missionTargetId,
                                        id,
                                        v14,
@@ -81,7 +81,7 @@ int32_t CompleteMissionViewController__CalculateClearCount(
       this = (CompleteMissionViewController_o *)MissionInfoMaker__GetProgStatus(
                                                   v8->fields.missionTargetId,
                                                   v8->fields.id,
-                                                  MissionProgressType_47706724,
+                                                  MissionProgressType_48073580,
                                                   v14,
                                                   0);
       max_length = list->max_length;
@@ -92,7 +92,7 @@ int32_t CompleteMissionViewController__CalculateClearCount(
         return v6;
     }
 LABEL_16:
-    sub_1C93D2C(this, list);
+    sub_1CE6958(this, list);
   }
   return 0;
 }
@@ -108,10 +108,10 @@ void CompleteMissionViewController__OnEnable(CompleteMissionViewController_o *th
 {
   struct System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *currentList; // x8
 
-  if ( (byte_4D2D11C & 1) == 0 )
+  if ( (byte_4E0120C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    byte_4D2D11C = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    byte_4E0120C = 1;
   }
   currentList = this->fields.currentList;
   if ( currentList )
@@ -157,16 +157,16 @@ void CompleteMissionViewController__Refresh(CompleteMissionViewController_o *thi
   intptr_t v32; // x8
 
   v2 = this;
-  if ( (byte_4D2D11D & 1) == 0 )
+  if ( (byte_4E0120D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_MstMissionMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Clear__);
-    sub_1C93AD4(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
-    this = (CompleteMissionViewController_o *)sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D2D11D = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_MstMissionMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Clear__);
+    sub_1CE6700(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+    this = (CompleteMissionViewController_o *)sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E0120D = 1;
   }
   currentList = v2->fields.currentList;
   if ( !currentList )
@@ -178,27 +178,27 @@ void CompleteMissionViewController__Refresh(CompleteMissionViewController_o *thi
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)currentList->fields._items, 0, size, 0);
   v2->fields.currentEventId = 0;
-  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_34;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventMissionMaster___);
-  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_34;
   this = (CompleteMissionViewController_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_MstMissionMaster___);
+                                              (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_MstMissionMaster___);
   if ( !this )
     goto LABEL_34;
   EnableMissions = MstMissionMaster__GetEnableMissions((MstMissionMaster_o *)this, 0);
-  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (CompleteMissionViewController_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_34;
   this = (CompleteMissionViewController_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                              (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !EnableMissions )
     goto LABEL_34;
   max_length = EnableMissions->max_length;
@@ -239,11 +239,11 @@ void CompleteMissionViewController__Refresh(CompleteMissionViewController_o *thi
   }
   if ( !LODWORD(v14->fields.m_CancellationTokenSource) )
 LABEL_35:
-    sub_1C93D34(this);
+    sub_1CE6960(this);
   root = v14->fields.root;
   if ( !root || (this = (CompleteMissionViewController_o *)v2->fields.iconSprite) == 0 )
 LABEL_34:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   CompleteMissionSprite__InitBtn((CompleteMissionSprite_o *)this, HIDWORD(root[1].klass), 0);
   if ( !LODWORD(v14->fields.m_CancellationTokenSource) )
     goto LABEL_35;
@@ -256,7 +256,7 @@ LABEL_34:
   AchiveMissionNum = UserEventMissionMaster__getAchiveMissionNum(v10, v13->fields.id, 0);
   m_CancellationTokenSource = (int32_t)v14->fields.m_CancellationTokenSource;
   v21 = AchiveMissionNum;
-  v22 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_1C93D20(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+  v22 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_1CE694C(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
   MasterMissionComponent_MasterMissionInfoItem___ctor(v22, v13, m_CancellationTokenSource, v15, v21, 0);
   this = (CompleteMissionViewController_o *)v2->fields.currentList;
   if ( !this )
@@ -272,14 +272,14 @@ LABEL_34:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v22,
-      *(const MethodInfo_387999C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
     v32 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
     *(_QWORD *)(v32 + 32) = v22;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)v22, v23, v24, v25, v26, v27, v28);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)v22, v23, v24, v25, v26, v27, v28);
   }
 LABEL_22:
   CompleteMissionViewController__UpdateNoticeBadge(v2, v12, v8);
@@ -296,15 +296,15 @@ void CompleteMissionViewController__RefreshLabels(CompleteMissionViewController_
   int64_t v7; // x8
   const MethodInfo *v8; // x2
 
-  if ( (byte_4D2D11E & 1) == 0 )
+  if ( (byte_4E0120E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    byte_4D2D11E = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    byte_4E0120E = 1;
   }
-  if ( (byte_4D2D11C & 1) == 0 )
+  if ( (byte_4E0120C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    byte_4D2D11C = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    byte_4E0120C = 1;
   }
   currentList = (System_Collections_Generic_List_object__o *)this->fields.currentList;
   if ( currentList && currentList->fields._size >= 1 )
@@ -312,9 +312,9 @@ void CompleteMissionViewController__RefreshLabels(CompleteMissionViewController_
     Item = System_Collections_Generic_List_object___get_Item(
              currentList,
              0,
-             (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+             (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
     if ( !Item || (klass = Item[1].klass) == 0 )
-      sub_1C93D2C(Item, v5);
+      sub_1CE6958(Item, v5);
     v7 = *(_QWORD *)&klass->_1.byval_arg.bits;
     this->fields.mLastDisplayedSecond = -1;
     this->fields.mTargetEndedAt = v7;
@@ -335,10 +335,10 @@ void CompleteMissionViewController__Release(CompleteMissionViewController_o *thi
   CompleteMissionSprite_o *v5; // x0
   UnityEngine_Object_o *root; // x20
 
-  if ( (byte_4D2D120 & 1) == 0 )
+  if ( (byte_4E01210 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2D120 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01210 = 1;
   }
   this->fields.mTargetEndedAt = -1;
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
@@ -363,7 +363,7 @@ void CompleteMissionViewController__Release(CompleteMissionViewController_o *thi
       return;
     }
 LABEL_14:
-    sub_1C93D2C(v5, v4);
+    sub_1CE6958(v5, v4);
   }
 }
 
@@ -377,10 +377,10 @@ void CompleteMissionViewController__SetInteractable(
   __int64 v6; // x1
   UnityEngine_Collider_o *v7; // x0
 
-  if ( (byte_4D2D11F & 1) == 0 )
+  if ( (byte_4E0120F & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2D11F = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E0120F = 1;
   }
   btnCollider = (UnityEngine_Object_o *)this->fields.btnCollider;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -389,7 +389,7 @@ void CompleteMissionViewController__SetInteractable(
   {
     v7 = (UnityEngine_Collider_o *)this->fields.btnCollider;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_Collider__set_enabled(v7, isEnabled, 0);
   }
 }
@@ -403,12 +403,12 @@ void CompleteMissionViewController__SetTimerFinishedDisplay(
   UnityEngine_Component_o *alertTitleLb; // x0
   UILabel_o *alertMsgLb; // x19
 
-  if ( (byte_4D2D124 & 1) == 0 )
+  if ( (byte_4E01214 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    sub_1C93AD4(&StringLiteral_13513/*"TIME_REST_ACHIVE"*/);
-    byte_4D2D124 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    sub_1CE6700(&StringLiteral_13553/*"TIME_REST_ACHIVE"*/);
+    byte_4E01214 = 1;
   }
   CompleteMissionViewController__UpdateMissionCountDisplay(this, method);
   alertTitleLb = (UnityEngine_Component_o *)this->fields.alertTitleLb;
@@ -429,10 +429,10 @@ void CompleteMissionViewController__SetTimerFinishedDisplay(
   alertMsgLb = this->fields.alertMsgLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  alertTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13513/*"TIME_REST_ACHIVE"*/, 0);
+  alertTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13553/*"TIME_REST_ACHIVE"*/, 0);
   if ( !alertMsgLb )
 LABEL_11:
-    sub_1C93D2C(alertTitleLb, v3);
+    sub_1CE6958(alertTitleLb, v3);
   UILabel__set_text(alertMsgLb, (System_String_o *)alertTitleLb, 0);
 }
 
@@ -452,7 +452,7 @@ void CompleteMissionViewController__SetVisible(
     || (v5 = isVisible, UnityEngine_GameObject__SetActive(root, isVisible, 0), (root = this->fields.alertRoot) == 0)
     || (UnityEngine_GameObject__SetActive(root, v5, 0), (root = this->fields.countRoot) == 0) )
   {
-    sub_1C93D2C(root, isVisible);
+    sub_1CE6958(root, isVisible);
   }
   UnityEngine_GameObject__SetActive(root, isVisible, 0);
   if ( isVisible )
@@ -476,16 +476,16 @@ void CompleteMissionViewController__Update(CompleteMissionViewController_o *this
   const MethodInfo *mTargetEndedAt; // x1
   int32_t v7; // w20
 
-  if ( (byte_4D2D121 & 1) == 0 )
+  if ( (byte_4E01211 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D2D121 = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4E01211 = 1;
   }
   if ( this->fields.mTargetEndedAt >= 1 )
   {
     root = this->fields.root;
     if ( !root )
-      sub_1C93D2C(0, method);
+      sub_1CE6958(0, method);
     if ( UnityEngine_GameObject__get_activeInHierarchy(root, 0) )
     {
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -522,12 +522,12 @@ void CompleteMissionViewController__UpdateMissionCountDisplay(
   UILabel_o *countMsgLb; // x19
   int32_t syncRoot; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2D122 & 1) == 0 )
+  if ( (byte_4E01212 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_8722/*"MISSION_ACHIVE_MSG"*/);
-    byte_4D2D122 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_8737/*"MISSION_ACHIVE_MSG"*/);
+    byte_4E01212 = 1;
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.currentList, 0) )
   {
@@ -538,7 +538,7 @@ void CompleteMissionViewController__UpdateMissionCountDisplay(
     currentList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  currentList,
                                                                  0,
-                                                                 (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                                                                 (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
     if ( !currentList )
       goto LABEL_15;
     syncRoot = (int32_t)currentList->fields._syncRoot;
@@ -553,7 +553,7 @@ void CompleteMissionViewController__UpdateMissionCountDisplay(
     currentList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  currentList,
                                                                  0,
-                                                                 (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                                                                 (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
     if ( !currentList )
       goto LABEL_15;
     syncRoot = currentList->fields._size;
@@ -565,11 +565,11 @@ void CompleteMissionViewController__UpdateMissionCountDisplay(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     currentList = (System_Collections_Generic_List_object__o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_8722/*"MISSION_ACHIVE_MSG"*/,
+                                                                 (System_String_o *)StringLiteral_8737/*"MISSION_ACHIVE_MSG"*/,
                                                                  0);
     if ( !countMsgLb )
 LABEL_15:
-      sub_1C93D2C(currentList, v3);
+      sub_1CE6958(currentList, v3);
     UILabel__set_text(countMsgLb, (System_String_o *)currentList, 0);
   }
 }
@@ -601,12 +601,12 @@ void CompleteMissionViewController__UpdateNoticeBadge(
   UILabel_o *data; // x21
   UnityEngine_Object_o *v24; // x21
 
-  if ( (byte_4D2D125 & 1) == 0 )
+  if ( (byte_4E01215 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    sub_1C93AD4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2D125 = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E01215 = 1;
   }
   p_mNoticeNumber = (GrandQuestFolderBoardItem_o *)&this->fields.mNoticeNumber;
   mNoticeNumber = (UnityEngine_Object_o *)this->fields.mNoticeNumber;
@@ -624,17 +624,17 @@ void CompleteMissionViewController__UpdateNoticeBadge(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v9 = UnityEngine_Object__Instantiate_object_(
              v8,
-             (const MethodInfo_3230E6C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+             (const MethodInfo_3290C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       noticeRoot = this->fields.noticeRoot;
       v11 = (UnityEngine_GameObject_o *)v9;
-      GameObjectExtensions__SafeSetParent_36750960((UnityEngine_GameObject_o *)v9, noticeRoot, 0);
+      GameObjectExtensions__SafeSetParent_37166960((UnityEngine_GameObject_o *)v9, noticeRoot, 0);
       if ( !v11 )
         goto LABEL_23;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v11,
-                           (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
       p_mNoticeNumber->klass = (GrandQuestFolderBoardItem_c *)Component_object;
-      sub_1C93A78(p_mNoticeNumber, (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
+      sub_1CE66A4(p_mNoticeNumber, (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
       klass = (UISprite_o *)p_mNoticeNumber->klass;
       if ( !p_mNoticeNumber->klass )
         goto LABEL_23;
@@ -668,7 +668,7 @@ void CompleteMissionViewController__UpdateNoticeBadge(
       return;
     }
 LABEL_23:
-    sub_1C93D2C(klass, v13);
+    sub_1CE6958(klass, v13);
   }
 }
 
@@ -687,13 +687,13 @@ void CompleteMissionViewController__UpdateTimerDisplay(
   System_String_o *charStr; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *numStr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4D2D123 & 1) == 0 )
+  if ( (byte_4E01213 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3733/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D2D123 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_3740/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E01213 = 1;
   }
   numStr = 0;
   charStr = 0;
@@ -739,7 +739,7 @@ LABEL_12:
           v10 = this->fields.alertTitleLb;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          alertTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/, 0);
+          alertTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3740/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/, 0);
           if ( v10 )
           {
             UILabel__set_text(v10, (System_String_o *)alertTitleLb, 0);
@@ -763,7 +763,7 @@ LABEL_12:
         }
       }
 LABEL_27:
-      sub_1C93D2C(alertTitleLb, v7);
+      sub_1CE6958(alertTitleLb, v7);
     }
   }
 }
@@ -779,10 +779,10 @@ bool CompleteMissionViewController__get_HasMissions(CompleteMissionViewControlle
 {
   struct System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *currentList; // x8
 
-  if ( (byte_4D2D11C & 1) == 0 )
+  if ( (byte_4E0120C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    byte_4D2D11C = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    byte_4E0120C = 1;
   }
   currentList = this->fields.currentList;
   return currentList && currentList->fields._size > 0;

@@ -1,9 +1,9 @@
 void MaterialCollectionMenu___ctor(MaterialCollectionMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D2BA43 & 1) == 0 )
+  if ( (byte_4DFFA62 & 1) == 0 )
   {
-    sub_1C93AD4(&BaseMenu_TypeInfo);
-    byte_4D2BA43 = 1;
+    sub_1CE6700(&BaseMenu_TypeInfo);
+    byte_4DFFA62 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -28,7 +28,7 @@ void MaterialCollectionMenu__Callback(MaterialCollectionMenu_o *this, int32_t re
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C93A78(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1CE66A4(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)result,
@@ -41,11 +41,11 @@ void MaterialCollectionMenu__Close(MaterialCollectionMenu_o *this, const MethodI
 {
   const MethodInfo *v2; // x2
 
-  MaterialCollectionMenu__Close_33851112(this, 0, v2);
+  MaterialCollectionMenu__Close_34270788(this, 0, v2);
 }
 
 
-void MaterialCollectionMenu__Close_33851112(
+void MaterialCollectionMenu__Close_34270788(
         MaterialCollectionMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -56,13 +56,13 @@ void MaterialCollectionMenu__Close_33851112(
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2BA37 & 1) == 0 )
+  if ( (byte_4DFFA56 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_10021/*"OnStartClose"*/);
-    byte_4D2BA37 = 1;
+    sub_1CE6700(&StringLiteral_10042/*"OnStartClose"*/);
+    byte_4DFFA56 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -72,7 +72,7 @@ void MaterialCollectionMenu__Close_33851112(
     v6,
     v7);
   this->fields.state = 4;
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10021/*"OnStartClose"*/, 0.1, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10042/*"OnStartClose"*/, 0.1, 0);
 }
 
 
@@ -93,7 +93,7 @@ void MaterialCollectionMenu__EndClose(MaterialCollectionMenu_o *this, const Meth
   MaterialCollectionMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C93D2C(0, v4);
+    sub_1CE6958(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc;
@@ -101,7 +101,7 @@ void MaterialCollectionMenu__EndClose(MaterialCollectionMenu_o *this, const Meth
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C93A78(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_1CE66A4(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -122,20 +122,20 @@ void MaterialCollectionMenu__EndCloseShowServant(MaterialCollectionMenu_o *this,
   System_String_o *v13; // x7
   const MethodInfo *v14; // x2
 
-  if ( (byte_4D2BA42 & 1) == 0 )
+  if ( (byte_4DFFA61 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnSelectServant__);
-    byte_4D2BA42 = 1;
+    sub_1CE6700(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnSelectServant__);
+    byte_4DFFA61 = 1;
   }
   materialCollectionServantListViewManager = this->fields.materialCollectionServantListViewManager;
   if ( !materialCollectionServantListViewManager
-    || (MaterialCollectionServantListViewManager__RequestListObject_33871108(
+    || (MaterialCollectionServantListViewManager__RequestListObject_34290796(
           materialCollectionServantListViewManager,
           4,
           v2),
         v5 = this->fields.materialCollectionServantListViewManager,
-        v6 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1C93D20(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo),
+        v6 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1CE694C(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo),
         MaterialCollectionServantListViewManager_CallbackFunc___ctor(
           v6,
           (Il2CppObject *)this,
@@ -143,11 +143,11 @@ void MaterialCollectionMenu__EndCloseShowServant(MaterialCollectionMenu_o *this,
           v7),
         !v5) )
   {
-    sub_1C93D2C(materialCollectionServantListViewManager, method);
+    sub_1CE6958(materialCollectionServantListViewManager, method);
   }
   v5->fields.callbackFunc = v6;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&v5->fields.callbackFunc, (int32_t)v6, v8, v9, v10, v11, v12, v13);
-  MaterialCollectionServantListViewManager__SetMode_33855684(v5, 2, v14);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v5->fields.callbackFunc, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+  MaterialCollectionServantListViewManager__SetMode_34275360(v5, 2, v14);
 }
 
 
@@ -175,24 +175,24 @@ void MaterialCollectionMenu__EndOpen(MaterialCollectionMenu_o *this, const Metho
   System_String_o *v13; // x7
   const MethodInfo *v14; // x2
 
-  if ( (byte_4D2BA36 & 1) == 0 )
+  if ( (byte_4DFFA55 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnSelectServant__);
-    byte_4D2BA36 = 1;
+    sub_1CE6700(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnSelectServant__);
+    byte_4DFFA55 = 1;
   }
   this->fields.state = 2;
   materialCollectionServantListViewManager = this->fields.materialCollectionServantListViewManager;
-  v4 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1C93D20(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+  v4 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1CE694C(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
   MaterialCollectionServantListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     Method_MaterialCollectionMenu_OnSelectServant__,
     v5);
   if ( !materialCollectionServantListViewManager )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   materialCollectionServantListViewManager->fields.callbackFunc = v4;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&materialCollectionServantListViewManager->fields.callbackFunc,
     (int32_t)v4,
     v8,
@@ -201,7 +201,7 @@ void MaterialCollectionMenu__EndOpen(MaterialCollectionMenu_o *this, const Metho
     v11,
     v12,
     v13);
-  MaterialCollectionServantListViewManager__SetMode_33855684(materialCollectionServantListViewManager, 2, v14);
+  MaterialCollectionServantListViewManager__SetMode_34275360(materialCollectionServantListViewManager, 2, v14);
   ActionExtensions__Call(this->fields.mOpenedAct, 0);
 }
 
@@ -220,13 +220,13 @@ void MaterialCollectionMenu__EndShowServant(
   ListViewManager_o *materialCollectionServantListViewManager; // x0
   System_Action_o *v12; // x21
 
-  if ( (byte_4D2BA40 & 1) == 0 )
+  if ( (byte_4DFFA5F & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndCloseShowServant__);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndCloseShowServantuestQuestJump__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2BA40 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndCloseShowServant__);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndCloseShowServantuestQuestJump__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFFA5F = 1;
   }
   if ( questId < 1 )
   {
@@ -237,21 +237,21 @@ void MaterialCollectionMenu__EndShowServant(
         goto LABEL_11;
       ListViewManager__SortItem(materialCollectionServantListViewManager, -1, 0, -1, 0);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     v10 = Method_MaterialCollectionMenu_EndCloseShowServant__;
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     v10 = Method_MaterialCollectionMenu_EndCloseShowServantuestQuestJump__;
   }
   v12 = v9;
   System_Action___ctor(v9, (Il2CppObject *)this, v10, 0);
   if ( !Instance )
 LABEL_11:
-    sub_1C93D2C(materialCollectionServantListViewManager, isDecide);
+    sub_1CE6958(materialCollectionServantListViewManager, isDecide);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v12, 0);
 }
 
@@ -266,18 +266,18 @@ void MaterialCollectionMenu__EndShowServantEquip(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D2BA41 & 1) == 0 )
+  if ( (byte_4DFFA60 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndCloseShowServant__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2BA41 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndCloseShowServant__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFFA60 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_MaterialCollectionMenu_EndCloseShowServant__, 0);
   if ( !Instance )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v5, 0);
 }
 
@@ -303,7 +303,7 @@ void MaterialCollectionMenu__Init(MaterialCollectionMenu_o *this, const MethodIn
         materialCollectionServantListViewManager = (MaterialCollectionServantListViewManager_o *)BgTxtManager__IsActiveBgTxt(0),
         !gameObject) )
   {
-    sub_1C93D2C(materialCollectionServantListViewManager, method);
+    sub_1CE6958(materialCollectionServantListViewManager, method);
   }
   UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)materialCollectionServantListViewManager & 1, 0);
   this->fields.tabKind = 0;
@@ -318,18 +318,18 @@ void MaterialCollectionMenu__OnClickCancel(MaterialCollectionMenu_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D2BA3B & 1) == 0 )
+  if ( (byte_4DFFA5A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnClickCancel__);
-    byte_4D2BA3B = 1;
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnClickCancel__);
+    byte_4DFFA5A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_MaterialCollectionMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_MaterialCollectionMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MaterialCollectionMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MaterialCollectionMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     MaterialCollectionMenu__Callback(this, 0, v5);
   }
@@ -342,18 +342,18 @@ void MaterialCollectionMenu__OnClickDecide(MaterialCollectionMenu_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D2BA3A & 1) == 0 )
+  if ( (byte_4DFFA59 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnClickDecide__);
-    byte_4D2BA3A = 1;
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnClickDecide__);
+    byte_4DFFA59 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_MaterialCollectionMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_MaterialCollectionMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MaterialCollectionMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MaterialCollectionMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     MaterialCollectionMenu__Callback(this, 0, v5);
   }
@@ -366,17 +366,17 @@ void MaterialCollectionMenu__OnClickTabCommandCode(MaterialCollectionMenu_o *thi
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4D2BA3E & 1) == 0 )
+  if ( (byte_4DFFA5D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnClickTabCommandCode__);
-    byte_4D2BA3E = 1;
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnClickTabCommandCode__);
+    byte_4DFFA5D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MaterialCollectionMenu_OnClickTabCommandCode__;
     if ( (*((_BYTE *)Method_MaterialCollectionMenu_OnClickTabCommandCode__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MaterialCollectionMenu_OnClickTabCommandCode__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MaterialCollectionMenu_OnClickTabCommandCode__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     MaterialCollectionMenu__SetTabKind(this, 2, 0, v5);
   }
@@ -389,17 +389,17 @@ void MaterialCollectionMenu__OnClickTabServant(MaterialCollectionMenu_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4D2BA3C & 1) == 0 )
+  if ( (byte_4DFFA5B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnClickTabServant__);
-    byte_4D2BA3C = 1;
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnClickTabServant__);
+    byte_4DFFA5B = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MaterialCollectionMenu_OnClickTabServant__;
     if ( (*((_BYTE *)Method_MaterialCollectionMenu_OnClickTabServant__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MaterialCollectionMenu_OnClickTabServant__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MaterialCollectionMenu_OnClickTabServant__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     MaterialCollectionMenu__SetTabKind(this, 0, 0, v5);
   }
@@ -412,17 +412,17 @@ void MaterialCollectionMenu__OnClickTabServantEquip(MaterialCollectionMenu_o *th
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4D2BA3D & 1) == 0 )
+  if ( (byte_4DFFA5C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnClickTabServantEquip__);
-    byte_4D2BA3D = 1;
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnClickTabServantEquip__);
+    byte_4DFFA5C = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MaterialCollectionMenu_OnClickTabServantEquip__;
     if ( (*((_BYTE *)Method_MaterialCollectionMenu_OnClickTabServantEquip__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_MaterialCollectionMenu_OnClickTabServantEquip__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_MaterialCollectionMenu_OnClickTabServantEquip__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     MaterialCollectionMenu__SetTabKind(this, 1, 0, v5);
   }
@@ -457,14 +457,14 @@ void MaterialCollectionMenu__OnSelectServant(
   Il2CppObject *v19; // x0
   ServantStatusDialog_ResultDelegate_o *v20; // x22
 
-  if ( (byte_4D2BA3F & 1) == 0 )
+  if ( (byte_4DFFA5E & 1) == 0 )
   {
-    sub_1C93AD4(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndShowServantEquip__);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndShowServant__);
-    sub_1C93AD4(&ServantStatusDialog_ResultDelegate_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2BA3F = 1;
+    sub_1CE6700(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndShowServantEquip__);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndShowServant__);
+    sub_1CE6700(&ServantStatusDialog_ResultDelegate_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFFA5E = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -487,12 +487,12 @@ void MaterialCollectionMenu__OnSelectServant(
         if ( dropList )
         {
           IsKeepServantEquip = ServantEntity__get_IsKeepServantEquip(dropList, 0);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           dragParentObject = (UserServantCollectionEntity_o *)v8->fields.dragParentObject;
           v13 = (CommonUI_o *)Instance;
           if ( IsKeepServantEquip )
           {
-            v14 = (ServantStatusDialog_EndDelegate_o *)sub_1C93D20(ServantStatusDialog_EndDelegate_TypeInfo);
+            v14 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo);
             ServantStatusDialog_EndDelegate___ctor(
               v14,
               (Il2CppObject *)this,
@@ -500,20 +500,20 @@ void MaterialCollectionMenu__OnSelectServant(
               0);
             if ( v13 )
             {
-              CommonUI__OpenServantStatusDialog_31592256(v13, 2, dragParentObject, v14, 0);
+              CommonUI__OpenServantStatusDialog_31931216(v13, 2, dragParentObject, v14, 0);
               return;
             }
 LABEL_19:
-            sub_1C93D2C(materialCollectionServantListViewManager, *(_QWORD *)&kind);
+            sub_1CE6958(materialCollectionServantListViewManager, *(_QWORD *)&kind);
           }
         }
         else
         {
-          v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           dragParentObject = (UserServantCollectionEntity_o *)v8->fields.dragParentObject;
           v13 = (CommonUI_o *)v19;
         }
-        v20 = (ServantStatusDialog_ResultDelegate_o *)sub_1C93D20(ServantStatusDialog_ResultDelegate_TypeInfo);
+        v20 = (ServantStatusDialog_ResultDelegate_o *)sub_1CE694C(ServantStatusDialog_ResultDelegate_TypeInfo);
         ServantStatusDialog_ResultDelegate___ctor(
           v20,
           (Il2CppObject *)this,
@@ -521,14 +521,14 @@ LABEL_19:
           0);
         if ( !v13 )
           goto LABEL_19;
-        CommonUI__OpenServantStatusDialog_31592720(v13, 2, dragParentObject, v20, 0);
+        CommonUI__OpenServantStatusDialog_31931680(v13, 2, dragParentObject, v20, 0);
       }
       else if ( materialCollectionServantListViewManager->fields.sortKindButton )
       {
-        v15 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v15 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         sortKindButton = (UserCommandCodeCollectionEntity_o *)v8->fields.sortKindButton;
         v17 = (CommonUI_o *)v15;
-        v18 = (ServantStatusDialog_EndDelegate_o *)sub_1C93D20(ServantStatusDialog_EndDelegate_TypeInfo);
+        v18 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v18,
           (Il2CppObject *)this,
@@ -536,7 +536,7 @@ LABEL_19:
           0);
         if ( !v17 )
           goto LABEL_19;
-        CommonUI__OpenServantStatusDialog_31593640(v17, 2, sortKindButton, v18, 0, 0);
+        CommonUI__OpenServantStatusDialog_31932600(v17, 2, sortKindButton, v18, 0, 0);
       }
     }
   }
@@ -547,13 +547,13 @@ void MaterialCollectionMenu__OnStartClose(MaterialCollectionMenu_o *this, const 
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4D2BA38 & 1) == 0 )
+  if ( (byte_4DFFA57 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndClose__);
-    byte_4D2BA38 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndClose__);
+    byte_4DFFA57 = 1;
   }
-  v3 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MaterialCollectionMenu_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v3, 0);
 }
@@ -563,13 +563,13 @@ void MaterialCollectionMenu__OnStartOpen(MaterialCollectionMenu_o *this, const M
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4D2BA35 & 1) == 0 )
+  if ( (byte_4DFFA54 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_EndOpen__);
-    byte_4D2BA35 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_EndOpen__);
+    byte_4DFFA54 = 1;
   }
-  v3 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MaterialCollectionMenu_EndOpen__, 0);
   BaseMenu__Open((BaseMenu_o *)this, v3, 0);
 }
@@ -604,17 +604,17 @@ void MaterialCollectionMenu__Open(
   const MethodInfo *v27; // x3
   const MethodInfo *v28; // x2
 
-  if ( (byte_4D2BA34 & 1) == 0 )
+  if ( (byte_4DFFA53 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_10022/*"OnStartOpen"*/);
-    byte_4D2BA34 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_10043/*"OnStartOpen"*/);
+    byte_4DFFA53 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.mOpenedAct = opened_act;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.mOpenedAct,
       (int32_t)opened_act,
       (int32_t)callback,
@@ -624,7 +624,7 @@ void MaterialCollectionMenu__Open(
       v6,
       v7);
     this->fields.callbackFunc = callback;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v11,
@@ -633,17 +633,17 @@ void MaterialCollectionMenu__Open(
       v14,
       v15,
       v16);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_16;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                  (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
     if ( !Instance )
       goto LABEL_16;
     NewList = UserServantCollectionMaster__GetNewList((UserServantCollectionMaster_o *)Instance, 0);
     this->fields.newSvtIdList = NewList;
-    sub_1C93A78(
+    sub_1CE66A4(
       (GrandQuestFolderBoardItem_o *)&this->fields.newSvtIdList,
       (int32_t)NewList,
       v20,
@@ -698,21 +698,22 @@ void MaterialCollectionMenu__Open(
           !Instance) )
     {
 LABEL_16:
-      sub_1C93D2C(Instance, v18);
+      sub_1CE6958(Instance, v18);
     }
-    MaterialCollectionServantListViewManager__SetMode_33855684(
+    MaterialCollectionServantListViewManager__SetMode_34275360(
       (MaterialCollectionServantListViewManager_o *)Instance,
       1,
       v28);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10022/*"OnStartOpen"*/,
+      (System_String_o *)StringLiteral_10043/*"OnStartOpen"*/,
       0.5,
       0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MaterialCollectionMenu__SetTabKind(
         MaterialCollectionMenu_o *this,
         int32_t kind,
@@ -745,85 +746,91 @@ void MaterialCollectionMenu__SetTabKind(
   System_String_o *v30; // x27
   Il2CppObject *v31; // x28
   Il2CppObject *v32; // x0
-  bool v36; // w27
-  System_String_o **v37; // x8
-  __int64 *v38; // x8
-  UserServantCollectionEntity_array *v39; // x0
+  float v33; // s3
+  float v34; // s2
+  float v35; // s1
+  float v36; // s0 OVERLAPPED
+  bool v37; // w27
+  System_String_o **v38; // x8
+  __int64 *v39; // x8
+  UserServantCollectionEntity_array *v40; // x0
   UILabel_o *servantEquipTabLabel; // x23
-  UserServantCollectionEntity_array *v41; // x24
-  System_String_o *v42; // x25
-  Il2CppObject *v43; // x26
-  Il2CppObject *v44; // x0
-  System_String_o **v48; // x8
-  __int64 *v49; // x8
-  UserCommandCodeCollectionEntity_array *v50; // x0
+  UserServantCollectionEntity_array *v42; // x24
+  System_String_o *v43; // x25
+  Il2CppObject *v44; // x26
+  Il2CppObject *v45; // x0
+  float v46; // s3
+  float v47; // s2
+  float v48; // s1
+  float v49; // s0 OVERLAPPED
+  System_String_o **v50; // x8
+  __int64 *v51; // x8
+  UserCommandCodeCollectionEntity_array *v52; // x0
   UILabel_o *commandCodeTabLabel; // x21
-  UserCommandCodeCollectionEntity_array *v52; // x22
-  System_String_o *v53; // x23
-  Il2CppObject *v54; // x24
-  Il2CppObject *v55; // x0
-  const MethodInfo *v56; // x2
-  int32_t v57; // w1
+  UserCommandCodeCollectionEntity_array *v54; // x22
+  System_String_o *v55; // x23
+  Il2CppObject *v56; // x24
+  Il2CppObject *v57; // x0
+  const MethodInfo *v58; // x2
+  int32_t v59; // w1
   struct MaterialCollectionServantListViewManager_o *materialCollectionServantListViewManager; // x21
-  MaterialCollectionServantListViewManager_CallbackFunc_o *v59; // x22
-  const MethodInfo *v60; // x3
-  int32_t v61; // w2
-  int32_t v62; // w3
-  System_String_o *v63; // x4
-  int32_t v64; // w5
-  int64_t v65; // x6
-  System_String_o *v66; // x7
-  int32_t v67; // w1
-  UserCommandCodeCollectionMaster_o *v68; // [xsp+8h] [xbp-B8h]
+  MaterialCollectionServantListViewManager_CallbackFunc_o *v61; // x22
+  const MethodInfo *v62; // x3
+  int32_t v63; // w2
+  int32_t v64; // w3
+  System_String_o *v65; // x4
+  int32_t v66; // w5
+  int64_t v67; // x6
+  System_String_o *v68; // x7
+  int32_t v69; // w1
+  UserCommandCodeCollectionMaster_o *v70; // [xsp+8h] [xbp-B8h]
   int max_length; // [xsp+10h] [xbp-B0h] BYREF
-  int32_t v70; // [xsp+14h] [xbp-ACh] BYREF
+  int32_t v72; // [xsp+14h] [xbp-ACh] BYREF
   int32_t findSum[2]; // [xsp+18h] [xbp-A8h] BYREF
-  UnityEngine_Color_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2BA39 & 1) == 0 )
+  if ( (byte_4DFFA58 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserCommandCodeCollectionMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_MaterialCollectionMenu_OnSelectServant__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_17693/*"btn_txt_craftessence_off"*/);
-    sub_1C93AD4(&StringLiteral_17733/*"btn_txt_servant_off"*/);
-    sub_1C93AD4(&StringLiteral_17689/*"btn_txt_cc_off"*/);
-    sub_1C93AD4(&StringLiteral_17575/*"btn_bg_12"*/);
-    sub_1C93AD4(&StringLiteral_17690/*"btn_txt_cc_on"*/);
-    sub_1C93AD4(&StringLiteral_17734/*"btn_txt_servant_on"*/);
-    sub_1C93AD4(&StringLiteral_17577/*"btn_bg_19"*/);
-    sub_1C93AD4(&StringLiteral_3361/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/);
-    sub_1C93AD4(&StringLiteral_17694/*"btn_txt_craftessence_on"*/);
-    sub_1C93AD4(&StringLiteral_3362/*"CHARA_GRAPH_TAB_SERVANT"*/);
-    sub_1C93AD4(&StringLiteral_3363/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/);
-    byte_4D2BA39 = 1;
+    sub_1CE6700(&MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserCommandCodeCollectionMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_MaterialCollectionMenu_OnSelectServant__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_17749/*"btn_txt_craftessence_off"*/);
+    sub_1CE6700(&StringLiteral_17789/*"btn_txt_servant_off"*/);
+    sub_1CE6700(&StringLiteral_17745/*"btn_txt_cc_off"*/);
+    sub_1CE6700(&StringLiteral_17630/*"btn_bg_12"*/);
+    sub_1CE6700(&StringLiteral_17746/*"btn_txt_cc_on"*/);
+    sub_1CE6700(&StringLiteral_17790/*"btn_txt_servant_on"*/);
+    sub_1CE6700(&StringLiteral_17632/*"btn_bg_19"*/);
+    sub_1CE6700(&StringLiteral_3366/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/);
+    sub_1CE6700(&StringLiteral_17750/*"btn_txt_craftessence_on"*/);
+    sub_1CE6700(&StringLiteral_3367/*"CHARA_GRAPH_TAB_SERVANT"*/);
+    sub_1CE6700(&StringLiteral_3368/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/);
+    byte_4DFFA58 = 1;
   }
   *(_QWORD *)findSum = 0;
   v7 = !this->fields.isInitTab;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_88;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_88;
-  v68 = (UserCommandCodeCollectionMaster_o *)DataManager__GetMasterData_object_(
+  v70 = (UserCommandCodeCollectionMaster_o *)DataManager__GetMasterData_object_(
                                                Instance,
-                                               (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserCommandCodeCollectionMaster___);
+                                               (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserCommandCodeCollectionMaster___);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4D2AFDF )
+  if ( !byte_4DFF120 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    byte_4D2AFDF = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    byte_4DFF120 = 1;
   }
   Instance = (DataManager_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -836,11 +843,11 @@ void MaterialCollectionMenu__SetTabKind(
   v14 = v12[21];
   v15 = v12[22];
   v16 = v12[23];
-  if ( !byte_4D2AFE0 )
+  if ( !byte_4DFF121 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
     Instance = (DataManager_o *)LocalizationManager_TypeInfo;
-    byte_4D2AFE0 = 1;
+    byte_4DFF121 = 1;
   }
   if ( !LODWORD(Instance[1].fields.saveDataMapList) )
   {
@@ -872,17 +879,17 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)this->fields.servantTabSprite;
   if ( !Instance )
     goto LABEL_88;
-  v23 = &StringLiteral_17577/*"btn_bg_19"*/;
+  v23 = &StringLiteral_17632/*"btn_bg_19"*/;
   if ( kind )
-    v23 = &StringLiteral_17575/*"btn_bg_12"*/;
+    v23 = &StringLiteral_17630/*"btn_bg_12"*/;
   UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v23, 0);
   Instance = (DataManager_o *)this->fields.servantTabStrSp;
   if ( !Instance )
     goto LABEL_88;
-  v24 = &StringLiteral_17734/*"btn_txt_servant_on"*/;
+  v24 = &StringLiteral_17790/*"btn_txt_servant_on"*/;
   v25 = isInit;
   if ( kind )
-    v24 = &StringLiteral_17733/*"btn_txt_servant_off"*/;
+    v24 = &StringLiteral_17789/*"btn_txt_servant_off"*/;
   UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v24, 0);
   if ( !MasterData_object )
     goto LABEL_88;
@@ -898,37 +905,37 @@ void MaterialCollectionMenu__SetTabKind(
   v29 = CollectionList;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3362/*"CHARA_GRAPH_TAB_SERVANT"*/, 0);
-  v70 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3367/*"CHARA_GRAPH_TAB_SERVANT"*/, 0);
+  v72 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
   if ( !v29 )
     goto LABEL_88;
   v31 = (Il2CppObject *)Instance;
   max_length = v29->max_length;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &max_length);
-  Instance = (DataManager_o *)System_String__Format_64467032(v30, v31, v32, 0);
+  Instance = (DataManager_o *)System_String__Format_65164136(v30, v31, v32, 0);
   if ( !servantTabLabel )
     goto LABEL_88;
   UILabel__set_text(servantTabLabel, (System_String_o *)Instance, 0);
   Instance = (DataManager_o *)this->fields.servantTabLabel;
-  v72.fields.a = v21;
-  v72.fields.b = v22;
-  v72.fields.g = v19;
-  v72.fields.r = v20;
+  v33 = v21;
+  v34 = v22;
+  v35 = v19;
+  v36 = v20;
   if ( kind )
   {
-    v72.fields.a = v16;
-    v72.fields.b = v15;
-    v72.fields.g = v14;
-    v72.fields.r = v13;
+    v33 = v16;
+    v34 = v15;
+    v35 = v14;
+    v36 = v13;
   }
   if ( !Instance )
     goto LABEL_88;
-  UILabel__set_effectColor((UILabel_o *)Instance, v72, 0);
+  UILabel__set_effectColor((UILabel_o *)Instance, *(UnityEngine_Color_o *)&v36, 0);
   Instance = (DataManager_o *)this->fields.servantTabButton;
   if ( !Instance )
     goto LABEL_88;
-  v36 = v26 || v25;
+  v37 = v26 || v25;
   ((void (__fastcall *)(DataManager_o *, _QWORD, bool, Il2CppClass **))Instance->klass[1]._1.nestedTypes)(
     Instance,
     0,
@@ -952,16 +959,16 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)this->fields.servantEquipTabSprite;
   if ( !Instance )
     goto LABEL_88;
-  v37 = (System_String_o **)(kind == 1 ? &StringLiteral_17577/*"btn_bg_19"*/ : &StringLiteral_17575/*"btn_bg_12"*/);
-  UISprite__set_spriteName((UISprite_o *)Instance, *v37, 0);
+  v38 = (System_String_o **)(kind == 1 ? &StringLiteral_17632/*"btn_bg_19"*/ : &StringLiteral_17630/*"btn_bg_12"*/);
+  UISprite__set_spriteName((UISprite_o *)Instance, *v38, 0);
   Instance = (DataManager_o *)this->fields.servantEquipTabStrSp;
   if ( !Instance )
     goto LABEL_88;
-  v38 = &StringLiteral_17694/*"btn_txt_craftessence_on"*/;
+  v39 = &StringLiteral_17750/*"btn_txt_craftessence_on"*/;
   if ( kind != 1 )
-    v38 = &StringLiteral_17693/*"btn_txt_craftessence_off"*/;
-  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v38, 0);
-  v39 = UserServantCollectionMaster__getCollectionList(
+    v39 = &StringLiteral_17749/*"btn_txt_craftessence_off"*/;
+  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v39, 0);
+  v40 = UserServantCollectionMaster__getCollectionList(
           (UserServantCollectionMaster_o *)MasterData_object,
           &findSum[1],
           findSum,
@@ -969,36 +976,36 @@ void MaterialCollectionMenu__SetTabKind(
           0,
           0);
   servantEquipTabLabel = this->fields.servantEquipTabLabel;
-  v41 = v39;
+  v42 = v40;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3363/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0);
-  v70 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
-  if ( !v41 )
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_3368/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0);
+  v72 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
+  if ( !v42 )
     goto LABEL_88;
-  v43 = (Il2CppObject *)Instance;
-  max_length = v41->max_length;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &max_length);
-  Instance = (DataManager_o *)System_String__Format_64467032(v42, v43, v44, 0);
+  v44 = (Il2CppObject *)Instance;
+  max_length = v42->max_length;
+  v45 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &max_length);
+  Instance = (DataManager_o *)System_String__Format_65164136(v43, v44, v45, 0);
   if ( !servantEquipTabLabel )
     goto LABEL_88;
   UILabel__set_text(servantEquipTabLabel, (System_String_o *)Instance, 0);
   Instance = (DataManager_o *)this->fields.servantEquipTabLabel;
-  v73.fields.a = v21;
-  v73.fields.b = v22;
-  v73.fields.g = v19;
-  v73.fields.r = v20;
+  v46 = v21;
+  v47 = v22;
+  v48 = v19;
+  v49 = v20;
   if ( kind != 1 )
   {
-    v73.fields.a = v16;
-    v73.fields.b = v15;
-    v73.fields.g = v14;
-    v73.fields.r = v13;
+    v46 = v16;
+    v47 = v15;
+    v48 = v14;
+    v49 = v13;
   }
   if ( !Instance )
     goto LABEL_88;
-  UILabel__set_effectColor((UILabel_o *)Instance, v73, 0);
+  UILabel__set_effectColor((UILabel_o *)Instance, *(UnityEngine_Color_o *)&v49, 0);
   Instance = (DataManager_o *)this->fields.servantEquipTabButton;
   if ( !Instance )
     goto LABEL_88;
@@ -1025,32 +1032,32 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)this->fields.commandCodeTabSprite;
   if ( !Instance )
     goto LABEL_88;
-  v48 = (System_String_o **)(kind == 2 ? &StringLiteral_17577/*"btn_bg_19"*/ : &StringLiteral_17575/*"btn_bg_12"*/);
-  UISprite__set_spriteName((UISprite_o *)Instance, *v48, 0);
+  v50 = (System_String_o **)(kind == 2 ? &StringLiteral_17632/*"btn_bg_19"*/ : &StringLiteral_17630/*"btn_bg_12"*/);
+  UISprite__set_spriteName((UISprite_o *)Instance, *v50, 0);
   Instance = (DataManager_o *)this->fields.commandCodeTabStrSp;
   if ( !Instance )
     goto LABEL_88;
-  v49 = &StringLiteral_17690/*"btn_txt_cc_on"*/;
+  v51 = &StringLiteral_17746/*"btn_txt_cc_on"*/;
   if ( kind != 2 )
-    v49 = &StringLiteral_17689/*"btn_txt_cc_off"*/;
-  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v49, 0);
-  Instance = (DataManager_o *)v68;
-  if ( !v68 )
+    v51 = &StringLiteral_17745/*"btn_txt_cc_off"*/;
+  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v51, 0);
+  Instance = (DataManager_o *)v70;
+  if ( !v70 )
     goto LABEL_88;
-  v50 = UserCommandCodeCollectionMaster__getCollectionList(v68, &findSum[1], findSum, 0);
+  v52 = UserCommandCodeCollectionMaster__getCollectionList(v70, &findSum[1], findSum, 0);
   commandCodeTabLabel = this->fields.commandCodeTabLabel;
-  v52 = v50;
+  v54 = v52;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3361/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0);
-  v70 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
-  if ( !v52 )
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3366/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0);
+  v72 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
+  if ( !v54 )
     goto LABEL_88;
-  v54 = (Il2CppObject *)Instance;
-  max_length = v52->max_length;
-  v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &max_length);
-  Instance = (DataManager_o *)System_String__Format_64467032(v53, v54, v55, 0);
+  v56 = (Il2CppObject *)Instance;
+  max_length = v54->max_length;
+  v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &max_length);
+  Instance = (DataManager_o *)System_String__Format_65164136(v55, v56, v57, 0);
   if ( !commandCodeTabLabel )
     goto LABEL_88;
   UILabel__set_text(commandCodeTabLabel, (System_String_o *)Instance, 0);
@@ -1075,23 +1082,23 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)((__int64 (__fastcall *)(DataManager_o *, _QWORD, bool, Il2CppClass **))Instance->klass[1]._1.nestedTypes)(
                                 Instance,
                                 0,
-                                v36,
+                                v37,
                                 Instance->klass[1]._1.implementedInterfaces);
-  if ( !v36 && this->fields.tabKind == kind )
+  if ( !v37 && this->fields.tabKind == kind )
     goto LABEL_82;
   if ( kind == 2 )
   {
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v57 = 3;
+    v59 = 3;
   }
   else if ( kind == 1 )
   {
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v57 = 1;
+    v59 = 1;
   }
   else
   {
@@ -1100,42 +1107,42 @@ void MaterialCollectionMenu__SetTabKind(
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v57 = 0;
+    v59 = 0;
   }
-  MaterialCollectionServantListViewManager__CreateList((MaterialCollectionServantListViewManager_o *)Instance, v57, v56);
+  MaterialCollectionServantListViewManager__CreateList((MaterialCollectionServantListViewManager_o *)Instance, v59, v58);
 LABEL_82:
   materialCollectionServantListViewManager = this->fields.materialCollectionServantListViewManager;
   if ( this->fields.state != 2 )
   {
     if ( materialCollectionServantListViewManager )
     {
-      v67 = 1;
+      v69 = 1;
       goto LABEL_87;
     }
 LABEL_88:
-    sub_1C93D2C(Instance, v9);
+    sub_1CE6958(Instance, v9);
   }
-  v59 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1C93D20(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+  v61 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_1CE694C(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
   MaterialCollectionServantListViewManager_CallbackFunc___ctor(
-    v59,
+    v61,
     (Il2CppObject *)this,
     Method_MaterialCollectionMenu_OnSelectServant__,
-    v60);
+    v62);
   if ( !materialCollectionServantListViewManager )
     goto LABEL_88;
-  materialCollectionServantListViewManager->fields.callbackFunc = v59;
-  sub_1C93A78(
+  materialCollectionServantListViewManager->fields.callbackFunc = v61;
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&materialCollectionServantListViewManager->fields.callbackFunc,
-    (int32_t)v59,
-    v61,
-    v62,
+    (int32_t)v61,
     v63,
     v64,
     v65,
-    v66);
-  v67 = 2;
+    v66,
+    v67,
+    v68);
+  v69 = 2;
 LABEL_87:
-  MaterialCollectionServantListViewManager__SetMode_33855684(materialCollectionServantListViewManager, v67, v56);
+  MaterialCollectionServantListViewManager__SetMode_34275360(materialCollectionServantListViewManager, v69, v58);
   this->fields.isInitTab = 1;
   this->fields.tabKind = kind;
 }
@@ -1156,10 +1163,10 @@ void MaterialCollectionMenu__add_callbackFunc(
   MaterialCollectionMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D2BA32 & 1) == 0 )
+  if ( (byte_4DFFA51 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionMenu_CallbackFunc_TypeInfo);
-    byte_4D2BA32 = 1;
+    sub_1CE6700(&MaterialCollectionMenu_CallbackFunc_TypeInfo);
+    byte_4DFFA51 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1172,13 +1179,13 @@ void MaterialCollectionMenu__add_callbackFunc(
       if ( (MaterialCollectionMenu_CallbackFunc_c *)v8->klass != MaterialCollectionMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MaterialCollectionMenu_o *)sub_1C940C8(v8);
+  v11 = (MaterialCollectionMenu_o *)sub_1CE6CF4(v8);
   MaterialCollectionMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1197,10 +1204,10 @@ void MaterialCollectionMenu__remove_callbackFunc(
   MaterialCollectionServantListViewManager_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4D2BA33 & 1) == 0 )
+  if ( (byte_4DFFA52 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionMenu_CallbackFunc_TypeInfo);
-    byte_4D2BA33 = 1;
+    sub_1CE6700(&MaterialCollectionMenu_CallbackFunc_TypeInfo);
+    byte_4DFFA52 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1213,13 +1220,13 @@ void MaterialCollectionMenu__remove_callbackFunc(
       if ( (MaterialCollectionMenu_CallbackFunc_c *)v8->klass != MaterialCollectionMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CEF8A8(p_callbackFunc, v8, v6);
+    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MaterialCollectionServantListViewManager_o *)sub_1C940C8(v8);
+  v11 = (MaterialCollectionServantListViewManager_o *)sub_1CE6CF4(v8);
   MaterialCollectionServantListViewManager__DestroyList(v11, v12);
 }
 
@@ -1243,7 +1250,7 @@ void MaterialCollectionMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1254,12 +1261,12 @@ void MaterialCollectionMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C93B94(method) & 1) == 0 )
+  if ( (sub_1CE67C0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C93BFC(v14, 0);
+      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1CE6828(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1271,9 +1278,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AC1504;
+  this->fields.invoke_impl = (intptr_t)sub_1B100E0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AC14BC;
+  this->fields.extra_arg = (intptr_t)sub_1B10098;
 }
 
 
@@ -1288,14 +1295,14 @@ System_IAsyncResult_o *MaterialCollectionMenu_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4D2BA44 & 1) == 0 )
+  if ( (byte_4DFFA63 & 1) == 0 )
   {
-    sub_1C93AD4(&MaterialCollectionMenu_ResultKind_TypeInfo);
-    byte_4D2BA44 = 1;
+    sub_1CE6700(&MaterialCollectionMenu_ResultKind_TypeInfo);
+    byte_4DFFA63 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(MaterialCollectionMenu_ResultKind_TypeInfo, &v10);
-  return sub_1C93A88(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
 }
 
 
@@ -1304,7 +1311,7 @@ void MaterialCollectionMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C93A8C(result, 0, method);
+  sub_1CE66B8(result, 0, method);
 }
 
 

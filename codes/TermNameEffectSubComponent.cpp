@@ -1,6 +1,6 @@
 void TermNameEffectSubComponent___ctor(TermNameEffectSubComponent_o *this, const MethodInfo *method)
 {
-  EffectSubComponent___ctor((EffectSubComponent_o *)this, 0);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
@@ -18,13 +18,13 @@ void TermNameEffectSubComponent__RecvParam(
   int32_t v11; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D320A2 & 1) == 0 )
+  if ( (byte_4E060EA & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1C93AD4(&RaceResultEffectParam_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D320A2 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_1CE6700(&RaceResultEffectParam_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E060EA = 1;
   }
   entity = 0;
   if ( param )
@@ -43,12 +43,12 @@ void TermNameEffectSubComponent__RecvParam(
           {
             v10 = *((_DWORD *)monitor + 8);
             v11 = *((_DWORD *)monitor + 10);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventRaceMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventRaceMaster__TryGetEntity(
@@ -69,7 +69,7 @@ void TermNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1C93D2C(Instance, param);
+              sub_1CE6958(Instance, param);
             }
           }
         }

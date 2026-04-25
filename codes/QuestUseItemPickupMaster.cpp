@@ -1,14 +1,14 @@
 void QuestUseItemPickupMaster___ctor(QuestUseItemPickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D311BB & 1) == 0 )
+  if ( (byte_4E05202 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataMasterBase_QuestUseItemPickupMaster__QuestUseItemPickupEntity__int___ctor__);
-    byte_4D311BB = 1;
+    sub_1CE6700(&Method_DataMasterBase_QuestUseItemPickupMaster__QuestUseItemPickupEntity__int___ctor__);
+    byte_4E05202 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     538,
-    (const MethodInfo_3460CFC *)Method_DataMasterBase_QuestUseItemPickupMaster__QuestUseItemPickupEntity__int___ctor__);
+    (const MethodInfo_34E6CE4 *)Method_DataMasterBase_QuestUseItemPickupMaster__QuestUseItemPickupEntity__int___ctor__);
 }
 
 
@@ -28,33 +28,33 @@ int32_t QuestUseItemPickupMaster__TryGetPriority(
   intptr_t *v15; // x8
   Il2CppObject *v16; // x0
 
-  if ( (byte_4D311BA & 1) == 0 )
+  if ( (byte_4E05201 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Linq_Enumerable_FirstOrDefault_QuestUseItemPickupEntity___);
-    sub_1C93AD4(&System_Func_QuestUseItemPickupEntity__bool__TypeInfo);
-    sub_1C93AD4(&Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__0__);
-    sub_1C93AD4(&Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__1__);
-    sub_1C93AD4(&QuestUseItemPickupMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4D311BA = 1;
+    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_QuestUseItemPickupEntity___);
+    sub_1CE6700(&System_Func_QuestUseItemPickupEntity__bool__TypeInfo);
+    sub_1CE6700(&Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__0__);
+    sub_1CE6700(&Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__1__);
+    sub_1CE6700(&QuestUseItemPickupMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4E05201 = 1;
   }
-  v9 = sub_1C93D20(QuestUseItemPickupMaster___c__DisplayClass0_0_TypeInfo);
+  v9 = sub_1CE694C(QuestUseItemPickupMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C93D2C(v10, v11);
+    sub_1CE6958(v10, v11);
   *(_DWORD *)(v9 + 16) = groupId;
   *(_DWORD *)(v9 + 20) = itemId;
   list = this->fields.list;
-  v13 = (System_Func_object__bool__o *)sub_1C93D20(System_Func_QuestUseItemPickupEntity__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_QuestUseItemPickupEntity__bool__TypeInfo);
   v14 = (System_Func_TSource__bool__o *)v13;
   if ( groupId )
     v15 = &Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__0__;
   else
     v15 = &Method_QuestUseItemPickupMaster___c__DisplayClass0_0__TryGetPriority_b__1__;
   System_Func_object__bool____ctor(v13, (Il2CppObject *)v9, *v15, 0);
-  v16 = System_Linq_Enumerable__FirstOrDefault_object__52221724(
+  v16 = System_Linq_Enumerable__FirstOrDefault_object__52613440(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           v14,
-          (const MethodInfo_31CD71C *)Method_System_Linq_Enumerable_FirstOrDefault_QuestUseItemPickupEntity___);
+          (const MethodInfo_322D140 *)Method_System_Linq_Enumerable_FirstOrDefault_QuestUseItemPickupEntity___);
   if ( v16 )
     return (int32_t)v16[3].klass;
   return defaultValue;
@@ -75,7 +75,7 @@ bool QuestUseItemPickupMaster___c__DisplayClass0_0___TryGetPriority_b__0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return e->fields.groupId == this->fields.groupId && QuestUseItemPickupEntity__IsOpen(e, 0, method);
 }
 
@@ -86,6 +86,6 @@ bool QuestUseItemPickupMaster___c__DisplayClass0_0___TryGetPriority_b__1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C93D2C(this, 0);
+    sub_1CE6958(this, 0);
   return e->fields.itemId == this->fields.itemId && QuestUseItemPickupEntity__IsOpen(e, 0, method);
 }

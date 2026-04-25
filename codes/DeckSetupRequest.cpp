@@ -27,26 +27,26 @@ void DeckSetupRequest__beginRequest(
   System_Byte_array *v21; // x20
   System_String_o *v22; // x0
 
-  if ( (byte_4D324BA & 1) == 0 )
+  if ( (byte_4E06503 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Convert_TypeInfo);
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UserDeckEntity__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_UserDeckEntity__TypeInfo);
-    sub_1C93AD4(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_1C93AD4(&StringLiteral_16766/*"activeDeckId"*/);
-    sub_1C93AD4(&StringLiteral_24826/*"userDeck"*/);
-    byte_4D324BA = 1;
+    sub_1CE6700(&System_Convert_TypeInfo);
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UserDeckEntity__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+    sub_1CE6700(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_1CE6700(&StringLiteral_16818/*"activeDeckId"*/);
+    sub_1CE6700(&StringLiteral_24914/*"userDeck"*/);
+    byte_4E06503 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson((Il2CppObject *)userDeck, 0, 0, 0);
-  RequestBase__addField_44911784((RequestBase_o *)this, (System_String_o *)StringLiteral_16766/*"activeDeckId"*/, activeDeckId, 0);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+  RequestBase__addField_45375920((RequestBase_o *)this, (System_String_o *)StringLiteral_16818/*"activeDeckId"*/, activeDeckId, 0);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
   if ( !v7 )
     goto LABEL_14;
   items = v7->fields._items;
@@ -60,35 +60,35 @@ void DeckSetupRequest__beginRequest(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)userDeck,
-      *(const MethodInfo_387999C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v19[4] = (Il2CppClass *)userDeck;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)userDeck, v10, v11, v12, v13, v14, v15);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)userDeck, v10, v11, v12, v13, v14, v15);
   }
-  v20 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C93D20(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v20 = (MiniMessagePack_MiniMessagePacker_o *)sub_1CE694C(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v20, 0);
   if ( !v20 )
 LABEL_14:
-    sub_1C93D2C(v8, v9);
+    sub_1CE6958(v8, v9);
   v21 = MiniMessagePack_MiniMessagePacker__PackClass(v20, (Il2CppObject *)v7, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v22 = System_Convert__ToBase64String(v21, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_24826/*"userDeck"*/, v22, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_24914/*"userDeck"*/, v22, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *DeckSetupRequest__getMockData(DeckSetupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D324B9 & 1) == 0 )
+  if ( (byte_4E06502 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D324B9 = 1;
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E06502 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -98,16 +98,16 @@ System_String_o *DeckSetupRequest__getURL(DeckSetupRequest_o *this, const Method
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D324B8 & 1) == 0 )
+  if ( (byte_4E06501 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_18681/*"deck/setup"*/);
-    byte_4D324B8 = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_18741/*"deck/setup"*/);
+    byte_4E06501 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_18681/*"deck/setup"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_18741/*"deck/setup"*/, 0);
 }
 
 
@@ -119,19 +119,19 @@ void DeckSetupRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4D324BB & 1) == 0 )
+  if ( (byte_4E06504 & 1) == 0 )
   {
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D324BB = 1;
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E06504 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(7, responseList, 0);
-  if ( v5 && ResponseData__checkError_44908744(v5, 0) )
-    v6 = &StringLiteral_22655/*"ok"*/;
+  if ( v5 && ResponseData__checkError_45365352(v5, 0) )
+    v6 = &StringLiteral_22728/*"ok"*/;
   else
-    v6 = &StringLiteral_22483/*"ng"*/;
+    v6 = &StringLiteral_22555/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

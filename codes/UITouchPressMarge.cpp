@@ -24,7 +24,7 @@ void UITouchPressMarge__OnHover(UITouchPressMarge_o *this, bool isSelect, const 
       return;
     }
 LABEL_9:
-    sub_1C93D2C(margeComponent, isSelect);
+    sub_1CE6958(margeComponent, isSelect);
   }
 }
 
@@ -48,6 +48,6 @@ void UITouchPressMarge__OnPress(UITouchPressMarge_o *this, bool isPressed, const
       return;
     }
 LABEL_7:
-    sub_1C93D2C(margeComponent, isPressed);
+    sub_1CE6958(margeComponent, isPressed);
   }
 }

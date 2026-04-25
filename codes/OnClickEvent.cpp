@@ -3,24 +3,24 @@ void OnClickEvent___ctor(OnClickEvent_o *this, const MethodInfo *method)
   System_Collections_Generic_List_object__o *v3; // x20
   System_Collections_Generic_List_object__o *v4; // x20
 
-  if ( (byte_4D2A9B9 & 1) == 0 )
+  if ( (byte_4DFE9DB & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4D2A9B9 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4DFE9DB = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSingleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C93A78(&this->fields.onSingleClick, v3);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1CE66A4(&this->fields.onSingleClick, v3);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v4;
-  sub_1C93A78(&this->fields.onDoubleClick, v4);
+  sub_1CE66A4(&this->fields.onDoubleClick, v4);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -39,10 +39,10 @@ void OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_EventDelegate__o *onDoubleClick; // x19
 
-  if ( (byte_4D2A9B8 & 1) == 0 )
+  if ( (byte_4DFE9DA & 1) == 0 )
   {
-    sub_1C93AD4(&EventDelegate_TypeInfo);
-    byte_4D2A9B8 = 1;
+    sub_1CE6700(&EventDelegate_TypeInfo);
+    byte_4DFE9DA = 1;
   }
   if ( this->fields.clickFlag )
   {
@@ -51,7 +51,7 @@ void OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodInfo *method)
     onDoubleClick = this->fields.onDoubleClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49943632(onDoubleClick, 0);
+    EventDelegate__Execute_50327612(onDoubleClick, 0);
   }
 }
 
@@ -67,17 +67,17 @@ void OnClickEvent__Update(OnClickEvent_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_EventDelegate__o *onSingleClick; // x20
 
-  if ( (byte_4D2A9B7 & 1) == 0 )
+  if ( (byte_4DFE9D9 & 1) == 0 )
   {
-    sub_1C93AD4(&EventDelegate_TypeInfo);
-    byte_4D2A9B7 = 1;
+    sub_1CE6700(&EventDelegate_TypeInfo);
+    byte_4DFE9D9 = 1;
   }
   if ( this->fields.clickFlag && UnityEngine_Time__get_time(0) > (float)(this->fields.clickTime + 0.36) )
   {
     onSingleClick = this->fields.onSingleClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49943632(onSingleClick, 0);
+    EventDelegate__Execute_50327612(onSingleClick, 0);
     this->fields.clickFlag = 0;
     this->fields.clickTime = -1.0;
   }

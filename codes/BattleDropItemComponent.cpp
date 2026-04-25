@@ -1,9 +1,9 @@
 void BattleDropItemComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D3346B & 1) == 0 )
+  if ( (byte_4E074DF & 1) == 0 )
   {
-    sub_1C93AD4(&BattleDropItemComponent_TypeInfo);
-    byte_4D3346B = 1;
+    sub_1CE6700(&BattleDropItemComponent_TypeInfo);
+    byte_4E074DF = 1;
   }
   LODWORD(BattleDropItemComponent_TypeInfo->static_fields->PossessionLabelWidth) = (struct BattleDropItemComponent_StaticFields)1118306304;
 }
@@ -63,7 +63,7 @@ LABEL_13:
       return;
     }
 LABEL_16:
-    sub_1C93D2C(IsServant, itemData);
+    sub_1CE6958(IsServant, itemData);
   }
 }
 
@@ -87,13 +87,13 @@ void BattleDropItemComponent__Set(BattleDropItemComponent_o *this, BattleDropIte
   const MethodInfo *v19; // x2
   bool v20; // w1
 
-  if ( (byte_4D33460 & 1) == 0 )
+  if ( (byte_4E074D4 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33460 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074D4 = 1;
   }
   this->fields.itemData = indata;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemData,
     (int32_t)indata,
     (int32_t)method,
@@ -174,7 +174,7 @@ LABEL_28:
       }
     }
 LABEL_30:
-    sub_1C93D2C(gameObject, v11);
+    sub_1CE6958(gameObject, v11);
   }
 }
 
@@ -187,10 +187,10 @@ void BattleDropItemComponent__SetAutoSellItem(BattleDropItemComponent_o *this, c
   struct BattleDropItem_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4D33465 & 1) == 0 )
+  if ( (byte_4E074D9 & 1) == 0 )
   {
-    this = (BattleDropItemComponent_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33465 = 1;
+    this = (BattleDropItemComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074D9 = 1;
   }
   itemData = v2->fields.itemData;
   if ( !itemData )
@@ -226,7 +226,7 @@ LABEL_13:
       }
     }
 LABEL_15:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
 }
 
@@ -243,7 +243,7 @@ void BattleDropItemComponent__SetCallBack(
   System_String_o *v7; // x7
 
   this->fields.callbackFunc = call;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)call,
     (int32_t)method,
@@ -301,7 +301,7 @@ void BattleDropItemComponent__SetCommandCode(BattleDropItemComponent_o *this, co
     || (item = (ItemIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)item, 0)) == 0 )
   {
 LABEL_13:
-    sub_1C93D2C(item, method);
+    sub_1CE6958(item, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)item, 1, 0);
 }
@@ -318,12 +318,12 @@ void BattleDropItemComponent__SetEventPointBuff(BattleDropItemComponent_o *this,
   void *servant; // x0
   struct BattleDropItem_o *itemData; // x8
 
-  if ( (byte_4D33464 & 1) == 0 )
+  if ( (byte_4E074D8 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_EventPointBuffMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D33464 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_EventPointBuffMaster___);
+    sub_1CE6700(&Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E074D8 = 1;
   }
   servant = this->fields.servant;
   if ( !servant )
@@ -336,17 +336,17 @@ void BattleDropItemComponent__SetEventPointBuff(BattleDropItemComponent_o *this,
   if ( !servant )
     goto LABEL_14;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servant, 0, 0);
-  servant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  servant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !servant
     || (servant = DataManager__GetMasterData_object_(
                     (DataManager_o *)servant,
-                    (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_EventPointBuffMaster___),
+                    (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventPointBuffMaster___),
         (itemData = this->fields.itemData) == 0)
     || !servant
     || (servant = DataMasterBase_object__object__int___GetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)servant,
                     itemData->fields.objectId,
-                    (const MethodInfo_3463274 *)Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__)) == 0
+                    (const MethodInfo_34E925C *)Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__)) == 0
     || !this->fields.item
     || (ItemIconComponent__SetEventPointBuffImage(
           (ItemIconComponent_o *)this->fields.item,
@@ -357,7 +357,7 @@ void BattleDropItemComponent__SetEventPointBuff(BattleDropItemComponent_o *this,
     || (servant = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servant, 0)) == 0 )
   {
 LABEL_14:
-    sub_1C93D2C(servant, method);
+    sub_1CE6958(servant, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servant, 1, 0);
 }
@@ -379,12 +379,12 @@ void BattleDropItemComponent__SetItem(BattleDropItemComponent_o *this, const Met
   int32_t v14; // w2
   int32_t v15; // w8
 
-  if ( (byte_4D33463 & 1) == 0 )
+  if ( (byte_4E074D7 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4D33463 = 1;
+    sub_1CE6700(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1CE6700(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E074D7 = 1;
   }
   servant = (ServantFaceIconComponent_o *)this->fields.servant;
   if ( !servant )
@@ -443,12 +443,12 @@ void BattleDropItemComponent__SetItem(BattleDropItemComponent_o *this, const Met
     }
     if ( v10 - v9 >= 1 )
     {
-      servant = (ServantFaceIconComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      servant = (ServantFaceIconComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( servant )
       {
         servant = (ServantFaceIconComponent_o *)DataManager__GetMasterData_object_(
                                                   (DataManager_o *)servant,
-                                                  (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                  (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ItemMaster___);
         v11 = this->fields.itemData;
         if ( v11 )
         {
@@ -457,7 +457,7 @@ void BattleDropItemComponent__SetItem(BattleDropItemComponent_o *this, const Met
             servant = (ServantFaceIconComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                                       (DataMasterBase_TMaster__TEntity__PKType__o *)servant,
                                                       v11->fields.objectId,
-                                                      (const MethodInfo_3463274 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                                      (const MethodInfo_34E925C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
             if ( servant )
             {
               v12 = this->fields.itemData;
@@ -489,7 +489,7 @@ void BattleDropItemComponent__SetItem(BattleDropItemComponent_o *this, const Met
         }
       }
 LABEL_33:
-      sub_1C93D2C(servant, method);
+      sub_1CE6958(servant, method);
     }
   }
 LABEL_30:
@@ -510,12 +510,12 @@ void BattleDropItemComponent__SetMaterialTd(BattleDropItemComponent_o *this, boo
   UnityEngine_Component_o *gameObject; // x0
   UISprite_o *v8; // x19
 
-  if ( (byte_4D33468 & 1) == 0 )
+  if ( (byte_4E074DC & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_23401/*"ribbon_noblephantasmup_01"*/);
-    byte_4D33468 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_23482/*"ribbon_noblephantasmup_01"*/);
+    byte_4E074DC = 1;
   }
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -526,7 +526,7 @@ void BattleDropItemComponent__SetMaterialTd(BattleDropItemComponent_o *this, boo
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C93D2C(gameObject, v6);
+      sub_1CE6958(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, flg, 0);
     if ( flg )
@@ -534,12 +534,13 @@ void BattleDropItemComponent__SetMaterialTd(BattleDropItemComponent_o *this, boo
       v8 = this->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23401/*"ribbon_noblephantasmup_01"*/, 0);
+      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23482/*"ribbon_noblephantasmup_01"*/, 0);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int32_t num, const MethodInfo *method)
 {
   UILabel_o *possessionLabel; // x20
@@ -552,20 +553,23 @@ void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int
   float PossessionLabelWidth; // s8
   UnityEngine_Transform_o *v12; // x20
   struct UILabel_o *v13; // x8
+  float y; // s1
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   int32_t possessionNum; // [xsp+1Ch] [xbp-24h] BYREF
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D3346A & 1) == 0 )
+  if ( (byte_4E074DE & 1) == 0 )
   {
-    sub_1C93AD4(&BattleDropItemComponent_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&StringLiteral_25376/*"{0:#,0}"*/);
-    byte_4D3346A = 1;
+    sub_1CE6700(&BattleDropItemComponent_TypeInfo);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&StringLiteral_25464/*"{0:#,0}"*/);
+    byte_4E074DE = 1;
   }
   possessionLabel = this->fields.possessionLabel;
   possessionNum = this->fields.possessionNum;
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &possessionNum);
-  transform = (__int64)System_String__Format((System_String_o *)StringLiteral_25376/*"{0:#,0}"*/, v5, 0);
+  transform = (__int64)System_String__Format((System_String_o *)StringLiteral_25464/*"{0:#,0}"*/, v5, 0);
   if ( !possessionLabel )
     goto LABEL_19;
   UILabel__set_text(possessionLabel, (System_String_o *)transform, 0);
@@ -588,18 +592,21 @@ void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int
   v12 = (UnityEngine_Transform_o *)transform;
   if ( PossessionLabelWidth >= v10 )
   {
-    if ( !byte_4D2A13E )
+    if ( !byte_4DFE0AE )
     {
-      transform = sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-      byte_4D2A13E = 1;
+      transform = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+      byte_4DFE0AE = 1;
     }
     if ( v12 )
     {
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+      y = static_fields->oneVector.fields.y;
+      z = static_fields->oneVector.fields.z;
+      x = static_fields->oneVector.fields.x;
       goto LABEL_18;
     }
 LABEL_19:
-    sub_1C93D2C(transform, v7);
+    sub_1CE6958(transform, v7);
   }
   transform = (__int64)BattleDropItemComponent_TypeInfo;
   if ( !BattleDropItemComponent_TypeInfo->_2.cctor_finished )
@@ -607,11 +614,11 @@ LABEL_19:
   v13 = this->fields.possessionLabel;
   if ( !v13 || !v12 )
     goto LABEL_19;
-  oneVector.fields.y = 1.0;
-  oneVector.fields.x = BattleDropItemComponent_TypeInfo->static_fields->PossessionLabelWidth / (float)v13->fields.mWidth;
-  oneVector.fields.z = 1.0;
+  y = 1.0;
+  x = BattleDropItemComponent_TypeInfo->static_fields->PossessionLabelWidth / (float)v13->fields.mWidth;
+  z = 1.0;
 LABEL_18:
-  UnityEngine_Transform__set_localScale(v12, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v12, *(UnityEngine_Vector3_o *)&x, 0);
 }
 
 
@@ -624,12 +631,12 @@ void BattleDropItemComponent__SetServant(BattleDropItemComponent_o *this, const 
   bool IsMaterialTd; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D33462 & 1) == 0 )
+  if ( (byte_4E074D6 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    byte_4D33462 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    byte_4E074D6 = 1;
   }
   entity = 0;
   item = (ItemIconComponent_o *)this->fields.item;
@@ -663,7 +670,7 @@ void BattleDropItemComponent__SetServant(BattleDropItemComponent_o *this, const 
   {
     if ( !item )
       goto LABEL_23;
-    BattleServantFaceIconComponent__SetSvtDrop_41571700(
+    BattleServantFaceIconComponent__SetSvtDrop_41996172(
       (BattleServantFaceIconComponent_o *)item,
       (int64_t)method,
       0,
@@ -680,7 +687,7 @@ void BattleDropItemComponent__SetServant(BattleDropItemComponent_o *this, const 
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)item, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  item = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_UserServantMaster___);
+  item = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserServantMaster___);
   v5 = this->fields.itemData;
   if ( !v5 || !item )
     goto LABEL_23;
@@ -688,7 +695,7 @@ void BattleDropItemComponent__SetServant(BattleDropItemComponent_o *this, const 
           (DataMasterBase_TMaster__TEntity__PKType__o *)item,
           &entity,
           v5->fields.userSvtId,
-          (const MethodInfo_3465A70 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+          (const MethodInfo_34EBA58 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
     IsMaterialTd = 0;
     goto LABEL_22;
@@ -696,7 +703,7 @@ void BattleDropItemComponent__SetServant(BattleDropItemComponent_o *this, const 
   item = (ItemIconComponent_o *)entity;
   if ( !entity )
 LABEL_23:
-    sub_1C93D2C(item, method);
+    sub_1CE6958(item, method);
   IsMaterialTd = UserServantEntity__IsMaterialTd((UserServantEntity_o *)entity, 0);
 LABEL_22:
   BattleDropItemComponent__SetMaterialTd(this, IsMaterialTd, v6);
@@ -709,18 +716,18 @@ void BattleDropItemComponent__SetTouch(BattleDropItemComponent_o *this, bool flg
   __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4D3345F & 1) == 0 )
+  if ( (byte_4E074D3 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3345F = 1;
+    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074D3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_31FC084 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -735,13 +742,13 @@ void BattleDropItemComponent__SetTouch(BattleDropItemComponent_o *this, bool flg
       return;
     }
 LABEL_10:
-    sub_1C93D2C(gameObject, v6);
+    sub_1CE6958(gameObject, v6);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void BattleDropItemComponent__Set_46745208(
+void BattleDropItemComponent__Set_47194980(
         BattleDropItemComponent_o *this,
         BattleDropItem_o *indata,
         int32_t possessionNum,
@@ -759,7 +766,7 @@ void BattleDropItemComponent__Show(BattleDropItemComponent_o *this, const Method
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C93D2C(0, v3);
+    sub_1CE6958(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
 
@@ -783,12 +790,12 @@ void BattleDropItemComponent__ShowAcquisitionUp(
   int32_t result; // [xsp+8h] [xbp-28h] BYREF
   float v17[9]; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D33461 & 1) == 0 )
+  if ( (byte_4E074D5 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3147/*"Battle_RESULT_ITEM_DROPUP"*/);
-    byte_4D33461 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_3152/*"Battle_RESULT_ITEM_DROPUP"*/);
+    byte_4E074D5 = 1;
   }
   AcquisitionUpObj = (UnityEngine_Object_o *)this->fields.AcquisitionUpObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -818,11 +825,11 @@ void BattleDropItemComponent__ShowAcquisitionUp(
       v14 = v13;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3147/*"Battle_RESULT_ITEM_DROPUP"*/, 0);
-      v7 = (UnityEngine_GameObject_o *)System_String__Concat_64425724(v14, v15, 0);
+      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3152/*"Battle_RESULT_ITEM_DROPUP"*/, 0);
+      v7 = (UnityEngine_GameObject_o *)System_String__Concat_65122828(v14, v15, 0);
       if ( !v12 )
 LABEL_20:
-        sub_1C93D2C(v7, v8);
+        sub_1CE6958(v7, v8);
       UILabel__set_text(v12, (System_String_o *)v7, 0);
     }
   }
@@ -835,10 +842,10 @@ void BattleDropItemComponent__ShowAutoSellItem(BattleDropItemComponent_o *this, 
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4D33466 & 1) == 0 )
+  if ( (byte_4E074DA & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33466 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074DA = 1;
   }
   autoSellInfo = (UnityEngine_Object_o *)this->fields.autoSellInfo;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -849,7 +856,7 @@ void BattleDropItemComponent__ShowAutoSellItem(BattleDropItemComponent_o *this, 
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C93D2C(gameObject, v4);
+      sub_1CE6958(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
   }
@@ -897,7 +904,7 @@ void BattleDropItemComponent__ShowDropNum(BattleDropItemComponent_o *this, const
   back = (UnityEngine_Component_o *)this->fields.servant;
   if ( !back || (back = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(back, 0)) == 0 )
 LABEL_19:
-    sub_1C93D2C(back, method);
+    sub_1CE6958(back, method);
   if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)back, 0) )
   {
     back = (UnityEngine_Component_o *)this->fields.servant;
@@ -923,10 +930,10 @@ void BattleDropItemComponent__ShowPossessionNum(BattleDropItemComponent_o *this,
   UnityEngine_Object_o *AcquisitionUpObj; // x20
 
   v2 = this;
-  if ( (byte_4D33469 & 1) == 0 )
+  if ( (byte_4E074DD & 1) == 0 )
   {
-    this = (BattleDropItemComponent_o *)sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33469 = 1;
+    this = (BattleDropItemComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074DD = 1;
   }
   itemData = v2->fields.itemData;
   if ( !itemData )
@@ -979,7 +986,7 @@ void BattleDropItemComponent__ShowPossessionNum(BattleDropItemComponent_o *this,
     || (this = (BattleDropItemComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
   {
 LABEL_31:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)this, 0) )
   {
@@ -1010,10 +1017,10 @@ void BattleDropItemComponent__setRateUp(BattleDropItemComponent_o *this, bool fl
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4D33467 & 1) == 0 )
+  if ( (byte_4E074DB & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D33467 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E074DB = 1;
   }
   additemflg = (UnityEngine_Object_o *)this->fields.additemflg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1022,7 +1029,7 @@ void BattleDropItemComponent__setRateUp(BattleDropItemComponent_o *this, bool fl
   {
     v7 = this->fields.additemflg;
     if ( !v7 )
-      sub_1C93D2C(0, v6);
+      sub_1CE6958(0, v6);
     UnityEngine_GameObject__SetActive(v7, flg, 0);
   }
 }
@@ -1050,7 +1057,7 @@ void BattleDropItemComponent_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1061,11 +1068,11 @@ void BattleDropItemComponent_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C93B94(method) & 1) != 0 )
+  if ( (sub_1CE67C0(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1ACB554;
+      v13 = sub_1B1A304;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -1077,41 +1084,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1C93B8C(method);
-        v16 = sub_1C94120(method);
+        v15 = sub_1CE67B8(method);
+        v16 = sub_1CE6D4C(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1ACB650;
+            v13 = sub_1B1A400;
           else
-            v13 = sub_1ACB614;
+            v13 = sub_1B1A3C4;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1ACB590;
+          v13 = sub_1B1A340;
         }
         else
         {
-          v13 = sub_1ACB564;
+          v13 = sub_1B1A314;
         }
       }
       else
       {
-        v13 = sub_1ACB534;
+        v13 = sub_1B1A2E4;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C93D48(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C93BFC(v17, 0);
+      v17 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1CE6828(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1ACB4EC;
+  this->fields.extra_arg = (intptr_t)sub_1B1A29C;
 }
 
 
@@ -1125,7 +1132,7 @@ System_IAsyncResult_o *BattleDropItemComponent_ClickDelegate__BeginInvoke(
   BattleDropItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return sub_1C93A88(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v6, callback, object);
 }
 
 
@@ -1134,7 +1141,7 @@ void BattleDropItemComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C93A8C(result, 0, method);
+  sub_1CE66B8(result, 0, method);
 }
 
 

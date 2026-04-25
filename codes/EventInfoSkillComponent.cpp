@@ -15,22 +15,22 @@ void EventInfoSkillComponent__CreateEventInfoSkillDialog(
   Il2CppObject *v8; // x21
   const MethodInfo *v9; // x4
 
-  if ( (byte_4D327F9 & 1) == 0 )
+  if ( (byte_4E06710 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D327F9 = 1;
+    sub_1CE6700(&Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E06710 = 1;
   }
   eventInfoSkillDialogPrefab = this->fields.eventInfoSkillDialogPrefab;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   v8 = GameObjectHelper__Instantiate_object_(
          eventInfoSkillDialogPrefab,
          (UnityEngine_Transform_o *)Instance[7].monitor,
          0,
-         (const MethodInfo_31FDCA8 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
+         (const MethodInfo_325DA60 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (Il2CppObject *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v8, 0, 0);
@@ -41,7 +41,7 @@ void EventInfoSkillComponent__CreateEventInfoSkillDialog(
   }
   if ( !v8 )
 LABEL_10:
-    sub_1C93D2C(Instance, v7);
+    sub_1CE6958(Instance, v7);
   EventInfoSkillDialog__Open(
     (EventInfoSkillDialog_o *)v8,
     this->fields.imagePartsGroupId,
@@ -75,23 +75,23 @@ void EventInfoSkillComponent__Initialization(
   System_Action_o *v21; // x22
   const MethodInfo *v22; // x3
 
-  if ( (byte_4D327F7 & 1) == 0 )
+  if ( (byte_4E0670E & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoSkillComponent___c__DisplayClass3_0__Initialization_b__0__);
-    sub_1C93AD4(&EventInfoSkillComponent___c__DisplayClass3_0_TypeInfo);
-    byte_4D327F7 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillComponent___c__DisplayClass3_0__Initialization_b__0__);
+    sub_1CE6700(&EventInfoSkillComponent___c__DisplayClass3_0_TypeInfo);
+    byte_4E0670E = 1;
   }
-  v5 = sub_1C93D20(EventInfoSkillComponent___c__DisplayClass3_0_TypeInfo);
+  v5 = sub_1CE694C(EventInfoSkillComponent___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = eventUiEntity;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)eventUiEntity, v14, v15, v16, v17, v18, v19);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)eventUiEntity, v14, v15, v16, v17, v18, v19);
   v20 = *(EventUiEntity_o **)(v5 + 24);
-  v21 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -116,12 +116,12 @@ void EventInfoSkillComponent__OnClick(EventInfoSkillComponent_o *this, const Met
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4D327F8 & 1) == 0 )
+  if ( (byte_4E0670F & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoSkillComponent_OnClick__);
-    sub_1C93AD4(&Method_EventInfoSkillComponent__OnClick_b__6_0__);
-    byte_4D327F8 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoSkillComponent_OnClick__);
+    sub_1CE6700(&Method_EventInfoSkillComponent__OnClick_b__6_0__);
+    byte_4E0670F = 1;
   }
   v3 = (EventInfoSkillComponent_o *)((__int64 (__fastcall *)(EventInfoSkillComponent_o *, const MethodInfo *))this->klass->vtable._17_IsBusy.methodPtr)(
                                       this,
@@ -132,10 +132,10 @@ void EventInfoSkillComponent__OnClick(EventInfoSkillComponent_o *this, const Met
     EventInfoSkillComponent__SetTerminalTouchEnable(v3, 0, v4);
     v5 = Method_EventInfoSkillComponent_OnClick__;
     if ( (*((_BYTE *)Method_EventInfoSkillComponent_OnClick__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C93AEC(Method_EventInfoSkillComponent_OnClick__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v5, v5[4]);
+      v5 = (_QWORD *)sub_1CE6718(Method_EventInfoSkillComponent_OnClick__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-    v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoSkillComponent__OnClick_b__6_0__, 0);
     EventInfoSkillComponent__CreateEventInfoSkillDialog(this, v7, v8);
   }
@@ -153,18 +153,18 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
   TitleInfoControl_o *genericContainerHandle; // x0
   System_String_c *klass; // x8
 
-  if ( (byte_4D327FA & 1) == 0 )
+  if ( (byte_4E06711 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&TerminalSceneComponent_TypeInfo);
-    byte_4D327FA = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&TerminalSceneComponent_TypeInfo);
+    byte_4E06711 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4D2A6EE )
+  if ( !byte_4DFE666 )
   {
-    sub_1C93AD4(&TerminalSceneComponent_TypeInfo);
-    byte_4D2A6EE = 1;
+    sub_1CE6700(&TerminalSceneComponent_TypeInfo);
+    byte_4DFE666 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -179,10 +179,10 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4D2A6EE )
+    if ( !byte_4DFE666 )
     {
-      sub_1C93AD4(&TerminalSceneComponent_TypeInfo);
-      byte_4D2A6EE = 1;
+      sub_1CE6700(&TerminalSceneComponent_TypeInfo);
+      byte_4DFE666 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -192,7 +192,7 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
     }
     klass = genericContainerHandle->fields.particleAssetName->klass;
     if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0 )
-      sub_1C93D2C(genericContainerHandle, v6);
+      sub_1CE6958(genericContainerHandle, v6);
     TitleInfoControl__SetTouchEnable(genericContainerHandle, enable, 0);
   }
 }
@@ -224,6 +224,6 @@ void EventInfoSkillComponent___c__DisplayClass3_0___Initialization_b__0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity || (this = (EventInfoSkillComponent___c__DisplayClass3_0_o *)this->fields.__4__this) == 0 )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, v2);
 }

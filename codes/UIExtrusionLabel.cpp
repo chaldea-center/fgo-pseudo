@@ -1,9 +1,9 @@
 void UIExtrusionLabel___ctor(UIExtrusionLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D3221B & 1) == 0 )
+  if ( (byte_4E06264 & 1) == 0 )
   {
-    sub_1C93AD4(&UILabel_TypeInfo);
-    byte_4D3221B = 1;
+    sub_1CE6700(&UILabel_TypeInfo);
+    byte_4E06264 = 1;
   }
   this->fields.extrusionBlankSize = 2;
   if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -26,14 +26,16 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
   UnityEngine_GameObject_o *transform; // x0
   float v9; // s10
   int32_t mAlignment; // w8
-  float extrusionBlankSize; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  float z; // s9
+  float v13; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4D3221A & 1) == 0 )
+  if ( (byte_4E06263 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D3221A = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E06263 = 1;
   }
   UILabel__set_text((UILabel_o *)this, value, 0);
   extrusionObject = (UnityEngine_Object_o *)this->fields.extrusionObject;
@@ -43,23 +45,30 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
   {
     LODWORD(v7) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)this, 0);
     transform = this->fields.extrusionObject;
+    if ( !transform )
+      goto LABEL_17;
+    v9 = v7;
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
+    if ( !transform )
+      goto LABEL_17;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    mAlignment = this->fields.mAlignment;
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
+    if ( mAlignment == 2 )
+      v13 = (float)(v9 * 0.5) + (float)this->fields.extrusionBlankSize;
+    else
+      v13 = mAlignment == 1 ? v9 + (float)this->fields.extrusionBlankSize : (float)this->fields.extrusionBlankSize;
+    transform = this->fields.extrusionObject;
     if ( !transform
-      || (v9 = v7, (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0)
-      || ((localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
-           mAlignment = this->fields.mAlignment,
-           mAlignment == 2)
-        ? (extrusionBlankSize = (float)(v9 * 0.5) + (float)this->fields.extrusionBlankSize)
-        : mAlignment != 1
-        ? (extrusionBlankSize = (float)this->fields.extrusionBlankSize)
-        : (extrusionBlankSize = v9 + (float)this->fields.extrusionBlankSize),
-          (transform = this->fields.extrusionObject) == 0
-       || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0) )
+      || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
     {
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C93D2C)(transform, v6);
+LABEL_17:
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1CE6958)(transform, v6);
     }
-    v13.fields.y = localPosition.fields.y;
-    v13.fields.z = localPosition.fields.z;
-    v13.fields.x = extrusionBlankSize;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v13, 0);
+    v15.fields.y = y;
+    v15.fields.z = z;
+    v15.fields.x = v13;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v15, 0);
   }
 }

@@ -2,8 +2,8 @@ void __noreturn CloseNLSocket()
 {
   __int64 v0; // x0
 
-  v0 = sub_1CD12B0(
+  v0 = sub_1D23EDC(
          "/Applications/Unity/Hub/Editor/2022.3.62f2/Unity.app/Contents/il2cpp/libil2cpp/mono/MonoPosixHelper.cpp(291) : "
          "Unsupported internal call for IL2CPP:CloseNLSocket - Not implemented");
-  sub_1CD0020(v0, 0);
+  sub_1D22C4C(v0, 0);
 }

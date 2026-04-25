@@ -17,21 +17,21 @@ void EventInfoRaidRemainingCounter__AddCountDataForQAA(EventInfoRaidRemainingCou
   System_Action_o *v8; // x20
   System_Collections_IEnumerator_o *v9; // x1
 
-  if ( (byte_4D31E6A & 1) == 0 )
+  if ( (byte_4E05EA1 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoRaidRemainingCounter__AddCountDataForQAA_b__48_0__);
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D31E6A = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoRaidRemainingCounter__AddCountDataForQAA_b__46_0__);
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4E05EA1 = 1;
   }
   if ( this->fields.eventUiEntity )
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4D2D4CA )
+    if ( !byte_4E01501 )
     {
-      sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-      byte_4D2D4CA = 1;
+      sub_1CE6700(&TerminalPramsManager_TypeInfo);
+      byte_4E01501 = 1;
     }
     v3 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -44,10 +44,10 @@ void EventInfoRaidRemainingCounter__AddCountDataForQAA(EventInfoRaidRemainingCou
     {
       if ( !v3->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v3);
-      if ( !byte_4D2D4CA )
+      if ( !byte_4E01501 )
       {
-        sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-        byte_4D2D4CA = 1;
+        sub_1CE6700(&TerminalPramsManager_TypeInfo);
+        byte_4E01501 = 1;
       }
       v5 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -57,60 +57,18 @@ void EventInfoRaidRemainingCounter__AddCountDataForQAA(EventInfoRaidRemainingCou
       }
       v6 = v5->static_fields->_RemainingRaidHpData_k__BackingField;
       if ( !v6 )
-        sub_1C93D2C(v5, method);
+        sub_1CE6958(v5, method);
       v6->fields.isAddDataForQAA = 0;
       qaaDelayDisplaySecond = this->fields.qaaDelayDisplaySecond;
-      v8 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
       System_Action___ctor(
         v8,
         (Il2CppObject *)this,
-        Method_EventInfoRaidRemainingCounter__AddCountDataForQAA_b__48_0__,
+        Method_EventInfoRaidRemainingCounter__AddCountDataForQAA_b__46_0__,
         0);
       v9 = BasicHelper__DelayCall(qaaDelayDisplaySecond, v8, 1, 0);
-      UnityEngine_MonoBehaviour__StartCoroutine_72105100((UnityEngine_MonoBehaviour_o *)this, v9, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_72903732((UnityEngine_MonoBehaviour_o *)this, v9, 0);
     }
-  }
-}
-
-
-int64_t EventInfoRaidRemainingCounter__CalcNextPhaseTarget(
-        EventInfoRaidRemainingCounter_o *this,
-        const MethodInfo *method)
-{
-  int64_t perSplitStep; // x8
-  int32_t splitNum; // w9
-  bool v4; // vf
-  int32_t v5; // w9
-  int64_t lastKnownAfter; // x9
-  bool v7; // nf
-  int64_t v8; // x8
-
-  perSplitStep = this->fields.perSplitStep;
-  if ( !perSplitStep )
-    return this->fields.lastKnownAfter;
-  splitNum = this->fields.splitNum;
-  v4 = __OFSUB__(splitNum, 1);
-  v5 = splitNum - 1;
-  if ( v5 < 0 != v4 || this->fields.splitPhaseCount >= v5 )
-    return this->fields.lastKnownAfter;
-  lastKnownAfter = this->fields.lastKnownAfter;
-  v4 = __OFSUB__(perSplitStep, 1);
-  v7 = perSplitStep - 1 < 0;
-  v8 = this->fields.currentDisplay - perSplitStep;
-  if ( v7 != v4 )
-  {
-    if ( v8 >= lastKnownAfter )
-      return v8;
-    else
-      return this->fields.lastKnownAfter;
-  }
-  else if ( v8 <= lastKnownAfter )
-  {
-    return v8;
-  }
-  else
-  {
-    return this->fields.lastKnownAfter;
   }
 }
 
@@ -124,14 +82,10 @@ bool EventInfoRaidRemainingCounter__DetectExternalValueChange(
   const MethodInfo *v5; // x1
   EventInfoRemainingRaidHpData_o *v6; // x8
   float v7; // s0
-  int64_t currentDisplay; // x20
   float phaseEndRealtime; // s0
+  int64_t currentDisplay; // x20
   __int64 v10; // x8
-  float realtimeSinceStartup; // s0
-  int64_t v12; // x20
-  const MethodInfo *v13; // x1
-  int64_t PhaseTarget; // x0
-  const MethodInfo *v15; // x3
+  const MethodInfo *v11; // x1
   EventInfoRemainingRaidHpData_o *remainingHpData; // [xsp+8h] [xbp-18h] BYREF
 
   remainingHpData = 0;
@@ -145,10 +99,9 @@ bool EventInfoRaidRemainingCounter__DetectExternalValueChange(
     if ( v7 != this->fields.lastSeenUpdateRealtime )
     {
       this->fields.lastSeenUpdateRealtime = v7;
+      phaseEndRealtime = this->fields.phaseEndRealtime;
       currentDisplay = this->fields.currentDisplay;
       *(_OWORD *)&this->fields.lastKnownBefore = *(_OWORD *)((char *)&off_18 + (_QWORD)v6);
-      phaseEndRealtime = this->fields.phaseEndRealtime;
-      this->fields.decreaseEndRealtime = *(float *)((char *)&qword_28 + (_QWORD)v6 + 4);
       if ( phaseEndRealtime <= 0.0 )
         goto LABEL_7;
       if ( UnityEngine_Time__get_realtimeSinceStartup(0) <= this->fields.phaseEndRealtime )
@@ -157,11 +110,8 @@ LABEL_9:
         this->fields.currentDisplay = currentDisplay;
         EventInfoRaidRemainingCounter__RecalculatePerSplitStepForUpdateIntervalPlan(this, v5);
         this->fields.splitPhaseCount = 0;
-        realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
-        v12 = this->fields.currentDisplay;
-        this->fields.nextSplitRealtime = realtimeSinceStartup;
-        PhaseTarget = EventInfoRaidRemainingCounter__CalcNextPhaseTarget(this, v13);
-        EventInfoRaidRemainingCounter__StartSplitPhase(this, v12, PhaseTarget, v15);
+        this->fields.nextSplitRealtime = UnityEngine_Time__get_realtimeSinceStartup(0);
+        EventInfoRaidRemainingCounter__StartSplitPhase(this, v11);
         return 1;
       }
       v6 = remainingHpData;
@@ -174,7 +124,7 @@ LABEL_7:
         goto LABEL_9;
       }
 LABEL_11:
-      sub_1C93D2C(RaidRemainingHpData, v5);
+      sub_1CE6958(RaidRemainingHpData, v5);
     }
   }
   return 0;
@@ -216,27 +166,23 @@ void EventInfoRaidRemainingCounter__Initialization(
   const MethodInfo *v25; // x0
   const MethodInfo *v26; // x1
   const MethodInfo *v27; // x1
-  float realtimeSinceStartup; // s8
+  float realtimeSinceStartup; // s0
   const MethodInfo *v29; // x1
-  float SplitIntervalSeconds; // s0
-  int64_t currentDisplay; // x20
-  const MethodInfo *v32; // x1
-  int64_t PhaseTarget; // x0
-  const MethodInfo *v34; // x3
+  const MethodInfo *v30; // x1
   _BOOL4 isSpot; // w8
   EventInfoRemainingRaidHpData_o *remainingHpData; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D31E61 & 1) == 0 )
+  if ( (byte_4E05E98 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    sub_1C93AD4(&StringLiteral_18441/*"count_bg"*/);
-    sub_1C93AD4(&StringLiteral_18442/*"count_end_bg"*/);
-    byte_4D31E61 = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1CE6700(&StringLiteral_18501/*"count_bg"*/);
+    sub_1CE6700(&StringLiteral_18502/*"count_end_bg"*/);
+    byte_4E05E98 = 1;
   }
   remainingHpData = 0;
   this->fields.eventUiEntity = entity;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (int32_t)method,
@@ -253,7 +199,7 @@ void EventInfoRaidRemainingCounter__Initialization(
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(bgSprite, 0, 0) )
-        EventInfoRaidRemainingCounter__SetupBackGroundSprite(this, (System_String_o *)StringLiteral_18442/*"count_end_bg"*/, v13);
+        EventInfoRaidRemainingCounter__SetupBackGroundSprite(this, (System_String_o *)StringLiteral_18502/*"count_end_bg"*/, v13);
       if ( this->fields.lastDisplayed )
       {
         if ( EventInfoRaidRemainingCounter__TrySetMessageLabels(this, v12) )
@@ -263,7 +209,7 @@ void EventInfoRaidRemainingCounter__Initialization(
   }
   else
   {
-    EventInfoRaidRemainingCounter__SetupBackGroundSprite(this, (System_String_o *)StringLiteral_18441/*"count_bg"*/, v10);
+    EventInfoRaidRemainingCounter__SetupBackGroundSprite(this, (System_String_o *)StringLiteral_18501/*"count_bg"*/, v10);
     v15 = EventInfoRaidRemainingCounter__TrySetMessageLabels(this, v14);
     RaidRemainingHpData = EventInfoRaidRemainingCounter__TryGetRaidRemainingHpData(
                             (EventInfoRaidRemainingCounter_o *)v15,
@@ -285,22 +231,19 @@ void EventInfoRaidRemainingCounter__Initialization(
         v23 = lastPhaseEndDisplay;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v24 = System_Math__Max_65947496((double)v23, (double)afterRemainingRaidHp, 0);
+      v24 = System_Math__Max_66644600((double)v23, (double)afterRemainingRaidHp, 0);
       this->fields.currentDisplay = EventInfoRaidRemainingCounter__SafeRoundToLong(v24, v25);
       EventInfoRaidRemainingCounter__RecalculatePerSplitStep(this, v26);
       this->fields.lastDisplayed = -1;
       EventInfoRaidRemainingCounter__UpdateLabelText(this, v27);
       this->fields.splitPhaseCount = 0;
       realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
-      SplitIntervalSeconds = EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v29);
-      currentDisplay = this->fields.currentDisplay;
-      this->fields.nextSplitRealtime = realtimeSinceStartup + SplitIntervalSeconds;
-      PhaseTarget = EventInfoRaidRemainingCounter__CalcNextPhaseTarget(this, v32);
-      EventInfoRaidRemainingCounter__StartSplitPhase(this, currentDisplay, PhaseTarget, v34);
-      this->fields.decreaseEndRealtime = 0.0;
+      this->fields.nextSplitRealtime = realtimeSinceStartup
+                                     + EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v29);
+      EventInfoRaidRemainingCounter__StartSplitPhase(this, v30);
       if ( !remainingHpData )
 LABEL_23:
-        sub_1C93D2C(RaidRemainingHpData, v18);
+        sub_1CE6958(RaidRemainingHpData, v18);
       isSpot = this->fields.isSpot;
       this->fields.lastSeenUpdateRealtime = remainingHpData->fields.lastUpdateRealtime;
       if ( isSpot )
@@ -335,7 +278,7 @@ void EventInfoRaidRemainingCounter__OnDestroy(EventInfoRaidRemainingCounter_o *t
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0);
 }
@@ -352,10 +295,10 @@ void EventInfoRaidRemainingCounter__RecalculatePerSplitStep(
   __int64 v7; // x9
   int64_t v8; // x8
 
-  if ( (byte_4D31E62 & 1) == 0 )
+  if ( (byte_4E05E99 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    byte_4D31E62 = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    byte_4E05E99 = 1;
   }
   lastKnownBefore = this->fields.lastKnownBefore;
   lastKnownAfter = this->fields.lastKnownAfter;
@@ -409,11 +352,11 @@ void EventInfoRaidRemainingCounter__RecalculatePerSplitStepForUpdateIntervalPlan
   unsigned __int64 v20; // x9
   int64_t v21; // x8
 
-  if ( (byte_4D31E67 & 1) == 0 )
+  if ( (byte_4E05E9E & 1) == 0 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D31E67 = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4E05E9E = 1;
   }
   lastKnownAfter = this->fields.lastKnownAfter;
   currentDisplay = this->fields.currentDisplay;
@@ -427,10 +370,10 @@ void EventInfoRaidRemainingCounter__RecalculatePerSplitStepForUpdateIntervalPlan
     realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4D2D4CA )
+    if ( !byte_4E01501 )
     {
-      sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-      byte_4D2D4CA = 1;
+      sub_1CE6700(&TerminalPramsManager_TypeInfo);
+      byte_4E01501 = 1;
     }
     v8 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -440,16 +383,16 @@ void EventInfoRaidRemainingCounter__RecalculatePerSplitStepForUpdateIntervalPlan
     }
     RemainingRaidHpData_k__BackingField = v8->static_fields->_RemainingRaidHpData_k__BackingField;
     if ( !RemainingRaidHpData_k__BackingField )
-      sub_1C93D2C(v8, v6);
+      sub_1CE6958(v8, v6);
     v10 = RemainingRaidHpData_k__BackingField->fields.decreaseEndRealtime - realtimeSinceStartup;
     SplitIntervalSeconds = 10.0;
     if ( EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v6) > 0.0 )
       SplitIntervalSeconds = EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v11);
     v13 = fmaxf(v10, 0.0);
-    if ( !byte_4D2A7BA )
+    if ( !byte_4DFE732 )
     {
-      sub_1C93AD4(&System_Math_TypeInfo);
-      byte_4D2A7BA = 1;
+      sub_1CE6700(&System_Math_TypeInfo);
+      byte_4DFE732 = 1;
     }
     v14 = System_Math_TypeInfo;
     v15 = v13 / SplitIntervalSeconds;
@@ -500,10 +443,10 @@ int64_t EventInfoRaidRemainingCounter__SafeRoundToLong(double value, const Metho
   double v7; // d1
   double iptr; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4D31E65 & 1) == 0 )
+  if ( (byte_4E05E9C & 1) == 0 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    byte_4D31E65 = 1;
+    sub_1CE6700(&System_Math_TypeInfo);
+    byte_4E05E9C = 1;
   }
   if ( (*(_QWORD *)&value & 0x7FFFFFFFFFFFFFFFuLL) > 0x7FF0000000000000LL )
     return 0;
@@ -579,27 +522,27 @@ void EventInfoRaidRemainingCounter__SetupBackGroundSprite(
   EventUiEntity_o *eventUiEntity; // x20
   System_Action_o *v21; // x22
 
-  if ( (byte_4D31E69 & 1) == 0 )
+  if ( (byte_4E05EA0 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_EventInfoRaidRemainingCounter___c__DisplayClass47_0__SetupBackGroundSprite_b__0__);
-    sub_1C93AD4(&EventInfoRaidRemainingCounter___c__DisplayClass47_0_TypeInfo);
-    byte_4D31E69 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_EventInfoRaidRemainingCounter___c__DisplayClass45_0__SetupBackGroundSprite_b__0__);
+    sub_1CE6700(&EventInfoRaidRemainingCounter___c__DisplayClass45_0_TypeInfo);
+    byte_4E05EA0 = 1;
   }
-  v5 = sub_1C93D20(EventInfoRaidRemainingCounter___c__DisplayClass47_0_TypeInfo);
+  v5 = sub_1CE694C(EventInfoRaidRemainingCounter___c__DisplayClass45_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = bgName;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)bgName, v14, v15, v16, v17, v18, v19);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)bgName, v14, v15, v16, v17, v18, v19);
   eventUiEntity = this->fields.eventUiEntity;
-  v21 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
-    Method_EventInfoRaidRemainingCounter___c__DisplayClass47_0__SetupBackGroundSprite_b__0__,
+    Method_EventInfoRaidRemainingCounter___c__DisplayClass45_0__SetupBackGroundSprite_b__0__,
     0);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v21, 0);
 }
@@ -613,135 +556,125 @@ void EventInfoRaidRemainingCounter__SnapToPhaseTarget(EventInfoRaidRemainingCoun
 }
 
 
-void EventInfoRaidRemainingCounter__StartSplitPhase(
-        EventInfoRaidRemainingCounter_o *this,
-        int64_t startValue,
-        int64_t targetValue,
-        const MethodInfo *method)
+void EventInfoRaidRemainingCounter__StartSplitPhase(EventInfoRaidRemainingCounter_o *this, const MethodInfo *method)
 {
-  TerminalPramsManager_c *v7; // x0
+  int64_t currentDisplay; // x23
+  int64_t lastKnownAfter; // x22
+  TerminalPramsManager_c *v5; // x0
   struct EventInfoRemainingRaidHpData_o *RemainingRaidHpData_k__BackingField; // x8
-  int64_t lastKnownAfter; // x21
-  float decreaseEndRealtime; // s8
+  int splitNum; // w8
+  int64_t perSplitStep; // x9
+  int64_t v9; // x8
+  bool v10; // cc
+  int64_t v11; // x9
+  const MethodInfo *v12; // x1
   float realtimeSinceStartup; // s0
-  int64_t perSplitStep; // x24
-  int64_t v13; // x8
-  int64_t v14; // x9
-  int64_t v15; // x25
-  double v16; // d0
-  double v17; // d1
-  const MethodInfo *v18; // x0
-  double v19; // d0
-  float v20; // s0
   float updatingPeriod; // s1
-  struct EventInfoRemainingRaidHpData_o *v22; // x8
-  struct EventInfoRemainingRaidHpData_o *v23; // x8
+  TerminalPramsManager_c *v15; // x0
+  struct EventInfoRemainingRaidHpData_o *v16; // x8
+  struct EventInfoRemainingRaidHpData_o *v17; // x8
 
-  if ( (byte_4D31E63 & 1) == 0 )
+  if ( (byte_4E05E9A & 1) == 0 )
   {
-    sub_1C93AD4(&System_Math_TypeInfo);
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D31E63 = 1;
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4E05E9A = 1;
   }
-  if ( startValue != targetValue )
+  currentDisplay = this->fields.currentDisplay;
+  lastKnownAfter = this->fields.lastKnownAfter;
+  if ( currentDisplay != lastKnownAfter )
   {
     ++this->fields.splitPhaseCount;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4D2D4CA )
+    if ( !byte_4E01501 )
     {
-      sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-      byte_4D2D4CA = 1;
+      sub_1CE6700(&TerminalPramsManager_TypeInfo);
+      byte_4E01501 = 1;
     }
-    v7 = TerminalPramsManager_TypeInfo;
+    v5 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v7 = TerminalPramsManager_TypeInfo;
+      v5 = TerminalPramsManager_TypeInfo;
     }
-    RemainingRaidHpData_k__BackingField = v7->static_fields->_RemainingRaidHpData_k__BackingField;
-    if ( RemainingRaidHpData_k__BackingField )
+    RemainingRaidHpData_k__BackingField = v5->static_fields->_RemainingRaidHpData_k__BackingField;
+    if ( !RemainingRaidHpData_k__BackingField
+      || !RemainingRaidHpData_k__BackingField->fields.isNeedSinglePhaseCountChange )
     {
-      if ( RemainingRaidHpData_k__BackingField->fields.isNeedSinglePhaseCountChange )
+      splitNum = this->fields.splitNum;
+      if ( splitNum >= 1 && this->fields.splitPhaseCount < splitNum )
       {
-        lastKnownAfter = this->fields.lastKnownAfter;
-      }
-      else
-      {
-        decreaseEndRealtime = this->fields.decreaseEndRealtime;
-        realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
         perSplitStep = this->fields.perSplitStep;
-        if ( decreaseEndRealtime <= realtimeSinceStartup )
+        v9 = this->fields.lastKnownAfter;
+        v10 = perSplitStep < 1;
+        v11 = perSplitStep + currentDisplay;
+        if ( v10 )
         {
-          v15 = this->fields.lastKnownAfter;
-          if ( !System_Math_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v16 = (double)targetValue;
-          v17 = (double)v15;
-          v19 = perSplitStep < 1 ? System_Math__Max_65947496(v16, v17, 0) : System_Math__Min_65947824(v16, v17, 0);
-          lastKnownAfter = EventInfoRaidRemainingCounter__SafeRoundToLong(v19, v18);
+          if ( v11 >= v9 )
+            lastKnownAfter = v11;
+          else
+            lastKnownAfter = this->fields.lastKnownAfter;
+        }
+        else if ( v11 <= v9 )
+        {
+          lastKnownAfter = v11;
         }
         else
         {
-          v13 = this->fields.lastKnownAfter;
-          v14 = perSplitStep + startValue;
-          if ( perSplitStep < 1 )
-            lastKnownAfter = v14 >= v13 ? perSplitStep + startValue : this->fields.lastKnownAfter;
-          else
-            lastKnownAfter = v14 <= v13 ? perSplitStep + startValue : this->fields.lastKnownAfter;
-        }
-      }
-      this->fields.phaseStartValue = startValue;
-      this->fields.phaseTargetValue = lastKnownAfter;
-      v20 = UnityEngine_Time__get_realtimeSinceStartup(0);
-      updatingPeriod = this->fields.updatingPeriod;
-      this->fields.currentDisplay = startValue;
-      this->fields.phaseStartRealtime = v20;
-      this->fields.phaseEndRealtime = v20 + updatingPeriod;
-      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4D2D4CA )
-      {
-        sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-        byte_4D2D4CA = 1;
-      }
-      v7 = TerminalPramsManager_TypeInfo;
-      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        v7 = TerminalPramsManager_TypeInfo;
-      }
-      v22 = v7->static_fields->_RemainingRaidHpData_k__BackingField;
-      if ( v22 )
-      {
-        v22->fields.lastPhaseEndDisplay = lastKnownAfter;
-        if ( lastKnownAfter || this->fields.lastKnownBefore > 1 )
-          goto LABEL_44;
-        if ( !v7->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v7);
-        if ( !byte_4D2D4CA )
-        {
-          sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-          byte_4D2D4CA = 1;
-        }
-        v7 = TerminalPramsManager_TypeInfo;
-        if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          v7 = TerminalPramsManager_TypeInfo;
-        }
-        v23 = v7->static_fields->_RemainingRaidHpData_k__BackingField;
-        if ( v23 )
-        {
-          v23->fields.beforeRemainingRaidHp = 0;
-LABEL_44:
-          this->fields.lastDisplayed = -1;
-          EventInfoRaidRemainingCounter__UpdateLabelText(this, (const MethodInfo *)startValue);
-          return;
+          lastKnownAfter = this->fields.lastKnownAfter;
         }
       }
     }
-    sub_1C93D2C(v7, startValue);
+    this->fields.phaseStartValue = currentDisplay;
+    this->fields.phaseTargetValue = lastKnownAfter;
+    realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
+    updatingPeriod = this->fields.updatingPeriod;
+    this->fields.currentDisplay = currentDisplay;
+    this->fields.phaseStartRealtime = realtimeSinceStartup;
+    this->fields.phaseEndRealtime = realtimeSinceStartup + updatingPeriod;
+    if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    if ( !byte_4E01501 )
+    {
+      sub_1CE6700(&TerminalPramsManager_TypeInfo);
+      byte_4E01501 = 1;
+    }
+    v15 = TerminalPramsManager_TypeInfo;
+    if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+      v15 = TerminalPramsManager_TypeInfo;
+    }
+    v16 = v15->static_fields->_RemainingRaidHpData_k__BackingField;
+    if ( v16 )
+    {
+      v16->fields.lastPhaseEndDisplay = lastKnownAfter;
+      if ( lastKnownAfter || this->fields.lastKnownBefore > 1 )
+        goto LABEL_38;
+      if ( !v15->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v15);
+      if ( !byte_4E01501 )
+      {
+        sub_1CE6700(&TerminalPramsManager_TypeInfo);
+        byte_4E01501 = 1;
+      }
+      v15 = TerminalPramsManager_TypeInfo;
+      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+        v15 = TerminalPramsManager_TypeInfo;
+      }
+      v17 = v15->static_fields->_RemainingRaidHpData_k__BackingField;
+      if ( v17 )
+      {
+        v17->fields.beforeRemainingRaidHp = 0;
+LABEL_38:
+        this->fields.lastDisplayed = -1;
+        EventInfoRaidRemainingCounter__UpdateLabelText(this, v12);
+        return;
+      }
+    }
+    sub_1CE6958(v15, v12);
   }
 }
 
@@ -765,10 +698,10 @@ void EventInfoRaidRemainingCounter__SwitchSpotState(
   unsigned __int64 v16; // x21
 
   v5 = isOnSpot;
-  if ( (byte_4D31E66 & 1) == 0 )
+  if ( (byte_4E05E9D & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D31E66 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E05E9D = 1;
   }
   this->fields.isSpot = v5;
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
@@ -811,13 +744,13 @@ void EventInfoRaidRemainingCounter__SwitchSpotState(
         goto LABEL_19;
     }
 LABEL_25:
-    sub_1C93D34(v8);
+    sub_1CE6960(v8);
   }
 LABEL_19:
   objectList = this->fields.objectList;
   if ( !objectList )
 LABEL_26:
-    sub_1C93D2C(v8, v7);
+    sub_1CE6958(v8, v7);
   v15 = objectList->max_length;
   if ( (int)v15 >= 1 )
   {
@@ -856,17 +789,17 @@ bool EventInfoRaidRemainingCounter__TryGetRaidRemainingHpData(
   TerminalPramsManager_c *v18; // x0
   EventInfoRemainingRaidHpData_o *v19; // x1
 
-  if ( (byte_4D31E6B & 1) == 0 )
+  if ( (byte_4E05EA2 & 1) == 0 )
   {
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D31E6B = 1;
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4E05EA2 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4D2D4CA )
+  if ( !byte_4E01501 )
   {
-    sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-    byte_4D2D4CA = 1;
+    sub_1CE6700(&TerminalPramsManager_TypeInfo);
+    byte_4E01501 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -876,7 +809,7 @@ bool EventInfoRaidRemainingCounter__TryGetRaidRemainingHpData(
   }
   RemainingRaidHpData_k__BackingField = v9->static_fields->_RemainingRaidHpData_k__BackingField;
   *remainingHpData = RemainingRaidHpData_k__BackingField;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)remainingHpData,
     (int32_t)RemainingRaidHpData_k__BackingField,
     (int32_t)method,
@@ -891,10 +824,10 @@ bool EventInfoRaidRemainingCounter__TryGetRaidRemainingHpData(
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     TerminalPramsManager__LoadRaidRemainingCount(0);
-    if ( !byte_4D2D4CA )
+    if ( !byte_4E01501 )
     {
-      sub_1C93AD4(&TerminalPramsManager_TypeInfo);
-      byte_4D2D4CA = 1;
+      sub_1CE6700(&TerminalPramsManager_TypeInfo);
+      byte_4E01501 = 1;
     }
     v18 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -904,7 +837,7 @@ bool EventInfoRaidRemainingCounter__TryGetRaidRemainingHpData(
     }
     v19 = v18->static_fields->_RemainingRaidHpData_k__BackingField;
     *remainingHpData = v19;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)remainingHpData, (int32_t)v19, v12, v13, v14, v15, v16, v17);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)remainingHpData, (int32_t)v19, v12, v13, v14, v15, v16, v17);
     v11 = *remainingHpData;
   }
   return v11 != 0;
@@ -927,17 +860,17 @@ bool EventInfoRaidRemainingCounter__TrySetMessageLabels(
   System_String_o *resultText; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4D31E68 & 1) == 0 )
+  if ( (byte_4E05E9F & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    this = (EventInfoRaidRemainingCounter_o *)sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D31E68 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    this = (EventInfoRaidRemainingCounter_o *)sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E05E9F = 1;
   }
   resultText = 0;
   messageLabelList = v2->fields.messageLabelList;
   if ( !messageLabelList )
 LABEL_18:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   v4 = 0;
   v5 = 4;
   while ( 1 )
@@ -970,7 +903,7 @@ LABEL_18:
             goto LABEL_18;
           if ( v6 >= LODWORD(v10->max_length) )
 LABEL_20:
-            sub_1C93D34(this);
+            sub_1CE6960(this);
           this = (EventInfoRaidRemainingCounter_o *)*((_QWORD *)&v10->obj.klass + v5);
           if ( !this )
             goto LABEL_18;
@@ -997,11 +930,7 @@ void EventInfoRaidRemainingCounter__Update(EventInfoRaidRemainingCounter_o *this
   const MethodInfo *v8; // x1
   float v9; // s0
   float nextSplitRealtime; // s8
-  float SplitIntervalSeconds; // s0
-  int64_t currentDisplay; // x20
-  const MethodInfo *v13; // x1
-  int64_t PhaseTarget; // x2
-  const MethodInfo *v15; // x3
+  const MethodInfo *v11; // x1
 
   if ( this->fields.isFixedMessage )
   {
@@ -1033,11 +962,9 @@ void EventInfoRaidRemainingCounter__Update(EventInfoRaidRemainingCounter_o *this
     nextSplitRealtime = this->fields.nextSplitRealtime;
     if ( v9 >= nextSplitRealtime && this->fields.currentDisplay != this->fields.lastKnownAfter )
     {
-      SplitIntervalSeconds = EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v8);
-      currentDisplay = this->fields.currentDisplay;
-      this->fields.nextSplitRealtime = nextSplitRealtime + SplitIntervalSeconds;
-      PhaseTarget = EventInfoRaidRemainingCounter__CalcNextPhaseTarget(this, v13);
-      EventInfoRaidRemainingCounter__StartSplitPhase(this, currentDisplay, PhaseTarget, v15);
+      this->fields.nextSplitRealtime = nextSplitRealtime
+                                     + EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(this, v8);
+      EventInfoRaidRemainingCounter__StartSplitPhase(this, v11);
     }
   }
 }
@@ -1050,10 +977,10 @@ void EventInfoRaidRemainingCounter__UpdateLabelText(EventInfoRaidRemainingCounte
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D31E64 & 1) == 0 )
+  if ( (byte_4E05E9B & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_9286/*"N0"*/);
-    byte_4D31E64 = 1;
+    sub_1CE6700(&StringLiteral_9304/*"N0"*/);
+    byte_4E05E9B = 1;
   }
   currentDisplay = this->fields.currentDisplay;
   if ( !this->fields.isSpot )
@@ -1061,12 +988,12 @@ void EventInfoRaidRemainingCounter__UpdateLabelText(EventInfoRaidRemainingCounte
     if ( currentDisplay == this->fields.lastDisplayed )
       return;
     countLabel = this->fields.countLabel;
-    v5 = System_Int64__ToString_65939396(
+    v5 = System_Int64__ToString_66636500(
            (int64_t)&this->fields.currentDisplay,
-           (System_String_o *)StringLiteral_9286/*"N0"*/,
+           (System_String_o *)StringLiteral_9304/*"N0"*/,
            0);
     if ( !countLabel )
-      sub_1C93D2C(v5, v6);
+      sub_1CE6958(v5, v6);
     UILabel__set_text(countLabel, v5, 0);
     currentDisplay = this->fields.currentDisplay;
   }
@@ -1121,7 +1048,7 @@ LABEL_13:
 }
 
 
-void EventInfoRaidRemainingCounter___AddCountDataForQAA_b__48_0(
+void EventInfoRaidRemainingCounter___AddCountDataForQAA_b__46_0(
         EventInfoRaidRemainingCounter_o *this,
         const MethodInfo *method)
 {
@@ -1130,14 +1057,14 @@ void EventInfoRaidRemainingCounter___AddCountDataForQAA_b__48_0(
   int32_t eventId; // w19
 
   v2 = this;
-  if ( (byte_4D31E6C & 1) == 0 )
+  if ( (byte_4E05EA3 & 1) == 0 )
   {
-    this = (EventInfoRaidRemainingCounter_o *)sub_1C93AD4(&TitleInfoControl_TypeInfo);
-    byte_4D31E6C = 1;
+    this = (EventInfoRaidRemainingCounter_o *)sub_1CE6700(&TitleInfoControl_TypeInfo);
+    byte_4E05EA3 = 1;
   }
   eventUiEntity = v2->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   eventId = eventUiEntity->fields.eventId;
   if ( !TitleInfoControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo);
@@ -1152,10 +1079,10 @@ float EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(
   int32_t splitNum; // w8
   BalanceConfig_c *v4; // x0
 
-  if ( (byte_4D31E60 & 1) == 0 )
+  if ( (byte_4E05E97 & 1) == 0 )
   {
-    sub_1C93AD4(&BalanceConfig_TypeInfo);
-    byte_4D31E60 = 1;
+    sub_1CE6700(&BalanceConfig_TypeInfo);
+    byte_4E05E97 = 1;
   }
   splitNum = this->fields.splitNum;
   if ( splitNum < 1 )
@@ -1171,16 +1098,16 @@ float EventInfoRaidRemainingCounter__get_SplitIntervalSeconds(
 }
 
 
-void EventInfoRaidRemainingCounter___c__DisplayClass47_0___ctor(
-        EventInfoRaidRemainingCounter___c__DisplayClass47_0_o *this,
+void EventInfoRaidRemainingCounter___c__DisplayClass45_0___ctor(
+        EventInfoRaidRemainingCounter___c__DisplayClass45_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void EventInfoRaidRemainingCounter___c__DisplayClass47_0___SetupBackGroundSprite_b__0(
-        EventInfoRaidRemainingCounter___c__DisplayClass47_0_o *this,
+void EventInfoRaidRemainingCounter___c__DisplayClass45_0___SetupBackGroundSprite_b__0(
+        EventInfoRaidRemainingCounter___c__DisplayClass45_0_o *this,
         const MethodInfo *method)
 {
   EventInfoUIBase_o *_4__this; // x0
@@ -1200,7 +1127,7 @@ void EventInfoRaidRemainingCounter___c__DisplayClass47_0___SetupBackGroundSprite
         (v5 = this->fields.__4__this) == 0)
     || (_4__this = (EventInfoUIBase_o *)v5->fields.bgSprite) == 0 )
   {
-    sub_1C93D2C(_4__this, method);
+    sub_1CE6958(_4__this, method);
   }
   (*(void (__fastcall **)(EventInfoUIBase_o *, size_t))&_4__this->klass[1]._2.cctor_finished)(
     _4__this,

@@ -15,30 +15,30 @@ void UIRectUpdater___ctor(UIRectUpdater_o *this, const MethodInfo *method)
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4D3502F & 1) == 0 )
+  if ( (byte_4E0900E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_UIRect___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_HashSet_UIRect__TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UIRect___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_UIRect__TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_UIRectUpdater___ctor__);
-    byte_4D3502F = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_UIRect___ctor__);
+    sub_1CE6700(&System_Collections_Generic_HashSet_UIRect__TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UIRect___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_UIRect__TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_UIRectUpdater___ctor__);
+    byte_4E0900E = 1;
   }
-  v3 = (System_Collections_Generic_HashSet_T__o *)sub_1C93D20(System_Collections_Generic_HashSet_UIRect__TypeInfo);
+  v3 = (System_Collections_Generic_HashSet_T__o *)sub_1CE694C(System_Collections_Generic_HashSet_UIRect__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
     v3,
-    (const MethodInfo_372B7CC *)Method_System_Collections_Generic_HashSet_UIRect___ctor__);
+    (const MethodInfo_37B3998 *)Method_System_Collections_Generic_HashSet_UIRect___ctor__);
   this->fields.rects = (struct System_Collections_Generic_HashSet_UIRect__o *)v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.rects, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C93D20(System_Collections_Generic_List_UIRect__TypeInfo);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.rects, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_UIRect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_3879168 *)Method_System_Collections_Generic_List_UIRect___ctor__);
+    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_UIRect___ctor__);
   this->fields.indexableRects = (struct System_Collections_Generic_List_UIRect__o *)v10;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.indexableRects, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.indexableRects, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3AC57E4 *)Method_SingletonMonoBehaviour_UIRectUpdater___ctor__);
+    (const MethodInfo_3B5522C *)Method_SingletonMonoBehaviour_UIRectUpdater___ctor__);
 }
 
 
@@ -46,18 +46,18 @@ void UIRectUpdater__Register(UIRectUpdater_o *this, UIRect_o *rect, const Method
 {
   System_Collections_Generic_HashSet_T__o *rects; // x0
 
-  if ( (byte_4D3502C & 1) == 0 )
+  if ( (byte_4E0900B & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_UIRect__Add__);
-    byte_4D3502C = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_UIRect__Add__);
+    byte_4E0900B = 1;
   }
   rects = (System_Collections_Generic_HashSet_T__o *)this->fields.rects;
   if ( !rects )
-    sub_1C93D2C(0, rect);
+    sub_1CE6958(0, rect);
   System_Collections_Generic_HashSet_object___Add(
     rects,
     (Il2CppObject *)rect,
-    (const MethodInfo_372C9B0 *)Method_System_Collections_Generic_HashSet_UIRect__Add__);
+    (const MethodInfo_37B4B7C *)Method_System_Collections_Generic_HashSet_UIRect__Add__);
   this->fields.isRectsDirty = 1;
 }
 
@@ -66,18 +66,18 @@ void UIRectUpdater__Unregister(UIRectUpdater_o *this, UIRect_o *rect, const Meth
 {
   System_Collections_Generic_HashSet_T__o *rects; // x0
 
-  if ( (byte_4D3502D & 1) == 0 )
+  if ( (byte_4E0900C & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_HashSet_UIRect__Remove__);
-    byte_4D3502D = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_HashSet_UIRect__Remove__);
+    byte_4E0900C = 1;
   }
   rects = (System_Collections_Generic_HashSet_T__o *)this->fields.rects;
   if ( !rects )
-    sub_1C93D2C(0, rect);
+    sub_1CE6958(0, rect);
   System_Collections_Generic_HashSet_object___Remove(
     rects,
     (Il2CppObject *)rect,
-    (const MethodInfo_372C08C *)Method_System_Collections_Generic_HashSet_UIRect__Remove__);
+    (const MethodInfo_37B4258 *)Method_System_Collections_Generic_HashSet_UIRect__Remove__);
   this->fields.isRectsDirty = 1;
 }
 
@@ -91,13 +91,13 @@ void UIRectUpdater__Update(UIRectUpdater_o *this, const MethodInfo *method)
   int32_t v7; // w21
   UIRect_o *v8; // x23
 
-  if ( (byte_4D3502E & 1) == 0 )
+  if ( (byte_4E0900D & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UIRect__AddRange__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UIRect__Clear__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UIRect__get_Count__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_UIRect__get_Item__);
-    byte_4D3502E = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_UIRect__AddRange__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UIRect__Clear__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UIRect__get_Count__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_UIRect__get_Item__);
+    byte_4E0900D = 1;
   }
   if ( this->fields.isRectsDirty )
   {
@@ -119,7 +119,7 @@ void UIRectUpdater__Update(UIRectUpdater_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddRange(
       (System_Collections_Generic_List_object__o *)indexableRects,
       (System_Collections_Generic_IEnumerable_T__o *)this->fields.rects,
-      (const MethodInfo_3879BA8 *)Method_System_Collections_Generic_List_UIRect__AddRange__);
+      (const MethodInfo_3906174 *)Method_System_Collections_Generic_List_UIRect__AddRange__);
   }
   indexableRects = this->fields.indexableRects;
   if ( !indexableRects )
@@ -133,7 +133,7 @@ void UIRectUpdater__Update(UIRectUpdater_o *this, const MethodInfo *method)
       indexableRects = System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)indexableRects,
                          v7,
-                         (const MethodInfo_38796CC *)Method_System_Collections_Generic_List_UIRect__get_Item__);
+                         (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_UIRect__get_Item__);
       if ( !indexableRects )
         break;
       v8 = (UIRect_o *)indexableRects;
@@ -148,6 +148,6 @@ void UIRectUpdater__Update(UIRectUpdater_o *this, const MethodInfo *method)
     }
     while ( indexableRects );
 LABEL_19:
-    sub_1C93D2C(indexableRects, method);
+    sub_1CE6958(indexableRects, method);
   }
 }

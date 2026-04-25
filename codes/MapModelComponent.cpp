@@ -1,7 +1,7 @@
 void MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_D009F0;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_D24BF0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -12,6 +12,7 @@ void MapModelComponent__Awake(MapModelComponent_o *this, const MethodInfo *metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
         MapModelComponent_o *this,
         int32_t layer,
@@ -28,15 +29,17 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   unsigned int v12; // w22
   System_String_o *name; // x0
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  float z; // s2
   struct UnityEngine_GameObject_array *v18; // x8
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v19 = layer;
   locationPrefix = this->fields.locationPrefix;
   v5 = System_Int32__ToString((int32_t)&v19, 0);
-  v6 = System_String__Concat_64425724(locationPrefix, v5, 0);
+  v6 = System_String__Concat_65122828(locationPrefix, v5, 0);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
@@ -48,16 +51,16 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
     v12 = v10 - 4;
     if ( (int)v10 - 4 >= max_length )
     {
-      if ( !byte_4D2A139 )
+      if ( !byte_4DFE0A9 )
       {
-        sub_1C93AD4(&UnityEngine_Vector3_TypeInfo);
-        byte_4D2A139 = 1;
+        sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+        byte_4DFE0A9 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      result.fields.x = static_fields->zeroVector.fields.x;
-      result.fields.y = static_fields->zeroVector.fields.y;
-      result.fields.z = static_fields->zeroVector.fields.z;
-      return result;
+      x = static_fields->zeroVector.fields.x;
+      y = static_fields->zeroVector.fields.y;
+      z = static_fields->zeroVector.fields.z;
+      goto LABEL_16;
     }
     if ( v12 >= max_length )
       goto LABEL_15;
@@ -76,16 +79,17 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   v18 = this->fields.cameraLocationObjectList;
   if ( !v18 )
 LABEL_8:
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   if ( v12 >= LODWORD(v18->max_length) )
 LABEL_15:
-    sub_1C93D34(v6);
-  LocalPosition = GameObjectExtensions__GetLocalPosition(
-                    (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
-                    0);
-  result.fields.x = LocalPosition.fields.x;
-  result.fields.y = LocalPosition.fields.y;
-  result.fields.z = LocalPosition.fields.z;
+    sub_1CE6960(v6);
+  *(UnityEngine_Vector3_o *)&x = GameObjectExtensions__GetLocalPosition(
+                                   (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
+                                   0);
+LABEL_16:
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -105,7 +109,7 @@ void MapModelComponent__PlayAnimation(
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 5) = endAction,
-        sub_1C93A78(
+        sub_1CE66A4(
           (GrandQuestFolderBoardItem_o *)(effectAction + 40),
           (int32_t)endAction,
           (int32_t)endAction,
@@ -116,9 +120,9 @@ void MapModelComponent__PlayAnimation(
           v7),
         (effectAction = (char *)this->fields.animationComponent) == 0) )
   {
-    sub_1C93D2C(effectAction, animationName);
+    sub_1CE6958(effectAction, animationName);
   }
-  SimpleAnimation__Play_67370764((SimpleAnimation_o *)effectAction, animationName, 0);
+  SimpleAnimation__Play_68069172((SimpleAnimation_o *)effectAction, animationName, 0);
 }
 
 
@@ -132,11 +136,17 @@ UnityEngine_Vector3_o MapModelComponent__get_MapCamera2DResetPosition(
         MapModelComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.mapCamera2DResetPosition.fields.x;
-  result.fields.y = this->fields.mapCamera2DResetPosition.fields.y;
-  result.fields.z = this->fields.mapCamera2DResetPosition.fields.z;
+  x = this->fields.mapCamera2DResetPosition.fields.x;
+  y = this->fields.mapCamera2DResetPosition.fields.y;
+  z = this->fields.mapCamera2DResetPosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

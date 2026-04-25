@@ -1,27 +1,27 @@
 void ImagePartsGroupEntity___ctor(ImagePartsGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E48 & 1) == 0 )
+  if ( (byte_4E04E89 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D30E48 = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04E89 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ImagePartsGroupEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4D30E47 & 1) == 0 )
+  if ( (byte_4E04E88 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D30E47 = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E04E88 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -37,19 +37,19 @@ bool ImagePartsGroupEntity__ExistsSkill(ImagePartsGroupEntity_o *this, const Met
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4D30E44 & 1) == 0 )
+  if ( (byte_4E04E85 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C93AD4(&StringLiteral_5281/*"DialogSkillId"*/);
-    byte_4D30E44 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1CE6700(&StringLiteral_5296/*"DialogSkillId"*/);
+    byte_4E04E85 = 1;
   }
   script = this->fields.script;
   if ( !script )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
-           (Il2CppObject *)StringLiteral_5281/*"DialogSkillId"*/,
-           (const MethodInfo_352ED9C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+           (Il2CppObject *)StringLiteral_5296/*"DialogSkillId"*/,
+           (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
 }
 
 
@@ -66,17 +66,17 @@ System_String_o *ImagePartsGroupEntity__GetSkillDetail(
   __int64 v10; // x1
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D30E41 & 1) == 0 )
+  if ( (byte_4E04E82 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&string_TypeInfo);
-    byte_4D30E41 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&string_TypeInfo);
+    byte_4E04E82 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillLvMaster___);
   SkillId = ImagePartsGroupEntity__GetSkillId(this, v6);
   SkillLv = (SkillLvEntity_o *)ImagePartsGroupEntity__GetSkillLv(this, v8);
   if ( !Master_object )
@@ -87,7 +87,7 @@ System_String_o *ImagePartsGroupEntity__GetSkillDetail(
     if ( entity )
       return SkillLvEntity__getDetail(entity, isShort, 0, 0);
 LABEL_10:
-    sub_1C93D2C(SkillLv, v10);
+    sub_1CE6958(SkillLv, v10);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -95,23 +95,23 @@ LABEL_10:
 
 int32_t ImagePartsGroupEntity__GetSkillId(ImagePartsGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E42 & 1) == 0 )
+  if ( (byte_4E04E83 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_5281/*"DialogSkillId"*/);
-    byte_4D30E42 = 1;
+    sub_1CE6700(&StringLiteral_5296/*"DialogSkillId"*/);
+    byte_4E04E83 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_5281/*"DialogSkillId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_5296/*"DialogSkillId"*/, 0, 0);
 }
 
 
 int32_t ImagePartsGroupEntity__GetSkillLv(ImagePartsGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E43 & 1) == 0 )
+  if ( (byte_4E04E84 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_5282/*"DialogSkillLv"*/);
-    byte_4D30E43 = 1;
+    sub_1CE6700(&StringLiteral_5297/*"DialogSkillLv"*/);
+    byte_4E04E84 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_5282/*"DialogSkillLv"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_5297/*"DialogSkillLv"*/, 0, 0);
 }
 
 
@@ -123,18 +123,18 @@ System_String_o *ImagePartsGroupEntity__GetSkillName(ImagePartsGroupEntity_o *th
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4D30E40 & 1) == 0 )
+  if ( (byte_4E04E81 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C93AD4(&string_TypeInfo);
-    byte_4D30E40 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1CE6700(&string_TypeInfo);
+    byte_4E04E81 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillMaster___);
   SkillId = (Il2CppObject *)ImagePartsGroupEntity__GetSkillId(this, v4);
   if ( !Master_object )
     goto LABEL_11;
@@ -142,13 +142,13 @@ System_String_o *ImagePartsGroupEntity__GetSkillName(ImagePartsGroupEntity_o *th
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          (int32_t)SkillId,
-         (const MethodInfo_34632C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+         (const MethodInfo_34E92A8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
   {
     SkillId = entity;
     if ( entity )
       return SkillEntity__getName((SkillEntity_o *)entity, 0);
 LABEL_11:
-    sub_1C93D2C(SkillId, v6);
+    sub_1CE6958(SkillId, v6);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -160,10 +160,10 @@ bool ImagePartsGroupEntity__IsOpen(ImagePartsGroupEntity_o *this, bool isCollect
   int32_t condType; // w22
   int64_t condNum; // x20
 
-  if ( (byte_4D30E46 & 1) == 0 )
+  if ( (byte_4E04E87 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D30E46 = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E04E87 = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
@@ -179,10 +179,10 @@ bool ImagePartsGroupEntity__IsRelease(ImagePartsGroupEntity_o *this, const Metho
   int32_t id; // w20
   int64_t idx; // x19
 
-  if ( (byte_4D30E3F & 1) == 0 )
+  if ( (byte_4E04E80 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D30E3F = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E04E80 = 1;
   }
   id = this->fields.id;
   idx = this->fields.idx;
@@ -194,10 +194,10 @@ bool ImagePartsGroupEntity__IsRelease(ImagePartsGroupEntity_o *this, const Metho
 
 bool ImagePartsGroupEntity__IsUseEquipImage(ImagePartsGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E45 & 1) == 0 )
+  if ( (byte_4E04E86 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_9625/*"NotEquipImage"*/);
-    byte_4D30E45 = 1;
+    sub_1CE6700(&StringLiteral_9646/*"NotEquipImage"*/);
+    byte_4E04E86 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_9625/*"NotEquipImage"*/, 0, 0) == 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_9646/*"NotEquipImage"*/, 0, 0) == 0;
 }

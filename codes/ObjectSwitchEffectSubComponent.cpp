@@ -1,7 +1,7 @@
 void ObjectSwitchEffectSubComponent___ctor(ObjectSwitchEffectSubComponent_o *this, const MethodInfo *method)
 {
   this->fields.parameterIndex = 3;
-  EffectSubComponent___ctor((EffectSubComponent_o *)this, 0);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
@@ -23,10 +23,10 @@ void ObjectSwitchEffectSubComponent__RecvParam(
   unsigned int v14; // w21
 
   v4 = this;
-  if ( (byte_4D32083 & 1) == 0 )
+  if ( (byte_4E060CB & 1) == 0 )
   {
-    this = (ObjectSwitchEffectSubComponent_o *)sub_1C93AD4(&RaceResultEffectParam_TypeInfo);
-    byte_4D32083 = 1;
+    this = (ObjectSwitchEffectSubComponent_o *)sub_1CE6700(&RaceResultEffectParam_TypeInfo);
+    byte_4E060CB = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -44,7 +44,7 @@ void ObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_28:
-    sub_1C93D2C(this, param);
+    sub_1CE6958(this, param);
   max_length = switchObjectList->max_length;
   if ( !v6 )
     goto LABEL_22;
@@ -98,7 +98,7 @@ LABEL_22:
           goto LABEL_28;
       }
 LABEL_30:
-      sub_1C93D34(this);
+      sub_1CE6960(this);
     }
   }
 }

@@ -1,23 +1,26 @@
+void PreparePurchaseByBankRequest___ctor(PreparePurchaseByBankRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0);
+}
+
+
 void PreparePurchaseByBankRequest__beginRequest(
         PreparePurchaseByBankRequest_o *this,
         int32_t shopId,
         const MethodInfo *method)
 {
-  const MethodInfo *v5; // x3
-  const MethodInfo *v6; // x1
-
-  if ( (byte_4D3254D & 1) == 0 )
+  if ( (byte_4E06595 & 1) == 0 )
   {
-    sub_1C93AD4(&PurchaseBehaviour_TypeInfo);
-    sub_1C93AD4(&StringLiteral_17144/*"bankShopId"*/);
-    byte_4D3254D = 1;
+    sub_1CE6700(&PurchaseBehaviour_TypeInfo);
+    sub_1CE6700(&StringLiteral_17196/*"bankShopId"*/);
+    byte_4E06595 = 1;
   }
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
   PurchaseBehaviour__AddPreparePurchaseShopIdsToPlayerPrefs(shopId, 0);
   UnityEngine_PlayerPrefs__Save(0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17144/*"bankShopId"*/, shopId, v5);
-  RequestBase__beginRequest((RequestBase_o *)this, v6);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17196/*"bankShopId"*/, shopId, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
@@ -25,16 +28,16 @@ System_String_o *PreparePurchaseByBankRequest__getURL(PreparePurchaseByBankReque
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D3254C & 1) == 0 )
+  if ( (byte_4E06594 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_23724/*"shop/preparePurchaseByBank"*/);
-    byte_4D3254C = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_23805/*"shop/preparePurchaseByBank"*/);
+    byte_4E06594 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_23724/*"shop/preparePurchaseByBank"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_23805/*"shop/preparePurchaseByBank"*/, 0);
 }
 
 
@@ -44,44 +47,29 @@ void PreparePurchaseByBankRequest__requestCompleted(
         const MethodInfo *method)
 {
   ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v9; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
+  System_String_o *v8; // x1
 
-  if ( (byte_4D3254E & 1) == 0 )
+  if ( (byte_4E06596 & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D3254E = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E06596 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(131, responseList, 0);
-  if ( v5
-    && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6))
-    && (success = (Il2CppObject *)v7->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45365352(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
-        CallBack->fields.method_code,
-        v9,
-        CallBack->fields.method);
+    v8 = JsonManager__toJson(success, 0, 0, 0);
   }
   else
   {
-    v11 = this->fields.CallBack;
-    if ( v11 )
-      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
-        v11->fields.method_code,
-        StringLiteral_22483/*"ng"*/,
-        v11->fields.method);
+    v8 = (System_String_o *)StringLiteral_22555/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

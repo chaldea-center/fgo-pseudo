@@ -1,76 +1,78 @@
 void AnimationList___cctor(const MethodInfo *method)
 {
   Il2CppType *v1; // x19
+  System_RuntimeTypeHandle_o v2; // x0
   System_Type_o *TypeFromHandle; // x19
   System_Array_o *Values; // x0
-  System_Collections_Generic_IEnumerable_TResult__o *v4; // x0
-  AnimationList___c_c *v5; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v6; // x19
-  Il2CppObject *v7; // x20
-  System_Func_T__TResult__o *v8; // x21
-  Il2CppObject *v9; // x20
-  System_Func_T__TResult__o *v10; // x22
-  struct System_Collections_Generic_Dictionary_string__int__o *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  System_Collections_Generic_IEnumerable_TResult__o *v5; // x0
+  AnimationList___c_c *v6; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x19
+  Il2CppObject *v8; // x20
+  System_Func_T__TResult__o *v9; // x21
+  Il2CppObject *v10; // x20
+  System_Func_T__TResult__o *v11; // x22
+  struct System_Collections_Generic_Dictionary_string__int__o *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
-  if ( (byte_4D2F79F & 1) == 0 )
+  if ( (byte_4E037E9 & 1) == 0 )
   {
-    sub_1C93AD4(&AnimationList_TypeInfo);
-    sub_1C93AD4(&System_Enum_TypeInfo);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_Cast_AnimationList_NAME___);
-    sub_1C93AD4(&Method_System_Linq_Enumerable_ToDictionary_AnimationList_NAME__string__int___);
-    sub_1C93AD4(&System_Func_AnimationList_NAME__int__TypeInfo);
-    sub_1C93AD4(&System_Func_AnimationList_NAME__string__TypeInfo);
-    sub_1C93AD4(&AnimationList_NAME_var);
-    sub_1C93AD4(&System_Type_TypeInfo);
-    sub_1C93AD4(&Method_AnimationList___c___cctor_b__2_0__);
-    sub_1C93AD4(&Method_AnimationList___c___cctor_b__2_1__);
-    sub_1C93AD4(&AnimationList___c_TypeInfo);
-    byte_4D2F79F = 1;
+    sub_1CE6700(&AnimationList_TypeInfo);
+    sub_1CE6700(&System_Enum_TypeInfo);
+    sub_1CE6700(&Method_System_Linq_Enumerable_Cast_AnimationList_NAME___);
+    sub_1CE6700(&Method_System_Linq_Enumerable_ToDictionary_AnimationList_NAME__string__int___);
+    sub_1CE6700(&System_Func_AnimationList_NAME__int__TypeInfo);
+    sub_1CE6700(&System_Func_AnimationList_NAME__string__TypeInfo);
+    sub_1CE6700(&AnimationList_NAME_var);
+    sub_1CE6700(&System_Type_TypeInfo);
+    sub_1CE6700(&Method_AnimationList___c___cctor_b__2_0__);
+    sub_1CE6700(&Method_AnimationList___c___cctor_b__2_1__);
+    sub_1CE6700(&AnimationList___c_TypeInfo);
+    byte_4E037E9 = 1;
   }
   v1 = AnimationList_NAME_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v1, 0);
+  v2.fields.value = (intptr_t)v1;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v2, 0);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
-  v4 = System_Linq_Enumerable__Cast_Int32Enum_(
+  v5 = System_Linq_Enumerable__Cast_Int32Enum_(
          (System_Collections_IEnumerable_o *)Values,
-         (const MethodInfo_31B32C4 *)Method_System_Linq_Enumerable_Cast_AnimationList_NAME___);
-  v5 = AnimationList___c_TypeInfo;
-  v6 = (System_Collections_Generic_IEnumerable_TSource__o *)v4;
+         (const MethodInfo_3212C30 *)Method_System_Linq_Enumerable_Cast_AnimationList_NAME___);
+  v6 = AnimationList___c_TypeInfo;
+  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)v5;
   if ( !AnimationList___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AnimationList___c_TypeInfo);
-    v5 = AnimationList___c_TypeInfo;
+    v6 = AnimationList___c_TypeInfo;
   }
-  v7 = (Il2CppObject *)v5->static_fields->__9;
-  v8 = (System_Func_T__TResult__o *)sub_1C93D20(System_Func_AnimationList_NAME__string__TypeInfo);
-  System_Func_Int32Enum__object____ctor(v8, v7, Method_AnimationList___c___cctor_b__2_0__, 0);
-  v9 = (Il2CppObject *)AnimationList___c_TypeInfo->static_fields->__9;
-  v10 = (System_Func_T__TResult__o *)sub_1C93D20(System_Func_AnimationList_NAME__int__TypeInfo);
-  System_Func_Int32Enum__int____ctor(v10, v9, Method_AnimationList___c___cctor_b__2_1__, 0);
-  v11 = (struct System_Collections_Generic_Dictionary_string__int__o *)System_Linq_Enumerable__ToDictionary_Int32Enum__object__int_(
-                                                                         v6,
-                                                                         (System_Func_TSource__TKey__o *)v8,
-                                                                         (System_Func_TSource__TElement__o *)v10,
-                                                                         (const MethodInfo_31E4534 *)Method_System_Linq_Enumerable_ToDictionary_AnimationList_NAME__string__int___);
-  AnimationList_TypeInfo->static_fields->_dictionary = v11;
-  sub_1C93A78(
+  v8 = (Il2CppObject *)v6->static_fields->__9;
+  v9 = (System_Func_T__TResult__o *)sub_1CE694C(System_Func_AnimationList_NAME__string__TypeInfo);
+  System_Func_Int32Enum__object____ctor(v9, v8, Method_AnimationList___c___cctor_b__2_0__, 0);
+  v10 = (Il2CppObject *)AnimationList___c_TypeInfo->static_fields->__9;
+  v11 = (System_Func_T__TResult__o *)sub_1CE694C(System_Func_AnimationList_NAME__int__TypeInfo);
+  System_Func_Int32Enum__int____ctor(v11, v10, Method_AnimationList___c___cctor_b__2_1__, 0);
+  v12 = (struct System_Collections_Generic_Dictionary_string__int__o *)System_Linq_Enumerable__ToDictionary_Int32Enum__object__int_(
+                                                                         v7,
+                                                                         (System_Func_TSource__TKey__o *)v9,
+                                                                         (System_Func_TSource__TElement__o *)v11,
+                                                                         (const MethodInfo_324414C *)Method_System_Linq_Enumerable_ToDictionary_AnimationList_NAME__string__int___);
+  AnimationList_TypeInfo->static_fields->_dictionary = v12;
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)AnimationList_TypeInfo->static_fields,
-    (int32_t)v11,
-    v12,
+    (int32_t)v12,
     v13,
     v14,
     v15,
     v16,
-    v17);
+    v17,
+    v18);
 }
 
 
@@ -86,11 +88,11 @@ int32_t AnimationList__getIndex(System_String_o *name, const MethodInfo *method)
   System_Collections_Generic_Dictionary_object__int__o *dictionary; // x0
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4D2F7A0 & 1) == 0 )
+  if ( (byte_4E037EA & 1) == 0 )
   {
-    sub_1C93AD4(&AnimationList_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
-    byte_4D2F7A0 = 1;
+    sub_1CE6700(&AnimationList_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
+    byte_4E037EA = 1;
   }
   value = 0;
   if ( !name )
@@ -103,12 +105,12 @@ int32_t AnimationList__getIndex(System_String_o *name, const MethodInfo *method)
   }
   dictionary = (System_Collections_Generic_Dictionary_object__int__o *)v3->static_fields->_dictionary;
   if ( !dictionary )
-    sub_1C93D2C(0, method);
+    sub_1CE6958(0, method);
   if ( System_Collections_Generic_Dictionary_object__int___TryGetValue(
          dictionary,
          (Il2CppObject *)name,
          &value,
-         (const MethodInfo_3527494 *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__) )
+         (const MethodInfo_35AD34C *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__) )
   {
     return value;
   }
@@ -129,15 +131,15 @@ void AnimationList___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4D2F7A1 & 1) == 0 )
+  if ( (byte_4E037EB & 1) == 0 )
   {
-    sub_1C93AD4(&AnimationList___c_TypeInfo);
-    byte_4D2F7A1 = 1;
+    sub_1CE6700(&AnimationList___c_TypeInfo);
+    byte_4E037EB = 1;
   }
-  v1 = (Il2CppObject *)sub_1C93D20(AnimationList___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1CE694C(AnimationList___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AnimationList___c_TypeInfo->static_fields->__9 = (struct AnimationList___c_o *)v1;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)AnimationList___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -160,10 +162,10 @@ System_String_o *AnimationList___c____cctor_b__2_0(AnimationList___c_o *this, in
   System_Enum_o v5; // [xsp+8h] [xbp-38h] BYREF
   int32_t v6; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4D2F7A2 & 1) == 0 )
+  if ( (byte_4E037EC & 1) == 0 )
   {
-    sub_1C93AD4(&AnimationList_NAME_TypeInfo);
-    byte_4D2F7A2 = 1;
+    sub_1CE6700(&AnimationList_NAME_TypeInfo);
+    byte_4E037EC = 1;
   }
   v5.klass = (System_Enum_c *)AnimationList_NAME_TypeInfo;
   v5.monitor = (void *)-1LL;

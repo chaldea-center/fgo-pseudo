@@ -8,13 +8,13 @@ void GardenItem___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.atlas = atlas;
-  sub_1C93A78(&this->fields, atlas);
+  sub_1CE66A4(&this->fields, atlas);
   this->fields.imagePartsGroupEntity = imagePartsGroupEntity;
-  sub_1C93A78(&this->fields.imagePartsGroupEntity, imagePartsGroupEntity);
+  sub_1CE66A4(&this->fields.imagePartsGroupEntity, imagePartsGroupEntity);
   this->fields.imageName = imageName;
-  sub_1C93A78(&this->fields.imageName, imageName);
+  sub_1CE66A4(&this->fields.imageName, imageName);
   this->fields.maskTexture = maskTexture;
-  sub_1C93A78(&this->fields.maskTexture, maskTexture);
+  sub_1CE66A4(&this->fields.maskTexture, maskTexture);
 }
 
 

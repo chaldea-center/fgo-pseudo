@@ -11,15 +11,15 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4D2F8EE & 1) == 0 )
+  if ( (byte_4E03939 & 1) == 0 )
   {
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_10894/*"QP_UNIT"*/);
-    sub_1C93AD4(&StringLiteral_8586/*"MANA_UNIT"*/);
-    sub_1C93AD4(&StringLiteral_12492/*"STONE_UNIT"*/);
-    sub_1C93AD4(&StringLiteral_6586/*"FRIEND_POINT_UNIT"*/);
-    byte_4D2F8EE = 1;
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_10927/*"QP_UNIT"*/);
+    sub_1CE6700(&StringLiteral_8602/*"MANA_UNIT"*/);
+    sub_1CE6700(&StringLiteral_12527/*"STONE_UNIT"*/);
+    sub_1CE6700(&StringLiteral_6602/*"FRIEND_POINT_UNIT"*/);
+    byte_4E03939 = 1;
   }
   if ( type <= 13 )
   {
@@ -29,7 +29,7 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_8586/*"MANA_UNIT"*/;
+        v5 = &StringLiteral_8602/*"MANA_UNIT"*/;
       }
       else
       {
@@ -37,7 +37,7 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
           goto LABEL_19;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_6586/*"FRIEND_POINT_UNIT"*/;
+        v5 = &StringLiteral_6602/*"FRIEND_POINT_UNIT"*/;
       }
 LABEL_13:
       v6 = LocalizationManager__Get((System_String_o *)*v5, 0);
@@ -49,7 +49,7 @@ LABEL_13:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v5 = &StringLiteral_10894/*"QP_UNIT"*/;
+      v5 = &StringLiteral_10927/*"QP_UNIT"*/;
       goto LABEL_13;
     }
     if ( type != 2 )
@@ -57,7 +57,7 @@ LABEL_13:
 LABEL_10:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = &StringLiteral_12492/*"STONE_UNIT"*/;
+    v5 = &StringLiteral_12527/*"STONE_UNIT"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
@@ -87,27 +87,27 @@ bool ItemType__IsCountableWithPlus(int32_t type, const MethodInfo *method)
 
 System_String_o *ItemType__get_CrossOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4D2F8EC & 1) == 0 )
+  if ( (byte_4E03937 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3721/*"COMMON_COUNT_OPERATOR_CROSS"*/);
-    byte_4D2F8EC = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_3728/*"COMMON_COUNT_OPERATOR_CROSS"*/);
+    byte_4E03937 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3721/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3728/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
 }
 
 
 System_String_o *ItemType__get_PlusOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4D2F8ED & 1) == 0 )
+  if ( (byte_4E03938 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_3722/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_4D2F8ED = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_3729/*"COMMON_COUNT_OPERATOR_PLUS"*/);
+    byte_4E03938 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3722/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3729/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
 }

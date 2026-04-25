@@ -1,13 +1,13 @@
 void WarReleaseEntity___ctor(WarReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D31C4D & 1) == 0 )
+  if ( (byte_4E05CA3 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D31C4D = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E05CA3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *WarReleaseEntity__CreatePK(
         int64_t condNum,
         const MethodInfo *method)
 {
-  if ( (byte_4D31C4C & 1) == 0 )
+  if ( (byte_4E05CA2 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_4D31C4C = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+    byte_4E05CA2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            warId,
            condType,
            condId,
            condNum,
-           (const MethodInfo_31A35B0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_3202F1C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -81,10 +81,10 @@ bool WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const MethodInfo *met
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4D31C4B & 1) == 0 )
+  if ( (byte_4E05CA1 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D31C4B = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E05CA1 = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;

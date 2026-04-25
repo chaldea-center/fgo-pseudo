@@ -1,9 +1,9 @@
 void BlacklistRootComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4D2B70A & 1) == 0 )
+  if ( (byte_4DFF72F & 1) == 0 )
   {
-    sub_1C93AD4(&BlacklistRootComponent_TypeInfo);
-    byte_4D2B70A = 1;
+    sub_1CE6700(&BlacklistRootComponent_TypeInfo);
+    byte_4DFF72F = 1;
   }
   BlacklistRootComponent_TypeInfo->static_fields->SCROLL_BAR_ACTIVE = 3;
 }
@@ -19,18 +19,18 @@ void BlacklistRootComponent___ctor(BlacklistRootComponent_o *this, const MethodI
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2B709 & 1) == 0 )
+  if ( (byte_4DFF72E & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_1C93AD4(&System_Collections_Generic_List_long__TypeInfo);
-    byte_4D2B709 = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_1CE6700(&System_Collections_Generic_List_long__TypeInfo);
+    byte_4DFF72E = 1;
   }
-  v3 = (System_Collections_Generic_List_long__o *)sub_1C93D20(System_Collections_Generic_List_long__TypeInfo);
+  v3 = (System_Collections_Generic_List_long__o *)sub_1CE694C(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v3,
-    (const MethodInfo_386117C *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_38ED748 *)Method_System_Collections_Generic_List_long___ctor__);
   this->fields.friendOfferList = v3;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.friendOfferList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.friendOfferList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -42,21 +42,21 @@ void BlacklistRootComponent__EndCloseShowServant(BlacklistRootComponent_o *this,
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2B703 & 1) == 0 )
+  if ( (byte_4DFF728 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    byte_4D2B703 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    byte_4DFF728 = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_BlacklistRootComponent_OnSelectFriendItem__,
     0);
   if ( !friendOperationItemListViewManager )
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 2, v4, 0);
 }
 
@@ -68,21 +68,21 @@ void BlacklistRootComponent__EndCloseShowServantEquip(BlacklistRootComponent_o *
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2B6FF & 1) == 0 )
+  if ( (byte_4DFF724 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    byte_4D2B6FF = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    byte_4DFF724 = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_BlacklistRootComponent_OnSelectFriendItem__,
     0);
   if ( !friendOperationItemListViewManager )
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 2, v4, 0);
 }
 
@@ -96,17 +96,17 @@ void BlacklistRootComponent__EndShowServant(BlacklistRootComponent_o *this, bool
   Il2CppObject *Instance; // x20
   System_Action_o *v9; // x21
 
-  if ( (byte_4D2B702 & 1) == 0 )
+  if ( (byte_4DFF727 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent_EndCloseShowServant__);
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B702 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent_EndCloseShowServant__);
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF727 = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-  v5 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v5 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
@@ -114,12 +114,12 @@ void BlacklistRootComponent__EndShowServant(BlacklistRootComponent_o *this, bool
     0);
   if ( !friendOperationItemListViewManager
     || (FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 5, v5, 0),
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v9 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_BlacklistRootComponent_EndCloseShowServant__, 0),
         !Instance) )
   {
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   }
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v9, 0);
 }
@@ -135,18 +135,18 @@ void BlacklistRootComponent__EndShowServantEquip(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4D2B6FE & 1) == 0 )
+  if ( (byte_4DFF723 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent_EndCloseShowServantEquip__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B6FE = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent_EndCloseShowServantEquip__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF723 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v5 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_BlacklistRootComponent_EndCloseShowServantEquip__, 0);
   if ( !Instance )
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, v5, 0);
 }
 
@@ -196,126 +196,115 @@ void BlacklistRootComponent__OnSelectFriendItem(
   ServantLeaderInfo_o *ServantLeaderInfo; // x0
   ServantLeaderInfo_o *v42; // x21
   __int64 v43; // x20
-  SkillInfo_o *v44; // x26
+  SkillInfo_o *v44; // x24
   Il2CppObject *v45; // x22
   FriendOperationItemListViewManager_o *v46; // x20
-  Il2CppObject *Master_object; // x0
-  __int64 v48; // x23
-  __int64 v49; // x24
-  ServantLimitImageMaster_o *v50; // x22
-  int32_t v51; // w23
-  int32_t ServantImageLimitSealAfter; // w23
-  Il2CppObject *v53; // x22
-  int32_t v54; // w0
-  int32_t limitCount; // w24
-  int32_t v56; // w21
-  System_String_o *v57; // x21
-  System_String_o *v58; // x22
-  Il2CppObject *v59; // x0
-  System_String_o *v60; // x0
-  System_String_o *v61; // x21
-  Il2CppObject *v62; // x0
-  System_String_o *v63; // x20
-  FriendOperationItemListViewManager_o *v64; // x8
-  struct UnityEngine_GameObject_o *v65; // x9
-  ServantLeaderInfo_o *v66; // x0
-  const MethodInfo *v67; // x2
-  __int64 v68; // x20
-  int32_t v69; // w2
-  int32_t v70; // w3
-  System_String_o *v71; // x4
-  int32_t v72; // w5
-  int64_t v73; // x6
-  System_String_o *v74; // x7
+  int32_t ServantId; // w22
+  int32_t DispLimitCountStageSealAfterAtStageLimitCount; // w21
+  System_String_o *v49; // x21
+  System_String_o *v50; // x22
+  Il2CppObject *v51; // x0
+  System_String_o *v52; // x0
+  System_String_o *v53; // x21
+  Il2CppObject *v54; // x0
+  System_String_o *v55; // x20
+  FriendOperationItemListViewManager_o *v56; // x8
+  struct UnityEngine_GameObject_o *v57; // x9
+  ServantLeaderInfo_o *v58; // x0
+  const MethodInfo *v59; // x2
+  __int64 v60; // x20
+  int32_t v61; // w2
+  int32_t v62; // w3
+  System_String_o *v63; // x4
+  int32_t v64; // w5
+  int64_t v65; // x6
+  System_String_o *v66; // x7
   int32_t Count; // w21
-  BalanceConfig_c *v76; // x8
+  BalanceConfig_c *v68; // x8
   struct System_Collections_Generic_List_UIDragDropListViewSurface__o *dropList; // x21
-  System_String_o *v78; // x22
-  bool v79; // w0
+  System_String_o *v70; // x22
+  bool v71; // w0
   BlacklistRegistDialog_o *blackListRegistDlg; // x19
-  System_String_o *v81; // x21
-  System_String_o *v82; // x22
-  System_String_o *v83; // x23
-  CommonConfirmDialog_ClickDelegate_o *v84; // x24
-  const MethodInfo *v85; // x7
-  __int64 v86; // x20
-  int32_t v87; // w2
-  int32_t v88; // w3
-  System_String_o *v89; // x4
-  int32_t v90; // w5
-  int64_t v91; // x6
-  System_String_o *v92; // x7
-  struct System_Collections_Generic_List_UIDragDropListViewSurface__o *v93; // x19
-  Il2CppObject *v94; // x0
-  System_String_o *v95; // x21
-  CommonUI_o *v96; // x19
-  System_String_o *v97; // x0
-  System_String_o *v98; // x21
-  CommonConfirmDialog_ClickDelegate_o *v99; // x22
-  System_String_o *v100; // x20
-  __int64 v101; // x0
-  BalanceConfig_c *v102; // x8
-  Il2CppObject *v103; // x21
-  Il2CppObject *v104; // x0
-  System_String_o *v105; // x20
+  System_String_o *v73; // x21
+  System_String_o *v74; // x22
+  System_String_o *v75; // x23
+  CommonConfirmDialog_ClickDelegate_o *v76; // x24
+  const MethodInfo *v77; // x7
+  __int64 v78; // x20
+  int32_t v79; // w2
+  int32_t v80; // w3
+  System_String_o *v81; // x4
+  int32_t v82; // w5
+  int64_t v83; // x6
+  System_String_o *v84; // x7
+  struct System_Collections_Generic_List_UIDragDropListViewSurface__o *v85; // x19
+  Il2CppObject *v86; // x0
+  System_String_o *v87; // x21
+  CommonUI_o *v88; // x19
+  System_String_o *v89; // x0
+  System_String_o *v90; // x21
+  CommonConfirmDialog_ClickDelegate_o *v91; // x22
+  System_String_o *v92; // x20
+  __int64 v93; // x0
+  BalanceConfig_c *v94; // x8
+  Il2CppObject *v95; // x21
+  Il2CppObject *v96; // x0
+  System_String_o *v97; // x20
   Il2CppObject *Instance; // x21
-  FriendOperationItemListViewManager_CallbackFunc_o *v107; // x21
-  System_Nullable_Vector2__o setCondensedScale; // [xsp+0h] [xbp-A0h]
-  int32_t m_CancellationTokenSource; // [xsp+18h] [xbp-88h] BYREF
-  int32_t lv; // [xsp+1Ch] [xbp-84h] BYREF
-  System_String_o *detail; // [xsp+20h] [xbp-80h] BYREF
-  System_String_o *name; // [xsp+28h] [xbp-78h] BYREF
-  SkillInfo_array *skillInfoList; // [xsp+30h] [xbp-70h] BYREF
-  ServantLimitAddEntity_o *entity; // [xsp+38h] [xbp-68h] BYREF
-  System_String_o *v115; // [xsp+40h] [xbp-60h] BYREF
-  System_String_o *defaultName; // [xsp+48h] [xbp-58h] BYREF
-  SkillInfo_array *v117; // [xsp+58h] [xbp-48h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v118; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v119; // 0:x0.16
+  FriendOperationItemListViewManager_CallbackFunc_o *v99; // x21
+  System_Nullable_Vector2__o setCondensedScale; // [xsp+0h] [xbp-90h]
+  int32_t m_CancellationTokenSource; // [xsp+18h] [xbp-78h] BYREF
+  int32_t lv; // [xsp+1Ch] [xbp-74h] BYREF
+  System_String_o *detail; // [xsp+20h] [xbp-70h] BYREF
+  System_String_o *name; // [xsp+28h] [xbp-68h] BYREF
+  SkillInfo_array *skillInfoList; // [xsp+30h] [xbp-60h] BYREF
+  ServantLimitAddEntity_o *entity; // [xsp+38h] [xbp-58h] BYREF
+  System_String_o *v107; // [xsp+40h] [xbp-50h] BYREF
+  System_String_o *defaultName; // [xsp+48h] [xbp-48h] BYREF
+  SkillInfo_array *v109; // [xsp+58h] [xbp-38h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v110; // 0:x0.16
 
   v5 = kind;
-  if ( (byte_4D2B700 & 1) == 0 )
+  if ( (byte_4DFF725 & 1) == 0 )
   {
-    sub_1C93AD4(&BalanceConfig_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserBlacklistMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C93AD4(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__getEntityList__);
-    sub_1C93AD4(&ImageLimitCount_TypeInfo);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Contains__);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&Method_BlacklistRootComponent___c__DisplayClass31_0__OnSelectFriendItem_b__0__);
-    sub_1C93AD4(&BlacklistRootComponent___c__DisplayClass31_0_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent___c__DisplayClass31_2__OnSelectFriendItem_b__3__);
-    sub_1C93AD4(&BlacklistRootComponent___c__DisplayClass31_2_TypeInfo);
-    sub_1C93AD4(&StringLiteral_43/*"\n"*/);
-    sub_1C93AD4(&StringLiteral_113/*" "*/);
-    sub_1C93AD4(&StringLiteral_2954/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/);
-    sub_1C93AD4(&StringLiteral_8599/*"MASTER_EQSKILL_LV_TXT"*/);
-    sub_1C93AD4(&StringLiteral_2951/*"BLACKLIST_REGIST_MAX_MESSAGE"*/);
-    sub_1C93AD4(&StringLiteral_2953/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/);
-    sub_1C93AD4(&StringLiteral_2952/*"BLACKLIST_REGIST_MAX_TITLE"*/);
-    sub_1C93AD4(&StringLiteral_2950/*"BLACKLIST_REGIST_CANCEL"*/);
-    sub_1C93AD4(&StringLiteral_2881/*"BATTLE_SKILLCHARGETURN"*/);
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    sub_1C93AD4(&StringLiteral_2955/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/);
-    byte_4D2B700 = 1;
+    sub_1CE6700(&BalanceConfig_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
+    sub_1CE6700(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserBlacklistMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1CE6700(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__getEntityList__);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_long__Contains__);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&Method_BlacklistRootComponent___c__DisplayClass31_0__OnSelectFriendItem_b__0__);
+    sub_1CE6700(&BlacklistRootComponent___c__DisplayClass31_0_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent___c__DisplayClass31_2__OnSelectFriendItem_b__3__);
+    sub_1CE6700(&BlacklistRootComponent___c__DisplayClass31_2_TypeInfo);
+    sub_1CE6700(&StringLiteral_43/*"\n"*/);
+    sub_1CE6700(&StringLiteral_113/*" "*/);
+    sub_1CE6700(&StringLiteral_2959/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/);
+    sub_1CE6700(&StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/);
+    sub_1CE6700(&StringLiteral_2956/*"BLACKLIST_REGIST_MAX_MESSAGE"*/);
+    sub_1CE6700(&StringLiteral_2958/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/);
+    sub_1CE6700(&StringLiteral_2957/*"BLACKLIST_REGIST_MAX_TITLE"*/);
+    sub_1CE6700(&StringLiteral_2955/*"BLACKLIST_REGIST_CANCEL"*/);
+    sub_1CE6700(&StringLiteral_2886/*"BATTLE_SKILLCHARGETURN"*/);
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    sub_1CE6700(&StringLiteral_2960/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/);
+    byte_4DFF725 = 1;
   }
-  v117 = 0;
-  v115 = 0;
+  v109 = 0;
+  v107 = 0;
   defaultName = 0;
   skillInfoList = 0;
   entity = 0;
@@ -325,8 +314,8 @@ void BlacklistRootComponent__OnSelectFriendItem(
   {
     v18 = Method_BlacklistRootComponent_OnSelectFriendItem__;
     if ( (*((_BYTE *)Method_BlacklistRootComponent_OnSelectFriendItem__ + 83) & 2) != 0 )
-      v18 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_OnSelectFriendItem__);
-    v19 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v18, v18[4]);
+      v18 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_OnSelectFriendItem__);
+    v19 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v18, v18[4]);
     OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0);
     this->fields.selectItemNum = n;
     switch ( v5 )
@@ -336,22 +325,22 @@ void BlacklistRootComponent__OnSelectFriendItem(
       case 3:
         friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewManager__GetItem(
                                                                                        friendOperationItemListViewManager,
                                                                                        n,
                                                                                        0);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         v39 = (FriendOperationItemListViewItem_o *)friendOperationItemListViewManager;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)friendOperationItemListViewManager->fields.dropList;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         dropDragPrefab = friendOperationItemListViewManager->fields.dropDragPrefab;
         if ( !dropDragPrefab )
-          goto LABEL_127;
+          goto LABEL_122;
         if ( !LODWORD(dropDragPrefab[1].klass) )
-          goto LABEL_128;
+          goto LABEL_123;
         ServantLeaderInfo = OtherUserGameEntity__getServantLeaderInfo(
                               (OtherUserGameEntity_o *)friendOperationItemListViewManager,
                               v39->fields.classPos,
@@ -361,7 +350,7 @@ void BlacklistRootComponent__OnSelectFriendItem(
                               0,
                               0);
         if ( !ServantLeaderInfo )
-          goto LABEL_123;
+          goto LABEL_118;
         v42 = ServantLeaderInfo;
         if ( v5 == 2 )
           v43 = 1;
@@ -369,147 +358,123 @@ void BlacklistRootComponent__OnSelectFriendItem(
           v43 = 2LL * (v5 == 3);
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewItem__GetSkillInfo(
                                                                                        v39,
-                                                                                       &v117,
+                                                                                       &v109,
                                                                                        0);
-        if ( !v117 )
-          goto LABEL_127;
-        if ( (unsigned int)v43 >= LODWORD(v117->max_length) )
-LABEL_128:
-          sub_1C93D34(friendOperationItemListViewManager);
-        v44 = v117->m_Items[v43];
+        if ( !v109 )
+          goto LABEL_122;
+        if ( (unsigned int)v43 >= LODWORD(v109->max_length) )
+LABEL_123:
+          sub_1CE6960(friendOperationItemListViewManager);
+        v44 = v109->m_Items[v43];
         if ( !v44 || v44->fields.id < 1 || v44->fields.lv < 1 )
-          goto LABEL_123;
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          goto LABEL_118;
+        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)friendOperationItemListViewManager,
-                                                                                       (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_SkillMaster___);
+                                                                                       (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_SkillMaster___);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         v45 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)friendOperationItemListViewManager,
                 v44->fields.id,
-                (const MethodInfo_3463274 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                (const MethodInfo_34E925C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)friendOperationItemListViewManager,
-                                                                                       (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                                                                                       (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_SkillLvMaster___);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SkillLvMaster__GetEntity(
                                                                                        (SkillLvMaster_o *)friendOperationItemListViewManager,
                                                                                        v44->fields.id,
                                                                                        v44->fields.lv,
                                                                                        0);
         if ( !v45 )
-          goto LABEL_127;
+          goto LABEL_122;
         v46 = friendOperationItemListViewManager;
-        SkillEntity__getSkillMessageInfo((SkillEntity_o *)v45, &defaultName, &v115, v44->fields.lv, 0);
+        SkillEntity__getSkillMessageInfo((SkillEntity_o *)v45, &defaultName, &v107, v44->fields.lv, 0);
+        ServantId = ServantLeaderInfo__GetServantId(v42, -1, 0);
+        DispLimitCountStageSealAfterAtStageLimitCount = ServantLeaderInfo__GetDispLimitCountStageSealAfterAtStageLimitCount(
+                                                          v42,
+                                                          0);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-        v49 = *(_QWORD *)&v42->fields.svtId.fields.currentCryptoKey;
-        v48 = *(_QWORD *)&v42->fields.svtId.fields.fakeValue;
-        v50 = (ServantLimitImageMaster_o *)Master_object;
-        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v119.fields.currentCryptoKey = v49;
-        *(_QWORD *)&v119.fields.fakeValue = v48;
-        v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v119, 0);
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)ServantLeaderInfo__getDispLimitCount(
-                                                                                       v42,
-                                                                                       0);
-        if ( !v50 )
-          goto LABEL_127;
-        ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                                       v50,
-                                       v51,
-                                       (int32_t)friendOperationItemListViewManager,
-                                       0);
-        v53 = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
-        v54 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v42->fields.svtId, 0);
-        limitCount = v42->fields.limitCount;
-        v56 = v54;
-        if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)ImageLimitCount__GetLimitCountByDispLimit(
-                                                                                       ServantImageLimitSealAfter,
-                                                                                       limitCount,
-                                                                                       0);
-        if ( !v53 )
-          goto LABEL_127;
+        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+        if ( !friendOperationItemListViewManager )
+          goto LABEL_122;
         if ( !ServantLimitAddMaster__TryGetEntity(
-                (ServantLimitAddMaster_o *)v53,
+                (ServantLimitAddMaster_o *)friendOperationItemListViewManager,
                 &entity,
-                v56,
-                (int32_t)friendOperationItemListViewManager,
+                ServantId,
+                DispLimitCountStageSealAfterAtStageLimitCount,
                 0) )
-          goto LABEL_79;
+          goto LABEL_74;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)entity;
         if ( !entity )
-          goto LABEL_127;
+          goto LABEL_122;
         if ( !ServantLimitAddEntity__HasKeyOverwriteSkillName(entity, 0) )
-          goto LABEL_79;
+          goto LABEL_74;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)entity;
         if ( !entity )
-          goto LABEL_127;
+          goto LABEL_122;
         defaultName = ServantLimitAddEntity__GetOverwriteSkillName(entity, v44->fields.id, defaultName, 0);
-LABEL_79:
-        v57 = defaultName;
+LABEL_74:
+        v49 = defaultName;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_8599/*"MASTER_EQSKILL_LV_TXT"*/, 0);
+        v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/, 0);
         lv = v44->fields.lv;
-        v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
-        v60 = System_String__Format(v58, v59, 0);
-        defaultName = System_String__Concat_64463988(v57, (System_String_o *)StringLiteral_113/*" "*/, v60, 0);
+        v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
+        v52 = System_String__Format(v50, v51, 0);
+        defaultName = System_String__Concat_65161092(v49, (System_String_o *)StringLiteral_113/*" "*/, v52, 0);
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)LocalizationManager__Get(
-                                                                                       (System_String_o *)StringLiteral_2881/*"BATTLE_SKILLCHARGETURN"*/,
+                                                                                       (System_String_o *)StringLiteral_2886/*"BATTLE_SKILLCHARGETURN"*/,
                                                                                        0);
         if ( !v46 )
-          goto LABEL_127;
-        v61 = (System_String_o *)friendOperationItemListViewManager;
+          goto LABEL_122;
+        v53 = (System_String_o *)friendOperationItemListViewManager;
         m_CancellationTokenSource = (int32_t)v46->fields.m_CancellationTokenSource;
-        v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CancellationTokenSource);
-        v63 = System_String__Format(v61, v62, 0);
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CancellationTokenSource);
+        v55 = System_String__Format(v53, v54, 0);
+        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
-        v30 = v115;
+          goto LABEL_122;
+        v30 = v107;
         v29 = defaultName;
-        v31 = v63;
-        goto LABEL_84;
+        v31 = v55;
+        goto LABEL_79;
       case 9:
-        v68 = sub_1C93D20(BlacklistRootComponent___c__DisplayClass31_0_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v68, 0);
-        if ( !v68 )
-          goto LABEL_127;
-        *(_QWORD *)(v68 + 24) = this;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v68 + 24), (int32_t)this, v69, v70, v71, v72, v73, v74);
-        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        v60 = sub_1CE694C(BlacklistRootComponent___c__DisplayClass31_0_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v60, 0);
+        if ( !v60 )
+          goto LABEL_122;
+        *(_QWORD *)(v60 + 24) = this;
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v60 + 24), (int32_t)this, v61, v62, v63, v64, v65, v66);
+        friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)friendOperationItemListViewManager,
-                                                                                       (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserBlacklistMaster___);
+                                                                                       (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserBlacklistMaster___);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)friendOperationItemListViewManager->fields.indicator;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         Count = System_Collections_ObjectModel_Collection_object___get_Count(
                   (System_Collections_ObjectModel_Collection_T__o *)friendOperationItemListViewManager,
-                  (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
-        v76 = BalanceConfig_TypeInfo;
+                  (const MethodInfo_3480AB0 *)Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
+        v68 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          v76 = BalanceConfig_TypeInfo;
+          v68 = BalanceConfig_TypeInfo;
         }
-        if ( Count < v76->static_fields->MaxBlackListNum )
+        if ( Count < v68->static_fields->MaxBlackListNum )
         {
           friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
           if ( friendOperationItemListViewManager )
@@ -524,67 +489,67 @@ LABEL_79:
               if ( dropList )
               {
                 *(_QWORD *)&kind = dropList->fields._items;
-                *(_QWORD *)(v68 + 16) = *(_QWORD *)&kind;
+                *(_QWORD *)(v60 + 16) = *(_QWORD *)&kind;
                 friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.friendOfferList;
                 if ( friendOperationItemListViewManager )
                 {
-                  v78 = (System_String_o *)StringLiteral_2953/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/;
-                  v79 = System_Collections_Generic_List_long___Contains(
+                  v70 = (System_String_o *)StringLiteral_2958/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/;
+                  v71 = System_Collections_Generic_List_long___Contains(
                           (System_Collections_Generic_List_long__o *)friendOperationItemListViewManager,
                           *(int64_t *)&kind,
-                          (const MethodInfo_3861D48 *)Method_System_Collections_Generic_List_long__Contains__);
+                          (const MethodInfo_38EE314 *)Method_System_Collections_Generic_List_long__Contains__);
                   blackListRegistDlg = this->fields.blackListRegistDlg;
-                  v81 = *(System_String_o **)&dropList->fields._size;
-                  if ( v79 )
-                    v78 = (System_String_o *)StringLiteral_2954/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/;
+                  v73 = *(System_String_o **)&dropList->fields._size;
+                  if ( v71 )
+                    v70 = (System_String_o *)StringLiteral_2959/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v82 = LocalizationManager__Get(v78, 0);
-                  v83 = LocalizationManager__Get((System_String_o *)StringLiteral_2955/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/, 0);
-                  v84 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
+                  v74 = LocalizationManager__Get(v70, 0);
+                  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2960/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/, 0);
+                  v76 = (CommonConfirmDialog_ClickDelegate_o *)sub_1CE694C(CommonConfirmDialog_ClickDelegate_TypeInfo);
                   CommonConfirmDialog_ClickDelegate___ctor(
-                    v84,
-                    (Il2CppObject *)v68,
+                    v76,
+                    (Il2CppObject *)v60,
                     Method_BlacklistRootComponent___c__DisplayClass31_0__OnSelectFriendItem_b__0__,
                     0);
                   if ( blackListRegistDlg )
                   {
-                    BlacklistRegistDialog__Open(blackListRegistDlg, v81, v82, v83, v84, 0, 0, v85);
+                    BlacklistRegistDialog__Open(blackListRegistDlg, v73, v74, v75, v76, 0, 0, v77);
                     return;
                   }
                 }
               }
             }
           }
-          goto LABEL_127;
+          goto LABEL_122;
         }
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v100 = LocalizationManager__Get((System_String_o *)StringLiteral_2951/*"BLACKLIST_REGIST_MAX_MESSAGE"*/, 0);
+        v92 = LocalizationManager__Get((System_String_o *)StringLiteral_2956/*"BLACKLIST_REGIST_MAX_MESSAGE"*/, 0);
         lv = Count;
-        v101 = j_il2cpp_value_box_0(int_TypeInfo, &lv);
-        v102 = BalanceConfig_TypeInfo;
-        v103 = (Il2CppObject *)v101;
+        v93 = j_il2cpp_value_box_0(int_TypeInfo, &lv);
+        v94 = BalanceConfig_TypeInfo;
+        v95 = (Il2CppObject *)v93;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          v102 = BalanceConfig_TypeInfo;
+          v94 = BalanceConfig_TypeInfo;
         }
-        m_CancellationTokenSource = v102->static_fields->MaxBlackListNum;
-        v104 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CancellationTokenSource);
-        v105 = System_String__Format_64467032(v100, v103, v104, 0);
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        m_CancellationTokenSource = v94->static_fields->MaxBlackListNum;
+        v96 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CancellationTokenSource);
+        v97 = System_String__Format_65164136(v92, v95, v96, 0);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)LocalizationManager__Get(
-                                                                                       (System_String_o *)StringLiteral_2952/*"BLACKLIST_REGIST_MAX_TITLE"*/,
+                                                                                       (System_String_o *)StringLiteral_2957/*"BLACKLIST_REGIST_MAX_TITLE"*/,
                                                                                        0);
         if ( !Instance )
-          goto LABEL_127;
+          goto LABEL_122;
         *(_QWORD *)&setCondensedScale.fields.hasValue = 0;
         setCondensedScale.fields.value.fields.y = 0.0;
         CommonUI__OpenWarningDialog(
           (CommonUI_o *)Instance,
           (System_String_o *)friendOperationItemListViewManager,
-          v105,
+          v97,
           0,
           1,
           0,
@@ -592,47 +557,47 @@ LABEL_79:
           1,
           setCondensedScale,
           0);
-LABEL_123:
+LABEL_118:
         v34 = this->fields.friendOperationItemListViewManager;
-        v35 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+        v35 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
         v36 = Method_BlacklistRootComponent_OnSelectFriendItem__;
         break;
       case 10:
-        v86 = sub_1C93D20(BlacklistRootComponent___c__DisplayClass31_2_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v86, 0);
-        if ( !v86 )
-          goto LABEL_127;
-        *(_QWORD *)(v86 + 24) = this;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v86 + 24), (int32_t)this, v87, v88, v89, v90, v91, v92);
+        v78 = sub_1CE694C(BlacklistRootComponent___c__DisplayClass31_2_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v78, 0);
+        if ( !v78 )
+          goto LABEL_122;
+        *(_QWORD *)(v78 + 24) = this;
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v78 + 24), (int32_t)this, v79, v80, v81, v82, v83, v84);
         friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewManager__GetItem(
                                                                                        friendOperationItemListViewManager,
                                                                                        this->fields.selectItemNum,
                                                                                        0);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
-        v93 = friendOperationItemListViewManager->fields.dropList;
-        if ( !v93 )
-          goto LABEL_127;
-        *(_QWORD *)(v86 + 16) = v93->fields._items;
-        v94 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v95 = *(System_String_o **)&v93->fields._size;
-        v96 = (CommonUI_o *)v94;
+          goto LABEL_122;
+        v85 = friendOperationItemListViewManager->fields.dropList;
+        if ( !v85 )
+          goto LABEL_122;
+        *(_QWORD *)(v78 + 16) = v85->fields._items;
+        v86 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v87 = *(System_String_o **)&v85->fields._size;
+        v88 = (CommonUI_o *)v86;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v97 = LocalizationManager__Get((System_String_o *)StringLiteral_2950/*"BLACKLIST_REGIST_CANCEL"*/, 0);
-        v98 = System_String__Concat_64463988(v95, (System_String_o *)StringLiteral_43/*"\n"*/, v97, 0);
-        v99 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C93D20(CommonConfirmDialog_ClickDelegate_TypeInfo);
+        v89 = LocalizationManager__Get((System_String_o *)StringLiteral_2955/*"BLACKLIST_REGIST_CANCEL"*/, 0);
+        v90 = System_String__Concat_65161092(v87, (System_String_o *)StringLiteral_43/*"\n"*/, v89, 0);
+        v91 = (CommonConfirmDialog_ClickDelegate_o *)sub_1CE694C(CommonConfirmDialog_ClickDelegate_TypeInfo);
         CommonConfirmDialog_ClickDelegate___ctor(
-          v99,
-          (Il2CppObject *)v86,
+          v91,
+          (Il2CppObject *)v78,
           Method_BlacklistRootComponent___c__DisplayClass31_2__OnSelectFriendItem_b__3__,
           0);
-        if ( !v96 )
-          goto LABEL_127;
-        CommonUI__OpenConfirmDialog_31580940(v96, (System_String_o *)StringLiteral_1/*""*/, v98, 1, v99, 0, 0, 0, 0, 0);
+        if ( !v88 )
+          goto LABEL_122;
+        CommonUI__OpenConfirmDialog_31919740(v88, (System_String_o *)StringLiteral_1/*""*/, v90, 1, v91, 0, 0, 0, 0, 0);
         return;
       case 13:
       case 14:
@@ -641,7 +606,7 @@ LABEL_123:
       case 17:
         friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewManager__GetItem(
                                                                                        friendOperationItemListViewManager,
                                                                                        n,
@@ -649,34 +614,34 @@ LABEL_123:
         v20 = (unsigned int)(v5 - 14);
         v21 = (unsigned int)v20 < 4 ? v20 + 1 : 0LL;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewItem__GetAppendSkillInfo(
                                                                                        (FriendOperationItemListViewItem_o *)friendOperationItemListViewManager,
                                                                                        &skillInfoList,
                                                                                        0);
         if ( !skillInfoList )
-          goto LABEL_127;
+          goto LABEL_122;
         if ( (unsigned int)v21 >= LODWORD(skillInfoList->max_length) )
-          goto LABEL_128;
+          goto LABEL_123;
         v22 = skillInfoList->m_Items[v21];
         if ( v22 && v22->fields.id >= 1 && v22->fields.lv >= 1 )
         {
           v23 = Method_BlacklistRootComponent_OnSelectFriendItem__;
           if ( (*((_BYTE *)Method_BlacklistRootComponent_OnSelectFriendItem__ + 83) & 2) != 0 )
-            v23 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_OnSelectFriendItem__);
-          v24 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v23, v23[4]);
+            v23 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_OnSelectFriendItem__);
+          v24 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v23, v23[4]);
           OverwriteAssetSoundName__PlaySystemSe(v24, 0, 0, 0);
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_SkillMaster___);
+          friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillMaster___);
           if ( !friendOperationItemListViewManager )
-            goto LABEL_127;
+            goto LABEL_122;
           friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)DataMasterBase_object__object__int___GetEntity(
                                                                                          (DataMasterBase_TMaster__TEntity__PKType__o *)friendOperationItemListViewManager,
                                                                                          v22->fields.id,
-                                                                                         (const MethodInfo_3463274 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                                                         (const MethodInfo_34E925C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
           if ( !friendOperationItemListViewManager )
-            goto LABEL_127;
+            goto LABEL_122;
           SkillEntity__getSkillMessageInfo(
             (SkillEntity_o *)friendOperationItemListViewManager,
             &name,
@@ -686,82 +651,82 @@ LABEL_123:
           v25 = name;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_8599/*"MASTER_EQSKILL_LV_TXT"*/, 0);
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/, 0);
           lv = v22->fields.lv;
           v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
           v28 = System_String__Format(v26, v27, 0);
-          name = System_String__Concat_64463988(v25, (System_String_o *)StringLiteral_113/*" "*/, v28, 0);
-          friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          name = System_String__Concat_65161092(v25, (System_String_o *)StringLiteral_113/*" "*/, v28, 0);
+          friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !friendOperationItemListViewManager )
-            goto LABEL_127;
+            goto LABEL_122;
           v30 = detail;
           v29 = name;
           v31 = (System_String_o *)StringLiteral_1/*""*/;
-LABEL_84:
+LABEL_79:
           CommonUI__OpenDetailLongInfoDialog((CommonUI_o *)friendOperationItemListViewManager, v29, v31, v30, 1, 0, 0);
         }
         else
         {
           v37 = Method_BlacklistRootComponent_OnSelectFriendItem__;
           if ( (*((_BYTE *)Method_BlacklistRootComponent_OnSelectFriendItem__ + 83) & 2) != 0 )
-            v37 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_OnSelectFriendItem__);
-          v38 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v37, v37[4]);
+            v37 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_OnSelectFriendItem__);
+          v38 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v37, v37[4]);
           OverwriteAssetSoundName__PlaySystemSe(v38, 2, 0, 0);
         }
-        goto LABEL_123;
+        goto LABEL_118;
       default:
         friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
+          goto LABEL_122;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewManager__GetItem(
                                                                                        friendOperationItemListViewManager,
                                                                                        n,
                                                                                        0);
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
-        v64 = friendOperationItemListViewManager;
+          goto LABEL_122;
+        v56 = friendOperationItemListViewManager;
         friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)friendOperationItemListViewManager->fields.dropList;
         if ( !friendOperationItemListViewManager )
-          goto LABEL_127;
-        v65 = friendOperationItemListViewManager->fields.dropDragPrefab;
-        if ( !v65 )
-          goto LABEL_127;
-        if ( !LODWORD(v65[1].klass) )
-          goto LABEL_128;
-        v66 = OtherUserGameEntity__getServantLeaderInfo(
+          goto LABEL_122;
+        v57 = friendOperationItemListViewManager->fields.dropDragPrefab;
+        if ( !v57 )
+          goto LABEL_122;
+        if ( !LODWORD(v57[1].klass) )
+          goto LABEL_123;
+        v58 = OtherUserGameEntity__getServantLeaderInfo(
                 (OtherUserGameEntity_o *)friendOperationItemListViewManager,
-                (int32_t)v64->fields.SortObject,
+                (int32_t)v56->fields.SortObject,
                 0,
                 0,
-                (int32_t)v65[1].monitor,
+                (int32_t)v57[1].monitor,
                 0,
                 0);
-        if ( !v66 )
-          goto LABEL_123;
-        BlacklistRootComponent__SelectShowServant(this, v66, v67);
+        if ( !v58 )
+          goto LABEL_118;
+        BlacklistRootComponent__SelectShowServant(this, v58, v59);
         return;
     }
-LABEL_124:
-    v107 = v35;
+LABEL_119:
+    v99 = v35;
     FriendOperationItemListViewManager_CallbackFunc___ctor(v35, (Il2CppObject *)this, (intptr_t)v36, 0);
     if ( v34 )
     {
-      FriendOperationItemListViewManager__SetMode(v34, 2, v107, 0);
+      FriendOperationItemListViewManager__SetMode(v34, 2, v99, 0);
       return;
     }
-LABEL_127:
-    sub_1C93D2C(friendOperationItemListViewManager, *(_QWORD *)&kind);
+LABEL_122:
+    sub_1CE6958(friendOperationItemListViewManager, *(_QWORD *)&kind);
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
   this->fields.selectItemNum = n;
   if ( !friendOperationItemListViewManager )
-    goto LABEL_127;
+    goto LABEL_122;
   friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)FriendOperationItemListViewManager__GetItem(
                                                                                  friendOperationItemListViewManager,
                                                                                  n,
                                                                                  0);
   if ( !friendOperationItemListViewManager )
-    goto LABEL_127;
+    goto LABEL_122;
   v8 = (FriendOperationItemListViewItem_o *)friendOperationItemListViewManager;
   ServantLeader = FriendOperationItemListViewItem__get_ServantLeader(
                     (FriendOperationItemListViewItem_o *)friendOperationItemListViewManager,
@@ -776,25 +741,25 @@ LABEL_127:
   v12 = *(_QWORD *)&EquipTargetInfo->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v118.fields.currentCryptoKey = v13;
-  *(_QWORD *)&v118.fields.fakeValue = v12;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v118, 0) < 1 )
+  *(_QWORD *)&v110.fields.currentCryptoKey = v13;
+  *(_QWORD *)&v110.fields.fakeValue = v12;
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v110, 0) < 1 )
   {
 LABEL_41:
     v32 = Method_BlacklistRootComponent_OnSelectFriendItem__;
     if ( (*((_BYTE *)Method_BlacklistRootComponent_OnSelectFriendItem__ + 83) & 2) != 0 )
-      v32 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_OnSelectFriendItem__);
-    v33 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v32, v32[4]);
+      v32 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_OnSelectFriendItem__);
+    v33 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v32, v32[4]);
     OverwriteAssetSoundName__PlaySystemSe(v33, 2, 0, 0);
     v34 = this->fields.friendOperationItemListViewManager;
-    v35 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    v35 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
     v36 = Method_BlacklistRootComponent_OnSelectFriendItem__;
-    goto LABEL_124;
+    goto LABEL_119;
   }
   v14 = Method_BlacklistRootComponent_OnSelectFriendItem__;
   if ( (*((_BYTE *)Method_BlacklistRootComponent_OnSelectFriendItem__ + 83) & 2) != 0 )
-    v14 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_OnSelectFriendItem__);
-  v15 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v14, v14[4]);
+    v14 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_OnSelectFriendItem__);
+  v15 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v14, v14[4]);
   OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0);
   if ( v8->fields.kind == 9 )
     v17 = 14;
@@ -814,19 +779,19 @@ void BlacklistRootComponent__SelectShowServant(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4D2B701 & 1) == 0 )
+  if ( (byte_4DFF726 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_EndShowServant__);
-    sub_1C93AD4(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B701 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_EndShowServant__);
+    sub_1CE6700(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF726 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (ServantStatusDialog_EndDelegate_o *)sub_1C93D20(ServantStatusDialog_EndDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(v6, (Il2CppObject *)this, Method_BlacklistRootComponent_EndShowServant__, 0);
   if ( !Instance )
-    sub_1C93D2C(v7, v8);
-  CommonUI__OpenServantStatusDialog_31592948((CommonUI_o *)Instance, 5, servantLeaderInfo, v6, 0);
+    sub_1CE6958(v7, v8);
+  CommonUI__OpenServantStatusDialog_31931908((CommonUI_o *)Instance, 5, servantLeaderInfo, v6, 0);
 }
 
 
@@ -841,23 +806,23 @@ void BlacklistRootComponent__SelectShowServantEquip(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4D2B6FD & 1) == 0 )
+  if ( (byte_4DFF722 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_EndShowServantEquip__);
-    sub_1C93AD4(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B6FD = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_EndShowServantEquip__);
+    sub_1CE6700(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF722 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (ServantStatusDialog_EndDelegate_o *)sub_1C93D20(ServantStatusDialog_EndDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(
     v8,
     (Il2CppObject *)this,
     Method_BlacklistRootComponent_EndShowServantEquip__,
     0);
   if ( !Instance )
-    sub_1C93D2C(v9, v10);
-  CommonUI__OpenServantEquipStatusDialog_31596056((CommonUI_o *)Instance, statusKind, equipInfo, v8, 0, 0);
+    sub_1CE6958(v9, v10);
+  CommonUI__OpenServantEquipStatusDialog_31935016((CommonUI_o *)Instance, statusKind, equipInfo, v8, 0, 0);
 }
 
 
@@ -872,22 +837,22 @@ void BlacklistRootComponent___OnSelectFriendItem_b__31_2(
   FriendOperationItemListViewManager_CallbackFunc_o *v7; // x21
 
   v4 = this;
-  if ( (byte_4D2B70E & 1) == 0 )
+  if ( (byte_4DFF733 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    this = (BlacklistRootComponent_o *)sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    byte_4D2B70E = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    this = (BlacklistRootComponent_o *)sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    byte_4DFF733 = 1;
   }
   if ( !result )
     goto LABEL_8;
-  if ( System_String__Equals_64461044(result, (System_String_o *)StringLiteral_22655/*"ok"*/, 0) )
+  if ( System_String__Equals_65158148(result, (System_String_o *)StringLiteral_22728/*"ok"*/, 0) )
   {
     BlacklistRootComponent__modeChange(v4, 0, v5);
     return;
   }
   friendOperationItemListViewManager = v4->fields.friendOperationItemListViewManager;
-  v7 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v7 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v7,
     (Il2CppObject *)v4,
@@ -895,7 +860,7 @@ void BlacklistRootComponent___OnSelectFriendItem_b__31_2(
     0);
   if ( !friendOperationItemListViewManager )
 LABEL_8:
-    sub_1C93D2C(this, result);
+    sub_1CE6958(this, result);
   FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 2, v7, 0);
 }
 
@@ -907,21 +872,21 @@ void BlacklistRootComponent___OnSelectFriendItem_b__31_4(BlacklistRootComponent_
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2B711 & 1) == 0 )
+  if ( (byte_4DFF736 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    byte_4D2B711 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    byte_4DFF736 = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_BlacklistRootComponent_OnSelectFriendItem__,
     0);
   if ( !friendOperationItemListViewManager )
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 2, v4, 0);
 }
 
@@ -937,25 +902,25 @@ void BlacklistRootComponent___OnSelectFriendItem_b__31_5(
   System_Action_o *v7; // x21
 
   v4 = this;
-  if ( (byte_4D2B70F & 1) == 0 )
+  if ( (byte_4DFF734 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_6__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (BlacklistRootComponent_o *)sub_1C93AD4(&StringLiteral_22655/*"ok"*/);
-    byte_4D2B70F = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_6__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (BlacklistRootComponent_o *)sub_1CE6700(&StringLiteral_22728/*"ok"*/);
+    byte_4DFF734 = 1;
   }
   if ( !result )
     goto LABEL_8;
-  if ( System_String__Equals_64461044(result, (System_String_o *)StringLiteral_22655/*"ok"*/, 0) )
+  if ( System_String__Equals_65158148(result, (System_String_o *)StringLiteral_22728/*"ok"*/, 0) )
     BlacklistRootComponent__modeChange(v4, 1, v5);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)v4, Method_BlacklistRootComponent__OnSelectFriendItem_b__31_6__, 0);
   if ( !Instance )
 LABEL_8:
-    sub_1C93D2C(this, result);
-  CommonUI__CloseConfirmDialog_31581328((CommonUI_o *)Instance, v7, 0);
+    sub_1CE6958(this, result);
+  CommonUI__CloseConfirmDialog_31920128((CommonUI_o *)Instance, v7, 0);
 }
 
 
@@ -966,21 +931,21 @@ void BlacklistRootComponent___OnSelectFriendItem_b__31_6(BlacklistRootComponent_
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4D2B710 & 1) == 0 )
+  if ( (byte_4DFF735 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    byte_4D2B710 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    byte_4DFF735 = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_BlacklistRootComponent_OnSelectFriendItem__,
     0);
   if ( !friendOperationItemListViewManager )
-    sub_1C93D2C(v5, v6);
+    sub_1CE6958(v5, v6);
   FriendOperationItemListViewManager__SetMode(friendOperationItemListViewManager, 2, v4, 0);
 }
 
@@ -993,10 +958,10 @@ void BlacklistRootComponent___afterMainMenuBar_b__39_0(BlacklistRootComponent_o 
   UnityEngine_GameObject_o *optionTopObj; // x20
   bool v7; // w0
 
-  if ( (byte_4D2B712 & 1) == 0 )
+  if ( (byte_4DFF737 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_7014/*"GO_NEXT"*/);
-    byte_4D2B712 = 1;
+    sub_1CE6700(&StringLiteral_7030/*"GO_NEXT"*/);
+    byte_4DFF737 = 1;
   }
   gameOptionComp = this->fields.gameOptionComp;
   if ( !gameOptionComp )
@@ -1012,9 +977,9 @@ void BlacklistRootComponent___afterMainMenuBar_b__39_0(BlacklistRootComponent_o 
         (gameOptionComp = (SetGameOptionComponent_o *)this->fields.myRoomFsm) == 0) )
   {
 LABEL_8:
-    sub_1C93D2C(gameOptionComp, method);
+    sub_1CE6958(gameOptionComp, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameOptionComp, (System_String_o *)StringLiteral_7014/*"GO_NEXT"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameOptionComp, (System_String_o *)StringLiteral_7030/*"GO_NEXT"*/, 0);
 }
 
 
@@ -1053,25 +1018,25 @@ void BlacklistRootComponent___blackListSetup_b__26_0(
 
   v3 = result;
   v4 = this;
-  if ( (byte_4D2B70D & 1) == 0 )
+  if ( (byte_4DFF732 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C93AD4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C93AD4(&System_Collections_ICollection_TypeInfo);
-    sub_1C93AD4(&System_Collections_IList_TypeInfo);
-    sub_1C93AD4(&long_TypeInfo);
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Add__);
-    sub_1C93AD4(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    sub_1C93AD4(&StringLiteral_7014/*"GO_NEXT"*/);
-    this = (BlacklistRootComponent_o *)sub_1C93AD4(&StringLiteral_19889/*"friendOfferList"*/);
-    byte_4D2B70D = 1;
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1CE6700(&System_Collections_ICollection_TypeInfo);
+    sub_1CE6700(&System_Collections_IList_TypeInfo);
+    sub_1CE6700(&long_TypeInfo);
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_Generic_List_long__Add__);
+    sub_1CE6700(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    sub_1CE6700(&StringLiteral_7030/*"GO_NEXT"*/);
+    this = (BlacklistRootComponent_o *)sub_1CE6700(&StringLiteral_19955/*"friendOfferList"*/);
+    byte_4DFF732 = 1;
   }
   value = 0;
   if ( !v3 )
     goto LABEL_37;
-  if ( System_String__Equals_64461044(v3, (System_String_o *)StringLiteral_22483/*"ng"*/, 0) )
+  if ( System_String__Equals_65158148(v3, (System_String_o *)StringLiteral_22555/*"ng"*/, 0) )
     goto LABEL_35;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -1081,13 +1046,13 @@ void BlacklistRootComponent___blackListSetup_b__26_0(
   v6 = this;
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)this,
-          (Il2CppObject *)StringLiteral_19889/*"friendOfferList"*/,
-          (const MethodInfo_352ED9C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+          (Il2CppObject *)StringLiteral_19955/*"friendOfferList"*/,
+          (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
     || (this = (BlacklistRootComponent_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                              (System_Collections_Generic_Dictionary_object__object__o *)v6,
-                                             (Il2CppObject *)StringLiteral_19889/*"friendOfferList"*/,
+                                             (Il2CppObject *)StringLiteral_19955/*"friendOfferList"*/,
                                              &value,
-                                             (const MethodInfo_35303B4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
+                                             (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
         ((unsigned __int8)this & 1) == 0) )
   {
 LABEL_35:
@@ -1095,11 +1060,11 @@ LABEL_35:
     this = (BlacklistRootComponent_o *)v4->fields.myRoomFsm;
     if ( this )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7014/*"GO_NEXT"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7030/*"GO_NEXT"*/, 0);
       return;
     }
 LABEL_37:
-    sub_1C93D2C(this, result);
+    sub_1CE6958(this, result);
   }
   friendOfferList = v4->fields.friendOfferList;
   if ( !friendOfferList )
@@ -1110,7 +1075,7 @@ LABEL_37:
   v9 = value;
   if ( !value )
     goto LABEL_37;
-  v10 = sub_1C93C10(value, System_Collections_IList_TypeInfo);
+  v10 = sub_1CE683C(value, System_Collections_IList_TypeInfo);
   if ( v10 )
   {
     v11 = *(_QWORD *)v10;
@@ -1131,7 +1096,7 @@ LABEL_37:
     else
     {
 LABEL_17:
-      v15 = sub_1C69E5C(v10, System_Collections_ICollection_TypeInfo, 1);
+      v15 = sub_1CBCA7C(v10, System_Collections_ICollection_TypeInfo, 1);
     }
     v16 = (*(__int64 (__fastcall **)(__int64, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8));
     if ( v16 >= 1 )
@@ -1158,7 +1123,7 @@ LABEL_17:
         else
         {
 LABEL_25:
-          v22 = sub_1C69E5C(v12, System_Collections_IList_TypeInfo, 0);
+          v22 = sub_1CBCA7C(v12, System_Collections_IList_TypeInfo, 0);
         }
         this = (BlacklistRootComponent_o *)(*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))v22)(
                                              v12,
@@ -1181,7 +1146,7 @@ LABEL_25:
           System_Collections_Generic_List_long___AddWithResize(
             v19,
             (int64_t)result,
-            *(const MethodInfo_38619D0 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+            *(const MethodInfo_38EDF9C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1191,13 +1156,13 @@ LABEL_25:
         if ( ++v17 == (_DWORD)v9 )
           goto LABEL_35;
       }
-      sub_1C940C8(this);
+      sub_1CE6CF4(this);
       goto LABEL_39;
     }
     goto LABEL_35;
   }
 LABEL_39:
-  v26 = (BlacklistRootComponent_o *)sub_1C940C8(v9);
+  v26 = (BlacklistRootComponent_o *)sub_1CE6CF4(v9);
   BlacklistRootComponent___OnSelectFriendItem_b__31_2(v26, v27, v28);
 }
 
@@ -1208,22 +1173,22 @@ void BlacklistRootComponent___fadeIn_b__23_0(BlacklistRootComponent_o *this, con
   PlayMakerFSM_o *myRoomFsm; // x8
   __int64 *v5; // x9
 
-  if ( (byte_4D2B70B & 1) == 0 )
+  if ( (byte_4DFF730 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_7014/*"GO_NEXT"*/);
-    sub_1C93AD4(&StringLiteral_7290/*"HIDE_END"*/);
-    byte_4D2B70B = 1;
+    sub_1CE6700(&StringLiteral_7030/*"GO_NEXT"*/);
+    sub_1CE6700(&StringLiteral_7306/*"HIDE_END"*/);
+    byte_4DFF730 = 1;
   }
   blackListObj = this->fields.blackListObj;
   if ( !blackListObj
     || (blackListObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_activeSelf(blackListObj, 0),
         (myRoomFsm = this->fields.myRoomFsm) == 0) )
   {
-    sub_1C93D2C(blackListObj, method);
+    sub_1CE6958(blackListObj, method);
   }
-  v5 = &StringLiteral_7014/*"GO_NEXT"*/;
+  v5 = &StringLiteral_7030/*"GO_NEXT"*/;
   if ( ((unsigned __int8)blackListObj & 1) == 0 )
-    v5 = &StringLiteral_7290/*"HIDE_END"*/;
+    v5 = &StringLiteral_7306/*"HIDE_END"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v5, 0);
 }
 
@@ -1232,15 +1197,15 @@ void BlacklistRootComponent___fadeOut_b__24_0(BlacklistRootComponent_o *this, co
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4D2B70C & 1) == 0 )
+  if ( (byte_4DFF731 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_7014/*"GO_NEXT"*/);
-    byte_4D2B70C = 1;
+    sub_1CE6700(&StringLiteral_7030/*"GO_NEXT"*/);
+    byte_4DFF731 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C93D2C(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7014/*"GO_NEXT"*/, 0);
+    sub_1CE6958(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7030/*"GO_NEXT"*/, 0);
 }
 
 
@@ -1254,15 +1219,15 @@ void BlacklistRootComponent__afterMainMenuBar(BlacklistRootComponent_o *this, co
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4D2B708 & 1) == 0 )
+  if ( (byte_4DFF72D & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&AvalonSceneManager_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent__afterMainMenuBar_b__39_0__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B708 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AvalonSceneManager_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent__afterMainMenuBar_b__39_0__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF72D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1271,10 +1236,10 @@ void BlacklistRootComponent__afterMainMenuBar(BlacklistRootComponent_o *this, co
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_BlacklistRootComponent__afterMainMenuBar_b__39_0__, 0);
   if ( !v5 )
-    sub_1C93D2C(v8, v9);
+    sub_1CE6958(v8, v9);
   CommonUI__maskFadeout(v5, 1, DEFAULT_FADE_TIME, v7, 0);
 }
 
@@ -1293,16 +1258,16 @@ void BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o *this, cons
   RequestBase_o *v11; // x19
 
   v2 = this;
-  if ( (byte_4D2B6FB & 1) == 0 )
+  if ( (byte_4DFF720 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent__blackListSetup_b__26_0__);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_BlacklistTopRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C93AD4(&StringLiteral_2949/*"BLACKLIST_HELP_TEXT"*/);
-    this = (BlacklistRootComponent_o *)sub_1C93AD4(&StringLiteral_7014/*"GO_NEXT"*/);
-    byte_4D2B6FB = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent__blackListSetup_b__26_0__);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_NetworkManager_getRequest_BlacklistTopRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1CE6700(&StringLiteral_2954/*"BLACKLIST_HELP_TEXT"*/);
+    this = (BlacklistRootComponent_o *)sub_1CE6700(&StringLiteral_7030/*"GO_NEXT"*/);
+    byte_4DFF720 = 1;
   }
   blackListObj = v2->fields.blackListObj;
   if ( !blackListObj )
@@ -1317,7 +1282,7 @@ void BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o *this, cons
   helpLabel = v2->fields.helpLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (BlacklistRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2949/*"BLACKLIST_HELP_TEXT"*/, 0);
+  this = (BlacklistRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2954/*"BLACKLIST_HELP_TEXT"*/, 0);
   if ( !helpLabel )
     goto LABEL_21;
   UILabel__set_text(helpLabel, (System_String_o *)this, 0);
@@ -1334,7 +1299,7 @@ void BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o *this, cons
     if ( this )
     {
       FriendOperationItemListViewManager__SetupClassBoardInfo((FriendOperationItemListViewManager_o *)this, 0);
-      v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v2,
@@ -1344,7 +1309,7 @@ void BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o *this, cons
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (BlacklistRootComponent_o *)NetworkManager__getRequest_object_(
                                            v9,
-                                           (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_BlacklistTopRequest___);
+                                           (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_BlacklistTopRequest___);
       titleInfoCtr = v2->fields.titleInfoCtr;
       if ( titleInfoCtr )
       {
@@ -1359,7 +1324,7 @@ void BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o *this, cons
       }
     }
 LABEL_21:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   MainMenuBar__setMenuActive(0, 0, 0);
   this = (BlacklistRootComponent_o *)v2->fields.friendOperationItemListViewManager;
@@ -1373,7 +1338,7 @@ LABEL_21:
   this = (BlacklistRootComponent_o *)v2->fields.myRoomFsm;
   if ( !this )
     goto LABEL_21;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7014/*"GO_NEXT"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7030/*"GO_NEXT"*/, 0);
 }
 
 
@@ -1383,15 +1348,15 @@ void BlacklistRootComponent__clickBlacklistTabButton(BlacklistRootComponent_o *t
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D2B705 & 1) == 0 )
+  if ( (byte_4DFF72A & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_clickBlacklistTabButton__);
-    byte_4D2B705 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_clickBlacklistTabButton__);
+    byte_4DFF72A = 1;
   }
   v3 = Method_BlacklistRootComponent_clickBlacklistTabButton__;
   if ( (*((_BYTE *)Method_BlacklistRootComponent_clickBlacklistTabButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_clickBlacklistTabButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_clickBlacklistTabButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   BlacklistRootComponent__modeChange(this, 1, v5);
 }
@@ -1403,15 +1368,15 @@ void BlacklistRootComponent__clickFriendHistoryTabButton(BlacklistRootComponent_
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4D2B704 & 1) == 0 )
+  if ( (byte_4DFF729 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_clickFriendHistoryTabButton__);
-    byte_4D2B704 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_clickFriendHistoryTabButton__);
+    byte_4DFF729 = 1;
   }
   v3 = Method_BlacklistRootComponent_clickFriendHistoryTabButton__;
   if ( (*((_BYTE *)Method_BlacklistRootComponent_clickFriendHistoryTabButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C93AEC(Method_BlacklistRootComponent_clickFriendHistoryTabButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1CE6718(Method_BlacklistRootComponent_clickFriendHistoryTabButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   BlacklistRootComponent__modeChange(this, 0, v5);
 }
@@ -1427,15 +1392,15 @@ void BlacklistRootComponent__fadeIn(BlacklistRootComponent_o *this, const Method
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4D2B6F9 & 1) == 0 )
+  if ( (byte_4DFF71E & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&AvalonSceneManager_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent__fadeIn_b__23_0__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B6F9 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AvalonSceneManager_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent__fadeIn_b__23_0__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF71E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1444,10 +1409,10 @@ void BlacklistRootComponent__fadeIn(BlacklistRootComponent_o *this, const Method
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_BlacklistRootComponent__fadeIn_b__23_0__, 0);
   if ( !v5 )
-    sub_1C93D2C(v8, v9);
+    sub_1CE6958(v8, v9);
   CommonUI__maskFadein(v5, DEFAULT_FADE_TIME, v7, 0);
 }
 
@@ -1462,15 +1427,15 @@ void BlacklistRootComponent__fadeOut(BlacklistRootComponent_o *this, const Metho
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4D2B6FA & 1) == 0 )
+  if ( (byte_4DFF71F & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&AvalonSceneManager_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent__fadeOut_b__24_0__);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B6FA = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&AvalonSceneManager_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent__fadeOut_b__24_0__);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF71F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1479,10 +1444,10 @@ void BlacklistRootComponent__fadeOut(BlacklistRootComponent_o *this, const Metho
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v7 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_BlacklistRootComponent__fadeOut_b__24_0__, 0);
   if ( !v5 )
-    sub_1C93D2C(v8, v9);
+    sub_1CE6958(v8, v9);
   CommonUI__maskFadeout(v5, 1, DEFAULT_FADE_TIME, v7, 0);
 }
 
@@ -1500,20 +1465,20 @@ void BlacklistRootComponent__modeChange(BlacklistRootComponent_o *this, int32_t 
   FriendOperationItemListViewManager_o *v12; // x20
   System_Action_o *v13; // x21
 
-  if ( (byte_4D2B706 & 1) == 0 )
+  if ( (byte_4DFF72B & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent_onMoveEnd__);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_17727/*"btn_txt_requestlist_off"*/);
-    sub_1C93AD4(&StringLiteral_17573/*"btn_bg_08"*/);
-    sub_1C93AD4(&StringLiteral_17679/*"btn_txt_blacklist_off"*/);
-    sub_1C93AD4(&StringLiteral_17574/*"btn_bg_09"*/);
-    sub_1C93AD4(&StringLiteral_2946/*"BLACKLIST_EXPLANATION_1"*/);
-    sub_1C93AD4(&StringLiteral_17728/*"btn_txt_requestlist_on"*/);
-    sub_1C93AD4(&StringLiteral_17680/*"btn_txt_blacklist_on"*/);
-    sub_1C93AD4(&StringLiteral_2947/*"BLACKLIST_EXPLANATION_2"*/);
-    byte_4D2B706 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent_onMoveEnd__);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_17783/*"btn_txt_requestlist_off"*/);
+    sub_1CE6700(&StringLiteral_17628/*"btn_bg_08"*/);
+    sub_1CE6700(&StringLiteral_17735/*"btn_txt_blacklist_off"*/);
+    sub_1CE6700(&StringLiteral_17629/*"btn_bg_09"*/);
+    sub_1CE6700(&StringLiteral_2951/*"BLACKLIST_EXPLANATION_1"*/);
+    sub_1CE6700(&StringLiteral_17784/*"btn_txt_requestlist_on"*/);
+    sub_1CE6700(&StringLiteral_17736/*"btn_txt_blacklist_on"*/);
+    sub_1CE6700(&StringLiteral_2952/*"BLACKLIST_EXPLANATION_2"*/);
+    byte_4DFF72B = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
   this->fields.listMode = mode;
@@ -1543,7 +1508,7 @@ void BlacklistRootComponent__modeChange(BlacklistRootComponent_o *this, int32_t 
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)LocalizationManager__Get(
-                                                                                           (System_String_o *)StringLiteral_2947/*"BLACKLIST_EXPLANATION_2"*/,
+                                                                                           (System_String_o *)StringLiteral_2952/*"BLACKLIST_EXPLANATION_2"*/,
                                                                                            0);
             if ( listExplanationLabel )
             {
@@ -1560,11 +1525,11 @@ void BlacklistRootComponent__modeChange(BlacklistRootComponent_o *this, int32_t 
                     17,
                     friendOperationItemListViewManager->klass->vtable._10_SetSortKind.method);
                   v12 = this->fields.friendOperationItemListViewManager;
-                  v13 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                  v13 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                   System_Action___ctor(v13, (Il2CppObject *)this, Method_BlacklistRootComponent_onMoveEnd__, 0);
                   if ( v12 )
                   {
-                    FriendOperationItemListViewManager__SetMode_33272528(v12, 1, v13, 0);
+                    FriendOperationItemListViewManager__SetMode_33690720(v12, 1, v13, 0);
                     friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
                     if ( friendOperationItemListViewManager )
                     {
@@ -1582,26 +1547,26 @@ void BlacklistRootComponent__modeChange(BlacklistRootComponent_o *this, int32_t 
                           {
                             UISprite__set_spriteName(
                               (UISprite_o *)friendOperationItemListViewManager,
-                              (System_String_o *)StringLiteral_17727/*"btn_txt_requestlist_off"*/,
+                              (System_String_o *)StringLiteral_17783/*"btn_txt_requestlist_off"*/,
                               0);
                             friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.friendHistoryTabButtonBackSpr;
                             if ( friendOperationItemListViewManager )
                             {
                               UISprite__set_spriteName(
                                 (UISprite_o *)friendOperationItemListViewManager,
-                                (System_String_o *)StringLiteral_17573/*"btn_bg_08"*/,
+                                (System_String_o *)StringLiteral_17628/*"btn_bg_08"*/,
                                 0);
                               friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.blackLisTabButtonTitleSpr;
                               if ( friendOperationItemListViewManager )
                               {
                                 UISprite__set_spriteName(
                                   (UISprite_o *)friendOperationItemListViewManager,
-                                  (System_String_o *)StringLiteral_17680/*"btn_txt_blacklist_on"*/,
+                                  (System_String_o *)StringLiteral_17736/*"btn_txt_blacklist_on"*/,
                                   0);
                                 friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.blackLisTabButtonBackSpr;
                                 if ( friendOperationItemListViewManager )
                                 {
-                                  v10 = &StringLiteral_17574/*"btn_bg_09"*/;
+                                  v10 = &StringLiteral_17629/*"btn_bg_09"*/;
                                   goto LABEL_42;
                                 }
                               }
@@ -1619,7 +1584,7 @@ void BlacklistRootComponent__modeChange(BlacklistRootComponent_o *this, int32_t 
       }
     }
 LABEL_44:
-    sub_1C93D2C(friendOperationItemListViewManager, *(_QWORD *)&mode);
+    sub_1CE6958(friendOperationItemListViewManager, *(_QWORD *)&mode);
   }
   if ( !listMode )
   {
@@ -1643,7 +1608,7 @@ LABEL_44:
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)LocalizationManager__Get(
-                                                                                           (System_String_o *)StringLiteral_2946/*"BLACKLIST_EXPLANATION_1"*/,
+                                                                                           (System_String_o *)StringLiteral_2951/*"BLACKLIST_EXPLANATION_1"*/,
                                                                                            0);
             if ( v7 )
             {
@@ -1660,11 +1625,11 @@ LABEL_44:
                     18,
                     friendOperationItemListViewManager->klass->vtable._10_SetSortKind.method);
                   v8 = this->fields.friendOperationItemListViewManager;
-                  v9 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+                  v9 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
                   System_Action___ctor(v9, (Il2CppObject *)this, Method_BlacklistRootComponent_onMoveEnd__, 0);
                   if ( v8 )
                   {
-                    FriendOperationItemListViewManager__SetMode_33272528(v8, 1, v9, 0);
+                    FriendOperationItemListViewManager__SetMode_33690720(v8, 1, v9, 0);
                     friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
                     if ( friendOperationItemListViewManager )
                     {
@@ -1682,26 +1647,26 @@ LABEL_44:
                           {
                             UISprite__set_spriteName(
                               (UISprite_o *)friendOperationItemListViewManager,
-                              (System_String_o *)StringLiteral_17728/*"btn_txt_requestlist_on"*/,
+                              (System_String_o *)StringLiteral_17784/*"btn_txt_requestlist_on"*/,
                               0);
                             friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.friendHistoryTabButtonBackSpr;
                             if ( friendOperationItemListViewManager )
                             {
                               UISprite__set_spriteName(
                                 (UISprite_o *)friendOperationItemListViewManager,
-                                (System_String_o *)StringLiteral_17574/*"btn_bg_09"*/,
+                                (System_String_o *)StringLiteral_17629/*"btn_bg_09"*/,
                                 0);
                               friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.blackLisTabButtonTitleSpr;
                               if ( friendOperationItemListViewManager )
                               {
                                 UISprite__set_spriteName(
                                   (UISprite_o *)friendOperationItemListViewManager,
-                                  (System_String_o *)StringLiteral_17679/*"btn_txt_blacklist_off"*/,
+                                  (System_String_o *)StringLiteral_17735/*"btn_txt_blacklist_off"*/,
                                   0);
                                 friendOperationItemListViewManager = (FriendOperationItemListViewManager_o *)this->fields.blackLisTabButtonBackSpr;
                                 if ( friendOperationItemListViewManager )
                                 {
-                                  v10 = &StringLiteral_17573/*"btn_bg_08"*/;
+                                  v10 = &StringLiteral_17628/*"btn_bg_08"*/;
 LABEL_42:
                                   UISprite__set_spriteName(
                                     (UISprite_o *)friendOperationItemListViewManager,
@@ -1737,17 +1702,17 @@ void BlacklistRootComponent__onMoveEnd(BlacklistRootComponent_o *this, const Met
   ListViewManager_o *v5; // x0
   int32_t ItemSum; // w20
 
-  if ( (byte_4D2B6FC & 1) == 0 )
+  if ( (byte_4DFF721 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&BlacklistRootComponent_TypeInfo);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    byte_4D2B6FC = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&BlacklistRootComponent_TypeInfo);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    byte_4DFF721 = 1;
   }
   if ( this->fields.listMode <= 1u )
   {
     friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
-    v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    v4 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
     FriendOperationItemListViewManager_CallbackFunc___ctor(
       v4,
       (Il2CppObject *)this,
@@ -1766,7 +1731,7 @@ void BlacklistRootComponent__onMoveEnd(BlacklistRootComponent_o *this, const Met
   v5 = (ListViewManager_o *)this->fields.friendOperationItemListViewManager;
   if ( !v5 )
 LABEL_11:
-    sub_1C93D2C(v5, method);
+    sub_1CE6958(v5, method);
   FriendOperationItemListViewManager__setScrollBarActive(
     (FriendOperationItemListViewManager_o *)v5,
     ItemSum >= BlacklistRootComponent_TypeInfo->static_fields->SCROLL_BAR_ACTIVE,
@@ -1794,37 +1759,37 @@ void BlacklistRootComponent__setRegistCount(BlacklistRootComponent_o *this, cons
   int32_t MaxBlackListNum; // [xsp+8h] [xbp-38h] BYREF
   int32_t Count; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4D2B707 & 1) == 0 )
+  if ( (byte_4DFF72C & 1) == 0 )
   {
-    sub_1C93AD4(&BalanceConfig_TypeInfo);
-    sub_1C93AD4(&Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
-    sub_1C93AD4(&Method_DataManager_GetMasterData_UserBlacklistMaster___);
-    sub_1C93AD4(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__getEntityList__);
-    sub_1C93AD4(&int_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C93AD4(&StringLiteral_6597/*"FRIEND_SHOW_INFOMATION"*/);
-    byte_4D2B707 = 1;
+    sub_1CE6700(&BalanceConfig_TypeInfo);
+    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
+    sub_1CE6700(&Method_DataManager_GetMasterData_UserBlacklistMaster___);
+    sub_1CE6700(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__getEntityList__);
+    sub_1CE6700(&int_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1CE6700(&StringLiteral_6613/*"FRIEND_SHOW_INFOMATION"*/);
+    byte_4DFF72C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_31A4A3C *)Method_DataManager_GetMasterData_UserBlacklistMaster___);
+                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserBlacklistMaster___);
   if ( !Instance )
     goto LABEL_12;
   datalist = (System_Collections_ObjectModel_Collection_T__o *)Instance->fields.datalist;
   registCntLabel = this->fields.registCntLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6597/*"FRIEND_SHOW_INFOMATION"*/, 0);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6613/*"FRIEND_SHOW_INFOMATION"*/, 0);
   if ( !datalist )
     goto LABEL_12;
   v7 = (System_String_o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             datalist,
-            (const MethodInfo_33FBDAC *)Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
+            (const MethodInfo_3480AB0 *)Method_System_Collections_ObjectModel_Collection_UserBlacklistEntity__get_Count__);
   v8 = j_il2cpp_value_box_0(int_TypeInfo, &Count);
   v9 = BalanceConfig_TypeInfo;
   v10 = (Il2CppObject *)v8;
@@ -1835,10 +1800,10 @@ void BlacklistRootComponent__setRegistCount(BlacklistRootComponent_o *this, cons
   }
   MaxBlackListNum = v9->static_fields->MaxBlackListNum;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MaxBlackListNum);
-  Instance = (DataManager_o *)System_String__Format_64467032(v7, v10, v11, 0);
+  Instance = (DataManager_o *)System_String__Format_65164136(v7, v10, v11, 0);
   if ( !registCntLabel )
 LABEL_12:
-    sub_1C93D2C(Instance, v4);
+    sub_1CE6958(Instance, v4);
   UILabel__set_text(registCntLabel, (System_String_o *)Instance, 0);
 }
 
@@ -1869,22 +1834,22 @@ void BlacklistRootComponent___c__DisplayClass31_0___OnSelectFriendItem_b__0(
   CommonConfirmDialog_o *blackListRegistDlg; // x19
   System_Action_o *v16; // x20
 
-  if ( (byte_4D2B713 & 1) == 0 )
+  if ( (byte_4DFF738 & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent___c__DisplayClass31_1__OnSelectFriendItem_b__1__);
-    sub_1C93AD4(&BlacklistRootComponent___c__DisplayClass31_1_TypeInfo);
-    byte_4D2B713 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent___c__DisplayClass31_1__OnSelectFriendItem_b__1__);
+    sub_1CE6700(&BlacklistRootComponent___c__DisplayClass31_1_TypeInfo);
+    byte_4DFF738 = 1;
   }
-  v5 = sub_1C93D20(BlacklistRootComponent___c__DisplayClass31_1_TypeInfo);
+  v5 = sub_1CE694C(BlacklistRootComponent___c__DisplayClass31_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_BYTE *)(v5 + 16) = isDecide,
         (_4__this = this->fields.__4__this) == 0)
     || (blackListRegistDlg = (CommonConfirmDialog_o *)_4__this->fields.blackListRegistDlg,
-        v16 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo),
+        v16 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
         System_Action___ctor(
           v16,
           (Il2CppObject *)v5,
@@ -1892,9 +1857,9 @@ void BlacklistRootComponent___c__DisplayClass31_0___OnSelectFriendItem_b__0(
           0),
         !blackListRegistDlg) )
   {
-    sub_1C93D2C(v6, v7);
+    sub_1CE6958(v6, v7);
   }
-  CommonConfirmDialog__Close_31558032(blackListRegistDlg, v16, 0);
+  CommonConfirmDialog__Close_31896832(blackListRegistDlg, v16, 0);
 }
 
 
@@ -1920,15 +1885,15 @@ void BlacklistRootComponent___c__DisplayClass31_1___OnSelectFriendItem_b__1(
   FriendOperationItemListViewManager_CallbackFunc_o *v9; // x21
 
   v2 = this;
-  if ( (byte_4D2B714 & 1) == 0 )
+  if ( (byte_4DFF739 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_BlacklistRootComponent_OnSelectFriendItem__);
-    sub_1C93AD4(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_2__);
-    sub_1C93AD4(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_BlacklistRegistRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    this = (BlacklistRootComponent___c__DisplayClass31_1_o *)sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4D2B714 = 1;
+    sub_1CE6700(&Method_BlacklistRootComponent_OnSelectFriendItem__);
+    sub_1CE6700(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_2__);
+    sub_1CE6700(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_NetworkManager_getRequest_BlacklistRegistRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    this = (BlacklistRootComponent___c__DisplayClass31_1_o *)sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4DFF739 = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -1936,7 +1901,7 @@ void BlacklistRootComponent___c__DisplayClass31_1___OnSelectFriendItem_b__1(
   if ( v2->fields.isDecide )
   {
     _4__this = (Il2CppObject *)CS___8__locals1->fields.__4__this;
-    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v5,
       _4__this,
@@ -1946,7 +1911,7 @@ void BlacklistRootComponent___c__DisplayClass31_1___OnSelectFriendItem_b__1(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     this = (BlacklistRootComponent___c__DisplayClass31_1_o *)NetworkManager__getRequest_object_(
                                                                v5,
-                                                               (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_BlacklistRegistRequest___);
+                                                               (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_BlacklistRegistRequest___);
     v6 = v2->fields.CS___8__locals1;
     if ( v6 && this )
     {
@@ -1954,13 +1919,13 @@ void BlacklistRootComponent___c__DisplayClass31_1___OnSelectFriendItem_b__1(
       return;
     }
 LABEL_13:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   v7 = (Il2CppObject *)CS___8__locals1->fields.__4__this;
   if ( !v7 )
     goto LABEL_13;
   monitor = (FriendOperationItemListViewManager_o *)v7[3].monitor;
-  v9 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1C93D20(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
+  v9 = (FriendOperationItemListViewManager_CallbackFunc_o *)sub_1CE694C(FriendOperationItemListViewManager_CallbackFunc_TypeInfo);
   FriendOperationItemListViewManager_CallbackFunc___ctor(
     v9,
     v7,
@@ -1994,21 +1959,21 @@ void BlacklistRootComponent___c__DisplayClass31_2___OnSelectFriendItem_b__3(
   CommonUI_o *v11; // x19
   System_Action_o *v12; // x20
 
-  if ( (byte_4D2B715 & 1) == 0 )
+  if ( (byte_4DFF73A & 1) == 0 )
   {
-    sub_1C93AD4(&System_Action_TypeInfo);
-    sub_1C93AD4(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_4__);
-    sub_1C93AD4(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_5__);
-    sub_1C93AD4(&Method_NetworkManager_getRequest_BlacklistRemoveRequest___);
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C93AD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4D2B715 = 1;
+    sub_1CE6700(&System_Action_TypeInfo);
+    sub_1CE6700(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_4__);
+    sub_1CE6700(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_5__);
+    sub_1CE6700(&Method_NetworkManager_getRequest_BlacklistRemoveRequest___);
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4DFF73A = 1;
   }
   if ( isDecide )
   {
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C93D20(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v6,
       _4__this,
@@ -2018,21 +1983,21 @@ void BlacklistRootComponent___c__DisplayClass31_2___OnSelectFriendItem_b__3(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v6,
-                       (const MethodInfo_322FB9C *)Method_NetworkManager_getRequest_BlacklistRemoveRequest___);
+                       (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_BlacklistRemoveRequest___);
     if ( Request_object )
     {
       BlacklistRemoveRequest__beginRequest((BlacklistRemoveRequest_o *)Request_object, this->fields.otherUserId, 0);
       return;
     }
 LABEL_10:
-    sub_1C93D2C(Request_object, v8);
+    sub_1CE6958(Request_object, v8);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3AC52FC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = (Il2CppObject *)this->fields.__4__this;
   v11 = (CommonUI_o *)Instance;
-  v12 = (System_Action_o *)sub_1C93D20(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
   System_Action___ctor(v12, v10, Method_BlacklistRootComponent__OnSelectFriendItem_b__31_4__, 0);
   if ( !v11 )
     goto LABEL_10;
-  CommonUI__CloseConfirmDialog_31581328(v11, v12, 0);
+  CommonUI__CloseConfirmDialog_31920128(v11, v12, 0);
 }

@@ -17,16 +17,16 @@ System_Collections_IEnumerator_o *ShopInfoIndicator__InformationChangeCR(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4D2CB62 & 1) == 0 )
+  if ( (byte_4E00BC5 & 1) == 0 )
   {
-    sub_1C93AD4(&ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
-    byte_4D2CB62 = 1;
+    sub_1CE6700(&ShopInfoIndicator__InformationChangeCR_d__11_TypeInfo);
+    byte_4E00BC5 = 1;
   }
-  v3 = sub_1C93D20(ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
+  v3 = sub_1CE694C(ShopInfoIndicator__InformationChangeCR_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -36,18 +36,18 @@ void ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_o *this, co
   struct UIPanel_o *informationPanel; // x0
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4D2CB63 & 1) == 0 )
+  if ( (byte_4E00BC6 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2CB63 = 1;
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4E00BC6 = 1;
   }
   informationPanel = this->fields.informationPanel;
   if ( !informationPanel )
     goto LABEL_11;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)informationPanel,
-                       (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   informationPanel = (struct UIPanel_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -60,7 +60,7 @@ void ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_o *this, co
       return;
     }
 LABEL_11:
-    sub_1C93D2C(informationPanel, method);
+    sub_1CE6958(informationPanel, method);
   }
 }
 
@@ -71,18 +71,18 @@ void ShopInfoIndicator__OnClick(ShopInfoIndicator_o *this, const MethodInfo *met
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4D2CB64 & 1) == 0 )
+  if ( (byte_4E00BC7 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_ShopInfoIndicator_OnClick__);
-    byte_4D2CB64 = 1;
+    sub_1CE6700(&Method_ShopInfoIndicator_OnClick__);
+    byte_4E00BC7 = 1;
   }
-  if ( !this->fields.isClick )
+  if ( this->fields._IsEnableSwitchButton_k__BackingField && !this->fields.isClick )
   {
     this->fields.isClick = 1;
     v3 = Method_ShopInfoIndicator_OnClick__;
     if ( (*((_BYTE *)Method_ShopInfoIndicator_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C93AEC(Method_ShopInfoIndicator_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C93AB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1CE6718(Method_ShopInfoIndicator_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ShopInfoIndicator__SwitchInfo(this, v5);
   }
@@ -104,8 +104,8 @@ void ShopInfoIndicator__StartInformationChange(ShopInfoIndicator_o *this, const 
   ShopInfoIndicator__StopInformationChange(this, method);
   v4 = ShopInfoIndicator__InformationChangeCR(this, v3);
   this->fields.InformationChangeCRW = v4;
-  sub_1C93A78((GrandQuestFolderBoardItem_o *)&this->fields.InformationChangeCRW, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_72105100(
+  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.InformationChangeCRW, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  UnityEngine_MonoBehaviour__StartCoroutine_72903732(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.InformationChangeCRW,
     0);
@@ -130,7 +130,7 @@ void ShopInfoIndicator__StopInformationChange(ShopInfoIndicator_o *this, const M
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, InformationChangeCRW, 0);
     this->fields.InformationChangeCRW = 0;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)p_InformationChangeCRW, 0, v5, v6, v7, v8, v9, v10);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_InformationChangeCRW, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -166,7 +166,7 @@ void ShopInfoIndicator__SwitchInfo(ShopInfoIndicator_o *this, const MethodInfo *
         goto LABEL_7;
     }
 LABEL_16:
-    sub_1C93D34(this);
+    sub_1CE6960(this);
   }
 LABEL_7:
   v6 = v4->fields.infos;
@@ -180,7 +180,7 @@ LABEL_7:
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0), (v8 = v4->fields.infos) == 0) )
   {
 LABEL_15:
-    sub_1C93D2C(this, method);
+    sub_1CE6958(this, method);
   }
   v9 = v4->fields.infoIndex;
   if ( v9 < LODWORD(v8->max_length) - 1 )
@@ -191,8 +191,20 @@ LABEL_15:
 }
 
 
-void ShopInfoIndicator__InformationChangeCR_d__7___ctor(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+bool ShopInfoIndicator__get_IsEnableSwitchButton(ShopInfoIndicator_o *this, const MethodInfo *method)
+{
+  return this->fields._IsEnableSwitchButton_k__BackingField;
+}
+
+
+void ShopInfoIndicator__set_IsEnableSwitchButton(ShopInfoIndicator_o *this, bool value, const MethodInfo *method)
+{
+  this->fields._IsEnableSwitchButton_k__BackingField = value;
+}
+
+
+void ShopInfoIndicator__InformationChangeCR_d__11___ctor(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
@@ -201,11 +213,11 @@ void ShopInfoIndicator__InformationChangeCR_d__7___ctor(
 }
 
 
-bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+bool ShopInfoIndicator__InformationChangeCR_d__11__MoveNext(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         const MethodInfo *method)
 {
-  ShopInfoIndicator__InformationChangeCR_d__7_o *v2; // x19
+  ShopInfoIndicator__InformationChangeCR_d__11_o *v2; // x19
   struct ShopInfoIndicator_o *_4__this; // x20
   int32_t v4; // w2
   int32_t v5; // w3
@@ -229,7 +241,7 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
   System_String_o *v23; // x7
   UnityEngine_GameObject_o *v24; // x0
   TweenAlpha_o *v25; // x0
-  ShopInfoIndicator__InformationChangeCR_d__7_o **v26; // x21
+  ShopInfoIndicator__InformationChangeCR_d__11_o **v26; // x21
   int32_t v27; // w2
   int32_t v28; // w3
   System_String_o *v29; // x4
@@ -239,11 +251,11 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
   const MethodInfo *v33; // x1
   UnityEngine_Object_o *v34; // x22
   struct UnityEngine_WaitForEndOfFrame_o *wait_5__3; // x1
-  ShopInfoIndicator__InformationChangeCR_d__7_o *v36; // x0
+  ShopInfoIndicator__InformationChangeCR_d__11_o *v36; // x0
   int v37; // w20
   UnityEngine_GameObject_o *gameObject; // x0
   TweenAlpha_o *v39; // x0
-  ShopInfoIndicator__InformationChangeCR_d__7_o **p_ta_5__2; // x21
+  ShopInfoIndicator__InformationChangeCR_d__11_o **p_ta_5__2; // x21
   int32_t v41; // w2
   int32_t v42; // w3
   System_String_o *v43; // x4
@@ -253,11 +265,11 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
   UnityEngine_Object_o *ta_5__2; // x22
 
   v2 = this;
-  if ( (byte_4D2CB65 & 1) == 0 )
+  if ( (byte_4E00BC8 & 1) == 0 )
   {
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)sub_1C93AD4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4D2CB65 = 1;
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)sub_1CE6700(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4E00BC8 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -267,23 +279,23 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
       if ( !_4__this )
         goto LABEL_48;
       ShopInfoIndicator__InformationPanelTweenAlpha(_4__this, method);
-      this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)_4__this->fields.informationPanel;
+      this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)_4__this->fields.informationPanel;
       if ( !this )
         goto LABEL_48;
-      ((void (__fastcall *)(ShopInfoIndicator__InformationChangeCR_d__7_o *, const MethodInfo *, float))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
+      ((void (__fastcall *)(ShopInfoIndicator__InformationChangeCR_d__11_o *, const MethodInfo *, float))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
         this,
         this->klass->vtable._8_System_Collections_IEnumerator_Reset.method,
         1.0);
       _4__this->fields.isClick = 1;
       v2->fields._ta_5__2 = 0;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, 0, v4, v5, v6, v7, v8, v9);
-      v10 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C93D20(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, 0, v4, v5, v6, v7, v8, v9);
+      v10 = (UnityEngine_WaitForEndOfFrame_o *)sub_1CE694C(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v10, 0);
       v2->fields._wait_5__3 = v10;
-      sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._wait_5__3, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._wait_5__3, (int32_t)v10, v11, v12, v13, v14, v15, v16);
       goto LABEL_17;
     case 1:
-      this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)v2->fields._ta_5__2;
+      this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)v2->fields._ta_5__2;
       v2->fields.__1__state = -1;
       if ( !this )
         goto LABEL_48;
@@ -310,18 +322,18 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
 LABEL_34:
         if ( _4__this->fields.isClick )
           goto LABEL_17;
-        this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)_4__this->fields.informationPanel;
+        this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)_4__this->fields.informationPanel;
         if ( !this )
           goto LABEL_48;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         v39 = TweenAlpha__Begin(gameObject, 0.5, 0.0, 0);
         v2->fields._ta_5__2 = v39;
-        p_ta_5__2 = (ShopInfoIndicator__InformationChangeCR_d__7_o **)&v2->fields._ta_5__2;
-        sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, (int32_t)v39, v41, v42, v43, v44, v45, v46);
+        p_ta_5__2 = (ShopInfoIndicator__InformationChangeCR_d__11_o **)&v2->fields._ta_5__2;
+        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, (int32_t)v39, v41, v42, v43, v44, v45, v46);
         ta_5__2 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Object__op_Inequality(ta_5__2, 0, 0);
+        this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)UnityEngine_Object__op_Inequality(ta_5__2, 0, 0);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_17;
         this = *p_ta_5__2;
@@ -329,9 +341,9 @@ LABEL_34:
           goto LABEL_48;
         LODWORD(this->fields.__4__this) = 6;
 LABEL_41:
-        this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Behaviour__get_enabled(
-                                                                  (UnityEngine_Behaviour_o *)this,
-                                                                  0);
+        this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)UnityEngine_Behaviour__get_enabled(
+                                                                   (UnityEngine_Behaviour_o *)this,
+                                                                   0);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
         while ( 1 )
@@ -340,7 +352,7 @@ LABEL_17:
           if ( !_4__this )
             goto LABEL_48;
           ShopInfoIndicator__InformationPanelTweenAlpha(_4__this, method);
-          this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)_4__this->fields.informationPanel;
+          this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)_4__this->fields.informationPanel;
           if ( !this )
             goto LABEL_48;
           if ( _4__this->fields.isClick )
@@ -348,13 +360,13 @@ LABEL_17:
           v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           v25 = TweenAlpha__Begin(v24, 0.5, 1.0, 0);
           v2->fields._ta_5__2 = v25;
-          v26 = (ShopInfoIndicator__InformationChangeCR_d__7_o **)&v2->fields._ta_5__2;
-          sub_1C93A78((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, (int32_t)v25, v27, v28, v29, v30, v31, v32);
+          v26 = (ShopInfoIndicator__InformationChangeCR_d__11_o **)&v2->fields._ta_5__2;
+          sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._ta_5__2, (int32_t)v25, v27, v28, v29, v30, v31, v32);
           ShopInfoIndicator__SwitchInfo(_4__this, v33);
           v34 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Object__op_Inequality(v34, 0, 0);
+          this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)UnityEngine_Object__op_Inequality(v34, 0, 0);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             this = *v26;
@@ -362,9 +374,9 @@ LABEL_17:
               goto LABEL_48;
             LODWORD(this->fields.__4__this) = 6;
 LABEL_26:
-            this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Behaviour__get_enabled(
-                                                                      (UnityEngine_Behaviour_o *)this,
-                                                                      0);
+            this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)UnityEngine_Behaviour__get_enabled(
+                                                                       (UnityEngine_Behaviour_o *)this,
+                                                                       0);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               if ( !_4__this )
@@ -385,7 +397,7 @@ LABEL_26:
           if ( !_4__this->fields.isClick )
             goto LABEL_32;
         }
-        ((void (__fastcall *)(ShopInfoIndicator__InformationChangeCR_d__7_o *, const MethodInfo *, float))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
+        ((void (__fastcall *)(ShopInfoIndicator__InformationChangeCR_d__11_o *, const MethodInfo *, float))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
           this,
           this->klass->vtable._8_System_Collections_IEnumerator_Reset.method,
           1.0);
@@ -395,7 +407,7 @@ LABEL_32:
       }
       if ( !_4__this )
 LABEL_48:
-        sub_1C93D2C(this, method);
+        sub_1CE6958(this, method);
       if ( _4__this->fields.isClick )
         goto LABEL_17;
       wait_5__3 = v2->fields._wait_5__3;
@@ -403,7 +415,7 @@ LABEL_48:
       v37 = 3;
 LABEL_46:
       v36->fields.__2__current = (Il2CppObject *)wait_5__3;
-      sub_1C93A78(
+      sub_1CE66A4(
         (GrandQuestFolderBoardItem_o *)&v36->fields.__2__current,
         (int32_t)wait_5__3,
         v18,
@@ -416,7 +428,7 @@ LABEL_46:
       v2->fields.__1__state = v37;
       return result;
     case 3:
-      this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)v2->fields._ta_5__2;
+      this = (ShopInfoIndicator__InformationChangeCR_d__11_o *)v2->fields._ta_5__2;
       v2->fields.__1__state = -1;
       if ( !this )
         goto LABEL_48;
@@ -427,40 +439,40 @@ LABEL_46:
 }
 
 
-Il2CppObject *ShopInfoIndicator__InformationChangeCR_d__7__System_Collections_Generic_IEnumerator_System_Object__get_Current(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+Il2CppObject *ShopInfoIndicator__InformationChangeCR_d__11__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         const MethodInfo *method)
 {
   return this->fields.__2__current;
 }
 
 
-void __noreturn ShopInfoIndicator__InformationChangeCR_d__7__System_Collections_IEnumerator_Reset(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+void __noreturn ShopInfoIndicator__InformationChangeCR_d__11__System_Collections_IEnumerator_Reset(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         const MethodInfo *method)
 {
   __int64 v2; // x0
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C93AE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C93D20(v2);
+  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C93AE8(&Method_ShopInfoIndicator__InformationChangeCR_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C93BFC(v3, v4);
+  v4 = sub_1CE6714(&Method_ShopInfoIndicator__InformationChangeCR_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1CE6828(v3, v4);
 }
 
 
-Il2CppObject *ShopInfoIndicator__InformationChangeCR_d__7__System_Collections_IEnumerator_get_Current(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+Il2CppObject *ShopInfoIndicator__InformationChangeCR_d__11__System_Collections_IEnumerator_get_Current(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         const MethodInfo *method)
 {
   return this->fields.__2__current;
 }
 
 
-void ShopInfoIndicator__InformationChangeCR_d__7__System_IDisposable_Dispose(
-        ShopInfoIndicator__InformationChangeCR_d__7_o *this,
+void ShopInfoIndicator__InformationChangeCR_d__11__System_IDisposable_Dispose(
+        ShopInfoIndicator__InformationChangeCR_d__11_o *this,
         const MethodInfo *method)
 {
   ;

@@ -6,10 +6,10 @@ void ContinueDecideRequest___ctor(ContinueDecideRequest_o *this, const MethodInf
 
 void ContinueDecideRequest__beginRequest(ContinueDecideRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D3249B & 1) == 0 )
+  if ( (byte_4E064E4 & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    byte_4D3249B = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    byte_4E064E4 = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, 0);
   RequestBase__addDeviceInfoField((RequestBase_o *)this, 0);
@@ -27,16 +27,16 @@ void ContinueDecideRequest__beginRequestCode(
 {
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D32497 & 1) == 0 )
+  if ( (byte_4E064E0 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_18401/*"continueKey"*/);
-    sub_1C93AD4(&StringLiteral_18404/*"continueType"*/);
-    sub_1C93AD4(&StringLiteral_18403/*"continuePass"*/);
-    byte_4D32497 = 1;
+    sub_1CE6700(&StringLiteral_18461/*"continueKey"*/);
+    sub_1CE6700(&StringLiteral_18464/*"continueType"*/);
+    sub_1CE6700(&StringLiteral_18463/*"continuePass"*/);
+    byte_4E064E0 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18404/*"continueType"*/, 1, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_18401/*"continueKey"*/, continueKey, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"continuePass"*/, continuePass, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18464/*"continueType"*/, 1, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_18461/*"continueKey"*/, continueKey, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_18463/*"continuePass"*/, continuePass, 0);
   ContinueDecideRequest__beginRequest(this, v7);
 }
 
@@ -49,16 +49,16 @@ void ContinueDecideRequest__beginRequestFacebook(
 {
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D32499 & 1) == 0 )
+  if ( (byte_4E064E2 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_19586/*"facebookId"*/);
-    sub_1C93AD4(&StringLiteral_18404/*"continueType"*/);
-    sub_1C93AD4(&StringLiteral_16743/*"accessToken"*/);
-    byte_4D32499 = 1;
+    sub_1CE6700(&StringLiteral_19648/*"facebookId"*/);
+    sub_1CE6700(&StringLiteral_18464/*"continueType"*/);
+    sub_1CE6700(&StringLiteral_16795/*"accessToken"*/);
+    byte_4E064E2 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18404/*"continueType"*/, 3, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_19586/*"facebookId"*/, facebookId, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_16743/*"accessToken"*/, accessToken, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18464/*"continueType"*/, 3, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_19648/*"facebookId"*/, facebookId, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_16795/*"accessToken"*/, accessToken, 0);
   ContinueDecideRequest__beginRequest(this, v7);
 }
 
@@ -71,26 +71,26 @@ void ContinueDecideRequest__beginRequestTwitter(
 {
   const MethodInfo *v7; // x1
 
-  if ( (byte_4D32498 & 1) == 0 )
+  if ( (byte_4E064E1 & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_24551/*"twitterId"*/);
-    sub_1C93AD4(&StringLiteral_18404/*"continueType"*/);
-    sub_1C93AD4(&StringLiteral_16743/*"accessToken"*/);
-    byte_4D32498 = 1;
+    sub_1CE6700(&StringLiteral_24639/*"twitterId"*/);
+    sub_1CE6700(&StringLiteral_18464/*"continueType"*/);
+    sub_1CE6700(&StringLiteral_16795/*"accessToken"*/);
+    byte_4E064E1 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18404/*"continueType"*/, 2, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_24551/*"twitterId"*/, twitterId, 0);
-  RequestBase__addField_44907496((RequestBase_o *)this, (System_String_o *)StringLiteral_16743/*"accessToken"*/, accessToken, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18464/*"continueType"*/, 2, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_24639/*"twitterId"*/, twitterId, 0);
+  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_16795/*"accessToken"*/, accessToken, 0);
   ContinueDecideRequest__beginRequest(this, v7);
 }
 
 
 System_String_o *ContinueDecideRequest__getMockData(ContinueDecideRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D32496 & 1) == 0 )
+  if ( (byte_4E064DF & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_1/*""*/);
-    byte_4D32496 = 1;
+    sub_1CE6700(&StringLiteral_1/*""*/);
+    byte_4E064DF = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -100,16 +100,16 @@ System_String_o *ContinueDecideRequest__getURL(ContinueDecideRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4D32495 & 1) == 0 )
+  if ( (byte_4E064DE & 1) == 0 )
   {
-    sub_1C93AD4(&NetworkManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_18398/*"continue/decide"*/);
-    byte_4D32495 = 1;
+    sub_1CE6700(&NetworkManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_18458/*"continue/decide"*/);
+    byte_4E064DE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64425724(BaseUrl, (System_String_o *)StringLiteral_18398/*"continue/decide"*/, 0);
+  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_18458/*"continue/decide"*/, 0);
 }
 
 
@@ -123,17 +123,17 @@ void ContinueDecideRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4D3249A & 1) == 0 )
+  if ( (byte_4E064E3 & 1) == 0 )
   {
-    sub_1C93AD4(&JsonManager_TypeInfo);
-    sub_1C93AD4(&ResponseCommandKind_TypeInfo);
-    sub_1C93AD4(&StringLiteral_22483/*"ng"*/);
-    byte_4D3249A = 1;
+    sub_1CE6700(&JsonManager_TypeInfo);
+    sub_1CE6700(&ResponseCommandKind_TypeInfo);
+    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
+    byte_4E064E3 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(33, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44908744(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45365352(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -142,7 +142,7 @@ void ContinueDecideRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22483/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22555/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

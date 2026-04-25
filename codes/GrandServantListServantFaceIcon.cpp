@@ -28,11 +28,11 @@ void GrandServantListServantFaceIcon__Setup(
   SkillInfo_array *skillInfoList; // [xsp+28h] [xbp-48h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
-  if ( (byte_4D2B66C & 1) == 0 )
+  if ( (byte_4DFF690 & 1) == 0 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4D2B66C = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4DFF690 = 1;
   }
   skillInfoList = 0;
   tdInfo = 0;
@@ -41,13 +41,13 @@ void GrandServantListServantFaceIcon__Setup(
     goto LABEL_19;
   if ( questRestrictionInfo )
   {
-    ServantFaceIconComponent__Set(servantFaceIcon, userServantEntity, 0, questRestrictionInfo, 0, 0, 0, 0, 0, 0);
+    ServantFaceIconComponent__Set(servantFaceIcon, userServantEntity, 0, questRestrictionInfo, 0, 0, 0, 0, 0, 1, 0);
     if ( !userServantEntity )
       goto LABEL_19;
   }
   else
   {
-    ServantFaceIconComponent__Set_41811860(servantFaceIcon, userServantEntity, 0, 0, 0);
+    ServantFaceIconComponent__Set_42235656(servantFaceIcon, userServantEntity, 0, 0, 1, 0);
     if ( !userServantEntity )
       goto LABEL_19;
   }
@@ -56,19 +56,19 @@ void GrandServantListServantFaceIcon__Setup(
   servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getLevelMax(userServantEntity, 0);
   if ( !iconLabelLevel )
     goto LABEL_19;
-  UIIconLabel__Set_41834012(iconLabelLevel, 2, lv, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_42257736(iconLabelLevel, 2, lv, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0);
   iconLabelFriendRank = this->fields.iconLabelFriendRank;
   servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getFriendshipRank(userServantEntity, 0);
   if ( !iconLabelFriendRank )
     goto LABEL_19;
-  UIIconLabel__Set_41834012(iconLabelFriendRank, 32, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_42257736(iconLabelFriendRank, 32, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0, 0);
   UserServantEntity__getSkillInfo(userServantEntity, &skillInfoList, -1, -1, 1, 0, -1, 0);
   UserServantEntity__getTreasureDeviceInfo(userServantEntity, &tdInfo, -1, -1, 0, 0);
   skillListTreasureDevice = this->fields.skillListTreasureDevice;
   v12 = skillInfoList;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetLevelList_42003760(v12, 0);
+  servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetLevelList_42427444(v12, 0);
   if ( !tdInfo )
     goto LABEL_19;
   v13 = tdInfo->fields.lv;
@@ -83,7 +83,7 @@ void GrandServantListServantFaceIcon__Setup(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v23.fields.currentCryptoKey = v18;
     *(_QWORD *)&v23.fields.fakeValue = v17;
-    v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49654028(v23, 0);
+    v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v23, 0);
     servantFaceIcon = (ServantFaceIconComponent_o *)QuestRestrictionInfo__GetOverwriteTempTreasureDeviceLv(
                                                       questRestrictionInfo,
                                                       v19,
@@ -92,7 +92,7 @@ void GrandServantListServantFaceIcon__Setup(
     if ( skillListTreasureDevice )
       goto LABEL_17;
 LABEL_19:
-    sub_1C93D2C(servantFaceIcon, userServantEntity);
+    sub_1CE6958(servantFaceIcon, userServantEntity);
   }
   v20 = 0;
   if ( !skillListTreasureDevice )

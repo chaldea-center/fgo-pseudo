@@ -1,14 +1,14 @@
 void NpcServantFollowerMaster___ctor(NpcServantFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30F7F & 1) == 0 )
+  if ( (byte_4E04FC5 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
-    byte_4D30F7F = 1;
+    sub_1CE6700(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    byte_4E04FC5 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     100,
-    (const MethodInfo_34634AC *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    (const MethodInfo_34E9494 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
 }
 
 
@@ -40,17 +40,17 @@ bool NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
   System_String_o *v26; // x7
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4D30F80 & 1) == 0 )
+  if ( (byte_4E04FC6 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C93AD4(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    byte_4D30F80 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1CE6700(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+    byte_4E04FC6 = 1;
   }
   entity = 0;
   *npcServantFollowerEntity = 0;
-  sub_1C93A78(
+  sub_1CE66A4(
     (GrandQuestFolderBoardItem_o *)npcServantFollowerEntity,
     0,
     questId,
@@ -61,14 +61,14 @@ bool NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
     v7);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
   if ( !Master_object
     || (EntityArray = NpcFollowerMaster__GetEntityArray((NpcFollowerMaster_o *)Master_object, questId, questPhase, v14),
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
         !EntityArray) )
   {
 LABEL_19:
-    sub_1C93D2C(Master_object, v13);
+    sub_1CE6958(Master_object, v13);
   }
   max_length = EntityArray->max_length;
   v17 = max_length > 0;
@@ -79,7 +79,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( v19 >= (unsigned int)max_length )
-        sub_1C93D34(Master_object);
+        sub_1CE6960(Master_object);
       v20 = EntityArray->m_Items[v19];
       if ( !v20 || !v18 )
         goto LABEL_19;
@@ -87,7 +87,7 @@ LABEL_19:
                                         v18,
                                         &entity,
                                         v20->fields.leaderSvtId,
-                                        (const MethodInfo_3465A70 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+                                        (const MethodInfo_34EBA58 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         v13 = entity;
@@ -102,7 +102,7 @@ LABEL_19:
         return v17;
     }
     *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
-    sub_1C93A78((GrandQuestFolderBoardItem_o *)npcServantFollowerEntity, (int32_t)v13, v21, v22, v23, v24, v25, v26);
+    sub_1CE66A4((GrandQuestFolderBoardItem_o *)npcServantFollowerEntity, (int32_t)v13, v21, v22, v23, v24, v25, v26);
   }
   return v17;
 }

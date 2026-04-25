@@ -28,21 +28,21 @@ void SelectImageLimitListViewItemDraw__SetButton(
   ServantCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4D2BC75 & 1) == 0 )
+  if ( (byte_4DFFCA0 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_1C93AD4(&DataManager_TypeInfo);
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_12027/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_1C93AD4(&StringLiteral_17578/*"btn_bg_20"*/);
-    sub_1C93AD4(&StringLiteral_17579/*"btn_bg_21"*/);
-    byte_4D2BC75 = 1;
+    sub_1CE6700(&Method_DataManager_GetMaster_ServantCostumeMaster___);
+    sub_1CE6700(&DataManager_TypeInfo);
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_12062/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    sub_1CE6700(&StringLiteral_17633/*"btn_bg_20"*/);
+    sub_1CE6700(&StringLiteral_17635/*"btn_bg_21"*/);
+    byte_4DFFCA0 = 1;
   }
   entity = 0;
   limitCount = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ServantCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_31A49E8 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+  Master_object = (ServantCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
   if ( !item || !Master_object )
     goto LABEL_43;
   if ( ServantCostumeMaster__TryGetEntity(Master_object, &entity, item->fields.svtId, item->fields.limitCount, 0) )
@@ -63,7 +63,7 @@ LABEL_23:
   {
     limitCount = item->fields.limitCount;
     v9 = System_Int32__ToString((int32_t)&limitCount, 0);
-    v10 = System_String__Concat_64425724((System_String_o *)StringLiteral_12027/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v9, 0);
+    v10 = System_String__Concat_65122828((System_String_o *)StringLiteral_12062/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v9, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Master_object = (ServantCostumeMaster_o *)LocalizationManager__Get(v10, 0);
@@ -73,10 +73,10 @@ LABEL_23:
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4D2BD02 )
+  if ( !byte_4DFFD2D )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    byte_4D2BD02 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    byte_4DFFD2D = 1;
   }
   Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -101,10 +101,10 @@ LABEL_24:
   if ( !isSelected )
   {
 LABEL_33:
-    if ( !byte_4D2AFDF )
+    if ( !byte_4DFF120 )
     {
-      sub_1C93AD4(&LocalizationManager_TypeInfo);
-      byte_4D2AFDF = 1;
+      sub_1CE6700(&LocalizationManager_TypeInfo);
+      byte_4DFF120 = 1;
     }
     Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -120,13 +120,13 @@ LABEL_33:
     if ( v11 )
       goto LABEL_38;
 LABEL_43:
-    sub_1C93D2C(Master_object, v6);
+    sub_1CE6958(Master_object, v6);
   }
 LABEL_26:
-  if ( !byte_4D2AFE0 )
+  if ( !byte_4DFF121 )
   {
-    sub_1C93AD4(&LocalizationManager_TypeInfo);
-    byte_4D2AFE0 = 1;
+    sub_1CE6700(&LocalizationManager_TypeInfo);
+    byte_4DFF121 = 1;
   }
   Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -151,9 +151,9 @@ LABEL_38:
   if ( !Master_object )
     goto LABEL_43;
   if ( item->fields.isSelected )
-    v19 = &StringLiteral_17579/*"btn_bg_21"*/;
+    v19 = &StringLiteral_17635/*"btn_bg_21"*/;
   else
-    v19 = &StringLiteral_17578/*"btn_bg_20"*/;
+    v19 = &StringLiteral_17633/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)*v19, 0);
 }
 
@@ -172,12 +172,12 @@ void SelectImageLimitListViewItemDraw__SetInput(
   int32_t svtId; // w23
   const MethodInfo *v13; // x2
 
-  if ( (byte_4D2BC74 & 1) == 0 )
+  if ( (byte_4DFFC9F & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C93AD4(&UnityEngine_Object_TypeInfo);
-    byte_4D2BC74 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    byte_4DFFC9F = 1;
   }
   if ( item )
   {
@@ -190,11 +190,11 @@ void SelectImageLimitListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_319B20C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0) )
       {
-        sub_1C93D2C(Component_object, v8);
+        sub_1CE6958(Component_object, v8);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,
@@ -207,7 +207,7 @@ void SelectImageLimitListViewItemDraw__SetInput(
     limitCount = item->fields.limitCount;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 1, 0, 0);
+    AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 1, 0, 0, 0);
     SelectImageLimitListViewItemDraw__SetButton(this, item, v13);
   }
 }
@@ -224,10 +224,10 @@ void SelectImageLimitListViewItemDraw__SetItem(
   int32_t svtId; // w23
   const MethodInfo *v10; // x2
 
-  if ( (byte_4D2BC73 & 1) == 0 )
+  if ( (byte_4DFFC9E & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    byte_4D2BC73 = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    byte_4DFFC9E = 1;
   }
   if ( item && mode )
   {
@@ -236,7 +236,7 @@ void SelectImageLimitListViewItemDraw__SetItem(
     limitCount = item->fields.limitCount;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 1, 0, 0);
+    AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 1, 0, 0, 0);
     SelectImageLimitListViewItemDraw__SetButton(this, item, v10);
   }
 }

@@ -1,27 +1,27 @@
 void MapCondEntity___ctor(MapCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30E9C & 1) == 0 )
+  if ( (byte_4E04EE2 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D30E9C = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04EE2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MapCondEntity__CreatePK(int32_t id, int32_t mapId, const MethodInfo *method)
 {
-  if ( (byte_4D30E9A & 1) == 0 )
+  if ( (byte_4E04EE0 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D30E9A = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E04EE0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            mapId,
-           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -63,10 +63,10 @@ bool MapCondEntity__IsOpen(MapCondEntity_o *this, const MethodInfo *method)
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4D30E9B & 1) == 0 )
+  if ( (byte_4E04EE1 & 1) == 0 )
   {
-    sub_1C93AD4(&CondType_TypeInfo);
-    byte_4D30E9B = 1;
+    sub_1CE6700(&CondType_TypeInfo);
+    byte_4E04EE1 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

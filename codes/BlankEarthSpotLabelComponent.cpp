@@ -8,16 +8,16 @@ void BlankEarthSpotLabelComponent__SetupNameBgSprite(BlankEarthSpotLabelComponen
 {
   UISprite_o *nameBgSprite; // x19
 
-  if ( (byte_4D2D0BA & 1) == 0 )
+  if ( (byte_4E011AA & 1) == 0 )
   {
-    sub_1C93AD4(&AtlasManager_TypeInfo);
-    sub_1C93AD4(&StringLiteral_20818/*"img_spotname_bg"*/);
-    byte_4D2D0BA = 1;
+    sub_1CE6700(&AtlasManager_TypeInfo);
+    sub_1CE6700(&StringLiteral_20886/*"img_spotname_bg"*/);
+    byte_4E011AA = 1;
   }
   nameBgSprite = this->fields.nameBgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(nameBgSprite, (System_String_o *)StringLiteral_20818/*"img_spotname_bg"*/, 0);
+  AtlasManager__SetEventUI(nameBgSprite, (System_String_o *)StringLiteral_20886/*"img_spotname_bg"*/, 0);
 }
 
 
@@ -47,7 +47,7 @@ void BlankEarthSpotLabelComponent__SetupNameLabel(
     || (nameLabel = (UILabel_o *)this->fields.nameBgSprite, v10 = v9->fields.mWidth + (v9->fields.mWidth < 0),
                                                             !nameLabel) )
   {
-    sub_1C93D2C(nameLabel, spotNameText);
+    sub_1CE6958(nameLabel, spotNameText);
   }
   v11 = v10 >> 1;
   if ( v11 <= -10 )

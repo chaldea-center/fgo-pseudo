@@ -1,27 +1,27 @@
 void GachaSubEntity___ctor(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30DD0 & 1) == 0 )
+  if ( (byte_4E04E11 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_string___ctor__);
-    byte_4D30DD0 = 1;
+    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
+    byte_4E04E11 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3460BB4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *GachaSubEntity__CreatePK(int32_t gachaId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4D30DCF & 1) == 0 )
+  if ( (byte_4E04E10 & 1) == 0 )
   {
-    sub_1C93AD4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4D30DCF = 1;
+    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E04E10 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            gachaId,
            id,
-           (const MethodInfo_31A2BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,43 +35,43 @@ System_String_o *GachaSubEntity__CreatePrimaryKey(GachaSubEntity_o *this, const 
 
 System_String_o *GachaSubEntity__GetSummonConfirmMessage(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30DCB & 1) == 0 )
+  if ( (byte_4E04E0C & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_13264/*"SummonConfirmMessage"*/);
-    byte_4D30DCB = 1;
+    sub_1CE6700(&StringLiteral_13304/*"SummonConfirmMessage"*/);
+    byte_4E04E0C = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_13264/*"SummonConfirmMessage"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_13304/*"SummonConfirmMessage"*/, 0, 0);
 }
 
 
 int32_t GachaSubEntity__GetSummonConfirmMessageFontSize(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30DCE & 1) == 0 )
+  if ( (byte_4E04E0F & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_6830/*"FontSize"*/);
-    byte_4D30DCE = 1;
+    sub_1CE6700(&StringLiteral_6846/*"FontSize"*/);
+    byte_4E04E0F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6830/*"FontSize"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6846/*"FontSize"*/, 0, 0);
 }
 
 
 int32_t GachaSubEntity__GetSummonConfirmMessageSpacingX(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30DCD & 1) == 0 )
+  if ( (byte_4E04E0E & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_13038/*"SpacingX"*/);
-    byte_4D30DCD = 1;
+    sub_1CE6700(&StringLiteral_13078/*"SpacingX"*/);
+    byte_4E04E0E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13038/*"SpacingX"*/, -1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13078/*"SpacingX"*/, -1, 0);
 }
 
 
 int32_t GachaSubEntity__GetSummonConfirmMessageSpacingY(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4D30DCC & 1) == 0 )
+  if ( (byte_4E04E0D & 1) == 0 )
   {
-    sub_1C93AD4(&StringLiteral_13039/*"SpacingY"*/);
-    byte_4D30DCC = 1;
+    sub_1CE6700(&StringLiteral_13079/*"SpacingY"*/);
+    byte_4E04E0D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13039/*"SpacingY"*/, -1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13079/*"SpacingY"*/, -1, 0);
 }
