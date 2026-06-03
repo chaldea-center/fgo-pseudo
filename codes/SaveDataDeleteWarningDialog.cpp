@@ -1,9 +1,9 @@
 void SaveDataDeleteWarningDialog___ctor(SaveDataDeleteWarningDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4DFEEE5 & 1) == 0 )
+  if ( (byte_4E71ADA & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4DFEEE5 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E71ADA = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,17 +17,17 @@ void SaveDataDeleteWarningDialog__OnClickCancel(SaveDataDeleteWarningDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   struct SaveDataDeleteWarningDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4DFEEE4 & 1) == 0 )
+  if ( (byte_4E71AD9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SaveDataDeleteWarningDialog_OnClickCancel__);
-    byte_4DFEEE4 = 1;
+    sub_1D0F0B4(&Method_SaveDataDeleteWarningDialog_OnClickCancel__);
+    byte_4E71AD9 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteWarningDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SaveDataDeleteWarningDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_SaveDataDeleteWarningDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteWarningDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -45,17 +45,17 @@ void SaveDataDeleteWarningDialog__OnClickDecide(SaveDataDeleteWarningDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   struct SaveDataDeleteWarningDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4DFEEE3 & 1) == 0 )
+  if ( (byte_4E71AD8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SaveDataDeleteWarningDialog_OnClickDecide__);
-    byte_4DFEEE3 = 1;
+    sub_1D0F0B4(&Method_SaveDataDeleteWarningDialog_OnClickDecide__);
+    byte_4E71AD8 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteWarningDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_SaveDataDeleteWarningDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_SaveDataDeleteWarningDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteWarningDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -71,13 +71,13 @@ void SaveDataDeleteWarningDialog__OnEnable(SaveDataDeleteWarningDialog_o *this, 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4DFEEE2 & 1) == 0 )
+  if ( (byte_4E71AD7 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4DFEEE2 = 1;
+    sub_1D0F0B4(&StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4E71AD7 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46098588(transform, (System_String_o *)StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -107,14 +107,14 @@ void SaveDataDeleteWarningDialog__Open(
         (decideButtonColor = this->fields.decideButtonColor) == 0) )
   {
 LABEL_5:
-    sub_1CE6958(decideButtonColor, func);
+    sub_1D0F30C(decideButtonColor, func);
   }
   ((void (__fastcall *)(UIButtonColor_o *, __int64, const MethodInfo *))decideButtonColor->klass->vtable._5_set_isEnabled.methodPtr)(
     decideButtonColor,
     1,
     decideButtonColor->klass->vtable._5_set_isEnabled.method);
   this->fields.clickFunc = func;
-  sub_1CE66A4(&this->fields.clickFunc, func);
+  sub_1D0F058(&this->fields.clickFunc, func);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
 
@@ -134,15 +134,15 @@ void SaveDataDeleteWarningDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1CE66A4(&this->fields.m_target, object);
+  sub_1D0F058(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v10, 0);
+      v10 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -154,9 +154,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B0EC10;
+  this->fields.invoke_impl = (intptr_t)sub_1B34A18;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B0EBC8;
+  this->fields.extra_arg = (intptr_t)sub_1B349D0;
 }
 
 
@@ -171,14 +171,14 @@ System_IAsyncResult_o *SaveDataDeleteWarningDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4DFEEE6 & 1) == 0 )
+  if ( (byte_4E71ADB & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4DFEEE6 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E71ADB = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -187,7 +187,7 @@ void SaveDataDeleteWarningDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

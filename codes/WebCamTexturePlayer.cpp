@@ -40,20 +40,20 @@ System_Collections_IEnumerator_o *WebCamTexturePlayer__CameraPermissionCheckRout
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4E06B07 & 1) == 0 )
+  if ( (byte_4E797B0 & 1) == 0 )
   {
-    sub_1CE6700(&WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_TypeInfo);
-    byte_4E06B07 = 1;
+    sub_1D0F0B4(&WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_TypeInfo);
+    byte_4E797B0 = 1;
   }
-  v7 = sub_1CE694C(WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_TypeInfo);
+  v7 = sub_1D0F300(WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 48) = cancelCallback;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)cancelCallback, v14, v15, v16, v17, v18, v19);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)cancelCallback, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 56) = successCallback;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 56), (int32_t)successCallback, v20, v21, v22, v23, v24, v25);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 56), (int32_t)successCallback, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -82,12 +82,12 @@ void WebCamTexturePlayer__StopCamera(WebCamTexturePlayer_o *this, const MethodIn
 
 bool WebCamTexturePlayer__get_IsCameraPermissionGranted(WebCamTexturePlayer_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E06B06 & 1) == 0 )
+  if ( (byte_4E797AF & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_16938/*"android.permission.CAMERA"*/);
-    byte_4E06B06 = 1;
+    sub_1D0F0B4(&StringLiteral_17009/*"android.permission.CAMERA"*/);
+    byte_4E797AF = 1;
   }
-  return UnityEngine_Android_Permission__HasUserAuthorizedPermission((System_String_o *)StringLiteral_16938/*"android.permission.CAMERA"*/, 0);
+  return UnityEngine_Android_Permission__HasUserAuthorizedPermission((System_String_o *)StringLiteral_17009/*"android.permission.CAMERA"*/, 0);
 }
 
 
@@ -147,23 +147,23 @@ bool WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4__MoveNext(
   System_String_o *v41; // x7
 
   v8 = this;
-  if ( (byte_4E06B09 & 1) == 0 )
+  if ( (byte_4E797B2 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_string__TypeInfo);
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Android_PermissionCallbacks_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_WebCamTexturePlayer___c__CameraPermissionCheckRoutine_b__4_0__);
-    sub_1CE6700(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__1__);
-    sub_1CE6700(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__2__);
-    sub_1CE6700(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__3__);
-    sub_1CE6700(&WebCamTexturePlayer___c__DisplayClass4_0_TypeInfo);
-    sub_1CE6700(&WebCamTexturePlayer___c_TypeInfo);
-    sub_1CE6700(&StringLiteral_10440/*"PHOTO_CAMERA_PERMISSION_CONFIRM_DIALOG"*/);
-    sub_1CE6700(&StringLiteral_16938/*"android.permission.CAMERA"*/);
-    this = (WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_o *)sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E06B09 = 1;
+    sub_1D0F0B4(&System_Action_string__TypeInfo);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Android_PermissionCallbacks_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_WebCamTexturePlayer___c__CameraPermissionCheckRoutine_b__4_0__);
+    sub_1D0F0B4(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__1__);
+    sub_1D0F0B4(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__2__);
+    sub_1D0F0B4(&Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__3__);
+    sub_1D0F0B4(&WebCamTexturePlayer___c__DisplayClass4_0_TypeInfo);
+    sub_1D0F0B4(&WebCamTexturePlayer___c_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_10481/*"PHOTO_CAMERA_PERMISSION_CONFIRM_DIALOG"*/);
+    sub_1D0F0B4(&StringLiteral_17009/*"android.permission.CAMERA"*/);
+    this = (WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E797B2 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -189,11 +189,11 @@ LABEL_15:
         return 0;
       }
       ActionExtensions__Call(v8->fields.cancelCallback, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       this = (WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_o *)LocalizationManager__Get(
-                                                                           (System_String_o *)StringLiteral_10440/*"PHOTO_CAMERA_PERMISSION_CONFIRM_DIALOG"*/,
+                                                                           (System_String_o *)StringLiteral_10481/*"PHOTO_CAMERA_PERMISSION_CONFIRM_DIALOG"*/,
                                                                            0);
       v30 = this;
       v31 = WebCamTexturePlayer___c_TypeInfo;
@@ -212,11 +212,11 @@ LABEL_15:
           v31 = WebCamTexturePlayer___c_TypeInfo;
         }
         v34 = (Il2CppObject *)v31->static_fields->__9;
-        _9__4_0 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        _9__4_0 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         System_Action___ctor(_9__4_0, v34, Method_WebCamTexturePlayer___c__CameraPermissionCheckRoutine_b__4_0__, 0);
         static_fields = WebCamTexturePlayer___c_TypeInfo->static_fields;
         static_fields->__9__4_0 = _9__4_0;
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)&static_fields->__9__4_0,
           (int32_t)_9__4_0,
           v36,
@@ -248,20 +248,20 @@ LABEL_15:
         return 0;
       }
 LABEL_28:
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
     }
-    v11 = (Il2CppObject *)sub_1CE694C(WebCamTexturePlayer___c__DisplayClass4_0_TypeInfo);
+    v11 = (Il2CppObject *)sub_1D0F300(WebCamTexturePlayer___c__DisplayClass4_0_TypeInfo);
     System_Object___ctor(v11, 0);
     v8->fields.__8__1 = (struct WebCamTexturePlayer___c__DisplayClass4_0_o *)v11;
     p__8__1 = (Il2CppObject **)&v8->fields.__8__1;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v13, v14, v15, v16, v17, v18);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v13, v14, v15, v16, v17, v18);
     if ( !v8->fields.__8__1 )
       goto LABEL_28;
     v8->fields.__8__1->fields.isWaiting = 1;
-    v19 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1CE694C(UnityEngine_Android_PermissionCallbacks_TypeInfo);
+    v19 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1D0F300(UnityEngine_Android_PermissionCallbacks_TypeInfo);
     UnityEngine_Android_PermissionCallbacks___ctor(v19, 0);
     v20 = *p__8__1;
-    v21 = (System_Action_object__o *)sub_1CE694C(System_Action_string__TypeInfo);
+    v21 = (System_Action_object__o *)sub_1D0F300(System_Action_string__TypeInfo);
     System_Action_object____ctor(
       v21,
       v20,
@@ -271,7 +271,7 @@ LABEL_28:
       goto LABEL_28;
     UnityEngine_Android_PermissionCallbacks__add_PermissionGranted(v19, (System_Action_string__o *)v21, 0);
     v22 = *p__8__1;
-    v23 = (System_Action_object__o *)sub_1CE694C(System_Action_string__TypeInfo);
+    v23 = (System_Action_object__o *)sub_1D0F300(System_Action_string__TypeInfo);
     System_Action_object____ctor(
       v23,
       v22,
@@ -279,14 +279,14 @@ LABEL_28:
       0);
     UnityEngine_Android_PermissionCallbacks__add_PermissionDenied(v19, (System_Action_string__o *)v23, 0);
     v24 = *p__8__1;
-    v25 = (System_Action_object__o *)sub_1CE694C(System_Action_string__TypeInfo);
+    v25 = (System_Action_object__o *)sub_1D0F300(System_Action_string__TypeInfo);
     System_Action_object____ctor(
       v25,
       v24,
       Method_WebCamTexturePlayer___c__DisplayClass4_0__CameraPermissionCheckRoutine_b__3__,
       0);
     UnityEngine_Android_PermissionCallbacks__add_PermissionDeniedAndDontAskAgain(v19, (System_Action_string__o *)v25, 0);
-    UnityEngine_Android_Permission__RequestUserPermission((System_String_o *)StringLiteral_16938/*"android.permission.CAMERA"*/, v19, 0);
+    UnityEngine_Android_Permission__RequestUserPermission((System_String_o *)StringLiteral_17009/*"android.permission.CAMERA"*/, v19, 0);
 LABEL_11:
     this = (WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_o *)&v8->fields.__8__1;
     _8__1 = v8->fields.__8__1;
@@ -296,13 +296,13 @@ LABEL_11:
     {
       v8->fields.__2__current = 0;
       p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-      sub_1CE66A4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+      sub_1D0F058(p__2__current, 0, v2, v3, v4, v5, v6, v7);
       result = 1;
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
       return result;
     }
     this->klass = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)this, 0, v2, v3, v4, v5, v6, v7);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)this, 0, v2, v3, v4, v5, v6, v7);
     if ( !_4__this )
       goto LABEL_28;
     goto LABEL_15;
@@ -327,11 +327,11 @@ void __noreturn WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 
@@ -361,15 +361,15 @@ void WebCamTexturePlayer___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E06B08 & 1) == 0 )
+  if ( (byte_4E797B1 & 1) == 0 )
   {
-    sub_1CE6700(&WebCamTexturePlayer___c_TypeInfo);
-    byte_4E06B08 = 1;
+    sub_1D0F0B4(&WebCamTexturePlayer___c_TypeInfo);
+    byte_4E797B1 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(WebCamTexturePlayer___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(WebCamTexturePlayer___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WebCamTexturePlayer___c_TypeInfo->static_fields->__9 = (struct WebCamTexturePlayer___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)WebCamTexturePlayer___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

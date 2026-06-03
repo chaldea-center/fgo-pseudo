@@ -1,9 +1,9 @@
 void SummonInfoDlgComponent___ctor(SummonInfoDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E00E70 & 1) == 0 )
+  if ( (byte_4E73A98 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4E00E70 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E73A98 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,7 +29,7 @@ void SummonInfoDlgComponent__Callback(SummonInfoDlgComponent_o *this, const Meth
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1CE66A4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_1D0F058(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -44,14 +44,14 @@ void SummonInfoDlgComponent__Close(SummonInfoDlgComponent_o *this, System_Action
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4E00E6E & 1) == 0 )
+  if ( (byte_4E73A96 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_SummonInfoDlgComponent_EndClose__);
-    byte_4E00E6E = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_SummonInfoDlgComponent_EndClose__);
+    byte_4E73A96 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -60,7 +60,7 @@ void SummonInfoDlgComponent__Close(SummonInfoDlgComponent_o *this, System_Action
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_SummonInfoDlgComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -85,7 +85,7 @@ void SummonInfoDlgComponent__EndClose(SummonInfoDlgComponent_o *this, const Meth
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1CE66A4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1D0F058(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -95,10 +95,10 @@ void SummonInfoDlgComponent__Init(SummonInfoDlgComponent_o *this, const MethodIn
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4E00E6C & 1) == 0 )
+  if ( (byte_4E73A94 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E00E6C = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E73A94 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -109,7 +109,7 @@ void SummonInfoDlgComponent__Init(SummonInfoDlgComponent_o *this, const MethodIn
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1CE6958(titleLabel, method);
+    sub_1D0F30C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -130,14 +130,14 @@ void SummonInfoDlgComponent__OpenInfoMessageDlg(
   UILabel_o *titleLabel; // x0
   UILabel_o *confirmBtnLabel; // x20
 
-  if ( (byte_4E00E6D & 1) == 0 )
+  if ( (byte_4E73A95 & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4E00E6D = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4E73A95 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)message,
@@ -157,7 +157,7 @@ void SummonInfoDlgComponent__OpenInfoMessageDlg(
   confirmBtnLabel = this->fields.confirmBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !confirmBtnLabel
     || (UILabel__set_text(confirmBtnLabel, (System_String_o *)titleLabel, 0),
         (titleLabel = (UILabel_o *)this->fields.cautionInfo) == 0)
@@ -165,7 +165,7 @@ void SummonInfoDlgComponent__OpenInfoMessageDlg(
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_11:
-    sub_1CE6958(titleLabel, v12);
+    sub_1D0F30C(titleLabel, v12);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 1, 0);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
@@ -187,10 +187,10 @@ void SummonInfoDlgComponent__add_callbackFunc(
   SummonInfoDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4E00E6A & 1) == 0 )
+  if ( (byte_4E73A92 & 1) == 0 )
   {
-    sub_1CE6700(&SummonInfoDlgComponent_CallbackFunc_TypeInfo);
-    byte_4E00E6A = 1;
+    sub_1D0F0B4(&SummonInfoDlgComponent_CallbackFunc_TypeInfo);
+    byte_4E73A92 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -203,25 +203,25 @@ void SummonInfoDlgComponent__add_callbackFunc(
       if ( (SummonInfoDlgComponent_CallbackFunc_c *)v8->klass != SummonInfoDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   SummonInfoDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *SummonInfoDlgComponent__get_closeBtnPath(SummonInfoDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E00E6F & 1) == 0 )
+  if ( (byte_4E73A97 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_4685/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/);
-    byte_4E00E6F = 1;
+    sub_1D0F0B4(&StringLiteral_4697/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/);
+    byte_4E73A97 = 1;
   }
-  return (System_String_o *)StringLiteral_4685/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/;
+  return (System_String_o *)StringLiteral_4697/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/;
 }
 
 
@@ -239,10 +239,10 @@ void SummonInfoDlgComponent__remove_callbackFunc(
   SummonInfoDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E00E6B & 1) == 0 )
+  if ( (byte_4E73A93 & 1) == 0 )
   {
-    sub_1CE6700(&SummonInfoDlgComponent_CallbackFunc_TypeInfo);
-    byte_4E00E6B = 1;
+    sub_1D0F0B4(&SummonInfoDlgComponent_CallbackFunc_TypeInfo);
+    byte_4E73A93 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -255,13 +255,13 @@ void SummonInfoDlgComponent__remove_callbackFunc(
       if ( (SummonInfoDlgComponent_CallbackFunc_c *)v8->klass != SummonInfoDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   SummonInfoDlgComponent__Init(v11, v12);
 }
 
@@ -285,7 +285,7 @@ void SummonInfoDlgComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -296,12 +296,12 @@ void SummonInfoDlgComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -313,9 +313,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B13880;
+  this->fields.invoke_impl = (intptr_t)sub_1B39688;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B13840;
+  this->fields.extra_arg = (intptr_t)sub_1B39648;
 }
 
 
@@ -328,7 +328,7 @@ System_IAsyncResult_o *SummonInfoDlgComponent_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, &v5, callback, object);
 }
 
 
@@ -337,7 +337,7 @@ void SummonInfoDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

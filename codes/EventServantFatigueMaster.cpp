@@ -1,14 +1,14 @@
 void EventServantFatigueMaster___ctor(EventServantFatigueMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04B81 & 1) == 0 )
+  if ( (byte_4E77804 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string___ctor__);
-    byte_4E04B81 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string___ctor__);
+    byte_4E77804 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     238,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventServantFatigueEntity_o *EventServantFatigueMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E04B7F & 1) == 0 )
+  if ( (byte_4E77802 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__GetEntity__);
-    byte_4E04B7F = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__GetEntity__);
+    byte_4E77802 = 1;
   }
   PK = (Il2CppObject *)EventServantFatigueEntity__CreatePK(eventId, svtId, priority, *(const MethodInfo **)&priority);
   return (EventServantFatigueEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_34EE1BC *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__GetEntity__);
+                                          (const MethodInfo_353AADC *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__GetEntity__);
 }
 
 
@@ -63,24 +63,24 @@ bool EventServantFatigueMaster__IsBonusFilterTarget(
   int32_t *v25; // x10
   __int64 v26; // x0
 
-  if ( (byte_4E04B82 & 1) == 0 )
+  if ( (byte_4E77805 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_EventServantFatigueEntity__GetEnumerator__);
-    sub_1CE6700(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&System_IDisposable_TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_IEnumerator_EventServantFatigueEntity__TypeInfo);
-    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
-    byte_4E04B82 = 1;
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventServantFatigueEntity__GetEnumerator__);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&System_IDisposable_TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_EventServantFatigueEntity__TypeInfo);
+    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
+    byte_4E77805 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1CE6958(0, *(_QWORD *)&eventId);
+    sub_1D0F30C(0, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3481088 *)Method_System_Collections_ObjectModel_Collection_EventServantFatigueEntity__GetEnumerator__);
+                 (const MethodInfo_34CD418 *)Method_System_Collections_ObjectModel_Collection_EventServantFatigueEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1CE6958(0, v8);
+    sub_1D0F30C(0, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -100,7 +100,7 @@ bool EventServantFatigueMaster__IsBonusFilterTarget(
     else
     {
 LABEL_9:
-      v13 = sub_1CBCA7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -124,7 +124,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1CBCA7C(Enumerator, System_Collections_Generic_IEnumerator_EventServantFatigueEntity__TypeInfo, 0);
+      v17 = sub_1CE5430(Enumerator, System_Collections_Generic_IEnumerator_EventServantFatigueEntity__TypeInfo, 0);
     }
     v18 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                       Enumerator,
@@ -136,9 +136,9 @@ LABEL_16:
         goto LABEL_26;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
       if ( !Master_object )
-        sub_1CE6958(0, v21);
+        sub_1D0F30C(0, v21);
       if ( CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, v19[8], 0, 0, 0) )
       {
 LABEL_26:
@@ -166,7 +166,7 @@ LABEL_28:
   else
   {
 LABEL_32:
-    v26 = sub_1CBCA7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v26 = sub_1CE5430(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
   return v22;
@@ -184,15 +184,15 @@ bool EventServantFatigueMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E04B80 & 1) == 0 )
+  if ( (byte_4E77803 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__TryGetEntity__);
-    byte_4E04B80 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__TryGetEntity__);
+    byte_4E77803 = 1;
   }
   PK = (Il2CppObject *)EventServantFatigueEntity__CreatePK(eventId, svtId, priority, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_EventServantFatigueMaster__EventServantFatigueEntity__string__TryGetEntity__);
 }

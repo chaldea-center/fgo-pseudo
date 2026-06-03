@@ -21,10 +21,10 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
   float v16; // s1
   float v17; // s2
 
-  if ( (byte_4E03FEB & 1) == 0 )
+  if ( (byte_4E76C65 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E03FEB = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E76C65 = 1;
   }
   col = (UnityEngine_Object_o *)this->fields.col;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,6 +70,6 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
       return;
     }
 LABEL_23:
-    sub_1CE6958(v7, v6);
+    sub_1D0F30C(v7, v6);
   }
 }

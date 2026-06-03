@@ -67,29 +67,29 @@ void NpInfoAddResultComponent__SetDisplay(
   UnityEngine_Color_o DefaultCondTitleSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E08C66 & 1) == 0 )
+  if ( (byte_4E7B998 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_ServantTransformMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08C66 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantTransformMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B998 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_55;
   v15 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   v17 = DataManager__GetMasterData_object_(
           v15,
-          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-  DataManager__GetMasterData_object_(v15, (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ServantMaster___);
+          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+  DataManager__GetMasterData_object_(v15, (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
   Instance = this->fields.lvInfo;
   if ( !Instance )
     goto LABEL_55;
@@ -109,7 +109,7 @@ void NpInfoAddResultComponent__SetDisplay(
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                *((_DWORD *)Instance + 6),
-               (const MethodInfo_34E925C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+               (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !v17 )
     goto LABEL_55;
   v19 = (System_String_o **)Instance;
@@ -147,7 +147,7 @@ void NpInfoAddResultComponent__SetDisplay(
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              *((_DWORD *)Instance + 6),
-             (const MethodInfo_34E925C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+             (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   v27 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v17, *((_DWORD *)v25 + 6), *((_DWORD *)v25 + 7), 0);
   afterLvLabel = this->fields.afterLvLabel;
   v29 = v27;
@@ -189,7 +189,7 @@ void NpInfoAddResultComponent__SetDisplay(
       klass = (System_String_o *)TransformInfo;
       v41 = TransformInfo ? TransformInfo->fields.condLabelColor : 0LL;
       DefaultCondTitleLabelColor = TransformHelper__get_DefaultCondTitleLabelColor(0);
-      v64 = ColorHelper__ParseColorCode_45269000(v41, DefaultCondTitleLabelColor, 0);
+      v64 = ColorHelper__ParseColorCode_45504796(v41, DefaultCondTitleLabelColor, 0);
       if ( !transformTitleLabel )
         goto LABEL_55;
       UIWidget__set_color(transformTitleLabel, v64, 0);
@@ -201,7 +201,7 @@ void NpInfoAddResultComponent__SetDisplay(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantTransformMaster___);
       v44 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
       v43 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
       v45 = (ServantTransformMaster_o *)Master_object;
@@ -209,12 +209,12 @@ void NpInfoAddResultComponent__SetDisplay(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v55.fields.currentCryptoKey = v44;
       *(_QWORD *)&v55.fields.fakeValue = v43;
-      v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v55, 0);
+      v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v55, 0);
       v47 = *(_QWORD *)&baseUserServantEntity->fields.dispLimitCount.fields.currentCryptoKey;
       *(_QWORD *)&v56.fields.fakeValue = *(_QWORD *)&baseUserServantEntity->fields.dispLimitCount.fields.fakeValue;
       v48 = v46;
       *(_QWORD *)&v56.fields.currentCryptoKey = v47;
-      Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v56, 0);
+      Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v56, 0);
       if ( !v45 )
         goto LABEL_55;
       Instance = ServantTransformMaster__GetEntity(v45, v48, (int32_t)Instance, 0);
@@ -224,7 +224,7 @@ void NpInfoAddResultComponent__SetDisplay(
       v50 = (ServantTransformEntity_o *)Instance;
       CondLabelColor = ServantTransformEntity__GetCondLabelColor((ServantTransformEntity_o *)Instance, 0);
       v61 = TransformHelper__get_DefaultCondTitleLabelColor(0);
-      v62 = ColorHelper__ParseColorCode_45269000(CondLabelColor, v61, 0);
+      v62 = ColorHelper__ParseColorCode_45504796(CondLabelColor, v61, 0);
       if ( !v49 )
         goto LABEL_55;
       UIWidget__set_color(v49, v62, 0);
@@ -232,7 +232,7 @@ void NpInfoAddResultComponent__SetDisplay(
       klass = ServantTransformEntity__GetCondSpriteColor(v50, 0);
     }
     DefaultCondTitleSpriteColor = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-    v66 = ColorHelper__ParseColorCode_45269000(klass, DefaultCondTitleSpriteColor, 0);
+    v66 = ColorHelper__ParseColorCode_45504796(klass, DefaultCondTitleSpriteColor, 0);
     if ( !transformTitleSprite )
       goto LABEL_55;
     UIWidget__set_color(transformTitleSprite, v66, 0);
@@ -253,7 +253,7 @@ void NpInfoAddResultComponent__SetDisplay(
           v34 = (UIWidget_o *)this->fields.transformTitleLabel;
           v35 = ServantTreasureDeviceAddEntity__GetCondLabelColor((ServantTreasureDeviceAddEntity_o *)Instance, 0);
           v57 = TransformHelper__get_DefaultCondTitleLabelColor(0);
-          v58 = ColorHelper__ParseColorCode_45269000(v35, v57, 0);
+          v58 = ColorHelper__ParseColorCode_45504796(v35, v57, 0);
           if ( v34 )
           {
             UIWidget__set_color(v34, v58, 0);
@@ -265,7 +265,7 @@ void NpInfoAddResultComponent__SetDisplay(
                                   (ServantTreasureDeviceAddEntity_o *)Instance,
                                   0);
               v59 = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-              v60 = ColorHelper__ParseColorCode_45269000(CondSpriteColor, v59, 0);
+              v60 = ColorHelper__ParseColorCode_45504796(CondSpriteColor, v59, 0);
               if ( v36 )
               {
                 UIWidget__set_color(v36, v60, 0);
@@ -281,7 +281,7 @@ void NpInfoAddResultComponent__SetDisplay(
         }
       }
 LABEL_55:
-      sub_1CE6958(Instance, v14);
+      sub_1D0F30C(Instance, v14);
     }
     Instance = this->fields.title;
     if ( !Instance )
@@ -306,10 +306,10 @@ void NpInfoAddResultComponent__SetMask(
   __int64 v9; // x1
   UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_4E08C67 & 1) == 0 )
+  if ( (byte_4E7B999 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08C67 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7B999 = 1;
   }
   maskObject = (UnityEngine_Object_o *)this->fields.maskObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -337,7 +337,7 @@ void NpInfoAddResultComponent__SetMask(
           return;
         }
       }
-      sub_1CE6958(v10, v9);
+      sub_1D0F30C(v10, v9);
     }
   }
 }

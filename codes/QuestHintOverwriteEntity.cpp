@@ -1,13 +1,13 @@
 void QuestHintOverwriteEntity___ctor(QuestHintOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05CF5 & 1) == 0 )
+  if ( (byte_4E7899A & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05CF5 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E7899A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *QuestHintOverwriteEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4E05CF4 & 1) == 0 )
+  if ( (byte_4E78999 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E05CF4 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4E78999 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            priority,
-           (const MethodInfo_32029C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

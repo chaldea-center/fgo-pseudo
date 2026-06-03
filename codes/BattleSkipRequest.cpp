@@ -10,14 +10,14 @@ void BattleSkipRequest__beginRequest(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4E0646B & 1) == 0 )
+  if ( (byte_4E79112 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_23229/*"questPhase"*/);
-    sub_1CE6700(&StringLiteral_23225/*"questId"*/);
-    byte_4E0646B = 1;
+    sub_1D0F0B4(&StringLiteral_23331/*"questPhase"*/);
+    sub_1D0F0B4(&StringLiteral_23327/*"questId"*/);
+    byte_4E79112 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23225/*"questId"*/, questId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23229/*"questPhase"*/, questPhase, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23327/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23331/*"questPhase"*/, questPhase, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -26,16 +26,16 @@ System_String_o *BattleSkipRequest__getURL(BattleSkipRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E0646A & 1) == 0 )
+  if ( (byte_4E79111 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_17239/*"battle/skip"*/);
-    byte_4E0646A = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_17310/*"battle/skip"*/);
+    byte_4E79111 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_17239/*"battle/skip"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_17310/*"battle/skip"*/, 0);
 }
 
 
@@ -49,18 +49,18 @@ void BattleSkipRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4E0646C & 1) == 0 )
+  if ( (byte_4E79113 & 1) == 0 )
   {
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&ServantCommentManager_TypeInfo);
-    byte_4E0646C = 1;
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&ServantCommentManager_TypeInfo);
+    byte_4E79113 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(138, responseList, 0);
   if ( !v5 )
-    sub_1CE6958(0, v6);
+    sub_1D0F30C(0, v6);
   success = (Il2CppObject *)v5->fields.success;
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);

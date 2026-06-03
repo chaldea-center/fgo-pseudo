@@ -14,18 +14,18 @@ void CommandCodeSetStatusRequest__beginRequest(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4E064D2 & 1) == 0 )
+  if ( (byte_4E79179 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_18365/*"commandCodeId"*/);
-    sub_1CE6700(&StringLiteral_21239/*"isLock"*/);
-    sub_1CE6700(&StringLiteral_21212/*"isChoice"*/);
-    byte_4E064D2 = 1;
+    sub_1D0F0B4(&StringLiteral_18443/*"commandCodeId"*/);
+    sub_1D0F0B4(&StringLiteral_21330/*"isLock"*/);
+    sub_1D0F0B4(&StringLiteral_21303/*"isChoice"*/);
+    byte_4E79179 = 1;
   }
-  RequestBase__addField_45375920((RequestBase_o *)this, (System_String_o *)StringLiteral_18365/*"commandCodeId"*/, userCommandCodeId, 0);
+  RequestBase__addField_45612144((RequestBase_o *)this, (System_String_o *)StringLiteral_18443/*"commandCodeId"*/, userCommandCodeId, 0);
   if ( !this )
-    sub_1CE6958(v9, v10);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21239/*"isLock"*/, isLock, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21212/*"isChoice"*/, isChoice, 0);
+    sub_1D0F30C(v9, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21330/*"isLock"*/, isLock, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21303/*"isChoice"*/, isChoice, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -34,11 +34,11 @@ System_String_o *CommandCodeSetStatusRequest__getMockData(
         CommandCodeSetStatusRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E064D1 & 1) == 0 )
+  if ( (byte_4E79178 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E064D1 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E79178 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -50,16 +50,16 @@ System_String_o *CommandCodeSetStatusRequest__getURL(CommandCodeSetStatusRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E064D0 & 1) == 0 )
+  if ( (byte_4E79177 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_18362/*"commandCode/setStatus"*/);
-    byte_4E064D0 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_18440/*"commandCode/setStatus"*/);
+    byte_4E79177 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_18362/*"commandCode/setStatus"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_18440/*"commandCode/setStatus"*/, 0);
 }
 
 
@@ -71,19 +71,19 @@ void CommandCodeSetStatusRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4E064D3 & 1) == 0 )
+  if ( (byte_4E7917A & 1) == 0 )
   {
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E064D3 = 1;
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E7917A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(71, responseList, 0);
-  if ( v5 && ResponseData__checkError_45365352(v5, 0) )
-    v6 = &StringLiteral_22728/*"ok"*/;
+  if ( v5 && ResponseData__checkError_45600864(v5, 0) )
+    v6 = &StringLiteral_22821/*"ok"*/;
   else
-    v6 = &StringLiteral_22555/*"ng"*/;
+    v6 = &StringLiteral_22648/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

@@ -1,13 +1,13 @@
 void ExcludeMotionEntity___ctor(ExcludeMotionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04D66 & 1) == 0 )
+  if ( (byte_4E779ED & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E04D66 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E779ED = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ System_String_o *ExcludeMotionEntity__CreatePK(
         int32_t weaponGroup,
         const MethodInfo *method)
 {
-  if ( (byte_4E04D64 & 1) == 0 )
+  if ( (byte_4E779EB & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
-    byte_4E04D64 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
+    byte_4E779EB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__object__int_(
            targetIdType,
@@ -30,7 +30,7 @@ System_String_o *ExcludeMotionEntity__CreatePK(
            targetSvtType,
            (Il2CppObject *)stateName,
            weaponGroup,
-           (const MethodInfo_320351C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
+           (const MethodInfo_324E32C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
 }
 
 
@@ -53,7 +53,7 @@ int32_t ExcludeMotionEntity__GetTargetSvtType(BattleServantData_o *svtData, cons
   __int64 v2; // x0
 
   if ( !svtData )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   if ( svtData->fields.isEnemy )
   {
     return (int)&dword_0 + 1;
@@ -81,15 +81,15 @@ bool ExcludeMotionEntity__IsSatisfyPhaseCond(
   struct System_Int32_array *phases; // x20
   System_Func_int__bool__o *v9; // x19
 
-  if ( (byte_4E04D65 & 1) == 0 )
+  if ( (byte_4E779EC & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_Any_int____79907888);
-    sub_1CE6700(&System_Func_int__bool__TypeInfo);
-    sub_1CE6700(&Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__);
-    sub_1CE6700(&ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
-    byte_4E04D65 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_Any_int____80372680);
+    sub_1D0F0B4(&System_Func_int__bool__TypeInfo);
+    sub_1D0F0B4(&Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__);
+    sub_1D0F0B4(&ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
+    byte_4E779EC = 1;
   }
-  v5 = sub_1CE694C(ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_1D0F300(ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   phases = this->fields.phases;
   if ( !phases )
@@ -99,19 +99,19 @@ bool ExcludeMotionEntity__IsSatisfyPhaseCond(
     if ( v5 )
     {
       *(_DWORD *)(v5 + 16) = currentPhase + 1;
-      v9 = (System_Func_int__bool__o *)sub_1CE694C(System_Func_int__bool__TypeInfo);
+      v9 = (System_Func_int__bool__o *)sub_1D0F300(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         v9,
         (Il2CppObject *)v5,
         Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__,
         0);
-      return BasicHelper__Any_int__52351580(
+      return BasicHelper__Any_int__52658284(
                phases,
                (System_Func_T__bool__o *)v9,
-               (const MethodInfo_31ED25C *)Method_BasicHelper_Any_int____79907888);
+               (const MethodInfo_323806C *)Method_BasicHelper_Any_int____80372680);
     }
 LABEL_8:
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   }
   return 1;
 }

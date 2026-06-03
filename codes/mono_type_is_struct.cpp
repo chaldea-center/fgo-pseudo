@@ -1,4 +1,4 @@
 __int64 mono_type_is_struct()
 {
-  return sub_1CDB390() & 1;
+  return sub_1D03D44() & 1;
 }

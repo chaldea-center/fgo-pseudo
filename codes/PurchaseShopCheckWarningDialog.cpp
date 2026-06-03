@@ -8,21 +8,21 @@ void PurchaseShopCheckWarningDialog___ctor(PurchaseShopCheckWarningDialog_o *thi
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E009D2 & 1) == 0 )
+  if ( (byte_4E735FA & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4E009D2 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4E735FA = 1;
   }
   *(_QWORD *)&this->fields.ItemIconScale = 0x743F4CCCCDLL;
-  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_D25240;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
+  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_D35AE0;
+  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -46,14 +46,14 @@ void PurchaseShopCheckWarningDialog__ClearItemList(PurchaseShopCheckWarningDialo
   int32_t size; // w2
   int v16; // w9
 
-  if ( (byte_4E009CB & 1) == 0 )
+  if ( (byte_4E735F3 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_GameObject__TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__ForEach__);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog___c__ClearItemList_b__22_0__);
-    sub_1CE6700(&PurchaseShopCheckWarningDialog___c_TypeInfo);
-    byte_4E009CB = 1;
+    sub_1D0F0B4(&System_Action_GameObject__TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__ForEach__);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog___c__ClearItemList_b__22_0__);
+    sub_1D0F0B4(&PurchaseShopCheckWarningDialog___c_TypeInfo);
+    byte_4E735F3 = 1;
   }
   v3 = PurchaseShopCheckWarningDialog___c_TypeInfo;
   objectList = this->fields.objectList;
@@ -71,20 +71,20 @@ void PurchaseShopCheckWarningDialog__ClearItemList(PurchaseShopCheckWarningDialo
       v3 = PurchaseShopCheckWarningDialog___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__22_0 = (System_Action_object__o *)sub_1CE694C(System_Action_GameObject__TypeInfo);
+    _9__22_0 = (System_Action_object__o *)sub_1D0F300(System_Action_GameObject__TypeInfo);
     System_Action_object____ctor(_9__22_0, v6, Method_PurchaseShopCheckWarningDialog___c__ClearItemList_b__22_0__, 0);
     static_fields = PurchaseShopCheckWarningDialog___c_TypeInfo->static_fields;
     static_fields->__9__22_0 = (struct System_Action_GameObject__o *)_9__22_0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v8, v9, v10, v11, v12, v13);
   }
   if ( !objectList
     || (System_Collections_Generic_List_object___ForEach(
           (System_Collections_Generic_List_object__o *)objectList,
           (System_Action_T__o *)_9__22_0,
-          (const MethodInfo_39069A8 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
+          (const MethodInfo_395CE50 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
         (v14 = this->fields.objectList) == 0) )
   {
-    sub_1CE6958(v3, method);
+    sub_1D0F30C(v3, method);
   }
   size = v14->fields._size;
   v16 = v14->fields._version + 1;
@@ -99,13 +99,13 @@ void PurchaseShopCheckWarningDialog__Close(PurchaseShopCheckWarningDialog_o *thi
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4E009CE & 1) == 0 )
+  if ( (byte_4E735F6 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog_Init__);
-    byte_4E009CE = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog_Init__);
+    byte_4E735F6 = 1;
   }
-  v3 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_PurchaseShopCheckWarningDialog_Init__, 0);
   BaseDialog__SafeClose((BaseDialog_o *)this, v3, 0);
 }
@@ -155,23 +155,23 @@ void PurchaseShopCheckWarningDialog__CreateItemList(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v41; // [xsp+30h] [xbp-90h] BYREF
   UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E009CC & 1) == 0 )
+  if ( (byte_4E735F4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__long__GetEnumerator__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__get_Current__);
-    sub_1CE6700(&Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___);
-    sub_1CE6700(&Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
-    sub_1CE6700(&Method_System_Collections_Generic_KeyValuePair_int__long__get_Key__);
-    sub_1CE6700(&Method_System_Collections_Generic_KeyValuePair_int__long__get_Value__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject____79994096);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E009CC = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__long__GetEnumerator__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__long__get_Current__);
+    sub_1D0F0B4(&Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___);
+    sub_1D0F0B4(&Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_int__long__get_Key__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_int__long__get_Value__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E735F4 = 1;
   }
   memset(&v41, 0, sizeof(v41));
   entity = 0;
@@ -179,63 +179,63 @@ void PurchaseShopCheckWarningDialog__CreateItemList(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ItemMaster___);
     System_Collections_Generic_Dictionary_int__long___GetEnumerator(
       &v39,
       itemList,
-      (const MethodInfo_3558A10 *)Method_System_Collections_Generic_Dictionary_int__long__GetEnumerator__);
+      (const MethodInfo_35A5594 *)Method_System_Collections_Generic_Dictionary_int__long__GetEnumerator__);
     v41 = v39;
     while ( 1 )
     {
       v6 = System_Collections_Generic_Dictionary_Enumerator_int__long___MoveNext(
              &v41,
-             (const MethodInfo_36A4394 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__long__MoveNext__);
+             (const MethodInfo_36F192C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__long__MoveNext__);
       if ( !v6 )
         break;
       if ( !Master_object )
-        sub_1CE6958(v6, v7);
+        sub_1D0F30C(v6, v7);
       value = v41.fields._current.fields.value;
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
              (int32_t)v41.fields._current.fields.key,
-             (const MethodInfo_34E92A8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+             (const MethodInfo_3535BC8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
       {
         listRoot = this->fields.listRoot;
         itemIconPrefab = (Il2CppObject *)this->fields.itemIconPrefab;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v11 = UnityEngine_Object__Instantiate_object__53022032(
+        v11 = UnityEngine_Object__Instantiate_object__53335036(
                 itemIconPrefab,
                 listRoot,
-                (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_GameObject____79994096);
+                (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
         v13 = (UnityEngine_GameObject_o *)v11;
         if ( !v11 )
-          sub_1CE6958(0, v12);
+          sub_1D0F30C(0, v12);
         transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v11, 0);
         v16 = (UnityEngine_Transform_o *)transform;
-        if ( !byte_4DFE0A9 )
+        if ( !byte_4E70C99 )
         {
-          transform = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-          byte_4DFE0A9 = 1;
+          transform = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+          byte_4E70C99 = 1;
         }
         if ( !v16 )
-          sub_1CE6958(transform, v15);
+          sub_1D0F30C(transform, v15);
         UnityEngine_Transform__set_localPosition(v16, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
         v17 = UnityEngine_GameObject__get_transform(v13, 0);
         if ( !v17 )
-          sub_1CE6958(0, v18);
+          sub_1D0F30C(0, v18);
         v42.fields.x = this->fields.ItemIconScale;
         v42.fields.y = v42.fields.x;
         v42.fields.z = v42.fields.x;
         UnityEngine_Transform__set_localScale(v17, v42, 0);
         Component_object = GameObjectExtensions__SafeGetComponent_object_(
                              v13,
-                             (const MethodInfo_325D924 *)Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___);
+                             (const MethodInfo_32A9F2C *)Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___);
         v21 = (ItemIconComponent_o *)Component_object;
         if ( !Component_object )
-          sub_1CE6958(0, v20);
-        ItemIconComponent__SetItem_42061140(
+          sub_1D0F30C(0, v20);
+        ItemIconComponent__SetItem_42280228(
           (ItemIconComponent_o *)Component_object,
           (ItemEntity_o *)entity,
           (int64_t)value,
@@ -245,44 +245,44 @@ void PurchaseShopCheckWarningDialog__CreateItemList(
         UnityEngine_GameObject__SetActive(v13, 1, 0);
         v23 = (UnityEngine_Component_o *)this->fields.listRoot;
         if ( !v23 )
-          sub_1CE6958(0, v22);
+          sub_1D0F30C(0, v22);
         gameObject = UnityEngine_Component__get_gameObject(v23, 0);
         v25 = GameObjectExtensions__SafeGetComponent_object_(
                 gameObject,
-                (const MethodInfo_325D924 *)Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
+                (const MethodInfo_32A9F2C *)Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
         if ( !v25 )
-          sub_1CE6958(0, v26);
+          sub_1D0F30C(0, v26);
         ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))v25->klass->vtable[8].methodPtr)(
           v25,
           v25->klass->vtable[8].method);
         objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
         if ( !objectList )
-          sub_1CE6958(0, v27);
+          sub_1D0F30C(0, v27);
         items = objectList->fields._items;
         v36 = Method_System_Collections_Generic_List_GameObject__Add__;
         ++objectList->fields._version;
         if ( !items )
-          sub_1CE6958(objectList, v27);
+          sub_1D0F30C(objectList, v27);
         size = objectList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             objectList,
             (Il2CppObject *)v13,
-            *(const MethodInfo_3905F68 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_395C410 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
           v38 = &items->obj.klass + size;
           objectList->fields._size = size + 1;
           v38[4] = (Il2CppClass *)v13;
-          sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v38 + 4), (int32_t)v13, v28, v29, v30, v31, v32, v33);
+          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v38 + 4), (int32_t)v13, v28, v29, v30, v31, v32, v33);
         }
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_int__long___Dispose(
       &v41,
-      (const MethodInfo_36A44AC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__long__Dispose__);
+      (const MethodInfo_36F1A44 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__long__Dispose__);
   }
 }
 
@@ -302,12 +302,12 @@ void PurchaseShopCheckWarningDialog__Init(PurchaseShopCheckWarningDialog_o *this
   const MethodInfo *v13; // x2
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E009C9 & 1) == 0 )
+  if ( (byte_4E735F1 & 1) == 0 )
   {
-    sub_1CE6700(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog_OnSliderDragFinished__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E009C9 = 1;
+    sub_1D0F0B4(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog_OnSliderDragFinished__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E735F1 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -359,7 +359,7 @@ void PurchaseShopCheckWarningDialog__Init(PurchaseShopCheckWarningDialog_o *this
     goto LABEL_15;
   UIProgressBar__set_value((UIProgressBar_o *)titleLabel, 0.0, 0);
   checkSlider = this->fields.checkSlider;
-  v6 = (UIProgressBar_OnDragFinished_o *)sub_1CE694C(UIProgressBar_OnDragFinished_TypeInfo);
+  v6 = (UIProgressBar_OnDragFinished_o *)sub_1D0F300(UIProgressBar_OnDragFinished_TypeInfo);
   UIProgressBar_OnDragFinished___ctor(
     v6,
     (Il2CppObject *)this,
@@ -367,7 +367,7 @@ void PurchaseShopCheckWarningDialog__Init(PurchaseShopCheckWarningDialog_o *this
     0);
   if ( !checkSlider
     || (checkSlider->fields.onDragFinished = v6,
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)&checkSlider->fields.onDragFinished,
           (int32_t)v6,
           v7,
@@ -380,7 +380,7 @@ void PurchaseShopCheckWarningDialog__Init(PurchaseShopCheckWarningDialog_o *this
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_15:
-    sub_1CE6958(titleLabel, method);
+    sub_1D0F30C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -393,21 +393,21 @@ void PurchaseShopCheckWarningDialog__OnClickCancel(PurchaseShopCheckWarningDialo
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4E009D0 & 1) == 0 )
+  if ( (byte_4E735F8 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog_OnClickCancel__);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog__OnClickCancel_b__27_0__);
-    byte_4E009D0 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog_OnClickCancel__);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog__OnClickCancel_b__27_0__);
+    byte_4E735F8 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_PurchaseShopCheckWarningDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_PurchaseShopCheckWarningDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_PurchaseShopCheckWarningDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_PurchaseShopCheckWarningDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_PurchaseShopCheckWarningDialog__OnClickCancel_b__27_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -422,27 +422,27 @@ void PurchaseShopCheckWarningDialog__OnClickDecide(PurchaseShopCheckWarningDialo
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4E009CF & 1) == 0 )
+  if ( (byte_4E735F7 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog_OnClickDecide__);
-    sub_1CE6700(&Method_PurchaseShopCheckWarningDialog__OnClickDecide_b__26_0__);
-    byte_4E009CF = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog_OnClickDecide__);
+    sub_1D0F0B4(&Method_PurchaseShopCheckWarningDialog__OnClickDecide_b__26_0__);
+    byte_4E735F7 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
     if ( !checkSlider )
-      sub_1CE6958(0, method);
+      sub_1D0F30C(0, method);
     value = UIProgressBar__get_value(checkSlider, 0);
     v5 = Method_PurchaseShopCheckWarningDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_PurchaseShopCheckWarningDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1CE6718(Method_PurchaseShopCheckWarningDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1D0F0CC(Method_PurchaseShopCheckWarningDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
     if ( value >= 1.0 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0);
-      v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_PurchaseShopCheckWarningDialog__OnClickDecide_b__26_0__, 0);
       BaseDialog__SafeClose((BaseDialog_o *)this, v7, 0);
     }
@@ -458,13 +458,13 @@ void PurchaseShopCheckWarningDialog__OnEnable(PurchaseShopCheckWarningDialog_o *
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4E009D1 & 1) == 0 )
+  if ( (byte_4E735F9 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4E009D1 = 1;
+    sub_1D0F0B4(&StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4E735F9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46098588(transform, (System_String_o *)StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -484,7 +484,7 @@ void PurchaseShopCheckWarningDialog__OnSliderDragFinished(
     || (value = UIProgressBar__get_value(checkSlider, 0),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0) )
   {
-    sub_1CE6958(checkSlider, method);
+    sub_1D0F30C(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -519,19 +519,19 @@ void PurchaseShopCheckWarningDialog__Open(
   UILabel_o *cancelButtonLabel; // x21
   const MethodInfo *v22; // x2
 
-  if ( (byte_4E009CD & 1) == 0 )
+  if ( (byte_4E735F5 & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_10593/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_SLIDER_MSG"*/);
-    sub_1CE6700(&StringLiteral_3715/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1CE6700(&StringLiteral_3713/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1CE6700(&StringLiteral_10595/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_WARNING_MSG"*/);
-    sub_1CE6700(&StringLiteral_10594/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_TITLE"*/);
-    byte_4E009CD = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_10637/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_SLIDER_MSG"*/);
+    sub_1D0F0B4(&StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1D0F0B4(&StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1D0F0B4(&StringLiteral_10639/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_WARNING_MSG"*/);
+    sub_1D0F0B4(&StringLiteral_10638/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_TITLE"*/);
+    byte_4E735F5 = 1;
   }
   PurchaseShopCheckWarningDialog__Init(this, (const MethodInfo *)shop);
   this->fields.closeFunc = closeCallback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeFunc,
     (int32_t)closeCallback,
     v9,
@@ -543,12 +543,12 @@ void PurchaseShopCheckWarningDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10594/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_TITLE"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10638/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_12;
   UILabel__set_text(titleLabel, v16, 0);
   warningLabel = this->fields.warningLabel;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10595/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_WARNING_MSG"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10639/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_WARNING_MSG"*/, 0);
   if ( !shop )
     goto LABEL_12;
   v16 = System_String__Format(v16, (Il2CppObject *)shop->fields.name, 0);
@@ -556,19 +556,19 @@ void PurchaseShopCheckWarningDialog__Open(
     goto LABEL_12;
   UILabel__set_text(warningLabel, v16, 0);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10593/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_SLIDER_MSG"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10637/*"PURCHASE_CLASS_BOARD_RESET_CHECK_DIALOG_SLIDER_MSG"*/, 0);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v16, 0),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COMMON_CONFIRM_DECIDE"*/, 0),
+        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/, 0),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v16, 0),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3713/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelButtonLabel) )
   {
 LABEL_12:
-    sub_1CE6958(v16, v17);
+    sub_1D0F30C(v16, v17);
   }
   UILabel__set_text(cancelButtonLabel, v16, 0);
   PurchaseShopCheckWarningDialog__CreateItemList(this, itemList, v22);
@@ -590,18 +590,18 @@ void PurchaseShopCheckWarningDialog__SetSlider(
   float r; // s0 OVERLAPPED
   __int64 v11; // x1
 
-  if ( (byte_4E009CA & 1) == 0 )
+  if ( (byte_4E735F2 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20883/*"img_slider_thumb_locked"*/);
-    sub_1CE6700(&StringLiteral_20882/*"img_slider_thumb"*/);
-    byte_4E009CA = 1;
+    sub_1D0F0B4(&StringLiteral_20974/*"img_slider_thumb_locked"*/);
+    sub_1D0F0B4(&StringLiteral_20973/*"img_slider_thumb"*/);
+    byte_4E735F2 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_15;
-  v6 = &StringLiteral_20882/*"img_slider_thumb"*/;
+  v6 = &StringLiteral_20973/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = &StringLiteral_20883/*"img_slider_thumb_locked"*/;
+    v6 = &StringLiteral_20974/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, (System_String_o *)*v6, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   a = 1.0;
@@ -627,7 +627,7 @@ void PurchaseShopCheckWarningDialog__SetSlider(
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_15:
-    sub_1CE6958(sliderSprite, sliderOn);
+    sub_1D0F30C(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
     sliderSprite,
@@ -647,7 +647,7 @@ void PurchaseShopCheckWarningDialog___OnClickCancel_b__27_0(
   PurchaseShopCheckWarningDialog__Init(this, method);
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1CE6958(v3, v4);
+    sub_1D0F30C(v3, v4);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     0,
@@ -666,7 +666,7 @@ void PurchaseShopCheckWarningDialog___OnClickDecide_b__26_0(
   PurchaseShopCheckWarningDialog__Init(this, method);
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1CE6958(v3, v4);
+    sub_1D0F30C(v3, v4);
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     1,
@@ -693,7 +693,7 @@ void PurchaseShopCheckWarningDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -704,12 +704,12 @@ void PurchaseShopCheckWarningDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -721,9 +721,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B12CD8;
+  this->fields.invoke_impl = (intptr_t)sub_1B38AE0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B12C90;
+  this->fields.extra_arg = (intptr_t)sub_1B38A98;
 }
 
 
@@ -738,14 +738,14 @@ System_IAsyncResult_o *PurchaseShopCheckWarningDialog_ClickDelegate__BeginInvoke
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4E009D3 & 1) == 0 )
+  if ( (byte_4E735FB & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4E009D3 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E735FB = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -754,7 +754,7 @@ void PurchaseShopCheckWarningDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 
@@ -780,15 +780,15 @@ void PurchaseShopCheckWarningDialog___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E009D4 & 1) == 0 )
+  if ( (byte_4E735FC & 1) == 0 )
   {
-    sub_1CE6700(&PurchaseShopCheckWarningDialog___c_TypeInfo);
-    byte_4E009D4 = 1;
+    sub_1D0F0B4(&PurchaseShopCheckWarningDialog___c_TypeInfo);
+    byte_4E735FC = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(PurchaseShopCheckWarningDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(PurchaseShopCheckWarningDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PurchaseShopCheckWarningDialog___c_TypeInfo->static_fields->__9 = (struct PurchaseShopCheckWarningDialog___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)PurchaseShopCheckWarningDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -811,10 +811,10 @@ void PurchaseShopCheckWarningDialog___c___ClearItemList_b__22_0(
         UnityEngine_GameObject_o *obj,
         const MethodInfo *method)
 {
-  if ( (byte_4E009D5 & 1) == 0 )
+  if ( (byte_4E735FD & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E009D5 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E735FD = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -822,6 +822,6 @@ void PurchaseShopCheckWarningDialog___c___ClearItemList_b__22_0(
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540((UnityEngine_Object_o *)obj, 0);
+    UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)obj, 0);
   }
 }

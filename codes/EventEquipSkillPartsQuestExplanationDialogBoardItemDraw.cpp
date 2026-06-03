@@ -24,10 +24,10 @@ void EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
   int32_t SkillId_k__BackingField; // w22
 
   v4 = this;
-  if ( (byte_4DFEAD9 & 1) == 0 )
+  if ( (byte_4E716CE & 1) == 0 )
   {
-    this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)sub_1CE6700(&AtlasManager_TypeInfo);
-    byte_4DFEAD9 = 1;
+    this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)sub_1D0F0B4(&AtlasManager_TypeInfo);
+    byte_4E716CE = 1;
   }
   if ( !item )
     goto LABEL_9;
@@ -42,7 +42,7 @@ void EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
         (this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)v4->fields.nameLabel) == 0) )
   {
 LABEL_9:
-    sub_1CE6958(this, item);
+    sub_1D0F30C(this, item);
   }
   UILabel__SetCondensedScale((UILabel_o *)this, 280, 0, 0);
   WrapControlText__textAdjust(v4->fields.detailLabel, item->fields._Detail_k__BackingField, 16, 0, 0);

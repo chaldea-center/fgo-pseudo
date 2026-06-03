@@ -7,16 +7,16 @@ void AppendBitmapFont___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4E08F9A & 1) == 0 )
+  if ( (byte_4E7BCCC & 1) == 0 )
   {
-    sub_1CE6700(&AppendBitmapFont_TypeInfo);
-    sub_1CE6700(&StringLiteral_6849/*"Fonts/BitmapFontProperties"*/);
-    byte_4E08F9A = 1;
+    sub_1D0F0B4(&AppendBitmapFont_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_6875/*"Fonts/BitmapFontProperties"*/);
+    byte_4E7BCCC = 1;
   }
-  AppendBitmapFont_TypeInfo->static_fields->BitmapFontPropertiesPath = (struct System_String_o *)StringLiteral_6849/*"Fonts/BitmapFontProperties"*/;
-  sub_1CE66A4(
+  AppendBitmapFont_TypeInfo->static_fields->BitmapFontPropertiesPath = (struct System_String_o *)StringLiteral_6875/*"Fonts/BitmapFontProperties"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)AppendBitmapFont_TypeInfo->static_fields,
-    StringLiteral_6849/*"Fonts/BitmapFontProperties"*/,
+    StringLiteral_6875/*"Fonts/BitmapFontProperties"*/,
     v1,
     v2,
     v3,
@@ -50,12 +50,12 @@ UIFont_o *AppendBitmapFont__GetFont(AppendBitmapFont_o *this, int32_t fontType, 
   BitmapFontProperties_BitmapFontInfo_o *v9; // x0
   Il2CppObject *object; // x19
 
-  if ( (byte_4E08F98 & 1) == 0 )
+  if ( (byte_4E7BCCA & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UIFont___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Resources_Load_GameObject___);
-    byte_4E08F98 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIFont___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Resources_Load_GameObject___);
+    byte_4E7BCCA = 1;
   }
   bitmapFontProperties = (UnityEngine_Object_o *)this->fields.bitmapFontProperties;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ UIFont_o *AppendBitmapFont__GetFont(AppendBitmapFont_o *this, int32_t fontType, 
     {
       object = UnityEngine_Resources__Load_object_(
                  v9->fields.Path,
-                 (const MethodInfo_32A11D4 *)Method_UnityEngine_Resources_Load_GameObject___);
+                 (const MethodInfo_32ED880 *)Method_UnityEngine_Resources_Load_GameObject___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v8 = (BitmapFontProperties_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)object, 0, 0);
@@ -79,9 +79,9 @@ UIFont_o *AppendBitmapFont__GetFont(AppendBitmapFont_o *this, int32_t fontType, 
         if ( object )
           return (UIFont_o *)UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)object,
-                               (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
+                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
 LABEL_14:
-        sub_1CE6958(v8, v6);
+        sub_1D0F30C(v8, v6);
       }
     }
   }
@@ -100,11 +100,11 @@ void AppendBitmapFont__Initialize(AppendBitmapFont_o *this, const MethodInfo *me
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4E08F95 & 1) == 0 )
+  if ( (byte_4E7BCC7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08F95 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BCC7 = 1;
   }
   Label_k__BackingField = (UnityEngine_Object_o *)this->fields._Label_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -113,9 +113,9 @@ void AppendBitmapFont__Initialize(AppendBitmapFont_o *this, const MethodInfo *me
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UILabel___);
     this->fields._Label_k__BackingField = (struct UILabel_o *)Component_object;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&this->fields._Label_k__BackingField,
       (int32_t)Component_object,
       v5,
@@ -136,10 +136,10 @@ void AppendBitmapFont__SetBitmapFont(AppendBitmapFont_o *this, int32_t fontType,
   UIFont_o *Font; // x0
   __int64 v9; // x1
 
-  if ( (byte_4E08F97 & 1) == 0 )
+  if ( (byte_4E7BCC9 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08F97 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BCC9 = 1;
   }
   Label_k__BackingField = (UnityEngine_Object_o *)this->fields._Label_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -149,7 +149,7 @@ void AppendBitmapFont__SetBitmapFont(AppendBitmapFont_o *this, int32_t fontType,
     v7 = this->fields._Label_k__BackingField;
     Font = AppendBitmapFont__GetFont(this, fontType, v6);
     if ( !v7 )
-      sub_1CE6958(Font, v9);
+      sub_1D0F30C(Font, v9);
     UILabel__set_bitmapFont(v7, Font, 0);
   }
 }
@@ -168,11 +168,11 @@ void AppendBitmapFont__Setup(AppendBitmapFont_o *this, const MethodInfo *method)
   const MethodInfo *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4E08F96 & 1) == 0 )
+  if ( (byte_4E7BCC8 & 1) == 0 )
   {
-    sub_1CE6700(&AppendBitmapFont_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Resources_Load_BitmapFontProperties___);
-    byte_4E08F96 = 1;
+    sub_1D0F0B4(&AppendBitmapFont_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Resources_Load_BitmapFontProperties___);
+    byte_4E7BCC8 = 1;
   }
   v3 = AppendBitmapFont_TypeInfo;
   if ( !AppendBitmapFont_TypeInfo->_2.cctor_finished )
@@ -182,9 +182,9 @@ void AppendBitmapFont__Setup(AppendBitmapFont_o *this, const MethodInfo *method)
   }
   object = UnityEngine_Resources__Load_object_(
              v3->static_fields->BitmapFontPropertiesPath,
-             (const MethodInfo_32A11D4 *)Method_UnityEngine_Resources_Load_BitmapFontProperties___);
+             (const MethodInfo_32ED880 *)Method_UnityEngine_Resources_Load_BitmapFontProperties___);
   this->fields.bitmapFontProperties = (struct BitmapFontProperties_o *)object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.bitmapFontProperties,
     (int32_t)object,
     v5,
@@ -204,22 +204,22 @@ void AppendBitmapFont__UpdateCondensedScaleLabel(AppendBitmapFont_o *this, const
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4E08F99 & 1) == 0 )
+  if ( (byte_4E7BCCB & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08F99 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BCCB = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( !v4 )
   {
     if ( !Component_object )
-      sub_1CE6958(v4, v5);
+      sub_1D0F30C(v4, v5);
     if ( HIBYTE(Component_object[3].monitor) )
       CondensedScaleLabel__SetCondensedScale((CondensedScaleLabel_o *)Component_object, v5);
   }
@@ -241,7 +241,7 @@ void AppendBitmapFont__set_Label(AppendBitmapFont_o *this, UILabel_o *value, con
   System_String_o *v7; // x7
 
   this->fields._Label_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._Label_k__BackingField,
     (int32_t)value,
     (int32_t)method,

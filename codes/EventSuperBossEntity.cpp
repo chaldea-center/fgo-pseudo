@@ -39,69 +39,69 @@ void EventSuperBossEntity___cctor(const MethodInfo *method)
   int64_t v37; // x6
   System_String_o *v38; // x7
 
-  if ( (byte_4E04BAC & 1) == 0 )
+  if ( (byte_4E7782F & 1) == 0 )
   {
-    sub_1CE6700(&EventSuperBossEntity_TypeInfo);
-    sub_1CE6700(&StringLiteral_24681/*"ui_start_quest_phase"*/);
-    sub_1CE6700(&StringLiteral_24678/*"ui_end_quest_phase"*/);
-    sub_1CE6700(&StringLiteral_24677/*"ui_end_quest_id"*/);
-    sub_1CE6700(&StringLiteral_24679/*"ui_hidden"*/);
-    sub_1CE6700(&StringLiteral_24680/*"ui_start_quest_id"*/);
-    byte_4E04BAC = 1;
+    sub_1D0F0B4(&EventSuperBossEntity_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_24789/*"ui_start_quest_phase"*/);
+    sub_1D0F0B4(&StringLiteral_24786/*"ui_end_quest_phase"*/);
+    sub_1D0F0B4(&StringLiteral_24785/*"ui_end_quest_id"*/);
+    sub_1D0F0B4(&StringLiteral_24787/*"ui_hidden"*/);
+    sub_1D0F0B4(&StringLiteral_24788/*"ui_start_quest_id"*/);
+    byte_4E7782F = 1;
   }
-  EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24680/*"ui_start_quest_id"*/;
-  sub_1CE66A4(
+  EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24788/*"ui_start_quest_id"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)EventSuperBossEntity_TypeInfo->static_fields,
-    StringLiteral_24680/*"ui_start_quest_id"*/,
+    StringLiteral_24788/*"ui_start_quest_id"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_24681/*"ui_start_quest_phase"*/;
+  v7 = StringLiteral_24789/*"ui_start_quest_phase"*/;
   static_fields = EventSuperBossEntity_TypeInfo->static_fields;
-  static_fields->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24681/*"ui_start_quest_phase"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->UI_START_QUEST_PHASE_KEY, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_24677/*"ui_end_quest_id"*/;
+  static_fields->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24789/*"ui_start_quest_phase"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->UI_START_QUEST_PHASE_KEY, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_24785/*"ui_end_quest_id"*/;
   v16 = EventSuperBossEntity_TypeInfo->static_fields;
-  v16->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24677/*"ui_end_quest_id"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v16->UI_END_QUEST_ID_KEY, v15, v17, v18, v19, v20, v21, v22);
-  v23 = StringLiteral_24678/*"ui_end_quest_phase"*/;
+  v16->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24785/*"ui_end_quest_id"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v16->UI_END_QUEST_ID_KEY, v15, v17, v18, v19, v20, v21, v22);
+  v23 = StringLiteral_24786/*"ui_end_quest_phase"*/;
   v24 = EventSuperBossEntity_TypeInfo->static_fields;
-  v24->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24678/*"ui_end_quest_phase"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v24->UI_END_QUEST_PHASE_KEY, v23, v25, v26, v27, v28, v29, v30);
-  v31 = StringLiteral_24679/*"ui_hidden"*/;
+  v24->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24786/*"ui_end_quest_phase"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v24->UI_END_QUEST_PHASE_KEY, v23, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_24787/*"ui_hidden"*/;
   v32 = EventSuperBossEntity_TypeInfo->static_fields;
-  v32->UI_HIDDEN = (struct System_String_o *)StringLiteral_24679/*"ui_hidden"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v32->UI_HIDDEN, v31, v33, v34, v35, v36, v37, v38);
+  v32->UI_HIDDEN = (struct System_String_o *)StringLiteral_24787/*"ui_hidden"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v32->UI_HIDDEN, v31, v33, v34, v35, v36, v37, v38);
 }
 
 
 void EventSuperBossEntity___ctor(EventSuperBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04BAB & 1) == 0 )
+  if ( (byte_4E7782E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E04BAB = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E7782E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventSuperBossEntity__CreatePK(int32_t eventId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4E04BA5 & 1) == 0 )
+  if ( (byte_4E77828 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E04BA5 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E77828 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            id,
-           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -111,10 +111,10 @@ System_String_o *EventSuperBossEntity__CreatePrimaryKey(EventSuperBossEntity_o *
   int32_t id; // w19
   int32_t eventId; // w20
 
-  if ( (byte_4E04BA4 & 1) == 0 )
+  if ( (byte_4E77827 & 1) == 0 )
   {
-    sub_1CE6700(&EventSuperBossEntity_TypeInfo);
-    byte_4E04BA4 = 1;
+    sub_1D0F0B4(&EventSuperBossEntity_TypeInfo);
+    byte_4E77827 = 1;
   }
   eventId = this->fields.eventId;
   id = this->fields.id;
@@ -159,33 +159,33 @@ System_Int64_array *EventSuperBossEntity__GetBreakGaugeHpList(EventSuperBossEnti
   EventSuperBossEntity_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E04BAA & 1) == 0 )
+  if ( (byte_4E7782D & 1) == 0 )
   {
-    sub_1CE6700(&System_Convert_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&long___TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1CE6700(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1CE6700(&StringLiteral_17596/*"breakGaugeHp"*/);
-    byte_4E04BAA = 1;
+    sub_1D0F0B4(&System_Convert_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&long___TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1D0F0B4(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1D0F0B4(&StringLiteral_17670/*"breakGaugeHp"*/);
+    byte_4E7782D = 1;
   }
   script = (__int64)this->fields.script;
   if ( !script )
     goto LABEL_21;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)script,
-         (Il2CppObject *)StringLiteral_17596/*"breakGaugeHp"*/,
-         (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17670/*"breakGaugeHp"*/,
+         (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     script = (__int64)this->fields.script;
     if ( !script )
       goto LABEL_21;
     script = (__int64)System_Collections_Generic_Dictionary_object__object___get_Item(
                         (System_Collections_Generic_Dictionary_object__object__o *)script,
-                        (Il2CppObject *)StringLiteral_17596/*"breakGaugeHp"*/,
-                        (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                        (Il2CppObject *)StringLiteral_17670/*"breakGaugeHp"*/,
+                        (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !script )
       goto LABEL_21;
     v4 = (System_Collections_Generic_List_object__o *)script;
@@ -193,21 +193,21 @@ System_Int64_array *EventSuperBossEntity__GetBreakGaugeHpList(EventSuperBossEnti
     if ( *(unsigned __int8 *)(*(_QWORD *)script + 304LL) < (unsigned int)naturalAligment
       || *(System_Collections_Generic_List_object__c **)(*(_QWORD *)(*(_QWORD *)script + 200LL) + 8 * naturalAligment - 8) != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1CE6CF4(script);
+      sub_1D0F6A8(script);
       EventSuperBossEntity___ctor(v11, v12);
       return result;
     }
     v6 = *(unsigned int *)(script + 24);
     if ( (int)v6 >= 1 )
     {
-      v7 = sub_1CE67A8(long___TypeInfo, (unsigned int)v6);
+      v7 = sub_1D0F15C(long___TypeInfo, (unsigned int)v6);
       v8 = 0;
       while ( 1 )
       {
         Item = System_Collections_Generic_List_object___get_Item(
                  v4,
                  v8,
-                 (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_object__get_Item__);
+                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_object__get_Item__);
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
         script = System_Convert__ToInt64(Item, 0);
@@ -220,16 +220,16 @@ System_Int64_array *EventSuperBossEntity__GetBreakGaugeHpList(EventSuperBossEnti
           return (System_Int64_array *)v7;
       }
 LABEL_21:
-      sub_1CE6958(script, method);
+      sub_1D0F30C(script, method);
     }
   }
-  script = sub_1CE67A8(long___TypeInfo, 1);
+  script = sub_1D0F15C(long___TypeInfo, 1);
   if ( !script )
     goto LABEL_21;
   v7 = script;
   if ( !*(_DWORD *)(script + 24) )
 LABEL_22:
-    sub_1CE6960(script);
+    sub_1D0F314(script);
   *(_QWORD *)(script + 32) = this->fields.maxHp;
   return (System_Int64_array *)v7;
 }
@@ -246,24 +246,24 @@ UserSuperBossEntity_o *EventSuperBossEntity__GetUserSuperBossEntity(
   __int64 v7; // d0
   UserSuperBossEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E04BA6 & 1) == 0 )
+  if ( (byte_4E77829 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_UserSuperBossMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&UserSuperBossEntity_TypeInfo);
-    byte_4E04BA6 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserSuperBossMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&UserSuperBossEntity_TypeInfo);
+    byte_4E77829 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserSuperBossMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserSuperBossMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   result = (UserSuperBossEntity_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -283,15 +283,15 @@ UserSuperBossEntity_o *EventSuperBossEntity__GetUserSuperBossEntity(
   {
     return entity;
   }
-  v6 = (UserSuperBossEntity_o *)sub_1CE694C(UserSuperBossEntity_TypeInfo);
+  v6 = (UserSuperBossEntity_o *)sub_1D0F300(UserSuperBossEntity_TypeInfo);
   UserSuperBossEntity___ctor(v6, 0);
   entity = v6;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   result = (UserSuperBossEntity_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -301,7 +301,7 @@ UserSuperBossEntity_o *EventSuperBossEntity__GetUserSuperBossEntity(
   }
   if ( !v6 || (v6->fields.userId = *(_QWORD *)(result[3].fields.userId + 64), (result = entity) == 0) )
 LABEL_23:
-    sub_1CE6958(result, v3);
+    sub_1D0F30C(result, v3);
   v7 = *(_QWORD *)&this->fields.eventId;
   entity->fields.damage = 0;
   *(_QWORD *)&result->fields.eventId = v7;
@@ -347,25 +347,25 @@ bool EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const
   EventSuperBossEntity_o *v36; // x0
   const MethodInfo *v37; // x1
 
-  if ( (byte_4E04BA8 & 1) == 0 )
+  if ( (byte_4E7782B & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&EventSuperBossEntity_TypeInfo);
-    sub_1CE6700(&long_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E04BA8 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&EventSuperBossEntity_TypeInfo);
+    sub_1D0F0B4(&long_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7782B = 1;
   }
   if ( !this->fields.script )
     goto LABEL_63;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   script = this->fields.script;
   v6 = (UserQuestMaster_o *)Instance;
   if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
@@ -375,14 +375,14 @@ bool EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_ID_KEY,
-          (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_34;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   v7 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -401,7 +401,7 @@ bool EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const
   Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                 (System_Collections_Generic_Dictionary_object__object__o *)v9,
                                 (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_ID_KEY,
-                                (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !v6 || !Instance )
     goto LABEL_65;
   if ( Instance->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -420,7 +420,7 @@ bool EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v16,
          (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_PHASE_KEY,
-         (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
     questPhase = v15->fields.questPhase;
@@ -432,7 +432,7 @@ bool EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const
     Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                   (System_Collections_Generic_Dictionary_object__object__o *)v18,
                                   (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_PHASE_KEY,
-                                  (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                  (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Instance )
       goto LABEL_65;
     if ( Instance->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -453,14 +453,14 @@ LABEL_34:
       if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
               (System_Collections_Generic_Dictionary_object__object__o *)v21,
               (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY,
-              (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+              (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
         goto LABEL_63;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4DFE4CA )
+      if ( !byte_4E710BF )
       {
-        sub_1CE6700(&NetworkManager_TypeInfo);
-        byte_4DFE4CA = 1;
+        sub_1D0F0B4(&NetworkManager_TypeInfo);
+        byte_4E710BF = 1;
       }
       v22 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -479,7 +479,7 @@ LABEL_34:
         Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                       (System_Collections_Generic_Dictionary_object__object__o *)v24,
                                       (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY,
-                                      (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                      (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( v6 )
         {
           if ( Instance )
@@ -500,7 +500,7 @@ LABEL_34:
               if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                       (System_Collections_Generic_Dictionary_object__object__o *)v31,
                       (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_PHASE_KEY,
-                      (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                      (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
               {
                 if ( !v30->fields.clearNum )
                   goto LABEL_61;
@@ -516,7 +516,7 @@ LABEL_34:
                 Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                               (System_Collections_Generic_Dictionary_object__object__o *)v33,
                                               (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_PHASE_KEY,
-                                              (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                              (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
                 if ( Instance )
                 {
                   if ( Instance->klass->_1.element_class == long_TypeInfo->_1.element_class )
@@ -528,7 +528,7 @@ LABEL_63:
                     return (char)v29;
                   }
 LABEL_66:
-                  sub_1CE6CF4(Instance);
+                  sub_1D0F6A8(Instance);
                   LOBYTE(v29) = EventSuperBossEntity__IsCleard(v36, v37);
                   return (char)v29;
                 }
@@ -539,7 +539,7 @@ LABEL_66:
       }
     }
 LABEL_65:
-    sub_1CE6958(Instance, v4);
+    sub_1D0F30C(Instance, v4);
   }
 LABEL_61:
   LOBYTE(v29) = 0;
@@ -575,15 +575,15 @@ bool EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const Metho
   int v17; // [xsp+8h] [xbp-38h] BYREF
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E04BA7 & 1) == 0 )
+  if ( (byte_4E7782A & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_UserQuestMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&EventSuperBossMaster_TypeInfo);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    byte_4E04BA7 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserQuestMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&EventSuperBossMaster_TypeInfo);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    byte_4E7782A = 1;
   }
   if ( EventSuperBossEntity__InUIDisplayPeriod(this, method) )
   {
@@ -600,7 +600,7 @@ bool EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const Metho
       v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
       v17 = i;
       v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-      v8 = System_String__Format_65164136(SAVE_KEY, v6, v7, 0);
+      v8 = System_String__Format_65604080(SAVE_KEY, v6, v7, 0);
       Int = (clsQuestCheck_o *)UnityEngine_PlayerPrefs__GetInt(v8, 0, 0);
       if ( !(_DWORD)Int )
         break;
@@ -614,13 +614,13 @@ bool EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const Metho
         return 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserQuestMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserQuestMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4DFE4CA )
+      if ( !byte_4E710BF )
       {
-        sub_1CE6700(&NetworkManager_TypeInfo);
-        byte_4DFE4CA = 1;
+        sub_1D0F0B4(&NetworkManager_TypeInfo);
+        byte_4E710BF = 1;
       }
       Int = (clsQuestCheck_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -641,7 +641,7 @@ bool EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const Metho
                  v14->m_Items[0],
                  0) > 0 )
             return 1;
-          Int = (clsQuestCheck_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+          Int = (clsQuestCheck_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
           v16 = this->fields.splitQuestIds;
           if ( v16 )
           {
@@ -652,13 +652,13 @@ bool EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const Metho
               goto LABEL_31;
             }
 LABEL_32:
-            sub_1CE6960(Int);
+            sub_1D0F314(Int);
           }
         }
       }
     }
 LABEL_31:
-    sub_1CE6958(Int, v10);
+    sub_1D0F30C(Int, v10);
   }
   return 0;
 }
@@ -674,13 +674,13 @@ bool EventSuperBossEntity__IsHidden(EventSuperBossEntity_o *this, const MethodIn
   EventSuperBossEntity_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4E04BA9 & 1) == 0 )
+  if ( (byte_4E7782C & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&EventSuperBossEntity_TypeInfo);
-    sub_1CE6700(&long_TypeInfo);
-    byte_4E04BA9 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&EventSuperBossEntity_TypeInfo);
+    sub_1D0F0B4(&long_TypeInfo);
+    byte_4E7782C = 1;
   }
   Item = EventSuperBossEntity_TypeInfo;
   script = this->fields.script;
@@ -691,7 +691,7 @@ bool EventSuperBossEntity__IsHidden(EventSuperBossEntity_o *this, const MethodIn
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_HIDDEN,
-          (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = EventSuperBossEntity_TypeInfo;
   v5 = this->fields.script;
@@ -701,13 +701,13 @@ bool EventSuperBossEntity__IsHidden(EventSuperBossEntity_o *this, const MethodIn
     || (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  (System_Collections_Generic_Dictionary_object__object__o *)v5,
                  (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_HIDDEN,
-                 (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                 (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
 LABEL_14:
-    sub_1CE6958(Item, method);
+    sub_1D0F30C(Item, method);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) == long_TypeInfo->_1.element_class )
     return *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v6, v7) == 1;
-  sub_1CE6CF4(Item);
+  sub_1D0F6A8(Item);
   return (unsigned __int8)EventSuperBossEntity__GetBreakGaugeHpList(v9, v10);
 }

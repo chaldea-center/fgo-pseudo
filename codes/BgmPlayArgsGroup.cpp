@@ -30,20 +30,20 @@ void BgmPlayArgsGroup___ctor(
   __int64 v30; // x0
   const MethodInfo *v31; // x1
 
-  if ( (byte_4E0407F & 1) == 0 )
+  if ( (byte_4E76CF9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-    byte_4E0407F = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+    byte_4E76CF9 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
   if ( !v7 )
     goto LABEL_20;
   items = v7->fields._items;
@@ -57,17 +57,17 @@ void BgmPlayArgsGroup___ctor(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)mainBgmParam,
-      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_395C410 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v19[4] = (Il2CppClass *)mainBgmParam;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)mainBgmParam, v10, v11, v12, v13, v14, v15);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)mainBgmParam, v10, v11, v12, v13, v14, v15);
   }
   this->fields._AllArgsList_k__BackingField = (struct System_Collections_Generic_List_BgmPlayArgs__o *)v7;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v7, v20, v21, v22, v23, v24, v25);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v7, v20, v21, v22, v23, v24, v25);
   AllArgsList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._AllArgsList_k__BackingField;
   if ( !otherBgmParams )
   {
@@ -75,31 +75,31 @@ void BgmPlayArgsGroup___ctor(
     v29 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 7);
     if ( !v29 )
     {
-      sub_1CBC7E4(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+      sub_1CE5198(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
       v29 = v28[7];
     }
     v30 = *(_QWORD *)(v29 + 16);
     if ( (*(_BYTE *)(v30 + 309) & 1) == 0 )
-      v30 = sub_1CBC788(inited);
+      v30 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v30 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v30);
     v8 = *(_QWORD *)(v28[7] + 16LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1CBC788(inited);
+      v8 = sub_1CE513C(inited);
     otherBgmParams = **(BgmPlayArgs_array ***)(v8 + 184);
   }
   if ( !AllArgsList_k__BackingField )
 LABEL_20:
-    sub_1CE6958(v8, v9);
+    sub_1D0F30C(v8, v9);
   System_Collections_Generic_List_object___AddRange(
     AllArgsList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)otherBgmParams,
-    (const MethodInfo_3906174 *)Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
+    (const MethodInfo_395C61C *)Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
   BgmPlayArgsGroup__Initialize(this, v31);
 }
 
 
-void BgmPlayArgsGroup___ctor_42338868(
+void BgmPlayArgsGroup___ctor_42558460(
         BgmPlayArgsGroup_o *this,
         System_String_o *toAnalyze,
         System_Nullable_float__o volumeNullable,
@@ -122,12 +122,12 @@ void BgmPlayArgsGroup___ctor_42338868(
   v11 = volumeNullable;
   v13 = Analyzer_FileNameToBgmPlayArgsGroup__Analyze(toAnalyze, v11, fadeTime, startTime, v12);
   this->fields._AllArgsList_k__BackingField = v13;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   BgmPlayArgsGroup__Initialize(this, v20);
 }
 
 
-void BgmPlayArgsGroup___ctor_42356400(BgmPlayArgsGroup_o *this, BgmPlayArgs_array *bgmParams, const MethodInfo *method)
+void BgmPlayArgsGroup___ctor_42575992(BgmPlayArgsGroup_o *this, BgmPlayArgs_array *bgmParams, const MethodInfo *method)
 {
   long double inited; // q0
   _QWORD *v6; // x20
@@ -145,12 +145,12 @@ void BgmPlayArgsGroup___ctor_42356400(BgmPlayArgsGroup_o *this, BgmPlayArgs_arra
   System_String_o *v18; // x7
   const MethodInfo *v19; // x1
 
-  if ( (byte_4E04080 & 1) == 0 )
+  if ( (byte_4E76CFA & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor___79843008);
-    sub_1CE6700(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-    byte_4E04080 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor___80307384);
+    sub_1D0F0B4(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+    byte_4E76CFA = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bgmParams )
@@ -159,28 +159,28 @@ void BgmPlayArgsGroup___ctor_42356400(BgmPlayArgsGroup_o *this, BgmPlayArgs_arra
     v7 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 7);
     if ( !v7 )
     {
-      sub_1CBC7E4(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+      sub_1CE5198(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
       v7 = v6[7];
     }
     v8 = *(_QWORD *)(v7 + 16);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1CBC788(inited);
+      v8 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v8 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v8);
     v9 = *(_QWORD *)(v6[7] + 16LL);
     if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-      v9 = sub_1CBC788(inited);
+      v9 = sub_1CE513C(inited);
     bgmParams = **(BgmPlayArgs_array ***)(v9 + 184);
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-  System_Collections_Generic_List_object____ctor_59791452(
+  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+  System_Collections_Generic_List_object____ctor_60144900(
     v10,
     (System_Collections_Generic_IEnumerable_T__o *)bgmParams,
-    (const MethodInfo_390585C *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor___79843008);
+    (const MethodInfo_395BD04 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor___80307384);
   if ( !this )
-    sub_1CE6958(v11, v12);
+    sub_1D0F30C(v11, v12);
   this->fields._AllArgsList_k__BackingField = (struct System_Collections_Generic_List_BgmPlayArgs__o *)v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v10, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v10, v13, v14, v15, v16, v17, v18);
   BgmPlayArgsGroup__Initialize(this, v19);
 }
 
@@ -201,13 +201,13 @@ System_Collections_Generic_IEnumerable_BgmPlayArgs__o *BgmPlayArgsGroup__AllArgs
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4E0407D & 1) == 0 )
+  if ( (byte_4E76CF7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
-    sub_1CE6700(&System_Func_BgmPlayArgs__bool__TypeInfo);
-    sub_1CE6700(&Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__);
-    sub_1CE6700(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_4E0407D = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
+    sub_1D0F0B4(&System_Func_BgmPlayArgs__bool__TypeInfo);
+    sub_1D0F0B4(&Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__);
+    sub_1D0F0B4(&BgmPlayArgsGroup___c_TypeInfo);
+    byte_4E76CF7 = 1;
   }
   v3 = BgmPlayArgsGroup___c_TypeInfo;
   AllArgsList_k__BackingField = this->fields._AllArgsList_k__BackingField;
@@ -225,16 +225,16 @@ System_Collections_Generic_IEnumerable_BgmPlayArgs__o *BgmPlayArgsGroup__AllArgs
       v3 = BgmPlayArgsGroup___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__12_0 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_BgmPlayArgs__bool__TypeInfo);
+    _9__12_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_BgmPlayArgs__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__12_0, v6, Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__, 0);
     static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = (struct System_Func_BgmPlayArgs__bool__o *)_9__12_0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
   }
   return (System_Collections_Generic_IEnumerable_BgmPlayArgs__o *)System_Linq_Enumerable__Where_object_(
                                                                     (System_Collections_Generic_IEnumerable_TSource__o *)AllArgsList_k__BackingField,
                                                                     (System_Func_TSource__bool__o *)_9__12_0,
-                                                                    (const MethodInfo_324B214 *)Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
+                                                                    (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
 }
 
 
@@ -269,16 +269,16 @@ void BgmPlayArgsGroup__Initialize(BgmPlayArgsGroup_o *this, const MethodInfo *me
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4E04081 & 1) == 0 )
+  if ( (byte_4E76CFB & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
-    sub_1CE6700(&MainBgmPlayArgs_TypeInfo);
-    sub_1CE6700(&System_Predicate_BgmPlayArgs__TypeInfo);
-    sub_1CE6700(&Method_BgmPlayArgsGroup___c__Initialize_b__17_0__);
-    sub_1CE6700(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_4E04081 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
+    sub_1D0F0B4(&MainBgmPlayArgs_TypeInfo);
+    sub_1D0F0B4(&System_Predicate_BgmPlayArgs__TypeInfo);
+    sub_1D0F0B4(&Method_BgmPlayArgsGroup___c__Initialize_b__17_0__);
+    sub_1D0F0B4(&BgmPlayArgsGroup___c_TypeInfo);
+    byte_4E76CFB = 1;
   }
   v3 = BgmPlayArgsGroup___c_TypeInfo;
   AllArgsList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._AllArgsList_k__BackingField;
@@ -296,18 +296,18 @@ void BgmPlayArgsGroup__Initialize(BgmPlayArgsGroup_o *this, const MethodInfo *me
       v3 = BgmPlayArgsGroup___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__17_0 = (System_Predicate_object__o *)sub_1CE694C(System_Predicate_BgmPlayArgs__TypeInfo);
+    _9__17_0 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_BgmPlayArgs__TypeInfo);
     System_Predicate_object____ctor(_9__17_0, v6, Method_BgmPlayArgsGroup___c__Initialize_b__17_0__, 0);
     static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
     static_fields->__9__17_0 = (struct System_Predicate_BgmPlayArgs__o *)_9__17_0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v8, v9, v10, v11, v12, v13);
   }
   if ( !AllArgsList_k__BackingField )
-    sub_1CE6958(v3, method);
+    sub_1D0F30C(v3, method);
   v14 = System_Collections_Generic_List_object___Find(
           AllArgsList_k__BackingField,
           (System_Predicate_T__o *)_9__17_0,
-          (const MethodInfo_39065D0 *)Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
+          (const MethodInfo_395CA78 *)Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
   if ( v14
     && (naturalAligment = MainBgmPlayArgs_TypeInfo->_2.naturalAligment,
         v14->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
@@ -322,7 +322,7 @@ void BgmPlayArgsGroup__Initialize(BgmPlayArgsGroup_o *this, const MethodInfo *me
     v22 = 0;
   }
   this->fields._MainArgs_k__BackingField = v22;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._MainArgs_k__BackingField,
     (int32_t)v22,
     v15,
@@ -333,12 +333,12 @@ void BgmPlayArgsGroup__Initialize(BgmPlayArgsGroup_o *this, const MethodInfo *me
     v20);
   v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields._AllArgsList_k__BackingField,
-                                                               (const MethodInfo_3232D7C *)Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
+                                                               (const MethodInfo_327EA84 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
   v24 = (struct System_Collections_Generic_List_SubBgmPlayArgs__o *)System_Linq_Enumerable__ToList_object_(
                                                                       v23,
-                                                                      (const MethodInfo_3248A54 *)Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
+                                                                      (const MethodInfo_329539C *)Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
   this->fields._SubArgsList_k__BackingField = v24;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._SubArgsList_k__BackingField,
     (int32_t)v24,
     v25,
@@ -369,15 +369,15 @@ BgmPlayArgsGroup_o *BgmPlayArgsGroup__NullExcludedClone(BgmPlayArgsGroup_o *this
   BgmPlayArgsGroup_o *v17; // x20
   const MethodInfo *v18; // x2
 
-  if ( (byte_4E0407E & 1) == 0 )
+  if ( (byte_4E76CF8 & 1) == 0 )
   {
-    sub_1CE6700(&BgmPlayArgsGroup_TypeInfo);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    sub_1CE6700(&System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
-    sub_1CE6700(&Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__);
-    sub_1CE6700(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_4E0407E = 1;
+    sub_1D0F0B4(&BgmPlayArgsGroup_TypeInfo);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+    sub_1D0F0B4(&System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
+    sub_1D0F0B4(&Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__);
+    sub_1D0F0B4(&BgmPlayArgsGroup___c_TypeInfo);
+    byte_4E76CF8 = 1;
   }
   v3 = BgmPlayArgsGroup__AllArgsListNullExcluded(this, method);
   v4 = BgmPlayArgsGroup___c_TypeInfo;
@@ -396,11 +396,11 @@ BgmPlayArgsGroup_o *BgmPlayArgsGroup__NullExcludedClone(BgmPlayArgsGroup_o *this
       v4 = BgmPlayArgsGroup___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__13_0 = (System_Func_object__object__o *)sub_1CE694C(System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
+    _9__13_0 = (System_Func_object__object__o *)sub_1D0F300(System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
     System_Func_object__object____ctor(_9__13_0, v7, Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__, 0);
     static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Func_BgmPlayArgs__BgmPlayArgs__o *)_9__13_0;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__13_0,
       (int32_t)_9__13_0,
       v9,
@@ -413,12 +413,12 @@ BgmPlayArgsGroup_o *BgmPlayArgsGroup__NullExcludedClone(BgmPlayArgsGroup_o *this
   v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                v5,
                                                                (System_Func_TSource__TResult__o *)_9__13_0,
-                                                               (const MethodInfo_323A63C *)Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
+                                                               (const MethodInfo_32866A4 *)Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
   v16 = System_Linq_Enumerable__ToArray_object_(
           v15,
-          (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-  v17 = (BgmPlayArgsGroup_o *)sub_1CE694C(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor_42356400(v17, (BgmPlayArgs_array *)v16, v18);
+          (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+  v17 = (BgmPlayArgsGroup_o *)sub_1D0F300(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor_42575992(v17, (BgmPlayArgs_array *)v16, v18);
   return v17;
 }
 
@@ -457,7 +457,7 @@ void BgmPlayArgsGroup__set_AllArgsList(
   System_String_o *v7; // x7
 
   this->fields._AllArgsList_k__BackingField = value;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -470,7 +470,7 @@ void BgmPlayArgsGroup__set_MainArgs(BgmPlayArgsGroup_o *this, MainBgmPlayArgs_o 
   System_String_o *v7; // x7
 
   this->fields._MainArgs_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._MainArgs_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -494,7 +494,7 @@ void BgmPlayArgsGroup__set_SubArgsList(
   System_String_o *v7; // x7
 
   this->fields._SubArgsList_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._SubArgsList_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -516,15 +516,15 @@ void BgmPlayArgsGroup___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E04082 & 1) == 0 )
+  if ( (byte_4E76CFC & 1) == 0 )
   {
-    sub_1CE6700(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_4E04082 = 1;
+    sub_1D0F0B4(&BgmPlayArgsGroup___c_TypeInfo);
+    byte_4E76CFC = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(BgmPlayArgsGroup___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(BgmPlayArgsGroup___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BgmPlayArgsGroup___c_TypeInfo->static_fields->__9 = (struct BgmPlayArgsGroup___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)BgmPlayArgsGroup___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -559,10 +559,10 @@ bool BgmPlayArgsGroup___c___Initialize_b__17_0(
   __int64 naturalAligment; // x10
   bool result; // w0
 
-  if ( (byte_4E04083 & 1) == 0 )
+  if ( (byte_4E76CFD & 1) == 0 )
   {
-    sub_1CE6700(&MainBgmPlayArgs_TypeInfo);
-    byte_4E04083 = 1;
+    sub_1D0F0B4(&MainBgmPlayArgs_TypeInfo);
+    byte_4E76CFD = 1;
   }
   result = x
         && (naturalAligment = MainBgmPlayArgs_TypeInfo->_2.naturalAligment,
@@ -578,7 +578,7 @@ BgmPlayArgs_o *BgmPlayArgsGroup___c___NullExcludedClone_b__13_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return (BgmPlayArgs_o *)((__int64 (__fastcall *)(BgmPlayArgs_o *, void *))x->klass[1]._1.image)(
                             x,
                             x->klass[1]._1.gc_desc);

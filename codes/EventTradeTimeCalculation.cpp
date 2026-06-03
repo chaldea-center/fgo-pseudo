@@ -1,11 +1,11 @@
 void EventTradeTimeCalculation___cctor(const MethodInfo *method)
 {
-  if ( (byte_4DFF2F2 & 1) == 0 )
+  if ( (byte_4E71EEA & 1) == 0 )
   {
-    sub_1CE6700(&EventTradeTimeCalculation_TypeInfo);
-    byte_4DFF2F2 = 1;
+    sub_1D0F0B4(&EventTradeTimeCalculation_TypeInfo);
+    byte_4E71EEA = 1;
   }
-  *EventTradeTimeCalculation_TypeInfo->static_fields = (struct EventTradeTimeCalculation_StaticFields)xmmword_D246B0;
+  *EventTradeTimeCalculation_TypeInfo->static_fields = (struct EventTradeTimeCalculation_StaticFields)xmmword_D34F70;
 }
 
 
@@ -23,20 +23,20 @@ int32_t EventTradeTimeCalculation__GetCompleteNum(
   int32_t getNum; // w21
 
   v5 = item;
-  if ( (byte_4DFF2ED & 1) == 0 )
+  if ( (byte_4E71EE5 & 1) == 0 )
   {
-    item = (EventTradeListViewItem_o *)sub_1CE6700(&EventTradeTimeCalculation_TypeInfo);
-    byte_4DFF2ED = 1;
+    item = (EventTradeListViewItem_o *)sub_1D0F0B4(&EventTradeTimeCalculation_TypeInfo);
+    byte_4E71EE5 = 1;
   }
   if ( !v5 || (TradeInfo_k__BackingField = v5->fields._TradeInfo_k__BackingField) == 0 )
-    sub_1CE6958(item, endedAt);
+    sub_1D0F30C(item, endedAt);
   TradeGoodsEntity_k__BackingField = v5->fields._TradeGoodsEntity_k__BackingField;
   startedAt = TradeInfo_k__BackingField->fields.startedAt;
   tradeNum = TradeInfo_k__BackingField->fields.tradeNum;
   getNum = TradeInfo_k__BackingField->fields.getNum;
   if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
-  return EventTradeTimeCalculation__GetCompleteNum_33525544(
+  return EventTradeTimeCalculation__GetCompleteNum_33693544(
            TradeGoodsEntity_k__BackingField,
            startedAt,
            endedAt,
@@ -46,7 +46,7 @@ int32_t EventTradeTimeCalculation__GetCompleteNum(
 }
 
 
-int32_t EventTradeTimeCalculation__GetCompleteNum_33525544(
+int32_t EventTradeTimeCalculation__GetCompleteNum_33693544(
         EventTradeGoodsEntity_o *goodsEntity,
         int64_t startedAt,
         int64_t endedAt,
@@ -86,20 +86,20 @@ int32_t EventTradeTimeCalculation__GetCompleteNum_33525544(
   EventTradePickupEntity_o *v42; // [xsp+10h] [xbp-70h] BYREF
   EventTradePickupEntity_o *pickupEntity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4DFF2EE & 1) == 0 )
+  if ( (byte_4E71EE6 & 1) == 0 )
   {
-    sub_1CE6700(&System_Convert_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMaster_EventTradePickupMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&EventTradePickupMaster_TypeInfo);
-    sub_1CE6700(&System_Math_TypeInfo);
-    byte_4DFF2EE = 1;
+    sub_1D0F0B4(&System_Convert_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventTradePickupMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&EventTradePickupMaster_TypeInfo);
+    sub_1D0F0B4(&System_Math_TypeInfo);
+    byte_4E71EE6 = 1;
   }
   v42 = 0;
   pickupEntity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   if ( !goodsEntity )
     goto LABEL_51;
   v12 = (EventTradePickupMaster_o *)Master_object;
@@ -123,7 +123,7 @@ int32_t EventTradeTimeCalculation__GetCompleteNum_33525544(
       goto LABEL_13;
     }
 LABEL_51:
-    sub_1CE6958(Master_object, v11);
+    sub_1D0F30C(Master_object, v11);
   }
   v15 = EventTradePickupMaster_TypeInfo;
   if ( !EventTradePickupMaster_TypeInfo->_2.cctor_finished )
@@ -156,8 +156,8 @@ LABEL_13:
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       v24 = v16 * tradeTime / DEFAULT_EVENT_TRADE_TIME_RATE;
-      v25 = System_Math__Max_66644648(0, ((int)v22 - (int)startedAt) / v24, 0);
-      v26 = System_Math__Min_66644976(v25, tradeNum - v18, 0);
+      v25 = System_Math__Max_67084744(0, ((int)v22 - (int)startedAt) / v24, 0);
+      v26 = System_Math__Min_67085072(v25, tradeNum - v18, 0);
       Master_object = (Il2CppObject *)EventTradePickupMaster__TryGetEntityTargetTime(
                                         v12,
                                         &v42,
@@ -198,7 +198,7 @@ LABEL_13:
         v32 = (v24 - v22 + startedAt) * v31 / v16 * v30;
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-        v33 = System_Convert__ToInt64_66210688(ceil((double)v32 / (double)(int)v31), 0);
+        v33 = System_Convert__ToInt64_66650632(ceil((double)v32 / (double)(int)v31), 0);
         v34 = v18 < tradeNum && v33 + v22 <= endedAt;
         v18 += v34;
         if ( v34 )
@@ -256,17 +256,17 @@ int64_t EventTradeTimeCalculation__GetTradeFinishTime(
   Il2CppObject *Master_object; // x22
   int64_t v9; // x23
 
-  if ( (byte_4DFF2EF & 1) == 0 )
+  if ( (byte_4E71EE7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_EventTradePickupMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&EventTradeTimeCalculation_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFF2EF = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventTradePickupMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&EventTradeTimeCalculation_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E71EE7 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   if ( startedAt <= 0 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -307,19 +307,19 @@ int32_t EventTradeTimeCalculation__GetTradeMaxNum(EventTradeGoodsEntity_o *goods
   EventTradeTimeCalculation_c *v12; // x8
   int64_t TradeTime; // x0
 
-  if ( (byte_4DFF2F0 & 1) == 0 )
+  if ( (byte_4E71EE8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_EventTradePickupMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&EventTradeTimeCalculation_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFF2F0 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventTradePickupMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&EventTradeTimeCalculation_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E71EE8 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   if ( !goodsEntity )
-    sub_1CE6958(Master_object, v4);
+    sub_1D0F30C(Master_object, v4);
   v5 = (EventTradePickupMaster_o *)Master_object;
   maxNum = goodsEntity->fields.maxNum;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -378,12 +378,12 @@ int64_t EventTradeTimeCalculation__GetTradeTime(
   EventTradePickupEntity_o *pickupEntity; // [xsp+8h] [xbp-58h] BYREF
 
   v8 = mstTradePickup;
-  if ( (byte_4DFF2F1 & 1) == 0 )
+  if ( (byte_4E71EE9 & 1) == 0 )
   {
-    sub_1CE6700(&System_Convert_TypeInfo);
-    sub_1CE6700(&EventTradePickupMaster_TypeInfo);
-    mstTradePickup = (EventTradePickupMaster_o *)sub_1CE6700(&System_Math_TypeInfo);
-    byte_4DFF2F1 = 1;
+    sub_1D0F0B4(&System_Convert_TypeInfo);
+    sub_1D0F0B4(&EventTradePickupMaster_TypeInfo);
+    mstTradePickup = (EventTradePickupMaster_o *)sub_1D0F0B4(&System_Math_TypeInfo);
+    byte_4E71EE9 = 1;
   }
   v27 = 0;
   pickupEntity = 0;
@@ -427,7 +427,7 @@ int64_t EventTradeTimeCalculation__GetTradeTime(
   v15 = ceil((double)(tradeTime * (int)v12) / (double)DEFAULT_EVENT_TRADE_TIME_RATE);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v16 = System_Convert__ToInt64_66210688(v15, 0);
+  v16 = System_Convert__ToInt64_66650632(v15, 0);
   mstTradePickup = (EventTradePickupMaster_o *)EventTradePickupMaster__TryGetEntityTargetTime(
                                                  v8,
                                                  &v27,
@@ -443,7 +443,7 @@ int64_t EventTradeTimeCalculation__GetTradeTime(
       goto LABEL_23;
     }
 LABEL_32:
-    sub_1CE6958(mstTradePickup, goodsEntity);
+    sub_1D0F30C(mstTradePickup, goodsEntity);
   }
   v18 = EventTradePickupMaster_TypeInfo;
   if ( !EventTradePickupMaster_TypeInfo->_2.cctor_finished )
@@ -476,7 +476,7 @@ LABEL_23:
     v25 = ceil((double)((v16 - v23) * v24 / v12 * v19) / (double)(int)v24);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    return (int)(System_Convert__ToInt64_66210688(v25, 0) + v23);
+    return (int)(System_Convert__ToInt64_66650632(v25, 0) + v23);
   }
   return v16;
 }

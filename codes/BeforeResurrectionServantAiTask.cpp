@@ -4,9 +4,7 @@ void BeforeResurrectionServantAiTask___ctor(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x4
-
-  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 18, svtData, logic, v4);
+  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 18, svtData, logic, 0);
 }
 
 
@@ -15,19 +13,9 @@ bool BeforeResurrectionServantAiTask__IsActable(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x4
-  BeforeResurrectionServantAiTask_o *v4; // x8
-  BattleServantData_o *svtData; // x1
-  BattleBuffData_BuffData_o *gutsBuff; // [xsp+8h] [xbp-8h] BYREF
+  BattleLogicReaction_o *logicReaction; // x8
 
-  if ( !logic || (v4 = this, (this = (BeforeResurrectionServantAiTask_o *)logic->fields.logicReaction) == 0) )
-    sub_1CE6958(this, logic);
-  svtData = v4->fields.svtData;
-  gutsBuff = 0;
-  return BattleLogicReaction__CheckExecutableResurrection_48286896(
-           (BattleLogicReaction_o *)this,
-           svtData,
-           &gutsBuff,
-           1,
-           v3);
+  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0 )
+    sub_1D0F30C(this, logic);
+  return BattleLogicReaction__CheckExecutableResurrection(logicReaction, this->fields.svtData, 0);
 }

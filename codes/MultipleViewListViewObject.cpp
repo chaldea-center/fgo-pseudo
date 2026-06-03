@@ -1,9 +1,9 @@
 void MultipleViewListViewObject___ctor(MultipleViewListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4DFFC8E & 1) == 0 )
+  if ( (byte_4E72893 & 1) == 0 )
   {
-    sub_1CE6700(&ListViewObject_TypeInfo);
-    byte_4DFFC8E = 1;
+    sub_1D0F0B4(&ListViewObject_TypeInfo);
+    byte_4E72893 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void MultipleViewListViewObject__Awake(MultipleViewListViewObject_o *this, const
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4DFFC85 & 1) == 0 )
+  if ( (byte_4E7288A & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
-    byte_4DFFC85 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
+    byte_4E7288A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1CE6958(0, v3);
+    sub_1D0F30C(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
+                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
   this->fields.itemDraw = (struct MultipleViewListViewItemDraw_o *)Component_object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -57,21 +57,21 @@ UnityEngine_GameObject_o *MultipleViewListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4DFFC89 & 1) == 0 )
+  if ( (byte_4E7288E & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___);
-    byte_4DFFC89 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___);
+    byte_4E7288E = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___)) == 0) )
+                                                    (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___)) == 0) )
   {
-    sub_1CE6958(DragObject, v4);
+    sub_1D0F30C(DragObject, v4);
   }
-  MultipleViewListViewObject__Init_34475364((MultipleViewListViewObject_o *)DragObject, 2, v6);
+  MultipleViewListViewObject__Init_34648860((MultipleViewListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -83,10 +83,10 @@ MultipleViewListViewItem_o *MultipleViewListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4DFFC87 & 1) == 0 )
+  if ( (byte_4E7288C & 1) == 0 )
   {
-    sub_1CE6700(&MultipleViewListViewItem_TypeInfo);
-    byte_4DFFC87 = 1;
+    sub_1D0F0B4(&MultipleViewListViewItem_TypeInfo);
+    byte_4E7288C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -133,10 +133,10 @@ void MultipleViewListViewObject__Init(
   int32_t v31; // w8
   GrandQuestFolderBoardItem_c *klass; // x19
 
-  if ( (byte_4DFFC8A & 1) == 0 )
+  if ( (byte_4E7288F & 1) == 0 )
   {
-    sub_1CE6700(&MultipleViewListViewItem_TypeInfo);
-    byte_4DFFC8A = 1;
+    sub_1D0F0B4(&MultipleViewListViewItem_TypeInfo);
+    byte_4E7288F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -164,12 +164,12 @@ void MultipleViewListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1CE6958(transform, v15);
+    sub_1D0F30C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v17,
@@ -209,7 +209,7 @@ LABEL_20:
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0;
-        sub_1CE66A4(p_callbackFunc, 0, v24, v25, v26, v27, v28, v29);
+        sub_1D0F058(p_callbackFunc, 0, v24, v25, v26, v27, v28, v29);
         ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
           klass->_1.element_class,
           *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -226,7 +226,7 @@ void MultipleViewListViewObject__InitItem(MultipleViewListViewObject_o *this, co
 
 
 // local variable allocation has failed, the output may be wrong!
-void MultipleViewListViewObject__Init_34475364(
+void MultipleViewListViewObject__Init_34648860(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -235,17 +235,17 @@ void MultipleViewListViewObject__Init_34475364(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void MultipleViewListViewObject__Init_34476724(
+void MultipleViewListViewObject__Init_34650168(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -254,17 +254,17 @@ void MultipleViewListViewObject__Init_34476724(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void MultipleViewListViewObject__Init_34476808(
+void MultipleViewListViewObject__Init_34650252(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -273,10 +273,10 @@ void MultipleViewListViewObject__Init_34476808(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -286,17 +286,17 @@ void MultipleViewListViewObject__OnClickSelect(MultipleViewListViewObject_o *thi
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4DFFC8C & 1) == 0 )
+  if ( (byte_4E72891 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_9944/*"OnClickSelectListView"*/);
-    byte_4DFFC8C = 1;
+    sub_1D0F0B4(&StringLiteral_9985/*"OnClickSelectListView"*/);
+    byte_4E72891 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1CE6958(0, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9944/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
+      sub_1D0F30C(0, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9985/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -314,11 +314,11 @@ void MultipleViewListViewObject__OnDestroy(MultipleViewListViewObject_o *this, c
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4DFFC86 & 1) == 0 )
+  if ( (byte_4E7288B & 1) == 0 )
   {
-    sub_1CE6700(&NGUITools_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFC86 = 1;
+    sub_1D0F0B4(&NGUITools_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7288B = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
@@ -332,7 +332,7 @@ void MultipleViewListViewObject__OnDestroy(MultipleViewListViewObject_o *this, c
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1CE66A4(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
+    sub_1D0F058(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -342,24 +342,24 @@ void MultipleViewListViewObject__OnLongPush(MultipleViewListViewObject_o *this, 
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4DFFC8D & 1) == 0 )
+  if ( (byte_4E72892 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_10005/*"OnLongPushListView"*/);
-    sub_1CE6700(&StringLiteral_10023/*"OnPressCancel"*/);
-    byte_4DFFC8D = 1;
+    sub_1D0F0B4(&StringLiteral_10046/*"OnLongPushListView"*/);
+    sub_1D0F0B4(&StringLiteral_10064/*"OnPressCancel"*/);
+    byte_4E72892 = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_72899908(gameObject, (System_String_o *)StringLiteral_10023/*"OnPressCancel"*/, 0),
+      || (UnityEngine_GameObject__SendMessage_73340852(gameObject, (System_String_o *)StringLiteral_10064/*"OnPressCancel"*/, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0) )
     {
-      sub_1CE6958(gameObject, v4);
+      sub_1D0F30C(gameObject, v4);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_10005/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_10046/*"OnLongPushListView"*/,
       (Il2CppObject *)this,
       0);
   }
@@ -375,11 +375,11 @@ void MultipleViewListViewObject__SetInput(MultipleViewListViewObject_o *this, bo
   struct ListViewItem_o *v9; // x1
   MultipleViewListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4DFFC88 & 1) == 0 )
+  if ( (byte_4E7288D & 1) == 0 )
   {
-    sub_1CE6700(&MultipleViewListViewItem_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFC88 = 1;
+    sub_1D0F0B4(&MultipleViewListViewItem_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7288D = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -403,7 +403,7 @@ void MultipleViewListViewObject__SetInput(MultipleViewListViewObject_o *this, bo
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1CE6958(0, v9);
+      sub_1D0F30C(0, v9);
     MultipleViewListViewItemDraw__SetInput(v10, (MultipleViewListViewItem_o *)v9, isInput, v6);
   }
 }
@@ -415,12 +415,12 @@ void MultipleViewListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_44952984((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_45188780((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void MultipleViewListViewObject__SetItem_34484500(
+void MultipleViewListViewObject__SetItem_34657508(
         MultipleViewListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -440,11 +440,11 @@ void MultipleViewListViewObject__SetupDisp(MultipleViewListViewObject_o *this, c
   const MethodInfo *v8; // x3
   MultipleViewListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4DFFC8B & 1) == 0 )
+  if ( (byte_4E72890 & 1) == 0 )
   {
-    sub_1CE6700(&MultipleViewListViewItem_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFC8B = 1;
+    sub_1D0F0B4(&MultipleViewListViewItem_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72890 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -468,7 +468,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1CE6958(0, v7);
+      sub_1D0F30C(0, v7);
     MultipleViewListViewItemDraw__SetItem(v9, (MultipleViewListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
@@ -489,10 +489,10 @@ void MultipleViewListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4DFFC83 & 1) == 0 )
+  if ( (byte_4E72888 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    byte_4DFFC83 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    byte_4E72888 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -505,13 +505,13 @@ void MultipleViewListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MultipleViewListViewObject_o *)sub_1CE6CF4(v8);
+  v11 = (MultipleViewListViewObject_o *)sub_1D0F6A8(v8);
   MultipleViewListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -530,10 +530,10 @@ void MultipleViewListViewObject__remove_callbackFunc(
   MultipleViewListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4DFFC84 & 1) == 0 )
+  if ( (byte_4E72889 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    byte_4DFFC84 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    byte_4E72889 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -546,12 +546,12 @@ void MultipleViewListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MultipleViewListViewObject_o *)sub_1CE6CF4(v8);
+  v11 = (MultipleViewListViewObject_o *)sub_1D0F6A8(v8);
   MultipleViewListViewObject__Awake(v11, v12);
 }

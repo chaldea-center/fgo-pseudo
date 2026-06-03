@@ -33,32 +33,32 @@ void UserPresentListViewItemDraw___cctor(const MethodInfo *method)
   int64_t v31; // x6
   System_String_o *v32; // x7
 
-  if ( (byte_4E03769 & 1) == 0 )
+  if ( (byte_4E763DC & 1) == 0 )
   {
-    sub_1CE6700(&UserPresentListViewItemDraw_TypeInfo);
-    sub_1CE6700(&StringLiteral_23484/*"ribon_present_important_1"*/);
-    sub_1CE6700(&StringLiteral_20746/*"img_listboard_bg02"*/);
-    sub_1CE6700(&StringLiteral_20747/*"img_listboard_bg03"*/);
-    sub_1CE6700(&StringLiteral_23485/*"ribon_present_limited_period"*/);
-    byte_4E03769 = 1;
+    sub_1D0F0B4(&UserPresentListViewItemDraw_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_23586/*"ribon_present_important_1"*/);
+    sub_1D0F0B4(&StringLiteral_20837/*"img_listboard_bg02"*/);
+    sub_1D0F0B4(&StringLiteral_20838/*"img_listboard_bg03"*/);
+    sub_1D0F0B4(&StringLiteral_23587/*"ribon_present_limited_period"*/);
+    byte_4E763DC = 1;
   }
   static_fields = UserPresentListViewItemDraw_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->BOARD_MSG_DEFAULT_OFFSET_Y = 0xFFFFFFEAFFFFFFF5LL;
-  v8 = StringLiteral_20746/*"img_listboard_bg02"*/;
-  static_fields->BOARD_BG_SP_NAME_NORMAL = (struct System_String_o *)StringLiteral_20746/*"img_listboard_bg02"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->BOARD_BG_SP_NAME_NORMAL, v8, v1, v2, v3, v4, v5, v6);
-  v9 = StringLiteral_20747/*"img_listboard_bg03"*/;
+  v8 = StringLiteral_20837/*"img_listboard_bg02"*/;
+  static_fields->BOARD_BG_SP_NAME_NORMAL = (struct System_String_o *)StringLiteral_20837/*"img_listboard_bg02"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->BOARD_BG_SP_NAME_NORMAL, v8, v1, v2, v3, v4, v5, v6);
+  v9 = StringLiteral_20838/*"img_listboard_bg03"*/;
   v10 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v10->BOARD_BG_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_20747/*"img_listboard_bg03"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v10->BOARD_BG_SP_NAME_IMPORTANT, v9, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_23485/*"ribon_present_limited_period"*/;
+  v10->BOARD_BG_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_20838/*"img_listboard_bg03"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v10->BOARD_BG_SP_NAME_IMPORTANT, v9, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_23587/*"ribon_present_limited_period"*/;
   v18 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v18->ICON_SP_NAME_LIMITED = (struct System_String_o *)StringLiteral_23485/*"ribon_present_limited_period"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v18->ICON_SP_NAME_LIMITED, v17, v19, v20, v21, v22, v23, v24);
-  v25 = StringLiteral_23484/*"ribon_present_important_1"*/;
+  v18->ICON_SP_NAME_LIMITED = (struct System_String_o *)StringLiteral_23587/*"ribon_present_limited_period"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v18->ICON_SP_NAME_LIMITED, v17, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_23586/*"ribon_present_important_1"*/;
   v26 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v26->ICON_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_23484/*"ribon_present_important_1"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v26->ICON_SP_NAME_IMPORTANT, v25, v27, v28, v29, v30, v31, v32);
+  v26->ICON_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_23586/*"ribon_present_important_1"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v26->ICON_SP_NAME_IMPORTANT, v25, v27, v28, v29, v30, v31, v32);
   *(_QWORD *)&UserPresentListViewItemDraw_TypeInfo->static_fields->NAME_TEXT_WIDTH = 0xF43C38000LL;
 }
 
@@ -75,7 +75,7 @@ void UserPresentListViewItemDraw__SetBlocked(UserPresentListViewItemDraw_o *this
 
   blockObj = this->fields.blockObj;
   if ( !blockObj )
-    sub_1CE6958(0, val);
+    sub_1D0F30C(0, val);
   UnityEngine_GameObject__SetActive(blockObj, val, 0);
 }
 
@@ -86,7 +86,7 @@ void UserPresentListViewItemDraw__SetCheck(UserPresentListViewItemDraw_o *this, 
 
   checkObj = this->fields.checkObj;
   if ( !checkObj )
-    sub_1CE6958(0, val);
+    sub_1D0F30C(0, val);
   UnityEngine_GameObject__SetActive(checkObj, val, 0);
 }
 
@@ -104,11 +104,11 @@ void UserPresentListViewItemDraw__SetCheckCnt(
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = count;
-  if ( (byte_4E03768 & 1) == 0 )
+  if ( (byte_4E763DB & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E03768 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E763DB = 1;
   }
   checkCntLabel = (UnityEngine_Object_o *)this->fields.checkCntLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -118,7 +118,7 @@ void UserPresentListViewItemDraw__SetCheckCnt(
     v5 = this->fields.checkCntLabel;
     v6 = System_Int32__ToString((int32_t)&v9, 0);
     if ( !v5 )
-      sub_1CE6958(v6, v7);
+      sub_1D0F30C(v6, v7);
     if ( v6 )
       v8 = v6;
     else
@@ -138,12 +138,12 @@ void UserPresentListViewItemDraw__SetInput(
   __int64 v7; // x1
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4E03765 & 1) == 0 )
+  if ( (byte_4E763D8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E03765 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E763D8 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -154,14 +154,14 @@ void UserPresentListViewItemDraw__SetInput(
     if ( !Component_object
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                           Component_object,
-                                                          (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                          (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
           (Component_object = (UnityEngine_Component_o *)this->fields.checkRoot) == 0)
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           (UnityEngine_GameObject_o *)Component_object,
-                                                          (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0 )
+                                                          (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0 )
     {
-      sub_1CE6958(Component_object, v7);
+      sub_1D0F30C(Component_object, v7);
     }
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0);
   }
@@ -220,16 +220,16 @@ void UserPresentListViewItemDraw__SetItem(
   struct UserPresentBoxEntity_o *v50; // x8
   const MethodInfo *v51; // x2
 
-  if ( (byte_4E03764 & 1) == 0 )
+  if ( (byte_4E763D7 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UserPresentBoxMaster_TypeInfo);
-    sub_1CE6700(&UserPresentListViewItemDraw_TypeInfo);
-    sub_1CE6700(&UserPresentListViewManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_10556/*"PRESENT_INFO"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E03764 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UserPresentBoxMaster_TypeInfo);
+    sub_1D0F0B4(&UserPresentListViewItemDraw_TypeInfo);
+    sub_1D0F0B4(&UserPresentListViewManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_10600/*"PRESENT_INFO"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E763D7 = 1;
   }
   if ( item && mode )
   {
@@ -260,12 +260,12 @@ void UserPresentListViewItemDraw__SetItem(
       if ( !itemIcon )
         goto LABEL_79;
     }
-    ItemIconComponent__SetGift_42064732(itemIcon, giftType, objectId, -1, 0, 0);
+    ItemIconComponent__SetGift_42283820(itemIcon, giftType, objectId, -1, 0, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_10556/*"PRESENT_INFO"*/, 0);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_10600/*"PRESENT_INFO"*/, 0);
     NameText = (Il2CppObject *)UserPresentListViewItem__get_NameText(item, v15);
-    itemIcon = (ItemIconComponent_o *)System_String__Format_65164136(
+    itemIcon = (ItemIconComponent_o *)System_String__Format_65604080(
                                         v14,
                                         NameText,
                                         (Il2CppObject *)item->fields.presentNum,
@@ -290,12 +290,12 @@ void UserPresentListViewItemDraw__SetItem(
           goto LABEL_24;
         }
       }
-      sub_1CE6CF4(manager);
+      sub_1D0F6A8(manager);
     }
     this->fields.mManager = manager;
     p_mManager = &this->fields.mManager;
 LABEL_24:
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_mManager, (int32_t)manager, v17, v18, v19, v20, v21, v22);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)p_mManager, (int32_t)manager, v17, v18, v19, v20, v21, v22);
     v29 = item->fields.usrPresentEnt;
     if ( !v29 )
       goto LABEL_50;
@@ -444,7 +444,7 @@ LABEL_61:
                 j_il2cpp_runtime_class_init_0(UserPresentListViewItemDraw_TypeInfo);
               if ( nameTextLabel )
               {
-                UILabel__SetCondensedScale_50636732(
+                UILabel__SetCondensedScale_50929924(
                   nameTextLabel,
                   UserPresentListViewItemDraw_TypeInfo->static_fields->NAME_TEXT_WIDTH,
                   0.0,
@@ -489,7 +489,7 @@ LABEL_61:
       }
     }
 LABEL_79:
-    sub_1CE6958(itemIcon, giftType);
+    sub_1D0F30C(itemIcon, giftType);
   }
 }
 
@@ -502,8 +502,8 @@ void UserPresentListViewItemDraw__SetItemInfo(
   void *Instance; // x0
   const MethodInfo *v6; // x1
   struct ItemEntity_o *itemEnt; // x8
-  struct ItemEntity_o *v8; // x8
-  System_String_o *detail; // x1
+  UILabel_o *itemSelectTextLabel; // x21
+  System_String_o *v9; // x1
   ItemMaster_o *v10; // x21
   const MethodInfo *v11; // x2
   struct ItemEntity_o *v12; // x8
@@ -529,197 +529,157 @@ void UserPresentListViewItemDraw__SetItemInfo(
   UILabel_o *holdNumTitleLb; // x22
   struct ItemEntity_o *v33; // x8
   LocalizationManager_c *v34; // x8
-  struct UILabel_o *holdNumCntLb; // x21
   int32_t num; // w22
-  struct ItemEntity_o *v37; // x8
+  struct ItemEntity_o *v36; // x8
   int type; // w8
   Il2CppObject *Master_object; // x21
-  struct ItemEntity_o *v40; // x8
-  LocalizationManager_c *v41; // x0
+  struct ItemEntity_o *v39; // x8
+  LocalizationManager_c *v40; // x0
   Il2CppObject *MasterData_object; // x21
-  struct ItemEntity_o *v43; // x8
+  struct ItemEntity_o *v42; // x8
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+  UnityEngine_Color_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E03766 & 1) == 0 )
+  if ( (byte_4E763D9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&UserPresentBoxMaster_TypeInfo);
-    sub_1CE6700(&StringLiteral_13576/*"TIME_REST_STRING"*/);
-    sub_1CE6700(&StringLiteral_13564/*"TIME_REST_PRESENT_LIMITED"*/);
-    sub_1CE6700(&StringLiteral_12196/*"SHOP_BUY_ITEM_HOLD"*/);
-    sub_1CE6700(&StringLiteral_13561/*"TIME_REST_PRESENT"*/);
-    sub_1CE6700(&StringLiteral_13562/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/);
-    sub_1CE6700(&StringLiteral_13563/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    sub_1CE6700(&StringLiteral_1117/*"0"*/);
-    byte_4E03766 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&UserPresentBoxMaster_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_13626/*"TIME_REST_STRING"*/);
+    sub_1D0F0B4(&StringLiteral_13614/*"TIME_REST_PRESENT_LIMITED"*/);
+    sub_1D0F0B4(&StringLiteral_12245/*"SHOP_BUY_ITEM_HOLD"*/);
+    sub_1D0F0B4(&StringLiteral_13611/*"TIME_REST_PRESENT"*/);
+    sub_1D0F0B4(&StringLiteral_13612/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/);
+    sub_1D0F0B4(&StringLiteral_13613/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    sub_1D0F0B4(&StringLiteral_1118/*"0"*/);
+    byte_4E763D9 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !item )
-    goto LABEL_126;
+    goto LABEL_125;
   itemEnt = item->fields.itemEnt;
   if ( !itemEnt )
-    goto LABEL_126;
+    goto LABEL_125;
   if ( itemEnt->fields.type == 24 )
   {
     Instance = this->fields.holdNumTitleLb;
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
     Instance = this->fields.holdNumCntLb;
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
     Instance = this->fields.checkRoot;
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
-    v8 = item->fields.itemEnt;
-    if ( !v8 )
-      goto LABEL_126;
-    Instance = this->fields.itemSelectTextLabel;
+    Instance = item->fields.itemEnt;
     if ( !Instance )
-      goto LABEL_126;
-    detail = v8->fields.detail;
-    goto LABEL_15;
+      goto LABEL_125;
+    itemSelectTextLabel = this->fields.itemSelectTextLabel;
+    Instance = ItemEntity__GetDetail((ItemEntity_o *)Instance, 0);
+    if ( !itemSelectTextLabel )
+      goto LABEL_125;
+    goto LABEL_14;
   }
   v10 = (ItemMaster_o *)Instance;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   Instance = (void *)ItemMaster__isQP((ItemMaster_o *)Instance, itemEnt->fields.id, 0);
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
     v12 = item->fields.itemEnt;
     if ( !v12 )
-      goto LABEL_126;
+      goto LABEL_125;
     Instance = (void *)ItemMaster__isFriendPoint(v10, v12->fields.id, 0);
     if ( ((unsigned __int8)Instance & 1) == 0 )
     {
       v13 = item->fields.itemEnt;
       if ( !v13 )
-        goto LABEL_126;
+        goto LABEL_125;
       if ( !ItemMaster__isEventPoint(v10, v13->fields.id, 0) )
       {
         Instance = this->fields.holdNumCntLb;
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
         Instance = this->fields.holdNumTitleLb;
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
         holdNumTitleLb = this->fields.holdNumTitleLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_12196/*"SHOP_BUY_ITEM_HOLD"*/, 0);
+        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_12245/*"SHOP_BUY_ITEM_HOLD"*/, 0);
         if ( !holdNumTitleLb )
-          goto LABEL_126;
+          goto LABEL_125;
         UILabel__set_text(holdNumTitleLb, (System_String_o *)Instance, 0);
         Instance = this->fields.checkRoot;
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
         v33 = item->fields.itemEnt;
         if ( !v33 )
-          goto LABEL_126;
+          goto LABEL_125;
         Instance = (void *)ItemMaster__isMana(v10, v33->fields.id, 0);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
           Instance = UserGameMaster__getSelfUserGame(0);
           if ( !Instance )
-            goto LABEL_126;
+            goto LABEL_125;
           v34 = LocalizationManager_TypeInfo;
-          holdNumCntLb = this->fields.holdNumCntLb;
+          itemSelectTextLabel = this->fields.holdNumCntLb;
           num = *((_DWORD *)Instance + 48);
-          goto LABEL_118;
+LABEL_118:
+          if ( v34->_2.cctor_finished )
+            goto LABEL_121;
+          v40 = v34;
+LABEL_120:
+          j_il2cpp_runtime_class_init_0(v40);
+LABEL_121:
+          Instance = LocalizationManager__GetNumberFormat(num, 0);
+          if ( !itemSelectTextLabel )
+            goto LABEL_125;
+LABEL_14:
+          v9 = (System_String_o *)Instance;
+LABEL_15:
+          UILabel__set_text(itemSelectTextLabel, v9, 0);
+          goto LABEL_23;
         }
-        v37 = item->fields.itemEnt;
-        if ( !v37 )
-          goto LABEL_126;
-        type = v37->fields.type;
+        v36 = item->fields.itemEnt;
+        if ( !v36 )
+          goto LABEL_125;
+        type = v36->fields.type;
         if ( type <= 21 )
         {
           if ( type != 2 && type != 17 )
-          {
-LABEL_107:
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-            if ( !Instance )
-              goto LABEL_126;
-            MasterData_object = DataManager__GetMasterData_object_(
-                                  (DataManager_o *)Instance,
-                                  (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
-            if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4DFE4CA )
-            {
-              sub_1CE6700(&NetworkManager_TypeInfo);
-              byte_4DFE4CA = 1;
-            }
-            Instance = NetworkManager_TypeInfo;
-            if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              Instance = NetworkManager_TypeInfo;
-            }
-            v43 = item->fields.itemEnt;
-            if ( !v43 )
-              goto LABEL_126;
-            if ( !MasterData_object )
-              goto LABEL_126;
-            Instance = UserItemMaster__GetEntityDefinitely(
-                         (UserItemMaster_o *)MasterData_object,
-                         *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL),
-                         v43->fields.id,
-                         0);
-            if ( !Instance )
-              goto LABEL_126;
-            v34 = LocalizationManager_TypeInfo;
-            holdNumCntLb = this->fields.holdNumCntLb;
-            num = *((_DWORD *)Instance + 7);
-LABEL_118:
-            if ( !v34->_2.cctor_finished )
-            {
-              v41 = v34;
-LABEL_120:
-              j_il2cpp_runtime_class_init_0(v41);
-            }
-LABEL_121:
-            Instance = LocalizationManager__GetNumberFormat(num, 0);
-            if ( !holdNumCntLb )
-              goto LABEL_126;
-            detail = (System_String_o *)Instance;
-LABEL_123:
-            Instance = holdNumCntLb;
-LABEL_15:
-            UILabel__set_text((UILabel_o *)Instance, detail, 0);
-            goto LABEL_23;
-          }
+            goto LABEL_107;
         }
         else if ( type != 36 )
         {
@@ -727,13 +687,13 @@ LABEL_15:
           {
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+            Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4DFE4CA )
+            if ( !byte_4E710BF )
             {
-              sub_1CE6700(&NetworkManager_TypeInfo);
-              byte_4DFE4CA = 1;
+              sub_1D0F0B4(&NetworkManager_TypeInfo);
+              byte_4E710BF = 1;
             }
             Instance = NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -741,48 +701,83 @@ LABEL_15:
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
               Instance = NetworkManager_TypeInfo;
             }
-            v40 = item->fields.itemEnt;
-            if ( !v40 || !Master_object )
-              goto LABEL_126;
+            v39 = item->fields.itemEnt;
+            if ( !v39 || !Master_object )
+              goto LABEL_125;
             Instance = (void *)UserSvtCoinMaster__TryGetEntity(
                                  (UserSvtCoinMaster_o *)Master_object,
                                  &entity,
                                  *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL),
-                                 v40->fields.value,
+                                 v39->fields.value,
                                  0);
-            holdNumCntLb = this->fields.holdNumCntLb;
+            itemSelectTextLabel = this->fields.holdNumCntLb;
             if ( ((unsigned __int8)Instance & 1) == 0 )
             {
-              if ( !holdNumCntLb )
-                goto LABEL_126;
-              detail = (System_String_o *)StringLiteral_1117/*"0"*/;
-              goto LABEL_123;
+              if ( !itemSelectTextLabel )
+                goto LABEL_125;
+              v9 = (System_String_o *)StringLiteral_1118/*"0"*/;
+              goto LABEL_15;
             }
             if ( !entity )
-              goto LABEL_126;
-            v41 = LocalizationManager_TypeInfo;
+              goto LABEL_125;
+            v40 = LocalizationManager_TypeInfo;
             num = entity->fields.num;
-            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              goto LABEL_120;
-            goto LABEL_121;
+            if ( LocalizationManager_TypeInfo->_2.cctor_finished )
+              goto LABEL_121;
+            goto LABEL_120;
           }
           if ( type == 22 )
           {
             Instance = UserGameMaster__getSelfUserGame(0);
             if ( !Instance )
-              goto LABEL_126;
+              goto LABEL_125;
             v34 = LocalizationManager_TypeInfo;
-            holdNumCntLb = this->fields.holdNumCntLb;
+            itemSelectTextLabel = this->fields.holdNumCntLb;
             num = *((_DWORD *)Instance + 49);
             goto LABEL_118;
           }
-          goto LABEL_107;
+LABEL_107:
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          if ( !Instance )
+            goto LABEL_125;
+          MasterData_object = DataManager__GetMasterData_object_(
+                                (DataManager_o *)Instance,
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+          if ( !byte_4E710BF )
+          {
+            sub_1D0F0B4(&NetworkManager_TypeInfo);
+            byte_4E710BF = 1;
+          }
+          Instance = NetworkManager_TypeInfo;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+          {
+            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+            Instance = NetworkManager_TypeInfo;
+          }
+          v42 = item->fields.itemEnt;
+          if ( !v42 )
+            goto LABEL_125;
+          if ( !MasterData_object )
+            goto LABEL_125;
+          Instance = UserItemMaster__GetEntityDefinitely(
+                       (UserItemMaster_o *)MasterData_object,
+                       *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL),
+                       v42->fields.id,
+                       0);
+          if ( !Instance )
+            goto LABEL_125;
+          v34 = LocalizationManager_TypeInfo;
+          itemSelectTextLabel = this->fields.holdNumCntLb;
+          num = *((_DWORD *)Instance + 7);
+          goto LABEL_118;
         }
         Instance = UserGameMaster__getSelfUserGame(0);
         if ( !Instance )
-          goto LABEL_126;
+          goto LABEL_125;
         v34 = LocalizationManager_TypeInfo;
-        holdNumCntLb = this->fields.holdNumCntLb;
+        itemSelectTextLabel = this->fields.holdNumCntLb;
         num = *((_DWORD *)Instance + 46);
         goto LABEL_118;
       }
@@ -792,23 +787,23 @@ LABEL_15:
 LABEL_23:
   Instance = item->fields.itemEnt;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   OverwritePresentboxDetail = ItemEntity__GetOverwritePresentboxDetail((ItemEntity_o *)Instance, 0);
   if ( System_String__op_Inequality(OverwritePresentboxDetail, (System_String_o *)StringLiteral_1/*""*/, 0) )
   {
     Instance = this->fields.itemSelectTextLabel;
     if ( !Instance )
-      goto LABEL_126;
+      goto LABEL_125;
     UILabel__set_text((UILabel_o *)Instance, OverwritePresentboxDetail, 0);
   }
   limitedPeriod = this->fields.limitedPeriod;
   Instance = (void *)UserPresentListViewItem__isItemLimitedPeriod(item, v6);
   if ( !limitedPeriod )
-    goto LABEL_126;
+    goto LABEL_125;
   UnityEngine_GameObject__SetActive(limitedPeriod, (unsigned __int8)Instance & 1, 0);
   Instance = this->fields.limitedPeriod;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)Instance, 0);
   resTimeLb = this->fields.resTimeLb;
   v18 = activeSelf;
@@ -823,91 +818,91 @@ LABEL_23:
     if ( v18 )
     {
 LABEL_31:
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13564/*"TIME_REST_PRESENT_LIMITED"*/, 0);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13614/*"TIME_REST_PRESENT_LIMITED"*/, 0);
       if ( !resTimeLb )
-        goto LABEL_126;
+        goto LABEL_125;
       UILabel__set_text(resTimeLb, (System_String_o *)Instance, 0);
       v19 = item->fields.itemEnt;
       if ( !v19 )
-        goto LABEL_126;
+        goto LABEL_125;
       resLimitedTimeLb = this->fields.resLimitedTimeLb;
       Instance = LocalizationManager__GetRestTime2(v19->fields.endedAt, -1, 0);
       if ( !resLimitedTimeLb )
-        goto LABEL_126;
+        goto LABEL_125;
       UILabel__set_text(resLimitedTimeLb, (System_String_o *)Instance, 0);
       Instance = this->fields.resLimitedTimeLb;
       if ( !Instance )
-        goto LABEL_126;
-      v45.fields.g = 0.92157;
-      v45.fields.b = 0.015686;
-      v45.fields.r = 1.0;
-      v45.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)Instance, v45, 0);
+        goto LABEL_125;
+      v44.fields.g = 0.92157;
+      v44.fields.b = 0.015686;
+      v44.fields.r = 1.0;
+      v44.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)Instance, v44, 0);
       Instance = this->fields.resLimitedTimeLbAlt;
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
       resLimitedTimeLbAlt = this->fields.resLimitedTimeLbAlt;
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13576/*"TIME_REST_STRING"*/, 0);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13626/*"TIME_REST_STRING"*/, 0);
       if ( !resLimitedTimeLbAlt )
-        goto LABEL_126;
+        goto LABEL_125;
       UILabel__set_text(resLimitedTimeLbAlt, (System_String_o *)Instance, 0);
       Instance = this->fields.resLimitedTimeLbAlt;
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
       if ( !this->fields.resLimitedTimeLb )
-        goto LABEL_126;
+        goto LABEL_125;
       v22 = (UnityEngine_GameObject_o *)Instance;
       Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.resLimitedTimeLb, 0);
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       LODWORD(v23) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
       v24 = this->fields.resLimitedTimeLb;
       if ( !v24 )
-        goto LABEL_126;
+        goto LABEL_125;
       GameObjectExtensions__SetLocalPositionX(v22, v23 - (float)v24->fields.mWidth, 0);
       Instance = this->fields.resTimeLb;
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       v25 = 1;
       goto LABEL_53;
     }
   }
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13561/*"TIME_REST_PRESENT"*/, 0);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13611/*"TIME_REST_PRESENT"*/, 0);
   if ( !resTimeLb )
-    goto LABEL_126;
+    goto LABEL_125;
   UILabel__set_text(resTimeLb, (System_String_o *)Instance, 0);
   Instance = item->fields.usrPresentEnt;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   v26 = this->fields.resLimitedTimeLb;
   v27 = UserPresentBoxEntity__expireAt((UserPresentBoxEntity_o *)Instance, 0);
   Instance = LocalizationManager__GetRestTime2(v27, -1, 0);
   if ( !v26 )
-    goto LABEL_126;
+    goto LABEL_125;
   UILabel__set_text(v26, (System_String_o *)Instance, 0);
   Instance = this->fields.resLimitedTimeLb;
   if ( !Instance )
-    goto LABEL_126;
-  v46.fields.r = 1.0;
-  v46.fields.g = 1.0;
-  v46.fields.b = 1.0;
-  v46.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)Instance, v46, 0);
+    goto LABEL_125;
+  v45.fields.r = 1.0;
+  v45.fields.g = 1.0;
+  v45.fields.b = 1.0;
+  v45.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)Instance, v45, 0);
   Instance = this->fields.resLimitedTimeLbAlt;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
   Instance = this->fields.resTimeLb;
   if ( !Instance )
-    goto LABEL_126;
+    goto LABEL_125;
   v25 = 0;
 LABEL_53:
   UILabel__set_applyGradient((UILabel_o *)Instance, v25, 0);
@@ -924,35 +919,35 @@ LABEL_53:
     {
       Instance = this->fields.resLimitedTimeLbAlt;
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
       Instance = this->fields.limitedPeriod;
       if ( !Instance )
-        goto LABEL_126;
+        goto LABEL_125;
       if ( !UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)Instance, 0) )
       {
         v30 = this->fields.resTimeLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13562/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0);
+        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13612/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0);
         if ( !v30 )
-          goto LABEL_126;
+          goto LABEL_125;
         UILabel__set_text(v30, (System_String_o *)Instance, 0);
       }
       v31 = this->fields.resLimitedTimeLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13563/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13613/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
       if ( v31 )
       {
         UILabel__set_text(v31, (System_String_o *)Instance, 0);
         return;
       }
-LABEL_126:
-      sub_1CE6958(Instance, v6);
+LABEL_125:
+      sub_1D0F30C(Instance, v6);
     }
   }
 }
@@ -990,18 +985,18 @@ void UserPresentListViewItemDraw__SetNormalInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E03767 & 1) == 0 )
+  if ( (byte_4E763DA & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_EventServantMaster___);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&UserPresentBoxMaster_TypeInfo);
-    sub_1CE6700(&StringLiteral_13561/*"TIME_REST_PRESENT"*/);
-    sub_1CE6700(&StringLiteral_13562/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/);
-    sub_1CE6700(&StringLiteral_13563/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/);
-    byte_4E03767 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventServantMaster___);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&UserPresentBoxMaster_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_13611/*"TIME_REST_PRESENT"*/);
+    sub_1D0F0B4(&StringLiteral_13612/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/);
+    sub_1D0F0B4(&StringLiteral_13613/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/);
+    byte_4E763DA = 1;
   }
   holdNumTitleLb = (UnityEngine_Component_o *)this->fields.holdNumTitleLb;
   if ( !holdNumTitleLb )
@@ -1028,7 +1023,7 @@ void UserPresentListViewItemDraw__SetNormalInfo(
   resTimeLb = this->fields.resTimeLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13561/*"TIME_REST_PRESENT"*/, 0);
+  holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13611/*"TIME_REST_PRESENT"*/, 0);
   if ( !resTimeLb )
     goto LABEL_66;
   UILabel__set_text(resTimeLb, (System_String_o *)holdNumTitleLb, 0);
@@ -1092,12 +1087,12 @@ void UserPresentListViewItemDraw__SetNormalInfo(
     v11 = usrPresentEnt ? usrPresentEnt->fields.giftType : 0;
     if ( Gift__IsEventSvtJoin(v11, 0) )
     {
-      holdNumTitleLb = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      holdNumTitleLb = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !holdNumTitleLb )
         goto LABEL_66;
       holdNumTitleLb = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)holdNumTitleLb,
-                                                    (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventMaster___);
+                                                    (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( !holdNumTitleLb )
         goto LABEL_66;
       holdNumTitleLb = (UnityEngine_Component_o *)EventMaster__GetEnableEntityList(
@@ -1118,7 +1113,7 @@ void UserPresentListViewItemDraw__SetNormalInfo(
             while ( 1 )
             {
               if ( (unsigned int)v14 >= (unsigned int)klass )
-                sub_1CE6960(holdNumTitleLb);
+                sub_1D0F314(holdNumTitleLb);
               v15 = *((_QWORD *)&v13[1].monitor + v14);
               if ( !v15 )
                 break;
@@ -1128,12 +1123,12 @@ void UserPresentListViewItemDraw__SetNormalInfo(
               createdAt = v16->fields.createdAt;
               if ( *(_QWORD *)(v15 + 88) < createdAt && createdAt < *(_QWORD *)(v15 + 96) )
               {
-                holdNumTitleLb = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                holdNumTitleLb = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( !holdNumTitleLb )
                   break;
                 holdNumTitleLb = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                                               (DataManager_o *)holdNumTitleLb,
-                                                              (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventServantMaster___);
+                                                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventServantMaster___);
                 v18 = item->fields.svtEnt;
                 if ( !v18 )
                   break;
@@ -1145,7 +1140,7 @@ void UserPresentListViewItemDraw__SetNormalInfo(
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                 *(_QWORD *)&v29.fields.currentCryptoKey = v22;
                 *(_QWORD *)&v29.fields.fakeValue = v21;
-                holdNumTitleLb = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(
+                holdNumTitleLb = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
                                                               v29,
                                                               0);
                 if ( !v19 )
@@ -1172,7 +1167,7 @@ void UserPresentListViewItemDraw__SetNormalInfo(
                 goto LABEL_56;
             }
 LABEL_66:
-            sub_1CE6958(holdNumTitleLb, item);
+            sub_1D0F30C(holdNumTitleLb, item);
           }
         }
       }
@@ -1193,12 +1188,12 @@ LABEL_56:
       v27 = this->fields.resTimeLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13562/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0);
+      holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13612/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0);
       if ( !v27 )
         goto LABEL_66;
       UILabel__set_text(v27, (System_String_o *)holdNumTitleLb, 0);
       v28 = this->fields.resLimitedTimeLb;
-      holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13563/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
+      holdNumTitleLb = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13613/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
       if ( !v28 )
         goto LABEL_66;
       UILabel__set_text(v28, (System_String_o *)holdNumTitleLb, 0);

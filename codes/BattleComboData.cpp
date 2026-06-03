@@ -8,17 +8,17 @@ void BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E078B8 & 1) == 0 )
+  if ( (byte_4E7A595 & 1) == 0 )
   {
-    sub_1CE6700(&bool___TypeInfo);
-    byte_4E078B8 = 1;
+    sub_1D0F0B4(&bool___TypeInfo);
+    byte_4E7A595 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v3 = (struct System_Boolean_array *)sub_1CE67A8(bool___TypeInfo, 3);
+  v3 = (struct System_Boolean_array *)sub_1D0F15C(bool___TypeInfo, 3);
   this->fields.sameflg = v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -27,10 +27,10 @@ bool BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo 
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4E078B9 & 1) == 0 )
+  if ( (byte_4E7A596 & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E078B9 = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A596 = 1;
   }
   if ( this->fields.flash )
     return 1;

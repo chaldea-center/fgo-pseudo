@@ -7,16 +7,16 @@ void ExcludeMotionMaster___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4E04D6A & 1) == 0 )
+  if ( (byte_4E779F1 & 1) == 0 )
   {
-    sub_1CE6700(&ExcludeMotionMaster_TypeInfo);
-    sub_1CE6700(&StringLiteral_6343/*"ExcludeMotionTargetId"*/);
-    byte_4E04D6A = 1;
+    sub_1D0F0B4(&ExcludeMotionMaster_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_6362/*"ExcludeMotionTargetId"*/);
+    byte_4E779F1 = 1;
   }
-  ExcludeMotionMaster_TypeInfo->static_fields->EXCLUDE_MOTION_TARGET_ID = (struct System_String_o *)StringLiteral_6343/*"ExcludeMotionTargetId"*/;
-  sub_1CE66A4(
+  ExcludeMotionMaster_TypeInfo->static_fields->EXCLUDE_MOTION_TARGET_ID = (struct System_String_o *)StringLiteral_6362/*"ExcludeMotionTargetId"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)ExcludeMotionMaster_TypeInfo->static_fields,
-    StringLiteral_6343/*"ExcludeMotionTargetId"*/,
+    StringLiteral_6362/*"ExcludeMotionTargetId"*/,
     v1,
     v2,
     v3,
@@ -28,15 +28,15 @@ void ExcludeMotionMaster___cctor(const MethodInfo *method)
 
 void ExcludeMotionMaster___ctor(ExcludeMotionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04D67 & 1) == 0 )
+  if ( (byte_4E779EE & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
-    byte_4E04D67 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
+    byte_4E779EE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     493,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
 }
 
 
@@ -74,14 +74,14 @@ System_Int32_array *ExcludeMotionMaster__GetExcludeOptionIndexes(
   ExcludeMotionEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v8 = this;
-  if ( (byte_4E04D69 & 1) == 0 )
+  if ( (byte_4E779F0 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_int___);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1CE6700(&ExcludeMotionMaster_TypeInfo);
-    sub_1CE6700(&long_TypeInfo);
-    this = (ExcludeMotionMaster_o *)sub_1CE6700(&TerminalPramsManager_TypeInfo);
-    byte_4E04D69 = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_int___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&ExcludeMotionMaster_TypeInfo);
+    sub_1D0F0B4(&long_TypeInfo);
+    this = (ExcludeMotionMaster_o *)sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    byte_4E779F0 = 1;
   }
   v31 = 0;
   entity = 0;
@@ -104,7 +104,7 @@ System_Int32_array *ExcludeMotionMaster__GetExcludeOptionIndexes(
           v10,
           (Il2CppObject *)v13->static_fields->EXCLUDE_MOTION_TARGET_ID,
           (Il2CppObject **)&v31,
-          (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     goto LABEL_12;
   this = v31;
   if ( !v31 )
@@ -130,15 +130,15 @@ LABEL_34:
         return *p_optionIndexes;
       }
 LABEL_46:
-      sub_1CE6958(this, svtData);
+      sub_1D0F30C(this, svtData);
     }
 LABEL_12:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4DFE737 )
+    if ( !byte_4E7132C )
     {
-      sub_1CE6700(&TerminalPramsManager_TypeInfo);
-      byte_4DFE737 = 1;
+      sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+      byte_4E7132C = 1;
     }
     v18 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -159,10 +159,10 @@ LABEL_12:
     v21 = entity;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4DFE736 )
+    if ( !byte_4E7132B )
     {
-      sub_1CE6700(&TerminalPramsManager_TypeInfo);
-      byte_4DFE736 = 1;
+      sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+      byte_4E7132B = 1;
     }
     this = (ExcludeMotionMaster_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -181,10 +181,10 @@ LABEL_12:
 LABEL_50:
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4DFEC9C )
+      if ( !byte_4E71891 )
       {
-        sub_1CE6700(&TerminalPramsManager_TypeInfo);
-        byte_4DFEC9C = 1;
+        sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+        byte_4E71891 = 1;
       }
       v22 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -207,24 +207,24 @@ LABEL_50:
         v26 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
         if ( !v26 )
         {
-          sub_1CBC7E4(Method_System_Array_Empty_int___);
+          sub_1CE5198(Method_System_Array_Empty_int___);
           v26 = v25[7];
         }
         v27 = *(_QWORD *)(v26 + 16);
         if ( (*(_BYTE *)(v27 + 309) & 1) == 0 )
-          v27 = sub_1CBC788(inited);
+          v27 = sub_1CE513C(inited);
         if ( !*(_DWORD *)(v27 + 224) )
           inited = j_il2cpp_runtime_class_init_0(v27);
         v28 = *(_QWORD *)(v25[7] + 16LL);
         if ( (*(_BYTE *)(v28 + 309) & 1) == 0 )
-          v28 = sub_1CBC788(inited);
+          v28 = sub_1CE513C(inited);
         p_optionIndexes = *(System_Int32_array ***)(v28 + 184);
         return *p_optionIndexes;
       }
     }
     goto LABEL_34;
   }
-  sub_1CE6CF4(v31);
+  sub_1D0F6A8(v31);
   ExcludeMotionMaster___cctor(v30);
   return result;
 }
@@ -242,10 +242,10 @@ bool ExcludeMotionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E04D68 & 1) == 0 )
+  if ( (byte_4E779EF & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
-    byte_4E04D68 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
+    byte_4E779EF = 1;
   }
   PK = (Il2CppObject *)ExcludeMotionEntity__CreatePK(
                          targetIdType,
@@ -258,5 +258,5 @@ bool ExcludeMotionMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
 }

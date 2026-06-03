@@ -15,25 +15,25 @@ void UILoopListView___ctor(UILoopListView_o *this, const MethodInfo *method)
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4E062A3 & 1) == 0 )
+  if ( (byte_4E78F4A & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_Transform__TypeInfo);
-    byte_4E062A3 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_Transform__TypeInfo);
+    byte_4E78F4A = 1;
   }
   this->fields.itemSize = 100;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_Transform__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_Transform___ctor__);
   this->fields.mChildList = (struct System_Collections_Generic_List_Transform__o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mChildList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_Transform__TypeInfo);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mChildList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_Transform___ctor__);
   this->fields.realChildList = (struct System_Collections_Generic_List_Transform__o *)v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.realChildList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.realChildList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.isFirstTime = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -64,19 +64,19 @@ void UILoopListView__initWrapContent(UILoopListView_o *this, const MethodInfo *m
   UIScrollView_OnDragNotification_c *v17; // x1
   const MethodInfo *v18; // x1
 
-  if ( (byte_4E0629D & 1) == 0 )
+  if ( (byte_4E78F44 & 1) == 0 )
   {
-    sub_1CE6700(&UIScrollView_OnDragNotification_TypeInfo);
-    sub_1CE6700(&Method_UILoopListView_OnMove__);
-    byte_4E0629D = 1;
+    sub_1D0F0B4(&UIScrollView_OnDragNotification_TypeInfo);
+    sub_1D0F0B4(&Method_UILoopListView_OnMove__);
+    byte_4E78F44 = 1;
   }
   UILoopListView__sortBaseOnMovement(this, method);
   mScroll = this->fields.mScroll;
   if ( !mScroll || (UIScrollView__ResetPosition(mScroll, 0), (v5 = this->fields.mScroll) == 0) )
-    sub_1CE6958(mScroll, v3);
+    sub_1D0F30C(mScroll, v3);
   onDragFinished = (System_Delegate_o *)v5->fields.onDragFinished;
   p_onDragFinished = (GrandQuestFolderBoardItem_o *)&v5->fields.onDragFinished;
-  v8 = (UIScrollView_OnDragNotification_o *)sub_1CE694C(UIScrollView_OnDragNotification_TypeInfo);
+  v8 = (UIScrollView_OnDragNotification_o *)sub_1D0F300(UIScrollView_OnDragNotification_TypeInfo);
   UIScrollView_OnDragNotification___ctor(v8, (Il2CppObject *)this, Method_UILoopListView_OnMove__, 0);
   v9 = System_Delegate__Combine(onDragFinished, (System_Delegate_o *)v8, 0);
   v16 = v9;
@@ -87,11 +87,11 @@ void UILoopListView__initWrapContent(UILoopListView_o *this, const MethodInfo *m
     || (p_onDragFinished->klass = (GrandQuestFolderBoardItem_c *)v9,
         (UIScrollView_OnDragNotification_c *)v9->klass != v17) )
   {
-    sub_1CE6CF4(v9);
+    sub_1D0F6A8(v9);
 LABEL_9:
     p_onDragFinished->klass = (GrandQuestFolderBoardItem_c *)v16;
   }
-  sub_1CE66A4(p_onDragFinished, (int32_t)v16, v10, v11, v12, v13, v14, v15);
+  sub_1D0F058(p_onDragFinished, (int32_t)v16, v10, v11, v12, v13, v14, v15);
   UILoopListView__wrapContent(this, v18);
   this->fields.isFirstTime = 0;
 }
@@ -108,11 +108,11 @@ void UILoopListView__resetChildPos(UILoopListView_o *this, const MethodInfo *met
   float v8; // s0 OVERLAPPED
   float v9; // s1
 
-  if ( (byte_4E062A0 & 1) == 0 )
+  if ( (byte_4E78F47 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4E062A0 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4E78F47 = 1;
   }
   mChildList = (System_Collections_Generic_List_object__o *)this->fields.mChildList;
   if ( !mChildList )
@@ -126,7 +126,7 @@ void UILoopListView__resetChildPos(UILoopListView_o *this, const MethodInfo *met
       mChildList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   mChildList,
                                                                   v5,
-                                                                  (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_Transform__get_Item__);
       if ( !mChildList )
         break;
       v6 = 0;
@@ -144,7 +144,7 @@ void UILoopListView__resetChildPos(UILoopListView_o *this, const MethodInfo *met
     }
     while ( mChildList );
 LABEL_12:
-    sub_1CE6958(mChildList, method);
+    sub_1D0F30C(mChildList, method);
   }
 }
 
@@ -156,22 +156,22 @@ void UILoopListView__setScrollPos(UILoopListView_o *this, int32_t idx, const Met
   struct UIScrollView_o *mScroll; // x19
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4E062A2 & 1) == 0 )
+  if ( (byte_4E78F49 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4E062A2 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4E78F49 = 1;
   }
   mChildList = (System_Collections_Generic_List_object__o *)this->fields.mChildList;
   if ( !mChildList
     || (mChildList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     mChildList,
                                                                     idx,
-                                                                    (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_Transform__get_Item__)) == 0
+                                                                    (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_Transform__get_Item__)) == 0
     || (mScroll = this->fields.mScroll,
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)mChildList, 0),
         !mScroll) )
   {
-    sub_1CE6958(mChildList, *(_QWORD *)&idx);
+    sub_1D0F30C(mChildList, *(_QWORD *)&idx);
   }
   ((void (__fastcall *)(struct UIScrollView_o *, const MethodInfo *, long double, long double, long double))mScroll->klass->vtable._10_MoveRelative.methodPtr)(
     mScroll,
@@ -215,36 +215,36 @@ bool UILoopListView__setScrollViewInfo(UILoopListView_o *this, const MethodInfo 
   int32_t v31; // w8
   bool result; // w0
 
-  if ( (byte_4E0629E & 1) == 0 )
+  if ( (byte_4E78F45 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1CE6700(&Method_NGUITools_FindInParents_UIPanel___);
-    sub_1CE6700(&NGUITools_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0629E = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1D0F0B4(&Method_NGUITools_FindInParents_UIPanel___);
+    sub_1D0F0B4(&NGUITools_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E78F45 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
   p_mTrans = &this->fields.mTrans;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   v12 = NGUITools__FindInParents_object_(
           gameObject,
-          (const MethodInfo_328EB80 *)Method_NGUITools_FindInParents_UIPanel___);
+          (const MethodInfo_32DB22C *)Method_NGUITools_FindInParents_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v12;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v12, v13, v14, v15, v16, v17, v18);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
     goto LABEL_20;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)mPanel,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
   this->fields.mScroll = (struct UIScrollView_o *)Component_object;
   p_mScroll = &this->fields.mScroll;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.mScroll,
     (int32_t)Component_object,
     v23,
@@ -263,11 +263,11 @@ bool UILoopListView__setScrollViewInfo(UILoopListView_o *this, const MethodInfo 
     || (mPanel = UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)mPanel, 0, 0)) == 0
     || (mPanel = UnityEngine_Component__GetComponent_object_(
                    (UnityEngine_Component_o *)mPanel,
-                   (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UIWidget___),
+                   (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___),
         !*p_mScroll) )
   {
 LABEL_20:
-    sub_1CE6958(mPanel, v19);
+    sub_1D0F30C(mPanel, v19);
   }
   movement = (*p_mScroll)->fields.movement;
   if ( movement == 1 )
@@ -336,15 +336,15 @@ void UILoopListView__sortBaseOnMovement(UILoopListView_o *this, const MethodInfo
   int64_t v41; // x6
   System_String_o *v42; // x7
 
-  if ( (byte_4E0629F & 1) == 0 )
+  if ( (byte_4E78F46 & 1) == 0 )
   {
-    sub_1CE6700(&System_Comparison_Transform__TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__Clear__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__Sort__);
-    sub_1CE6700(&Method_UILoopListView___c__sortBaseOnMovement_b__16_0__);
-    sub_1CE6700(&UILoopListView___c_TypeInfo);
-    byte_4E0629F = 1;
+    sub_1D0F0B4(&System_Comparison_Transform__TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__Clear__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__Sort__);
+    sub_1D0F0B4(&Method_UILoopListView___c__sortBaseOnMovement_b__16_0__);
+    sub_1D0F0B4(&UILoopListView___c_TypeInfo);
+    byte_4E78F46 = 1;
   }
   mTrans = (void *)UILoopListView__setScrollViewInfo(this, method);
   if ( ((unsigned __int8)mTrans & 1) != 0 )
@@ -383,14 +383,14 @@ void UILoopListView__sortBaseOnMovement(UILoopListView_o *this, const MethodInfo
               System_Collections_Generic_List_object___AddWithResize(
                 v9,
                 (Il2CppObject *)mTrans,
-                *(const MethodInfo_3905F68 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                *(const MethodInfo_395C410 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
             }
             else
             {
               v20 = &items->obj.klass + v18;
               v9->fields._size = v18 + 1;
               v20[4] = v19;
-              sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
+              sub_1D0F058((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
             }
             mTrans = this->fields.mTrans;
             if ( mTrans )
@@ -411,14 +411,14 @@ void UILoopListView__sortBaseOnMovement(UILoopListView_o *this, const MethodInfo
                     System_Collections_Generic_List_object___AddWithResize(
                       realChildList,
                       (Il2CppObject *)mTrans,
-                      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+                      *(const MethodInfo_395C410 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v32 = &v28->obj.klass + v30;
                     realChildList->fields._size = v30 + 1;
                     v32[4] = v31;
-                    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v32 + 4), (int32_t)v31, v22, v23, v24, v25, v26, v27);
+                    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v32 + 4), (int32_t)v31, v22, v23, v24, v25, v26, v27);
                   }
                   mTrans = this->fields.mTrans;
                   ++v8;
@@ -449,19 +449,19 @@ void UILoopListView__sortBaseOnMovement(UILoopListView_o *this, const MethodInfo
         mTrans = UILoopListView___c_TypeInfo;
       }
       v35 = (Il2CppObject *)**((_QWORD **)mTrans + 23);
-      v34 = (System_Comparison_T__o *)sub_1CE694C(System_Comparison_Transform__TypeInfo);
+      v34 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_Transform__TypeInfo);
       System_Comparison_object____ctor(v34, v35, Method_UILoopListView___c__sortBaseOnMovement_b__16_0__, 0);
       static_fields = UILoopListView___c_TypeInfo->static_fields;
       static_fields->__9__16_0 = (struct System_Comparison_Transform__o *)v34;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__16_0, (int32_t)v34, v37, v38, v39, v40, v41, v42);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__16_0, (int32_t)v34, v37, v38, v39, v40, v41, v42);
     }
     if ( !v33 )
 LABEL_33:
-      sub_1CE6958(mTrans, v4);
-    System_Collections_Generic_List_object___Sort_59800108(
+      sub_1D0F30C(mTrans, v4);
+    System_Collections_Generic_List_object___Sort_60153556(
       (System_Collections_Generic_List_object__o *)v33,
       v34,
-      (const MethodInfo_3907A2C *)Method_System_Collections_Generic_List_Transform__Sort__);
+      (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_Transform__Sort__);
   }
 }
 
@@ -497,17 +497,17 @@ void UILoopListView__updateItem(
   v5 = this;
   if ( !mScroll || !item )
 LABEL_29:
-    sub_1CE6958(this, item);
+    sub_1D0F30C(this, item);
   movement = mScroll->fields.movement;
   localPosition = UnityEngine_Transform__get_localPosition(item, 0);
   if ( movement == 1 )
   {
     y = localPosition.fields.y;
     itemSize = (float)v5->fields.itemSize;
-    if ( !byte_4DFE85E )
+    if ( !byte_4E71453 )
     {
-      sub_1CE6700(&System_Math_TypeInfo);
-      byte_4DFE85E = 1;
+      sub_1D0F0B4(&System_Math_TypeInfo);
+      byte_4E71453 = 1;
     }
     v11 = y / itemSize;
   }
@@ -515,10 +515,10 @@ LABEL_29:
   {
     x = localPosition.fields.x;
     v13 = (float)v5->fields.itemSize;
-    if ( !byte_4DFE85E )
+    if ( !byte_4E71453 )
     {
-      sub_1CE6700(&System_Math_TypeInfo);
-      byte_4DFE85E = 1;
+      sub_1D0F0B4(&System_Math_TypeInfo);
+      byte_4E71453 = 1;
     }
     v11 = x / v13;
   }
@@ -659,11 +659,11 @@ void UILoopListView__wrapContent(UILoopListView_o *this, const MethodInfo *metho
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4E062A1 & 1) == 0 )
+  if ( (byte_4E78F48 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    this = (UILoopListView_o *)sub_1CE6700(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4E062A1 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    this = (UILoopListView_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4E78F48 = 1;
   }
   *(_QWORD *)index = 0;
   v76 = 0;
@@ -707,7 +707,7 @@ void UILoopListView__wrapContent(UILoopListView_o *this, const MethodInfo *metho
   while ( v8 != 4 );
   if ( m_CancellationTokenSource <= 2 )
 LABEL_105:
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v11 = v75 + v75;
   if ( v2->fields.isHorizontal )
   {
@@ -730,7 +730,7 @@ LABEL_105:
         this = (UILoopListView_o *)System_Collections_Generic_List_object___get_Item(
                                      (System_Collections_Generic_List_object__o *)this,
                                      (int32_t)method,
-                                     (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_Transform__get_Item__);
         if ( !this )
           break;
         v16 = this;
@@ -748,10 +748,10 @@ LABEL_105:
           x = localPosition.fields.x;
           y = localPosition.fields.y;
           z = localPosition.fields.z;
-          if ( !byte_4DFE85E )
+          if ( !byte_4E71453 )
           {
-            sub_1CE6700(&System_Math_TypeInfo);
-            byte_4DFE85E = 1;
+            sub_1D0F0B4(&System_Math_TypeInfo);
+            byte_4E71453 = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -764,10 +764,10 @@ LABEL_105:
           v20 = v80.fields.x;
           y = v80.fields.y;
           z = v80.fields.z;
-          if ( !byte_4DFE85E )
+          if ( !byte_4E71453 )
           {
-            sub_1CE6700(&System_Math_TypeInfo);
-            byte_4DFE85E = 1;
+            sub_1D0F0B4(&System_Math_TypeInfo);
+            byte_4E71453 = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -830,7 +830,7 @@ LABEL_48:
       while ( this );
     }
 LABEL_104:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   }
   this = (UILoopListView_o *)v2->fields.mChildList;
   if ( !this )
@@ -844,7 +844,7 @@ LABEL_104:
     this = (UILoopListView_o *)System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)this,
                                  v39,
-                                 (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_Transform__get_Item__);
     if ( !this )
       goto LABEL_104;
     v41 = this;
@@ -856,10 +856,10 @@ LABEL_104:
       v44 = v84.fields.x;
       v45 = v84.fields.y;
       v46 = v84.fields.z;
-      if ( !byte_4DFE85E )
+      if ( !byte_4E71453 )
       {
-        sub_1CE6700(&System_Math_TypeInfo);
-        byte_4DFE85E = 1;
+        sub_1D0F0B4(&System_Math_TypeInfo);
+        byte_4E71453 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -921,10 +921,10 @@ LABEL_75:
     v54 = v85.fields.x;
     v55 = v85.fields.y;
     v56 = v85.fields.z;
-    if ( !byte_4DFE85E )
+    if ( !byte_4E71453 )
     {
-      sub_1CE6700(&System_Math_TypeInfo);
-      byte_4DFE85E = 1;
+      sub_1D0F0B4(&System_Math_TypeInfo);
+      byte_4E71453 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1015,7 +1015,7 @@ void UILoopListView_OnInitializeItem___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1026,17 +1026,17 @@ void UILoopListView_OnInitializeItem___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( v12 == 2 )
     {
-      v13 = sub_1B18CFC;
+      v13 = sub_1B3EB64;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v15 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v15, 0);
+      v15 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v15, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -1046,11 +1046,11 @@ LABEL_8:
   }
   if ( v12 != 3 )
     goto LABEL_8;
-  v13 = sub_1B18D24;
+  v13 = sub_1B3EB8C;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v13;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1B18C9C;
+  this->fields.extra_arg = (intptr_t)sub_1B3EB04;
 }
 
 
@@ -1069,16 +1069,16 @@ System_IAsyncResult_o *UILoopListView_OnInitializeItem__BeginInvoke(
 
   v13 = realIndex;
   v14 = wrapIndex;
-  if ( (byte_4E062A4 & 1) == 0 )
+  if ( (byte_4E78F4B & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    byte_4E062A4 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    byte_4E78F4B = 1;
   }
   v12[3] = 0;
   v12[0] = go;
   v12[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v12[2] = j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v12, callback, object);
 }
 
 
@@ -1087,7 +1087,7 @@ void UILoopListView_OnInitializeItem__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 
@@ -1117,15 +1117,15 @@ void UILoopListView___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E062A5 & 1) == 0 )
+  if ( (byte_4E78F4C & 1) == 0 )
   {
-    sub_1CE6700(&UILoopListView___c_TypeInfo);
-    byte_4E062A5 = 1;
+    sub_1D0F0B4(&UILoopListView___c_TypeInfo);
+    byte_4E78F4C = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(UILoopListView___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(UILoopListView___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UILoopListView___c_TypeInfo->static_fields->__9 = (struct UILoopListView___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)UILoopListView___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1153,7 +1153,7 @@ int32_t UILoopListView___c___sortBaseOnMovement_b__16_0(
   float v6; // s0
 
   if ( !a || (LODWORD(v5) = (unsigned int)UnityEngine_Transform__get_localPosition(a, 0), !b) )
-    sub_1CE6958(this, a);
+    sub_1D0F30C(this, a);
   v6 = v5 - COERCE_FLOAT(UnityEngine_Transform__get_localPosition(b, 0));
   if ( v6 == INFINITY )
     return 0x80000000;

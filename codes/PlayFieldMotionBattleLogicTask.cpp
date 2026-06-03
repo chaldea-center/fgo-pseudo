@@ -19,6 +19,6 @@ void PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
   LODWORD(v5[-1].fields.timingLastWaitSecond) = 44;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v5, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v5, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v5->fields.combo) = v6;
 }

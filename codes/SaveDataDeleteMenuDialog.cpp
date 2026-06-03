@@ -1,11 +1,11 @@
 void SaveDataDeleteMenuDialog___ctor(SaveDataDeleteMenuDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4DFEEE1 & 1) == 0 )
+  if ( (byte_4E71AD6 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4DFEEE1 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E71AD6 = 1;
   }
-  this->fields.buttonDisabledColor = (struct UnityEngine_Color_o)xmmword_D24BB0;
+  this->fields.buttonDisabledColor = (struct UnityEngine_Color_o)xmmword_D35470;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -19,23 +19,23 @@ void SaveDataDeleteMenuDialog__OnClickCacheClear(SaveDataDeleteMenuDialog_o *thi
   struct System_Action_o **p_cacheClearAction; // x19
   System_Action_o *cacheClearAction; // t1
 
-  if ( (byte_4DFEEDE & 1) == 0 )
+  if ( (byte_4E71AD3 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
-    byte_4DFEEDE = 1;
+    sub_1D0F0B4(&Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
+    byte_4E71AD3 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteMenuDialog_OnClickCacheClear__;
     if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickCacheClear__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     cacheClearAction = this->fields.cacheClearAction;
     p_cacheClearAction = &this->fields.cacheClearAction;
     ActionExtensions__Call(cacheClearAction, 0);
     *p_cacheClearAction = 0;
-    sub_1CE66A4(p_cacheClearAction, 0);
+    sub_1D0F058(p_cacheClearAction, 0);
   }
 }
 
@@ -47,23 +47,23 @@ void SaveDataDeleteMenuDialog__OnClickCancel(SaveDataDeleteMenuDialog_o *this, c
   struct System_Action_o **p_cancelAction; // x19
   System_Action_o *cancelAction; // t1
 
-  if ( (byte_4DFEEE0 & 1) == 0 )
+  if ( (byte_4E71AD5 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SaveDataDeleteMenuDialog_OnClickCancel__);
-    byte_4DFEEE0 = 1;
+    sub_1D0F0B4(&Method_SaveDataDeleteMenuDialog_OnClickCancel__);
+    byte_4E71AD5 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteMenuDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_SaveDataDeleteMenuDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteMenuDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     cancelAction = this->fields.cancelAction;
     p_cancelAction = &this->fields.cancelAction;
     ActionExtensions__Call(cancelAction, 0);
     *p_cancelAction = 0;
-    sub_1CE66A4(p_cancelAction, 0);
+    sub_1D0F058(p_cancelAction, 0);
   }
 }
 
@@ -76,18 +76,18 @@ void SaveDataDeleteMenuDialog__OnClickSeveDataDelete(SaveDataDeleteMenuDialog_o 
   struct System_Action_o **p_saveDataDeleteAction; // x19
   System_Action_o *saveDataDeleteAction; // t1
 
-  if ( (byte_4DFEEDF & 1) == 0 )
+  if ( (byte_4E71AD4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
-    byte_4DFEEDF = 1;
+    sub_1D0F0B4(&Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
+    byte_4E71AD4 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     isSaveDataDeleted = this->fields.isSaveDataDeleted;
     v4 = Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__;
     if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1CE6718(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v4, v4[4]);
+      v4 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v4, v4[4]);
     if ( isSaveDataDeleted )
     {
       OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
@@ -99,7 +99,7 @@ void SaveDataDeleteMenuDialog__OnClickSeveDataDelete(SaveDataDeleteMenuDialog_o 
       p_saveDataDeleteAction = &this->fields.saveDataDeleteAction;
       ActionExtensions__Call(saveDataDeleteAction, 0);
       *p_saveDataDeleteAction = 0;
-      sub_1CE66A4(p_saveDataDeleteAction, 0);
+      sub_1D0F058(p_saveDataDeleteAction, 0);
     }
   }
 }
@@ -109,13 +109,13 @@ void SaveDataDeleteMenuDialog__OnEnable(SaveDataDeleteMenuDialog_o *this, const 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4DFEEDC & 1) == 0 )
+  if ( (byte_4E71AD1 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4DFEEDC = 1;
+    sub_1D0F0B4(&StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4E71AD1 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46098588(transform, (System_String_o *)StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -129,17 +129,17 @@ void SaveDataDeleteMenuDialog__Open(
   bool IsUserSaveDataDeleted; // w0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4DFEEDD & 1) == 0 )
+  if ( (byte_4E71AD2 & 1) == 0 )
   {
-    sub_1CE6700(&TerminalPramsManager_TypeInfo);
-    byte_4DFEEDD = 1;
+    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    byte_4E71AD2 = 1;
   }
   this->fields.cacheClearAction = cacheClearAction;
-  sub_1CE66A4(&this->fields.cacheClearAction, cacheClearAction);
+  sub_1D0F058(&this->fields.cacheClearAction, cacheClearAction);
   this->fields.saveDataDeleteAction = saveDataDeleteAction;
-  sub_1CE66A4(&this->fields.saveDataDeleteAction, saveDataDeleteAction);
+  sub_1D0F058(&this->fields.saveDataDeleteAction, saveDataDeleteAction);
   this->fields.cancelAction = cancelAction;
-  sub_1CE66A4(&this->fields.cancelAction, cancelAction);
+  sub_1D0F058(&this->fields.cancelAction, cancelAction);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   IsUserSaveDataDeleted = TerminalPramsManager__IsUserSaveDataDeleted(0);
@@ -190,7 +190,7 @@ void SaveDataDeleteMenuDialog__UpdateSaveDeleteButton(
         (saveDeleteButtonColor = this->fields.saveDeleteButtonColor) == 0) )
   {
 LABEL_10:
-    sub_1CE6958(saveDeleteButtonColor, isEnabled);
+    sub_1D0F30C(saveDeleteButtonColor, isEnabled);
   }
   ((void (__fastcall *)(UIButtonColor_o *, bool, const MethodInfo *))saveDeleteButtonColor->klass->vtable._5_set_isEnabled.methodPtr)(
     saveDeleteButtonColor,

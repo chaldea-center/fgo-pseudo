@@ -8,19 +8,19 @@ void BattleViewBufflistComponent___ctor(BattleViewBufflistComponent_o *this, con
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E082E9 & 1) == 0 )
+  if ( (byte_4E7B01B & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4E082E9 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4E7B01B = 1;
   }
   this->fields.height = 120.0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.objList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.objList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -35,14 +35,14 @@ void BattleViewBufflistComponent__StopScrollViewMotion(BattleViewBufflistCompone
     goto LABEL_6;
   UIScrollView__DisableSpring(uiScrollView, 0);
   v4 = this->fields.uiScrollView;
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    uiScrollView = (UIScrollView_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    uiScrollView = (UIScrollView_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   if ( !v4 )
 LABEL_6:
-    sub_1CE6958(uiScrollView, method);
+    sub_1D0F30C(uiScrollView, method);
   UIScrollView__set_currentMomentum(v4, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
 }
 
@@ -77,10 +77,10 @@ void BattleViewBufflistComponent__UpdateBuffListScrollView(
   struct UIScrollView_o *v27; // x8
   struct UIProgressBar_o *v28; // x8
 
-  if ( (byte_4E082E8 & 1) == 0 )
+  if ( (byte_4E7B01A & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E082E8 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7B01A = 1;
   }
   stateTitleObj = (UnityEngine_Object_o *)this->fields.stateTitleObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -253,7 +253,7 @@ LABEL_50:
           }
         }
 LABEL_54:
-        sub_1CE6958(mBG, v7);
+        sub_1D0F30C(mBG, v7);
       }
     }
   }
@@ -300,14 +300,14 @@ void BattleViewBufflistComponent__setBuffList(
   System_String_o *v28; // x21
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E082E5 & 1) == 0 )
+  if ( (byte_4E7B017 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_2825/*"BATTLE_NOBUFFLIST"*/);
-    byte_4E082E5 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_2829/*"BATTLE_NOBUFFLIST"*/);
+    byte_4E7B017 = 1;
   }
   prefabBuffObject = this->fields.prefabBuffObject;
   if ( !prefabBuffObject )
@@ -324,7 +324,7 @@ void BattleViewBufflistComponent__setBuffList(
       do
       {
         if ( v8 >= (unsigned int)max_length )
-          sub_1CE6960(prefabBuffObject);
+          sub_1D0F314(prefabBuffObject);
         v10 = buffList->m_Items[v8];
         height = this->fields.height;
         Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
@@ -352,7 +352,7 @@ void BattleViewBufflistComponent__setBuffList(
           UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)prefabBuffObject, v29, 0);
           prefabBuffObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            (UnityEngine_GameObject_o *)Object,
-                                                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
+                                                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
           if ( !prefabBuffObject )
             goto LABEL_34;
           v13 = prefabBuffObject;
@@ -373,14 +373,14 @@ void BattleViewBufflistComponent__setBuffList(
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)prefabBuffObject,
               (Il2CppObject *)Object,
-              *(const MethodInfo_3905F68 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+              *(const MethodInfo_395C410 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
           }
           else
           {
             v24 = m_CachedPtr + 8 * klass_low;
             LODWORD(prefabBuffObject[1].klass) = klass_low + 1;
             *(_QWORD *)(v24 + 32) = Object;
-            sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v24 + 32), (int32_t)Object, v14, v15, v16, v17, v18, v19);
+            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v24 + 32), (int32_t)Object, v14, v15, v16, v17, v18, v19);
           }
         }
         LODWORD(max_length) = buffList->max_length;
@@ -393,14 +393,14 @@ void BattleViewBufflistComponent__setBuffList(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Inequality(nothingLabel, 0, 0) )
       goto LABEL_32;
-    v27 = (System_String_o *)StringLiteral_2825/*"BATTLE_NOBUFFLIST"*/;
+    v27 = (System_String_o *)StringLiteral_2829/*"BATTLE_NOBUFFLIST"*/;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     prefabBuffObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(v27, 0);
     if ( prefabBuffObject )
     {
       v28 = (System_String_o *)prefabBuffObject;
-      if ( !System_String__Equals_65158148((System_String_o *)prefabBuffObject, v27, 0) )
+      if ( !System_String__Equals_65598092((System_String_o *)prefabBuffObject, v27, 0) )
       {
         prefabBuffObject = (UnityEngine_GameObject_o *)this->fields.nothingLabel;
         if ( !prefabBuffObject )
@@ -421,7 +421,7 @@ LABEL_32:
       }
     }
 LABEL_34:
-    sub_1CE6958(prefabBuffObject, buffList);
+    sub_1D0F30C(prefabBuffObject, buffList);
   }
 }
 
@@ -432,7 +432,7 @@ void BattleViewBufflistComponent__setBuffListScrollView(BattleViewBufflistCompon
 
   uiScrollView = this->fields.uiScrollView;
   if ( !uiScrollView || (UIScrollView__ResetPosition(uiScrollView, 0), (uiScrollView = this->fields.uiScrollView) == 0) )
-    sub_1CE6958(uiScrollView, method);
+    sub_1D0F30C(uiScrollView, method);
   UIScrollView__UpdateScrollbars(uiScrollView, 0);
 }
 
@@ -452,7 +452,7 @@ void BattleViewBufflistComponent__setClassIcon(
   UnityEngine_Object_o *v12; // x23
   System_String_o *NameEffectPath; // x22
   AssetData_o *AssetStorage; // x0
-  Il2CppObject *Object_object__52317288; // x22
+  Il2CppObject *Object_object__52624444; // x22
   UnityEngine_Transform_o *transform; // x23
   Il2CppObject *v17; // x0
   int32_t v18; // w2
@@ -463,15 +463,15 @@ void BattleViewBufflistComponent__setClassIcon(
   System_String_o *v23; // x7
   UILabel_o *nameLabel; // x20
 
-  if ( (byte_4E082E7 & 1) == 0 )
+  if ( (byte_4E7B019 & 1) == 0 )
   {
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject____79994096);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&ServantAssetLoadManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_18833/*"dialog_title"*/);
-    byte_4E082E7 = 1;
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&ServantAssetLoadManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_18911/*"dialog_title"*/);
+    byte_4E7B019 = 1;
   }
   servantClassIconComponent = (UnityEngine_Object_o *)this->fields.nameInfo.fields.servantClassIconComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -507,7 +507,7 @@ void BattleViewBufflistComponent__setClassIcon(
       v12 = (UnityEngine_Object_o *)*p_enemyNameEffectPrefab;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72918540(v12, 0);
+      UnityEngine_Object__Destroy_73359484(v12, 0);
     }
     if ( v11 )
     {
@@ -518,24 +518,24 @@ void BattleViewBufflistComponent__setClassIcon(
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       AssetStorage = AssetManager__getAssetStorage(NameEffectPath, 0);
       if ( AssetStorage )
-        Object_object__52317288 = AssetData__GetObject_object__52317288(
+        Object_object__52624444 = AssetData__GetObject_object__52624444(
                                     AssetStorage,
-                                    (System_String_o *)StringLiteral_18833/*"dialog_title"*/,
-                                    (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                                    (System_String_o *)StringLiteral_18911/*"dialog_title"*/,
+                                    (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
       else
-        Object_object__52317288 = 0;
+        Object_object__52624444 = 0;
       ClassId = (ServantClassIconComponent_o *)this->fields.nameInfo.fields.nameLabel;
       if ( !ClassId )
         goto LABEL_30;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)ClassId, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v17 = UnityEngine_Object__Instantiate_object__53022032(
-              Object_object__52317288,
+      v17 = UnityEngine_Object__Instantiate_object__53335036(
+              Object_object__52624444,
               transform,
-              (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_GameObject____79994096);
+              (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
       *p_enemyNameEffectPrefab = (struct UnityEngine_GameObject_o *)v17;
-      sub_1CE66A4(
+      sub_1D0F058(
         (GrandQuestFolderBoardItem_o *)&this->fields.enemyNameEffectPrefab,
         (int32_t)v17,
         v18,
@@ -553,7 +553,7 @@ void BattleViewBufflistComponent__setClassIcon(
       return;
     }
 LABEL_30:
-    sub_1CE6958(ClassId, v7);
+    sub_1D0F30C(ClassId, v7);
   }
 }
 
@@ -567,15 +567,15 @@ void BattleViewBufflistComponent__setClearBuffList(BattleViewBufflistComponent_o
   int v7; // w9
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E082E6 & 1) == 0 )
+  if ( (byte_4E7B018 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E082E6 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7B018 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   objList = this->fields.objList;
@@ -584,23 +584,23 @@ void BattleViewBufflistComponent__setClearBuffList(BattleViewBufflistComponent_o
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)objList,
-    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v8.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540((UnityEngine_Object_o *)current, 0);
+    UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v5 = this->fields.objList;
   if ( !v5 )
 LABEL_13:
-    sub_1CE6958(objList, method);
+    sub_1D0F30C(objList, method);
   size = v5->fields._size;
   v7 = v5->fields._version + 1;
   v5->fields._size = 0;
@@ -626,7 +626,7 @@ void BattleViewBufflistComponent__setHide(BattleViewBufflistComponent_o *this, b
         (barObject = (UnityEngine_GameObject_o *)this->fields.listRoot) == 0)
     || (barObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)barObject, 0)) == 0 )
   {
-    sub_1CE6958(barObject, v4);
+    sub_1D0F30C(barObject, v4);
   }
   UnityEngine_GameObject__SetActive(barObject, 0, 0);
 }
@@ -646,7 +646,7 @@ void BattleViewBufflistComponent__setShow(BattleViewBufflistComponent_o *this, c
         BattleViewBufflistComponent__setBuffListScrollView(this, v5),
         (listRoot = (UnityEngine_Component_o *)this->fields.barObject) == 0) )
   {
-    sub_1CE6958(listRoot, v3);
+    sub_1D0F30C(listRoot, v3);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listRoot, 1, 0);
 }

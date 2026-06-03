@@ -20,14 +20,14 @@ void WarBoardAPIReinforcementsRequestTask___ctor(
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  WarBoardAPIRequestTask___ctor_39360204(
+  WarBoardAPIRequestTask___ctor_39576564(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)squareIds);
   this->fields.reinforcementsId = stageReinforcementId;
   this->fields.reinforcementsIndexes = reinforcementsIdx;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.reinforcementsIndexes,
     (int32_t)reinforcementsIdx,
     v11,
@@ -37,7 +37,7 @@ void WarBoardAPIReinforcementsRequestTask___ctor(
     v15,
     v16);
   this->fields.squareIndexes = squareIds;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.squareIndexes,
     (int32_t)squareIds,
     v17,
@@ -55,7 +55,7 @@ void WarBoardAPIReinforcementsRequestTask__SetRequest(
 {
   WarBoardReinforcementsRequest_o *Instance; // x0
   __int64 v4; // x1
-  WarBoardData_o *klass; // x20
+  WarBoardData_o *monitor; // x20
   struct RequestBase_o *v6; // x21
   int32_t v7; // w2
   int32_t v8; // w3
@@ -64,33 +64,33 @@ void WarBoardAPIReinforcementsRequestTask__SetRequest(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4E02636 & 1) == 0 )
+  if ( (byte_4E752A9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E02636 = 1;
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4E752A9 = 1;
   }
-  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
-  klass = (WarBoardData_o *)Instance[11].klass;
+  monitor = (WarBoardData_o *)Instance[9].monitor;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (WarBoardReinforcementsRequest_o *)NetworkManager__getRequest_object_(
                                                   0,
-                                                  (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+                                                  (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
   if ( !Instance )
 LABEL_8:
-    sub_1CE6958(Instance, v4);
+    sub_1D0F30C(Instance, v4);
   v6 = (struct RequestBase_o *)Instance;
   WarBoardReinforcementsRequest__beginRequest(
     Instance,
-    klass,
+    monitor,
     this->fields.reinforcementsId,
     this->fields.reinforcementsIndexes,
     this->fields.squareIndexes,
     0);
   this->fields.request = v6;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.request, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.request, (int32_t)v6, v7, v8, v9, v10, v11, v12);
 }

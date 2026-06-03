@@ -2,12 +2,12 @@ bool AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E045E4 & 1) == 0 )
+  if ( (byte_4E77262 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_9579/*"NoBackStepNpc"*/);
-    byte_4E045E4 = 1;
+    sub_1D0F0B4(&StringLiteral_9620/*"NoBackStepNpc"*/);
+    byte_4E77262 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9579/*"NoBackStepNpc"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9620/*"NoBackStepNpc"*/, -1, v2) == 1;
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *AiEntity__get_FirstTimeSaveKey(AiEntity_o *this, const MethodIn
   int32_t idx; // [xsp+8h] [xbp-28h] BYREF
   int32_t id; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E045E5 & 1) == 0 )
+  if ( (byte_4E77263 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_2195/*"Ai_{0}_{1}"*/);
-    byte_4E045E5 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_2197/*"Ai_{0}_{1}"*/);
+    byte_4E77263 = 1;
   }
   id = this->fields.id;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id);
   idx = this->fields.idx;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &idx);
-  return System_String__Format_65164136((System_String_o *)StringLiteral_2195/*"Ai_{0}_{1}"*/, v3, v4, 0);
+  return System_String__Format_65604080((System_String_o *)StringLiteral_2197/*"Ai_{0}_{1}"*/, v3, v4, 0);
 }
 
 

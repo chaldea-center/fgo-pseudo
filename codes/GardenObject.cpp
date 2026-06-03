@@ -39,23 +39,23 @@ void GardenObject__ApplyCustomMaterial(
   UnityEngine_Vector2_o v33; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o v34; // 0:s0.4,4:s1.4
 
-  if ( (byte_4DFED8A & 1) == 0 )
+  if ( (byte_4E7197F & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1CE6700(&UnityEngine_Material_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject____79994096);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_16416/*"_MainTex"*/);
-    sub_1CE6700(&StringLiteral_131/*" (Clone)"*/);
-    sub_1CE6700(&StringLiteral_16421/*"_MaskTex"*/);
-    byte_4DFED8A = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1D0F0B4(&UnityEngine_Material_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
+    sub_1D0F0B4(&StringLiteral_131/*" (Clone)"*/);
+    sub_1D0F0B4(&StringLiteral_16486/*"_MaskTex"*/);
+    byte_4E7197F = 1;
   }
   gardenSprite = (UIWidget_o *)this->fields.gardenSprite;
   if ( !gardenSprite )
     goto LABEL_48;
   UIWidget__set_depth(gardenSprite, splitNum, 0);
-  v10 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16421/*"_MaskTex"*/, 0);
-  v11 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16416/*"_MainTex"*/, 0);
+  v10 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16486/*"_MaskTex"*/, 0);
+  v11 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16481/*"_MainTex"*/, 0);
   p_cloneAtlas = (UnityEngine_Object_o **)&this->fields.cloneAtlas;
   cloneAtlas = (UnityEngine_Object_o *)this->fields.cloneAtlas;
   v14 = v11;
@@ -75,7 +75,7 @@ void GardenObject__ApplyCustomMaterial(
           goto LABEL_48;
         v33.fields.y = 0.0;
         v33.fields.x = maskOffset;
-        UnityEngine_Material__SetTextureOffset_72783340((UnityEngine_Material_o *)gardenSprite, v10, v33, 0);
+        UnityEngine_Material__SetTextureOffset_73224284((UnityEngine_Material_o *)gardenSprite, v10, v33, 0);
       }
       else
       {
@@ -91,7 +91,7 @@ void GardenObject__ApplyCustomMaterial(
       {
         v34.fields.y = 0.0;
         v34.fields.x = mainOffset;
-        UnityEngine_Material__SetTextureOffset_72783340((UnityEngine_Material_o *)gardenSprite, v14, v34, 0);
+        UnityEngine_Material__SetTextureOffset_73224284((UnityEngine_Material_o *)gardenSprite, v14, v34, 0);
 LABEL_42:
         gardenSprite = (UIWidget_o *)this->fields.gardenSprite;
         if ( gardenSprite )
@@ -108,7 +108,7 @@ LABEL_42:
         }
       }
 LABEL_48:
-      sub_1CE6958(gardenSprite, *(_QWORD *)&splitNum);
+      sub_1D0F30C(gardenSprite, *(_QWORD *)&splitNum);
     }
   }
   item = this->fields.item;
@@ -127,11 +127,11 @@ LABEL_48:
       if ( !gardenSprite )
         goto LABEL_48;
       spriteMaterial = UIAtlas__get_spriteMaterial((UIAtlas_o *)gardenSprite, 0);
-      v20 = (UnityEngine_Material_o *)sub_1CE694C(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_72781104(v20, spriteMaterial, 0);
+      v20 = (UnityEngine_Material_o *)sub_1D0F300(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_73222048(v20, spriteMaterial, 0);
       this->fields.cloneMaterial = v20;
       p_cloneMaterial = &this->fields.cloneMaterial;
-      gardenSprite = (UIWidget_o *)sub_1CE66A4(&this->fields.cloneMaterial, v20);
+      gardenSprite = (UIWidget_o *)sub_1D0F058(&this->fields.cloneMaterial, v20);
       if ( splitNum >= 2 )
       {
         v22 = this->fields.item;
@@ -140,7 +140,7 @@ LABEL_48:
         gardenSprite = (UIWidget_o *)this->fields.cloneMaterial;
         if ( !gardenSprite )
           goto LABEL_48;
-        UnityEngine_Material__SetTexture_72782688(
+        UnityEngine_Material__SetTexture_73223632(
           (UnityEngine_Material_o *)gardenSprite,
           v10,
           v22->fields.maskTexture,
@@ -150,14 +150,14 @@ LABEL_48:
           goto LABEL_48;
         v31.fields.y = 0.0;
         v31.fields.x = maskOffset;
-        UnityEngine_Material__SetTextureOffset_72783340((UnityEngine_Material_o *)gardenSprite, v10, v31, 0);
+        UnityEngine_Material__SetTextureOffset_73224284((UnityEngine_Material_o *)gardenSprite, v10, v31, 0);
       }
       gardenSprite = (UIWidget_o *)*p_cloneMaterial;
       if ( !*p_cloneMaterial )
         goto LABEL_48;
       v32.fields.y = 0.0;
       v32.fields.x = mainOffset;
-      UnityEngine_Material__SetTextureOffset_72783340((UnityEngine_Material_o *)gardenSprite, v14, v32, 0);
+      UnityEngine_Material__SetTextureOffset_73224284((UnityEngine_Material_o *)gardenSprite, v14, v32, 0);
       v23 = this->fields.item;
       if ( !v23 )
         goto LABEL_48;
@@ -168,10 +168,10 @@ LABEL_48:
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      gardenSprite = (UIWidget_o *)UnityEngine_Object__Instantiate_object__53022032(
+      gardenSprite = (UIWidget_o *)UnityEngine_Object__Instantiate_object__53335036(
                                      gameObject,
                                      transform,
-                                     (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_GameObject____79994096);
+                                     (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
       v26 = this->fields.item;
       if ( !v26 )
         goto LABEL_48;
@@ -183,15 +183,15 @@ LABEL_48:
       if ( !gardenSprite )
         goto LABEL_48;
       name = UnityEngine_Object__get_name((UnityEngine_Object_o *)gardenSprite, 0);
-      gardenSprite = (UIWidget_o *)System_String__Concat_65122828(name, (System_String_o *)StringLiteral_131/*" (Clone)"*/, 0);
+      gardenSprite = (UIWidget_o *)System_String__Concat_65562772(name, (System_String_o *)StringLiteral_131/*" (Clone)"*/, 0);
       if ( !v27 )
         goto LABEL_48;
       UnityEngine_Object__set_name(v27, (System_String_o *)gardenSprite, 0);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v27,
-                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       *p_cloneAtlas = (UnityEngine_Object_o *)Component_object;
-      sub_1CE66A4(&this->fields.cloneAtlas, Component_object);
+      sub_1D0F058(&this->fields.cloneAtlas, Component_object);
       if ( UnityEngine_Object__op_Inequality(*p_cloneAtlas, 0, 0) )
       {
         gardenSprite = (UIWidget_o *)*p_cloneAtlas;
@@ -206,7 +206,7 @@ LABEL_48:
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72918540(v27, 0);
+      UnityEngine_Object__Destroy_73359484(v27, 0);
       GardenObject__CleanupDynamicObjects(this, v30);
     }
   }
@@ -228,11 +228,11 @@ void GardenObject__CleanupDynamicObjects(GardenObject_o *this, const MethodInfo 
   UnityEngine_Object_o *v13; // x20
   bool v14; // w21
 
-  if ( (byte_4DFED8B & 1) == 0 )
+  if ( (byte_4E71980 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Application_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFED8B = 1;
+    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E71980 = 1;
   }
   p_cloneAtlas = (UnityEngine_Component_o **)&this->fields.cloneAtlas;
   cloneAtlas = (UnityEngine_Object_o *)this->fields.cloneAtlas;
@@ -244,18 +244,18 @@ void GardenObject__CleanupDynamicObjects(GardenObject_o *this, const MethodInfo 
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     isPlaying = UnityEngine_Application__get_isPlaying(0);
     if ( !*p_cloneAtlas )
-      sub_1CE6958(isPlaying, v6);
+      sub_1D0F30C(isPlaying, v6);
     v7 = isPlaying;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_cloneAtlas, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v7 )
-      UnityEngine_Object__Destroy_72918540(gameObject, 0);
+      UnityEngine_Object__Destroy_73359484(gameObject, 0);
     else
-      UnityEngine_Object__DestroyImmediate_72918728(gameObject, 0);
+      UnityEngine_Object__DestroyImmediate_73359672(gameObject, 0);
   }
   this->fields.cloneAtlas = 0;
-  sub_1CE66A4(&this->fields.cloneAtlas, 0);
+  sub_1D0F058(&this->fields.cloneAtlas, 0);
   cloneMaterial = this->fields.cloneMaterial;
   p_cloneMaterial = &this->fields.cloneMaterial;
   v10 = (UnityEngine_Object_o *)cloneMaterial;
@@ -271,11 +271,11 @@ void GardenObject__CleanupDynamicObjects(GardenObject_o *this, const MethodInfo 
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v14 )
-      UnityEngine_Object__Destroy_72918540(v13, 0);
+      UnityEngine_Object__Destroy_73359484(v13, 0);
     else
-      UnityEngine_Object__DestroyImmediate_72918728(v13, 0);
+      UnityEngine_Object__DestroyImmediate_73359672(v13, 0);
     *p_cloneMaterial = 0;
-    sub_1CE66A4(p_cloneMaterial, 0);
+    sub_1D0F058(p_cloneMaterial, 0);
   }
 }
 
@@ -287,14 +287,14 @@ void GardenObject__SetItem(GardenObject_o *this, GardenItem_o *item, const Metho
   __int64 v7; // x1
   struct UnityEngine_Material_o *spriteMaterial; // x0
 
-  if ( (byte_4DFED89 & 1) == 0 )
+  if ( (byte_4E7197E & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFED89 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7197E = 1;
   }
   GardenObject__CleanupDynamicObjects(this, (const MethodInfo *)item);
   this->fields.item = item;
-  sub_1CE66A4(&this->fields.item, item);
+  sub_1D0F058(&this->fields.item, item);
   gardenSprite = (UnityEngine_Object_o *)this->fields.gardenSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -304,7 +304,7 @@ void GardenObject__SetItem(GardenObject_o *this, GardenItem_o *item, const Metho
     atlas = this->fields.gardenSprite;
     if ( !atlas || (UISprite__set_atlas(atlas, item->fields.atlas, 0), (atlas = this->fields.gardenSprite) == 0) )
 LABEL_13:
-      sub_1CE6958(atlas, v7);
+      sub_1D0F30C(atlas, v7);
     UISprite__set_spriteName(atlas, item->fields.imageName, 0);
   }
   else if ( !item )
@@ -316,5 +316,5 @@ LABEL_13:
     goto LABEL_13;
   spriteMaterial = UIAtlas__get_spriteMaterial((UIAtlas_o *)atlas, 0);
   this->fields.defaultMaterial = spriteMaterial;
-  sub_1CE66A4(&this->fields.defaultMaterial, spriteMaterial);
+  sub_1D0F058(&this->fields.defaultMaterial, spriteMaterial);
 }

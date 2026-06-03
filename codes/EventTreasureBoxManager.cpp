@@ -34,49 +34,49 @@ void EventTreasureBoxManager__Init(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4DFF2F3 & 1) == 0 )
+  if ( (byte_4E71EEB & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureBoxMaster___);
-    sub_1CE6700(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4DFF2F3 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureBoxMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E71EEB = 1;
   }
   this->fields.eventId = eventId;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ShopMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ShopMaster___);
   if ( !Instance )
     goto LABEL_26;
   EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Instance, eventId, 0);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_26;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              eventId,
-             (const MethodInfo_34E925C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             (const MethodInfo_3535B7C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   currencyInfoController = this->fields.currencyInfoController;
   v18 = (EventDetailEntity_o *)Entity;
-  v19 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+  v19 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v19,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
   if ( !currencyInfoController )
     goto LABEL_26;
   currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v19;
-  Instance = sub_1CE66A4(&currencyInfoController->fields.objectList, v19);
+  Instance = sub_1D0F058(&currencyInfoController->fields.objectList, v19);
   if ( !v18 )
     goto LABEL_26;
   v20 = this->fields.currencyInfoController;
@@ -121,7 +121,7 @@ void EventTreasureBoxManager__Init(
     || (*(_DWORD *)(Instance + 32) = 3, (treasureBoxList = this->fields.treasureBoxList) == 0) )
   {
 LABEL_26:
-    sub_1CE6958(Instance, v14);
+    sub_1D0F30C(Instance, v14);
   }
   v26 = 0;
   while ( 1 )
@@ -130,14 +130,14 @@ LABEL_26:
     if ( (int)v26 >= max_length )
       break;
     if ( (unsigned int)v26 >= max_length )
-      sub_1CE6960(Instance);
+      sub_1D0F314(Instance);
     v28 = treasureBoxList->m_Items[v26];
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureBoxMaster___);
+                            (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureBoxMaster___);
       if ( Instance )
       {
         Instance = (__int64)TreasureBoxMaster__GetTreasureBoxData((TreasureBoxMaster_o *)Instance, eventId, v26, 0);
@@ -169,7 +169,7 @@ void EventTreasureBoxManager__StopUpdateRemainTime(EventTreasureBoxManager_o *th
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   ShopCurrencyInfoController__StopUpdateRemainTime(currencyInfoController, 0);
 }
 
@@ -180,7 +180,7 @@ void EventTreasureBoxManager__UpdateEventItemList(EventTreasureBoxManager_o *thi
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   ShopCurrencyInfoController__RefreshEventItemWindow(currencyInfoController, 6, this->fields.eventId, 1, 0);
 }
 
@@ -191,6 +191,6 @@ int32_t EventTreasureBoxManager__get_ItemBaseWindowHeight(EventTreasureBoxManage
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return currencyInfoController->fields._ItemBaseWindowHeight_k__BackingField;
 }

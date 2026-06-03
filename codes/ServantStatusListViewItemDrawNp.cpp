@@ -1,9 +1,9 @@
 void ServantStatusListViewItemDrawNp___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E01AB3 & 1) == 0 )
+  if ( (byte_4E74621 & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusListViewItemDrawNp_TypeInfo);
-    byte_4E01AB3 = 1;
+    sub_1D0F0B4(&ServantStatusListViewItemDrawNp_TypeInfo);
+    byte_4E74621 = 1;
   }
   ServantStatusListViewItemDrawNp_TypeInfo->static_fields->NP_LIST_MAX = 2;
 }
@@ -20,11 +20,11 @@ void ServantStatusListViewItemDrawNp___ctor(ServantStatusListViewItemDrawNp_o *t
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4E01AB2 & 1) == 0 )
+  if ( (byte_4E74620 & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusListViewItemDrawNp_TypeInfo);
-    sub_1CE6700(&ServantStatusNpComponent___TypeInfo);
-    byte_4E01AB2 = 1;
+    sub_1D0F0B4(&ServantStatusListViewItemDrawNp_TypeInfo);
+    sub_1D0F0B4(&ServantStatusNpComponent___TypeInfo);
+    byte_4E74620 = 1;
   }
   v3 = ServantStatusListViewItemDrawNp_TypeInfo;
   if ( !ServantStatusListViewItemDrawNp_TypeInfo->_2.cctor_finished )
@@ -32,11 +32,11 @@ void ServantStatusListViewItemDrawNp___ctor(ServantStatusListViewItemDrawNp_o *t
     j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawNp_TypeInfo);
     v3 = ServantStatusListViewItemDrawNp_TypeInfo;
   }
-  v4 = (struct ServantStatusNpComponent_array *)sub_1CE67A8(
+  v4 = (struct ServantStatusNpComponent_array *)sub_1D0F15C(
                                                   ServantStatusNpComponent___TypeInfo,
                                                   v3->static_fields->NP_LIST_MAX);
   this->fields.npList = v4;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.npList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.npList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   this->fields.transformNameAddHeight = 42;
   this->fields.dispLimitCnt = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -116,10 +116,10 @@ void ServantStatusListViewItemDrawNp__Awake(ServantStatusListViewItemDrawNp_o *t
   v3->fields.titleBasePosition.fields.z = v15.fields.z;
   if ( !v10 )
 LABEL_24:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   if ( !LODWORD(v10->max_length) )
 LABEL_25:
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   this = (ServantStatusListViewItemDrawNp_o *)v10->m_Items[0];
   if ( !this )
     goto LABEL_24;
@@ -148,10 +148,10 @@ void ServantStatusListViewItemDrawNp__ModifyCommandCard(
   ServantStatusListViewItemDrawNp_c *v6; // x0
   struct ServantStatusNpComponent_array *npList; // x8
 
-  if ( (byte_4E01AB1 & 1) == 0 )
+  if ( (byte_4E7461F & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusListViewItemDrawNp_TypeInfo);
-    byte_4E01AB1 = 1;
+    sub_1D0F0B4(&ServantStatusListViewItemDrawNp_TypeInfo);
+    byte_4E7461F = 1;
   }
   v5 = 0;
   this->fields.isStart = 1;
@@ -169,11 +169,11 @@ void ServantStatusListViewItemDrawNp__ModifyCommandCard(
     if ( !npList )
       goto LABEL_12;
     if ( (unsigned int)v5 >= LODWORD(npList->max_length) )
-      sub_1CE6960(v6);
+      sub_1D0F314(v6);
     v6 = (ServantStatusListViewItemDrawNp_c *)npList->m_Items[v5];
     if ( !v6 )
 LABEL_12:
-      sub_1CE6958(v6, item);
+      sub_1D0F30C(v6, item);
     ServantStatusNpComponent__ModifyCommandCard((ServantStatusNpComponent_o *)v6, item, 0);
     ++v5;
   }
@@ -279,29 +279,29 @@ void ServantStatusListViewItemDrawNp__SetItem(
   UnityEngine_Color_o v97; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v98; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4E01AB0 & 1) == 0 )
+  if ( (byte_4E7461E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&ServantStatusListViewItemDrawNp_TypeInfo);
-    sub_1CE6700(&TreasureDvcInfo_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E01AB0 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&ServantStatusListViewItemDrawNp_TypeInfo);
+    sub_1D0F0B4(&TreasureDvcInfo_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7461E = 1;
   }
   this->fields.dispMode = mode;
-  v7 = (TreasureDvcInfo_o *)sub_1CE694C(TreasureDvcInfo_TypeInfo);
+  v7 = (TreasureDvcInfo_o *)sub_1D0F300(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v7, 0);
   this->fields.tdInfo = v7;
   p_tdInfo = &this->fields.tdInfo;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.tdInfo, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.tdInfo, (int32_t)v7, v9, v10, v11, v12, v13, v14);
   if ( !item || !mode )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  v16 = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  v16 = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
   SvtId = ServantStatusListViewItem__GetSvtId(item, 1, 0);
   LimitCount = (ServantStatusNpComponent_o *)ServantStatusListViewItem__get_LimitCount(item, 0);
   if ( !Master_object )
@@ -505,14 +505,14 @@ LABEL_50:
           goto LABEL_125;
         if ( i >= LODWORD(v53->max_length) )
 LABEL_126:
-          sub_1CE6960(LimitCount);
+          sub_1D0F314(LimitCount);
         v54 = v53->m_Items[i];
         CondLabelColor = ServantTreasureDeviceAddEntity__GetCondLabelColor(EnableEntity, 0);
         v93.fields.r = 0.0;
         v93.fields.g = 0.0;
         v93.fields.b = 0.0;
         v93.fields.a = 1.0;
-        v94 = ColorHelper__ParseColorCode_45269000(CondLabelColor, v93, 0);
+        v94 = ColorHelper__ParseColorCode_45504796(CondLabelColor, v93, 0);
         r = v94.fields.r;
         g = v94.fields.g;
         b = v94.fields.b;
@@ -522,7 +522,7 @@ LABEL_126:
         v95.fields.g = 1.0;
         v95.fields.b = 1.0;
         v95.fields.a = 1.0;
-        v96 = ColorHelper__ParseColorCode_45269000(CondSpriteColor, v95, 0);
+        v96 = ColorHelper__ParseColorCode_45504796(CondSpriteColor, v95, 0);
         if ( !v54 )
           goto LABEL_125;
         v98 = v96;
@@ -673,7 +673,7 @@ LABEL_91:
                                                       0)) == 0) )
   {
 LABEL_125:
-    sub_1CE6958(LimitCount, v19);
+    sub_1D0F30C(LimitCount, v19);
   }
   v78 = v74 >> 1;
   v89.fields.y = v76 + (float)(v74 >> 1);

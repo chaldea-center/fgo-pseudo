@@ -2,10 +2,10 @@ void ItemIconWithConsumptionNumberComponent___ctor(
         ItemIconWithConsumptionNumberComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E03F05 & 1) == 0 )
+  if ( (byte_4E76B7D & 1) == 0 )
   {
-    sub_1CE6700(&ItemIconComponent_TypeInfo);
-    byte_4E03F05 = 1;
+    sub_1D0F0B4(&ItemIconComponent_TypeInfo);
+    byte_4E76B7D = 1;
   }
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
@@ -27,12 +27,12 @@ void ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
   int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = consumptionNumber;
-  if ( (byte_4E03F04 & 1) == 0 )
+  if ( (byte_4E76B7C & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_10980/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/);
-    byte_4E03F04 = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_11027/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/);
+    byte_4E76B7C = 1;
   }
   consumptionNumberLabel = (UnityEngine_Object_o *)this->fields.consumptionNumberLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,11 +42,11 @@ void ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
     v5 = this->fields.consumptionNumberLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10980/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11027/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0);
     v7 = (Il2CppObject *)System_Int32__ToString((int32_t)&v10, 0);
     v8 = System_String__Format(v6, v7, 0);
     if ( !v5 || (UILabel__set_text(v5, v8, 0), (v8 = (System_String_o *)this->fields.consumptionNumberLabel) == 0) )
-      sub_1CE6958(v8, v9);
+      sub_1D0F30C(v8, v9);
     UILabel__set_fontSize((UILabel_o *)v8, 23, 0);
   }
 }

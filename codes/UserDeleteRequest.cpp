@@ -2,16 +2,16 @@ System_String_o *UserDeleteRequest__getURL(UserDeleteRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E06646 & 1) == 0 )
+  if ( (byte_4E792ED & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_24916/*"userDelete/top"*/);
-    byte_4E06646 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25025/*"userDelete/top"*/);
+    byte_4E792ED = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_24916/*"userDelete/top"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_25025/*"userDelete/top"*/, 0);
 }
 
 
@@ -28,12 +28,12 @@ void UserDeleteRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4E06647 & 1) == 0 )
+  if ( (byte_4E792EE & 1) == 0 )
   {
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E06647 = 1;
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E792EE = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -57,7 +57,7 @@ void UserDeleteRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22555/*"ng"*/,
+        StringLiteral_22648/*"ng"*/,
         v11->fields.method);
   }
 }

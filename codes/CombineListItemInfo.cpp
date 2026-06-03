@@ -23,7 +23,7 @@ void CombineListItemInfo___ctor(
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.spriteName,
     (int32_t)spriteName,
     v11,
@@ -33,5 +33,5 @@ void CombineListItemInfo___ctor(
     v15,
     v16);
   this->fields.eventData = eventData;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v17, v18, v19, v20, v21, v22);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v17, v18, v19, v20, v21, v22);
 }

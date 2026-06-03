@@ -13,31 +13,31 @@ void WarBoardEffectData___ctor(
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4E024CD & 1) == 0 )
+  if ( (byte_4E751B6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_WarBoardEffectMaster___);
-    sub_1CE6700(&Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E024CD = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_WarBoardEffectMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E751B6 = 1;
   }
   this->fields.effectId = -1;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !layout
     || (this->fields._squareIndex_k__BackingField = layout->fields.squareIndex,
         this->fields.effectId = layout->fields.effectId,
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_WarBoardEffectMaster___)) == 0 )
+                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_WarBoardEffectMaster___)) == 0 )
   {
-    sub_1CE6958(Instance, v6);
+    sub_1D0F30C(Instance, v6);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.effectId,
-             (const MethodInfo_34E925C *)Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
+             (const MethodInfo_3535B7C *)Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
   this->fields.effectEntity = (struct WarBoardEffectEntity_o *)Entity;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.effectEntity, (int32_t)Entity, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.effectEntity, (int32_t)Entity, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -59,7 +59,7 @@ void WarBoardEffectData__SetComponent(
   System_String_o *v7; // x7
 
   this->fields.component = component;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.component,
     (int32_t)component,
     (int32_t)method,
@@ -77,7 +77,7 @@ void WarBoardEffectData__SetEffectEnable(WarBoardEffectData_o *this, bool enable
 
   component = this->fields.component;
   if ( !component )
-    sub_1CE6958(0, enable);
+    sub_1D0F30C(0, enable);
   WarBoardEffectComponent__SetColliderEnable(component, enable, 0);
 }
 
@@ -88,7 +88,7 @@ void WarBoardEffectData__SetTouchEnable(WarBoardEffectData_o *this, bool enable,
 
   component = this->fields.component;
   if ( !component )
-    sub_1CE6958(0, enable);
+    sub_1D0F30C(0, enable);
   WarBoardEffectComponent__SetTouchEnable(component, enable, 0);
 }
 
@@ -104,10 +104,10 @@ System_String_o *WarBoardEffectData__get_description(WarBoardEffectData_o *this,
   struct WarBoardEffectEntity_o *effectEntity; // x8
   struct System_String_StaticFields *p_effectName; // x8
 
-  if ( (byte_4E024CF & 1) == 0 )
+  if ( (byte_4E751B8 & 1) == 0 )
   {
-    sub_1CE6700(&string_TypeInfo);
-    byte_4E024CF = 1;
+    sub_1D0F0B4(&string_TypeInfo);
+    byte_4E751B8 = 1;
   }
   effectEntity = this->fields.effectEntity;
   if ( effectEntity )
@@ -153,10 +153,10 @@ System_String_o *WarBoardEffectData__get_name(WarBoardEffectData_o *this, const 
   struct WarBoardEffectEntity_o *effectEntity; // x8
   struct System_String_StaticFields *p_name; // x8
 
-  if ( (byte_4E024CE & 1) == 0 )
+  if ( (byte_4E751B7 & 1) == 0 )
   {
-    sub_1CE6700(&string_TypeInfo);
-    byte_4E024CE = 1;
+    sub_1D0F0B4(&string_TypeInfo);
+    byte_4E751B7 = 1;
   }
   effectEntity = this->fields.effectEntity;
   if ( effectEntity )

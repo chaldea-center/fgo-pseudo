@@ -26,54 +26,54 @@ void BattleDataDefine___cctor(const MethodInfo *method)
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4E07451 & 1) == 0 )
+  if ( (byte_4E7A121 & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&int___TypeInfo);
-    sub_1CE6700(&StringLiteral_3029/*"BUSTER_CHAIN_INDIVIDUALITY"*/);
-    sub_1CE6700(&StringLiteral_11545/*"RootCameraPrefab"*/);
-    sub_1CE6700(&StringLiteral_11027/*"QUICK_CHAIN_INDIVIDUALITY"*/);
-    sub_1CE6700(&StringLiteral_3106/*"Battle/Common"*/);
-    sub_1CE6700(&StringLiteral_2050/*"ARTS_CHAIN_INDIVIDUALITY"*/);
-    sub_1CE6700(&StringLiteral_3343/*"CHAIN_ERROR_INDIVIDUALITY"*/);
-    sub_1CE6700(&StringLiteral_3022/*"BRAVE_CHAIN_INDIVIDUALITY"*/);
-    sub_1CE6700(&StringLiteral_8735/*"MIGHTY_CHAIN_INDIVIDUALITY"*/);
-    byte_4E07451 = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&int___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3035/*"BUSTER_CHAIN_INDIVIDUALITY"*/);
+    sub_1D0F0B4(&StringLiteral_11593/*"RootCameraPrefab"*/);
+    sub_1D0F0B4(&StringLiteral_11074/*"QUICK_CHAIN_INDIVIDUALITY"*/);
+    sub_1D0F0B4(&StringLiteral_3112/*"Battle/Common"*/);
+    sub_1D0F0B4(&StringLiteral_2051/*"ARTS_CHAIN_INDIVIDUALITY"*/);
+    sub_1D0F0B4(&StringLiteral_3353/*"CHAIN_ERROR_INDIVIDUALITY"*/);
+    sub_1D0F0B4(&StringLiteral_3028/*"BRAVE_CHAIN_INDIVIDUALITY"*/);
+    sub_1D0F0B4(&StringLiteral_8771/*"MIGHTY_CHAIN_INDIVIDUALITY"*/);
+    byte_4E7A121 = 1;
   }
   static_fields = BattleDataDefine_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->OVERWRITE_ATK_RATE_PRIORITY = 0x3E800000001LL;
   *(_QWORD *)&static_fields->PERCENTAGE_DENOMINATOR = 0x447A000042C80000LL;
-  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_D24610;
-  v2 = sub_1CE67A8(int___TypeInfo, 1);
+  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_D34ED0;
+  v2 = sub_1D0F15C(int___TypeInfo, 1);
   v3 = BattleDataDefine_TypeInfo->static_fields;
   v3->NO_INDIVIDUALITY_ARRAY = (struct System_Int32_array *)v2;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v3->NO_INDIVIDUALITY_ARRAY, v2, v4, v5, v6, v7, v8, v9);
-  v10 = StringLiteral_3106/*"Battle/Common"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->NO_INDIVIDUALITY_ARRAY, v2, v4, v5, v6, v7, v8, v9);
+  v10 = StringLiteral_3112/*"Battle/Common"*/;
   v11 = BattleDataDefine_TypeInfo->static_fields;
-  v11->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3106/*"Battle/Common"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v11->ASSET_BATTLE_COMMON, v10, v12, v13, v14, v15, v16, v17);
-  v18 = StringLiteral_11545/*"RootCameraPrefab"*/;
+  v11->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3112/*"Battle/Common"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v11->ASSET_BATTLE_COMMON, v10, v12, v13, v14, v15, v16, v17);
+  v18 = StringLiteral_11593/*"RootCameraPrefab"*/;
   v19 = BattleDataDefine_TypeInfo->static_fields;
-  v19->RootCameraAssetName = (struct System_String_o *)StringLiteral_11545/*"RootCameraPrefab"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v19->RootCameraAssetName, v18, v20, v21, v22, v23, v24, v25);
-  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_D24200;
+  v19->RootCameraAssetName = (struct System_String_o *)StringLiteral_11593/*"RootCameraPrefab"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v19->RootCameraAssetName, v18, v20, v21, v22, v23, v24, v25);
+  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_D34AC0;
   BattleDataDefine_TypeInfo->static_fields->_ArtsChainIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                        (System_String_o *)StringLiteral_2050/*"ARTS_CHAIN_INDIVIDUALITY"*/,
+                                                                                        (System_String_o *)StringLiteral_2051/*"ARTS_CHAIN_INDIVIDUALITY"*/,
                                                                                         0);
   BattleDataDefine_TypeInfo->static_fields->_BusterChainIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                          (System_String_o *)StringLiteral_3029/*"BUSTER_CHAIN_INDIVIDUALITY"*/,
+                                                                                          (System_String_o *)StringLiteral_3035/*"BUSTER_CHAIN_INDIVIDUALITY"*/,
                                                                                           0);
   BattleDataDefine_TypeInfo->static_fields->_QuickChainIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                         (System_String_o *)StringLiteral_11027/*"QUICK_CHAIN_INDIVIDUALITY"*/,
+                                                                                         (System_String_o *)StringLiteral_11074/*"QUICK_CHAIN_INDIVIDUALITY"*/,
                                                                                          0);
   BattleDataDefine_TypeInfo->static_fields->_BraveChainIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                         (System_String_o *)StringLiteral_3022/*"BRAVE_CHAIN_INDIVIDUALITY"*/,
+                                                                                         (System_String_o *)StringLiteral_3028/*"BRAVE_CHAIN_INDIVIDUALITY"*/,
                                                                                          0);
   BattleDataDefine_TypeInfo->static_fields->_MigthyChainIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                          (System_String_o *)StringLiteral_8735/*"MIGHTY_CHAIN_INDIVIDUALITY"*/,
+                                                                                          (System_String_o *)StringLiteral_8771/*"MIGHTY_CHAIN_INDIVIDUALITY"*/,
                                                                                           0);
   BattleDataDefine_TypeInfo->static_fields->_ChainErrorIndividuality_k__BackingField = ConstantMaster__getValue(
-                                                                                         (System_String_o *)StringLiteral_3343/*"CHAIN_ERROR_INDIVIDUALITY"*/,
+                                                                                         (System_String_o *)StringLiteral_3353/*"CHAIN_ERROR_INDIVIDUALITY"*/,
                                                                                          0);
 }
 
@@ -83,15 +83,15 @@ System_String_o *BattleDataDefine__AddUniqueCameraPath(int32_t cameraId, const M
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E07447 & 1) == 0 )
+  if ( (byte_4E7A117 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_3125/*"Battle/UniqueCamera/Add/{0}"*/);
-    byte_4E07447 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3132/*"Battle/UniqueCamera/Add/{0}"*/);
+    byte_4E7A117 = 1;
   }
   v5 = cameraId;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
-  return System_String__Format((System_String_o *)StringLiteral_3125/*"Battle/UniqueCamera/Add/{0}"*/, v3, 0);
+  return System_String__Format((System_String_o *)StringLiteral_3132/*"Battle/UniqueCamera/Add/{0}"*/, v3, 0);
 }
 
 
@@ -100,15 +100,15 @@ System_String_o *BattleDataDefine__FieldMotionPath(int32_t motionId, const Metho
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E07446 & 1) == 0 )
+  if ( (byte_4E7A116 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_3114/*"Battle/Field/{0}"*/);
-    byte_4E07446 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3120/*"Battle/Field/{0}"*/);
+    byte_4E7A116 = 1;
   }
   v5 = motionId;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
-  return System_String__Format((System_String_o *)StringLiteral_3114/*"Battle/Field/{0}"*/, v3, 0);
+  return System_String__Format((System_String_o *)StringLiteral_3120/*"Battle/Field/{0}"*/, v3, 0);
 }
 
 
@@ -127,7 +127,7 @@ bool BattleDataDefine__IsMatchBuffGroup(int32_t buffGroup, BattleBuffData_BuffDa
     if ( buff )
       return !buff->fields.passive;
 LABEL_8:
-    sub_1CE6958(buffGroup, buff);
+    sub_1D0F30C(buffGroup, buff);
   }
   if ( !buff )
     goto LABEL_8;
@@ -142,26 +142,26 @@ System_String_o *BattleDataDefine__MakeBgPath(int32_t bgId, const MethodInfo *me
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = bgId;
-  if ( (byte_4E07448 & 1) == 0 )
+  if ( (byte_4E7A118 & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E07448 = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A118 = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0);
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-  return BattleDataDefine__MakeBgPath_47170512(v3, v2);
+  return BattleDataDefine__MakeBgPath_47422280(v3, v2);
 }
 
 
-System_String_o *BattleDataDefine__MakeBgPath_47170512(System_String_o *bgIdStr, const MethodInfo *method)
+System_String_o *BattleDataDefine__MakeBgPath_47422280(System_String_o *bgIdStr, const MethodInfo *method)
 {
-  if ( (byte_4E07449 & 1) == 0 )
+  if ( (byte_4E7A119 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_3169/*"Bg/"*/);
-    byte_4E07449 = 1;
+    sub_1D0F0B4(&StringLiteral_3177/*"Bg/"*/);
+    byte_4E7A119 = 1;
   }
-  return System_String__Concat_65122828((System_String_o *)StringLiteral_3169/*"Bg/"*/, bgIdStr, 0);
+  return System_String__Concat_65562772((System_String_o *)StringLiteral_3177/*"Bg/"*/, bgIdStr, 0);
 }
 
 
@@ -175,10 +175,10 @@ int32_t BattleDataDefine__get_ArtsChainIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744A & 1) == 0 )
+  if ( (byte_4E7A11A & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744A = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11A = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -194,10 +194,10 @@ int32_t BattleDataDefine__get_BraveChainIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744D & 1) == 0 )
+  if ( (byte_4E7A11D & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744D = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11D = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -213,10 +213,10 @@ int32_t BattleDataDefine__get_BusterChainIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744B & 1) == 0 )
+  if ( (byte_4E7A11B & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744B = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11B = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -232,10 +232,10 @@ int32_t BattleDataDefine__get_ChainErrorIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744F & 1) == 0 )
+  if ( (byte_4E7A11F & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744F = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11F = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -251,10 +251,10 @@ int32_t BattleDataDefine__get_MigthyChainIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744E & 1) == 0 )
+  if ( (byte_4E7A11E & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744E = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11E = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -285,15 +285,15 @@ PlayerMasterIndividuality_o *BattleDataDefine__get_PlayerMasterIndividuality(con
   Il2CppObject *v15; // x19
   struct BattleDataDefine_StaticFields *static_fields; // x0
 
-  if ( (byte_4E07450 & 1) == 0 )
+  if ( (byte_4E7A120 & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_JsonManager_Deserialize_PlayerMasterIndividuality___);
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_10489/*"PLAYER_MASTER_INDIVIDUALITY"*/);
-    byte_4E07450 = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_JsonManager_Deserialize_PlayerMasterIndividuality___);
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_10533/*"PLAYER_MASTER_INDIVIDUALITY"*/);
+    byte_4E7A120 = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -314,10 +314,10 @@ PlayerMasterIndividuality_o *BattleDataDefine__get_PlayerMasterIndividuality(con
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ConstantStrMaster___);
     if ( !Master_object )
-      sub_1CE6958(0, v4);
-    Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)Master_object, (System_String_o *)StringLiteral_10489/*"PLAYER_MASTER_INDIVIDUALITY"*/, 0);
+      sub_1D0F30C(0, v4);
+    Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)Master_object, (System_String_o *)StringLiteral_10533/*"PLAYER_MASTER_INDIVIDUALITY"*/, 0);
     IsNullOrEmpty = System_String__IsNullOrEmpty(Value, 0);
     playerMasterIndividuality = 0;
     if ( !IsNullOrEmpty )
@@ -326,7 +326,7 @@ PlayerMasterIndividuality_o *BattleDataDefine__get_PlayerMasterIndividuality(con
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v7 = JsonManager__Deserialize_object_(
              (Il2CppObject *)Value,
-             (const MethodInfo_3273BD8 *)Method_JsonManager_Deserialize_PlayerMasterIndividuality___);
+             (const MethodInfo_32C0284 *)Method_JsonManager_Deserialize_PlayerMasterIndividuality___);
       v14 = BattleDataDefine_TypeInfo;
       v15 = v7;
       if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -336,7 +336,7 @@ PlayerMasterIndividuality_o *BattleDataDefine__get_PlayerMasterIndividuality(con
       }
       static_fields = v14->static_fields;
       static_fields->playerMasterIndividuality = (struct PlayerMasterIndividuality_o *)v15;
-      sub_1CE66A4(
+      sub_1D0F058(
         (GrandQuestFolderBoardItem_o *)&static_fields->playerMasterIndividuality,
         (int32_t)v15,
         v8,
@@ -356,10 +356,10 @@ int32_t BattleDataDefine__get_QuickChainIndividuality(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E0744C & 1) == 0 )
+  if ( (byte_4E7A11C & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E0744C = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7A11C = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )

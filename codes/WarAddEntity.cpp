@@ -23,60 +23,60 @@ void WarAddEntity___cctor(const MethodInfo *method)
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4E05B47 & 1) == 0 )
+  if ( (byte_4E787E6 & 1) == 0 )
   {
-    sub_1CE6700(&WarAddEntity_TypeInfo);
-    sub_1CE6700(&StringLiteral_17322/*"bgChangeEffectTime"*/);
-    sub_1CE6700(&StringLiteral_17323/*"bgChangeEffectType"*/);
-    sub_1CE6700(&StringLiteral_19411/*"eventTowerId"*/);
-    byte_4E05B47 = 1;
+    sub_1D0F0B4(&WarAddEntity_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_17395/*"bgChangeEffectTime"*/);
+    sub_1D0F0B4(&StringLiteral_17396/*"bgChangeEffectType"*/);
+    sub_1D0F0B4(&StringLiteral_19490/*"eventTowerId"*/);
+    byte_4E787E6 = 1;
   }
-  WarAddEntity_TypeInfo->static_fields->BG_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_17323/*"bgChangeEffectType"*/;
-  sub_1CE66A4(
+  WarAddEntity_TypeInfo->static_fields->BG_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_17396/*"bgChangeEffectType"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)WarAddEntity_TypeInfo->static_fields,
-    StringLiteral_17323/*"bgChangeEffectType"*/,
+    StringLiteral_17396/*"bgChangeEffectType"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_17322/*"bgChangeEffectTime"*/;
+  v7 = StringLiteral_17395/*"bgChangeEffectTime"*/;
   static_fields = WarAddEntity_TypeInfo->static_fields;
-  static_fields->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_17322/*"bgChangeEffectTime"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->BG_CHANGE_TIME_KEY, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_19411/*"eventTowerId"*/;
+  static_fields->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_17395/*"bgChangeEffectTime"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->BG_CHANGE_TIME_KEY, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_19490/*"eventTowerId"*/;
   v16 = WarAddEntity_TypeInfo->static_fields;
-  v16->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_19411/*"eventTowerId"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v16->EVENT_TOWER_ID, v15, v17, v18, v19, v20, v21, v22);
+  v16->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_19490/*"eventTowerId"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v16->EVENT_TOWER_ID, v15, v17, v18, v19, v20, v21, v22);
 }
 
 
 void WarAddEntity___ctor(WarAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05B46 & 1) == 0 )
+  if ( (byte_4E787E5 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05B46 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E787E5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarAddEntity__CreatePK(int32_t warId, int32_t type, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4E05B40 & 1) == 0 )
+  if ( (byte_4E787DF & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E05B40 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4E787DF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            warId,
            type,
            priority,
-           (const MethodInfo_32029C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -87,10 +87,10 @@ System_String_o *WarAddEntity__CreatePrimaryKey(WarAddEntity_o *this, const Meth
   int32_t warId; // w21
   int32_t priority; // w19
 
-  if ( (byte_4E05B3F & 1) == 0 )
+  if ( (byte_4E787DE & 1) == 0 )
   {
-    sub_1CE6700(&WarAddEntity_TypeInfo);
-    byte_4E05B3F = 1;
+    sub_1D0F0B4(&WarAddEntity_TypeInfo);
+    byte_4E787DE = 1;
   }
   warId = this->fields.warId;
   type = this->fields.type;
@@ -103,12 +103,12 @@ System_String_o *WarAddEntity__CreatePrimaryKey(WarAddEntity_o *this, const Meth
 
 System_String_o *WarAddEntity__GetBoardEffectName(WarAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05B43 & 1) == 0 )
+  if ( (byte_4E787E2 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_17199/*"bannerEffectName"*/);
-    byte_4E05B43 = 1;
+    sub_1D0F0B4(&StringLiteral_17270/*"bannerEffectName"*/);
+    byte_4E787E2 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_17199/*"bannerEffectName"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_17270/*"bannerEffectName"*/, 0, 0);
 }
 
 
@@ -127,14 +127,14 @@ int32_t WarAddEntity__GetClearedReturnFolderWarId(WarAddEntity_o *this, const Me
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4E05B44 & 1) == 0 )
+  if ( (byte_4E787E3 & 1) == 0 )
   {
-    sub_1CE6700(&Method_EntityScriptUtil_GetScriptValue_object__int___);
-    sub_1CE6700(&System_Func_object__int__TypeInfo);
-    sub_1CE6700(&Method_WarAddEntity___c__GetClearedReturnFolderWarId_b__21_0__);
-    sub_1CE6700(&WarAddEntity___c_TypeInfo);
-    sub_1CE6700(&StringLiteral_18206/*"clearedReturnFolderWarId"*/);
-    byte_4E05B44 = 1;
+    sub_1D0F0B4(&Method_EntityScriptUtil_GetScriptValue_object__int___);
+    sub_1D0F0B4(&System_Func_object__int__TypeInfo);
+    sub_1D0F0B4(&Method_WarAddEntity___c__GetClearedReturnFolderWarId_b__21_0__);
+    sub_1D0F0B4(&WarAddEntity___c_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_18284/*"clearedReturnFolderWarId"*/);
+    byte_4E787E3 = 1;
   }
   v3 = WarAddEntity___c_TypeInfo;
   script = this->fields.script;
@@ -143,7 +143,7 @@ int32_t WarAddEntity__GetClearedReturnFolderWarId(WarAddEntity_o *this, const Me
     j_il2cpp_runtime_class_init_0(WarAddEntity___c_TypeInfo);
     v3 = WarAddEntity___c_TypeInfo;
   }
-  v5 = (System_String_o *)StringLiteral_18206/*"clearedReturnFolderWarId"*/;
+  v5 = (System_String_o *)StringLiteral_18284/*"clearedReturnFolderWarId"*/;
   _9__21_0 = v3->static_fields->__9__21_0;
   if ( !_9__21_0 )
   {
@@ -153,11 +153,11 @@ int32_t WarAddEntity__GetClearedReturnFolderWarId(WarAddEntity_o *this, const Me
       v3 = WarAddEntity___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v3->static_fields->__9;
-    _9__21_0 = (System_Func_object__int__o *)sub_1CE694C(System_Func_object__int__TypeInfo);
+    _9__21_0 = (System_Func_object__int__o *)sub_1D0F300(System_Func_object__int__TypeInfo);
     System_Func_object__int____ctor(_9__21_0, v7, Method_WarAddEntity___c__GetClearedReturnFolderWarId_b__21_0__, 0);
     static_fields = WarAddEntity___c_TypeInfo->static_fields;
     static_fields->__9__21_0 = _9__21_0;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__21_0,
       (int32_t)_9__21_0,
       v9,
@@ -172,7 +172,7 @@ int32_t WarAddEntity__GetClearedReturnFolderWarId(WarAddEntity_o *this, const Me
            v5,
            (System_Func_TSource__TDestination__o *)_9__21_0,
            0,
-           (const MethodInfo_320AB40 *)Method_EntityScriptUtil_GetScriptValue_object__int___);
+           (const MethodInfo_3255950 *)Method_EntityScriptUtil_GetScriptValue_object__int___);
 }
 
 
@@ -187,11 +187,11 @@ bool WarAddEntity__HasBGChange(WarAddEntity_o *this, const MethodInfo *method)
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x19
   WarAddEntity_c *v4; // x0
 
-  if ( (byte_4E05B41 & 1) == 0 )
+  if ( (byte_4E787E0 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&WarAddEntity_TypeInfo);
-    byte_4E05B41 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&WarAddEntity_TypeInfo);
+    byte_4E787E0 = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -205,18 +205,18 @@ bool WarAddEntity__HasBGChange(WarAddEntity_o *this, const MethodInfo *method)
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)v4->static_fields->BG_CHANGE_TYPE_KEY,
-           (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+           (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
 }
 
 
 bool WarAddEntity__IsExecuteFirstFade(WarAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05B45 & 1) == 0 )
+  if ( (byte_4E787E4 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_19581/*"executeFirstFade"*/);
-    byte_4E05B45 = 1;
+    sub_1D0F0B4(&StringLiteral_19660/*"executeFirstFade"*/);
+    byte_4E787E4 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19581/*"executeFirstFade"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19660/*"executeFirstFade"*/, 0, 0) > 0;
 }
 
 
@@ -230,11 +230,11 @@ int32_t WarAddEntity__getScript(WarAddEntity_o *this, System_String_o *key, int3
   const MethodInfo *v13; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E05B42 & 1) == 0 )
+  if ( (byte_4E787E1 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1CE6700(&long_TypeInfo);
-    byte_4E05B42 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&long_TypeInfo);
+    byte_4E787E1 = 1;
   }
   value = 0;
   script = this->fields.script;
@@ -243,15 +243,15 @@ int32_t WarAddEntity__getScript(WarAddEntity_o *this, System_String_o *key, int3
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defVal;
   }
   if ( !value )
-    sub_1CE6958(0, v8);
+    sub_1D0F30C(0, v8);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v9, v10);
-  sub_1CE6CF4(value);
+  sub_1D0F6A8(value);
   return (unsigned int)WarAddEntity__GetBoardEffectName(v12, v13);
 }
 
@@ -266,15 +266,15 @@ void WarAddEntity___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E05B48 & 1) == 0 )
+  if ( (byte_4E787E7 & 1) == 0 )
   {
-    sub_1CE6700(&WarAddEntity___c_TypeInfo);
-    byte_4E05B48 = 1;
+    sub_1D0F0B4(&WarAddEntity___c_TypeInfo);
+    byte_4E787E7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(WarAddEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(WarAddEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarAddEntity___c_TypeInfo->static_fields->__9 = (struct WarAddEntity___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)WarAddEntity___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -304,15 +304,15 @@ int32_t WarAddEntity___c___GetClearedReturnFolderWarId_b__21_0(
   int32_t v9; // w3
   const MethodInfo *v10; // x4
 
-  if ( (byte_4E05B49 & 1) == 0 )
+  if ( (byte_4E787E8 & 1) == 0 )
   {
-    this = (WarAddEntity___c_o *)sub_1CE6700(&long_TypeInfo);
-    byte_4E05B49 = 1;
+    this = (WarAddEntity___c_o *)sub_1D0F0B4(&long_TypeInfo);
+    byte_4E787E8 = 1;
   }
   if ( !val )
-    sub_1CE6958(this, val);
+    sub_1D0F30C(this, val);
   if ( val->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(val, long_TypeInfo, method, v3);
-  sub_1CE6CF4(val);
+  sub_1D0F6A8(val);
   return (unsigned int)WarAddMaster__GetEntity(v6, v7, v8, v9, v10);
 }

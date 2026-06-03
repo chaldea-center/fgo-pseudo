@@ -19,10 +19,10 @@ void AutoDestroyObjectComponent__Update(AutoDestroyObjectComponent_o *this, cons
   float v6; // s0
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4E06F6F & 1) == 0 )
+  if ( (byte_4E79C35 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E06F6F = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E79C35 = 1;
   }
   elapsedTime = this->fields.elapsedTime;
   deltaTime = UnityEngine_Time__get_deltaTime(0);
@@ -34,6 +34,6 @@ void AutoDestroyObjectComponent__Update(AutoDestroyObjectComponent_o *this, cons
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540(gameObject, 0);
+    UnityEngine_Object__Destroy_73359484(gameObject, 0);
   }
 }

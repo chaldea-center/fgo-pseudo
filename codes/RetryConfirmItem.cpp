@@ -66,7 +66,7 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
         }
       }
 LABEL_15:
-      sub_1CE6958(useAmount, method);
+      sub_1D0F30C(useAmount, method);
     }
   }
 }
@@ -115,7 +115,7 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0) )
   {
 LABEL_15:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   }
   v12 = LocalPositionX;
   if ( useAmount + mWidth >= v9 + v8 )
@@ -145,17 +145,17 @@ System_Collections_IEnumerator_o *RetryConfirmItem__SetCondensedScalePossessionA
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4E08550 & 1) == 0 )
+  if ( (byte_4E7B282 & 1) == 0 )
   {
-    sub_1CE6700(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
-    byte_4E08550 = 1;
+    sub_1D0F0B4(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+    byte_4E7B282 = 1;
   }
   v5 = isDispUseItemUI;
-  v6 = sub_1CE694C(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+  v6 = sub_1D0F300(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
   *(_BYTE *)(v6 + 40) = v5;
   return (System_Collections_IEnumerator_o *)v6;
 }
@@ -218,14 +218,14 @@ bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0);
         v4->fields.__2__current = 0;
         p__2__current = (GrandQuestFolderBoardItem_o *)&v4->fields.__2__current;
-        sub_1CE66A4(p__2__current, 0, v6, v7, v8, v9, v10, v11);
+        sub_1D0F058(p__2__current, 0, v6, v7, v8, v9, v10, v11);
         result = 1;
         LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
       }
     }
 LABEL_14:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   }
   return 0;
 }
@@ -247,11 +247,11 @@ void __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 

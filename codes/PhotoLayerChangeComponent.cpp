@@ -13,10 +13,10 @@ void PhotoLayerChangeComponent__ChangeLayer(PhotoLayerChangeComponent_o *this, c
   struct UIPanel_o *v7; // x20
   int32_t mDepth; // w19
 
-  if ( (byte_4DFFEF4 & 1) == 0 )
+  if ( (byte_4E72B11 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFEF4 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72B11 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -31,7 +31,7 @@ void PhotoLayerChangeComponent__ChangeLayer(PhotoLayerChangeComponent_o *this, c
     {
       v7 = this->fields.anotherPanel;
       if ( !v7 || (v5 = this->fields.selfPanel) == 0 )
-        sub_1CE6958(v5, v6);
+        sub_1D0F30C(v5, v6);
       mDepth = v5->fields.mDepth;
       UIPanel__set_depth(v5, v7->fields.mDepth, 0);
       UIPanel__set_depth(v7, mDepth, 0);
@@ -53,10 +53,10 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
   UIPanel_o *v5; // x0
   UnityEngine_Object_o *anotherPanel; // x20
 
-  if ( (byte_4DFFEF2 & 1) == 0 )
+  if ( (byte_4E72B0F & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFEF2 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72B0F = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -80,7 +80,7 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
       return;
     }
 LABEL_14:
-    sub_1CE6958(v5, v4);
+    sub_1D0F30C(v5, v4);
   }
 }
 
@@ -97,11 +97,11 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
   System_Reflection_MethodBase_o *v10; // x0
   int32_t v11; // w1
 
-  if ( (byte_4DFFEF3 & 1) == 0 )
+  if ( (byte_4E72B10 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_PhotoLayerChangeComponent_OnClick__);
-    byte_4DFFEF3 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_PhotoLayerChangeComponent_OnClick__);
+    byte_4E72B10 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -124,8 +124,8 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
             return;
           v9 = Method_PhotoLayerChangeComponent_OnClick__;
           if ( (*((_BYTE *)Method_PhotoLayerChangeComponent_OnClick__ + 83) & 2) != 0 )
-            v9 = (_QWORD *)sub_1CE6718(Method_PhotoLayerChangeComponent_OnClick__);
-          v10 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v9, v9[4]);
+            v9 = (_QWORD *)sub_1D0F0CC(Method_PhotoLayerChangeComponent_OnClick__);
+          v10 = (System_Reflection_MethodBase_o *)sub_1D0F098(v9, v9[4]);
           OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
           v5 = this->fields.anotherPanel;
           if ( v5 )
@@ -146,7 +146,7 @@ LABEL_20:
           }
         }
       }
-      sub_1CE6958(v5, v6);
+      sub_1D0F30C(v5, v6);
     }
   }
 }
@@ -164,7 +164,7 @@ void PhotoLayerChangeComponent__SetAnotherPanel(
   System_String_o *v7; // x7
 
   this->fields.anotherPanel = another;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.anotherPanel,
     (int32_t)another,
     (int32_t)method,
@@ -188,7 +188,7 @@ void PhotoLayerChangeComponent__SetSelfPanel(
   System_String_o *v7; // x7
 
   this->fields.selfPanel = self;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.selfPanel,
     (int32_t)self,
     (int32_t)method,

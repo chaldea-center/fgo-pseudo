@@ -1,13 +1,13 @@
 void ServantCostumeEntity___ctor(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E052F6 & 1) == 0 )
+  if ( (byte_4E77F8F & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E052F6 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E77F8F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ bool ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntity_o *this, 
 {
   int64_t Time; // x0
 
-  if ( (byte_4E052F0 & 1) == 0 )
+  if ( (byte_4E77F87 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4E052F0 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E77F87 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -29,15 +29,15 @@ bool ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntity_o *this, 
 
 System_String_o *ServantCostumeEntity__CreatePK(int32_t svtId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4E052EF & 1) == 0 )
+  if ( (byte_4E77F86 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E052EF = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E77F86 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            id,
-           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -49,24 +49,46 @@ System_String_o *ServantCostumeEntity__CreatePrimaryKey(ServantCostumeEntity_o *
 }
 
 
+int32_t ServantCostumeEntity__GetSupportBaseLimitCount(ServantCostumeEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4E77F8D & 1) == 0 )
+  {
+    sub_1D0F0B4(&StringLiteral_24332/*"supportBaseLimitCount"*/);
+    byte_4E77F8D = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24332/*"supportBaseLimitCount"*/, 0, 0);
+}
+
+
+int32_t ServantCostumeEntity__GetSupportLimitCountGroup(ServantCostumeEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4E77F8C & 1) == 0 )
+  {
+    sub_1D0F0B4(&StringLiteral_24334/*"supportLimitCountGroupIndex"*/);
+    byte_4E77F8C = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24334/*"supportLimitCountGroupIndex"*/, 0, 0);
+}
+
+
 bool ServantCostumeEntity__IsEventCombineCostume(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E052F1 & 1) == 0 )
+  if ( (byte_4E77F88 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E052F1 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E77F88 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0 )
+                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0 )
   {
-    sub_1CE6958(Instance, v4);
+    sub_1D0F30C(Instance, v4);
   }
   return EventCombineCostumeMaster__IsEventCombineCostume(
            (EventCombineCostumeMaster_o *)Instance,
@@ -87,12 +109,12 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
   UserServantCollectionEntity_o *EntityDefinitely; // x0
   int32_t baseSvtId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E052F5 & 1) == 0 )
+  if ( (byte_4E77F8E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4E052F5 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E77F8E = 1;
   }
   baseSvtId = 0;
   if ( ServantCostumeEntity__TryGetBaseSvtId(this, &baseSvtId, v2) )
@@ -102,13 +124,13 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
   svtId = p_baseSvtId->svtId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   v8 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -117,7 +139,7 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
     v8 = NetworkManager_TypeInfo;
   }
   if ( !Master_object )
-    sub_1CE6958(v8, v6);
+    sub_1D0F30C(v8, v6);
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(
                        (UserServantCollectionMaster_o *)Master_object,
                        v8->static_fields->userIdNumber,
@@ -133,12 +155,12 @@ bool ServantCostumeEntity__TryGetBaseSvtId(ServantCostumeEntity_o *this, int32_t
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4E052F4 & 1) == 0 )
+  if ( (byte_4E77F8B & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_17221/*"baseSvtId"*/);
-    byte_4E052F4 = 1;
+    sub_1D0F0B4(&StringLiteral_17292/*"baseSvtId"*/);
+    byte_4E77F8B = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17221/*"baseSvtId"*/, baseSvtId, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17292/*"baseSvtId"*/, baseSvtId, v3);
 }
 
 
@@ -146,12 +168,12 @@ bool ServantCostumeEntity__checkBgmId(ServantCostumeEntity_o *this, int32_t *par
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4E052F3 & 1) == 0 )
+  if ( (byte_4E77F8A & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_17330/*"bgmId"*/);
-    byte_4E052F3 = 1;
+    sub_1D0F0B4(&StringLiteral_17403/*"bgmId"*/);
+    byte_4E77F8A = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17330/*"bgmId"*/, param, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17403/*"bgmId"*/, param, v3);
 }
 
 
@@ -177,12 +199,12 @@ bool ServantCostumeEntity__checkScript(
   int32_t *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4E052F2 & 1) == 0 )
+  if ( (byte_4E77F89 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&long_TypeInfo);
-    byte_4E052F2 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&long_TypeInfo);
+    byte_4E77F89 = 1;
   }
   *param = 0;
   script = this->fields.script;
@@ -191,16 +213,16 @@ bool ServantCostumeEntity__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                                (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
       {
-        sub_1CE6958(Item, v8);
+        sub_1D0F30C(Item, v8);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
@@ -210,7 +232,7 @@ bool ServantCostumeEntity__checkScript(
       }
       else
       {
-        sub_1CE6CF4(Item);
+        sub_1D0F6A8(Item);
         LOBYTE(script) = ServantCostumeEntity__checkBgmId(v13, v14, v15);
       }
     }

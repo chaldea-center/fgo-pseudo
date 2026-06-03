@@ -7,16 +7,16 @@ void UIOpenLabelURL___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4E036AF & 1) == 0 )
+  if ( (byte_4E76322 & 1) == 0 )
   {
-    sub_1CE6700(&UIOpenLabelURL_TypeInfo);
-    sub_1CE6700(&StringLiteral_15756/*"WebView:"*/);
-    byte_4E036AF = 1;
+    sub_1D0F0B4(&UIOpenLabelURL_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_15811/*"WebView:"*/);
+    byte_4E76322 = 1;
   }
-  UIOpenLabelURL_TypeInfo->static_fields->BOOT_WEB_VIEW = (struct System_String_o *)StringLiteral_15756/*"WebView:"*/;
-  sub_1CE66A4(
+  UIOpenLabelURL_TypeInfo->static_fields->BOOT_WEB_VIEW = (struct System_String_o *)StringLiteral_15811/*"WebView:"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)UIOpenLabelURL_TypeInfo->static_fields,
-    StringLiteral_15756/*"WebView:"*/,
+    StringLiteral_15811/*"WebView:"*/,
     v1,
     v2,
     v3,
@@ -42,20 +42,20 @@ void UIOpenLabelURL__OnClick(UIOpenLabelURL_o *this, const MethodInfo *method)
   struct System_String_o *BOOT_WEB_VIEW; // x8
   System_String_o *v9; // x19
 
-  if ( (byte_4E036AE & 1) == 0 )
+  if ( (byte_4E76321 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Application_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&UICamera_TypeInfo);
-    sub_1CE6700(&UIOpenLabelURL_TypeInfo);
-    sub_1CE6700(&WebViewManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E036AE = 1;
+    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    sub_1D0F0B4(&UIOpenLabelURL_TypeInfo);
+    sub_1D0F0B4(&WebViewManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E76321 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -105,7 +105,7 @@ void UIOpenLabelURL__OnClick(UIOpenLabelURL_o *this, const MethodInfo *method)
         }
       }
 LABEL_27:
-      sub_1CE6958(v5, v4);
+      sub_1D0F30C(v5, v4);
     }
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);

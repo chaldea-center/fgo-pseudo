@@ -11,20 +11,20 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickId(
   System_String_o *name; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E01242 & 1) == 0 )
+  if ( (byte_4E73E6A & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Last_string___);
-    byte_4E01242 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Last_string___);
+    byte_4E73E6A = 1;
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !name || (name = (System_String_o *)System_String__Split(name, 0x5Fu, 0, 0)) == 0 )
-    sub_1CE6958(name, v4);
+    sub_1D0F30C(name, v4);
   if ( LODWORD(name[1].klass) == 1 )
     return 0;
   else
     return (System_String_o *)System_Linq_Enumerable__Last_object_(
                                 (System_Collections_Generic_IEnumerable_TSource__o *)name,
-                                (const MethodInfo_322E56C *)Method_System_Linq_Enumerable_Last_string___);
+                                (const MethodInfo_327A274 *)Method_System_Linq_Enumerable_Last_string___);
 }
 
 
@@ -41,17 +41,17 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickLayerMasterData(
   int v10; // [xsp+Ch] [xbp-24h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E01241 & 1) == 0 )
+  if ( (byte_4E73E69 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_22265/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/);
-    byte_4E01241 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22358/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/);
+    byte_4E73E69 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
   {
-    sub_1CE6958(gameObject, v4);
+    sub_1D0F30C(gameObject, v4);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
   if ( localPosition.fields.z == INFINITY )
@@ -63,7 +63,7 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickLayerMasterData(
   MapGimmickId = (Il2CppObject *)DebugDummyMapGimmickComponent__GetMapGimmickId(this, v5);
   v10 = z;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return System_String__Format_65164136((System_String_o *)StringLiteral_22265/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/, MapGimmickId, v8, 0);
+  return System_String__Format_65604080((System_String_o *)StringLiteral_22358/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/, MapGimmickId, v8, 0);
 }
 
 
@@ -85,17 +85,17 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickMasterData(
   int v15; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E01240 & 1) == 0 )
+  if ( (byte_4E73E68 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_22263/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/);
-    byte_4E01240 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22356/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/);
+    byte_4E73E68 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
   {
-    sub_1CE6958(gameObject, v4);
+    sub_1D0F30C(gameObject, v4);
   }
   v5 = (UnityEngine_Transform_o *)gameObject;
   v6 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0));
@@ -113,5 +113,5 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickMasterData(
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
   v14 = y;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
-  return System_String__Format_65164204((System_String_o *)StringLiteral_22263/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/, MapGimmickId, v11, v12, 0);
+  return System_String__Format_65604148((System_String_o *)StringLiteral_22356/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/, MapGimmickId, v11, v12, 0);
 }

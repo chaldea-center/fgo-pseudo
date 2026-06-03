@@ -1,27 +1,27 @@
 void BattleMasterImageEntity___ctor(BattleMasterImageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04662 & 1) == 0 )
+  if ( (byte_4E772E0 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E04662 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E772E0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleMasterImageEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4E0465D & 1) == 0 )
+  if ( (byte_4E772DB & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E0465D = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E772DB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,12 +39,12 @@ int32_t BattleMasterImageEntity__GetOverwriteMasterBackgroundId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E04660 & 1) == 0 )
+  if ( (byte_4E772DE & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22915/*"overwriteMasterBackgroundId"*/);
-    byte_4E04660 = 1;
+    sub_1D0F0B4(&StringLiteral_23009/*"overwriteMasterBackgroundId"*/);
+    byte_4E772DE = 1;
   }
-  return BattleMasterImageEntity__getScript(this, (System_String_o *)StringLiteral_22915/*"overwriteMasterBackgroundId"*/, 0, v2);
+  return BattleMasterImageEntity__getScript(this, (System_String_o *)StringLiteral_23009/*"overwriteMasterBackgroundId"*/, 0, v2);
 }
 
 
@@ -52,12 +52,12 @@ System_Int32_array *BattleMasterImageEntity__GetOverwriteResultPosition(
         BattleMasterImageEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E04661 & 1) == 0 )
+  if ( (byte_4E772DF & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22928/*"overwriteResultPosition"*/);
-    byte_4E04661 = 1;
+    sub_1D0F0B4(&StringLiteral_23027/*"overwriteResultPosition"*/);
+    byte_4E772DF = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22928/*"overwriteResultPosition"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_23027/*"overwriteResultPosition"*/, 0, 0);
 }
 
 
@@ -68,17 +68,17 @@ bool BattleMasterImageEntity__checkScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4E0465E & 1) == 0 )
+  if ( (byte_4E772DC & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_4E0465E = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    byte_4E772DC = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
                        (Il2CppObject *)key,
-                       (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -99,11 +99,11 @@ int32_t BattleMasterImageEntity__getScript(
   const MethodInfo *v13; // x1
 
   v4 = defVal;
-  if ( (byte_4E0465F & 1) == 0 )
+  if ( (byte_4E772DD & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&long_TypeInfo);
-    byte_4E0465F = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&long_TypeInfo);
+    byte_4E772DD = 1;
   }
   if ( !BattleMasterImageEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -112,12 +112,12 @@ int32_t BattleMasterImageEntity__getScript(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                              (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_1CE6958(script, v7);
+    sub_1D0F30C(script, v7);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v9, v10);
-  sub_1CE6CF4(script);
+  sub_1D0F6A8(script);
   return BattleMasterImageEntity__GetOverwriteMasterBackgroundId(v12, v13);
 }

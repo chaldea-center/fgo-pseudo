@@ -1,26 +1,26 @@
 void WarBoardReinforcementsEntity___ctor(WarBoardReinforcementsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05C00 & 1) == 0 )
+  if ( (byte_4E7889F & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05C00 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E7889F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardReinforcementsEntity__CreatePK(int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4E05BF7 & 1) == 0 )
+  if ( (byte_4E78896 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int___);
-    byte_4E05BF7 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int___);
+    byte_4E78896 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            id,
-           (const MethodInfo_32023C4 *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_324D1D4 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 
@@ -39,13 +39,13 @@ bool WarBoardReinforcementsEntity__GetMovedAfterDefendType(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFF & 1) == 0 )
+  if ( (byte_4E7889E & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22589/*"noMovedAfterDefend"*/);
-    byte_4E05BFF = 1;
+    sub_1D0F0B4(&StringLiteral_22682/*"noMovedAfterDefend"*/);
+    byte_4E7889E = 1;
   }
   *type = 0;
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22589/*"noMovedAfterDefend"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22682/*"noMovedAfterDefend"*/, -1, 0);
   if ( (IntValue & 0x80000000) == 0 )
     *type = IntValue;
   return IntValue >= 0;
@@ -74,12 +74,12 @@ bool WarBoardReinforcementsEntity__TryGetDeadEffectType(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFD & 1) == 0 )
+  if ( (byte_4E7889C & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_18726/*"deadEffect"*/);
-    byte_4E05BFD = 1;
+    sub_1D0F0B4(&StringLiteral_18804/*"deadEffect"*/);
+    byte_4E7889C = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18726/*"deadEffect"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18804/*"deadEffect"*/, -1, 0);
   *value = IntValue;
   return IntValue != -1;
 }
@@ -92,13 +92,13 @@ bool WarBoardReinforcementsEntity__TryGetMoveAfterAttackType(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFE & 1) == 0 )
+  if ( (byte_4E7889D & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22586/*"noMoveAfterAttack"*/);
-    byte_4E05BFE = 1;
+    sub_1D0F0B4(&StringLiteral_22679/*"noMoveAfterAttack"*/);
+    byte_4E7889D = 1;
   }
   *type = 0;
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22586/*"noMoveAfterAttack"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22679/*"noMoveAfterAttack"*/, -1, 0);
   if ( (IntValue & 0x80000000) == 0 )
     *type = IntValue;
   return IntValue >= 0;
@@ -112,12 +112,12 @@ bool WarBoardReinforcementsEntity__TryGetOverwriteAttackCost(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFB & 1) == 0 )
+  if ( (byte_4E7889A & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22878/*"overwriteAttackCost"*/);
-    byte_4E05BFB = 1;
+    sub_1D0F0B4(&StringLiteral_22971/*"overwriteAttackCost"*/);
+    byte_4E7889A = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22878/*"overwriteAttackCost"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22971/*"overwriteAttackCost"*/, -1, 0);
   *value = IntValue;
   return IntValue != -1;
 }
@@ -130,12 +130,12 @@ bool WarBoardReinforcementsEntity__TryGetOverwriteBaseActionPoint(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFA & 1) == 0 )
+  if ( (byte_4E78899 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22880/*"overwriteBaseActionPoint"*/);
-    byte_4E05BFA = 1;
+    sub_1D0F0B4(&StringLiteral_22973/*"overwriteBaseActionPoint"*/);
+    byte_4E78899 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22880/*"overwriteBaseActionPoint"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22973/*"overwriteBaseActionPoint"*/, -1, 0);
   *value = IntValue;
   return IntValue != -1;
 }
@@ -148,12 +148,12 @@ bool WarBoardReinforcementsEntity__TryGetOverwriteMoveCost(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BFC & 1) == 0 )
+  if ( (byte_4E7889B & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22916/*"overwriteMoveCost"*/);
-    byte_4E05BFC = 1;
+    sub_1D0F0B4(&StringLiteral_23013/*"overwriteMoveCost"*/);
+    byte_4E7889B = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22916/*"overwriteMoveCost"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23013/*"overwriteMoveCost"*/, -1, 0);
   *value = IntValue;
   return IntValue != -1;
 }
@@ -180,12 +180,12 @@ bool WarBoardReinforcementsEntity__TryGetOverwriteWallAttackCost(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BF9 & 1) == 0 )
+  if ( (byte_4E78898 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22949/*"overwriteWallAttackCost"*/);
-    byte_4E05BF9 = 1;
+    sub_1D0F0B4(&StringLiteral_23048/*"overwriteWallAttackCost"*/);
+    byte_4E78898 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22949/*"overwriteWallAttackCost"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23048/*"overwriteWallAttackCost"*/, -1, 0);
   *value = IntValue;
   return IntValue != -1;
 }
@@ -198,12 +198,12 @@ bool WarBoardReinforcementsEntity__TryGetRoleType(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E05BF8 & 1) == 0 )
+  if ( (byte_4E78897 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_25156/*"warBoardSvtDetail"*/);
-    byte_4E05BF8 = 1;
+    sub_1D0F0B4(&StringLiteral_25265/*"warBoardSvtDetail"*/);
+    byte_4E78897 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25156/*"warBoardSvtDetail"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25265/*"warBoardSvtDetail"*/, -1, 0);
   *value = IntValue;
   return IntValue >= 0;
 }

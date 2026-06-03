@@ -12,7 +12,7 @@ void SubmarineRevealSpotPerformance___ctor(
 
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0);
   this->fields.spot = spot;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -28,16 +28,16 @@ System_Collections_IEnumerator_o *SubmarineRevealSpotPerformance__Execute(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E012FF & 1) == 0 )
+  if ( (byte_4E73F27 & 1) == 0 )
   {
-    sub_1CE6700(&SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo);
-    byte_4E012FF = 1;
+    sub_1D0F0B4(&SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo);
+    byte_4E73F27 = 1;
   }
-  v3 = sub_1CE694C(SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo);
+  v3 = sub_1D0F300(SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -49,19 +49,19 @@ void SubmarineRevealSpotPerformance__OnStart(SubmarineRevealSpotPerformance_o *t
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4E012FE & 1) == 0 )
+  if ( (byte_4E73F26 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__);
-    byte_4E012FE = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__);
+    byte_4E73F26 = 1;
   }
   SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0);
   this->fields.spotAnimFinished = 0;
   spot = this->fields.spot;
-  v4 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__, 0);
   if ( !spot )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   SrcSpotBasePrefab__SetState(spot, 3, v4, 0);
 }
 
@@ -79,7 +79,7 @@ void SubmarineRevealSpotPerformance___OnStart_b__3_0(SubmarineRevealSpotPerforma
 
   spot = this->fields.spot;
   if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0 )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   mMapCtrl_SpotInfo->fields.dispType = 2;
   this->fields.spotAnimFinished = 1;
 }
@@ -112,12 +112,12 @@ bool SubmarineRevealSpotPerformance__Execute_d__4__MoveNext(
   System_String_o *v13; // x7
   int32_t v14; // w8
 
-  if ( (byte_4E01300 & 1) == 0 )
+  if ( (byte_4E73F28 & 1) == 0 )
   {
-    sub_1CE6700(&System_Func_bool__TypeInfo);
-    sub_1CE6700(&Method_SubmarineRevealSpotPerformance__Execute_b__4_0__);
-    sub_1CE6700(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4E01300 = 1;
+    sub_1D0F0B4(&System_Func_bool__TypeInfo);
+    sub_1D0F0B4(&Method_SubmarineRevealSpotPerformance__Execute_b__4_0__);
+    sub_1D0F0B4(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4E73F28 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -131,12 +131,12 @@ bool SubmarineRevealSpotPerformance__Execute_d__4__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v6 = (System_Func_bool__o *)sub_1CE694C(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_1D0F300(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v6, _4__this, Method_SubmarineRevealSpotPerformance__Execute_b__4_0__, 0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_1CE694C(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_1D0F300(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     v14 = 1;
     result = 1;
   }
@@ -161,11 +161,11 @@ void __noreturn SubmarineRevealSpotPerformance__Execute_d__4__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_SubmarineRevealSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_SubmarineRevealSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 

@@ -11,19 +11,20 @@ void BattlePlayMovieTask__Init(
         AiBaseEntity_o *aiEnt,
         const MethodInfo *method)
 {
-  struct System_String_o *MovieName; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  struct System_String_o *MovieName; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
   if ( !aiEnt )
-    sub_1CE6958(this, aiActEnt);
+    sub_1D0F30C(this, aiActEnt);
   MovieName = AiBaseEntity__GetMovieName(aiEnt, 0);
   this->fields.movieName = MovieName;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)MovieName, v6, v7, v8, v9, v10, v11);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.movieName, (int32_t)MovieName, v7, v8, v9, v10, v11, v12);
+  this->fields.isBgmPause = !AiBaseEntity__IsPlayBgmWhileMoviePlaying(aiEnt, 0);
 }
 
 
@@ -32,16 +33,18 @@ BattleActionData_o *BattlePlayMovieTask__MakeActionData(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  System_String_o *movieName; // x19
-  BattlePlayMovieActionData_o *v5; // x20
+  System_String_o *movieName; // x20
+  bool isBgmPause; // w19
+  BattlePlayMovieActionData_o *v6; // x21
 
-  if ( (byte_4E07E00 & 1) == 0 )
+  if ( (byte_4E7AAE7 & 1) == 0 )
   {
-    sub_1CE6700(&BattlePlayMovieActionData_TypeInfo);
-    byte_4E07E00 = 1;
+    sub_1D0F0B4(&BattlePlayMovieActionData_TypeInfo);
+    byte_4E7AAE7 = 1;
   }
   movieName = this->fields.movieName;
-  v5 = (BattlePlayMovieActionData_o *)sub_1CE694C(BattlePlayMovieActionData_TypeInfo);
-  BattlePlayMovieActionData___ctor(v5, movieName, 0);
-  return (BattleActionData_o *)v5;
+  isBgmPause = this->fields.isBgmPause;
+  v6 = (BattlePlayMovieActionData_o *)sub_1D0F300(BattlePlayMovieActionData_TypeInfo);
+  BattlePlayMovieActionData___ctor(v6, movieName, isBgmPause, 0);
+  return (BattleActionData_o *)v6;
 }

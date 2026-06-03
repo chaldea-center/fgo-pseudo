@@ -13,16 +13,16 @@ BuffList_ACTION_array *CreateOtherTreasureDevicePreBeforeSkillTask__get_TargetAc
   BuffList_ACTION_array *result; // x0
   __int64 v3; // x1
 
-  if ( (byte_4E07ADE & 1) == 0 )
+  if ( (byte_4E7A7BE & 1) == 0 )
   {
-    sub_1CE6700(&BuffList_ACTION___TypeInfo);
-    byte_4E07ADE = 1;
+    sub_1D0F0B4(&BuffList_ACTION___TypeInfo);
+    byte_4E7A7BE = 1;
   }
-  result = (BuffList_ACTION_array *)sub_1CE67A8(BuffList_ACTION___TypeInfo, 1);
+  result = (BuffList_ACTION_array *)sub_1D0F15C(BuffList_ACTION___TypeInfo, 1);
   if ( !result )
-    sub_1CE6958(0, v3);
+    sub_1D0F30C(0, v3);
   if ( !LODWORD(result->max_length) )
-    sub_1CE6960(result);
+    sub_1D0F314(result);
   result->m_Items[0] = 166;
   return result;
 }

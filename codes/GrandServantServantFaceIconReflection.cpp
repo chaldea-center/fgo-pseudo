@@ -20,12 +20,12 @@ void GrandServantServantFaceIconReflection__ApplyNGUIPanelHorizontal(
   float x; // s8
   float v11; // s9
 
-  if ( (byte_4DFF4F0 & 1) == 0 )
+  if ( (byte_4E720E9 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_16456/*"_PanelWidth"*/);
-    sub_1CE6700(&StringLiteral_16454/*"_PanelSoftnessX"*/);
-    byte_4DFF4F0 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16522/*"_PanelWidth"*/);
+    sub_1D0F0B4(&StringLiteral_16520/*"_PanelSoftnessX"*/);
+    byte_4E720E9 = 1;
   }
   panel = (UnityEngine_Object_o *)this->fields.panel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -43,13 +43,13 @@ void GrandServantServantFaceIconReflection__ApplyNGUIPanelHorizontal(
       || (height = this->fields.reflectionMaterial) == 0
       || (x = v9->fields.mClipSoftness.fields.x,
           v11 = fmaxf((float)((float)width / (float)v7) / 1.7778, 1.0) * 1024.0,
-          UnityEngine_Material__SetFloat(height, (System_String_o *)StringLiteral_16456/*"_PanelWidth"*/, v8 / v11, 0),
+          UnityEngine_Material__SetFloat(height, (System_String_o *)StringLiteral_16522/*"_PanelWidth"*/, v8 / v11, 0),
           (height = this->fields.reflectionMaterial) == 0) )
     {
 LABEL_11:
-      sub_1CE6958(height, v6);
+      sub_1D0F30C(height, v6);
     }
-    UnityEngine_Material__SetFloat(height, (System_String_o *)StringLiteral_16454/*"_PanelSoftnessX"*/, (float)(x / v11) * 4.0, 0);
+    UnityEngine_Material__SetFloat(height, (System_String_o *)StringLiteral_16520/*"_PanelSoftnessX"*/, (float)(x / v11) * 4.0, 0);
   }
 }
 
@@ -63,10 +63,10 @@ void GrandServantServantFaceIconReflection__CleanUp(
   struct UnityEngine_Material_o *reflectionMaterial; // t1
   UnityEngine_Object_o *v6; // x20
 
-  if ( (byte_4DFF4F1 & 1) == 0 )
+  if ( (byte_4E720EA & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFF4F1 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E720EA = 1;
   }
   reflectionMaterial = this->fields.reflectionMaterial;
   p_reflectionMaterial = &this->fields.reflectionMaterial;
@@ -78,9 +78,9 @@ void GrandServantServantFaceIconReflection__CleanUp(
     v6 = (UnityEngine_Object_o *)*p_reflectionMaterial;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540(v6, 0);
+    UnityEngine_Object__Destroy_73359484(v6, 0);
     *p_reflectionMaterial = 0;
-    sub_1CE66A4(p_reflectionMaterial, 0);
+    sub_1D0F058(p_reflectionMaterial, 0);
   }
 }
 
@@ -95,11 +95,11 @@ void GrandServantServantFaceIconReflection__InstantiateReflectionMaterial(
   __int64 v6; // x1
   UnityEngine_Object_o *v7; // x0
 
-  if ( (byte_4DFF4EE & 1) == 0 )
+  if ( (byte_4E720E7 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Material_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFF4EE = 1;
+    sub_1D0F0B4(&UnityEngine_Material_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E720E7 = 1;
   }
   reflectionMaterial = (UnityEngine_Object_o *)this->fields.reflectionMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -107,13 +107,13 @@ void GrandServantServantFaceIconReflection__InstantiateReflectionMaterial(
   if ( UnityEngine_Object__op_Equality(reflectionMaterial, 0, 0) )
   {
     reflectionShader = this->fields.reflectionShader;
-    v5 = (UnityEngine_Material_o *)sub_1CE694C(UnityEngine_Material_TypeInfo);
+    v5 = (UnityEngine_Material_o *)sub_1D0F300(UnityEngine_Material_TypeInfo);
     UnityEngine_Material___ctor(v5, reflectionShader, 0);
     this->fields.reflectionMaterial = v5;
-    sub_1CE66A4(&this->fields.reflectionMaterial, v5);
+    sub_1D0F058(&this->fields.reflectionMaterial, v5);
     v7 = (UnityEngine_Object_o *)this->fields.reflectionMaterial;
     if ( !v7 )
-      sub_1CE6958(0, v6);
+      sub_1D0F30C(0, v6);
     UnityEngine_Object__set_hideFlags(v7, 61, 0);
   }
 }
@@ -137,23 +137,23 @@ void GrandServantServantFaceIconReflection__OnEnable(
   const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
 
-  if ( (byte_4DFF4ED & 1) == 0 )
+  if ( (byte_4E720E6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponentInParent_UIPanel____79927768);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
-    byte_4DFF4ED = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentInParent_UIPanel____80392616);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+    byte_4E720E6 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
   this->fields.meshRenderer = (struct UnityEngine_MeshRenderer_o *)Component_object;
-  sub_1CE66A4(&this->fields.meshRenderer, Component_object);
+  sub_1D0F058(&this->fields.meshRenderer, Component_object);
   ComponentInParent_object = UnityEngine_Component__GetComponentInParent_object_(
                                (UnityEngine_Component_o *)this,
                                1,
-                               (const MethodInfo_31FB454 *)Method_UnityEngine_Component_GetComponentInParent_UIPanel____79927768);
+                               (const MethodInfo_3246264 *)Method_UnityEngine_Component_GetComponentInParent_UIPanel____80392616);
   this->fields.panel = (struct UIPanel_o *)ComponentInParent_object;
-  sub_1CE66A4(&this->fields.panel, ComponentInParent_object);
+  sub_1D0F058(&this->fields.panel, ComponentInParent_object);
   GrandServantServantFaceIconReflection__InstantiateReflectionMaterial(this, v5);
   GrandServantServantFaceIconReflection__SetupReflectionMaterial(this, v6);
 }
@@ -208,21 +208,21 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
   UnityEngine_Vector4_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4DFF4EF & 1) == 0 )
+  if ( (byte_4E720E8 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_16284/*"_BackSprite_Mask"*/);
-    sub_1CE6700(&StringLiteral_16282/*"_BackSpriteRect"*/);
-    sub_1CE6700(&StringLiteral_16359/*"_FaceSpriteTexSize"*/);
-    sub_1CE6700(&StringLiteral_16358/*"_FaceSpriteRect"*/);
-    sub_1CE6700(&StringLiteral_16280/*"_BackSprite"*/);
-    sub_1CE6700(&StringLiteral_16281/*"_BackSpriteNGUISize"*/);
-    sub_1CE6700(&StringLiteral_16283/*"_BackSpriteTexSize"*/);
-    sub_1CE6700(&StringLiteral_16428/*"_MySize"*/);
-    sub_1CE6700(&StringLiteral_16421/*"_MaskTex"*/);
-    sub_1CE6700(&StringLiteral_16357/*"_FaceSpriteNGUISize"*/);
-    sub_1CE6700(&StringLiteral_16356/*"_FaceSprite"*/);
-    byte_4DFF4EF = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16340/*"_BackSprite_Mask"*/);
+    sub_1D0F0B4(&StringLiteral_16338/*"_BackSpriteRect"*/);
+    sub_1D0F0B4(&StringLiteral_16424/*"_FaceSpriteTexSize"*/);
+    sub_1D0F0B4(&StringLiteral_16423/*"_FaceSpriteRect"*/);
+    sub_1D0F0B4(&StringLiteral_16336/*"_BackSprite"*/);
+    sub_1D0F0B4(&StringLiteral_16337/*"_BackSpriteNGUISize"*/);
+    sub_1D0F0B4(&StringLiteral_16339/*"_BackSpriteTexSize"*/);
+    sub_1D0F0B4(&StringLiteral_16494/*"_MySize"*/);
+    sub_1D0F0B4(&StringLiteral_16486/*"_MaskTex"*/);
+    sub_1D0F0B4(&StringLiteral_16422/*"_FaceSpriteNGUISize"*/);
+    sub_1D0F0B4(&StringLiteral_16421/*"_FaceSprite"*/);
+    byte_4E720E8 = 1;
   }
   reflectionMaterial = (UnityEngine_Object_o *)this->fields.reflectionMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -285,7 +285,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
         goto LABEL_37;
       transform = UnityEngine_Material__GetTexture(
                     (UnityEngine_Material_o *)transform,
-                    (System_String_o *)StringLiteral_16421/*"_MaskTex"*/,
+                    (System_String_o *)StringLiteral_16486/*"_MaskTex"*/,
                     0);
       faceSprite = this->fields.faceSprite;
       if ( !faceSprite )
@@ -298,13 +298,13 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       if ( !this->fields.reflectionMaterial )
         goto LABEL_37;
       v26 = (UnityEngine_Texture_o *)transform;
-      UnityEngine_Material__SetTexture(this->fields.reflectionMaterial, (System_String_o *)StringLiteral_16280/*"_BackSprite"*/, v23, 0);
+      UnityEngine_Material__SetTexture(this->fields.reflectionMaterial, (System_String_o *)StringLiteral_16336/*"_BackSprite"*/, v23, 0);
       transform = &this->fields.reflectionMaterial->klass;
       if ( !transform )
         goto LABEL_37;
       UnityEngine_Material__SetTexture(
         (UnityEngine_Material_o *)transform,
-        (System_String_o *)StringLiteral_16284/*"_BackSprite_Mask"*/,
+        (System_String_o *)StringLiteral_16340/*"_BackSprite_Mask"*/,
         v25,
         0);
       transform = &this->fields.reflectionMaterial->klass;
@@ -312,7 +312,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
         goto LABEL_37;
       UnityEngine_Material__SetTexture(
         (UnityEngine_Material_o *)transform,
-        (System_String_o *)StringLiteral_16356/*"_FaceSprite"*/,
+        (System_String_o *)StringLiteral_16421/*"_FaceSprite"*/,
         v26,
         0);
       v27 = this->fields.reflectionMaterial;
@@ -325,7 +325,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       v28 = 0;
       UnityEngine_Material__SetVector(
         v27,
-        (System_String_o *)StringLiteral_16428/*"_MySize"*/,
+        (System_String_o *)StringLiteral_16494/*"_MySize"*/,
         *(UnityEngine_Vector4_o *)&localScale.fields.x,
         0);
       transform = &this->fields.reflectionMaterial->klass;
@@ -337,7 +337,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       v45.fields.w = (float)v17;
       UnityEngine_Material__SetVector(
         (UnityEngine_Material_o *)transform,
-        (System_String_o *)StringLiteral_16282/*"_BackSpriteRect"*/,
+        (System_String_o *)StringLiteral_16338/*"_BackSpriteRect"*/,
         v45,
         0);
       transform = &this->fields.reflectionMaterial->klass;
@@ -349,7 +349,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       v46.fields.w = (float)v21;
       UnityEngine_Material__SetVector(
         (UnityEngine_Material_o *)transform,
-        (System_String_o *)StringLiteral_16358/*"_FaceSpriteRect"*/,
+        (System_String_o *)StringLiteral_16423/*"_FaceSpriteRect"*/,
         v46,
         0);
       if ( !v23 )
@@ -367,7 +367,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       v47.fields.x = (float)v30;
       v47.fields.z = 0.0;
       v47.fields.w = 0.0;
-      UnityEngine_Material__SetVector(v29, (System_String_o *)StringLiteral_16283/*"_BackSpriteTexSize"*/, v47, 0);
+      UnityEngine_Material__SetVector(v29, (System_String_o *)StringLiteral_16339/*"_BackSpriteTexSize"*/, v47, 0);
       if ( !v26 )
         goto LABEL_37;
       v31 = this->fields.reflectionMaterial;
@@ -383,7 +383,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
       v48.fields.x = (float)v32;
       v48.fields.z = 0.0;
       v48.fields.w = 0.0;
-      UnityEngine_Material__SetVector(v31, (System_String_o *)StringLiteral_16359/*"_FaceSpriteTexSize"*/, v48, 0);
+      UnityEngine_Material__SetVector(v31, (System_String_o *)StringLiteral_16424/*"_FaceSpriteTexSize"*/, v48, 0);
       transform = &this->fields.backSprite->klass;
       if ( !transform )
         goto LABEL_37;
@@ -395,7 +395,7 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
         goto LABEL_37;
       v36 = 0;
       v37 = 0;
-      UnityEngine_Material__SetVector(v33, (System_String_o *)StringLiteral_16281/*"_BackSpriteNGUISize"*/, *(UnityEngine_Vector4_o *)&v34, 0);
+      UnityEngine_Material__SetVector(v33, (System_String_o *)StringLiteral_16337/*"_BackSpriteNGUISize"*/, *(UnityEngine_Vector4_o *)&v34, 0);
       transform = &this->fields.faceSprite->klass;
       if ( !transform
         || (v38 = this->fields.reflectionMaterial,
@@ -407,14 +407,14 @@ void GrandServantServantFaceIconReflection__SetupReflectionMaterial(
             v42 = 0,
             UnityEngine_Material__SetVector(
               v38,
-              (System_String_o *)StringLiteral_16357/*"_FaceSpriteNGUISize"*/,
+              (System_String_o *)StringLiteral_16422/*"_FaceSpriteNGUISize"*/,
               *(UnityEngine_Vector4_o *)&v39,
               0),
             GrandServantServantFaceIconReflection__ApplyNGUIPanelHorizontal(this, v43),
             (transform = &this->fields.meshRenderer->klass) == 0) )
       {
 LABEL_37:
-        sub_1CE6958(transform, v6);
+        sub_1D0F30C(transform, v6);
       }
       UnityEngine_Renderer__set_sharedMaterial((UnityEngine_Renderer_o *)transform, this->fields.reflectionMaterial, 0);
     }

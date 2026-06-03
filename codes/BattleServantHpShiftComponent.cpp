@@ -75,13 +75,13 @@ void BattleServantHpShiftComponent__AlignShiftIcons(BattleServantHpShiftComponen
   __int64 v67; // x0
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E08205 & 1) == 0 )
+  if ( (byte_4E7AF38 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&BattleServantHpShiftComponent_ShiftIconData_TypeInfo);
-    byte_4E08205 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&BattleServantHpShiftComponent_ShiftIconData_TypeInfo);
+    byte_4E7AF38 = 1;
   }
   svtData = (__int64)this->fields.svtData;
   if ( !svtData )
@@ -108,7 +108,7 @@ void BattleServantHpShiftComponent__AlignShiftIcons(BattleServantHpShiftComponen
         (allIconDataList = this->fields.allIconDataList) == 0) )
   {
 LABEL_70:
-    sub_1CE6958(svtData, method);
+    sub_1D0F30C(svtData, method);
   }
   v9 = 0;
   v10 = -(int)svtData;
@@ -127,12 +127,12 @@ LABEL_70:
       v13 = *(UnityEngine_GameObject_o **)((char *)&this->klass + v12);
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v13, transform, 0, 0);
-      v16 = sub_1CE694C(BattleServantHpShiftComponent_ShiftIconData_TypeInfo);
-      BattleServantHpShiftComponent_ShiftIconData___ctor((BattleServantHpShiftComponent_ShiftIconData_o *)v16, 0);
+      v16 = sub_1D0F300(BattleServantHpShiftComponent_ShiftIconData_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v16, 0);
       if ( !v16 )
         goto LABEL_70;
       *(_QWORD *)(v16 + 32) = Object;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v16 + 32), (int32_t)Object, v17, v18, v19, v20, v21, v22);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v16 + 32), (int32_t)Object, v17, v18, v19, v20, v21, v22);
       v23 = v10 + v9;
       if ( v9 >= v5 )
       {
@@ -149,17 +149,17 @@ LABEL_70:
       v25 = this->fields.allIconDataList;
       if ( !v25 )
         goto LABEL_70;
-      svtData = sub_1CE683C(v16, v25->obj.klass->_1.element_class);
+      svtData = sub_1D0F1F0(v16, v25->obj.klass->_1.element_class);
       if ( !svtData )
       {
-        v67 = sub_1CE697C(0);
-        sub_1CE6828(v67, 0);
+        v67 = sub_1D0F330(0);
+        sub_1D0F1DC(v67, 0);
       }
       if ( (unsigned int)v9 >= LODWORD(v25->max_length) )
         goto LABEL_72;
       v32 = &v25->obj.klass + v9;
       v32[4] = (Il2CppClass *)v16;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v32 + 4), v16, v26, v27, v28, v29, v30, v31);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v32 + 4), v16, v26, v27, v28, v29, v30, v31);
       allIconDataList = this->fields.allIconDataList;
       if ( !allIconDataList )
         goto LABEL_70;
@@ -188,7 +188,7 @@ LABEL_70:
         goto LABEL_70;
       Component_object = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                          (UnityEngine_GameObject_o *)svtData,
-                                         (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( v9 >= v5 )
       {
         ShiftEffectIndex = BattleServantHpShiftComponent__GetShiftEffectIndex(this, v9, v37);
@@ -273,7 +273,7 @@ LABEL_70:
           goto LABEL_70;
         if ( (unsigned int)v9 >= LODWORD(v61->max_length) )
 LABEL_72:
-          sub_1CE6960(svtData);
+          sub_1D0F314(svtData);
         v62 = v61->m_Items[v9];
         if ( !v62 )
           goto LABEL_70;
@@ -292,14 +292,14 @@ LABEL_72:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)svtData,
             (Il2CppObject *)method,
-            *(const MethodInfo_3905F68 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
+            *(const MethodInfo_395C410 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
         }
         else
         {
           v66 = v63 + 8 * v65;
           *(_DWORD *)(svtData + 24) = v65 + 1;
           *(_QWORD *)(v66 + 32) = method;
-          sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v66 + 32), (int32_t)method, v55, v56, v57, v58, v59, v60);
+          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v66 + 32), (int32_t)method, v55, v56, v57, v58, v59, v60);
         }
       }
     }
@@ -320,7 +320,7 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
   System_String_o *ASSET_BATTLE_COMMON; // x21
   AssetData_o *AssetStorage; // x0
   __int64 v8; // x1
-  Il2CppObject *Object_object__52317288; // x21
+  Il2CppObject *Object_object__52624444; // x21
   float v10; // s8
   UnityEngine_Transform_o *parent; // x0
   UnityEngine_Object_o *Object; // x21
@@ -332,16 +332,16 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4E0820E & 1) == 0 )
+  if ( (byte_4E7AF41 & 1) == 0 )
   {
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BattleServantHpShiftDecagramEffectComponent___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_20307/*"hp_crystaleffect_superboss_1_1"*/);
-    sub_1CE6700(&StringLiteral_20306/*"hp_crystaleffect_1_1"*/);
-    byte_4E0820E = 1;
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantHpShiftDecagramEffectComponent___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_20395/*"hp_crystaleffect_superboss_1_1"*/);
+    sub_1D0F0B4(&StringLiteral_20394/*"hp_crystaleffect_1_1"*/);
+    byte_4E7AF41 = 1;
   }
   v5 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -355,14 +355,14 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
   AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
   if ( !AssetStorage )
     goto LABEL_24;
-  Object_object__52317288 = AssetData__GetObject_object__52317288(
+  Object_object__52624444 = AssetData__GetObject_object__52624444(
                               AssetStorage,
-                              (System_String_o *)StringLiteral_20306/*"hp_crystaleffect_1_1"*/,
-                              (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                              (System_String_o *)StringLiteral_20394/*"hp_crystaleffect_1_1"*/,
+                              (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = 0.0;
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52317288, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52624444, 0, 0) )
   {
     AssetStorage = (AssetData_o *)this->fields.shiftIconDecagramSprite;
     if ( !AssetStorage )
@@ -373,7 +373,7 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
     parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)AssetStorage, 0);
     Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
                                        (BaseMonoBehaviour_o *)this,
-                                       (UnityEngine_GameObject_o *)Object_object__52317288,
+                                       (UnityEngine_GameObject_o *)Object_object__52624444,
                                        parent,
                                        0,
                                        0);
@@ -386,7 +386,7 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
         goto LABEL_24;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)Object,
-                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BattleServantHpShiftDecagramEffectComponent___);
+                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantHpShiftDecagramEffectComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       AssetStorage = (AssetData_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -395,19 +395,19 @@ float BattleServantHpShiftComponent__CreateDecagramEffect(
         if ( Component_object )
         {
           Component_object[13].klass = (Il2CppClass *)this;
-          sub_1CE66A4((GrandQuestFolderBoardItem_o *)&Component_object[13], (int32_t)this, v14, v15, v16, v17, v18, v19);
+          sub_1D0F058((GrandQuestFolderBoardItem_o *)&Component_object[13], (int32_t)this, v14, v15, v16, v17, v18, v19);
           v10 = *((float *)&Component_object[12].monitor + 1);
           if ( isSuperBoss )
-            CommonEffectComponent__Init_44847588(
+            CommonEffectComponent__Init_45083384(
               (CommonEffectComponent_o *)Component_object,
-              (System_String_o *)StringLiteral_20307/*"hp_crystaleffect_superboss_1_1"*/,
+              (System_String_o *)StringLiteral_20395/*"hp_crystaleffect_superboss_1_1"*/,
               0,
               0,
               0);
           return v10;
         }
 LABEL_24:
-        sub_1CE6958(AssetStorage, v8);
+        sub_1D0F30C(AssetStorage, v8);
       }
     }
   }
@@ -453,35 +453,33 @@ float BattleServantHpShiftComponent__CreateShiftPhaseEffect(
   Il2CppObject *v37; // [xsp+8h] [xbp-58h] BYREF
   Il2CppObject *component; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E0820D & 1) == 0 )
+  if ( (byte_4E7AF40 & 1) == 0 )
   {
-    sub_1CE6700(&Method_ActionExtensions_Call_int___);
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_BattleServantHpShiftComponent___c__DisplayClass43_0__CreateShiftPhaseEffect_b__0__);
-    sub_1CE6700(&BattleServantHpShiftComponent___c__DisplayClass43_0_TypeInfo);
-    byte_4E0820D = 1;
+    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_BattleServantHpShiftComponent___c__DisplayClass43_0__CreateShiftPhaseEffect_b__0__);
+    sub_1D0F0B4(&BattleServantHpShiftComponent___c__DisplayClass43_0_TypeInfo);
+    byte_4E7AF40 = 1;
   }
   component = 0;
   v37 = 0;
-  v7 = sub_1CE694C(BattleServantHpShiftComponent___c__DisplayClass43_0_TypeInfo);
-  BattleServantHpShiftComponent___c__DisplayClass43_0___ctor(
-    (BattleServantHpShiftComponent___c__DisplayClass43_0_o *)v7,
-    0);
+  v7 = sub_1D0F300(BattleServantHpShiftComponent___c__DisplayClass43_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_25;
   *(_QWORD *)(v7 + 16) = callBack;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)callBack, v10, v11, v12, v13, v14, v15);
-  v16 = BasicHelper__IndexValue_object__52373088(
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)callBack, v10, v11, v12, v13, v14, v15);
+  v16 = BasicHelper__IndexValue_object__52679792(
           (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
           0,
           0,
-          (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+          (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   AssetNameByPrefixAndIconIndex = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v16, 0, 0);
@@ -507,10 +505,10 @@ float BattleServantHpShiftComponent__CreateShiftPhaseEffect(
                                       v24);
     if ( !v21 )
       goto LABEL_25;
-    AssetNameByPrefixAndIconIndex = AssetData__GetObject_object__52317288(
+    AssetNameByPrefixAndIconIndex = AssetData__GetObject_object__52624444(
                                       v21,
                                       (System_String_o *)AssetNameByPrefixAndIconIndex,
-                                      (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                                      (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
     if ( !v16 )
       goto LABEL_25;
     v25 = (UnityEngine_GameObject_o *)AssetNameByPrefixAndIconIndex;
@@ -527,13 +525,13 @@ float BattleServantHpShiftComponent__CreateShiftPhaseEffect(
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)Object,
              &component,
-             (const MethodInfo_325D0CC *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
+             (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
       {
         AssetNameByPrefixAndIconIndex = component;
         if ( !component )
           goto LABEL_25;
         component[13].klass = (Il2CppClass *)this;
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)((char *)AssetNameByPrefixAndIconIndex + 208),
           (int32_t)this,
           v28,
@@ -549,16 +547,16 @@ float BattleServantHpShiftComponent__CreateShiftPhaseEffect(
       if ( !UnityEngine_GameObject__TryGetComponent_object_(
               (UnityEngine_GameObject_o *)Object,
               &v37,
-              (const MethodInfo_325D0CC *)Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___) )
+              (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___) )
       {
         ActionExtensions__Call_int_(
           *(System_Action_T__o **)(v7 + 16),
           0,
-          (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
+          (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
         return v17;
       }
       v34 = v37;
-      v35 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+      v35 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
       System_Action___ctor(
         v35,
         (Il2CppObject *)v7,
@@ -574,7 +572,7 @@ float BattleServantHpShiftComponent__CreateShiftPhaseEffect(
         return v17;
       }
 LABEL_25:
-      sub_1CE6958(AssetNameByPrefixAndIconIndex, v9);
+      sub_1D0F30C(AssetNameByPrefixAndIconIndex, v9);
     }
   }
   return v17;
@@ -587,29 +585,23 @@ System_Collections_IEnumerator_o *BattleServantHpShiftComponent__FadeOutShiftIco
         const MethodInfo *method)
 {
   __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4E0820B & 1) == 0 )
+  if ( (byte_4E7AF3E & 1) == 0 )
   {
-    sub_1CE6700(&BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_TypeInfo);
-    byte_4E0820B = 1;
+    sub_1D0F0B4(&BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_TypeInfo);
+    byte_4E7AF3E = 1;
   }
-  v5 = sub_1CE694C(BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_TypeInfo);
-  BattleServantHpShiftComponent__FadeOutShiftIcon_d__41___ctor(
-    (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o *)v5,
-    0,
-    0);
-  if ( !v5 )
-    sub_1CE6958(v6, v7);
+  v5 = sub_1D0F300(BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(float *)(v5 + 40) = duration;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -624,16 +616,16 @@ System_String_o *BattleServantHpShiftComponent__GetBreakShiftIconEffectName(
   System_Nullable_int__o v6; // x3
   System_Nullable_int__o v7; // x4
 
-  if ( (byte_4E081FE & 1) == 0 )
+  if ( (byte_4E7AF31 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20316/*"hp_iconeffect"*/);
-    byte_4E081FE = 1;
+    sub_1D0F0B4(&StringLiteral_20404/*"hp_iconeffect"*/);
+    byte_4E7AF31 = 1;
   }
   v6 = 0;
   v7 = 0;
   return BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconIndex(
            this,
-           (System_String_o *)StringLiteral_20316/*"hp_iconeffect"*/,
+           (System_String_o *)StringLiteral_20404/*"hp_iconeffect"*/,
            index,
            v6,
            v7,
@@ -652,20 +644,20 @@ System_String_o *BattleServantHpShiftComponent__GetEmptyIconSpriteName(
   const MethodInfo *v8; // x5
   System_Nullable_int__o overwriteImageNo; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E081FD & 1) == 0 )
+  if ( (byte_4E7AF30 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Nullable_int___ctor__);
-    sub_1CE6700(&StringLiteral_20313/*"hp_icon"*/);
-    byte_4E081FD = 1;
+    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
+    sub_1D0F0B4(&StringLiteral_20401/*"hp_icon"*/);
+    byte_4E7AF30 = 1;
   }
   p_overwriteImageNo = (System_Nullable_int__o)&overwriteImageNo;
   overwriteImageNo = 0;
-  System_Nullable_int____ctor(p_overwriteImageNo, 0, (const MethodInfo_3A2DE74 *)Method_System_Nullable_int___ctor__);
+  System_Nullable_int____ctor(p_overwriteImageNo, 0, (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
   v6 = overwriteImageNo;
   v7 = 0;
   return BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconIndex(
            this,
-           (System_String_o *)StringLiteral_20313/*"hp_icon"*/,
+           (System_String_o *)StringLiteral_20401/*"hp_icon"*/,
            index,
            v6,
            v7,
@@ -682,16 +674,16 @@ System_String_o *BattleServantHpShiftComponent__GetShiftBeforeEffectName(
   System_Nullable_int__o v6; // x3
   System_Nullable_int__o v7; // x4
 
-  if ( (byte_4E081FF & 1) == 0 )
+  if ( (byte_4E7AF32 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20317/*"hp_iconeffect_before"*/);
-    byte_4E081FF = 1;
+    sub_1D0F0B4(&StringLiteral_20405/*"hp_iconeffect_before"*/);
+    byte_4E7AF32 = 1;
   }
   v6 = 0;
   v7 = 0;
   return BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconIndex(
            this,
-           (System_String_o *)StringLiteral_20317/*"hp_iconeffect_before"*/,
+           (System_String_o *)StringLiteral_20405/*"hp_iconeffect_before"*/,
            index,
            v6,
            v7,
@@ -711,7 +703,7 @@ int32_t BattleServantHpShiftComponent__GetShiftEffectIndex(
 
   allIconDataList = this->fields.allIconDataList;
   if ( !allIconDataList )
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   v4 = 2;
   if ( (int)allIconDataList->max_length >= 1 )
   {
@@ -747,35 +739,33 @@ BattleCommonSettings_ShiftIconAdjustment_o *BattleServantHpShiftComponent__GetSh
   System_Collections_Generic_IEnumerable_TSource__o *shiftIconAdjustmentArray; // x19
   System_Func_object__bool__o *v15; // x20
 
-  if ( (byte_4E08203 & 1) == 0 )
+  if ( (byte_4E7AF36 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_BattleCommonSettings_ShiftIconAdjustment___);
-    sub_1CE6700(&System_Func_BattleCommonSettings_ShiftIconAdjustment__bool__TypeInfo);
-    sub_1CE6700(&Method_BattleServantHpShiftComponent___c__DisplayClass32_0__GetShiftIconAdjustment_b__0__);
-    sub_1CE6700(&BattleServantHpShiftComponent___c__DisplayClass32_0_TypeInfo);
-    byte_4E08203 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_FirstOrDefault_BattleCommonSettings_ShiftIconAdjustment___);
+    sub_1D0F0B4(&System_Func_BattleCommonSettings_ShiftIconAdjustment__bool__TypeInfo);
+    sub_1D0F0B4(&Method_BattleServantHpShiftComponent___c__DisplayClass32_0__GetShiftIconAdjustment_b__0__);
+    sub_1D0F0B4(&BattleServantHpShiftComponent___c__DisplayClass32_0_TypeInfo);
+    byte_4E7AF36 = 1;
   }
-  v5 = sub_1CE694C(BattleServantHpShiftComponent___c__DisplayClass32_0_TypeInfo);
-  BattleServantHpShiftComponent___c__DisplayClass32_0___ctor(
-    (BattleServantHpShiftComponent___c__DisplayClass32_0_o *)v5,
-    0);
+  v5 = sub_1D0F300(BattleServantHpShiftComponent___c__DisplayClass32_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   *(_QWORD *)(v5 + 16) = spriteName;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)spriteName, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)spriteName, v8, v9, v10, v11, v12, v13);
   shiftIconAdjustmentArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.shiftIconAdjustmentArray;
   if ( !shiftIconAdjustmentArray )
     return 0;
-  v15 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_BattleCommonSettings_ShiftIconAdjustment__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_BattleCommonSettings_ShiftIconAdjustment__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v5,
     Method_BattleServantHpShiftComponent___c__DisplayClass32_0__GetShiftIconAdjustment_b__0__,
     0);
-  return (BattleCommonSettings_ShiftIconAdjustment_o *)System_Linq_Enumerable__FirstOrDefault_object__52613440(
+  return (BattleCommonSettings_ShiftIconAdjustment_o *)System_Linq_Enumerable__FirstOrDefault_object__52923832(
                                                          shiftIconAdjustmentArray,
                                                          (System_Func_TSource__bool__o *)v15,
-                                                         (const MethodInfo_322D140 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleCommonSettings_ShiftIconAdjustment___);
+                                                         (const MethodInfo_3278DB8 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleCommonSettings_ShiftIconAdjustment___);
 }
 
 
@@ -786,13 +776,13 @@ System_String_o *BattleServantHpShiftComponent__GetShiftIconName(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4E081FC & 1) == 0 )
+  if ( (byte_4E7AF2F & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20313/*"hp_icon"*/);
-    byte_4E081FC = 1;
+    sub_1D0F0B4(&StringLiteral_20401/*"hp_icon"*/);
+    byte_4E7AF2F = 1;
   }
   return BattleServantHpShiftComponent__MakeImageSuffixAddedStr(
-           (System_String_o *)StringLiteral_20313/*"hp_icon"*/,
+           (System_String_o *)StringLiteral_20401/*"hp_icon"*/,
            inputImageType,
            imageNo,
            v3);
@@ -806,7 +796,7 @@ System_String_o *BattleServantHpShiftComponent__GetShiftPhaseIconSpriteName(
         int32_t inputImageType,
         const MethodInfo *method)
 {
-  BattleServantHpShiftComponent___c__DisplayClass29_0_o *v9; // x23
+  __int64 v9; // x23
   __int64 v10; // x0
   __int64 v11; // x1
   const MethodInfo *v12; // x2
@@ -815,31 +805,31 @@ System_String_o *BattleServantHpShiftComponent__GetShiftPhaseIconSpriteName(
   System_Func_object__bool__o *v15; // x22
   Il2CppObject *v16; // x0
 
-  if ( (byte_4E08200 & 1) == 0 )
+  if ( (byte_4E7AF33 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
-    sub_1CE6700(&System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
-    sub_1CE6700(&Method_BattleServantHpShiftComponent___c__DisplayClass29_0__GetShiftPhaseIconSpriteName_b__0__);
-    sub_1CE6700(&BattleServantHpShiftComponent___c__DisplayClass29_0_TypeInfo);
-    byte_4E08200 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
+    sub_1D0F0B4(&System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
+    sub_1D0F0B4(&Method_BattleServantHpShiftComponent___c__DisplayClass29_0__GetShiftPhaseIconSpriteName_b__0__);
+    sub_1D0F0B4(&BattleServantHpShiftComponent___c__DisplayClass29_0_TypeInfo);
+    byte_4E7AF33 = 1;
   }
-  v9 = (BattleServantHpShiftComponent___c__DisplayClass29_0_o *)sub_1CE694C(BattleServantHpShiftComponent___c__DisplayClass29_0_TypeInfo);
-  BattleServantHpShiftComponent___c__DisplayClass29_0___ctor(v9, 0);
-  if ( !v9 || (v9->fields.index = index, (svtData = this->fields.svtData) == 0) )
-    sub_1CE6958(v10, v11);
+  v9 = sub_1D0F300(BattleServantHpShiftComponent___c__DisplayClass29_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0);
+  if ( !v9 || (*(_DWORD *)(v9 + 16) = index, (svtData = this->fields.svtData) == 0) )
+    sub_1D0F30C(v10, v11);
   OverwriteShiftIconArray_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)svtData->fields._OverwriteShiftIconArray_k__BackingField;
   if ( OverwriteShiftIconArray_k__BackingField )
   {
-    v15 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
+    v15 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v15,
       (Il2CppObject *)v9,
       Method_BattleServantHpShiftComponent___c__DisplayClass29_0__GetShiftPhaseIconSpriteName_b__0__,
       0);
-    v16 = System_Linq_Enumerable__FirstOrDefault_object__52613440(
+    v16 = System_Linq_Enumerable__FirstOrDefault_object__52923832(
             OverwriteShiftIconArray_k__BackingField,
             (System_Func_TSource__bool__o *)v15,
-            (const MethodInfo_322D140 *)Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
+            (const MethodInfo_3278DB8 *)Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
     if ( v16 )
     {
       inputImageType = HIDWORD(v16[1].klass);
@@ -883,15 +873,15 @@ void BattleServantHpShiftComponent__ImportFromBattleCommonSettings(
   GrandQuestFolderBoardItem_c *monitor; // x1
   Il2CppObject *data; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E081FA & 1) == 0 )
+  if ( (byte_4E7AF2D & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_BattleCommonSettings_ShiftIconAdjustment___);
-    sub_1CE6700(&Method_AssetManager_TryGetAssetObject_BattleCommonSettings___);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_3132/*"BattleCommonSettings"*/);
-    byte_4E081FA = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_BattleCommonSettings_ShiftIconAdjustment___);
+    sub_1D0F0B4(&Method_AssetManager_TryGetAssetObject_BattleCommonSettings___);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3139/*"BattleCommonSettings"*/);
+    byte_4E7AF2D = 1;
   }
   data = 0;
   shiftIconAdjustmentArray = this->fields.shiftIconAdjustmentArray;
@@ -902,21 +892,21 @@ void BattleServantHpShiftComponent__ImportFromBattleCommonSettings(
     v13 = *((_QWORD *)Method_System_Array_Empty_BattleCommonSettings_ShiftIconAdjustment___ + 7);
     if ( !v13 )
     {
-      sub_1CBC7E4(Method_System_Array_Empty_BattleCommonSettings_ShiftIconAdjustment___);
+      sub_1CE5198(Method_System_Array_Empty_BattleCommonSettings_ShiftIconAdjustment___);
       v13 = v12[7];
     }
     v14 = *(_QWORD *)(v13 + 16);
     if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-      v14 = sub_1CBC788(inited);
+      v14 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v14 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v14);
     v15 = *(_QWORD *)(v12[7] + 16LL);
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-      v15 = sub_1CBC788(inited);
+      v15 = sub_1CE513C(inited);
     v16 = *(GrandQuestFolderBoardItem_c ***)(v15 + 184);
     v17 = *v16;
     p_shiftIconAdjustmentArray->klass = *v16;
-    sub_1CE66A4(p_shiftIconAdjustmentArray, (int32_t)v17, v2, v3, v4, v5, v6, v7);
+    sub_1D0F058(p_shiftIconAdjustmentArray, (int32_t)v17, v2, v3, v4, v5, v6, v7);
     v18 = BattleDataDefine_TypeInfo;
     if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     {
@@ -929,8 +919,8 @@ void BattleServantHpShiftComponent__ImportFromBattleCommonSettings(
     if ( AssetManager__TryGetAssetObject_object_(
            &data,
            ASSET_BATTLE_COMMON,
-           (System_String_o *)StringLiteral_3132/*"BattleCommonSettings"*/,
-           (const MethodInfo_31E5008 *)Method_AssetManager_TryGetAssetObject_BattleCommonSettings___) )
+           (System_String_o *)StringLiteral_3139/*"BattleCommonSettings"*/,
+           (const MethodInfo_322FFDC *)Method_AssetManager_TryGetAssetObject_BattleCommonSettings___) )
     {
       v20 = data;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -939,12 +929,12 @@ void BattleServantHpShiftComponent__ImportFromBattleCommonSettings(
       if ( !v21 )
       {
         if ( !data )
-          sub_1CE6958(v21, v22);
+          sub_1D0F30C(v21, v22);
         monitor = (GrandQuestFolderBoardItem_c *)data[1].monitor;
         if ( monitor )
         {
           p_shiftIconAdjustmentArray->klass = monitor;
-          sub_1CE66A4(p_shiftIconAdjustmentArray, (int32_t)monitor, v23, v24, v25, v26, v27, v28);
+          sub_1D0F058(p_shiftIconAdjustmentArray, (int32_t)monitor, v23, v24, v25, v26, v27, v28);
         }
       }
     }
@@ -971,11 +961,11 @@ bool BattleServantHpShiftComponent__IsIconActive(
   struct UISprite_o *shiftIconDecagramSprite; // x0
   Il2CppObject *v8; // x19
 
-  if ( (byte_4E0820A & 1) == 0 )
+  if ( (byte_4E7AF3D & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0820A = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF3D = 1;
   }
   decagramNumber = this->fields.decagramNumber;
   if ( decagramNumber <= index )
@@ -986,13 +976,13 @@ bool BattleServantHpShiftComponent__IsIconActive(
     if ( shiftIconDecagramSprite )
       return UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)shiftIconDecagramSprite, 0);
 LABEL_13:
-    sub_1CE6958(shiftIconDecagramSprite, *(_QWORD *)&index);
+    sub_1D0F30C(shiftIconDecagramSprite, *(_QWORD *)&index);
   }
-  v8 = BasicHelper__IndexValue_object__52373088(
+  v8 = BasicHelper__IndexValue_object__52679792(
          (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
          index,
          0,
-         (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+         (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   shiftIconDecagramSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0, 0);
@@ -1020,10 +1010,10 @@ bool BattleServantHpShiftComponent__IsShiftPhaseIconActive(
   BattleServantHpShiftComponent_ShiftIconData_o *v11; // x11
 
   v3 = this;
-  if ( (byte_4E08212 & 1) == 0 )
+  if ( (byte_4E7AF45 & 1) == 0 )
   {
-    this = (BattleServantHpShiftComponent_o *)sub_1CE6700(&Method_System_Array_Empty_BattleServantHpShiftComponent_ShiftIconData___);
-    byte_4E08212 = 1;
+    this = (BattleServantHpShiftComponent_o *)sub_1D0F0B4(&Method_System_Array_Empty_BattleServantHpShiftComponent_ShiftIconData___);
+    byte_4E7AF45 = 1;
   }
   allIconDataList = v3->fields.allIconDataList;
   if ( !allIconDataList )
@@ -1032,20 +1022,20 @@ bool BattleServantHpShiftComponent__IsShiftPhaseIconActive(
     v6 = *((_QWORD *)Method_System_Array_Empty_BattleServantHpShiftComponent_ShiftIconData___ + 7);
     if ( !v6 )
     {
-      sub_1CBC7E4(Method_System_Array_Empty_BattleServantHpShiftComponent_ShiftIconData___);
+      sub_1CE5198(Method_System_Array_Empty_BattleServantHpShiftComponent_ShiftIconData___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1CBC788(inited);
+      v7 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v7 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v7);
     this = *(BattleServantHpShiftComponent_o **)(v5[7] + 16LL);
     if ( (*((_BYTE *)&this[2].fields.decagramNumber + 5) & 1) == 0 )
-      this = (BattleServantHpShiftComponent_o *)sub_1CBC788(inited);
+      this = (BattleServantHpShiftComponent_o *)sub_1CE513C(inited);
     allIconDataList = **(struct BattleServantHpShiftComponent_ShiftIconData_array ***)&this[1].fields.addPos;
     if ( !allIconDataList )
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
   }
   v8 = 0;
   max_length = (unsigned int)allIconDataList->max_length;
@@ -1056,7 +1046,7 @@ bool BattleServantHpShiftComponent__IsShiftPhaseIconActive(
     do
     {
       if ( max_length == v8 )
-        sub_1CE6960(this);
+        sub_1D0F314(this);
       v11 = m_Items[v8];
       if ( v11 && v11->fields.iconType == 1 )
         break;
@@ -1077,7 +1067,7 @@ System_String_o *BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconInde
         const MethodInfo *method)
 {
   unsigned __int64 v8; // x22
-  BattleServantHpShiftComponent___c__DisplayClass30_0_o *v11; // x24
+  __int64 v11; // x24
   __int64 v12; // x0
   __int64 v13; // x1
   const MethodInfo *v14; // x3
@@ -1088,33 +1078,33 @@ System_String_o *BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconInde
   unsigned __int64 v19; // x1
 
   LODWORD(v8) = index;
-  if ( (byte_4E08201 & 1) == 0 )
+  if ( (byte_4E7AF34 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
-    sub_1CE6700(&System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
-    sub_1CE6700(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1CE6700(&Method_System_Nullable_int__get_HasValue__);
-    sub_1CE6700(&Method_BattleServantHpShiftComponent___c__DisplayClass30_0__MakeAssetNameByPrefixAndIconIndex_b__0__);
-    sub_1CE6700(&BattleServantHpShiftComponent___c__DisplayClass30_0_TypeInfo);
-    byte_4E08201 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
+    sub_1D0F0B4(&System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
+    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
+    sub_1D0F0B4(&Method_BattleServantHpShiftComponent___c__DisplayClass30_0__MakeAssetNameByPrefixAndIconIndex_b__0__);
+    sub_1D0F0B4(&BattleServantHpShiftComponent___c__DisplayClass30_0_TypeInfo);
+    byte_4E7AF34 = 1;
   }
-  v11 = (BattleServantHpShiftComponent___c__DisplayClass30_0_o *)sub_1CE694C(BattleServantHpShiftComponent___c__DisplayClass30_0_TypeInfo);
-  BattleServantHpShiftComponent___c__DisplayClass30_0___ctor(v11, 0);
-  if ( !v11 || (v11->fields.index = v8, (svtData = this->fields.svtData) == 0) )
-    sub_1CE6958(v12, v13);
+  v11 = sub_1D0F300(BattleServantHpShiftComponent___c__DisplayClass30_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v11, 0);
+  if ( !v11 || (*(_DWORD *)(v11 + 16) = v8, (svtData = this->fields.svtData) == 0) )
+    sub_1D0F30C(v12, v13);
   OverwriteShiftIconArray_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)svtData->fields._OverwriteShiftIconArray_k__BackingField;
   if ( OverwriteShiftIconArray_k__BackingField )
   {
-    v17 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
+    v17 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_EnemyScriptParam_OverwriteShiftIcon__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v17,
       (Il2CppObject *)v11,
       Method_BattleServantHpShiftComponent___c__DisplayClass30_0__MakeAssetNameByPrefixAndIconIndex_b__0__,
       0);
-    v18 = System_Linq_Enumerable__FirstOrDefault_object__52613440(
+    v18 = System_Linq_Enumerable__FirstOrDefault_object__52923832(
             OverwriteShiftIconArray_k__BackingField,
             (System_Func_TSource__bool__o *)v17,
-            (const MethodInfo_322D140 *)Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
+            (const MethodInfo_3278DB8 *)Method_System_Linq_Enumerable_FirstOrDefault_EnemyScriptParam_OverwriteShiftIcon___);
     if ( overwriteImageNo.fields.hasValue )
     {
       v8 = HIDWORD(*(unsigned __int64 *)&overwriteImageNo);
@@ -1125,7 +1115,7 @@ System_String_o *BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconInde
     }
     else
     {
-      LODWORD(v8) = v11->fields.index;
+      LODWORD(v8) = *(_DWORD *)(v11 + 16);
     }
     goto LABEL_15;
   }
@@ -1166,17 +1156,17 @@ System_String_o *BattleServantHpShiftComponent__MakeImageSuffixAddedStr(
   int32_t v10; // [xsp+8h] [xbp-38h] BYREF
   int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E08202 & 1) == 0 )
+  if ( (byte_4E7AF35 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_25612/*"{0}_{1}_{2}"*/);
-    byte_4E08202 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25722/*"{0}_{1}_{2}"*/);
+    byte_4E7AF35 = 1;
   }
   v11 = inputImageType;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
   v10 = imageNo;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return System_String__Format_65164204((System_String_o *)StringLiteral_25612/*"{0}_{1}_{2}"*/, (Il2CppObject *)prefix, v7, v8, 0);
+  return System_String__Format_65604148((System_String_o *)StringLiteral_25722/*"{0}_{1}_{2}"*/, (Il2CppObject *)prefix, v7, v8, 0);
 }
 
 
@@ -1200,19 +1190,19 @@ float BattleServantHpShiftComponent__PlayShiftEffectBefore(
   const MethodInfo *v17; // x2
   int32_t ShiftEffectIndex; // w0
   const MethodInfo *v19; // x2
-  Il2CppObject *Object_object__52317288; // x21
+  Il2CppObject *Object_object__52624444; // x21
   UnityEngine_Transform_o *transform; // x0
 
   v4 = this;
-  if ( (byte_4E0820F & 1) == 0 )
+  if ( (byte_4E7AF42 & 1) == 0 )
   {
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    this = (BattleServantHpShiftComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0820F = 1;
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    this = (BattleServantHpShiftComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF42 = 1;
   }
   svtData = v4->fields.svtData;
   if ( !svtData )
@@ -1241,7 +1231,7 @@ float BattleServantHpShiftComponent__PlayShiftEffectBefore(
       return BattleServantHpShiftComponent__CreateDecagramEffect(v4, v9, v10);
     }
 LABEL_28:
-    sub_1CE6958(this, statusUi);
+    sub_1D0F30C(this, statusUi);
   }
   currentShiftIconList = (System_Collections_Generic_List_object__o *)v4->fields.currentShiftIconList;
   if ( currentShiftIconList && currentShiftIconList->fields._size > v8 )
@@ -1249,7 +1239,7 @@ LABEL_28:
     Item = System_Collections_Generic_List_object___get_Item(
              currentShiftIconList,
              v8,
-             (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -1271,13 +1261,13 @@ LABEL_28:
                                                   v19);
       if ( !AssetStorage )
         goto LABEL_28;
-      Object_object__52317288 = AssetData__GetObject_object__52317288(
+      Object_object__52624444 = AssetData__GetObject_object__52624444(
                                   AssetStorage,
                                   (System_String_o *)this,
-                                  (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                                  (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52317288, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52624444, 0, 0) )
       {
         this = (BattleServantHpShiftComponent_o *)v4->fields.currentShiftIconList;
         if ( !this )
@@ -1285,13 +1275,13 @@ LABEL_28:
         this = (BattleServantHpShiftComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                     (System_Collections_Generic_List_object__o *)this,
                                                     v8,
-                                                    (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                    (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         if ( !this )
           goto LABEL_28;
         transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
         BaseMonoBehaviour__createObject(
           (BaseMonoBehaviour_o *)v4,
-          (UnityEngine_GameObject_o *)Object_object__52317288,
+          (UnityEngine_GameObject_o *)Object_object__52624444,
           transform,
           0,
           0);
@@ -1347,31 +1337,29 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
   System_Action_o *v46; // x20
   Il2CppObject *component; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E08211 & 1) == 0 )
+  if ( (byte_4E7AF44 & 1) == 0 )
   {
-    sub_1CE6700(&Method_ActionExtensions_Call_int___);
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_BattleServantHpShiftComponent___c__DisplayClass47_0__PlayShiftEffectGeneral_b__0__);
-    sub_1CE6700(&BattleServantHpShiftComponent___c__DisplayClass47_0_TypeInfo);
-    sub_1CE6700(&StringLiteral_20309/*"hp_feathereffect"*/);
-    sub_1CE6700(&StringLiteral_20317/*"hp_iconeffect_before"*/);
-    byte_4E08211 = 1;
+    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_BattleServantHpShiftComponent___c__DisplayClass47_0__PlayShiftEffectGeneral_b__0__);
+    sub_1D0F0B4(&BattleServantHpShiftComponent___c__DisplayClass47_0_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_20397/*"hp_feathereffect"*/);
+    sub_1D0F0B4(&StringLiteral_20405/*"hp_iconeffect_before"*/);
+    byte_4E7AF44 = 1;
   }
   component = 0;
-  v13 = sub_1CE694C(BattleServantHpShiftComponent___c__DisplayClass47_0_TypeInfo);
-  BattleServantHpShiftComponent___c__DisplayClass47_0___ctor(
-    (BattleServantHpShiftComponent___c__DisplayClass47_0_o *)v13,
-    0);
+  v13 = sub_1D0F300(BattleServantHpShiftComponent___c__DisplayClass47_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_41;
   *(_QWORD *)(v13 + 16) = callBack;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v13 + 16), (int32_t)callBack, v16, v17, v18, v19, v20, v21);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v13 + 16), (int32_t)callBack, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v13 + 24) = index;
   *nextAnimationTime = 0.0;
   if ( this->fields.decagramNumber - 1 == index )
@@ -1380,7 +1368,7 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
       goto LABEL_41;
     AssetNameByPrefixAndIconIndex = (void *)System_String__op_Equality(
                                               effectData->fields.prefixEffect,
-                                              (System_String_o *)StringLiteral_20317/*"hp_iconeffect_before"*/,
+                                              (System_String_o *)StringLiteral_20405/*"hp_iconeffect_before"*/,
                                               0);
     if ( ((unsigned __int8)AssetNameByPrefixAndIconIndex & 1) != 0 )
     {
@@ -1399,17 +1387,17 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
   {
     goto LABEL_41;
   }
-  if ( System_String__op_Equality(effectData->fields.prefixEffect, (System_String_o *)StringLiteral_20309/*"hp_feathereffect"*/, 0) )
+  if ( System_String__op_Equality(effectData->fields.prefixEffect, (System_String_o *)StringLiteral_20397/*"hp_feathereffect"*/, 0) )
     *nextAnimationTime = BattleServantHpShiftComponent__CreateShiftPhaseEffect(
                            this,
                            effectData,
                            *(System_Action_int__o **)(v13 + 16),
                            v24);
-  v25 = BasicHelper__IndexValue_object__52373088(
+  v25 = BasicHelper__IndexValue_object__52679792(
           (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
           *(_DWORD *)(v13 + 24),
           0,
-          (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+          (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v25, 0, 0) )
@@ -1417,7 +1405,7 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
     ActionExtensions__Call_int_(
       *(System_Action_T__o **)(v13 + 16),
       *(_DWORD *)(v13 + 24),
-      (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
+      (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
     return 0;
   }
   else
@@ -1440,10 +1428,10 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
                                       v35);
     if ( !v30 )
       goto LABEL_41;
-    AssetNameByPrefixAndIconIndex = AssetData__GetObject_object__52317288(
+    AssetNameByPrefixAndIconIndex = AssetData__GetObject_object__52624444(
                                       v30,
                                       (System_String_o *)AssetNameByPrefixAndIconIndex,
-                                      (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                                      (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
     if ( !v25 )
       goto LABEL_41;
     v36 = (UnityEngine_GameObject_o *)AssetNameByPrefixAndIconIndex;
@@ -1459,13 +1447,13 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)Object,
              &component,
-             (const MethodInfo_325D0CC *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
+             (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
       {
         AssetNameByPrefixAndIconIndex = component;
         if ( !component )
           goto LABEL_41;
         component[13].klass = (Il2CppClass *)this;
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)((char *)AssetNameByPrefixAndIconIndex + 208),
           (int32_t)this,
           v39,
@@ -1489,7 +1477,7 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
         goto LABEL_41;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)Object,
-                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1498,10 +1486,10 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
       ActionExtensions__Call_int_(
         *(System_Action_T__o **)(v13 + 16),
         *(_DWORD *)(v13 + 24),
-        (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
+        (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
       return 1;
     }
-    v46 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v46 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(
       v46,
       (Il2CppObject *)v13,
@@ -1509,7 +1497,7 @@ bool BattleServantHpShiftComponent__PlayShiftEffectGeneral(
       0);
     if ( !Component_object )
 LABEL_41:
-      sub_1CE6958(AssetNameByPrefixAndIconIndex, v15);
+      sub_1D0F30C(AssetNameByPrefixAndIconIndex, v15);
     v26 = 1;
     ((void (__fastcall *)(Il2CppObject *, __int64, System_Action_o *, const MethodInfo *))Component_object->klass->vtable[8].methodPtr)(
       Component_object,
@@ -1533,14 +1521,14 @@ void BattleServantHpShiftComponent__UpdateHideInvalidIcon(
   Il2CppObject *Component_object; // x0
   __int64 v10; // x1
 
-  if ( (byte_4E08207 & 1) == 0 )
+  if ( (byte_4E7AF3A & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E08207 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7AF3A = 1;
   }
   currentShiftIconList = (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList;
   if ( currentShiftIconList )
@@ -1552,11 +1540,11 @@ void BattleServantHpShiftComponent__UpdateHideInvalidIcon(
     v7 = size - 2;
     while ( 1 )
     {
-      v8 = BasicHelper__IndexValue_object__52373088(
+      v8 = BasicHelper__IndexValue_object__52679792(
              currentShiftIconList,
              dispMaxPos + 1,
              0,
-             (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+             (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Component_object = (Il2CppObject *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0, 0);
@@ -1565,9 +1553,9 @@ void BattleServantHpShiftComponent__UpdateHideInvalidIcon(
         if ( !v8
           || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)v8,
-                                   (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___)) == 0 )
+                                   (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___)) == 0 )
         {
-          sub_1CE6958(Component_object, v10);
+          sub_1D0F30C(Component_object, v10);
         }
         UISprite__set_spriteName((UISprite_o *)Component_object, (System_String_o *)StringLiteral_1/*""*/, 0);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, 0, 0);
@@ -1597,12 +1585,12 @@ void BattleServantHpShiftComponent__UpdateIcon(
   Il2CppObject *Component_object; // x22
   const MethodInfo *v15; // x2
 
-  if ( (byte_4E08208 & 1) == 0 )
+  if ( (byte_4E7AF3B & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08208 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF3B = 1;
   }
   decagramNumber = this->fields.decagramNumber;
   if ( decagramNumber > index )
@@ -1616,13 +1604,13 @@ void BattleServantHpShiftComponent__UpdateIcon(
         return;
       }
 LABEL_17:
-      sub_1CE6958(shiftIconDecagramSprite, *(_QWORD *)&index);
+      sub_1D0F30C(shiftIconDecagramSprite, *(_QWORD *)&index);
     }
-    v11 = BasicHelper__IndexValue_object__52373088(
+    v11 = BasicHelper__IndexValue_object__52679792(
             (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
             index,
             0,
-            (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+            (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     shiftIconDecagramSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(
@@ -1647,7 +1635,7 @@ LABEL_17:
         goto LABEL_17;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v11,
-                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       shiftIconDecagramSprite = (UnityEngine_Behaviour_o *)BattleServantHpShiftComponent__getSpriteName(this, v13, v15);
       if ( !Component_object )
         goto LABEL_17;
@@ -1669,11 +1657,11 @@ void BattleServantHpShiftComponent__UpdateIconActive(
   struct UISprite_o *shiftIconDecagramSprite; // x0
   Il2CppObject *v9; // x20
 
-  if ( (byte_4E08209 & 1) == 0 )
+  if ( (byte_4E7AF3C & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08209 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF3C = 1;
   }
   decagramNumber = this->fields.decagramNumber;
   if ( decagramNumber > index )
@@ -1687,13 +1675,13 @@ void BattleServantHpShiftComponent__UpdateIconActive(
         return;
       }
 LABEL_13:
-      sub_1CE6958(shiftIconDecagramSprite, *(_QWORD *)&index);
+      sub_1D0F30C(shiftIconDecagramSprite, *(_QWORD *)&index);
     }
-    v9 = BasicHelper__IndexValue_object__52373088(
+    v9 = BasicHelper__IndexValue_object__52679792(
            (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
            index,
            0,
-           (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+           (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     shiftIconDecagramSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0, 0);
@@ -1719,12 +1707,12 @@ void BattleServantHpShiftComponent__UpdateIconEnabled(
   Il2CppObject *v9; // x20
   Il2CppObject *component; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E0820C & 1) == 0 )
+  if ( (byte_4E7AF3F & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_GameObject___);
-    sub_1CE6700(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0820C = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_GameObject___);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF3F = 1;
   }
   component = 0;
   decagramNumber = this->fields.decagramNumber;
@@ -1740,13 +1728,13 @@ LABEL_6:
         return;
       }
 LABEL_13:
-      sub_1CE6958(shiftIconDecagramSprite, *(_QWORD *)&index);
+      sub_1D0F30C(shiftIconDecagramSprite, *(_QWORD *)&index);
     }
-    v9 = BasicHelper__IndexValue_object__52373088(
+    v9 = BasicHelper__IndexValue_object__52679792(
            (System_Collections_Generic_List_T__o *)this->fields.currentShiftIconList,
            index,
            0,
-           (const MethodInfo_31F2660 *)Method_BasicHelper_IndexValue_GameObject___);
+           (const MethodInfo_323D470 *)Method_BasicHelper_IndexValue_GameObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     shiftIconDecagramSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(
@@ -1760,7 +1748,7 @@ LABEL_13:
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)v9,
              &component,
-             (const MethodInfo_325D0CC *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___) )
+             (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___) )
       {
         shiftIconDecagramSprite = (UnityEngine_Behaviour_o *)component;
         if ( component )
@@ -1825,16 +1813,16 @@ void BattleServantHpShiftComponent__createIconList(
   UIAtlas_o *atlas; // [xsp+8h] [xbp-58h] BYREF
 
   v4 = this;
-  if ( (byte_4E08204 & 1) == 0 )
+  if ( (byte_4E7AF37 & 1) == 0 )
   {
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&BattleServantHpShiftComponent_ShiftIconData___TypeInfo);
-    this = (BattleServantHpShiftComponent_o *)sub_1CE6700(&StringLiteral_3127/*"BattleAssetUIAtlas"*/);
-    byte_4E08204 = 1;
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&BattleServantHpShiftComponent_ShiftIconData___TypeInfo);
+    this = (BattleServantHpShiftComponent_o *)sub_1D0F0B4(&StringLiteral_3134/*"BattleAssetUIAtlas"*/);
+    byte_4E7AF37 = 1;
   }
   atlas = 0;
   if ( !svtData )
@@ -1866,7 +1854,7 @@ void BattleServantHpShiftComponent__createIconList(
       {
         if ( v16 - 4 >= (unsigned __int64)(unsigned int)max_length )
 LABEL_45:
-          sub_1CE6960(this);
+          sub_1D0F314(this);
         v17 = *((_QWORD *)&allIconDataList->obj.klass + v16);
         if ( v17 )
         {
@@ -1887,7 +1875,7 @@ LABEL_45:
             v21 = *(UnityEngine_Object_o **)(v20 + 32);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            UnityEngine_Object__Destroy_72918540(v21, 0);
+            UnityEngine_Object__Destroy_73359484(v21, 0);
           }
         }
         allIconDataList = *p_allIconDataList;
@@ -1900,7 +1888,7 @@ LABEL_45:
       while ( v22 < (int)max_length );
     }
     *p_allIconDataList = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.allIconDataList, 0, v5, v6, v7, v8, v9, v10);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.allIconDataList, 0, v5, v6, v7, v8, v9, v10);
   }
   this = (BattleServantHpShiftComponent_o *)v4->fields.shiftIconDecagramSprite;
   if ( !this )
@@ -1920,7 +1908,7 @@ LABEL_45:
   ASSET_BATTLE_COMMON = v29->static_fields->ASSET_BATTLE_COMMON;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3127/*"BattleAssetUIAtlas"*/, 0) )
+  if ( !AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3134/*"BattleAssetUIAtlas"*/, 0) )
     goto LABEL_39;
   this = (BattleServantHpShiftComponent_o *)v4->fields.shiftIconDecagramSprite;
   if ( !this
@@ -1935,7 +1923,7 @@ LABEL_45:
         (this = (BattleServantHpShiftComponent_o *)v4->fields.shiftIconDecagramSprite) == 0) )
   {
 LABEL_44:
-    sub_1CE6958(this, svtData);
+    sub_1D0F30C(this, svtData);
   }
   ((void (__fastcall *)(BattleServantHpShiftComponent_o *, void *))this->klass[2]._1.parent)(
     this,
@@ -1947,18 +1935,18 @@ LABEL_39:
     v4->fields.shiftDeckPhaseIndex = svtData->fields.shiftDeckPhaseIndex;
     if ( !v33 )
     {
-      v34 = sub_1CE67A8(BattleServantHpShiftComponent_ShiftIconData___TypeInfo, (unsigned int)v11);
+      v34 = sub_1D0F15C(BattleServantHpShiftComponent_ShiftIconData___TypeInfo, (unsigned int)v11);
       *p_allIconDataList = (struct BattleServantHpShiftComponent_ShiftIconData_array *)v34;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.allIconDataList, v34, v35, v36, v37, v38, v39, v40);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.allIconDataList, v34, v35, v36, v37, v38, v39, v40);
     }
     v4->fields.currentShiftIconList = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.currentShiftIconList, 0, v23, v24, v25, v26, v27, v28);
-    v41 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.currentShiftIconList, 0, v23, v24, v25, v26, v27, v28);
+    v41 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v41,
-      (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
     v4->fields.currentShiftIconList = (struct System_Collections_Generic_List_GameObject__o *)v41;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&v4->fields.currentShiftIconList,
       (int32_t)v41,
       v42,
@@ -1981,16 +1969,16 @@ System_String_o *BattleServantHpShiftComponent__getSpriteName(
   System_Nullable_int__o v6; // x3
   System_Nullable_int__o v7; // x4
 
-  if ( (byte_4E081FB & 1) == 0 )
+  if ( (byte_4E7AF2E & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20313/*"hp_icon"*/);
-    byte_4E081FB = 1;
+    sub_1D0F0B4(&StringLiteral_20401/*"hp_icon"*/);
+    byte_4E7AF2E = 1;
   }
   v6 = 0;
   v7 = 0;
   return BattleServantHpShiftComponent__MakeAssetNameByPrefixAndIconIndex(
            this,
-           (System_String_o *)StringLiteral_20313/*"hp_icon"*/,
+           (System_String_o *)StringLiteral_20401/*"hp_icon"*/,
            index,
            v6,
            v7,
@@ -2015,7 +2003,7 @@ void BattleServantHpShiftComponent__playShiftEffect(
   const MethodInfo *v13; // x2
   int32_t ShiftEffectIndex; // w0
   const MethodInfo *v15; // x2
-  Il2CppObject *Object_object__52317288; // x21
+  Il2CppObject *Object_object__52624444; // x21
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *Component_object; // x21
   const MethodInfo *v19; // x2
@@ -2023,16 +2011,16 @@ void BattleServantHpShiftComponent__playShiftEffect(
   const MethodInfo *v21; // x2
 
   v4 = this;
-  if ( (byte_4E08210 & 1) == 0 )
+  if ( (byte_4E7AF43 & 1) == 0 )
   {
-    sub_1CE6700(&Method_AssetData_GetObject_GameObject____79905008);
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    this = (BattleServantHpShiftComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08210 = 1;
+    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    this = (BattleServantHpShiftComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF43 = 1;
   }
   if ( !svtData )
     goto LABEL_29;
@@ -2054,7 +2042,7 @@ void BattleServantHpShiftComponent__playShiftEffect(
     Item = System_Collections_Generic_List_object___get_Item(
              currentShiftIconList,
              v7,
-             (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -2076,13 +2064,13 @@ void BattleServantHpShiftComponent__playShiftEffect(
                                                   v15);
       if ( AssetStorage )
       {
-        Object_object__52317288 = AssetData__GetObject_object__52317288(
+        Object_object__52624444 = AssetData__GetObject_object__52624444(
                                     AssetStorage,
                                     (System_String_o *)this,
-                                    (const MethodInfo_31E4C68 *)Method_AssetData_GetObject_GameObject____79905008);
+                                    (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52317288, 0, 0) )
+        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__52624444, 0, 0) )
         {
           this = (BattleServantHpShiftComponent_o *)v4->fields.currentShiftIconList;
           if ( !this )
@@ -2090,13 +2078,13 @@ void BattleServantHpShiftComponent__playShiftEffect(
           this = (BattleServantHpShiftComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                       (System_Collections_Generic_List_object__o *)this,
                                                       v7,
-                                                      (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                      (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
           if ( !this )
             goto LABEL_29;
           transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
           BaseMonoBehaviour__createObject(
             (BaseMonoBehaviour_o *)v4,
-            (UnityEngine_GameObject_o *)Object_object__52317288,
+            (UnityEngine_GameObject_o *)Object_object__52624444,
             transform,
             0,
             0);
@@ -2107,12 +2095,12 @@ void BattleServantHpShiftComponent__playShiftEffect(
           this = (BattleServantHpShiftComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                       (System_Collections_Generic_List_object__o *)this,
                                                       v7,
-                                                      (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                      (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
           if ( this )
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)this,
-                                 (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
             v20 = BattleServantHpShiftComponent__GetShiftEffectIndex(v4, v7, v19);
             this = (BattleServantHpShiftComponent_o *)BattleServantHpShiftComponent__GetEmptyIconSpriteName(
                                                         v4,
@@ -2127,7 +2115,7 @@ void BattleServantHpShiftComponent__playShiftEffect(
         }
       }
 LABEL_29:
-      sub_1CE6958(this, svtData);
+      sub_1D0F30C(this, svtData);
     }
   }
 }
@@ -2164,18 +2152,18 @@ int32_t BattleServantHpShiftComponent__setInitValue(
   const MethodInfo *v29; // x2
   UIAtlas_o *atlas; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E081F9 & 1) == 0 )
+  if ( (byte_4E7AF2C & 1) == 0 )
   {
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_3127/*"BattleAssetUIAtlas"*/);
-    byte_4E081F9 = 1;
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3134/*"BattleAssetUIAtlas"*/);
+    byte_4E7AF2C = 1;
   }
   atlas = 0;
   this->fields.svtData = svtData;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.svtData,
     (int32_t)svtData,
     isWaitShiftPhaseEffect,
@@ -2190,7 +2178,7 @@ int32_t BattleServantHpShiftComponent__setInitValue(
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        shiftIconClone,
-                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v15 = BattleDataDefine_TypeInfo;
   v16 = (UISprite_o *)Component_object;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -2204,7 +2192,7 @@ int32_t BattleServantHpShiftComponent__setInitValue(
   shiftIconClone = (UnityEngine_GameObject_o *)AssetManager__TryGetUIAtlas(
                                                  &atlas,
                                                  ASSET_BATTLE_COMMON,
-                                                 (System_String_o *)StringLiteral_3127/*"BattleAssetUIAtlas"*/,
+                                                 (System_String_o *)StringLiteral_3134/*"BattleAssetUIAtlas"*/,
                                                  0);
   if ( ((unsigned __int8)shiftIconClone & 1) != 0 )
   {
@@ -2229,7 +2217,7 @@ int32_t BattleServantHpShiftComponent__setInitValue(
       goto LABEL_27;
     v22 = UnityEngine_GameObject__GetComponent_object_(
             shiftIconClone,
-            (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+            (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     v23 = (UnityEngine_Object_o *)atlas;
     v24 = (UISprite_o *)v22;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2251,7 +2239,7 @@ int32_t BattleServantHpShiftComponent__setInitValue(
       goto LABEL_23;
     }
 LABEL_27:
-    sub_1CE6958(shiftIconClone, v12);
+    sub_1D0F30C(shiftIconClone, v12);
   }
 LABEL_23:
   BattleServantHpShiftComponent__createIconList(this, svtData, v21);
@@ -2302,11 +2290,11 @@ void BattleServantHpShiftComponent__setValue(
   BattleServantHpShiftComponent_ShiftIconData_o *v32; // x8
 
   v6 = this;
-  if ( (byte_4E08206 & 1) == 0 )
+  if ( (byte_4E7AF39 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    this = (BattleServantHpShiftComponent_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08206 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    this = (BattleServantHpShiftComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF39 = 1;
   }
   if ( v6->fields.allIconDataList )
   {
@@ -2324,7 +2312,7 @@ void BattleServantHpShiftComponent__setValue(
           (allIconDataList = v6->fields.allIconDataList) == 0) )
     {
 LABEL_42:
-      sub_1CE6958(this, svtData);
+      sub_1D0F30C(this, svtData);
     }
     v12 = !isWaitShiftPhaseEffect;
     v13 = 0;
@@ -2359,7 +2347,7 @@ LABEL_42:
           goto LABEL_42;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)this,
-                             (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (BattleServantHpShiftComponent_o *)UnityEngine_Object__op_Equality(
@@ -2373,7 +2361,7 @@ LABEL_42:
             goto LABEL_42;
           if ( v13 >= LODWORD(v24->max_length) )
 LABEL_44:
-            sub_1CE6960(this);
+            sub_1D0F314(this);
           v25 = v24->m_Items[v13];
           if ( !v25 )
             goto LABEL_42;
@@ -2460,10 +2448,10 @@ void BattleServantHpShiftComponent_EffectData___ctor(
   BattleDataDefine_c *v9; // x0
   struct System_String_o *ASSET_BATTLE_COMMON; // x1
 
-  if ( (byte_4E08214 & 1) == 0 )
+  if ( (byte_4E7AF46 & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    byte_4E08214 = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    byte_4E7AF46 = 1;
   }
   v9 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -2473,7 +2461,7 @@ void BattleServantHpShiftComponent_EffectData___ctor(
   }
   ASSET_BATTLE_COMMON = v9->static_fields->ASSET_BATTLE_COMMON;
   this->fields.prefixAsset = ASSET_BATTLE_COMMON;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)ASSET_BATTLE_COMMON, v2, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)ASSET_BATTLE_COMMON, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -2564,26 +2552,26 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
   UnityEngine_Color_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4E08217 & 1) == 0 )
+  if ( (byte_4E7AF49 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__);
-    sub_1CE6700(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_float__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_UISprite__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_float___ctor__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_UISprite___ctor__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_UISprite__get_Count__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_UISprite__get_Item__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_float__get_Item__);
-    sub_1CE6700(&System_Collections_Generic_List_float__TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_List_UISprite__TypeInfo);
-    this = (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08217 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISprite__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_float___ctor__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISprite___ctor__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISprite__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISprite__get_Item__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__get_Item__);
+    sub_1D0F0B4(&System_Collections_Generic_List_float__TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_List_UISprite__TypeInfo);
+    this = (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AF49 = 1;
   }
   component = 0;
   memset(&v59, 0, sizeof(v59));
@@ -2606,20 +2594,20 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
     {
       return 0;
     }
-    v5 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_UISprite__TypeInfo);
+    v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UISprite__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v5,
-      (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_UISprite___ctor__);
+      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UISprite___ctor__);
     v2->fields._targetSprites_5__2 = (struct System_Collections_Generic_List_UISprite__o *)v5;
     p_targetSprites_5__2 = (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o **)&v2->fields._targetSprites_5__2;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._targetSprites_5__2, (int32_t)v5, v7, v8, v9, v10, v11, v12);
-    v13 = (System_Collections_Generic_List_float__o *)sub_1CE694C(System_Collections_Generic_List_float__TypeInfo);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields._targetSprites_5__2, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+    v13 = (System_Collections_Generic_List_float__o *)sub_1D0F300(System_Collections_Generic_List_float__TypeInfo);
     System_Collections_Generic_List_float____ctor(
       v13,
-      (const MethodInfo_3952460 *)Method_System_Collections_Generic_List_float___ctor__);
+      (const MethodInfo_39A8588 *)Method_System_Collections_Generic_List_float___ctor__);
     v2->fields._startAlphas_5__3 = v13;
     p_startAlphas_5__3 = (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o **)&v2->fields._startAlphas_5__3;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&v2->fields._startAlphas_5__3,
       (int32_t)v13,
       v15,
@@ -2637,7 +2625,7 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)this,
                v21,
-               (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -2648,13 +2636,13 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
         this = (BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_o *)System_Collections_Generic_List_object___get_Item(
                                                                             (System_Collections_Generic_List_object__o *)this,
                                                                             v21,
-                                                                            (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                            (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         if ( !this )
           goto LABEL_48;
         if ( UnityEngine_GameObject__TryGetComponent_object_(
                (UnityEngine_GameObject_o *)this,
                &component,
-               (const MethodInfo_325D0CC *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___) )
+               (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___) )
         {
           if ( v21 )
           {
@@ -2673,14 +2661,14 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)method,
-                *(const MethodInfo_3905F68 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                *(const MethodInfo_395C410 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
             }
             else
             {
               v32 = v29 + 8 * _2__current_low;
               LODWORD(this->fields.__2__current) = _2__current_low + 1;
               *(_QWORD *)(v32 + 32) = method;
-              sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)method, v23, v24, v25, v26, v27, v28);
+              sub_1D0F058((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)method, v23, v24, v25, v26, v27, v28);
             }
             if ( !component )
               goto LABEL_48;
@@ -2699,7 +2687,7 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
               System_Collections_Generic_List_float___AddWithResize(
                 (System_Collections_Generic_List_float__o *)this,
                 v33,
-                *(const MethodInfo_3952CBC **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+                *(const MethodInfo_39A8DE4 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
             }
             else
             {
@@ -2738,10 +2726,10 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v59,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v59,
-              (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
+              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
     {
       current = v59.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2750,7 +2738,7 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
       if ( !v55 )
       {
         if ( !current )
-          sub_1CE6958(v55, v56);
+          sub_1D0F30C(v55, v56);
         v63.fields.r = *((float *)&current[9].klass + 1);
         v63.fields.g = *(float *)&current[9].monitor;
         v63.fields.b = *((float *)&current[9].monitor + 1);
@@ -2760,7 +2748,7 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v59,
-      (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
     return 0;
   }
   deltaTime = UnityEngine_Time__get_deltaTime(0);
@@ -2776,7 +2764,7 @@ bool BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__MoveNext(
     v49 = v48;
   if ( !this )
 LABEL_48:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   v50 = 0;
   v51 = fmaxf(v49, 0.0);
   while ( v50 < SLODWORD(this->fields.__2__current) )
@@ -2784,7 +2772,7 @@ LABEL_48:
     v52 = (UIWidget_o *)System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)this,
                           v50,
-                          (const MethodInfo_3905C98 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                          (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v52, 0, 0) )
@@ -2795,7 +2783,7 @@ LABEL_48:
       v53 = System_Collections_Generic_List_float___get_Item(
               (System_Collections_Generic_List_float__o *)this,
               v50,
-              (const MethodInfo_39529C4 *)Method_System_Collections_Generic_List_float__get_Item__);
+              (const MethodInfo_39A8AEC *)Method_System_Collections_Generic_List_float__get_Item__);
       if ( !v52 )
         goto LABEL_48;
       v62.fields.g = v52->fields.mColor.fields.g;
@@ -2811,7 +2799,7 @@ LABEL_48:
   }
   v2->fields.__2__current = 0;
   p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-  sub_1CE66A4(p__2__current, 0, v38, v39, v40, v41, v42, v43);
+  sub_1D0F058(p__2__current, 0, v38, v39, v40, v41, v42, v43);
   result = 1;
   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return result;
@@ -2834,11 +2822,11 @@ void __noreturn BattleServantHpShiftComponent__FadeOutShiftIcon_d__41__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_BattleServantHpShiftComponent__FadeOutShiftIcon_d__41_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 
@@ -2872,7 +2860,7 @@ bool BattleServantHpShiftComponent___c__DisplayClass29_0___GetShiftPhaseIconSpri
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return x->fields.index == this->fields.index - 1;
 }
 
@@ -2891,7 +2879,7 @@ bool BattleServantHpShiftComponent___c__DisplayClass30_0___MakeAssetNameByPrefix
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return x->fields.index == this->fields.index - 1;
 }
 
@@ -2912,7 +2900,7 @@ bool BattleServantHpShiftComponent___c__DisplayClass32_0___GetShiftIconAdjustmen
   System_String_o *SpriteName; // x0
 
   if ( !x )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   SpriteName = BattleCommonSettings_ShiftIconAdjustment__get_SpriteName(x, 0);
   return System_String__op_Equality(SpriteName, this->fields.spriteName, 0);
 }
@@ -2930,15 +2918,15 @@ void BattleServantHpShiftComponent___c__DisplayClass43_0___CreateShiftPhaseEffec
         BattleServantHpShiftComponent___c__DisplayClass43_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E08215 & 1) == 0 )
+  if ( (byte_4E7AF47 & 1) == 0 )
   {
-    sub_1CE6700(&Method_ActionExtensions_Call_int___);
-    byte_4E08215 = 1;
+    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
+    byte_4E7AF47 = 1;
   }
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.callBack,
     0,
-    (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -2954,13 +2942,13 @@ void BattleServantHpShiftComponent___c__DisplayClass47_0___PlayShiftEffectGenera
         BattleServantHpShiftComponent___c__DisplayClass47_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E08216 & 1) == 0 )
+  if ( (byte_4E7AF48 & 1) == 0 )
   {
-    sub_1CE6700(&Method_ActionExtensions_Call_int___);
-    byte_4E08216 = 1;
+    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
+    byte_4E7AF48 = 1;
   }
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.callBack,
     this->fields.index,
-    (const MethodInfo_3149954 *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
 }

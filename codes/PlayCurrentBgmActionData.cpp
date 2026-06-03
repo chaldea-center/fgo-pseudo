@@ -5,10 +5,10 @@ void PlayCurrentBgmActionData__ExecAction(
 {
   UnityEngine_Object_o *logic; // x19
 
-  if ( (byte_4E07053 & 1) == 0 )
+  if ( (byte_4E7A01A & 1) == 0 )
   {
-    this = (PlayCurrentBgmActionData_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E07053 = 1;
+    this = (PlayCurrentBgmActionData_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7A01A = 1;
   }
   if ( !perf )
     goto LABEL_10;
@@ -24,6 +24,6 @@ void PlayCurrentBgmActionData__ExecAction(
       return;
     }
 LABEL_10:
-    sub_1CE6958(this, perf);
+    sub_1D0F30C(this, perf);
   }
 }

@@ -11,11 +11,11 @@ void UIButtonActivate__OnClick(UIButtonActivate_o *this, const MethodInfo *metho
   UnityEngine_GameObject_o *v4; // x20
   _BOOL4 state; // w19
 
-  if ( (byte_4E0902C & 1) == 0 )
+  if ( (byte_4E7BD5E & 1) == 0 )
   {
-    sub_1CE6700(&NGUITools_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0902C = 1;
+    sub_1D0F0B4(&NGUITools_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BD5E = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

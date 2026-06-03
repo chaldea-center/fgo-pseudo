@@ -8,7 +8,7 @@ void UpdateAllViewActionData__ExecAction(
     || (BattleFieldEnvironmentData__UpdateAllView((BattleFieldEnvironmentData_o *)this, 0),
         (this = (UpdateAllViewActionData_o *)perf->fields.logic) == 0) )
   {
-    sub_1CE6958(this, perf);
+    sub_1D0F30C(this, perf);
   }
   BattleLogic__UpdateConditionBuffPlayerSubMember((BattleLogic_o *)this, 0, 0, 0);
 }

@@ -1,6 +1,11 @@
 void BattleExUiSkillInfoData___ctor(BattleExUiSkillInfoData_o *this, const MethodInfo *method)
 {
-  BattleSkillInfoData___ctor((BattleSkillInfoData_o *)this, 0);
+  this->fields.itemImageId = -1;
+  *(_QWORD *)&this->fields.cutInId = -1;
+  *(_QWORD *)&this->fields.commonReleaseCondId = -1;
+  this->fields._SelectAddIndex_k__BackingField = -1;
+  this->fields.canExecSkill = 1;
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 

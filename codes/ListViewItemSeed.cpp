@@ -21,16 +21,16 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4E06112 & 1) == 0 )
+  if ( (byte_4E78DB9 & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_4E06112 = 1;
+    this = (ListViewItemSeed_o *)sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_4E78DB9 = 1;
   }
   if ( !obj )
     goto LABEL_9;
   this = (ListViewItemSeed_o *)UnityEngine_GameObject__GetComponent_object_(
                                  obj,
-                                 (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !v4->fields.arrangement )
   {
     if ( this )
@@ -42,7 +42,7 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
       goto LABEL_10;
     }
 LABEL_9:
-    sub_1CE6958(this, obj);
+    sub_1D0F30C(this, obj);
   }
   if ( !this )
     goto LABEL_9;
@@ -76,7 +76,7 @@ UnityEngine_Vector3_o ListViewItemSeed__GetLocalPosition(
         Position = ListViewItemSeed__GetPosition(this, index, v7),
         !transform) )
   {
-    sub_1CE6958(parent, *(_QWORD *)&index);
+    sub_1D0F30C(parent, *(_QWORD *)&index);
   }
   return UnityEngine_Transform__InverseTransformPoint(transform, Position, 0);
 }
@@ -117,8 +117,8 @@ UnityEngine_Vector3_o ListViewItemSeed__GetPosition(ListViewItemSeed_o *this, in
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1CE6958(0, v11);
-  return UnityEngine_Transform__TransformPoint_72945320(
+    sub_1D0F30C(0, v11);
+  return UnityEngine_Transform__TransformPoint_73386264(
            transform,
            v6 * this->fields.arrangementPich.fields.x,
            v7 * this->fields.arrangementPich.fields.y,
@@ -143,10 +143,10 @@ void ListViewItemSeed__SetTransform(
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4E06113 & 1) == 0 )
+  if ( (byte_4E78DBA & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1CE6700(&StringLiteral_12922/*"SetBaseTransform"*/);
-    byte_4E06113 = 1;
+    this = (ListViewItemSeed_o *)sub_1D0F0B4(&StringLiteral_12972/*"SetBaseTransform"*/);
+    byte_4E78DBA = 1;
   }
   if ( !obj )
     goto LABEL_10;
@@ -165,8 +165,8 @@ void ListViewItemSeed__SetTransform(
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0), !v10) )
   {
 LABEL_10:
-    sub_1CE6958(this, obj);
+    sub_1D0F30C(this, obj);
   }
   UnityEngine_Transform__set_localScale(v10, localScale, 0);
-  UnityEngine_GameObject__SendMessage_72899908(obj, (System_String_o *)StringLiteral_12922/*"SetBaseTransform"*/, 0);
+  UnityEngine_GameObject__SendMessage_73340852(obj, (System_String_o *)StringLiteral_12972/*"SetBaseTransform"*/, 0);
 }

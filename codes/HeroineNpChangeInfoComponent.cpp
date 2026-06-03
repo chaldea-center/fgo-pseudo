@@ -19,26 +19,26 @@ void HeroineNpChangeInfoComponent__Setup(
   int32_t lv; // [xsp+Ch] [xbp-24h] BYREF
 
   lv = treasureDvcLv;
-  if ( (byte_4E08C4F & 1) == 0 )
+  if ( (byte_4E7B981 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1CE6700(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08C4F = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B981 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 treasureDvcId,
-                                (const MethodInfo_34E925C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_14;
   v8 = Instance;
@@ -54,10 +54,10 @@ void HeroineNpChangeInfoComponent__Setup(
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&lv, 0);
   if ( !lvLabel
     || (UILabel__set_text(lvLabel, (System_String_o *)Instance, 0),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0
+                                      (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0
     || (Instance = (DataManager_o *)TreasureDvcLvMaster__GetEntity(
                                       (TreasureDvcLvMaster_o *)Instance,
                                       treasureDvcId,
@@ -68,7 +68,7 @@ void HeroineNpChangeInfoComponent__Setup(
         (v11 = this->fields.detailLabel) == 0) )
   {
 LABEL_14:
-    sub_1CE6958(Instance, v7);
+    sub_1D0F30C(Instance, v7);
   }
   WrapControlText__textAdjust(detailLabel, (System_String_o *)Instance, v11->fields.mFontSize, 0, 0);
 }
@@ -86,26 +86,26 @@ void HeroineNpChangeInfoComponent__SetupForNpChange(
   UILabel_o *detailLabel; // x20
   struct UILabel_o *v11; // x8
 
-  if ( (byte_4E08C50 & 1) == 0 )
+  if ( (byte_4E7B982 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1CE6700(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08C50 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B982 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 treasureDvcId,
-                                (const MethodInfo_34E925C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_14;
   v9 = (System_String_o **)Instance;
@@ -120,10 +120,10 @@ void HeroineNpChangeInfoComponent__SetupForNpChange(
   Instance = (DataManager_o *)this->fields.lvLabel;
   if ( !Instance
     || (UILabel__set_text((UILabel_o *)Instance, v9[5], 0),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0
+                                      (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0
     || (Instance = (DataManager_o *)TreasureDvcLvMaster__GetEntity(
                                       (TreasureDvcLvMaster_o *)Instance,
                                       treasureDvcId,
@@ -134,7 +134,7 @@ void HeroineNpChangeInfoComponent__SetupForNpChange(
         (v11 = this->fields.detailLabel) == 0) )
   {
 LABEL_14:
-    sub_1CE6958(Instance, v8);
+    sub_1D0F30C(Instance, v8);
   }
   WrapControlText__textAdjust(detailLabel, (System_String_o *)Instance, v11->fields.mFontSize, 0, 0);
 }

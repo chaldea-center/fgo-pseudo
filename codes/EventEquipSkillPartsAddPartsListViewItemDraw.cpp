@@ -24,10 +24,10 @@ void EventEquipSkillPartsAddPartsListViewItemDraw__UpdateUi(
   int32_t SkillId_k__BackingField; // w22
 
   v4 = this;
-  if ( (byte_4DFEACA & 1) == 0 )
+  if ( (byte_4E716BF & 1) == 0 )
   {
-    this = (EventEquipSkillPartsAddPartsListViewItemDraw_o *)sub_1CE6700(&AtlasManager_TypeInfo);
-    byte_4DFEACA = 1;
+    this = (EventEquipSkillPartsAddPartsListViewItemDraw_o *)sub_1D0F0B4(&AtlasManager_TypeInfo);
+    byte_4E716BF = 1;
   }
   if ( !item )
     goto LABEL_10;
@@ -45,7 +45,7 @@ void EventEquipSkillPartsAddPartsListViewItemDraw__UpdateUi(
         (this = (EventEquipSkillPartsAddPartsListViewItemDraw_o *)v4->fields.line) == 0) )
   {
 LABEL_10:
-    sub_1CE6958(this, item);
+    sub_1D0F30C(this, item);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, !item->fields._IsLast_k__BackingField, 0);
 }

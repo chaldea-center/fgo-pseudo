@@ -1,23 +1,23 @@
 void UINarrowFigureTexture___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E062F5 & 1) == 0 )
+  if ( (byte_4E78F9C & 1) == 0 )
   {
-    sub_1CE6700(&UINarrowFigureTexture_TypeInfo);
-    sub_1CE6700(&StringLiteral_16421/*"_MaskTex"*/);
-    byte_4E062F5 = 1;
+    sub_1D0F0B4(&UINarrowFigureTexture_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16486/*"_MaskTex"*/);
+    byte_4E78F9C = 1;
   }
   UINarrowFigureTexture_TypeInfo->static_fields->MaskTexId = UnityEngine_Shader__PropertyToID(
-                                                               (System_String_o *)StringLiteral_16421/*"_MaskTex"*/,
+                                                               (System_String_o *)StringLiteral_16486/*"_MaskTex"*/,
                                                                0);
 }
 
 
 void UINarrowFigureTexture___ctor(UINarrowFigureTexture_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E062F4 & 1) == 0 )
+  if ( (byte_4E78F9B & 1) == 0 )
   {
-    sub_1CE6700(&UINarrowFigureRender_TypeInfo);
-    byte_4E062F4 = 1;
+    sub_1D0F0B4(&UINarrowFigureRender_TypeInfo);
+    byte_4E78F9B = 1;
   }
   if ( !UINarrowFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UINarrowFigureRender_TypeInfo);
@@ -31,7 +31,7 @@ void UINarrowFigureTexture__Awake(UINarrowFigureTexture_o *this, const MethodInf
 
   bodyTexture = this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   ((void (__fastcall *)(struct UITexture_o *, _QWORD, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
     bodyTexture,
     0,
@@ -48,10 +48,10 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
   UnityEngine_Object_o *v7; // x20
   UnityEngine_Object_o *v8; // x20
 
-  if ( (byte_4E062F2 & 1) == 0 )
+  if ( (byte_4E78F99 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E062F2 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E78F99 = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -92,7 +92,7 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
                                      v5->klass[1].vtable._1_Finalize.methodPtr);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_72918540(v8, 0);
+      UnityEngine_Object__Destroy_73359484(v8, 0);
       v5 = (UnityEngine_Component_o *)this->fields.bodyTexture;
       if ( !v5 )
         goto LABEL_24;
@@ -111,7 +111,7 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
       return;
     }
 LABEL_24:
-    sub_1CE6958(v5, v4);
+    sub_1D0F30C(v5, v4);
   }
 }
 
@@ -139,32 +139,32 @@ void UINarrowFigureTexture__EndLoadAsset(
   Il2CppObject *Instance; // x0
   __int64 v21; // x1
 
-  if ( (byte_4E062F1 & 1) == 0 )
+  if ( (byte_4E78F98 & 1) == 0 )
   {
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4E062F1 = 1;
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4E78F98 = 1;
   }
   loadingAssetName = this->fields.loadingAssetName;
   if ( !loadingAssetName )
     goto LABEL_8;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( AssetManager__compAssetStorage_41674432(assetData, loadingAssetName, 0) )
+  if ( AssetManager__compAssetStorage_41891824(assetData, loadingAssetName, 0) )
   {
     v12 = this->fields.loadingAssetName;
     this->fields.loadedAssetName = v12;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.loadedAssetName, (int32_t)v12, v6, v7, v8, v9, v10, v11);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.loadedAssetName, (int32_t)v12, v6, v7, v8, v9, v10, v11);
     this->fields.loadingAssetName = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.loadingAssetName, 0, v13, v14, v15, v16, v17, v18);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.loadingAssetName, 0, v13, v14, v15, v16, v17, v18);
     UINarrowFigureTexture__SetTexture(this, v19);
   }
   else
   {
 LABEL_8:
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( !Instance )
-      sub_1CE6958(0, v21);
+      sub_1D0F30C(0, v21);
     AssetManager__ReleaseReservation((AssetManager_o *)Instance, assetData, 0);
   }
 }
@@ -190,9 +190,9 @@ void UINarrowFigureTexture__OnDestroy(UINarrowFigureTexture_o *this, const Metho
   UINarrowFigureTexture__ReleaseAssetStorage(this, v3);
   *(_QWORD *)&this->fields.currentSvtId = 0;
   this->fields.maskShader = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.maskShader, 0, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.maskShader, 0, v4, v5, v6, v7, v8, v9);
   this->fields.maskTexture = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.maskTexture, 0, v10, v11, v12, v13, v14, v15);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.maskTexture, 0, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -214,10 +214,10 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4E062EF & 1) == 0 )
+  if ( (byte_4E78F96 & 1) == 0 )
   {
-    sub_1CE6700(&AssetManager_TypeInfo);
-    byte_4E062EF = 1;
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    byte_4E78F96 = 1;
   }
   loadedAssetName = this->fields.loadedAssetName;
   if ( loadedAssetName )
@@ -226,7 +226,7 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadedAssetName, 0);
     this->fields.loadedAssetName = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.loadedAssetName, 0, v4, v5, v6, v7, v8, v9);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.loadedAssetName, 0, v4, v5, v6, v7, v8, v9);
   }
   loadingAssetName = this->fields.loadingAssetName;
   if ( loadingAssetName )
@@ -236,7 +236,7 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadingAssetName, 0);
     p_loadingAssetName->klass = 0;
-    sub_1CE66A4(p_loadingAssetName, 0, v12, v13, v14, v15, v16, v17);
+    sub_1D0F058(p_loadingAssetName, 0, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -260,7 +260,7 @@ void UINarrowFigureTexture__SetActive(UINarrowFigureTexture_o *this, bool isActi
   if ( !bodyTexture
     || (bodyTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bodyTexture, 0)) == 0 )
   {
-    sub_1CE6958(bodyTexture, isActive);
+    sub_1D0F30C(bodyTexture, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyTexture, isActive, 0);
 }
@@ -292,13 +292,13 @@ void UINarrowFigureTexture__SetCharacter(
   AssetLoader_LoadEndDataHandler_o *v23; // x21
 
   v8 = useGroupImage;
-  if ( (byte_4E062F0 & 1) == 0 )
+  if ( (byte_4E78F97 & 1) == 0 )
   {
-    sub_1CE6700(&AssetManager_TypeInfo);
-    sub_1CE6700(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1CE6700(&UINarrowFigureRender_TypeInfo);
-    sub_1CE6700(&Method_UINarrowFigureTexture_EndLoadAsset__);
-    byte_4E062F0 = 1;
+    sub_1D0F0B4(&AssetManager_TypeInfo);
+    sub_1D0F0B4(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1D0F0B4(&UINarrowFigureRender_TypeInfo);
+    sub_1D0F0B4(&Method_UINarrowFigureTexture_EndLoadAsset__);
+    byte_4E78F97 = 1;
   }
   currentLimitCountStage = this->fields.currentLimitCountStage;
   this->fields.currentSvtId = svtId;
@@ -319,7 +319,7 @@ LABEL_16:
     UINarrowFigureTexture__ClearTexture(this, v11);
     UINarrowFigureTexture__ReleaseAssetStorage(this, v15);
     this->fields.loadingAssetName = v13;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&this->fields.loadingAssetName,
       (int32_t)v13,
       v16,
@@ -329,7 +329,7 @@ LABEL_16:
       v20,
       v21);
     v22 = this->fields.loadingAssetName;
-    v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1CE694C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1D0F300(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v23, (Il2CppObject *)this, Method_UINarrowFigureTexture_EndLoadAsset__, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -385,16 +385,16 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
   UnityEngine_Rect_o uvRect; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Texture2D_o *texture2d; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E062F3 & 1) == 0 )
+  if ( (byte_4E78F9A & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Material_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Resources_Load_Texture2D___);
-    sub_1CE6700(&UINarrowFigureRender_TypeInfo);
-    sub_1CE6700(&UINarrowFigureTexture_TypeInfo);
-    sub_1CE6700(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
-    sub_1CE6700(&StringLiteral_4644/*"CommonUI/NarrowFigure/NarrowFigureMask"*/);
-    byte_4E062F3 = 1;
+    sub_1D0F0B4(&UnityEngine_Material_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Resources_Load_Texture2D___);
+    sub_1D0F0B4(&UINarrowFigureRender_TypeInfo);
+    sub_1D0F0B4(&UINarrowFigureTexture_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_4988/*"Custom/SpriteWithMask"*/);
+    sub_1D0F0B4(&StringLiteral_4656/*"CommonUI/NarrowFigure/NarrowFigureMask"*/);
+    byte_4E78F9A = 1;
   }
   *(_QWORD *)&uvRect.fields.m_Width = 0;
   texture2d = 0;
@@ -427,9 +427,9 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(maskShader, 0, 0) )
       {
-        v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0);
+        v9 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4988/*"Custom/SpriteWithMask"*/, 0);
         this->fields.maskShader = v9;
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.maskShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.maskShader, (int32_t)v9, v10, v11, v12, v13, v14, v15);
       }
       maskTexture = (UnityEngine_Object_o *)this->fields.maskTexture;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -438,10 +438,10 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       if ( UnityEngine_Object__op_Equality(maskTexture, 0, 0) )
       {
         object = UnityEngine_Resources__Load_object_(
-                   (System_String_o *)StringLiteral_4644/*"CommonUI/NarrowFigure/NarrowFigureMask"*/,
-                   (const MethodInfo_32A11D4 *)Method_UnityEngine_Resources_Load_Texture2D___);
+                   (System_String_o *)StringLiteral_4656/*"CommonUI/NarrowFigure/NarrowFigureMask"*/,
+                   (const MethodInfo_32ED880 *)Method_UnityEngine_Resources_Load_Texture2D___);
         *p_maskTexture = (UnityEngine_Texture_o *)object;
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)&this->fields.maskTexture,
           (int32_t)object,
           v19,
@@ -453,7 +453,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       }
       v25 = this->fields.bodyTexture;
       v26 = this->fields.maskShader;
-      v27 = (UnityEngine_Material_o *)sub_1CE694C(UnityEngine_Material_TypeInfo);
+      v27 = (UnityEngine_Material_o *)sub_1D0F300(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v27, v26, 0);
       if ( !v25 )
         goto LABEL_40;
@@ -472,7 +472,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
         j_il2cpp_runtime_class_init_0(UINarrowFigureTexture_TypeInfo);
       if ( !v28 )
         goto LABEL_40;
-      UnityEngine_Material__SetTexture_72782688(
+      UnityEngine_Material__SetTexture_73223632(
         v28,
         UINarrowFigureTexture_TypeInfo->static_fields->MaskTexId,
         *p_maskTexture,
@@ -514,7 +514,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       }
     }
 LABEL_40:
-    sub_1CE6958(gameObject, v4);
+    sub_1D0F30C(gameObject, v4);
   }
 }
 
@@ -539,7 +539,7 @@ void UINarrowFigureTexture__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1CE6958(0, v8);
+    sub_1D0F30C(0, v8);
   v10.fields.b = b;
   v10.fields.a = a;
   v10.fields.r = r;

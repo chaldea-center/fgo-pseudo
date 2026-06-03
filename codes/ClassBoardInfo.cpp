@@ -6,14 +6,14 @@ void ClassBoardInfo___ctor(ClassBoardInfo_o *this, const MethodInfo *method)
 
 bool ClassBoardInfo__IsReleasedClassId(ClassBoardInfo_o *this, int32_t classId, const MethodInfo *method)
 {
-  if ( (byte_4E044BC & 1) == 0 )
+  if ( (byte_4E77138 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4E044BC = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_4E77138 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.releasedClassIds, 0)
       && System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.releasedClassIds,
            classId,
-           (const MethodInfo_3220A90 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
 }

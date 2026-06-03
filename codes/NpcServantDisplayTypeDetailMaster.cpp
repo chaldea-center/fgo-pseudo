@@ -1,14 +1,14 @@
 void NpcServantDisplayTypeDetailMaster___ctor(NpcServantDisplayTypeDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05CE4 & 1) == 0 )
+  if ( (byte_4E78989 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string___ctor__);
-    byte_4E05CE4 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string___ctor__);
+    byte_4E78989 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     529,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ NpcServantDisplayTypeDetailEntity_o *NpcServantDisplayTypeDetailMaster__GetEntit
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E05CE5 & 1) == 0 )
+  if ( (byte_4E7898A & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__GetEntity__);
-    byte_4E05CE5 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__GetEntity__);
+    byte_4E7898A = 1;
   }
   PK = (Il2CppObject *)NpcServantDisplayTypeDetailEntity__CreatePK(displayType, colorType, 0);
   return (NpcServantDisplayTypeDetailEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   PK,
-                                                  (const MethodInfo_34EE1BC *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__GetEntity__);
+                                                  (const MethodInfo_353AADC *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__GetEntity__);
 }
 
 
@@ -42,15 +42,15 @@ bool NpcServantDisplayTypeDetailMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E05CE6 & 1) == 0 )
+  if ( (byte_4E7898B & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__TryGetEntity__);
-    byte_4E05CE6 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__TryGetEntity__);
+    byte_4E7898B = 1;
   }
   PK = (Il2CppObject *)NpcServantDisplayTypeDetailEntity__CreatePK(displayType, colorType, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_NpcServantDisplayTypeDetailMaster__NpcServantDisplayTypeDetailEntity__string__TryGetEntity__);
 }

@@ -8,18 +8,18 @@ void BattleDropTimingAdjustmentSetting___ctor(BattleDropTimingAdjustmentSetting_
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E074FC & 1) == 0 )
+  if ( (byte_4E7A1CC & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
-    byte_4E074FC = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+    byte_4E7A1CC = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
   this->fields.dropTimingDatas = (struct System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 

@@ -1,28 +1,28 @@
 void SetItemEntity___ctor(SetItemEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05525 & 1) == 0 )
+  if ( (byte_4E781C2 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05525 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E781C2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *SetItemEntity__CreatePK(int32_t id, int32_t purchaseType, int32_t targetId, const MethodInfo *method)
 {
-  if ( (byte_4E05524 & 1) == 0 )
+  if ( (byte_4E781C1 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E05524 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4E781C1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            purchaseType,
            targetId,
-           (const MethodInfo_32029C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

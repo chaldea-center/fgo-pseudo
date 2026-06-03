@@ -33,9 +33,9 @@ void RecommendSupportQuestBoardListViewItem___ctor(
 
   v12 = this;
   v13 = isSetting;
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   v12->fields._QuestFolderInfo_k__BackingField = folderInfo;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&v12->fields._QuestFolderInfo_k__BackingField,
     (int32_t)folderInfo,
     v14,
@@ -45,7 +45,7 @@ void RecommendSupportQuestBoardListViewItem___ctor(
     v18,
     v19);
   v12->fields._QuestInfo_k__BackingField = questInfo;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&v12->fields._QuestInfo_k__BackingField,
     (int32_t)questInfo,
     v20,
@@ -60,7 +60,7 @@ void RecommendSupportQuestBoardListViewItem___ctor(
   LOBYTE(v12[-1].fields._SettingSvtName_k__BackingField) = v27;
   BYTE1(v12[-1].fields._SettingSvtName_k__BackingField) = v13;
   HIDWORD(v12[-1].fields._SettingSvtName_k__BackingField) = selectIndex;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v12, (int32_t)svtName, v28, v29, v30, v31, v32, v33);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v12, (int32_t)svtName, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -79,34 +79,34 @@ bool RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(
   Il2CppObject *v11; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E00779 & 1) == 0 )
+  if ( (byte_4E7339E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1CE6700(&QuestRestrictionInfo_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4E00779 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1D0F0B4(&QuestRestrictionInfo_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4E7339E = 1;
   }
   entity = 0;
   if ( !this->fields._QuestInfo_k__BackingField )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = RecommendSupportSelectControl__get_SelectServantId((RecommendSupportSelectControl_o *)Instance, v5),
         !Master_object) )
   {
 LABEL_16:
-    sub_1CE6958(Instance, v5);
+    sub_1D0F30C(Instance, v5);
   }
   Instance = DataMasterBase_object__object__long___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                &entity,
                Instance,
-               (const MethodInfo_34EBA58 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+               (const MethodInfo_3538378 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   if ( (Instance & 1) == 0 )
     return 0;
   QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
@@ -117,8 +117,8 @@ LABEL_16:
     goto LABEL_16;
   phase = QuestInfo_k__BackingField->fields.phase;
   id = questEntity->fields.id;
-  v10 = (QuestRestrictionInfo_o *)sub_1CE694C(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_44530920(v10, 0, id, phase, 0);
+  v10 = (QuestRestrictionInfo_o *)sub_1D0F300(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_44765680(v10, 0, id, phase, 0);
   v11 = entity;
   if ( !entity )
     goto LABEL_16;
@@ -126,6 +126,35 @@ LABEL_16:
   if ( !Instance )
     goto LABEL_16;
   return UserServantEntity__getQuestRestriction((UserServantEntity_o *)v11, v10, *(_DWORD *)(Instance + 24), 2, 0);
+}
+
+
+bool RecommendSupportQuestBoardListViewItem__IsGrandEnableSupport(
+        RecommendSupportQuestBoardListViewItem_o *this,
+        const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
+  struct RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *QuestInfo_k__BackingField; // x8
+  struct QuestEntity_o *questEntity; // x9
+
+  if ( (byte_4E7339F & 1) == 0 )
+  {
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E7339F = 1;
+  }
+  if ( !this->fields._QuestInfo_k__BackingField )
+    return 0;
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
+  if ( !QuestInfo_k__BackingField || (questEntity = QuestInfo_k__BackingField->fields.questEntity) == 0 || !Instance )
+    sub_1D0F30C(Instance, v4);
+  return PartyOrganizationUtility__IsSupportGrandEnableQuest(
+           (PartyOrganizationUtility_o *)Instance,
+           questEntity->fields.id,
+           QuestInfo_k__BackingField->fields.phase,
+           0,
+           0);
 }
 
 

@@ -12,9 +12,9 @@ void MyRoomHelpListViewItem___ctor(
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -30,7 +30,7 @@ System_String_o *MyRoomHelpListViewItem__get_ImageName(MyRoomHelpListViewItem_o 
 
   info = this->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return info->fields.imageName;
 }
 
@@ -42,14 +42,14 @@ System_String_o *MyRoomHelpListViewItem__get_InfoText(MyRoomHelpListViewItem_o *
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4E0000F & 1) == 0 )
+  if ( (byte_4E72C2C & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_1CE6700(&LocalizationManager_TypeInfo);
-    byte_4E0000F = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    byte_4E72C2C = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -64,14 +64,14 @@ System_String_o *MyRoomHelpListViewItem__get_ItemName(MyRoomHelpListViewItem_o *
   System_String_o *itemName; // x19
 
   v2 = this;
-  if ( (byte_4E00010 & 1) == 0 )
+  if ( (byte_4E72C2D & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_1CE6700(&LocalizationManager_TypeInfo);
-    byte_4E00010 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    byte_4E72C2D = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   itemName = info->fields.itemName;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);

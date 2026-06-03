@@ -39,15 +39,15 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
   struct System_String_array *v33; // x8
   struct System_String_o *v34; // x1
 
-  if ( (byte_4E01286 & 1) == 0 )
+  if ( (byte_4E73EAE & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_4454/*"ChrVoice_"*/);
-    byte_4E01286 = 1;
+    sub_1D0F0B4(&StringLiteral_4465/*"ChrVoice_"*/);
+    byte_4E73EAE = 1;
   }
   this->fields.assetName = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.assetName, 0, v2, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetName, 0, v2, v3, v4, v5, v6, v7);
   this->fields.vcName = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.vcName, 0, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.vcName, 0, v9, v10, v11, v12, v13, v14);
   p_svtId = &this->fields.svtId;
   if ( this->fields.svtId )
   {
@@ -57,22 +57,22 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
     if ( !vcNameList->max_length )
       return;
     v18 = System_Int32__ToString((int32_t)p_svtId, 0);
-    v19 = System_String__Concat_65122828((System_String_o *)StringLiteral_4454/*"ChrVoice_"*/, v18, 0);
+    v19 = System_String__Concat_65562772((System_String_o *)StringLiteral_4465/*"ChrVoice_"*/, v18, 0);
     this->fields.assetName = v19;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.assetName, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetName, (int32_t)v19, v20, v21, v22, v23, v24, v25);
     v26 = this->fields.vcNameList;
     if ( !v26
-      || (p_svtId = (int32_t *)UnityEngine_Random__Range_72878252(0, v26->max_length, 0),
+      || (p_svtId = (int32_t *)UnityEngine_Random__Range_73319196(0, v26->max_length, 0),
           (v33 = this->fields.vcNameList) == 0) )
     {
 LABEL_11:
-      sub_1CE6958(p_svtId, v15);
+      sub_1D0F30C(p_svtId, v15);
     }
     if ( (unsigned int)p_svtId >= LODWORD(v33->max_length) )
-      sub_1CE6960(p_svtId);
+      sub_1D0F314(p_svtId);
     v34 = v33->m_Items[(int)p_svtId];
     this->fields.vcName = v34;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.vcName, (int32_t)v34, v27, v28, v29, v30, v31, v32);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.vcName, (int32_t)v34, v27, v28, v29, v30, v31, v32);
   }
 }
 
@@ -98,13 +98,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4E01287 & 1) == 0 )
+  if ( (byte_4E73EAF & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&SeManager_TypeInfo);
-    sub_1CE6700(&SoundManager_TypeInfo);
-    sub_1CE6700(&Method_SubmarineScanVoiceComponent_StopVoice__);
-    byte_4E01287 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&SeManager_TypeInfo);
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    sub_1D0F0B4(&Method_SubmarineScanVoiceComponent_StopVoice__);
+    byte_4E73EAF = 1;
   }
   assetName = this->fields.assetName;
   if ( assetName )
@@ -119,13 +119,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
         v5 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v5->static_fields->DEFAULT_VOLUME;
-      v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_SubmarineScanVoiceComponent_StopVoice__, 0);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v8 = SoundManager__playVoice_42673536(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
+      v8 = SoundManager__playVoice_42894660(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
       this->fields.sePlayer = v8;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10, v11, v12, v13, v14);
     }
   }
 }
@@ -144,10 +144,10 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4E01288 & 1) == 0 )
+  if ( (byte_4E73EB0 & 1) == 0 )
   {
-    sub_1CE6700(&SoundManager_TypeInfo);
-    byte_4E01288 = 1;
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    byte_4E73EB0 = 1;
   }
   p_sePlayer = (GrandQuestFolderBoardItem_o *)&this->fields.sePlayer;
   if ( this->fields.sePlayer )
@@ -159,6 +159,6 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(v5, vcName, 0.0, 0);
     p_sePlayer->klass = 0;
-    sub_1CE66A4(p_sePlayer, 0, v7, v8, v9, v10, v11, v12);
+    sub_1D0F058(p_sePlayer, 0, v7, v8, v9, v10, v11, v12);
   }
 }

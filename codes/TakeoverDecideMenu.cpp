@@ -1,9 +1,9 @@
 void TakeoverDecideMenu___ctor(TakeoverDecideMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E02181 & 1) == 0 )
+  if ( (byte_4E74DF4 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4E02181 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E74DF4 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,7 +28,7 @@ void TakeoverDecideMenu__Callback(TakeoverDecideMenu_o *this, bool result, const
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1CE66A4(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1D0F058(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -41,11 +41,11 @@ void TakeoverDecideMenu__Close(TakeoverDecideMenu_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  TakeoverDecideMenu__Close_38713452(this, 0, v2);
+  TakeoverDecideMenu__Close_38929536(this, 0, v2);
 }
 
 
-void TakeoverDecideMenu__Close_38713452(
+void TakeoverDecideMenu__Close_38929536(
         TakeoverDecideMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -57,14 +57,14 @@ void TakeoverDecideMenu__Close_38713452(
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4E0217E & 1) == 0 )
+  if ( (byte_4E74DF1 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_TakeoverDecideMenu_EndClose__);
-    byte_4E0217E = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_TakeoverDecideMenu_EndClose__);
+    byte_4E74DF1 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -74,7 +74,7 @@ void TakeoverDecideMenu__Close_38713452(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_TakeoverDecideMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -99,7 +99,7 @@ void TakeoverDecideMenu__EndClose(TakeoverDecideMenu_o *this, const MethodInfo *
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1CE66A4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1D0F058(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -115,10 +115,10 @@ void TakeoverDecideMenu__Init(TakeoverDecideMenu_o *this, const MethodInfo *meth
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4E0217C & 1) == 0 )
+  if ( (byte_4E74DEF & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E0217C = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E74DEF = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -136,7 +136,7 @@ void TakeoverDecideMenu__Init(TakeoverDecideMenu_o *this, const MethodInfo *meth
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.closeLabel) == 0) )
   {
 LABEL_10:
-    sub_1CE6958(titleLabel, method);
+    sub_1D0F30C(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -150,18 +150,18 @@ void TakeoverDecideMenu__OnClickClose(TakeoverDecideMenu_o *this, const MethodIn
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E0217F & 1) == 0 )
+  if ( (byte_4E74DF2 & 1) == 0 )
   {
-    sub_1CE6700(&Method_TakeoverDecideMenu_OnClickClose__);
-    byte_4E0217F = 1;
+    sub_1D0F0B4(&Method_TakeoverDecideMenu_OnClickClose__);
+    byte_4E74DF2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TakeoverDecideMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_TakeoverDecideMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_TakeoverDecideMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_TakeoverDecideMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     TakeoverDecideMenu__Callback(this, 0, v5);
   }
@@ -185,20 +185,20 @@ void TakeoverDecideMenu__Open(
   System_String_o *v15; // x0
   System_Action_o *v16; // x20
 
-  if ( (byte_4E0217D & 1) == 0 )
+  if ( (byte_4E74DF0 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&Method_TakeoverDecideMenu_EndOpen__);
-    sub_1CE6700(&StringLiteral_3848/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E0217D = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&Method_TakeoverDecideMenu_EndOpen__);
+    sub_1D0F0B4(&StringLiteral_3858/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E74DF0 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)callback,
@@ -229,22 +229,22 @@ void TakeoverDecideMenu__Open(
     closeLabel = this->fields.closeLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
     if ( !closeLabel
       || (UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0),
           messageLabel = this->fields.messageLabel,
-          v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/, 0),
+          v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3858/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/, 0),
           gameObject = (UnityEngine_GameObject_o *)System_String__Format(v15, (Il2CppObject *)userName, 0),
           !messageLabel)
       || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.warningLabel) == 0) )
     {
 LABEL_15:
-      sub_1CE6958(gameObject, v12);
+      sub_1D0F30C(gameObject, v12);
     }
     UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
     this->fields.state = 1;
-    v16 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v16, (Il2CppObject *)this, Method_TakeoverDecideMenu_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0, 0);
   }
@@ -266,10 +266,10 @@ void TakeoverDecideMenu__add_callbackFunc(
   TakeoverDecideMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4E0217A & 1) == 0 )
+  if ( (byte_4E74DED & 1) == 0 )
   {
-    sub_1CE6700(&TakeoverDecideMenu_CallbackFunc_TypeInfo);
-    byte_4E0217A = 1;
+    sub_1D0F0B4(&TakeoverDecideMenu_CallbackFunc_TypeInfo);
+    byte_4E74DED = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -282,25 +282,25 @@ void TakeoverDecideMenu__add_callbackFunc(
       if ( (TakeoverDecideMenu_CallbackFunc_c *)v8->klass != TakeoverDecideMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   TakeoverDecideMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *TakeoverDecideMenu__get_closeBtnPath(TakeoverDecideMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E02180 & 1) == 0 )
+  if ( (byte_4E74DF3 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15793/*"Window/CloseButton"*/);
-    byte_4E02180 = 1;
+    sub_1D0F0B4(&StringLiteral_15848/*"Window/CloseButton"*/);
+    byte_4E74DF3 = 1;
   }
-  return (System_String_o *)StringLiteral_15793/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15848/*"Window/CloseButton"*/;
 }
 
 
@@ -318,10 +318,10 @@ void TakeoverDecideMenu__remove_callbackFunc(
   TakeoverDecideMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E0217B & 1) == 0 )
+  if ( (byte_4E74DEE & 1) == 0 )
   {
-    sub_1CE6700(&TakeoverDecideMenu_CallbackFunc_TypeInfo);
-    byte_4E0217B = 1;
+    sub_1D0F0B4(&TakeoverDecideMenu_CallbackFunc_TypeInfo);
+    byte_4E74DEE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -334,13 +334,13 @@ void TakeoverDecideMenu__remove_callbackFunc(
       if ( (TakeoverDecideMenu_CallbackFunc_c *)v8->klass != TakeoverDecideMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   TakeoverDecideMenu__Init(v11, v12);
 }
 
@@ -364,7 +364,7 @@ void TakeoverDecideMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -375,12 +375,12 @@ void TakeoverDecideMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -392,9 +392,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B15244;
+  this->fields.invoke_impl = (intptr_t)sub_1B3B0AC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B151FC;
+  this->fields.extra_arg = (intptr_t)sub_1B3B064;
 }
 
 
@@ -409,14 +409,14 @@ System_IAsyncResult_o *TakeoverDecideMenu_CallbackFunc__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4E02182 & 1) == 0 )
+  if ( (byte_4E74DF5 & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4E02182 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E74DF5 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -425,7 +425,7 @@ void TakeoverDecideMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

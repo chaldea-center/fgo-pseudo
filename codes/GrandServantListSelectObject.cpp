@@ -14,21 +14,21 @@ void GrandServantListSelectObject__AddServantTouchPress(
   EventDelegate_Callback_o *v6; // x21
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4DFF687 & 1) == 0 )
+  if ( (byte_4E72282 & 1) == 0 )
   {
-    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
-    sub_1CE6700(&EventDelegate_TypeInfo);
-    this = (GrandServantListSelectObject_o *)sub_1CE6700(&Method_GrandServantListSelectObject_OnClickServant__);
-    byte_4DFF687 = 1;
+    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
+    sub_1D0F0B4(&EventDelegate_TypeInfo);
+    this = (GrandServantListSelectObject_o *)sub_1D0F0B4(&Method_GrandServantListSelectObject_OnClickServant__);
+    byte_4E72282 = 1;
   }
   if ( !touchPress )
-    sub_1CE6958(this, touchPress);
+    sub_1D0F30C(this, touchPress);
   onClick = touchPress->fields.onClick;
-  v6 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
+  v6 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v6, v4, Method_GrandServantListSelectObject_OnClickServant__, 0);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_50365832(onClick, v6, 0);
+  EventDelegate__Set_50659024(onClick, v6, 0);
 }
 
 
@@ -64,16 +64,16 @@ void GrandServantListSelectObject__Initialize(
   System_Collections_Generic_List_EventDelegate__o *v30; // x21
   EventDelegate_Callback_o *v31; // x0
 
-  if ( (byte_4DFF686 & 1) == 0 )
+  if ( (byte_4E72281 & 1) == 0 )
   {
-    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
-    sub_1CE6700(&EventDelegate_TypeInfo);
-    sub_1CE6700(&Method_GrandServantListSelectObject_OnClickServant__);
-    sub_1CE6700(&Method_GrandServantListSelectObject_OnLongPressServant__);
-    byte_4DFF686 = 1;
+    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
+    sub_1D0F0B4(&EventDelegate_TypeInfo);
+    sub_1D0F0B4(&Method_GrandServantListSelectObject_OnClickServant__);
+    sub_1D0F0B4(&Method_GrandServantListSelectObject_OnLongPressServant__);
+    byte_4E72281 = 1;
   }
   this->fields.fsm = fsm;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.fsm,
     (int32_t)fsm,
     grandGraphId,
@@ -87,25 +87,25 @@ void GrandServantListSelectObject__Initialize(
   if ( !servantTouchPress )
     goto LABEL_18;
   onClick = servantTouchPress->fields.onClick;
-  v15 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v15, (Il2CppObject *)this, Method_GrandServantListSelectObject_OnClickServant__, 0);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  v11 = EventDelegate__Set_50365832(onClick, v15, 0);
+  v11 = EventDelegate__Set_50659024(onClick, v15, 0);
   v16 = this->fields.servantTouchPress;
   if ( !v16
     || (onLongPress = v16->fields.onLongPress,
-        v18 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo),
+        v18 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
           v18,
           (Il2CppObject *)this,
           Method_GrandServantListSelectObject_OnLongPressServant__,
           0),
-        v11 = EventDelegate__Set_50365832(onLongPress, v18, 0),
+        v11 = EventDelegate__Set_50659024(onLongPress, v18, 0),
         (equipTouchPresses = this->fields.equipTouchPresses) == 0) )
   {
 LABEL_18:
-    sub_1CE6958(v11, v12);
+    sub_1D0F30C(v11, v12);
   }
   v21 = 4;
   while ( 1 )
@@ -123,19 +123,19 @@ LABEL_18:
       v26 = GrandServantListSelectObject___Initialize_g__CreateOnClickEquip_4_0(this, v23, v19);
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      v11 = EventDelegate__Set_50365832(v25, v26, 0);
+      v11 = EventDelegate__Set_50659024(v25, v26, 0);
       v28 = this->fields.equipTouchPresses;
       if ( v28 )
       {
         if ( v23 >= LODWORD(v28->max_length) )
 LABEL_20:
-          sub_1CE6960(v11);
+          sub_1D0F314(v11);
         v29 = *((_QWORD *)&v28->obj.klass + v21);
         if ( v29 )
         {
           v30 = *(System_Collections_Generic_List_EventDelegate__o **)(v29 + 48);
           v31 = GrandServantListSelectObject___Initialize_g__CreateOnLongPressEquip_4_1(this, v23, v27);
-          v11 = EventDelegate__Set_50365832(v30, v31, 0);
+          v11 = EventDelegate__Set_50659024(v30, v31, 0);
           equipTouchPresses = this->fields.equipTouchPresses;
           ++v21;
           if ( equipTouchPresses )
@@ -155,13 +155,13 @@ void GrandServantListSelectObject__OnClickEquip(
 {
   const MethodInfo *v5; // x2
 
-  if ( (byte_4DFF68A & 1) == 0 )
+  if ( (byte_4E72285 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_3479/*"CLICK_EQUIP"*/);
-    byte_4DFF68A = 1;
+    sub_1D0F0B4(&StringLiteral_3489/*"CLICK_EQUIP"*/);
+    byte_4E72285 = 1;
   }
   GrandServantListSelectObject__SetEquipIndex(this, index, method);
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3479/*"CLICK_EQUIP"*/, v5);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3489/*"CLICK_EQUIP"*/, v5);
 }
 
 
@@ -169,12 +169,12 @@ void GrandServantListSelectObject__OnClickServant(GrandServantListSelectObject_o
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4DFF688 & 1) == 0 )
+  if ( (byte_4E72283 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_3506/*"CLICK_SERVANT"*/);
-    byte_4DFF688 = 1;
+    sub_1D0F0B4(&StringLiteral_3516/*"CLICK_SERVANT"*/);
+    byte_4E72283 = 1;
   }
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3506/*"CLICK_SERVANT"*/, v2);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3516/*"CLICK_SERVANT"*/, v2);
 }
 
 
@@ -185,13 +185,13 @@ void GrandServantListSelectObject__OnLongPressEquip(
 {
   const MethodInfo *v5; // x2
 
-  if ( (byte_4DFF68B & 1) == 0 )
+  if ( (byte_4E72286 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_8397/*"LONG_PRESS_EQUIP"*/);
-    byte_4DFF68B = 1;
+    sub_1D0F0B4(&StringLiteral_8433/*"LONG_PRESS_EQUIP"*/);
+    byte_4E72286 = 1;
   }
   GrandServantListSelectObject__SetEquipIndex(this, index, method);
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8397/*"LONG_PRESS_EQUIP"*/, v5);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8433/*"LONG_PRESS_EQUIP"*/, v5);
 }
 
 
@@ -199,12 +199,12 @@ void GrandServantListSelectObject__OnLongPressServant(GrandServantListSelectObje
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4DFF689 & 1) == 0 )
+  if ( (byte_4E72284 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_8398/*"LONG_PRESS_SERVANT"*/);
-    byte_4DFF689 = 1;
+    sub_1D0F0B4(&StringLiteral_8434/*"LONG_PRESS_SERVANT"*/);
+    byte_4E72284 = 1;
   }
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8398/*"LONG_PRESS_SERVANT"*/, v2);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8434/*"LONG_PRESS_SERVANT"*/, v2);
 }
 
 
@@ -217,11 +217,11 @@ void GrandServantListSelectObject__SendEvent(
   __int64 v6; // x1
   PlayMakerFSM_o *m_CancellationTokenSource; // x0
 
-  if ( (byte_4DFF68C & 1) == 0 )
+  if ( (byte_4E72287 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_11657/*"SELECT_GRAND_GRAPH_ID"*/);
-    byte_4DFF68C = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_11705/*"SELECT_GRAND_GRAPH_ID"*/);
+    byte_4E72287 = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -234,12 +234,12 @@ void GrandServantListSelectObject__SendEvent(
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)m_CancellationTokenSource[1].fields.m_CancellationTokenSource) == 0
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                           (HutongGames_PlayMaker_FsmVariables_o *)m_CancellationTokenSource,
-                                                          (System_String_o *)StringLiteral_11657/*"SELECT_GRAND_GRAPH_ID"*/,
+                                                          (System_String_o *)StringLiteral_11705/*"SELECT_GRAND_GRAPH_ID"*/,
                                                           0)) == 0
       || (LODWORD(m_CancellationTokenSource->fields.addEventHandlers) = this->fields.grandGraphId,
           (m_CancellationTokenSource = this->fields.fsm) == 0) )
     {
-      sub_1CE6958(m_CancellationTokenSource, v6);
+      sub_1D0F30C(m_CancellationTokenSource, v6);
     }
     PlayMakerFSM__SendEvent(m_CancellationTokenSource, eventName, 0);
   }
@@ -255,11 +255,11 @@ void GrandServantListSelectObject__SetEquipIndex(
   __int64 v6; // x1
   PlayMakerFSM_o *m_CancellationTokenSource; // x0
 
-  if ( (byte_4DFF68D & 1) == 0 )
+  if ( (byte_4E72288 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_11648/*"SELECT_EQUIP_INDEX"*/);
-    byte_4DFF68D = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_11696/*"SELECT_EQUIP_INDEX"*/);
+    byte_4E72288 = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -272,10 +272,10 @@ void GrandServantListSelectObject__SetEquipIndex(
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)m_CancellationTokenSource[1].fields.m_CancellationTokenSource) == 0
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                           (HutongGames_PlayMaker_FsmVariables_o *)m_CancellationTokenSource,
-                                                          (System_String_o *)StringLiteral_11648/*"SELECT_EQUIP_INDEX"*/,
+                                                          (System_String_o *)StringLiteral_11696/*"SELECT_EQUIP_INDEX"*/,
                                                           0)) == 0 )
     {
-      sub_1CE6958(m_CancellationTokenSource, v6);
+      sub_1D0F30C(m_CancellationTokenSource, v6);
     }
     LODWORD(m_CancellationTokenSource->fields.addEventHandlers) = index;
   }
@@ -298,21 +298,21 @@ EventDelegate_Callback_o *GrandServantListSelectObject___Initialize_g__CreateOnC
   System_String_o *v13; // x7
   EventDelegate_Callback_o *v14; // x19
 
-  if ( (byte_4DFF68E & 1) == 0 )
+  if ( (byte_4E72289 & 1) == 0 )
   {
-    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
-    sub_1CE6700(&Method_GrandServantListSelectObject___c__DisplayClass4_0__Initialize_b__2__);
-    sub_1CE6700(&GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
-    byte_4DFF68E = 1;
+    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
+    sub_1D0F0B4(&Method_GrandServantListSelectObject___c__DisplayClass4_0__Initialize_b__2__);
+    sub_1D0F0B4(&GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
+    byte_4E72289 = 1;
   }
-  v5 = sub_1CE694C(GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
+  v5 = sub_1D0F300(GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 16) = index;
-  v14 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
+  v14 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v14,
     (Il2CppObject *)v5,
@@ -338,21 +338,21 @@ EventDelegate_Callback_o *GrandServantListSelectObject___Initialize_g__CreateOnL
   System_String_o *v13; // x7
   EventDelegate_Callback_o *v14; // x19
 
-  if ( (byte_4DFF68F & 1) == 0 )
+  if ( (byte_4E7228A & 1) == 0 )
   {
-    sub_1CE6700(&EventDelegate_Callback_TypeInfo);
-    sub_1CE6700(&Method_GrandServantListSelectObject___c__DisplayClass4_1__Initialize_b__3__);
-    sub_1CE6700(&GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
-    byte_4DFF68F = 1;
+    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
+    sub_1D0F0B4(&Method_GrandServantListSelectObject___c__DisplayClass4_1__Initialize_b__3__);
+    sub_1D0F0B4(&GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
+    byte_4E7228A = 1;
   }
-  v5 = sub_1CE694C(GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
+  v5 = sub_1D0F300(GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 16) = index;
-  v14 = (EventDelegate_Callback_o *)sub_1CE694C(EventDelegate_Callback_TypeInfo);
+  v14 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v14,
     (Il2CppObject *)v5,
@@ -377,7 +377,7 @@ void GrandServantListSelectObject___c__DisplayClass4_0___Initialize_b__2(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   GrandServantListSelectObject__OnClickEquip(this->fields.__4__this, this->fields.index, v2);
 }
 
@@ -397,6 +397,6 @@ void GrandServantListSelectObject___c__DisplayClass4_1___Initialize_b__3(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   GrandServantListSelectObject__OnLongPressEquip(this->fields.__4__this, this->fields.index, v2);
 }

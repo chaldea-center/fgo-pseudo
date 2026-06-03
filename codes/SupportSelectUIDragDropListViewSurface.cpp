@@ -26,7 +26,7 @@ void SupportSelectUIDragDropListViewSurface__set_DropObject(
   System_String_o *v7; // x7
 
   this->fields.dropObject = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.dropObject,
     (int32_t)value,
     (int32_t)method,

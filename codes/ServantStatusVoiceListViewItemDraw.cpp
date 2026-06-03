@@ -26,7 +26,7 @@ void ServantStatusVoiceListViewItemDraw__SetInput(
       }
     }
 LABEL_8:
-    sub_1CE6958(baseButton, item);
+    sub_1D0F30C(baseButton, item);
   }
   baseButton = this->fields.baseButton;
   if ( !baseButton )
@@ -55,15 +55,15 @@ void ServantStatusVoiceListViewItemDraw__SetItem(
   float v16; // s2
 
   v6 = this;
-  if ( (byte_4E025AA & 1) == 0 )
+  if ( (byte_4E75191 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_TweenColor___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_20992/*"img_txt_myroom"*/);
-    sub_1CE6700(&StringLiteral_20998/*"img_txt_other"*/);
-    sub_1CE6700(&StringLiteral_20924/*"img_txt_battle"*/);
-    this = (ServantStatusVoiceListViewItemDraw_o *)sub_1CE6700(&StringLiteral_21027/*"img_txt_synthesis"*/);
-    byte_4E025AA = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_TweenColor___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_21083/*"img_txt_myroom"*/);
+    sub_1D0F0B4(&StringLiteral_21089/*"img_txt_other"*/);
+    sub_1D0F0B4(&StringLiteral_21015/*"img_txt_battle"*/);
+    this = (ServantStatusVoiceListViewItemDraw_o *)sub_1D0F0B4(&StringLiteral_21118/*"img_txt_synthesis"*/);
+    byte_4E75191 = 1;
   }
   if ( item && mode )
   {
@@ -71,7 +71,7 @@ void ServantStatusVoiceListViewItemDraw__SetItem(
     if ( !voiceEntitiy )
       goto LABEL_26;
     v8 = voiceEntitiy->fields.svtVoiceType - 1;
-    v9 = (System_String_o **)(v8 > 8 ? &StringLiteral_20998/*"img_txt_other"*/ : (&off_4804508)[v8]);
+    v9 = (System_String_o **)(v8 > 8 ? &StringLiteral_21089/*"img_txt_other"*/ : (&off_486FF68)[v8]);
     this = (ServantStatusVoiceListViewItemDraw_o *)v6->fields.typeSpite;
     if ( !this )
       goto LABEL_26;
@@ -95,11 +95,11 @@ void ServantStatusVoiceListViewItemDraw__SetItem(
           (this = (ServantStatusVoiceListViewItemDraw_o *)v6->fields.playIconSprite) == 0) )
     {
 LABEL_26:
-      sub_1CE6958(this, item);
+      sub_1D0F30C(this, item);
     }
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (ServantStatusVoiceListViewItemDraw_o *)UnityEngine_Object__op_Inequality(
@@ -150,7 +150,7 @@ void ServantStatusVoiceListViewItemDraw__SetPlay(
   if ( !playIconSprite
     || (playIconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(playIconSprite, 0), !item) )
   {
-    sub_1CE6958(playIconSprite, item);
+    sub_1D0F30C(playIconSprite, item);
   }
   if ( item->fields.isPlay || !item->fields.isCanPlay )
   {

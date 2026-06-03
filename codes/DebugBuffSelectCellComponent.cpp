@@ -35,16 +35,16 @@ void DebugBuffSelectCellComponent__Set(
   System_String_o *v31; // x0
   __int64 v32; // x1
 
-  if ( (byte_4E05F9C & 1) == 0 )
+  if ( (byte_4E78C43 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1452/*":"*/);
-    byte_4E05F9C = 1;
+    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
+    byte_4E78C43 = 1;
   }
   this->fields.id = id;
   v14 = (_DWORD)this + 40;
   this->fields.name = name;
   p_name = &this->fields.name;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.name,
     (int32_t)name,
     (int32_t)name,
@@ -54,16 +54,16 @@ void DebugBuffSelectCellComponent__Set(
     (int64_t)method,
     v7);
   this->fields.detail = detail;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
   v29 = (UILabel_o *)*(p_callback - 5);
   *((_DWORD *)p_callback - 2) = buffType;
   v30 = System_Int32__ToString(v14, 0);
-  v31 = System_String__Concat_65161092(v30, (System_String_o *)StringLiteral_1452/*":"*/, *p_name, 0);
+  v31 = System_String__Concat_65601036(v30, (System_String_o *)StringLiteral_1453/*":"*/, *p_name, 0);
   if ( !v29 )
-    sub_1CE6958(v31, v32);
+    sub_1D0F30C(v31, v32);
   UILabel__set_text(v29, v31, 0);
 }
 

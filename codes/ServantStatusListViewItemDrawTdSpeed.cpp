@@ -61,16 +61,16 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
   float v36; // s2
   float v37; // s3
 
-  if ( (byte_4E02553 & 1) == 0 )
+  if ( (byte_4E7513A & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_12116/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
-    sub_1CE6700(&StringLiteral_17633/*"btn_bg_20"*/);
-    sub_1CE6700(&StringLiteral_12114/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
-    sub_1CE6700(&StringLiteral_12115/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_12110/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
-    sub_1CE6700(&StringLiteral_17635/*"btn_bg_21"*/);
-    byte_4E02553 = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_12165/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
+    sub_1D0F0B4(&StringLiteral_17707/*"btn_bg_20"*/);
+    sub_1D0F0B4(&StringLiteral_12163/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
+    sub_1D0F0B4(&StringLiteral_12164/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_12159/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
+    sub_1D0F0B4(&StringLiteral_17709/*"btn_bg_21"*/);
+    byte_4E7513A = 1;
   }
   ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0);
   if ( item && mode )
@@ -83,7 +83,7 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
     v10 = tdSpeedRangeLabelList->m_Items[0];
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12114/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0);
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12163/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0);
     if ( !v10 )
       goto LABEL_54;
     UIRangeLabel__Set(v10, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
@@ -93,7 +93,7 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
     if ( LODWORD(v11->max_length) <= 1 )
       goto LABEL_55;
     v12 = v11->m_Items[1];
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12110/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0);
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12159/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0);
     if ( !v12 )
       goto LABEL_54;
     UIRangeLabel__Set(v12, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
@@ -102,21 +102,21 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_54;
     if ( LODWORD(v13->max_length) <= 2 )
 LABEL_55:
-      sub_1CE6960(TreasureDeviceSpeedSelect);
+      sub_1D0F314(TreasureDeviceSpeedSelect);
     v14 = v13->m_Items[2];
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12116/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0);
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12165/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0);
     if ( !v14 )
       goto LABEL_54;
     UIRangeLabel__Set(v14, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
     explanationLabel = this->fields.explanationLabel;
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12115/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_12164/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
     if ( !explanationLabel )
       goto LABEL_54;
     UILabel__set_text(explanationLabel, TreasureDeviceSpeedSelect, 0);
-    if ( !byte_4DFF120 )
+    if ( !byte_4E71D15 )
     {
-      sub_1CE6700(&LocalizationManager_TypeInfo);
-      byte_4DFF120 = 1;
+      sub_1D0F0B4(&LocalizationManager_TypeInfo);
+      byte_4E71D15 = 1;
     }
     TreasureDeviceSpeedSelect = (System_String_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -129,11 +129,11 @@ LABEL_55:
     v18 = fields[21];
     v19 = fields[22];
     v20 = fields[23];
-    if ( !byte_4DFF121 )
+    if ( !byte_4E71D16 )
     {
-      sub_1CE6700(&LocalizationManager_TypeInfo);
+      sub_1D0F0B4(&LocalizationManager_TypeInfo);
       TreasureDeviceSpeedSelect = (System_String_o *)LocalizationManager_TypeInfo;
-      byte_4DFF121 = 1;
+      byte_4E71D16 = 1;
     }
     if ( !LODWORD(TreasureDeviceSpeedSelect[9].monitor) )
     {
@@ -173,7 +173,7 @@ LABEL_55:
         TreasureDeviceSpeedSelect = (System_String_o *)tdSpeedButtonSpriteList->m_Items[v24];
         if ( !TreasureDeviceSpeedSelect )
           break;
-        v32 = (System_String_o **)(v24 == v30 ? &StringLiteral_17635/*"btn_bg_21"*/ : &StringLiteral_17633/*"btn_bg_20"*/);
+        v32 = (System_String_o **)(v24 == v30 ? &StringLiteral_17709/*"btn_bg_21"*/ : &StringLiteral_17707/*"btn_bg_20"*/);
         UISprite__set_spriteName((UISprite_o *)TreasureDeviceSpeedSelect, *v32, 0);
         v33 = this->fields.tdSpeedRangeLabelList;
         if ( !v33 )
@@ -195,7 +195,7 @@ LABEL_55:
           return;
       }
 LABEL_54:
-      sub_1CE6958(TreasureDeviceSpeedSelect, v8);
+      sub_1D0F30C(TreasureDeviceSpeedSelect, v8);
     }
   }
 }

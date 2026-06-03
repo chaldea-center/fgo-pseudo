@@ -22,10 +22,10 @@ bool Ai__CheckPriority(int32_t actNum, int32_t num, int32_t priority, const Meth
 
 int32_t Ai__getCond(int32_t intype, const MethodInfo *method)
 {
-  if ( (byte_4E037E8 & 1) == 0 )
+  if ( (byte_4E7645B & 1) == 0 )
   {
-    sub_1CE6700(&System_Math_TypeInfo);
-    byte_4E037E8 = 1;
+    sub_1D0F0B4(&System_Math_TypeInfo);
+    byte_4E7645B = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

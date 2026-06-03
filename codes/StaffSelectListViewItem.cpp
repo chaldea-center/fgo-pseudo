@@ -27,10 +27,10 @@ void StaffSelectListViewItem___ctor(
   bool IsRestrictionSvt; // w0
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
     (int32_t)entity,
     v15,
@@ -57,13 +57,13 @@ void StaffSelectListViewItem___ctor(
   v21 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_9:
-    sub_1CE6958(v21, v22);
+    sub_1D0F30C(v21, v22);
   IsRestrictionSvt = StaffPhotoEntity__IsRestrictionSvt(v21, selectedSvtId, 0);
 LABEL_8:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
   *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = IsRestrictionSvt;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)p_PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v24,
@@ -84,7 +84,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1CE6958(this, selectStaffPhotoId);
+    sub_1D0F30C(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -99,7 +99,7 @@ bool StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1CE6958(this, sort);
+    sub_1D0F30C(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

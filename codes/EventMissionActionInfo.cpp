@@ -24,13 +24,13 @@ void EventMissionActionInfo___ctor(
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void EventMissionActionInfo___ctor_46839508(
+void EventMissionActionInfo___ctor_47079272(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -53,7 +53,7 @@ void EventMissionActionInfo___ctor_46839508(
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -77,7 +77,7 @@ int32_t EventMissionActionInfo__getValID(EventMissionActionInfo_o *this, const M
     if ( this->fields.missionActionType == 3 )
     {
       if ( !(_DWORD)max_length )
-        sub_1CE6960(0xFFFFFFFFLL);
+        sub_1D0F314(0xFFFFFFFFLL);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0) )
         return result;
       else
@@ -96,16 +96,16 @@ System_String_o *EventMissionActionInfo__getValMessage(EventMissionActionInfo_o 
   System_String_o **m_Items; // x8
 
   v2 = this;
-  if ( (byte_4E0714F & 1) == 0 )
+  if ( (byte_4E79DFC & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E0714F = 1;
+    this = (EventMissionActionInfo_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E79DFC = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (max_length = vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)max_length )
-      sub_1CE6960(this);
+      sub_1D0F314(this);
     m_Items = vals->m_Items;
   }
   else

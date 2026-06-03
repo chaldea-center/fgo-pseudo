@@ -11,10 +11,10 @@ void PhotoStandFigureDragProcess__CheckDisplayPhotoUi(PhotoStandFigureDragProces
   __int64 v4; // x1
   MyRoomControl_o *v5; // x0
 
-  if ( (byte_4DFFF24 & 1) == 0 )
+  if ( (byte_4E72B41 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFF24 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72B41 = 1;
   }
   MyRoomControl_k__BackingField = (UnityEngine_Object_o *)this->fields._MyRoomControl_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23,7 +23,7 @@ void PhotoStandFigureDragProcess__CheckDisplayPhotoUi(PhotoStandFigureDragProces
   {
     v5 = this->fields._MyRoomControl_k__BackingField;
     if ( !v5 )
-      sub_1CE6958(0, v4);
+      sub_1D0F30C(0, v4);
     MyRoomControl__DispPhotoUi(v5, 0);
   }
 }
@@ -48,10 +48,10 @@ void PhotoStandFigureDragProcess__CheckDragOperate(PhotoStandFigureDragProcess_o
     {
       x = touchInfo->fields.PositionDelta.fields.x;
       v5.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.PositionDelta.fields.y;
-      if ( !byte_4DFE0A9 )
+      if ( !byte_4E70C99 )
       {
-        this = (PhotoStandFigureDragProcess_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-        byte_4DFE0A9 = 1;
+        this = (PhotoStandFigureDragProcess_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+        byte_4E70C99 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v7.n64_u64[0] = vsub_f32(v5, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -73,7 +73,7 @@ LABEL_8:
         goto LABEL_8;
       }
     }
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   }
 }
 
@@ -114,14 +114,14 @@ void PhotoStandFigureDragProcess__GetPositionDelta(
   x = touchInfo->fields.TouchPosition.fields.x;
   v8.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.TouchPosition.fields.y;
   z = v19.fields.z;
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
     v16 = v19.fields.x;
     y = v19.fields.y;
-    parent = (UnityEngine_Transform_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
+    parent = (UnityEngine_Transform_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
     v19.fields.x = v16;
     v19.fields.y = y;
-    byte_4DFE0A9 = 1;
+    byte_4E70C99 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v11.n64_u64[0] = vsub_f32(v8, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -143,7 +143,7 @@ void PhotoStandFigureDragProcess__GetPositionDelta(
   v15 = this->fields.touchInfo;
   if ( !v15 )
 LABEL_10:
-    sub_1CE6958(parent, v4);
+    sub_1D0F30C(parent, v4);
   v15->fields.TouchPosition.fields.z = z;
   v15->fields.TouchPosition.fields.x = v19.fields.x;
   v15->fields.TouchPosition.fields.y = v19.fields.y;
@@ -161,9 +161,9 @@ UnityEngine_Vector3_o PhotoStandFigureDragProcess__GetWorldPosition(
 
   mainCamera = this->fields.mainCamera;
   if ( !mainCamera )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   v4 = 0;
-  return UnityEngine_Camera__ScreenToWorldPoint_72722736(mainCamera, *(UnityEngine_Vector3_o *)&screenPos.fields.x, 0);
+  return UnityEngine_Camera__ScreenToWorldPoint_73162832(mainCamera, *(UnityEngine_Vector3_o *)&screenPos.fields.x, 0);
 }
 
 
@@ -197,14 +197,14 @@ void PhotoStandFigureDragProcess__Init(PhotoStandFigureDragProcess_o *this, bool
   float v30; // s0
   bool IsOtherImage; // w0
 
-  if ( (byte_4DFFF21 & 1) == 0 )
+  if ( (byte_4E72B3E & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    byte_4DFFF21 = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    byte_4E72B3E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.targetTransform = transform;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.targetTransform,
     (int32_t)transform,
     v6,
@@ -215,13 +215,13 @@ void PhotoStandFigureDragProcess__Init(PhotoStandFigureDragProcess_o *this, bool
     v11);
   targetTransform = this->fields.targetTransform;
   if ( !targetTransform )
-    sub_1CE6958(0, v12);
+    sub_1D0F30C(0, v12);
   parent = UnityEngine_Transform__get_parent(targetTransform, 0);
   this->fields.parent = parent;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.parent, (int32_t)parent, v15, v16, v17, v18, v19, v20);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.parent, (int32_t)parent, v15, v16, v17, v18, v19, v20);
   main = UnityEngine_Camera__get_main(0);
   this->fields.mainCamera = main;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mainCamera, (int32_t)main, v22, v23, v24, v25, v26, v27);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mainCamera, (int32_t)main, v22, v23, v24, v25, v26, v27);
   this->fields.isTouchScale = 0;
   v29 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -248,24 +248,25 @@ void PhotoStandFigureDragProcess__Init(PhotoStandFigureDragProcess_o *this, bool
 void PhotoStandFigureDragProcess__InitTouchInfo(PhotoStandFigureDragProcess_o *this, const MethodInfo *method)
 {
   PhotoStandFigureDragProcess_TouchInfo_o *v3; // x20
+  const MethodInfo *v4; // x1
   struct PhotoStandFigureDragProcess_TouchInfo_o **p_touchInfo; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4DFFF22 & 1) == 0 )
+  if ( (byte_4E72B3F & 1) == 0 )
   {
-    sub_1CE6700(&PhotoStandFigureDragProcess_TouchInfo_TypeInfo);
-    byte_4DFFF22 = 1;
+    sub_1D0F0B4(&PhotoStandFigureDragProcess_TouchInfo_TypeInfo);
+    byte_4E72B3F = 1;
   }
-  v3 = (PhotoStandFigureDragProcess_TouchInfo_o *)sub_1CE694C(PhotoStandFigureDragProcess_TouchInfo_TypeInfo);
-  PhotoStandFigureDragProcess_TouchInfo___ctor(v3, 0);
+  v3 = (PhotoStandFigureDragProcess_TouchInfo_o *)sub_1D0F300(PhotoStandFigureDragProcess_TouchInfo_TypeInfo);
+  PhotoStandFigureDragProcess_TouchInfo___ctor(v3, v4);
   this->fields.touchInfo = v3;
   p_touchInfo = &this->fields.touchInfo;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_touchInfo, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_touchInfo, (int32_t)v3, v6, v7, v8, v9, v10, v11);
   *((_BYTE *)p_touchInfo + 24) = 0;
 }
 
@@ -291,6 +292,13 @@ void PhotoStandFigureDragProcess__OnDragUpdate(PhotoStandFigureDragProcess_o *th
     PhotoStandFigureDragProcess__SetPosition(this, v5);
     PhotoStandFigureDragProcess__CheckDragOperate(this, v6);
   }
+}
+
+
+// attributes: thunk
+void PhotoStandFigureDragProcess__OnOutsideTouch(PhotoStandFigureDragProcess_o *this, const MethodInfo *method)
+{
+  PhotoStandFigureDragProcess__CheckDisplayPhotoUi(this, method);
 }
 
 
@@ -332,18 +340,18 @@ void PhotoStandFigureDragProcess__OneTouch(PhotoStandFigureDragProcess_o *this, 
   if ( !touches )
     goto LABEL_9;
   if ( !touches[6] )
-    sub_1CE6960(touches);
+    sub_1D0F314(touches);
   touches = memmove(&v9, touches + 8, 0x44u);
   touchInfo = this->fields.touchInfo;
   if ( !touchInfo )
 LABEL_9:
-    sub_1CE6958(touches, v4);
+    sub_1D0F30C(touches, v4);
   if ( touchInfo->fields.TouchCount >= 2 )
   {
-    if ( !byte_4DFE0A9 )
+    if ( !byte_4E70C99 )
     {
-      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-      byte_4DFE0A9 = 1;
+      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+      byte_4E70C99 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -366,10 +374,10 @@ void PhotoStandFigureDragProcess__SetCanOtherTouch(
   __int64 v6; // x1
   MyRoomControl_o *v7; // x0
 
-  if ( (byte_4DFFF25 & 1) == 0 )
+  if ( (byte_4E72B42 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFF25 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72B42 = 1;
   }
   MyRoomControl_k__BackingField = (UnityEngine_Object_o *)this->fields._MyRoomControl_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -378,7 +386,7 @@ void PhotoStandFigureDragProcess__SetCanOtherTouch(
   {
     v7 = this->fields._MyRoomControl_k__BackingField;
     if ( !v7 )
-      sub_1CE6958(0, v6);
+      sub_1D0F30C(0, v6);
     MyRoomControl__SetMaskCollider(v7, !canOtherTouch, 0);
   }
 }
@@ -396,7 +404,7 @@ void PhotoStandFigureDragProcess__SetPosition(PhotoStandFigureDragProcess_o *thi
     || (localPosition = UnityEngine_Transform__get_localPosition(this->fields.targetTransform, 0),
         (touchInfo = this->fields.touchInfo) == 0) )
   {
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   }
   v6.fields.x = localPosition.fields.x + touchInfo->fields.PositionDelta.fields.x;
   v6.fields.y = localPosition.fields.y + touchInfo->fields.PositionDelta.fields.y;
@@ -465,10 +473,10 @@ void PhotoStandFigureDragProcess__SetScale(PhotoStandFigureDragProcess_o *this, 
       else
         v8 = v9;
     }
-    if ( !byte_4DFE0AD )
+    if ( !byte_4E70C9D )
     {
-      this = (PhotoStandFigureDragProcess_o *)sub_1CE6700(&UnityEngine_Mathf_TypeInfo);
-      byte_4DFE0AD = 1;
+      this = (PhotoStandFigureDragProcess_o *)sub_1D0F0B4(&UnityEngine_Mathf_TypeInfo);
+      byte_4E70C9D = 1;
     }
     v11 = fabsf(x);
     v12 = fabsf(v8);
@@ -487,10 +495,10 @@ void PhotoStandFigureDragProcess__SetScale(PhotoStandFigureDragProcess_o *this, 
       {
         v21 = v15->fields.ScalePivotWorldPos.fields.x;
         v22.n64_u64[0] = *(unsigned __int64 *)&v15->fields.ScalePivotWorldPos.fields.y;
-        if ( !byte_4DFE0A9 )
+        if ( !byte_4E70C99 )
         {
-          this = (PhotoStandFigureDragProcess_o *)sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-          byte_4DFE0A9 = 1;
+          this = (PhotoStandFigureDragProcess_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+          byte_4E70C99 = 1;
         }
         static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
         v24.n64_u64[0] = vsub_f32(v22, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -520,10 +528,10 @@ void PhotoStandFigureDragProcess__SetScale(PhotoStandFigureDragProcess_o *this, 
       else
       {
         v16 = 1;
-        if ( !byte_4DFE0A9 )
+        if ( !byte_4E70C99 )
         {
-          sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-          byte_4DFE0A9 = 1;
+          sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+          byte_4E70C99 = 1;
         }
       }
       v17 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -582,7 +590,7 @@ LABEL_29:
         }
       }
 LABEL_38:
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
     }
   }
 }
@@ -598,7 +606,7 @@ void PhotoStandFigureDragProcess__SetUp(PhotoStandFigureDragProcess_o *this, con
 
   targetTransform = this->fields.targetTransform;
   if ( !targetTransform )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   localScale = UnityEngine_Transform__get_localScale(targetTransform, 0);
   touchInfo = this->fields.touchInfo;
   this->fields.localScale = localScale;
@@ -606,10 +614,10 @@ void PhotoStandFigureDragProcess__SetUp(PhotoStandFigureDragProcess_o *this, con
   if ( touchInfo )
   {
     touchInfo->fields.ScaleDelta = 0.0;
-    if ( !byte_4DFE0A9 )
+    if ( !byte_4E70C99 )
     {
-      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-      byte_4DFE0A9 = 1;
+      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+      byte_4E70C99 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -645,7 +653,7 @@ void PhotoStandFigureDragProcess__Touch(PhotoStandFigureDragProcess_o *this, con
   }
   touchInfo = this->fields.touchInfo;
   if ( !touchInfo )
-    sub_1CE6958(touchCount, v4);
+    sub_1D0F30C(touchCount, v4);
   touchInfo->fields.TouchCount = v5;
 }
 
@@ -674,10 +682,10 @@ void PhotoStandFigureDragProcess__TwoTouch(PhotoStandFigureDragProcess_o *this, 
   UnityEngine_Vector3_o WorldPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4DFFF23 & 1) == 0 )
+  if ( (byte_4E72B40 & 1) == 0 )
   {
-    sub_1CE6700(&System_Math_TypeInfo);
-    byte_4DFFF23 = 1;
+    sub_1D0F0B4(&System_Math_TypeInfo);
+    byte_4E72B40 = 1;
   }
   memset(&dest, 0, sizeof(dest));
   memset(&v19, 0, sizeof(v19));
@@ -692,7 +700,7 @@ void PhotoStandFigureDragProcess__TwoTouch(PhotoStandFigureDragProcess_o *this, 
     goto LABEL_23;
   if ( LODWORD(touches[1].klass) <= 1 )
 LABEL_24:
-    sub_1CE6960(touches);
+    sub_1D0F314(touches);
   memmove(&v19, (char *)&touches[4].klass + 4, 0x44u);
   position = UnityEngine_Touch__get_position(&dest, 0);
   v6 = UnityEngine_Touch__get_position(&v19, 0);
@@ -750,7 +758,7 @@ LABEL_24:
       return;
     }
 LABEL_23:
-    sub_1CE6958(touches, v4);
+    sub_1D0F30C(touches, v4);
   }
   if ( v15 > 0.0 )
   {
@@ -782,7 +790,7 @@ void PhotoStandFigureDragProcess__set_MyRoomControl(
   System_String_o *v7; // x7
 
   this->fields._MyRoomControl_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._MyRoomControl_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -809,10 +817,10 @@ void PhotoStandFigureDragProcess_TouchInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.TouchCount = 0;
   this->fields.ScaleDelta = 0.0;
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;

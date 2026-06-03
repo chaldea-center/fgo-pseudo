@@ -1,13 +1,13 @@
 void EffectEntity___ctor(EffectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04890 & 1) == 0 )
+  if ( (byte_4E77511 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_int___ctor__);
-    byte_4E04890 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
+    byte_4E77511 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_34E6B24 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -29,19 +29,19 @@ bool EffectEntity__IsUseNodePositionOnly(
   __int64 v10; // x1
   AuraEffectPosOverwriteEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E0488F & 1) == 0 )
+  if ( (byte_4E77510 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_24886/*"useNodePositionOnly"*/);
-    byte_4E0488F = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_24994/*"useNodePositionOnly"*/);
+    byte_4E77510 = 1;
   }
   entity = 0;
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24886/*"useNodePositionOnly"*/, 0, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24994/*"useNodePositionOnly"*/, 0, 0);
   v8 = IntValue == 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (AuraEffectPosOverwriteMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+  Master_object = (AuraEffectPosOverwriteMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
   if ( !Master_object )
     goto LABEL_10;
   if ( AuraEffectPosOverwriteMaster__TryGetEntity(Master_object, &entity, this->fields.id, svtId, limitCount, 0) )
@@ -50,7 +50,7 @@ bool EffectEntity__IsUseNodePositionOnly(
     if ( entity )
       return AuraEffectPosOverwriteEntity__IsUseNodePositionOnly(entity, IntValue == 1, 0);
 LABEL_10:
-    sub_1CE6958(Master_object, v10);
+    sub_1D0F30C(Master_object, v10);
   }
   return v8;
 }

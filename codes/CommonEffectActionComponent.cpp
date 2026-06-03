@@ -14,18 +14,18 @@ void CommonEffectActionComponent__Awake(CommonEffectActionComponent_o *this, con
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E06049 & 1) == 0 )
+  if ( (byte_4E78CF0 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
-    byte_4E06049 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+    byte_4E78CF0 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1CE694C(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v3,
-    (const MethodInfo_355AB10 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    (const MethodInfo_35A7834 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
   this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.eventActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.eventActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -45,26 +45,26 @@ void CommonEffectActionComponent__CallEventAction(
   struct System_Collections_Generic_Dictionary_int__Action__o *v7; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_4E0604B & 1) == 0 )
+  if ( (byte_4E78CF2 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
-    byte_4E0604B = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+    byte_4E78CF2 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__object___ContainsKey(
          (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
          key,
-         (const MethodInfo_355B6D8 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_35A83FC *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
     v7 = this->fields.eventActionList;
     if ( !v7 )
-      sub_1CE6958(0, v6);
+      sub_1D0F30C(0, v6);
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
              (System_Collections_Generic_Dictionary_int__object__o *)v7,
              key,
-             (const MethodInfo_355B444 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+             (const MethodInfo_35A8168 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
     ActionExtensions__Call((System_Action_o *)Item, 0);
   }
 }
@@ -88,7 +88,7 @@ void CommonEffectActionComponent__SetEndAction(
   System_String_o *v7; // x7
 
   this->fields.endAction = endAction;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.endAction,
     (int32_t)endAction,
     (int32_t)method,
@@ -108,10 +108,10 @@ void CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_4E0604A & 1) == 0 )
+  if ( (byte_4E78CF1 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
-    byte_4E0604A = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+    byte_4E78CF1 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -119,7 +119,7 @@ void CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
       key,
       (Il2CppObject *)action,
-      (const MethodInfo_355B4D0 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_35A81F4 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
@@ -135,7 +135,7 @@ void CommonEffectActionComponent__SetStartAction(
   System_String_o *v7; // x7
 
   this->fields.startAction = startAction;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.startAction,
     (int32_t)startAction,
     (int32_t)method,

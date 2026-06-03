@@ -3,24 +3,24 @@ void AchievementExchangeConditionsDialog___ctor(AchievementExchangeConditionsDia
   System_Collections_Generic_List_object__o *v3; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4DFE410 & 1) == 0 )
+  if ( (byte_4E71000 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4DFE410 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4E71000 = 1;
   }
-  *(_OWORD *)&this->fields.scrollViewPosShopListNum1.fields.x = xmmword_D25320;
-  *(_OWORD *)&this->fields.scrollViewPosShopListNum2.fields.y = xmmword_D24560;
-  *(_OWORD *)&this->fields.scrollViewPosShopListNum3.fields.z = xmmword_D24D10;
-  *(_OWORD *)&this->fields.scrollViewPosShopListNum5.fields.x = xmmword_D24300;
+  *(_OWORD *)&this->fields.scrollViewPosShopListNum1.fields.x = xmmword_D35BC0;
+  *(_OWORD *)&this->fields.scrollViewPosShopListNum2.fields.y = xmmword_D34E20;
+  *(_OWORD *)&this->fields.scrollViewPosShopListNum3.fields.z = xmmword_D355B0;
+  *(_OWORD *)&this->fields.scrollViewPosShopListNum5.fields.x = xmmword_D34BC0;
   *(_QWORD *)&this->fields.scrollViewPosDefault.fields.y = 1118306304;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.shopNameList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1CE66A4(&this->fields.shopNameList, v3);
+  sub_1D0F058(&this->fields.shopNameList, v3);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, v4);
@@ -39,7 +39,7 @@ void AchievementExchangeConditionsDialog__Callback(
   p_callbackFunc = &this->fields.callbackFunc;
   v3 = callbackFunc;
   *p_callbackFunc = 0;
-  sub_1CE66A4(p_callbackFunc, 0);
+  sub_1D0F058(p_callbackFunc, 0);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
 }
@@ -53,16 +53,16 @@ void AchievementExchangeConditionsDialog__Close(
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4DFE40D & 1) == 0 )
+  if ( (byte_4E70FFD & 1) == 0 )
   {
-    sub_1CE6700(&Method_AchievementExchangeConditionsDialog_EndClose__);
-    sub_1CE6700(&System_Action_TypeInfo);
-    byte_4DFE40D = 1;
+    sub_1D0F0B4(&Method_AchievementExchangeConditionsDialog_EndClose__);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    byte_4E70FFD = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1CE66A4(&this->fields.closeCallbackFunc, callback);
+  sub_1D0F058(&this->fields.closeCallbackFunc, callback);
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_AchievementExchangeConditionsDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
@@ -83,7 +83,7 @@ void AchievementExchangeConditionsDialog__EndClose(
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1CE66A4(p_closeCallbackFunc, 0);
+    sub_1D0F058(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -103,14 +103,14 @@ void AchievementExchangeConditionsDialog__Init(AchievementExchangeConditionsDial
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4DFE40A & 1) == 0 )
+  if ( (byte_4E70FFA & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFE40A = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E70FFA = 1;
   }
   detailLabel = this->fields.detailLabel;
   if ( !detailLabel )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   UILabel__set_text(detailLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
   AchievementExchangeConditionsDialog__InitShopNameList(this, v4);
@@ -126,35 +126,35 @@ void AchievementExchangeConditionsDialog__InitShopNameList(
   Il2CppObject *current; // x19
   System_Collections_Generic_List_Enumerator_object__o v5; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4DFE40B & 1) == 0 )
+  if ( (byte_4E70FFB & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFE40B = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E70FFB = 1;
   }
   memset(&v5, 0, sizeof(v5));
   shopNameList = this->fields.shopNameList;
   if ( !shopNameList )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v5,
     (System_Collections_Generic_List_object__o *)shopNameList,
-    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v5,
-            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v5.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540((UnityEngine_Object_o *)current, 0);
+    UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v5,
-    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }
 
 
@@ -169,28 +169,28 @@ void AchievementExchangeConditionsDialog__OnClickCancel(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4DFE40E & 1) == 0 )
+  if ( (byte_4E70FFE & 1) == 0 )
   {
-    sub_1CE6700(&Method_AchievementExchangeConditionsDialog_Callback__);
-    sub_1CE6700(&Method_AchievementExchangeConditionsDialog_OnClickCancel__);
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFE40E = 1;
+    sub_1D0F0B4(&Method_AchievementExchangeConditionsDialog_Callback__);
+    sub_1D0F0B4(&Method_AchievementExchangeConditionsDialog_OnClickCancel__);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E70FFE = 1;
   }
   if ( this->fields.state == 2 )
   {
     AchievementExchangeConditionsDialog__InitShopNameList(this, method);
     v3 = Method_AchievementExchangeConditionsDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_AchievementExchangeConditionsDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718();
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC();
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.state = 3;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_AchievementExchangeConditionsDialog_Callback__, 0);
     if ( !Instance )
-      sub_1CE6958(v7, v8);
+      sub_1D0F30C(v7, v8);
     CommonUI__CloseAchievementExchangeConditionsDialog((CommonUI_o *)Instance, v6, 0);
   }
 }
@@ -223,23 +223,23 @@ void AchievementExchangeConditionsDialog__Open(
   System_Action_o *v27; // x20
   const MethodInfo *v28; // x4
 
-  if ( (byte_4DFE40C & 1) == 0 )
+  if ( (byte_4E70FFC & 1) == 0 )
   {
-    sub_1CE6700(&Method_AchievementExchangeConditionsDialog_EndOpen__);
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_1CE6700(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1CE6700(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NGUITools_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1CE6700(&StringLiteral_1907/*"ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME"*/);
-    byte_4DFE40C = 1;
+    sub_1D0F0B4(&Method_AchievementExchangeConditionsDialog_EndOpen__);
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NGUITools_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1D0F0B4(&StringLiteral_1908/*"ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME"*/);
+    byte_4E70FFC = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1CE66A4(&this->fields.callbackFunc, callback);
+  sub_1D0F058(&this->fields.callbackFunc, callback);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_29;
@@ -251,7 +251,7 @@ void AchievementExchangeConditionsDialog__Open(
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_29;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
@@ -272,30 +272,30 @@ void AchievementExchangeConditionsDialog__Open(
       shopListLabel = this->fields.shopListLabel;
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-      v20 = NGUITools__AddChild_50459828(grid, shopListLabel, 0);
-      titleLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v20 = NGUITools__AddChild_50753020(grid, shopListLabel, 0);
+      titleLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !titleLabel )
         break;
       titleLabel = (UILabel_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)titleLabel,
-                                  (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ShopMaster___);
+                                  (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ShopMaster___);
       if ( v17 >= LODWORD(shopIds->max_length) )
-        sub_1CE6960(titleLabel);
+        sub_1D0F314(titleLabel);
       if ( !titleLabel )
         break;
       titleLabel = (UILabel_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)titleLabel,
                                   shopIds->m_Items[v17],
-                                  (const MethodInfo_34E925C *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
+                                  (const MethodInfo_3535B7C *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
       if ( !v20 )
         break;
       v21 = titleLabel;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v20,
-                           (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1907/*"ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME"*/, 0);
+      titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1908/*"ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME"*/, 0);
       if ( !v21 )
         break;
       titleLabel = (UILabel_o *)System_String__Format(
@@ -320,26 +320,26 @@ void AchievementExchangeConditionsDialog__Open(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)titleLabel,
           (Il2CppObject *)v20,
-          *(const MethodInfo_3905F68 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          *(const MethodInfo_395C410 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
         v26 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(titleLabel->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v26 + 32) = v20;
-        sub_1CE66A4(v26 + 32, v20);
+        sub_1D0F058(v26 + 32, v20);
       }
       max_length = shopIds->max_length;
       if ( (__int64)++v17 >= (int)max_length )
         goto LABEL_28;
     }
 LABEL_29:
-    sub_1CE6958(titleLabel, v11);
+    sub_1D0F30C(titleLabel, v11);
   }
 LABEL_28:
   AchievementExchangeConditionsDialog__ScrollViewPositionAdjustment(this, max_length, v15);
   this->fields.state = 1;
-  v27 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)this, Method_AchievementExchangeConditionsDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0, v28);
 }
@@ -384,7 +384,7 @@ void AchievementExchangeConditionsDialog__ScrollViewPositionAdjustment(
   }
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_1CE6958(0, num);
+    sub_1D0F30C(0, num);
   v6.fields.y = *p_y;
   v6.fields.x = p_scrollViewPosShopListNum1->fields.x;
   v6.fields.z = 680.0;
@@ -408,10 +408,10 @@ void AchievementExchangeConditionsDialog__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4DFE408 & 1) == 0 )
+  if ( (byte_4E70FF8 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    byte_4DFE408 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    byte_4E70FF8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -424,13 +424,13 @@ void AchievementExchangeConditionsDialog__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (AchievementExchangeConditionsDialog_o *)sub_1CE6CF4(v8);
+  v11 = (AchievementExchangeConditionsDialog_o *)sub_1D0F6A8(v8);
   AchievementExchangeConditionsDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -443,10 +443,10 @@ UnityEngine_GameObject_o *AchievementExchangeConditionsDialog__get_closeBtnObjec
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4DFE40F & 1) == 0 )
+  if ( (byte_4E70FFF & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFE40F = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E70FFF = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -455,7 +455,7 @@ UnityEngine_GameObject_o *AchievementExchangeConditionsDialog__get_closeBtnObjec
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeBtn;
   if ( !v6 )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }
 
@@ -474,10 +474,10 @@ void AchievementExchangeConditionsDialog__remove_callbackFunc(
   AchievementExchangeConditionsDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4DFE409 & 1) == 0 )
+  if ( (byte_4E70FF9 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    byte_4DFE409 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    byte_4E70FF9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -490,12 +490,12 @@ void AchievementExchangeConditionsDialog__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (AchievementExchangeConditionsDialog_o *)sub_1CE6CF4(v8);
+  v11 = (AchievementExchangeConditionsDialog_o *)sub_1D0F6A8(v8);
   AchievementExchangeConditionsDialog__Init(v11, v12);
 }

@@ -12,7 +12,7 @@ void ItemLinkInfoDetailObject__Awake(ItemLinkInfoDetailObject_o *this, const Met
 
   widget = this->fields.widget;
   if ( !widget || (itemDetailLabel = this->fields.itemDetailLabel) == 0 )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   this->fields.itemDetailLabelMargin = (float)widget->fields.mHeight - (float)itemDetailLabel->fields.mHeight;
   this->fields.itemDetailLabelFontSize = itemDetailLabel->fields.mFontSize;
 }
@@ -24,16 +24,20 @@ void ItemLinkInfoDetailObject__Setup(
         bool isDispStoneDetail,
         const MethodInfo *method)
 {
+  UILabel_o *itemDetailLabel; // x22
+  System_String_o *Detail; // x0
   int32_t type; // w23
   ItemIconComponent_o *itemIcon; // x22
   __int64 ImageId; // x0
-  __int64 v10; // x1
+  __int64 v12; // x1
 
   if ( itemEnt )
   {
+    itemDetailLabel = this->fields.itemDetailLabel;
+    Detail = ItemEntity__GetDetail(itemEnt, 0);
     WrapControlText__textAdjust(
-      this->fields.itemDetailLabel,
-      itemEnt->fields.detail,
+      itemDetailLabel,
+      Detail,
       this->fields.itemDetailLabelFontSize,
       this->fields.itemDetailLabelFontSize,
       0);
@@ -41,7 +45,7 @@ void ItemLinkInfoDetailObject__Setup(
     itemIcon = this->fields.itemIcon;
     ImageId = ItemEntity__GetImageId(itemEnt, 0);
     if ( !itemIcon )
-      sub_1CE6958(ImageId, v10);
+      sub_1D0F30C(ImageId, v12);
     ItemIconComponent__SetCombineItemImage(itemIcon, ImageId, itemEnt->fields.bgImageId, -1, type == 29, 0);
   }
   if ( isDispStoneDetail )
@@ -66,14 +70,14 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
   UserExternalPaymentStoneEntity_o *v15; // [xsp+8h] [xbp-38h] BYREF
   UserGameEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4E07187 & 1) == 0 )
+  if ( (byte_4E79E34 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E07187 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E79E34 = 1;
   }
   entity = 0;
   v15 = 0;
@@ -81,13 +85,13 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4DFE4CA )
+    if ( !byte_4E710BF )
     {
-      sub_1CE6700(&NetworkManager_TypeInfo);
-      byte_4DFE4CA = 1;
+      sub_1D0F0B4(&NetworkManager_TypeInfo);
+      byte_4E710BF = 1;
     }
     UnitInfo = (System_String_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -158,7 +162,7 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
         }
       }
 LABEL_40:
-      sub_1CE6958(UnitInfo, v3);
+      sub_1D0F30C(UnitInfo, v3);
     }
   }
 }
@@ -170,7 +174,7 @@ float ItemLinkInfoDetailObject__get_AreaHeight(ItemLinkInfoDetailObject_o *this,
 
   itemDetailLabel = this->fields.itemDetailLabel;
   if ( !itemDetailLabel )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return this->fields.itemDetailLabelMargin + (float)itemDetailLabel->fields.mHeight;
 }
 
@@ -181,6 +185,6 @@ float ItemLinkInfoDetailObject__get_Height(ItemLinkInfoDetailObject_o *this, con
 
   widget = this->fields.widget;
   if ( !widget )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return (float)widget->fields.mHeight;
 }

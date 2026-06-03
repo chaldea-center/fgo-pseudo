@@ -43,10 +43,10 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
   UnityEngine_Rect_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E09154 & 1) == 0 )
+  if ( (byte_4E7BE86 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E09154 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BE86 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -68,7 +68,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
     }
     this->fields.mSprite = Sprite;
     p_mSprite = &this->fields.mSprite;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v7, v8, v9, v10, v11, v12);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v7, v8, v9, v10, v11, v12);
     if ( !this->fields.mSprite )
       return this->fields.mSprite != 0;
     if ( atlas )
@@ -80,7 +80,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       if ( v6 )
       {
         *p_mSprite = 0;
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, 0, v16, v17, v18, v19, v20, v21);
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, 0, v16, v17, v18, v19, v20, v21);
         return this->fields.mSprite != 0;
       }
       v22 = (int *)*p_mSprite;
@@ -125,7 +125,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       }
     }
 LABEL_25:
-    sub_1CE6958(v6, Sprite);
+    sub_1D0F30C(v6, Sprite);
   }
   return this->fields.mSprite != 0;
 }
@@ -153,7 +153,7 @@ int32_t BMSymbol__get_length(BMSymbol_o *this, const MethodInfo *method)
   {
     sequence = this->fields.sequence;
     if ( !sequence )
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
     mLength = sequence->fields._stringLength;
     this->fields.mLength = mLength;
   }

@@ -28,14 +28,14 @@ void VoiceInfo___ctor(VoiceInfo_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.isCanPlay = 0;
   this->fields.overwriteName = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
   this->fields.overwriteNameDefault = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
   this->fields.servantVoiceConds = 0;
   *(_QWORD *)&this->fields.overwritePriority = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.servantVoiceConds, 0, v15, v16, v17, v18, v19, v20);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.servantVoiceConds, 0, v15, v16, v17, v18, v19, v20);
   this->fields.sync = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.sync, 0, v21, v22, v23, v24, v25, v26);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sync, 0, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -57,10 +57,10 @@ LABEL_7:
     goto LABEL_8;
   }
   if ( !(_DWORD)max_length )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   sync = (struct ServantVoiceSync_array *)sync->m_Items[0];
   if ( !sync )
-    sub_1CE6958(this, syncSvtId);
+    sub_1D0F30C(this, syncSvtId);
   LODWORD(sync) = sync->bounds;
   result = 1;
 LABEL_8:

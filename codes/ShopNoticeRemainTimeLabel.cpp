@@ -21,9 +21,9 @@ void ShopNoticeRemainTimeLabel___ctor(
   this->fields.onTimeOverLabelColor = _Q0;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.label = label;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)label, v12, v13, v14, v15, v16, v17);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)label, v12, v13, v14, v15, v16, v17);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)monoBehaviour, v18, v19, v20, v21, v22, v23);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)monoBehaviour, v18, v19, v20, v21, v22, v23);
 }
 
 
@@ -35,7 +35,7 @@ void ShopNoticeRemainTimeLabel__SetTimeLimit(
 {
   this->fields.timeLimit = timeLimit;
   if ( isChangeTimeOverLabelColorToRed )
-    this->fields.onTimeOverLabelColor = (struct UnityEngine_Color_o)xmmword_D26250;
+    this->fields.onTimeOverLabelColor = (struct UnityEngine_Color_o)xmmword_D36B10;
 }
 
 
@@ -57,10 +57,10 @@ void ShopNoticeRemainTimeLabel__Start(ShopNoticeRemainTimeLabel_o *this, const M
   monoBehaviour = this->fields.monoBehaviour;
   updated = ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel(this, v4);
   if ( !monoBehaviour )
-    sub_1CE6958(updated, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_72903732(monoBehaviour, updated, 0);
+    sub_1D0F30C(updated, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_73344676(monoBehaviour, updated, 0);
   this->fields.coroutine = started;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -82,10 +82,10 @@ void ShopNoticeRemainTimeLabel__Stop(ShopNoticeRemainTimeLabel_o *this, const Me
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1CE6958(0, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_72904352(monoBehaviour, coroutine, 0);
+      sub_1D0F30C(0, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_73345296(monoBehaviour, coroutine, 0);
     p_coroutine->klass = 0;
-    sub_1CE66A4(p_coroutine, 0, v5, v6, v7, v8, v9, v10);
+    sub_1D0F058(p_coroutine, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -102,16 +102,16 @@ System_Collections_IEnumerator_o *ShopNoticeRemainTimeLabel__UpdateRemainTimeLab
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E00BD9 & 1) == 0 )
+  if ( (byte_4E73801 & 1) == 0 )
   {
-    sub_1CE6700(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
-    byte_4E00BD9 = 1;
+    sub_1D0F0B4(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
+    byte_4E73801 = 1;
   }
-  v3 = sub_1CE694C(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
+  v3 = sub_1D0F300(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -154,12 +154,12 @@ bool ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
   GrandQuestFolderBoardItem_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4E00BDA & 1) == 0 )
+  if ( (byte_4E73802 & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_o *)sub_1CE6700(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4E00BDA = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_o *)sub_1D0F0B4(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4E73802 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -172,10 +172,10 @@ bool ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
     if ( _1__state )
       return 0;
     v2->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_1CE694C(UnityEngine_WaitForSeconds_TypeInfo);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1D0F300(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0);
     v2->fields._loopWait_5__2 = v5;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v2->fields._loopWait_5__2, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields._loopWait_5__2, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   }
   if ( !_4__this )
     goto LABEL_18;
@@ -186,7 +186,7 @@ bool ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
   this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_o *)LocalizationManager__GetRestTime5(timeLimit, -1, 0);
   if ( !label )
 LABEL_18:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   UILabel__set_text(label, (System_String_o *)this, 0);
   v14 = _4__this->fields.timeLimit;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -204,7 +204,7 @@ LABEL_18:
   loopWait_5__2 = (Il2CppObject *)v2->fields._loopWait_5__2;
   v2->fields.__2__current = loopWait_5__2;
   p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-  sub_1CE66A4(p__2__current, (int32_t)loopWait_5__2, v15, v16, v17, v18, v19, v20);
+  sub_1D0F058(p__2__current, (int32_t)loopWait_5__2, v15, v16, v17, v18, v19, v20);
   result = 1;
   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return result;
@@ -227,11 +227,11 @@ void __noreturn ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 

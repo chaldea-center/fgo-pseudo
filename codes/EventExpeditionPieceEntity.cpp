@@ -1,27 +1,27 @@
 void EventExpeditionPieceEntity___ctor(EventExpeditionPieceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E049C1 & 1) == 0 )
+  if ( (byte_4E77642 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E049C1 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E77642 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventExpeditionPieceEntity__CreatePK(int64_t eventId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4E049C0 & 1) == 0 )
+  if ( (byte_4E77641 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E049C0 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4E77641 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            eventId,
            idx,
-           (const MethodInfo_3202638 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

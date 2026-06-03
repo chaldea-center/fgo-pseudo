@@ -1,27 +1,27 @@
 void WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05C1B & 1) == 0 )
+  if ( (byte_4E788BB & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05C1B = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E788BB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4E05C1A & 1) == 0 )
+  if ( (byte_4E788BA & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E05C1A = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E788BA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,17 +41,17 @@ System_String_array *WarBoardStageBossEntity__GetTextEffectColors(
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E05C19 & 1) == 0 )
+  if ( (byte_4E788B9 & 1) == 0 )
   {
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_24439/*"text_effect_colors"*/);
-    byte_4E05C19 = 1;
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_24545/*"text_effect_colors"*/);
+    byte_4E788B9 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24439/*"text_effect_colors"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24545/*"text_effect_colors"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( IsNullOrEmpty )
-    return (System_String_array *)sub_1CE67A8(string___TypeInfo, 0);
+    return (System_String_array *)sub_1D0F15C(string___TypeInfo, 0);
   if ( !StringValue )
-    sub_1CE6958(IsNullOrEmpty, v5);
+    sub_1D0F30C(IsNullOrEmpty, v5);
   return System_String__Split(StringValue, 0x2Cu, 0, 0);
 }

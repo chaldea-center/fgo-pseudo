@@ -1,13 +1,13 @@
 void WarReleaseEntity___ctor(WarReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05CA3 & 1) == 0 )
+  if ( (byte_4E78948 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05CA3 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E78948 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *WarReleaseEntity__CreatePK(
         int64_t condNum,
         const MethodInfo *method)
 {
-  if ( (byte_4E05CA2 & 1) == 0 )
+  if ( (byte_4E78947 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_4E05CA2 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+    byte_4E78947 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            warId,
            condType,
            condId,
            condNum,
-           (const MethodInfo_3202F1C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_324DD2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -81,10 +81,10 @@ bool WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const MethodInfo *met
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4E05CA1 & 1) == 0 )
+  if ( (byte_4E78945 & 1) == 0 )
   {
-    sub_1CE6700(&CondType_TypeInfo);
-    byte_4E05CA1 = 1;
+    sub_1D0F0B4(&CondType_TypeInfo);
+    byte_4E78945 = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
@@ -98,4 +98,65 @@ bool WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const MethodInfo *met
 bool WarReleaseEntity__IsShowBoard(WarReleaseEntity_o *this, const MethodInfo *method)
 {
   return (unsigned int)(this->fields.warDisplayType - 1) < 3;
+}
+
+
+bool WarReleaseEntity__TryGetTransitionDialogData(
+        WarReleaseEntity_o *this,
+        WarReleaseEntity_TransitionDialogData_o **data,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  Il2CppObject *v11; // x20
+  Il2CppObject *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
+
+  if ( (byte_4E78946 & 1) == 0 )
+  {
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25001/*"useTransitionDialog"*/);
+    byte_4E78946 = 1;
+  }
+  value = 0;
+  *data = 0;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)data, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  script = this->fields.script;
+  if ( script
+    && System_Collections_Generic_Dictionary_object__object___TryGetValue(
+         (System_Collections_Generic_Dictionary_object__object__o *)script,
+         (Il2CppObject *)StringLiteral_25001/*"useTransitionDialog"*/,
+         &value,
+         (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+  {
+    v11 = value;
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+    v12 = JsonManager__Deserialize_object_(
+            v11,
+            (const MethodInfo_32C0284 *)Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
+    *data = (WarReleaseEntity_TransitionDialogData_o *)v12;
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)data, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  }
+  return *data != 0;
+}
+
+
+void WarReleaseEntity_TransitionDialogData___ctor(
+        WarReleaseEntity_TransitionDialogData_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

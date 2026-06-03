@@ -17,10 +17,10 @@ void BattleServantBuffIconComponent__AddDepth(
   UnityEngine_Object_o *sideBgSprite; // x21
   UnityEngine_Object_o *intervalLabel; // x21
 
-  if ( (byte_4E081C6 & 1) == 0 )
+  if ( (byte_4E7AEF8 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081C6 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEF8 = 1;
   }
   iconSprite = (UIWidget_o *)this->fields.iconSprite;
   if ( !iconSprite )
@@ -58,7 +58,7 @@ void BattleServantBuffIconComponent__AddDepth(
       return;
     }
 LABEL_20:
-    sub_1CE6958(iconSprite, *(_QWORD *)&addDepth);
+    sub_1D0F30C(iconSprite, *(_QWORD *)&addDepth);
   }
 }
 
@@ -78,10 +78,10 @@ void BattleServantBuffIconComponent__OnClick(BattleServantBuffIconComponent_o *t
   __int64 buffId; // x1
   BattlePerformanceStatus_o *v6; // x0
 
-  if ( (byte_4E081C2 & 1) == 0 )
+  if ( (byte_4E7AEF4 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081C2 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEF4 = 1;
   }
   targetPerf = (UnityEngine_Object_o *)this->fields.targetPerf;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ void BattleServantBuffIconComponent__OnClick(BattleServantBuffIconComponent_o *t
     {
       v6 = this->fields.targetPerf;
       if ( !v6 )
-        sub_1CE6958(0, buffId);
+        sub_1D0F30C(0, buffId);
       BattlePerformanceStatus__OpenBuffConf(v6, buffId, v4);
     }
   }
@@ -108,10 +108,10 @@ void BattleServantBuffIconComponent__ParentHasChanged(BattleServantBuffIconCompo
   UnityEngine_Object_o *backSprite; // x20
   UnityEngine_Object_o *sideBgSprite; // x20
 
-  if ( (byte_4E081C3 & 1) == 0 )
+  if ( (byte_4E7AEF5 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081C3 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEF5 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -151,7 +151,7 @@ void BattleServantBuffIconComponent__ParentHasChanged(BattleServantBuffIconCompo
       return;
     }
 LABEL_19:
-    sub_1CE6958(v5, v4);
+    sub_1D0F30C(v5, v4);
   }
 }
 
@@ -171,10 +171,10 @@ void BattleServantBuffIconComponent__SetEnableVisual(
   float v11; // s2
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E081BD & 1) == 0 )
+  if ( (byte_4E7AEEF & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081BD = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEEF = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -192,7 +192,7 @@ void BattleServantBuffIconComponent__SetEnableVisual(
           UIWidget__set_color(v7, *(UnityEngine_Color_o *)&v8, 0),
           (v7 = (UIWidget_o *)this->fields.iconSprite) == 0) )
     {
-      sub_1CE6958(v7, v6);
+      sub_1D0F30C(v7, v6);
     }
     ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v7->klass->vtable._30_MarkAsChanged.methodPtr)(
       v7,
@@ -219,15 +219,15 @@ void BattleServantBuffIconComponent__SetInterval(
   Il2CppObject *v14; // x0
   int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E081C4 & 1) == 0 )
+  if ( (byte_4E7AEF6 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_2716/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/);
-    sub_1CE6700(&StringLiteral_2715/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E081C4 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_2720/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/);
+    sub_1D0F0B4(&StringLiteral_2719/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7AEF6 = 1;
   }
   intervalLabel = (UnityEngine_Object_o *)this->fields.intervalLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -245,9 +245,9 @@ void BattleServantBuffIconComponent__SetInterval(
       {
         v9 = IntervalVal;
         if ( BattleBuffData_IntervalData__get_HasIntervalTurn(interval, 0) )
-          v10 = (System_String_o **)&StringLiteral_2716/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/;
+          v10 = (System_String_o **)&StringLiteral_2720/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/;
         else
-          v10 = (System_String_o **)&StringLiteral_2715/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/;
+          v10 = (System_String_o **)&StringLiteral_2719/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/;
         v11 = *v10;
         v12 = this->fields.intervalLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -262,7 +262,7 @@ void BattleServantBuffIconComponent__SetInterval(
           return;
         }
 LABEL_17:
-        sub_1CE6958(v7, v6);
+        sub_1D0F30C(v7, v6);
       }
     }
   }
@@ -279,12 +279,12 @@ void BattleServantBuffIconComponent__SetSideBg(
   __int64 v8; // x1
   UnityEngine_Behaviour_o *v9; // x0
 
-  if ( (byte_4E081BE & 1) == 0 )
+  if ( (byte_4E7AEF0 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_17824/*"bufficon_bg2"*/);
-    sub_1CE6700(&StringLiteral_17823/*"bufficon_bg1"*/);
-    byte_4E081BE = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_17899/*"bufficon_bg2"*/);
+    sub_1D0F0B4(&StringLiteral_17898/*"bufficon_bg1"*/);
+    byte_4E7AEF0 = 1;
   }
   sideBgSprite = (UnityEngine_Object_o *)this->fields.sideBgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -300,7 +300,7 @@ void BattleServantBuffIconComponent__SetSideBg(
       v9 = (UnityEngine_Behaviour_o *)this->fields.sideBgSprite;
       if ( !v9 )
         goto LABEL_17;
-      UISprite__set_spriteName((UISprite_o *)v9, (System_String_o *)StringLiteral_17824/*"bufficon_bg2"*/, 0);
+      UISprite__set_spriteName((UISprite_o *)v9, (System_String_o *)StringLiteral_17899/*"bufficon_bg2"*/, 0);
       v9 = (UnityEngine_Behaviour_o *)this->fields.sideBgSprite;
       if ( !v9 )
         goto LABEL_17;
@@ -311,7 +311,7 @@ void BattleServantBuffIconComponent__SetSideBg(
       v9 = (UnityEngine_Behaviour_o *)this->fields.sideBgSprite;
       if ( !v9 )
         goto LABEL_17;
-      UISprite__set_spriteName((UISprite_o *)v9, (System_String_o *)StringLiteral_17823/*"bufficon_bg1"*/, 0);
+      UISprite__set_spriteName((UISprite_o *)v9, (System_String_o *)StringLiteral_17898/*"bufficon_bg1"*/, 0);
       v9 = (UnityEngine_Behaviour_o *)this->fields.sideBgSprite;
       if ( !v9 )
         goto LABEL_17;
@@ -326,7 +326,7 @@ void BattleServantBuffIconComponent__SetSideBg(
       return;
     }
 LABEL_17:
-    sub_1CE6958(v9, v8);
+    sub_1D0F30C(v9, v8);
   }
 }
 
@@ -352,11 +352,11 @@ void BattleServantBuffIconComponent__ShowHighLight(BattleServantBuffIconComponen
   UnityEngine_Transform_o *v19; // x20
   UnityEngine_Transform_o *v20; // x19
 
-  if ( (byte_4E081C5 & 1) == 0 )
+  if ( (byte_4E7AEF7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Object_Instantiate_GameObject____79994096);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081C5 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEF7 = 1;
   }
   flashEffectObj = (UnityEngine_Object_o *)this->fields.flashEffectObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -376,22 +376,22 @@ void BattleServantBuffIconComponent__ShowHighLight(BattleServantBuffIconComponen
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v10 = UnityEngine_Object__Instantiate_object__53022032(
+        v10 = UnityEngine_Object__Instantiate_object__53335036(
                 v8,
                 transform,
-                (const MethodInfo_3290D50 *)Method_UnityEngine_Object_Instantiate_GameObject____79994096);
+                (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
         this->fields.flashEffectObjInstance = (struct UnityEngine_GameObject_o *)v10;
         p_flashEffectObjInstance = &this->fields.flashEffectObjInstance;
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_flashEffectObjInstance, (int32_t)v10, v12, v13, v14, v15, v16, v17);
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)p_flashEffectObjInstance, (int32_t)v10, v12, v13, v14, v15, v16, v17);
         v4 = (__int64)*p_flashEffectObjInstance;
         if ( *p_flashEffectObjInstance )
         {
           v4 = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v4, 0);
           v18 = (UnityEngine_Transform_o *)v4;
-          if ( !byte_4DFE0A9 )
+          if ( !byte_4E70C99 )
           {
-            v4 = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-            byte_4DFE0A9 = 1;
+            v4 = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+            byte_4E70C99 = 1;
           }
           if ( v18 )
           {
@@ -401,10 +401,10 @@ void BattleServantBuffIconComponent__ShowHighLight(BattleServantBuffIconComponen
             {
               v4 = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v4, 0);
               v19 = (UnityEngine_Transform_o *)v4;
-              if ( !byte_4DFE0AE )
+              if ( !byte_4E70C9E )
               {
-                v4 = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-                byte_4DFE0AE = 1;
+                v4 = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+                byte_4E70C9E = 1;
               }
               if ( v19 )
               {
@@ -414,10 +414,10 @@ void BattleServantBuffIconComponent__ShowHighLight(BattleServantBuffIconComponen
                 {
                   v4 = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v4, 0);
                   v20 = (UnityEngine_Transform_o *)v4;
-                  if ( !byte_4DFE0AF )
+                  if ( !byte_4E70C9F )
                   {
-                    v4 = sub_1CE6700(&UnityEngine_Quaternion_TypeInfo);
-                    byte_4DFE0AF = 1;
+                    v4 = sub_1D0F0B4(&UnityEngine_Quaternion_TypeInfo);
+                    byte_4E70C9F = 1;
                   }
                   if ( v20 )
                   {
@@ -433,7 +433,7 @@ void BattleServantBuffIconComponent__ShowHighLight(BattleServantBuffIconComponen
           }
         }
       }
-      sub_1CE6958(v4, v5);
+      sub_1D0F30C(v4, v5);
     }
   }
 }
@@ -456,10 +456,10 @@ void BattleServantBuffIconComponent__SyncBackgroundColorWithIcon(
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E081BC & 1) == 0 )
+  if ( (byte_4E7AEEE & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081BC = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEEE = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -517,7 +517,7 @@ void BattleServantBuffIconComponent__SyncBackgroundColorWithIcon(
         }
       }
 LABEL_20:
-      sub_1CE6958(v4, v5);
+      sub_1D0F30C(v4, v5);
     }
   }
 }
@@ -537,7 +537,7 @@ void BattleServantBuffIconComponent__UpdateActiveBuff(
     || (BattleServantBuffIconComponent__SetEnableVisual(this, nowBuff->fields.isReady, method),
         (v6 = this->fields.nowBuff) == 0) )
   {
-    sub_1CE6958(this, isPlayFlashEffect);
+    sub_1D0F30C(this, isPlayFlashEffect);
   }
   if ( isPlayFlashEffect && v6->fields.isReady )
     BattleServantBuffIconComponent__ShowHighLight(this, (const MethodInfo *)isPlayFlashEffect);
@@ -553,7 +553,7 @@ void BattleServantBuffIconComponent__UpdateShowBuffDataReady(
   struct BattleBuffData_ShowBuffData_o *oldBuff; // x9
 
   if ( !showBuffData || (nowBuff = this->fields.nowBuff) == 0 )
-    sub_1CE6958(this, showBuffData);
+    sub_1D0F30C(this, showBuffData);
   if ( showBuffData->fields.addOrder == nowBuff->fields.addOrder )
   {
     oldBuff = this->fields.oldBuff;
@@ -575,10 +575,10 @@ void BattleServantBuffIconComponent__setIcon(
   int32_t v8; // w21
   const MethodInfo *v9; // x3
 
-  if ( (byte_4E081BF & 1) == 0 )
+  if ( (byte_4E7AEF1 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    byte_4E081BF = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    byte_4E7AEF1 = 1;
   }
   if ( buffId == -1 )
   {
@@ -589,7 +589,7 @@ void BattleServantBuffIconComponent__setIcon(
       return;
     }
 LABEL_10:
-    sub_1CE6958(gameObject, v6);
+    sub_1D0F30C(gameObject, v6);
   }
   this->fields.buffId = buffId;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -606,7 +606,7 @@ LABEL_10:
 
 
 // local variable allocation has failed, the output may be wrong!
-void BattleServantBuffIconComponent__setIcon_48740440(
+void BattleServantBuffIconComponent__setIcon_49033416(
         BattleServantBuffIconComponent_o *this,
         int32_t buffId,
         bool isSetPlayerSideBg,
@@ -620,7 +620,7 @@ void BattleServantBuffIconComponent__setIcon_48740440(
 }
 
 
-void BattleServantBuffIconComponent__setIcon_48740488(
+void BattleServantBuffIconComponent__setIcon_49033464(
         BattleServantBuffIconComponent_o *this,
         BattleBuffData_ShowBuffData_o *buff,
         const MethodInfo *method)
@@ -662,19 +662,19 @@ void BattleServantBuffIconComponent__setIcon_48740488(
   const MethodInfo *v39; // x2
   const MethodInfo *v40; // x1
 
-  if ( (byte_4E081C0 & 1) == 0 )
+  if ( (byte_4E7AEF2 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_20788/*"img_passivebg"*/);
-    sub_1CE6700(&StringLiteral_20789/*"img_passiveframe"*/);
-    byte_4E081C0 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_20879/*"img_passivebg"*/);
+    sub_1D0F0B4(&StringLiteral_20880/*"img_passiveframe"*/);
+    byte_4E7AEF2 = 1;
   }
   if ( buff )
   {
     nowBuff = this->fields.nowBuff;
     this->fields.oldBuff = nowBuff;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&this->fields.oldBuff,
       (int32_t)nowBuff,
       (int32_t)method,
@@ -684,7 +684,7 @@ void BattleServantBuffIconComponent__setIcon_48740488(
       v6,
       v7);
     this->fields.nowBuff = buff;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.nowBuff, (int32_t)buff, v11, v12, v13, v14, v15, v16);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.nowBuff, (int32_t)buff, v11, v12, v13, v14, v15, v16);
     this->fields.buffId = buff->fields.buffId;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
@@ -711,7 +711,7 @@ void BattleServantBuffIconComponent__setIcon_48740488(
         gameObject = (UnityEngine_GameObject_o *)this->fields.backSprite;
         if ( !gameObject )
           goto LABEL_34;
-        v23 = &StringLiteral_20789/*"img_passiveframe"*/;
+        v23 = &StringLiteral_20880/*"img_passiveframe"*/;
 LABEL_28:
         UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)*v23, 0);
 LABEL_29:
@@ -733,7 +733,7 @@ LABEL_31:
           return;
         }
 LABEL_34:
-        sub_1CE6958(gameObject, v18);
+        sub_1D0F30C(gameObject, v18);
       }
     }
     else if ( !buff->fields.isPassive )
@@ -751,7 +751,7 @@ LABEL_34:
     gameObject = (UnityEngine_GameObject_o *)this->fields.backSprite;
     if ( !gameObject )
       goto LABEL_34;
-    v23 = &StringLiteral_20788/*"img_passivebg"*/;
+    v23 = &StringLiteral_20879/*"img_passivebg"*/;
     goto LABEL_28;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -759,9 +759,9 @@ LABEL_34:
     goto LABEL_34;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.oldBuff = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.oldBuff, 0, v24, v25, v26, v27, v28, v29);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.oldBuff, 0, v24, v25, v26, v27, v28, v29);
   this->fields.nowBuff = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.nowBuff, 0, v30, v31, v32, v33, v34, v35);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.nowBuff, 0, v30, v31, v32, v33, v34, v35);
   flashEffectObjInstance = (UnityEngine_Object_o *)this->fields.flashEffectObjInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -770,7 +770,7 @@ LABEL_34:
     v37 = (UnityEngine_Object_o *)this->fields.flashEffectObjInstance;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_72918540(v37, 0);
+    UnityEngine_Object__Destroy_73359484(v37, 0);
   }
 }
 
@@ -786,11 +786,11 @@ void BattleServantBuffIconComponent__setImageId(
   UnityEngine_Object_o *backSprite; // x20
   const MethodInfo *v9; // x3
 
-  if ( (byte_4E081C1 & 1) == 0 )
+  if ( (byte_4E7AEF3 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081C1 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEF3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -816,14 +816,14 @@ LABEL_12:
       return;
     }
 LABEL_14:
-    sub_1CE6958(gameObject, v6);
+    sub_1D0F30C(gameObject, v6);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void BattleServantBuffIconComponent__setImageId_48742312(
+void BattleServantBuffIconComponent__setImageId_49035288(
         BattleServantBuffIconComponent_o *this,
         int32_t iconId,
         bool isSetPlayerSideBg,

@@ -1,14 +1,14 @@
 void ServantFlagMaster___ctor(ServantFlagMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05375 & 1) == 0 )
+  if ( (byte_4E7800F & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
-    byte_4E05375 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
+    byte_4E7800F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     230,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantFlagEntity_o *ServantFlagMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E05373 & 1) == 0 )
+  if ( (byte_4E7800D & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
-    byte_4E05373 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
+    byte_4E7800D = 1;
   }
   PK = (Il2CppObject *)ServantFlagEntity__CreatePK(svtId, flagId, *(const MethodInfo **)&flagId);
   return (ServantFlagEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_34EE1BC *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
+                                  (const MethodInfo_353AADC *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool ServantFlagMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E05374 & 1) == 0 )
+  if ( (byte_4E7800E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
-    byte_4E05374 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
+    byte_4E7800E = 1;
   }
   PK = (Il2CppObject *)ServantFlagEntity__CreatePK(svtId, flagId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_ServantFlagMaster__ServantFlagEntity__string__TryGetEntity__);
 }
 
 
@@ -78,7 +78,7 @@ int32_t ServantFlagMaster__getBeforeEnhanceTdId(
   if ( !max_length )
     return -1;
   if ( !(_DWORD)max_length )
-    sub_1CE6960(Entity);
+    sub_1D0F314(Entity);
   return args->m_Items[0];
 }
 
@@ -93,20 +93,20 @@ ServantFlagEntity_o *ServantFlagMaster__getEntity(
   ServantFlagEntity_o *result; // x0
   int32_t v8; // w22
 
-  if ( (byte_4E05376 & 1) == 0 )
+  if ( (byte_4E78010 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Count__);
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Item__);
-    byte_4E05376 = 1;
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Item__);
+    byte_4E78010 = 1;
   }
   result = (ServantFlagEntity_o *)this->fields.list;
   if ( !result )
 LABEL_11:
-    sub_1CE6958(result, *(_QWORD *)&svtId);
+    sub_1D0F30C(result, *(_QWORD *)&svtId);
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_object___get_Count(
                  (System_Collections_ObjectModel_Collection_T__o *)result,
-                 (const MethodInfo_3480AB0 *)Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Count__) )
+                 (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Count__) )
   {
     result = (ServantFlagEntity_o *)this->fields.list;
     if ( !result )
@@ -114,7 +114,7 @@ LABEL_11:
     result = (ServantFlagEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                       (System_Collections_ObjectModel_Collection_T__o *)result,
                                       v8,
-                                      (const MethodInfo_3480B40 *)Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Item__);
+                                      (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_ServantFlagEntity__get_Item__);
     if ( !result )
       goto LABEL_11;
     if ( result->fields.svtId == svtId && result->fields.flagType == flagType )

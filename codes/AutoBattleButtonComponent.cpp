@@ -11,7 +11,7 @@ void AutoBattleButtonComponent__InitButton(AutoBattleButtonComponent_o *this, co
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1CE6958(0, v3);
+    sub_1D0F30C(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 

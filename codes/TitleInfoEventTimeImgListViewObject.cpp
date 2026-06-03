@@ -21,22 +21,22 @@ void TitleInfoEventTimeImgListViewObject__Init(
   System_String_o *v13; // x7
   const MethodInfo *v14; // x2
 
-  if ( (byte_4E0338B & 1) == 0 )
+  if ( (byte_4E75FFE & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_4E0338B = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
+    byte_4E75FFE = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9, v10, v11, v12, v13),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9, v10, v11, v12, v13),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0) )
   {
-    sub_1CE6958(dispObject, *(_QWORD *)&state);
+    sub_1D0F30C(dispObject, *(_QWORD *)&state);
   }
   TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
 }

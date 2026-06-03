@@ -2,17 +2,17 @@ void CommonServicePluginScript___cctor(const MethodInfo *method)
 {
   UnityEngine_AndroidJavaClass_o *v1; // x19
 
-  if ( (byte_4DFCC7C & 1) == 0 )
+  if ( (byte_4E6F86C & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_1CE6700(&CommonServicePluginScript_TypeInfo);
-    sub_1CE6700(&StringLiteral_21416/*"jp.delightworks.unityplugin.CommonServicePlugin"*/);
-    byte_4DFCC7C = 1;
+    sub_1D0F0B4(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_1D0F0B4(&CommonServicePluginScript_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_21509/*"jp.delightworks.unityplugin.CommonServicePlugin"*/);
+    byte_4E6F86C = 1;
   }
-  v1 = (UnityEngine_AndroidJavaClass_o *)sub_1CE694C(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v1, (System_String_o *)StringLiteral_21416/*"jp.delightworks.unityplugin.CommonServicePlugin"*/, 0);
+  v1 = (UnityEngine_AndroidJavaClass_o *)sub_1D0F300(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v1, (System_String_o *)StringLiteral_21509/*"jp.delightworks.unityplugin.CommonServicePlugin"*/, 0);
   CommonServicePluginScript_TypeInfo->static_fields->classPlugin = v1;
-  sub_1CE66A4(CommonServicePluginScript_TypeInfo->static_fields, v1);
+  sub_1D0F058(CommonServicePluginScript_TypeInfo->static_fields, v1);
 }
 
 
@@ -33,13 +33,13 @@ int64_t CommonServicePluginScript__GetFreeSize(System_String_o *path, const Meth
   __int64 v9; // x1
   __int64 v11; // x0
 
-  if ( (byte_4DFCC7D & 1) == 0 )
+  if ( (byte_4E6F86D & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_AndroidJavaObject_CallStatic_long___);
-    sub_1CE6700(&CommonServicePluginScript_TypeInfo);
-    sub_1CE6700(&object___TypeInfo);
-    sub_1CE6700(&StringLiteral_7135/*"GetFreeSize"*/);
-    byte_4DFCC7D = 1;
+    sub_1D0F0B4(&Method_UnityEngine_AndroidJavaObject_CallStatic_long___);
+    sub_1D0F0B4(&CommonServicePluginScript_TypeInfo);
+    sub_1D0F0B4(&object___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_7162/*"GetFreeSize"*/);
+    byte_4E6F86D = 1;
   }
   v3 = CommonServicePluginScript_TypeInfo;
   if ( !CommonServicePluginScript_TypeInfo->_2.cctor_finished )
@@ -55,28 +55,28 @@ int64_t CommonServicePluginScript__GetFreeSize(System_String_o *path, const Meth
     j_il2cpp_runtime_class_init_0(v3);
     classPlugin = (UnityEngine_AndroidJavaObject_o *)CommonServicePluginScript_TypeInfo->static_fields->classPlugin;
   }
-  v5 = sub_1CE67A8(object___TypeInfo, 1);
+  v5 = sub_1D0F15C(object___TypeInfo, 1);
   v7 = v5;
   if ( !v5 )
-    sub_1CE6958(0, v6);
+    sub_1D0F30C(0, v6);
   if ( path )
   {
-    v5 = sub_1CE683C(path, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_1D0F1F0(path, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v11 = sub_1CE697C();
-      sub_1CE6828(v11, 0);
+      v11 = sub_1D0F330();
+      sub_1D0F1DC(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v7 + 24) )
-    sub_1CE6960(v5);
+    sub_1D0F314(v5);
   *(_QWORD *)(v7 + 32) = path;
-  v8 = sub_1CE66A4(v7 + 32, path);
+  v8 = sub_1D0F058(v7 + 32, path);
   if ( !classPlugin )
-    sub_1CE6958(v8, v9);
+    sub_1D0F30C(v8, v9);
   return UnityEngine_AndroidJavaObject__CallStatic_long_(
            classPlugin,
-           (System_String_o *)StringLiteral_7135/*"GetFreeSize"*/,
+           (System_String_o *)StringLiteral_7162/*"GetFreeSize"*/,
            (System_Object_array *)v7,
-           (const MethodInfo_314DC2C *)Method_UnityEngine_AndroidJavaObject_CallStatic_long___);
+           (const MethodInfo_31974C0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_long___);
 }

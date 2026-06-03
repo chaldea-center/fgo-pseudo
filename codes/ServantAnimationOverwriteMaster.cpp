@@ -1,14 +1,14 @@
 void ServantAnimationOverwriteMaster___ctor(ServantAnimationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E0526B & 1) == 0 )
+  if ( (byte_4E77F02 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string___ctor__);
-    byte_4E0526B = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string___ctor__);
+    byte_4E77F02 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     316,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ ServantAnimationOverwriteEntity_o *ServantAnimationOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E05268 & 1) == 0 )
+  if ( (byte_4E77EFF & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__GetEntity__);
-    byte_4E05268 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__GetEntity__);
+    byte_4E77EFF = 1;
   }
   PK = (Il2CppObject *)ServantAnimationOverwriteEntity__CreatePK(svtId, svtLimitCount, idx, *(const MethodInfo **)&idx);
   return (ServantAnimationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_34EE1BC *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__GetEntity__);
+                                                (const MethodInfo_353AADC *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -57,22 +57,22 @@ ServantAnimationOverwriteEntity_array *ServantAnimationOverwriteMaster__GetList(
   System_Collections_IEnumerable_o *v21; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
 
-  if ( (byte_4E0526C & 1) == 0 )
+  if ( (byte_4E77F03 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Cast_ServantAnimationOverwriteEntity___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_ServantAnimationOverwriteEntity___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Where_ServantAnimationOverwriteEntity___);
-    sub_1CE6700(&System_Func_ServantAnimationOverwriteEntity__bool__TypeInfo);
-    sub_1CE6700(&Method_ServantAnimationOverwriteMaster___c__DisplayClass5_0__GetList_b__0__);
-    sub_1CE6700(&ServantAnimationOverwriteMaster___c__DisplayClass5_0_TypeInfo);
-    byte_4E0526C = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Cast_ServantAnimationOverwriteEntity___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_ServantAnimationOverwriteEntity___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_ServantAnimationOverwriteEntity___);
+    sub_1D0F0B4(&System_Func_ServantAnimationOverwriteEntity__bool__TypeInfo);
+    sub_1D0F0B4(&Method_ServantAnimationOverwriteMaster___c__DisplayClass5_0__GetList_b__0__);
+    sub_1D0F0B4(&ServantAnimationOverwriteMaster___c__DisplayClass5_0_TypeInfo);
+    byte_4E77F03 = 1;
   }
-  v9 = sub_1CE694C(ServantAnimationOverwriteMaster___c__DisplayClass5_0_TypeInfo);
+  v9 = sub_1D0F300(ServantAnimationOverwriteMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1CE6958(v10, v11);
+    sub_1D0F30C(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   if ( isEnemy )
     v18 = 2;
   else
@@ -81,7 +81,7 @@ ServantAnimationOverwriteEntity_array *ServantAnimationOverwriteMaster__GetList(
   *(_DWORD *)(v9 + 28) = limitCount;
   *(_DWORD *)(v9 + 32) = v18;
   list = this->fields.list;
-  v20 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_ServantAnimationOverwriteEntity__bool__TypeInfo);
+  v20 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_ServantAnimationOverwriteEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v20,
     (Il2CppObject *)v9,
@@ -90,13 +90,13 @@ ServantAnimationOverwriteEntity_array *ServantAnimationOverwriteMaster__GetList(
   v21 = (System_Collections_IEnumerable_o *)System_Linq_Enumerable__Where_object_(
                                               (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                               (System_Func_TSource__bool__o *)v20,
-                                              (const MethodInfo_324B214 *)Method_System_Linq_Enumerable_Where_ServantAnimationOverwriteEntity___);
+                                              (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_ServantAnimationOverwriteEntity___);
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_object_(
                                                                v21,
-                                                               (const MethodInfo_3212CBC *)Method_System_Linq_Enumerable_Cast_ServantAnimationOverwriteEntity___);
+                                                               (const MethodInfo_325FCE8 *)Method_System_Linq_Enumerable_Cast_ServantAnimationOverwriteEntity___);
   return (ServantAnimationOverwriteEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                     v22,
-                                                    (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_ServantAnimationOverwriteEntity___);
+                                                    (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_ServantAnimationOverwriteEntity___);
 }
 
 
@@ -112,10 +112,10 @@ bool ServantAnimationOverwriteMaster__IsSvtMatch(
   DataEntityBase_o *v11; // x8
   int klass_high; // w9
 
-  if ( (byte_4E0526D & 1) == 0 )
+  if ( (byte_4E77F04 & 1) == 0 )
   {
-    sub_1CE6700(&ServantAnimationOverwriteEntity_TypeInfo);
-    byte_4E0526D = 1;
+    sub_1D0F0B4(&ServantAnimationOverwriteEntity_TypeInfo);
+    byte_4E77F04 = 1;
   }
   if ( baseEnt
     && (naturalAligment = ServantAnimationOverwriteEntity_TypeInfo->_2.naturalAligment,
@@ -147,10 +147,10 @@ bool ServantAnimationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E05269 & 1) == 0 )
+  if ( (byte_4E77F00 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__TryGetEntity__);
-    byte_4E05269 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__TryGetEntity__);
+    byte_4E77F00 = 1;
   }
   PK = (Il2CppObject *)ServantAnimationOverwriteEntity__CreatePK(
                          svtId,
@@ -161,7 +161,7 @@ bool ServantAnimationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_ServantAnimationOverwriteMaster__ServantAnimationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -170,18 +170,18 @@ ServantAnimationOverwriteMaster_o *ServantAnimationOverwriteMaster__get_Master(c
   Il2CppObject *Instance; // x0
   __int64 v2; // x1
 
-  if ( (byte_4E0526A & 1) == 0 )
+  if ( (byte_4E77F01 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_ServantAnimationOverwriteMaster___);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E0526A = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantAnimationOverwriteMaster___);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E77F01 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1CE6958(0, v2);
+    sub_1D0F30C(0, v2);
   return (ServantAnimationOverwriteMaster_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)Instance,
-                                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ServantAnimationOverwriteMaster___);
+                                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantAnimationOverwriteMaster___);
 }
 
 
@@ -201,7 +201,7 @@ bool ServantAnimationOverwriteMaster___c__DisplayClass5_0___GetList_b__0(
   const MethodInfo *v3; // x5
 
   if ( !this->fields.__4__this )
-    sub_1CE6958(this, x);
+    sub_1D0F30C(this, x);
   return ServantAnimationOverwriteMaster__IsSvtMatch(
            (ServantAnimationOverwriteMaster_o *)this,
            (DataEntityBase_o *)x,

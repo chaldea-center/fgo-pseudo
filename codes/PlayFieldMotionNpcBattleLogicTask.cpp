@@ -18,7 +18,7 @@ void PlayFieldMotionNpcBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
   this->fields.actiontype = 44;
   this->fields.motionName = motionName;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.motionName, (int32_t)motionName, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.motionName, (int32_t)motionName, v9, v10, v11, v12, v13, v14);
   this->fields.isForcedSpeedOne = v8;
   this->fields.actiontype = 61;
   BattleLogicTask__setTarget((BattleLogicTask_o *)this, targetId, v15);
@@ -45,10 +45,10 @@ BattleActionData_o *PlayFieldMotionNpcBattleLogicTask__MakeActionData(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4E07DF1 & 1) == 0 )
+  if ( (byte_4E7AAD8 & 1) == 0 )
   {
-    sub_1CE6700(&PlayFieldMotionNpcActionData_TypeInfo);
-    byte_4E07DF1 = 1;
+    sub_1D0F0B4(&PlayFieldMotionNpcActionData_TypeInfo);
+    byte_4E7AAD8 = 1;
   }
   if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._12_IsMakeAble.methodPtr)(
           this,
@@ -57,10 +57,10 @@ BattleActionData_o *PlayFieldMotionNpcBattleLogicTask__MakeActionData(
       & 1) == 0 )
     return 0;
   TargetId = PlayFieldMotionNpcBattleLogicTask__get_TargetId(this, v5);
-  v7 = (PlayFieldMotionNpcActionData_o *)sub_1CE694C(PlayFieldMotionNpcActionData_TypeInfo);
+  v7 = (PlayFieldMotionNpcActionData_o *)sub_1D0F300(PlayFieldMotionNpcActionData_TypeInfo);
   PlayFieldMotionNpcActionData___ctor(v7, TargetId, 0);
   if ( !logic )
-    sub_1CE6958(v8, v9);
+    sub_1D0F30C(v8, v9);
   return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v7, 0);
 }
 
@@ -69,14 +69,14 @@ int32_t PlayFieldMotionNpcBattleLogicTask__get_TargetId(
         PlayFieldMotionNpcBattleLogicTask_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E07DF0 & 1) == 0 )
+  if ( (byte_4E7AAD7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_IndexValue_int____79910440);
-    byte_4E07DF0 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_IndexValue_int____80375232);
+    byte_4E7AAD7 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.targetIdlist,
            0,
            -1,
-           (const MethodInfo_31F25F8 *)Method_BasicHelper_IndexValue_int____79910440);
+           (const MethodInfo_323D408 *)Method_BasicHelper_IndexValue_int____80375232);
 }

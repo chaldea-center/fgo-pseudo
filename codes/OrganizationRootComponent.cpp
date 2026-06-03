@@ -6,25 +6,42 @@ void OrganizationRootComponent___ctor(OrganizationRootComponent_o *this, const M
 
 void OrganizationRootComponent__BackBuyQpItem(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  OrganizationTopListViewManager_o *topListViewManager; // x20
+  struct OrganizationTopListViewManager_o *topListViewManager; // x20
   System_Action_o *v4; // x21
   __int64 v5; // x0
   __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E00030 & 1) == 0 )
+  if ( (byte_4E72C4D & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_OrganizationRootComponent_OnMoveEnd__);
-    byte_4E00030 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnMoveEnd__);
+    byte_4E72C4D = 1;
   }
   if ( this->fields.state == 5 )
   {
     topListViewManager = this->fields.topListViewManager;
-    v4 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_OrganizationRootComponent_OnMoveEnd__, 0);
     if ( !topListViewManager )
-      sub_1CE6958(v5, v6);
-    OrganizationTopListViewManager__SetMode_34902092(topListViewManager, 5, v4, 0);
+      sub_1D0F30C(v5, v6);
+    topListViewManager->fields.callbackFunc2 = v4;
+    sub_1D0F058(
+      (GrandQuestFolderBoardItem_o *)&topListViewManager->fields.callbackFunc2,
+      (int32_t)v4,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12);
+    OrganizationTopListViewManager__SetMode_35080604(topListViewManager, 5, v13);
     this->fields.state = 6;
   }
 }
@@ -33,14 +50,22 @@ void OrganizationRootComponent__BackBuyQpItem(OrganizationRootComponent_o *this,
 void OrganizationRootComponent__Init(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *topListViewManager; // x0
-  OrganizationTopListViewManager_o *v4; // x20
-  System_Action_o *v5; // x21
+  const MethodInfo *v4; // x2
+  struct OrganizationTopListViewManager_o *v5; // x20
+  System_Action_o *v6; // x21
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E0002E & 1) == 0 )
+  if ( (byte_4E72C4B & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_OrganizationRootComponent_OnMoveEnd__);
-    byte_4E0002E = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnMoveEnd__);
+    byte_4E72C4B = 1;
   }
   if ( !this->fields.state )
   {
@@ -52,19 +77,22 @@ void OrganizationRootComponent__Init(OrganizationRootComponent_o *this, const Me
       goto LABEL_11;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)topListViewManager, 1, 0);
     topListViewManager = (UnityEngine_Component_o *)this->fields.topListViewManager;
-    if ( !topListViewManager
-      || (OrganizationTopListViewManager__CreateList((OrganizationTopListViewManager_o *)topListViewManager, 0, 0),
-          v4 = this->fields.topListViewManager,
-          v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
-          System_Action___ctor(v5, (Il2CppObject *)this, Method_OrganizationRootComponent_OnMoveEnd__, 0),
-          !v4)
-      || (OrganizationTopListViewManager__SetMode_34902092(v4, 2, v5, 0),
+    if ( !topListViewManager )
+      goto LABEL_11;
+    OrganizationTopListViewManager__CreateList((OrganizationTopListViewManager_o *)topListViewManager, 0, v4);
+    v5 = this->fields.topListViewManager;
+    v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    System_Action___ctor(v6, (Il2CppObject *)this, Method_OrganizationRootComponent_OnMoveEnd__, 0);
+    if ( !v5
+      || (v5->fields.callbackFunc2 = v6,
+          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v5->fields.callbackFunc2, (int32_t)v6, v7, v8, v9, v10, v11, v12),
+          OrganizationTopListViewManager__SetMode_35080604(v5, 2, v13),
           (topListViewManager = (UnityEngine_Component_o *)this->fields.titleInfo) == 0) )
     {
 LABEL_11:
-      sub_1CE6958(topListViewManager, method);
+      sub_1D0F30C(topListViewManager, method);
     }
-    TitleInfoControl__changeTitleInfo_41045104((TitleInfoControl_o *)topListViewManager, 0, 41, 0, 0);
+    TitleInfoControl__changeTitleInfo_41261876((TitleInfoControl_o *)topListViewManager, 0, 41, 0, 0);
     this->fields.state = 1;
   }
 }
@@ -75,10 +103,10 @@ void OrganizationRootComponent__OnClickBack(OrganizationRootComponent_o *this, c
   int32_t state; // w8
   TitleInfoControl_o *titleInfo; // x0
 
-  if ( (byte_4E00033 & 1) == 0 )
+  if ( (byte_4E72C50 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_3462/*"CLICK_BACK"*/);
-    byte_4E00033 = 1;
+    sub_1D0F0B4(&StringLiteral_3472/*"CLICK_BACK"*/);
+    byte_4E72C50 = 1;
   }
   state = this->fields.state;
   if ( state <= 5 )
@@ -92,82 +120,110 @@ void OrganizationRootComponent__OnClickBack(OrganizationRootComponent_o *this, c
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1CE6958(0, method);
-  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3462/*"CLICK_BACK"*/, 0);
+    sub_1D0F30C(0, method);
+  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3472/*"CLICK_BACK"*/, 0);
 }
 
 
 void OrganizationRootComponent__OnMoveEnd(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  OrganizationTopListViewManager_o *topListViewManager; // x20
+  struct OrganizationTopListViewManager_o *topListViewManager; // x20
   OrganizationTopListViewManager_CallbackFunc_o *v4; // x21
-  System_String_o *v5; // x0
-  __int64 v6; // x1
+  const MethodInfo *v5; // x3
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  const MethodInfo *v14; // x2
   Il2CppObject *Instance; // x19
-  int32_t v8; // w8
-  OrganizationTopListViewManager_o *v9; // x20
-  OrganizationTopListViewManager_CallbackFunc_o *v10; // x21
+  int32_t v16; // w8
+  struct OrganizationTopListViewManager_o *v17; // x20
+  OrganizationTopListViewManager_CallbackFunc_o *v18; // x21
+  const MethodInfo *v19; // x3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  const MethodInfo *v26; // x2
 
-  if ( (byte_4E00032 & 1) == 0 )
+  if ( (byte_4E72C4F & 1) == 0 )
   {
-    sub_1CE6700(&OrganizationTopListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&Method_OrganizationRootComponent_OnSelectTop__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&TutorialFlag_TypeInfo);
-    sub_1CE6700(&StringLiteral_13735/*"TUTORIAL_MESSAGE_SHOP1"*/);
-    byte_4E00032 = 1;
+    sub_1D0F0B4(&OrganizationTopListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnSelectTop__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&TutorialFlag_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_13786/*"TUTORIAL_MESSAGE_SHOP1"*/);
+    byte_4E72C4F = 1;
   }
   switch ( this->fields.state )
   {
     case 1:
       this->fields.state = 2;
       topListViewManager = this->fields.topListViewManager;
-      v4 = (OrganizationTopListViewManager_CallbackFunc_o *)sub_1CE694C(OrganizationTopListViewManager_CallbackFunc_TypeInfo);
+      v4 = (OrganizationTopListViewManager_CallbackFunc_o *)sub_1D0F300(OrganizationTopListViewManager_CallbackFunc_TypeInfo);
       OrganizationTopListViewManager_CallbackFunc___ctor(
         v4,
         (Il2CppObject *)this,
         (intptr_t)Method_OrganizationRootComponent_OnSelectTop__,
-        0);
+        v5);
       if ( !topListViewManager )
         goto LABEL_19;
-      OrganizationTopListViewManager__SetMode(topListViewManager, 1, v4, 0);
+      topListViewManager->fields.callbackFunc = v4;
+      sub_1D0F058(
+        (GrandQuestFolderBoardItem_o *)&topListViewManager->fields.callbackFunc,
+        (int32_t)v4,
+        v8,
+        v9,
+        v10,
+        v11,
+        v12,
+        v13);
+      OrganizationTopListViewManager__SetMode_35080604(topListViewManager, 1, v14);
       if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      if ( TutorialFlag__Get_41569468(103, 0) )
+      if ( TutorialFlag__Get_41786532(103, 0) )
         return;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13735/*"TUTORIAL_MESSAGE_SHOP1"*/, 0);
+      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13786/*"TUTORIAL_MESSAGE_SHOP1"*/, 0);
       if ( !Instance )
 LABEL_19:
-        sub_1CE6958(v5, v6);
-      CommonUI__OpenTutorialNotificationDialog((CommonUI_o *)Instance, v5, 103, 0, 0);
+        sub_1D0F30C(v6, v7);
+      CommonUI__OpenTutorialNotificationDialog((CommonUI_o *)Instance, v6, 103, 0, 0);
       break;
     case 3:
-      v8 = 4;
+      v16 = 4;
       goto LABEL_15;
     case 4:
-      v8 = 5;
+      v16 = 5;
       goto LABEL_15;
     case 6:
-      v8 = 7;
+      v16 = 7;
 LABEL_15:
-      this->fields.state = v8;
+      this->fields.state = v16;
       return;
     case 7:
       this->fields.state = 2;
-      v9 = this->fields.topListViewManager;
-      v10 = (OrganizationTopListViewManager_CallbackFunc_o *)sub_1CE694C(OrganizationTopListViewManager_CallbackFunc_TypeInfo);
+      v17 = this->fields.topListViewManager;
+      v18 = (OrganizationTopListViewManager_CallbackFunc_o *)sub_1D0F300(OrganizationTopListViewManager_CallbackFunc_TypeInfo);
       OrganizationTopListViewManager_CallbackFunc___ctor(
-        v10,
+        v18,
         (Il2CppObject *)this,
         (intptr_t)Method_OrganizationRootComponent_OnSelectTop__,
-        0);
-      if ( !v9 )
+        v19);
+      if ( !v17 )
         goto LABEL_19;
-      OrganizationTopListViewManager__SetMode(v9, 1, v10, 0);
+      v17->fields.callbackFunc = v18;
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v17->fields.callbackFunc, (int32_t)v18, v20, v21, v22, v23, v24, v25);
+      OrganizationTopListViewManager__SetMode_35080604(v17, 1, v26);
       break;
     default:
       return;
@@ -185,21 +241,21 @@ void OrganizationRootComponent__OnSelectTop(
   __int64 v7; // x1
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4E00034 & 1) == 0 )
+  if ( (byte_4E72C51 & 1) == 0 )
   {
-    sub_1CE6700(&Method_OrganizationRootComponent_OnSelectTop__);
-    byte_4E00034 = 1;
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnSelectTop__);
+    byte_4E72C51 = 1;
   }
   if ( result )
   {
     v5 = Method_OrganizationRootComponent_OnSelectTop__;
     if ( (*((_BYTE *)Method_OrganizationRootComponent_OnSelectTop__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1CE6718(Method_OrganizationRootComponent_OnSelectTop__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1D0F0CC(Method_OrganizationRootComponent_OnSelectTop__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     myFSM = this->fields.myFSM;
     if ( !myFSM )
-      sub_1CE6958(0, v7);
+      sub_1D0F30C(0, v7);
     PlayMakerFSM__SendEvent(myFSM, result, 0);
   }
 }
@@ -207,17 +263,17 @@ void OrganizationRootComponent__OnSelectTop(
 
 void OrganizationRootComponent__Quit(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  OrganizationTopListViewManager_o *topListViewManager; // x0
+  ListViewManager_o *topListViewManager; // x0
 
-  topListViewManager = this->fields.topListViewManager;
+  topListViewManager = (ListViewManager_o *)this->fields.topListViewManager;
   if ( !topListViewManager
-    || (OrganizationTopListViewManager__DestroyList(topListViewManager, 0),
-        (topListViewManager = this->fields.topListViewManager) == 0)
-    || (topListViewManager = (OrganizationTopListViewManager_o *)UnityEngine_Component__get_gameObject(
-                                                                   (UnityEngine_Component_o *)topListViewManager,
-                                                                   0)) == 0 )
+    || (ListViewManager__DestroyList(topListViewManager, 0),
+        (topListViewManager = (ListViewManager_o *)this->fields.topListViewManager) == 0)
+    || (topListViewManager = (ListViewManager_o *)UnityEngine_Component__get_gameObject(
+                                                    (UnityEngine_Component_o *)topListViewManager,
+                                                    0)) == 0 )
   {
-    sub_1CE6958(topListViewManager, method);
+    sub_1D0F30C(topListViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)topListViewManager, 0, 0);
   this->fields.state = 0;
@@ -232,25 +288,42 @@ void OrganizationRootComponent__RefreshInfo(OrganizationRootComponent_o *this, c
 
 void OrganizationRootComponent__SelectBuyManaItem(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  OrganizationTopListViewManager_o *topListViewManager; // x20
+  struct OrganizationTopListViewManager_o *topListViewManager; // x20
   System_Action_o *v4; // x21
   __int64 v5; // x0
   __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E00031 & 1) == 0 )
+  if ( (byte_4E72C4E & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_OrganizationRootComponent_OnMoveEnd__);
-    byte_4E00031 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnMoveEnd__);
+    byte_4E72C4E = 1;
   }
   if ( this->fields.state == 2 )
   {
     topListViewManager = this->fields.topListViewManager;
-    v4 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_OrganizationRootComponent_OnMoveEnd__, 0);
     if ( !topListViewManager )
-      sub_1CE6958(v5, v6);
-    OrganizationTopListViewManager__SetMode_34902092(topListViewManager, 3, v4, 0);
+      sub_1D0F30C(v5, v6);
+    topListViewManager->fields.callbackFunc2 = v4;
+    sub_1D0F058(
+      (GrandQuestFolderBoardItem_o *)&topListViewManager->fields.callbackFunc2,
+      (int32_t)v4,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12);
+    OrganizationTopListViewManager__SetMode_35080604(topListViewManager, 3, v13);
     this->fields.state = 8;
   }
 }
@@ -258,25 +331,42 @@ void OrganizationRootComponent__SelectBuyManaItem(OrganizationRootComponent_o *t
 
 void OrganizationRootComponent__SelectBuyQpItem(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  OrganizationTopListViewManager_o *topListViewManager; // x20
+  struct OrganizationTopListViewManager_o *topListViewManager; // x20
   System_Action_o *v4; // x21
   __int64 v5; // x0
   __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E0002F & 1) == 0 )
+  if ( (byte_4E72C4C & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_OrganizationRootComponent_OnMoveEnd__);
-    byte_4E0002F = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_OrganizationRootComponent_OnMoveEnd__);
+    byte_4E72C4C = 1;
   }
   if ( this->fields.state == 2 )
   {
     topListViewManager = this->fields.topListViewManager;
-    v4 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_OrganizationRootComponent_OnMoveEnd__, 0);
     if ( !topListViewManager )
-      sub_1CE6958(v5, v6);
-    OrganizationTopListViewManager__SetMode_34902092(topListViewManager, 3, v4, 0);
+      sub_1D0F30C(v5, v6);
+    topListViewManager->fields.callbackFunc2 = v4;
+    sub_1D0F058(
+      (GrandQuestFolderBoardItem_o *)&topListViewManager->fields.callbackFunc2,
+      (int32_t)v4,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12);
+    OrganizationTopListViewManager__SetMode_35080604(topListViewManager, 3, v13);
     this->fields.state = 3;
   }
 }
@@ -294,23 +384,23 @@ void OrganizationRootComponent__beginInitialize(OrganizationRootComponent_o *thi
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E0002C & 1) == 0 )
+  if ( (byte_4E72C49 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E0002C = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4E72C49 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 3, 29, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void OrganizationRootComponent__beginResume(OrganizationRootComponent_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginResume_42637824((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginResume_42858936((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -320,11 +410,11 @@ void OrganizationRootComponent__beginStartUp(OrganizationRootComponent_o *this, 
   __int64 v4; // x1
   TitleInfoControl_o *titleInfo; // x0
 
-  if ( (byte_4E0002D & 1) == 0 )
+  if ( (byte_4E72C4A & 1) == 0 )
   {
-    sub_1CE6700(&BgmManager_TypeInfo);
-    sub_1CE6700(&SoundManager_TypeInfo);
-    byte_4E0002D = 1;
+    sub_1D0F0B4(&BgmManager_TypeInfo);
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    byte_4E72C4A = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -334,8 +424,8 @@ void OrganizationRootComponent__beginStartUp(OrganizationRootComponent_o *this, 
   SoundManager__playBgm(MainBgmName, 0);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   TitleInfoControl__setTitleInfo(titleInfo, this->fields.myFSM, 1, 0, 71, 0);
   MainMenuBar__setMenuActive(1, 0, 0);
-  SceneRootComponent__beginStartUp_42637640((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
 }

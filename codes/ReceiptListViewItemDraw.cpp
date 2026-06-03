@@ -22,12 +22,12 @@ void ReceiptListViewItemDraw__SetItem(
   float v15; // s1
   float v16; // s2
 
-  if ( (byte_4E01F3E & 1) == 0 )
+  if ( (byte_4E74BAF & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_1752/*"?"*/);
-    byte_4E01F3E = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1753/*"?"*/);
+    byte_4E74BAF = 1;
   }
   if ( item && mode )
   {
@@ -44,14 +44,14 @@ void ReceiptListViewItemDraw__SetItem(
     {
       if ( !titleTextLabel )
         goto LABEL_25;
-      v10 = (System_String_o *)StringLiteral_1752/*"?"*/;
+      v10 = (System_String_o *)StringLiteral_1753/*"?"*/;
     }
     UILabel__set_text(titleTextLabel, v10, 0);
     timeTextLabel = this->fields.timeTextLabel;
-    if ( (byte_4E01F3D & 1) == 0 )
+    if ( (byte_4E74BAE & 1) == 0 )
     {
-      TitleText = sub_1CE6700(&StringLiteral_1/*""*/);
-      byte_4E01F3D = 1;
+      TitleText = sub_1D0F0B4(&StringLiteral_1/*""*/);
+      byte_4E74BAE = 1;
     }
     if ( timeTextLabel )
     {
@@ -64,7 +64,7 @@ void ReceiptListViewItemDraw__SetItem(
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)TitleText,
-                               (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           TitleText = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -90,6 +90,6 @@ void ReceiptListViewItemDraw__SetItem(
       }
     }
 LABEL_25:
-    sub_1CE6958(TitleText, v8);
+    sub_1D0F30C(TitleText, v8);
   }
 }

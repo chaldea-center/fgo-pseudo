@@ -9,7 +9,7 @@ void BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *callBack, co
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.callBack = callBack;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)callBack, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)callBack, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -19,7 +19,7 @@ void BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *method)
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   ((void (__fastcall *)(intptr_t, intptr_t))callBack->fields.invoke_impl)(
     callBack->fields.method_code,
     callBack->fields.method);

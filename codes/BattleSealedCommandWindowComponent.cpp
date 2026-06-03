@@ -11,12 +11,12 @@ System_String_o *BattleSealedCommandWindowComponent__get_closeBtnPath(
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E081A2 & 1) == 0 )
+  if ( (byte_4E7AED4 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_17660/*"btn_close"*/);
-    byte_4E081A2 = 1;
+    sub_1D0F0B4(&StringLiteral_17734/*"btn_close"*/);
+    byte_4E7AED4 = 1;
   }
-  return (System_String_o *)StringLiteral_17660/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17734/*"btn_close"*/;
 }
 
 
@@ -35,15 +35,15 @@ void BattleSealedCommandWindowComponent__setLabel(
   float z; // s2
   float y; // s1
 
-  if ( (byte_4E081A1 & 1) == 0 )
+  if ( (byte_4E7AED3 & 1) == 0 )
   {
-    sub_1CE6700(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
-    sub_1CE6700(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1CE6700(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_1CE6700(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1CE6700(&Method_System_Nullable_int__get_HasValue__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E081A1 = 1;
+    sub_1D0F0B4(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1D0F0B4(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AED3 = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,13 +52,13 @@ void BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1CE694C(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1D0F300(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
       System_Object___ctor((Il2CppObject *)args, 0);
     }
     transform = this->fields.confLabel;
     if ( !transform || (UILabel__set_text(transform, str, 0), !args) )
 LABEL_19:
-      sub_1CE6958(transform, value);
+      sub_1D0F30C(transform, value);
     transform = this->fields.confLabel;
     if ( args->fields._fontSize_k__BackingField.fields.hasValue )
     {

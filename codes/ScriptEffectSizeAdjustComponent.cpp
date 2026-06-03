@@ -21,14 +21,14 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
   float v15; // s0
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E037DF & 1) == 0 )
+  if ( (byte_4E76452 & 1) == 0 )
   {
-    sub_1CE6700(&ManagerConfig_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4E037DF = 1;
+    sub_1D0F0B4(&ManagerConfig_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4E76452 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -40,10 +40,10 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
     {
       x = this->fields.defaultScale.fields.x;
       v6.n64_u64[0] = *(unsigned __int64 *)&this->fields.defaultScale.fields.y;
-      if ( !byte_4DFE0A9 )
+      if ( !byte_4E70C99 )
       {
-        sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-        byte_4DFE0A9 = 1;
+        sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+        byte_4E70C99 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v8.n64_u64[0] = vsub_f32(v6, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -53,7 +53,7 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
                                  * (float)(x - static_fields->zeroVector.fields.x))
                          + *(float *)&v9)) >= 1.0e-10 )
       {
-        v10 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+        v10 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
         if ( !v10 )
           goto LABEL_20;
         UiRootActiveHeight = ScriptManager__GetUiRootActiveHeight(v10, 0);
@@ -80,7 +80,7 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
               return;
             }
 LABEL_20:
-            sub_1CE6958(v10, v11);
+            sub_1D0F30C(v10, v11);
           }
         }
       }
@@ -108,11 +108,11 @@ void ScriptEffectSizeAdjustComponent__Start(ScriptEffectSizeAdjustComponent_o *t
     || (this->fields.defaultScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1CE6958(gameObject, v4);
+    sub_1D0F30C(gameObject, v4);
   }
   transform = UnityEngine_GameObject__get_transform(gameObject, 0);
   this->fields.effectObjectTransform = transform;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.effectObjectTransform,
     (int32_t)transform,
     v6,

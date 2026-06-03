@@ -1,7 +1,7 @@
 void BillBoardGrouped___ctor(BillBoardGrouped_o *this, const MethodInfo *method)
 {
   this->fields.grouping = -1;
-  BillBoard___ctor((BillBoard_o *)this, 0);
+  BillBoard___ctor((BillBoard_o *)this, method);
 }
 
 
@@ -41,11 +41,11 @@ void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *me
   UnityEngine_Vector3_o LookVec; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E03DBF & 1) == 0 )
+  if ( (byte_4E76A37 & 1) == 0 )
   {
-    sub_1CE6700(&BillBoardGroupManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
-    byte_4E03DBF = 1;
+    sub_1D0F0B4(&BillBoardGroupManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    byte_4E76A37 = 1;
   }
   grouping = this->fields.grouping;
   if ( grouping < 0 )
@@ -66,26 +66,26 @@ void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *me
       v8 = p_targetFov[5];
       v9 = p_targetFov[6];
 LABEL_21:
-      v23 = UnityEngine_Quaternion__LookRotation_72856820(*(UnityEngine_Vector3_o *)&v7, 0);
+      v23 = UnityEngine_Quaternion__LookRotation_73297764(*(UnityEngine_Vector3_o *)&v7, 0);
       if ( mTrf )
       {
         v15 = mTrf;
         goto LABEL_23;
       }
 LABEL_24:
-      sub_1CE6958(Instance, method);
+      sub_1D0F30C(Instance, method);
     }
-    Instance = (BillBoardGroupManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    Instance = (BillBoardGroupManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
     LookVec = BillBoardGroupManager__GetLookVec(Instance, this->fields.grouping, !this->fields.enableRotationZ, v16);
     x = LookVec.fields.x;
     y = LookVec.fields.y;
     z = LookVec.fields.z;
-    if ( !byte_4DFE0A9 )
+    if ( !byte_4E70C99 )
     {
-      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-      byte_4DFE0A9 = 1;
+      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+      byte_4E70C99 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     if ( (float)((float)((float)(z - static_fields->zeroVector.fields.z)
@@ -102,7 +102,7 @@ LABEL_24:
       goto LABEL_21;
     }
 LABEL_19:
-    BillBoard__UpdateBillboard((BillBoard_o *)this, 0);
+    BillBoard__UpdateBillboard((BillBoard_o *)this, method);
     return;
   }
   Instance = (BillBoardGroupManager_o *)this->fields.targetCamera;
@@ -118,7 +118,7 @@ LABEL_19:
   v14 = -forward.fields.z;
   if ( !this->fields.enableRotationZ )
     v12 = 0.0;
-  v23 = UnityEngine_Quaternion__LookRotation_72856820(*(UnityEngine_Vector3_o *)&v13, 0);
+  v23 = UnityEngine_Quaternion__LookRotation_73297764(*(UnityEngine_Vector3_o *)&v13, 0);
   if ( !v11 )
     goto LABEL_24;
   v15 = v11;
@@ -137,20 +137,20 @@ void BillBoardGrouped__Update(BillBoardGrouped_o *this, const MethodInfo *method
   __int64 v8; // x1
   const MethodInfo *v9; // x4
 
-  if ( (byte_4E03DBE & 1) == 0 )
+  if ( (byte_4E76A36 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
-    byte_4E03DBE = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    byte_4E76A36 = 1;
   }
   if ( this->fields.grouping >= 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
     grouping = this->fields.grouping;
     targetCamera = this->fields.targetCamera;
     v6 = (BillBoardGroupManager_o *)Instance;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !v6 )
-      sub_1CE6958(gameObject, v8);
+      sub_1D0F30C(gameObject, v8);
     BillBoardGroupManager__AddData(v6, grouping, targetCamera, gameObject, v9);
   }
 }

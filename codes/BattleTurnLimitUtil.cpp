@@ -12,7 +12,7 @@ void BattleTurnLimitUtil___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.EntityScript = script;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -20,24 +20,24 @@ bool BattleTurnLimitUtil__ExistLimitTurn(
         System_Collections_Generic_Dictionary_string__object__o *script,
         const MethodInfo *method)
 {
-  return BattleTurnLimitUtil__GetLimitTurn_47840180(script, method) > 0;
+  return BattleTurnLimitUtil__GetLimitTurn_48100684(script, method) > 0;
 }
 
 
 int32_t BattleTurnLimitUtil__GetLimitActType(BattleTurnLimitUtil_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E07A39 & 1) == 0 )
+  if ( (byte_4E7A719 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_8493/*"LimitAct"*/);
-    byte_4E07A39 = 1;
+    sub_1D0F0B4(&StringLiteral_8529/*"LimitAct"*/);
+    byte_4E7A719 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_8493/*"LimitAct"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_8529/*"LimitAct"*/, 0, 0);
 }
 
 
 int32_t BattleTurnLimitUtil__GetLimitTurn(BattleTurnLimitUtil_o *this, const MethodInfo *method)
 {
-  return BattleTurnLimitUtil__GetLimitTurn_47840180(this->fields.EntityScript, method);
+  return BattleTurnLimitUtil__GetLimitTurn_48100684(this->fields.EntityScript, method);
 }
 
 
@@ -45,25 +45,25 @@ System_Int32_array *BattleTurnLimitUtil__GetLimitTurnCountStopIndividualityArray
         BattleTurnLimitUtil_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E07A41 & 1) == 0 )
+  if ( (byte_4E7A721 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_8497/*"LimitTurnCountStopIndividualities"*/);
-    byte_4E07A41 = 1;
+    sub_1D0F0B4(&StringLiteral_8533/*"LimitTurnCountStopIndividualities"*/);
+    byte_4E7A721 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.EntityScript, (System_String_o *)StringLiteral_8497/*"LimitTurnCountStopIndividualities"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.EntityScript, (System_String_o *)StringLiteral_8533/*"LimitTurnCountStopIndividualities"*/, 0, 0);
 }
 
 
-int32_t BattleTurnLimitUtil__GetLimitTurn_47840180(
+int32_t BattleTurnLimitUtil__GetLimitTurn_48100684(
         System_Collections_Generic_Dictionary_string__object__o *script,
         const MethodInfo *method)
 {
-  if ( (byte_4E07A3E & 1) == 0 )
+  if ( (byte_4E7A71E & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24618/*"turn"*/);
-    byte_4E07A3E = 1;
+    sub_1D0F0B4(&StringLiteral_24726/*"turn"*/);
+    byte_4E7A71E = 1;
   }
-  return EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_24618/*"turn"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_24726/*"turn"*/, 0, 0);
 }
 
 
@@ -71,12 +71,12 @@ int32_t BattleTurnLimitUtil__GetTurnDispType(
         System_Collections_Generic_Dictionary_string__object__o *script,
         const MethodInfo *method)
 {
-  if ( (byte_4E07A3F & 1) == 0 )
+  if ( (byte_4E7A71F & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24619/*"turnDispType"*/);
-    byte_4E07A3F = 1;
+    sub_1D0F0B4(&StringLiteral_24727/*"turnDispType"*/);
+    byte_4E7A71F = 1;
   }
-  return EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_24619/*"turnDispType"*/, 1, 0);
+  return EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_24727/*"turnDispType"*/, 1, 0);
 }
 
 
@@ -85,11 +85,11 @@ System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray(
         int32_t limitTurn,
         const MethodInfo *method)
 {
-  return BattleTurnLimitUtil__GetTurnEffectArray_47840464(limitTurn, this->fields.EntityScript, method);
+  return BattleTurnLimitUtil__GetTurnEffectArray_48100968(limitTurn, this->fields.EntityScript, method);
 }
 
 
-System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_47840464(
+System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_48100968(
         int32_t limitTurn,
         System_Collections_Generic_Dictionary_string__object__o *script,
         const MethodInfo *method)
@@ -97,17 +97,17 @@ System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_47840464(
   System_Int32_array *IntArray; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4E07A3C & 1) == 0 )
+  if ( (byte_4E7A71C & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24620/*"turnEffect"*/);
-    byte_4E07A3C = 1;
+    sub_1D0F0B4(&StringLiteral_24728/*"turnEffect"*/);
+    byte_4E7A71C = 1;
   }
-  IntArray = EntityScriptUtil__GetIntArray(script, (System_String_o *)StringLiteral_24620/*"turnEffect"*/, 0, 0);
-  return BattleTurnLimitUtil__GetTurnEffectArray_47840748(limitTurn, IntArray, v6);
+  IntArray = EntityScriptUtil__GetIntArray(script, (System_String_o *)StringLiteral_24728/*"turnEffect"*/, 0, 0);
+  return BattleTurnLimitUtil__GetTurnEffectArray_48101252(limitTurn, IntArray, v6);
 }
 
 
-System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_47840748(
+System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_48101252(
         int32_t limitTurn,
         System_Int32_array *turnArray,
         const MethodInfo *method)
@@ -125,17 +125,17 @@ System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_47840748(
   __int64 v15; // x0
   __int64 v16; // x0
 
-  if ( (byte_4E07A3D & 1) == 0 )
+  if ( (byte_4E7A71D & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_int___);
-    sub_1CE6700(&int___TypeInfo);
-    byte_4E07A3D = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_int___);
+    sub_1D0F0B4(&int___TypeInfo);
+    byte_4E7A71D = 1;
   }
   if ( turnArray )
   {
-    result = (System_Int32_array *)sub_1CE67A8(int___TypeInfo, (unsigned int)limitTurn);
+    result = (System_Int32_array *)sub_1D0F15C(int___TypeInfo, (unsigned int)limitTurn);
     if ( !result )
-      sub_1CE6958(0, v7);
+      sub_1D0F30C(0, v7);
     if ( (int)result->max_length >= 1 )
     {
       max_length = (unsigned int)result->max_length;
@@ -146,7 +146,7 @@ System_Int32_array *BattleTurnLimitUtil__GetTurnEffectArray_47840748(
       {
         if ( v11 >= max_length )
 LABEL_24:
-          sub_1CE6960(result);
+          sub_1D0F314(result);
         result->m_Items[v11] = v10;
         v12 = turnArray->max_length;
         if ( (int)v9 < (int)v12 )
@@ -170,17 +170,17 @@ LABEL_24:
     v14 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v14 )
     {
-      sub_1CBC7E4(Method_System_Array_Empty_int___);
+      sub_1CE5198(Method_System_Array_Empty_int___);
       v14 = v13[7];
     }
     v15 = *(_QWORD *)(v14 + 16);
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-      v15 = sub_1CBC788(inited);
+      v15 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v15 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v15);
     v16 = *(_QWORD *)(v13[7] + 16LL);
     if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-      v16 = sub_1CBC788(inited);
+      v16 = sub_1CE513C(inited);
     return **(System_Int32_array ***)(v16 + 184);
   }
   return result;
@@ -189,12 +189,12 @@ LABEL_24:
 
 int32_t BattleTurnLimitUtil__GetTurnEffectType(BattleTurnLimitUtil_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E07A3A & 1) == 0 )
+  if ( (byte_4E7A71A & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24621/*"turnEffectType"*/);
-    byte_4E07A3A = 1;
+    sub_1D0F0B4(&StringLiteral_24729/*"turnEffectType"*/);
+    byte_4E7A71A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_24621/*"turnEffectType"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_24729/*"turnEffectType"*/, 0, 0);
 }
 
 
@@ -206,12 +206,12 @@ bool BattleTurnLimitUtil__IsDispLimitTurn(BattleTurnLimitUtil_o *this, const Met
 
 bool BattleTurnLimitUtil__IsTurnElapsedEndBattleFlag(BattleTurnLimitUtil_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E07A3B & 1) == 0 )
+  if ( (byte_4E7A71B & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24622/*"turnElapsedEndBattle"*/);
-    byte_4E07A3B = 1;
+    sub_1D0F0B4(&StringLiteral_24730/*"turnElapsedEndBattle"*/);
+    byte_4E7A71B = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_24622/*"turnElapsedEndBattle"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.EntityScript, (System_String_o *)StringLiteral_24730/*"turnElapsedEndBattle"*/, 0, 0) > 0;
 }
 
 
@@ -233,39 +233,39 @@ BattleTurnLimitUtil_o *BattleTurnLimitUtil__Make(
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4E07A40 & 1) == 0 )
+  if ( (byte_4E7A720 & 1) == 0 )
   {
-    sub_1CE6700(&BattleQuestPhaseTurnLimitUtil_TypeInfo);
-    sub_1CE6700(&BattleTurnLimitUtil_TypeInfo);
-    sub_1CE6700(&BattleWaveTurnLimitUtil_TypeInfo);
-    byte_4E07A40 = 1;
+    sub_1D0F0B4(&BattleQuestPhaseTurnLimitUtil_TypeInfo);
+    sub_1D0F0B4(&BattleTurnLimitUtil_TypeInfo);
+    sub_1D0F0B4(&BattleWaveTurnLimitUtil_TypeInfo);
+    byte_4E7A720 = 1;
   }
   if ( questPhaseEnt )
     script = questPhaseEnt->fields.script;
   else
     script = 0;
-  if ( BattleTurnLimitUtil__GetLimitTurn_47840180(script, (const MethodInfo *)stageEnt) < 1 )
+  if ( BattleTurnLimitUtil__GetLimitTurn_48100684(script, (const MethodInfo *)stageEnt) < 1 )
   {
     if ( stageEnt )
       v9 = stageEnt->fields.script;
     else
       v9 = 0;
-    if ( BattleTurnLimitUtil__GetLimitTurn_47840180(v9, v6) < 1 )
+    if ( BattleTurnLimitUtil__GetLimitTurn_48100684(v9, v6) < 1 )
     {
-      v7 = sub_1CE694C(BattleTurnLimitUtil_TypeInfo);
+      v7 = sub_1D0F300(BattleTurnLimitUtil_TypeInfo);
       System_Object___ctor((Il2CppObject *)v7, 0);
       *(_QWORD *)(v7 + 16) = 0;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 16), 0, v11, v12, v13, v14, v15, v16);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), 0, v11, v12, v13, v14, v15, v16);
     }
     else
     {
-      v7 = sub_1CE694C(BattleWaveTurnLimitUtil_TypeInfo);
+      v7 = sub_1D0F300(BattleWaveTurnLimitUtil_TypeInfo);
       BattleWaveTurnLimitUtil___ctor((BattleWaveTurnLimitUtil_o *)v7, stageEnt, v10);
     }
   }
   else
   {
-    v7 = sub_1CE694C(BattleQuestPhaseTurnLimitUtil_TypeInfo);
+    v7 = sub_1D0F300(BattleQuestPhaseTurnLimitUtil_TypeInfo);
     BattleQuestPhaseTurnLimitUtil___ctor((BattleQuestPhaseTurnLimitUtil_o *)v7, questPhaseEnt, v8);
   }
   return (BattleTurnLimitUtil_o *)v7;

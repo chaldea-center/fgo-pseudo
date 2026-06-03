@@ -7,11 +7,11 @@ void PresentBoxNotificationListViewItem___ctor(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.entity = e;
-  v6 = sub_1CE66A4(&this->fields.entity, e);
+  v6 = sub_1D0F058(&this->fields.entity, e);
   if ( !e )
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0);
 }
 

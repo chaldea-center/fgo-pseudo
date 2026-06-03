@@ -23,17 +23,17 @@ void CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *this, const
   System_String_o *v23; // x7
   const MethodInfo *v24; // x1
 
-  if ( (byte_4E03D68 & 1) == 0 )
+  if ( (byte_4E769E0 & 1) == 0 )
   {
-    sub_1CE6700(&CharaGraphSortManageUnitCommandCode_TypeInfo);
-    sub_1CE6700(&CharaGraphSortManageUnitServantEquip_TypeInfo);
-    sub_1CE6700(&CharaGraphSortManageUnitServant_TypeInfo);
-    byte_4E03D68 = 1;
+    sub_1D0F0B4(&CharaGraphSortManageUnitCommandCode_TypeInfo);
+    sub_1D0F0B4(&CharaGraphSortManageUnitServantEquip_TypeInfo);
+    sub_1D0F0B4(&CharaGraphSortManageUnitServant_TypeInfo);
+    byte_4E769E0 = 1;
   }
-  v3 = (Il2CppObject *)sub_1CE694C(CharaGraphSortManageUnitServant_TypeInfo);
+  v3 = (Il2CppObject *)sub_1D0F300(CharaGraphSortManageUnitServant_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
@@ -42,10 +42,10 @@ void CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *this, const
     v7,
     v8,
     v9);
-  v10 = (Il2CppObject *)sub_1CE694C(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  v10 = (Il2CppObject *)sub_1D0F300(CharaGraphSortManageUnitServantEquip_TypeInfo);
   System_Object___ctor(v10, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v10;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)v10,
     v11,
@@ -54,10 +54,10 @@ void CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *this, const
     v14,
     v15,
     v16);
-  v17 = (Il2CppObject *)sub_1CE694C(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  v17 = (Il2CppObject *)sub_1D0F300(CharaGraphSortManageUnitCommandCode_TypeInfo);
   System_Object___ctor(v17, 0);
   this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v17;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
     (int32_t)v17,
     v18,
@@ -107,7 +107,7 @@ void CharaGraphSortOwnerAllKind__set_CommandCodeSortManageUnit(
   System_String_o *v7; // x7
 
   this->fields._CommandCodeSortManageUnit_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -131,7 +131,7 @@ void CharaGraphSortOwnerAllKind__set_ServantEquipSortManageUnit(
   System_String_o *v7; // x7
 
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -155,7 +155,7 @@ void CharaGraphSortOwnerAllKind__set_ServantSortManageUnit(
   System_String_o *v7; // x7
 
   this->fields._ServantSortManageUnit_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,

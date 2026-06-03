@@ -1,3 +1,14 @@
+void PlayerComboEndServantAiTask___ctor(
+        PlayerComboEndServantAiTask_o *this,
+        int32_t procState,
+        BattleServantData_o *svtData,
+        BattleLogic_o *logic,
+        const MethodInfo *method)
+{
+  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, procState, svtData, logic, 0);
+}
+
+
 BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
         PlayerComboEndServantAiTask_o *this,
         BattleLogic_o *logic,
@@ -14,29 +25,29 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
   int v13; // w9
   BattleLogicTask_o *v14; // x11
 
-  if ( (byte_4E07E04 & 1) == 0 )
+  if ( (byte_4E7ABBE & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_BattleLogicTask___);
-    byte_4E07E04 = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_BattleLogicTask___);
+    byte_4E7ABBE = 1;
   }
-  result = BattleLogicServantAiTask__MakeActionTask((BattleLogicServantAiTask_o *)this, logic, method);
+  result = BattleLogicServantAiTask__MakeActionTask((BattleLogicServantAiTask_o *)this, logic, 0);
   if ( !result )
   {
     v8 = Method_System_Array_Empty_BattleLogicTask___;
     v9 = *((_QWORD *)Method_System_Array_Empty_BattleLogicTask___ + 7);
     if ( !v9 )
     {
-      sub_1CBC7E4(Method_System_Array_Empty_BattleLogicTask___);
+      sub_1CE5198(Method_System_Array_Empty_BattleLogicTask___);
       v9 = v8[7];
     }
     v10 = *(_QWORD *)(v9 + 16);
     if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-      v10 = sub_1CBC788(inited);
+      v10 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v10 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v10);
     v11 = *(_QWORD *)(v8[7] + 16LL);
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-      v11 = sub_1CBC788(inited);
+      v11 = sub_1CE513C(inited);
     result = **(BattleLogicTask_array ***)(v11 + 184);
     if ( !result )
       goto LABEL_19;
@@ -48,7 +59,7 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
     while ( 1 )
     {
       if ( max_length == v13 )
-        sub_1CE6960(result);
+        sub_1D0F314(result);
       v14 = result->m_Items[v13];
       if ( !v14 )
         break;
@@ -60,7 +71,7 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
         return result;
     }
 LABEL_19:
-    sub_1CE6958(result, v6);
+    sub_1D0F30C(result, v6);
   }
   return result;
 }

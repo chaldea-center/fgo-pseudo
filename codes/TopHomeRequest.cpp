@@ -1,10 +1,10 @@
 bool TopHomeRequest__IsExpirationDateUpdateEventMap(const MethodInfo *method)
 {
-  if ( (byte_4E0661E & 1) == 0 )
+  if ( (byte_4E792C5 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E0661E = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -20,12 +20,12 @@ void TopHomeRequest__UpdateAccessTime(const MethodInfo *method)
   struct BalanceConfig_StaticFields *static_fields; // x8
   struct TopHomeRequest_StaticFields *v5; // x9
 
-  if ( (byte_4E06620 & 1) == 0 )
+  if ( (byte_4E792C7 & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E06620 = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -51,11 +51,11 @@ bool TopHomeRequest__checkExpirationDate(TopHomeRequest_o *this, const MethodInf
   int64_t nextRefreshTime; // x9
   bool result; // w0
 
-  if ( (byte_4E0661B & 1) == 0 )
+  if ( (byte_4E792C2 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E0661B = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -74,10 +74,10 @@ bool TopHomeRequest__checkExpirationDate(TopHomeRequest_o *this, const MethodInf
 
 void TopHomeRequest__clearExpirationDate(const MethodInfo *method)
 {
-  if ( (byte_4E06618 & 1) == 0 )
+  if ( (byte_4E792BF & 1) == 0 )
   {
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E06618 = 1;
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792BF = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
 }
@@ -85,15 +85,15 @@ void TopHomeRequest__clearExpirationDate(const MethodInfo *method)
 
 System_String_o *TopHomeRequest__getMockData(TopHomeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E0661A & 1) == 0 )
+  if ( (byte_4E792C1 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_9210/*"MockTopLoginRequest"*/);
-    byte_4E0661A = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_9251/*"MockTopLoginRequest"*/);
+    byte_4E792C1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9210/*"MockTopLoginRequest"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9251/*"MockTopLoginRequest"*/, 0);
 }
 
 
@@ -101,25 +101,25 @@ System_String_o *TopHomeRequest__getURL(TopHomeRequest_o *this, const MethodInfo
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E06619 & 1) == 0 )
+  if ( (byte_4E792C0 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_20276/*"home/top"*/);
-    byte_4E06619 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_20364/*"home/top"*/);
+    byte_4E792C0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_20276/*"home/top"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_20364/*"home/top"*/, 0);
 }
 
 
 bool TopHomeRequest__isBackgroundRequest(TopHomeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E0661C & 1) == 0 )
+  if ( (byte_4E792C3 & 1) == 0 )
   {
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E0661C = 1;
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C3 = 1;
   }
   return TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled;
 }
@@ -149,19 +149,19 @@ void TopHomeRequest__requestCompleted(
   struct TopHomeRequest_StaticFields *static_fields; // x8
   __int64 *v22; // x9
 
-  if ( (byte_4E06621 & 1) == 0 )
+  if ( (byte_4E792C8 & 1) == 0 )
   {
-    sub_1CE6700(&CatAndMouseGame_TypeInfo);
-    sub_1CE6700(&System_Convert_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
-    sub_1CE6700(&StringLiteral_17089/*"assetbundleKey"*/);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E06621 = 1;
+    sub_1D0F0B4(&CatAndMouseGame_TypeInfo);
+    sub_1D0F0B4(&System_Convert_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
+    sub_1D0F0B4(&StringLiteral_17160/*"assetbundleKey"*/);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E792C8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -174,7 +174,7 @@ void TopHomeRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v22 = &StringLiteral_22555/*"ng"*/;
+    v22 = &StringLiteral_22648/*"ng"*/;
     goto LABEL_21;
   }
   TopHomeRequest__UpdateAccessTime((const MethodInfo *)v8);
@@ -184,7 +184,7 @@ void TopHomeRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v22 = &StringLiteral_22728/*"ok"*/;
+    v22 = &StringLiteral_22821/*"ok"*/;
 LABEL_21:
     invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl;
     method_code = CallBack->fields.method_code;
@@ -193,15 +193,15 @@ LABEL_21:
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success,
-         (Il2CppObject *)StringLiteral_17089/*"assetbundleKey"*/,
-         (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17160/*"assetbundleKey"*/,
+         (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_17089/*"assetbundleKey"*/,
-             (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_17160/*"assetbundleKey"*/,
+             (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
-      sub_1CE6958(0, v11);
+      sub_1D0F30C(0, v11);
     v12 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
                                Item,
                                Item->klass->vtable[3].method);
@@ -231,10 +231,10 @@ LABEL_22:
 
 void TopHomeRequest__setBackgroundRequest(TopHomeRequest_o *this, bool isEnabled, const MethodInfo *method)
 {
-  if ( (byte_4E0661D & 1) == 0 )
+  if ( (byte_4E792C4 & 1) == 0 )
   {
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E0661D = 1;
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C4 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled = isEnabled;
 }
@@ -245,11 +245,11 @@ void TopHomeRequest__setRecentRefreshTime(int64_t time, const MethodInfo *method
   int64_t v3; // x0
   struct TopHomeRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4E0661F & 1) == 0 )
+  if ( (byte_4E792C6 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&TopHomeRequest_TypeInfo);
-    byte_4E0661F = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&TopHomeRequest_TypeInfo);
+    byte_4E792C6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

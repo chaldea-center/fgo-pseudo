@@ -3,10 +3,10 @@ void QuestBoardListEffectAppearComponent___ctor(QuestBoardListEffectAppearCompon
   QuestBoardListViewItemDraw_c *v8; // x0
   int32_t POS_Y_ITVL_AREA; // w8
 
-  if ( (byte_4E015B0 & 1) == 0 )
+  if ( (byte_4E74196 & 1) == 0 )
   {
-    sub_1CE6700(&QuestBoardListViewItemDraw_TypeInfo);
-    byte_4E015B0 = 1;
+    sub_1D0F0B4(&QuestBoardListViewItemDraw_TypeInfo);
+    byte_4E74196 = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
   *(_QWORD *)&this->fields.boardMovingStartTime = _D0;
@@ -18,7 +18,7 @@ void QuestBoardListEffectAppearComponent___ctor(QuestBoardListEffectAppearCompon
     v8 = QuestBoardListViewItemDraw_TypeInfo;
   }
   POS_Y_ITVL_AREA = v8->static_fields->POS_Y_ITVL_AREA;
-  this->fields.bgmfadeTime = 2.0;
+  this->fields.bgmFadeOutTime = 2.0;
   this->fields.targetBoardForceShiftPosY = (float)-POS_Y_ITVL_AREA;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }

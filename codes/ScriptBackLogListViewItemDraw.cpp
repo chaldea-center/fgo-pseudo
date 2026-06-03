@@ -37,7 +37,7 @@ void ScriptBackLogListViewItemDraw__SetItem(
       }
     }
 LABEL_8:
-    sub_1CE6958(this, item);
+    sub_1D0F30C(this, item);
   }
   if ( !this )
     goto LABEL_8;

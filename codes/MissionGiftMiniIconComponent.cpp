@@ -16,7 +16,7 @@ void MissionGiftMiniIconComponent__SetMiniIcon(
   {
     if ( miniIcon )
     {
-      ItemIconComponent__SetGift_42064732(
+      ItemIconComponent__SetGift_42283820(
         miniIcon,
         entity->fields.type,
         entity->fields.objectId,
@@ -26,7 +26,7 @@ void MissionGiftMiniIconComponent__SetMiniIcon(
       return;
     }
 LABEL_6:
-    sub_1CE6958(miniIcon, entity);
+    sub_1D0F30C(miniIcon, entity);
   }
   if ( !miniIcon )
     goto LABEL_6;

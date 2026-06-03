@@ -33,9 +33,9 @@ void BattleVoicePlayCondArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._BattleData_k__BackingField = btlData;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)btlData, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)btlData, v11, v12, v13, v14, v15, v16);
   this->fields._ServantData_k__BackingField = svtData;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ServantData_k__BackingField,
     (int32_t)svtData,
     v17,
@@ -45,7 +45,7 @@ void BattleVoicePlayCondArgs___ctor(
     v21,
     v22);
   this->fields._ActionData_k__BackingField = actData;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ActionData_k__BackingField,
     (int32_t)actData,
     v23,
@@ -55,7 +55,7 @@ void BattleVoicePlayCondArgs___ctor(
     v27,
     v28);
   this->fields._CommandData_k__BackingField = cmdData;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommandData_k__BackingField,
     (int32_t)cmdData,
     v29,
@@ -81,11 +81,11 @@ bool BattleVoicePlayCondArgs__CheckMainTargetIndividuality(
   int max_length; // w8
   int v12; // w9
 
-  if ( (byte_4E07888 & 1) == 0 )
+  if ( (byte_4E7A565 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4E07888 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_4E7A565 = 1;
   }
   ActionData_k__BackingField = this->fields._ActionData_k__BackingField;
   if ( !ActionData_k__BackingField )
@@ -93,12 +93,12 @@ bool BattleVoicePlayCondArgs__CheckMainTargetIndividuality(
   targetId = ActionData_k__BackingField->fields.targetId;
   v7 = System_Linq_Enumerable__Distinct_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)ActionData_k__BackingField->fields.funcTargetList,
-         (const MethodInfo_3226CCC *)Method_System_Linq_Enumerable_Distinct_int___);
+         (const MethodInfo_3272944 *)Method_System_Linq_Enumerable_Distinct_int___);
   v8 = System_Linq_Enumerable__ToArray_int_(
          v7,
-         (const MethodInfo_3243710 *)Method_System_Linq_Enumerable_ToArray_int___);
+         (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !v8 )
-    sub_1CE6958(0, v9);
+    sub_1D0F30C(0, v9);
   max_length = v8->max_length;
   if ( max_length < 1 )
     return 0;
@@ -106,7 +106,7 @@ bool BattleVoicePlayCondArgs__CheckMainTargetIndividuality(
   while ( 1 )
   {
     if ( max_length == v12 )
-      sub_1CE6960(v8);
+      sub_1D0F314(v8);
     if ( targetId == v8->m_Items[v12] )
       break;
     if ( max_length == ++v12 )
@@ -151,22 +151,22 @@ bool BattleVoicePlayCondArgs__CheckTargetIndividualityInFuncTargetListAll(
   unsigned __int64 v11; // x23
 
   v4 = this;
-  if ( (byte_4E07887 & 1) == 0 )
+  if ( (byte_4E7A564 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Distinct_int___);
-    this = (BattleVoicePlayCondArgs_o *)sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4E07887 = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Distinct_int___);
+    this = (BattleVoicePlayCondArgs_o *)sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_4E7A564 = 1;
   }
   ActionData_k__BackingField = v4->fields._ActionData_k__BackingField;
   if ( !ActionData_k__BackingField
     || (v6 = System_Linq_Enumerable__Distinct_int_(
                (System_Collections_Generic_IEnumerable_TSource__o *)ActionData_k__BackingField->fields.funcTargetList,
-               (const MethodInfo_3226CCC *)Method_System_Linq_Enumerable_Distinct_int___),
+               (const MethodInfo_3272944 *)Method_System_Linq_Enumerable_Distinct_int___),
         (this = (BattleVoicePlayCondArgs_o *)System_Linq_Enumerable__ToArray_int_(
                                                v6,
-                                               (const MethodInfo_3243710 *)Method_System_Linq_Enumerable_ToArray_int___)) == 0) )
+                                               (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___)) == 0) )
   {
-    sub_1CE6958(this, *(_QWORD *)&targetIndividuality);
+    sub_1D0F30C(this, *(_QWORD *)&targetIndividuality);
   }
   ServantData_k__BackingField = this->fields._ServantData_k__BackingField;
   v9 = this;
@@ -177,7 +177,7 @@ bool BattleVoicePlayCondArgs__CheckTargetIndividualityInFuncTargetListAll(
     do
     {
       if ( v11 >= (unsigned int)ServantData_k__BackingField )
-        sub_1CE6960(this);
+        sub_1D0F314(this);
       this = (BattleVoicePlayCondArgs_o *)BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
                                             v4,
                                             *((_DWORD *)&v9->fields._ActionData_k__BackingField + v11),
@@ -237,10 +237,10 @@ bool BattleVoicePlayCondArgs__IsOpenBattlePoint(
   __int64 v13; // x1
   const MethodInfo *v14; // x3
 
-  if ( (byte_4E0788B & 1) == 0 )
+  if ( (byte_4E7A568 & 1) == 0 )
   {
-    sub_1CE6700(&int___TypeInfo);
-    byte_4E0788B = 1;
+    sub_1D0F0B4(&int___TypeInfo);
+    byte_4E7A568 = 1;
   }
   ServantData_k__BackingField = this->fields._ServantData_k__BackingField;
   if ( !ServantData_k__BackingField )
@@ -249,11 +249,11 @@ bool BattleVoicePlayCondArgs__IsOpenBattlePoint(
   if ( !BattlePointData )
     return 0;
   v11 = BattlePointData;
-  v12 = sub_1CE67A8(int___TypeInfo, 1);
+  v12 = sub_1D0F15C(int___TypeInfo, 1);
   if ( !v12 )
-    sub_1CE6958(0, v13);
+    sub_1D0F30C(0, v13);
   if ( !*(_DWORD *)(v12 + 24) )
-    sub_1CE6960(v12);
+    sub_1D0F314(v12);
   *(_DWORD *)(v12 + 32) = condNum;
   return BattleUtility__IsSatisfyValueCond(valueCondType, (System_Int32_array *)v12, v11->fields.value, v14);
 }
@@ -271,10 +271,10 @@ bool BattleVoicePlayCondArgs__IsOpenBattleSvtFriendShip(
   int32_t v10; // w0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4E0788A & 1) == 0 )
+  if ( (byte_4E7A567 & 1) == 0 )
   {
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4E0788A = 1;
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4E7A567 = 1;
   }
   ServantData_k__BackingField = this->fields._ServantData_k__BackingField;
   if ( !ServantData_k__BackingField )
@@ -285,7 +285,7 @@ bool BattleVoicePlayCondArgs__IsOpenBattleSvtFriendShip(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v12.fields.currentCryptoKey = v9;
   *(_QWORD *)&v12.fields.fakeValue = v8;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v12, 0);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v12, 0);
   if ( isAbove )
     return v10 >= targetFriendShip;
   else
@@ -306,11 +306,11 @@ bool BattleVoicePlayCondArgs__IsOpenBattleValue(
   const MethodInfo *v12; // x3
   int32_t value; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E0788C & 1) == 0 )
+  if ( (byte_4E7A569 & 1) == 0 )
   {
-    sub_1CE6700(&int___TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0788C = 1;
+    sub_1D0F0B4(&int___TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7A569 = 1;
   }
   value = 0;
   BattleData_k__BackingField = (UnityEngine_Object_o *)this->fields._BattleData_k__BackingField;
@@ -323,12 +323,12 @@ bool BattleVoicePlayCondArgs__IsOpenBattleValue(
     goto LABEL_13;
   if ( !BattleData__TryGetBattleValue(v11, targetId, &value, 0) )
     return 0;
-  v11 = (struct BattleData_o *)sub_1CE67A8(int___TypeInfo, 1);
+  v11 = (struct BattleData_o *)sub_1D0F15C(int___TypeInfo, 1);
   if ( !v11 )
 LABEL_13:
-    sub_1CE6958(v11, v10);
+    sub_1D0F30C(v11, v10);
   if ( !LODWORD(v11->fields.m_CancellationTokenSource) )
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   LODWORD(v11->fields.rootfsm) = condNum;
   return BattleUtility__IsSatisfyValueCond(valueCondType, (System_Int32_array *)v11, value, v12);
 }
@@ -366,10 +366,10 @@ bool BattleVoicePlayCondArgs__IsPlayQuestPhase(
   BattleData_o *v13; // x8
   bool v14; // w8
 
-  if ( (byte_4E07886 & 1) == 0 )
+  if ( (byte_4E7A563 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E07886 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7A563 = 1;
   }
   BattleData_k__BackingField = (UnityEngine_Object_o *)this->fields._BattleData_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -381,7 +381,7 @@ bool BattleVoicePlayCondArgs__IsPlayQuestPhase(
     || (QuestId = (BattleData_o *)BattleData__getQuestId(QuestId, 0),
         (v13 = this->fields._BattleData_k__BackingField) == 0) )
   {
-    sub_1CE6958(QuestId, v10);
+    sub_1D0F30C(QuestId, v10);
   }
   v14 = ((_DWORD)QuestId == targetQuestId) & (BattleData__getPhase(v13, 0) == targetQuestPhase);
   if ( isNot )
@@ -419,13 +419,13 @@ bool BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
   System_Int32_array *ConcatServantAndBuffIndividualityies; // x20
   System_Int32_array *v16; // x21
 
-  if ( (byte_4E07889 & 1) == 0 )
+  if ( (byte_4E7A566 & 1) == 0 )
   {
-    sub_1CE6700(&Individuality_TypeInfo);
-    sub_1CE6700(&int___TypeInfo);
-    sub_1CE6700(&System_Math_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E07889 = 1;
+    sub_1D0F0B4(&Individuality_TypeInfo);
+    sub_1D0F0B4(&int___TypeInfo);
+    sub_1D0F0B4(&System_Math_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7A566 = 1;
   }
   BattleData_k__BackingField = (UnityEngine_Object_o *)this->fields._BattleData_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -455,13 +455,13 @@ bool BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
                                            0,
                                            0,
                                            0);
-  v11 = (struct BattleData_o *)sub_1CE67A8(int___TypeInfo, 1);
+  v11 = (struct BattleData_o *)sub_1D0F15C(int___TypeInfo, 1);
   if ( !v11 )
 LABEL_21:
-    sub_1CE6958(v11, v10);
+    sub_1D0F30C(v11, v10);
   v16 = (System_Int32_array *)v11;
   if ( !LODWORD(v11->fields.m_CancellationTokenSource) )
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   LODWORD(v11->fields.rootfsm) = v14;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);

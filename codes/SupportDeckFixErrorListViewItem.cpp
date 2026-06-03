@@ -11,9 +11,9 @@ void SupportDeckFixErrorListViewItem___ctor(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.message, (int32_t)message, v6, v7, v8, v9, v10, v11);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.message, (int32_t)message, v6, v7, v8, v9, v10, v11);
 }
 
 

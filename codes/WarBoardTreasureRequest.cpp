@@ -11,17 +11,17 @@ void WarBoardTreasureRequest__beginRequest(
   const MethodInfo *v9; // x3
 
   v6 = (RequestBase_o *)this;
-  if ( (byte_4E06686 & 1) == 0 )
+  if ( (byte_4E7932D & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_24023/*"stageId"*/);
-    this = (WarBoardTreasureRequest_o *)sub_1CE6700(&StringLiteral_24593/*"treasureId"*/);
-    byte_4E06686 = 1;
+    sub_1D0F0B4(&StringLiteral_24125/*"stageId"*/);
+    this = (WarBoardTreasureRequest_o *)sub_1D0F0B4(&StringLiteral_24701/*"treasureId"*/);
+    byte_4E7932D = 1;
   }
   if ( !warBoardData )
-    sub_1CE6958(this, *(_QWORD *)&treasureId);
+    sub_1D0F30C(this, *(_QWORD *)&treasureId);
   id = WarBoardData__get_id(warBoardData, 0);
-  RequestBase__addField(v6, (System_String_o *)StringLiteral_24023/*"stageId"*/, id, v8);
-  RequestBase__addField(v6, (System_String_o *)StringLiteral_24593/*"treasureId"*/, treasureId, v9);
+  RequestBase__addField(v6, (System_String_o *)StringLiteral_24125/*"stageId"*/, id, v8);
+  RequestBase__addField(v6, (System_String_o *)StringLiteral_24701/*"treasureId"*/, treasureId, v9);
   WarBoardData__SetRequest(warBoardData, v6, 0);
 }
 
@@ -30,16 +30,16 @@ System_String_o *WarBoardTreasureRequest__getURL(WarBoardTreasureRequest_o *this
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E06685 & 1) == 0 )
+  if ( (byte_4E7932C & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_25151/*"warBoard/treasure"*/);
-    byte_4E06685 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25260/*"warBoard/treasure"*/);
+    byte_4E7932C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_25151/*"warBoard/treasure"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_25260/*"warBoard/treasure"*/, 0);
 }
 
 
@@ -56,12 +56,12 @@ void WarBoardTreasureRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4E06687 & 1) == 0 )
+  if ( (byte_4E7932E & 1) == 0 )
   {
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E06687 = 1;
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E7932E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -86,7 +86,7 @@ void WarBoardTreasureRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22555/*"ng"*/,
+        StringLiteral_22648/*"ng"*/,
         v11->fields.method);
   }
 }

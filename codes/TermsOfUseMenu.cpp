@@ -15,36 +15,36 @@ void TermsOfUseMenu___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4E02191 & 1) == 0 )
+  if ( (byte_4E74E04 & 1) == 0 )
   {
-    sub_1CE6700(&TermsOfUseMenu_TypeInfo);
-    sub_1CE6700(&StringLiteral_22611/*"none"*/);
-    sub_1CE6700(&StringLiteral_15367/*"UsePolicyConsent"*/);
-    byte_4E02191 = 1;
+    sub_1D0F0B4(&TermsOfUseMenu_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22704/*"none"*/);
+    sub_1D0F0B4(&StringLiteral_15422/*"UsePolicyConsent"*/);
+    byte_4E74E04 = 1;
   }
-  TermsOfUseMenu_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_15367/*"UsePolicyConsent"*/;
-  sub_1CE66A4(
+  TermsOfUseMenu_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_15422/*"UsePolicyConsent"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)TermsOfUseMenu_TypeInfo->static_fields,
-    StringLiteral_15367/*"UsePolicyConsent"*/,
+    StringLiteral_15422/*"UsePolicyConsent"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_22611/*"none"*/;
+  v7 = StringLiteral_22704/*"none"*/;
   static_fields = TermsOfUseMenu_TypeInfo->static_fields;
-  static_fields->SAVE_DEFAULT_STR = (struct System_String_o *)StringLiteral_22611/*"none"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->SAVE_DEFAULT_STR, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->SAVE_DEFAULT_STR = (struct System_String_o *)StringLiteral_22704/*"none"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->SAVE_DEFAULT_STR, v7, v9, v10, v11, v12, v13, v14);
 }
 
 
 void TermsOfUseMenu___ctor(TermsOfUseMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E02190 & 1) == 0 )
+  if ( (byte_4E74E03 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4E02190 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E74E03 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -69,7 +69,7 @@ void TermsOfUseMenu__Callback(TermsOfUseMenu_o *this, bool result, const MethodI
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1CE66A4(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1D0F058(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -82,11 +82,11 @@ void TermsOfUseMenu__Close(TermsOfUseMenu_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  TermsOfUseMenu__Close_38716380(this, 0, v2);
+  TermsOfUseMenu__Close_38932464(this, 0, v2);
 }
 
 
-void TermsOfUseMenu__Close_38716380(TermsOfUseMenu_o *this, System_Action_o *callback, const MethodInfo *method)
+void TermsOfUseMenu__Close_38932464(TermsOfUseMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   int32_t v3; // w3
   System_String_o *v4; // x4
@@ -95,14 +95,14 @@ void TermsOfUseMenu__Close_38716380(TermsOfUseMenu_o *this, System_Action_o *cal
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4E0218B & 1) == 0 )
+  if ( (byte_4E74DFE & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_TermsOfUseMenu_EndClose__);
-    byte_4E0218B = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_TermsOfUseMenu_EndClose__);
+    byte_4E74DFE = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -112,7 +112,7 @@ void TermsOfUseMenu__Close_38716380(TermsOfUseMenu_o *this, System_Action_o *cal
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_TermsOfUseMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -137,7 +137,7 @@ void TermsOfUseMenu__EndClose(TermsOfUseMenu_o *this, const MethodInfo *method)
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1CE66A4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1D0F058(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -153,10 +153,10 @@ void TermsOfUseMenu__Init(TermsOfUseMenu_o *this, const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4E02189 & 1) == 0 )
+  if ( (byte_4E74DFC & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E02189 = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E74DFC = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -167,7 +167,7 @@ void TermsOfUseMenu__Init(TermsOfUseMenu_o *this, const MethodInfo *method)
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = this->fields.cancelLabel) == 0) )
   {
-    sub_1CE6958(titleLabel, method);
+    sub_1D0F30C(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -183,11 +183,11 @@ bool TermsOfUseMenu__IsConcent(TermsOfUseMenu_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x1
   System_String_o *updateVersion; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E02186 & 1) == 0 )
+  if ( (byte_4E74DF9 & 1) == 0 )
   {
-    sub_1CE6700(&ManagerConfig_TypeInfo);
-    sub_1CE6700(&TermsOfUseMenu_TypeInfo);
-    byte_4E02186 = 1;
+    sub_1D0F0B4(&ManagerConfig_TypeInfo);
+    sub_1D0F0B4(&TermsOfUseMenu_TypeInfo);
+    byte_4E74DF9 = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   updateVersion = 0;
@@ -225,11 +225,11 @@ bool TermsOfUseMenu__IsConcentFirst(TermsOfUseMenu_o *this, const MethodInfo *me
   TermsOfUseMenu_c *v4; // x0
   System_String_o *String; // x0
 
-  if ( (byte_4E02187 & 1) == 0 )
+  if ( (byte_4E74DFA & 1) == 0 )
   {
-    sub_1CE6700(&ManagerConfig_TypeInfo);
-    sub_1CE6700(&TermsOfUseMenu_TypeInfo);
-    byte_4E02187 = 1;
+    sub_1D0F0B4(&ManagerConfig_TypeInfo);
+    sub_1D0F0B4(&TermsOfUseMenu_TypeInfo);
+    byte_4E74DFA = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -256,18 +256,18 @@ void TermsOfUseMenu__OnClickCancel(TermsOfUseMenu_o *this, const MethodInfo *met
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E0218E & 1) == 0 )
+  if ( (byte_4E74E01 & 1) == 0 )
   {
-    sub_1CE6700(&Method_TermsOfUseMenu_OnClickCancel__);
-    byte_4E0218E = 1;
+    sub_1D0F0B4(&Method_TermsOfUseMenu_OnClickCancel__);
+    byte_4E74E01 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TermsOfUseMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_TermsOfUseMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_TermsOfUseMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_TermsOfUseMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     TermsOfUseMenu__Callback(this, 0, v5);
   }
@@ -283,24 +283,24 @@ void TermsOfUseMenu__OnClickDecide(TermsOfUseMenu_o *this, const MethodInfo *met
   TermsOfUseMenu_c *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4E0218D & 1) == 0 )
+  if ( (byte_4E74E00 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1CE6700(&Method_TermsOfUseMenu_OnClickDecide__);
-    sub_1CE6700(&TermsOfUseMenu_TypeInfo);
-    byte_4E0218D = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1D0F0B4(&Method_TermsOfUseMenu_OnClickDecide__);
+    sub_1D0F0B4(&TermsOfUseMenu_TypeInfo);
+    byte_4E74E00 = 1;
   }
   if ( this->fields.state == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !Instance )
-      sub_1CE6958(0, v4);
+      sub_1D0F30C(0, v4);
     AdManager__TrackEvent((AdManager_o *)Instance, 2, 3, -1, -1, 0, 0);
     this->fields.state = 3;
     v5 = Method_TermsOfUseMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_TermsOfUseMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1CE6718(Method_TermsOfUseMenu_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1D0F0CC(Method_TermsOfUseMenu_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0);
     v7 = TermsOfUseMenu_TypeInfo;
     if ( !TermsOfUseMenu_TypeInfo->_2.cctor_finished )
@@ -316,38 +316,38 @@ void TermsOfUseMenu__OnClickShow(TermsOfUseMenu_o *this, const MethodInfo *metho
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   System_String_o *v5; // x20
-  System_String_o *WebViewAddress_42533240; // x21
+  System_String_o *WebViewAddress_42753856; // x21
   System_Action_o *v7; // x22
 
-  if ( (byte_4E0218C & 1) == 0 )
+  if ( (byte_4E74DFF & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_TermsOfUseMenu_OnClickShow__);
-    sub_1CE6700(&Method_TermsOfUseMenu_OnEndShowWebView__);
-    sub_1CE6700(&WebViewManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_15704/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/);
-    byte_4E0218C = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_TermsOfUseMenu_OnClickShow__);
+    sub_1D0F0B4(&Method_TermsOfUseMenu_OnEndShowWebView__);
+    sub_1D0F0B4(&WebViewManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_15759/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/);
+    byte_4E74DFF = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_TermsOfUseMenu_OnClickShow__;
     if ( (*((_BYTE *)Method_TermsOfUseMenu_OnClickShow__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_TermsOfUseMenu_OnClickShow__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_TermsOfUseMenu_OnClickShow__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15704/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15759/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    WebViewAddress_42533240 = NetworkManager__getWebViewAddress_42533240(4, 0);
-    v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    WebViewAddress_42753856 = NetworkManager__getWebViewAddress_42753856(4, 0);
+    v7 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_TermsOfUseMenu_OnEndShowWebView__, 0);
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    WebViewManager__OpenView(v5, WebViewAddress_42533240, v7, 0);
+    WebViewManager__OpenView(v5, WebViewAddress_42753856, v7, 0);
   }
 }
 
@@ -378,23 +378,23 @@ void TermsOfUseMenu__Open(TermsOfUseMenu_o *this, TermsOfUseMenu_CallbackFunc_o 
   UILabel_o *decideLabel; // x20
   System_Action_o *v21; // x20
 
-  if ( (byte_4E0218A & 1) == 0 )
+  if ( (byte_4E74DFD & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&Method_TermsOfUseMenu_EndOpen__);
-    sub_1CE6700(&StringLiteral_13521/*"TERMS_OF_USE_TITLE"*/);
-    sub_1CE6700(&StringLiteral_13520/*"TERMS_OF_USE_SHOW"*/);
-    sub_1CE6700(&StringLiteral_13518/*"TERMS_OF_USE_MESSAGE1"*/);
-    sub_1CE6700(&StringLiteral_13511/*"TERMS_OF_USE_DECIDE"*/);
-    sub_1CE6700(&StringLiteral_13510/*"TERMS_OF_USE_CANCEL"*/);
-    sub_1CE6700(&StringLiteral_13519/*"TERMS_OF_USE_MESSAGE2"*/);
-    byte_4E0218A = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&Method_TermsOfUseMenu_EndOpen__);
+    sub_1D0F0B4(&StringLiteral_13571/*"TERMS_OF_USE_TITLE"*/);
+    sub_1D0F0B4(&StringLiteral_13570/*"TERMS_OF_USE_SHOW"*/);
+    sub_1D0F0B4(&StringLiteral_13568/*"TERMS_OF_USE_MESSAGE1"*/);
+    sub_1D0F0B4(&StringLiteral_13561/*"TERMS_OF_USE_DECIDE"*/);
+    sub_1D0F0B4(&StringLiteral_13560/*"TERMS_OF_USE_CANCEL"*/);
+    sub_1D0F0B4(&StringLiteral_13569/*"TERMS_OF_USE_MESSAGE2"*/);
+    byte_4E74DFD = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)method,
@@ -410,12 +410,12 @@ void TermsOfUseMenu__Open(TermsOfUseMenu_o *this, TermsOfUseMenu_CallbackFunc_o 
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13521/*"TERMS_OF_USE_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13571/*"TERMS_OF_USE_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_18;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     messageLabel = this->fields.messageLabel;
-    v16 = (System_String_o **)(TermsOfUseMenu__IsConcentFirst(v14, v15) ? &StringLiteral_13518/*"TERMS_OF_USE_MESSAGE1"*/ : &StringLiteral_13519/*"TERMS_OF_USE_MESSAGE2"*/);
+    v16 = (System_String_o **)(TermsOfUseMenu__IsConcentFirst(v14, v15) ? &StringLiteral_13568/*"TERMS_OF_USE_MESSAGE1"*/ : &StringLiteral_13569/*"TERMS_OF_USE_MESSAGE2"*/);
     v17 = *v16;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -424,23 +424,23 @@ void TermsOfUseMenu__Open(TermsOfUseMenu_o *this, TermsOfUseMenu_CallbackFunc_o 
       goto LABEL_18;
     UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
     showLabel = this->fields.showLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13520/*"TERMS_OF_USE_SHOW"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13570/*"TERMS_OF_USE_SHOW"*/, 0);
     if ( !showLabel
       || (UILabel__set_text(showLabel, (System_String_o *)gameObject, 0),
           cancelLabel = this->fields.cancelLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13510/*"TERMS_OF_USE_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13560/*"TERMS_OF_USE_CANCEL"*/, 0),
           !cancelLabel)
       || (UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0),
           decideLabel = this->fields.decideLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13511/*"TERMS_OF_USE_DECIDE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13561/*"TERMS_OF_USE_DECIDE"*/, 0),
           !decideLabel) )
     {
 LABEL_18:
-      sub_1CE6958(gameObject, v11);
+      sub_1D0F30C(gameObject, v11);
     }
     UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0);
     this->fields.state = 1;
-    v21 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v21 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v21, (Il2CppObject *)this, Method_TermsOfUseMenu_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v21, 0, 0, 0);
   }
@@ -453,11 +453,11 @@ void TermsOfUseMenu__Save(const MethodInfo *method)
   TermsOfUseMenu_c *v2; // x8
   System_String_o *UseTermsLatestVersion; // x19
 
-  if ( (byte_4E02188 & 1) == 0 )
+  if ( (byte_4E74DFB & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&TermsOfUseMenu_TypeInfo);
-    byte_4E02188 = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&TermsOfUseMenu_TypeInfo);
+    byte_4E74DFB = 1;
   }
   v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -503,15 +503,15 @@ bool TermsOfUseMenu__TryUpdateTermsVersion(System_String_o **updateVersion, cons
   BalanceConfig_c *v24; // x0
   System_String_o *UseTermsLatestVersion; // x1
 
-  if ( (byte_4E02185 & 1) == 0 )
+  if ( (byte_4E74DF8 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Application_TypeInfo);
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&System_Version_TypeInfo);
-    byte_4E02185 = 1;
+    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&System_Version_TypeInfo);
+    byte_4E74DF8 = 1;
   }
   *updateVersion = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)updateVersion, 0, v2, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)updateVersion, 0, v2, v3, v4, v5, v6, v7);
   v9 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
@@ -532,7 +532,7 @@ bool TermsOfUseMenu__TryUpdateTermsVersion(System_String_o **updateVersion, cons
 LABEL_17:
     UseTermsLatestVersion = static_fields->UseTermsLatestVersion;
     *updateVersion = UseTermsLatestVersion;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)updateVersion,
       (int32_t)UseTermsLatestVersion,
       v11,
@@ -549,13 +549,13 @@ LABEL_17:
     v17 = BalanceConfig_TypeInfo;
   }
   UseTermsAgreementRequiredAppVersion = v17->static_fields->UseTermsAgreementRequiredAppVersion;
-  v21 = (System_Version_o *)sub_1CE694C(System_Version_TypeInfo);
-  System_Version___ctor_66768148(v21, UseTermsAgreementRequiredAppVersion, 0);
+  v21 = (System_Version_o *)sub_1D0F300(System_Version_TypeInfo);
+  System_Version___ctor_67208244(v21, UseTermsAgreementRequiredAppVersion, 0);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   version = UnityEngine_Application__get_version(0);
-  v23 = (System_Version_o *)sub_1CE694C(System_Version_TypeInfo);
-  System_Version___ctor_66768148(v23, version, 0);
+  v23 = (System_Version_o *)sub_1D0F300(System_Version_TypeInfo);
+  System_Version___ctor_67208244(v23, version, 0);
   if ( System_Version__op_LessThanOrEqual(v21, v23, 0) )
   {
     v24 = BalanceConfig_TypeInfo;
@@ -586,10 +586,10 @@ void TermsOfUseMenu__add_callbackFunc(
   TermsOfUseMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4E02183 & 1) == 0 )
+  if ( (byte_4E74DF6 & 1) == 0 )
   {
-    sub_1CE6700(&TermsOfUseMenu_CallbackFunc_TypeInfo);
-    byte_4E02183 = 1;
+    sub_1D0F0B4(&TermsOfUseMenu_CallbackFunc_TypeInfo);
+    byte_4E74DF6 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -602,25 +602,25 @@ void TermsOfUseMenu__add_callbackFunc(
       if ( (TermsOfUseMenu_CallbackFunc_c *)v8->klass != TermsOfUseMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   TermsOfUseMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *TermsOfUseMenu__get_closeBtnPath(TermsOfUseMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E0218F & 1) == 0 )
+  if ( (byte_4E74E02 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15791/*"Window/CancelButton"*/);
-    byte_4E0218F = 1;
+    sub_1D0F0B4(&StringLiteral_15846/*"Window/CancelButton"*/);
+    byte_4E74E02 = 1;
   }
-  return (System_String_o *)StringLiteral_15791/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15846/*"Window/CancelButton"*/;
 }
 
 
@@ -638,10 +638,10 @@ void TermsOfUseMenu__remove_callbackFunc(
   System_String_o **v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E02184 & 1) == 0 )
+  if ( (byte_4E74DF7 & 1) == 0 )
   {
-    sub_1CE6700(&TermsOfUseMenu_CallbackFunc_TypeInfo);
-    byte_4E02184 = 1;
+    sub_1D0F0B4(&TermsOfUseMenu_CallbackFunc_TypeInfo);
+    byte_4E74DF7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -654,13 +654,13 @@ void TermsOfUseMenu__remove_callbackFunc(
       if ( (TermsOfUseMenu_CallbackFunc_c *)v8->klass != TermsOfUseMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   TermsOfUseMenu__TryUpdateTermsVersion(v11, v12);
 }
 
@@ -684,7 +684,7 @@ void TermsOfUseMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -695,12 +695,12 @@ void TermsOfUseMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -712,9 +712,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B152A8;
+  this->fields.invoke_impl = (intptr_t)sub_1B3B110;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B15260;
+  this->fields.extra_arg = (intptr_t)sub_1B3B0C8;
 }
 
 
@@ -729,14 +729,14 @@ System_IAsyncResult_o *TermsOfUseMenu_CallbackFunc__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4E02192 & 1) == 0 )
+  if ( (byte_4E74E05 & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4E02192 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E74E05 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -745,7 +745,7 @@ void TermsOfUseMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

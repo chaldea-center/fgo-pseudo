@@ -36,16 +36,16 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
   float v16; // s2
   float v17; // s0
 
-  if ( (byte_4E01E53 & 1) == 0 )
+  if ( (byte_4E74AA4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_16416/*"_MainTex"*/);
-    byte_4E01E53 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
+    byte_4E74AA4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -55,9 +55,9 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
     || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0)) == 0 )
   {
 LABEL_18:
-    sub_1CE6958(material, v5);
+    sub_1D0F30C(material, v5);
   }
-  if ( !UnityEngine_Material__HasProperty_72784012(material, (System_String_o *)StringLiteral_16416/*"_MainTex"*/, 0) )
+  if ( !UnityEngine_Material__HasProperty_73224956(material, (System_String_o *)StringLiteral_16481/*"_MainTex"*/, 0) )
   {
 LABEL_17:
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
@@ -85,7 +85,7 @@ LABEL_17:
     v17 = v16;
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16416/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
     *(UnityEngine_Vector2_o *)(&v15 - 1),
     0);
 }

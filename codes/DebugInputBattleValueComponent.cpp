@@ -17,7 +17,7 @@ void DebugInputBattleValueComponent__Cancel(DebugInputBattleValueComponent_o *th
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1CE6958(debugMenuTran, method);
+    sub_1D0F30C(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -70,7 +70,7 @@ void DebugInputBattleValueComponent__Open(
     ++v13;
   while ( v13 < max_length );
   this->fields.data = data;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.data,
     (int32_t)data,
     (int32_t)debugMenuTran,
@@ -80,7 +80,7 @@ void DebugInputBattleValueComponent__Open(
     v6,
     v7);
   v12->fields.debugMenuTran = debugMenuTran;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&v12->fields.debugMenuTran,
     (int32_t)debugMenuTran,
     v14,
@@ -90,7 +90,7 @@ void DebugInputBattleValueComponent__Open(
     v18,
     v19);
   v12->fields.onSubmitCallback = onSubmitCallback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&v12->fields.onSubmitCallback,
     (int32_t)onSubmitCallback,
     v20,
@@ -125,7 +125,7 @@ void DebugInputBattleValueComponent__Open(
       while ( 1 )
       {
         if ( (unsigned int)v28 >= v27 )
-          sub_1CE6960(this);
+          sub_1D0F314(this);
         v30 = v26->m_Items[v28];
         if ( !v30 )
           break;
@@ -138,7 +138,7 @@ void DebugInputBattleValueComponent__Open(
           goto LABEL_14;
       }
 LABEL_20:
-      sub_1CE6958(this, data);
+      sub_1D0F30C(this, data);
     }
 LABEL_14:
     battleValueIdInput = v12->fields.battleValueIdInput;
@@ -181,7 +181,7 @@ void DebugInputBattleValueComponent__Submit(DebugInputBattleValueComponent_o *th
         System_Int32__TryParse(value, &result[1], 0),
         (battleValueIdInput = this->fields.battleValueNumInput) == 0) )
   {
-    sub_1CE6958(battleValueIdInput, method);
+    sub_1D0F30C(battleValueIdInput, method);
   }
   v5 = UIInput__get_value(battleValueIdInput, 0);
   System_Int32__TryParse(v5, result, 0);

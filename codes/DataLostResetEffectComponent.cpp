@@ -8,15 +8,15 @@ void DataLostResetEffectComponent___ctor(DataLostResetEffectComponent_o *this, c
   System_String_o *v7; // x7
   int32_t v9; // w1
 
-  if ( (byte_4E03E74 & 1) == 0 )
+  if ( (byte_4E76AEC & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E03E74 = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E76AEC = 1;
   }
   this->fields.whiteOutTime = 1.5;
   *(_QWORD *)&this->fields.bgmFadeOutTime = 0x40D000003FC00000LL;
   v9 = StringLiteral_1/*""*/;
   this->fields.whiteOutSe = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.whiteOutSe, v9, v2, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.whiteOutSe, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }

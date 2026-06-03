@@ -1,9 +1,9 @@
 void GrandServantStatusListViewItemDrawEquip___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E001A1 & 1) == 0 )
+  if ( (byte_4E72DA8 & 1) == 0 )
   {
-    sub_1CE6700(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
-    byte_4E001A1 = 1;
+    sub_1D0F0B4(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
+    byte_4E72DA8 = 1;
   }
   *GrandServantStatusListViewItemDrawEquip_TypeInfo->static_fields = (struct GrandServantStatusListViewItemDrawEquip_StaticFields)0x2800000012LL;
 }
@@ -64,13 +64,13 @@ void GrandServantStatusListViewItemDrawEquip___ctor(
   int64_t v51; // x6
   System_String_o *v52; // x7
 
-  if ( (byte_4E001A0 & 1) == 0 )
+  if ( (byte_4E72DA7 & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&int___TypeInfo);
-    sub_1CE6700(&SkillInfoObject___TypeInfo);
-    sub_1CE6700(&UnityEngine_Vector3___TypeInfo);
-    byte_4E001A0 = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&int___TypeInfo);
+    sub_1D0F0B4(&SkillInfoObject___TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Vector3___TypeInfo);
+    byte_4E72DA7 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -78,20 +78,20 @@ void GrandServantStatusListViewItemDrawEquip___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct SkillInfoObject_array *)sub_1CE67A8(
+  v4 = (struct SkillInfoObject_array *)sub_1D0F15C(
                                          SkillInfoObject___TypeInfo,
                                          (unsigned int)v3->static_fields->GrandSvtEquipMax);
   this->fields.skillInfoObjectList = v4;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.skillInfoObjectList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (struct System_Int32_array *)sub_1CE67A8(int___TypeInfo, 3);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.skillInfoObjectList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (struct System_Int32_array *)sub_1D0F15C(int___TypeInfo, 3);
   this->fields.skillPitches = v11;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.skillPitches, (int32_t)v11, v12, v13, v14, v15, v16, v17);
-  v18 = (struct UnityEngine_Vector3_array *)sub_1CE67A8(UnityEngine_Vector3___TypeInfo, 3);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.skillPitches, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+  v18 = (struct UnityEngine_Vector3_array *)sub_1D0F15C(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.baseSizes = v18;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.baseSizes, (int32_t)v18, v19, v20, v21, v22, v23, v24);
-  v25 = (struct UnityEngine_Vector3_array *)sub_1CE67A8(UnityEngine_Vector3___TypeInfo, 3);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.baseSizes, (int32_t)v18, v19, v20, v21, v22, v23, v24);
+  v25 = (struct UnityEngine_Vector3_array *)sub_1D0F15C(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.titleBasePositions = v25;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.titleBasePositions,
     (int32_t)v25,
     v26,
@@ -100,9 +100,9 @@ void GrandServantStatusListViewItemDrawEquip___ctor(
     v29,
     v30,
     v31);
-  v32 = (struct UnityEngine_Vector3_array *)sub_1CE67A8(UnityEngine_Vector3___TypeInfo, 3);
+  v32 = (struct UnityEngine_Vector3_array *)sub_1D0F15C(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.skillBasePositions = v32;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.skillBasePositions,
     (int32_t)v32,
     v33,
@@ -111,15 +111,15 @@ void GrandServantStatusListViewItemDrawEquip___ctor(
     v36,
     v37,
     v38);
-  v39 = (struct UnityEngine_Vector3_array *)sub_1CE67A8(UnityEngine_Vector3___TypeInfo, 3);
+  v39 = (struct UnityEngine_Vector3_array *)sub_1D0F15C(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.baseSpriteSizes = v39;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.baseSpriteSizes, (int32_t)v39, v40, v41, v42, v43, v44, v45);
-  this->fields.ColorInvalid = (struct UnityEngine_Color_o)xmmword_D25930;
-  this->fields.ColorCostZero = UnityEngine_Color__HSVToRGB_72839552(0.0, 0.0, 0.5, 1, 0);
-  this->fields.ColorCost = UnityEngine_Color__HSVToRGB_72839552(0.0, 0.0, 1.0, 1, 0);
-  v46 = (struct System_Int32_array *)sub_1CE67A8(int___TypeInfo, 3);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.baseSpriteSizes, (int32_t)v39, v40, v41, v42, v43, v44, v45);
+  this->fields.ColorInvalid = (struct UnityEngine_Color_o)xmmword_D361E0;
+  this->fields.ColorCostZero = UnityEngine_Color__HSVToRGB_73280496(0.0, 0.0, 0.5, 1, 0);
+  this->fields.ColorCost = UnityEngine_Color__HSVToRGB_73280496(0.0, 0.0, 1.0, 1, 0);
+  v46 = (struct System_Int32_array *)sub_1D0F15C(int___TypeInfo, 3);
   this->fields.skillViewCounts = v46;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.skillViewCounts, (int32_t)v46, v47, v48, v49, v50, v51, v52);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.skillViewCounts, (int32_t)v46, v47, v48, v49, v50, v51, v52);
   ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0);
 }
 
@@ -160,7 +160,7 @@ void GrandServantStatusListViewItemDrawEquip__Awake(
   titleSprites = this->fields.titleSprites;
   if ( !titleSprites )
 LABEL_40:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   v4 = this;
   v5 = 0;
   v6 = 40;
@@ -211,7 +211,7 @@ LABEL_40:
       goto LABEL_40;
     if ( (unsigned int)v5 >= LODWORD(v11->max_length) )
 LABEL_42:
-      sub_1CE6960(this);
+      sub_1D0F314(this);
     baseSprite = v4->fields.baseSprite;
     if ( baseSprite )
     {
@@ -312,11 +312,11 @@ UnityEngine_GameObject_o *GrandServantStatusListViewItemDrawEquip__GetEquipChang
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.changeSkillBase;
 }
 
@@ -333,11 +333,11 @@ UILabel_o *GrandServantStatusListViewItemDrawEquip__GetEquipChangeSkillExplanati
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.changeSkillExplanationLabel;
 }
 
@@ -354,11 +354,11 @@ SkillIconComponent_o *GrandServantStatusListViewItemDrawEquip__GetEquipChangeSki
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.changeSkillIcon;
 }
 
@@ -375,11 +375,11 @@ UIRangeLabel_o *GrandServantStatusListViewItemDrawEquip__GetEquipChangeSkillTitl
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.changeSkillTitleRangeLabel;
 }
 
@@ -396,11 +396,11 @@ UILabel_o *GrandServantStatusListViewItemDrawEquip__GetEquipChangeSkillTypeLabel
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.changeSkillTypeLabel;
 }
 
@@ -417,11 +417,11 @@ UILabel_array *GrandServantStatusListViewItemDrawEquip__GetEquipSkillExplanation
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillExplanationLabelList;
 }
 
@@ -438,11 +438,11 @@ UISprite_o *GrandServantStatusListViewItemDrawEquip__GetEquipSkillMask(
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillMask;
 }
 
@@ -459,11 +459,11 @@ UILabel_o *GrandServantStatusListViewItemDrawEquip__GetEquipSkillMaskLabel(
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillMaskLabel;
 }
 
@@ -488,10 +488,10 @@ int32_t GrandServantStatusListViewItemDrawEquip__GetServantLeaderDataEquipId(
   __int64 v8; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
-  if ( (byte_4E0019B & 1) == 0 )
+  if ( (byte_4E72DA2 & 1) == 0 )
   {
-    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4E0019B = 1;
+    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4E72DA2 = 1;
   }
   if ( index == 2 )
   {
@@ -503,7 +503,7 @@ int32_t GrandServantStatusListViewItemDrawEquip__GetServantLeaderDataEquipId(
       return 0;
     }
 LABEL_17:
-    sub_1CE6958(this, *(_QWORD *)&index);
+    sub_1D0F30C(this, *(_QWORD *)&index);
   }
   if ( index == 1 )
   {
@@ -530,7 +530,7 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v10.fields.currentCryptoKey = v8;
   *(_QWORD *)&v10.fields.fakeValue = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v10, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v10, 0);
 }
 
 
@@ -546,11 +546,11 @@ UnityEngine_GameObject_array *GrandServantStatusListViewItemDrawEquip__GetSkillB
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillBaseList;
 }
 
@@ -567,11 +567,11 @@ SkillIconComponent_array *GrandServantStatusListViewItemDrawEquip__GetSkillIconC
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillIconList;
 }
 
@@ -605,7 +605,7 @@ int32_t GrandServantStatusListViewItemDrawEquip__GetSkillInfoListNum(
         if ( (__int64)v9 < (int)max_length_low )
         {
           if ( v9 >= max_length_low )
-            sub_1CE6960(IsNullOrEmpty);
+            sub_1D0F314(IsNullOrEmpty);
           v11 = skillInfoList->m_Items[v9];
           if ( v11 )
           {
@@ -619,7 +619,7 @@ int32_t GrandServantStatusListViewItemDrawEquip__GetSkillInfoListNum(
           return IsNullOrEmpty;
       }
     }
-    sub_1CE6958(IsNullOrEmpty, v8);
+    sub_1D0F30C(IsNullOrEmpty, v8);
   }
   LODWORD(IsNullOrEmpty) = 0;
   return IsNullOrEmpty;
@@ -638,11 +638,11 @@ UIRangeLabel_array *GrandServantStatusListViewItemDrawEquip__GetSkillTitleRangeL
   if ( !skillInfoObjectList )
     goto LABEL_5;
   if ( LODWORD(skillInfoObjectList->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v4 = skillInfoObjectList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1CE6958(this, index);
+    sub_1D0F30C(this, index);
   return v4->fields.equipSkillTitleRangeLabelList;
 }
 
@@ -709,17 +709,17 @@ bool GrandServantStatusListViewItemDrawEquip__IsNeedAddAdjust(
   SkillIconComponent_array *v64; // [xsp+30h] [xbp-80h]
   UILabel_o **m_Items; // [xsp+48h] [xbp-68h]
 
-  if ( (byte_4E0019E & 1) == 0 )
+  if ( (byte_4E72DA5 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_7040/*"GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_6482/*"FOLLOWER_GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_7041/*"GRAND_BOND_EQUIP_SKILL_INFO_ANOTHER_SKILL_HEADER"*/);
-    byte_4E0019E = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_7067/*"GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_6508/*"FOLLOWER_GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_7068/*"GRAND_BOND_EQUIP_SKILL_INFO_ANOTHER_SKILL_HEADER"*/);
+    byte_4E72DA5 = 1;
   }
   *newRange = range;
   EquipSkillExplanationLabelList = GrandServantStatusListViewItemDrawEquip__GetEquipSkillExplanationLabelList(
@@ -728,10 +728,10 @@ bool GrandServantStatusListViewItemDrawEquip__IsNeedAddAdjust(
                                      (const MethodInfo *)skillInfoList);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !equipSkillIcon )
 LABEL_113:
-    sub_1CE6958(Master_object, v18);
+    sub_1D0F30C(Master_object, v18);
   if ( SLODWORD(equipSkillIcon->max_length) >= 1 )
   {
     v19 = 0;
@@ -903,9 +903,9 @@ LABEL_113:
                   v43 = v63;
                   if ( UnityEngine_Object__op_Inequality(EquipSkillMaskLabel, 0, 0) )
                   {
-                    v44 = (System_String_o **)&StringLiteral_7040/*"GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/;
+                    v44 = (System_String_o **)&StringLiteral_7067/*"GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/;
                     if ( !isMine )
-                      v44 = (System_String_o **)&StringLiteral_6482/*"FOLLOWER_GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/;
+                      v44 = (System_String_o **)&StringLiteral_6508/*"FOLLOWER_GRAND_BOND_EQUIP_INFO_NORMAL_SKILL_MASK_MESSAGE"*/;
                     v45 = *v44;
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -968,7 +968,7 @@ LABEL_113:
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     Master_object = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_7041/*"GRAND_BOND_EQUIP_SKILL_INFO_ANOTHER_SKILL_HEADER"*/,
+                                                                  (System_String_o *)StringLiteral_7068/*"GRAND_BOND_EQUIP_SKILL_INFO_ANOTHER_SKILL_HEADER"*/,
                                                                   0);
                     if ( !v43 )
                       goto LABEL_113;
@@ -985,7 +985,7 @@ LABEL_113:
                 goto LABEL_113;
               if ( LODWORD(skillPitches->max_length) <= index )
 LABEL_114:
-                sub_1CE6960(Master_object);
+                sub_1D0F314(Master_object);
               v52 = (char *)skillPitches + 4 * index;
               v55 = *((_DWORD *)v52 + 8);
               v53 = v52 + 32;
@@ -1041,10 +1041,10 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipExpInfo(
   int32_t lateExp[2]; // [xsp+8h] [xbp-38h] BYREF
 
   v6 = this;
-  if ( (byte_4E0019D & 1) == 0 )
+  if ( (byte_4E72DA4 & 1) == 0 )
   {
-    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1CE6700(&LocalizationManager_TypeInfo);
-    byte_4E0019D = 1;
+    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    byte_4E72DA4 = 1;
   }
   *(_QWORD *)lateExp = 0;
   barExp = 0.0;
@@ -1062,7 +1062,7 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipExpInfo(
     goto LABEL_22;
   if ( LODWORD(expBases->max_length) <= index )
 LABEL_23:
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v8 = expBases->m_Items[index];
   if ( !v8 )
     goto LABEL_22;
@@ -1103,7 +1103,7 @@ LABEL_23:
             return;
           }
 LABEL_22:
-          sub_1CE6958(this, *(_QWORD *)&index);
+          sub_1D0F30C(this, *(_QWORD *)&index);
         }
       }
     }
@@ -1138,11 +1138,11 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipIcon(
   struct ServantLeaderInfo_o *v21; // x9
 
   v6 = this;
-  if ( (byte_4E0019A & 1) == 0 )
+  if ( (byte_4E72DA1 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20704/*"img_frames_nodata6"*/);
-    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1CE6700(&StringLiteral_20703/*"img_frames_nodata5"*/);
-    byte_4E0019A = 1;
+    sub_1D0F0B4(&StringLiteral_20795/*"img_frames_nodata6"*/);
+    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1D0F0B4(&StringLiteral_20794/*"img_frames_nodata5"*/);
+    byte_4E72DA1 = 1;
   }
   if ( !item )
     goto LABEL_50;
@@ -1160,14 +1160,14 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipIcon(
         this = (GrandServantStatusListViewItemDrawEquip_o *)ServantStatusListViewItem__GetEquipIdByIndex(item, index, 0);
         if ( v8 )
         {
-          ServantFaceIconComponent__Set_42235440(v8, (int64_t)this, 0, 0, 0);
+          ServantFaceIconComponent__Set_42454776(v8, (int64_t)this, 0, 0, 0);
           return;
         }
 LABEL_50:
-        sub_1CE6958(this, *(_QWORD *)&index);
+        sub_1D0F30C(this, *(_QWORD *)&index);
       }
 LABEL_51:
-      sub_1CE6960(this);
+      sub_1D0F314(this);
     }
   }
   else
@@ -1229,7 +1229,7 @@ LABEL_51:
             goto LABEL_50;
           equipTarget3 = v11->fields.equipTarget1;
         }
-        ServantFaceIconComponent__Set_42241744((ServantFaceIconComponent_o *)this, equipTarget3, 0, 0, 0);
+        ServantFaceIconComponent__Set_42461092((ServantFaceIconComponent_o *)this, equipTarget3, 0, 0, 0);
         return;
       }
     }
@@ -1252,9 +1252,9 @@ LABEL_51:
       this = (GrandServantStatusListViewItemDrawEquip_o *)v15->m_Items[2];
       if ( !this )
         goto LABEL_50;
-      v16 = &StringLiteral_20703/*"img_frames_nodata5"*/;
+      v16 = &StringLiteral_20794/*"img_frames_nodata5"*/;
 LABEL_38:
-      ServantFaceIconComponent__NoMount_42230200((ServantFaceIconComponent_o *)this, (System_String_o *)*v16, 1, 0);
+      ServantFaceIconComponent__NoMount_42449288((ServantFaceIconComponent_o *)this, (System_String_o *)*v16, 1, 0);
       return;
     case 1:
       v17 = v6->fields.equipIcons;
@@ -1265,7 +1265,7 @@ LABEL_38:
       this = (GrandServantStatusListViewItemDrawEquip_o *)v17->m_Items[1];
       if ( !this )
         goto LABEL_50;
-      v16 = &StringLiteral_20704/*"img_frames_nodata6"*/;
+      v16 = &StringLiteral_20795/*"img_frames_nodata6"*/;
       goto LABEL_38;
     case 0:
       v14 = v6->fields.equipIcons;
@@ -1335,19 +1335,19 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipInfoLabel(
 
   v5 = index;
   v6 = this;
-  if ( (byte_4E0019C & 1) == 0 )
+  if ( (byte_4E72DA3 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_25514/*"{0}"*/);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E0019C = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25624/*"{0}"*/);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E72DA3 = 1;
   }
   nameRangeLabels = v6->fields.nameRangeLabels;
   if ( !nameRangeLabels )
 LABEL_97:
-    sub_1CE6958(this, *(_QWORD *)&index);
+    sub_1D0F30C(this, *(_QWORD *)&index);
   if ( LODWORD(nameRangeLabels->max_length) <= v5 )
     goto LABEL_98;
   if ( !item )
@@ -1402,7 +1402,7 @@ LABEL_97:
   this = (GrandServantStatusListViewItemDrawEquip_o *)ServantStatusListViewItem__GetEquipAtkByIndex(item, v5, 0);
   if ( !v14 )
     goto LABEL_97;
-  UIIconLabel__Set_42257736(v14, 5, (int32_t)this, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_42477084(v14, 5, (int32_t)this, 0, 0, 0, 0, 0, 0, 0, 0);
   hpIconLabels = v6->fields.hpIconLabels;
   if ( !hpIconLabels )
     goto LABEL_97;
@@ -1412,7 +1412,7 @@ LABEL_97:
   this = (GrandServantStatusListViewItemDrawEquip_o *)ServantStatusListViewItem__GetEquipHpByIndex(item, v5, 0);
   if ( !v16 )
     goto LABEL_97;
-  UIIconLabel__Set_42257736(v16, 3, (int32_t)this, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_42477084(v16, 3, (int32_t)this, 0, 0, 0, 0, 0, 0, 0, 0);
   if ( !v5
     || (this = (GrandServantStatusListViewItemDrawEquip_o *)ServantStatusListViewItem__GetEquipCostByIndex(item, v5, 0),
         !(_DWORD)this) )
@@ -1517,7 +1517,7 @@ LABEL_97:
       }
     }
 LABEL_98:
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   }
   v17 = v6->fields.costLabels;
   if ( !v17 )
@@ -1527,8 +1527,8 @@ LABEL_98:
   v18 = v17->m_Items[v5];
   EquipCostByIndex = ServantStatusListViewItem__GetEquipCostByIndex(item, v5, 0);
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &EquipCostByIndex);
-  v20 = System_String__Format((System_String_o *)StringLiteral_25514/*"{0}"*/, v19, 0);
-  this = (GrandServantStatusListViewItemDrawEquip_o *)System_String__Concat_65122828(
+  v20 = System_String__Format((System_String_o *)StringLiteral_25624/*"{0}"*/, v19, 0);
+  this = (GrandServantStatusListViewItemDrawEquip_o *)System_String__Concat_65562772(
                                                         v20,
                                                         (System_String_o *)StringLiteral_113/*" "*/,
                                                         0);
@@ -1650,7 +1650,7 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipLimitCount(
   if ( !limitCountGauges )
     goto LABEL_10;
   if ( LODWORD(limitCountGauges->max_length) <= index )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v8 = &limitCountGauges->obj.klass + index;
   v9 = (ServantStatusLimitCountGauge_o *)v8[4];
   v10 = this;
@@ -1664,7 +1664,7 @@ void GrandServantStatusListViewItemDrawEquip__SetEquipLimitCount(
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1CE6958(this, *(_QWORD *)&index);
+    sub_1D0F30C(this, *(_QWORD *)&index);
   }
   this = (GrandServantStatusListViewItemDrawEquip_o *)ServantStatusListViewItem__GetEquipLimitCountByIndex(
                                                         item,
@@ -1776,19 +1776,19 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
   UnityEngine_Vector3_o v94; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v95; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E00198 & 1) == 0 )
+  if ( (byte_4E72D9F & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&SkillInfo_TypeInfo);
-    sub_1CE6700(&StringLiteral_12039/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/);
-    sub_1CE6700(&StringLiteral_7053/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/);
-    sub_1CE6700(&StringLiteral_20719/*"img_line_04"*/);
-    byte_4E00198 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&SkillInfo_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_12088/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/);
+    sub_1D0F0B4(&StringLiteral_7080/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/);
+    sub_1D0F0B4(&StringLiteral_20810/*"img_line_04"*/);
+    byte_4E72D9F = 1;
   }
   skillInfoList = 0;
   newTb.fields.z = 0.0;
@@ -1797,10 +1797,10 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
   ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0);
   if ( mode )
   {
-    if ( !byte_4DFE0A9 )
+    if ( !byte_4E70C99 )
     {
-      Master_object = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-      byte_4DFE0A9 = 1;
+      Master_object = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+      byte_4E70C99 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     explanationLabels = this->fields.explanationLabels;
@@ -1814,13 +1814,13 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
     v12 = explanationLabels->m_Items[0];
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12039/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, 0);
+    Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12088/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, 0);
     if ( !v12 )
       goto LABEL_92;
     UILabel__set_text(v12, (System_String_o *)Master_object, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
     v89 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
     if ( !item )
       goto LABEL_92;
@@ -1831,10 +1831,10 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
       do
       {
         baseSpriteSizes = this->fields.baseSpriteSizes;
-        if ( !byte_4DFE0A9 )
+        if ( !byte_4E70C99 )
         {
-          Master_object = sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-          byte_4DFE0A9 = 1;
+          Master_object = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+          byte_4E70C99 = 1;
         }
         if ( !baseSpriteSizes )
           goto LABEL_92;
@@ -1862,7 +1862,7 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
           v22 = line2Sprites->m_Items[v14];
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          AtlasManager__SetDownloadCommonSprite(v22, (System_String_o *)StringLiteral_20719/*"img_line_04"*/, 0);
+          AtlasManager__SetDownloadCommonSprite(v22, (System_String_o *)StringLiteral_20810/*"img_line_04"*/, 0);
         }
         GrandServantStatusListViewItemDrawEquip__SetEquipIcon(this, v14, item, v13);
         GrandServantStatusListViewItemDrawEquip__SetEquipInfoLabel(this, v14, item, v23);
@@ -1905,14 +1905,14 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v31 > 0, 0);
         }
         newRange = 0;
-        v34 = sub_1CE694C(SkillInfo_TypeInfo);
+        v34 = sub_1D0F300(SkillInfo_TypeInfo);
         SkillInfo___ctor((SkillInfo_o *)v34, 0);
         if ( v14 != 1 )
           goto LABEL_46;
         Master_object = ServantStatusListViewItem__IsChangeFriendShipSvtEquipSkill(item, 0);
         if ( (Master_object & 1) == 0 )
           goto LABEL_46;
-        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_7053/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/, 0);
+        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_7080/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/, 0);
         Master_object = (__int64)v89;
         if ( !v89 )
           goto LABEL_92;
@@ -1920,7 +1920,7 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
                           v89,
                           &entity,
                           Value,
-                          (const MethodInfo_34E92A8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                          (const MethodInfo_3535BC8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
         if ( (Master_object & 1) != 0 )
         {
           if ( !v34 )
@@ -1931,7 +1931,7 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
             goto LABEL_92;
           EffectExplanation = SkillEntity__getEffectExplanation((SkillEntity_o *)entity, 0, 0);
           *(_QWORD *)(v34 + 40) = EffectExplanation;
-          sub_1CE66A4(
+          sub_1D0F058(
             (GrandQuestFolderBoardItem_o *)(v34 + 40),
             (int32_t)EffectExplanation,
             v37,
@@ -1945,7 +1945,7 @@ void GrandServantStatusListViewItemDrawEquip__SetItem(
             goto LABEL_92;
           Name = SkillEntity__getName((SkillEntity_o *)entity, 0);
           *(_QWORD *)(v34 + 32) = Name;
-          sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v34 + 32), (int32_t)Name, v44, v45, v46, v47, v48, v49);
+          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v34 + 32), (int32_t)Name, v44, v45, v46, v47, v48, v49);
           v50 = 1;
         }
         else
@@ -2091,10 +2091,10 @@ LABEL_46:
     v80 = this->fields.baseSpriteSizes;
     if ( !v80 )
 LABEL_92:
-      sub_1CE6958(Master_object, v8);
+      sub_1D0F30C(Master_object, v8);
     if ( LODWORD(v80->max_length) <= 2 )
 LABEL_93:
-      sub_1CE6960(Master_object);
+      sub_1D0F314(Master_object);
     Master_object = (__int64)this->fields.baseSprite;
     if ( !Master_object )
       goto LABEL_92;
@@ -2181,10 +2181,10 @@ void GrandServantStatusListViewItemDrawEquip__SetPosition(
   UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4E00199 & 1) == 0 )
+  if ( (byte_4E72DA0 & 1) == 0 )
   {
-    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E00199 = 1;
+    this = (GrandServantStatusListViewItemDrawEquip_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72DA0 = 1;
   }
   titleSprites = v4->fields.titleSprites;
   if ( !titleSprites )
@@ -2390,10 +2390,10 @@ LABEL_77:
             }
           }
 LABEL_79:
-          sub_1CE6958(this, item);
+          sub_1D0F30C(this, item);
         }
 LABEL_80:
-        sub_1CE6960(this);
+        sub_1D0F314(this);
       }
       if ( (unsigned int)v26 >= LODWORD(v28->fields.m_CancellationTokenSource) )
         goto LABEL_80;
@@ -2538,11 +2538,11 @@ void GrandServantStatusListViewItemDrawEquip__SetReinforce(
         (v19 = v8->fields.reinforceObject) == 0) )
   {
 LABEL_22:
-    sub_1CE6958(this, *(_QWORD *)&index);
+    sub_1D0F30C(this, *(_QWORD *)&index);
   }
   if ( LODWORD(v19->max_length) <= index )
 LABEL_23:
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   range += v17;
   v20 = v19->m_Items[index];
   if ( range >= 0 )
@@ -2621,14 +2621,14 @@ void GrandServantStatusListViewItemDrawEquip__SetSkillInfo(
   y = tb.fields.y;
   x = tb.fields.x;
   v15 = skillInfoList;
-  if ( (byte_4E0019F & 1) == 0 )
+  if ( (byte_4E72DA6 & 1) == 0 )
   {
-    sub_1CE6700(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&string_TypeInfo);
-    byte_4E0019F = 1;
+    sub_1D0F0B4(&GrandServantStatusListViewItemDrawEquip_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&string_TypeInfo);
+    byte_4E72DA6 = 1;
   }
   SkillBase = GrandServantStatusListViewItemDrawEquip__GetSkillBase(this, index, (const MethodInfo *)skillInfoList);
   EquipSkillExplanationLabelList = GrandServantStatusListViewItemDrawEquip__GetEquipSkillExplanationLabelList(
@@ -2644,7 +2644,7 @@ void GrandServantStatusListViewItemDrawEquip__SetSkillInfo(
   newTb->fields.z = z;
   if ( !SkillBase )
 LABEL_80:
-    sub_1CE6958(SkillIconComponent, v22);
+    sub_1D0F30C(SkillIconComponent, v22);
   max_length = SkillBase->max_length;
   v57 = changeSkillInfo;
   if ( max_length >= 1 )
@@ -2721,7 +2721,7 @@ LABEL_26:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v64.fields.currentCryptoKey = v47;
         *(_QWORD *)&v64.fields.fakeValue = v46;
-        SkillIconComponent = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(
+        SkillIconComponent = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
                                                            v64,
                                                            0);
         if ( !item->fields.servantLeaderInfo )
@@ -2733,10 +2733,10 @@ LABEL_26:
       v49 = -1;
       v39 = -1;
 LABEL_48:
-      SkillIconComponent = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      SkillIconComponent = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !SkillIconComponent )
         goto LABEL_80;
-      SkillIconComponent = (UnityEngine_GameObject_o *)PartyOrganizationUtility__IsRarityRestriction_35550816(
+      SkillIconComponent = (UnityEngine_GameObject_o *)PartyOrganizationUtility__IsRarityRestriction_35731404(
                                                          (PartyOrganizationUtility_o *)SkillIconComponent,
                                                          v39,
                                                          v49,
@@ -2861,7 +2861,7 @@ LABEL_27:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v63.fields.currentCryptoKey = v38;
     *(_QWORD *)&v63.fields.fakeValue = v37;
-    SkillIconComponent = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(
+    SkillIconComponent = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
                                                        v63,
                                                        0);
     if ( !item->fields.userSvtEntity )
@@ -2874,7 +2874,7 @@ LABEL_45:
       goto LABEL_80;
     if ( LODWORD(skillViewCounts->max_length) <= index )
 LABEL_81:
-      sub_1CE6960(SkillIconComponent);
+      sub_1D0F314(SkillIconComponent);
     v49 = (int)SkillIconComponent;
     skillViewCounts->m_Items[index] = v25 + 1;
     goto LABEL_48;

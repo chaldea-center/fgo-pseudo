@@ -1,9 +1,9 @@
 void UserEventServantPointEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E0588A & 1) == 0 )
+  if ( (byte_4E78529 & 1) == 0 )
   {
-    sub_1CE6700(&UserEventServantPointEntity_TypeInfo);
-    byte_4E0588A = 1;
+    sub_1D0F0B4(&UserEventServantPointEntity_TypeInfo);
+    byte_4E78529 = 1;
   }
   UserEventServantPointEntity_TypeInfo->static_fields->MAX_BUDDY_POINT = 9999999;
 }
@@ -11,14 +11,14 @@ void UserEventServantPointEntity___cctor(const MethodInfo *method)
 
 void UserEventServantPointEntity___ctor(UserEventServantPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05889 & 1) == 0 )
+  if ( (byte_4E78528 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05889 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E78528 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -28,16 +28,16 @@ System_String_o *UserEventServantPointEntity__CreatePK(
         int32_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_4E05886 & 1) == 0 )
+  if ( (byte_4E78525 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4E05886 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4E78525 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            svtId,
-           (const MethodInfo_3202B7C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_324D98C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -54,11 +54,11 @@ System_String_o *UserEventServantPointEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v10; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4E05885 & 1) == 0 )
+  if ( (byte_4E78524 & 1) == 0 )
   {
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1CE6700(&UserEventServantPointEntity_TypeInfo);
-    byte_4E05885 = 1;
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1D0F0B4(&UserEventServantPointEntity_TypeInfo);
+    byte_4E78524 = 1;
   }
   v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
   *(_OWORD *)&v11.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
@@ -66,7 +66,7 @@ System_String_o *UserEventServantPointEntity__CreatePrimaryKey(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v10 = v11;
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50041532(&v10, 0);
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v10, 0);
   eventId = this->fields.eventId;
   svtId = this->fields.svtId;
   v8 = v4;
@@ -81,10 +81,10 @@ int32_t UserEventServantPointEntity__GetBuddyPoint(UserEventServantPointEntity_o
   const MethodInfo *v2; // x2
   UserEventServantPointEntity_c *v4; // x0
 
-  if ( (byte_4E05888 & 1) == 0 )
+  if ( (byte_4E78527 & 1) == 0 )
   {
-    sub_1CE6700(&UserEventServantPointEntity_TypeInfo);
-    byte_4E05888 = 1;
+    sub_1D0F0B4(&UserEventServantPointEntity_TypeInfo);
+    byte_4E78527 = 1;
   }
   v4 = UserEventServantPointEntity_TypeInfo;
   if ( !UserEventServantPointEntity_TypeInfo->_2.cctor_finished )
@@ -104,19 +104,19 @@ int32_t UserEventServantPointEntity__GetIntValue(
   int64_t value; // x20
   int64_t v6; // x19
 
-  if ( (byte_4E05887 & 1) == 0 )
+  if ( (byte_4E78526 & 1) == 0 )
   {
-    sub_1CE6700(&System_Convert_TypeInfo);
-    sub_1CE6700(&System_Math_TypeInfo);
-    byte_4E05887 = 1;
+    sub_1D0F0B4(&System_Convert_TypeInfo);
+    sub_1D0F0B4(&System_Math_TypeInfo);
+    byte_4E78526 = 1;
   }
   value = this->fields.value;
   if ( !maxValue )
     maxValue = 0x7FFFFFFF;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v6 = System_Math__Min_66644988(maxValue, value, 0);
+  v6 = System_Math__Min_67085084(maxValue, value, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  return System_Convert__ToInt32_66208100(v6, 0);
+  return System_Convert__ToInt32_66648044(v6, 0);
 }

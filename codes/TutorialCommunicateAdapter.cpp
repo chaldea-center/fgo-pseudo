@@ -12,7 +12,7 @@ void TutorialCommunicateAdapter___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.onGetRequest = onGetRequest;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.onGetRequest, (int32_t)onGetRequest, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onGetRequest, (int32_t)onGetRequest, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -27,13 +27,13 @@ void TutorialCommunicateAdapter__SendRequest(
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E0445C & 1) == 0 )
+  if ( (byte_4E770D8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
-    byte_4E0445C = 1;
+    sub_1D0F0B4(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    byte_4E770D8 = 1;
   }
   this->fields._EventTutorialEntity_k__BackingField = entity;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)entity,
     (int32_t)method,
@@ -46,7 +46,7 @@ void TutorialCommunicateAdapter__SendRequest(
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.onGetRequest,
     (Il2CppObject *)this,
-    (const MethodInfo_3149A44 *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    (const MethodInfo_31932D8 *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
 }
 
 
@@ -82,7 +82,7 @@ void TutorialCommunicateAdapter__set_EventTutorialEntity(
   System_String_o *v7; // x7
 
   this->fields._EventTutorialEntity_k__BackingField = value;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -10,14 +10,14 @@ void EventScriptFlagRequest__beginRequest(
         int32_t flagId,
         const MethodInfo *method)
 {
-  if ( (byte_4E06533 & 1) == 0 )
+  if ( (byte_4E791DA & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_19400/*"eventId"*/);
-    sub_1CE6700(&StringLiteral_19750/*"flagId"*/);
-    byte_4E06533 = 1;
+    sub_1D0F0B4(&StringLiteral_19479/*"eventId"*/);
+    sub_1D0F0B4(&StringLiteral_19829/*"flagId"*/);
+    byte_4E791DA = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19400/*"eventId"*/, eventId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19750/*"flagId"*/, flagId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19479/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19829/*"flagId"*/, flagId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -26,16 +26,16 @@ System_String_o *EventScriptFlagRequest__getURL(EventScriptFlagRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E06532 & 1) == 0 )
+  if ( (byte_4E791D9 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_19392/*"event/scriptFlag"*/);
-    byte_4E06532 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_19471/*"event/scriptFlag"*/);
+    byte_4E791D9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_19392/*"event/scriptFlag"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_19471/*"event/scriptFlag"*/, 0);
 }
 
 
@@ -50,11 +50,11 @@ void EventScriptFlagRequest__requestCompleted(
   System_String_o *v8; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4E06534 & 1) == 0 )
+  if ( (byte_4E791DB & 1) == 0 )
   {
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    byte_4E06534 = 1;
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    byte_4E791DB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -62,7 +62,7 @@ void EventScriptFlagRequest__requestCompleted(
   if ( v5 )
   {
     v6 = v5;
-    v7 = ResponseData__checkError_45365352(v5, 0);
+    v7 = ResponseData__checkError_45600864(v5, 0);
     v8 = 0;
     if ( v7 )
     {

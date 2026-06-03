@@ -1,10 +1,10 @@
 void Debug___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E040F3 & 1) == 0 )
+  if ( (byte_4E76D6D & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040F3 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D6D = 1;
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -14,55 +14,55 @@ void Debug___cctor(const MethodInfo *method)
 
 void Debug__Assert(bool condition, System_String_o *message, System_String_o *detailMessage, const MethodInfo *method)
 {
-  if ( (byte_4E040F0 & 1) == 0 )
+  if ( (byte_4E76D6A & 1) == 0 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040F0 = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D6A = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
-  }
-  if ( !Debug_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-}
-
-
-void Debug__Assert_42399236(bool condition, System_String_o *message, const MethodInfo *method)
-{
-  if ( (byte_4E040F1 & 1) == 0 )
-  {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040F1 = 1;
-  }
-  if ( !Debug_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
-  {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
 }
 
 
-void Debug__Assert_42399368(bool condition, const MethodInfo *method)
+void Debug__Assert_42618828(bool condition, System_String_o *message, const MethodInfo *method)
 {
-  if ( (byte_4E040F2 & 1) == 0 )
+  if ( (byte_4E76D6B & 1) == 0 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040F2 = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D6B = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
+  }
+  if ( !Debug_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
+}
+
+
+void Debug__Assert_42618960(bool condition, const MethodInfo *method)
+{
+  if ( (byte_4E76D6C & 1) == 0 )
+  {
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D6C = 1;
+  }
+  if ( !Debug_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
+  if ( !byte_4E76E27 )
+  {
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
@@ -73,18 +73,18 @@ void Debug__Break(const MethodInfo *method)
 {
   Debug_c *v1; // x0
 
-  if ( (byte_4E040E1 & 1) == 0 )
+  if ( (byte_4E76D5B & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E1 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D5B = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v1 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -101,14 +101,14 @@ void Debug__Break(const MethodInfo *method)
 }
 
 
-void Debug__Break_31590536(const MethodInfo *method)
+void Debug__Break_31756860(const MethodInfo *method)
 {
-  if ( (byte_4DFDF4D & 1) == 0 )
+  if ( (byte_4E70B3D & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF4D = 1;
+    method = (const MethodInfo *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B3D = 1;
   }
-  if ( Debug__IsEnable_31590624(method) )
+  if ( Debug__IsEnable_31756948(method) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -139,18 +139,18 @@ void Debug__DrawLine(
   v5 = vec1.fields.z;
   v6 = vec1.fields.y;
   v7 = vec1.fields.x;
-  if ( (byte_4E040EE & 1) == 0 )
+  if ( (byte_4E76D68 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040EE = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D68 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v8 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -173,7 +173,7 @@ void Debug__DrawLine(
 }
 
 
-void Debug__DrawLine_31591952(
+void Debug__DrawLine_31758276(
         UnityEngine_Vector3_o vec1,
         UnityEngine_Vector3_o vec2,
         UnityEngine_Color_o col,
@@ -194,12 +194,12 @@ void Debug__DrawLine_31591952(
   v7 = vec1.fields.x;
   v8 = vec2.fields.y;
   v9 = vec2.fields.z;
-  if ( (byte_4DFDF59 & 1) == 0 )
+  if ( (byte_4E70B49 & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF59 = 1;
+    method = (const MethodInfo *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B49 = 1;
   }
-  if ( Debug__IsEnable_31590624(method) )
+  if ( Debug__IsEnable_31756948(method) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -236,18 +236,18 @@ void Debug__DrawRay(
   v5 = vec1.fields.z;
   v6 = vec1.fields.y;
   v7 = vec1.fields.x;
-  if ( (byte_4E040EF & 1) == 0 )
+  if ( (byte_4E76D69 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040EF = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D69 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v8 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -270,7 +270,7 @@ void Debug__DrawRay(
 }
 
 
-void Debug__DrawRay_31592156(
+void Debug__DrawRay_31758480(
         UnityEngine_Vector3_o vec1,
         UnityEngine_Vector3_o vec2,
         UnityEngine_Color_o col,
@@ -291,12 +291,12 @@ void Debug__DrawRay_31592156(
   v7 = vec1.fields.x;
   v8 = vec2.fields.y;
   v9 = vec2.fields.z;
-  if ( (byte_4DFDF5A & 1) == 0 )
+  if ( (byte_4E70B4A & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF5A = 1;
+    method = (const MethodInfo *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B4A = 1;
   }
-  if ( Debug__IsEnable_31590624(method) )
+  if ( Debug__IsEnable_31756948(method) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -315,10 +315,10 @@ bool Debug__IsEnable(const MethodInfo *method)
 {
   Debug_c *v1; // x0
 
-  if ( (byte_4E040F4 & 1) == 0 )
+  if ( (byte_4E76D6E & 1) == 0 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040F4 = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D6E = 1;
   }
   v1 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -330,12 +330,12 @@ bool Debug__IsEnable(const MethodInfo *method)
 }
 
 
-bool Debug__IsEnable_31590624(const MethodInfo *method)
+bool Debug__IsEnable_31756948(const MethodInfo *method)
 {
-  if ( (byte_4DFDF5B & 1) == 0 )
+  if ( (byte_4E70B4B & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF5B = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B4B = 1;
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -347,18 +347,18 @@ void Debug__Log(Il2CppObject *message, const MethodInfo *method)
 {
   Debug_c *v3; // x0
 
-  if ( (byte_4E040E2 & 1) == 0 )
+  if ( (byte_4E76D5C & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E2 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D5C = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v3 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -377,17 +377,17 @@ void Debug__Log(Il2CppObject *message, const MethodInfo *method)
 
 void Debug__LogAssertionFormat(System_String_o *format, System_Object_array *args, const MethodInfo *method)
 {
-  if ( (byte_4E040EB & 1) == 0 )
+  if ( (byte_4E76D65 & 1) == 0 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040EB = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D65 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
@@ -398,18 +398,18 @@ void Debug__LogError(Il2CppObject *message, const MethodInfo *method)
 {
   Debug_c *v3; // x0
 
-  if ( (byte_4E040E4 & 1) == 0 )
+  if ( (byte_4E76D5E & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E4 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D5E = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v3 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -430,18 +430,18 @@ void Debug__LogErrorFormat(System_String_o *format, System_Object_array *args, c
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040EA & 1) == 0 )
+  if ( (byte_4E76D64 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040EA = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D64 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -458,17 +458,17 @@ void Debug__LogErrorFormat(System_String_o *format, System_Object_array *args, c
 }
 
 
-void Debug__LogErrorFormat_31591608(System_String_o *format, System_Object_array *args, const MethodInfo *method)
+void Debug__LogErrorFormat_31757932(System_String_o *format, System_Object_array *args, const MethodInfo *method)
 {
   System_String_o *v4; // x20
 
   v4 = format;
-  if ( (byte_4DFDF56 & 1) == 0 )
+  if ( (byte_4E70B46 & 1) == 0 )
   {
-    format = (System_String_o *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF56 = 1;
+    format = (System_String_o *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B46 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)format) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)format) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -477,17 +477,17 @@ void Debug__LogErrorFormat_31591608(System_String_o *format, System_Object_array
 }
 
 
-void Debug__LogError_31590928(Il2CppObject *message, const MethodInfo *method)
+void Debug__LogError_31757252(Il2CppObject *message, const MethodInfo *method)
 {
   Il2CppObject *v2; // x19
 
   v2 = message;
-  if ( (byte_4DFDF50 & 1) == 0 )
+  if ( (byte_4E70B40 & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF50 = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B40 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -496,41 +496,41 @@ void Debug__LogError_31590928(Il2CppObject *message, const MethodInfo *method)
 }
 
 
-void Debug__LogError_31591036(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__LogError_31757360(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Il2CppObject *v4; // x20
 
   v4 = message;
-  if ( (byte_4DFDF51 & 1) == 0 )
+  if ( (byte_4E70B41 & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF51 = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B41 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError_72729832(v4, context, 0);
+    UnityEngine_Debug__LogError_73169928(v4, context, 0);
   }
 }
 
 
-void Debug__LogError_42396660(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__LogError_42616252(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040E5 & 1) == 0 )
+  if ( (byte_4E76D5F & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E5 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D5F = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -542,7 +542,7 @@ void Debug__LogError_42396660(Il2CppObject *message, UnityEngine_Object_o *conte
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError_72729832(message, context, 0);
+    UnityEngine_Debug__LogError_73169928(message, context, 0);
   }
 }
 
@@ -551,18 +551,18 @@ void Debug__LogException(System_Exception_o *exception, const MethodInfo *method
 {
   Debug_c *v3; // x0
 
-  if ( (byte_4E040EC & 1) == 0 )
+  if ( (byte_4E76D66 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040EC = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D66 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v3 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -579,17 +579,17 @@ void Debug__LogException(System_Exception_o *exception, const MethodInfo *method
 }
 
 
-void Debug__LogException_31591728(System_Exception_o *exception, const MethodInfo *method)
+void Debug__LogException_31758052(System_Exception_o *exception, const MethodInfo *method)
 {
   System_Exception_o *v2; // x19
 
   v2 = exception;
-  if ( (byte_4DFDF57 & 1) == 0 )
+  if ( (byte_4E70B47 & 1) == 0 )
   {
-    exception = (System_Exception_o *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF57 = 1;
+    exception = (System_Exception_o *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B47 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)exception) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)exception) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -598,7 +598,7 @@ void Debug__LogException_31591728(System_Exception_o *exception, const MethodInf
 }
 
 
-void Debug__LogException_31591836(
+void Debug__LogException_31758160(
         System_Exception_o *exception,
         UnityEngine_Object_o *context,
         const MethodInfo *method)
@@ -606,39 +606,39 @@ void Debug__LogException_31591836(
   System_Exception_o *v4; // x20
 
   v4 = exception;
-  if ( (byte_4DFDF58 & 1) == 0 )
+  if ( (byte_4E70B48 & 1) == 0 )
   {
-    exception = (System_Exception_o *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF58 = 1;
+    exception = (System_Exception_o *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B48 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)exception) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)exception) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogException_72730676(v4, context, 0);
+    UnityEngine_Debug__LogException_73170772(v4, context, 0);
   }
 }
 
 
-void Debug__LogException_42398292(
+void Debug__LogException_42617884(
         System_Exception_o *exception,
         UnityEngine_Object_o *context,
         const MethodInfo *method)
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040ED & 1) == 0 )
+  if ( (byte_4E76D67 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040ED = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D67 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -650,7 +650,7 @@ void Debug__LogException_42398292(
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogException_72730676(exception, context, 0);
+    UnityEngine_Debug__LogException_73170772(exception, context, 0);
   }
 }
 
@@ -659,18 +659,18 @@ void Debug__LogFormat(System_String_o *format, System_Object_array *args, const 
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040E9 & 1) == 0 )
+  if ( (byte_4E76D63 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E9 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D63 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -687,17 +687,17 @@ void Debug__LogFormat(System_String_o *format, System_Object_array *args, const 
 }
 
 
-void Debug__LogFormat_31591492(System_String_o *format, System_Object_array *args, const MethodInfo *method)
+void Debug__LogFormat_31757816(System_String_o *format, System_Object_array *args, const MethodInfo *method)
 {
   System_String_o *v4; // x20
 
   v4 = format;
-  if ( (byte_4DFDF55 & 1) == 0 )
+  if ( (byte_4E70B45 & 1) == 0 )
   {
-    format = (System_String_o *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF55 = 1;
+    format = (System_String_o *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B45 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)format) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)format) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -710,18 +710,18 @@ void Debug__LogWarning(Il2CppObject *message, const MethodInfo *method)
 {
   Debug_c *v3; // x0
 
-  if ( (byte_4E040E6 & 1) == 0 )
+  if ( (byte_4E76D60 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E6 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D60 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v3 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -742,18 +742,18 @@ void Debug__LogWarningFormat(System_String_o *format, System_Object_array *args,
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040E8 & 1) == 0 )
+  if ( (byte_4E76D62 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E8 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D62 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -770,17 +770,17 @@ void Debug__LogWarningFormat(System_String_o *format, System_Object_array *args,
 }
 
 
-void Debug__LogWarningFormat_31591376(System_String_o *format, System_Object_array *args, const MethodInfo *method)
+void Debug__LogWarningFormat_31757700(System_String_o *format, System_Object_array *args, const MethodInfo *method)
 {
   System_String_o *v4; // x20
 
   v4 = format;
-  if ( (byte_4DFDF54 & 1) == 0 )
+  if ( (byte_4E70B44 & 1) == 0 )
   {
-    format = (System_String_o *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF54 = 1;
+    format = (System_String_o *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B44 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)format) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)format) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -789,17 +789,17 @@ void Debug__LogWarningFormat_31591376(System_String_o *format, System_Object_arr
 }
 
 
-void Debug__LogWarning_31591152(Il2CppObject *message, const MethodInfo *method)
+void Debug__LogWarning_31757476(Il2CppObject *message, const MethodInfo *method)
 {
   Il2CppObject *v2; // x19
 
   v2 = message;
-  if ( (byte_4DFDF52 & 1) == 0 )
+  if ( (byte_4E70B42 & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF52 = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B42 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -808,41 +808,41 @@ void Debug__LogWarning_31591152(Il2CppObject *message, const MethodInfo *method)
 }
 
 
-void Debug__LogWarning_31591260(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__LogWarning_31757584(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Il2CppObject *v4; // x20
 
   v4 = message;
-  if ( (byte_4DFDF53 & 1) == 0 )
+  if ( (byte_4E70B43 & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF53 = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B43 = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning_72731216(v4, context, 0);
+    UnityEngine_Debug__LogWarning_73171312(v4, context, 0);
   }
 }
 
 
-void Debug__LogWarning_42397080(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__LogWarning_42616672(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040E7 & 1) == 0 )
+  if ( (byte_4E76D61 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E7 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D61 = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -854,22 +854,22 @@ void Debug__LogWarning_42397080(Il2CppObject *message, UnityEngine_Object_o *con
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning_72731216(message, context, 0);
+    UnityEngine_Debug__LogWarning_73171312(message, context, 0);
   }
 }
 
 
-void Debug__Log_31590704(Il2CppObject *message, const MethodInfo *method)
+void Debug__Log_31757028(Il2CppObject *message, const MethodInfo *method)
 {
   Il2CppObject *v2; // x19
 
   v2 = message;
-  if ( (byte_4DFDF4E & 1) == 0 )
+  if ( (byte_4E70B3E & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF4E = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B3E = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -878,41 +878,41 @@ void Debug__Log_31590704(Il2CppObject *message, const MethodInfo *method)
 }
 
 
-void Debug__Log_31590812(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__Log_31757136(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Il2CppObject *v4; // x20
 
   v4 = message;
-  if ( (byte_4DFDF4F & 1) == 0 )
+  if ( (byte_4E70B3F & 1) == 0 )
   {
-    message = (Il2CppObject *)sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    byte_4DFDF4F = 1;
+    message = (Il2CppObject *)sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    byte_4E70B3F = 1;
   }
-  if ( Debug__IsEnable_31590624((const MethodInfo *)message) )
+  if ( Debug__IsEnable_31756948((const MethodInfo *)message) )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__Log_72728280(v4, context, 0);
+    UnityEngine_Debug__Log_73168376(v4, context, 0);
   }
 }
 
 
-void Debug__Log_42396240(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
+void Debug__Log_42615832(Il2CppObject *message, UnityEngine_Object_o *context, const MethodInfo *method)
 {
   Debug_c *v5; // x0
 
-  if ( (byte_4E040E3 & 1) == 0 )
+  if ( (byte_4E76D5D & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E040E3 = 1;
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76D5D = 1;
   }
   if ( !Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Debug_TypeInfo);
-  if ( !byte_4E041AC )
+  if ( !byte_4E76E27 )
   {
-    sub_1CE6700(&Debug_TypeInfo);
-    byte_4E041AC = 1;
+    sub_1D0F0B4(&Debug_TypeInfo);
+    byte_4E76E27 = 1;
   }
   v5 = Debug_TypeInfo;
   if ( !Debug_TypeInfo->_2.cctor_finished )
@@ -924,6 +924,6 @@ void Debug__Log_42396240(Il2CppObject *message, UnityEngine_Object_o *context, c
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__Log_72728280(message, context, 0);
+    UnityEngine_Debug__Log_73168376(message, context, 0);
   }
 }

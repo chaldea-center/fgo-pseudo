@@ -1,7 +1,7 @@
 void UIButtonScale___ctor(UIButtonScale_o *this, const MethodInfo *method)
 {
   *(int32x2_t *)&this->fields.pressed.fields.y = vdup_n_s32(0x3F866666u);
-  *(_OWORD *)&this->fields.hover.fields.x = xmmword_D244D0;
+  *(_OWORD *)&this->fields.hover.fields.x = xmmword_D34D90;
   this->fields.duration = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -14,11 +14,11 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
   struct UnityEngine_Transform_o *v5; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4E09047 & 1) == 0 )
+  if ( (byte_4E7BD79 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_TweenScale___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E09047 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_TweenScale___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BD79 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -32,7 +32,7 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
         goto LABEL_14;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v5,
-                           (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
+                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
@@ -48,7 +48,7 @@ void UIButtonScale__OnDisable(UIButtonScale_o *this, const MethodInfo *method)
           return;
         }
 LABEL_14:
-        sub_1CE6958(v5, v4);
+        sub_1D0F30C(v5, v4);
       }
     }
   }
@@ -61,10 +61,10 @@ void UIButtonScale__OnEnable(UIButtonScale_o *this, const MethodInfo *method)
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E09046 & 1) == 0 )
+  if ( (byte_4E7BD78 & 1) == 0 )
   {
-    sub_1CE6700(&UICamera_TypeInfo);
-    byte_4E09046 = 1;
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    byte_4E7BD78 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -110,7 +110,7 @@ void UIButtonScale__OnHover(UIButtonScale_o *this, bool isOver, const MethodInfo
                                                0);
     if ( !tweenTarget )
 LABEL_10:
-      sub_1CE6958(tweenTarget, v5);
+      sub_1D0F30C(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -131,10 +131,10 @@ void UIButtonScale__OnPress(UIButtonScale_o *this, bool isPressed, const MethodI
   unsigned __int64 v14; // d3
   int v15; // s2
 
-  if ( (byte_4E09048 & 1) == 0 )
+  if ( (byte_4E7BD7A & 1) == 0 )
   {
-    sub_1CE6700(&UICamera_TypeInfo);
-    byte_4E09048 = 1;
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    byte_4E7BD7A = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -172,7 +172,7 @@ void UIButtonScale__OnPress(UIButtonScale_o *this, bool isPressed, const MethodI
     tweenTarget = (UnityEngine_Component_o *)TweenScale__Begin(v9, duration, *(UnityEngine_Vector3_o *)&x, 0);
     if ( !tweenTarget )
 LABEL_16:
-      sub_1CE6958(tweenTarget, v5);
+      sub_1D0F30C(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -183,10 +183,10 @@ void UIButtonScale__OnSelect(UIButtonScale_o *this, bool isSelected, const Metho
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4E09049 & 1) == 0 )
+  if ( (byte_4E7BD7B & 1) == 0 )
   {
-    sub_1CE6700(&UICamera_TypeInfo);
-    byte_4E09049 = 1;
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    byte_4E7BD7B = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -218,10 +218,10 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4E09045 & 1) == 0 )
+  if ( (byte_4E7BD77 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E09045 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BD77 = 1;
   }
   if ( !this->fields.mStarted )
   {
@@ -234,7 +234,7 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.tweenTarget = transform;
-      sub_1CE66A4(
+      sub_1D0F058(
         (GrandQuestFolderBoardItem_o *)&this->fields.tweenTarget,
         (int32_t)transform,
         v7,
@@ -245,7 +245,7 @@ void UIButtonScale__Start(UIButtonScale_o *this, const MethodInfo *method)
         v12);
     }
     if ( !*p_tweenTarget )
-      sub_1CE6958(0, v5);
+      sub_1D0F30C(0, v5);
     this->fields.mScale = UnityEngine_Transform__get_localScale(*p_tweenTarget, 0);
   }
 }

@@ -34,13 +34,13 @@ void MyRoomHelpListViewItemDraw__SetItem(
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E00011 & 1) == 0 )
+  if ( (byte_4E72C2E & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_20758/*"img_menuboard_01"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    sub_1CE6700(&StringLiteral_20909/*"img_tutorial_txtbg"*/);
-    byte_4E00011 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_20849/*"img_menuboard_01"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    sub_1D0F0B4(&StringLiteral_21000/*"img_tutorial_txtbg"*/);
+    byte_4E72C2E = 1;
   }
   if ( item )
   {
@@ -70,7 +70,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_41;
-        imageName = (System_String_o *)StringLiteral_20758/*"img_menuboard_01"*/;
+        imageName = (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/;
         v13 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
@@ -152,7 +152,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
                   gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
                   if ( gameObject )
                   {
-                    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20909/*"img_tutorial_txtbg"*/, 0);
+                    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_21000/*"img_tutorial_txtbg"*/, 0);
                     gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                     if ( gameObject )
                     {
@@ -185,7 +185,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_41:
-      sub_1CE6958(gameObject, v9);
+      sub_1D0F30C(gameObject, v9);
     }
   }
 }

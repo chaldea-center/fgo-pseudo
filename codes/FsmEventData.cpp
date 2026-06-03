@@ -15,18 +15,18 @@ void FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *method)
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4E06103 & 1) == 0 )
+  if ( (byte_4E78DAA & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22611/*"none"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E06103 = 1;
+    sub_1D0F0B4(&StringLiteral_22704/*"none"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E78DAA = 1;
   }
-  v9 = StringLiteral_22611/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_22611/*"none"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_22704/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_22704/*"none"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   v10 = StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -58,7 +58,7 @@ void FsmEventData__set_EventData(FsmEventData_o *this, System_String_o *value, c
   System_String_o *v7; // x7
 
   this->fields.eventData = value;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -71,5 +71,5 @@ void FsmEventData__set_Title(FsmEventData_o *this, System_String_o *value, const
   System_String_o *v7; // x7
 
   this->fields.title = value;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

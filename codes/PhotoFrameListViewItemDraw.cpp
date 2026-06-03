@@ -13,7 +13,7 @@ void PhotoFrameListViewItemDraw__SetAtlas(
 
   frameSampleSprite = this->fields.frameSampleSprite;
   if ( !frameSampleSprite )
-    sub_1CE6958(0, atlas);
+    sub_1D0F30C(0, atlas);
   UISprite__set_atlas(frameSampleSprite, atlas, 0);
 }
 
@@ -36,12 +36,12 @@ void PhotoFrameListViewItemDraw__SetButton(
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4DFFEC5 & 1) == 0 )
+  if ( (byte_4E72AE2 & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_17633/*"btn_bg_20"*/);
-    this = (PhotoFrameListViewItemDraw_o *)sub_1CE6700(&StringLiteral_17635/*"btn_bg_21"*/);
-    byte_4DFFEC5 = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_17707/*"btn_bg_20"*/);
+    this = (PhotoFrameListViewItemDraw_o *)sub_1D0F0B4(&StringLiteral_17709/*"btn_bg_21"*/);
+    byte_4E72AE2 = 1;
   }
   if ( !item )
     goto LABEL_24;
@@ -61,10 +61,10 @@ void PhotoFrameListViewItemDraw__SetButton(
   if ( !IsSelected_k__BackingField )
   {
 LABEL_14:
-    if ( !byte_4DFF120 )
+    if ( !byte_4E71D15 )
     {
-      sub_1CE6700(&LocalizationManager_TypeInfo);
-      byte_4DFF120 = 1;
+      sub_1D0F0B4(&LocalizationManager_TypeInfo);
+      byte_4E71D15 = 1;
     }
     this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -80,13 +80,13 @@ LABEL_14:
     if ( frameNameLabel )
       goto LABEL_19;
 LABEL_24:
-    sub_1CE6958(this, item);
+    sub_1D0F30C(this, item);
   }
 LABEL_7:
-  if ( !byte_4DFF121 )
+  if ( !byte_4E71D16 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    byte_4DFF121 = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    byte_4E71D16 = 1;
   }
   this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -111,9 +111,9 @@ LABEL_19:
   if ( !this )
     goto LABEL_24;
   if ( item->fields._IsSelected_k__BackingField )
-    v13 = &StringLiteral_17635/*"btn_bg_21"*/;
+    v13 = &StringLiteral_17709/*"btn_bg_21"*/;
   else
-    v13 = &StringLiteral_17633/*"btn_bg_20"*/;
+    v13 = &StringLiteral_17707/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v13, 0);
 }
 
@@ -129,11 +129,11 @@ void PhotoFrameListViewItemDraw__SetInput(
   const MethodInfo *v9; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4DFFEC4 & 1) == 0 )
+  if ( (byte_4E72AE1 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFFEC4 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E72AE1 = 1;
   }
   if ( item )
   {
@@ -146,11 +146,11 @@ void PhotoFrameListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.button) == 0) )
       {
-        sub_1CE6958(Component_object, v8);
+        sub_1D0F30C(Component_object, v8);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,
@@ -173,11 +173,11 @@ void PhotoFrameListViewItemDraw__SetItem(
   UnityEngine_Object_o *Atlas_k__BackingField; // x21
   const MethodInfo *v9; // x2
 
-  if ( (byte_4DFFEC3 & 1) == 0 )
+  if ( (byte_4E72AE0 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&string_TypeInfo);
-    byte_4DFFEC3 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&string_TypeInfo);
+    byte_4E72AE0 = 1;
   }
   if ( item && mode )
   {
@@ -207,6 +207,6 @@ LABEL_13:
         }
       }
     }
-    sub_1CE6958(frameSampleSprite, item);
+    sub_1D0F30C(frameSampleSprite, item);
   }
 }

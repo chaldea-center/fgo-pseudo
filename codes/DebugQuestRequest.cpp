@@ -10,24 +10,24 @@ void DebugQuestRequest__beginRequest(DebugQuestRequest_o *this, bool is_enable, 
   RequestBase_o *v4; // x19
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4E064F3 & 1) == 0 )
+  if ( (byte_4E7919A & 1) == 0 )
   {
-    this = (DebugQuestRequest_o *)sub_1CE6700(&StringLiteral_19749/*"flag"*/);
-    byte_4E064F3 = 1;
+    this = (DebugQuestRequest_o *)sub_1D0F0B4(&StringLiteral_19828/*"flag"*/);
+    byte_4E7919A = 1;
   }
   if ( !v4 )
-    sub_1CE6958(this, is_enable);
-  RequestBase__addField(v4, (System_String_o *)StringLiteral_19749/*"flag"*/, is_enable, 0);
+    sub_1D0F30C(this, is_enable);
+  RequestBase__addField(v4, (System_String_o *)StringLiteral_19828/*"flag"*/, is_enable, 0);
   RequestBase__beginRequest(v4, 0);
 }
 
 
 System_String_o *DebugQuestRequest__getMockData(DebugQuestRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E064F2 & 1) == 0 )
+  if ( (byte_4E79199 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E064F2 = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E79199 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -37,16 +37,16 @@ System_String_o *DebugQuestRequest__getURL(DebugQuestRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E064F1 & 1) == 0 )
+  if ( (byte_4E79198 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_4532/*"ClientDebug/QuestThrough"*/);
-    byte_4E064F1 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_4543/*"ClientDebug/QuestThrough"*/);
+    byte_4E79198 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_4532/*"ClientDebug/QuestThrough"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_4543/*"ClientDebug/QuestThrough"*/, 0);
 }
 
 
@@ -58,20 +58,20 @@ void DebugQuestRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4E064F4 & 1) == 0 )
+  if ( (byte_4E7919B & 1) == 0 )
   {
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E064F4 = 1;
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E7919B = 1;
   }
   TopHomeRequest__clearExpirationDate(0);
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(42, responseList, 0);
-  if ( v5 && ResponseData__checkError_45365352(v5, 0) )
-    v6 = &StringLiteral_22728/*"ok"*/;
+  if ( v5 && ResponseData__checkError_45600864(v5, 0) )
+    v6 = &StringLiteral_22821/*"ok"*/;
   else
-    v6 = &StringLiteral_22555/*"ng"*/;
+    v6 = &StringLiteral_22648/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

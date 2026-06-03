@@ -8,10 +8,10 @@ void ClassButtonComponent__Awake(ClassButtonComponent_o *this, const MethodInfo 
 {
   UnityEngine_Color_o v3; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4E03DCE & 1) == 0 )
+  if ( (byte_4E76A46 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_411/*"#606060"*/);
-    byte_4E03DCE = 1;
+    sub_1D0F0B4(&StringLiteral_411/*"#606060"*/);
+    byte_4E76A46 = 1;
   }
   v3 = (UnityEngine_Color_o)0LL;
   UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_411/*"#606060"*/, &v3, 0);
@@ -66,10 +66,10 @@ void ClassButtonComponent__add_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4E03DCC & 1) == 0 )
+  if ( (byte_4E76A44 & 1) == 0 )
   {
-    sub_1CE6700(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    byte_4E03DCC = 1;
+    sub_1D0F0B4(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4E76A44 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -82,13 +82,13 @@ void ClassButtonComponent__add_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   ClassButtonComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -113,10 +113,10 @@ void ClassButtonComponent__remove_callbackFunc(
   ClassButtonComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E03DCD & 1) == 0 )
+  if ( (byte_4E76A45 & 1) == 0 )
   {
-    sub_1CE6700(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    byte_4E03DCD = 1;
+    sub_1D0F0B4(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4E76A45 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -129,13 +129,13 @@ void ClassButtonComponent__remove_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D424D4(p_callbackFunc, v8, v6);
+    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1CE6CF4(v8);
+  sub_1D0F6A8(v8);
   ClassButtonComponent__Awake(v11, v12);
 }
 
@@ -155,7 +155,7 @@ void ClassButtonComponent__setClassPos(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_DWORD *)p_callbackFunc - 2) = classPos;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)p_callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -186,7 +186,7 @@ void ClassButtonComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -197,12 +197,12 @@ void ClassButtonComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -214,9 +214,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B17A00;
+  this->fields.invoke_impl = (intptr_t)sub_1B3D868;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B179B8;
+  this->fields.extra_arg = (intptr_t)sub_1B3D820;
 }
 
 
@@ -231,14 +231,14 @@ System_IAsyncResult_o *ClassButtonComponent_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = classPos;
-  if ( (byte_4E03DCF & 1) == 0 )
+  if ( (byte_4E76A47 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    byte_4E03DCF = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    byte_4E76A47 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -247,7 +247,7 @@ void ClassButtonComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

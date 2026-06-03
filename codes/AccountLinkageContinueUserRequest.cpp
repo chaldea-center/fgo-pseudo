@@ -9,13 +9,13 @@ void AccountLinkageContinueUserRequest__beginRequest(
         System_String_o *accountLinkageToken,
         const MethodInfo *method)
 {
-  if ( (byte_4E0642A & 1) == 0 )
+  if ( (byte_4E790D1 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_16804/*"accountLinkageToken"*/);
-    byte_4E0642A = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16875/*"accountLinkageToken"*/);
+    byte_4E790D1 = 1;
   }
-  RequestBase__addField_45365032((RequestBase_o *)this, (System_String_o *)StringLiteral_16804/*"accountLinkageToken"*/, accountLinkageToken, 0);
+  RequestBase__addField_45601604((RequestBase_o *)this, (System_String_o *)StringLiteral_16875/*"accountLinkageToken"*/, accountLinkageToken, 0);
   RequestBase__addBaseField((RequestBase_o *)this, 0);
   RequestBase__WriteParameter((RequestBase_o *)this, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -30,16 +30,16 @@ System_String_o *AccountLinkageContinueUserRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E06429 & 1) == 0 )
+  if ( (byte_4E790D0 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_16798/*"accountLinkageAnx/continueUser"*/);
-    byte_4E06429 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_16869/*"accountLinkageAnx/continueUser"*/);
+    byte_4E790D0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_16798/*"accountLinkageAnx/continueUser"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_16869/*"accountLinkageAnx/continueUser"*/, 0);
 }
 
 
@@ -75,48 +75,48 @@ void AccountLinkageContinueUserRequest__requestCompleted(
   const MethodInfo *v28; // x1
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4E0642B & 1) == 0 )
+  if ( (byte_4E790D2 & 1) == 0 )
   {
-    sub_1CE6700(&AccountLinkageParams_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&long_TypeInfo);
-    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
-    sub_1CE6700(&StringLiteral_17120/*"authKey"*/);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    sub_1CE6700(&StringLiteral_23625/*"secretKey"*/);
-    this = (AccountLinkageContinueUserRequest_o *)sub_1CE6700(&StringLiteral_24957/*"userId"*/);
-    byte_4E0642B = 1;
+    sub_1D0F0B4(&AccountLinkageParams_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&long_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
+    sub_1D0F0B4(&StringLiteral_17191/*"authKey"*/);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    sub_1D0F0B4(&StringLiteral_23727/*"secretKey"*/);
+    this = (AccountLinkageContinueUserRequest_o *)sub_1D0F0B4(&StringLiteral_25066/*"userId"*/);
+    byte_4E790D2 = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !LODWORD(responseList->max_length) )
-    sub_1CE6960(this);
+    sub_1D0F314(this);
   v5 = responseList->m_Items[0];
   if ( !v5 )
     goto LABEL_15;
-  this = (AccountLinkageContinueUserRequest_o *)ResponseData__checkError_45365352(v5, 0);
+  this = (AccountLinkageContinueUserRequest_o *)ResponseData__checkError_45600864(v5, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    v26 = &StringLiteral_22555/*"ng"*/;
+    v26 = &StringLiteral_22648/*"ng"*/;
     goto LABEL_14;
   }
   success = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.success;
   if ( !success
     || (this = (AccountLinkageContinueUserRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                         success,
-                                                        (Il2CppObject *)StringLiteral_24957/*"userId"*/,
-                                                        (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                        (Il2CppObject *)StringLiteral_25066/*"userId"*/,
+                                                        (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
 LABEL_15:
-    sub_1CE6958(this, responseList);
+    sub_1D0F30C(this, responseList);
   }
   if ( this->klass->_1.element_class == long_TypeInfo->_1.element_class )
   {
     v9 = *(struct System_String_o **)j_il2cpp_object_unbox_0(this, long_TypeInfo, v7, v8);
     this = (AccountLinkageContinueUserRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                     success,
-                                                    (Il2CppObject *)StringLiteral_17120/*"authKey"*/,
-                                                    (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (Il2CppObject *)StringLiteral_17191/*"authKey"*/,
+                                                    (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
     {
       v10 = ((__int64 (__fastcall *)(AccountLinkageContinueUserRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
@@ -124,8 +124,8 @@ LABEL_15:
               this->klass->vtable._3_ToString.method);
       this = (AccountLinkageContinueUserRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                       success,
-                                                      (Il2CppObject *)StringLiteral_23625/*"secretKey"*/,
-                                                      (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                      (Il2CppObject *)StringLiteral_23727/*"secretKey"*/,
+                                                      (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( this )
       {
         v11 = ((__int64 (__fastcall *)(AccountLinkageContinueUserRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
@@ -135,11 +135,11 @@ LABEL_15:
         static_fields->fields._Name_k__BackingField = (struct System_String_o *)v10;
         static_fields = (GrandQuestFolderBoardItem_o *)((char *)static_fields + 128);
         static_fields[-1].fields._ClosedMessage_k__BackingField = v9;
-        sub_1CE66A4(static_fields, v10, v13, v14, v15, v16, v17, v18);
+        sub_1D0F058(static_fields, v10, v13, v14, v15, v16, v17, v18);
         v19 = AccountLinkageParams_TypeInfo->static_fields;
         v19->newSecretKey = (struct System_String_o *)v11;
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v19->newSecretKey, v11, v20, v21, v22, v23, v24, v25);
-        v26 = &StringLiteral_22728/*"ok"*/;
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)&v19->newSecretKey, v11, v20, v21, v22, v23, v24, v25);
+        v26 = &StringLiteral_22821/*"ok"*/;
 LABEL_14:
         RequestBase__completed(v4, (System_String_o *)*v26, 0);
         return;
@@ -147,6 +147,6 @@ LABEL_14:
     }
     goto LABEL_15;
   }
-  sub_1CE6CF4(this);
+  sub_1D0F6A8(this);
   AccountLinkageContinueUserRequest___ctor(v27, v28);
 }

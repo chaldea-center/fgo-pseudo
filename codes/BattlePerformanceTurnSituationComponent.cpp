@@ -23,32 +23,32 @@ void BattlePerformanceTurnSituationComponent___cctor(const MethodInfo *method)
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4E0818C & 1) == 0 )
+  if ( (byte_4E7AEA6 & 1) == 0 )
   {
-    sub_1CE6700(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_1CE6700(&StringLiteral_2909/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/);
-    sub_1CE6700(&StringLiteral_2907/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/);
-    sub_1CE6700(&StringLiteral_2908/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/);
-    byte_4E0818C = 1;
+    sub_1D0F0B4(&BattlePerformanceTurnSituationComponent_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_2913/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/);
+    sub_1D0F0B4(&StringLiteral_2911/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/);
+    sub_1D0F0B4(&StringLiteral_2912/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/);
+    byte_4E7AEA6 = 1;
   }
-  BattlePerformanceTurnSituationComponent_TypeInfo->static_fields->LabelWithRaidPrefixKey = (struct System_String_o *)StringLiteral_2909/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/;
-  sub_1CE66A4(
+  BattlePerformanceTurnSituationComponent_TypeInfo->static_fields->LabelWithRaidPrefixKey = (struct System_String_o *)StringLiteral_2913/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)BattlePerformanceTurnSituationComponent_TypeInfo->static_fields,
-    StringLiteral_2909/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/,
+    StringLiteral_2913/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_2908/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
+  v7 = StringLiteral_2912/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
   static_fields = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
-  static_fields->LabelWithRaidDamageNumKey = (struct System_String_o *)StringLiteral_2908/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->LabelWithRaidDamageNumKey, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_2907/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  static_fields->LabelWithRaidDamageNumKey = (struct System_String_o *)StringLiteral_2912/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->LabelWithRaidDamageNumKey, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_2911/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
   v16 = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
-  v16->LABEL_WITH_RAIDNAME_KEY = (struct System_String_o *)StringLiteral_2907/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v16->LABEL_WITH_RAIDNAME_KEY, v15, v17, v18, v19, v20, v21, v22);
+  v16->LABEL_WITH_RAIDNAME_KEY = (struct System_String_o *)StringLiteral_2911/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v16->LABEL_WITH_RAIDNAME_KEY, v15, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -95,15 +95,15 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
   int64_t v33; // [xsp+18h] [xbp-48h] BYREF
 
   v33 = param;
-  if ( (byte_4E0818B & 1) == 0 )
+  if ( (byte_4E7AEA5 & 1) == 0 )
   {
-    sub_1CE6700(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&long_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_397/*"#,0"*/);
-    byte_4E0818B = 1;
+    sub_1D0F0B4(&BattlePerformanceTurnSituationComponent_TypeInfo);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&long_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_397/*"#,0"*/);
+    byte_4E7AEA5 = 1;
   }
   numLabel = (UnityEngine_Object_o *)this->fields.numLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -131,7 +131,7 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
     v15 = System_String__Format(v14, (Il2CppObject *)bossName, 0);
     BattlePerformanceTurnSituationComponent__setMessage(this, v15, v16);
     v17 = this->fields.numLabel;
-    v18 = System_Int64__ToString_66636500((int64_t)&v33, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
+    v18 = System_Int64__ToString_67076596((int64_t)&v33, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
     if ( !v17
       || (UILabel__set_text(v17, v18, 0),
           LabelWithRaidDamageNumKey = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields->LabelWithRaidDamageNumKey,
@@ -141,7 +141,7 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
           v18 = LocalizationManager__Get(v22, 0),
           !this->fields.numTextLabel) )
     {
-      sub_1CE6958(v18, v19);
+      sub_1D0F30C(v18, v19);
     }
     UILabel__set_text(this->fields.numTextLabel, v18, 0);
   }
@@ -163,7 +163,7 @@ LABEL_16:
     v27 = LocalizationManager__Get(v26, 0);
     v31 = v33;
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v31);
-    v29 = System_String__Format_65164136(v27, (Il2CppObject *)bossName, v28, 0);
+    v29 = System_String__Format_65604080(v27, (Il2CppObject *)bossName, v28, 0);
     BattlePerformanceTurnSituationComponent__setMessage(this, v29, v30);
   }
 }
@@ -178,22 +178,22 @@ void BattlePerformanceTurnSituationComponent__setMessage(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4E0818A & 1) == 0 )
+  if ( (byte_4E7AEA4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0818A = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7AEA4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( !v6 )
   {
     if ( !Component_object )
-      sub_1CE6958(v6, v7);
+      sub_1D0F30C(v6, v7);
     UILabel__set_text((UILabel_o *)Component_object, message, 0);
   }
 }

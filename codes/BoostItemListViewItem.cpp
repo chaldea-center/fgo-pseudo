@@ -18,28 +18,28 @@ void BoostItemListViewItem___ctor(
   UserItemEntity_o *EntityDefinitely; // x0
   int32_t num; // w8
 
-  if ( (byte_4E000AF & 1) == 0 )
+  if ( (byte_4E72CCD & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E000AF = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E72CCD = 1;
   }
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.itemEntity = data;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.itemEntity, (int32_t)data, v11, v12, v13, v14, v15, v16);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemEntity, (int32_t)data, v11, v12, v13, v14, v15, v16);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -49,7 +49,7 @@ void BoostItemListViewItem___ctor(
   }
   if ( !data || !MasterData_object )
 LABEL_19:
-    sub_1CE6958(Instance, v18);
+    sub_1D0F30C(Instance, v18);
   EntityDefinitely = UserItemMaster__GetEntityDefinitely(
                        (UserItemMaster_o *)MasterData_object,
                        *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -111,16 +111,16 @@ System_String_o *BoostItemListViewItem__get_NameText(BoostItemListViewItem_o *th
   struct ItemEntity_o *itemEntity; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_4E000B0 & 1) == 0 )
+  if ( (byte_4E72CCE & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_19321/*"error"*/);
-    byte_4E000B0 = 1;
+    sub_1D0F0B4(&StringLiteral_19400/*"error"*/);
+    byte_4E72CCE = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( itemEntity )
     p_name = &itemEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_19321/*"error"*/;
+    p_name = (System_String_o **)&StringLiteral_19400/*"error"*/;
   return *p_name;
 }
 
@@ -130,18 +130,18 @@ System_String_o *BoostItemListViewItem__get_NumText(BoostItemListViewItem_o *thi
   Il2CppObject *v3; // x0
   int32_t itemPossessionSum; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4E000B2 & 1) == 0 )
+  if ( (byte_4E72CD0 & 1) == 0 )
   {
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_25505/*"{0:N0}"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E000B2 = 1;
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25615/*"{0:N0}"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E72CD0 = 1;
   }
   if ( !this->fields.itemEntity )
     return (System_String_o *)StringLiteral_1/*""*/;
   itemPossessionSum = this->fields.itemPossessionSum;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &itemPossessionSum);
-  return System_String__Format((System_String_o *)StringLiteral_25505/*"{0:N0}"*/, v3, 0);
+  return System_String__Format((System_String_o *)StringLiteral_25615/*"{0:N0}"*/, v3, 0);
 }
 
 
@@ -153,31 +153,31 @@ System_String_o *BoostItemListViewItem__get_SkillText(BoostItemListViewItem_o *t
   struct ItemEntity_o *v6; // x8
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4E000B1 & 1) == 0 )
+  if ( (byte_4E72CCF & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1CE6700(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E000B1 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E72CCF = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( !itemEntity || itemEntity->fields.type != 19 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_SkillMaster___),
+                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SkillMaster___),
         (v6 = this->fields.itemEntity) == 0)
     || !Instance )
   {
-    sub_1CE6958(Instance, v5);
+    sub_1D0F30C(Instance, v5);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              v6->fields.value,
-             (const MethodInfo_34E925C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getEffectExplanation((SkillEntity_o *)Entity, 0, 0);
   else

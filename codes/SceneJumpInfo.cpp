@@ -4,7 +4,7 @@ void SceneJumpInfo___ctor(SceneJumpInfo_o *this, const MethodInfo *method)
 }
 
 
-void SceneJumpInfo___ctor_42635484(SceneJumpInfo_o *this, System_String_o *name, const MethodInfo *method)
+void SceneJumpInfo___ctor_42856596(SceneJumpInfo_o *this, System_String_o *name, const MethodInfo *method)
 {
   int32_t v5; // w2
   int32_t v6; // w3
@@ -15,18 +15,18 @@ void SceneJumpInfo___ctor_42635484(SceneJumpInfo_o *this, System_String_o *name,
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v5, v6, v7, v8, v9, v10);
 }
 
 
-void SceneJumpInfo___ctor_42635532(SceneJumpInfo_o *this, int32_t id, const MethodInfo *method)
+void SceneJumpInfo___ctor_42856644(SceneJumpInfo_o *this, int32_t id, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.id = id;
 }
 
 
-void SceneJumpInfo___ctor_42635572(SceneJumpInfo_o *this, System_String_o *name, int32_t id, const MethodInfo *method)
+void SceneJumpInfo___ctor_42856684(SceneJumpInfo_o *this, System_String_o *name, int32_t id, const MethodInfo *method)
 {
   SceneJumpInfo_o *v6; // x21
   int32_t v7; // w2
@@ -40,12 +40,12 @@ void SceneJumpInfo___ctor_42635572(SceneJumpInfo_o *this, System_String_o *name,
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.name = name;
   v6 = (SceneJumpInfo_o *)((char *)v6 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
   LODWORD(v6->monitor) = id;
 }
 
 
-void SceneJumpInfo___ctor_42635632(
+void SceneJumpInfo___ctor_42856744(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int32_t id,
@@ -64,13 +64,13 @@ void SceneJumpInfo___ctor_42635632(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = id;
   HIDWORD(v8->monitor) = num;
 }
 
 
-void SceneJumpInfo___ctor_42635704(
+void SceneJumpInfo___ctor_42856816(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int32_t id,
@@ -89,13 +89,13 @@ void SceneJumpInfo___ctor_42635704(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = id;
   v8->fields.name = (struct System_String_o *)userId;
 }
 
 
-void SceneJumpInfo___ctor_42635780(
+void SceneJumpInfo___ctor_42856892(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -113,12 +113,12 @@ void SceneJumpInfo___ctor_42635780(
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.name = name;
   v6 = (SceneJumpInfo_o *)((char *)v6 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
   v6->fields.name = (struct System_String_o *)userId;
 }
 
 
-void SceneJumpInfo___ctor_42635840(
+void SceneJumpInfo___ctor_42856952(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -137,13 +137,13 @@ void SceneJumpInfo___ctor_42635840(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v8, (int32_t)name, v9, v10, v11, v12, v13, v14);
   v8->fields.name = (struct System_String_o *)userId;
   *(_QWORD *)&v8->fields.id = userId2;
 }
 
 
-void SceneJumpInfo___ctor_42635912(
+void SceneJumpInfo___ctor_42857024(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -163,7 +163,7 @@ void SceneJumpInfo___ctor_42635912(
   System_Object___ctor((Il2CppObject *)this, 0);
   v10->fields.name = name;
   v10 = (SceneJumpInfo_o *)((char *)v10 + 16);
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)v10, (int32_t)name, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)v10, (int32_t)name, v11, v12, v13, v14, v15, v16);
   HIDWORD(v10->monitor) = num;
   v10->fields.name = (struct System_String_o *)userId;
   *(_QWORD *)&v10->fields.id = userId2;
@@ -182,18 +182,18 @@ bool SceneJumpInfo__ReturnScene(SceneJumpInfo_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E04397 & 1) == 0 )
+  if ( (byte_4E77013 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E04397 = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4E77013 = 1;
   }
   returnSceneName = this->fields.returnSceneName;
   if ( returnSceneName )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
-      sub_1CE6958(0, v5);
-    AvalonSceneManager__transitionScene_42306876(
+      sub_1D0F30C(0, v5);
+    AvalonSceneManager__transitionScene_42526224(
       (AvalonSceneManager_o *)Instance,
       this->fields.returnSceneName,
       1,
@@ -213,7 +213,7 @@ void SceneJumpInfo__SetBackSceneJumpInfo(SceneJumpInfo_o *this, SceneJumpInfo_o 
   System_String_o *v7; // x7
 
   this->fields.backSceneJumpInfo = back;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.backSceneJumpInfo,
     (int32_t)back,
     (int32_t)method,
@@ -240,7 +240,7 @@ void SceneJumpInfo__SetName(SceneJumpInfo_o *this, System_String_o *name, const 
   System_String_o *v7; // x7
 
   this->fields.name = name;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -262,17 +262,17 @@ void SceneJumpInfo__SetReturnNowScene(SceneJumpInfo_o *this, const MethodInfo *m
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4E04396 & 1) == 0 )
+  if ( (byte_4E77012 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E04396 = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4E77012 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   NowSceneName = AvalonSceneManager__getNowSceneName((AvalonSceneManager_o *)Instance, 0);
   this->fields.returnSceneName = NowSceneName;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.returnSceneName,
     (int32_t)NowSceneName,
     v6,
@@ -294,16 +294,16 @@ void SceneJumpInfo__SetReturnScene(SceneJumpInfo_o *this, int32_t type, const Me
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4E04395 & 1) == 0 )
+  if ( (byte_4E77011 & 1) == 0 )
   {
-    sub_1CE6700(&SceneList_TypeInfo);
-    byte_4E04395 = 1;
+    sub_1D0F0B4(&SceneList_TypeInfo);
+    byte_4E77011 = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
   this->fields.returnSceneName = SceneName;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.returnSceneName,
     (int32_t)SceneName,
     v6,

@@ -11,7 +11,7 @@ void DebugMenuComponent__OnClickCheckBox(DebugMenuComponent_o *this, const Metho
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   v3 = !UnityEngine_GameObject__get_activeSelf(this->fields.checkMark, 0);
   UnityEngine_GameObject__SetActive(checkMark, v3, 0);
 }
@@ -96,17 +96,17 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
       v4 = this->fields.paramdel;
       if ( !v4 )
 LABEL_18:
-        sub_1CE6958(this, method);
+        sub_1D0F30C(this, method);
       ((void (__fastcall *)(intptr_t))v4->fields.invoke_impl)(v4->fields.method_code);
 LABEL_14:
       DebugMenuComponent__updateTitleLabel(this, v5);
       return;
     default:
-      v13 = sub_1CE6714(&System_ArgumentOutOfRangeException_TypeInfo);
-      v14 = (System_ArgumentOutOfRangeException_o *)sub_1CE694C(v13);
+      v13 = sub_1D0F0C8(&System_ArgumentOutOfRangeException_TypeInfo);
+      v14 = (System_ArgumentOutOfRangeException_o *)sub_1D0F300(v13);
       System_ArgumentOutOfRangeException___ctor(v14, 0);
-      v15 = sub_1CE6714(&Method_DebugMenuComponent_OnClickMenu__);
-      sub_1CE6828(v14, v15);
+      v15 = sub_1D0F0C8(&Method_DebugMenuComponent_OnClickMenu__);
+      sub_1D0F1DC(v14, v15);
   }
 }
 
@@ -117,7 +117,7 @@ void DebugMenuComponent__SetFavorite(DebugMenuComponent_o *this, bool favorite, 
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1CE6958(0, favorite);
+    sub_1D0F30C(0, favorite);
   UnityEngine_GameObject__SetActive(checkMark, favorite, 0);
 }
 
@@ -143,7 +143,7 @@ bool DebugMenuComponent__get_isFavorite(DebugMenuComponent_o *this, const Method
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   return UnityEngine_GameObject__get_activeSelf(checkMark, 0);
 }
 
@@ -173,7 +173,7 @@ void DebugMenuComponent__setInitDlg(
   const MethodInfo *v22; // x1
 
   this->fields.menudel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.menudel,
     (int32_t)del,
     (int32_t)del,
@@ -184,14 +184,14 @@ void DebugMenuComponent__setInitDlg(
     v7);
   this->fields.type = 0;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v10, v11, v12, v13, v14, v15);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v10, v11, v12, v13, v14, v15);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v16, v17, v18, v19, v20, v21);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v16, v17, v18, v19, v20, v21);
   DebugMenuComponent__updateTitleLabel(this, v22);
 }
 
 
-void DebugMenuComponent__setInitDlg_44806508(
+void DebugMenuComponent__setInitDlg_45042292(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_tgrDelegate_o *del,
@@ -216,7 +216,7 @@ void DebugMenuComponent__setInitDlg_44806508(
   const MethodInfo *v23; // x1
 
   this->fields.tgrdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.tgrdel,
     (int32_t)del,
     (int32_t)del,
@@ -227,15 +227,15 @@ void DebugMenuComponent__setInitDlg_44806508(
     v7);
   this->fields.type = 1;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.flg = flg;
   DebugMenuComponent__updateTitleLabel(this, v23);
 }
 
 
-void DebugMenuComponent__setInitDlg_44806604(
+void DebugMenuComponent__setInitDlg_45042388(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -260,7 +260,7 @@ void DebugMenuComponent__setInitDlg_44806604(
   const MethodInfo *v23; // x1
 
   this->fields.paramdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (int32_t)del,
@@ -271,16 +271,16 @@ void DebugMenuComponent__setInitDlg_44806604(
     v7);
   this->fields.type = 2;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v23);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_44806696(
+void DebugMenuComponent__setInitDlg_45042480(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramtgrDelegate_o *del,
@@ -305,7 +305,7 @@ void DebugMenuComponent__setInitDlg_44806696(
   const MethodInfo *v24; // x1
 
   this->fields.paramtgrdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramtgrdel,
     (int32_t)del,
     (int32_t)del,
@@ -316,16 +316,16 @@ void DebugMenuComponent__setInitDlg_44806696(
     v7);
   this->fields.type = 3;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v12, v13, v14, v15, v16, v17);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v12, v13, v14, v15, v16, v17);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v18, v19, v20, v21, v22, v23);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v18, v19, v20, v21, v22, v23);
   this->fields.flg = flg;
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v24);
 }
 
 
-void DebugMenuComponent__setInitDlg_44806808(
+void DebugMenuComponent__setInitDlg_45042592(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramStrDelegate_o *del,
@@ -356,7 +356,7 @@ void DebugMenuComponent__setInitDlg_44806808(
   const MethodInfo *v29; // x1
 
   this->fields.paramStrdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramStrdel,
     (int32_t)del,
     (int32_t)del,
@@ -367,17 +367,17 @@ void DebugMenuComponent__setInitDlg_44806808(
     v7);
   this->fields.type = 4;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v11, v12, v13, v14, v15, v16);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.strParam = param;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.strParam, (int32_t)param, v23, v24, v25, v26, v27, v28);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.strParam, (int32_t)param, v23, v24, v25, v26, v27, v28);
   DebugMenuComponent__updateTitleLabel(this, v29);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_44806912(
+void DebugMenuComponent__setInitDlg_45042696(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -402,7 +402,7 @@ void DebugMenuComponent__setInitDlg_44806912(
   const MethodInfo *v25; // x1
 
   this->fields.paramdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (int32_t)del,
@@ -413,9 +413,9 @@ void DebugMenuComponent__setInitDlg_44806912(
     v7);
   this->fields.type = 5;
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v13, v14, v15, v16, v17, v18);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v19, v20, v21, v22, v23, v24);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v19, v20, v21, v22, v23, v24);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -424,7 +424,7 @@ void DebugMenuComponent__setInitDlg_44806912(
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_44807024(
+void DebugMenuComponent__setInitDlg_45042808(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -455,7 +455,7 @@ void DebugMenuComponent__setInitDlg_44807024(
   const MethodInfo *v32; // x1
 
   this->fields.paramdel = del;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (int32_t)del,
@@ -466,7 +466,7 @@ void DebugMenuComponent__setInitDlg_44807024(
     (System_String_o *)method);
   this->fields.type = 6;
   this->fields.paramToStringDictionary = dictionary;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.paramToStringDictionary,
     (int32_t)dictionary,
     v14,
@@ -476,9 +476,9 @@ void DebugMenuComponent__setInitDlg_44807024(
     v18,
     v19);
   this->fields.originalTitle = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v20, v21, v22, v23, v24, v25);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.originalTitle, (int32_t)txt, v20, v21, v22, v23, v24, v25);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v26, v27, v28, v29, v30, v31);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v26, v27, v28, v29, v30, v31);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -501,7 +501,7 @@ void DebugMenuComponent__setStringParam(DebugMenuComponent_o *this, System_Strin
   System_String_o *v7; // x7
 
   this->fields.strParam = param;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.strParam,
     (int32_t)param,
     (int32_t)method,
@@ -534,7 +534,7 @@ void DebugMenuComponent__setTitle(DebugMenuComponent_o *this, System_String_o *t
   System_String_o *v15; // x7
 
   this->fields.originalTitle = txt;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     (int32_t)method,
@@ -544,7 +544,7 @@ void DebugMenuComponent__setTitle(DebugMenuComponent_o *this, System_String_o *t
     v6,
     v7);
   this->fields.title = txt;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v10, v11, v12, v13, v14, v15);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.title, (int32_t)txt, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -560,14 +560,14 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
   __int64 v10; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E05FE3 & 1) == 0 )
+  if ( (byte_4E78C8A & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
-    sub_1CE6700(&StringLiteral_206/*" [ON] "*/);
-    sub_1CE6700(&StringLiteral_16173/*"[​"*/);
-    sub_1CE6700(&StringLiteral_205/*" [OFF] "*/);
-    sub_1CE6700(&StringLiteral_16207/*"]"*/);
-    byte_4E05FE3 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
+    sub_1D0F0B4(&StringLiteral_206/*" [ON] "*/);
+    sub_1D0F0B4(&StringLiteral_16228/*"[​"*/);
+    sub_1D0F0B4(&StringLiteral_205/*" [OFF] "*/);
+    sub_1D0F0B4(&StringLiteral_16262/*"]"*/);
+    byte_4E78C8A = 1;
   }
   value = 0;
   title = this->fields.title;
@@ -583,7 +583,7 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
         v4 = &StringLiteral_206/*" [ON] "*/;
       else
         v4 = &StringLiteral_205/*" [OFF] "*/;
-      v7 = System_String__Concat_65122828(this->fields.title, (System_String_o *)*v4, 0);
+      v7 = System_String__Concat_65562772(this->fields.title, (System_String_o *)*v4, 0);
       goto LABEL_14;
     case 5:
       v5 = (Il2CppObject *)System_Int32__ToString((int)this + 64, 0);
@@ -596,7 +596,7 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
              paramToStringDictionary,
              this->fields.param,
              &value,
-             (const MethodInfo_355CC70 *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
+             (const MethodInfo_35A9994 *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
       {
         v5 = value;
       }
@@ -606,11 +606,11 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
         value = v5;
       }
 LABEL_11:
-      v7 = System_String__Concat_65163096(
+      v7 = System_String__Concat_65603040(
              title,
-             (System_String_o *)StringLiteral_16173/*"[​"*/,
+             (System_String_o *)StringLiteral_16228/*"[​"*/,
              (System_String_o *)v5,
-             (System_String_o *)StringLiteral_16207/*"]"*/,
+             (System_String_o *)StringLiteral_16262/*"]"*/,
              0);
 LABEL_14:
       title = v7;
@@ -621,15 +621,15 @@ LABEL_15:
             (paramToStringDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.titlelabel) == 0) )
       {
 LABEL_18:
-        sub_1CE6958(paramToStringDictionary, method);
+        sub_1D0F30C(paramToStringDictionary, method);
       }
       UILabel__set_effectStyle((UILabel_o *)paramToStringDictionary, 2, 0);
       return;
     default:
-      v8 = sub_1CE6714(&System_ArgumentOutOfRangeException_TypeInfo);
-      v9 = (System_ArgumentOutOfRangeException_o *)sub_1CE694C(v8);
+      v8 = sub_1D0F0C8(&System_ArgumentOutOfRangeException_TypeInfo);
+      v9 = (System_ArgumentOutOfRangeException_o *)sub_1D0F300(v8);
       System_ArgumentOutOfRangeException___ctor(v9, 0);
-      v10 = sub_1CE6714(&Method_DebugMenuComponent_updateTitleLabel__);
-      sub_1CE6828(v9, v10);
+      v10 = sub_1D0F0C8(&Method_DebugMenuComponent_updateTitleLabel__);
+      sub_1D0F1DC(v9, v10);
   }
 }

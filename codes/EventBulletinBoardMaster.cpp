@@ -1,14 +1,14 @@
 void EventBulletinBoardMaster___ctor(EventBulletinBoardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E04902 & 1) == 0 )
+  if ( (byte_4E77583 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
-    byte_4E04902 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
+    byte_4E77583 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     242,
-    (const MethodInfo_34E6CE4 *)Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
+    (const MethodInfo_3533604 *)Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
 }
 
 
@@ -36,31 +36,31 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4E04903 & 1) == 0 )
+  if ( (byte_4E77584 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
-    sub_1CE6700(&Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__);
-    sub_1CE6700(&System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
-    byte_4E04903 = 1;
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__);
+    sub_1D0F0B4(&System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
+    byte_4E77584 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventBulletinBoardReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
+  Master_object = (EventBulletinBoardReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
   if ( !this->fields.list )
     goto LABEL_23;
   v8 = Master_object;
   Master_object = (EventBulletinBoardReleaseMaster_o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                          (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                                                         (const MethodInfo_3480AB0 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+                                                         (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
   if ( (int)Master_object >= 1 )
   {
     v9 = (int)Master_object;
@@ -73,7 +73,7 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
       Master_object = (EventBulletinBoardReleaseMaster_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                              (System_Collections_ObjectModel_Collection_T__o *)Master_object,
                                                              v10,
-                                                             (const MethodInfo_3480B40 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+                                                             (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
       if ( !Master_object )
         break;
       v12 = (Il2CppObject *)Master_object;
@@ -100,14 +100,14 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               v12,
-              *(const MethodInfo_3905F68 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              *(const MethodInfo_395C410 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v22[4] = (Il2CppClass *)v12;
-            sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v12, v13, v14, v15, v16, v17, v18);
+            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v12, v13, v14, v15, v16, v17, v18);
           }
         }
       }
@@ -115,7 +115,7 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
         goto LABEL_19;
     }
 LABEL_23:
-    sub_1CE6958(Master_object, v7);
+    sub_1D0F30C(Master_object, v7);
   }
 LABEL_19:
   if ( !v5 )

@@ -20,11 +20,11 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
   const MethodInfo *v8; // x1
 
   v4 = this;
-  if ( (byte_4E07DF9 & 1) == 0 )
+  if ( (byte_4E7AAE0 & 1) == 0 )
   {
-    sub_1CE6700(&BattleLogicTask_TypeInfo);
-    this = (PlayBackStepLogicTask_o *)sub_1CE6700(&BattlePerformance_TypeInfo);
-    byte_4E07DF9 = 1;
+    sub_1D0F0B4(&BattleLogicTask_TypeInfo);
+    this = (PlayBackStepLogicTask_o *)sub_1D0F0B4(&BattlePerformance_TypeInfo);
+    byte_4E7AAE0 = 1;
   }
   if ( !logic )
     goto LABEL_15;
@@ -38,7 +38,7 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
     if ( this )
     {
       BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0);
-      v7 = (BattleLogicTask_o *)sub_1CE694C(BattleLogicTask_TypeInfo);
+      v7 = (BattleLogicTask_o *)sub_1D0F300(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v7, v8);
       this = (PlayBackStepLogicTask_o *)BattlePerformance_TypeInfo;
       if ( !BattlePerformance_TypeInfo->_2.cctor_finished )
@@ -55,7 +55,7 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
       }
     }
 LABEL_15:
-    sub_1CE6958(this, logic);
+    sub_1D0F30C(this, logic);
   }
   return 0;
 }

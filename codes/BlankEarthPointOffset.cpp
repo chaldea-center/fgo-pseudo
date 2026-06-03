@@ -4,10 +4,10 @@ void BlankEarthPointOffset___ctor(BlankEarthPointOffset_o *this, const MethodInf
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_4DFE0A9 )
+  if ( !byte_4E70C99 )
   {
-    sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-    byte_4DFE0A9 = 1;
+    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+    byte_4E70C99 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -56,10 +56,10 @@ void BlankEarthPointOffset__LateUpdate(BlankEarthPointOffset_o *this, const Meth
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E0118C & 1) == 0 )
+  if ( (byte_4E73DB4 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0118C = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E73DB4 = 1;
   }
   currentCamera = (UnityEngine_Object_o *)this->fields.currentCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -92,7 +92,7 @@ void BlankEarthPointOffset__LateUpdate(BlankEarthPointOffset_o *this, const Meth
       v25.fields.y = v11 + (float)(y * lossyScale.fields.y);
       v25.fields.x = v10 + (float)(x * lossyScale.fields.x);
       v25.fields.z = v13;
-      v26 = UnityEngine_Camera__WorldToScreenPoint_72722712((UnityEngine_Camera_o *)targetTransform, v25, 0);
+      v26 = UnityEngine_Camera__WorldToScreenPoint_73162808((UnityEngine_Camera_o *)targetTransform, v25, 0);
       targetTransform = this->fields.earthTransform;
       if ( !targetTransform )
         goto LABEL_20;
@@ -109,14 +109,14 @@ void BlankEarthPointOffset__LateUpdate(BlankEarthPointOffset_o *this, const Meth
       v28.fields.z = v16 * v19;
       v28.fields.x = v14;
       v28.fields.y = v15;
-      v29 = UnityEngine_Camera__ScreenToWorldPoint_72722736((UnityEngine_Camera_o *)targetTransform, v28, 0);
+      v29 = UnityEngine_Camera__ScreenToWorldPoint_73162832((UnityEngine_Camera_o *)targetTransform, v28, 0);
       v20 = v29.fields.x;
       v21 = v29.fields.y;
       v22 = v29.fields.z;
       targetTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !targetTransform )
 LABEL_20:
-        sub_1CE6958(targetTransform, v5);
+        sub_1D0F30C(targetTransform, v5);
       v30.fields.x = v20;
       v30.fields.y = v21;
       v30.fields.z = v22;
@@ -138,7 +138,7 @@ void BlankEarthPointOffset__SetEarthObject(
   System_String_o *v7; // x7
 
   this->fields.earthTransform = earthObject;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.earthTransform,
     (int32_t)earthObject,
     (int32_t)method,
@@ -162,7 +162,7 @@ void BlankEarthPointOffset__SetTargetCamera(
   System_String_o *v7; // x7
 
   this->fields.currentCamera = targetCamera;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.currentCamera,
     (int32_t)targetCamera,
     (int32_t)method,

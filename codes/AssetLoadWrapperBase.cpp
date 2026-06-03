@@ -9,15 +9,15 @@ void AssetLoadWrapperBase___ctor(AssetLoadWrapperBase_o *this, const MethodInfo 
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4E03A43 & 1) == 0 )
+  if ( (byte_4E766B7 & 1) == 0 )
   {
-    sub_1CE6700(&AssetPathLoadCounter_TypeInfo);
-    byte_4E03A43 = 1;
+    sub_1D0F0B4(&AssetPathLoadCounter_TypeInfo);
+    byte_4E766B7 = 1;
   }
-  v3 = (AssetPathLoadCounter_o *)sub_1CE694C(AssetPathLoadCounter_TypeInfo);
+  v3 = (AssetPathLoadCounter_o *)sub_1D0F300(AssetPathLoadCounter_TypeInfo);
   AssetPathLoadCounter___ctor(v3, v4);
   this->fields.pathCounter = v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -28,7 +28,7 @@ void AssetLoadWrapperBase__AddLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1CE6958(0, path);
+    sub_1D0F30C(0, path);
   AssetPathLoadCounter__AddCount(pathCounter, path, method);
 }
 
@@ -55,21 +55,21 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
   int32_t *v20; // x10
   __int64 v21; // x0
 
-  if ( (byte_4E03A42 & 1) == 0 )
+  if ( (byte_4E766B6 & 1) == 0 )
   {
-    sub_1CE6700(&System_IDisposable_TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
-    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
-    sub_1CE6700(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
-    byte_4E03A42 = 1;
+    sub_1D0F0B4(&System_IDisposable_TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
+    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
+    byte_4E766B6 = 1;
   }
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
     goto LABEL_30;
   Enumerator = AssetPathLoadCounter__GetEnumerator(pathCounter, method);
   if ( !Enumerator )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -89,7 +89,7 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
     else
     {
 LABEL_9:
-      v9 = sub_1CBCA7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v9 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v9)(
             Enumerator,
@@ -113,7 +113,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v13 = sub_1CBCA7C(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
+      v13 = sub_1CE5430(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
     }
     v14 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v13)(
             Enumerator,
@@ -150,7 +150,7 @@ LABEL_16:
   else
   {
 LABEL_26:
-    v21 = sub_1CBCA7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v21 = sub_1CE5430(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v21)(
     Enumerator,
@@ -158,7 +158,7 @@ LABEL_26:
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
 LABEL_30:
-    sub_1CE6958(pathCounter, method);
+    sub_1D0F30C(pathCounter, method);
   AssetPathLoadCounter__Clear(pathCounter, method);
 }
 
@@ -169,6 +169,6 @@ void AssetLoadWrapperBase__SubLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1CE6958(0, path);
+    sub_1D0F30C(0, path);
   AssetPathLoadCounter__SubCount(pathCounter, path, method);
 }

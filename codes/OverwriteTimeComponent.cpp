@@ -12,7 +12,7 @@ void OverwriteTimeComponent__Awake(OverwriteTimeComponent_o *this, const MethodI
 
 void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t time, const MethodInfo *method)
 {
-  System_IFormatProvider_o *CultureInfo_66332336; // x21
+  System_IFormatProvider_o *CultureInfo_66772280; // x21
   UILabel_o *monthNum; // x22
   System_DateTime_o v7; // x0
   System_String_o *remain; // x0
@@ -30,30 +30,30 @@ void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t tim
   int32_t Month; // [xsp+4h] [xbp-4Ch] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E00D2E & 1) == 0 )
+  if ( (byte_4E73956 & 1) == 0 )
   {
-    sub_1CE6700(&System_Globalization_CultureInfo_TypeInfo);
-    sub_1CE6700(&System_DateTime_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_21370/*"ja-JP"*/);
-    sub_1CE6700(&StringLiteral_18716/*"ddd"*/);
-    sub_1CE6700(&StringLiteral_652/*"("*/);
-    sub_1CE6700(&StringLiteral_13580/*"TIME_STR_DAYS"*/);
-    sub_1CE6700(&StringLiteral_758/*")"*/);
-    sub_1CE6700(&StringLiteral_6962/*"GACHA_OVERWRITE_TIME_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_13583/*"TIME_STR_MONTH"*/);
-    byte_4E00D2E = 1;
+    sub_1D0F0B4(&System_Globalization_CultureInfo_TypeInfo);
+    sub_1D0F0B4(&System_DateTime_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_21463/*"ja-JP"*/);
+    sub_1D0F0B4(&StringLiteral_18794/*"ddd"*/);
+    sub_1D0F0B4(&StringLiteral_652/*"("*/);
+    sub_1D0F0B4(&StringLiteral_13630/*"TIME_STR_DAYS"*/);
+    sub_1D0F0B4(&StringLiteral_758/*")"*/);
+    sub_1D0F0B4(&StringLiteral_6988/*"GACHA_OVERWRITE_TIME_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_13633/*"TIME_STR_MONTH"*/);
+    byte_4E73956 = 1;
   }
   Month = 0;
   if ( !System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo);
-  CultureInfo_66332336 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_66332336(
-                                                       (System_String_o *)StringLiteral_21370/*"ja-JP"*/,
+  CultureInfo_66772280 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_66772280(
+                                                       (System_String_o *)StringLiteral_21463/*"ja-JP"*/,
                                                        0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getServerDateTime_42521056(time, 0).fields._dateData;
+  dateData = NetworkManager__getServerDateTime_42741668(time, 0).fields._dateData;
   monthNum = this->fields.monthNum;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
@@ -66,7 +66,7 @@ void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t tim
   v10 = this->fields.month;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13583/*"TIME_STR_MONTH"*/, 0);
+  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13633/*"TIME_STR_MONTH"*/, 0);
   if ( !v10 )
     goto LABEL_20;
   UILabel__set_text(v10, remain, 0);
@@ -78,14 +78,14 @@ void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t tim
     goto LABEL_20;
   UILabel__set_text(dayNum, remain, 0);
   day = this->fields.day;
-  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13580/*"TIME_STR_DAYS"*/, 0);
+  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13630/*"TIME_STR_DAYS"*/, 0);
   if ( !day )
     goto LABEL_20;
   UILabel__set_text(day, remain, 0);
   week = this->fields.week;
   v15.fields._dateData = (uint64_t)&dateData;
-  v16 = System_DateTime__ToString_66521228(v15, (System_String_o *)StringLiteral_18716/*"ddd"*/, CultureInfo_66332336, 0);
-  remain = System_String__Concat_65161092(
+  v16 = System_DateTime__ToString_66961172(v15, (System_String_o *)StringLiteral_18794/*"ddd"*/, CultureInfo_66772280, 0);
+  remain = System_String__Concat_65601036(
              (System_String_o *)StringLiteral_652/*"("*/,
              v16,
              (System_String_o *)StringLiteral_758/*")"*/,
@@ -94,7 +94,7 @@ void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t tim
     goto LABEL_20;
   UILabel__set_text(week, remain, 0);
   minutes = this->fields.minutes;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6962/*"GACHA_OVERWRITE_TIME_MESSAGE"*/, 0);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6988/*"GACHA_OVERWRITE_TIME_MESSAGE"*/, 0);
   v19 = (Il2CppObject *)LocalizationManager__GetTime(time, 0);
   remain = System_String__Format(v18, v19, 0);
   if ( !minutes
@@ -102,7 +102,7 @@ void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t tim
     || (remain = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)remain, 0)) == 0 )
   {
 LABEL_20:
-    sub_1CE6958(remain, v9);
+    sub_1D0F30C(remain, v9);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)remain, 0, 0);
 }

@@ -18,19 +18,19 @@ void FGO_param2anim__Start(FGO_param2anim_o *this, const MethodInfo *method)
   __int64 v11; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4E037CD & 1) == 0 )
+  if ( (byte_4E76440 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1CE6700(&StringLiteral_16753/*"_twoValue0"*/);
-    sub_1CE6700(&StringLiteral_16754/*"_twoValue1"*/);
-    byte_4E037CD = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1D0F0B4(&StringLiteral_16824/*"_twoValue0"*/);
+    sub_1D0F0B4(&StringLiteral_16825/*"_twoValue1"*/);
+    byte_4E76440 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._renderer,
     (int32_t)Component_object,
     v5,
@@ -45,30 +45,30 @@ void FGO_param2anim__Start(FGO_param2anim_o *this, const MethodInfo *method)
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0);
   if ( !renderer )
     goto LABEL_12;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16753/*"_twoValue0"*/, 0);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16824/*"_twoValue0"*/, 0);
   renderer = *p_renderer;
   if ( !*p_renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0
     || (UnityEngine_Material__EnableKeyword(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16754/*"_twoValue1"*/,
+          (System_String_o *)StringLiteral_16825/*"_twoValue1"*/,
           0),
         (renderer = *p_renderer) == 0)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16753/*"_twoValue0"*/,
+          (System_String_o *)StringLiteral_16824/*"_twoValue0"*/,
           this->fields.two_value.fields.x,
           0),
         (renderer = this->fields._renderer) == 0)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
   {
 LABEL_12:
-    sub_1CE6958(renderer, v11);
+    sub_1D0F30C(renderer, v11);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16754/*"_twoValue1"*/,
+    (System_String_o *)StringLiteral_16825/*"_twoValue1"*/,
     this->fields.two_value.fields.y,
     0);
 }
@@ -78,28 +78,28 @@ void FGO_param2anim__Update(FGO_param2anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4E037CE & 1) == 0 )
+  if ( (byte_4E76441 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_16753/*"_twoValue0"*/);
-    sub_1CE6700(&StringLiteral_16754/*"_twoValue1"*/);
-    byte_4E037CE = 1;
+    sub_1D0F0B4(&StringLiteral_16824/*"_twoValue0"*/);
+    sub_1D0F0B4(&StringLiteral_16825/*"_twoValue1"*/);
+    byte_4E76441 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16753/*"_twoValue0"*/,
+          (System_String_o *)StringLiteral_16824/*"_twoValue0"*/,
           this->fields.two_value.fields.x,
           0),
         (renderer = this->fields._renderer) == 0)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
   {
-    sub_1CE6958(renderer, method);
+    sub_1D0F30C(renderer, method);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16754/*"_twoValue1"*/,
+    (System_String_o *)StringLiteral_16825/*"_twoValue1"*/,
     this->fields.two_value.fields.y,
     0);
 }

@@ -7,16 +7,16 @@ void PurchaseByStoneRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4E065AA & 1) == 0 )
+  if ( (byte_4E79251 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_22681/*"num"*/);
-    sub_1CE6700(&StringLiteral_20547/*"id"*/);
-    byte_4E065AA = 1;
+    sub_1D0F0B4(&StringLiteral_22774/*"num"*/);
+    sub_1D0F0B4(&StringLiteral_20637/*"id"*/);
+    byte_4E79251 = 1;
   }
-  this->fields.id = id;
-  this->fields.num = num;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20547/*"id"*/, id, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22681/*"num"*/, num, v7);
+  *((_DWORD *)&this->fields.shouldShowConnect + 1) = id;
+  this->fields.id = num;
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20637/*"id"*/, id, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22774/*"num"*/, num, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -25,16 +25,16 @@ System_String_o *PurchaseByStoneRequest__getURL(PurchaseByStoneRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E065A9 & 1) == 0 )
+  if ( (byte_4E79250 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_23808/*"shop/purchaseByStone"*/);
-    byte_4E065A9 = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_23910/*"shop/purchaseByStone"*/);
+    byte_4E79250 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_23808/*"shop/purchaseByStone"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_23910/*"shop/purchaseByStone"*/, 0);
 }
 
 
@@ -48,12 +48,12 @@ void PurchaseByStoneRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4E065AB & 1) == 0 )
+  if ( (byte_4E79252 & 1) == 0 )
   {
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22728/*"ok"*/);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E065AB = 1;
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E79252 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -63,14 +63,14 @@ void PurchaseByStoneRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22728/*"ok"*/;
+    v8 = &StringLiteral_22821/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22555/*"ng"*/;
+    v8 = &StringLiteral_22648/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

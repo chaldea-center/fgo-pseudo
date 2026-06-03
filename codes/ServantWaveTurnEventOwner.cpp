@@ -14,35 +14,35 @@ void ServantWaveTurnEventOwner___cctor(const MethodInfo *method)
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4E07ED9 & 1) == 0 )
+  if ( (byte_4E7ABC7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__TypeInfo);
-    sub_1CE6700(&Method_MoveToSubMemberWaveTurnEvent_CreateBySaveData__);
-    sub_1CE6700(&ServantWaveTurnEventOwner_TypeInfo);
-    sub_1CE6700(&Method_UseNoblePhantasmWaveTurnEvent_CreateBySaveData__);
-    sub_1CE6700(&ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
-    byte_4E07ED9 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__TypeInfo);
+    sub_1D0F0B4(&Method_MoveToSubMemberWaveTurnEvent_CreateBySaveData__);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner_TypeInfo);
+    sub_1D0F0B4(&Method_UseNoblePhantasmWaveTurnEvent_CreateBySaveData__);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
+    byte_4E7ABC7 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1CE694C(System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1D0F300(System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_357B178 *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor__);
-  v2 = (ServantWaveTurnEventOwner_WaveTurnEventFactory_o *)sub_1CE694C(ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
+    (const MethodInfo_35C7DCC *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor__);
+  v2 = (ServantWaveTurnEventOwner_WaveTurnEventFactory_o *)sub_1D0F300(ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
   ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor(
     v2,
     0,
     Method_MoveToSubMemberWaveTurnEvent_CreateBySaveData__,
     v3);
   if ( !v1 )
-    sub_1CE6958(v4, v5);
+    sub_1D0F30C(v4, v5);
   System_Collections_Generic_Dictionary_Int32Enum__object___set_Item(
     v1,
     1,
     (Il2CppObject *)v2,
-    (const MethodInfo_357BB38 *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
-  v6 = (ServantWaveTurnEventOwner_WaveTurnEventFactory_o *)sub_1CE694C(ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
+    (const MethodInfo_35C878C *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
+  v6 = (ServantWaveTurnEventOwner_WaveTurnEventFactory_o *)sub_1D0F300(ServantWaveTurnEventOwner_WaveTurnEventFactory_TypeInfo);
   ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor(
     v6,
     0,
@@ -52,9 +52,9 @@ void ServantWaveTurnEventOwner___cctor(const MethodInfo *method)
     v1,
     2,
     (Il2CppObject *)v6,
-    (const MethodInfo_357BB38 *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
+    (const MethodInfo_35C878C *)Method_System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__set_Item__);
   ServantWaveTurnEventOwner_TypeInfo->static_fields->WaveTurnEventTypeToFactoryMap = (struct System_Collections_Generic_Dictionary_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory__o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)ServantWaveTurnEventOwner_TypeInfo->static_fields,
     (int32_t)v1,
     v8,
@@ -76,18 +76,18 @@ void ServantWaveTurnEventOwner___ctor(ServantWaveTurnEventOwner_o *this, const M
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E07ED8 & 1) == 0 )
+  if ( (byte_4E7ABC6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent____ctor__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___TypeInfo);
-    byte_4E07ED8 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent____ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___TypeInfo);
+    byte_4E7ABC6 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1CE694C(System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1D0F300(System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___TypeInfo);
   System_Collections_Generic_Dictionary_long__object____ctor(
     v3,
-    (const MethodInfo_358D018 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent____ctor__);
+    (const MethodInfo_35D9B9C *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent____ctor__);
   this->fields.servantWaveTurnEventDict = (struct System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___o *)v3;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -111,10 +111,10 @@ void ServantWaveTurnEventOwner__Add(
   System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___c **v15; // x8
 
   v5 = this;
-  if ( (byte_4E07ED4 & 1) == 0 )
+  if ( (byte_4E7ABC2 & 1) == 0 )
   {
-    this = (ServantWaveTurnEventOwner_o *)sub_1CE6700(&Method_System_Collections_Generic_List_ServantWaveTurnEvent__Add__);
-    byte_4E07ED4 = 1;
+    this = (ServantWaveTurnEventOwner_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantWaveTurnEvent__Add__);
+    byte_4E7ABC2 = 1;
   }
   if ( !ev
     || (this = (ServantWaveTurnEventOwner_o *)ServantWaveTurnEventOwner__GetOrCreateWaveTurnEventDictValue(
@@ -127,7 +127,7 @@ void ServantWaveTurnEventOwner__Add(
         ++HIDWORD(this[1].klass),
         !servantWaveTurnEventDict) )
   {
-    sub_1CE6958(this, ev);
+    sub_1D0F30C(this, ev);
   }
   klass_low = SLODWORD(this[1].klass);
   if ( (unsigned int)klass_low >= LODWORD(servantWaveTurnEventDict->fields._entries) )
@@ -135,14 +135,14 @@ void ServantWaveTurnEventOwner__Add(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)ev,
-      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_395C410 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &servantWaveTurnEventDict->klass + klass_low;
     LODWORD(this[1].klass) = klass_low + 1;
     v15[4] = (System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___c *)ev;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)ev, v6, v7, v8, v9, v10, v11);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)ev, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -167,17 +167,17 @@ System_Collections_Generic_IEnumerable_ServantWaveTurnEvent__o *ServantWaveTurnE
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4E07ED3 & 1) == 0 )
+  if ( (byte_4E7ABC1 & 1) == 0 )
   {
-    sub_1CE6700(&ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
-    byte_4E07ED3 = 1;
+    sub_1D0F0B4(&ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
+    byte_4E7ABC1 = 1;
   }
-  v7 = sub_1CE694C(ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
+  v7 = sub_1D0F300(ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = -2;
   *(_DWORD *)(v7 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v7 + 40) = this;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v7 + 52) = wave;
   *(_DWORD *)(v7 + 60) = turn;
   return (System_Collections_Generic_IEnumerable_ServantWaveTurnEvent__o *)v7;
@@ -211,25 +211,25 @@ ServantWaveTurnEventOwner_SaveData_o *ServantWaveTurnEventOwner__ExportSaveData(
   int64_t v23; // x6
   System_String_o *v24; // x7
 
-  if ( (byte_4E07ED6 & 1) == 0 )
+  if ( (byte_4E7ABC4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Values__);
-    sub_1CE6700(&Method_System_Linq_Enumerable_SelectMany_List_ServantWaveTurnEvent___ServantWaveTurnEvent_SaveData___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_ServantWaveTurnEvent_SaveData___);
-    sub_1CE6700(&System_Func_List_ServantWaveTurnEvent___IEnumerable_ServantWaveTurnEvent_SaveData___TypeInfo);
-    sub_1CE6700(&ServantWaveTurnEventOwner_SaveData_TypeInfo);
-    sub_1CE6700(&Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_0__);
-    sub_1CE6700(&ServantWaveTurnEventOwner___c_TypeInfo);
-    byte_4E07ED6 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Values__);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_SelectMany_List_ServantWaveTurnEvent___ServantWaveTurnEvent_SaveData___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_ServantWaveTurnEvent_SaveData___);
+    sub_1D0F0B4(&System_Func_List_ServantWaveTurnEvent___IEnumerable_ServantWaveTurnEvent_SaveData___TypeInfo);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner_SaveData_TypeInfo);
+    sub_1D0F0B4(&Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_0__);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner___c_TypeInfo);
+    byte_4E7ABC4 = 1;
   }
-  v3 = sub_1CE694C(ServantWaveTurnEventOwner_SaveData_TypeInfo);
+  v3 = sub_1D0F300(ServantWaveTurnEventOwner_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   servantWaveTurnEventDict = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.servantWaveTurnEventDict;
   if ( !servantWaveTurnEventDict )
     goto LABEL_12;
   Values = System_Collections_Generic_Dictionary_long__object___get_Values(
              servantWaveTurnEventDict,
-             (const MethodInfo_358D7F8 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Values__);
+             (const MethodInfo_35DA37C *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Values__);
   v7 = ServantWaveTurnEventOwner___c_TypeInfo;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)Values;
   if ( !ServantWaveTurnEventOwner___c_TypeInfo->_2.cctor_finished )
@@ -246,24 +246,24 @@ ServantWaveTurnEventOwner_SaveData_o *ServantWaveTurnEventOwner__ExportSaveData(
       v7 = ServantWaveTurnEventOwner___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__8_0 = (System_Func_object__object__o *)sub_1CE694C(System_Func_List_ServantWaveTurnEvent___IEnumerable_ServantWaveTurnEvent_SaveData___TypeInfo);
+    _9__8_0 = (System_Func_object__object__o *)sub_1D0F300(System_Func_List_ServantWaveTurnEvent___IEnumerable_ServantWaveTurnEvent_SaveData___TypeInfo);
     System_Func_object__object____ctor(_9__8_0, v10, Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_0__, 0);
     static_fields = ServantWaveTurnEventOwner___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Func_List_ServantWaveTurnEvent___IEnumerable_ServantWaveTurnEvent_SaveData___o *)_9__8_0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v12, v13, v14, v15, v16, v17);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__object_(
                                                                v8,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)_9__8_0,
-                                                               (const MethodInfo_323CECC *)Method_System_Linq_Enumerable_SelectMany_List_ServantWaveTurnEvent___ServantWaveTurnEvent_SaveData___);
+                                                               (const MethodInfo_3288F34 *)Method_System_Linq_Enumerable_SelectMany_List_ServantWaveTurnEvent___ServantWaveTurnEvent_SaveData___);
   servantWaveTurnEventDict = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Linq_Enumerable__ToArray_object_(
                                                                                         v18,
-                                                                                        (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_ServantWaveTurnEvent_SaveData___);
+                                                                                        (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_ServantWaveTurnEvent_SaveData___);
   if ( !v3 )
 LABEL_12:
-    sub_1CE6958(servantWaveTurnEventDict, v4);
+    sub_1D0F30C(servantWaveTurnEventDict, v4);
   *(_QWORD *)(v3 + 16) = servantWaveTurnEventDict;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)servantWaveTurnEventDict, v19, v20, v21, v22, v23, v24);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)servantWaveTurnEventDict, v19, v20, v21, v22, v23, v24);
   return (ServantWaveTurnEventOwner_SaveData_o *)v3;
 }
 
@@ -280,15 +280,15 @@ System_Collections_Generic_List_ServantWaveTurnEvent__o *ServantWaveTurnEventOwn
   System_Collections_Generic_Dictionary_TKey__TValue__o *v9; // x21
   System_Collections_Generic_List_object__o *v10; // x22
 
-  if ( (byte_4E07ED5 & 1) == 0 )
+  if ( (byte_4E7ABC3 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Item__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___set_Item__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_ServantWaveTurnEvent___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_ServantWaveTurnEvent__TypeInfo);
-    sub_1CE6700(&ServantWaveTurnEventOwner_TypeInfo);
-    byte_4E07ED5 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Item__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___set_Item__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantWaveTurnEvent___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_ServantWaveTurnEvent__TypeInfo);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner_TypeInfo);
+    byte_4E7ABC3 = 1;
   }
   if ( !ServantWaveTurnEventOwner_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantWaveTurnEventOwner_TypeInfo);
@@ -299,29 +299,29 @@ System_Collections_Generic_List_ServantWaveTurnEvent__o *ServantWaveTurnEventOwn
   if ( !System_Collections_Generic_Dictionary_long__object___ContainsKey(
           servantWaveTurnEventDict,
           v8,
-          (const MethodInfo_358DBDC *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___ContainsKey__) )
+          (const MethodInfo_35DA760 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___ContainsKey__) )
   {
     v9 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.servantWaveTurnEventDict;
-    v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_ServantWaveTurnEvent__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ServantWaveTurnEvent__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_ServantWaveTurnEvent___ctor__);
+      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ServantWaveTurnEvent___ctor__);
     if ( !v9 )
       goto LABEL_11;
     System_Collections_Generic_Dictionary_long__object___set_Item(
       v9,
       v8,
       (Il2CppObject *)v10,
-      (const MethodInfo_358D9D4 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___set_Item__);
+      (const MethodInfo_35DA558 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___set_Item__);
   }
   servantWaveTurnEventDict = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.servantWaveTurnEventDict;
   if ( !servantWaveTurnEventDict )
 LABEL_11:
-    sub_1CE6958(servantWaveTurnEventDict, *(_QWORD *)&wave);
+    sub_1D0F30C(servantWaveTurnEventDict, *(_QWORD *)&wave);
   return (System_Collections_Generic_List_ServantWaveTurnEvent__o *)System_Collections_Generic_Dictionary_long__object___get_Item(
                                                                       servantWaveTurnEventDict,
                                                                       v8,
-                                                                      (const MethodInfo_358D948 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Item__);
+                                                                      (const MethodInfo_35DA4CC *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___get_Item__);
 }
 
 
@@ -340,12 +340,12 @@ void ServantWaveTurnEventOwner__ImportSaveData(
   int32_t TypeValue; // w21
   const MethodInfo *v13; // x2
 
-  if ( (byte_4E07ED7 & 1) == 0 )
+  if ( (byte_4E7ABC5 & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_GetValue_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___Clear__);
-    sub_1CE6700(&ServantWaveTurnEventOwner_TypeInfo);
-    byte_4E07ED7 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_GetValue_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___Clear__);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner_TypeInfo);
+    byte_4E7ABC5 = 1;
   }
   if ( saveData
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)saveData->fields.WaveTurnEventArray, 0) )
@@ -355,7 +355,7 @@ void ServantWaveTurnEventOwner__ImportSaveData(
       goto LABEL_18;
     System_Collections_Generic_Dictionary_long__object___Clear(
       servantWaveTurnEventDict,
-      (const MethodInfo_358DB70 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___Clear__);
+      (const MethodInfo_35DA6F4 *)Method_System_Collections_Generic_Dictionary_long__List_ServantWaveTurnEvent___Clear__);
     WaveTurnEventArray = saveData->fields.WaveTurnEventArray;
     if ( !WaveTurnEventArray )
       goto LABEL_18;
@@ -366,7 +366,7 @@ void ServantWaveTurnEventOwner__ImportSaveData(
       while ( 1 )
       {
         if ( v9 >= max_length )
-          sub_1CE6960(servantWaveTurnEventDict);
+          sub_1D0F314(servantWaveTurnEventDict);
         v10 = WaveTurnEventArray->m_Items[v9];
         if ( !v10 )
           break;
@@ -381,7 +381,7 @@ void ServantWaveTurnEventOwner__ImportSaveData(
                                                                                               (System_Collections_Generic_Dictionary_K__V__o *)v11->static_fields->WaveTurnEventTypeToFactoryMap,
                                                                                               TypeValue,
                                                                                               0,
-                                                                                              (const MethodInfo_31F2014 *)Method_BasicHelper_GetValue_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___);
+                                                                                              (const MethodInfo_323CE24 *)Method_BasicHelper_GetValue_WaveTurnEventType__ServantWaveTurnEventOwner_WaveTurnEventFactory___);
         if ( servantWaveTurnEventDict )
         {
           servantWaveTurnEventDict = (System_Collections_Generic_Dictionary_TKey__TValue__o *)((__int64 (__fastcall *)(struct System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *, ServantWaveTurnEvent_SaveData_o *, _QWORD))servantWaveTurnEventDict->fields._entries)(
@@ -396,7 +396,7 @@ void ServantWaveTurnEventOwner__ImportSaveData(
           return;
       }
 LABEL_18:
-      sub_1CE6958(servantWaveTurnEventDict, v5);
+      sub_1D0F30C(servantWaveTurnEventDict, v5);
     }
   }
 }
@@ -430,7 +430,7 @@ void ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -441,11 +441,11 @@ void ServantWaveTurnEventOwner_WaveTurnEventFactory___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) != 0 )
+  if ( (sub_1D0F174(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1B1B1C0;
+      v13 = sub_1B4102C;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -457,41 +457,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1CE67B8(method);
-        v16 = sub_1CE6D4C(method);
+        v15 = sub_1D0F16C(method);
+        v16 = sub_1D0F700(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1B1B2BC;
+            v13 = sub_1B41128;
           else
-            v13 = sub_1B1B280;
+            v13 = sub_1B410EC;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1B1B1FC;
+          v13 = sub_1B41068;
         }
         else
         {
-          v13 = sub_1B1B1D0;
+          v13 = sub_1B4103C;
         }
       }
       else
       {
-        v13 = sub_1B1B1A0;
+        v13 = sub_1B4100C;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v17, 0);
+      v17 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1B1B150;
+  this->fields.extra_arg = (intptr_t)sub_1B40FBC;
 }
 
 
@@ -505,7 +505,7 @@ System_IAsyncResult_o *ServantWaveTurnEventOwner_WaveTurnEventFactory__BeginInvo
   ServantWaveTurnEvent_SaveData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = saveData;
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, &v6, callback, object);
 }
 
 
@@ -514,7 +514,7 @@ ServantWaveTurnEvent_o *ServantWaveTurnEventOwner_WaveTurnEventFactory__EndInvok
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  return (ServantWaveTurnEvent_o *)sub_1CE66B8(result, 0, method);
+  return (ServantWaveTurnEvent_o *)sub_1D0F06C(result, 0, method);
 }
 
 
@@ -578,12 +578,12 @@ bool ServantWaveTurnEventOwner__EventEnumerator_d__4__MoveNext(
 
   v31 = this;
   v3 = this;
-  if ( (byte_4E07EDC & 1) == 0 )
+  if ( (byte_4E7ABCA & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__get_Current__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_ServantWaveTurnEvent__GetEnumerator__);
-    byte_4E07EDC = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__get_Current__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantWaveTurnEvent__GetEnumerator__);
+    byte_4E7ABCA = 1;
   }
   v30 = &v31;
   _1__state = v3->fields.__1__state;
@@ -594,37 +594,37 @@ bool ServantWaveTurnEventOwner__EventEnumerator_d__4__MoveNext(
     _4__this = v3->fields.__4__this;
     v3->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1CE6958(0, method);
+      sub_1D0F30C(0, method);
     WaveTurnEventDictValue = (System_Collections_Generic_List_object__o *)ServantWaveTurnEventOwner__GetOrCreateWaveTurnEventDictValue(
                                                                             _4__this,
                                                                             v3->fields.wave,
                                                                             v3->fields.turn,
                                                                             v2);
     if ( !WaveTurnEventDictValue )
-      sub_1CE6958(0, v7);
+      sub_1D0F30C(0, v7);
     System_Collections_Generic_List_object___GetEnumerator(
       v29,
       WaveTurnEventDictValue,
-      (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_ServantWaveTurnEvent__GetEnumerator__);
+      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_ServantWaveTurnEvent__GetEnumerator__);
     v8 = v31;
     v9 = *(_OWORD *)&v29[0].fields._list;
     p__7__wrap1 = &v31->fields.__7__wrap1;
     v29[1] = v29[0];
     v31->fields.__7__wrap1.fields._current = (struct ServantWaveTurnEvent_o *)v29[0].fields._current;
     *(_OWORD *)&v8->fields.__7__wrap1.fields._list = v9;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)p__7__wrap1, 0, v11, v12, v13, v14, v15, v16);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)p__7__wrap1, 0, v11, v12, v13, v14, v15, v16);
     v3 = v31;
   }
   v3->fields.__1__state = -3;
   v24 = System_Collections_Generic_List_Enumerator_object___MoveNext(
           (System_Collections_Generic_List_Enumerator_object__o *)&v3->fields.__7__wrap1,
-          (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__MoveNext__);
+          (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__MoveNext__);
   v25 = v31;
   if ( v24 )
   {
     current = v31->fields.__7__wrap1.fields._current;
     v31->fields.__2__current = current;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&v25->fields.__2__current,
       (int32_t)current,
       v18,
@@ -664,10 +664,10 @@ System_Collections_Generic_IEnumerator_ServantWaveTurnEvent__o *ServantWaveTurnE
   System_String_o *v11; // x7
   System_Collections_Generic_IEnumerator_ServantWaveTurnEvent__o *result; // x0
 
-  if ( (byte_4E07EDE & 1) == 0 )
+  if ( (byte_4E7ABCC & 1) == 0 )
   {
-    sub_1CE6700(&ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
-    byte_4E07EDE = 1;
+    sub_1D0F0B4(&ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
+    byte_4E7ABCC = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -678,13 +678,13 @@ System_Collections_Generic_IEnumerator_ServantWaveTurnEvent__o *ServantWaveTurnE
   }
   else
   {
-    v4 = (ServantWaveTurnEventOwner__EventEnumerator_d__4_o *)sub_1CE694C(ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
+    v4 = (ServantWaveTurnEventOwner__EventEnumerator_d__4_o *)sub_1D0F300(ServantWaveTurnEventOwner__EventEnumerator_d__4_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7, v8, v9, v10, v11);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7, v8, v9, v10, v11);
   }
   result = (System_Collections_Generic_IEnumerator_ServantWaveTurnEvent__o *)v4;
   v4->fields.wave = this->fields.__3__wave;
@@ -709,11 +709,11 @@ void __noreturn ServantWaveTurnEventOwner__EventEnumerator_d__4__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1CE6714(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1CE694C(v2);
+  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1CE6714(&Method_ServantWaveTurnEventOwner__EventEnumerator_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1CE6828(v3, v4);
+  v4 = sub_1D0F0C8(&Method_ServantWaveTurnEventOwner__EventEnumerator_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1D0F1DC(v3, v4);
 }
 
 
@@ -741,15 +741,15 @@ void ServantWaveTurnEventOwner__EventEnumerator_d__4____m__Finally1(
         ServantWaveTurnEventOwner__EventEnumerator_d__4_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E07EDD & 1) == 0 )
+  if ( (byte_4E7ABCB & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__Dispose__);
-    byte_4E07EDD = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__Dispose__);
+    byte_4E7ABCB = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
-    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__Dispose__);
+    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_ServantWaveTurnEvent__Dispose__);
 }
 
 
@@ -763,15 +763,15 @@ void ServantWaveTurnEventOwner___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E07EDA & 1) == 0 )
+  if ( (byte_4E7ABC8 & 1) == 0 )
   {
-    sub_1CE6700(&ServantWaveTurnEventOwner___c_TypeInfo);
-    byte_4E07EDA = 1;
+    sub_1D0F0B4(&ServantWaveTurnEventOwner___c_TypeInfo);
+    byte_4E7ABC8 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(ServantWaveTurnEventOwner___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(ServantWaveTurnEventOwner___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantWaveTurnEventOwner___c_TypeInfo->static_fields->__9 = (struct ServantWaveTurnEventOwner___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)ServantWaveTurnEventOwner___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -805,13 +805,13 @@ System_Collections_Generic_IEnumerable_ServantWaveTurnEvent_SaveData__o *Servant
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4E07EDB & 1) == 0 )
+  if ( (byte_4E7ABC9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Select_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData___);
-    sub_1CE6700(&System_Func_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData__TypeInfo);
-    sub_1CE6700(&Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_1__);
-    sub_1CE6700(&ServantWaveTurnEventOwner___c_TypeInfo);
-    byte_4E07EDB = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData___);
+    sub_1D0F0B4(&System_Func_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData__TypeInfo);
+    sub_1D0F0B4(&Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_1__);
+    sub_1D0F0B4(&ServantWaveTurnEventOwner___c_TypeInfo);
+    byte_4E7ABC9 = 1;
   }
   v4 = ServantWaveTurnEventOwner___c_TypeInfo;
   if ( !ServantWaveTurnEventOwner___c_TypeInfo->_2.cctor_finished )
@@ -828,16 +828,16 @@ System_Collections_Generic_IEnumerable_ServantWaveTurnEvent_SaveData__o *Servant
       v4 = ServantWaveTurnEventOwner___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__8_1 = (System_Func_object__object__o *)sub_1CE694C(System_Func_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData__TypeInfo);
+    _9__8_1 = (System_Func_object__object__o *)sub_1D0F300(System_Func_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData__TypeInfo);
     System_Func_object__object____ctor(_9__8_1, v6, Method_ServantWaveTurnEventOwner___c__ExportSaveData_b__8_1__, 0);
     static_fields = ServantWaveTurnEventOwner___c_TypeInfo->static_fields;
     static_fields->__9__8_1 = (struct System_Func_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData__o *)_9__8_1;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__8_1, (int32_t)_9__8_1, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__8_1, (int32_t)_9__8_1, v8, v9, v10, v11, v12, v13);
   }
   return (System_Collections_Generic_IEnumerable_ServantWaveTurnEvent_SaveData__o *)System_Linq_Enumerable__Select_object__object_(
                                                                                       (System_Collections_Generic_IEnumerable_TSource__o *)x,
                                                                                       (System_Func_TSource__TResult__o *)_9__8_1,
-                                                                                      (const MethodInfo_323A63C *)Method_System_Linq_Enumerable_Select_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData___);
+                                                                                      (const MethodInfo_32866A4 *)Method_System_Linq_Enumerable_Select_ServantWaveTurnEvent__ServantWaveTurnEvent_SaveData___);
 }
 
 
@@ -847,7 +847,7 @@ ServantWaveTurnEvent_SaveData_o *ServantWaveTurnEventOwner___c___ExportSaveData_
         const MethodInfo *method)
 {
   if ( !y )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return (ServantWaveTurnEvent_SaveData_o *)((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, const MethodInfo *))y->klass->vtable._5_ExportSaveData.methodPtr)(
                                               y,
                                               y->klass->vtable._5_ExportSaveData.method);

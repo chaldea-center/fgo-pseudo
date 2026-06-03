@@ -1,9 +1,9 @@
 void EventInfoSkillDialog___ctor(EventInfoSkillDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E06719 & 1) == 0 )
+  if ( (byte_4E793C0 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4E06719 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E793C0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,13 +24,13 @@ void EventInfoSkillDialog__OnClose(EventInfoSkillDialog_o *this, const MethodInf
   System_Reflection_MethodBase_o *v5; // x0
   System_Action_o *v6; // x20
 
-  if ( (byte_4E06718 & 1) == 0 )
+  if ( (byte_4E793BF & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_EventInfoSkillDialog_OnClose__);
-    sub_1CE6700(&Method_EventInfoSkillDialog__OnClose_b__15_0__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E06718 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_EventInfoSkillDialog_OnClose__);
+    sub_1D0F0B4(&Method_EventInfoSkillDialog__OnClose_b__15_0__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E793BF = 1;
   }
   if ( this->fields.canTap )
   {
@@ -42,10 +42,10 @@ void EventInfoSkillDialog__OnClose(EventInfoSkillDialog_o *this, const MethodInf
     this->fields.canTap = 0;
     v4 = Method_EventInfoSkillDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoSkillDialog_OnClose__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1CE6718(Method_EventInfoSkillDialog_OnClose__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v4, v4[4]);
+      v4 = (_QWORD *)sub_1D0F0CC(Method_EventInfoSkillDialog_OnClose__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
-    v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_EventInfoSkillDialog__OnClose_b__15_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v6, 0);
   }
@@ -66,15 +66,15 @@ void EventInfoSkillDialog__Open(
   System_Action_o *v13; // x22
   const MethodInfo *v14; // x3
 
-  if ( (byte_4E06716 & 1) == 0 )
+  if ( (byte_4E793BD & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_EventInfoSkillDialog__Open_b__13_0__);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E06716 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_EventInfoSkillDialog__Open_b__13_0__);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E793BD = 1;
   }
   this->fields.onClosed = inOnClosed;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.onClosed,
     (int32_t)inOnClosed,
     (int32_t)atlasList,
@@ -90,7 +90,7 @@ void EventInfoSkillDialog__Open(
     AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0);
   this->fields.canTap = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
-  v13 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_EventInfoSkillDialog__Open_b__13_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
   EventInfoSkillDialog__SetupSkillInfo(this, imagePartsGroupId, atlasList, v14);
@@ -136,23 +136,23 @@ void EventInfoSkillDialog__SetupSkillInfo(
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v38; // x8
 
-  if ( (byte_4E06717 & 1) == 0 )
+  if ( (byte_4E793BE & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_ImagePartsGroupMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
-    sub_1CE6700(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_1CE6700(&Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_EventInfoSkillDialog___c__SetupSkillInfo_b__14_0__);
-    sub_1CE6700(&EventInfoSkillDialog___c_TypeInfo);
-    byte_4E06717 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+    sub_1D0F0B4(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_1D0F0B4(&Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_EventInfoSkillDialog___c__SetupSkillInfo_b__14_0__);
+    sub_1D0F0B4(&EventInfoSkillDialog___c_TypeInfo);
+    byte_4E793BE = 1;
   }
   TransformHelper__DestroyChildren(this->fields.skillParent, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
   if ( !Master_object )
     goto LABEL_45;
   OpenEntities = ImagePartsGroupMaster__GetOpenEntities(Master_object, imagePartsGroupId, 0);
@@ -172,11 +172,11 @@ void EventInfoSkillDialog__SetupSkillInfo(
       v10 = EventInfoSkillDialog___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__14_0 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    _9__14_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__14_0, v13, Method_EventInfoSkillDialog___c__SetupSkillInfo_b__14_0__, 0);
     static_fields = EventInfoSkillDialog___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Func_ImagePartsGroupEntity__bool__o *)_9__14_0;
-    sub_1CE66A4(
+    sub_1D0F058(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__14_0,
       (int32_t)_9__14_0,
       v15,
@@ -189,10 +189,10 @@ void EventInfoSkillDialog__SetupSkillInfo(
   v21 = System_Linq_Enumerable__Where_object_(
           v11,
           (System_Func_TSource__bool__o *)_9__14_0,
-          (const MethodInfo_324B214 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
   Master_object = (ImagePartsGroupMaster_o *)System_Linq_Enumerable__ToArray_object_(
                                                v21,
-                                               (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+                                               (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
   if ( !Master_object )
     goto LABEL_45;
   v22 = Master_object;
@@ -216,13 +216,13 @@ void EventInfoSkillDialog__SetupSkillInfo(
     do
     {
       if ( v27 >= (unsigned int)v26 )
-        sub_1CE6960(v25);
+        sub_1D0F314(v25);
       v29 = (ImagePartsGroupEntity_o *)*((_QWORD *)&v22->fields.revision + v27);
       v30 = GameObjectHelper__Instantiate_object_(
               this->fields.skillPrefab,
               this->fields.skillParent,
               0,
-              (const MethodInfo_325DA60 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
+              (const MethodInfo_32AA068 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v25 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v30, 0, 0);
@@ -256,7 +256,7 @@ void EventInfoSkillDialog__SetupSkillInfo(
       if ( !Master_object )
         goto LABEL_45;
       v34 = (float)(v28 * 0.5) + this->fields.noScrollSkillOffset;
-      UnityEngine_Transform__SetParent_72941980(
+      UnityEngine_Transform__SetParent_73382924(
         (UnityEngine_Transform_o *)Master_object,
         this->fields.noScrollSkillParent,
         0,
@@ -290,7 +290,7 @@ void EventInfoSkillDialog__SetupSkillInfo(
         }
       }
 LABEL_45:
-      sub_1CE6958(Master_object, v8);
+      sub_1D0F30C(Master_object, v8);
     }
   }
 }
@@ -308,20 +308,20 @@ void EventInfoSkillDialog___OnClose_b__15_0(EventInfoSkillDialog_o *this, const 
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4E0671A & 1) == 0 )
+  if ( (byte_4E793C1 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0671A = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E793C1 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_72918540(gameObject, 0);
+  UnityEngine_Object__Destroy_73359484(gameObject, 0);
   onClosed = this->fields.onClosed;
   p_onClosed = (GrandQuestFolderBoardItem_o *)&this->fields.onClosed;
   ActionExtensions__Call(onClosed, 0);
   p_onClosed->klass = 0;
-  sub_1CE66A4(p_onClosed, 0, v6, v7, v8, v9, v10, v11);
+  sub_1D0F058(p_onClosed, 0, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -341,15 +341,15 @@ void EventInfoSkillDialog___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E0671B & 1) == 0 )
+  if ( (byte_4E793C2 & 1) == 0 )
   {
-    sub_1CE6700(&EventInfoSkillDialog___c_TypeInfo);
-    byte_4E0671B = 1;
+    sub_1D0F0B4(&EventInfoSkillDialog___c_TypeInfo);
+    byte_4E793C2 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(EventInfoSkillDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(EventInfoSkillDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoSkillDialog___c_TypeInfo->static_fields->__9 = (struct EventInfoSkillDialog___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)EventInfoSkillDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -373,6 +373,6 @@ bool EventInfoSkillDialog___c___SetupSkillInfo_b__14_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return ImagePartsGroupEntity__ExistsSkill(v, 0);
 }

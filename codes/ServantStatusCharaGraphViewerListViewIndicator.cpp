@@ -18,7 +18,7 @@ void ServantStatusCharaGraphViewerListViewIndicator__Init(
   System_String_o *v7; // x7
 
   this->fields.onModifyCenterItem = onModifyCenter;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.onModifyCenterItem,
     (int32_t)onModifyCenter,
     (int32_t)method,
@@ -45,10 +45,10 @@ void ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterItem(
   __int64 naturalAligment; // x11
   ListViewItem_o *v12; // x1
 
-  if ( (byte_4E008FF & 1) == 0 )
+  if ( (byte_4E73527 & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_4E008FF = 1;
+    sub_1D0F0B4(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_4E73527 = 1;
   }
   onModifyCenterItem = this->fields.onModifyCenterItem;
   if ( onModifyCenterItem )
@@ -101,7 +101,7 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -112,11 +112,11 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) != 0 )
+  if ( (sub_1D0F174(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1B12A8C;
+      v13 = sub_1B38894;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -128,41 +128,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1CE67B8(method);
-        v16 = sub_1CE6D4C(method);
+        v15 = sub_1D0F16C(method);
+        v16 = sub_1D0F700(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1B12B88;
+            v13 = sub_1B38990;
           else
-            v13 = sub_1B12B4C;
+            v13 = sub_1B38954;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1B12AC8;
+          v13 = sub_1B388D0;
         }
         else
         {
-          v13 = sub_1B12A9C;
+          v13 = sub_1B388A4;
         }
       }
       else
       {
-        v13 = sub_1B12A6C;
+        v13 = sub_1B38874;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v17, 0);
+      v17 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1B12A24;
+  this->fields.extra_arg = (intptr_t)sub_1B3882C;
 }
 
 
@@ -176,7 +176,7 @@ System_IAsyncResult_o *ServantStatusCharaGraphViewerListViewIndicator_OnModifyCe
   ServantStatusCharaGraphListViewItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, &v6, callback, object);
 }
 
 
@@ -185,7 +185,7 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent__EndInvo
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

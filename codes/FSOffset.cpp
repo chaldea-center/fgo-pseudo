@@ -27,10 +27,10 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E063C8 & 1) == 0 )
+  if ( (byte_4E7906F & 1) == 0 )
   {
-    sub_1CE6700(&FSUtility_TypeInfo);
-    byte_4E063C8 = 1;
+    sub_1D0F0B4(&FSUtility_TypeInfo);
+    byte_4E7906F = 1;
   }
   if ( this->fields.enableAddBottomY )
   {
@@ -48,7 +48,7 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
             z = localPosition.fields.z,
             (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
       {
-        sub_1CE6958(transform, v5);
+        sub_1D0F30C(transform, v5);
       }
       v11.fields.x = x;
       v11.fields.z = z;
@@ -67,10 +67,10 @@ void FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
   float v6; // s0
   int32_t v7; // w20
 
-  if ( (byte_4E063C6 & 1) == 0 )
+  if ( (byte_4E7906D & 1) == 0 )
   {
-    sub_1CE6700(&FSUtility_TypeInfo);
-    byte_4E063C6 = 1;
+    sub_1D0F0B4(&FSUtility_TypeInfo);
+    byte_4E7906D = 1;
   }
   if ( this->fields.enableAddOffsetX )
   {
@@ -93,12 +93,12 @@ void FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
       v7 = UnityEngine_Screen__get_width(0);
       v6 = (float)v7 / (float)UnityEngine_Screen__get_height(0);
     }
-    FSOffset__AddOffsetX_45256532(this, v6, v5);
+    FSOffset__AddOffsetX_45492328(this, v6, v5);
   }
 }
 
 
-void FSOffset__AddOffsetX_45256532(FSOffset_o *this, float ratio, const MethodInfo *method)
+void FSOffset__AddOffsetX_45492328(FSOffset_o *this, float ratio, const MethodInfo *method)
 {
   float subMarginX; // s9
   int32_t calcNotchSize; // w20
@@ -117,10 +117,10 @@ void FSOffset__AddOffsetX_45256532(FSOffset_o *this, float ratio, const MethodIn
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E063C7 & 1) == 0 )
+  if ( (byte_4E7906E & 1) == 0 )
   {
-    sub_1CE6700(&FSUtility_TypeInfo);
-    byte_4E063C7 = 1;
+    sub_1D0F0B4(&FSUtility_TypeInfo);
+    byte_4E7906E = 1;
   }
   subMarginX = this->fields.subMarginX;
   calcNotchSize = this->fields.calcNotchSize;
@@ -160,7 +160,7 @@ void FSOffset__AddOffsetX_45256532(FSOffset_o *this, float ratio, const MethodIn
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_19:
-    sub_1CE6958(transform, v13);
+    sub_1D0F30C(transform, v13);
   v20.fields.x = x;
   v20.fields.y = y;
   v20.fields.z = z;
@@ -183,10 +183,10 @@ void FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4E063C4 & 1) == 0 )
+  if ( (byte_4E7906B & 1) == 0 )
   {
-    sub_1CE6700(&CommonUI_TypeInfo);
-    byte_4E063C4 = 1;
+    sub_1D0F0B4(&CommonUI_TypeInfo);
+    byte_4E7906B = 1;
   }
   if ( this->fields.checkForceObi )
   {
@@ -195,7 +195,7 @@ void FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.defaultPosition, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1CE6958(transform, v4);
+      sub_1D0F30C(transform, v4);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.defaultScale, 0);
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
@@ -218,7 +218,7 @@ void FSOffset__RestoreDefaults(FSOffset_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   v5 = transform;
   UnityEngine_Transform__set_localPosition(transform, this->fields.defaultPosition, 0);
   UnityEngine_Transform__set_localScale(v5, this->fields.defaultScale, 0);
@@ -242,10 +242,10 @@ void FSOffset__SetOffset(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E063C5 & 1) == 0 )
+  if ( (byte_4E7906C & 1) == 0 )
   {
-    sub_1CE6700(&FSUtility_TypeInfo);
-    byte_4E063C5 = 1;
+    sub_1D0F0B4(&FSUtility_TypeInfo);
+    byte_4E7906C = 1;
   }
   if ( this->fields.enablePosition )
   {
@@ -305,7 +305,7 @@ LABEL_21:
       goto LABEL_21;
     }
 LABEL_22:
-    sub_1CE6958(transform, v6);
+    sub_1D0F30C(transform, v6);
   }
 }
 
@@ -327,7 +327,7 @@ void FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *method)
       || (this->fields.defaultPosition = UnityEngine_Transform__get_localPosition(transform, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1CE6958(transform, v4);
+      sub_1D0F30C(transform, v4);
     }
     localScale = UnityEngine_Transform__get_localScale(transform, 0);
     checkForceObi = this->fields.checkForceObi;

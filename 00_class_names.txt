@@ -76,6 +76,7 @@ AppendSkillExchangeCombineControl
 AppendSkillExchangeDialog
 AppendSkillListComponent
 AreaEntity
+AreaInfoAnotherViewTransitionDialogComponent
 AreaMaster
 AssetData
 AssetDataListInfo
@@ -225,6 +226,7 @@ BattleCharaChangeConfirmListViewItemDrawSkill
 BattleCharaChangeConfirmListViewItemDrawTreasureDevice
 BattleCharaChangeConfirmListViewManager
 BattleCharaChangeConfirmListViewObject
+BattleCharaColorMatrixComponent
 BattleChrControl
 BattleChrManager
 BattleComboData
@@ -363,6 +365,7 @@ BattlePerformanceTurnSituationComponent
 BattlePlayAnimationComponent
 BattlePlayMovieActionData
 BattlePlayMovieTask
+BattlePlayerAttackPreselectTargetWindow
 BattlePointData
 BattlePointEntity
 BattlePointGaugeCellTypeComponent
@@ -842,6 +845,7 @@ ClassRelationMaster
 ClassRelationOverwriteEntity
 ClassRelationOverwriteMaster
 ClassStatisticsInfo
+ClearPlayerAttackPreselectTargetInterruptProcess
 ClearPlayerPrefs
 ClearRandomMissionInfo
 ClientApiErrorDialogRequest
@@ -1136,6 +1140,7 @@ DebugInputBuffAllComponent
 DebugInputBuffComponent
 DebugInputCommandCodeComponent
 DebugInputComponent
+DebugInputFastForwardBreakShiftComponent
 DebugInputInfiniteGutsComponent
 DebugInputOverwriteTdVoiceLottery
 DebugInputSimpleSelectionElement
@@ -1155,6 +1160,7 @@ DebugParamSelectComponent
 DebugQuestRequest
 DebugSelectDialog
 DebugServerTimeRequest
+DebugSetHpComponent
 DebugSignupMenu
 DebugSkillSelectCellComponent
 DebugSkillSelectComponent
@@ -2094,6 +2100,11 @@ ImageItem
 ImageLimitCount
 ImagePartsGroupEntity
 ImagePartsGroupMaster
+ImageViewListViewItem
+ImageViewListViewItemDraw
+ImageViewListViewManager
+ImageViewListViewMenu
+ImageViewListViewObject
 Individuality
 IndividualityPersonalityEntity
 IndividualityPersonalityMaster
@@ -3309,6 +3320,7 @@ SetScenarioTextSpeedControl
 SetSelectSvtInfoComponent
 SetSmoothnessControl
 SetSpoilerProtectionControl
+SetSupportLimitCountToDispLimitCount
 SetSvtInfo
 SetSvtRandOptionControl
 SetSwitch2OptionControl

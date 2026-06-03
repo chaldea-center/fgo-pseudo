@@ -1,11 +1,11 @@
 void CombineLimitUpWarningDialog___ctor(CombineLimitUpWarningDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4DFE7E7 & 1) == 0 )
+  if ( (byte_4E713DC & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4DFE7E7 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E713DC = 1;
   }
-  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_D25240;
+  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_D35AE0;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -33,12 +33,12 @@ void CombineLimitUpWarningDialog__Init(CombineLimitUpWarningDialog_o *this, cons
   const MethodInfo *v6; // x2
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4DFE7E1 & 1) == 0 )
+  if ( (byte_4E713D6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog_OnSliderDragFinished__);
-    sub_1CE6700(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFE7E1 = 1;
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog_OnSliderDragFinished__);
+    sub_1D0F0B4(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E713D6 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -70,7 +70,7 @@ void CombineLimitUpWarningDialog__Init(CombineLimitUpWarningDialog_o *this, cons
     goto LABEL_12;
   UIProgressBar__set_value((UIProgressBar_o *)titleLabel, 0.0, 0);
   checkSlider = this->fields.checkSlider;
-  v5 = (UIProgressBar_OnDragFinished_o *)sub_1CE694C(UIProgressBar_OnDragFinished_TypeInfo);
+  v5 = (UIProgressBar_OnDragFinished_o *)sub_1D0F300(UIProgressBar_OnDragFinished_TypeInfo);
   UIProgressBar_OnDragFinished___ctor(
     v5,
     (Il2CppObject *)this,
@@ -78,12 +78,12 @@ void CombineLimitUpWarningDialog__Init(CombineLimitUpWarningDialog_o *this, cons
     0);
   if ( !checkSlider
     || (checkSlider->fields.onDragFinished = v5,
-        sub_1CE66A4(&checkSlider->fields.onDragFinished, v5),
+        sub_1D0F058(&checkSlider->fields.onDragFinished, v5),
         CombineLimitUpWarningDialog__SetSlider(this, 0, v6),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_12:
-    sub_1CE6958(titleLabel, method);
+    sub_1D0F30C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -96,22 +96,22 @@ void CombineLimitUpWarningDialog__OnClickCancel(CombineLimitUpWarningDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4DFE7E5 & 1) == 0 )
+  if ( (byte_4E713DA & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog_OnClickCancel__);
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog__OnClickCancel_b__24_0__);
-    byte_4DFE7E5 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog_OnClickCancel__);
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog__OnClickCancel_b__24_0__);
+    byte_4E713DA = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_CombineLimitUpWarningDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CombineLimitUpWarningDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718(Method_CombineLimitUpWarningDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC(Method_CombineLimitUpWarningDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
-    v5 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_CombineLimitUpWarningDialog__OnClickCancel_b__24_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -126,28 +126,28 @@ void CombineLimitUpWarningDialog__OnClickDecide(CombineLimitUpWarningDialog_o *t
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4DFE7E4 & 1) == 0 )
+  if ( (byte_4E713D9 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog_OnClickDecide__);
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog__OnClickDecide_b__23_0__);
-    byte_4DFE7E4 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog_OnClickDecide__);
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog__OnClickDecide_b__23_0__);
+    byte_4E713D9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
     if ( !checkSlider )
-      sub_1CE6958(0, method);
+      sub_1D0F30C(0, method);
     value = UIProgressBar__get_value(checkSlider, 0);
     v5 = Method_CombineLimitUpWarningDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_CombineLimitUpWarningDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1CE6718(Method_CombineLimitUpWarningDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1D0F0CC(Method_CombineLimitUpWarningDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
     if ( value >= 1.0 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       this->fields.state = 3;
-      v7 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_CombineLimitUpWarningDialog__OnClickDecide_b__23_0__, 0);
       BaseDialog__Close((BaseDialog_o *)this, v7, 0);
     }
@@ -163,13 +163,13 @@ void CombineLimitUpWarningDialog__OnEnable(CombineLimitUpWarningDialog_o *this, 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4DFE7E6 & 1) == 0 )
+  if ( (byte_4E713DB & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4DFE7E6 = 1;
+    sub_1D0F0B4(&StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4E713DB = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46098588(transform, (System_String_o *)StringLiteral_15799/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -187,7 +187,7 @@ void CombineLimitUpWarningDialog__OnSliderDragFinished(CombineLimitUpWarningDial
     || (value = UIProgressBar__get_value(checkSlider, 0),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0) )
   {
-    sub_1CE6958(checkSlider, method);
+    sub_1D0F30C(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -214,50 +214,50 @@ void CombineLimitUpWarningDialog__Open(
   UILabel_o *cancelButtonLabel; // x20
   System_Action_o *v12; // x20
 
-  if ( (byte_4DFE7E3 & 1) == 0 )
+  if ( (byte_4E713D8 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_CombineLimitUpWarningDialog_EndOpen__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_8332/*"LIMITUP_CHECK_COMBINE_TITLE"*/);
-    sub_1CE6700(&StringLiteral_8331/*"LIMITUP_CHECK_COMBINE_BODY"*/);
-    sub_1CE6700(&StringLiteral_3715/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1CE6700(&StringLiteral_8333/*"LIMITUP_CHECK_WARNING_SLIDER"*/);
-    sub_1CE6700(&StringLiteral_3713/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4DFE7E3 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_CombineLimitUpWarningDialog_EndOpen__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_8368/*"LIMITUP_CHECK_COMBINE_TITLE"*/);
+    sub_1D0F0B4(&StringLiteral_8367/*"LIMITUP_CHECK_COMBINE_BODY"*/);
+    sub_1D0F0B4(&StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1D0F0B4(&StringLiteral_8369/*"LIMITUP_CHECK_WARNING_SLIDER"*/);
+    sub_1D0F0B4(&StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4E713D8 = 1;
   }
   CombineLimitUpWarningDialog__Init(this, (const MethodInfo *)closeCallback);
   this->fields.closeFunc = closeCallback;
-  sub_1CE66A4(&this->fields.closeFunc, closeCallback);
+  sub_1D0F058(&this->fields.closeFunc, closeCallback);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8332/*"LIMITUP_CHECK_COMBINE_TITLE"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8368/*"LIMITUP_CHECK_COMBINE_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_11;
   UILabel__set_text(titleLabel, v6, 0);
   warningLabel = this->fields.warningLabel;
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8331/*"LIMITUP_CHECK_COMBINE_BODY"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8367/*"LIMITUP_CHECK_COMBINE_BODY"*/, 0);
   if ( !warningLabel )
     goto LABEL_11;
   UILabel__set_text(warningLabel, v6, 0);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8333/*"LIMITUP_CHECK_WARNING_SLIDER"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8369/*"LIMITUP_CHECK_WARNING_SLIDER"*/, 0);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v6, 0),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COMMON_CONFIRM_DECIDE"*/, 0),
+        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/, 0),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v6, 0),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3713/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelButtonLabel) )
   {
 LABEL_11:
-    sub_1CE6958(v6, v7);
+    sub_1D0F30C(v6, v7);
   }
   UILabel__set_text(cancelButtonLabel, v6, 0);
-  v12 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_CombineLimitUpWarningDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v12, 0, 0, 0);
 }
@@ -277,18 +277,18 @@ void CombineLimitUpWarningDialog__SetSlider(
   float r; // s0 OVERLAPPED
   __int64 v11; // x1
 
-  if ( (byte_4DFE7E2 & 1) == 0 )
+  if ( (byte_4E713D7 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20883/*"img_slider_thumb_locked"*/);
-    sub_1CE6700(&StringLiteral_20882/*"img_slider_thumb"*/);
-    byte_4DFE7E2 = 1;
+    sub_1D0F0B4(&StringLiteral_20974/*"img_slider_thumb_locked"*/);
+    sub_1D0F0B4(&StringLiteral_20973/*"img_slider_thumb"*/);
+    byte_4E713D7 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_15;
-  v6 = &StringLiteral_20882/*"img_slider_thumb"*/;
+  v6 = &StringLiteral_20973/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = &StringLiteral_20883/*"img_slider_thumb_locked"*/;
+    v6 = &StringLiteral_20974/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, (System_String_o *)*v6, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   a = 1.0;
@@ -314,7 +314,7 @@ void CombineLimitUpWarningDialog__SetSlider(
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_15:
-    sub_1CE6958(sliderSprite, sliderOn);
+    sub_1D0F30C(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
     sliderSprite,
@@ -329,7 +329,7 @@ void CombineLimitUpWarningDialog___OnClickCancel_b__24_0(CombineLimitUpWarningDi
 
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     0,
@@ -343,7 +343,7 @@ void CombineLimitUpWarningDialog___OnClickDecide_b__23_0(CombineLimitUpWarningDi
 
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))closeFunc->fields.invoke_impl)(
     closeFunc->fields.method_code,
     1,
@@ -366,15 +366,15 @@ void CombineLimitUpWarningDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1CE66A4(&this->fields.m_target, object);
+  sub_1D0F058(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v10, 0);
+      v10 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -386,9 +386,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B0E044;
+  this->fields.invoke_impl = (intptr_t)sub_1B33E4C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B0DFFC;
+  this->fields.extra_arg = (intptr_t)sub_1B33E04;
 }
 
 
@@ -403,14 +403,14 @@ System_IAsyncResult_o *CombineLimitUpWarningDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4DFE7E8 & 1) == 0 )
+  if ( (byte_4E713DD & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4DFE7E8 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E713DD = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -419,7 +419,7 @@ void CombineLimitUpWarningDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

@@ -1,9 +1,9 @@
 void RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E060E5 & 1) == 0 )
+  if ( (byte_4E78D8C & 1) == 0 )
   {
-    sub_1CE6700(&CommonEffectComponent_TypeInfo);
-    byte_4E060E5 = 1;
+    sub_1D0F0B4(&CommonEffectComponent_TypeInfo);
+    byte_4E78D8C = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -37,18 +37,18 @@ void RaceResultEffectComponent__SetParam(
   System_Object_array *v17; // x20
   __int64 v18; // x24
 
-  if ( (byte_4E060E4 & 1) == 0 )
+  if ( (byte_4E78D8B & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_4E060E4 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+    byte_4E78D8B = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)p_param, (int32_t)param, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_param, (int32_t)param, (int32_t)method, v3, v4, v5, v6, v7);
   v13 = (__int64)*(p_param - 1);
   if ( !v13 )
 LABEL_17:
-    sub_1CE6958(Components_object, v12);
+    sub_1D0F30C(Components_object, v12);
   v14 = *(_DWORD *)(v13 + 24);
   if ( v14 >= 1 )
   {
@@ -62,7 +62,7 @@ LABEL_17:
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_325C798 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_32A8DA0 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -90,6 +90,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1CE6960(Components_object);
+    sub_1D0F314(Components_object);
   }
 }

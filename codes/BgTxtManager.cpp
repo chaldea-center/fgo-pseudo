@@ -6,10 +6,10 @@ void BgTxtManager___ctor(BgTxtManager_o *this, const MethodInfo *method)
 
 bool BgTxtManager__IsActiveBgTxt(const MethodInfo *method)
 {
-  if ( (byte_4E03DB9 & 1) == 0 )
+  if ( (byte_4E76A31 & 1) == 0 )
   {
-    sub_1CE6700(&ServantCommentManager_TypeInfo);
-    byte_4E03DB9 = 1;
+    sub_1D0F0B4(&ServantCommentManager_TypeInfo);
+    byte_4E76A31 = 1;
   }
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);

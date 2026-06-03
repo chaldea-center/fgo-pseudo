@@ -2,10 +2,10 @@ void CommandCardExceedResultWindowComponent___ctor(
         CommandCardExceedResultWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E08AD0 & 1) == 0 )
+  if ( (byte_4E7B802 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4E08AD0 = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E7B802 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,27 +24,27 @@ int32_t CommandCardExceedResultWindowComponent__GetCommandCodeId(
   Il2CppClass *klass; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
-  if ( (byte_4E08ACF & 1) == 0 )
+  if ( (byte_4E7B801 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1CE6700(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08ACF = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B801 = 1;
   }
   if ( userCommandCodeId < 1 )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0
+                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0
     || (Instance = DataMasterBase_object__object__long___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      userCommandCodeId,
-                     (const MethodInfo_34EBA0C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__)) == 0 )
+                     (const MethodInfo_353832C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__)) == 0 )
   {
-    sub_1CE6958(Instance, v5);
+    sub_1D0F30C(Instance, v5);
   }
   klass = Instance[5].klass;
   monitor = Instance[5].monitor;
@@ -52,7 +52,7 @@ int32_t CommandCardExceedResultWindowComponent__GetCommandCodeId(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v9.fields.currentCryptoKey = klass;
   *(_QWORD *)&v9.fields.fakeValue = monitor;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v9, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v9, 0);
 }
 
 
@@ -70,26 +70,26 @@ int64_t CommandCardExceedResultWindowComponent__GetUserCommandCodeId(
   __int64 v11; // x8
   UserServantCommandCodeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E08ACE & 1) == 0 )
+  if ( (byte_4E7B800 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08ACE = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B800 = 1;
   }
   entity = 0;
-  result = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_17;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)result,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   result = (int64_t)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -110,9 +110,9 @@ int64_t CommandCardExceedResultWindowComponent__GetUserCommandCodeId(
     return result;
   if ( !entity || (userCommandCodeIds = entity->fields.userCommandCodeIds) == 0 )
 LABEL_17:
-    sub_1CE6958(result, v7);
+    sub_1D0F30C(result, v7);
   if ( LODWORD(userCommandCodeIds->max_length) <= cardIndex )
-    sub_1CE6960(0);
+    sub_1D0F314(0);
   v11 = userCommandCodeIds->m_Items[cardIndex];
   return v11 & ~(v11 >> 63);
 }
@@ -185,29 +185,29 @@ void CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
   v15 = multiCommandCardDisplayTitleColor.fields.b;
   v16 = multiCommandCardDisplayTitleColor.fields.g;
   v17 = multiCommandCardDisplayTitleColor.fields.r;
-  if ( (byte_4E08ACC & 1) == 0 )
+  if ( (byte_4E7B7FE & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&Method_BaseDialog_EndOpenBaseDialog__);
-    sub_1CE6700(&BattleCommandData_TypeInfo);
-    sub_1CE6700(&Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__);
-    sub_1CE6700(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
-    sub_1CE6700(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1CE6700(&ImageLimitCount_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E08ACC = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&Method_BaseDialog_EndOpenBaseDialog__);
+    sub_1D0F0B4(&BattleCommandData_TypeInfo);
+    sub_1D0F0B4(&Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
+    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1D0F0B4(&ImageLimitCount_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4E7B7FE = 1;
   }
   v24 = Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__;
   entity = 0;
   if ( (*((_BYTE *)Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__ + 83) & 2) != 0 )
-    v24 = (_QWORD *)sub_1CE6718(Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__);
-  v25 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v24, v24[4]);
+    v24 = (_QWORD *)sub_1D0F0CC(Method_CommandCardExceedResultWindowComponent_SetCommandCardExceedInfo__);
+  v25 = (System_Reflection_MethodBase_o *)sub_1D0F098(v24, v24[4]);
   OverwriteAssetSoundName__PlaySystemSe(v25, 6, 0, 0);
   if ( useServantId <= 0 )
   {
@@ -228,32 +228,32 @@ void CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   LimitCountByImageLimitCostumeIn = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v29, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_58;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_58;
   v57 = multiCommandCardDisplayTitle;
   v31 = DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           useServantId,
-          (const MethodInfo_34E925C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_3535B7C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_58;
   v58 = exceedCount;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4DFE4CA )
+  if ( !byte_4E710BF )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    byte_4DFE4CA = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    byte_4E710BF = 1;
   }
   v33 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -268,7 +268,7 @@ void CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v60.fields.currentCryptoKey = v34;
   *(_QWORD *)&v60.fields.fakeValue = v35;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v60, 0);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v60, 0);
   if ( !MasterData_object )
     goto LABEL_58;
   UserServantCommandCardMaster__TryGetEntity(
@@ -277,16 +277,16 @@ void CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
     userIdNumber,
     (int)Instance,
     0);
-  v37 = (CommandCardExceedResultWindowComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(
+  v37 = (CommandCardExceedResultWindowComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
                                                       userServantEntity->fields.svtId,
                                                       0);
   UserCommandCodeId = CommandCardExceedResultWindowComponent__GetUserCommandCodeId(v37, (int)v37, cardIndex, v38);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_58;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_58;
   Instance = (DataManager_o *)ItemMaster__GetEntityByType((ItemMaster_o *)Instance, 25, 0);
@@ -306,14 +306,14 @@ void CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
     goto LABEL_58;
   if ( LODWORD(klass->_1.namespaze) <= cardIndex )
 LABEL_59:
-    sub_1CE6960(Instance);
+    sub_1D0F314(Instance);
   saveNameList = (int)Instance->fields.saveNameList;
   v43 = commandCardParam->m_Items[cardIndex];
   v44 = *((_DWORD *)&klass->_1.byval_arg.data + cardIndex);
-  v45 = (BattleCommandData_o *)sub_1CE694C(BattleCommandData_TypeInfo);
-  BattleCommandData___ctor_47826296(v45, v44, useServantId, LimitCountByImageLimitCostumeIn, 0, cardIndex, 0);
-  v46 = (BattleCommandData_o *)sub_1CE694C(BattleCommandData_TypeInfo);
-  BattleCommandData___ctor_47826296(v46, v44, useServantId, LimitCountByImageLimitCostumeIn, 0, cardIndex, 0);
+  v45 = (BattleCommandData_o *)sub_1D0F300(BattleCommandData_TypeInfo);
+  BattleCommandData___ctor_48086632(v45, v44, useServantId, LimitCountByImageLimitCostumeIn, 0, cardIndex, 0);
+  v46 = (BattleCommandData_o *)sub_1D0F300(BattleCommandData_TypeInfo);
+  BattleCommandData___ctor_48086632(v46, v44, useServantId, LimitCountByImageLimitCostumeIn, 0, cardIndex, 0);
   if ( !v45 )
     goto LABEL_58;
   v45->fields.userCommandCodeId = UserCommandCodeId;
@@ -376,7 +376,7 @@ LABEL_59:
                                        0)) == 0) )
   {
 LABEL_58:
-    sub_1CE6958(Instance, v27);
+    sub_1D0F30C(Instance, v27);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, (v52 ^ 1) & 1, 0);
   if ( (v52 & 1) == 0 )
@@ -418,7 +418,7 @@ LABEL_58:
       v54 = 0.0;
     GameObjectExtensions__SetLocalPositionY(this->fields.commandCardBaseObj, v54, 0);
   }
-  v55 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v55 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v55, (Il2CppObject *)this, Method_BaseDialog_EndOpenBaseDialog__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v55, 0, 0, 0);
 }
@@ -442,30 +442,30 @@ void CommandCardExceedResultWindowComponent__SetLabels(
   Il2CppObject *v17; // x20
   Il2CppObject *v18; // x0
 
-  if ( (byte_4E08ACD & 1) == 0 )
+  if ( (byte_4E7B7FF & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_3651/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/);
-    sub_1CE6700(&StringLiteral_3652/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/);
-    byte_4E08ACD = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3661/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/);
+    sub_1D0F0B4(&StringLiteral_3662/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/);
+    byte_4E7B7FF = 1;
   }
   previousStatusLabel = this->fields.previousStatusLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3652/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3662/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(previousParam, 0);
   v12 = (Il2CppObject *)LocalizationManager__GetNumberFormat(maxParam, 0);
-  v13 = System_String__Format_65164136(v10, NumberFormat, v12, 0);
+  v13 = System_String__Format_65604080(v10, NumberFormat, v12, 0);
   if ( !previousStatusLabel
     || (UILabel__set_text(previousStatusLabel, v13, 0),
         afterStatusLabel = this->fields.afterStatusLabel,
-        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3651/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0),
+        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3661/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0),
         v17 = (Il2CppObject *)LocalizationManager__GetNumberFormat(afterParam, 0),
         v18 = (Il2CppObject *)LocalizationManager__GetNumberFormat(maxParam, 0),
-        v13 = System_String__Format_65164136(v16, v17, v18, 0),
+        v13 = System_String__Format_65604080(v16, v17, v18, 0),
         !afterStatusLabel) )
   {
-    sub_1CE6958(v13, v14);
+    sub_1D0F30C(v13, v14);
   }
   UILabel__set_text(afterStatusLabel, v13, 0);
 }

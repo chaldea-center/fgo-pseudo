@@ -1,10 +1,10 @@
-void DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_34E6B24 *method)
+void DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_3533444 *method)
 {
   DataEntityBase___ctor((DataEntityBase_o *)this, 0);
 }
 
 
-System_String_o *DataEntityBase_int___get_PrimaryKey(DataEntityBase_int__o *this, const MethodInfo_34E6AE4 *method)
+System_String_o *DataEntityBase_int___get_PrimaryKey(DataEntityBase_int__o *this, const MethodInfo_3533404 *method)
 {
   int v4; // [xsp+Ch] [xbp-14h] BYREF
 

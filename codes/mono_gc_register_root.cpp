@@ -1,5 +1,5 @@
 __int64 mono_gc_register_root()
 {
-  sub_1CE7A90();
+  sub_1D10444();
   return 1;
 }

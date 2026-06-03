@@ -7,28 +7,28 @@ System_Single_array *EntityScriptUtil__GetFloatArray(
   System_Func_object__object__o *v7; // x22
   System_Single_array *result; // x0
 
-  if ( (byte_4E04561 & 1) == 0 )
+  if ( (byte_4E771DE & 1) == 0 )
   {
-    sub_1CE6700(&Method_EntityScriptUtil_GetScriptValue_List_object___List_float____);
-    sub_1CE6700(&Method_EntityScriptValueConvertLogic_ObjectListToFloatList__);
-    sub_1CE6700(&System_Func_List_object___List_float___TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_float__ToArray__);
-    byte_4E04561 = 1;
+    sub_1D0F0B4(&Method_EntityScriptUtil_GetScriptValue_List_object___List_float____);
+    sub_1D0F0B4(&Method_EntityScriptValueConvertLogic_ObjectListToFloatList__);
+    sub_1D0F0B4(&System_Func_List_object___List_float___TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__ToArray__);
+    byte_4E771DE = 1;
   }
   if ( !script )
     return defaultArray;
-  v7 = (System_Func_object__object__o *)sub_1CE694C(System_Func_List_object___List_float___TypeInfo);
+  v7 = (System_Func_object__object__o *)sub_1D0F300(System_Func_List_object___List_float___TypeInfo);
   System_Func_object__object____ctor(v7, 0, Method_EntityScriptValueConvertLogic_ObjectListToFloatList__, 0);
   result = (System_Single_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                     script,
                                     key,
                                     (System_Func_TSource__TDestination__o *)v7,
                                     0,
-                                    (const MethodInfo_320ACA0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_float____);
+                                    (const MethodInfo_3255AB0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_float____);
   if ( result )
     result = System_Collections_Generic_List_float___ToArray(
                (System_Collections_Generic_List_float__o *)result,
-               (const MethodInfo_3954774 *)Method_System_Collections_Generic_List_float__ToArray__);
+               (const MethodInfo_39AA89C *)Method_System_Collections_Generic_List_float__ToArray__);
   if ( !result )
     return defaultArray;
   return result;
@@ -41,17 +41,17 @@ float EntityScriptUtil__GetFloatValue(
         float defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E0455C & 1) == 0 )
+  if ( (byte_4E771D9 & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_GetValue_double___);
-    byte_4E0455C = 1;
+    sub_1D0F0B4(&Method_BasicHelper_GetValue_double___);
+    byte_4E771D9 = 1;
   }
   if ( script )
     return BasicHelper__GetValue_double_(
              script,
              key,
              defaultValue,
-             (const MethodInfo_31F18D8 *)Method_BasicHelper_GetValue_double___);
+             (const MethodInfo_323C6E8 *)Method_BasicHelper_GetValue_double___);
   return defaultValue;
 }
 
@@ -66,28 +66,28 @@ System_Collections_Generic_Dictionary_string__object__o *EntityScriptUtil__GetIn
   __int64 naturalAligment; // x10
   System_Collections_Generic_Dictionary_object__object__o *v8; // x19
 
-  if ( (byte_4E04562 & 1) == 0 )
+  if ( (byte_4E771DF & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_GetValue_object___);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_4E04562 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_GetValue_object___);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_4E771DF = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)script, 0) )
   {
     v5 = System_Collections_Generic_Dictionary_string__object__TypeInfo;
 LABEL_8:
-    v8 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1CE694C(v5);
+    v8 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1D0F300(v5);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v8,
-      (const MethodInfo_35B3FE0 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3600C34 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     return (System_Collections_Generic_Dictionary_string__object__o *)v8;
   }
   Value_object = BasicHelper__GetValue_object_(
                    script,
                    key,
                    0,
-                   (const MethodInfo_31F1AB0 *)Method_BasicHelper_GetValue_object___);
+                   (const MethodInfo_323C8C0 *)Method_BasicHelper_GetValue_object___);
   v5 = System_Collections_Generic_Dictionary_string__object__TypeInfo;
   if ( !Value_object )
     goto LABEL_8;
@@ -111,28 +111,28 @@ System_Int32_array *EntityScriptUtil__GetIntArray(
   System_Func_object__object__o *v7; // x22
   System_Int32_array *result; // x0
 
-  if ( (byte_4E0455E & 1) == 0 )
+  if ( (byte_4E771DB & 1) == 0 )
   {
-    sub_1CE6700(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
-    sub_1CE6700(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
-    sub_1CE6700(&System_Func_List_object___List_int___TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_int__ToArray__);
-    byte_4E0455E = 1;
+    sub_1D0F0B4(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+    sub_1D0F0B4(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
+    sub_1D0F0B4(&System_Func_List_object___List_int___TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
+    byte_4E771DB = 1;
   }
   if ( !script )
     return defaultValue;
-  v7 = (System_Func_object__object__o *)sub_1CE694C(System_Func_List_object___List_int___TypeInfo);
+  v7 = (System_Func_object__object__o *)sub_1D0F300(System_Func_List_object___List_int___TypeInfo);
   System_Func_object__object____ctor(v7, 0, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0);
   result = (System_Int32_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                    script,
                                    key,
                                    (System_Func_TSource__TDestination__o *)v7,
                                    0,
-                                   (const MethodInfo_320ACA0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+                                   (const MethodInfo_3255AB0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
   if ( result )
     result = System_Collections_Generic_List_int___ToArray(
                (System_Collections_Generic_List_int__o *)result,
-               (const MethodInfo_38EA9FC *)Method_System_Collections_Generic_List_int__ToArray__);
+               (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !result )
     return defaultValue;
   return result;
@@ -151,26 +151,26 @@ System_Int32_array *EntityScriptUtil__GetIntArrayDefaultEmpty(
   __int64 v9; // x0
   __int64 v10; // x0
 
-  if ( (byte_4E0455F & 1) == 0 )
+  if ( (byte_4E771DC & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_int___);
-    byte_4E0455F = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_int___);
+    byte_4E771DC = 1;
   }
   v7 = Method_System_Array_Empty_int___;
   v8 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v8 )
   {
-    sub_1CBC7E4(Method_System_Array_Empty_int___);
+    sub_1CE5198(Method_System_Array_Empty_int___);
     v8 = v7[7];
   }
   v9 = *(_QWORD *)(v8 + 16);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1CBC788(inited);
+    v9 = sub_1CE513C(inited);
   if ( !*(_DWORD *)(v9 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v9);
   v10 = *(_QWORD *)(v7[7] + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1CBC788(inited);
+    v10 = sub_1CE513C(inited);
   return EntityScriptUtil__GetIntArray(script, key, **(System_Int32_array ***)(v10 + 184), v3);
 }
 
@@ -181,17 +181,17 @@ int32_t EntityScriptUtil__GetIntValue(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E0455B & 1) == 0 )
+  if ( (byte_4E771D8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_GetValue_long___);
-    byte_4E0455B = 1;
+    sub_1D0F0B4(&Method_BasicHelper_GetValue_long___);
+    byte_4E771D8 = 1;
   }
   if ( script )
     return BasicHelper__GetValue_long_(
              script,
              key,
              defaultValue,
-             (const MethodInfo_31F19C4 *)Method_BasicHelper_GetValue_long___);
+             (const MethodInfo_323C7D4 *)Method_BasicHelper_GetValue_long___);
   return defaultValue;
 }
 
@@ -228,30 +228,30 @@ float EntityScriptUtil__GetMillesimal(
   System_Int32_array *v14; // x2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4E0455D & 1) == 0 )
+  if ( (byte_4E771DA & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1CE6700(&long_TypeInfo);
-    byte_4E0455D = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1D0F0B4(&long_TypeInfo);
+    byte_4E771DA = 1;
   }
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defaultValue;
   }
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
-    sub_1CE6958(0, v8);
+    sub_1D0F30C(0, v8);
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return (float)*(__int64 *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v9, v10) / 1000.0;
-  sub_1CE6CF4(Item);
+  sub_1D0F6A8(Item);
   EntityScriptUtil__GetIntArray(v12, v13, v14, v15);
   return result;
 }
@@ -263,10 +263,10 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScri
         System_String_o *key,
         System_Func_TSource__TDestination__o *converter,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o defaultValue,
-        const MethodInfo_320AE00 *method)
+        const MethodInfo_3255C10 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
-  const MethodInfo_320AE00_RGCTXs *rgctx_data; // x24
+  const MethodInfo_3255C10_RGCTXs *rgctx_data; // x24
   size_t actualSize; // x20
   char *v11; // x27
   long double v12; // q0
@@ -274,7 +274,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScri
   Il2CppClass *_2_TSource; // x1
   _QWORD *v15; // x0
   __int64 v16; // x1
-  const MethodInfo_320AE00_RGCTXs *v17; // x8
+  const MethodInfo_3255C10_RGCTXs *v17; // x8
   MethodInfo *_3_System_Func_TSource__TDestination__Invoke; // x1
   unsigned int bits; // w9
   void (*methodPointer)(); // x8
@@ -301,11 +301,11 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScri
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1CBC7E4();
+      sub_1CE5198();
       rgctx_data = method->rgctx_data;
     }
   }
@@ -322,7 +322,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScri
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     _0_TDestination = method->rgctx_data->_0_TDestination;
 LABEL_15:
@@ -336,10 +336,10 @@ LABEL_15:
   v13 = value;
   _2_TSource = method->rgctx_data->_2_TSource;
   if ( (*(&_2_TSource->_2.bitflags2 + 2) & 1) == 0 )
-    _2_TSource = (Il2CppClass *)sub_1CBC788(v12);
-  v15 = (_QWORD *)sub_1CE684C(v13, _2_TSource, v11);
+    _2_TSource = (Il2CppClass *)sub_1CE513C(v12);
+  v15 = (_QWORD *)sub_1D0F200(v13, _2_TSource, v11);
   if ( !v27 )
-    sub_1CE6958(v15, v16);
+    sub_1D0F30C(v15, v16);
   v17 = method->rgctx_data;
   _3_System_Func_TSource__TDestination__Invoke = v17->_3_System_Func_TSource__TDestination__Invoke;
   bits = v17->_2_TSource->_1.byval_arg.bits;
@@ -377,14 +377,14 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
         System_String_o *key,
         System_Func_TSource__TDestination__o *converter,
         System_Nullable_int__o defaultValue,
-        const MethodInfo_320A9D8 *method)
+        const MethodInfo_32557E8 *method)
 {
   __int64 v10; // x0
   __int64 v11; // x1
   __int64 v12; // x2
   __int64 v13; // x3
   long double v14; // q0
-  const MethodInfo_320A9D8_RGCTXs *rgctx_data; // x8
+  const MethodInfo_32557E8_RGCTXs *rgctx_data; // x8
   Il2CppObject *v16; // x21
   __int64 _2_TSource; // x1
   _QWORD *v18; // x0
@@ -397,9 +397,9 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
 
   if ( !method->rgctx_data )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( !method->rgctx_data )
-      sub_1CBC7E4();
+      sub_1CE5198();
   }
   value = 0;
   if ( script )
@@ -408,21 +408,21 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
             (Il2CppObject *)key,
             &value,
-            (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+            (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( (v10 & 1) != 0 )
     {
       if ( !converter )
-        sub_1CE6958(v10, v11);
+        sub_1D0F30C(v10, v11);
       rgctx_data = method->rgctx_data;
       v16 = value;
       _2_TSource = (__int64)rgctx_data->_2_TSource;
       if ( (*(_BYTE *)(_2_TSource + 309) & 1) == 0 )
       {
-        v10 = sub_1CBC788(v14);
+        v10 = sub_1CE513C(v14);
         _2_TSource = v10;
       }
       if ( !v16 )
-        sub_1CE6958(v10, _2_TSource);
+        sub_1D0F30C(v10, _2_TSource);
       if ( v16->klass->_1.element_class == *(Il2CppClass **)(_2_TSource + 64) )
       {
         v18 = (_QWORD *)j_il2cpp_object_unbox_0(v16, _2_TSource, v12, v13);
@@ -433,11 +433,11 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
       }
       else
       {
-        sub_1CE6CF4(v16);
+        sub_1D0F6A8(v16);
         if ( v21 != 1 )
-          sub_1DCA8DC();
+          sub_1DF3290();
         v22 = (_QWORD **)__cxa_begin_catch(v20);
-        v23 = sub_1CE6714(&System_InvalidCastException_TypeInfo);
+        v23 = sub_1D0F0C8(&System_InvalidCastException_TypeInfo);
         if ( (j_il2cpp_class_is_assignable_from_0(v23, **v22) & 1) == 0 )
         {
           exception = __cxa_allocate_exception(8u);
@@ -457,7 +457,7 @@ int32_t EntityScriptUtil__GetScriptValue_object__int_(
         System_String_o *key,
         System_Func_TSource__TDestination__o *converter,
         int32_t defaultValue,
-        const MethodInfo_320AB40 *method)
+        const MethodInfo_3255950 *method)
 {
   _BOOL8 v10; // x0
   __int64 v11; // x1
@@ -468,9 +468,9 @@ int32_t EntityScriptUtil__GetScriptValue_object__int_(
 
   if ( !method->rgctx_data )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( !method->rgctx_data )
-      sub_1CBC7E4();
+      sub_1CE5198();
   }
   value = 0;
   if ( script )
@@ -479,17 +479,17 @@ int32_t EntityScriptUtil__GetScriptValue_object__int_(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
             (Il2CppObject *)key,
             &value,
-            (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+            (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( v10 )
     {
       if ( !converter )
-        sub_1CE6958(v10, v11);
+        sub_1D0F30C(v10, v11);
       v13 = value;
       _2_TSource = method->rgctx_data->_2_TSource;
       if ( (*(&_2_TSource->_2.bitflags2 + 2) & 1) == 0 )
-        _2_TSource = (Il2CppClass *)sub_1CBC788(v12);
-      if ( v13 && !sub_1CE683C(v13, _2_TSource) )
-        sub_1CE6CF4(v13);
+        _2_TSource = (Il2CppClass *)sub_1CE513C(v12);
+      if ( v13 && !sub_1D0F1F0(v13, _2_TSource) )
+        sub_1D0F6A8(v13);
       return ((__int64 (__fastcall *)(intptr_t))converter->fields.invoke_impl)(converter->fields.method_code);
     }
   }
@@ -502,7 +502,7 @@ Il2CppObject *EntityScriptUtil__GetScriptValue_object__object_(
         System_String_o *key,
         System_Func_TSource__TDestination__o *converter,
         Il2CppObject *defaultValue,
-        const MethodInfo_320ACA0 *method)
+        const MethodInfo_3255AB0 *method)
 {
   _BOOL8 v10; // x0
   __int64 v11; // x1
@@ -513,9 +513,9 @@ Il2CppObject *EntityScriptUtil__GetScriptValue_object__object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( !method->rgctx_data )
-      sub_1CBC7E4();
+      sub_1CE5198();
   }
   value = 0;
   if ( script )
@@ -524,17 +524,17 @@ Il2CppObject *EntityScriptUtil__GetScriptValue_object__object_(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
             (Il2CppObject *)key,
             &value,
-            (const MethodInfo_35B619C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+            (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( v10 )
     {
       if ( !converter )
-        sub_1CE6958(v10, v11);
+        sub_1D0F30C(v10, v11);
       v13 = value;
       _2_TSource = method->rgctx_data->_2_TSource;
       if ( (*(&_2_TSource->_2.bitflags2 + 2) & 1) == 0 )
-        _2_TSource = (Il2CppClass *)sub_1CBC788(v12);
-      if ( v13 && !sub_1CE683C(v13, _2_TSource) )
-        sub_1CE6CF4(v13);
+        _2_TSource = (Il2CppClass *)sub_1CE513C(v12);
+      if ( v13 && !sub_1D0F1F0(v13, _2_TSource) )
+        sub_1D0F6A8(v13);
       return (Il2CppObject *)((__int64 (__fastcall *)(intptr_t))converter->fields.invoke_impl)(converter->fields.method_code);
     }
   }
@@ -550,23 +550,23 @@ System_String_array *EntityScriptUtil__GetStringArray(
 {
   System_Func_object__object__o *v7; // x22
 
-  if ( (byte_4E04559 & 1) == 0 )
+  if ( (byte_4E771D6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_EntityScriptUtil_GetScriptValue_List_object___string_____);
-    sub_1CE6700(&Method_EntityScriptValueConvertLogic_ObjectListToStringArray__);
-    sub_1CE6700(&System_Func_List_object___string____TypeInfo);
-    byte_4E04559 = 1;
+    sub_1D0F0B4(&Method_EntityScriptUtil_GetScriptValue_List_object___string_____);
+    sub_1D0F0B4(&Method_EntityScriptValueConvertLogic_ObjectListToStringArray__);
+    sub_1D0F0B4(&System_Func_List_object___string____TypeInfo);
+    byte_4E771D6 = 1;
   }
   if ( !script )
     return defaultValue;
-  v7 = (System_Func_object__object__o *)sub_1CE694C(System_Func_List_object___string____TypeInfo);
+  v7 = (System_Func_object__object__o *)sub_1D0F300(System_Func_List_object___string____TypeInfo);
   System_Func_object__object____ctor(v7, 0, Method_EntityScriptValueConvertLogic_ObjectListToStringArray__, 0);
   return (System_String_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                   script,
                                   key,
                                   (System_Func_TSource__TDestination__o *)v7,
                                   &defaultValue->obj,
-                                  (const MethodInfo_320ACA0 *)Method_EntityScriptUtil_GetScriptValue_List_object___string_____);
+                                  (const MethodInfo_3255AB0 *)Method_EntityScriptUtil_GetScriptValue_List_object___string_____);
 }
 
 
@@ -582,26 +582,26 @@ System_String_array *EntityScriptUtil__GetStringArrayDefaultEmpty(
   __int64 v9; // x0
   __int64 v10; // x0
 
-  if ( (byte_4E0455A & 1) == 0 )
+  if ( (byte_4E771D7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_string___);
-    byte_4E0455A = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_string___);
+    byte_4E771D7 = 1;
   }
   v7 = Method_System_Array_Empty_string___;
   v8 = *((_QWORD *)Method_System_Array_Empty_string___ + 7);
   if ( !v8 )
   {
-    sub_1CBC7E4(Method_System_Array_Empty_string___);
+    sub_1CE5198(Method_System_Array_Empty_string___);
     v8 = v7[7];
   }
   v9 = *(_QWORD *)(v8 + 16);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1CBC788(inited);
+    v9 = sub_1CE513C(inited);
   if ( !*(_DWORD *)(v9 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v9);
   v10 = *(_QWORD *)(v7[7] + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1CBC788(inited);
+    v10 = sub_1CE513C(inited);
   return EntityScriptUtil__GetStringArray(script, key, **(System_String_array ***)(v10 + 184), v3);
 }
 
@@ -612,17 +612,17 @@ System_String_o *EntityScriptUtil__GetStringValue(
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E04558 & 1) == 0 )
+  if ( (byte_4E771D5 & 1) == 0 )
   {
-    sub_1CE6700(&Method_BasicHelper_GetValue_string___);
-    byte_4E04558 = 1;
+    sub_1D0F0B4(&Method_BasicHelper_GetValue_string___);
+    byte_4E771D5 = 1;
   }
   if ( script )
     return (System_String_o *)BasicHelper__GetValue_object_(
                                 script,
                                 key,
                                 (Il2CppObject *)defaultValue,
-                                (const MethodInfo_31F1AB0 *)Method_BasicHelper_GetValue_string___);
+                                (const MethodInfo_323C8C0 *)Method_BasicHelper_GetValue_string___);
   else
     return defaultValue;
 }
@@ -633,16 +633,16 @@ bool EntityScriptUtil__ScriptHasKey(
         System_String_o *key,
         const MethodInfo *method)
 {
-  if ( (byte_4E04557 & 1) == 0 )
+  if ( (byte_4E771D4 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_4E04557 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    byte_4E771D4 = 1;
   }
   return script
       && System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+           (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
 }
 
 
@@ -666,41 +666,41 @@ bool EntityScriptUtil__TryGet2DimensionalIntArray(
   System_String_o *v18; // x7
   System_Object_array *v19; // x1
 
-  if ( (byte_4E04560 & 1) == 0 )
+  if ( (byte_4E771DD & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1CE6700(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int______);
-    sub_1CE6700(&Method_EntityScriptValueConvertLogic_DoubleObjectListToIntArrayList__);
-    sub_1CE6700(&System_Func_List_object___List_int_____TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_int____ToArray__);
-    byte_4E04560 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1D0F0B4(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int______);
+    sub_1D0F0B4(&Method_EntityScriptValueConvertLogic_DoubleObjectListToIntArrayList__);
+    sub_1D0F0B4(&System_Func_List_object___List_int_____TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_int____ToArray__);
+    byte_4E771DD = 1;
   }
   *resValue = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)resValue, 0, (int32_t)resValue, (int32_t)method, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)resValue, 0, (int32_t)resValue, (int32_t)method, v4, v5, v6, v7);
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0;
   }
-  v11 = (System_Func_object__object__o *)sub_1CE694C(System_Func_List_object___List_int_____TypeInfo);
+  v11 = (System_Func_object__object__o *)sub_1D0F300(System_Func_List_object___List_int_____TypeInfo);
   System_Func_object__object____ctor(v11, 0, Method_EntityScriptValueConvertLogic_DoubleObjectListToIntArrayList__, 0);
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  script,
                                  key,
                                  (System_Func_TSource__TDestination__o *)v11,
                                  0,
-                                 (const MethodInfo_320ACA0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int______);
+                                 (const MethodInfo_3255AB0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int______);
   if ( ScriptValue_object__object )
     v19 = System_Collections_Generic_List_object___ToArray(
             (System_Collections_Generic_List_object__o *)ScriptValue_object__object,
-            (const MethodInfo_3907AC0 *)Method_System_Collections_Generic_List_int____ToArray__);
+            (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_int____ToArray__);
   else
     v19 = 0;
   *resValue = (System_Int32_array_array *)v19;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)resValue, (int32_t)v19, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)resValue, (int32_t)v19, v13, v14, v15, v16, v17, v18);
   return 1;
 }
 
@@ -721,6 +721,6 @@ bool EntityScriptUtil__TryGetIntArray(
 
   IntArray = EntityScriptUtil__GetIntArray(script, key, 0, method);
   *resValue = IntArray;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)resValue, (int32_t)IntArray, v6, v7, v8, v9, v10, v11);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)resValue, (int32_t)IntArray, v6, v7, v8, v9, v10, v11);
   return IntArray != 0;
 }

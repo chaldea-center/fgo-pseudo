@@ -10,286 +10,286 @@ void DatFileName___cctor(const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4E038FE & 1) == 0 )
+  if ( (byte_4E76572 & 1) == 0 )
   {
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string___ctor__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__TypeInfo);
-    sub_1CE6700(&StringLiteral_18207/*"clearrandommissionsave.dat"*/);
-    sub_1CE6700(&StringLiteral_17299/*"battleuseitemrequestsave.dat"*/);
-    sub_1CE6700(&StringLiteral_23672/*"servantcharactergraphexopen.dat"*/);
-    sub_1CE6700(&StringLiteral_24693/*"unconfirmedpayment.dat"*/);
-    sub_1CE6700(&StringLiteral_25009/*"userservantlocksave.dat"*/);
-    sub_1CE6700(&StringLiteral_23269/*"questphasehintdialogopensave.dat"*/);
-    sub_1CE6700(&StringLiteral_25191/*"warboardmoviehistorysave.dat"*/);
-    sub_1CE6700(&StringLiteral_17125/*"authsave2.dat"*/);
-    sub_1CE6700(&StringLiteral_21823/*"materialbranchroutesave.dat"*/);
-    sub_1CE6700(&StringLiteral_23024/*"paymentsave.dat"*/);
-    sub_1CE6700(&StringLiteral_23674/*"servantprofilelimitcount.dat"*/);
-    sub_1CE6700(&StringLiteral_25000/*"usercommandcodenewsave.dat"*/);
-    sub_1CE6700(&StringLiteral_23261/*"questfocusstatesave.dat"*/);
-    sub_1CE6700(&StringLiteral_23678/*"serversave.dat"*/);
-    sub_1CE6700(&StringLiteral_25006/*"userservantcollectionsave.dat"*/);
-    sub_1CE6700(&StringLiteral_23197/*"purchasebybankrequestsave.dat"*/);
-    sub_1CE6700(&StringLiteral_17298/*"battleusecontinuerequestsave.dat"*/);
-    sub_1CE6700(&StringLiteral_21824/*"materialgroupclearhistorysave.dat"*/);
-    sub_1CE6700(&StringLiteral_23673/*"servantprofileeventjoin.dat"*/);
-    sub_1CE6700(&StringLiteral_21784/*"masterDataList.dat"*/);
-    sub_1CE6700(&StringLiteral_17124/*"authsave.dat"*/);
-    sub_1CE6700(&StringLiteral_17297/*"battleusecontinueitemrequestsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25005/*"usermissionprogsave_{0}_{1}.dat"*/);
-    sub_1CE6700(&StringLiteral_24488/*"tipsarchivestatesave_{0}.dat"*/);
-    sub_1CE6700(&StringLiteral_25010/*"userservantnewsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25004/*"usermissionprogsave_{0}.dat"*/);
-    sub_1CE6700(&StringLiteral_24999/*"usercommandcodecollectionsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25001/*"userequiplvsave.dat"*/);
-    sub_1CE6700(&StringLiteral_22848/*"otherusernewsave.dat"*/);
-    sub_1CE6700(&StringLiteral_21503/*"lastuseddecknumbersave.dat"*/);
-    sub_1CE6700(&StringLiteral_25189/*"warboardcontinue.dat"*/);
-    sub_1CE6700(&StringLiteral_23025/*"payment{0:D20}.dat"*/);
-    sub_1CE6700(&StringLiteral_19965/*"friendcodesave.dat"*/);
-    sub_1CE6700(&StringLiteral_21782/*"masterData.dat"*/);
-    sub_1CE6700(&StringLiteral_23262/*"questhintdialogopensave.dat"*/);
-    sub_1CE6700(&StringLiteral_25003/*"usermissionnewsave_{0}.dat"*/);
-    sub_1CE6700(&StringLiteral_21783/*"masterDataCheck.dat"*/);
-    sub_1CE6700(&StringLiteral_17294/*"battlecommandspellrequestsave.dat"*/);
-    sub_1CE6700(&StringLiteral_21825/*"materialservantlimitcountsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25008/*"userservantcommentsave.dat"*/);
-    sub_1CE6700(&StringLiteral_23869/*"signupsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25190/*"warboardmessagehistorysave.dat"*/);
-    sub_1CE6700(&StringLiteral_23590/*"scriptsave.dat"*/);
-    sub_1CE6700(&StringLiteral_25007/*"userservantcombinevoicesave.dat"*/);
-    byte_4E038FE = 1;
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__TypeInfo);
+    sub_1D0F0B4(&StringLiteral_18285/*"clearrandommissionsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17372/*"battleuseitemrequestsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23774/*"servantcharactergraphexopen.dat"*/);
+    sub_1D0F0B4(&StringLiteral_24801/*"unconfirmedpayment.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25118/*"userservantlocksave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23371/*"questphasehintdialogopensave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25300/*"warboardmoviehistorysave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17196/*"authsave2.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21916/*"materialbranchroutesave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23123/*"paymentsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23776/*"servantprofilelimitcount.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25109/*"usercommandcodenewsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23363/*"questfocusstatesave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23780/*"serversave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25115/*"userservantcollectionsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23299/*"purchasebybankrequestsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17371/*"battleusecontinuerequestsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21917/*"materialgroupclearhistorysave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23775/*"servantprofileeventjoin.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21877/*"masterDataList.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17195/*"authsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17370/*"battleusecontinueitemrequestsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25114/*"usermissionprogsave_{0}_{1}.dat"*/);
+    sub_1D0F0B4(&StringLiteral_24595/*"tipsarchivestatesave_{0}.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25119/*"userservantnewsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25113/*"usermissionprogsave_{0}.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25108/*"usercommandcodecollectionsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25110/*"userequiplvsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_22941/*"otherusernewsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21596/*"lastuseddecknumbersave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25298/*"warboardcontinue.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23124/*"payment{0:D20}.dat"*/);
+    sub_1D0F0B4(&StringLiteral_20053/*"friendcodesave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21875/*"masterData.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23364/*"questhintdialogopensave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25112/*"usermissionnewsave_{0}.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21876/*"masterDataCheck.dat"*/);
+    sub_1D0F0B4(&StringLiteral_17367/*"battlecommandspellrequestsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_21918/*"materialservantlimitcountsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25117/*"userservantcommentsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23971/*"signupsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25299/*"warboardmessagehistorysave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_23692/*"scriptsave.dat"*/);
+    sub_1D0F0B4(&StringLiteral_25116/*"userservantcombinevoicesave.dat"*/);
+    byte_4E76572 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1CE694C(System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1D0F300(System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_357B178 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string___ctor__);
+    (const MethodInfo_35C7DCC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string___ctor__);
   if ( !v1 )
-    sub_1CE6958(v2, v3);
+    sub_1D0F30C(v2, v3);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     0,
-    (Il2CppObject *)StringLiteral_23590/*"scriptsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23692/*"scriptsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     1,
-    (Il2CppObject *)StringLiteral_23197/*"purchasebybankrequestsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23299/*"purchasebybankrequestsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
-    (Il2CppObject *)StringLiteral_17298/*"battleusecontinuerequestsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17371/*"battleusecontinuerequestsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     3,
-    (Il2CppObject *)StringLiteral_17294/*"battlecommandspellrequestsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17367/*"battlecommandspellrequestsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     4,
-    (Il2CppObject *)StringLiteral_25007/*"userservantcombinevoicesave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25116/*"userservantcombinevoicesave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     5,
-    (Il2CppObject *)StringLiteral_25010/*"userservantnewsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25119/*"userservantnewsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     6,
-    (Il2CppObject *)StringLiteral_25009/*"userservantlocksave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25118/*"userservantlocksave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     7,
-    (Il2CppObject *)StringLiteral_25006/*"userservantcollectionsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25115/*"userservantcollectionsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     8,
-    (Il2CppObject *)StringLiteral_25001/*"userequiplvsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25110/*"userequiplvsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     9,
-    (Il2CppObject *)StringLiteral_25000/*"usercommandcodenewsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25109/*"usercommandcodenewsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     10,
-    (Il2CppObject *)StringLiteral_24999/*"usercommandcodecollectionsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25108/*"usercommandcodecollectionsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     11,
-    (Il2CppObject *)StringLiteral_25008/*"userservantcommentsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25117/*"userservantcommentsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     12,
-    (Il2CppObject *)StringLiteral_22848/*"otherusernewsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_22941/*"otherusernewsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     13,
-    (Il2CppObject *)StringLiteral_21783/*"masterDataCheck.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21876/*"masterDataCheck.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     14,
-    (Il2CppObject *)StringLiteral_21784/*"masterDataList.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21877/*"masterDataList.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     15,
-    (Il2CppObject *)StringLiteral_21782/*"masterData.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21875/*"masterData.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     16,
-    (Il2CppObject *)StringLiteral_17124/*"authsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17195/*"authsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     17,
-    (Il2CppObject *)StringLiteral_17125/*"authsave2.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17196/*"authsave2.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     18,
-    (Il2CppObject *)StringLiteral_23869/*"signupsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23971/*"signupsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     19,
-    (Il2CppObject *)StringLiteral_23678/*"serversave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23780/*"serversave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     20,
-    (Il2CppObject *)StringLiteral_19965/*"friendcodesave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_20053/*"friendcodesave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     21,
-    (Il2CppObject *)StringLiteral_23024/*"paymentsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23123/*"paymentsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     22,
-    (Il2CppObject *)StringLiteral_23025/*"payment{0:D20}.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23124/*"payment{0:D20}.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     23,
-    (Il2CppObject *)StringLiteral_25004/*"usermissionprogsave_{0}.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25113/*"usermissionprogsave_{0}.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     24,
-    (Il2CppObject *)StringLiteral_25005/*"usermissionprogsave_{0}_{1}.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25114/*"usermissionprogsave_{0}_{1}.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     25,
-    (Il2CppObject *)StringLiteral_25003/*"usermissionnewsave_{0}.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25112/*"usermissionnewsave_{0}.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     26,
-    (Il2CppObject *)StringLiteral_21825/*"materialservantlimitcountsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21918/*"materialservantlimitcountsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     27,
-    (Il2CppObject *)StringLiteral_23674/*"servantprofilelimitcount.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23776/*"servantprofilelimitcount.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     28,
-    (Il2CppObject *)StringLiteral_23673/*"servantprofileeventjoin.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23775/*"servantprofileeventjoin.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     29,
-    (Il2CppObject *)StringLiteral_17297/*"battleusecontinueitemrequestsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17370/*"battleusecontinueitemrequestsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     30,
-    (Il2CppObject *)StringLiteral_17299/*"battleuseitemrequestsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17372/*"battleuseitemrequestsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     31,
-    (Il2CppObject *)StringLiteral_24693/*"unconfirmedpayment.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_24801/*"unconfirmedpayment.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     32,
-    (Il2CppObject *)StringLiteral_23672/*"servantcharactergraphexopen.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23774/*"servantcharactergraphexopen.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     33,
-    (Il2CppObject *)StringLiteral_23262/*"questhintdialogopensave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23364/*"questhintdialogopensave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     34,
-    (Il2CppObject *)StringLiteral_21503/*"lastuseddecknumbersave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21596/*"lastuseddecknumbersave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     35,
-    (Il2CppObject *)StringLiteral_21823/*"materialbranchroutesave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21916/*"materialbranchroutesave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     36,
-    (Il2CppObject *)StringLiteral_18207/*"clearrandommissionsave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_18285/*"clearrandommissionsave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     37,
-    (Il2CppObject *)StringLiteral_21824/*"materialgroupclearhistorysave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_21917/*"materialgroupclearhistorysave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     38,
-    (Il2CppObject *)StringLiteral_25190/*"warboardmessagehistorysave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25299/*"warboardmessagehistorysave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     39,
-    (Il2CppObject *)StringLiteral_25191/*"warboardmoviehistorysave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25300/*"warboardmoviehistorysave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     40,
-    (Il2CppObject *)StringLiteral_24488/*"tipsarchivestatesave_{0}.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_24595/*"tipsarchivestatesave_{0}.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     41,
-    (Il2CppObject *)StringLiteral_25189/*"warboardcontinue.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_25298/*"warboardcontinue.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     42,
-    (Il2CppObject *)StringLiteral_23261/*"questfocusstatesave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23363/*"questfocusstatesave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     43,
-    (Il2CppObject *)StringLiteral_23269/*"questphasehintdialogopensave.dat"*/,
-    (const MethodInfo_357BB4C *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_23371/*"questphasehintdialogopensave.dat"*/,
+    (const MethodInfo_35C87A0 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   DatFileName_TypeInfo->static_fields->filelist = (struct System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__o *)v1;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)DatFileName_TypeInfo->static_fields, (int32_t)v1, v4, v5, v6, v7, v8, v9);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)DatFileName_TypeInfo->static_fields, (int32_t)v1, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -306,14 +306,14 @@ System_String_o *DatFileName__getFileName(int32_t name, const MethodInfo *method
   DatFileName_c *v5; // x0
   Il2CppObject *Item; // x19
 
-  if ( (byte_4E038F9 & 1) == 0 )
+  if ( (byte_4E7656D & 1) == 0 )
   {
-    sub_1CE6700(&AndroidUtil_TypeInfo);
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E038F9 = 1;
+    sub_1D0F0B4(&AndroidUtil_TypeInfo);
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7656D = 1;
   }
   v3 = DatFileName_TypeInfo;
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -327,7 +327,7 @@ System_String_o *DatFileName__getFileName(int32_t name, const MethodInfo *method
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          name,
-         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
+         (const MethodInfo_35C8994 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
     v5 = DatFileName_TypeInfo;
     if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -341,11 +341,11 @@ System_String_o *DatFileName__getFileName(int32_t name, const MethodInfo *method
       Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                filelist,
                name,
-               (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+               (const MethodInfo_35C8700 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
       goto LABEL_12;
     }
 LABEL_15:
-    sub_1CE6958(filelist, method);
+    sub_1D0F30C(filelist, method);
   }
   Item = (Il2CppObject *)StringLiteral_1/*""*/;
 LABEL_12:
@@ -361,13 +361,13 @@ System_String_o *DatFileName__getFileNameNotConverted(int32_t name, const Method
   System_Collections_Generic_Dictionary_TKey__TValue__o *filelist; // x0
   DatFileName_c *v5; // x0
 
-  if ( (byte_4E038FD & 1) == 0 )
+  if ( (byte_4E76571 & 1) == 0 )
   {
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E038FD = 1;
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E76571 = 1;
   }
   v3 = DatFileName_TypeInfo;
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -381,7 +381,7 @@ System_String_o *DatFileName__getFileNameNotConverted(int32_t name, const Method
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          name,
-         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
+         (const MethodInfo_35C8994 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
     v5 = DatFileName_TypeInfo;
     if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -394,15 +394,15 @@ System_String_o *DatFileName__getFileNameNotConverted(int32_t name, const Method
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   filelist,
                                   name,
-                                  (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+                                  (const MethodInfo_35C8700 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
 LABEL_12:
-    sub_1CE6958(filelist, method);
+    sub_1D0F30C(filelist, method);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-System_String_o *DatFileName__getFileName_41563876(int32_t name, int64_t l, const MethodInfo *method)
+System_String_o *DatFileName__getFileName_41780940(int32_t name, int64_t l, const MethodInfo *method)
 {
   DatFileName_c *v5; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *filelist; // x0
@@ -412,15 +412,15 @@ System_String_o *DatFileName__getFileName_41563876(int32_t name, int64_t l, cons
   System_String_o *v10; // x19
   int64_t v12; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E038FA & 1) == 0 )
+  if ( (byte_4E7656E & 1) == 0 )
   {
-    sub_1CE6700(&AndroidUtil_TypeInfo);
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
-    sub_1CE6700(&long_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E038FA = 1;
+    sub_1D0F0B4(&AndroidUtil_TypeInfo);
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+    sub_1D0F0B4(&long_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7656E = 1;
   }
   v5 = DatFileName_TypeInfo;
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -434,7 +434,7 @@ System_String_o *DatFileName__getFileName_41563876(int32_t name, int64_t l, cons
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          name,
-         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
+         (const MethodInfo_35C8994 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
     v7 = DatFileName_TypeInfo;
     if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -448,11 +448,11 @@ System_String_o *DatFileName__getFileName_41563876(int32_t name, int64_t l, cons
       Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                filelist,
                name,
-               (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+               (const MethodInfo_35C8700 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
       goto LABEL_12;
     }
 LABEL_15:
-    sub_1CE6958(filelist, l);
+    sub_1D0F30C(filelist, l);
   }
   Item = (Il2CppObject *)StringLiteral_1/*""*/;
 LABEL_12:
@@ -466,7 +466,7 @@ LABEL_12:
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *DatFileName__getFileName_41564228(int32_t name, int32_t i1, int32_t i2, const MethodInfo *method)
+System_String_o *DatFileName__getFileName_41781292(int32_t name, int32_t i1, int32_t i2, const MethodInfo *method)
 {
   DatFileName_c *v7; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *filelist; // x0
@@ -478,15 +478,15 @@ System_String_o *DatFileName__getFileName_41564228(int32_t name, int32_t i1, int
   int32_t v15; // [xsp+8h] [xbp-38h] BYREF
   int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E038FB & 1) == 0 )
+  if ( (byte_4E7656F & 1) == 0 )
   {
-    sub_1CE6700(&AndroidUtil_TypeInfo);
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E038FB = 1;
+    sub_1D0F0B4(&AndroidUtil_TypeInfo);
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7656F = 1;
   }
   v7 = DatFileName_TypeInfo;
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -500,7 +500,7 @@ System_String_o *DatFileName__getFileName_41564228(int32_t name, int32_t i1, int
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          name,
-         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
+         (const MethodInfo_35C8994 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
     v9 = DatFileName_TypeInfo;
     if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -514,11 +514,11 @@ System_String_o *DatFileName__getFileName_41564228(int32_t name, int32_t i1, int
       Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                filelist,
                name,
-               (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+               (const MethodInfo_35C8700 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
       goto LABEL_12;
     }
 LABEL_15:
-    sub_1CE6958(filelist, *(_QWORD *)&i1);
+    sub_1D0F30C(filelist, *(_QWORD *)&i1);
   }
   Item = (Il2CppObject *)StringLiteral_1/*""*/;
 LABEL_12:
@@ -526,14 +526,14 @@ LABEL_12:
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
   v15 = i2;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  v13 = System_String__Format_65164136((System_String_o *)Item, v11, v12, 0);
+  v13 = System_String__Format_65604080((System_String_o *)Item, v11, v12, 0);
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   return AndroidUtil__ConvertFileNameIfNeed(v13, 0);
 }
 
 
-System_String_o *DatFileName__getFileName_41564616(
+System_String_o *DatFileName__getFileName_41781680(
         int32_t name,
         System_String_o *str1,
         System_String_o *str2,
@@ -546,14 +546,14 @@ System_String_o *DatFileName__getFileName_41564616(
   System_String_o *v11; // x0
   System_String_o *v12; // x19
 
-  if ( (byte_4E038FC & 1) == 0 )
+  if ( (byte_4E76570 & 1) == 0 )
   {
-    sub_1CE6700(&AndroidUtil_TypeInfo);
-    sub_1CE6700(&DatFileName_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E038FC = 1;
+    sub_1D0F0B4(&AndroidUtil_TypeInfo);
+    sub_1D0F0B4(&DatFileName_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E76570 = 1;
   }
   v7 = DatFileName_TypeInfo;
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -567,7 +567,7 @@ System_String_o *DatFileName__getFileName_41564616(
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          name,
-         (const MethodInfo_357BD40 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
+         (const MethodInfo_35C8994 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
     v9 = DatFileName_TypeInfo;
     if ( !DatFileName_TypeInfo->_2.cctor_finished )
@@ -581,16 +581,16 @@ System_String_o *DatFileName__getFileName_41564616(
       Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                filelist,
                name,
-               (const MethodInfo_357BAAC *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
+               (const MethodInfo_35C8700 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__);
       goto LABEL_12;
     }
 LABEL_18:
-    sub_1CE6958(filelist, str1);
+    sub_1D0F30C(filelist, str1);
   }
   Item = (Il2CppObject *)StringLiteral_1/*""*/;
 LABEL_12:
   if ( str2 )
-    v11 = System_String__Format_65164136((System_String_o *)Item, (Il2CppObject *)str1, (Il2CppObject *)str2, 0);
+    v11 = System_String__Format_65604080((System_String_o *)Item, (Il2CppObject *)str1, (Il2CppObject *)str2, 0);
   else
     v11 = System_String__Format((System_String_o *)Item, (Il2CppObject *)str1, 0);
   v12 = v11;

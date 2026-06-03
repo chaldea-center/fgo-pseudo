@@ -2,11 +2,11 @@ void FuncParamValueUpInfoBase___cctor(const MethodInfo *method)
 {
   BattleDataDefine_c *v1; // x0
 
-  if ( (byte_4E07A7F & 1) == 0 )
+  if ( (byte_4E7A75F & 1) == 0 )
   {
-    sub_1CE6700(&BattleDataDefine_TypeInfo);
-    sub_1CE6700(&FuncParamValueUpInfoBase_TypeInfo);
-    byte_4E07A7F = 1;
+    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
+    sub_1D0F0B4(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_4E7A75F = 1;
   }
   v1 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -36,11 +36,11 @@ int32_t FuncParamValueUpInfoBase__Enhance(
   FuncParamValueUpInfoBase_c *v8; // x0
 
   LODWORD(v4) = value;
-  if ( (byte_4E07A7E & 1) == 0 )
+  if ( (byte_4E7A75E & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___);
-    sub_1CE6700(&FuncParamValueUpInfoBase_TypeInfo);
-    byte_4E07A7E = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_DataVals_TYPE___);
+    sub_1D0F0B4(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_4E7A75E = 1;
   }
   if ( this->fields._ValueEnhanceRate_k__BackingField )
   {
@@ -54,7 +54,7 @@ int32_t FuncParamValueUpInfoBase__Enhance(
       if ( System_Linq_Enumerable__Contains_Int32Enum_(
              v7,
              type,
-             (const MethodInfo_3220B8C *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
+             (const MethodInfo_326C728 *)Method_System_Linq_Enumerable_Contains_DataVals_TYPE___) )
       {
         v8 = FuncParamValueUpInfoBase_TypeInfo;
         if ( !FuncParamValueUpInfoBase_TypeInfo->_2.cctor_finished )

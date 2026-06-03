@@ -11,9 +11,9 @@ void OrganizationTopListViewItem___ctor(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -31,7 +31,7 @@ System_String_o *OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return info->fields.eventData;
 }
 
@@ -44,7 +44,7 @@ System_String_o *OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   return info->fields.imageName;
 }
 
@@ -58,14 +58,14 @@ System_String_o *OrganizationTopListViewItem__get_InfoText(
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4E00035 & 1) == 0 )
+  if ( (byte_4E72C52 & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1CE6700(&LocalizationManager_TypeInfo);
-    byte_4E00035 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    byte_4E72C52 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);

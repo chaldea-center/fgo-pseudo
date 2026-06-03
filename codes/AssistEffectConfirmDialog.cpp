@@ -1,9 +1,9 @@
 void AssistEffectConfirmDialog___ctor(AssistEffectConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4DFE41D & 1) == 0 )
+  if ( (byte_4E71012 & 1) == 0 )
   {
-    sub_1CE6700(&BaseDialog_TypeInfo);
-    byte_4DFE41D = 1;
+    sub_1D0F0B4(&BaseDialog_TypeInfo);
+    byte_4E71012 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,12 +17,12 @@ void AssistEffectConfirmDialog__Init(AssistEffectConfirmDialog_o *this, const Me
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x20
 
-  if ( (byte_4DFE419 & 1) == 0 )
+  if ( (byte_4E7100E & 1) == 0 )
   {
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFE419 = 1;
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7100E = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, method);
@@ -41,13 +41,13 @@ void AssistEffectConfirmDialog__Init(AssistEffectConfirmDialog_o *this, const Me
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
 LABEL_10:
-    sub_1CE6958(titleLabel, v3);
+    sub_1D0F30C(titleLabel, v3);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
   this->fields.closeCallback = 0;
-  sub_1CE66A4(&this->fields.closeCallback, 0);
+  sub_1D0F058(&this->fields.closeCallback, 0);
 }
 
 
@@ -57,18 +57,18 @@ void AssistEffectConfirmDialog__OnClickCloseButton(AssistEffectConfirmDialog_o *
   System_Reflection_MethodBase_o *v4; // x0
   struct AssistEffectConfirmDialog_ClickDelegate_o *closeCallback; // x8
 
-  if ( (byte_4DFE41B & 1) == 0 )
+  if ( (byte_4E71010 & 1) == 0 )
   {
-    sub_1CE6700(&Method_AssistEffectConfirmDialog_OnClickCloseButton__);
-    byte_4DFE41B = 1;
+    sub_1D0F0B4(&Method_AssistEffectConfirmDialog_OnClickCloseButton__);
+    byte_4E71010 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_AssistEffectConfirmDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_AssistEffectConfirmDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1CE6718();
-    v4 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1D0F0CC();
+    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     closeCallback = this->fields.closeCallback;
     if ( closeCallback )
@@ -96,16 +96,16 @@ void AssistEffectConfirmDialog__Open(
   System_Action_o *v15; // x20
   const MethodInfo *v16; // x4
 
-  if ( (byte_4DFE41A & 1) == 0 )
+  if ( (byte_4E7100F & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_AssistEffectConfirmDialog__Open_b__11_0__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&StringLiteral_5561/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/);
-    sub_1CE6700(&StringLiteral_5560/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_5562/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE"*/);
-    byte_4DFE41A = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_AssistEffectConfirmDialog__Open_b__11_0__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_5580/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/);
+    sub_1D0F0B4(&StringLiteral_5579/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_5581/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE"*/);
+    byte_4E7100F = 1;
   }
   AssistEffectConfirmDialog__Init(this, (const MethodInfo *)closeCallback);
   this->fields.state = 1;
@@ -116,17 +116,17 @@ void AssistEffectConfirmDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5562/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5581/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_24;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   messageLabel = this->fields.messageLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5579/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_24;
   UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
   this->fields.closeCallback = closeCallback;
-  sub_1CE66A4(&this->fields.closeCallback, closeCallback);
+  sub_1D0F058(&this->fields.closeCallback, closeCallback);
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -158,7 +158,7 @@ LABEL_22:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5561/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/, 0);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5580/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/, 0);
         if ( noDataLabel )
         {
           UILabel__set_text(noDataLabel, (System_String_o *)gameObject, 0);
@@ -176,10 +176,10 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_1CE6958(gameObject, v8);
+    sub_1D0F30C(gameObject, v8);
   }
 LABEL_23:
-  v15 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)this, Method_AssistEffectConfirmDialog__Open_b__11_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v15, 0, 0, v16);
 }
@@ -199,10 +199,10 @@ UnityEngine_GameObject_o *AssistEffectConfirmDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4DFE41C & 1) == 0 )
+  if ( (byte_4E71011 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4DFE41C = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E71011 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -211,7 +211,7 @@ UnityEngine_GameObject_o *AssistEffectConfirmDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }
 
@@ -231,15 +231,15 @@ void AssistEffectConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1CE66A4(&this->fields.m_target, object);
+  sub_1D0F058(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v10, 0);
+      v10 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v10, 0);
     }
     goto LABEL_5;
   }
@@ -251,9 +251,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B0DCC0;
+  this->fields.invoke_impl = (intptr_t)sub_1B33AC8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B0DC80;
+  this->fields.extra_arg = (intptr_t)sub_1B33A88;
 }
 
 
@@ -266,7 +266,7 @@ System_IAsyncResult_o *AssistEffectConfirmDialog_ClickDelegate__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, &v5, callback, object);
 }
 
 
@@ -275,7 +275,7 @@ void AssistEffectConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

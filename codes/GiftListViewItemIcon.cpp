@@ -25,7 +25,7 @@ void GiftListViewItemIcon__OnClick(GiftListViewItemIcon_o *this, const MethodInf
         return;
       }
 LABEL_8:
-      sub_1CE6958(IsServant, itemData);
+      sub_1D0F30C(IsServant, itemData);
     }
   }
 }
@@ -48,7 +48,7 @@ void GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEntity_o *indat
 
   this->fields.itemData = indata;
   p_itemData = &this->fields.itemData;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.itemData,
     (int32_t)indata,
     (int32_t)method,
@@ -83,7 +83,7 @@ void GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEntity_o *indat
       }
     }
 LABEL_17:
-    sub_1CE6958(IsServant, gifttype);
+    sub_1D0F30C(IsServant, gifttype);
   }
   gifttype = (unsigned int)this->fields.gifttype;
   if ( (_DWORD)gifttype == 11 )
@@ -110,7 +110,7 @@ LABEL_17:
     {
       if ( !v15 || !IsServant )
         goto LABEL_17;
-      ItemIconComponent__SetGift_42064732(IsServant, gifttype, v15->fields.objectId, v15->fields.num, 0, 0);
+      ItemIconComponent__SetGift_42283820(IsServant, gifttype, v15->fields.objectId, v15->fields.num, 0, 0);
     }
   }
 }
@@ -128,7 +128,7 @@ void GiftListViewItemIcon__SetCallBack(
   System_String_o *v7; // x7
 
   this->fields.callbackFunc = call;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)call,
     (int32_t)method,
@@ -146,18 +146,18 @@ void GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, bool flg, cons
   __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4E07179 & 1) == 0 )
+  if ( (byte_4E79E26 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E07179 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E79E26 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_325BE3C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -172,7 +172,7 @@ void GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, bool flg, cons
       return;
     }
 LABEL_10:
-    sub_1CE6958(gameObject, v6);
+    sub_1D0F30C(gameObject, v6);
   }
 }
 
@@ -184,7 +184,7 @@ void GiftListViewItemIcon__Show(GiftListViewItemIcon_o *this, const MethodInfo *
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1CE6958(0, v3);
+    sub_1D0F30C(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
 
@@ -211,7 +211,7 @@ void GiftListViewItemIcon_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -222,11 +222,11 @@ void GiftListViewItemIcon_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) != 0 )
+  if ( (sub_1D0F174(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1B19F18;
+      v13 = sub_1B3FD80;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -238,41 +238,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1CE67B8(method);
-        v16 = sub_1CE6D4C(method);
+        v15 = sub_1D0F16C(method);
+        v16 = sub_1D0F700(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1B1A014;
+            v13 = sub_1B3FE7C;
           else
-            v13 = sub_1B19FD8;
+            v13 = sub_1B3FE40;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1B19F54;
+          v13 = sub_1B3FDBC;
         }
         else
         {
-          v13 = sub_1B19F28;
+          v13 = sub_1B3FD90;
         }
       }
       else
       {
-        v13 = sub_1B19EF8;
+        v13 = sub_1B3FD60;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v17, 0);
+      v17 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1B19EB0;
+  this->fields.extra_arg = (intptr_t)sub_1B3FD18;
 }
 
 
@@ -286,7 +286,7 @@ System_IAsyncResult_o *GiftListViewItemIcon_ClickDelegate__BeginInvoke(
   GiftEntity_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = gift;
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, &v6, callback, object);
 }
 
 
@@ -295,7 +295,7 @@ void GiftListViewItemIcon_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

@@ -24,12 +24,12 @@ void WarehouseUIDragDropListViewItem__DragEnd(WarehouseUIDragDropListViewItem_o 
   const MethodInfo *v17; // x2
 
   v3 = this;
-  if ( (byte_4E027D6 & 1) == 0 )
+  if ( (byte_4E75449 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&WarehouseListViewManager_TypeInfo);
-    this = (WarehouseUIDragDropListViewItem_o *)sub_1CE6700(&WarehouseListViewObject_TypeInfo);
-    byte_4E027D6 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&WarehouseListViewManager_TypeInfo);
+    this = (WarehouseUIDragDropListViewItem_o *)sub_1D0F0B4(&WarehouseListViewObject_TypeInfo);
+    byte_4E75449 = 1;
   }
   mListViewObject = (WarehouseListViewObject_o *)v3->fields.mListViewObject;
   if ( !mListViewObject )
@@ -38,7 +38,7 @@ void WarehouseUIDragDropListViewItem__DragEnd(WarehouseUIDragDropListViewItem_o 
   if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (WarehouseListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[naturalAligment - 1] != WarehouseListViewObject_TypeInfo )
   {
-    sub_1CE6CF4(v3->fields.mListViewObject);
+    sub_1D0F6A8(v3->fields.mListViewObject);
     goto LABEL_20;
   }
   manager = mListViewObject->fields.manager;
@@ -46,7 +46,7 @@ void WarehouseUIDragDropListViewItem__DragEnd(WarehouseUIDragDropListViewItem_o 
   {
 LABEL_21:
     UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0, 0);
-    WarehouseListViewObject__Init_39526344(mListViewObject, 3, v17);
+    WarehouseListViewObject__Init_39742704(mListViewObject, 3, v17);
     goto LABEL_22;
   }
   v6 = WarehouseListViewManager_TypeInfo->_2.naturalAligment;
@@ -54,17 +54,17 @@ LABEL_21:
     || (WarehouseListViewManager_c *)manager->klass->_2.typeHierarchy[v6 - 1] != WarehouseListViewManager_TypeInfo )
   {
 LABEL_20:
-    sub_1CE6CF4(manager);
+    sub_1D0F6A8(manager);
     goto LABEL_21;
   }
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0, 0);
-  WarehouseListViewObject__Init_39526344(mListViewObject, 3, v7);
+  WarehouseListViewObject__Init_39742704(mListViewObject, 3, v7);
   ((void (__fastcall *)(struct ListViewManager_o *, const MethodInfo *))manager->klass->vtable._9_ItemDragEnd.methodPtr)(
     manager,
     manager->klass->vtable._9_ItemDragEnd.method);
   v3->fields.dragSurface = 0;
   v3->fields.isDrag = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v3->fields.dragSurface, 0, v8, v9, v10, v11, v12, v13);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->fields.dragSurface, 0, v8, v9, v10, v11, v12, v13);
   mDragScrollView = (UnityEngine_Object_o *)v3->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -86,7 +86,7 @@ LABEL_20:
         return;
       }
 LABEL_22:
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
     }
   }
 }
@@ -109,10 +109,10 @@ void WarehouseUIDragDropListViewItem__OnDragDropMove(
   z = delta.fields.z;
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4E027D3 & 1) == 0 )
+  if ( (byte_4E75446 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E027D3 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E75446 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -123,7 +123,7 @@ void WarehouseUIDragDropListViewItem__OnDragDropMove(
     if ( !transform
       || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
     {
-      sub_1CE6958(transform, v8);
+      sub_1D0F30C(transform, v8);
     }
     v10 = (UnityEngine_Transform_o *)transform;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
@@ -145,16 +145,16 @@ void WarehouseUIDragDropListViewItem__OnDragDropRelease(
   __int64 v6; // x9
   const MethodInfo *v7; // x1
 
-  if ( (byte_4E027D5 & 1) == 0 )
+  if ( (byte_4E75448 & 1) == 0 )
   {
-    sub_1CE6700(&WarehouseListViewManager_TypeInfo);
-    sub_1CE6700(&WarehouseListViewObject_TypeInfo);
-    byte_4E027D5 = 1;
+    sub_1D0F0B4(&WarehouseListViewManager_TypeInfo);
+    sub_1D0F0B4(&WarehouseListViewObject_TypeInfo);
+    byte_4E75448 = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   if ( !mListViewObject )
 LABEL_11:
-    sub_1CE6958(mListViewObject, surface);
+    sub_1D0F30C(mListViewObject, surface);
   surface = (UnityEngine_GameObject_o *)WarehouseListViewObject_TypeInfo;
   naturalAligment = WarehouseListViewObject_TypeInfo->_2.naturalAligment;
   if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment
@@ -170,7 +170,7 @@ LABEL_11:
     || (WarehouseListViewManager_c *)mListViewObject->klass->_2.typeHierarchy[v6 - 1] != WarehouseListViewManager_TypeInfo )
   {
 LABEL_10:
-    sub_1CE6CF4(mListViewObject);
+    sub_1D0F6A8(mListViewObject);
     goto LABEL_11;
   }
   WarehouseListViewManager__SetDragEnd((WarehouseListViewManager_o *)mListViewObject, 0);
@@ -207,13 +207,13 @@ void WarehouseUIDragDropListViewItem__OnDragDropStart(
   const MethodInfo *v24; // x1
   long double v25; // q0 OVERLAPPED
 
-  if ( (byte_4E027D2 & 1) == 0 )
+  if ( (byte_4E75445 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&UICamera_TypeInfo);
-    sub_1CE6700(&WarehouseListViewManager_TypeInfo);
-    sub_1CE6700(&WarehouseListViewObject_TypeInfo);
-    byte_4E027D2 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    sub_1D0F0B4(&WarehouseListViewManager_TypeInfo);
+    sub_1D0F0B4(&WarehouseListViewObject_TypeInfo);
+    byte_4E75445 = 1;
   }
   mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -241,16 +241,16 @@ void WarehouseUIDragDropListViewItem__OnDragDropStart(
     || (UnityEngine_Collider__set_enabled(mCollider, 1, 0), (mListViewObject = this->fields.mListViewObject) == 0) )
   {
 LABEL_27:
-    sub_1CE6958(mCollider, v5);
+    sub_1D0F30C(mCollider, v5);
   }
   v8 = (const MethodInfo *)WarehouseListViewObject_TypeInfo;
   naturalAligment = WarehouseListViewObject_TypeInfo->_2.naturalAligment;
   if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (WarehouseListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[naturalAligment - 1] != WarehouseListViewObject_TypeInfo )
   {
-    sub_1CE6CF4(this->fields.mListViewObject);
+    sub_1D0F6A8(this->fields.mListViewObject);
 LABEL_29:
-    v25 = sub_1CE6CF4(mDragScrollView);
+    v25 = sub_1D0F6A8(mDragScrollView);
     WarehouseUIDragDropListViewItem__OnDragDropMove(v23, *(UnityEngine_Vector3_o *)&v25, v24);
     return;
   }
@@ -296,7 +296,7 @@ LABEL_29:
   else
     dragged = 0;
   this->fields.dragSurface = dragged;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.dragSurface, (int32_t)dragged, v14, v15, v16, v17, v18, v19);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dragSurface, (int32_t)dragged, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -357,15 +357,15 @@ void WarehouseUIDragDropListViewItem__Update(WarehouseUIDragDropListViewItem_o *
   UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E027D4 & 1) == 0 )
+  if ( (byte_4E75447 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_BoxCollider_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_WarehouseListViewObject___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&UnityEngine_Physics_TypeInfo);
-    sub_1CE6700(&UICamera_TypeInfo);
-    sub_1CE6700(&WarehouseListViewManager_TypeInfo);
-    byte_4E027D4 = 1;
+    sub_1D0F0B4(&UnityEngine_BoxCollider_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_WarehouseListViewObject___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Physics_TypeInfo);
+    sub_1D0F0B4(&UICamera_TypeInfo);
+    sub_1D0F0B4(&WarehouseListViewManager_TypeInfo);
+    byte_4E75447 = 1;
   }
   memset(&v49, 0, sizeof(v49));
   if ( !this->fields.isDrag )
@@ -401,19 +401,19 @@ void WarehouseUIDragDropListViewItem__Update(WarehouseUIDragDropListViewItem_o *
   v50.fields.z = 0.0;
   v50.fields.x = static_fields->lastTouchPosition.fields.x;
   v50.fields.y = static_fields->lastTouchPosition.fields.y;
-  UnityEngine_Camera__ScreenPointToRay_72723200(&v47, v7, v50, 0);
+  UnityEngine_Camera__ScreenPointToRay_73163296(&v47, v7, v50, 0);
   v48 = v47;
   if ( !UnityEngine_Physics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo);
   v46 = v48;
-  if ( !UnityEngine_Physics__Raycast_73237192(&v46, &v49, 0) )
+  if ( !UnityEngine_Physics__Raycast_73678472(&v46, &v49, 0) )
     goto LABEL_26;
   main = (intptr_t)UnityEngine_RaycastHit__get_collider(&v49, 0);
   if ( !main )
     goto LABEL_85;
   Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)main,
-                                               (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_WarehouseListViewObject___);
+                                               (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_WarehouseListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   main = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -432,7 +432,7 @@ LABEL_84:
   if ( m_CachedPtr->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (WarehouseListViewManager_c *)m_CachedPtr->klass->_2.typeHierarchy[naturalAligment - 1] != WarehouseListViewManager_TypeInfo )
   {
-    sub_1CE6CF4(Component_object[1].fields.m_CachedPtr);
+    sub_1D0F6A8(Component_object[1].fields.m_CachedPtr);
     goto LABEL_84;
   }
   main = (intptr_t)WarehouseListViewObject__GetItem(
@@ -478,7 +478,7 @@ LABEL_26:
   v51.fields.z = 0.0;
   v51.fields.x = v19->lastTouchPosition.fields.x;
   v51.fields.y = v19->lastTouchPosition.fields.y;
-  v52 = UnityEngine_Camera__ScreenToWorldPoint_72722736(v18, v51, 0);
+  v52 = UnityEngine_Camera__ScreenToWorldPoint_73162832(v18, v51, 0);
   if ( !monitor )
     goto LABEL_85;
   x = v52.fields.x;
@@ -503,7 +503,7 @@ LABEL_26:
   if ( *(unsigned __int8 *)(*(_QWORD *)main + 304LL) < (unsigned int)v28
     || *(UnityEngine_BoxCollider_c **)(*(_QWORD *)(*(_QWORD *)main + 200LL) + 8 * v28 - 8) != UnityEngine_BoxCollider_TypeInfo )
   {
-    sub_1CE6CF4(main);
+    sub_1D0F6A8(main);
     WarehouseUIDragDropListViewItem__OnDragDropRelease(v43, v44, v45);
     return;
   }
@@ -537,7 +537,7 @@ LABEL_26:
             v36 = -1.0;
 LABEL_76:
             v38 = 0;
-            if ( !UIScrollView__IsLimitOverPosition2_50343912(
+            if ( !UIScrollView__IsLimitOverPosition2_50637104(
                     (UIScrollView_o *)scrollView,
                     *(UnityEngine_Vector3_o *)&v35,
                     0) )
@@ -572,7 +572,7 @@ LABEL_68:
   main = (intptr_t)scrollView[2].monitor;
   if ( !main )
 LABEL_85:
-    sub_1CE6958(main, v6);
+    sub_1D0F30C(main, v6);
   if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0) <= 0.0 )
     goto LABEL_68;
   v33 = v25 - v23;
@@ -603,7 +603,7 @@ LABEL_69:
   v41 = 0.0;
 LABEL_80:
   v42 = 0;
-  if ( !UIScrollView__IsLimitOverPosition2_50343912((UIScrollView_o *)scrollView, *(UnityEngine_Vector3_o *)&v40, 0) )
+  if ( !UIScrollView__IsLimitOverPosition2_50637104((UIScrollView_o *)scrollView, *(UnityEngine_Vector3_o *)&v40, 0) )
   {
     v39 = -0.5;
     goto LABEL_82;

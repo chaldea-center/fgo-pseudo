@@ -1,13 +1,13 @@
 void UserEntity___ctor(UserEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E057D1 & 1) == 0 )
+  if ( (byte_4E78470 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_long___ctor__);
-    byte_4E057D1 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
+    byte_4E78470 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_34E6B6C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
 }
 
 

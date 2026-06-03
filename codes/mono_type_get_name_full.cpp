@@ -17,12 +17,12 @@ __int64 __fastcall mono_type_get_name_full(
   void *v15[2]; // [xsp+8h] [xbp-28h] BYREF
   void *v16; // [xsp+18h] [xbp-18h]
 
-  sub_1CDAA34(v15, a1, a2);
+  sub_1D033E8(v15, a1, a2);
   if ( ((__int64)v15[0] & 1) != 0 )
     v12 = (char *)v16;
   else
     v12 = (char *)v15 + 1;
-  v13 = sub_1D14098(v12);
+  v13 = sub_1D3CA4C(v12);
   if ( ((__int64)v15[0] & 1) != 0 )
     operator delete(v16);
   return v13;

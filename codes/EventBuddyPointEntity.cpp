@@ -1,13 +1,13 @@
 void EventBuddyPointEntity___ctor(EventBuddyPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E048FC & 1) == 0 )
+  if ( (byte_4E7757D & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E048FC = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E7757D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventBuddyPointEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4E048FA & 1) == 0 )
+  if ( (byte_4E7757B & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E048FA = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4E7757B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            questPhase,
-           (const MethodInfo_32029C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -44,14 +44,14 @@ int32_t EventBuddyPointEntity__GetPosPoint(EventBuddyPointEntity_o *this, int32_
   __int64 v6; // x1
   unsigned int v7; // w8
 
-  if ( (byte_4E048FB & 1) == 0 )
+  if ( (byte_4E7757C & 1) == 0 )
   {
-    sub_1CE6700(&int___TypeInfo);
-    byte_4E048FB = 1;
+    sub_1D0F0B4(&int___TypeInfo);
+    byte_4E7757C = 1;
   }
-  v5 = (_DWORD *)sub_1CE67A8(int___TypeInfo, 6);
+  v5 = (_DWORD *)sub_1D0F15C(int___TypeInfo, 6);
   if ( !v5 )
-    sub_1CE6958(0, v6);
+    sub_1D0F30C(0, v6);
   v7 = v5[6];
   if ( !v7
     || (v5[8] = this->fields.pointPos1, v7 == 1)
@@ -61,7 +61,7 @@ int32_t EventBuddyPointEntity__GetPosPoint(EventBuddyPointEntity_o *this, int32_
     || (v5[12] = this->fields.pointPos5, v7 == 5)
     || (v5[13] = this->fields.pointPos6, v7 <= posIdx) )
   {
-    sub_1CE6960(v5);
+    sub_1D0F314(v5);
   }
   return v5[posIdx + 8];
 }

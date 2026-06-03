@@ -27,9 +27,9 @@ void UpHateData___ctor(
     PriorityEachType = 0;
   this->fields._Priority_k__BackingField = PriorityEachType;
   this->fields.buffData = inBuffData;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)inBuffData, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.buffData, (int32_t)inBuffData, v9, v10, v11, v12, v13, v14);
   this->fields.upHateBuff = inUpHateBuff;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.upHateBuff,
     (int32_t)inUpHateBuff,
     v16,
@@ -93,12 +93,12 @@ UpHateData_o *UpHateData__Make(
   UpHateData_o *v7; // x22
   const MethodInfo *v8; // x4
 
-  if ( (byte_4E07442 & 1) == 0 )
+  if ( (byte_4E7A112 & 1) == 0 )
   {
-    sub_1CE6700(&UpHateData_TypeInfo);
-    byte_4E07442 = 1;
+    sub_1D0F0B4(&UpHateData_TypeInfo);
+    byte_4E7A112 = 1;
   }
-  v7 = (UpHateData_o *)sub_1CE694C(UpHateData_TypeInfo);
+  v7 = (UpHateData_o *)sub_1D0F300(UpHateData_TypeInfo);
   UpHateData___ctor(v7, uniqueId, buffData, upHateBuff, v8);
   return v7;
 }
@@ -126,15 +126,15 @@ UpHateData_array *UpHateData__MakeArray(
   __int64 v18; // x0
   __int64 v19; // x0
 
-  if ( (byte_4E07443 & 1) == 0 )
+  if ( (byte_4E7A113 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Array_Empty_UpHateData___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Select_int__UpHateData___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_UpHateData___);
-    sub_1CE6700(&System_Func_int__UpHateData__TypeInfo);
-    sub_1CE6700(&Method_UpHateData___c__MakeArray_b__14_0__);
-    sub_1CE6700(&UpHateData___c_TypeInfo);
-    byte_4E07443 = 1;
+    sub_1D0F0B4(&Method_System_Array_Empty_UpHateData___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_int__UpHateData___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_UpHateData___);
+    sub_1D0F0B4(&System_Func_int__UpHateData__TypeInfo);
+    sub_1D0F0B4(&Method_UpHateData___c__MakeArray_b__14_0__);
+    sub_1D0F0B4(&UpHateData___c_TypeInfo);
+    byte_4E7A113 = 1;
   }
   if ( !uniqueIds )
     goto LABEL_11;
@@ -153,19 +153,19 @@ UpHateData_array *UpHateData__MakeArray(
       v4 = UpHateData___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__14_0 = (System_Func_T__TResult__o *)sub_1CE694C(System_Func_int__UpHateData__TypeInfo);
+    _9__14_0 = (System_Func_T__TResult__o *)sub_1D0F300(System_Func_int__UpHateData__TypeInfo);
     System_Func_int__object____ctor(_9__14_0, v6, Method_UpHateData___c__MakeArray_b__14_0__, 0);
     static_fields = UpHateData___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Func_int__UpHateData__o *)_9__14_0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v8, v9, v10, v11, v12, v13);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v8, v9, v10, v11, v12, v13);
   }
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)uniqueIds,
                                                                (System_Func_TSource__TResult__o *)_9__14_0,
-                                                               (const MethodInfo_3237910 *)Method_System_Linq_Enumerable_Select_int__UpHateData___);
+                                                               (const MethodInfo_3283684 *)Method_System_Linq_Enumerable_Select_int__UpHateData___);
   result = (UpHateData_array *)System_Linq_Enumerable__ToArray_object_(
                                  v14,
-                                 (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_UpHateData___);
+                                 (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_UpHateData___);
   if ( !result )
   {
 LABEL_11:
@@ -173,17 +173,17 @@ LABEL_11:
     v17 = *((_QWORD *)Method_System_Array_Empty_UpHateData___ + 7);
     if ( !v17 )
     {
-      sub_1CBC7E4(Method_System_Array_Empty_UpHateData___);
+      sub_1CE5198(Method_System_Array_Empty_UpHateData___);
       v17 = v16[7];
     }
     v18 = *(_QWORD *)(v17 + 16);
     if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-      v18 = sub_1CBC788(inited);
+      v18 = sub_1CE513C(inited);
     if ( !*(_DWORD *)(v18 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v18);
     v19 = *(_QWORD *)(v16[7] + 16LL);
     if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
-      v19 = sub_1CBC788(inited);
+      v19 = sub_1CE513C(inited);
     return **(UpHateData_array ***)(v19 + 184);
   }
   return result;
@@ -234,15 +234,15 @@ void UpHateData___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E07444 & 1) == 0 )
+  if ( (byte_4E7A114 & 1) == 0 )
   {
-    sub_1CE6700(&UpHateData___c_TypeInfo);
-    byte_4E07444 = 1;
+    sub_1D0F0B4(&UpHateData___c_TypeInfo);
+    byte_4E7A114 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(UpHateData___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(UpHateData___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UpHateData___c_TypeInfo->static_fields->__9 = (struct UpHateData___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)UpHateData___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -265,12 +265,12 @@ UpHateData_o *UpHateData___c___MakeArray_b__14_0(UpHateData___c_o *this, int32_t
   UpHateData_o *v4; // x20
   const MethodInfo *v5; // x4
 
-  if ( (byte_4E07445 & 1) == 0 )
+  if ( (byte_4E7A115 & 1) == 0 )
   {
-    sub_1CE6700(&UpHateData_TypeInfo);
-    byte_4E07445 = 1;
+    sub_1D0F0B4(&UpHateData_TypeInfo);
+    byte_4E7A115 = 1;
   }
-  v4 = (UpHateData_o *)sub_1CE694C(UpHateData_TypeInfo);
+  v4 = (UpHateData_o *)sub_1D0F300(UpHateData_TypeInfo);
   UpHateData___ctor(v4, x, 0, 0, v5);
   return v4;
 }

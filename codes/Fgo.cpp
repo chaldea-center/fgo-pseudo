@@ -31,36 +31,36 @@ void Fgo_Assertions_Assert___cctor(const MethodInfo *method)
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4E08F54 & 1) == 0 )
+  if ( (byte_4E7BC86 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo____ctor__);
-    sub_1CE6700(&System_Collections_Generic_Dictionary_Type__List_FieldInfo___TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey___ctor__);
-    sub_1CE6700(&System_Collections_Generic_HashSet_Assert_SuppressAssertKey__TypeInfo);
-    byte_4E08F54 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo____ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Dictionary_Type__List_FieldInfo___TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_HashSet_Assert_SuppressAssertKey__TypeInfo);
+    byte_4E7BC86 = 1;
   }
   static_fields = Fgo_Assertions_Assert_TypeInfo->static_fields;
   static_fields->enable = 1;
   static_fields->onFailedAction = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->onFailedAction, 0, v1, v2, v3, v4, v5, v6);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->onFailedAction, 0, v1, v2, v3, v4, v5, v6);
   v8 = Fgo_Assertions_Assert_TypeInfo->static_fields;
   v8->onFailedSendReport = 0;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v8->onFailedSendReport, 0, v9, v10, v11, v12, v13, v14);
-  v15 = (System_Collections_Generic_HashSet_T__o *)sub_1CE694C(System_Collections_Generic_HashSet_Assert_SuppressAssertKey__TypeInfo);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v8->onFailedSendReport, 0, v9, v10, v11, v12, v13, v14);
+  v15 = (System_Collections_Generic_HashSet_T__o *)sub_1D0F300(System_Collections_Generic_HashSet_Assert_SuppressAssertKey__TypeInfo);
   System_Collections_Generic_HashSet_Int32Enum____ctor(
     v15,
-    (const MethodInfo_37AF444 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey___ctor__);
+    (const MethodInfo_38028F4 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey___ctor__);
   v16 = Fgo_Assertions_Assert_TypeInfo->static_fields;
   v16->suppressAsserts = (struct System_Collections_Generic_HashSet_Assert_SuppressAssertKey__o *)v15;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v16->suppressAsserts, (int32_t)v15, v17, v18, v19, v20, v21, v22);
-  v23 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1CE694C(System_Collections_Generic_Dictionary_Type__List_FieldInfo___TypeInfo);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v16->suppressAsserts, (int32_t)v15, v17, v18, v19, v20, v21, v22);
+  v23 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_Type__List_FieldInfo___TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v23,
-    (const MethodInfo_35B3FE0 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo____ctor__);
+    (const MethodInfo_3600C34 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo____ctor__);
   v24 = Fgo_Assertions_Assert_TypeInfo->static_fields;
   v24->cachedFieldInfo = (struct System_Collections_Generic_Dictionary_Type__List_FieldInfo___o *)v23;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v24->cachedFieldInfo, (int32_t)v23, v25, v26, v27, v28, v29, v30);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v24->cachedFieldInfo, (int32_t)v23, v25, v26, v27, v28, v29, v30);
 }
 
 
@@ -78,16 +78,16 @@ void Fgo_Assertions_Assert__AreApproximatelyEqual(
   float v12; // s0
   float Epsilon; // s3
 
-  if ( (byte_4E08F43 & 1) == 0 )
+  if ( (byte_4E7BC75 & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F43 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC75 = 1;
   }
-  if ( !byte_4DFE0AD )
+  if ( !byte_4E70C9D )
   {
-    sub_1CE6700(&UnityEngine_Mathf_TypeInfo);
-    byte_4DFE0AD = 1;
+    sub_1D0F0B4(&UnityEngine_Mathf_TypeInfo);
+    byte_4E70C9D = 1;
   }
   v10 = fabsf(expected);
   v11 = fabsf(actual);
@@ -106,7 +106,7 @@ void Fgo_Assertions_Assert__AreApproximatelyEqual(
       actual,
       1,
       message,
-      (const MethodInfo_31E2B60 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
+      (const MethodInfo_322DB34 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
   }
 }
 
@@ -120,11 +120,11 @@ void Fgo_Assertions_Assert__AreEqual(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F44 & 1) == 0 )
+  if ( (byte_4E7BC76 & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F44 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC76 = 1;
   }
   if ( expected != actual )
   {
@@ -135,12 +135,12 @@ void Fgo_Assertions_Assert__AreEqual(
       actual,
       1,
       message,
-      (const MethodInfo_31E25C4 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
+      (const MethodInfo_322D598 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
   }
 }
 
 
-void Fgo_Assertions_Assert__AreEqual_50140308(
+void Fgo_Assertions_Assert__AreEqual_50433500(
         int64_t expected,
         int64_t actual,
         System_String_o *message,
@@ -149,11 +149,11 @@ void Fgo_Assertions_Assert__AreEqual_50140308(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F45 & 1) == 0 )
+  if ( (byte_4E7BC77 & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F45 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC77 = 1;
   }
   if ( expected != actual )
   {
@@ -164,12 +164,12 @@ void Fgo_Assertions_Assert__AreEqual_50140308(
       actual,
       1,
       message,
-      (const MethodInfo_31E2790 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
+      (const MethodInfo_322D764 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
   }
 }
 
 
-void Fgo_Assertions_Assert__AreEqual_50140468(
+void Fgo_Assertions_Assert__AreEqual_50433660(
         UnityEngine_Object_o *expected,
         UnityEngine_Object_o *actual,
         System_String_o *message,
@@ -178,12 +178,12 @@ void Fgo_Assertions_Assert__AreEqual_50140468(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F46 & 1) == 0 )
+  if ( (byte_4E7BC78 & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08F46 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BC78 = 1;
   }
   if ( expected )
     goto LABEL_10;
@@ -210,7 +210,7 @@ LABEL_19:
           (Il2CppObject *)actual,
           1,
           message,
-          (const MethodInfo_31E2964 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
+          (const MethodInfo_322D938 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
       }
     }
   }
@@ -224,7 +224,7 @@ void Fgo_Assertions_Assert__AreEqual___Il2CppFullySharedGenericType_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E162C *method)
+        const MethodInfo_322C600 *method)
 {
   long double v7; // q0
   void **monitor; // x21
@@ -301,12 +301,12 @@ void Fgo_Assertions_Assert__AreEqual___Il2CppFullySharedGenericType_(
   v64 = actual.klass;
   if ( !v11 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
     v11 = filePath[2].monitor;
     if ( !v11 )
     {
-      sub_1CBC7E4(filePath);
+      sub_1CE5198(filePath);
       v11 = filePath[2].monitor;
     }
   }
@@ -318,7 +318,7 @@ void Fgo_Assertions_Assert__AreEqual___Il2CppFullySharedGenericType_(
   }
   else
   {
-    v14 = sub_1CBC788(v7);
+    v14 = sub_1CE513C(v7);
     v11 = filePath[2].monitor;
     v15 = *(_DWORD *)(v14 + 252);
     v12 = *v11;
@@ -350,7 +350,7 @@ void Fgo_Assertions_Assert__AreEqual___Il2CppFullySharedGenericType_(
       || *(UnityEngine_Object_c **)(*(_QWORD *)(*(_QWORD *)v26 + 200LL) + 8 * v27 - 8) != UnityEngine_Object_TypeInfo
       || ((v28 = filePath[2].monitor, *(int *)(*v28 + 40LL) >= 0) ? (v29 = &v66) : (v29 = monitor),
           memcpy((char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL), v29, v13),
-          (sub_1CE6910(*v28, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
+          (sub_1D0F2C4(*v28, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
     {
       v30 = filePath[2].monitor;
       v31 = *(int *)(*v30 + 40LL) >= 0 ? &v66 : monitor;
@@ -363,7 +363,7 @@ void Fgo_Assertions_Assert__AreEqual___Il2CppFullySharedGenericType_(
           ? (v35 = &v67)
           : (v35 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v67),
             memcpy((char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL), v35, v13),
-            (sub_1CE6910(*v34, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
+            (sub_1D0F2C4(*v34, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
       {
         v36 = filePath[2].monitor;
         v37 = *(int *)(*v36 + 40LL) >= 0 ? &v67 : (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v67;
@@ -394,7 +394,7 @@ LABEL_40:
           else
             v42 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v67;
           memcpy((char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL), v42, v13);
-          if ( (sub_1CE6910(*v40, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
+          if ( (sub_1D0F2C4(*v40, (char *)&v63 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
           {
             v43 = filePath[2].monitor;
             if ( *(int *)(*v43 + 40LL) >= 0 )
@@ -408,7 +408,7 @@ LABEL_40:
             v49 = *v47;
             if ( (*(_BYTE *)(*v47 + 309LL) & 1) == 0 )
             {
-              v50 = sub_1CBC788(v46);
+              v50 = sub_1CE513C(v46);
               v47 = filePath[2].monitor;
               v41 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v67;
               LODWORD(v49) = v50;
@@ -420,7 +420,7 @@ LABEL_40:
               v53 = &v67;
             else
               v53 = v41;
-            sub_1CE723C(v49, v51, (int)v16, v53);
+            sub_1D0FBF0(v49, v51, (int)v16, v53);
             if ( v69[0] )
               return;
             v41 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v67;
@@ -475,16 +475,16 @@ void Fgo_Assertions_Assert__AreNotApproximatelyEqual(
   float v12; // s0
   float Epsilon; // s3
 
-  if ( (byte_4E08F47 & 1) == 0 )
+  if ( (byte_4E7BC79 & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F47 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC79 = 1;
   }
-  if ( !byte_4DFE0AD )
+  if ( !byte_4E70C9D )
   {
-    sub_1CE6700(&UnityEngine_Mathf_TypeInfo);
-    byte_4DFE0AD = 1;
+    sub_1D0F0B4(&UnityEngine_Mathf_TypeInfo);
+    byte_4E70C9D = 1;
   }
   v10 = fabsf(expected);
   v11 = fabsf(actual);
@@ -503,7 +503,7 @@ void Fgo_Assertions_Assert__AreNotApproximatelyEqual(
       actual,
       0,
       message,
-      (const MethodInfo_31E2B60 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
+      (const MethodInfo_322DB34 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_float___);
   }
 }
 
@@ -517,11 +517,11 @@ void Fgo_Assertions_Assert__AreNotEqual(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F48 & 1) == 0 )
+  if ( (byte_4E7BC7A & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F48 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC7A = 1;
   }
   if ( expected == actual )
   {
@@ -532,12 +532,12 @@ void Fgo_Assertions_Assert__AreNotEqual(
       expected,
       0,
       message,
-      (const MethodInfo_31E25C4 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
+      (const MethodInfo_322D598 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_int___);
   }
 }
 
 
-void Fgo_Assertions_Assert__AreNotEqual_50141176(
+void Fgo_Assertions_Assert__AreNotEqual_50434368(
         int64_t expected,
         int64_t actual,
         System_String_o *message,
@@ -546,11 +546,11 @@ void Fgo_Assertions_Assert__AreNotEqual_50141176(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F49 & 1) == 0 )
+  if ( (byte_4E7BC7B & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    byte_4E08F49 = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    byte_4E7BC7B = 1;
   }
   if ( expected == actual )
   {
@@ -561,12 +561,12 @@ void Fgo_Assertions_Assert__AreNotEqual_50141176(
       expected,
       0,
       message,
-      (const MethodInfo_31E2790 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
+      (const MethodInfo_322D764 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_long___);
   }
 }
 
 
-void Fgo_Assertions_Assert__AreNotEqual_50141336(
+void Fgo_Assertions_Assert__AreNotEqual_50434528(
         UnityEngine_Object_o *expected,
         UnityEngine_Object_o *actual,
         System_String_o *message,
@@ -575,12 +575,12 @@ void Fgo_Assertions_Assert__AreNotEqual_50141336(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F4A & 1) == 0 )
+  if ( (byte_4E7BC7C & 1) == 0 )
   {
-    sub_1CE6700(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E08F4A = 1;
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BC7C = 1;
   }
   if ( !expected )
   {
@@ -608,7 +608,7 @@ LABEL_19:
       (Il2CppObject *)actual,
       0,
       message,
-      (const MethodInfo_31E2964 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
+      (const MethodInfo_322D938 *)Method_Fgo_Assertions_Assert_GetComparisonAssertMessage_Object___);
   }
 }
 
@@ -620,7 +620,7 @@ void Fgo_Assertions_Assert__AreNotEqual___Il2CppFullySharedGenericType_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E1B04 *method)
+        const MethodInfo_322CAD8 *method)
 {
   long double v7; // q0
   void **monitor; // x23
@@ -699,12 +699,12 @@ void Fgo_Assertions_Assert__AreNotEqual___Il2CppFullySharedGenericType_(
   v66 = actual.klass;
   if ( !v11 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
     v11 = filePath[2].monitor;
     if ( !v11 )
     {
-      sub_1CBC7E4(filePath);
+      sub_1CE5198(filePath);
       v11 = filePath[2].monitor;
     }
   }
@@ -713,7 +713,7 @@ void Fgo_Assertions_Assert__AreNotEqual___Il2CppFullySharedGenericType_(
   v14 = v13;
   if ( (*(_BYTE *)(*v11 + 309LL) & 1) == 0 )
   {
-    v15 = sub_1CBC788(v7);
+    v15 = sub_1CE513C(v7);
     v11 = filePath[2].monitor;
     v13 = *(_DWORD *)(v15 + 252);
     v12 = *v11;
@@ -779,7 +779,7 @@ LABEL_65:
     || *(UnityEngine_Object_c **)(*(_QWORD *)(*(_QWORD *)v28 + 200LL) + 8 * v29 - 8) != UnityEngine_Object_TypeInfo
     || ((v30 = filePath[2].monitor, *(int *)(*v30 + 40LL) >= 0) ? (v31 = &v68) : (v31 = monitor),
         memcpy((char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL), v31, v14),
-        (sub_1CE6910(*v30, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
+        (sub_1D0F2C4(*v30, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
   {
     v32 = filePath[2].monitor;
     v33 = *(int *)(*v32 + 40LL) >= 0 ? &v68 : monitor;
@@ -792,7 +792,7 @@ LABEL_65:
         ? (v37 = &v69)
         : (v37 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v69),
           memcpy((char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL), v37, v14),
-          (sub_1CE6910(*v36, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
+          (sub_1D0F2C4(*v36, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0) )
     {
       v38 = filePath[2].monitor;
       v39 = *(int *)(*v38 + 40LL) >= 0 ? &v69 : (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v69;
@@ -820,7 +820,7 @@ LABEL_39:
         v43 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v69;
         v44 = *(int *)(*v42 + 40LL) >= 0 ? &v69 : (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v69;
         memcpy((char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL), v44, v14);
-        if ( (sub_1CE6910(*v42, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
+        if ( (sub_1D0F2C4(*v42, (char *)&v65 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
         {
           v45 = filePath[2].monitor;
           if ( *(int *)(*v45 + 40LL) >= 0 )
@@ -834,7 +834,7 @@ LABEL_39:
           v51 = *v49;
           if ( (*(_BYTE *)(*v49 + 309LL) & 1) == 0 )
           {
-            v52 = sub_1CBC788(v48);
+            v52 = sub_1CE513C(v48);
             v49 = filePath[2].monitor;
             v43 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v69;
             LODWORD(v51) = v52;
@@ -842,7 +842,7 @@ LABEL_39:
           v53 = v49[2];
           v54 = *(int *)(*v49 + 40LL) >= 0 ? &v69 : v43;
           v70[0] = v50;
-          sub_1CE723C(v51, v53, (int)v65, v54);
+          sub_1D0FBF0(v51, v53, (int)v65, v54);
           if ( v71[0] )
           {
             v24 = filePath[2].monitor;
@@ -898,17 +898,17 @@ void Fgo_Assertions_Assert__CanFormat(
   int32_t v27; // [xsp+8h] [xbp-68h] BYREF
   _WORD v28[2]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4E08F51 & 1) == 0 )
+  if ( (byte_4E7BC83 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&char_TypeInfo);
-    sub_1CE6700(&StringLiteral_25907/*"書式指定項目が不正です"*/);
-    sub_1CE6700(&StringLiteral_25847/*"パラメータ"*/);
-    sub_1CE6700(&StringLiteral_25896/*"文字列"*/);
-    sub_1CE6700(&StringLiteral_25890/*"引数"*/);
-    sub_1CE6700(&StringLiteral_25891/*"引数を超えたのインデックスを指しています"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E08F51 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&char_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_26016/*"書式指定項目が不正です"*/);
+    sub_1D0F0B4(&StringLiteral_25956/*"パラメータ"*/);
+    sub_1D0F0B4(&StringLiteral_26005/*"文字列"*/);
+    sub_1D0F0B4(&StringLiteral_25999/*"引数"*/);
+    sub_1D0F0B4(&StringLiteral_26000/*"引数を超えたのインデックスを指しています"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E7BC83 = 1;
   }
   v28[0] = 0;
   result = 0;
@@ -917,7 +917,7 @@ void Fgo_Assertions_Assert__CanFormat(
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    v24 = &StringLiteral_25847/*"パラメータ"*/;
+    v24 = &StringLiteral_25956/*"パラメータ"*/;
     goto LABEL_59;
   }
   format = parameter->fields.format;
@@ -925,7 +925,7 @@ void Fgo_Assertions_Assert__CanFormat(
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    v24 = &StringLiteral_25896/*"文字列"*/;
+    v24 = &StringLiteral_26005/*"文字列"*/;
     goto LABEL_59;
   }
   args = parameter->fields.args;
@@ -933,7 +933,7 @@ void Fgo_Assertions_Assert__CanFormat(
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    v24 = &StringLiteral_25890/*"引数"*/;
+    v24 = &StringLiteral_25999/*"引数"*/;
 LABEL_59:
     Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)*v24, message, (const MethodInfo *)gameObject);
     return;
@@ -973,12 +973,12 @@ LABEL_20:
           goto LABEL_66;
         v21 = parameter->fields.args;
         if ( !v21 )
-          sub_1CE6958(v19, v20);
+          sub_1D0F30C(v19, v20);
         if ( v27 >= SLODWORD(v21->max_length) )
         {
           if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-          v25 = &StringLiteral_25891/*"引数を超えたのインデックスを指しています"*/;
+          v25 = &StringLiteral_26000/*"引数を超えたのインデックスを指しています"*/;
           goto LABEL_69;
         }
         v18 = v28[0];
@@ -1002,7 +1002,7 @@ LABEL_29:
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
       v22 = System_Char__ToString((uint16_t)v28, 0);
-      v15 = System_String__Concat_65122828(v15, v22, 0);
+      v15 = System_String__Concat_65562772(v15, v22, 0);
       v10 = 0;
       v12 = 1;
       goto LABEL_47;
@@ -1018,7 +1018,7 @@ LABEL_29:
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v23 = System_Char__ToString((uint16_t)v28, 0);
-        v15 = System_String__Concat_65122828(v15, v23, 0);
+        v15 = System_String__Concat_65562772(v15, v23, 0);
         goto LABEL_28;
       }
       if ( !System_Int32__TryParse(v15, &result, 0) )
@@ -1065,7 +1065,7 @@ LABEL_47:
 LABEL_66:
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-  v25 = &StringLiteral_25907/*"書式指定項目が不正です"*/;
+  v25 = &StringLiteral_26016/*"書式指定項目が不正です"*/;
 LABEL_69:
   Fgo_Assertions_Assert__GetEffectiveAssertMessage((System_String_o *)*v25, message, (const MethodInfo *)gameObject);
 }
@@ -1077,7 +1077,7 @@ void Fgo_Assertions_Assert__CanParse___Il2CppFullySharedGenericType_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E2024 *method)
+        const MethodInfo_322CFF8 *method)
 {
   Il2CppType *_0_T; // x21
   System_RuntimeTypeHandle_o v10; // x0
@@ -1130,25 +1130,25 @@ void Fgo_Assertions_Assert__CanParse___Il2CppFullySharedGenericType_(
 
   if ( !method->rgctx_data )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&bool_var);
-    sub_1CE6700(&bool_TypeInfo);
-    sub_1CE6700(&qword_4BEE038);
-    sub_1CE6700(&double_var);
-    sub_1CE6700(&short_var);
-    sub_1CE6700(&int_var);
-    sub_1CE6700(&long_var);
-    sub_1CE6700(&sbyte_var);
-    sub_1CE6700(&float_var);
-    sub_1CE6700(&System_Type_TypeInfo);
-    sub_1CE6700(&ushort_var);
-    sub_1CE6700(&uint_var);
-    sub_1CE6700(&ulong_var);
-    sub_1CE6700(&StringLiteral_25878/*"型が不正です:{0}"*/);
-    sub_1CE6700(&StringLiteral_25896/*"文字列"*/);
-    sub_1CE6700(&StringLiteral_274/*" isNotBoolean"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&bool_var);
+    sub_1D0F0B4(&bool_TypeInfo);
+    sub_1D0F0B4(&qword_4C5F290);
+    sub_1D0F0B4(&double_var);
+    sub_1D0F0B4(&short_var);
+    sub_1D0F0B4(&int_var);
+    sub_1D0F0B4(&long_var);
+    sub_1D0F0B4(&sbyte_var);
+    sub_1D0F0B4(&float_var);
+    sub_1D0F0B4(&System_Type_TypeInfo);
+    sub_1D0F0B4(&ushort_var);
+    sub_1D0F0B4(&uint_var);
+    sub_1D0F0B4(&ulong_var);
+    sub_1D0F0B4(&StringLiteral_25987/*"型が不正です:{0}"*/);
+    sub_1D0F0B4(&StringLiteral_26005/*"文字列"*/);
+    sub_1D0F0B4(&StringLiteral_274/*" isNotBoolean"*/);
     if ( !method->rgctx_data )
-      sub_1CBC7E4(method);
+      sub_1CE5198(method);
   }
   result = 0;
   v55[0] = 0;
@@ -1176,7 +1176,7 @@ void Fgo_Assertions_Assert__CanParse___Il2CppFullySharedGenericType_(
         j_il2cpp_runtime_class_init_0(bool_TypeInfo);
       if ( !System_Boolean__TryParse(value, &result, 0) )
       {
-        v14 = System_String__Concat_65122828(value, (System_String_o *)StringLiteral_274/*" isNotBoolean"*/, 0);
+        v14 = System_String__Concat_65562772(value, (System_String_o *)StringLiteral_274/*" isNotBoolean"*/, 0);
 LABEL_12:
         v15 = v14;
         if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -1186,7 +1186,7 @@ LABEL_12:
     }
     else
     {
-      v16 = qword_4BEE038;
+      v16 = qword_4C5F290;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
       v17.fields.value = (intptr_t)v16;
@@ -1301,7 +1301,7 @@ LABEL_12:
                         v45 = System_Type__GetTypeFromHandle(v44, 0);
                         if ( !System_Type__op_Equality(v45, (System_Type_o *)TypeFromHandle, 0) )
                         {
-                          v14 = System_String__Format((System_String_o *)StringLiteral_25878/*"型が不正です:{0}"*/, TypeFromHandle, 0);
+                          v14 = System_String__Format((System_String_o *)StringLiteral_25987/*"型が不正です:{0}"*/, TypeFromHandle, 0);
                           goto LABEL_12;
                         }
                         if ( System_Double__TryParse(value, &v46, 0) )
@@ -1324,7 +1324,7 @@ LABEL_12:
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_25896/*"文字列"*/, message, 0);
+    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_26005/*"文字列"*/, message, 0);
   }
 }
 
@@ -1347,7 +1347,7 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o actual,
         bool equal,
         System_String_o *message,
-        const MethodInfo_31E2D2C *method)
+        const MethodInfo_322DD00 *method)
 {
   long double v5; // q0
   __int64 v6; // x21
@@ -1432,16 +1432,16 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
   v10 = (char)actual.klass;
   if ( !v9 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_22678/*"null"*/);
-    sub_1CE6700(&StringLiteral_19585/*"expectedEqual"*/);
-    sub_1CE6700(&StringLiteral_19586/*"expectedNotEqual"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_22771/*"null"*/);
+    sub_1D0F0B4(&StringLiteral_19664/*"expectedEqual"*/);
+    sub_1D0F0B4(&StringLiteral_19665/*"expectedNotEqual"*/);
     v9 = *(__int64 **)(v6 + 56);
     if ( !v9 )
     {
-      sub_1CBC7E4(v6);
+      sub_1CE5198(v6);
       v9 = *(__int64 **)(v6 + 56);
     }
   }
@@ -1454,7 +1454,7 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
   }
   else
   {
-    v14 = sub_1CBC788(v5);
+    v14 = sub_1CE513C(v5);
     v9 = *(__int64 **)(v6 + 56);
     v15 = *(_DWORD *)(v14 + 252);
     v11 = *v9;
@@ -1467,7 +1467,7 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
   }
   else
   {
-    v17 = sub_1CBC788(v5);
+    v17 = sub_1CE513C(v5);
     v9 = *(__int64 **)(v6 + 56);
     v11 = *v9;
   }
@@ -1477,13 +1477,13 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
   else
     v19 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
   memcpy((char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL), v19, v13);
-  if ( (sub_1CE6910(*v9, (char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
+  if ( (sub_1D0F2C4(*v9, (char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
   {
     v21 = *(_QWORD **)(v6 + 56);
     v22 = *v21;
     if ( (*(_BYTE *)(*v21 + 309LL) & 1) == 0 )
     {
-      LODWORD(v22) = sub_1CBC788(v20);
+      LODWORD(v22) = sub_1CE513C(v20);
       v21 = *(_QWORD **)(v6 + 56);
       klass = v74;
     }
@@ -1491,13 +1491,13 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
       v23 = &v74;
     else
       v23 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
-    sub_1CE723C(v22, v21[1], (int)v16, v23);
+    sub_1D0FBF0(v22, v21[1], (int)v16, v23);
     v24 = v75;
     v7 = v73;
   }
   else
   {
-    v24 = StringLiteral_22678/*"null"*/;
+    v24 = StringLiteral_22771/*"null"*/;
   }
   v25 = *(_QWORD **)(v6 + 56);
   if ( *(int *)(*v25 + 40LL) >= 0 )
@@ -1505,13 +1505,13 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
   else
     v26 = v7;
   memcpy((char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL), v26, v13);
-  if ( (sub_1CE6910(*v25, (char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
+  if ( (sub_1D0F2C4(*v25, (char *)&v71 - ((v13 + 15) & 0x1FFFFFFF0LL)) & 1) != 0 )
   {
     v28 = *(_QWORD **)(v6 + 56);
     v29 = *v28;
     if ( (*(_BYTE *)(*v28 + 309LL) & 1) == 0 )
     {
-      LODWORD(v29) = sub_1CBC788(v27);
+      LODWORD(v29) = sub_1CE513C(v27);
       v28 = *(_QWORD **)(v6 + 56);
       v7 = v73;
     }
@@ -1519,45 +1519,45 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage___Il2CppFully
       v30 = (void **)&v73;
     else
       v30 = v7;
-    sub_1CE723C(v29, v28[1], (int)v18, v30);
+    sub_1D0FBF0(v29, v28[1], (int)v18, v30);
     v31 = v75;
   }
   else
   {
-    v31 = StringLiteral_22678/*"null"*/;
+    v31 = StringLiteral_22771/*"null"*/;
   }
-  v32 = sub_1CE67A8(string___TypeInfo, 5);
+  v32 = sub_1D0F15C(string___TypeInfo, 5);
   if ( !v32 )
-    sub_1CE6958(0, v33);
+    sub_1D0F30C(0, v33);
   v40 = v32;
   if ( !*(_DWORD *)(v32 + 24) )
     goto LABEL_43;
   *(_QWORD *)(v32 + 32) = v24;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v32 + 32), v24, v34, v35, v36, v37, v38, v39);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v32 + 32), v24, v34, v35, v36, v37, v38, v39);
   if ( *(_DWORD *)(v40 + 24) <= 1u )
     goto LABEL_43;
   v47 = (int)StringLiteral_113/*" "*/;
   *(_QWORD *)(v40 + 40) = StringLiteral_113/*" "*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v40 + 40), v47, v41, v42, v43, v44, v45, v46);
-  v54 = (__int64 *)&StringLiteral_19586/*"expectedNotEqual"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v40 + 40), v47, v41, v42, v43, v44, v45, v46);
+  v54 = (__int64 *)&StringLiteral_19665/*"expectedNotEqual"*/;
   if ( (v10 & 1) == 0 )
-    v54 = (__int64 *)&StringLiteral_19585/*"expectedEqual"*/;
+    v54 = (__int64 *)&StringLiteral_19664/*"expectedEqual"*/;
   if ( *(_DWORD *)(v40 + 24) <= 2u
     || (v55 = *v54,
         *(_QWORD *)(v40 + 48) = *v54,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v40 + 48), v55, v48, v49, v50, v51, v52, v53),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v40 + 48), v55, v48, v49, v50, v51, v52, v53),
         *(_DWORD *)(v40 + 24) <= 3u)
     || (v62 = (int)StringLiteral_113/*" "*/,
         *(_QWORD *)(v40 + 56) = StringLiteral_113/*" "*/,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v40 + 56), v62, v56, v57, v58, v59, v60, v61),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v40 + 56), v62, v56, v57, v58, v59, v60, v61),
         *(_DWORD *)(v40 + 24) <= 4u) )
   {
 LABEL_43:
-    sub_1CE6960(v32);
+    sub_1D0F314(v32);
   }
   *(_QWORD *)(v40 + 64) = v31;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v40 + 64), v31, v63, v64, v65, v66, v67, v68);
-  v69 = System_String__Concat_65163360((System_String_array *)v40, 0);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v40 + 64), v31, v63, v64, v65, v66, v67, v68);
+  v69 = System_String__Concat_65603304((System_String_array *)v40, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v69, monitor, 0);
@@ -1569,7 +1569,7 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_float_(
         float actual,
         bool equal,
         System_String_o *message,
-        const MethodInfo_31E2B60 *method)
+        const MethodInfo_322DB34 *method)
 {
   System_String_o *v8; // x23
   float v9; // s0
@@ -1619,48 +1619,48 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_float_(
   v51 = expected;
   if ( !method->rgctx_data )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_19585/*"expectedEqual"*/);
-    sub_1CE6700(&StringLiteral_19586/*"expectedNotEqual"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_19664/*"expectedEqual"*/);
+    sub_1D0F0B4(&StringLiteral_19665/*"expectedNotEqual"*/);
     if ( !method->rgctx_data )
-      sub_1CBC7E4(method);
+      sub_1CE5198(method);
   }
   v8 = System_Single__ToString(expected, (const MethodInfo *)&v51);
   v10 = System_Single__ToString(v9, (const MethodInfo *)&v50);
-  v11 = sub_1CE67A8(string___TypeInfo, 5);
+  v11 = sub_1D0F15C(string___TypeInfo, 5);
   if ( !v11 )
-    sub_1CE6958(0, v12);
+    sub_1D0F30C(0, v12);
   v19 = v11;
   if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v11 + 32) = v8;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v8, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v8, v13, v14, v15, v16, v17, v18);
   if ( *(_DWORD *)(v19 + 24) <= 1u )
     goto LABEL_15;
   v26 = (int)StringLiteral_113/*" "*/;
   *(_QWORD *)(v19 + 40) = StringLiteral_113/*" "*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
-  v33 = (__int64 *)&StringLiteral_19586/*"expectedNotEqual"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
+  v33 = (__int64 *)&StringLiteral_19665/*"expectedNotEqual"*/;
   if ( !equal )
-    v33 = (__int64 *)&StringLiteral_19585/*"expectedEqual"*/;
+    v33 = (__int64 *)&StringLiteral_19664/*"expectedEqual"*/;
   if ( *(_DWORD *)(v19 + 24) <= 2u
     || (v34 = *v33,
         *(_QWORD *)(v19 + 48) = *v33,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
         *(_DWORD *)(v19 + 24) <= 3u)
     || (v41 = (int)StringLiteral_113/*" "*/,
         *(_QWORD *)(v19 + 56) = StringLiteral_113/*" "*/,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v19 + 24) <= 4u) )
   {
 LABEL_15:
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   }
   *(_QWORD *)(v19 + 64) = v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
-  v48 = System_String__Concat_65163360((System_String_array *)v19, 0);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
+  v48 = System_String__Concat_65603304((System_String_array *)v19, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v48, message, 0);
@@ -1672,9 +1672,9 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_int_(
         int32_t actual,
         bool equal,
         System_String_o *message,
-        const MethodInfo_31E25C4 *method)
+        const MethodInfo_322D598 *method)
 {
-  const MethodInfo_31E25C4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_322D598_RGCTXs *rgctx_data; // x8
   System_String_o *v9; // x23
   System_String_o *v10; // x21
   __int64 v11; // x0
@@ -1723,52 +1723,52 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_int_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_19585/*"expectedEqual"*/);
-    sub_1CE6700(&StringLiteral_19586/*"expectedNotEqual"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_19664/*"expectedEqual"*/);
+    sub_1D0F0B4(&StringLiteral_19665/*"expectedNotEqual"*/);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1CBC7E4(method);
+      sub_1CE5198(method);
       rgctx_data = method->rgctx_data;
     }
   }
   v9 = System_Int32__ToString((int32_t)&v51, (const MethodInfo *)rgctx_data[1]._0_T);
   v10 = System_Int32__ToString((int32_t)&v50, (const MethodInfo *)method->rgctx_data[1]._0_T);
-  v11 = sub_1CE67A8(string___TypeInfo, 5);
+  v11 = sub_1D0F15C(string___TypeInfo, 5);
   if ( !v11 )
-    sub_1CE6958(0, v12);
+    sub_1D0F30C(0, v12);
   v19 = v11;
   if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v11 + 32) = v9;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v9, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v9, v13, v14, v15, v16, v17, v18);
   if ( *(_DWORD *)(v19 + 24) <= 1u )
     goto LABEL_15;
   v26 = (int)StringLiteral_113/*" "*/;
   *(_QWORD *)(v19 + 40) = StringLiteral_113/*" "*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
-  v33 = (__int64 *)&StringLiteral_19586/*"expectedNotEqual"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
+  v33 = (__int64 *)&StringLiteral_19665/*"expectedNotEqual"*/;
   if ( !equal )
-    v33 = (__int64 *)&StringLiteral_19585/*"expectedEqual"*/;
+    v33 = (__int64 *)&StringLiteral_19664/*"expectedEqual"*/;
   if ( *(_DWORD *)(v19 + 24) <= 2u
     || (v34 = *v33,
         *(_QWORD *)(v19 + 48) = *v33,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
         *(_DWORD *)(v19 + 24) <= 3u)
     || (v41 = (int)StringLiteral_113/*" "*/,
         *(_QWORD *)(v19 + 56) = StringLiteral_113/*" "*/,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v19 + 24) <= 4u) )
   {
 LABEL_15:
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   }
   *(_QWORD *)(v19 + 64) = v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
-  v48 = System_String__Concat_65163360((System_String_array *)v19, 0);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
+  v48 = System_String__Concat_65603304((System_String_array *)v19, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v48, message, 0);
@@ -1780,9 +1780,9 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_long_(
         int64_t actual,
         bool equal,
         System_String_o *message,
-        const MethodInfo_31E2790 *method)
+        const MethodInfo_322D764 *method)
 {
-  const MethodInfo_31E2790_RGCTXs *rgctx_data; // x8
+  const MethodInfo_322D764_RGCTXs *rgctx_data; // x8
   System_String_o *v9; // x23
   System_String_o *v10; // x21
   __int64 v11; // x0
@@ -1831,52 +1831,52 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_long_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_19585/*"expectedEqual"*/);
-    sub_1CE6700(&StringLiteral_19586/*"expectedNotEqual"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_19664/*"expectedEqual"*/);
+    sub_1D0F0B4(&StringLiteral_19665/*"expectedNotEqual"*/);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1CBC7E4(method);
+      sub_1CE5198(method);
       rgctx_data = method->rgctx_data;
     }
   }
   v9 = System_Int64__ToString((int64_t)&v51, (const MethodInfo *)rgctx_data[1]._0_T);
   v10 = System_Int64__ToString((int64_t)&v50, (const MethodInfo *)method->rgctx_data[1]._0_T);
-  v11 = sub_1CE67A8(string___TypeInfo, 5);
+  v11 = sub_1D0F15C(string___TypeInfo, 5);
   if ( !v11 )
-    sub_1CE6958(0, v12);
+    sub_1D0F30C(0, v12);
   v19 = v11;
   if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v11 + 32) = v9;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v9, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)v9, v13, v14, v15, v16, v17, v18);
   if ( *(_DWORD *)(v19 + 24) <= 1u )
     goto LABEL_15;
   v26 = (int)StringLiteral_113/*" "*/;
   *(_QWORD *)(v19 + 40) = StringLiteral_113/*" "*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
-  v33 = (__int64 *)&StringLiteral_19586/*"expectedNotEqual"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
+  v33 = (__int64 *)&StringLiteral_19665/*"expectedNotEqual"*/;
   if ( !equal )
-    v33 = (__int64 *)&StringLiteral_19585/*"expectedEqual"*/;
+    v33 = (__int64 *)&StringLiteral_19664/*"expectedEqual"*/;
   if ( *(_DWORD *)(v19 + 24) <= 2u
     || (v34 = *v33,
         *(_QWORD *)(v19 + 48) = *v33,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
         *(_DWORD *)(v19 + 24) <= 3u)
     || (v41 = (int)StringLiteral_113/*" "*/,
         *(_QWORD *)(v19 + 56) = StringLiteral_113/*" "*/,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v19 + 24) <= 4u) )
   {
 LABEL_15:
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   }
   *(_QWORD *)(v19 + 64) = v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
-  v48 = System_String__Concat_65163360((System_String_array *)v19, 0);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)v10, v42, v43, v44, v45, v46, v47);
+  v48 = System_String__Concat_65603304((System_String_array *)v19, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v48, message, 0);
@@ -1889,7 +1889,7 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_object_(
         Il2CppObject *actual,
         bool equal,
         System_String_o *message,
-        const MethodInfo_31E2964 *method)
+        const MethodInfo_322D938 *method)
 {
   __int64 v9; // x23
   __int64 v10; // x21
@@ -1932,61 +1932,61 @@ System_String_o *Fgo_Assertions_Assert__GetComparisonAssertMessage_object_(
   System_String_o *v47; // x7
   System_String_o *v48; // x20
 
-  if ( (byte_4E0A17E & 1) == 0 )
+  if ( (byte_4E7CEB7 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&string___TypeInfo);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_22678/*"null"*/);
-    sub_1CE6700(&StringLiteral_19585/*"expectedEqual"*/);
-    sub_1CE6700(&StringLiteral_19586/*"expectedNotEqual"*/);
-    byte_4E0A17E = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&string___TypeInfo);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_22771/*"null"*/);
+    sub_1D0F0B4(&StringLiteral_19664/*"expectedEqual"*/);
+    sub_1D0F0B4(&StringLiteral_19665/*"expectedNotEqual"*/);
+    byte_4E7CEB7 = 1;
   }
   if ( expected )
-    v9 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, bool, System_String_o *, const MethodInfo_31E2964 *))expected->klass->vtable[3].methodPtr)(
+    v9 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, bool, System_String_o *, const MethodInfo_322D938 *))expected->klass->vtable[3].methodPtr)(
            expected,
            expected->klass->vtable[3].method,
            equal,
            message,
            method);
   else
-    v9 = StringLiteral_22678/*"null"*/;
+    v9 = StringLiteral_22771/*"null"*/;
   if ( actual )
     v10 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))actual->klass->vtable[3].methodPtr)(
             actual,
             actual->klass->vtable[3].method);
   else
-    v10 = StringLiteral_22678/*"null"*/;
-  v11 = sub_1CE67A8(string___TypeInfo, 5);
+    v10 = StringLiteral_22771/*"null"*/;
+  v11 = sub_1D0F15C(string___TypeInfo, 5);
   if ( !v11 )
-    sub_1CE6958(0, v12);
+    sub_1D0F30C(0, v12);
   v19 = v11;
   if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_21;
   *(_QWORD *)(v11 + 32) = v9;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v11 + 32), v9, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 32), v9, v13, v14, v15, v16, v17, v18);
   if ( *(_DWORD *)(v19 + 24) <= 1u )
     goto LABEL_21;
   v26 = (int)StringLiteral_113/*" "*/;
   *(_QWORD *)(v19 + 40) = StringLiteral_113/*" "*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
-  v33 = (__int64 *)(equal ? &StringLiteral_19586/*"expectedNotEqual"*/ : &StringLiteral_19585/*"expectedEqual"*/);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 40), v26, v20, v21, v22, v23, v24, v25);
+  v33 = (__int64 *)(equal ? &StringLiteral_19665/*"expectedNotEqual"*/ : &StringLiteral_19664/*"expectedEqual"*/);
   if ( *(_DWORD *)(v19 + 24) <= 2u
     || (v34 = *v33,
         *(_QWORD *)(v19 + 48) = *v33,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 48), v34, v27, v28, v29, v30, v31, v32),
         *(_DWORD *)(v19 + 24) <= 3u)
     || (v41 = (int)StringLiteral_113/*" "*/,
         *(_QWORD *)(v19 + 56) = StringLiteral_113/*" "*/,
-        sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
+        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 56), v41, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v19 + 24) <= 4u) )
   {
 LABEL_21:
-    sub_1CE6960(v11);
+    sub_1D0F314(v11);
   }
   *(_QWORD *)(v19 + 64) = v10;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v19 + 64), v10, v42, v43, v44, v45, v46, v47);
-  v48 = System_String__Concat_65163360((System_String_array *)v19, 0);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 64), v10, v42, v43, v44, v45, v46, v47);
+  v48 = System_String__Concat_65603304((System_String_array *)v19, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v48, message, 0);
@@ -1998,16 +1998,16 @@ System_String_o *Fgo_Assertions_Assert__GetEffectiveAssertMessage(
         System_String_o *message,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F42 & 1) == 0 )
+  if ( (byte_4E7BC74 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_56/*"\n("*/);
-    sub_1CE6700(&StringLiteral_758/*")"*/);
-    byte_4E08F42 = 1;
+    sub_1D0F0B4(&StringLiteral_56/*"\n("*/);
+    sub_1D0F0B4(&StringLiteral_758/*")"*/);
+    byte_4E7BC74 = 1;
   }
   if ( System_String__IsNullOrEmpty(message, 0) )
     return defaultMessage;
   else
-    return System_String__Concat_65163096(
+    return System_String__Concat_65603040(
              message,
              (System_String_o *)StringLiteral_56/*"\n("*/,
              defaultMessage,
@@ -2024,13 +2024,13 @@ System_String_o *Fgo_Assertions_Assert__GetNullAssertMessage(
   const MethodInfo *v5; // x2
   System_String_o *v6; // x20
 
-  if ( (byte_4E08F4E & 1) == 0 )
+  if ( (byte_4E7BC80 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25801/*"が null です"*/);
-    byte_4E08F4E = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25910/*"が null です"*/);
+    byte_4E7BC80 = 1;
   }
-  v6 = System_String__Concat_65122828(modelName, (System_String_o *)StringLiteral_25801/*"が null です"*/, 0);
+  v6 = System_String__Concat_65562772(modelName, (System_String_o *)StringLiteral_25910/*"が null です"*/, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v6, message, v5);
@@ -2045,13 +2045,13 @@ System_String_o *Fgo_Assertions_Assert__GetParseAssertMessage(
   const MethodInfo *v5; // x2
   System_String_o *v6; // x20
 
-  if ( (byte_4E08F50 & 1) == 0 )
+  if ( (byte_4E7BC82 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_275/*" isNotNumbers"*/);
-    byte_4E08F50 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_275/*" isNotNumbers"*/);
+    byte_4E7BC82 = 1;
   }
-  v6 = System_String__Concat_65122828(value, (System_String_o *)StringLiteral_275/*" isNotNumbers"*/, 0);
+  v6 = System_String__Concat_65562772(value, (System_String_o *)StringLiteral_275/*" isNotNumbers"*/, 0);
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   return Fgo_Assertions_Assert__GetEffectiveAssertMessage(v6, message, v5);
@@ -2066,7 +2066,7 @@ void Fgo_Assertions_Assert__HasContainKey___Il2CppFullySharedGenericType____Il2C
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E30C0 *method)
+        const MethodInfo_322E094 *method)
 {
   long double v7; // q0
   __int64 v8; // x21
@@ -2104,15 +2104,15 @@ void Fgo_Assertions_Assert__HasContainKey___Il2CppFullySharedGenericType____Il2C
   v11 = *(_QWORD *)(*(_QWORD *)&line + 56LL);
   if ( !v11 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25837/*"ディクショナリ"*/);
-    sub_1CE6700(&StringLiteral_776/*") の値がディクショナリに含まれていません"*/);
-    sub_1CE6700(&StringLiteral_21443/*"key("*/);
-    sub_1CE6700(&StringLiteral_25821/*"キー"*/);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25946/*"ディクショナリ"*/);
+    sub_1D0F0B4(&StringLiteral_776/*") の値がディクショナリに含まれていません"*/);
+    sub_1D0F0B4(&StringLiteral_21536/*"key("*/);
+    sub_1D0F0B4(&StringLiteral_25930/*"キー"*/);
     v11 = *(_QWORD *)(v8 + 56);
     if ( !v11 )
     {
-      sub_1CBC7E4(v8);
+      sub_1CE5198(v8);
       v11 = *(_QWORD *)(v8 + 56);
     }
   }
@@ -2120,14 +2120,14 @@ void Fgo_Assertions_Assert__HasContainKey___Il2CppFullySharedGenericType____Il2C
   v14 = *(unsigned int *)(v13 + 252);
   v15 = *(_DWORD *)(v13 + 252);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v15 = *(_DWORD *)(sub_1CBC788(v7) + 252);
+    v15 = *(_DWORD *)(sub_1CE513C(v7) + 252);
   v16 = (char *)&v31 - (((unsigned int)(v15 + 16) + 15LL) & 0x1FFFFFFF0LL);
   v17 = (System_String_o *)((char *)&v31 - ((v14 + 15) & 0x1FFFFFFF0LL));
   if ( !dic )
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    v28 = &StringLiteral_25837/*"ディクショナリ"*/;
+    v28 = &StringLiteral_25946/*"ディクショナリ"*/;
     goto LABEL_25;
   }
   v18 = *(_QWORD *)(v8 + 56);
@@ -2136,11 +2136,11 @@ void Fgo_Assertions_Assert__HasContainKey___Il2CppFullySharedGenericType____Il2C
   else
     v19 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
   memcpy((char *)&v31 - ((v14 + 15) & 0x1FFFFFFF0LL), v19, v14);
-  if ( (sub_1CE6910(*(_QWORD *)(v18 + 8), (char *)&v31 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) == 0 )
+  if ( (sub_1D0F2C4(*(_QWORD *)(v18 + 8), (char *)&v31 - ((v14 + 15) & 0x1FFFFFFF0LL)) & 1) == 0 )
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    v28 = &StringLiteral_25821/*"キー"*/;
+    v28 = &StringLiteral_25930/*"キー"*/;
 LABEL_25:
     Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)*v28, monitor, 0);
     return;
@@ -2172,7 +2172,7 @@ LABEL_25:
     }
     else
     {
-      LODWORD(v27) = sub_1CBC788(v24);
+      LODWORD(v27) = sub_1CE513C(v24);
       v25 = *(_QWORD *)(v8 + 56);
       klass = v31;
       v26 = *(_QWORD *)(v25 + 8);
@@ -2181,9 +2181,9 @@ LABEL_25:
       v29 = &v31;
     else
       v29 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
-    sub_1CE723C(v27, *(_QWORD *)(v25 + 24), (int)v16, v29);
-    v30 = System_String__Concat_65161092(
-            (System_String_o *)StringLiteral_21443/*"key("*/,
+    sub_1D0FBF0(v27, *(_QWORD *)(v25 + 24), (int)v16, v29);
+    v30 = System_String__Concat_65601036(
+            (System_String_o *)StringLiteral_21536/*"key("*/,
             v32,
             (System_String_o *)StringLiteral_776/*") の値がディクショナリに含まれていません"*/,
             0);
@@ -2276,35 +2276,35 @@ void Fgo_Assertions_Assert__IsAllSerializeFieldsNotNull(
   System_Collections_Generic_List_Enumerator_object__o v77; // [xsp+20h] [xbp-80h] BYREF
 
   v4 = (Il2CppObject *)component;
-  if ( (byte_4E08F53 & 1) == 0 )
+  if ( (byte_4E7BC85 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___ContainsKey__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___get_Item__);
-    sub_1CE6700(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___set_Item__);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Select_Object____f__AnonymousType0_Object__int____);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__get_Current__);
-    sub_1CE6700(&System_Func_Object__int____f__AnonymousType0_Object__int___TypeInfo);
-    sub_1CE6700(&System_IDisposable_TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_IEnumerable___f__AnonymousType0_Object__int___TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_IEnumerable_Object__var);
-    sub_1CE6700(&System_Collections_Generic_IEnumerable_Object__TypeInfo);
-    sub_1CE6700(&System_Collections_Generic_IEnumerator___f__AnonymousType0_Object__int___TypeInfo);
-    sub_1CE6700(&System_Collections_IEnumerator_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_List_FieldInfo__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_FieldInfo__GetEnumerator__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_FieldInfo___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_FieldInfo__TypeInfo);
-    sub_1CE6700(&Fgo_Assertions_Assert_NullableAttribute_var);
-    sub_1CE6700(&UnityEngine_Object___var);
-    sub_1CE6700(&UnityEngine_Object_var);
-    sub_1CE6700(&UnityEngine_SerializeField_var);
-    sub_1CE6700(&System_Type_TypeInfo);
-    sub_1CE6700(&Method_Fgo_Assertions_Assert___c__IsAllSerializeFieldsNotNull_b__42_0__);
-    component = (UnityEngine_Component_o *)sub_1CE6700(&Fgo_Assertions_Assert___c_TypeInfo);
-    byte_4E08F53 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___ContainsKey__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___get_Item__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___set_Item__);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_Object____f__AnonymousType0_Object__int____);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_FieldInfo__get_Current__);
+    sub_1D0F0B4(&System_Func_Object__int____f__AnonymousType0_Object__int___TypeInfo);
+    sub_1D0F0B4(&System_IDisposable_TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerable___f__AnonymousType0_Object__int___TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_Object__var);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_Object__TypeInfo);
+    sub_1D0F0B4(&System_Collections_Generic_IEnumerator___f__AnonymousType0_Object__int___TypeInfo);
+    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_FieldInfo__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_FieldInfo__GetEnumerator__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_FieldInfo___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_FieldInfo__TypeInfo);
+    sub_1D0F0B4(&Fgo_Assertions_Assert_NullableAttribute_var);
+    sub_1D0F0B4(&UnityEngine_Object___var);
+    sub_1D0F0B4(&UnityEngine_Object_var);
+    sub_1D0F0B4(&UnityEngine_SerializeField_var);
+    sub_1D0F0B4(&System_Type_TypeInfo);
+    sub_1D0F0B4(&Method_Fgo_Assertions_Assert___c__IsAllSerializeFieldsNotNull_b__42_0__);
+    component = (UnityEngine_Component_o *)sub_1D0F0B4(&Fgo_Assertions_Assert___c_TypeInfo);
+    byte_4E7BC85 = 1;
   }
   memset(&v77, 0, sizeof(v77));
   if ( !v4 )
@@ -2323,7 +2323,7 @@ void Fgo_Assertions_Assert__IsAllSerializeFieldsNotNull(
   component = (UnityEngine_Component_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                            (System_Collections_Generic_Dictionary_object__object__o *)component,
                                            v7,
-                                           (const MethodInfo_35B4B84 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___ContainsKey__);
+                                           (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___ContainsKey__);
   if ( ((unsigned __int8)component & 1) != 0 )
     goto LABEL_45;
   if ( !v7 )
@@ -2333,10 +2333,10 @@ void Fgo_Assertions_Assert__IsAllSerializeFieldsNotNull(
          v7,
          v8,
          v7->klass->vtable[88].method);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_FieldInfo__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_FieldInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_FieldInfo___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_FieldInfo___ctor__);
   if ( !v9 )
     goto LABEL_92;
   v11 = *(_QWORD *)(v9 + 24);
@@ -2346,7 +2346,7 @@ void Fgo_Assertions_Assert__IsAllSerializeFieldsNotNull(
     do
     {
       if ( v12 >= (unsigned int)v11 )
-        sub_1CE6960(component);
+        sub_1D0F314(component);
       v13 = *(System_Reflection_MemberInfo_o **)(v9 + 32 + 8 * v12);
       v14 = UnityEngine_SerializeField_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -2432,14 +2432,14 @@ LABEL_96:
               System_Collections_Generic_List_object___AddWithResize(
                 v10,
                 (Il2CppObject *)v13,
-                *(const MethodInfo_3905F68 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+                *(const MethodInfo_395C410 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
             }
             else
             {
               v38 = &items->obj.klass + size;
               v10->fields._size = size + 1;
               v38[4] = (Il2CppClass *)v13;
-              sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v38 + 4), (int32_t)v13, v23, v24, v25, v26, v27, v28);
+              sub_1D0F058((GrandQuestFolderBoardItem_o *)(v38 + 4), (int32_t)v13, v23, v24, v25, v26, v27, v28);
             }
           }
         }
@@ -2458,12 +2458,12 @@ LABEL_96:
   component = (UnityEngine_Component_o *)System_Object__GetType(v4, 0);
   if ( !cachedFieldInfo )
 LABEL_92:
-    sub_1CE6958(component, checkInheritance);
+    sub_1D0F30C(component, checkInheritance);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     cachedFieldInfo,
     (Il2CppObject *)component,
     (Il2CppObject *)v10,
-    (const MethodInfo_35B497C *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___set_Item__);
+    (const MethodInfo_36015D0 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___set_Item__);
 LABEL_45:
   v41 = Fgo_Assertions_Assert_TypeInfo;
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -2477,22 +2477,22 @@ LABEL_45:
   component = (UnityEngine_Component_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                            (System_Collections_Generic_Dictionary_object__object__o *)component,
                                            v7,
-                                           (const MethodInfo_35B4910 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___get_Item__);
+                                           (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_Type__List_FieldInfo___get_Item__);
   if ( !component )
     goto LABEL_92;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v76,
     (System_Collections_Generic_List_object__o *)component,
-    (const MethodInfo_3906A60 *)Method_System_Collections_Generic_List_FieldInfo__GetEnumerator__);
+    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_FieldInfo__GetEnumerator__);
   v77 = v76;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v77,
-            (const MethodInfo_36809F0 *)Method_System_Collections_Generic_List_Enumerator_FieldInfo__MoveNext__) )
+            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_FieldInfo__MoveNext__) )
   {
     if ( !v77.fields._current )
-      sub_1CE6958(0, v42);
+      sub_1D0F30C(0, v42);
     v43 = ((__int64 (*)(void))v77.fields._current->klass->vtable[25].methodPtr)();
-    v44 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1CE683C(
+    v44 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1D0F1F0(
                                                                  v43,
                                                                  System_Collections_Generic_IEnumerable_Object__TypeInfo);
     if ( v44 )
@@ -2512,7 +2512,7 @@ LABEL_45:
           v45 = Fgo_Assertions_Assert___c_TypeInfo;
         }
         v47 = (Il2CppObject *)v45->static_fields->__9;
-        _9__42_0 = (System_Func_T1__T2__TResult__o *)sub_1CE694C(System_Func_Object__int____f__AnonymousType0_Object__int___TypeInfo);
+        _9__42_0 = (System_Func_T1__T2__TResult__o *)sub_1D0F300(System_Func_Object__int____f__AnonymousType0_Object__int___TypeInfo);
         System_Func_object__int__object____ctor(
           _9__42_0,
           v47,
@@ -2520,7 +2520,7 @@ LABEL_45:
           0);
         static_fields = Fgo_Assertions_Assert___c_TypeInfo->static_fields;
         static_fields->__9__42_0 = (struct System_Func_Object__int____f__AnonymousType0_Object__int___o *)_9__42_0;
-        sub_1CE66A4(
+        sub_1D0F058(
           (GrandQuestFolderBoardItem_o *)&static_fields->__9__42_0,
           (int32_t)_9__42_0,
           v49,
@@ -2530,13 +2530,13 @@ LABEL_45:
           v53,
           v54);
       }
-      v55 = System_Linq_Enumerable__Select_object__object__52668720(
+      v55 = System_Linq_Enumerable__Select_object__object__52980120(
               v44,
               (System_Func_TSource__int__TResult__o *)_9__42_0,
-              (const MethodInfo_323A930 *)Method_System_Linq_Enumerable_Select_Object____f__AnonymousType0_Object__int____);
+              (const MethodInfo_3286998 *)Method_System_Linq_Enumerable_Select_Object____f__AnonymousType0_Object__int____);
       v57 = v55;
       if ( !v55 )
-        sub_1CE6958(0, v56);
+        sub_1D0F30C(0, v56);
       klass = v55->klass;
       v59 = *(unsigned __int16 *)&v55->klass->_2.rank;
       if ( *(_WORD *)&v55->klass->_2.rank )
@@ -2554,13 +2554,13 @@ LABEL_45:
       else
       {
 LABEL_64:
-        v61 = sub_1CBCA7C(v55, System_Collections_Generic_IEnumerable___f__AnonymousType0_Object__int___TypeInfo, 0);
+        v61 = sub_1CE5430(v55, System_Collections_Generic_IEnumerable___f__AnonymousType0_Object__int___TypeInfo, 0);
       }
       v63 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v61)(
               v57,
               *(_QWORD *)(v61 + 8));
       if ( !v63 )
-        sub_1CE6958(0, v62);
+        sub_1D0F30C(0, v62);
       while ( 1 )
       {
         v64 = *(_QWORD *)v63;
@@ -2580,7 +2580,7 @@ LABEL_64:
         else
         {
 LABEL_71:
-          v67 = sub_1CBCA7C(v63, System_Collections_IEnumerator_TypeInfo, 0);
+          v67 = sub_1CE5430(v63, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v67)(v63, *(_QWORD *)(v67 + 8)) & 1) == 0 )
           break;
@@ -2601,7 +2601,7 @@ LABEL_71:
         else
         {
 LABEL_78:
-          v71 = sub_1CBCA7C(v63, System_Collections_Generic_IEnumerator___f__AnonymousType0_Object__int___TypeInfo, 0);
+          v71 = sub_1CE5430(v63, System_Collections_Generic_IEnumerator___f__AnonymousType0_Object__int___TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v71)(v63, *(_QWORD *)(v71 + 8));
       }
@@ -2622,14 +2622,14 @@ LABEL_78:
       else
       {
 LABEL_85:
-        v75 = sub_1CBCA7C(v63, System_IDisposable_TypeInfo, 0);
+        v75 = sub_1CE5430(v63, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v75)(v63, *(_QWORD *)(v75 + 8));
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v77,
-    (const MethodInfo_36809EC *)Method_System_Collections_Generic_List_Enumerator_FieldInfo__Dispose__);
+    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_FieldInfo__Dispose__);
 }
 
 
@@ -2641,12 +2641,12 @@ void Fgo_Assertions_Assert__IsAssetDataNotNull(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F4C & 1) == 0 )
+  if ( (byte_4E7BC7E & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_16040/*"[AssetData]\n{0}をロードできませんでした"*/);
-    byte_4E08F4C = 1;
+    sub_1D0F0B4(&StringLiteral_16095/*"[AssetData]\n{0}をロードできませんでした"*/);
+    byte_4E7BC7E = 1;
   }
-  System_String__Format((System_String_o *)StringLiteral_16040/*"[AssetData]\n{0}をロードできませんでした"*/, (Il2CppObject *)assetName, 0);
+  System_String__Format((System_String_o *)StringLiteral_16095/*"[AssetData]\n{0}をロードできませんでした"*/, (Il2CppObject *)assetName, 0);
 }
 
 
@@ -2681,19 +2681,19 @@ void Fgo_Assertions_Assert__IsInRange(
   int32_t v17; // [xsp+18h] [xbp-28h] BYREF
   int32_t v18; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E08F4F & 1) == 0 )
+  if ( (byte_4E7BC81 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&StringLiteral_21065/*"index({0}) の値が負です"*/);
-    sub_1CE6700(&StringLiteral_21066/*"index({0}) の値が配列の要素数({1})を超えています"*/);
-    byte_4E08F4F = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_21156/*"index({0}) の値が負です"*/);
+    sub_1D0F0B4(&StringLiteral_21157/*"index({0}) の値が配列の要素数({1})を超えています"*/);
+    byte_4E7BC81 = 1;
   }
   if ( index < 0 )
   {
     v18 = index;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-    v12 = System_String__Format((System_String_o *)StringLiteral_21065/*"index({0}) の値が負です"*/, v14, 0);
+    v12 = System_String__Format((System_String_o *)StringLiteral_21156/*"index({0}) の値が負です"*/, v14, 0);
   }
   else
   {
@@ -2703,7 +2703,7 @@ void Fgo_Assertions_Assert__IsInRange(
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
     v16 = count;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-    v12 = System_String__Format_65164136((System_String_o *)StringLiteral_21066/*"index({0}) の値が配列の要素数({1})を超えています"*/, v10, v11, 0);
+    v12 = System_String__Format_65604080((System_String_o *)StringLiteral_21157/*"index({0}) の値が配列の要素数({1})を超えています"*/, v10, v11, 0);
   }
   v15 = v12;
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -2719,43 +2719,43 @@ void Fgo_Assertions_Assert__IsInRange___Il2CppFullySharedGenericType_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E33E0 *method)
+        const MethodInfo_322E3B4 *method)
 {
-  if ( (byte_4E0A180 & 1) == 0 )
+  if ( (byte_4E7CEB9 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25926/*"配列"*/);
-    byte_4E0A180 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_26035/*"配列"*/);
+    byte_4E7CEB9 = 1;
   }
   if ( !array )
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_25926/*"配列"*/, message, 0);
+    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_26035/*"配列"*/, message, 0);
   }
 }
 
 
-void Fgo_Assertions_Assert__IsInRange___Il2CppFullySharedGenericType__52310876(
+void Fgo_Assertions_Assert__IsInRange___Il2CppFullySharedGenericType__52618032(
         System_Collections_Generic_List_T__o *array,
         int32_t index,
         System_String_o *message,
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E335C *method)
+        const MethodInfo_322E330 *method)
 {
-  if ( (byte_4E0A17F & 1) == 0 )
+  if ( (byte_4E7CEB8 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25850/*"リスト"*/);
-    byte_4E0A17F = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25959/*"リスト"*/);
+    byte_4E7CEB8 = 1;
   }
   if ( !array )
   {
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
-    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_25850/*"リスト"*/, message, 0);
+    Fgo_Assertions_Assert__GetNullAssertMessage((System_String_o *)StringLiteral_25959/*"リスト"*/, message, 0);
   }
 }
 
@@ -2766,7 +2766,7 @@ void Fgo_Assertions_Assert__IsNotNull_object_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E3464 *method)
+        const MethodInfo_322E438 *method)
 {
   Il2CppClass *klass; // x8
   UnityEngine_Object_c *v8; // x0
@@ -2774,10 +2774,10 @@ void Fgo_Assertions_Assert__IsNotNull_object_(
   __int64 v10; // x9
   Il2CppObject *v11; // x0
 
-  if ( (byte_4E0A181 & 1) == 0 )
+  if ( (byte_4E7CEBA & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0A181 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7CEBA = 1;
   }
   if ( value )
   {
@@ -2823,11 +2823,11 @@ void Fgo_Assertions_Assert__IsNotThrowAction(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F52 & 1) == 0 )
+  if ( (byte_4E7BC84 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25808/*"アクション"*/);
-    byte_4E08F52 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25917/*"アクション"*/);
+    byte_4E7BC84 = 1;
   }
   if ( action )
   {
@@ -2844,7 +2844,7 @@ void Fgo_Assertions_Assert__IsNotThrowAction(
     if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
     Fgo_Assertions_Assert__GetNullAssertMessage(
-      (System_String_o *)StringLiteral_25808/*"アクション"*/,
+      (System_String_o *)StringLiteral_25917/*"アクション"*/,
       message,
       (const MethodInfo *)gameObject);
   }
@@ -2857,7 +2857,7 @@ void Fgo_Assertions_Assert__IsNull_object_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E3528 *method)
+        const MethodInfo_322E4FC *method)
 {
   Il2CppClass *klass; // x8
   UnityEngine_Object_c *v8; // x0
@@ -2865,10 +2865,10 @@ void Fgo_Assertions_Assert__IsNull_object_(
   __int64 v10; // x9
   Il2CppObject *v11; // x0
 
-  if ( (byte_4E0A182 & 1) == 0 )
+  if ( (byte_4E7CEBB & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E0A182 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7CEBB = 1;
   }
   if ( value )
   {
@@ -2910,14 +2910,14 @@ void Fgo_Assertions_Assert__IsSerializeFieldNotNull_object_(
         UnityEngine_GameObject_o *gameObject,
         System_String_o *filePath,
         int32_t line,
-        const MethodInfo_31E35EC *method)
+        const MethodInfo_322E5C0 *method)
 {
-  if ( (byte_4E0A183 & 1) == 0 )
+  if ( (byte_4E7CEBC & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_16089/*"[SerializeField]\n{0}の参照が切れています"*/);
-    byte_4E0A183 = 1;
+    sub_1D0F0B4(&StringLiteral_16143/*"[SerializeField]\n{0}の参照が切れています"*/);
+    byte_4E7CEBC = 1;
   }
-  System_String__Format((System_String_o *)StringLiteral_16089/*"[SerializeField]\n{0}の参照が切れています"*/, (Il2CppObject *)fieldName, 0);
+  System_String__Format((System_String_o *)StringLiteral_16143/*"[SerializeField]\n{0}の参照が切れています"*/, (Il2CppObject *)fieldName, 0);
 }
 
 
@@ -2947,12 +2947,12 @@ void Fgo_Assertions_Assert__IsTrueOnce(
   System_Collections_Generic_HashSet_T__o *suppressAsserts; // x0
   Fgo_Assertions_Assert_c *v11; // x0
 
-  if ( (byte_4E08F4B & 1) == 0 )
+  if ( (byte_4E7BC7D & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Contains__);
-    byte_4E08F4B = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Contains__);
+    byte_4E7BC7D = 1;
   }
   if ( !condition )
   {
@@ -2968,7 +2968,7 @@ void Fgo_Assertions_Assert__IsTrueOnce(
       if ( System_Collections_Generic_HashSet_Int32Enum___Contains(
              suppressAsserts,
              assertKey,
-             (const MethodInfo_37AFB38 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Contains__) )
+             (const MethodInfo_3802FE8 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Contains__) )
       {
         return;
       }
@@ -2984,11 +2984,11 @@ void Fgo_Assertions_Assert__IsTrueOnce(
         System_Collections_Generic_HashSet_Int32Enum___Add(
           suppressAsserts,
           assertKey,
-          (const MethodInfo_37B0648 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Add__);
+          (const MethodInfo_3803AF8 *)Method_System_Collections_Generic_HashSet_Assert_SuppressAssertKey__Add__);
         return;
       }
     }
-    sub_1CE6958(suppressAsserts, condition);
+    sub_1D0F30C(suppressAsserts, condition);
   }
 }
 
@@ -3007,14 +3007,14 @@ void Fgo_Assertions_Assert__OnFailed(
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_4E08F3E & 1) == 0 )
+  if ( (byte_4E7BC70 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&StringLiteral_25516/*"{0}\n(expected={1}, actual={2})"*/);
-    byte_4E08F3E = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25626/*"{0}\n(expected={1}, actual={2})"*/);
+    byte_4E7BC70 = 1;
   }
-  v7 = System_String__Format_65164204(
-         (System_String_o *)StringLiteral_25516/*"{0}\n(expected={1}, actual={2})"*/,
+  v7 = System_String__Format_65604148(
+         (System_String_o *)StringLiteral_25626/*"{0}\n(expected={1}, actual={2})"*/,
          (Il2CppObject *)message,
          (Il2CppObject *)expected,
          (Il2CppObject *)actual,
@@ -3043,7 +3043,7 @@ void Fgo_Assertions_Assert__OnFailed(
         j_il2cpp_runtime_class_init_0(v8);
         onFailedAction = Fgo_Assertions_Assert_TypeInfo->static_fields->onFailedAction;
         if ( !onFailedAction )
-          sub_1CE6958(v12, v13);
+          sub_1D0F30C(v12, v13);
       }
       ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))onFailedAction->fields.invoke_impl)(
         onFailedAction->fields.method_code,
@@ -3062,16 +3062,16 @@ void Fgo_Assertions_Assert__OnFailedDataEntityExists(
         int32_t line,
         const MethodInfo *method)
 {
-  if ( (byte_4E08F4D & 1) == 0 )
+  if ( (byte_4E7BC7F & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_16066/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/);
-    byte_4E08F4D = 1;
+    sub_1D0F0B4(&StringLiteral_16120/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/);
+    byte_4E7BC7F = 1;
   }
-  System_String__Format_65164136((System_String_o *)StringLiteral_16066/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/, (Il2CppObject *)name, (Il2CppObject *)key, 0);
+  System_String__Format_65604080((System_String_o *)StringLiteral_16120/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/, (Il2CppObject *)name, (Il2CppObject *)key, 0);
 }
 
 
-void Fgo_Assertions_Assert__OnFailed_50138644(
+void Fgo_Assertions_Assert__OnFailed_50431836(
         System_String_o *caption,
         System_String_o *message,
         UnityEngine_GameObject_o *gameObject,
@@ -3096,16 +3096,16 @@ void Fgo_Assertions_Assert__OnFailed_50138644(
 
   v9 = message;
   v10 = (Il2CppObject *)caption;
-  if ( (byte_4E08F3F & 1) == 0 )
+  if ( (byte_4E7BC71 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&System_IO_Path_TypeInfo);
-    sub_1CE6700(&StringLiteral_25554/*"{0}({1})"*/);
-    sub_1CE6700(&StringLiteral_61/*"\nGameObject:"*/);
-    caption = (System_String_o *)sub_1CE6700(&StringLiteral_25517/*"{0}\n{1}\n{2}"*/);
-    byte_4E08F3F = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&System_IO_Path_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_25664/*"{0}({1})"*/);
+    sub_1D0F0B4(&StringLiteral_61/*"\nGameObject:"*/);
+    caption = (System_String_o *)sub_1D0F0B4(&StringLiteral_25627/*"{0}\n{1}\n{2}"*/);
+    byte_4E7BC71 = 1;
   }
   if ( !filePath )
     goto LABEL_27;
@@ -3115,7 +3115,7 @@ void Fgo_Assertions_Assert__OnFailed_50138644(
   FileName = (Il2CppObject *)System_IO_Path__GetFileName(v11, 0);
   v22 = line;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-  v14 = (Il2CppObject *)System_String__Format_65164136((System_String_o *)StringLiteral_25554/*"{0}({1})"*/, FileName, v13, 0);
+  v14 = (Il2CppObject *)System_String__Format_65604080((System_String_o *)StringLiteral_25664/*"{0}({1})"*/, FileName, v13, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   caption = (System_String_o *)UnityEngine_Object__op_Inequality(0, (UnityEngine_Object_o *)gameObject, 0);
@@ -3124,9 +3124,9 @@ void Fgo_Assertions_Assert__OnFailed_50138644(
     if ( !gameObject )
       goto LABEL_27;
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)gameObject, 0);
-    v9 = System_String__Concat_65161092(v9, (System_String_o *)StringLiteral_61/*"\nGameObject:"*/, name, 0);
+    v9 = System_String__Concat_65601036(v9, (System_String_o *)StringLiteral_61/*"\nGameObject:"*/, name, 0);
   }
-  v16 = System_String__Format_65164204((System_String_o *)StringLiteral_25517/*"{0}\n{1}\n{2}"*/, v10, (Il2CppObject *)v9, v14, 0);
+  v16 = System_String__Format_65604148((System_String_o *)StringLiteral_25627/*"{0}\n{1}\n{2}"*/, v10, (Il2CppObject *)v9, v14, 0);
   v17 = Fgo_Assertions_Assert_TypeInfo;
   v18 = v16;
   if ( !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -3180,7 +3180,7 @@ void Fgo_Assertions_Assert__OnFailed_50138644(
         return;
       }
 LABEL_27:
-      sub_1CE6958(caption, message);
+      sub_1D0F30C(caption, message);
     }
   }
 }
@@ -3197,12 +3197,12 @@ void Fgo_Assertions_Assert__SetOnFailedAction(System_Action_string__o *action, b
   Fgo_Assertions_Assert_c *v11; // x0
   struct Fgo_Assertions_Assert_StaticFields *static_fields; // x0
 
-  if ( (byte_4E08F40 & 1) == 0 )
+  if ( (byte_4E7BC72 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&StringLiteral_25897/*"既に表明違反時の処理が設定されています"*/);
-    byte_4E08F40 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_26006/*"既に表明違反時の処理が設定されています"*/);
+    byte_4E7BC72 = 1;
   }
   if ( !force )
   {
@@ -3216,7 +3216,7 @@ void Fgo_Assertions_Assert__SetOnFailedAction(System_Action_string__o *action, b
     {
       if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_25897/*"既に表明違反時の処理が設定されています"*/, 0);
+      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_26006/*"既に表明違反時の処理が設定されています"*/, 0);
     }
   }
   v11 = Fgo_Assertions_Assert_TypeInfo;
@@ -3227,7 +3227,7 @@ void Fgo_Assertions_Assert__SetOnFailedAction(System_Action_string__o *action, b
   }
   static_fields = v11->static_fields;
   static_fields->onFailedAction = action;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&static_fields->onFailedAction,
     (int32_t)action,
     (int32_t)method,
@@ -3253,12 +3253,12 @@ void Fgo_Assertions_Assert__SetOnFailedSendReport(
   Fgo_Assertions_Assert_c *v11; // x0
   struct Fgo_Assertions_Assert_StaticFields *static_fields; // x0
 
-  if ( (byte_4E08F41 & 1) == 0 )
+  if ( (byte_4E7BC73 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert_TypeInfo);
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&StringLiteral_25897/*"既に表明違反時の処理が設定されています"*/);
-    byte_4E08F41 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_26006/*"既に表明違反時の処理が設定されています"*/);
+    byte_4E7BC73 = 1;
   }
   if ( !force )
   {
@@ -3272,7 +3272,7 @@ void Fgo_Assertions_Assert__SetOnFailedSendReport(
     {
       if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_25897/*"既に表明違反時の処理が設定されています"*/, 0);
+      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_26006/*"既に表明違反時の処理が設定されています"*/, 0);
     }
   }
   v11 = Fgo_Assertions_Assert_TypeInfo;
@@ -3283,7 +3283,7 @@ void Fgo_Assertions_Assert__SetOnFailedSendReport(
   }
   static_fields = v11->static_fields;
   static_fields->onFailedSendReport = action;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&static_fields->onFailedSendReport,
     (int32_t)action,
     (int32_t)method,
@@ -3324,9 +3324,9 @@ void Fgo_Assertions_Assert_StringFormatParam___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.format = aFormat;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)aFormat, v7, v8, v9, v10, v11, v12);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)aFormat, v7, v8, v9, v10, v11, v12);
   this->fields.args = aArgs;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.args, (int32_t)aArgs, v13, v14, v15, v16, v17, v18);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.args, (int32_t)aArgs, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -3340,15 +3340,15 @@ void Fgo_Assertions_Assert___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4E08F55 & 1) == 0 )
+  if ( (byte_4E7BC87 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_Assert___c_TypeInfo);
-    byte_4E08F55 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_Assert___c_TypeInfo);
+    byte_4E7BC87 = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(Fgo_Assertions_Assert___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(Fgo_Assertions_Assert___c_TypeInfo);
   System_Object___ctor(v1, 0);
   Fgo_Assertions_Assert___c_TypeInfo->static_fields->__9 = (struct Fgo_Assertions_Assert___c_o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)Fgo_Assertions_Assert___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -3374,18 +3374,18 @@ __f__AnonymousType0_Object__int__o *Fgo_Assertions_Assert___c___IsAllSerializeFi
 {
   __f__AnonymousType0__obj_j__TPar___index_j__TPar__o *v6; // x21
 
-  if ( (byte_4E08F56 & 1) == 0 )
+  if ( (byte_4E7BC88 & 1) == 0 )
   {
-    sub_1CE6700(&Method___f__AnonymousType0_Object__int___ctor__);
-    sub_1CE6700(&_f__AnonymousType0_Object__int__TypeInfo);
-    byte_4E08F56 = 1;
+    sub_1D0F0B4(&Method___f__AnonymousType0_Object__int___ctor__);
+    sub_1D0F0B4(&_f__AnonymousType0_Object__int__TypeInfo);
+    byte_4E7BC88 = 1;
   }
-  v6 = (__f__AnonymousType0__obj_j__TPar___index_j__TPar__o *)sub_1CE694C(_f__AnonymousType0_Object__int__TypeInfo);
+  v6 = (__f__AnonymousType0__obj_j__TPar___index_j__TPar__o *)sub_1D0F300(_f__AnonymousType0_Object__int__TypeInfo);
   _f__AnonymousType0_object__int____ctor(
     v6,
     (Il2CppObject *)obj,
     index,
-    (const MethodInfo_33E0F48 *)Method___f__AnonymousType0_Object__int___ctor__);
+    (const MethodInfo_342E3D4 *)Method___f__AnonymousType0_Object__int___ctor__);
   return (__f__AnonymousType0_Object__int__o *)v6;
 }
 
@@ -3407,19 +3407,19 @@ void Fgo_Assertions_AssertQueue___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4E08F5C & 1) == 0 )
+  if ( (byte_4E7BC8E & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Queue_string___ctor__);
-    sub_1CE6700(&System_Collections_Generic_Queue_string__TypeInfo);
-    byte_4E08F5C = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Queue_string___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_Queue_string__TypeInfo);
+    byte_4E7BC8E = 1;
   }
-  v1 = (System_Collections_Generic_Queue_T__o *)sub_1CE694C(System_Collections_Generic_Queue_string__TypeInfo);
+  v1 = (System_Collections_Generic_Queue_T__o *)sub_1D0F300(System_Collections_Generic_Queue_string__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v1,
-    (const MethodInfo_3AB06FC *)Method_System_Collections_Generic_Queue_string___ctor__);
+    (const MethodInfo_3B07960 *)Method_System_Collections_Generic_Queue_string___ctor__);
   Fgo_Assertions_AssertQueue_TypeInfo->static_fields->queue = (struct System_Collections_Generic_Queue_string__o *)v1;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)Fgo_Assertions_AssertQueue_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -3432,7 +3432,7 @@ void Fgo_Assertions_AssertQueue___cctor(const MethodInfo *method)
   static_fields->onFailedAction = 0;
   static_fields = (struct Fgo_Assertions_AssertQueue_StaticFields *)((char *)static_fields + 16);
   LOBYTE(static_fields[-1].onFailedAction) = 1;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)static_fields, 0, v9, v10, v11, v12, v13, v14);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)static_fields, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -3442,11 +3442,11 @@ void Fgo_Assertions_AssertQueue__Clear(const MethodInfo *method)
   Fgo_Assertions_AssertQueue_c *v2; // x0
   System_Collections_Generic_Queue_T__o *queue; // x0
 
-  if ( (byte_4E08F5B & 1) == 0 )
+  if ( (byte_4E7BC8D & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Queue_string__Clear__);
-    byte_4E08F5B = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Queue_string__Clear__);
+    byte_4E7BC8D = 1;
   }
   v2 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( !Fgo_Assertions_AssertQueue_TypeInfo->_2.cctor_finished )
@@ -3456,10 +3456,10 @@ void Fgo_Assertions_AssertQueue__Clear(const MethodInfo *method)
   }
   queue = (System_Collections_Generic_Queue_T__o *)v2->static_fields->queue;
   if ( !queue )
-    sub_1CE6958(0, v1);
+    sub_1D0F30C(0, v1);
   System_Collections_Generic_Queue_object___Clear(
     queue,
-    (const MethodInfo_3AB0984 *)Method_System_Collections_Generic_Queue_string__Clear__);
+    (const MethodInfo_3B07BE8 *)Method_System_Collections_Generic_Queue_string__Clear__);
 }
 
 
@@ -3472,12 +3472,12 @@ void Fgo_Assertions_AssertQueue__Dequeue(const MethodInfo *method)
   Il2CppObject *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E08F5A & 1) == 0 )
+  if ( (byte_4E7BC8C & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Queue_string__Dequeue__);
-    sub_1CE6700(&Method_System_Collections_Generic_Queue_string__get_Count__);
-    byte_4E08F5A = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Queue_string__Dequeue__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Queue_string__get_Count__);
+    byte_4E7BC8C = 1;
   }
   queue = (System_Collections_Generic_Queue_T__o *)Fgo_Assertions_AssertQueue_TypeInfo;
   if ( !Fgo_Assertions_AssertQueue_TypeInfo->_2.cctor_finished )
@@ -3506,12 +3506,12 @@ LABEL_8:
       {
         v5 = System_Collections_Generic_Queue_object___Dequeue(
                queue,
-               (const MethodInfo_3AB0E54 *)Method_System_Collections_Generic_Queue_string__Dequeue__);
+               (const MethodInfo_3B080B8 *)Method_System_Collections_Generic_Queue_string__Dequeue__);
         Fgo_Assertions_AssertQueue__OnFailed((System_String_o *)v5, v6);
         return;
       }
 LABEL_12:
-      sub_1CE6958(queue, v1);
+      sub_1D0F30C(queue, v1);
     }
   }
   syncRoot->isReady = 1;
@@ -3523,11 +3523,11 @@ void Fgo_Assertions_AssertQueue__Enqueue(System_String_o *message, const MethodI
   struct Fgo_Assertions_AssertQueue_StaticFields *static_fields; // x8
   _BOOL4 isReady; // w21
 
-  if ( (byte_4E08F59 & 1) == 0 )
+  if ( (byte_4E7BC8B & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    sub_1CE6700(&Method_System_Collections_Generic_Queue_string__Enqueue__);
-    byte_4E08F59 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    sub_1D0F0B4(&Method_System_Collections_Generic_Queue_string__Enqueue__);
+    byte_4E7BC8B = 1;
   }
   if ( Fgo_Assertions_AssertQueue_TypeInfo->_2.cctor_finished )
   {
@@ -3559,11 +3559,11 @@ LABEL_5:
     }
   }
   if ( !static_fields->queue )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   System_Collections_Generic_Queue_object___Enqueue(
     (System_Collections_Generic_Queue_T__o *)static_fields->queue,
     (Il2CppObject *)message,
-    (const MethodInfo_3AB0CC4 *)Method_System_Collections_Generic_Queue_string__Enqueue__);
+    (const MethodInfo_3B07F28 *)Method_System_Collections_Generic_Queue_string__Enqueue__);
 }
 
 
@@ -3574,12 +3574,12 @@ void Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, const Method
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4E08F57 & 1) == 0 )
+  if ( (byte_4E7BC89 & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    sub_1CE6700(&UnityEngine_Debug_TypeInfo);
-    sub_1CE6700(&StringLiteral_25916/*"表明違反時処理が設定されていません"*/);
-    byte_4E08F57 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_26025/*"表明違反時処理が設定されていません"*/);
+    byte_4E7BC89 = 1;
   }
   v3 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( !Fgo_Assertions_AssertQueue_TypeInfo->_2.cctor_finished )
@@ -3595,7 +3595,7 @@ void Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, const Method
       j_il2cpp_runtime_class_init_0(v3);
       onFailedAction = Fgo_Assertions_AssertQueue_TypeInfo->static_fields->onFailedAction;
       if ( !onFailedAction )
-        sub_1CE6958(v5, v6);
+        sub_1D0F30C(v5, v6);
     }
     ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))onFailedAction->fields.invoke_impl)(
       onFailedAction->fields.method_code,
@@ -3606,7 +3606,7 @@ void Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, const Method
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_25916/*"表明違反時処理が設定されていません"*/, 0);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_26025/*"表明違反時処理が設定されていません"*/, 0);
   }
 }
 
@@ -3622,10 +3622,10 @@ void Fgo_Assertions_AssertQueue__SetOnFailedAction(System_Action_string__o *acti
   Fgo_Assertions_AssertQueue_c *v9; // x0
   struct Fgo_Assertions_AssertQueue_StaticFields *static_fields; // x0
 
-  if ( (byte_4E08F58 & 1) == 0 )
+  if ( (byte_4E7BC8A & 1) == 0 )
   {
-    sub_1CE6700(&Fgo_Assertions_AssertQueue_TypeInfo);
-    byte_4E08F58 = 1;
+    sub_1D0F0B4(&Fgo_Assertions_AssertQueue_TypeInfo);
+    byte_4E7BC8A = 1;
   }
   v9 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( !Fgo_Assertions_AssertQueue_TypeInfo->_2.cctor_finished )
@@ -3635,5 +3635,5 @@ void Fgo_Assertions_AssertQueue__SetOnFailedAction(System_Action_string__o *acti
   }
   static_fields = v9->static_fields;
   static_fields->onFailedAction = action;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&static_fields->onFailedAction, (int32_t)action, v2, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->onFailedAction, (int32_t)action, v2, v3, v4, v5, v6, v7);
 }

@@ -64,7 +64,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1CE6958(enabled, v5);
+    sub_1D0F30C(enabled, v5);
   }
 }
 
@@ -78,7 +78,7 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
   {
     frames = this->fields.frames;
     if ( !frames )
-      sub_1CE6958(this, method);
+      sub_1D0F30C(this, method);
     v2 = LODWORD(frames->max_length) - 1;
   }
   else
@@ -135,7 +135,7 @@ LABEL_13:
           return;
         }
 LABEL_19:
-        sub_1CE6958(v10, v4);
+        sub_1D0F30C(v10, v4);
       }
       if ( (v10 & 0x80000000) == 0 )
       {
@@ -190,12 +190,12 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   struct UI2DSprite_o *v37; // x10
   struct UnityEngine_Sprite_o *v38; // x1
 
-  if ( (byte_4E092C4 & 1) == 0 )
+  if ( (byte_4E7BFF6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E092C4 = 1;
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E7BFF6 = 1;
   }
   mUnitySprite = (UnityEngine_Object_o *)this->fields.mUnitySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -209,9 +209,9 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
       this->fields.mUnitySprite = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-      sub_1CE66A4(
+      sub_1D0F058(
         (GrandQuestFolderBoardItem_o *)&this->fields.mUnitySprite,
         (int32_t)Component_object,
         v6,
@@ -222,9 +222,9 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
         v11);
       v12 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_31FAB78 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
       this->fields.mNguiSprite = (struct UI2DSprite_o *)v12;
-      sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.mNguiSprite, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mNguiSprite, (int32_t)v12, v13, v14, v15, v16, v17, v18);
       v19 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -267,10 +267,10 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
         return;
       }
 LABEL_36:
-      sub_1CE6958(v24, v25);
+      sub_1D0F30C(v24, v25);
     }
 LABEL_37:
-    sub_1CE6960(v24);
+    sub_1D0F314(v24);
   }
   v28 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -289,7 +289,7 @@ LABEL_37:
       goto LABEL_36;
     v38 = v35->m_Items[v36];
     v37->fields.nextSprite = v38;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v37->fields.nextSprite, (int32_t)v38, v29, v30, v31, v32, v33, v34);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v37->fields.nextSprite, (int32_t)v38, v29, v30, v31, v32, v33, v34);
   }
 }
 

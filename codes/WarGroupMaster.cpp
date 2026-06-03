@@ -1,14 +1,14 @@
 void WarGroupMaster___ctor(WarGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05C7B & 1) == 0 )
+  if ( (byte_4E7891F & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
-    byte_4E05C7B = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
+    byte_4E7891F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     358,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string___ctor__);
 }
 
 
@@ -27,22 +27,22 @@ bool WarGroupMaster__CanUseContinueItem(
   __int64 max_length; // x8
   int32_t *m_Items; // x9
 
-  if ( (byte_4E05C7C & 1) == 0 )
+  if ( (byte_4E78920 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Count__);
-    sub_1CE6700(&Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Item__);
-    byte_4E05C7C = 1;
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Count__);
+    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Item__);
+    byte_4E78920 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_17:
-    sub_1CE6958(list, *(_QWORD *)&warId);
+    sub_1D0F30C(list, *(_QWORD *)&warId);
   v12 = 0;
   while ( 1 )
   {
     Count = System_Collections_ObjectModel_Collection_object___get_Count(
               list,
-              (const MethodInfo_3480AB0 *)Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Count__);
+              (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Count__);
     if ( v12 >= Count )
       return v12 < Count;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -51,7 +51,7 @@ LABEL_17:
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v12,
-                                                               (const MethodInfo_3480B40 *)Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Item__);
+                                                               (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_WarGroupEntity__get_Item__);
     if ( list )
     {
       if ( !targetIds )
@@ -93,16 +93,16 @@ WarGroupEntity_o *WarGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E05C79 & 1) == 0 )
+  if ( (byte_4E7891D & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
-    byte_4E05C79 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
+    byte_4E7891D = 1;
   }
   PK = (Il2CppObject *)WarGroupEntity__CreatePK(id, warId, questAfterClear, questType, *(const MethodInfo **)&questType);
   return (WarGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_34EE1BC *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
+                               (const MethodInfo_353AADC *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__GetEntity__);
 }
 
 
@@ -126,19 +126,19 @@ bool WarGroupMaster__HasEntity(
   int32_t v20; // w27
   System_String_o *PK; // x0
 
-  if ( (byte_4E05C7D & 1) == 0 )
+  if ( (byte_4E78921 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_WarGroupIgnoreMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__isEntityExistsFromId__);
-    byte_4E05C7D = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_WarGroupIgnoreMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__isEntityExistsFromId__);
+    byte_4E78921 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_WarGroupIgnoreMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_WarGroupIgnoreMaster___);
   if ( !targetIds )
 LABEL_15:
-    sub_1CE6958(Master_object, v14);
+    sub_1D0F30C(Master_object, v14);
   max_length = targetIds->max_length;
   v17 = (int)max_length > 0;
   if ( (int)max_length >= 1 )
@@ -148,13 +148,13 @@ LABEL_15:
     do
     {
       if ( v19 >= (unsigned int)max_length )
-        sub_1CE6960(Master_object);
+        sub_1D0F314(Master_object);
       v20 = targetIds->m_Items[v19];
       PK = WarGroupEntity__CreatePK(v20, warId, questAfterClear, questType, v15);
-      Master_object = (Il2CppObject *)DataMasterBase_object__object__object___isEntityExistsFromId_55499076(
+      Master_object = (Il2CppObject *)DataMasterBase_object__object__object___isEntityExistsFromId_55812708(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_34ED944 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__isEntityExistsFromId__);
+                                        (const MethodInfo_353A264 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__isEntityExistsFromId__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( !v18 )
@@ -184,10 +184,10 @@ bool WarGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E05C7A & 1) == 0 )
+  if ( (byte_4E7891E & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
-    byte_4E05C7A = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
+    byte_4E7891E = 1;
   }
   PK = (Il2CppObject *)WarGroupEntity__CreatePK(
                          id,
@@ -199,7 +199,7 @@ bool WarGroupMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_34EE208 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_353AB28 *)Method_DataMasterBase_WarGroupMaster__WarGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -223,25 +223,25 @@ bool WarGroupMaster__TryGetWarList(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4E05C7E & 1) == 0 )
+  if ( (byte_4E78922 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Linq_Enumerable_OfType_WarGroupEntity___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_ToArray_WarGroupEntity___);
-    sub_1CE6700(&Method_System_Linq_Enumerable_Where_WarGroupEntity___);
-    sub_1CE6700(&System_Func_WarGroupEntity__bool__TypeInfo);
-    sub_1CE6700(&Method_WarGroupMaster___c__DisplayClass5_0__TryGetWarList_b__0__);
-    sub_1CE6700(&WarGroupMaster___c__DisplayClass5_0_TypeInfo);
-    byte_4E05C7E = 1;
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_OfType_WarGroupEntity___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_WarGroupEntity___);
+    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_WarGroupEntity___);
+    sub_1D0F0B4(&System_Func_WarGroupEntity__bool__TypeInfo);
+    sub_1D0F0B4(&Method_WarGroupMaster___c__DisplayClass5_0__TryGetWarList_b__0__);
+    sub_1D0F0B4(&WarGroupMaster___c__DisplayClass5_0_TypeInfo);
+    byte_4E78922 = 1;
   }
-  v7 = sub_1CE694C(WarGroupMaster___c__DisplayClass5_0_TypeInfo);
+  v7 = sub_1D0F300(WarGroupMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1CE6958(v8, v9);
+    sub_1D0F30C(v8, v9);
   *(_DWORD *)(v7 + 16) = warGroupId;
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_3232D7C *)Method_System_Linq_Enumerable_OfType_WarGroupEntity___);
-  v11 = (System_Func_object__bool__o *)sub_1CE694C(System_Func_WarGroupEntity__bool__TypeInfo);
+                                                               (const MethodInfo_327EA84 *)Method_System_Linq_Enumerable_OfType_WarGroupEntity___);
+  v11 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_WarGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v11,
     (Il2CppObject *)v7,
@@ -250,12 +250,12 @@ bool WarGroupMaster__TryGetWarList(
   v12 = System_Linq_Enumerable__Where_object_(
           v10,
           (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_324B214 *)Method_System_Linq_Enumerable_Where_WarGroupEntity___);
+          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_WarGroupEntity___);
   v13 = System_Linq_Enumerable__ToArray_object_(
           v12,
-          (const MethodInfo_32438A8 *)Method_System_Linq_Enumerable_ToArray_WarGroupEntity___);
+          (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_WarGroupEntity___);
   *entities = (WarGroupEntity_array *)v13;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)entities, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)entities, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*entities, 0);
 }
 
@@ -272,6 +272,6 @@ bool WarGroupMaster___c__DisplayClass5_0___TryGetWarList_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return entity->fields.id == this->fields.warGroupId;
 }

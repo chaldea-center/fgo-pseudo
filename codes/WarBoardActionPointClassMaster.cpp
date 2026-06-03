@@ -1,14 +1,14 @@
 void WarBoardActionPointClassMaster___ctor(WarBoardActionPointClassMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05B57 & 1) == 0 )
+  if ( (byte_4E787F6 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
-    byte_4E05B57 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
+    byte_4E787F6 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     344,
-    (const MethodInfo_34EBC44 *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
+    (const MethodInfo_3538564 *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ WarBoardActionPointClassEntity_o *WarBoardActionPointClassMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E05B58 & 1) == 0 )
+  if ( (byte_4E787F7 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
-    byte_4E05B58 = 1;
+    sub_1D0F0B4(&Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
+    byte_4E787F7 = 1;
   }
   PK = (Il2CppObject *)WarBoardActionPointClassEntity__CreatePK(id, classId, *(const MethodInfo **)&classId);
   return (WarBoardActionPointClassEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_34EE1BC *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
+                                               (const MethodInfo_353AADC *)Method_DataMasterBase_WarBoardActionPointClassMaster__WarBoardActionPointClassEntity__string__GetEntity__);
 }
 
 
@@ -61,15 +61,15 @@ WarBoardActionPointClassEntity_o *WarBoardActionPointClassMaster__GetEntitySafe(
   WarBoardActionPointClassEntity_o *result; // x0
   const MethodInfo *v10; // x3
 
-  if ( (byte_4E05B59 & 1) == 0 )
+  if ( (byte_4E787F8 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    byte_4E05B59 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    byte_4E787F8 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
   if ( !Master_object )
     goto LABEL_11;
   result = WarBoardActionPointClassMaster__GetEntity((WarBoardActionPointClassMaster_o *)Master_object, id, classId, v8);
@@ -77,10 +77,10 @@ WarBoardActionPointClassEntity_o *WarBoardActionPointClassMaster__GetEntitySafe(
     return result;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
   if ( !Master_object )
 LABEL_11:
-    sub_1CE6958(Master_object, v7);
+    sub_1D0F30C(Master_object, v7);
   return WarBoardActionPointClassMaster__GetEntity((WarBoardActionPointClassMaster_o *)Master_object, id, -1, v10);
 }
 

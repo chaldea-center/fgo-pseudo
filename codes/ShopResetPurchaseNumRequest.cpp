@@ -7,14 +7,14 @@ void ShopResetPurchaseNumRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4E0660C & 1) == 0 )
+  if ( (byte_4E792B3 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_23431/*"resetItemId"*/);
-    sub_1CE6700(&StringLiteral_23811/*"shopId"*/);
-    byte_4E0660C = 1;
+    sub_1D0F0B4(&StringLiteral_23533/*"resetItemId"*/);
+    sub_1D0F0B4(&StringLiteral_23913/*"shopId"*/);
+    byte_4E792B3 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23811/*"shopId"*/, shopId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23431/*"resetItemId"*/, resetItemId, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23913/*"shopId"*/, shopId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23533/*"resetItemId"*/, resetItemId, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,16 +23,16 @@ System_String_o *ShopResetPurchaseNumRequest__getURL(ShopResetPurchaseNumRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E0660B & 1) == 0 )
+  if ( (byte_4E792B2 & 1) == 0 )
   {
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_23809/*"shop/resetPurchaseNum"*/);
-    byte_4E0660B = 1;
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_23911/*"shop/resetPurchaseNum"*/);
+    byte_4E792B2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65122828(BaseUrl, (System_String_o *)StringLiteral_23809/*"shop/resetPurchaseNum"*/, 0);
+  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_23911/*"shop/resetPurchaseNum"*/, 0);
 }
 
 
@@ -49,12 +49,12 @@ void ShopResetPurchaseNumRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4E0660D & 1) == 0 )
+  if ( (byte_4E792B4 & 1) == 0 )
   {
-    sub_1CE6700(&JsonManager_TypeInfo);
-    sub_1CE6700(&ResponseCommandKind_TypeInfo);
-    sub_1CE6700(&StringLiteral_22555/*"ng"*/);
-    byte_4E0660D = 1;
+    sub_1D0F0B4(&JsonManager_TypeInfo);
+    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
+    byte_4E792B4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -78,7 +78,7 @@ void ShopResetPurchaseNumRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22555/*"ng"*/,
+        StringLiteral_22648/*"ng"*/,
         v11->fields.method);
   }
 }

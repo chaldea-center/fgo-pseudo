@@ -1,27 +1,27 @@
 void QuestPhaseDetailEntity___ctor(QuestPhaseDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E05087 & 1) == 0 )
+  if ( (byte_4E77D17 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_string___ctor__);
-    byte_4E05087 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
+    byte_4E77D17 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_34E6B9C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *QuestPhaseDetailEntity__CreatePK(int32_t questId, int32_t phase, const MethodInfo *method)
 {
-  if ( (byte_4E05086 & 1) == 0 )
+  if ( (byte_4E77D16 & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E05086 = 1;
+    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4E77D16 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            phase,
-           (const MethodInfo_3202530 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -71,11 +71,11 @@ bool QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   UnityEngine_Color_o v16; // kr00_16
   UnityEngine_Color_o v17; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4E05089 & 1) == 0 )
+  if ( (byte_4E77D19 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E05089 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E77D19 = 1;
   }
   *(_QWORD *)&v17.fields.r = 0;
   *(_QWORD *)&v17.fields.b = 0;
@@ -121,10 +121,10 @@ bool QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   if ( !offset || SLODWORD(offset->max_length) < 2 )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0);
-    if ( !byte_4DFE0A9 )
+    if ( !byte_4E70C99 )
     {
-      sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-      byte_4DFE0A9 = 1;
+      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+      byte_4E70C99 = 1;
     }
     GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     goto LABEL_29;
@@ -140,10 +140,10 @@ bool QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   v15 = this->fields.offset;
   if ( !v15 )
 LABEL_34:
-    sub_1CE6958(IsNullOrEmpty, v6);
+    sub_1D0F30C(IsNullOrEmpty, v6);
   if ( LODWORD(v15->max_length) <= 1 )
 LABEL_35:
-    sub_1CE6960(IsNullOrEmpty);
+    sub_1D0F314(IsNullOrEmpty);
   GameObjectExtensions__SetLocalPositionY(IsNullOrEmpty, (float)v15->m_Items[1], 0);
 LABEL_29:
   if ( System_String__IsNullOrEmpty(this->fields.imgColor, 0) )
@@ -189,10 +189,10 @@ bool QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
   UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E05088 & 1) == 0 )
+  if ( (byte_4E77D18 & 1) == 0 )
   {
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    byte_4E05088 = 1;
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    byte_4E77D18 = 1;
   }
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
@@ -230,10 +230,10 @@ bool QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
       if ( !label )
         goto LABEL_34;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0);
-      if ( !byte_4DFE0A9 )
+      if ( !byte_4E70C99 )
       {
-        sub_1CE6700(&UnityEngine_Vector3_TypeInfo);
-        byte_4DFE0A9 = 1;
+        sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
+        byte_4E70C99 = 1;
       }
       GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     }
@@ -271,14 +271,14 @@ LABEL_31:
       {
         v9 = 1;
         UnityEngine_GameObject__SetActive(IsNullOrEmpty, 1, 0);
-        UILabel__SetCondensedScale_50636732(label, maxWidth, 0.0, 0);
+        UILabel__SetCondensedScale_50929924(label, maxWidth, 0.0, 0);
         return v9;
       }
 LABEL_34:
-      sub_1CE6958(IsNullOrEmpty, v8);
+      sub_1D0F30C(IsNullOrEmpty, v8);
     }
 LABEL_35:
-    sub_1CE6960(IsNullOrEmpty);
+    sub_1D0F314(IsNullOrEmpty);
   }
   if ( !label )
     goto LABEL_34;

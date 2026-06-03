@@ -2,10 +2,10 @@ void FollowerRootComponent___cctor(const MethodInfo *method)
 {
   struct FollowerRootComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4DFF355 & 1) == 0 )
+  if ( (byte_4E71F4D & 1) == 0 )
   {
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    byte_4DFF355 = 1;
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    byte_4E71F4D = 1;
   }
   static_fields = FollowerRootComponent_TypeInfo->static_fields;
   static_fields->LIST_UPDATE_MESSAGE_FONT_SIZE = 26;
@@ -18,14 +18,14 @@ void FollowerRootComponent___ctor(FollowerRootComponent_o *this, const MethodInf
 {
   __int64 v3; // x1
 
-  if ( (byte_4DFF354 & 1) == 0 )
+  if ( (byte_4E71F4C & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFF354 = 1;
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E71F4C = 1;
   }
   v3 = StringLiteral_1/*""*/;
   this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1CE66A4(&this->fields.backupBgmName, v3);
+  sub_1D0F058(&this->fields.backupBgmName, v3);
   SceneRootComponent___ctor((SceneRootComponent_o *)this, 0);
 }
 
@@ -37,15 +37,15 @@ void FollowerRootComponent__CallbackFollowerList(
 {
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4DFF339 & 1) == 0 )
+  if ( (byte_4E71F31 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_11196/*"REQUEST_OK"*/);
-    byte_4DFF339 = 1;
+    sub_1D0F0B4(&StringLiteral_11244/*"REQUEST_OK"*/);
+    byte_4E71F31 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_1CE6958(0, result);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11196/*"REQUEST_OK"*/, 0);
+    sub_1D0F30C(0, result);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11244/*"REQUEST_OK"*/, 0);
 }
 
 
@@ -60,7 +60,7 @@ void FollowerRootComponent__CallbackInitRecommendFollowerRequest(
   operationItemListViewManager = (ListViewManager_o *)this->fields.operationItemListViewManager;
   this->fields.isInitRecommendRequest = 1;
   if ( !operationItemListViewManager )
-    sub_1CE6958(0, result);
+    sub_1D0F30C(0, result);
   ListViewManager__SetEmptyMessageBase(operationItemListViewManager, 1, 0);
   FollowerRootComponent__Init(this, v5);
 }
@@ -78,13 +78,13 @@ void FollowerRootComponent__CallbackRefresh(
   FollowerSelectItemListViewManager_o *v8; // x20
   FollowerSelectItemListViewManager_CallbackFunc_o *v9; // x21
 
-  if ( (byte_4DFF34C & 1) == 0 )
+  if ( (byte_4E71F44 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&OtherUserServantLimitCountManager_TypeInfo);
-    sub_1CE6700(&RandomLimitCountManager_TypeInfo);
-    byte_4DFF34C = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&RandomLimitCountManager_TypeInfo);
+    byte_4E71F44 = 1;
   }
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
@@ -117,7 +117,7 @@ void FollowerRootComponent__CallbackRefresh(
           battleSetupInfo->fields.questRestrictionInfo,
           0),
         v8 = this->fields.operationItemListViewManager,
-        v9 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo),
+        v9 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo),
         FollowerSelectItemListViewManager_CallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -128,7 +128,7 @@ void FollowerRootComponent__CallbackRefresh(
         (operationItemListViewManager = (FollowerSelectItemListViewManager_o *)this->fields.commonConfirmDialog) == 0) )
   {
 LABEL_14:
-    sub_1CE6958(operationItemListViewManager, v4);
+    sub_1D0F30C(operationItemListViewManager, v4);
   }
   CommonConfirmDialog__Close((CommonConfirmDialog_o *)operationItemListViewManager, 0);
 }
@@ -141,21 +141,21 @@ void FollowerRootComponent__EndCloseShowServant(FollowerRootComponent_o *this, c
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4DFF340 & 1) == 0 )
+  if ( (byte_4E71F38 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF340 = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F38 = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
-  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
     0);
   if ( !operationItemListViewManager )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v4, 0);
 }
 
@@ -167,21 +167,21 @@ void FollowerRootComponent__EndCloseShowServantEquip(FollowerRootComponent_o *th
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4DFF343 & 1) == 0 )
+  if ( (byte_4E71F3B & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF343 = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F3B = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
-  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
     0);
   if ( !operationItemListViewManager )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v4, 0);
 }
 
@@ -190,10 +190,10 @@ void FollowerRootComponent__EndCloseTutorialArrow(FollowerRootComponent_o *this,
 {
   UnityEngine_GameObject_o *tutorialMaskBase2; // x0
 
-  if ( (byte_4DFF34E & 1) == 0 )
+  if ( (byte_4E71F46 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_8721/*"MENU_SELECT_ITEM"*/);
-    byte_4DFF34E = 1;
+    sub_1D0F0B4(&StringLiteral_8757/*"MENU_SELECT_ITEM"*/);
+    byte_4E71F46 = 1;
   }
   tutorialMaskBase2 = this->fields.tutorialMaskBase2;
   if ( !tutorialMaskBase2
@@ -202,9 +202,9 @@ void FollowerRootComponent__EndCloseTutorialArrow(FollowerRootComponent_o *this,
         this->fields.state = 3,
         !tutorialMaskBase2) )
   {
-    sub_1CE6958(tutorialMaskBase2, method);
+    sub_1D0F30C(tutorialMaskBase2, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)tutorialMaskBase2, (System_String_o *)StringLiteral_8721/*"MENU_SELECT_ITEM"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)tutorialMaskBase2, (System_String_o *)StringLiteral_8757/*"MENU_SELECT_ITEM"*/, 0);
 }
 
 
@@ -213,21 +213,21 @@ void FollowerRootComponent__EndLoadCommonBg(FollowerRootComponent_o *this, const
   UnityEngine_Component_o *backSkinSprite; // x0
   System_Action_o *v4; // x20
 
-  if ( (byte_4DFF331 & 1) == 0 )
+  if ( (byte_4E71F29 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndLoadOutGameAtlas__);
-    byte_4DFF331 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndLoadOutGameAtlas__);
+    byte_4E71F29 = 1;
   }
   backSkinSprite = (UnityEngine_Component_o *)this->fields.backSkinSprite;
   if ( !backSkinSprite
     || (backSkinSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(backSkinSprite, 0)) == 0 )
   {
-    sub_1CE6958(backSkinSprite, method);
+    sub_1D0F30C(backSkinSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)backSkinSprite, 1, 0);
-  v4 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadOutGameAtlas__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -239,14 +239,14 @@ void FollowerRootComponent__EndLoadEventAtlas(FollowerRootComponent_o *this, con
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4DFF333 & 1) == 0 )
+  if ( (byte_4E71F2B & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndLoadPartyOrganizationAtlas__);
-    byte_4DFF333 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndLoadPartyOrganizationAtlas__);
+    byte_4E71F2B = 1;
   }
-  v3 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadPartyOrganizationAtlas__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -258,14 +258,14 @@ void FollowerRootComponent__EndLoadOutGameAtlas(FollowerRootComponent_o *this, c
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4DFF332 & 1) == 0 )
+  if ( (byte_4E71F2A & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndLoadEventAtlas__);
-    byte_4DFF332 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndLoadEventAtlas__);
+    byte_4E71F2A = 1;
   }
-  v3 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadEventAtlas__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -278,11 +278,11 @@ void FollowerRootComponent__EndLoadPartyOrganizationAtlas(FollowerRootComponent_
   FollowerSelectItemListViewManager_o *operationItemListViewManager; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4DFF334 & 1) == 0 )
+  if ( (byte_4E71F2C & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF334 = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F2C = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager )
@@ -292,30 +292,30 @@ void FollowerRootComponent__EndLoadPartyOrganizationAtlas(FollowerRootComponent_
   if ( !operationItemListViewManager )
     goto LABEL_15;
   FollowerSelectItemListViewManager__SetClassBoardInfo(operationItemListViewManager, 0);
-  SceneRootComponent__beginStartUp_42637640((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
   if ( this->fields.isForceFadeOut )
   {
     this->fields.isForceFadeOut = 0;
-    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !operationItemListViewManager )
       goto LABEL_15;
     CommonUI__maskFadeInit((CommonUI_o *)operationItemListViewManager, 0);
-    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !operationItemListViewManager )
       goto LABEL_15;
     CommonUI__maskFadeout((CommonUI_o *)operationItemListViewManager, 1, 0.0, 0, 0);
     FollowerRootComponent__StartBattleSetupMenu(this, v4);
   }
-  operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !operationItemListViewManager )
     goto LABEL_15;
   if ( PartyOrganizationUtility__ExistsTemporaryPartyInfo((PartyOrganizationUtility_o *)operationItemListViewManager, 0) )
   {
-    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( operationItemListViewManager )
     {
       CommonUI__maskFadeInit((CommonUI_o *)operationItemListViewManager, 0);
-      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( operationItemListViewManager )
       {
         CommonUI__maskFadeout((CommonUI_o *)operationItemListViewManager, 1, 0.0, 0, 0);
@@ -323,7 +323,7 @@ void FollowerRootComponent__EndLoadPartyOrganizationAtlas(FollowerRootComponent_
       }
     }
 LABEL_15:
-    sub_1CE6958(operationItemListViewManager, method);
+    sub_1D0F30C(operationItemListViewManager, method);
   }
 }
 
@@ -335,22 +335,22 @@ void FollowerRootComponent__EndOpenTutorialArrow(FollowerRootComponent_o *this, 
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4DFF352 & 1) == 0 )
+  if ( (byte_4E71F4A & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF352 = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F4A = 1;
   }
   this->fields.state = 3;
   operationItemListViewManager = this->fields.operationItemListViewManager;
-  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
     0);
   if ( !operationItemListViewManager )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 4, v4, 0);
 }
 
@@ -370,16 +370,16 @@ void FollowerRootComponent__EndRecommendRefreshConfirm(
   FollowerSelectItemListViewManager_CallbackFunc_o *v10; // x21
 
   v4 = this;
-  if ( (byte_4DFF34B & 1) == 0 )
+  if ( (byte_4E71F43 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_CallbackRefresh__);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF34B = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_CallbackRefresh__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F43 = 1;
   }
   if ( isDecide )
   {
@@ -392,18 +392,18 @@ void FollowerRootComponent__EndRecommendRefreshConfirm(
       if ( !this )
         goto LABEL_18;
       TitleInfoControl__setBackBtnEnable((TitleInfoControl_o *)this, 0, 0);
-      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !this )
         goto LABEL_18;
       LOBYTE(this->fields.titleInfo) = 1;
     }
-    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(v6, (Il2CppObject *)v4, Method_FollowerRootComponent_CallbackRefresh__, 0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     this = (FollowerRootComponent_o *)NetworkManager__getRequest_object_(
                                         v6,
-                                        (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+                                        (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
     if ( v4->fields.battleSetupInfo )
     {
       v7 = (FollowerRecommendSupportListRequest_o *)this;
@@ -419,10 +419,10 @@ void FollowerRootComponent__EndRecommendRefreshConfirm(
       }
     }
 LABEL_18:
-    sub_1CE6958(this, isDecide);
+    sub_1D0F30C(this, isDecide);
   }
   operationItemListViewManager = v4->fields.operationItemListViewManager;
-  v10 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v10 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v10,
     (Il2CppObject *)v4,
@@ -450,16 +450,16 @@ void FollowerRootComponent__EndRefreshConfirm(FollowerRootComponent_o *this, boo
   FollowerSelectItemListViewManager_CallbackFunc_o *v10; // x21
 
   v4 = this;
-  if ( (byte_4DFF34A & 1) == 0 )
+  if ( (byte_4E71F42 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_CallbackRefresh__);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&Method_NetworkManager_getRequest_FollowerListRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF34A = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_CallbackRefresh__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_FollowerListRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F42 = 1;
   }
   if ( isDecide )
   {
@@ -472,18 +472,18 @@ void FollowerRootComponent__EndRefreshConfirm(FollowerRootComponent_o *this, boo
       if ( !this )
         goto LABEL_18;
       TitleInfoControl__setBackBtnEnable((TitleInfoControl_o *)this, 0, 0);
-      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !this )
         goto LABEL_18;
       LOBYTE(this->fields.titleInfo) = 1;
     }
-    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(v6, (Il2CppObject *)v4, Method_FollowerRootComponent_CallbackRefresh__, 0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     this = (FollowerRootComponent_o *)NetworkManager__getRequest_object_(
                                         v6,
-                                        (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_FollowerListRequest___);
+                                        (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_FollowerListRequest___);
     if ( v4->fields.battleSetupInfo )
     {
       v7 = (FollowerListRequest_o *)this;
@@ -499,10 +499,10 @@ void FollowerRootComponent__EndRefreshConfirm(FollowerRootComponent_o *this, boo
       }
     }
 LABEL_18:
-    sub_1CE6958(this, isDecide);
+    sub_1D0F30C(this, isDecide);
   }
   operationItemListViewManager = v4->fields.operationItemListViewManager;
-  v10 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v10 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v10,
     (Il2CppObject *)v4,
@@ -525,21 +525,21 @@ void FollowerRootComponent__EndRefreshRest(FollowerRootComponent_o *this, const 
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4DFF34D & 1) == 0 )
+  if ( (byte_4E71F45 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF34D = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F45 = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
-  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
     0);
   if ( !operationItemListViewManager )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v4, 0);
 }
 
@@ -551,12 +551,12 @@ void FollowerRootComponent__EndShowServant(FollowerRootComponent_o *this, bool i
   Il2CppObject *Instance; // x20
   System_Action_o *v6; // x21
 
-  if ( (byte_4DFF33F & 1) == 0 )
+  if ( (byte_4E71F37 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndCloseShowServant__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFF33F = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndCloseShowServant__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E71F37 = 1;
   }
   operationItemListViewManager = (ListViewManager_o *)this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager
@@ -565,12 +565,12 @@ void FollowerRootComponent__EndShowServant(FollowerRootComponent_o *this, bool i
           this->fields.openScroll,
           this->fields.openOffset,
           0),
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo),
         System_Action___ctor(v6, (Il2CppObject *)this, Method_FollowerRootComponent_EndCloseShowServant__, 0),
         !Instance) )
   {
-    sub_1CE6958(operationItemListViewManager, isDecide);
+    sub_1D0F30C(operationItemListViewManager, isDecide);
   }
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v6, 0);
 }
@@ -583,12 +583,12 @@ void FollowerRootComponent__EndShowServantEquip(FollowerRootComponent_o *this, b
   Il2CppObject *Instance; // x20
   System_Action_o *v6; // x21
 
-  if ( (byte_4DFF342 & 1) == 0 )
+  if ( (byte_4E71F3A & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndCloseShowServantEquip__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFF342 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndCloseShowServantEquip__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E71F3A = 1;
   }
   operationItemListViewManager = (ListViewManager_o *)this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager
@@ -597,12 +597,12 @@ void FollowerRootComponent__EndShowServantEquip(FollowerRootComponent_o *this, b
           this->fields.openScroll,
           this->fields.openOffset,
           0),
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo),
         System_Action___ctor(v6, (Il2CppObject *)this, Method_FollowerRootComponent_EndCloseShowServantEquip__, 0),
         !Instance) )
   {
-    sub_1CE6958(operationItemListViewManager, isDecide);
+    sub_1D0F30C(operationItemListViewManager, isDecide);
   }
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, v6, 0);
 }
@@ -615,22 +615,22 @@ void FollowerRootComponent__EndTutorialFollowerCommonGuide(FollowerRootComponent
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4DFF353 & 1) == 0 )
+  if ( (byte_4E71F4B & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF353 = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F4B = 1;
   }
   this->fields.state = 3;
   operationItemListViewManager = this->fields.operationItemListViewManager;
-  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+  v4 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
   FollowerSelectItemListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
     0);
   if ( !operationItemListViewManager )
-    sub_1CE6958(v5, v6);
+    sub_1D0F30C(v5, v6);
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v4, 0);
 }
 
@@ -643,18 +643,18 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification1(
   FollowerSelectItemListViewManager_o *operationItemListViewManager; // x20
   FollowerSelectItemListViewManager_CallbackFunc_o *v5; // x21
 
-  if ( (byte_4DFF350 & 1) == 0 )
+  if ( (byte_4E71F48 & 1) == 0 )
   {
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    byte_4DFF350 = 1;
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    byte_4E71F48 = 1;
   }
   titleInfo = this->fields.titleInfo;
   this->fields.state = 3;
   if ( !titleInfo
     || (TitleInfoControl__setBackBtnEnable(titleInfo, 0, 0),
         operationItemListViewManager = this->fields.operationItemListViewManager,
-        v5 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo),
+        v5 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo),
         FollowerSelectItemListViewManager_CallbackFunc___ctor(
           v5,
           (Il2CppObject *)this,
@@ -662,7 +662,7 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification1(
           0),
         !operationItemListViewManager) )
   {
-    sub_1CE6958(titleInfo, method);
+    sub_1D0F30C(titleInfo, method);
   }
   FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v5, 0);
 }
@@ -684,13 +684,13 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification2(
   int v11; // s5
   int v12; // s6
 
-  if ( (byte_4DFF351 & 1) == 0 )
+  if ( (byte_4E71F49 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&FSUtility_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndOpenTutorialArrow__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFF351 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&FSUtility_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndOpenTutorialArrow__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E71F49 = 1;
   }
   tutorialMaskBase2 = this->fields.tutorialMaskBase2;
   if ( !tutorialMaskBase2 )
@@ -699,12 +699,12 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification2(
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   IsUnderVista = FSUtility__IsUnderVista(0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_FollowerRootComponent_EndOpenTutorialArrow__, 0);
   if ( !Instance )
 LABEL_10:
-    sub_1CE6958(tutorialMaskBase2, method);
+    sub_1D0F30C(tutorialMaskBase2, method);
   v7 = -12.0;
   v8 = -492.0;
   if ( IsUnderVista )
@@ -746,13 +746,13 @@ System_Int64_array *FollowerRootComponent__GetEquipIdsForGrandSvt(
   BalanceConfig_c *v10; // x0
 
   v6 = this;
-  if ( (byte_4DFF33C & 1) == 0 )
+  if ( (byte_4E71F34 & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&long___TypeInfo);
-    byte_4DFF33C = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&long___TypeInfo);
+    byte_4E71F34 = 1;
   }
   battleSetupInfo = v6->fields.battleSetupInfo;
   if ( !battleSetupInfo )
@@ -768,10 +768,10 @@ System_Int64_array *FollowerRootComponent__GetEquipIdsForGrandSvt(
     return result;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
+  this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
   if ( !this )
 LABEL_15:
-    sub_1CE6958(this, *(_QWORD *)&initPos);
+    sub_1D0F30C(this, *(_QWORD *)&initPos);
   FirstByUserSvtId = UserServantGrandMaster__GetFirstByUserSvtId((UserServantGrandMaster_o *)this, userSvtId, 0);
   if ( FirstByUserSvtId )
     return UserServantGrandEntity__GetEquipUserServantIdList(FirstByUserSvtId, 0);
@@ -781,7 +781,7 @@ LABEL_15:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v10 = BalanceConfig_TypeInfo;
   }
-  return (System_Int64_array *)sub_1CE67A8(long___TypeInfo, (unsigned int)v10->static_fields->GrandSvtEquipMax);
+  return (System_Int64_array *)sub_1D0F15C(long___TypeInfo, (unsigned int)v10->static_fields->GrandSvtEquipMax);
 }
 
 
@@ -794,24 +794,24 @@ void FollowerRootComponent__GetFriendPointUpValSummary(
 {
   System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4DFF33B & 1) == 0 )
+  if ( (byte_4E71F33 & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___Dispose__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___MoveNext__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___get_Current__);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___GetEnumerator__);
-    byte_4DFF33B = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___Dispose__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___MoveNext__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___get_Current__);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___GetEnumerator__);
+    byte_4E71F33 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   if ( !upTypeVals )
-    sub_1CE6958(this, fpUpMax);
+    sub_1D0F30C(this, fpUpMax);
   System_Collections_Generic_List_ValueTuple_Int32Enum__int____GetEnumerator(
     &v8,
     (System_Collections_Generic_List_T__o *)upTypeVals,
-    (const MethodInfo_38B0BD8 *)Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___GetEnumerator__);
+    (const MethodInfo_390452C *)Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_ValueTuple_Int32Enum__int____MoveNext(
             &v8,
-            (const MethodInfo_36776AC *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___MoveNext__) )
+            (const MethodInfo_36C4A44 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___MoveNext__) )
   {
     if ( LODWORD(v8.fields._current) == 123 )
     {
@@ -824,7 +824,7 @@ void FollowerRootComponent__GetFriendPointUpValSummary(
   }
   System_Collections_Generic_List_Enumerator_ValueTuple_Int32Enum__int____Dispose(
     &v8,
-    (const MethodInfo_36776A8 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___Dispose__);
+    (const MethodInfo_36C4A40 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_FuncList_TYPE__int___Dispose__);
 }
 
 
@@ -850,24 +850,24 @@ void FollowerRootComponent__Init(FollowerRootComponent_o *this, const MethodInfo
   struct BattleSetupInfo_o *v20; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4DFF33A & 1) == 0 )
+  if ( (byte_4E71F32 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&ClassButtonControlComponent_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__);
-    sub_1CE6700(&Method_FollowerRootComponent_CallbackInitRecommendFollowerRequest__);
-    sub_1CE6700(&Method_FollowerRootComponent_OnMoveEnd__);
-    sub_1CE6700(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&Method_FollowerRootComponent___c__Init_b__50_0__);
-    sub_1CE6700(&FollowerRootComponent___c_TypeInfo);
-    sub_1CE6700(&StringLiteral_8721/*"MENU_SELECT_ITEM"*/);
-    byte_4DFF33A = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&ClassButtonControlComponent_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_CallbackInitRecommendFollowerRequest__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnMoveEnd__);
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&Method_FollowerRootComponent___c__Init_b__50_0__);
+    sub_1D0F0B4(&FollowerRootComponent___c_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_8757/*"MENU_SELECT_ITEM"*/);
+    byte_4E71F32 = 1;
   }
   entity = 0;
   if ( !this->fields.state )
@@ -894,13 +894,13 @@ void FollowerRootComponent__Init(FollowerRootComponent_o *this, const MethodInfo
       goto LABEL_19;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    battleSetupInfo = (__int64)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
+    battleSetupInfo = (__int64)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
     if ( !battleSetupInfo )
       goto LABEL_50;
     if ( !DataMasterBase_object__object__long___TryGetSingleEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)battleSetupInfo,
             &entity,
-            (const MethodInfo_34EBB38 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
+            (const MethodInfo_3538458 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
       goto LABEL_41;
     battleSetupInfo = (__int64)this->fields.battleSetupInfo;
     if ( !battleSetupInfo )
@@ -957,19 +957,19 @@ LABEL_19:
         this->fields.selectItemNum = -1;
         if ( battleSetupInfo )
         {
-          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)battleSetupInfo, (System_String_o *)StringLiteral_8721/*"MENU_SELECT_ITEM"*/, 0);
+          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)battleSetupInfo, (System_String_o *)StringLiteral_8757/*"MENU_SELECT_ITEM"*/, 0);
           return;
         }
       }
       else
       {
 LABEL_28:
-        battleSetupInfo = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+        battleSetupInfo = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
         if ( !battleSetupInfo )
           goto LABEL_50;
         if ( *(_BYTE *)(battleSetupInfo + 148) )
         {
-          battleSetupInfo = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          battleSetupInfo = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           v11 = (PartyOrganizationUtility_o *)battleSetupInfo;
           v12 = FollowerRootComponent___c_TypeInfo;
           if ( !FollowerRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -986,11 +986,11 @@ LABEL_28:
               v12 = FollowerRootComponent___c_TypeInfo;
             }
             v14 = (Il2CppObject *)v12->static_fields->__9;
-            _9__50_0 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+            _9__50_0 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
             System_Action___ctor(_9__50_0, v14, Method_FollowerRootComponent___c__Init_b__50_0__, 0);
             static_fields = FollowerRootComponent___c_TypeInfo->static_fields;
             static_fields->__9__50_0 = _9__50_0;
-            battleSetupInfo = sub_1CE66A4(&static_fields->__9__50_0, _9__50_0);
+            battleSetupInfo = sub_1D0F058(&static_fields->__9__50_0, _9__50_0);
           }
           if ( !v11 )
             goto LABEL_50;
@@ -998,11 +998,11 @@ LABEL_28:
         }
         this->fields.state = 2;
         v16 = this->fields.operationItemListViewManager;
-        v17 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        v17 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         System_Action___ctor(v17, (Il2CppObject *)this, Method_FollowerRootComponent_OnMoveEnd__, 0);
         if ( v16 )
         {
-          FollowerSelectItemListViewManager__SetMode_33638616(v16, 1, v17, 0);
+          FollowerSelectItemListViewManager__SetMode_33807212(v16, 1, v17, 0);
           return;
         }
       }
@@ -1010,7 +1010,7 @@ LABEL_28:
     else
     {
 LABEL_41:
-      v18 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v18 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v18,
         (Il2CppObject *)this,
@@ -1020,7 +1020,7 @@ LABEL_41:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       battleSetupInfo = (__int64)NetworkManager__getRequest_object_(
                                    v18,
-                                   (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+                                   (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
       if ( this->fields.battleSetupInfo )
       {
         v19 = (FollowerRecommendSupportListRequest_o *)battleSetupInfo;
@@ -1042,7 +1042,7 @@ LABEL_41:
       }
     }
 LABEL_50:
-    sub_1CE6958(battleSetupInfo, method);
+    sub_1D0F30C(battleSetupInfo, method);
   }
 }
 
@@ -1077,39 +1077,39 @@ void FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this, const Met
   System_String_o *v28; // x24
   CommonConfirmDialog_ClickDelegate_o *v29; // x25
 
-  if ( (byte_4DFF34F & 1) == 0 )
+  if ( (byte_4E71F47 & 1) == 0 )
   {
-    sub_1CE6700(&BattleRootComponent_TypeInfo);
-    sub_1CE6700(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1CE6700(&Method_UnityEngine_Component_GetComponentsInChildren_Camera___);
-    sub_1CE6700(&Method_FollowerRootComponent_OnClickBack__);
-    sub_1CE6700(&Method_FollowerRootComponent__OnClickBack_b__73_0__);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&UnityEngine_Object_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&TerminalPramsManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_6486/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/);
-    sub_1CE6700(&StringLiteral_3462/*"CLICK_BACK"*/);
-    sub_1CE6700(&StringLiteral_6485/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/);
-    sub_1CE6700(&StringLiteral_6484/*"FOLLOWER_SELECT_BACK_TITLE"*/);
-    sub_1CE6700(&StringLiteral_3717/*"COMMON_CONFIRM_NO"*/);
-    sub_1CE6700(&StringLiteral_3722/*"COMMON_CONFIRM_YES"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    sub_1CE6700(&StringLiteral_3463/*"CLICK_BACK_BATTLE_SETUP"*/);
-    byte_4DFF34F = 1;
+    sub_1D0F0B4(&BattleRootComponent_TypeInfo);
+    sub_1D0F0B4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentsInChildren_Camera___);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnClickBack__);
+    sub_1D0F0B4(&Method_FollowerRootComponent__OnClickBack_b__73_0__);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_6512/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/);
+    sub_1D0F0B4(&StringLiteral_3472/*"CLICK_BACK"*/);
+    sub_1D0F0B4(&StringLiteral_6511/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/);
+    sub_1D0F0B4(&StringLiteral_6510/*"FOLLOWER_SELECT_BACK_TITLE"*/);
+    sub_1D0F0B4(&StringLiteral_3727/*"COMMON_CONFIRM_NO"*/);
+    sub_1D0F0B4(&StringLiteral_3732/*"COMMON_CONFIRM_YES"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    sub_1D0F0B4(&StringLiteral_3473/*"CLICK_BACK_BATTLE_SETUP"*/);
+    byte_4E71F47 = 1;
   }
   if ( this->fields.state == 3 && !this->fields.tutorialState )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
     if ( !Instance )
       goto LABEL_64;
     if ( !*((_BYTE *)Instance + 148) )
       goto LABEL_34;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
       goto LABEL_64;
     StackedRootComponent = AvalonSceneManager__GetStackedRootComponent((AvalonSceneManager_o *)Instance, 0);
@@ -1132,8 +1132,8 @@ void FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this, const Met
     {
       v8 = Method_FollowerRootComponent_OnClickBack__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnClickBack__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnClickBack__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v8, v8[4]);
+        v8 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnClickBack__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1D0F098(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 1, 0, 0);
       this->fields.state = 4;
       if ( v7 )
@@ -1152,13 +1152,13 @@ void FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this, const Met
               Instance = this->fields.myFSM;
               if ( Instance )
               {
-                PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3462/*"CLICK_BACK"*/, 0);
+                PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3472/*"CLICK_BACK"*/, 0);
                 Instance = UnityEngine_Component__get_transform(v7, 0);
                 if ( Instance )
                 {
-                  Instance = UnityEngine_Component__GetComponentsInChildren_object__52410400(
+                  Instance = UnityEngine_Component__GetComponentsInChildren_object__52717104(
                                (UnityEngine_Component_o *)Instance,
-                               (const MethodInfo_31FB820 *)Method_UnityEngine_Component_GetComponentsInChildren_Camera___);
+                               (const MethodInfo_3246630 *)Method_UnityEngine_Component_GetComponentsInChildren_Camera___);
                   if ( Instance )
                   {
                     v11 = *((_DWORD *)Instance + 6);
@@ -1169,7 +1169,7 @@ void FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this, const Met
                     while ( 1 )
                     {
                       if ( v13 >= v11 )
-                        sub_1CE6960(Instance);
+                        sub_1D0F314(Instance);
                       Instance = (void *)*((_QWORD *)v12 + (int)v13 + 4);
                       if ( !Instance )
                         break;
@@ -1192,17 +1192,17 @@ void FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this, const Met
     else
     {
 LABEL_34:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( !Instance )
         goto LABEL_64;
       if ( AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)Instance, 0) )
         goto LABEL_42;
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_64;
       if ( *((int *)Instance + 20) > 0 )
         goto LABEL_42;
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_64;
       if ( *((_BYTE *)Instance + 206) )
@@ -1215,8 +1215,8 @@ LABEL_34:
 LABEL_42:
         v15 = Method_FollowerRootComponent_OnClickBack__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnClickBack__ + 83) & 2) != 0 )
-          v15 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnClickBack__);
-        v16 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v15, v15[4]);
+          v15 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnClickBack__);
+        v16 = (System_Reflection_MethodBase_o *)sub_1D0F098(v15, v15[4]);
         OverwriteAssetSoundName__PlaySystemSe(v16, 1, 0, 0);
         v17 = this->fields.battleSetupInfo;
         this->fields.state = 4;
@@ -1226,9 +1226,9 @@ LABEL_42:
           if ( Instance )
           {
             if ( v17->fields.isChildFollower )
-              v18 = &StringLiteral_3463/*"CLICK_BACK_BATTLE_SETUP"*/;
+              v18 = &StringLiteral_3473/*"CLICK_BACK_BATTLE_SETUP"*/;
             else
-              v18 = &StringLiteral_3462/*"CLICK_BACK"*/;
+              v18 = &StringLiteral_3472/*"CLICK_BACK"*/;
             PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)*v18, 0);
             return;
           }
@@ -1238,8 +1238,8 @@ LABEL_42:
       {
         v19 = Method_FollowerRootComponent_OnClickBack__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnClickBack__ + 83) & 2) != 0 )
-          v19 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnClickBack__);
-        v20 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v19, v19[4]);
+          v19 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnClickBack__);
+        v20 = (System_Reflection_MethodBase_o *)sub_1D0F098(v19, v19[4]);
         OverwriteAssetSoundName__PlaySystemSe(v20, 1, 0, 0);
         v21 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1250,17 +1250,17 @@ LABEL_42:
         lastPlayQuestConsumeAp = v21->static_fields->lastPlayQuestConsumeAp;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v23 = (System_String_o **)&StringLiteral_6485/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/;
+        v23 = (System_String_o **)&StringLiteral_6511/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/;
         if ( lastPlayQuestConsumeAp <= 0 )
-          v23 = (System_String_o **)&StringLiteral_6486/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/;
+          v23 = (System_String_o **)&StringLiteral_6512/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/;
         v24 = LocalizationManager__Get(*v23, 0);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6484/*"FOLLOWER_SELECT_BACK_TITLE"*/, 0);
-        v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3722/*"COMMON_CONFIRM_YES"*/, 0);
-        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_NO"*/, 0);
-        v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1CE694C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6510/*"FOLLOWER_SELECT_BACK_TITLE"*/, 0);
+        v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_YES"*/, 0);
+        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3727/*"COMMON_CONFIRM_NO"*/, 0);
+        v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
         CommonConfirmDialog_ClickDelegate___ctor(
           v29,
           (Il2CppObject *)this,
@@ -1298,7 +1298,7 @@ LABEL_42:
       }
     }
 LABEL_64:
-    sub_1CE6958(Instance, v4);
+    sub_1D0F30C(Instance, v4);
   }
 }
 
@@ -1322,20 +1322,20 @@ void FollowerRootComponent__OnMoveEnd(FollowerRootComponent_o *this, const Metho
   const MethodInfo *v17; // x1
   System_Action_o *v18; // x22
 
-  if ( (byte_4DFF348 & 1) == 0 )
+  if ( (byte_4E71F40 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndTutorialFollowerCommonGuide__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndTutorialFollowerGuideNotification1__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndTutorialFollowerGuideNotification2__);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&StringLiteral_13727/*"TUTORIAL_MESSAGE_FOLLOWER2"*/);
-    sub_1CE6700(&StringLiteral_13726/*"TUTORIAL_MESSAGE_FOLLOWER1"*/);
-    byte_4DFF348 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndTutorialFollowerCommonGuide__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndTutorialFollowerGuideNotification1__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndTutorialFollowerGuideNotification2__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&StringLiteral_13778/*"TUTORIAL_MESSAGE_FOLLOWER2"*/);
+    sub_1D0F0B4(&StringLiteral_13777/*"TUTORIAL_MESSAGE_FOLLOWER1"*/);
+    byte_4E71F40 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -1345,11 +1345,11 @@ void FollowerRootComponent__OnMoveEnd(FollowerRootComponent_o *this, const Metho
       *(_QWORD *)&this->fields.tutorialState = 0x200000002LL;
       if ( tutorialMode == 3 )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13727/*"TUTORIAL_MESSAGE_FOLLOWER2"*/, 0);
-        v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13778/*"TUTORIAL_MESSAGE_FOLLOWER2"*/, 0);
+        v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         v7 = &Method_FollowerRootComponent_EndTutorialFollowerGuideNotification2__;
 LABEL_25:
         v18 = v6;
@@ -1360,15 +1360,15 @@ LABEL_25:
           return;
         }
 LABEL_27:
-        sub_1CE6958(battleSetupInfo, method);
+        sub_1D0F30C(battleSetupInfo, method);
       }
       if ( tutorialMode == 2 )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13726/*"TUTORIAL_MESSAGE_FOLLOWER1"*/, 0);
-        v6 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13777/*"TUTORIAL_MESSAGE_FOLLOWER1"*/, 0);
+        v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         v7 = &Method_FollowerRootComponent_EndTutorialFollowerGuideNotification1__;
         goto LABEL_25;
       }
@@ -1398,7 +1398,7 @@ LABEL_27:
         if ( v11 )
         {
           v12 = v11->fields.eventId;
-          v13 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+          v13 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
           System_Action___ctor(
             v13,
             (Il2CppObject *)this,
@@ -1428,7 +1428,7 @@ LABEL_27:
       }
       this->fields.state = 3;
       operationItemListViewManager = this->fields.operationItemListViewManager;
-      v16 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+      v16 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
       FollowerSelectItemListViewManager_CallbackFunc___ctor(
         v16,
         (Il2CppObject *)this,
@@ -1437,7 +1437,7 @@ LABEL_27:
       if ( !operationItemListViewManager )
         goto LABEL_27;
       FollowerSelectItemListViewManager__SetMode(operationItemListViewManager, 2, v16, 0);
-      battleSetupInfo = (BattleSetupInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      battleSetupInfo = (BattleSetupInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !battleSetupInfo )
         goto LABEL_27;
       if ( PartyOrganizationUtility__ExistsTemporaryPartyInfo((PartyOrganizationUtility_o *)battleSetupInfo, 0) )
@@ -1571,50 +1571,50 @@ void FollowerRootComponent__OnSelectFollowerItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v121; // 0:x0.16
 
   v8 = this;
-  if ( (byte_4DFF349 & 1) == 0 )
+  if ( (byte_4E71F41 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1CE6700(&FollowerListRequest_TypeInfo);
-    sub_1CE6700(&FollowerRecommendSupportListRequest_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_CallbackRefresh__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndCloseTutorialArrow__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndRecommendRefreshConfirm__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndRefreshConfirm__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndRefreshRest__);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    sub_1CE6700(&int_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&Method_FollowerRootComponent___c__OnSelectFollowerItem_b__67_0__);
-    sub_1CE6700(&FollowerRootComponent___c_TypeInfo);
-    sub_1CE6700(&StringLiteral_6509/*"FOLLOWER_SELECT_REFRESH_TITLE"*/);
-    sub_1CE6700(&StringLiteral_8721/*"MENU_SELECT_ITEM"*/);
-    sub_1CE6700(&StringLiteral_8730/*"MENU_SHOW_SUPPORT"*/);
-    sub_1CE6700(&StringLiteral_6506/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_113/*" "*/);
-    sub_1CE6700(&StringLiteral_6507/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/);
-    sub_1CE6700(&StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/);
-    sub_1CE6700(&StringLiteral_2886/*"BATTLE_SKILLCHARGETURN"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&StringLiteral_6508/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/);
-    byte_4DFF349 = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1D0F0B4(&FollowerListRequest_TypeInfo);
+    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_CallbackRefresh__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndCloseTutorialArrow__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndRecommendRefreshConfirm__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndRefreshConfirm__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndRefreshRest__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    sub_1D0F0B4(&int_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&Method_FollowerRootComponent___c__OnSelectFollowerItem_b__67_0__);
+    sub_1D0F0B4(&FollowerRootComponent___c_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_6535/*"FOLLOWER_SELECT_REFRESH_TITLE"*/);
+    sub_1D0F0B4(&StringLiteral_8757/*"MENU_SELECT_ITEM"*/);
+    sub_1D0F0B4(&StringLiteral_8766/*"MENU_SHOW_SUPPORT"*/);
+    sub_1D0F0B4(&StringLiteral_6532/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_113/*" "*/);
+    sub_1D0F0B4(&StringLiteral_6533/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/);
+    sub_1D0F0B4(&StringLiteral_8652/*"MASTER_EQSKILL_LV_TXT"*/);
+    sub_1D0F0B4(&StringLiteral_2890/*"BATTLE_SKILLCHARGETURN"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&StringLiteral_6534/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/);
+    byte_4E71F41 = 1;
   }
   v118 = 0;
   v116 = 0;
@@ -1650,8 +1650,8 @@ void FollowerRootComponent__OnSelectFollowerItem(
       }
       v69 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-        v69 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-      v70 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v69, v69[4]);
+        v69 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+      v70 = (System_Reflection_MethodBase_o *)sub_1D0F098(v69, v69[4]);
       OverwriteAssetSoundName__PlaySystemSe(v70, 0, 0, 0);
       FollowerRootComponent__SelectShowServant(v8, (FollowerSelectItemListViewItem_o *)v68, v71);
       return;
@@ -1660,8 +1660,8 @@ void FollowerRootComponent__OnSelectFollowerItem(
     case 4:
       v26 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-        v26 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-      v27 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v26, v26[4]);
+        v26 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+      v27 = (System_Reflection_MethodBase_o *)sub_1D0F098(v26, v26[4]);
       OverwriteAssetSoundName__PlaySystemSe(v27, 0, 0, 0);
       this = (FollowerRootComponent_o *)v8->fields.operationItemListViewManager;
       if ( !this )
@@ -1685,24 +1685,24 @@ void FollowerRootComponent__OnSelectFollowerItem(
       v31 = v118->m_Items[v29];
       if ( !v31 || v31->fields.id < 1 || v31->fields.lv < 1 )
         goto LABEL_162;
-      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_194;
       this = (FollowerRootComponent_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)this,
-                                          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SkillMaster___);
       if ( !this )
         goto LABEL_194;
       v32 = DataMasterBase_object__object__int___GetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
               v31->fields.id,
-              (const MethodInfo_34E925C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_194;
       this = (FollowerRootComponent_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)this,
-                                          (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SkillLvMaster___);
       if ( !this )
         goto LABEL_194;
       this = (FollowerRootComponent_o *)SkillLvMaster__GetEntity(
@@ -1726,7 +1726,7 @@ void FollowerRootComponent__OnSelectFollowerItem(
                                                         0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+      this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
       if ( !this )
         goto LABEL_194;
       if ( !ServantLimitAddMaster__TryGetEntity(
@@ -1749,12 +1749,12 @@ LABEL_57:
       v38 = defaultName;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/, 0);
+      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_8652/*"MASTER_EQSKILL_LV_TXT"*/, 0);
       lv = v31->fields.lv;
       v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
       v41 = System_String__Format(v39, v40, 0);
-      defaultName = System_String__Concat_65161092(v38, (System_String_o *)StringLiteral_113/*" "*/, v41, 0);
-      this = (FollowerRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2886/*"BATTLE_SKILLCHARGETURN"*/, 0);
+      defaultName = System_String__Concat_65601036(v38, (System_String_o *)StringLiteral_113/*" "*/, v41, 0);
+      this = (FollowerRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2890/*"BATTLE_SKILLCHARGETURN"*/, 0);
       if ( !v33 )
         goto LABEL_194;
       v42 = this;
@@ -1763,7 +1763,7 @@ LABEL_57:
       v44 = System_String__Format((System_String_o *)v42, v43, 0);
       tutorialMode = v8->fields.tutorialMode;
       v46 = v44;
-      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_194;
       if ( tutorialMode == 3 )
@@ -1772,7 +1772,7 @@ LABEL_57:
         CommonUI__OpenDetailLongInfoDialog((CommonUI_o *)this, defaultName, v46, v116, 1, 0, 0);
 LABEL_162:
       operationItemListViewManager = v8->fields.operationItemListViewManager;
-      v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+      v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
       v25 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       goto LABEL_178;
     case 5:
@@ -1790,8 +1790,8 @@ LABEL_162:
         friendPointCampaignEntityList_low = LOBYTE(this->fields.friendPointCampaignEntityList);
         v84 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v84 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v57 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v84, v84[4]);
+          v84 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v57 = (System_Reflection_MethodBase_o *)sub_1D0F098(v84, v84[4]);
         if ( !friendPointCampaignEntityList_low )
           goto LABEL_143;
         goto LABEL_176;
@@ -1801,8 +1801,8 @@ LABEL_162:
       {
         v106 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v106 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v107 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v106, v106[4]);
+          v106 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v107 = (System_Reflection_MethodBase_o *)sub_1D0F098(v106, v106[4]);
         OverwriteAssetSoundName__PlaySystemSe(v107, 2, 0, 0);
         goto LABEL_185;
       }
@@ -1810,14 +1810,14 @@ LABEL_162:
       {
         v56 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v56 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v57 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v56, v56[4]);
+          v56 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v57 = (System_Reflection_MethodBase_o *)sub_1D0F098(v56, v56[4]);
 LABEL_143:
         OverwriteAssetSoundName__PlaySystemSe(v57, 0, 0, 0);
         this = (FollowerRootComponent_o *)v8->fields.myFSM;
         if ( this )
         {
-          v67 = &StringLiteral_8730/*"MENU_SHOW_SUPPORT"*/;
+          v67 = &StringLiteral_8766/*"MENU_SHOW_SUPPORT"*/;
           goto LABEL_145;
         }
         goto LABEL_194;
@@ -1850,7 +1850,7 @@ LABEL_143:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v119.fields.currentCryptoKey = v89;
         *(_QWORD *)&v119.fields.fakeValue = v88;
-        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v119, 0) >= 1 )
+        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v119, 0) >= 1 )
         {
           this = (FollowerRootComponent_o *)FollowerSelectItemListViewItem__get_ServantLeader(v85, v87);
           if ( !this )
@@ -1868,7 +1868,7 @@ LABEL_143:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v120.fields.currentCryptoKey = v93;
           *(_QWORD *)&v120.fields.fakeValue = v92;
-          if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v120, 0) < 1 )
+          if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v120, 0) < 1 )
             goto LABEL_173;
           this = (FollowerRootComponent_o *)FollowerSelectItemListViewItem__get_ServantLeader(v85, v94);
           if ( !this )
@@ -1878,13 +1878,13 @@ LABEL_143:
 LABEL_173:
             v103 = Method_FollowerRootComponent_OnSelectFollowerItem__;
             if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-              v103 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-            v57 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v103, v103[4]);
+              v103 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+            v57 = (System_Reflection_MethodBase_o *)sub_1D0F098(v103, v103[4]);
 LABEL_176:
             OverwriteAssetSoundName__PlaySystemSe(v57, 2, 0, 0);
 LABEL_177:
             operationItemListViewManager = v8->fields.operationItemListViewManager;
-            v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+            v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
             v25 = Method_FollowerRootComponent_OnSelectFollowerItem__;
 LABEL_178:
             v104 = v24;
@@ -1908,12 +1908,12 @@ LABEL_163:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v121.fields.currentCryptoKey = v96;
         *(_QWORD *)&v121.fields.fakeValue = v95;
-        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50038008(v121, 0) < 1 )
+        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v121, 0) < 1 )
           goto LABEL_173;
         v97 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v97 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v98 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v97, v97[4]);
+          v97 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v98 = (System_Reflection_MethodBase_o *)sub_1D0F098(v97, v97[4]);
         OverwriteAssetSoundName__PlaySystemSe(v98, 0, 0, 0);
         followerInfo = v85->fields.followerInfo;
         if ( followerInfo )
@@ -1941,15 +1941,15 @@ LABEL_191:
 LABEL_116:
       v72 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-        v72 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-      v73 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v72, v72[4]);
+        v72 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+      v73 = (System_Reflection_MethodBase_o *)sub_1D0F098(v72, v72[4]);
       OverwriteAssetSoundName__PlaySystemSe(v73, 2, 0, 0);
       v74 = v8->fields.tutorialMode;
       if ( v74 == 3 )
       {
 LABEL_185:
         operationItemListViewManager = v8->fields.operationItemListViewManager;
-        v104 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+        v104 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
         FollowerSelectItemListViewManager_CallbackFunc___ctor(
           v104,
           (Il2CppObject *)v8,
@@ -1969,13 +1969,13 @@ LABEL_180:
     case 13:
       v47 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-        v47 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-      v48 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v47, v47[4]);
+        v47 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+      v48 = (System_Reflection_MethodBase_o *)sub_1D0F098(v47, v47[4]);
       OverwriteAssetSoundName__PlaySystemSe(v48, 0, 0, 0);
       if ( !FollowerListRequest_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(FollowerListRequest_TypeInfo);
       v49 = FollowerListRequest__checkRefreshRate(0);
-      v50 = (CommonConfirmDialog_ClickDelegate_o *)sub_1CE694C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v50 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
         v50,
         (Il2CppObject *)v8,
@@ -1986,7 +1986,7 @@ LABEL_180:
         if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
         v51 = FollowerRecommendSupportListRequest__CheckRefreshRate(0);
-        v50 = (CommonConfirmDialog_ClickDelegate_o *)sub_1CE694C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+        v50 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
         CommonConfirmDialog_ClickDelegate___ctor(
           v50,
           (Il2CppObject *)v8,
@@ -1998,14 +1998,14 @@ LABEL_71:
           commonConfirmDialog = v8->fields.commonConfirmDialog;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6509/*"FOLLOWER_SELECT_REFRESH_TITLE"*/, 0);
-          this = (FollowerRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6506/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/, 0);
+          v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6535/*"FOLLOWER_SELECT_REFRESH_TITLE"*/, 0);
+          this = (FollowerRootComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6532/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/, 0);
           v54 = this;
           if ( !FollowerRootComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(FollowerRootComponent_TypeInfo);
           if ( commonConfirmDialog )
           {
-            CommonConfirmDialog__Open_31894688(
+            CommonConfirmDialog__Open_32061816(
               commonConfirmDialog,
               v53,
               (System_String_o *)v54,
@@ -2025,12 +2025,12 @@ LABEL_71:
       {
         goto LABEL_71;
       }
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_6508/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/, 0);
-      v81 = LocalizationManager__Get((System_String_o *)StringLiteral_6507/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/, 0);
-      v82 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_6534/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/, 0);
+      v81 = LocalizationManager__Get((System_String_o *)StringLiteral_6533/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/, 0);
+      v82 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
       System_Action___ctor(v82, (Il2CppObject *)v8, Method_FollowerRootComponent_EndRefreshRest__, 0);
       if ( Instance )
       {
@@ -2063,25 +2063,25 @@ LABEL_71:
         goto LABEL_194;
       if ( (unsigned int)v11 >= LODWORD(skillInfoList->max_length) )
 LABEL_195:
-        sub_1CE6960(this);
+        sub_1D0F314(this);
       v12 = skillInfoList->m_Items[v11];
       if ( v12 && v12->fields.id >= 1 && v12->fields.lv >= 1 )
       {
         v13 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v13 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v14 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v13, v13[4]);
+          v13 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v14 = (System_Reflection_MethodBase_o *)sub_1D0F098(v13, v13[4]);
         OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillMaster___);
+        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
         if ( !this )
           goto LABEL_194;
         v15 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                 v12->fields.id,
-                (const MethodInfo_34E925C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_SkillLvMaster___);
+                (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillLvMaster___);
         if ( !this )
           goto LABEL_194;
         this = (FollowerRootComponent_o *)SkillLvMaster__GetEntity(
@@ -2095,13 +2095,13 @@ LABEL_195:
         v16 = name;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MASTER_EQSKILL_LV_TXT"*/, 0);
+        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8652/*"MASTER_EQSKILL_LV_TXT"*/, 0);
         lv = v12->fields.lv;
         v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v19 = System_String__Format(v17, v18, 0);
-        name = System_String__Concat_65161092(v16, (System_String_o *)StringLiteral_113/*" "*/, v19, 0);
+        name = System_String__Concat_65601036(v16, (System_String_o *)StringLiteral_113/*" "*/, v19, 0);
         v20 = v8->fields.tutorialMode;
-        this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_194;
         if ( v20 == 3 )
@@ -2125,13 +2125,13 @@ LABEL_195:
       {
         v21 = Method_FollowerRootComponent_OnSelectFollowerItem__;
         if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-          v21 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-        v22 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v21, v21[4]);
+          v21 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+        v22 = (System_Reflection_MethodBase_o *)sub_1D0F098(v21, v21[4]);
         OverwriteAssetSoundName__PlaySystemSe(v22, 2, 0, 0);
       }
 LABEL_30:
       operationItemListViewManager = v8->fields.operationItemListViewManager;
-      v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+      v24 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
       v25 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       goto LABEL_178;
     case 14:
@@ -2144,12 +2144,12 @@ LABEL_30:
       if ( !this )
         goto LABEL_194;
       TitleInfoControl__setBackBtnEnable((TitleInfoControl_o *)this, 0, 0);
-      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !this )
         goto LABEL_194;
       LOBYTE(this->fields.titleInfo) = 1;
 LABEL_126:
-      v76 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v76 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v76,
         (Il2CppObject *)v8,
@@ -2159,7 +2159,7 @@ LABEL_126:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (FollowerRootComponent_o *)NetworkManager__getRequest_object_(
                                           v76,
-                                          (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
+                                          (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_FollowerRecommendSupportListRequest___);
       if ( !v8->fields.battleSetupInfo )
         goto LABEL_194;
       v77 = (FollowerRecommendSupportListRequest_o *)this;
@@ -2188,12 +2188,12 @@ LABEL_126:
       {
         goto LABEL_173;
       }
-      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
       if ( !this )
         goto LABEL_194;
       if ( !BYTE4(this->fields.battleSetupInfo) )
         goto LABEL_98;
-      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       v59 = this;
       v60 = FollowerRootComponent___c_TypeInfo;
       if ( !FollowerRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -2210,11 +2210,11 @@ LABEL_126:
           v60 = FollowerRootComponent___c_TypeInfo;
         }
         v62 = (Il2CppObject *)v60->static_fields->__9;
-        _9__67_0 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        _9__67_0 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         System_Action___ctor(_9__67_0, v62, Method_FollowerRootComponent___c__OnSelectFollowerItem_b__67_0__, 0);
         static_fields = FollowerRootComponent___c_TypeInfo->static_fields;
         static_fields->__9__67_0 = _9__67_0;
-        this = (FollowerRootComponent_o *)sub_1CE66A4(&static_fields->__9__67_0, _9__67_0);
+        this = (FollowerRootComponent_o *)sub_1D0F058(&static_fields->__9__67_0, _9__67_0);
       }
       if ( !v59 )
         goto LABEL_194;
@@ -2223,8 +2223,8 @@ LABEL_126:
 LABEL_98:
       v64 = Method_FollowerRootComponent_OnSelectFollowerItem__;
       if ( (*((_BYTE *)Method_FollowerRootComponent_OnSelectFollowerItem__ + 83) & 2) != 0 )
-        v64 = (_QWORD *)sub_1CE6718(Method_FollowerRootComponent_OnSelectFollowerItem__);
-      v65 = (System_Reflection_MethodBase_o *)sub_1CE66E4(v64, v64[4]);
+        v64 = (_QWORD *)sub_1D0F0CC(Method_FollowerRootComponent_OnSelectFollowerItem__);
+      v65 = (System_Reflection_MethodBase_o *)sub_1D0F098(v64, v64[4]);
       OverwriteAssetSoundName__PlaySystemSe(v65, 0, 0, 0);
       if ( !v8->fields.tutorialState )
         goto LABEL_105;
@@ -2232,8 +2232,8 @@ LABEL_98:
       if ( v66 == 3 )
       {
         v8->fields.state = 4;
-        v108 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v109 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
+        v108 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v109 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
         System_Action___ctor(v109, (Il2CppObject *)v8, Method_FollowerRootComponent_EndCloseTutorialArrow__, 0);
         if ( !v108 )
           goto LABEL_194;
@@ -2249,14 +2249,14 @@ LABEL_105:
           this = (FollowerRootComponent_o *)v8->fields.myFSM;
           if ( this )
           {
-            v67 = &StringLiteral_8721/*"MENU_SELECT_ITEM"*/;
+            v67 = &StringLiteral_8757/*"MENU_SELECT_ITEM"*/;
 LABEL_145:
             PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v67, 0);
             return;
           }
         }
 LABEL_194:
-        sub_1CE6958(this, *(_QWORD *)&kind);
+        sub_1D0F30C(this, *(_QWORD *)&kind);
       }
       return;
   }
@@ -2293,19 +2293,19 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4DFF32F & 1) == 0 )
+  if ( (byte_4E71F27 & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&BgmManager_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&SoundManager_TypeInfo);
-    this = (FollowerRootComponent_o *)sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFF32F = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&BgmManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E71F27 = 1;
   }
   entity = 0;
   battleSetupInfo = v2->fields.battleSetupInfo;
@@ -2322,7 +2322,7 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
     if ( !v2->fields.battleSetupInfo )
       goto LABEL_70;
     v6 = (QuestPhaseMaster_o *)this;
@@ -2346,7 +2346,7 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_BgmMaster___);
+        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_BgmMaster___);
         if ( !this )
           goto LABEL_70;
         BgmFileName = BgmMaster__GetBgmFileName(
@@ -2373,7 +2373,7 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
         v15 = FormationSubBgmId;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_BgmMaster___);
+        this = (FollowerRootComponent_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_BgmMaster___);
         if ( !this )
           goto LABEL_70;
         this = (FollowerRootComponent_o *)BgmMaster__GetBgmFileName(
@@ -2394,7 +2394,7 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
       v13 = 0;
       BgmFileName = 0;
     }
-    this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !this )
       goto LABEL_70;
     this = (FollowerRootComponent_o *)PartyOrganizationUtility__ExistsTemporaryPartyInfo(
@@ -2404,7 +2404,7 @@ void FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, const MethodI
     {
       if ( !System_String__IsNullOrEmpty(BgmFileName, 0) )
         FollowerRootComponent__SetBackupBgmName(v2, v12 & 1, v16);
-      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (FollowerRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( this )
       {
         selectFriendCode = this->fields.selectFriendCode;
@@ -2461,12 +2461,12 @@ LABEL_48:
           SoundManager__stopBgm(0);
           goto LABEL_57;
         }
-        this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( this )
         {
           this = (FollowerRootComponent_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestMaster___);
           if ( v2->fields.battleSetupInfo )
           {
             v25 = (QuestMaster_o *)this;
@@ -2496,7 +2496,7 @@ LABEL_48:
           }
         }
 LABEL_70:
-        sub_1CE6958(this, method);
+        sub_1D0F30C(this, method);
       }
     }
   }
@@ -2509,10 +2509,10 @@ void FollowerRootComponent__PlaySubBgm(
         float fadeTime,
         const MethodInfo *method)
 {
-  if ( (byte_4DFF32E & 1) == 0 )
+  if ( (byte_4E71F26 & 1) == 0 )
   {
-    sub_1CE6700(&SoundManager_TypeInfo);
-    byte_4DFF32E = 1;
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    byte_4E71F26 = 1;
   }
   if ( !System_String__IsNullOrEmpty(subBgmName, 0) )
   {
@@ -2535,7 +2535,7 @@ void FollowerRootComponent__Quit(FollowerRootComponent_o *this, const MethodInfo
                                                                                 (UnityEngine_Component_o *)operationItemListViewManager,
                                                                                 0)) == 0 )
   {
-    sub_1CE6958(operationItemListViewManager, method);
+    sub_1D0F30C(operationItemListViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)operationItemListViewManager, 0, 0);
   this->fields.state = 0;
@@ -2550,16 +2550,16 @@ void FollowerRootComponent__RequestFollowerList(FollowerRootComponent_o *this, c
   FollowerListRequest_o *v6; // x20
   struct BattleSetupInfo_o *battleSetupInfo; // x8
 
-  if ( (byte_4DFF338 & 1) == 0 )
+  if ( (byte_4E71F30 & 1) == 0 )
   {
-    sub_1CE6700(&Method_FollowerRootComponent_CallbackFollowerList__);
-    sub_1CE6700(&Method_NetworkManager_getRequest_FollowerListRequest___);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1CE6700(&StringLiteral_11196/*"REQUEST_OK"*/);
-    byte_4DFF338 = 1;
+    sub_1D0F0B4(&Method_FollowerRootComponent_CallbackFollowerList__);
+    sub_1D0F0B4(&Method_NetworkManager_getRequest_FollowerListRequest___);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_11244/*"REQUEST_OK"*/);
+    byte_4E71F30 = 1;
   }
-  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1CE694C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -2569,7 +2569,7 @@ void FollowerRootComponent__RequestFollowerList(FollowerRootComponent_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = (FollowerListRequest_o *)NetworkManager__getRequest_object_(
                                               v3,
-                                              (const MethodInfo_328F954 *)Method_NetworkManager_getRequest_FollowerListRequest___);
+                                              (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_FollowerListRequest___);
   if ( !this->fields.battleSetupInfo )
     goto LABEL_13;
   v6 = Request_object;
@@ -2590,12 +2590,12 @@ void FollowerRootComponent__RequestFollowerList(FollowerRootComponent_o *this, c
       }
     }
 LABEL_13:
-    sub_1CE6958(Request_object, v5);
+    sub_1D0F30C(Request_object, v5);
   }
   Request_object = (FollowerListRequest_o *)this->fields.myFSM;
   if ( !Request_object )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Request_object, (System_String_o *)StringLiteral_11196/*"REQUEST_OK"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Request_object, (System_String_o *)StringLiteral_11244/*"REQUEST_OK"*/, 0);
 }
 
 
@@ -2605,10 +2605,10 @@ bool FollowerRootComponent__ReturnBattleSetupMenu(FollowerRootComponent_o *this,
   struct BattleSetupInfo_o *battleSetupInfo; // x19
 
   v2 = this;
-  if ( (byte_4DFF345 & 1) == 0 )
+  if ( (byte_4E71F3D & 1) == 0 )
   {
-    this = (FollowerRootComponent_o *)sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4DFF345 = 1;
+    this = (FollowerRootComponent_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4E71F3D = 1;
   }
   battleSetupInfo = v2->fields.battleSetupInfo;
   v2->fields.state = 5;
@@ -2616,10 +2616,10 @@ bool FollowerRootComponent__ReturnBattleSetupMenu(FollowerRootComponent_o *this,
     goto LABEL_8;
   if ( battleSetupInfo->fields.isChildFollower )
     battleSetupInfo->fields.followerId = 0;
-  this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (FollowerRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this )
 LABEL_8:
-    sub_1CE6958(this, method);
+    sub_1D0F30C(this, method);
   AvalonSceneManager__pushScene((AvalonSceneManager_o *)this, 40, 1, (Il2CppObject *)battleSetupInfo, 0);
   return 1;
 }
@@ -2632,19 +2632,20 @@ bool FollowerRootComponent__ReturnQuestMenu(FollowerRootComponent_o *this, const
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
   TerminalPramsManager_c *v7; // x0
+  OtherUserServantLimitCountManager_c *v8; // x0
 
-  if ( (byte_4DFF344 & 1) == 0 )
+  if ( (byte_4E71F3C & 1) == 0 )
   {
-    sub_1CE6700(&Method_AvalonSceneManager_UnloadScene_PartyOrganizationRootComponent___);
-    sub_1CE6700(&OtherUserServantLimitCountManager_TypeInfo);
-    sub_1CE6700(&QuestHintDialogOpenManager_TypeInfo);
-    sub_1CE6700(&RandomLimitCountManager_TypeInfo);
-    sub_1CE6700(&ScriptManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&SoundManager_TypeInfo);
-    sub_1CE6700(&TerminalPramsManager_TypeInfo);
-    byte_4DFF344 = 1;
+    sub_1D0F0B4(&Method_AvalonSceneManager_UnloadScene_PartyOrganizationRootComponent___);
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&QuestHintDialogOpenManager_TypeInfo);
+    sub_1D0F0B4(&RandomLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&ScriptManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    byte_4E71F3C = 1;
   }
   battleSetupInfo = (Il2CppObject *)this->fields.battleSetupInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -2658,25 +2659,25 @@ bool FollowerRootComponent__ReturnQuestMenu(FollowerRootComponent_o *this, const
     SoundManager__playBgm(backupBgmName, 0);
   }
   this->fields.battleSetupInfo = 0;
-  sub_1CE66A4(&this->fields.battleSetupInfo, 0);
+  sub_1D0F058(&this->fields.battleSetupInfo, 0);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
   ScriptManager__ClearSelectRouteArray(0);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
-    goto LABEL_33;
+    goto LABEL_37;
   if ( BYTE6(Instance[12].monitor) )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !Instance )
-      goto LABEL_33;
+      goto LABEL_37;
     BYTE6(Instance[12].monitor) = 0;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4DFF129 )
+    if ( !byte_4E71D1E )
     {
-      sub_1CE6700(&TerminalPramsManager_TypeInfo);
-      byte_4DFF129 = 1;
+      sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+      byte_4E71D1E = 1;
     }
     v7 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2686,36 +2687,48 @@ bool FollowerRootComponent__ReturnQuestMenu(FollowerRootComponent_o *this, const
     }
     v7->static_fields->_IsAutoResume_k__BackingField = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_33;
+    goto LABEL_37;
   if ( AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)Instance, 0) )
   {
     this->fields.state = 0;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
-      goto LABEL_33;
+      goto LABEL_37;
     AvalonSceneManager__popSceneRefresh((AvalonSceneManager_o *)Instance, 1, battleSetupInfo, 0);
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
-      goto LABEL_33;
+      goto LABEL_37;
     AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0, 0, 0);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-LABEL_33:
-    sub_1CE6958(Instance, v6);
+LABEL_37:
+    sub_1D0F30C(Instance, v6);
   AvalonSceneManager__UnloadScene_object_(
     (AvalonSceneManager_o *)Instance,
-    (const MethodInfo_31EBE58 *)Method_AvalonSceneManager_UnloadScene_PartyOrganizationRootComponent___);
+    (const MethodInfo_3236BA0 *)Method_AvalonSceneManager_UnloadScene_PartyOrganizationRootComponent___);
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
   RandomLimitCountManager__set_EnableRandomLimitCount(0, 0);
   if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+  if ( !byte_4E71F5D )
+  {
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    byte_4E71F5D = 1;
+  }
+  v8 = OtherUserServantLimitCountManager_TypeInfo;
+  if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+    v8 = OtherUserServantLimitCountManager_TypeInfo;
+  }
+  v8->static_fields->_IsEnableAdjustSupportLimitCount_k__BackingField = 0;
   OtherUserServantLimitCountManager__Clear(0);
   return 1;
 }
@@ -2723,32 +2736,48 @@ LABEL_33:
 
 void FollowerRootComponent__ReturnSupportList(FollowerRootComponent_o *this, const MethodInfo *method)
 {
-  int32_t state; // w8
+  int32_t state; // w21
+  OtherUserServantLimitCountManager_c *v4; // x0
   void *operationItemListViewManager; // x0
-  FollowerSelectItemListViewManager_o *v5; // x20
-  FollowerSelectItemListViewManager_CallbackFunc_o *v6; // x21
-  FollowerSelectItemListViewManager_o *v7; // x20
-  FollowerSelectItemListViewManager_c *v8; // x0
-  FollowerSelectItemListViewManager_o *v9; // x20
-  FollowerSelectItemListViewManager_CallbackFunc_o *v10; // x21
+  FollowerSelectItemListViewManager_o *v6; // x20
+  FollowerSelectItemListViewManager_CallbackFunc_o *v7; // x21
+  FollowerSelectItemListViewManager_o *v8; // x20
+  FollowerSelectItemListViewManager_c *v9; // x0
+  FollowerSelectItemListViewManager_o *v10; // x20
+  FollowerSelectItemListViewManager_CallbackFunc_o *v11; // x21
   struct BattleSetupInfo_o *battleSetupInfo; // x8
   FollowerQuestInfomationDraw_o *followerQuestInfomationDraw; // x20
   QuestRestrictionInfo_o *questRestrictionInfo; // x21
-  const MethodInfo *v14; // x4
-  CommonUI_o *v15; // x20
+  const MethodInfo *v15; // x4
+  CommonUI_o *v16; // x20
 
-  if ( (byte_4DFF336 & 1) == 0 )
+  if ( (byte_4E71F2E & 1) == 0 )
   {
-    sub_1CE6700(&AvalonSceneManager_TypeInfo);
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&RandomLimitCountManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF336 = 1;
+    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&RandomLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F2E = 1;
   }
   state = this->fields.state;
   this->fields.state = 3;
+  if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+  if ( !byte_4E71F5D )
+  {
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    byte_4E71F5D = 1;
+  }
+  v4 = OtherUserServantLimitCountManager_TypeInfo;
+  if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+    v4 = OtherUserServantLimitCountManager_TypeInfo;
+  }
+  v4->static_fields->_IsEnableAdjustSupportLimitCount_k__BackingField = 1;
   if ( state == 5 )
   {
     if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -2757,41 +2786,41 @@ void FollowerRootComponent__ReturnSupportList(FollowerRootComponent_o *this, con
     RandomLimitCountManager__set_EnableRandomLimitCount(1, 0);
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
-      goto LABEL_27;
+      goto LABEL_33;
     FollowerSelectItemListViewManager__ModifyList(
       (FollowerSelectItemListViewManager_o *)operationItemListViewManager,
       this->fields.friendPointUpVal,
       this->fields.friendPointUpMaxVal,
       0);
-    v5 = this->fields.operationItemListViewManager;
-    v6 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    v6 = this->fields.operationItemListViewManager;
+    v7 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
     FollowerSelectItemListViewManager_CallbackFunc___ctor(
-      v6,
+      v7,
       (Il2CppObject *)this,
       (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
       0);
-    if ( !v5 )
-      goto LABEL_27;
-    FollowerSelectItemListViewManager__SetMode(v5, 3, v6, 0);
-    v7 = this->fields.operationItemListViewManager;
-    if ( !v7 )
-      goto LABEL_27;
-    if ( !byte_4DFF365 )
+    if ( !v6 )
+      goto LABEL_33;
+    FollowerSelectItemListViewManager__SetMode(v6, 3, v7, 0);
+    v8 = this->fields.operationItemListViewManager;
+    if ( !v8 )
+      goto LABEL_33;
+    if ( !byte_4E71F5E )
     {
-      sub_1CE6700(&FollowerSelectItemListViewManager_TypeInfo);
-      byte_4DFF365 = 1;
+      sub_1D0F0B4(&FollowerSelectItemListViewManager_TypeInfo);
+      byte_4E71F5E = 1;
     }
-    v8 = FollowerSelectItemListViewManager_TypeInfo;
+    v9 = FollowerSelectItemListViewManager_TypeInfo;
     if ( !FollowerSelectItemListViewManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FollowerSelectItemListViewManager_TypeInfo);
-      v8 = FollowerSelectItemListViewManager_TypeInfo;
+      v9 = FollowerSelectItemListViewManager_TypeInfo;
     }
-    FollowerSelectItemListViewManager__ChangeClass(v7, v8->static_fields->followerClassId, 0);
+    FollowerSelectItemListViewManager__ChangeClass(v8, v9->static_fields->followerClassId, 0);
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
-LABEL_27:
-      sub_1CE6958(operationItemListViewManager, method);
+LABEL_33:
+      sub_1D0F30C(operationItemListViewManager, method);
     operationItemListViewManager = (void *)FollowerSelectItemListViewManager__GetDisplayItemNum(
                                              (FollowerSelectItemListViewManager_o *)operationItemListViewManager,
                                              0);
@@ -2799,7 +2828,7 @@ LABEL_27:
     {
       operationItemListViewManager = this->fields.operationItemListViewManager;
       if ( !operationItemListViewManager )
-        goto LABEL_27;
+        goto LABEL_33;
       ListViewManager__JumpItem((ListViewManager_o *)operationItemListViewManager, this->fields.selectItemNum, 0);
     }
   }
@@ -2807,44 +2836,44 @@ LABEL_27:
   {
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
-      goto LABEL_27;
+      goto LABEL_33;
     FollowerSelectItemListViewManager__ModifyList(
       (FollowerSelectItemListViewManager_o *)operationItemListViewManager,
       this->fields.friendPointUpVal,
       this->fields.friendPointUpMaxVal,
       0);
-    v9 = this->fields.operationItemListViewManager;
-    v10 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    v10 = this->fields.operationItemListViewManager;
+    v11 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
     FollowerSelectItemListViewManager_CallbackFunc___ctor(
-      v10,
+      v11,
       (Il2CppObject *)this,
       (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
       0);
-    if ( !v9 )
-      goto LABEL_27;
-    FollowerSelectItemListViewManager__SetMode(v9, 2, v10, 0);
+    if ( !v10 )
+      goto LABEL_33;
+    FollowerSelectItemListViewManager__SetMode(v10, 2, v11, 0);
   }
   battleSetupInfo = this->fields.battleSetupInfo;
   if ( !battleSetupInfo )
-    goto LABEL_27;
+    goto LABEL_33;
   followerQuestInfomationDraw = this->fields.followerQuestInfomationDraw;
   questRestrictionInfo = battleSetupInfo->fields.questRestrictionInfo;
-  operationItemListViewManager = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  operationItemListViewManager = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !operationItemListViewManager || !followerQuestInfomationDraw )
-    goto LABEL_27;
+    goto LABEL_33;
   FollowerQuestInfomationDraw__SetInfomation(
     followerQuestInfomationDraw,
     questRestrictionInfo,
     *((_DWORD *)operationItemListViewManager + 22),
     0,
-    v14);
-  operationItemListViewManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v15 = (CommonUI_o *)operationItemListViewManager;
+    v15);
+  operationItemListViewManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v16 = (CommonUI_o *)operationItemListViewManager;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-  if ( !v15 )
-    goto LABEL_27;
-  CommonUI__maskFadein(v15, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+  if ( !v16 )
+    goto LABEL_33;
+  CommonUI__maskFadein(v16, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
   SceneRootComponent__sendMessageResume((SceneRootComponent_o *)this, 0);
 }
 
@@ -2859,12 +2888,12 @@ void FollowerRootComponent__SelectShowServant(
   ServantLeaderInfo_o *ServantLeader; // x20
   ServantStatusDialog_EndDelegate_o *v8; // x22
 
-  if ( (byte_4DFF33E & 1) == 0 )
+  if ( (byte_4E71F36 & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndShowServant__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFF33E = 1;
+    sub_1D0F0B4(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndShowServant__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E71F36 = 1;
   }
   operationItemListViewManager = (ListViewManager_o *)this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager
@@ -2873,11 +2902,11 @@ void FollowerRootComponent__SelectShowServant(
           &this->fields.openScroll,
           &this->fields.openOffset,
           0),
-        operationItemListViewManager = (ListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        operationItemListViewManager = (ListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
         !item)
     || (v6 = (CommonUI_o *)operationItemListViewManager,
         ServantLeader = FollowerSelectItemListViewItem__get_ServantLeader(item, (const MethodInfo *)item),
-        v8 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo),
+        v8 = (ServantStatusDialog_EndDelegate_o *)sub_1D0F300(ServantStatusDialog_EndDelegate_TypeInfo),
         ServantStatusDialog_EndDelegate___ctor(
           v8,
           (Il2CppObject *)this,
@@ -2885,9 +2914,9 @@ void FollowerRootComponent__SelectShowServant(
           0),
         !v6) )
   {
-    sub_1CE6958(operationItemListViewManager, item);
+    sub_1D0F30C(operationItemListViewManager, item);
   }
-  CommonUI__OpenServantStatusDialog_31931908(v6, 5, ServantLeader, v8, 0);
+  CommonUI__OpenServantStatusDialog_32099052(v6, 5, ServantLeader, v8, 0);
 }
 
 
@@ -2901,12 +2930,12 @@ void FollowerRootComponent__SelectShowServantEquip(
   Il2CppObject *Instance; // x22
   ServantStatusDialog_EndDelegate_o *v9; // x23
 
-  if ( (byte_4DFF341 & 1) == 0 )
+  if ( (byte_4E71F39 & 1) == 0 )
   {
-    sub_1CE6700(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_EndShowServantEquip__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4DFF341 = 1;
+    sub_1D0F0B4(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndShowServantEquip__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4E71F39 = 1;
   }
   operationItemListViewManager = (ListViewManager_o *)this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager
@@ -2915,8 +2944,8 @@ void FollowerRootComponent__SelectShowServantEquip(
           &this->fields.openScroll,
           &this->fields.openOffset,
           0),
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v9 = (ServantStatusDialog_EndDelegate_o *)sub_1CE694C(ServantStatusDialog_EndDelegate_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v9 = (ServantStatusDialog_EndDelegate_o *)sub_1D0F300(ServantStatusDialog_EndDelegate_TypeInfo),
         ServantStatusDialog_EndDelegate___ctor(
           v9,
           (Il2CppObject *)this,
@@ -2924,9 +2953,9 @@ void FollowerRootComponent__SelectShowServantEquip(
           0),
         !Instance) )
   {
-    sub_1CE6958(operationItemListViewManager, equipInfo);
+    sub_1D0F30C(operationItemListViewManager, equipInfo);
   }
-  CommonUI__OpenServantEquipStatusDialog_31935016((CommonUI_o *)Instance, statusKind, equipInfo, v9, 0, 0);
+  CommonUI__OpenServantEquipStatusDialog_32102160((CommonUI_o *)Instance, statusKind, equipInfo, v9, 0, 0);
 }
 
 
@@ -2937,10 +2966,10 @@ void FollowerRootComponent__SetBackupBgmName(
 {
   struct System_String_o *BgmName; // x0
 
-  if ( (byte_4DFF330 & 1) == 0 )
+  if ( (byte_4E71F28 & 1) == 0 )
   {
-    sub_1CE6700(&SoundManager_TypeInfo);
-    byte_4DFF330 = 1;
+    sub_1D0F0B4(&SoundManager_TypeInfo);
+    byte_4E71F28 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -2950,7 +2979,7 @@ void FollowerRootComponent__SetBackupBgmName(
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     BgmName = SoundManager__getBgmName(0);
     this->fields.backupBgmName = BgmName;
-    sub_1CE66A4(&this->fields.backupBgmName, BgmName);
+    sub_1D0F058(&this->fields.backupBgmName, BgmName);
   }
 }
 
@@ -2960,11 +2989,11 @@ bool FollowerRootComponent__SetFollowerBase(UISprite_o *sprite, System_String_o 
   FollowerRootComponent_c *v5; // x0
   UIAtlas_o *partyOrganizationAtlasCache; // x21
 
-  if ( (byte_4DFF32B & 1) == 0 )
+  if ( (byte_4E71F23 & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    byte_4DFF32B = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    byte_4E71F23 = 1;
   }
   v5 = FollowerRootComponent_TypeInfo;
   if ( !FollowerRootComponent_TypeInfo->_2.cctor_finished )
@@ -2984,7 +3013,7 @@ bool FollowerRootComponent__StartBattleSetupMenu(FollowerRootComponent_o *this, 
   PartyOrganizationUtility_o *Instance; // x0
   __int64 followerId; // x1
   struct BattleSetupInfo_o *battleSetupInfo; // x8
-  int32_t ItemIndex_33646728; // w0
+  int32_t ItemIndex_33815324; // w0
   struct PartyListViewItem_o *PartyItemSmc_k__BackingField; // x9
   struct BattleSetupInfo_o *v8; // x8
   int64_t v9; // x10
@@ -2994,13 +3023,13 @@ bool FollowerRootComponent__StartBattleSetupMenu(FollowerRootComponent_o *this, 
   int32_t sortValue0_high; // w9
   Il2CppObject *v14; // x19
 
-  if ( (byte_4DFF346 & 1) == 0 )
+  if ( (byte_4E71F3E & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF346 = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F3E = 1;
   }
-  Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   Instance = (PartyOrganizationUtility_o *)PartyOrganizationUtility__ExistsTemporaryPartyInfo(Instance, 0);
@@ -3015,14 +3044,14 @@ bool FollowerRootComponent__StartBattleSetupMenu(FollowerRootComponent_o *this, 
       Instance = (PartyOrganizationUtility_o *)this->fields.operationItemListViewManager;
       if ( !Instance )
         goto LABEL_31;
-      ItemIndex_33646728 = FollowerSelectItemListViewManager__GetItemIndex_33646728(
+      ItemIndex_33815324 = FollowerSelectItemListViewManager__GetItemIndex_33815324(
                              (FollowerSelectItemListViewManager_o *)Instance,
                              followerId,
                              battleSetupInfo->fields.followerClassId,
                              battleSetupInfo->fields.followerSupportDeckId,
                              battleSetupInfo->fields.followerGrandGraphId,
                              0);
-      this->fields.selectItemNum = ItemIndex_33646728 & ~(ItemIndex_33646728 >> 31);
+      this->fields.selectItemNum = ItemIndex_33815324 & ~(ItemIndex_33815324 >> 31);
     }
     goto LABEL_28;
   }
@@ -3076,7 +3105,7 @@ bool FollowerRootComponent__StartBattleSetupMenu(FollowerRootComponent_o *this, 
         if ( sortStr1 )
         {
           if ( !LODWORD(sortStr1[1].klass) )
-            sub_1CE6960(Instance);
+            sub_1D0F314(Instance);
           monitor = sortStr1[1].monitor;
           if ( monitor )
           {
@@ -3091,13 +3120,13 @@ LABEL_25:
         }
       }
 LABEL_31:
-      sub_1CE6958(Instance, followerId);
+      sub_1D0F30C(Instance, followerId);
     }
   }
 LABEL_28:
   this->fields.state = 5;
   v14 = (Il2CppObject *)this->fields.battleSetupInfo;
-  Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   AvalonSceneManager__pushScene((AvalonSceneManager_o *)Instance, 40, 1, v14, 0);
@@ -3133,16 +3162,16 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
   Il2CppObject *v27; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4DFF347 & 1) == 0 )
+  if ( (byte_4E71F3F & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_PickupUserFollowerMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_UserFollowerMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
-    sub_1CE6700(&Method_DataMasterBase_PickupUserFollowerMaster__PickupUserFollowerEntity__long__TryGetSingleEntity__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1CE6700(&SupportInfoJump_TypeInfo);
-    byte_4DFF347 = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_PickupUserFollowerMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_UserFollowerMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
+    sub_1D0F0B4(&Method_DataMasterBase_PickupUserFollowerMaster__PickupUserFollowerEntity__long__TryGetSingleEntity__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1D0F0B4(&SupportInfoJump_TypeInfo);
+    byte_4E71F3F = 1;
   }
   entity = 0;
   v27 = 0;
@@ -3158,13 +3187,13 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
       v6 = Item;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_UserFollowerMaster___);
+      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserFollowerMaster___);
       if ( !operationItemListViewManager )
         goto LABEL_50;
       operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataMasterBase_object__object__long___TryGetSingleEntity(
                                                                               (DataMasterBase_TMaster__TEntity__PKType__o *)operationItemListViewManager,
                                                                               &entity,
-                                                                              (const MethodInfo_34EBB38 *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
+                                                                              (const MethodInfo_3538458 *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
       if ( ((unsigned __int8)operationItemListViewManager & 1) != 0 )
       {
         if ( !entity )
@@ -3179,7 +3208,7 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
           while ( 1 )
           {
             if ( namespaze == v9 )
-              sub_1CE6960(operationItemListViewManager);
+              sub_1D0F314(operationItemListViewManager);
             v10 = (FollowerInfo_o *)*((_QWORD *)&klass->_1.byval_arg.data + v9);
             if ( !v10 )
               goto LABEL_50;
@@ -3192,8 +3221,8 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
               goto LABEL_20;
           }
           this->fields.state = 6;
-          v19 = (SupportInfoJump_o *)sub_1CE694C(SupportInfoJump_TypeInfo);
-          SupportInfoJump___ctor_42681720(v19, v10, 0, 1, 0);
+          v19 = (SupportInfoJump_o *)sub_1D0F300(SupportInfoJump_TypeInfo);
+          SupportInfoJump___ctor_42902844(v19, v10, 0, 1, 0);
           battleSetupInfo = this->fields.battleSetupInfo;
           if ( battleSetupInfo )
           {
@@ -3210,7 +3239,7 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
                 SupportInfoJump__SetIsUseGrandSupport(v19, Option_k__BackingField->fields.isUseGrandBoard, 0);
                 v19->fields._IsGrandRestriction_k__BackingField = v6->fields._IsGrandServantRestrictionSupport_k__BackingField;
                 IsGrandSvt_k__BackingField = v6->fields._IsGrandSvt_k__BackingField;
-                operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+                operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
                 if ( operationItemListViewManager )
                 {
                   if ( IsGrandSvt_k__BackingField )
@@ -3230,13 +3259,13 @@ bool FollowerRootComponent__StartSupportInfoMenu(FollowerRootComponent_o *this, 
 LABEL_20:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_PickupUserFollowerMaster___);
+      operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_PickupUserFollowerMaster___);
       if ( !operationItemListViewManager )
         goto LABEL_50;
       operationItemListViewManager = (FollowerSelectItemListViewManager_o *)DataMasterBase_object__object__long___TryGetSingleEntity(
                                                                               (DataMasterBase_TMaster__TEntity__PKType__o *)operationItemListViewManager,
                                                                               &v27,
-                                                                              (const MethodInfo_34EBB38 *)Method_DataMasterBase_PickupUserFollowerMaster__PickupUserFollowerEntity__long__TryGetSingleEntity__);
+                                                                              (const MethodInfo_3538458 *)Method_DataMasterBase_PickupUserFollowerMaster__PickupUserFollowerEntity__long__TryGetSingleEntity__);
       if ( ((unsigned __int8)operationItemListViewManager & 1) != 0 )
       {
         if ( !v27 )
@@ -3266,8 +3295,8 @@ LABEL_20:
                   return v17;
               }
               this->fields.state = 6;
-              v25 = (SupportInfoJump_o *)sub_1CE694C(SupportInfoJump_TypeInfo);
-              SupportInfoJump___ctor_42681720(v25, v15, 0, 1, 0);
+              v25 = (SupportInfoJump_o *)sub_1D0F300(SupportInfoJump_TypeInfo);
+              SupportInfoJump___ctor_42902844(v25, v15, 0, 1, 0);
               v26 = this->fields.battleSetupInfo;
               if ( v26 )
               {
@@ -3278,7 +3307,7 @@ LABEL_20:
                     v26->fields.eventUpValSetupInfo,
                     v26->fields.questRestrictionInfo,
                     0);
-                  operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+                  operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
                   if ( operationItemListViewManager )
                   {
                     v23 = 60;
@@ -3291,7 +3320,7 @@ LABEL_49:
                 }
               }
 LABEL_50:
-              sub_1CE6958(operationItemListViewManager, selectItemNum);
+              sub_1D0F30C(operationItemListViewManager, selectItemNum);
             }
           }
         }
@@ -3313,7 +3342,7 @@ void FollowerRootComponent__UpdateDeckInfomation(FollowerRootComponent_o *this, 
   Il2CppObject *Master_object; // x21
   EventQuestMaster_o *v10; // x22
   struct BattleSetupInfo_o *v11; // x8
-  struct EventCampaignEntity_array *Data_43089240; // x0
+  struct EventCampaignEntity_array *Data_43310940; // x0
   struct BattleSetupInfo_o *v13; // x8
   int32_t i; // w20
   BalanceConfig_c *v15; // x0
@@ -3377,34 +3406,34 @@ void FollowerRootComponent__UpdateDeckInfomation(FollowerRootComponent_o *this, 
   int32_t fpUpDuplicateSum[2]; // [xsp+40h] [xbp-60h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-58h] BYREF
 
-  if ( (byte_4DFF33D & 1) == 0 )
+  if ( (byte_4E71F35 & 1) == 0 )
   {
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_UserEventDeckMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_EventCampaignMaster___);
-    sub_1CE6700(&Method_DataManager_GetMaster_EventQuestMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__);
-    sub_1CE6700(&LastUsedDeckNumberManager_TypeInfo);
-    sub_1CE6700(&NetworkManager_TypeInfo);
-    sub_1CE6700(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1CE6700(&Method_System_Nullable_int___ctor__);
-    sub_1CE6700(&Method_System_Nullable_int__get_HasValue__);
-    sub_1CE6700(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1CE6700(&OptionManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4DFF33D = 1;
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserEventDeckMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventCampaignMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMaster_EventQuestMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__);
+    sub_1D0F0B4(&LastUsedDeckNumberManager_TypeInfo);
+    sub_1D0F0B4(&NetworkManager_TypeInfo);
+    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
+    sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
+    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1D0F0B4(&OptionManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4E71F35 = 1;
   }
   *(_QWORD *)fpUpDuplicateSum = 0;
   entity = 0;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_136;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserDeckMaster___);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   Instance = OptionManager__GetAutoSelectParty(0);
@@ -3429,17 +3458,17 @@ LABEL_9:
                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                  &entity,
                  battleSetupInfo->fields.deckId,
-                 (const MethodInfo_34EBA58 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__);
+                 (const MethodInfo_3538378 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__);
   }
   else
   {
     v66 = Instance;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4DFE4CA )
+    if ( !byte_4E710BF )
     {
-      sub_1CE6700(&NetworkManager_TypeInfo);
-      byte_4DFE4CA = 1;
+      sub_1D0F0B4(&NetworkManager_TypeInfo);
+      byte_4E710BF = 1;
     }
     Instance = (__int64)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3464,11 +3493,11 @@ LABEL_9:
     QuestRestrictionInfo__SetDeckInfo(questRestrictionInfo, (UserDeckEntity_o *)entity, 0);
   this->fields.friendPointCampaignEntityList = 0;
   *(_QWORD *)&this->fields.friendPointUpVal = 0;
-  sub_1CE66A4(&this->fields.friendPointCampaignEntityList, 0);
+  sub_1D0F058(&this->fields.friendPointCampaignEntityList, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventCampaignMaster___);
-  Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_EventQuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventCampaignMaster___);
+  Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventQuestMaster___);
   if ( !this->fields.battleSetupInfo )
     goto LABEL_136;
   v10 = (EventQuestMaster_o *)Instance;
@@ -3481,13 +3510,13 @@ LABEL_9:
   Instance = (__int64)EventQuestMaster__GetEnabledEventCampaignForQuest(v10, Instance, v11->fields.questPhase, 0, 7, 0);
   if ( !Master_object )
     goto LABEL_136;
-  Data_43089240 = EventCampaignMaster__getData_43089240(
+  Data_43310940 = EventCampaignMaster__getData_43310940(
                     (EventCampaignMaster_o *)Master_object,
                     24,
                     (EventEntity_array *)Instance,
                     0);
-  this->fields.friendPointCampaignEntityList = Data_43089240;
-  Instance = sub_1CE66A4(&this->fields.friendPointCampaignEntityList, Data_43089240);
+  this->fields.friendPointCampaignEntityList = Data_43310940;
+  Instance = sub_1D0F058(&this->fields.friendPointCampaignEntityList, Data_43310940);
   *(_QWORD *)fpUpDuplicateSum = 0;
   if ( this->fields.tutorialMode == 4 )
   {
@@ -3496,7 +3525,7 @@ LABEL_9:
       goto LABEL_136;
     if ( v13->fields.isChildFollower )
     {
-      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_136;
       if ( *(_QWORD *)(Instance + 104) )
@@ -3511,7 +3540,7 @@ LABEL_9:
           }
           if ( i >= v15->static_fields->DeckMemberMax )
             break;
-          Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           if ( !Instance )
             goto LABEL_136;
           Instance = *(_QWORD *)(Instance + 104);
@@ -3546,7 +3575,7 @@ LABEL_9:
   v20 = this->fields.battleSetupInfo;
   if ( !v20 )
 LABEL_136:
-    sub_1CE6958(Instance, v4);
+    sub_1D0F30C(Instance, v4);
   v21 = v20->fields.questRestrictionInfo;
   if ( v21 )
   {
@@ -3571,18 +3600,18 @@ LABEL_136:
     if ( *(int *)(Instance + 396) >= 1 )
     {
 LABEL_46:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_136;
       v24 = DataManager__GetMasterData_object_(
               (DataManager_o *)Instance,
-              (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_UserEventDeckMaster___);
+              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserEventDeckMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4DFE4CA )
+      if ( !byte_4E710BF )
       {
-        sub_1CE6700(&NetworkManager_TypeInfo);
-        byte_4DFE4CA = 1;
+        sub_1D0F0B4(&NetworkManager_TypeInfo);
+        byte_4E710BF = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3613,14 +3642,14 @@ LABEL_46:
         goto LABEL_136;
       if ( !*(_DWORD *)(Instance + 24) )
 LABEL_137:
-        sub_1CE6960(Instance);
+        sub_1D0F314(Instance);
       v29 = *(UserEventDeckEntity_o **)(Instance + 32);
-      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_136;
       if ( !*(_QWORD *)(Instance + 104) )
         goto LABEL_85;
-      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_136;
       v30 = *(_QWORD *)(Instance + 104);
@@ -3632,7 +3661,7 @@ LABEL_137:
         v32 = *(_DWORD *)(currentCryptoKey + 396);
         v33 = (System_Nullable_int__o)&v72;
         v72.fields.currentCryptoKey = 0;
-        System_Nullable_int____ctor(v33, v32, (const MethodInfo_3A2DE74 *)Method_System_Nullable_int___ctor__);
+        System_Nullable_int____ctor(v33, v32, (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
         currentCryptoKey = v72.fields.currentCryptoKey;
       }
       v34 = this->fields.battleSetupInfo;
@@ -3653,7 +3682,7 @@ LABEL_137:
           }
           if ( j >= *(_DWORD *)(*(_QWORD *)(Instance + 184) + 172LL) )
             break;
-          Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           if ( !Instance )
             goto LABEL_136;
           Instance = *(_QWORD *)(Instance + 104);
@@ -3677,7 +3706,7 @@ LABEL_137:
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
               v71 = v72;
-              v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50041532(&v71, 0);
+              v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v71, 0);
               Instance = (__int64)FollowerRootComponent__GetEquipIdsForGrandSvt(this, InitPos_k__BackingField, v43, v44);
               if ( !v38->fields.userServantEntity )
                 goto LABEL_136;
@@ -3772,7 +3801,7 @@ LABEL_126:
             Instance = (__int64)v67->fields.questRestrictionInfo;
             if ( Instance )
             {
-              QuestRestrictionInfo__SetDeckInfo_44545548((QuestRestrictionInfo_o *)Instance, v29, 0);
+              QuestRestrictionInfo__SetDeckInfo_44779808((QuestRestrictionInfo_o *)Instance, v29, 0);
               goto LABEL_132;
             }
           }
@@ -3845,14 +3874,14 @@ void FollowerRootComponent___OnClickBack_b__73_0(
   __int64 v6; // x1
   TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_4DFF356 & 1) == 0 )
+  if ( (byte_4E71F4E & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&TerminalPramsManager_TypeInfo);
-    sub_1CE6700(&StringLiteral_3462/*"CLICK_BACK"*/);
-    byte_4DFF356 = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_3472/*"CLICK_BACK"*/);
+    byte_4E71F4E = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__CloseConfirmDialog(Instance, 0);
@@ -3860,10 +3889,10 @@ void FollowerRootComponent___OnClickBack_b__73_0(
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4DFF129 )
+    if ( !byte_4E71D1E )
     {
-      sub_1CE6700(&TerminalPramsManager_TypeInfo);
-      byte_4DFF129 = 1;
+      sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+      byte_4E71D1E = 1;
     }
     v7 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3875,11 +3904,11 @@ void FollowerRootComponent___OnClickBack_b__73_0(
     Instance = (CommonUI_o *)this->fields.myFSM;
     if ( Instance )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3462/*"CLICK_BACK"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3472/*"CLICK_BACK"*/, 0);
       return;
     }
 LABEL_14:
-    sub_1CE6958(Instance, v6);
+    sub_1D0F30C(Instance, v6);
   }
   this->fields.state = 3;
 }
@@ -3891,12 +3920,12 @@ void FollowerRootComponent__beginFinish(FollowerRootComponent_o *this, const Met
   FollowerRootComponent_c *v4; // x0
   struct FollowerRootComponent_StaticFields *static_fields; // x0
 
-  if ( (byte_4DFF337 & 1) == 0 )
+  if ( (byte_4E71F2F & 1) == 0 )
   {
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4DFF337 = 1;
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4E71F2F = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
   this->fields.state = 0;
@@ -3920,17 +3949,17 @@ void FollowerRootComponent__beginFinish(FollowerRootComponent_o *this, const Met
   }
   static_fields = v4->static_fields;
   static_fields->partyOrganizationAtlasCache = 0;
-  sub_1CE66A4(&static_fields->partyOrganizationAtlasCache, 0);
+  sub_1D0F058(&static_fields->partyOrganizationAtlasCache, 0);
   operationItemListViewManager = (FollowerSelectItemListViewManager_o *)this->fields.backSkinSprite;
   if ( !operationItemListViewManager
     || (operationItemListViewManager = (FollowerSelectItemListViewManager_o *)UnityEngine_Component__get_gameObject(
                                                                                 (UnityEngine_Component_o *)operationItemListViewManager,
                                                                                 0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)operationItemListViewManager, 0, 0),
-        (operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0) )
+        (operationItemListViewManager = (FollowerSelectItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0) )
   {
 LABEL_14:
-    sub_1CE6958(operationItemListViewManager, method);
+    sub_1D0F30C(operationItemListViewManager, method);
   }
   AtlasManager__ReleaseUISkin((AtlasManager_o *)operationItemListViewManager, 2, 0, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -3944,15 +3973,15 @@ void FollowerRootComponent__beginInitialize(FollowerRootComponent_o *this, const
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4DFF32C & 1) == 0 )
+  if ( (byte_4E71F24 & 1) == 0 )
   {
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4DFF32C = 1;
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4E71F24 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1CE6958(0, v4);
+    sub_1D0F30C(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -3963,7 +3992,7 @@ void FollowerRootComponent__beginPause(FollowerRootComponent_o *this, const Meth
 
   operationItemListViewManager = this->fields.operationItemListViewManager;
   if ( !operationItemListViewManager )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   FollowerSelectItemListViewManager__SaveSortFilter(operationItemListViewManager, 0);
 }
 
@@ -3996,45 +4025,46 @@ void FollowerRootComponent__beginResume(FollowerRootComponent_o *this, Il2CppObj
   const MethodInfo *v28; // x1
   CommonUI_o *v29; // x20
   struct BattleSetupInfo_o *v30; // x8
-  PartyListViewItem_o *v31; // x20
-  UnityEngine_Component_o *v32; // x8
+  OtherUserServantLimitCountManager_c *v31; // x0
+  PartyListViewItem_o *v32; // x20
+  UnityEngine_Component_o *v33; // x8
   int32_t i; // w21
-  FollowerSelectItemListViewManager_o *v34; // x22
-  struct BattleSetupInfo_o *v35; // x8
-  const MethodInfo *v36; // x4
-  struct BattleSetupInfo_o *v37; // x8
-  FollowerSelectItemListViewManager_o *v38; // x22
-  FollowerSelectItemListViewManager_CallbackFunc_o *v39; // x23
+  FollowerSelectItemListViewManager_o *v35; // x22
+  struct BattleSetupInfo_o *v36; // x8
+  const MethodInfo *v37; // x4
+  struct BattleSetupInfo_o *v38; // x8
+  FollowerSelectItemListViewManager_o *v39; // x22
+  FollowerSelectItemListViewManager_CallbackFunc_o *v40; // x23
   PartyOrganizationListViewItem_o *Member; // x0
   struct FollowerInfo_o *followerInfo; // x8
-  FollowerSelectItemListViewManager_o *v42; // x20
+  FollowerSelectItemListViewManager_o *v43; // x20
   int64_t userId; // x21
-  struct QuestRestrictionInfo_o *v44; // x8
-  BalanceConfig_c *v45; // x0
-  int32_t v46; // w22
-  PartyOrganizationListViewItem_o *v47; // x0
-  struct FollowerInfo_o *v48; // x8
+  struct QuestRestrictionInfo_o *v45; // x8
+  BalanceConfig_c *v46; // x0
+  int32_t v47; // w22
+  PartyOrganizationListViewItem_o *v48; // x0
+  struct FollowerInfo_o *v49; // x8
   int32_t monitor; // w4
   int klass_high; // w10
-  int32_t v51; // w10
-  struct BattleSetupInfo_o *v52; // x8
+  int32_t v52; // w10
+  struct BattleSetupInfo_o *v53; // x8
 
-  if ( (byte_4DFF335 & 1) == 0 )
+  if ( (byte_4E71F2D & 1) == 0 )
   {
-    sub_1CE6700(&AvalonSceneManager_TypeInfo);
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&BattleSetupInfo_TypeInfo);
-    sub_1CE6700(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
-    sub_1CE6700(&Method_FollowerRootComponent_OnSelectFollowerItem__);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    sub_1CE6700(&OtherUserServantLimitCountManager_TypeInfo);
-    sub_1CE6700(&RandomLimitCountManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&SupportInfoJump_TypeInfo);
-    sub_1CE6700(&TutorialFlag_TypeInfo);
-    byte_4DFF335 = 1;
+    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&BattleSetupInfo_TypeInfo);
+    sub_1D0F0B4(&FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1D0F0B4(&Method_FollowerRootComponent_OnSelectFollowerItem__);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&RandomLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&SupportInfoJump_TypeInfo);
+    sub_1D0F0B4(&TutorialFlag_TypeInfo);
+    byte_4E71F2D = 1;
   }
   v5 = FollowerRootComponent_TypeInfo;
   partyOrganizationAtlas = this->fields.partyOrganizationAtlas;
@@ -4045,27 +4075,27 @@ void FollowerRootComponent__beginResume(FollowerRootComponent_o *this, Il2CppObj
   }
   static_fields = v5->static_fields;
   static_fields->partyOrganizationAtlasCache = partyOrganizationAtlas;
-  sub_1CE66A4(&static_fields->partyOrganizationAtlasCache, partyOrganizationAtlas);
+  sub_1D0F058(&static_fields->partyOrganizationAtlasCache, partyOrganizationAtlas);
   titleInfo = this->fields.titleInfo;
-  Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
-    goto LABEL_128;
+    goto LABEL_132;
   if ( *(_BYTE *)(Instance + 112) )
   {
     selectItemNum = 0;
     if ( !titleInfo )
-      goto LABEL_128;
+      goto LABEL_132;
   }
   else
   {
     selectItemNum = this->fields.tutorialMode != 2;
     if ( !titleInfo )
-      goto LABEL_128;
+      goto LABEL_132;
   }
   TitleInfoControl__setBackBtnEnable(titleInfo, selectItemNum, 0);
   Instance = (__int64)this->fields.operationItemListViewManager;
   if ( !Instance )
-    goto LABEL_128;
+    goto LABEL_132;
   FollowerSelectItemListViewManager__PlayClassButtonEffect((FollowerSelectItemListViewManager_o *)Instance, 0);
   if ( this->fields.state == 6 )
   {
@@ -4081,7 +4111,7 @@ void FollowerRootComponent__beginResume(FollowerRootComponent_o *this, Il2CppObj
         {
           Instance = (__int64)this->fields.operationItemListViewManager;
           if ( !Instance )
-            goto LABEL_128;
+            goto LABEL_132;
           Instance = (__int64)FollowerSelectItemListViewManager__GetItem(
                                 (FollowerSelectItemListViewManager_o *)Instance,
                                 selectItemNum,
@@ -4096,7 +4126,7 @@ void FollowerRootComponent__beginResume(FollowerRootComponent_o *this, Il2CppObj
             else
               v14 = 0;
             if ( !battleSetupInfo )
-              goto LABEL_128;
+              goto LABEL_132;
             battleSetupInfo->fields.followerId = v14;
             battleSetupInfo->fields.followerClassId = (int32_t)data[3].klass;
             monitor = (int32_t)data[4].monitor;
@@ -4107,18 +4137,18 @@ void FollowerRootComponent__beginResume(FollowerRootComponent_o *this, Il2CppObj
             battleSetupInfo->fields.followerSupportDeckId = klass_high;
             if ( v12 )
             {
-              v51 = *(_DWORD *)(v12 + 36);
+              v52 = *(_DWORD *)(v12 + 36);
               battleSetupInfo->fields.followerType = 0;
-              if ( (v51 | 4) == 5 )
-                battleSetupInfo->fields.followerType = v51;
+              if ( (v52 | 4) == 5 )
+                battleSetupInfo->fields.followerType = v52;
               if ( monitor >= 1 )
               {
                 selectItemNum = *(_QWORD *)(v12 + 16);
-LABEL_113:
+LABEL_117:
                 Instance = (__int64)this->fields.operationItemListViewManager;
                 if ( !Instance )
-                  goto LABEL_128;
-                Instance = FollowerSelectItemListViewManager__GetItemIndex_33646728(
+                  goto LABEL_132;
+                Instance = FollowerSelectItemListViewManager__GetItemIndex_33815324(
                              (FollowerSelectItemListViewManager_o *)Instance,
                              selectItemNum,
                              0,
@@ -4134,15 +4164,15 @@ LABEL_113:
               if ( monitor >= 1 )
               {
                 selectItemNum = 0;
-                goto LABEL_113;
+                goto LABEL_117;
               }
             }
             if ( this->fields.operationItemListViewManager )
             {
-              if ( !byte_4DFF365 )
+              if ( !byte_4E71F5E )
               {
-                sub_1CE6700(&FollowerSelectItemListViewManager_TypeInfo);
-                byte_4DFF365 = 1;
+                sub_1D0F0B4(&FollowerSelectItemListViewManager_TypeInfo);
+                byte_4E71F5E = 1;
               }
               Instance = (__int64)FollowerSelectItemListViewManager_TypeInfo;
               if ( !FollowerSelectItemListViewManager_TypeInfo->_2.cctor_finished )
@@ -4150,15 +4180,15 @@ LABEL_113:
                 j_il2cpp_runtime_class_init_0(FollowerSelectItemListViewManager_TypeInfo);
                 Instance = (__int64)FollowerSelectItemListViewManager_TypeInfo;
               }
-              v52 = this->fields.battleSetupInfo;
-              if ( v52 )
+              v53 = this->fields.battleSetupInfo;
+              if ( v53 )
               {
-                selectItemNum = (unsigned int)v52->fields.followerClassId;
+                selectItemNum = (unsigned int)v53->fields.followerClassId;
                 if ( *(_DWORD *)(*(_QWORD *)(Instance + 184) + 8LL) != (_DWORD)selectItemNum )
                 {
                   Instance = (__int64)this->fields.operationItemListViewManager;
                   if ( !Instance )
-                    goto LABEL_128;
+                    goto LABEL_132;
                   if ( FollowerSelectItemListViewManager__ChangeClass(
                          (FollowerSelectItemListViewManager_o *)Instance,
                          selectItemNum,
@@ -4166,11 +4196,11 @@ LABEL_113:
                   {
                     Instance = (__int64)this->fields.operationItemListViewManager;
                     if ( !Instance )
-                      goto LABEL_128;
+                      goto LABEL_132;
                     ListViewManager__JumpItem((ListViewManager_o *)Instance, this->fields.selectItemNum, 0);
                   }
                 }
-                Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+                Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
                 if ( Instance )
                 {
                   AvalonSceneManager__pushScene(
@@ -4183,8 +4213,8 @@ LABEL_113:
                 }
               }
             }
-LABEL_128:
-            sub_1CE6958(Instance, selectItemNum);
+LABEL_132:
+            sub_1D0F30C(Instance, selectItemNum);
           }
         }
       }
@@ -4226,35 +4256,35 @@ LABEL_128:
     this->fields.battleSetupInfo = 0;
     p_battleSetupInfo = &this->fields.battleSetupInfo;
   }
-  Instance = sub_1CE66A4(p_battleSetupInfo, v18);
+  Instance = sub_1D0F058(p_battleSetupInfo, v18);
   v20 = *p_battleSetupInfo;
   if ( *p_battleSetupInfo )
   {
     questRestrictionInfo = v20->fields.questRestrictionInfo;
     if ( !questRestrictionInfo )
-      goto LABEL_128;
+      goto LABEL_132;
     if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction(v20->fields.questRestrictionInfo, 0)
       && (questRestrictionInfo->fields.isNoSupportBattle
        || questRestrictionInfo->fields.isFixedMyServantSingle
        || questRestrictionInfo->fields.isSupportOnlyForceBattle) )
     {
-      goto LABEL_93;
+      goto LABEL_97;
     }
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    Instance = TutorialFlag__Get_41569468(102, 0);
+    Instance = TutorialFlag__Get_41786532(102, 0);
     if ( (Instance & 1) == 0 )
     {
       v23 = *p_battleSetupInfo;
       if ( !*p_battleSetupInfo )
-        goto LABEL_128;
+        goto LABEL_132;
 LABEL_62:
       if ( v23->fields.isChildFollower )
       {
         FollowerRootComponent__ReturnBattleSetupMenu(this, (const MethodInfo *)selectItemNum);
         return;
       }
-      goto LABEL_93;
+      goto LABEL_97;
     }
 LABEL_39:
     FollowerRootComponent__UpdateDeckInfomation(this, (const MethodInfo *)selectItemNum);
@@ -4267,7 +4297,7 @@ LABEL_39:
         {
           v23 = this->fields.battleSetupInfo;
           if ( !v23 )
-            goto LABEL_128;
+            goto LABEL_132;
           goto LABEL_62;
         }
 LABEL_50:
@@ -4278,14 +4308,14 @@ LABEL_50:
       this->fields.selectItemNum = -1;
       *(_QWORD *)&this->fields.tutorialMode = 0x100000003LL;
       if ( !Instance )
-        goto LABEL_128;
+        goto LABEL_132;
       operationItemListViewManager = this->fields.operationItemListViewManager;
       Instance = BattleSetupInfo__TargetQuestId((BattleSetupInfo_o *)Instance, 0);
       v25 = this->fields.battleSetupInfo;
       if ( !v25 )
-        goto LABEL_128;
+        goto LABEL_132;
       if ( !operationItemListViewManager )
-        goto LABEL_128;
+        goto LABEL_132;
       FollowerSelectItemListViewManager__CreateList(
         operationItemListViewManager,
         Instance,
@@ -4297,10 +4327,10 @@ LABEL_50:
         0);
       v27 = this->fields.battleSetupInfo;
       if ( !v27 )
-        goto LABEL_128;
+        goto LABEL_132;
       Instance = (__int64)this->fields.followerQuestInfomationDraw;
       if ( !Instance )
-        goto LABEL_128;
+        goto LABEL_132;
       FollowerQuestInfomationDraw__SetInfomation(
         (FollowerQuestInfomationDraw_o *)Instance,
         v27->fields.questRestrictionInfo,
@@ -4310,7 +4340,7 @@ LABEL_50:
       this->fields.state = 2;
       FollowerRootComponent__OnMoveEnd(this, v28);
 LABEL_57:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v29 = (CommonUI_o *)Instance;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
@@ -4320,115 +4350,127 @@ LABEL_57:
         SceneRootComponent__sendMessageResume((SceneRootComponent_o *)this, 0);
         return;
       }
-      goto LABEL_128;
+      goto LABEL_132;
     }
     if ( this->fields.state == 6 )
       goto LABEL_50;
     v30 = this->fields.battleSetupInfo;
     if ( !v30 )
-      goto LABEL_128;
+      goto LABEL_132;
     if ( v30->fields.isChildFollower )
-      goto LABEL_131;
-    v44 = v30->fields.questRestrictionInfo;
-    if ( !v44 )
-      goto LABEL_128;
-    if ( !v44->fields.isNotTransitionSupportList )
+      goto LABEL_135;
+    v45 = v30->fields.questRestrictionInfo;
+    if ( !v45 )
+      goto LABEL_132;
+    if ( !v45->fields.isNotTransitionSupportList )
     {
-LABEL_131:
+LABEL_135:
       if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
       RandomLimitCountManager__set_EnableRandomLimitCount(0, 0);
       RandomLimitCountManager__set_EnableRandomLimitCount(1, 0);
       if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+      if ( !byte_4E71F5D )
+      {
+        sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+        byte_4E71F5D = 1;
+      }
+      v31 = OtherUserServantLimitCountManager_TypeInfo;
+      if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+        v31 = OtherUserServantLimitCountManager_TypeInfo;
+      }
+      v31->static_fields->_IsEnableAdjustSupportLimitCount_k__BackingField = 1;
       OtherUserServantLimitCountManager__Clear(0);
-      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
-        goto LABEL_128;
-      v31 = *(PartyListViewItem_o **)(Instance + 104);
-      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        goto LABEL_132;
+      v32 = *(PartyListViewItem_o **)(Instance + 104);
+      Instance = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
-        goto LABEL_128;
-      v32 = (UnityEngine_Component_o *)this->fields.operationItemListViewManager;
+        goto LABEL_132;
+      v33 = (UnityEngine_Component_o *)this->fields.operationItemListViewManager;
       i = *(_DWORD *)(Instance + 88);
       this->fields.tutorialState = 0;
       this->fields.selectItemNum = -1;
-      if ( !v32 )
-        goto LABEL_128;
-      Instance = (__int64)UnityEngine_Component__get_gameObject(v32, 0);
+      if ( !v33 )
+        goto LABEL_132;
+      Instance = (__int64)UnityEngine_Component__get_gameObject(v33, 0);
       if ( !Instance )
-        goto LABEL_128;
+        goto LABEL_132;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
       Instance = (__int64)this->fields.battleSetupInfo;
       if ( !Instance )
-        goto LABEL_128;
-      v34 = this->fields.operationItemListViewManager;
+        goto LABEL_132;
+      v35 = this->fields.operationItemListViewManager;
       Instance = BattleSetupInfo__TargetQuestId((BattleSetupInfo_o *)Instance, 0);
-      v35 = this->fields.battleSetupInfo;
+      v36 = this->fields.battleSetupInfo;
+      if ( !v36 )
+        goto LABEL_132;
       if ( !v35 )
-        goto LABEL_128;
-      if ( !v34 )
-        goto LABEL_128;
+        goto LABEL_132;
       FollowerSelectItemListViewManager__CreateList(
-        v34,
+        v35,
         Instance,
-        v35->fields.questPhase,
+        v36->fields.questPhase,
         this->fields.friendPointUpVal,
         this->fields.friendPointUpMaxVal,
         this->fields.friendPointCampaignEntityList,
-        v35->fields.questRestrictionInfo,
+        v36->fields.questRestrictionInfo,
         0);
-      v37 = this->fields.battleSetupInfo;
-      if ( !v37 )
-        goto LABEL_128;
+      v38 = this->fields.battleSetupInfo;
+      if ( !v38 )
+        goto LABEL_132;
       Instance = (__int64)this->fields.followerQuestInfomationDraw;
       if ( !Instance )
-        goto LABEL_128;
+        goto LABEL_132;
       FollowerQuestInfomationDraw__SetInfomation(
         (FollowerQuestInfomationDraw_o *)Instance,
-        v37->fields.questRestrictionInfo,
+        v38->fields.questRestrictionInfo,
         i,
         0,
-        v36);
+        v37);
       this->fields.state = 3;
-      v38 = this->fields.operationItemListViewManager;
-      v39 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1CE694C(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
+      v39 = this->fields.operationItemListViewManager;
+      v40 = (FollowerSelectItemListViewManager_CallbackFunc_o *)sub_1D0F300(FollowerSelectItemListViewManager_CallbackFunc_TypeInfo);
       FollowerSelectItemListViewManager_CallbackFunc___ctor(
-        v39,
+        v40,
         (Il2CppObject *)this,
         (intptr_t)Method_FollowerRootComponent_OnSelectFollowerItem__,
         0);
-      if ( !v38 )
-        goto LABEL_128;
-      FollowerSelectItemListViewManager__SetMode(v38, 2, v39, 0);
-      if ( v31 )
+      if ( !v39 )
+        goto LABEL_132;
+      FollowerSelectItemListViewManager__SetMode(v39, 2, v40, 0);
+      if ( v32 )
       {
         Instance = (__int64)this->fields.operationItemListViewManager;
         if ( !Instance )
-          goto LABEL_128;
+          goto LABEL_132;
         if ( ListViewManager__get_ItemSum((ListViewManager_o *)Instance, 0) >= 3 )
         {
           if ( i )
           {
-LABEL_84:
+LABEL_88:
             if ( i >= 1 )
             {
-              Member = PartyListViewItem__GetMember(v31, i - 1, 0);
+              Member = PartyListViewItem__GetMember(v32, i - 1, 0);
               if ( Member )
               {
                 followerInfo = Member->fields.followerInfo;
                 if ( followerInfo )
                 {
-                  v42 = this->fields.operationItemListViewManager;
+                  v43 = this->fields.operationItemListViewManager;
                   userId = followerInfo->fields.userId;
                   Instance = (__int64)PartyOrganizationListViewItem__get_ServantLeader(Member, 0);
                   if ( !Instance )
-                    goto LABEL_128;
-                  if ( !v42 )
-                    goto LABEL_128;
-                  Instance = FollowerSelectItemListViewManager__GetItemIndex(v42, userId, *(_QWORD *)(Instance + 40), 0);
+                    goto LABEL_132;
+                  if ( !v43 )
+                    goto LABEL_132;
+                  Instance = FollowerSelectItemListViewManager__GetItemIndex(v43, userId, *(_QWORD *)(Instance + 40), 0);
                   if ( !this->fields.operationItemListViewManager )
-                    goto LABEL_128;
+                    goto LABEL_132;
                   ListViewManager__JumpItem((ListViewManager_o *)this->fields.operationItemListViewManager, Instance, 0);
                 }
               }
@@ -4438,23 +4480,23 @@ LABEL_84:
           {
             for ( i = 1; ; ++i )
             {
-              v45 = BalanceConfig_TypeInfo;
-              v46 = i - 1;
+              v46 = BalanceConfig_TypeInfo;
+              v47 = i - 1;
               if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                v45 = BalanceConfig_TypeInfo;
+                v46 = BalanceConfig_TypeInfo;
               }
-              if ( v46 >= v45->static_fields->DeckMemberMax )
+              if ( v47 >= v46->static_fields->DeckMemberMax )
                 break;
-              v47 = PartyListViewItem__GetMember(v31, v46, 0);
-              if ( v47 )
+              v48 = PartyListViewItem__GetMember(v32, v47, 0);
+              if ( v48 )
               {
-                v48 = v47->fields.followerInfo;
-                if ( v48 )
+                v49 = v48->fields.followerInfo;
+                if ( v49 )
                 {
-                  if ( Follower__IsNotNpc(v48->fields.type, 0) )
-                    goto LABEL_84;
+                  if ( Follower__IsNotNpc(v49->fields.type, 0) )
+                    goto LABEL_88;
                 }
               }
             }
@@ -4463,7 +4505,7 @@ LABEL_84:
       }
       goto LABEL_57;
     }
-LABEL_93:
+LABEL_97:
     FollowerRootComponent__ReturnQuestMenu(this, (const MethodInfo *)selectItemNum);
   }
 }
@@ -4482,72 +4524,74 @@ void FollowerRootComponent__beginStartUp(FollowerRootComponent_o *this, Il2CppOb
   Il2CppObject *v13; // x1
   struct BattleSetupInfo_o **p_battleSetupInfo; // x0
   const MethodInfo *v15; // x1
-  FollowerRootComponent_c *v16; // x0
+  OtherUserServantLimitCountManager_c *v16; // x0
+  FollowerRootComponent_c *v17; // x0
   struct UIAtlas_o *partyOrganizationAtlas; // x20
   struct FollowerRootComponent_StaticFields *static_fields; // x0
   UILabel_o *infomationLabel; // x20
   UnityEngine_GameObject_o *refreshButtonBase; // x20
-  bool v21; // w8
-  __int64 v22; // x8
-  ConstantMaster_o *v23; // x20
+  bool v22; // w8
+  __int64 v23; // x8
+  ConstantMaster_o *v24; // x20
   struct BattleSetupInfo_o *battleSetupInfo; // x8
-  System_Action_o *v25; // x20
   System_Action_o *v26; // x20
-  QuestPhaseMaster_o *v27; // x20
-  struct BattleSetupInfo_o *v28; // x8
-  NpcFollowerMaster_o *v29; // x20
-  struct BattleSetupInfo_o *v30; // x8
+  System_Action_o *v27; // x20
+  QuestPhaseMaster_o *v28; // x20
+  struct BattleSetupInfo_o *v29; // x8
+  NpcFollowerMaster_o *v30; // x20
   struct BattleSetupInfo_o *v31; // x8
-  const MethodInfo *v32; // x1
-  const MethodInfo *v33; // x4
-  struct BattleSetupInfo_o *v34; // x8
+  struct BattleSetupInfo_o *v32; // x8
+  const MethodInfo *v33; // x1
+  const MethodInfo *v34; // x4
+  struct BattleSetupInfo_o *v35; // x8
 
-  if ( (byte_4DFF32D & 1) == 0 )
+  if ( (byte_4E71F25 & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_TypeInfo);
-    sub_1CE6700(&AtlasManager_TypeInfo);
-    sub_1CE6700(&BalanceConfig_TypeInfo);
-    sub_1CE6700(&BattleSetupInfo_TypeInfo);
-    sub_1CE6700(&Method_DataManager_GetMasterData_ConstantMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
-    sub_1CE6700(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1CE6700(&Method_FollowerRootComponent_EndLoadCommonBg__);
-    sub_1CE6700(&Method_FollowerRootComponent_EndLoadPartyOrganizationAtlasSimple__);
-    sub_1CE6700(&FollowerRootComponent_TypeInfo);
-    sub_1CE6700(&LocalizationManager_TypeInfo);
-    sub_1CE6700(&RandomLimitCountManager_TypeInfo);
-    sub_1CE6700(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_1CE6700(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1CE6700(&TutorialFlag_TypeInfo);
-    sub_1CE6700(&StringLiteral_13751/*"TUTORIAL_SUPPORT_QUEST_ID"*/);
-    sub_1CE6700(&StringLiteral_13752/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/);
-    sub_1CE6700(&StringLiteral_6487/*"FOLLOWER_SELECT_EXPLANATION2"*/);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4DFF32D = 1;
+    sub_1D0F0B4(&System_Action_TypeInfo);
+    sub_1D0F0B4(&AtlasManager_TypeInfo);
+    sub_1D0F0B4(&BalanceConfig_TypeInfo);
+    sub_1D0F0B4(&BattleSetupInfo_TypeInfo);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_ConstantMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
+    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndLoadCommonBg__);
+    sub_1D0F0B4(&Method_FollowerRootComponent_EndLoadPartyOrganizationAtlasSimple__);
+    sub_1D0F0B4(&FollowerRootComponent_TypeInfo);
+    sub_1D0F0B4(&LocalizationManager_TypeInfo);
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&RandomLimitCountManager_TypeInfo);
+    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1D0F0B4(&TutorialFlag_TypeInfo);
+    sub_1D0F0B4(&StringLiteral_13802/*"TUTORIAL_SUPPORT_QUEST_ID"*/);
+    sub_1D0F0B4(&StringLiteral_13803/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/);
+    sub_1D0F0B4(&StringLiteral_6513/*"FOLLOWER_SELECT_EXPLANATION2"*/);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E71F25 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
-    goto LABEL_100;
+    goto LABEL_106;
   if ( PartyOrganizationUtility__ExistsTemporaryPartyInfo((PartyOrganizationUtility_o *)Instance, 0) )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !Instance )
-      goto LABEL_100;
+      goto LABEL_106;
     v7 = *((_QWORD *)Instance + 23);
     if ( !v7 )
-      goto LABEL_100;
+      goto LABEL_106;
     v8 = *(struct BattleSetupInfo_o **)(v7 + 48);
     this->fields.battleSetupInfo = v8;
-    sub_1CE66A4(&this->fields.battleSetupInfo, v8);
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1D0F058(&this->fields.battleSetupInfo, v8);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
     if ( !Instance )
-      goto LABEL_100;
+      goto LABEL_106;
     if ( !MissionNotifyManager__IsPause((MissionNotifyManager_o *)Instance, 0) )
     {
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3B55234 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( !Instance )
-        goto LABEL_100;
+        goto LABEL_106;
       MissionNotifyManager__StartPause((MissionNotifyManager_o *)Instance, 0);
     }
   }
@@ -4576,7 +4620,7 @@ void FollowerRootComponent__beginStartUp(FollowerRootComponent_o *this, Il2CppOb
       this->fields.battleSetupInfo = 0;
       p_battleSetupInfo = &this->fields.battleSetupInfo;
     }
-    sub_1CE66A4(p_battleSetupInfo, v13);
+    sub_1D0F058(p_battleSetupInfo, v13);
   }
   if ( !this->fields.battleSetupInfo )
   {
@@ -4586,45 +4630,59 @@ void FollowerRootComponent__beginStartUp(FollowerRootComponent_o *this, Il2CppOb
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
   RandomLimitCountManager__set_EnableRandomLimitCount(1, 0);
+  if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+  if ( !byte_4E71F5D )
+  {
+    sub_1D0F0B4(&OtherUserServantLimitCountManager_TypeInfo);
+    byte_4E71F5D = 1;
+  }
+  v16 = OtherUserServantLimitCountManager_TypeInfo;
+  if ( !OtherUserServantLimitCountManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(OtherUserServantLimitCountManager_TypeInfo);
+    v16 = OtherUserServantLimitCountManager_TypeInfo;
+  }
+  v16->static_fields->_IsEnableAdjustSupportLimitCount_k__BackingField = 1;
   FollowerRootComponent__PlayBGM(this, v15);
-  v16 = FollowerRootComponent_TypeInfo;
+  v17 = FollowerRootComponent_TypeInfo;
   partyOrganizationAtlas = this->fields.partyOrganizationAtlas;
   if ( !FollowerRootComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FollowerRootComponent_TypeInfo);
-    v16 = FollowerRootComponent_TypeInfo;
+    v17 = FollowerRootComponent_TypeInfo;
   }
-  static_fields = v16->static_fields;
+  static_fields = v17->static_fields;
   static_fields->partyOrganizationAtlasCache = partyOrganizationAtlas;
-  sub_1CE66A4(&static_fields->partyOrganizationAtlasCache, partyOrganizationAtlas);
+  sub_1D0F058(&static_fields->partyOrganizationAtlasCache, partyOrganizationAtlas);
   Instance = this->fields.titleInfo;
   if ( !Instance )
-    goto LABEL_100;
-  TitleInfoControl__setTitleInfo_41044284((TitleInfoControl_o *)Instance, this->fields.myFSM, 3, 67, 1, 0);
+    goto LABEL_106;
+  TitleInfoControl__setTitleInfo_41261056((TitleInfoControl_o *)Instance, this->fields.myFSM, 3, 67, 1, 0);
   Instance = this->fields.titleInfo;
   if ( !Instance )
-    goto LABEL_100;
+    goto LABEL_106;
   TitleInfoControl__setBackBtnEnable((TitleInfoControl_o *)Instance, 1, 0);
   Instance = this->fields.operationItemListViewManager;
   if ( !Instance )
-    goto LABEL_100;
-  FollowerSelectItemListViewManager__DestroyList_33634200(
+    goto LABEL_106;
+  FollowerSelectItemListViewManager__DestroyList_33802796(
     (FollowerSelectItemListViewManager_o *)Instance,
     this->fields.battleSetupInfo,
     0);
   infomationLabel = this->fields.infomationLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_6487/*"FOLLOWER_SELECT_EXPLANATION2"*/, 0);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_6513/*"FOLLOWER_SELECT_EXPLANATION2"*/, 0);
   if ( !infomationLabel )
-    goto LABEL_100;
+    goto LABEL_106;
   UILabel__set_text(infomationLabel, (System_String_o *)Instance, 0);
   Instance = BalanceConfig_TypeInfo;
   refreshButtonBase = this->fields.refreshButtonBase;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
   if ( !refreshButtonBase )
-    goto LABEL_100;
+    goto LABEL_106;
   UnityEngine_GameObject__SetActive(
     refreshButtonBase,
     BalanceConfig_TypeInfo->static_fields->FollowerRefreshRestTime >= 0,
@@ -4635,49 +4693,49 @@ void FollowerRootComponent__beginStartUp(FollowerRootComponent_o *this, Il2CppOb
   this->fields.isForceFadeOut = 0;
   this->fields.isInitRecommendRequest = 0;
   if ( !Instance )
-    goto LABEL_100;
+    goto LABEL_106;
   BattleSetupInfo__SetSelectableQuests((BattleSetupInfo_o *)Instance, *((_BYTE *)Instance + 73), 0);
   Instance = this->fields.battleSetupInfo;
   if ( !Instance )
-    goto LABEL_100;
-  v21 = *((_QWORD *)Instance + 14) || *((_DWORD *)Instance + 30) != 0;
-  if ( (v21 & *((_BYTE *)Instance + 73)) != 0
+    goto LABEL_106;
+  v22 = *((_QWORD *)Instance + 14) || *((_DWORD *)Instance + 30) != 0;
+  if ( (v22 & *((_BYTE *)Instance + 73)) != 0
     && (BattleSetupInfo__SetRestriction((BattleSetupInfo_o *)Instance, 1, 0),
         (Instance = this->fields.battleSetupInfo) == 0)
-    || (v22 = *((_QWORD *)Instance + 11)) == 0 )
+    || (v23 = *((_QWORD *)Instance + 11)) == 0 )
   {
-LABEL_100:
-    sub_1CE6958(Instance, v6);
+LABEL_106:
+    sub_1D0F30C(Instance, v6);
   }
-  if ( *(_BYTE *)(v22 + 378) )
+  if ( *(_BYTE *)(v23 + 378) )
   {
-LABEL_48:
+LABEL_54:
     FollowerRootComponent__StartBattleSetupMenu(this, v6);
     return;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_41569468(102, 0) )
+  if ( TutorialFlag__Get_41786532(102, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      goto LABEL_100;
+      goto LABEL_106;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_ConstantMaster___);
+                 (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ConstantMaster___);
     if ( !Instance )
-      goto LABEL_100;
-    v23 = (ConstantMaster_o *)Instance;
-    Instance = (void *)ConstantMaster__GetValue((ConstantMaster_o *)Instance, (System_String_o *)StringLiteral_13751/*"TUTORIAL_SUPPORT_QUEST_ID"*/, 0);
+      goto LABEL_106;
+    v24 = (ConstantMaster_o *)Instance;
+    Instance = (void *)ConstantMaster__GetValue((ConstantMaster_o *)Instance, (System_String_o *)StringLiteral_13802/*"TUTORIAL_SUPPORT_QUEST_ID"*/, 0);
     battleSetupInfo = this->fields.battleSetupInfo;
     if ( !battleSetupInfo )
-      goto LABEL_100;
+      goto LABEL_106;
     if ( battleSetupInfo->fields.questId == (_DWORD)Instance )
     {
-      Instance = (void *)ConstantMaster__GetValue(v23, (System_String_o *)StringLiteral_13752/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/, 0);
+      Instance = (void *)ConstantMaster__GetValue(v24, (System_String_o *)StringLiteral_13803/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/, 0);
       battleSetupInfo = this->fields.battleSetupInfo;
       if ( !battleSetupInfo )
-        goto LABEL_100;
+        goto LABEL_106;
       if ( battleSetupInfo->fields.questPhase == (_DWORD)Instance )
         *(_QWORD *)&this->fields.tutorialMode = 0x100000003LL;
     }
@@ -4687,87 +4745,87 @@ LABEL_48:
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
     if ( !TutorialFlag__IsProgressDone(3, 0) )
-      goto LABEL_48;
+      goto LABEL_54;
     Instance = this->fields.infomationLabel;
     *(_QWORD *)&this->fields.tutorialMode = 0x100000002LL;
     if ( !Instance )
-      goto LABEL_100;
+      goto LABEL_106;
     UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
     battleSetupInfo = this->fields.battleSetupInfo;
     if ( !battleSetupInfo )
-      goto LABEL_100;
+      goto LABEL_106;
   }
   Instance = battleSetupInfo->fields.questRestrictionInfo;
   if ( !Instance )
-    goto LABEL_100;
+    goto LABEL_106;
   if ( !*((_BYTE *)Instance + 403)
     && !*((_BYTE *)Instance + 401)
     && !*((_BYTE *)Instance + 360)
     && !*((_BYTE *)Instance + 379) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                   (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
       if ( this->fields.battleSetupInfo )
       {
-        v27 = (QuestPhaseMaster_o *)Instance;
+        v28 = (QuestPhaseMaster_o *)Instance;
         Instance = (void *)BattleSetupInfo__TargetQuestId(this->fields.battleSetupInfo, 0);
-        v28 = this->fields.battleSetupInfo;
-        if ( v28 )
+        v29 = this->fields.battleSetupInfo;
+        if ( v29 )
         {
-          if ( v27 )
+          if ( v28 )
           {
-            Instance = QuestPhaseMaster__GetEntity(v27, (int32_t)Instance, v28->fields.questPhase, 0);
+            Instance = QuestPhaseMaster__GetEntity(v28, (int32_t)Instance, v29->fields.questPhase, 0);
             if ( Instance && *((_BYTE *)Instance + 24) )
             {
-              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3B54D44 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !Instance )
-                goto LABEL_100;
+                goto LABEL_106;
               Instance = DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_32043A8 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
+                           (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
               if ( !this->fields.battleSetupInfo )
-                goto LABEL_100;
-              v29 = (NpcFollowerMaster_o *)Instance;
+                goto LABEL_106;
+              v30 = (NpcFollowerMaster_o *)Instance;
               Instance = (void *)BattleSetupInfo__TargetQuestId(this->fields.battleSetupInfo, 0);
-              v30 = this->fields.battleSetupInfo;
+              v31 = this->fields.battleSetupInfo;
+              if ( !v31 )
+                goto LABEL_106;
               if ( !v30 )
-                goto LABEL_100;
-              if ( !v29 )
-                goto LABEL_100;
-              Instance = NpcFollowerMaster__GetQuestFollowerList(v29, (int32_t)Instance, v30->fields.questPhase, 0);
+                goto LABEL_106;
+              Instance = NpcFollowerMaster__GetQuestFollowerList(v30, (int32_t)Instance, v31->fields.questPhase, 0);
               if ( !Instance )
-                goto LABEL_100;
+                goto LABEL_106;
               if ( !*((_QWORD *)Instance + 3) )
               {
                 *(_QWORD *)&this->fields.tutorialMode = 0x100000001LL;
-                goto LABEL_75;
+                goto LABEL_81;
               }
             }
-            v31 = this->fields.battleSetupInfo;
-            if ( v31 )
+            v32 = this->fields.battleSetupInfo;
+            if ( v32 )
             {
-              Instance = v31->fields.questRestrictionInfo;
+              Instance = v32->fields.questRestrictionInfo;
               if ( Instance )
               {
                 if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction((QuestRestrictionInfo_o *)Instance, 0) )
                   this->fields.tutorialMode = 4;
-                FollowerRootComponent__UpdateDeckInfomation(this, v32);
-                v34 = this->fields.battleSetupInfo;
-                if ( v34 )
+                FollowerRootComponent__UpdateDeckInfomation(this, v33);
+                v35 = this->fields.battleSetupInfo;
+                if ( v35 )
                 {
                   Instance = this->fields.followerQuestInfomationDraw;
                   if ( Instance )
                   {
                     FollowerQuestInfomationDraw__SetInfomation(
                       (FollowerQuestInfomationDraw_o *)Instance,
-                      v34->fields.questRestrictionInfo,
+                      v35->fields.questRestrictionInfo,
                       0,
                       0,
-                      v33);
+                      v34);
                     Instance = this->fields.backSkinSprite;
                     if ( Instance )
                     {
@@ -4775,7 +4833,7 @@ LABEL_48:
                       if ( Instance )
                       {
                         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
-                        goto LABEL_71;
+                        goto LABEL_77;
                       }
                     }
                   }
@@ -4786,28 +4844,28 @@ LABEL_48:
         }
       }
     }
-    goto LABEL_100;
+    goto LABEL_106;
   }
   this->fields.tutorialState = 1;
   if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction((QuestRestrictionInfo_o *)Instance, 0) )
   {
     this->fields.isForceFadeOut = 1;
     this->fields.tutorialMode = 4;
-LABEL_71:
-    v25 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
-    System_Action___ctor(v25, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadCommonBg__, 0);
+LABEL_77:
+    v26 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    System_Action___ctor(v26, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadCommonBg__, 0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__LoadUISkin(v25, 2, 1, 0);
+    AtlasManager__LoadUISkin(v26, 2, 1, 0);
     return;
   }
   this->fields.tutorialMode = 1;
-LABEL_75:
-  v26 = (System_Action_o *)sub_1CE694C(System_Action_TypeInfo);
-  System_Action___ctor(v26, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadPartyOrganizationAtlasSimple__, 0);
+LABEL_81:
+  v27 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  System_Action___ctor(v27, (Il2CppObject *)this, Method_FollowerRootComponent_EndLoadPartyOrganizationAtlasSimple__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadPartyOrganizationAtlas(v26, 1, 0);
+  AtlasManager__LoadPartyOrganizationAtlas(v27, 1, 0);
 }
 
 
@@ -4820,7 +4878,7 @@ void FollowerRootComponent__setBattleSetupFollowType(
 
   battleSetupInfo = this->fields.battleSetupInfo;
   if ( !battleSetupInfo )
-    sub_1CE6958(this, type);
+    sub_1D0F30C(this, type);
   battleSetupInfo->fields.followerType = 0;
   if ( (type | 4) == 5 )
     battleSetupInfo->fields.followerType = type;
@@ -4831,15 +4889,15 @@ void FollowerRootComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4DFF357 & 1) == 0 )
+  if ( (byte_4E71F4F & 1) == 0 )
   {
-    sub_1CE6700(&FollowerRootComponent___c_TypeInfo);
-    byte_4DFF357 = 1;
+    sub_1D0F0B4(&FollowerRootComponent___c_TypeInfo);
+    byte_4E71F4F = 1;
   }
-  v1 = (Il2CppObject *)sub_1CE694C(FollowerRootComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1D0F300(FollowerRootComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   FollowerRootComponent___c_TypeInfo->static_fields->__9 = (struct FollowerRootComponent___c_o *)v1;
-  sub_1CE66A4(FollowerRootComponent___c_TypeInfo->static_fields, v1);
+  sub_1D0F058(FollowerRootComponent___c_TypeInfo->static_fields, v1);
 }
 
 

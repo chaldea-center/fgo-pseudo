@@ -15,7 +15,7 @@ void UserOwnFriendPoint___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void UserOwnFriendPoint___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_1CE6958(v13, v14);
+    sub_1D0F30C(v13, v14);
   this->fields._Num_k__BackingField = UserGameEntity__GetFriendPoint(userGameEntity, 0);
 }

@@ -4,7 +4,7 @@ int32_t UserFormationResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1CE6958(this, 0);
+    sub_1D0F30C(this, 0);
   return !ResponseData__checkError((ResponseData_o *)this, data->fields.resCode, method) || !data->fields.success;
 }
 

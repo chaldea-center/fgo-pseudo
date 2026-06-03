@@ -15,18 +15,18 @@ void UnlockSlider___ctor(UnlockSlider_o *this, const MethodInfo *method)
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4E036B1 & 1) == 0 )
+  if ( (byte_4E76324 & 1) == 0 )
   {
-    sub_1CE6700(&StringLiteral_20883/*"img_slider_thumb_locked"*/);
-    sub_1CE6700(&StringLiteral_20882/*"img_slider_thumb"*/);
-    byte_4E036B1 = 1;
+    sub_1D0F0B4(&StringLiteral_20974/*"img_slider_thumb_locked"*/);
+    sub_1D0F0B4(&StringLiteral_20973/*"img_slider_thumb"*/);
+    byte_4E76324 = 1;
   }
-  v9 = StringLiteral_20883/*"img_slider_thumb_locked"*/;
-  this->fields.sliderThumbLockSpriteName = (struct System_String_o *)StringLiteral_20883/*"img_slider_thumb_locked"*/;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.sliderThumbLockSpriteName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_20882/*"img_slider_thumb"*/;
-  this->fields.sliderThumbUnlockSpriteName = (struct System_String_o *)StringLiteral_20882/*"img_slider_thumb"*/;
-  sub_1CE66A4(
+  v9 = StringLiteral_20974/*"img_slider_thumb_locked"*/;
+  this->fields.sliderThumbLockSpriteName = (struct System_String_o *)StringLiteral_20974/*"img_slider_thumb_locked"*/;
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sliderThumbLockSpriteName, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_20973/*"img_slider_thumb"*/;
+  this->fields.sliderThumbUnlockSpriteName = (struct System_String_o *)StringLiteral_20973/*"img_slider_thumb"*/;
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.sliderThumbUnlockSpriteName,
     v10,
     v11,
@@ -52,7 +52,7 @@ bool UnlockSlider__IsLocked(UnlockSlider_o *this, const MethodInfo *method)
 
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
-    sub_1CE6958(0, method);
+    sub_1D0F30C(0, method);
   return UIProgressBar__get_value(checkSlider, 0) < 1.0;
 }
 
@@ -84,7 +84,7 @@ void UnlockSlider__OnSliderDragFinished(UnlockSlider_o *this, const MethodInfo *
   onDragFinished = this->fields.onDragFinished;
   if ( !onDragFinished )
 LABEL_11:
-    sub_1CE6958(checkSlider, method);
+    sub_1D0F30C(checkSlider, method);
   ((void (__fastcall *)(intptr_t, _BOOL4, intptr_t))onDragFinished->fields.invoke_impl)(
     onDragFinished->fields.method_code,
     v8,
@@ -99,7 +99,7 @@ void UnlockSlider__SetSliderThumbSprite(UnlockSlider_o *this, bool isUnlocked, c
 
   sliderThumbSprite = this->fields.sliderThumbSprite;
   if ( !sliderThumbSprite )
-    sub_1CE6958(0, isUnlocked);
+    sub_1D0F30C(0, isUnlocked);
   v5 = 64;
   if ( isUnlocked )
     v5 = 72;
@@ -129,14 +129,14 @@ void UnlockSlider__Setup(
   System_String_o *v19; // x7
   const MethodInfo *v20; // x1
 
-  if ( (byte_4E036B0 & 1) == 0 )
+  if ( (byte_4E76323 & 1) == 0 )
   {
-    sub_1CE6700(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1CE6700(&Method_UnlockSlider_OnSliderDragFinished__);
-    byte_4E036B0 = 1;
+    sub_1D0F0B4(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1D0F0B4(&Method_UnlockSlider_OnSliderDragFinished__);
+    byte_4E76323 = 1;
   }
   this->fields.onDragFinished = dragFinishedAction;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.onDragFinished,
     (int32_t)dragFinishedAction,
     (int32_t)method,
@@ -149,14 +149,14 @@ void UnlockSlider__Setup(
   if ( !checkSlider
     || (UIProgressBar__set_value(checkSlider, 0.0, 0),
         v12 = this->fields.checkSlider,
-        v13 = (UIProgressBar_OnDragFinished_o *)sub_1CE694C(UIProgressBar_OnDragFinished_TypeInfo),
+        v13 = (UIProgressBar_OnDragFinished_o *)sub_1D0F300(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(v13, (Il2CppObject *)this, Method_UnlockSlider_OnSliderDragFinished__, 0),
         !v12) )
   {
-    sub_1CE6958(checkSlider, v10);
+    sub_1D0F30C(checkSlider, v10);
   }
   v12->fields.onDragFinished = v13;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&v12->fields.onDragFinished, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v12->fields.onDragFinished, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   UnlockSlider__OnSliderDragFinished(this, v20);
 }
 
@@ -180,7 +180,7 @@ void UnlockSlider_OnDragFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -191,12 +191,12 @@ void UnlockSlider_OnDragFinished___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1CE67C0(method) & 1) == 0 )
+  if ( (sub_1D0F174(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1CE6974(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1CE6828(v14, 0);
+      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1D0F1DC(v14, 0);
     }
     goto LABEL_5;
   }
@@ -208,9 +208,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B16C00;
+  this->fields.invoke_impl = (intptr_t)sub_1B3CA68;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B16BB8;
+  this->fields.extra_arg = (intptr_t)sub_1B3CA20;
 }
 
 
@@ -225,14 +225,14 @@ System_IAsyncResult_o *UnlockSlider_OnDragFinished__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isUnlocked;
-  if ( (byte_4E036B2 & 1) == 0 )
+  if ( (byte_4E76325 & 1) == 0 )
   {
-    sub_1CE6700(&bool_TypeInfo);
-    byte_4E036B2 = 1;
+    sub_1D0F0B4(&bool_TypeInfo);
+    byte_4E76325 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1CE66B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
 }
 
 
@@ -241,7 +241,7 @@ void UnlockSlider_OnDragFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1CE66B8(result, 0, method);
+  sub_1D0F06C(result, 0, method);
 }
 
 

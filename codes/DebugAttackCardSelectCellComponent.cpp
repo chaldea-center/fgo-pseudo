@@ -20,14 +20,14 @@ void DebugAttackCardSelectCellComponent__Set(
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4E05F98 & 1) == 0 )
+  if ( (byte_4E78C3F & 1) == 0 )
   {
-    sub_1CE6700(&System_Action_int__string__string__int__TypeInfo);
-    sub_1CE6700(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
-    sub_1CE6700(&StringLiteral_1/*""*/);
-    byte_4E05F98 = 1;
+    sub_1D0F0B4(&System_Action_int__string__string__int__TypeInfo);
+    sub_1D0F0B4(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
+    sub_1D0F0B4(&StringLiteral_1/*""*/);
+    byte_4E78C3F = 1;
   }
-  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1CE694C(System_Action_int__string__string__int__TypeInfo);
+  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1D0F300(System_Action_int__string__string__int__TypeInfo);
   System_Action_int__object__object__int____ctor(
     v9,
     (Il2CppObject *)this,
@@ -42,7 +42,7 @@ void DebugAttackCardSelectCellComponent__Set(
     (System_Action_int__string__string__int__o *)v9,
     v10);
   this->fields.actionCallback = callback;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields.actionCallback,
     (int32_t)callback,
     v11,

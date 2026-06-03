@@ -34,19 +34,19 @@ void BattleScriptSystemActionData__SetBattleScriptSystem(
   Il2CppObject *v28; // x1
   Il2CppClass **v29; // x0
 
-  if ( (byte_4E07058 & 1) == 0 )
+  if ( (byte_4E7A01F & 1) == 0 )
   {
-    sub_1CE6700(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__Add__);
-    sub_1CE6700(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
-    sub_1CE6700(&System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
-    byte_4E07058 = 1;
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__Add__);
+    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
+    sub_1D0F0B4(&System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
+    byte_4E7A01F = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1CE694C(System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_3905734 *)Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
+    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData___ctor__);
   this->fields._ListBattleScriptData_k__BackingField = (struct System_Collections_Generic_List_BattleLogicBattleScript_BattleScriptData__o *)v9;
-  sub_1CE66A4(
+  sub_1D0F058(
     (GrandQuestFolderBoardItem_o *)&this->fields._ListBattleScriptData_k__BackingField,
     (int32_t)v9,
     v10,
@@ -68,7 +68,7 @@ void BattleScriptSystemActionData__SetBattleScriptSystem(
         ++ListBattleScriptData_k__BackingField->fields._version,
         !items) )
   {
-    sub_1CE6958(BattleScriptSystemData, v17);
+    sub_1D0F30C(BattleScriptSystemData, v17);
   }
   size = ListBattleScriptData_k__BackingField->fields._size;
   v28 = BattleScriptSystemData;
@@ -77,13 +77,13 @@ void BattleScriptSystemActionData__SetBattleScriptSystem(
     System_Collections_Generic_List_object___AddWithResize(
       ListBattleScriptData_k__BackingField,
       BattleScriptSystemData,
-      *(const MethodInfo_3905F68 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      *(const MethodInfo_395C410 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
   }
   else
   {
     ListBattleScriptData_k__BackingField->fields._size = size + 1;
     v29 = &items->obj.klass + size;
     v29[4] = (Il2CppClass *)v28;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v28, v19, v20, v21, v22, v23, v24);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v28, v19, v20, v21, v22, v23, v24);
   }
 }

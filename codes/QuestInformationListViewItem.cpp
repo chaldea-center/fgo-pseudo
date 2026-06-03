@@ -5,7 +5,7 @@ void QuestInformationListViewItem___ctor(
         int32_t target,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.infoType = 0;
   this->fields.mRewardType = type;
   this->fields.targetId = target;
@@ -14,7 +14,7 @@ void QuestInformationListViewItem___ctor(
 }
 
 
-void QuestInformationListViewItem___ctor_37538680(
+void QuestInformationListViewItem___ctor_37741932(
         QuestInformationListViewItem_o *this,
         int32_t index,
         ViewEnemyEntity_o *viewEnemyEnt,
@@ -57,17 +57,17 @@ void QuestInformationListViewItem___ctor_37538680(
   NpcServantDisplayTypeDetailEntity_o *entity; // [xsp+20h] [xbp-40h] BYREF
   QuestInformationListViewItem_MissionTargetState_o missionTargetState; // [xsp+2Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E0167A & 1) == 0 )
+  if ( (byte_4E742BD & 1) == 0 )
   {
-    sub_1CE6700(&Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
-    sub_1CE6700(&DataManager_TypeInfo);
-    sub_1CE6700(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1CE6700(&Method_System_Nullable_Color__get_HasValue__);
-    byte_4E0167A = 1;
+    sub_1D0F0B4(&Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
+    sub_1D0F0B4(&DataManager_TypeInfo);
+    sub_1D0F0B4(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1D0F0B4(&Method_System_Nullable_Color__get_HasValue__);
+    byte_4E742BD = 1;
   }
   missionTargetState = 0;
   entity = 0;
-  ListViewItem___ctor_44921328((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
   this->fields.infoType = 1;
   if ( !viewEnemyEnt )
   {
@@ -76,7 +76,7 @@ void QuestInformationListViewItem___ctor_37538680(
     *(_QWORD *)&this->fields.targetId = 0;
     *(_QWORD *)&this->fields.dispType = 0;
     *(_QWORD *)&this->fields.iconId = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.nameText, 0, v9, v10, v11, v12, v13, v14);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.nameText, 0, v9, v10, v11, v12, v13, v14);
     __asm { FMOV            V0.4S, #1.0 }
     *(_QWORD *)&this->fields.weeklyMissionTarget = 0;
     this->fields.mainColor = _Q0;
@@ -90,7 +90,7 @@ void QuestInformationListViewItem___ctor_37538680(
     *(_QWORD *)&this->fields.targetId = 0;
     *(_QWORD *)&this->fields.iconId = 0;
     *(_QWORD *)&this->fields.dispType = 0;
-    sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.nameText, 0, v15, v16, v17, v18, v19, v20);
+    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.nameText, 0, v15, v16, v17, v18, v19, v20);
     *(_WORD *)&this->fields.weeklyMissionTarget = 0;
     IsEventMission = missionTargetState.fields.IsEventMission;
     __asm { FMOV            V0.4S, #1.0 }
@@ -111,7 +111,7 @@ LABEL_7:
   this->fields.enemyNameEffectId = ViewEnemyEntity__getEnemyNameEffect(viewEnemyEnt, 0);
   BattleName = ViewEnemyEntity__getBattleName(viewEnemyEnt, 0);
   this->fields.nameText = BattleName;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields.nameText, (int32_t)BattleName, v31, v32, v33, v34, v35, v36);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.nameText, (int32_t)BattleName, v31, v32, v33, v34, v35, v36);
   this->fields._IsGrand_k__BackingField = ViewEnemyEntity__IsGrand(viewEnemyEnt, 0);
   this->fields.weeklyMissionTarget = missionTargetState.fields.IsWeeklyMission;
   this->fields.limitMissionTarget = missionTargetState.fields.IsLimitMission;
@@ -120,7 +120,7 @@ LABEL_7:
   this->fields.colorType = ViewEnemyEntity__GetColorType(viewEnemyEnt, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (NpcServantDisplayTypeDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3204354 *)Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
+  Master_object = (NpcServantDisplayTypeDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
   if ( !Master_object )
     goto LABEL_26;
   if ( !NpcServantDisplayTypeDetailMaster__TryGetEntity(
@@ -158,7 +158,7 @@ LABEL_7:
   Master_object = (NpcServantDisplayTypeDetailMaster_o *)entity;
   if ( !entity )
 LABEL_26:
-    sub_1CE6958(Master_object, v38);
+    sub_1D0F30C(Master_object, v38);
   NpcServantDisplayTypeDetailEntity__get_AddColor(&v48, entity, 0);
   v43 = v48.fields.value.fields.b;
   v44 = v48.fields.value.fields.a;

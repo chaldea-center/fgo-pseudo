@@ -16,7 +16,7 @@ void FieldBuffDeleteProcess__Init(
   System_String_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -40,5 +40,5 @@ void FieldBuffDeleteProcess__set_FieldEnvData(
   System_String_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1CE66A4((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
